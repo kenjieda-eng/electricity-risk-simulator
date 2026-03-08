@@ -1,8 +1,24 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LineElement,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip,
+  type ChartData,
+  type ChartOptions,
+} from "chart.js";
+import { Bar, Line } from "react-chartjs-2";
 import { getRiskLabel } from "../../lib/riskScore";
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
 
 type CompareApiData = {
   id: string;
@@ -34,6 +50,21 @@ type CompareApiData = {
   };
 };
 
+const monthNames = [
+  "1月",
+  "2月",
+  "3月",
+  "4月",
+  "5月",
+  "6月",
+  "7月",
+  "8月",
+  "9月",
+  "10月",
+  "11月",
+  "12月",
+];
+
 const formatNumber = (value: number) => value.toLocaleString("ja-JP");
 const formatSignedNumber = (value: number) =>
   `${value >= 0 ? "+" : "-"}${Math.abs(value).toLocaleString("ja-JP")}`;
@@ -42,8 +73,34 @@ const getCheaperPlanText = (fixedTotal: number, marketTotal: number) => {
   if (marketTotal < fixedTotal) return "市場連動プランのほうが得です";
   return "両プランは同水準です";
 };
+const getCheaperPlanDetailText = (fixedTotal: number, marketTotal: number) => {
+  const gap = Math.abs(fixedTotal - marketTotal);
+  if (fixedTotal < marketTotal) {
+    return `固定プランのほうが ${formatNumber(gap)} 万円得です`;
+  }
+  if (marketTotal < fixedTotal) {
+    return `市場連動プランのほうが ${formatNumber(gap)} 万円得です`;
+  }
+  return "両プランは同水準です";
+};
 
 type SeasonType = "spring" | "summer" | "autumn" | "winter";
+type StressFlags = {
+  heatwave: boolean;
+  coldWave: boolean;
+  fuelPrice: boolean;
+  geopolitical: boolean;
+  outage: boolean;
+};
+type ScenarioResult = {
+  lineA: number[];
+  lineB: number[];
+  monthlyAValues: number[];
+  monthlyBValues: number[];
+  totalA: number;
+  totalB: number;
+};
+type ChartSeriesKey = "baselineFixed" | "baselineMarket" | "currentFixed" | "currentMarket";
 
 const contractFactorMap: Record<string, number> = {
   low: 1.03,
@@ -130,13 +187,16 @@ const calcMonthlyBase = (
   return springCost;
 };
 
-const calculateBaselineTotals = (input: CompareApiData["input"]) => {
+const calculateScenario = (
+  input: CompareApiData["input"],
+  stressFlags: StressFlags
+): ScenarioResult => {
   const safeSpring = Math.max(0, Number(input.spring_cost) || 0);
   const safeSummer = Math.max(0, Number(input.summer_cost) || 0);
   const safeAutumn = Math.max(0, Number(input.autumn_cost) || 0);
   const safeWinter = Math.max(0, Number(input.winter_cost) || 0);
   const floorArea = Math.max(1, Number(input.floor_area) || 1);
-  const startMonth = Math.min(12, Math.max(1, Number(input.start_month) || 4));
+  const startMonth = Math.min(12, Math.max(1, Number(input.start_month) || 1));
   const orderedMonths = getOrderedMonths(startMonth);
   const contractType = input.contract_type || "high";
   const region = input.region || "shutoken";
@@ -150,9 +210,13 @@ const calculateBaselineTotals = (input: CompareApiData["input"]) => {
   const seasonalFactors = regionSeasonMap[region] ?? regionSeasonMap.shutoken;
   const areaFactor = Math.max(0.85, Math.min(1.25, 1 + ((floorArea - 5000) / 5000) * 0.08));
 
-  let totalA = 0;
-  let totalB = 0;
-  for (const monthNumber of orderedMonths) {
+  const lineA: number[] = [];
+  const lineB: number[] = [];
+  const monthlyAValues: number[] = [];
+  const monthlyBValues: number[] = [];
+  let cumulativeA = 0;
+  let cumulativeB = 0;
+  for (const [monthIndex, monthNumber] of orderedMonths.entries()) {
     const seasonType = getSeasonType(monthNumber);
     const baseMonthly =
       calcMonthlyBase(monthNumber, safeSpring, safeSummer, safeAutumn, safeWinter) *
@@ -171,13 +235,59 @@ const calculateBaselineTotals = (input: CompareApiData["input"]) => {
         ? 1.02
         : 0.88 * shoulderAdjustment;
 
-    totalA += baseMonthly * 1.08;
-    totalB += baseMonthly * seasonalWaveB;
+    let monthlyA = baseMonthly * 1.08;
+    let monthlyB = baseMonthly * seasonalWaveB;
+    const isSummer = seasonType === "summer";
+    const isWinter = seasonType === "winter";
+
+    if (stressFlags.heatwave && isSummer) {
+      monthlyA *= 1.06;
+      monthlyB *= 1.35;
+      if (usagePattern === "seasonal-heavy") monthlyB *= 1.06;
+    }
+    if (stressFlags.coldWave && isWinter) {
+      monthlyA *= 1.07;
+      monthlyB *= 1.4;
+      if (usagePattern === "seasonal-heavy") monthlyB *= 1.06;
+    }
+    if (stressFlags.fuelPrice) {
+      monthlyA *= 1.12;
+      monthlyB *= 1.22;
+    }
+    if (stressFlags.geopolitical) {
+      monthlyA *= 1.18;
+      monthlyB *= 1.52;
+    }
+    if (stressFlags.outage) {
+      const isOutageMonth = monthIndex === 0;
+      const isAftershockMonth = monthIndex === 1;
+      if (isOutageMonth) {
+        monthlyA *= 1.08;
+        monthlyB *= 1.3;
+        if (usagePattern === "24h" || usagePattern === "night") {
+          monthlyB *= 1.06;
+        }
+      } else if (isAftershockMonth) {
+        monthlyA *= 1.03;
+        monthlyB *= 1.1;
+      }
+    }
+
+    monthlyAValues.push(Math.round(monthlyA));
+    monthlyBValues.push(Math.round(monthlyB));
+    cumulativeA += monthlyA;
+    cumulativeB += monthlyB;
+    lineA.push(Math.round(cumulativeA));
+    lineB.push(Math.round(cumulativeB));
   }
 
   return {
-    fixedTotal: Math.round(totalA),
-    marketTotal: Math.round(totalB),
+    lineA,
+    lineB,
+    monthlyAValues,
+    monthlyBValues,
+    totalA: Math.round(cumulativeA),
+    totalB: Math.round(cumulativeB),
   };
 };
 
@@ -301,7 +411,7 @@ const riskFactorReasonMap: Record<string, string> = {
 
 const toJapaneseLabel = (value: string, labels: Record<string, string>) => labels[value] ?? value;
 
-export default function ComparePage() {
+function ComparePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const savedResultId = searchParams.get("id");
@@ -312,6 +422,12 @@ export default function ComparePage() {
   const [isLoading, setIsLoading] = useState(false);
   const [fetchError, setFetchError] = useState("");
   const [averageRiskScore, setAverageRiskScore] = useState<number | null>(null);
+  const [seriesVisibility, setSeriesVisibility] = useState<Record<ChartSeriesKey, boolean>>({
+    baselineFixed: true,
+    baselineMarket: true,
+    currentFixed: true,
+    currentMarket: true,
+  });
 
   useEffect(() => {
     if (!savedResultId) return;
@@ -450,10 +566,6 @@ export default function ComparePage() {
     const detailText = topFactors.map((factor) => factor.label).join("、");
     return `今回の点数は、${detailText} 傾向が重なって算出されています。`;
   }, [compareData, displayedRiskScore]);
-  const baselineTotals = useMemo(
-    () => (compareData ? calculateBaselineTotals(compareData.input) : null),
-    [compareData]
-  );
   const selectedStressFactors = useMemo(() => {
     if (!selectedStressParam) return [];
     return selectedStressParam
@@ -462,32 +574,211 @@ export default function ComparePage() {
       .filter(Boolean)
       .map((key) => stressFactorLabels[key] ?? key);
   }, [selectedStressParam]);
+  const selectedStressKeys = useMemo(() => {
+    if (!selectedStressParam) return [];
+    return selectedStressParam
+      .split(",")
+      .map((key) => key.trim())
+      .filter((key) => key in stressFactorLabels);
+  }, [selectedStressParam]);
+  const stressFlags = useMemo<StressFlags>(
+    () => ({
+      heatwave: selectedStressKeys.includes("heatwave"),
+      coldWave: selectedStressKeys.includes("coldWave"),
+      fuelPrice: selectedStressKeys.includes("fuelPrice"),
+      geopolitical: selectedStressKeys.includes("geopolitical"),
+      outage: selectedStressKeys.includes("outage"),
+    }),
+    [selectedStressKeys]
+  );
+  const orderedMonths = useMemo(() => {
+    if (!compareData) return [];
+    const startMonth = Math.min(12, Math.max(1, Number(compareData.input.start_month) || 1));
+    return getOrderedMonths(startMonth);
+  }, [compareData]);
+  const baselineScenario = useMemo(
+    () =>
+      compareData
+        ? calculateScenario(compareData.input, {
+            heatwave: false,
+            coldWave: false,
+            fuelPrice: false,
+            geopolitical: false,
+            outage: false,
+          })
+        : null,
+    [compareData]
+  );
+  const currentScenario = useMemo(
+    () => (compareData ? calculateScenario(compareData.input, stressFlags) : null),
+    [compareData, stressFlags]
+  );
   const commentaryLines = useMemo(() => {
-    if (!compareData || !baselineTotals) return [];
+    if (!compareData || !baselineScenario || !currentScenario) return [];
     return buildResultCommentary(
-      compareData.output.fixed_total,
-      compareData.output.market_total,
-      baselineTotals.fixedTotal,
-      baselineTotals.marketTotal,
+      currentScenario.totalA,
+      currentScenario.totalB,
+      baselineScenario.totalA,
+      baselineScenario.totalB,
       selectedStressFactors
     );
-  }, [compareData, baselineTotals, selectedStressFactors]);
+  }, [compareData, baselineScenario, currentScenario, selectedStressFactors]);
+  const lineData = useMemo<ChartData<"line">>(
+    () => {
+      const datasets: NonNullable<ChartData<"line">["datasets"]> = [];
+      if (seriesVisibility.baselineFixed) {
+        datasets.push({
+          label: "固定プラン（反映前）",
+          data: baselineScenario?.lineA ?? [],
+          borderColor: "#0f172a",
+          backgroundColor: "rgba(15, 23, 42, 0.15)",
+          pointRadius: 0,
+          borderWidth: 2,
+          tension: 0.25,
+        });
+      }
+      if (seriesVisibility.baselineMarket) {
+        datasets.push({
+          label: "市場連動プラン（反映前）",
+          data: baselineScenario?.lineB ?? [],
+          borderColor: "#dc2626",
+          backgroundColor: "rgba(220, 38, 38, 0.15)",
+          pointRadius: 0,
+          borderWidth: 2,
+          tension: 0.25,
+        });
+      }
+      if (seriesVisibility.currentFixed) {
+        datasets.push({
+          label: "固定プラン（反映後）",
+          data: currentScenario?.lineA ?? [],
+          borderColor: "#334155",
+          borderDash: [6, 4],
+          pointRadius: 0,
+          borderWidth: 2,
+          tension: 0.25,
+        });
+      }
+      if (seriesVisibility.currentMarket) {
+        datasets.push({
+          label: "市場連動プラン（反映後）",
+          data: currentScenario?.lineB ?? [],
+          borderColor: "#be123c",
+          borderDash: [6, 4],
+          pointRadius: 0,
+          borderWidth: 2,
+          tension: 0.25,
+        });
+      }
+      return {
+        labels: orderedMonths.map((month) => monthNames[month - 1]),
+        datasets,
+      };
+    },
+    [orderedMonths, baselineScenario, currentScenario, seriesVisibility]
+  );
+  const lineOptions = useMemo<ChartOptions<"line">>(
+    () => ({
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "bottom" },
+        tooltip: {
+          callbacks: {
+            label(context) {
+              return `${context.dataset.label}: ${Number(context.parsed.y).toLocaleString("ja-JP")} 万円`;
+            },
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: "累計電気代（万円）" },
+        },
+      },
+    }),
+    []
+  );
+  const barData = useMemo<ChartData<"bar">>(
+    () => {
+      const datasets: NonNullable<ChartData<"bar">["datasets"]> = [];
+      if (seriesVisibility.baselineFixed) {
+        datasets.push({
+          label: "固定プラン（反映前）",
+          data: baselineScenario?.monthlyAValues ?? [],
+          backgroundColor: "rgba(15, 23, 42, 0.45)",
+        });
+      }
+      if (seriesVisibility.baselineMarket) {
+        datasets.push({
+          label: "市場連動プラン（反映前）",
+          data: baselineScenario?.monthlyBValues ?? [],
+          backgroundColor: "rgba(220, 38, 38, 0.45)",
+        });
+      }
+      if (seriesVisibility.currentFixed) {
+        datasets.push({
+          label: "固定プラン（反映後）",
+          data: currentScenario?.monthlyAValues ?? [],
+          backgroundColor: "rgba(15, 23, 42, 0.82)",
+        });
+      }
+      if (seriesVisibility.currentMarket) {
+        datasets.push({
+          label: "市場連動プラン（反映後）",
+          data: currentScenario?.monthlyBValues ?? [],
+          backgroundColor: "rgba(220, 38, 38, 0.78)",
+        });
+      }
+      return {
+        labels: orderedMonths.map((month) => monthNames[month - 1]),
+        datasets,
+      };
+    },
+    [orderedMonths, baselineScenario, currentScenario, seriesVisibility]
+  );
+  const barOptions = useMemo<ChartOptions<"bar">>(
+    () => ({
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "bottom" },
+        tooltip: {
+          callbacks: {
+            label(context) {
+              return `${context.dataset.label}: ${Number(context.parsed.y).toLocaleString("ja-JP")} 万円`;
+            },
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: "月額電気代（万円）" },
+        },
+      },
+    }),
+    []
+  );
   const fixedPlanIncrease = useMemo(() => {
-    if (!compareData || !baselineTotals) return null;
-    return compareData.output.fixed_total - baselineTotals.fixedTotal;
-  }, [compareData, baselineTotals]);
+    if (!currentScenario || !baselineScenario) return null;
+    return currentScenario.totalA - baselineScenario.totalA;
+  }, [currentScenario, baselineScenario]);
   const marketPlanIncrease = useMemo(() => {
-    if (!compareData || !baselineTotals) return null;
-    return compareData.output.market_total - baselineTotals.marketTotal;
-  }, [compareData, baselineTotals]);
+    if (!currentScenario || !baselineScenario) return null;
+    return currentScenario.totalB - baselineScenario.totalB;
+  }, [currentScenario, baselineScenario]);
   const planAdvantageWithoutRisk = useMemo(() => {
-    if (!baselineTotals) return null;
-    return getCheaperPlanText(baselineTotals.fixedTotal, baselineTotals.marketTotal);
-  }, [baselineTotals]);
+    if (!baselineScenario) return null;
+    return getCheaperPlanDetailText(baselineScenario.totalA, baselineScenario.totalB);
+  }, [baselineScenario]);
   const planAdvantageWithRisk = useMemo(() => {
-    if (!compareData) return null;
-    return getCheaperPlanText(compareData.output.fixed_total, compareData.output.market_total);
-  }, [compareData]);
+    if (!currentScenario) return null;
+    return getCheaperPlanDetailText(currentScenario.totalA, currentScenario.totalB);
+  }, [currentScenario]);
+  const toggleSeriesVisibility = (key: ChartSeriesKey) =>
+    setSeriesVisibility((prev) => ({ ...prev, [key]: !prev[key] }));
 
   return (
     <main className="mx-auto min-h-screen max-w-[1600px] bg-slate-50 px-4 py-10 text-slate-800 sm:px-6 lg:px-8">
@@ -506,9 +797,14 @@ export default function ComparePage() {
 
       <section className="grid grid-cols-1 gap-4">
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 shadow-sm">
-          <h2 className="text-lg font-bold tracking-[0.05em] text-amber-700 sm:text-xl">
-            リスクスコア
-          </h2>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <h2 className="text-lg font-bold tracking-[0.05em] text-amber-700 sm:text-xl">
+              リスクスコア
+            </h2>
+            <p className="text-sm text-amber-800 sm:text-base">
+              電気料金の上振れリスクを 0〜100 点で示した指標です。点数が低いほど上振れリスクが低く、料金が安定している状態を示します。
+            </p>
+          </div>
           {hasRisk ? (
             <>
               <p className="mt-2 flex flex-wrap items-end gap-x-3 gap-y-1 text-amber-900">
@@ -642,13 +938,13 @@ export default function ComparePage() {
                 <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-2">
                   <dt>固定プラン累計（リスク要因反映前・万円）</dt>
                   <dd className="font-medium text-slate-900">
-                    {baselineTotals ? `${formatNumber(baselineTotals.fixedTotal)} 万円` : "-"}
+                    {baselineScenario ? `${formatNumber(baselineScenario.totalA)} 万円` : "-"}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-2">
                   <dt>市場連動累計（リスク要因反映前・万円）</dt>
                   <dd className="font-semibold text-rose-700">
-                    {baselineTotals ? `${formatNumber(baselineTotals.marketTotal)} 万円` : "-"}
+                    {baselineScenario ? `${formatNumber(baselineScenario.totalB)} 万円` : "-"}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-2">
@@ -684,11 +980,11 @@ export default function ComparePage() {
                 </div>
                 <div className="mt-3 space-y-1 text-sm text-slate-700">
                   <p>
-                    リスク要因が発生しなければ:{" "}
+                    選択したリスク要因が発生しなければ:{" "}
                     <span className="font-semibold">{planAdvantageWithoutRisk ?? "-"}</span>
                   </p>
                   <p>
-                    リスク要因が発生した場合:{" "}
+                    選択したリスク要因が発生した場合:{" "}
                     <span className="font-semibold">{planAdvantageWithRisk ?? "-"}</span>
                   </p>
                 </div>
@@ -715,6 +1011,67 @@ export default function ComparePage() {
         </div>
       </section>
 
+      <section className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 className="text-base font-semibold uppercase tracking-[0.08em] text-slate-500">
+          年間シミュレーショングラフ
+        </h2>
+        {compareData && baselineScenario && currentScenario ? (
+          <>
+            <p className="mt-2 text-sm text-slate-500">
+              折れ線は累計、棒は各月の4プラン比較です。チェックで表示/非表示を切り替えできます。
+            </p>
+            <div className="mt-3 grid grid-cols-1 gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700 sm:grid-cols-2">
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={seriesVisibility.baselineFixed}
+                  onChange={() => toggleSeriesVisibility("baselineFixed")}
+                  className="h-4 w-4 rounded border-slate-300 text-slate-700 focus:ring-slate-400"
+                />
+                固定プラン（反映前）
+              </label>
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={seriesVisibility.baselineMarket}
+                  onChange={() => toggleSeriesVisibility("baselineMarket")}
+                  className="h-4 w-4 rounded border-slate-300 text-rose-700 focus:ring-rose-400"
+                />
+                市場連動プラン（反映前）
+              </label>
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={seriesVisibility.currentFixed}
+                  onChange={() => toggleSeriesVisibility("currentFixed")}
+                  className="h-4 w-4 rounded border-slate-300 text-slate-700 focus:ring-slate-400"
+                />
+                固定プラン（反映後）
+              </label>
+              <label className="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={seriesVisibility.currentMarket}
+                  onChange={() => toggleSeriesVisibility("currentMarket")}
+                  className="h-4 w-4 rounded border-slate-300 text-rose-700 focus:ring-rose-400"
+                />
+                市場連動プラン（反映後）
+              </label>
+            </div>
+            <div className="mt-3 h-[260px] w-full sm:h-[320px]">
+              <Line data={lineData} options={lineOptions} />
+            </div>
+            <div className="mt-4 h-[220px] w-full sm:h-[280px]">
+              <Bar data={barData} options={barOptions} />
+            </div>
+          </>
+        ) : (
+          <p className="mt-3 text-base text-slate-600">
+            {isLoading ? "グラフデータを読み込み中です..." : "グラフ表示に必要なデータがありません。"}
+          </p>
+        )}
+      </section>
+
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
         <p className="text-base text-slate-600 sm:text-lg">
           入力画面に戻ると、前回の入力内容は引き継がれません。条件を変更する場合は、再度入力してください。
@@ -731,5 +1088,21 @@ export default function ComparePage() {
       </section>
 
     </main>
+  );
+}
+
+export default function ComparePage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto min-h-screen max-w-[1600px] bg-slate-50 px-4 py-10 text-slate-800 sm:px-6 lg:px-8">
+          <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p className="text-base text-slate-600">比較データを読み込み中です...</p>
+          </section>
+        </main>
+      }
+    >
+      <ComparePageContent />
+    </Suspense>
   );
 }

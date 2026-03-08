@@ -381,7 +381,7 @@ export default function Page() {
     summerCost: "",
     autumnCost: "",
     winterCost: "",
-    startMonth: "",
+    startMonth: 1,
     buildingType: "",
     usagePattern: "",
     floorArea: "",
@@ -434,7 +434,7 @@ export default function Page() {
   }, [state]);
 
   const orderedMonths = useMemo(
-    () => getOrderedMonths(Math.min(12, Math.max(1, Number(state.startMonth) || 4))),
+    () => getOrderedMonths(Math.min(12, Math.max(1, Number(state.startMonth) || 1))),
     [state.startMonth]
   );
 
@@ -720,6 +720,12 @@ export default function Page() {
       setState((prev) => ({ ...prev, [key]: value === "" ? "" : Number(value) || 0 }));
 
   const handleAnonymousShare = async () => {
+    const hasSelectedStress = Object.values(state.stress).some(Boolean);
+    if (!hasSelectedStress) {
+      setSaveError("リスク要因を1つ以上チェックしてください。");
+      return;
+    }
+
     setIsSaving(true);
     setSaveError("");
 
@@ -925,35 +931,8 @@ export default function Page() {
             </div>
 
             <div>
-              <label htmlFor="startMonth" className="mb-1.5 block text-base font-medium text-slate-700">
-                7. グラフ開始月
-              </label>
-              <select
-                id="startMonth"
-                value={state.startMonth}
-                onChange={(e) =>
-                  setState((prev) => ({
-                    ...prev,
-                    startMonth:
-                      e.target.value === ""
-                        ? ""
-                        : Math.min(12, Math.max(1, Number(e.target.value) || 1)),
-                  }))
-                }
-                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-base focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-              >
-                <option value="">選択してください</option>
-                {monthNames.map((label, idx) => (
-                  <option key={label} value={idx + 1}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
               <label htmlFor="buildingType" className="mb-1.5 block text-base font-medium text-slate-700">
-                8. 建物用途
+                7. 建物用途
               </label>
               <select
                 id="buildingType"
@@ -982,7 +961,7 @@ export default function Page() {
 
             <div>
               <label htmlFor="usagePattern" className="mb-1.5 block text-base font-medium text-slate-700">
-                9. 電力使用パターン
+                8. 電力使用パターン
               </label>
               <select
                 id="usagePattern"
@@ -1007,7 +986,7 @@ export default function Page() {
 
             <div>
               <label htmlFor="floorArea" className="mb-1.5 block text-base font-medium text-slate-700">
-                10. 延床面積（㎡）
+                9. 延床面積（㎡）
               </label>
               <input
                 id="floorArea"
@@ -1018,15 +997,6 @@ export default function Page() {
                 className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-base focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
               />
             </div>
-          </div>
-          <div className="mt-4">
-            <button
-              type="button"
-              onClick={() => window.print()}
-              className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-base font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-            >
-              印刷
-            </button>
           </div>
         </aside>
 
@@ -1041,6 +1011,33 @@ export default function Page() {
             <p className="mt-1 text-sm text-slate-500 sm:text-base">
               実線は当初想定、点線はリスク要因を反映したシナリオです。
             </p>
+            <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div>
+                <label htmlFor="startMonth" className="mb-1.5 block text-base font-medium text-slate-700">
+                  グラフ開始月
+                </label>
+                <select
+                  id="startMonth"
+                  value={state.startMonth}
+                  onChange={(e) =>
+                    setState((prev) => ({
+                      ...prev,
+                      startMonth:
+                        e.target.value === ""
+                          ? ""
+                          : Math.min(12, Math.max(1, Number(e.target.value) || 1)),
+                    }))
+                  }
+                  className="w-48 rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-base focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
+                >
+                  {monthNames.map((label, idx) => (
+                    <option key={label} value={idx + 1}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
             <div className="mt-4 grid grid-cols-1 gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700 sm:grid-cols-2 sm:text-base">
               <label className="inline-flex items-center gap-2">
                 <input
@@ -1127,7 +1124,7 @@ export default function Page() {
                 className="inline-flex items-center justify-center rounded-lg border border-rose-700 bg-rose-700 px-5 py-3 text-base font-bold text-white shadow-sm transition hover:bg-rose-800 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-rose-300 sm:text-lg"
               >
                 {isSaving
-                  ? "共有して比較ページへ移動中..."
+                  ? "移動中"
                   : "この入力内容で電力料金上昇リスクスコア（点数）を確認する"}
               </button>
               {saveError && (

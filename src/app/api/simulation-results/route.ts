@@ -142,7 +142,6 @@ export async function POST(request: Request) {
       "summer_cost",
       "autumn_cost",
       "winter_cost",
-      "start_month",
       "building_type",
       "usage_pattern",
       "floor_area",
@@ -162,6 +161,11 @@ export async function POST(request: Request) {
     }
 
     const id = crypto.randomUUID();
+    const safeStartMonthRaw = Number(body.start_month);
+    const safeStartMonth =
+      Number.isFinite(safeStartMonthRaw) && safeStartMonthRaw >= 1 && safeStartMonthRaw <= 12
+        ? Math.round(safeStartMonthRaw)
+        : 1;
     const basePayload = {
       id,
       contract_type: body.contract_type,
@@ -170,7 +174,7 @@ export async function POST(request: Request) {
       summer_cost: body.summer_cost,
       autumn_cost: body.autumn_cost,
       winter_cost: body.winter_cost,
-      start_month: body.start_month,
+      start_month: safeStartMonth,
       building_type: body.building_type,
       usage_pattern: body.usage_pattern,
       floor_area: body.floor_area,
