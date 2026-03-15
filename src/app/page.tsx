@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   BarElement,
@@ -459,9 +460,9 @@ export default function Page() {
     const factors: string[] = [];
     if (state.stress.heatwave) factors.push("猛暑");
     if (state.stress.coldWave) factors.push("厳冬");
-    if (state.stress.fuelPrice) factors.push("燃料価格の上昇");
+    if (state.stress.fuelPrice) factors.push("為替リスク（円安）");
     if (state.stress.geopolitical) factors.push("地政学リスク");
-    if (state.stress.outage) factors.push("発電所の停止");
+    if (state.stress.outage) factors.push("災害リスク");
     return factors;
   }, [state.stress]);
 
@@ -815,6 +816,12 @@ export default function Page() {
             企業向け・法人向けに、契約条件や価格上昇リスク要因をもとに開始月から12か月間の累計電気代と上昇リスクを比較・可視化できます。
           </p>
         </div>
+        <Link
+          href="/how-to"
+          className="inline-flex items-center self-start rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+        >
+          使い方
+        </Link>
       </header>
 
       <section className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[270px_minmax(0,1fr)]">
@@ -1011,9 +1018,12 @@ export default function Page() {
             <p className="mt-1 text-sm text-slate-500 sm:text-base">
               実線は当初想定、点線はリスク要因を反映したシナリオです。
             </p>
-            <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <p className="mt-3 text-sm text-slate-600 sm:text-base">
+              下のプルダウンとチェック項目で、グラフの開始月と表示するプランを変更できます。
+            </p>
+            <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3">
               <div>
-                <label htmlFor="startMonth" className="mb-1.5 block text-base font-medium text-slate-700">
+                <label htmlFor="startMonth" className="mb-1 block text-sm font-medium text-slate-700 sm:text-base">
                   グラフ開始月
                 </label>
                 <select
@@ -1028,7 +1038,7 @@ export default function Page() {
                           : Math.min(12, Math.max(1, Number(e.target.value) || 1)),
                     }))
                   }
-                  className="w-48 rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-base focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
+                  className="w-44 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200 sm:w-48 sm:text-base"
                 >
                   {monthNames.map((label, idx) => (
                     <option key={label} value={idx + 1}>
@@ -1038,8 +1048,8 @@ export default function Page() {
                 </select>
               </div>
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700 sm:grid-cols-2 sm:text-base">
-              <label className="inline-flex items-center gap-2">
+            <div className="mt-3 grid grid-cols-1 gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700 sm:grid-cols-2 sm:text-base">
+              <label className="inline-flex items-center gap-1.5 leading-tight">
                 <input
                   type="checkbox"
                   checked={seriesVisibility.baselineFixed}
@@ -1048,7 +1058,7 @@ export default function Page() {
                 />
                 固定プラン（当初想定）
               </label>
-              <label className="inline-flex items-center gap-2">
+              <label className="inline-flex items-center gap-1.5 leading-tight">
                 <input
                   type="checkbox"
                   checked={seriesVisibility.baselineMarket}
@@ -1057,7 +1067,7 @@ export default function Page() {
                 />
                 市場連動プラン（当初想定）
               </label>
-              <label className="inline-flex items-center gap-2">
+              <label className="inline-flex items-center gap-1.5 leading-tight">
                 <input
                   type="checkbox"
                   checked={seriesVisibility.currentFixed && hasStressFactors}
@@ -1067,7 +1077,7 @@ export default function Page() {
                 />
                 固定プラン（リスク要因反映後）
               </label>
-              <label className="inline-flex items-center gap-2">
+              <label className="inline-flex items-center gap-1.5 leading-tight">
                 <input
                   type="checkbox"
                   checked={seriesVisibility.currentMarket && hasStressFactors}
@@ -1184,7 +1194,7 @@ export default function Page() {
                   <span className="block font-semibold">☑ リスク要因1：猛暑</span>
                   <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
                     影響月:
-                    7月〜9月。夏場の需給逼迫を想定し、固定はやや上昇、市場連動は大きく上振れ。
+                    7月〜9月。夏場の需給逼迫を想定し、固定プランは緩やかに上昇し、市場連動プランは大きく上振れしやすくなります。
                   </span>
                 </span>
               </label>
@@ -1205,7 +1215,7 @@ export default function Page() {
                   <span className="block font-semibold">☑ リスク要因2：厳冬</span>
                   <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
                     影響月:
-                    12月〜2月。冬場の暖房需要増を想定し、特に市場連動の冬季コストが跳ねやすい設定。
+                    12月〜2月。冬場の暖房需要増を想定し、特に市場連動プランは冬季コストが上振れしやすくなります。
                   </span>
                 </span>
               </label>
@@ -1223,10 +1233,10 @@ export default function Page() {
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
                 <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因3：燃料価格の上昇</span>
+                  <span className="block font-semibold">☑ リスク要因3：為替リスク（円安）</span>
                   <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
                     影響月:
-                    通年。LNGや石炭の価格が上がる場面を想定。世界的な需要増、円安、資源高などで起こりやすく、固定も市場連動も上がりやすくなります。
+                    通年。円安が進む局面を想定。輸入燃料コストが上がり、固定プラン・市場連動プランともに料金が上振れしやすくなります。
                   </span>
                 </span>
               </label>
@@ -1265,10 +1275,10 @@ export default function Page() {
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
                 <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因5：発電所の停止</span>
+                  <span className="block font-semibold">☑ リスク要因5：災害リスク</span>
                   <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
                     影響月:
-                    発生月と翌月。災害、設備トラブル、点検長期化などで発電所が止まる場面を想定。供給が減るため、まず発生月に大きく、翌月は余波として市場価格が上がりやすくなります。
+                    発生月と翌月。災害により発電所の稼働が停止・低下する場面を想定。供給が減るため、発生月は特に大きく、翌月も余波で市場価格が上振れしやすくなります。
                   </span>
                 </span>
               </label>

@@ -29,11 +29,85 @@ const dateTimeFormatter = new Intl.DateTimeFormat("ja-JP", {
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
 
+const contractTypeLabels: Record<string, string> = {
+  low: "低圧",
+  high: "高圧",
+  special: "特別高圧",
+};
+
+const regionLabels: Record<string, string> = {
+  hokkaido: "北海道",
+  tohoku: "東北",
+  "kita-kanto": "北関東",
+  shutoken: "首都圏",
+  tokyo: "東京",
+  chubu: "中部",
+  hokuriku: "北陸",
+  kansai: "関西",
+  chugoku: "中国",
+  shikoku: "四国",
+  kyushu: "九州",
+  okinawa: "沖縄",
+};
+
+const buildingTypeLabels: Record<string, string> = {
+  office: "オフィス",
+  retail: "商業店舗",
+  restaurant: "飲食店・外食",
+  factory: "工場",
+  welfare: "病院・福祉施設",
+  hotel: "ホテル・宿泊施設",
+  store: "店舗",
+  warehouse: "倉庫",
+  datacenter: "データセンター",
+  public: "公共施設",
+  hospital: "病院",
+  school: "学校",
+};
+
+const usagePatternLabels: Record<string, string> = {
+  balanced: "終日バランス型",
+  daytime: "平日日中メイン",
+  "24h": "24時間稼働",
+  night: "夜間中心",
+  "weekend-busy": "土日稼働型",
+  "seasonal-heavy": "季節偏重",
+};
+
+const riskLabelLabels: Record<string, string> = {
+  "very low": "低い",
+  low: "やや低い",
+  medium: "注意",
+  caution: "注意",
+  high: "高い",
+  "very high": "非常に高い",
+  "very_low": "低い",
+  "very_high": "非常に高い",
+  "slightly low": "やや低い",
+  "slightly_low": "やや低い",
+  低い: "低い",
+  やや低い: "やや低い",
+  注意: "注意",
+  高い: "高い",
+  非常に高い: "非常に高い",
+};
+
 function formatDate(value: string | null): string {
   if (!value) return "-";
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) return value;
   return dateTimeFormatter.format(parsed);
+}
+
+function toJapaneseLabel(value: string | null, labels: Record<string, string>): string {
+  if (!value) return "-";
+  return labels[value] ?? value;
+}
+
+function toJapaneseRiskLabel(value: string | null): string {
+  if (!value) return "-";
+  const normalized = value.toLowerCase().trim();
+  return riskLabelLabels[normalized] ?? riskLabelLabels[value] ?? value;
 }
 
 function formatNumber(value: number | null, unit?: string): string {
@@ -124,10 +198,10 @@ export default async function AdminSimulationResultsPage() {
               {rows.map((row) => (
                 <tr key={row.id} className="border-t border-slate-100 align-top hover:bg-slate-50">
                   <td className="px-3 py-3 whitespace-nowrap">{formatDate(row.created_at)}</td>
-                  <td className="px-3 py-3">{row.contract_type ?? "-"}</td>
-                  <td className="px-3 py-3">{row.region ?? "-"}</td>
-                  <td className="px-3 py-3">{row.building_type ?? "-"}</td>
-                  <td className="px-3 py-3">{row.usage_pattern ?? "-"}</td>
+                  <td className="px-3 py-3">{toJapaneseLabel(row.contract_type, contractTypeLabels)}</td>
+                  <td className="px-3 py-3">{toJapaneseLabel(row.region, regionLabels)}</td>
+                  <td className="px-3 py-3">{toJapaneseLabel(row.building_type, buildingTypeLabels)}</td>
+                  <td className="px-3 py-3">{toJapaneseLabel(row.usage_pattern, usagePatternLabels)}</td>
                   <td className="px-3 py-3">{formatNumber(row.floor_area)}</td>
                   <td className="px-3 py-3 whitespace-nowrap">
                     {formatNumber(row.spring_cost)} / {formatNumber(row.summer_cost)} /{" "}
@@ -139,7 +213,7 @@ export default async function AdminSimulationResultsPage() {
                     {resolveCurrentPlan(row.fixed_total, row.market_total)}
                   </td>
                   <td className="px-3 py-3">{formatNumber(row.risk_score)}</td>
-                  <td className="px-3 py-3">{row.risk_label ?? "-"}</td>
+                  <td className="px-3 py-3">{toJapaneseRiskLabel(row.risk_label)}</td>
                   <td className="px-3 py-3">
                     <Link
                       href={`/admin/simulation-results/${encodeURIComponent(row.id)}`}

@@ -394,9 +394,9 @@ const usagePatternLabels: Record<string, string> = {
 const stressFactorLabels: Record<string, string> = {
   heatwave: "猛暑",
   coldWave: "厳冬",
-  fuelPrice: "燃料価格の上昇",
+  fuelPrice: "為替リスク（円安）",
   geopolitical: "地政学リスク",
-  outage: "発電所の停止",
+  outage: "災害リスク",
 };
 
 const riskFactorReasonMap: Record<string, string> = {
