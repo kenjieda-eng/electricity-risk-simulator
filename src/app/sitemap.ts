@@ -1,0 +1,15 @@
+import type { MetadataRoute } from "next";
+
+const SITE_URL = "https://simulator.eic-jp.org";
+const PUBLIC_PATHS = ["/", "/how-to", "/compare"] as const;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
+  return PUBLIC_PATHS.map((path, index) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: now,
+    changeFrequency: index === 0 ? "weekly" : "monthly",
+    priority: index === 0 ? 1 : 0.8,
+  }));
+}
