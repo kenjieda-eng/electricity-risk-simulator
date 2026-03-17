@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,7 +22,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <header className="border-b border-slate-200 bg-white">
+          <div className="mx-auto max-w-[1600px] px-4 py-3 sm:px-6 lg:px-8">
+            <Link href="/" aria-label="トップページへ戻る">
+              <Image
+                src="/logo.png"
+                alt="法人向け電気料金リスクシミュレーターのロゴ"
+                width={230}
+                height={44}
+                className="h-auto w-[210px] sm:w-[230px]"
+                priority
+              />
+            </Link>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

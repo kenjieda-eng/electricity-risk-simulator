@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "使い方 | 法人向け電気料金リスクシミュレーター",
+  description:
+    "契約種別、エリア、季節ごとの電気代などを入力して、法人向け電気料金上昇リスクを確認する方法をわかりやすく解説します。",
+  alternates: {
+    canonical: "https://simulator.eic-jp.org/how-to",
+  },
+  openGraph: {
+    title: "使い方 | 法人向け電気料金リスクシミュレーター",
+    description:
+      "契約種別、エリア、季節ごとの電気代などを入力して、法人向け電気料金上昇リスクを確認する方法をわかりやすく解説します。",
+    url: "https://simulator.eic-jp.org/how-to",
+    siteName: "法人向け電気料金リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "使い方 | 法人向け電気料金リスクシミュレーター",
+    description:
+      "契約種別、エリア、季節ごとの電気代などを入力して、法人向け電気料金上昇リスクを確認する方法をわかりやすく解説します。",
+  },
+};
 
 export default function HowToPage() {
   return (
