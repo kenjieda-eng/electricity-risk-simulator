@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "法人向け 電気料金上昇リスク シナリオ分析",
   description: "法人向け電気料金シミュレーションツール",
   alternates: {
-    canonical: "./",
+    canonical: "/",
+  },
+  verification: {
+    google: "fO91QoZppqZzi-hvqHuPm5m_Cjdb5Lh4gmpAnynN_8c",
   },
 };
 
