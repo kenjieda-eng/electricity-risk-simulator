@@ -16,12 +16,21 @@ export const metadata: Metadata = {
     siteName: "法人向け電気料金リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
+    images: [
+      {
+        url: "/ogp-default.png",
+        width: 1200,
+        height: 630,
+        alt: "法人向け電気料金リスクシミュレーター",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "固定プランと市場連動プランの比較 | 法人向け電気料金リスクシミュレーター",
     description:
       "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇リスクの違いを比較できるページです。",
+    images: ["/twitter-default.png"],
   },
 };
 

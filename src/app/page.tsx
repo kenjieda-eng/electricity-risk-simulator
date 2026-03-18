@@ -16,12 +16,21 @@ export const metadata: Metadata = {
     siteName: "法人向け電気料金リスクシミュレーター",
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: "/ogp-default.png",
+        width: 1200,
+        height: 630,
+        alt: "法人向け電気料金リスクシミュレーター",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "法人向け電気料金リスクシミュレーター | 電気料金上昇リスクを試算",
     description:
       "法人向けに、契約条件や価格上昇リスク要因をもとに、年間の電気料金変動や上昇リスクを試算できるシミュレーターです。",
+    images: ["/twitter-default.png"],
   },
 };
 
