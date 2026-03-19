@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import HomePageClient from "./_components/HomePageClient";
 
 export const metadata: Metadata = {
@@ -35,5 +36,120 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomePageClient />;
+  return (
+    <>
+      <section className="bg-white px-4 pb-8 pt-6 text-slate-800 sm:px-6 sm:pt-8 lg:px-8">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              法人向け電気料金リスクシミュレーター
+            </h1>
+            <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+              市場価格や燃料費の変動を踏まえて、企業や自治体を含む法人組織の電気料金上昇リスクを簡易に確認できる電気料金シミュレーターです。
+              固定プランと市場連動型プランの比較を通じて、電力契約の更新や見直し時の検討材料を整理できます。
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="#simulator"
+                className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
+              >
+                シミュレーションを始める
+              </Link>
+              <Link
+                href="/how-to"
+                className="inline-flex items-center justify-center rounded-md border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                使い方を見る
+              </Link>
+              <Link
+                href="/compare"
+                className="inline-flex items-center justify-center rounded-md border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                比較ポイントを見る
+              </Link>
+            </div>
+          </div>
+
+          <section className="mt-8">
+            <h2 className="text-xl font-semibold text-slate-900">このツールでわかること</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-sm font-semibold text-slate-900">電気料金上昇時の影響イメージ</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  季節変動やリスク要因を重ねたときに、年間の電気料金がどの程度上振れしうるかを確認できます。
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-sm font-semibold text-slate-900">固定プランと市場連動の比較</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  固定プランと市場連動型プランの差分を同じ条件で見比べ、価格変動への強さを把握できます。
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-sm font-semibold text-slate-900">電力契約の見直しポイント</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  契約更新時に確認したい条件を整理し、新電力を含む候補プラン比較のたたき台として使えます。
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-sm font-semibold text-slate-900">社内検討の説明材料</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  想定条件ごとの数値差を可視化できるため、担当者間での比較や稟議前の整理に活用できます。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-8">
+            <h2 className="text-xl font-semibold text-slate-900">どんな利用者に向いているか</h2>
+            <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+                高圧・特別高圧の電力契約を見直したい企業・自治体・各種法人
+              </li>
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+                市場連動型プランのリスクを整理し、固定プランとの比較を進めたい担当者
+              </li>
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+                電気料金の変動幅を確認し、新電力を含む選択肢を検討したい企業や法人
+              </li>
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+                電気料金上昇リスクを社内・庁内で説明するための下準備をしたい担当者
+              </li>
+            </ul>
+          </section>
+
+          <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">使い方と比較ページ</h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              操作手順を確認したい場合は使い方ページへ、固定プランと市場連動型プランの違いを先に整理したい場合は比較ページをご利用ください。
+            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="/how-to"
+                className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100"
+              >
+                詳しい使い方を見る
+              </Link>
+              <Link
+                href="/compare"
+                className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100"
+              >
+                固定プランと市場連動型プランの違いを見る
+              </Link>
+            </div>
+          </section>
+
+          <section className="mt-6 rounded-xl border border-slate-200 bg-white p-4">
+            <p className="text-xs leading-6 text-slate-600 sm:text-sm">
+              本ツールの試算は将来の価格や実際の請求額を保証するものではありません。契約比較やリスク把握の参考情報としてご活用いただき、最終的な電力契約の判断は最新の提示条件をご確認のうえご検討ください。
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section id="simulator" className="scroll-mt-24">
+        <HomePageClient />
+      </section>
+    </>
+  );
 }
