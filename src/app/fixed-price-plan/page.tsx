@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "予算管理 電力契約",
     "市場連動 比較",
     "電力契約 見直し",
+    "固定プラン メリット デメリット",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/fixed-price-plan",
@@ -88,7 +89,7 @@ export default function FixedPricePlanPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">固定プランの注意点</h2>
+          <h2 className="text-xl font-semibold text-slate-900">固定プランのデメリット・注意点</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             固定プランは安定性に強みがありますが、相場が下落した局面では、結果として割高に見えることがあります。固定だから絶対安心という考え方ではなく、
             契約条件や期間、見直しタイミングを含めて確認することが必要です。

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "電力契約 見直し",
     "電気代 変動 リスク",
     "固定プラン 比較",
+    "市場連動プラン メリット デメリット",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/market-linked-plan",
@@ -76,6 +77,28 @@ export default function MarketLinkedPlanPage() {
             <li>需要が高まる季節や時間帯では単価が上がりやすい</li>
             <li>燃料関連コストや為替変動が価格に反映されやすい</li>
             <li>相場急騰時は、短期間でも負担増が生じることがある</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランのメリット</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>相場が低位で推移する局面では、固定プランより単価を抑えられる可能性がある</li>
+            <li>市場環境の変化を料金に反映しやすく、運用次第でコスト最適化を狙いやすい</li>
+            <li>月次の実績管理と見直しを回せる法人では、改善アクションにつなげやすい</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランのデメリット・注意点</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランのデメリットは、相場急騰時に電力量料金の単価が上振れしやすく、同じ使用量でも請求額が大きく変わる可能性があることです。
+            そのため、導入時はメリットだけでなく上振れリスクの管理方法もセットで検討する必要があります。
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>月次の予算見通しがぶれやすく、社内説明の負担が増える場合がある</li>
+            <li>電力使用量が多い法人ほど、相場上昇局面でコスト影響が大きくなりやすい</li>
+            <li>変動を前提としたモニタリング体制がないと、リスクが顕在化しやすい</li>
           </ul>
         </section>
 

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "電力契約 選び方",
     "予算管理 電気代",
     "価格変動リスク",
+    "市場連動プラン 固定プラン メリット デメリット",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/market-linked-vs-fixed",
@@ -125,6 +126,14 @@ export default function MarketLinkedVsFixedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランでは、相場急騰がそのまま負担増につながる可能性があります。固定プランは急騰耐性がある反面、
             相場下落局面で相対的に高く見えることがあるため、どのリスクを優先的に抑えたいかを明確にすることが重要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランと固定プランのメリット・デメリット</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランのメリットは、相場下落局面の恩恵を受けやすい点です。一方のデメリットは、相場急騰時にコスト上振れが発生しやすい点にあります。
+            固定プランのメリットは予算の見通しを立てやすい点で、デメリットは相場下落時に相対的に割高に見える可能性がある点です。
           </p>
         </section>
 
