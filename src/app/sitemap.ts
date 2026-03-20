@@ -1,7 +1,16 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://simulator.eic-jp.org";
-const PUBLIC_PATHS = ["/", "/how-to", "/compare"] as const;
+const PUBLIC_PATHS = [
+  "/",
+  "/how-to",
+  "/compare",
+  "/articles",
+  "/market-linked-plan",
+  "/fixed-price-plan",
+  "/market-linked-vs-fixed",
+  "/lng-electricity-price",
+] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -5,8 +5,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://simulator.eic-jp.org"),
-  title: "法人向け 電気料金上昇リスク シナリオ分析",
-  description: "法人向け電気料金シミュレーションツール",
+  title: "法人向け電気料金上昇、高騰リスクシミュレーター",
+  description: "法人向けの電気代・電気料金の上昇、高騰リスクを試算するシミュレーションツール",
   alternates: {
     canonical: "/",
   },
@@ -25,10 +25,10 @@ export default function RootLayout({
       <body>
         <header className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-[1600px] px-4 py-3 sm:px-6 lg:px-8">
-            <Link href="/" aria-label="トップページへ戻る">
+            <Link href="/" aria-label="法人向け電気料金上昇、高騰リスクシミュレーターへ戻る">
               <Image
                 src="/logo.png"
-                alt="法人向け電気料金リスクシミュレーターのロゴ"
+                alt="法人向け電気料金上昇、高騰リスクシミュレーターのロゴ"
                 width={230}
                 height={44}
                 className="h-auto w-[210px] sm:w-[230px]"

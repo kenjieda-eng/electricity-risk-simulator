@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import ComparePageClient from "./ComparePageClient";
 
 export const metadata: Metadata = {
-  title: "固定プランと市場連動プランの比較 | 法人向け電気料金リスクシミュレーター",
+  title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
   description:
-    "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇リスクの違いを比較できるページです。",
+    "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/compare",
   },
   openGraph: {
-    title: "固定プランと市場連動プランの比較 | 法人向け電気料金リスクシミュレーター",
+    title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
-      "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇リスクの違いを比較できるページです。",
+      "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
     url: "https://simulator.eic-jp.org/compare",
-    siteName: "法人向け電気料金リスクシミュレーター",
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         url: "/ogp-default.png",
         width: 1200,
         height: 630,
-        alt: "法人向け電気料金リスクシミュレーター",
+        alt: "法人向け電気料金上昇、高騰リスクシミュレーター",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "固定プランと市場連動プランの比較 | 法人向け電気料金リスクシミュレーター",
+    title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
-      "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇リスクの違いを比較できるページです。",
+      "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
     images: ["/twitter-default.png"],
   },
 };
@@ -40,10 +40,10 @@ export default function ComparePage() {
       <section className="mx-auto mt-6 max-w-[1600px] bg-slate-50 px-4 py-[18px] sm:px-6 lg:px-8">
         <div className="rounded-xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
           <h1 className="text-lg font-bold text-slate-900 sm:text-xl">
-            電気料金上昇リスクと固定プラン・市場連動プランの比較結果
+            電気料金上昇・高騰リスクと固定プラン・市場連動プランの比較結果
           </h1>
           <p className="mt-2 text-sm leading-6 sm:text-base">
-            このページでは、入力条件に基づく電気料金上昇リスクスコアと、固定プラン・市場連動型プランの比較結果を確認できます。企業や自治体を含む法人向けの電力契約見直しにおいて、高圧・特別高圧の電気料金変動リスクを把握するための電気料金シミュレーター結果ページです。
+            このページでは、入力条件に基づく電気料金上昇・高騰リスクスコアと、固定プラン・市場連動型プランの比較結果を確認できます。企業や自治体を含む法人向けの電力契約見直しにおいて、高圧・特別高圧の電気代と電気料金の変動リスクを把握するための電気料金シミュレーター結果ページです。
           </p>
         </div>
       </section>
