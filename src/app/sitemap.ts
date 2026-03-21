@@ -10,6 +10,12 @@ const PUBLIC_PATHS = [
   "/fixed-price-plan",
   "/market-linked-vs-fixed",
   "/lng-electricity-price",
+  "/fuel-cost-adjustment",
+  "/why-business-electricity-prices-rise",
+  "/high-voltage-electricity-pricing",
+  "/when-to-review-electricity-contract",
+  "/how-to-compare-electricity-suppliers",
+  "/renewable-energy-surcharge",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

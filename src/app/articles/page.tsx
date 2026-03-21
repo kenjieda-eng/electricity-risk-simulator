@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
   description:
-    "法人向けに、市場連動プラン・固定プラン・両者の違いを実務視点で整理した解説ページ一覧です。契約見直しや比較検討の入口としてご利用ください。",
+    "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/articles",
   },
   openGraph: {
     title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
-      "法人向けに、市場連動プラン・固定プラン・両者の違いを実務視点で整理した解説ページ一覧です。契約見直しや比較検討の入口としてご利用ください。",
+      "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
     url: "https://simulator.eic-jp.org/articles",
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
@@ -29,12 +29,48 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
-      "法人向けに、市場連動プラン・固定プラン・両者の違いを実務視点で整理した解説ページ一覧です。契約見直しや比較検討の入口としてご利用ください。",
+      "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
     images: ["/twitter-default.png"],
   },
 };
 
 const articleLinks = [
+  {
+    href: "/when-to-review-electricity-contract",
+    title: "法人が電力契約を見直すタイミング",
+    description:
+      "電気料金の上昇、契約更新、使用状況の変化など、法人が電力契約を見直すべき場面と確認ポイントを整理。",
+  },
+  {
+    href: "/how-to-compare-electricity-suppliers",
+    title: "新電力を比較するときのポイント",
+    description:
+      "単価だけでなく、燃料費調整額、市場連動、契約条件、リスクまで含めて法人が比較時に確認したい視点を解説。",
+  },
+  {
+    href: "/renewable-energy-surcharge",
+    title: "再エネ賦課金とは",
+    description:
+      "再エネ賦課金の仕組み、法人の電気料金への影響、請求書での見方、燃料費調整額との違いを整理。",
+  },
+  {
+    href: "/fuel-cost-adjustment",
+    title: "燃料費調整額（燃調費）とは",
+    description:
+      "発電用燃料の価格変動が法人の電気料金にどう影響するか、請求書で確認したいポイントとあわせて解説。",
+  },
+  {
+    href: "/why-business-electricity-prices-rise",
+    title: "法人の電気料金が上がる理由",
+    description:
+      "燃料価格、為替、市場価格、制度要因、使用量や契約条件など、法人の電気料金が上がる主な要因を整理。",
+  },
+  {
+    href: "/high-voltage-electricity-pricing",
+    title: "高圧電力の料金の見方",
+    description:
+      "高圧電力の請求書にある基本料金、電力量料金、燃料費調整額などの見方を法人向けに解説。",
+  },
   {
     href: "/lng-electricity-price",
     title: "法人の電気料金とLNGの関係",
