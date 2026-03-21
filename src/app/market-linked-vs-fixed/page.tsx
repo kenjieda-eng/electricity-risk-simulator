@@ -74,7 +74,7 @@ const comparisonRows = [
 export default function MarketLinkedVsFixedPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動プランと固定プランの違い</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           法人の電気契約では、市場連動プランと固定プランのどちらにも利点と注意点があります。どちらが常に優れているというより、

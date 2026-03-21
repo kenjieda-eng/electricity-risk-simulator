@@ -3,9 +3,9 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "新電力を比較するときのポイントとは？法人が確認したい料金・条件・リスクを解説";
+const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
 const pageDescription =
-  "法人が新電力を比較するときのポイントをわかりやすく解説。単価だけでなく、燃料費調整額、市場連動、契約条件、請求構造、リスクの見方まで整理します。";
+  "新電力を比較するときに法人が確認したいポイントを解説。基本料金、電力量料金、燃料費調整額、市場連動型・固定型の違い、契約条件、リスクの見方まで整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -47,56 +47,54 @@ export const metadata: Metadata = {
 export default function HowToCompareElectricitySuppliersPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          新電力を比較するときのポイントとは？法人が確認したい料金・条件・リスクを解説
-        </h1>
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">新電力を比較するときのポイント</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人向けの電力契約を見直すとき、複数の新電力を比較する場面は少なくありません。見積書や料金表では単価が目に入りやすい一方で、
-          実際の請求額を左右する要素は複数あります。
+          電力会社の比較では、提示単価だけを見ると判断を誤りやすくなります。同じように見える見積でも、料金の仕組みや契約条件が異なる場合があります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、単価だけに偏らない比較の基本視点を整理します。比較直前の判断基準をそろえたいときの実務ガイドとして活用してください。
+          このページでは、法人が比較時に確認したい視点を整理します。比較ページへ進む前に、判断軸をそろえるための実務ガイドとして活用してください。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">新電力の比較で単価だけを見ないほうがよい理由</h2>
+          <h2 className="text-xl font-semibold text-slate-900">単価だけで比較しないほうがよい理由</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            新電力の比較では、単価の安さが最初に目に入りやすいですが、それだけで判断すると総額の見通しを外すことがあります。
-            法人の電気料金は、基本料金、電力量料金、燃料費調整額、契約条件などの組み合わせで決まるためです。
+            見積書の単価が安く見えても、燃料費調整額や市場連動の影響で実際の請求額は変わることがあります。さらに、基本料金の設計や契約条件によって、
+            総額差が逆転するケースもあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            比較の軸は「単価の大小」ではなく、「総額がどう決まるか」を確認することが重要です。
+            比較では「見た目の単価」ではなく「請求額の決まり方」を確認する視点が重要です。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">比較時に確認したい主な項目</h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較時は、少なくとも次の項目を同じ粒度で確認することをおすすめします。
+            契約電力に対してどのように設定されているかを確認します。安く見えても他項目で調整されていないか、
+            拠点特性に合っているかをあわせて見ます。
           </p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金</li>
-            <li>電力量料金</li>
-            <li>燃料費調整額の扱い</li>
-            <li>市場連動型か固定型か</li>
-            <li>契約期間</li>
-            <li>解約条件</li>
-            <li>請求書の分かりやすさ</li>
-            <li>価格変動リスクの大きさ</li>
-          </ul>
-        </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">市場連動型と固定型の違いをどう見るか</h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">電力量料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較で大きな分岐になるのが、市場連動型か固定型かです。市場連動型は相場変動を受けやすい一方、条件次第ではコストを抑えられる可能性があります。
-            固定型は見通しを立てやすい反面、市場が下がった局面で相対的に高く見えることがあります。
+            使用量に応じてどのように課金されるか、時間帯別の考え方があるかを確認します。単純な単価比較だけでは、
+            実際の請求総額を読み切れない場合があります。
           </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">燃料費調整額</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            どちらが適しているかは一律ではありません。詳細は{" "}
+            どのような考え方で反映されるか、上限や扱いがどうなっているかは、見落としやすい比較項目です。基礎理解は{" "}
+            <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              燃料費調整額の解説
+            </Link>{" "}
+            で確認できます。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">市場連動型か固定型か</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場価格の変動を取り込む契約か、料金安定を重視する契約かで、許容すべきリスクが変わります。契約タイプの理解には{" "}
             <Link href="/market-linked-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               市場連動プラン
             </Link>
@@ -106,75 +104,83 @@ export default function HowToCompareElectricitySuppliersPage() {
             </Link>
             、{" "}
             <Link href="/market-linked-vs-fixed" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              両者の比較ページ
-            </Link>
-            で確認できます。
+              両者比較
+            </Link>{" "}
+            を参照してください。
           </p>
-        </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額や請求構造もあわせて見る</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積比較では、燃料費調整額の扱いを見落としやすい点に注意が必要です。見た目の単価が安くても、燃料費調整額や上乗せ項目を含めると、
-            総額差が縮まることがあります。
-          </p>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">契約期間・更新条件・解約条件</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            単価表だけでなく、請求構造全体を確認してください。燃調費の基本は{" "}
-            <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              燃料費調整額の解説
-            </Link>
-            も参考になります。
+            契約期間が長すぎないか、自動更新の条件、中途解約時の負担を確認します。導入後に動きづらくならないよう、
+            運用面の柔軟性も見ておくことが大切です。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">請求書やサポート体制</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            請求明細の分かりやすさや問い合わせ対応は、導入後の運用負担に直結します。比較時点で確認しておくと、
+            契約後の実務を安定させやすくなります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人ごとに重視すべき比較軸は違う</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            工場、倉庫、オフィス、店舗、医療施設など、業種や使用状況によって重視すべきポイントは変わります。共通の正解を探すより、
-            自社の優先順位を先に明確にすることが重要です。
-          </p>
+          <h2 className="text-xl font-semibold text-slate-900">法人が比較で見落としやすいポイント</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>価格の安さを重視するか</li>
-            <li>月ごとの変動を抑えたいか</li>
-            <li>予算管理のしやすさを優先するか</li>
-            <li>契約条件の柔軟性を重視するか</li>
+            <li>単価だけを見る</li>
+            <li>燃料費調整額を確認しない</li>
+            <li>契約条件を後回しにする</li>
+            <li>市場連動のリスクを軽く見る</li>
+            <li>現在契約との比較軸がそろっていない</li>
           </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">比較前にそろえておきたい情報</h2>
+          <h2 className="text-xl font-semibold text-slate-900">比較しやすくするために準備したい情報</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較精度を高めるために、事前に自社情報をそろえておくと判断しやすくなります。
+            比較精度を高めるために、次の情報を事前にそろえることをおすすめします。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>現在の契約内容</li>
             <li>直近の請求書</li>
-            <li>使用量の推移</li>
-            <li>料金明細の内訳</li>
-            <li>現在感じている課題</li>
-            <li>変動許容度の考え方</li>
+            <li>使用量推移</li>
+            <li>契約電力</li>
+            <li>現在の契約種別</li>
+            <li>更新時期</li>
+            <li>複数拠点なら拠点別データ</li>
           </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            見直しの入口整理は{" "}
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">自社に合う比較の考え方</h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">予算の安定を重視する法人</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            固定型が相性のよい場合があります。価格変動より予算管理を優先する企業では、月次の見通しの立てやすさが実務上のメリットになります。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">相場変動を許容できる法人</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動型の選択肢もあります。ただし、上振れ時の影響や社内説明のしやすさを事前に確認することが前提です。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">まずは現状把握を優先したい法人</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            いきなり契約変更に進まず、まず比較軸を整理する方法も有効です。見直しの入口は{" "}
             <Link href="/when-to-review-electricity-contract" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               法人が電力契約を見直すタイミング
-            </Link>
-            を起点にすると進めやすくなります。
+            </Link>{" "}
+            から確認できます。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">比較の最終判断で見たいポイント</h2>
+          <h2 className="text-xl font-semibold text-slate-900">比較の最後は総額・条件・リスクで判断する</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            最終判断では、最安の見た目より「自社に合っているか」を基準に確認することが重要です。価格だけでなく条件とリスクを含めて判断することで、
-            導入後の想定差を減らせます。
+            料金表の一部ではなく、総額感と契約条件を合わせて確認することが重要です。安さだけではなく、変動リスク、運用しやすさ、
+            契約柔軟性も含めて判断すると、導入後のギャップを減らせます。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>年間で見たときに納得感があるか</li>
-            <li>月ごとの変動リスクを受け入れられるか</li>
-            <li>現在の使用実態に合っているか</li>
-            <li>契約内容が理解しやすいか</li>
-            <li>見積条件が明確か</li>
+            <li>総額で見たときの妥当性</li>
+            <li>契約条件の納得感</li>
+            <li>価格変動リスクの許容度</li>
+            <li>請求・運用面の扱いやすさ</li>
           </ul>
         </section>
 
@@ -206,6 +212,11 @@ export default function HowToCompareElectricitySuppliersPage() {
               href: "/fuel-cost-adjustment",
               title: "燃料費調整額の仕組み",
               description: "総額比較で見落としやすい調整項目を確認できます。",
+            },
+            {
+              href: "/compare",
+              title: "法人向け電気料金比較ページ",
+              description: "整理した比較軸で、実際の条件差を確認できます。",
             },
           ]}
         />

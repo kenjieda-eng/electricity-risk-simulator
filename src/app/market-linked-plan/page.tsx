@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 export default function MarketLinkedPlanPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動プランとは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           法人の電気料金では、市場価格に連動して単価が動く契約が選択肢になることがあります。市場価格が落ち着いている局面ではコストを抑えやすく見える一方、

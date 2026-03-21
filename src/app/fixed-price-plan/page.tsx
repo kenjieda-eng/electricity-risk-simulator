@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 export default function FixedPricePlanPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">固定プランとは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           固定プランは、一定期間の単価を比較的読みやすくし、電気料金の見通しを立てやすくする契約です。法人の契約見直しでは、単価の安さだけでなく、

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function FuelCostAdjustmentPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           燃料費調整額（燃調費）とは？法人の電気料金への影響をわかりやすく解説
         </h1>

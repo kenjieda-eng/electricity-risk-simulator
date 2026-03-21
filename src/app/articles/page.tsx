@@ -39,19 +39,19 @@ const articleLinks = [
     href: "/when-to-review-electricity-contract",
     title: "法人が電力契約を見直すタイミング",
     description:
-      "電気料金の上昇、契約更新、使用状況の変化など、法人が電力契約を見直すべき場面と確認ポイントを整理。",
+      "電気料金の上昇、契約更新、使用状況の変化など、法人が電力契約を見直すべき場面と確認ポイントを整理します。",
   },
   {
     href: "/how-to-compare-electricity-suppliers",
     title: "新電力を比較するときのポイント",
     description:
-      "単価だけでなく、燃料費調整額、市場連動、契約条件、リスクまで含めて法人が比較時に確認したい視点を解説。",
+      "単価だけでなく、燃料費調整額、市場連動、契約条件、リスクまで含めて法人が比較時に確認したい視点を解説します。",
   },
   {
     href: "/renewable-energy-surcharge",
     title: "再エネ賦課金とは",
     description:
-      "再エネ賦課金の仕組み、法人の電気料金への影響、請求書での見方、燃料費調整額との違いを整理。",
+      "再エネ賦課金の仕組み、法人の電気料金への影響、請求書での見方、燃料費調整額との違いを整理します。",
   },
   {
     href: "/fuel-cost-adjustment",
@@ -70,6 +70,36 @@ const articleLinks = [
     title: "高圧電力の料金の見方",
     description:
       "高圧電力の請求書にある基本料金、電力量料金、燃料費調整額などの見方を法人向けに解説。",
+  },
+  {
+    href: "/extra-high-voltage-electricity-pricing",
+    title: "特別高圧電力の料金の見方",
+    description:
+      "特別高圧電力の料金構造や請求書で確認したいポイント、高圧との違いを法人向けに整理します。",
+  },
+  {
+    href: "/contract-demand-what-is-it",
+    title: "契約電力とは",
+    description:
+      "契約電力の意味や基本料金との関係、請求書・見積書で確認したいポイントを法人向けに解説します。",
+  },
+  {
+    href: "/business-electricity-bill-breakdown",
+    title: "法人向け電気料金の内訳とは",
+    description:
+      "基本料金、電力量料金、燃料費調整額、再エネ賦課金など、法人向け電気料金の内訳を整理します。",
+  },
+  {
+    href: "/how-to-read-electricity-bill",
+    title: "電気料金の請求書で確認したいポイント",
+    description:
+      "契約電力、基本料金、電力量料金、燃料費調整額など、法人担当者が請求書でまず見るべき項目を整理します。",
+  },
+  {
+    href: "/how-to-read-electricity-quote",
+    title: "法人向け電気料金見積書の見方",
+    description:
+      "見積比較時に確認したい料金項目や契約条件、注意点を法人向けに解説します。",
   },
   {
     href: "/lng-electricity-price",
@@ -100,7 +130,7 @@ const articleLinks = [
 export default function ArticlesPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">解説ページ一覧</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           電力契約の見直し時に押さえたい基礎知識を、法人担当者向けに整理した解説ページです。まずは気になるテーマから読み、

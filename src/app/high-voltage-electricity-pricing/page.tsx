@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function HighVoltageElectricityPricingPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           高圧電力の料金の見方とは？法人向けに請求書の確認ポイントを解説
         </h1>

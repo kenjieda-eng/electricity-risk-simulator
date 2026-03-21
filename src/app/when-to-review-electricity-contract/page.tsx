@@ -3,9 +3,9 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "法人が電力契約を見直すタイミングとは？確認したいサインと比較の進め方を解説";
+const pageTitle = "法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント";
 const pageDescription =
-  "法人が電力契約を見直すべきタイミングをわかりやすく解説。請求額の上昇、契約更新、使用状況の変化、市場環境の変化など、確認したいサインと見直し時のポイントを整理します。";
+  "法人が電力契約を見直すべきタイミングを解説。電気料金の上昇、契約更新、使用状況の変化、設備更新などをきっかけに、確認したいポイントと比較時の視点を整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -47,138 +47,144 @@ export const metadata: Metadata = {
 export default function WhenToReviewElectricityContractPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-slate-200 bg-white p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          法人が電力契約を見直すタイミングとは？確認したいサインと比較の進め方を解説
-        </h1>
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人が電力契約を見直すタイミング</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人の電気料金は、契約を一度結んだらそのままでよいとは限りません。請求額の上昇、契約更新、使用量の変化、市場環境の変化などによって、
-          現在の契約が自社に合わなくなることがあります。
+          法人の電力契約は、一度決めると長期間そのままになることが少なくありません。ですが、料金上昇や事業環境の変化があると、
+          現在の契約内容が実態に合わなくなる場合があります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          ただし、電気料金が上がったからといって、すぐに契約先を変えればよいとは限りません。まずは何が原因で負担が増えているのか、
-          どの条件を見直すべきかを整理することが大切です。このページでは、見直しの代表的なタイミングと比較前の確認ポイントをまとめます。
+          このページでは、見直しを検討しやすいタイミングと、比較前に確認したいポイントを整理します。単なる一般論ではなく、
+          実務で判断しやすい確認順序を意識してまとめています。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人の電力契約は定期的な見直しが必要か</h2>
+          <h2 className="text-xl font-semibold text-slate-900">法人が電力契約を見直すべき主なタイミング</h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">請求額が以前より大きくなったとき</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人の電力契約は、事業内容や使用状況が大きく変わっていなくても、市場環境や料金条件の変化によって見直し余地が生まれることがあります。
-            近年は燃料価格、為替、市場価格、制度負担などが変動しやすく、契約条件によって請求額の差が出やすい状況です。
+            使用量が大きく変わっていなくても、燃料価格、為替、市場価格、制度要因によって請求額が上がることがあります。
+            まずは「使用量が増えたのか」「単価が上がったのか」を切り分けることが重要です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            契約締結時には適していたプランでも、現在の使用実態やリスク許容度に合わなくなることがあります。
-            そのため、一定のタイミングで見直し候補として確認する価値があります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見直しを検討しやすい代表的なタイミング</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電力契約の見直しを考えやすいタイミングには、いくつかの典型があります。以下のような変化があった場合は、現契約を継続すべきか、
-            比較を始めるべきかを整理しやすくなります。
-          </p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>請求額が以前より大きく上がったとき</li>
-            <li>契約更新の案内が来たとき</li>
-            <li>使用量や稼働時間が変わったとき</li>
-            <li>拠点の増減や設備更新があったとき</li>
-            <li>市場連動型と固定型のどちらがよいか迷い始めたとき</li>
-          </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">請求額が上がったときにまず確認したいこと</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            請求額が上がると、すぐに契約変更を検討しがちです。ただし、原因を切り分けないまま比較を始めると、判断を誤ることがあります。
-            まずは何が増えているのかを明確にすることが重要です。
-          </p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>使用量が増えているのか</li>
-            <li>契約単価が上がっているのか</li>
-            <li>燃料費調整額の影響が大きいのか</li>
-            <li>再エネ賦課金など制度要因なのか</li>
-            <li>市場連動型の価格変動を受けているのか</li>
-          </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            上昇要因の全体像は{" "}
+            上昇が続く場合は、契約メニューが自社のリスク許容度に合っているかも見直します。要因整理には{" "}
             <Link href="/why-business-electricity-prices-rise" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               法人の電気料金が上がる理由
-            </Link>
-            、燃調費は{" "}
+            </Link>{" "}
+            と{" "}
             <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              燃料費調整額の解説
-            </Link>
-            もあわせて確認すると整理しやすくなります。
+              燃料費調整額
+            </Link>{" "}
+            の確認が有効です。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">契約更新や満了時期が近づいたとき</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            契約更新は見直ししやすい代表的なタイミングです。自動更新のまま継続すると、比較の機会を逃すことがあります。
+            更新前に単価水準、契約条件、違約金、見直し余地を確認しておくと判断しやすくなります。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">拠点の稼働状況や使用量が変わったとき</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            生産量や営業時間、空調負荷、設備稼働が変わると、適した料金プランも変わる可能性があります。使用量だけでなく、
+            使う時間帯の変化も確認すべきポイントです。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">設備更新や増設を行ったとき</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            空調更新、冷凍冷蔵設備更新、EV導入、蓄電池設置などで負荷特性が変わると、契約電力や料金メニューの前提が変わることがあります。
+            設備投資後は省エネ効果だけでなく、契約条件も確認することが重要です。
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">複数拠点の請求状況に差があるとき</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            似た規模の拠点でも契約条件や単価体系の違いで請求額に差が出ることがあります。特に多拠点企業では、拠点ごとの契約を横並びで比較し、
+            全体最適の観点で見直し余地を探すことが有効です。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">契約更新や条件変更の前後で見直したいポイント</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約更新は、電力契約を見直す代表的なタイミングです。更新条件が提示されたときは、そのまま継続する前に現在の条件が妥当かを確認します。
-          </p>
+          <h2 className="text-xl font-semibold text-slate-900">見直し前に確認したいポイント</h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">請求書のどこを見るか</h3>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金と電力量料金のバランス</li>
-            <li>燃料費調整額の扱い</li>
-            <li>市場連動型か固定型か</li>
-            <li>契約期間や解約条件</li>
-            <li>自社の使用実態との適合性</li>
+            <li>基本料金</li>
+            <li>電力量料金</li>
+            <li>燃料費調整額</li>
+            <li>再エネ賦課金</li>
+            <li>契約電力と使用量</li>
           </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">使用状況や事業環境が変わったときも見直し候補</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            工場や倉庫の稼働時間の変更、拠点の増減、設備更新などの変化があると、以前は合っていた契約条件でも現在の実態に合わなくなることがあります。
+            料金上昇の原因が制度・燃料・市場・契約条件のどこにあるかを切り分けると、見直しの方向性が明確になります。
           </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">現在の契約が固定型か市場連動型か</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            特にピークの立ち方や季節変動が変わると、料金構造の見え方も変わります。請求額だけでなく、契約条件全体を見直すことが大切です。
+            契約の仕組みを理解しないまま比較すると、単価だけで誤判断しやすくなります。安定重視か相場連動を許容するかで、
+            選ぶべき方向性が変わります。
           </p>
-        </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">比較を始める前に整理しておきたいこと</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較前に前提情報をそろえると、単価だけでなく自社に合った契約を選びやすくなります。
-          </p>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">契約条件や解約条件</h3>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>現在の契約種別</li>
-            <li>直近数か月の請求額</li>
-            <li>使用量の傾向</li>
-            <li>基本料金と電力量料金の構成</li>
-            <li>燃料費調整額などの影響</li>
-            <li>課題が「高いこと」か「変動が大きいこと」か</li>
+            <li>契約期間</li>
+            <li>更新条件</li>
+            <li>解約金</li>
+            <li>最低利用条件</li>
           </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            比較軸の整理は{" "}
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">料金表だけでなく、契約条件まで含めて比較することが重要です。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">こんなときは比較・診断を進めやすい</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>更新時期が近い</li>
+            <li>請求額の上昇が続いている</li>
+            <li>使用状況が変わった</li>
+            <li>現在契約の仕組みがわからない</li>
+            <li>他拠点との差が大きい</li>
+          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            このような状態は、比較や診断に進む合理的なタイミングです。比較の進め方は{" "}
             <Link href="/how-to-compare-electricity-suppliers" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               新電力を比較するときのポイント
-            </Link>
-            で詳しく確認できます。
+            </Link>{" "}
+            で整理できます。
           </p>
+
+          <h2 className="mt-6 text-xl font-semibold text-slate-900">法人が電力契約を見直すときの注意点</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>単価だけで決めない</li>
+            <li>市場連動リスクを見落とさない</li>
+            <li>燃料費調整額や再エネ賦課金の扱いも確認する</li>
+            <li>契約条件まで含めて見る</li>
+            <li>将来の使用状況変化も少し織り込む</li>
+          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見直し後の比較は何を基準に進めるべきか</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較では価格差だけで決めず、価格・条件・リスクをあわせて確認することが重要です。法人の電気料金は、単価表だけでは見えにくい差があります。
-          </p>
+          <h2 className="text-xl font-semibold text-slate-900">迷ったら比較の前に現状整理から始める</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>総額で見たときにどうか</li>
-            <li>価格変動リスクをどの程度受けるか</li>
-            <li>自社の使用実態に合っているか</li>
-            <li>市場連動型か固定型か</li>
-            <li>契約条件や見積の透明性があるか</li>
+            <li>直近数か月の請求書</li>
+            <li>契約更新時期</li>
+            <li>使用量推移</li>
+            <li>現在の料金体系</li>
+            <li>拠点ごとの差</li>
           </ul>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            ここまで整理してから比較に進むと、見積の読み違いを減らせます。見直しの入口は請求額上昇だけではなく、更新時期や設備更新、
+            使用状況の変化も含めて捉えることが大切です。
+          </p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
-          intro="見直しの入口を押さえた後は、要因分析・契約タイプ理解・比較基準の順で確認すると実務判断につなげやすくなります。"
+          intro="見直しタイミングを整理した後は、要因理解と比較軸の確認を組み合わせると判断しやすくなります。"
           links={[
+            {
+              href: "/lng-electricity-price",
+              title: "法人の電気料金とLNGの関係",
+              description: "燃料市場の変動が請求額へ波及する背景を確認できます。",
+            },
             {
               href: "/why-business-electricity-prices-rise",
               title: "法人の電気料金が上がる理由",
@@ -188,16 +194,6 @@ export default function WhenToReviewElectricityContractPage() {
               href: "/fuel-cost-adjustment",
               title: "燃料費調整額の仕組み",
               description: "見落としやすい燃調費の影響を確認できます。",
-            },
-            {
-              href: "/market-linked-plan",
-              title: "市場連動プランとは",
-              description: "価格変動を受ける契約の特徴と注意点を把握できます。",
-            },
-            {
-              href: "/fixed-price-plan",
-              title: "固定プランとは",
-              description: "価格安定性を重視する契約の考え方を整理できます。",
             },
             {
               href: "/how-to-compare-electricity-suppliers",
