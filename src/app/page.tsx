@@ -109,63 +109,39 @@ export default function Page() {
 
           <section className="mt-8">
             <h2 className="text-xl font-semibold text-slate-900">どんな利用者に向いているか</h2>
-            <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
-              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+            <ul className="mt-4 grid gap-2 text-sm leading-6 text-slate-700 sm:grid-cols-2">
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-2.5">
                 高圧・特別高圧の電力契約を見直したい企業・自治体・各種法人
               </li>
-              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-2.5">
                 市場連動型プランのリスクを整理し、固定プランとの比較を進めたい担当者
               </li>
-              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-2.5">
                 電気料金の変動幅を確認し、新電力を含む選択肢を検討したい企業や法人
               </li>
-              <li className="rounded-lg border border-slate-200 bg-white px-4 py-3">
+              <li className="rounded-lg border border-slate-200 bg-white px-4 py-2.5">
                 電気料金上昇リスクを社内・庁内で説明するための下準備をしたい担当者
               </li>
             </ul>
           </section>
 
-          <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
-            <h2 className="text-xl font-semibold text-slate-900">契約見直しの解説ページ</h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              市場連動プランと固定プランの基礎を整理した解説ページを追加しています。実際に試算する前に整理したい方は一覧ページをご覧ください。
-            </p>
-            <div className="mt-4">
+          <section className="mt-6 rounded-xl border border-slate-200 bg-white p-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="text-lg font-semibold text-slate-900">契約見直しの解説ページ</h2>
+                <p className="mt-1 text-sm leading-6 text-slate-700">
+                  市場連動プランと固定プランの基礎を整理した解説ページを追加しています。実際に試算する前に整理したい方は一覧ページをご覧ください。
+                </p>
+              </div>
               <Link
                 href="/articles"
-                className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100"
+                className="inline-flex shrink-0 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100"
               >
                 解説ページ一覧へ
               </Link>
             </div>
           </section>
 
-          <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
-            <h2 className="text-xl font-semibold text-slate-900">使い方と比較ページ</h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              操作手順を確認したい場合は使い方ページへ、固定プランと市場連動型プランの違いを先に整理したい場合は比較ページをご利用ください。
-            </p>
-            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="/how-to"
-                className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100"
-              >
-                詳しい使い方を見る
-              </Link>
-              <Link
-                href="/compare"
-                className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100"
-              >
-                固定プランと市場連動型プランの違いを見る
-              </Link>
-            </div>
-          </section>
-
-          <section className="mt-6 rounded-xl border border-slate-200 bg-white p-4">
-            <p className="text-xs leading-6 text-slate-600 sm:text-sm">
-              本ツールの試算は将来の価格や実際の請求額を保証するものではありません。契約比較やリスク把握の参考情報としてご活用いただき、最終的な電力契約の判断は最新の提示条件をご確認のうえご検討ください。
-            </p>
-          </section>
         </div>
       </section>
 

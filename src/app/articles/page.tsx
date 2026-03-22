@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+  title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
   description:
-    "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
+    "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/articles",
   },
   openGraph: {
-    title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
     description:
-      "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     url: "https://simulator.eic-jp.org/articles",
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
@@ -27,103 +27,192 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "解説ページ一覧 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
     description:
-      "法人向けに、契約見直しタイミング・新電力比較・再エネ賦課金・燃料費調整額・高圧料金の見方などを実務視点で整理した解説ページ一覧です。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     images: ["/twitter-default.png"],
   },
 };
 
-const articleLinks = [
+type ArticleLink = {
+  href: string;
+  title: string;
+  description: string;
+};
+
+type ArticleCategory = {
+  id: string;
+  title: string;
+  description: string;
+  articles: ArticleLink[];
+};
+
+const categories: ArticleCategory[] = [
   {
-    href: "/when-to-review-electricity-contract",
-    title: "法人が電力契約を見直すタイミング",
+    id: "basics",
+    title: "1. 基礎から知る",
     description:
-      "電気料金の上昇、契約更新、使用状況の変化など、法人が電力契約を見直すべき場面と確認ポイントを整理します。",
+      "法人向け電気料金の基本構造や、請求書・見積書を見るうえで押さえたい基礎知識を整理したページです。まず全体像をつかみたい方に向いています。",
+    articles: [
+      {
+        href: "/contract-demand-what-is-it",
+        title: "契約電力とは",
+        description:
+          "契約電力の意味や基本料金との関係、請求書や見積書で確認したいポイントを法人向けに解説します。",
+      },
+      {
+        href: "/demand-charge",
+        title: "デマンドとは",
+        description:
+          "デマンドの意味や契約電力との関係、基本料金にどう影響するのかを法人向けに整理します。",
+      },
+      {
+        href: "/business-electricity-bill-breakdown",
+        title: "法人向け電気料金の内訳とは",
+        description:
+          "基本料金、電力量料金、燃料費調整額、再エネ賦課金など、法人向け電気料金の内訳を整理します。",
+      },
+      {
+        href: "/business-electricity-price-benchmark",
+        title: "法人向け電気料金の相場はどう見るか",
+        description:
+          "法人向け電気料金の相場感をどう見ればよいか、請求書や見積書を比較するときの考え方を整理します。",
+      },
+      {
+        href: "/high-voltage-electricity-pricing",
+        title: "高圧電力の料金の見方",
+        description:
+          "高圧電力の請求書にある基本料金、電力量料金、燃料費調整額などの見方を法人向けに解説します。",
+      },
+      {
+        href: "/extra-high-voltage-electricity-pricing",
+        title: "特別高圧電力の料金の見方",
+        description:
+          "特別高圧電力の料金構造や請求書で確認したいポイント、高圧との違いを法人向けに整理します。",
+      },
+      {
+        href: "/how-to-read-electricity-bill",
+        title: "電気料金の請求書で確認したいポイント",
+        description:
+          "契約電力、基本料金、電力量料金、燃料費調整額など、法人担当者が請求書でまず見るべき項目を整理します。",
+      },
+      {
+        href: "/how-to-read-electricity-quote",
+        title: "法人向け電気料金見積書の見方",
+        description:
+          "見積比較時に確認したい料金項目や契約条件、注意点を法人向けに解説します。",
+      },
+    ],
   },
   {
-    href: "/how-to-compare-electricity-suppliers",
-    title: "新電力を比較するときのポイント",
+    id: "reasons-for-increase",
+    title: "2. 料金が上がる理由を知る",
     description:
-      "単価だけでなく、燃料費調整額、市場連動、契約条件、リスクまで含めて法人が比較時に確認したい視点を解説します。",
+      "電気料金が変動する背景には、燃料価格、為替、市場価格、制度要因など複数の要素があります。料金上昇の理由を整理して理解したい方に向いています。",
+    articles: [
+      {
+        href: "/why-business-electricity-prices-rise",
+        title: "法人の電気料金が上がる理由",
+        description:
+          "燃料価格、為替、市場価格、制度要因、使用量や契約条件など、法人の電気料金が上がる主な要因を整理します。",
+      },
+      {
+        href: "/fuel-cost-adjustment",
+        title: "燃料費調整額（燃調費）とは",
+        description:
+          "発電用燃料の価格変動が法人の電気料金にどう影響するか、請求書で確認したいポイントとあわせて解説します。",
+      },
+      {
+        href: "/market-price-adjustment",
+        title: "市場価格調整額とは",
+        description:
+          "市場価格調整額の意味や、燃料費調整額・市場連動プランとの違いを法人向けに解説します。",
+      },
+      {
+        href: "/renewable-energy-surcharge",
+        title: "再エネ賦課金とは",
+        description:
+          "再エネ賦課金の仕組み、法人の電気料金への影響、請求書での見方、燃料費調整額との違いを整理します。",
+      },
+      {
+        href: "/lng-electricity-price",
+        title: "法人の電気料金とLNGの関係",
+        description:
+          "なぜ海外のLNG市場が日本の法人向け電気料金に影響するのかを、JEPX・燃料費調整額・契約見直しの観点で整理します。",
+      },
+    ],
   },
   {
-    href: "/renewable-energy-surcharge",
-    title: "再エネ賦課金とは",
+    id: "menu-comparison",
+    title: "3. 契約メニューの違いを知る",
     description:
-      "再エネ賦課金の仕組み、法人の電気料金への影響、請求書での見方、燃料費調整額との違いを整理します。",
+      "法人向け電力契約では、料金が安定しやすいメニューと、市場価格に連動するメニューで特徴が大きく異なります。契約方式の違いを整理して比較したい方に向いています。",
+    articles: [
+      {
+        href: "/market-linked-plan",
+        title: "市場連動プランとは",
+        description:
+          "市場価格に連動して単価が動く仕組み、向いている法人・向きにくい法人、検討時の注意点を整理します。",
+      },
+      {
+        href: "/fixed-price-plan",
+        title: "固定プランとは",
+        description:
+          "電気料金を安定させやすい理由、予算管理との相性、メリットと注意点を法人向けにまとめます。",
+      },
+      {
+        href: "/market-linked-vs-fixed",
+        title: "市場連動プランと固定プランの違い",
+        description:
+          "料金の動き方、予算管理、リスクの出方、向いている法人像を比較し、選び方の軸を確認できます。",
+      },
+    ],
   },
   {
-    href: "/fuel-cost-adjustment",
-    title: "燃料費調整額（燃調費）とは",
+    id: "review",
+    title: "4. 見直しポイントを知る",
     description:
-      "発電用燃料の価格変動が法人の電気料金にどう影響するか、請求書で確認したいポイントとあわせて解説。",
+      "実際に契約の見直しや比較検討を進めるときに確認したい視点をまとめたページです。見直しのタイミングや比較の考え方を整理したい方に向いています。",
+    articles: [
+      {
+        href: "/when-to-review-electricity-contract",
+        title: "法人が電力契約を見直すタイミング",
+        description:
+          "電気料金の上昇、契約更新、使用状況の変化など、法人が電力契約を見直すべき場面と確認ポイントを整理します。",
+      },
+      {
+        href: "/how-to-compare-electricity-suppliers",
+        title: "新電力を比較するときのポイント",
+        description:
+          "単価だけでなく、燃料費調整額、市場連動、契約条件、リスクまで含めて法人が比較時に確認したい視点を解説します。",
+      },
+      {
+        href: "/electricity-contract-terms",
+        title: "法人向け電力契約で確認したい契約条件",
+        description:
+          "契約期間、更新条件、違約金、解約時の扱いなど、見直し時に確認したい契約条件を整理します。",
+      },
+      {
+        href: "/why-business-electricity-costs-are-high",
+        title: "法人の電気料金が高い会社に共通する特徴",
+        description:
+          "契約電力、デマンド、調整項目、比較時の見落としなど、電気料金が高くなりやすい特徴を整理します。",
+      },
+    ],
   },
   {
-    href: "/why-business-electricity-prices-rise",
-    title: "法人の電気料金が上がる理由",
+    id: "next-step",
+    title: "5. 比較・シミュレーションへ進む",
     description:
-      "燃料価格、為替、市場価格、制度要因、使用量や契約条件など、法人の電気料金が上がる主な要因を整理。",
-  },
-  {
-    href: "/high-voltage-electricity-pricing",
-    title: "高圧電力の料金の見方",
-    description:
-      "高圧電力の請求書にある基本料金、電力量料金、燃料費調整額などの見方を法人向けに解説。",
-  },
-  {
-    href: "/extra-high-voltage-electricity-pricing",
-    title: "特別高圧電力の料金の見方",
-    description:
-      "特別高圧電力の料金構造や請求書で確認したいポイント、高圧との違いを法人向けに整理します。",
-  },
-  {
-    href: "/contract-demand-what-is-it",
-    title: "契約電力とは",
-    description:
-      "契約電力の意味や基本料金との関係、請求書・見積書で確認したいポイントを法人向けに解説します。",
-  },
-  {
-    href: "/business-electricity-bill-breakdown",
-    title: "法人向け電気料金の内訳とは",
-    description:
-      "基本料金、電力量料金、燃料費調整額、再エネ賦課金など、法人向け電気料金の内訳を整理します。",
-  },
-  {
-    href: "/how-to-read-electricity-bill",
-    title: "電気料金の請求書で確認したいポイント",
-    description:
-      "契約電力、基本料金、電力量料金、燃料費調整額など、法人担当者が請求書でまず見るべき項目を整理します。",
-  },
-  {
-    href: "/how-to-read-electricity-quote",
-    title: "法人向け電気料金見積書の見方",
-    description:
-      "見積比較時に確認したい料金項目や契約条件、注意点を法人向けに解説します。",
-  },
-  {
-    href: "/lng-electricity-price",
-    title: "法人の電気料金とLNGの関係",
-    description:
-      "なぜ海外のLNG市場が日本の法人向け電気料金に影響するのかを、JEPX・燃料費調整額・契約見直しの観点で整理しています。",
-  },
-  {
-    href: "/market-linked-plan",
-    title: "市場連動プランとは",
-    description:
-      "市場価格に連動して単価が動く仕組み、向いている法人・向きにくい法人、検討時の注意点を整理しています。",
-  },
-  {
-    href: "/fixed-price-plan",
-    title: "固定プランとは",
-    description:
-      "電気料金を安定させやすい理由、予算管理との相性、メリットと注意点を法人向けにまとめています。",
-  },
-  {
-    href: "/market-linked-vs-fixed",
-    title: "市場連動プランと固定プランの違い",
-    description:
-      "料金の動き方、予算管理、リスクの出方、向いている法人像を比較し、選び方の軸を確認できます。",
+      "基礎知識を確認した後は、比較ページやシミュレーションを使って、自社条件に近い形で電気料金リスクを確認しやすくなります。",
+    articles: [
+      {
+        href: "/compare",
+        title: "比較ページ・シミュレーションへの進み方",
+        description:
+          "解説ページで基礎知識を確認した後に、比較ページやシミュレーションへ進むための導線ページです。",
+      },
+    ],
   },
 ];
 
@@ -133,47 +222,62 @@ export default function ArticlesPage() {
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">解説ページ一覧</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電力契約の見直し時に押さえたい基礎知識を、法人担当者向けに整理した解説ページです。まずは気になるテーマから読み、
-          その後にシミュレーションや比較ページで条件差を確認すると判断しやすくなります。
+          法人向け電気料金の見直しや比較の前に押さえたい基礎知識を、テーマ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを、必要なテーマから確認できます。
         </p>
       </header>
 
-      <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {articleLinks.map((article) => (
-          <Link
-            key={article.href}
-            href={article.href}
-            className="rounded-xl border border-slate-200 bg-white p-5 transition hover:bg-slate-50"
-          >
-            <h2 className="text-lg font-semibold text-slate-900">{article.title}</h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">{article.description}</p>
-          </Link>
-        ))}
-      </section>
+      <div className="mt-8 space-y-10">
+        {categories.map((category) => (
+          <section key={category.id} className="space-y-4" aria-labelledby={`${category.id}-heading`}>
+            <div>
+              <h2 id={`${category.id}-heading`} className="text-2xl font-semibold tracking-tight text-slate-900">
+                {category.title}
+              </h2>
+              <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">{category.description}</p>
+            </div>
 
-      <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-        <h2 className="text-lg font-semibold text-slate-900">次に進むページ</h2>
+            <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
+              {category.articles.map((article) => (
+                <article
+                  key={article.href}
+                  className="rounded-xl border border-slate-200 bg-white p-5 transition hover:bg-slate-50"
+                >
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    <Link href={article.href} className="underline-offset-2 hover:underline">
+                      {article.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-700">{article.description}</p>
+                  <Link
+                    href={article.href}
+                    className="mt-4 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+                  >
+                    詳しく見る
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <section className="mt-10 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-lg font-semibold text-slate-900">比較・シミュレーションへ進む</h2>
         <p className="mt-2 text-sm leading-7 text-slate-700">
-          読み進めた後は、使い方ページで入力手順を確認し、比較ページやトップのシミュレーターで実際の条件を試算してください。
+          必要なテーマを確認した後は、比較ページやシミュレーションで自社条件に近いケースを試算できます。
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link
-            href="/how-to"
-            className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
-          >
-            使い方ページを見る
-          </Link>
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link
             href="/compare"
             className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
-            比較ページを見る
+            料金メニューの違いを比較したい方はこちら
           </Link>
           <Link
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
-            法人向け電気料金上昇、高騰リスクシミュレーターへ戻る
+            電気料金リスクをシミュレーションしたい方はこちら
           </Link>
         </div>
       </section>
