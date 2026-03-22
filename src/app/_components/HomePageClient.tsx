@@ -824,7 +824,7 @@ export default function HomePageClient() {
         </Link>
       </header>
 
-      <section className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[270px_minmax(0,1fr)]">
+      <section className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="mb-6 text-xl font-semibold text-slate-900">入力条件</h2>
           <div className="space-y-4">
@@ -1007,23 +1007,17 @@ export default function HomePageClient() {
           </div>
         </aside>
 
-        <section className="grid grid-cols-1 gap-4 lg:grid-cols-[310px_minmax(0,1fr)] xl:grid-cols-[360px_minmax(0,1fr)]">
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 lg:order-2">
+        <div className="flex flex-col gap-6">
+          <section className="order-2 rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
               年間シミュレーション
             </h2>
-            <p className="mt-2 text-base text-slate-600 sm:text-lg">
-              開始月に応じて月ラベルと季節判定が切り替わり、2つのプランの推移を即時に再計算・再描画します。
+            <p className="mt-1.5 text-sm leading-6 text-slate-600 sm:text-base">
+              開始月に応じて月ラベルと季節判定が切り替わり、2つのプランの推移を即時に再計算・再描画します。実線は当初想定、点線はリスク要因を反映したシナリオです。下のプルダウンとチェック項目で、グラフの開始月と表示するプランを変更できます。
             </p>
-            <p className="mt-1 text-sm text-slate-500 sm:text-base">
-              実線は当初想定、点線はリスク要因を反映したシナリオです。
-            </p>
-            <p className="mt-3 text-sm text-slate-600 sm:text-base">
-              下のプルダウンとチェック項目で、グラフの開始月と表示するプランを変更できます。
-            </p>
-            <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-3">
-              <div>
-                <label htmlFor="startMonth" className="mb-1 block text-sm font-medium text-slate-700 sm:text-base">
+            <div className="mt-2.5 rounded-lg border border-slate-200 bg-slate-50 p-2.5">
+              <div className="flex items-center gap-2">
+                <label htmlFor="startMonth" className="text-sm font-medium text-slate-700 sm:text-base">
                   グラフ開始月
                 </label>
                 <select
@@ -1038,7 +1032,7 @@ export default function HomePageClient() {
                           : Math.min(12, Math.max(1, Number(e.target.value) || 1)),
                     }))
                   }
-                  className="w-44 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200 sm:w-48 sm:text-base"
+                  className="w-32 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200 sm:w-36 sm:text-base"
                 >
                   {monthNames.map((label, idx) => (
                     <option key={label} value={idx + 1}>
@@ -1141,15 +1135,15 @@ export default function HomePageClient() {
                 <p className="mt-2 text-base text-rose-700">{saveError}</p>
               )}
             </div>
-          </div>
+          </section>
 
-          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5 lg:order-1">
+          <section className="order-1 rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
             <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">電気料金が上がるリスク要因</h3>
-            <p className="mt-1 text-base text-slate-500 sm:text-lg">
+            <p className="mt-1 text-sm leading-6 text-slate-500 sm:text-base">
               チェックしたリスク要因が累積で反映され、料金が上振れするシナリオとしてグラフに反映されます。
             </p>
-            <div className="mt-4 grid gap-3">
-              <label className="flex items-start gap-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3">
+            <div className="mt-3 grid gap-2">
+              <label className="flex items-start gap-2 rounded-lg border border-emerald-200 bg-emerald-50 p-2.5">
                 <input
                   ref={worstCaseRef}
                   id="stressWorstCase"
@@ -1170,14 +1164,14 @@ export default function HomePageClient() {
                   }}
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ ワーストシナリオ</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ ワーストシナリオ </span>
+                  <span className="text-slate-500">
                     主要な上振れリスク要因をすべて一括で反映します。最も厳しいケースをまとめて確認したいときに使います。
                   </span>
                 </span>
               </label>
-              <label className="flex items-start gap-3 rounded-lg border border-slate-200 p-3">
+              <label className="flex items-start gap-2 rounded-lg border border-slate-200 p-2.5">
                 <input
                   id="stressHeatwave"
                   type="checkbox"
@@ -1190,15 +1184,14 @@ export default function HomePageClient() {
                   }
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因1：猛暑</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
-                    影響月:
-                    7月〜9月。夏場の需給逼迫を想定し、固定プランは緩やかに上昇し、市場連動プランは大きく上振れしやすくなります。
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ リスク要因1：猛暑 </span>
+                  <span className="text-slate-500">
+                    影響月: 7月〜9月。夏場の需給逼迫を想定し、固定プランは緩やかに上昇し、市場連動プランは大きく上振れしやすくなります。
                   </span>
                 </span>
               </label>
-              <label className="flex items-start gap-3 rounded-lg border border-slate-200 p-3">
+              <label className="flex items-start gap-2 rounded-lg border border-slate-200 p-2.5">
                 <input
                   id="stressColdWave"
                   type="checkbox"
@@ -1211,15 +1204,14 @@ export default function HomePageClient() {
                   }
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因2：厳冬</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
-                    影響月:
-                    12月〜2月。冬場の暖房需要増を想定し、特に市場連動プランは冬季コストが上振れしやすくなります。
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ リスク要因2：厳冬 </span>
+                  <span className="text-slate-500">
+                    影響月: 12月〜2月。冬場の暖房需要増を想定し、特に市場連動プランは冬季コストが上振れしやすくなります。
                   </span>
                 </span>
               </label>
-              <label className="flex items-start gap-3 rounded-lg border border-slate-200 p-3">
+              <label className="flex items-start gap-2 rounded-lg border border-slate-200 p-2.5">
                 <input
                   id="stressFuelPrice"
                   type="checkbox"
@@ -1232,15 +1224,14 @@ export default function HomePageClient() {
                   }
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因3：為替リスク（円安）</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
-                    影響月:
-                    通年。円安が進む局面を想定。輸入燃料コストが上がり、固定プラン・市場連動プランともに料金が上振れしやすくなります。
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ リスク要因3：為替リスク（円安） </span>
+                  <span className="text-slate-500">
+                    影響月: 通年。円安が進む局面を想定。輸入燃料コストが上がり、固定プラン・市場連動プランともに料金が上振れしやすくなります。
                   </span>
                 </span>
               </label>
-              <label className="flex items-start gap-3 rounded-lg border border-slate-200 p-3">
+              <label className="flex items-start gap-2 rounded-lg border border-slate-200 p-2.5">
                 <input
                   id="stressGeopolitical"
                   type="checkbox"
@@ -1253,15 +1244,14 @@ export default function HomePageClient() {
                   }
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因4：地政学リスク</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
-                    影響月:
-                    通年。中東情勢の悪化や国際紛争などで、燃料の調達不安が強まる場面を想定。特に市場連動プランは影響を受けやすくなります。
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ リスク要因4：地政学リスク </span>
+                  <span className="text-slate-500">
+                    影響月: 通年。中東情勢の悪化や国際紛争などで、燃料の調達不安が強まる場面を想定。特に市場連動プランは影響を受けやすくなります。
                   </span>
                 </span>
               </label>
-              <label className="flex items-start gap-3 rounded-lg border border-slate-200 p-3">
+              <label className="flex items-start gap-2 rounded-lg border border-slate-200 p-2.5">
                 <input
                   id="stressOutage"
                   type="checkbox"
@@ -1274,17 +1264,16 @@ export default function HomePageClient() {
                   }
                   className="mt-1 h-5 w-5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                 />
-                <span className="text-base text-slate-700 sm:text-lg">
-                  <span className="block font-semibold">☑ リスク要因5：災害リスク</span>
-                  <span className="mt-1 block text-sm leading-7 text-slate-500 sm:text-base">
-                    影響月:
-                    発生月と翌月。災害により発電所の稼働が停止・低下する場面を想定。供給が減るため、発生月は特に大きく、翌月も余波で市場価格が上振れしやすくなります。
+                <span className="text-sm leading-6 text-slate-700 sm:text-base">
+                  <span className="font-semibold">☑ リスク要因5：災害リスク </span>
+                  <span className="text-slate-500">
+                    影響月: 発生月と翌月。災害により発電所の稼働が停止・低下する場面を想定。供給が減るため、発生月は特に大きく、翌月も余波で市場価格が上振れしやすくなります。
                   </span>
                 </span>
               </label>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </section>
     </main>
   );
