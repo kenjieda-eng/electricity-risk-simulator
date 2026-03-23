@@ -1,0 +1,195 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+
+const pageTitle =
+  "猛暑で法人・企業・自治体の電気料金・電気代はどう上がる？夏の上振れリスクを解説";
+const pageDescription =
+  "猛暑によって法人・企業・自治体の電気料金・電気代が上がる仕組みを解説。7月〜9月の需給逼迫、市場連動プランと固定プランの違い、夏の電気代対策を整理します。";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    "猛暑 電気料金 法人",
+    "夏 電気代 上振れ",
+    "市場連動プラン リスク",
+    "固定プラン 比較",
+    "電力契約 見直し",
+  ],
+  alternates: {
+    canonical: "https://simulator.eic-jp.org/electricity-cost-risk-heatwave",
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "https://simulator.eic-jp.org/electricity-cost-risk-heatwave",
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+    images: [
+      {
+        url: "/ogp-default.png",
+        width: 1200,
+        height: 630,
+        alt: "猛暑リスクの解説",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/twitter-default.png"],
+  },
+};
+
+export default function ElectricityCostRiskHeatwavePage() {
+  return (
+    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          猛暑で法人・企業・自治体の電気料金・電気代はどう上がるか
+        </h1>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+          暑い夏は使用量が増えるだけでなく、電気の単価そのものが上がりやすい場面があります。法人・企業・自治体では空調負荷が大きく、
+          請求額の増加が予想より大きくなるケースもあります。
+        </p>
+        <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          このページでは、猛暑時の上振れ構造と、契約メニューごとの見え方を整理します。見直しや比較の前提としてご活用ください。
+        </p>
+      </header>
+
+      <section className="mt-6 space-y-6">
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">猛暑リスクとは何か</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            猛暑リスクは、主に7月〜9月に電気料金・電気代が上振れしやすくなる要因です。冷房需要が集中しやすく、特に午後から夕方にかけて
+            需給が厳しくなることがあります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            市場全体の需要が高まる局面では、使用量の増加と単価上昇が同時に起こる場合があるため、夏場は月次コストの管理で注意が必要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">なぜ猛暑で電気料金・電気代が上がるのか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            気温上昇により空調負荷が増えると、使用量が増加します。さらに需要が集中すると市場価格が上がりやすくなり、
+            市場価格の影響を受ける契約では単価面の上振れも起こり得ます。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            法人や自治体では、床面積が大きい施設、稼働時間が長い施設、ピークが集中しやすい施設ほど影響が出やすい傾向があります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランと固定プランで違いはあるのか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <Link href="/market-linked-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              市場連動プラン
+            </Link>
+            は、夏場の価格変動の影響を受けやすく、上振れが見えやすい契約です。一方で、
+            <Link href="/fixed-price-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              固定プラン
+            </Link>
+            でも、使用量が増えれば請求額は上がります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            契約の見方は単価だけでなく、使用量、ピーク、デマンドまで含めて考えることが重要です。違いの整理は{" "}
+            <Link href="/market-linked-vs-fixed" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              市場連動プランと固定プランの比較ページ
+            </Link>
+            が参考になります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">法人・企業・自治体で影響が出やすいケース</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>オフィス、工場、商業施設など空調負荷が大きい施設</li>
+            <li>学校、庁舎、公共施設など一定時間帯に需要が集中しやすい施設</li>
+            <li>高圧・特別高圧の大口施設で、単価変動や使用量増の影響額が大きいケース</li>
+          </ul>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            施設用途ごとに負荷特性が異なるため、自社・自施設の運用実態に合わせて確認することが大切です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">夏の電気代対策として確認したいこと</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>空調運用の見直しとピーク時間帯の運転計画</li>
+            <li>デマンド管理と契約電力の整合</li>
+            <li>見積比較時の調整項目・契約条件の確認</li>
+            <li>契約更新前の再検討タイミングの設定</li>
+          </ul>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            見直し時期の考え方は{" "}
+            <Link href="/when-to-review-electricity-contract" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              電力契約を見直すタイミング
+            </Link>
+            、比較の進め方は{" "}
+            <Link href="/how-to-compare-electricity-suppliers" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              新電力を比較するときのポイント
+            </Link>
+            のページで確認できます。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">猛暑リスクをシミュレーターでどう見るか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            まずはベースケースとの差分を確認し、次に
+            <Link href="/worst-case-electricity-cost-risk" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              ワーストシナリオ
+            </Link>
+            と比較すると、夏要因の寄与を把握しやすくなります。自社・自施設に近い使用条件で確認することが精度向上につながります。
+          </p>
+        </section>
+
+        <RelatedLinks
+          heading="関連ページ"
+          intro="夏の上振れ要因を、契約メニューと見直し判断につなげるための導線です。"
+          links={[
+            {
+              href: "/market-linked-plan",
+              title: "市場連動プランとは",
+              description: "夏場の価格変動が反映されやすい契約の特徴を確認できます。",
+            },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "料金安定を重視する契約の考え方を整理できます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "契約タイプ別にリスクの出方を比較できます。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "電力契約を見直すタイミング",
+              description: "更新時期と見直し順序を実務目線で確認できます。",
+            },
+            {
+              href: "/how-to-compare-electricity-suppliers",
+              title: "新電力を比較するときのポイント",
+              description: "単価だけでない比較軸を整理できます。",
+            },
+          ]}
+        />
+
+        <ContentCta
+          heading="夏の上振れリスクを条件別に確認する"
+          description="猛暑リスクの構造を押さえた後は、比較ページやシミュレーションで自社に近い条件を試算すると、契約見直しの判断がしやすくなります。"
+          links={[
+            { href: "/compare", label: "比較ページを見る" },
+            { href: "/", label: "シミュレーションを始める" },
+          ]}
+        />
+      </section>
+    </main>
+  );
+}

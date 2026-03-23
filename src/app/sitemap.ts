@@ -16,6 +16,12 @@ const PUBLIC_PATHS = [
   "/when-to-review-electricity-contract",
   "/how-to-compare-electricity-suppliers",
   "/renewable-energy-surcharge",
+  "/worst-case-electricity-cost-risk",
+  "/electricity-cost-risk-heatwave",
+  "/electricity-cost-risk-severe-winter",
+  "/electricity-cost-risk-yen-depreciation",
+  "/electricity-cost-risk-geopolitics",
+  "/electricity-cost-risk-disaster",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

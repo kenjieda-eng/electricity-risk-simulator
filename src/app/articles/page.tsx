@@ -214,6 +214,50 @@ const categories: ArticleCategory[] = [
       },
     ],
   },
+  {
+    id: "risk-scenarios",
+    title: "6. リスクシナリオ別に知る",
+    description:
+      "法人・企業・自治体の電気料金・電気代がどんな場面で上がりやすいのかを、シナリオごとに整理した解説ページです。猛暑、厳冬、円安、地政学リスク、災害など、上振れ要因ごとの違いを確認したい方に向いています。",
+    articles: [
+      {
+        href: "/worst-case-electricity-cost-risk",
+        title: "ワーストシナリオとは",
+        description:
+          "猛暑、厳冬、円安、地政学、災害など、主要な上振れ要因を一括で反映した場合に、法人・企業・自治体の電気料金・電気代がどう動きやすいかを解説します。",
+      },
+      {
+        href: "/electricity-cost-risk-heatwave",
+        title: "猛暑で電気料金・電気代はどう上がるか",
+        description:
+          "夏場の需給逼迫や冷房需要の増加によって、法人・企業・自治体の電気料金・電気代がどう上振れしやすいかを整理します。",
+      },
+      {
+        href: "/electricity-cost-risk-severe-winter",
+        title: "厳冬で電気料金・電気代はどう上がるか",
+        description:
+          "冬場の暖房需要増によって、法人・企業・自治体の電気料金・電気代がどう上振れしやすいかを整理します。",
+      },
+      {
+        href: "/electricity-cost-risk-yen-depreciation",
+        title: "円安で電気料金・電気代はどう上がるか",
+        description:
+          "輸入燃料コストの上昇が、法人・企業・自治体の電気料金・電気代にどう影響するかを解説します。",
+      },
+      {
+        href: "/electricity-cost-risk-geopolitics",
+        title: "地政学リスクで電気料金・電気代はどう上がるか",
+        description:
+          "中東情勢や国際紛争などによる燃料調達不安が、法人・企業・自治体の電気料金・電気代にどう波及するかを整理します。",
+      },
+      {
+        href: "/electricity-cost-risk-disaster",
+        title: "災害で電気料金・電気代はどう上がるか",
+        description:
+          "発電所停止や供給力低下によって、法人・企業・自治体の電気料金・電気代がどう上振れしやすいかを解説します。",
+      },
+    ],
+  },
 ];
 
 export default function ArticlesPage() {
