@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { unstable_noStore as noStore } from "next/cache";
 
 import { createAdminServerClient } from "../../../lib/supabase/adminServerClient";
 
 const PAGE_SIZE = 500;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 type SimulationResultRow = {
   id: string;
@@ -25,6 +28,7 @@ type SimulationResultRow = {
 const dateTimeFormatter = new Intl.DateTimeFormat("ja-JP", {
   dateStyle: "medium",
   timeStyle: "short",
+  timeZone: "Asia/Tokyo",
 });
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
@@ -123,6 +127,7 @@ function resolveCurrentPlan(fixedTotal: number | null, marketTotal: number | nul
 }
 
 export default async function AdminSimulationResultsPage() {
+  noStore();
   const supabase = createAdminServerClient();
 
   const selectColumns =

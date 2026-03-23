@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { unstable_noStore as noStore } from "next/cache";
 import { notFound } from "next/navigation";
 
 import { createAdminServerClient } from "../../../../lib/supabase/adminServerClient";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 type PageProps = {
   params: Promise<{
@@ -12,6 +15,7 @@ type PageProps = {
 const dateTimeFormatter = new Intl.DateTimeFormat("ja-JP", {
   dateStyle: "medium",
   timeStyle: "short",
+  timeZone: "Asia/Tokyo",
 });
 
 const numberFormatter = new Intl.NumberFormat("ja-JP");
@@ -168,6 +172,7 @@ function formatValue(key: string, value: unknown): string {
 }
 
 export default async function AdminSimulationResultDetailPage({ params }: PageProps) {
+  noStore();
   const { id } = await params;
   const supabase = createAdminServerClient();
 
