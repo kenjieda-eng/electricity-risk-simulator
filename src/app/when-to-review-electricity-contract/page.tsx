@@ -200,6 +200,11 @@ export default function WhenToReviewElectricityContractPage() {
               title: "新電力を比較するときのポイント",
               description: "比較前にそろえる情報と判断軸を確認できます。",
             },
+            {
+              href: "/last-resort-supply",
+              title: "最終保障供給とは",
+              description: "契約不成立時に確認したい制度の基本と切り替えの考え方を整理できます。",
+            },
           ]}
         />
 

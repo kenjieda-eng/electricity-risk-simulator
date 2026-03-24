@@ -201,8 +201,64 @@ const categories: ArticleCategory[] = [
     ],
   },
   {
+    id: "last-resort-supply",
+    title: "5. 最終保障供給を知る",
+    description:
+      "最終保障供給とは何か、どんな法人・自治体が対象になるのか、料金が高く見えやすい理由、切り替え時の注意点、自治体の入札不調との関係などを整理したページ群です。高圧・特別高圧の需要家が実務で確認したい論点を順に確認できます。",
+    articles: [
+      {
+        href: "/last-resort-supply",
+        title: "最終保障供給とは",
+        description:
+          "最終保障供給の仕組み、対象になる法人・自治体、通常契約との違い、確認したい基本を整理します。",
+      },
+      {
+        href: "/last-resort-supply-price",
+        title: "最終保障供給の料金はなぜ高いのか",
+        description:
+          "最終保障供給の料金が高く見えやすい理由と、通常契約との違いを法人向けに解説します。",
+      },
+      {
+        href: "/last-resort-supply-target",
+        title: "最終保障供給の対象は誰か",
+        description:
+          "高圧・特別高圧の違い、低圧との違い、自社が対象か確認するときの考え方を整理します。",
+      },
+      {
+        href: "/last-resort-supply-switch",
+        title: "最終保障供給から切り替えるには",
+        description:
+          "最終保障供給から通常の法人向け電力契約へ切り替える流れと注意点を整理します。",
+      },
+      {
+        href: "/municipality-last-resort-supply",
+        title: "自治体が最終保障供給になったとき",
+        description:
+          "入札不調との関係、予算・契約事務への影響、次回調達までの考え方を整理します。",
+      },
+      {
+        href: "/last-resort-vs-retail-contract",
+        title: "最終保障供給と通常の電力契約の違い",
+        description:
+          "料金、契約の考え方、継続前提の違いを比較しながら整理します。",
+      },
+      {
+        href: "/last-resort-supply-high-voltage",
+        title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
+        description:
+          "高圧・特別高圧の担当者が、料金・契約・切替で見たい論点を整理します。",
+      },
+      {
+        href: "/last-resort-supply-terms",
+        title: "最終保障供給の約款はどう読むか",
+        description:
+          "約款や料金表のどこを確認すればよいかを、法人担当者向けにわかりやすく整理します。",
+      },
+    ],
+  },
+  {
     id: "risk-scenarios",
-    title: "5. リスクシナリオ別に知る",
+    title: "6. リスクシナリオ別に知る",
     description:
       "法人・企業・自治体の電気料金・電気代がどんな場面で上がりやすいのかを、シナリオごとに整理した解説ページです。猛暑、厳冬、円安、地政学リスク、災害など、上振れ要因ごとの違いを確認したい方に向いています。",
     articles: [

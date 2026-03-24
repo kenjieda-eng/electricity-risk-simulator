@@ -168,6 +168,11 @@ export default function ExtraHighVoltageElectricityPricingPage() {
               title: "電気料金の請求書で確認したいポイント",
               description: "実際の請求書を確認する順番を整理できます。",
             },
+            {
+              href: "/last-resort-supply-high-voltage",
+              title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
+              description: "最終保障供給時に特別高圧需要家が確認したい論点を整理できます。",
+            },
           ]}
         />
 

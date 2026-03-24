@@ -180,6 +180,11 @@ export default function HighVoltageElectricityPricingPage() {
               title: "市場連動型と固定型の違い",
               description: "契約選定時の比較軸をまとめて確認できます。",
             },
+            {
+              href: "/last-resort-supply-high-voltage",
+              title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
+              description: "最終保障供給局面での高圧実務の確認項目を整理できます。",
+            },
           ]}
         />
 

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -165,6 +165,11 @@ export default function ElectricityContractTermsPage() {
               href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "契約条件の記載箇所と確認方法を確認できます。",
+            },
+            {
+              href: "/last-resort-supply-terms",
+              title: "最終保障供給の約款はどう読むか",
+              description: "約款や料金表の確認順序を、最終保障供給の実務に沿って整理できます。",
             },
             {
               href: "/articles",

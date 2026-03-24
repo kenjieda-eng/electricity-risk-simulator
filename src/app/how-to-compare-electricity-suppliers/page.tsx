@@ -218,6 +218,11 @@ export default function HowToCompareElectricitySuppliersPage() {
               title: "法人向け電気料金比較ページ",
               description: "整理した比較軸で、実際の条件差を確認できます。",
             },
+            {
+              href: "/last-resort-supply-switch",
+              title: "最終保障供給から切り替えるには",
+              description: "最終保障供給から通常契約へ移るときの実務整理に使えます。",
+            },
           ]}
         />
 
