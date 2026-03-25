@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -171,7 +171,7 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
             },
             {
               href: "/articles",
-              title: "解説ページ一覧",
+              title: "法人向け電気料金の基礎知識",
               description: "関連する見直しテーマをまとめて確認できます。",
             },
           ]}

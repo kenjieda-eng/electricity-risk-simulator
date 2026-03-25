@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -163,7 +163,7 @@ export default function DemandChargePage() {
             },
             {
               href: "/articles",
-              title: "解説ページ一覧",
+              title: "法人向け電気料金の基礎知識",
               description: "関連テーマをカテゴリ別でまとめて確認できます。",
             },
           ]}

@@ -53,7 +53,7 @@ export default function LastResortSupplyPage() {
         </Link>
         <span className="mx-2">/</span>
         <Link href="/articles" className="underline underline-offset-2 hover:text-slate-900">
-          解説ページ一覧
+          法人向け電気料金の基礎知識
         </Link>
         <span className="mx-2">/</span>
         <span className="text-slate-900">最終保障供給とは</span>

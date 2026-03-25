@@ -283,7 +283,7 @@ export default function BusinessElectricityRetrospective202601Page() {
               href="/articles"
               className="rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
             >
-              解説ページ一覧
+              法人向け電気料金の基礎知識
             </Link>
           </div>
         </section>

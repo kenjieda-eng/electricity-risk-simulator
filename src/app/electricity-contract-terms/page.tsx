@@ -173,7 +173,7 @@ export default function ElectricityContractTermsPage() {
             },
             {
               href: "/articles",
-              title: "解説ページ一覧",
+              title: "法人向け電気料金の基礎知識",
               description: "見直し関連テーマを一覧でたどれます。",
             },
           ]}

@@ -72,7 +72,13 @@ export default function Page() {
                 href="/articles"
                 className="inline-flex items-center justify-center rounded-md border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
               >
-                解説ページ一覧を見る
+                法人向け電気料金の基礎知識を見る
+              </Link>
+              <Link
+                href="/business-electricity-retrospective"
+                className="inline-flex items-center justify-center rounded-md border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                法人電気料金振り返りを見る
               </Link>
             </div>
           </div>
@@ -137,7 +143,7 @@ export default function Page() {
                 href="/articles"
                 className="inline-flex shrink-0 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100"
               >
-                解説ページ一覧へ
+                法人向け電気料金の基礎知識へ
               </Link>
             </div>
           </section>

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
+  title: "法人向け電気料金の基礎知識",
   description:
-    "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+    "法人向け電気料金の基礎知識をカテゴリ別に整理したページです。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/articles",
   },
   openGraph: {
-    title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
+    title: "法人向け電気料金の基礎知識",
     description:
-      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理したページです。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     url: "https://simulator.eic-jp.org/articles",
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         url: "/ogp-default.png",
         width: 1200,
         height: 630,
-        alt: "解説ページ一覧",
+        alt: "法人向け電気料金の基礎知識",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
+    title: "法人向け電気料金の基礎知識",
     description:
-      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理したページです。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     images: ["/twitter-default.png"],
   },
 };
@@ -364,9 +364,9 @@ export default function ArticlesPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">解説ページ一覧</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の基礎知識</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人向け電気料金の見直しや比較の前に押さえたい基礎知識を、テーマ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを、必要なテーマから確認できます。
+          法人向け電気料金の見直しや比較の前に押さえたい基礎知識を、テーマ別に整理したページです。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを、必要なテーマから確認できます。
         </p>
       </header>
 
