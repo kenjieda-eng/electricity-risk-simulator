@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
   description:
-    "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+    "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/articles",
   },
   openGraph: {
     title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
     description:
-      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     url: "https://simulator.eic-jp.org/articles",
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "解説ページ一覧 | 法人向け電気料金の基礎知識",
     description:
-      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
+      "法人向け電気料金の基礎知識をカテゴリ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、推移と高止まり、契約メニューの違い、見直し時の確認ポイントを順に確認できます。",
     images: ["/twitter-default.png"],
   },
 };
@@ -143,8 +143,46 @@ const categories: ArticleCategory[] = [
     ],
   },
   {
+    id: "price-trend-and-stickiness",
+    title: "3. 電気料金の推移と高止まり",
+    description:
+      "2019年以降の電気料金推移をもとに、2022年の急騰と、その後も元に戻らない高止まりの実態を整理した解説カテゴリです。再エネ賦課金を含まない単価の動きも踏まえながら、特別高圧・高圧・低圧ごとの違いや、補助金縮小後に見えやすくなる負担構造を確認できます。法人の電気料金見直しや契約判断の前提整理に活用できます。",
+    articles: [
+      {
+        href: "/electricity-price-trend-2019-2025",
+        title: "法人向け電気料金は高止まりしているのか",
+        description:
+          "2019年から2025年の推移データをもとに、急騰後も元に戻っていない実態を全体像として整理します。",
+      },
+      {
+        href: "/electricity-price-without-renewable-surcharge",
+        title: "再エネ賦課金を除いても電気料金は高いのか",
+        description:
+          "再エネ賦課金を含まないデータで、ベース単価そのものの上昇と高止まり傾向を解説します。",
+      },
+      {
+        href: "/electricity-price-by-voltage-type",
+        title: "特別高圧・高圧・低圧で上がり方はどう違うか",
+        description:
+          "契約区分ごとの推移差を比較し、自社で何を確認すべきかを法人向けに整理します。",
+      },
+      {
+        href: "/why-electricity-prices-have-not-returned",
+        title: "急騰後も元に戻らないのはなぜか",
+        description:
+          "2019年から2021年との比較で、高止まりが続く背景を構造的に整理します。",
+      },
+      {
+        href: "/electricity-price-subsidy-impact",
+        title: "補助金縮小で見え方はどう変わったか",
+        description:
+          "補助金の有無による請求額の見え方と、ベース単価の見方を分けて解説します。",
+      },
+    ],
+  },
+  {
     id: "menu-comparison",
-    title: "3. 契約メニューの違いを知る",
+    title: "4. 契約メニューの違いを知る",
     description:
       "法人向け電力契約では、料金が安定しやすいメニューと、市場価格に連動するメニューで特徴が大きく異なります。契約方式の違いを整理して比較したい方に向いています。",
     articles: [
@@ -170,7 +208,7 @@ const categories: ArticleCategory[] = [
   },
   {
     id: "review",
-    title: "4. 見直しポイントを知る",
+    title: "5. 見直しポイントを知る",
     description:
       "実際に契約の見直しや比較検討を進めるときに確認したい視点をまとめたページです。見直しのタイミングや比較の考え方を整理したい方に向いています。",
     articles: [
@@ -202,7 +240,7 @@ const categories: ArticleCategory[] = [
   },
   {
     id: "last-resort-supply",
-    title: "5. 最終保障供給を知る",
+    title: "6. 最終保障供給を知る",
     description:
       "最終保障供給とは何か、どんな法人・自治体が対象になるのか、料金が高く見えやすい理由、切り替え時の注意点、自治体の入札不調との関係などを整理したページ群です。高圧・特別高圧の需要家が実務で確認したい論点を順に確認できます。",
     articles: [
@@ -258,7 +296,7 @@ const categories: ArticleCategory[] = [
   },
   {
     id: "risk-scenarios",
-    title: "6. リスクシナリオ別に知る",
+    title: "7. リスクシナリオ別に知る",
     description:
       "法人・企業・自治体の電気料金・電気代がどんな場面で上がりやすいのかを、シナリオごとに整理した解説ページです。猛暑、厳冬、円安、地政学リスク、災害など、上振れ要因ごとの違いを確認したい方に向いています。",
     articles: [
