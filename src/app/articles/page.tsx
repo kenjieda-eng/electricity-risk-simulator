@@ -338,6 +338,26 @@ const categories: ArticleCategory[] = [
       },
     ],
   },
+  {
+    id: "monthly-retrospective",
+    title: "8. 法人電気料金振り返り",
+    description:
+      "月次の法人向け電気料金動向を、補助政策と推移データをもとに振り返るカテゴリです。単月の変化を契約区分別に整理し、次月以降の予算や見直し判断につなげます。",
+    articles: [
+      {
+        href: "/business-electricity-retrospective/2026-02",
+        title: "【2026年2月】法人の電気料金はどう動いた？",
+        description:
+          "補助政策と当社団が運営している「新電力ネット」のデータから、補助の恩恵を最終確認し、補助終了前後への備えを契約区分別に整理します。",
+      },
+      {
+        href: "/business-electricity-retrospective/2026-01",
+        title: "【2026年1月】法人の電気料金はどう動いた？",
+        description:
+          "補助政策と当社団が運営している「新電力ネット」のデータから、秋からの上昇局面に対し、1月使用分で空気が大きく変わった点を整理します。",
+      },
+    ],
+  },
 ];
 
 export default function ArticlesPage() {
