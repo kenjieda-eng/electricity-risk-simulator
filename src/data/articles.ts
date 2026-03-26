@@ -1,0 +1,661 @@
+export type ArticleCategorySlug =
+  | "basic"
+  | "price-increase"
+  | "price-trends"
+  | "plan-types"
+  | "review-points"
+  | "last-resort-supply"
+  | "risk-scenarios"
+  | "power-procurement"
+  | "monthly-review";
+
+export type CategoryGroup = "learning" | "monthly";
+
+export type ArticleCategory = {
+  name: string;
+  slug: ArticleCategorySlug;
+  description: string;
+  intro: string;
+  learnPoints: string[];
+  recommendedReadingOrder: string[];
+  order: number;
+  group: CategoryGroup;
+};
+
+export type ArticleMeta = {
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  categorySlug: ArticleCategorySlug;
+  featured?: boolean;
+  publishedAt: string;
+  order: number;
+};
+
+export const articleCategories: ArticleCategory[] = [
+  {
+    name: "基礎から知る",
+    slug: "basic",
+    description:
+      "法人向け電気料金の基本構造や、請求書・見積書を見るうえで押さえたい基礎知識を整理したカテゴリです。",
+    intro:
+      "法人向け電気料金を見直す前に、まず押さえておきたい基礎論点をまとめています。契約電力やデマンド、請求書・見積書の確認ポイントを順に読むことで、比較や見直しの判断軸をそろえやすくなります。",
+    learnPoints: [
+      "契約電力やデマンドなど、基本料金に関わる基礎概念",
+      "請求書・見積書で確認したい主要項目",
+      "高圧・特別高圧を含む料金内訳の見方",
+    ],
+    recommendedReadingOrder: [
+      "business-electricity-bill-breakdown",
+      "contract-demand-what-is-it",
+      "demand-charge",
+      "how-to-read-electricity-bill",
+      "how-to-read-electricity-quote",
+    ],
+    order: 1,
+    group: "learning",
+  },
+  {
+    name: "料金が上がる理由を知る",
+    slug: "price-increase",
+    description:
+      "燃料価格、為替、市場価格、制度要因など、法人向け電気料金が上昇する背景を整理したカテゴリです。",
+    intro:
+      "電気料金は単価改定だけでなく、燃料費調整額や市場価格調整額、再エネ賦課金など複数要因で変動します。料金上昇の理由を構造的に押さえることで、説明や比較の精度を高められます。",
+    learnPoints: [
+      "燃料費・市場価格・制度要因が料金へ与える影響",
+      "請求書のどの項目で上昇要因を確認できるか",
+      "LNG価格や国際動向と法人向け料金のつながり",
+    ],
+    recommendedReadingOrder: [
+      "why-business-electricity-prices-rise",
+      "fuel-cost-adjustment",
+      "market-price-adjustment",
+      "renewable-energy-surcharge",
+      "lng-electricity-price",
+    ],
+    order: 2,
+    group: "learning",
+  },
+  {
+    name: "電気料金の推移と高止まり",
+    slug: "price-trends",
+    description:
+      "急騰後も元に戻りにくい背景を、推移データと制度変化から確認できるカテゴリです。",
+    intro:
+      "2019年以降の推移をふまえて、急騰後の高止まりや補助金縮小後の見え方を整理します。契約区分別の差や、再エネ賦課金を除いた単価の動きを確認したいときに活用できます。",
+    learnPoints: [
+      "高止まりが続く背景と、急騰後の変化",
+      "特別高圧・高圧・低圧の上がり方の違い",
+      "補助金要因を除いた単価の見方",
+    ],
+    recommendedReadingOrder: [
+      "electricity-price-trend-2019-2025",
+      "why-electricity-prices-have-not-returned",
+      "electricity-price-without-renewable-surcharge",
+      "electricity-price-by-voltage-type",
+      "electricity-price-subsidy-impact",
+    ],
+    order: 3,
+    group: "learning",
+  },
+  {
+    name: "契約メニューの違いを知る",
+    slug: "plan-types",
+    description:
+      "市場連動プランと固定プランの特徴を比較し、契約方式ごとのリスク差を整理できるカテゴリです。",
+    intro:
+      "法人向け電力契約では、単価の決まり方とリスクの出方がメニューごとに異なります。市場連動と固定の違いを比較し、予算管理や社内説明に使える判断軸を整理できます。",
+    learnPoints: [
+      "市場連動と固定で異なる単価変動の仕組み",
+      "予算管理とリスク耐性に応じた選び方",
+      "比較時に見落としやすい契約条件",
+    ],
+    recommendedReadingOrder: [
+      "market-linked-plan",
+      "fixed-price-plan",
+      "market-linked-vs-fixed",
+    ],
+    order: 4,
+    group: "learning",
+  },
+  {
+    name: "見直しポイントを知る",
+    slug: "review-points",
+    description:
+      "契約見直しのタイミング、比較軸、契約条件を実務目線で整理したカテゴリです。",
+    intro:
+      "電力契約の見直しでは、単価比較だけでなく契約期間や違約金などの条件確認が欠かせません。実務で使いやすい確認ポイントを段階的に整理しています。",
+    learnPoints: [
+      "見直しを始めるべきタイミングの判断",
+      "比較時に確認したい料金項目と契約条件",
+      "電気料金が高止まりしやすい契約・運用の特徴",
+    ],
+    recommendedReadingOrder: [
+      "when-to-review-electricity-contract",
+      "how-to-compare-electricity-suppliers",
+      "electricity-contract-terms",
+      "why-business-electricity-costs-are-high",
+    ],
+    order: 5,
+    group: "learning",
+  },
+  {
+    name: "最終保障供給を知る",
+    slug: "last-resort-supply",
+    description:
+      "最終保障供給の仕組み、対象、料金、切替実務までを確認できるカテゴリです。",
+    intro:
+      "高圧・特別高圧の需要家にとって、最終保障供給は緊急時の重要論点です。通常契約との違い、料金が高く見える理由、切替時の実務ポイントをまとめています。",
+    learnPoints: [
+      "最終保障供給の対象と制度上の位置づけ",
+      "料金が高く見えやすい背景と確認項目",
+      "切替時に必要な実務対応と契約確認",
+    ],
+    recommendedReadingOrder: [
+      "last-resort-supply",
+      "last-resort-supply-target",
+      "last-resort-supply-price",
+      "last-resort-supply-switch",
+      "last-resort-supply-terms",
+    ],
+    order: 6,
+    group: "learning",
+  },
+  {
+    name: "リスクシナリオ別に知る",
+    slug: "risk-scenarios",
+    description:
+      "猛暑・厳冬・円安・地政学リスク・災害など、上振れ要因別に料金リスクを整理したカテゴリです。",
+    intro:
+      "電気料金の上振れリスクは、要因ごとに出方と影響時期が異なります。シナリオ別に確認することで、予算策定や説明資料で使いやすい見方をそろえられます。",
+    learnPoints: [
+      "要因別に異なる料金上振れのパターン",
+      "季節要因と国際要因が重なるときの見方",
+      "複合要因時に確認したいリスクの優先度",
+    ],
+    recommendedReadingOrder: [
+      "worst-case-electricity-cost-risk",
+      "electricity-cost-risk-heatwave",
+      "electricity-cost-risk-severe-winter",
+      "electricity-cost-risk-yen-depreciation",
+      "electricity-cost-risk-geopolitics",
+      "electricity-cost-risk-disaster",
+    ],
+    order: 7,
+    group: "learning",
+  },
+  {
+    name: "電力調達の仕組みを知る",
+    slug: "power-procurement",
+    description:
+      "法人向け電気料金の背景にある、電力会社の調達構造を整理したカテゴリです。自社発電、市場調達（JEPX）、相対契約、分散調達とヘッジまでを順に確認できます。",
+    intro:
+      "電気料金は使用量だけで決まるものではなく、電力会社の調達構造とも深く関係します。自社発電、市場調達、相対契約、分散調達とヘッジを順に確認することで、価格変動や契約メニューの背景を理解しやすくなります。",
+    learnPoints: [
+      "電力会社がどこから電気を仕入れているか",
+      "JEPXや相対契約が法人向け電気料金とどう関係するか",
+      "調達の分散やヘッジという考え方がなぜ必要か",
+    ],
+    recommendedReadingOrder: [
+      "how-electricity-is-procured",
+      "jepx-explained",
+      "how-electricity-prices-are-determined",
+      "bilateral-power-contracts",
+      "power-risk-management",
+    ],
+    order: 8,
+    group: "learning",
+  },
+  {
+    name: "法人電気料金振り返り",
+    slug: "monthly-review",
+    description:
+      "月次の動向を確認し、次月以降の予算・調達判断につなげるための振り返りカテゴリです。",
+    intro:
+      "月次の法人向け電気料金動向を、補助政策と推移データをもとに振り返ります。単月の変化を継続的に確認し、契約判断や予算計画の見直しに活用できる構成です。",
+    learnPoints: [
+      "直近月の料金動向と背景要因",
+      "補助政策の影響と見え方の変化",
+      "翌月以降の予算検討に使える確認ポイント",
+    ],
+    recommendedReadingOrder: [
+      "business-electricity-retrospective-2026-02",
+      "business-electricity-retrospective-2026-01",
+    ],
+    order: 9,
+    group: "monthly",
+  },
+];
+
+export const articleList: ArticleMeta[] = [
+  {
+    title: "契約電力とは",
+    slug: "contract-demand-what-is-it",
+    description: "契約電力の意味や基本料金との関係、見積・請求確認時の要点を整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 1,
+    publishedAt: "2025-08-01",
+  },
+  {
+    title: "デマンドとは",
+    slug: "demand-charge",
+    description: "デマンドの考え方と、契約電力・基本料金との関係を法人向けに整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 2,
+    publishedAt: "2025-08-02",
+  },
+  {
+    title: "法人向け電気料金の内訳とは",
+    slug: "business-electricity-bill-breakdown",
+    description: "基本料金・電力量料金・調整項目など、電気料金の内訳をわかりやすく解説します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 3,
+    featured: true,
+    publishedAt: "2025-08-03",
+  },
+  {
+    title: "法人向け電気料金の相場はどう見るか",
+    slug: "business-electricity-price-benchmark",
+    description: "相場感のつかみ方と、比較時に見たい指標の考え方を整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 4,
+    publishedAt: "2025-08-04",
+  },
+  {
+    title: "高圧電力の料金の見方",
+    slug: "high-voltage-electricity-pricing",
+    description: "高圧契約で請求書や見積書を確認する際の基本項目を解説します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 5,
+    publishedAt: "2025-08-05",
+  },
+  {
+    title: "特別高圧電力の料金の見方",
+    slug: "extra-high-voltage-electricity-pricing",
+    description: "特別高圧の料金構造と、高圧との違いを実務目線で整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 6,
+    publishedAt: "2025-08-06",
+  },
+  {
+    title: "電気料金の請求書で確認したいポイント",
+    slug: "how-to-read-electricity-bill",
+    description: "契約電力、単価、調整項目など、請求書確認の優先ポイントを整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 7,
+    publishedAt: "2025-08-07",
+  },
+  {
+    title: "法人向け電気料金見積書の見方",
+    slug: "how-to-read-electricity-quote",
+    description: "見積比較で見落としやすい条件や項目を、実務向けに確認できます。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 8,
+    publishedAt: "2025-08-08",
+  },
+  {
+    title: "法人の電気料金が上がる理由",
+    slug: "why-business-electricity-prices-rise",
+    description: "燃料・市場・制度・契約条件など、上昇要因を全体像から整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 1,
+    featured: true,
+    publishedAt: "2025-08-09",
+  },
+  {
+    title: "燃料費調整額（燃調費）とは",
+    slug: "fuel-cost-adjustment",
+    description: "燃料価格の変動が請求額へ反映される仕組みを確認できます。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 2,
+    publishedAt: "2025-08-10",
+  },
+  {
+    title: "市場価格調整額とは",
+    slug: "market-price-adjustment",
+    description: "市場価格調整額の意味と、他調整項目との違いを整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 3,
+    publishedAt: "2025-08-11",
+  },
+  {
+    title: "再エネ賦課金とは",
+    slug: "renewable-energy-surcharge",
+    description: "再エネ賦課金の仕組みと、法人の請求書での確認ポイントを解説します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 4,
+    publishedAt: "2025-08-12",
+  },
+  {
+    title: "法人の電気料金とLNGの関係",
+    slug: "lng-electricity-price",
+    description: "LNG市場の動きが法人向け電気料金へ波及する背景を整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 5,
+    publishedAt: "2025-08-13",
+  },
+  {
+    title: "法人向け電気料金は高止まりしているのか",
+    slug: "electricity-price-trend-2019-2025",
+    description: "推移データをもとに、急騰後の高止まり実態を確認します。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 1,
+    publishedAt: "2025-08-14",
+  },
+  {
+    title: "再エネ賦課金を除いても電気料金は高いのか",
+    slug: "electricity-price-without-renewable-surcharge",
+    description: "再エネ賦課金を除いた単価で、料金水準の実態を整理します。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 2,
+    publishedAt: "2025-08-15",
+  },
+  {
+    title: "特別高圧・高圧・低圧で上がり方はどう違うか",
+    slug: "electricity-price-by-voltage-type",
+    description: "契約区分ごとの単価推移の差を比較し、確認観点を整理します。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 3,
+    publishedAt: "2025-08-16",
+  },
+  {
+    title: "急騰後も元に戻らないのはなぜか",
+    slug: "why-electricity-prices-have-not-returned",
+    description: "高止まりが続く構造要因を、過去比較を交えて解説します。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 4,
+    publishedAt: "2025-08-17",
+  },
+  {
+    title: "補助金縮小で見え方はどう変わったか",
+    slug: "electricity-price-subsidy-impact",
+    description: "補助金の有無による見え方の違いと、確認のポイントを整理します。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 5,
+    publishedAt: "2025-08-18",
+  },
+  {
+    title: "市場連動プランとは",
+    slug: "market-linked-plan",
+    description: "市場価格に連動するプランの特徴と注意点を解説します。",
+    category: "契約メニューの違いを知る",
+    categorySlug: "plan-types",
+    order: 1,
+    publishedAt: "2025-08-19",
+  },
+  {
+    title: "固定プランとは",
+    slug: "fixed-price-plan",
+    description: "単価が安定しやすい固定プランの特徴と活用場面を整理します。",
+    category: "契約メニューの違いを知る",
+    categorySlug: "plan-types",
+    order: 2,
+    publishedAt: "2025-08-20",
+  },
+  {
+    title: "市場連動プランと固定プランの違い",
+    slug: "market-linked-vs-fixed",
+    description: "料金の動き方やリスクの違いを比較し、選定軸を整理します。",
+    category: "契約メニューの違いを知る",
+    categorySlug: "plan-types",
+    order: 3,
+    featured: true,
+    publishedAt: "2025-08-21",
+  },
+  {
+    title: "法人が電力契約を見直すタイミング",
+    slug: "when-to-review-electricity-contract",
+    description: "見直しを検討すべきタイミングと確認事項を実務向けに整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 1,
+    featured: true,
+    publishedAt: "2025-08-22",
+  },
+  {
+    title: "新電力を比較するときのポイント",
+    slug: "how-to-compare-electricity-suppliers",
+    description: "比較時に押さえたい単価以外の条件とリスク観点を解説します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 2,
+    publishedAt: "2025-08-23",
+  },
+  {
+    title: "法人向け電力契約で確認したい契約条件",
+    slug: "electricity-contract-terms",
+    description: "契約期間、更新、違約金など、見直し時の確認項目を整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 3,
+    publishedAt: "2025-08-24",
+  },
+  {
+    title: "法人の電気料金が高い会社に共通する特徴",
+    slug: "why-business-electricity-costs-are-high",
+    description: "電気料金が高止まりしやすい契約・運用面の特徴を整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 4,
+    publishedAt: "2025-08-25",
+  },
+  {
+    title: "最終保障供給とは",
+    slug: "last-resort-supply",
+    description: "最終保障供給の位置づけと、通常契約との違いを基本から確認できます。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 1,
+    featured: true,
+    publishedAt: "2025-08-26",
+  },
+  {
+    title: "最終保障供給の料金はなぜ高いのか",
+    slug: "last-resort-supply-price",
+    description: "料金が高く見えやすい背景と、確認時の注意点を解説します。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 2,
+    publishedAt: "2025-08-27",
+  },
+  {
+    title: "最終保障供給の対象は誰か",
+    slug: "last-resort-supply-target",
+    description: "対象範囲の考え方と、自社が該当するかの確認ポイントを整理します。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 3,
+    publishedAt: "2025-08-28",
+  },
+  {
+    title: "最終保障供給から切り替えるには",
+    slug: "last-resort-supply-switch",
+    description: "通常契約へ戻す際の流れと、実務上の確認事項をまとめています。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 4,
+    publishedAt: "2025-08-29",
+  },
+  {
+    title: "自治体が最終保障供給になったとき",
+    slug: "municipality-last-resort-supply",
+    description: "入札不調時の対応や、自治体実務での確認点を整理します。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 5,
+    publishedAt: "2025-08-30",
+  },
+  {
+    title: "最終保障供給と通常の電力契約の違い",
+    slug: "last-resort-vs-retail-contract",
+    description: "料金構造や契約前提の違いを比較し、判断材料を整理できます。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 6,
+    publishedAt: "2025-08-31",
+  },
+  {
+    title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
+    slug: "last-resort-supply-high-voltage",
+    description: "高圧・特別高圧の担当者向けに、確認優先度の高い論点を整理します。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 7,
+    publishedAt: "2025-09-01",
+  },
+  {
+    title: "最終保障供給の約款はどう読むか",
+    slug: "last-resort-supply-terms",
+    description: "約款・料金表で確認したい項目を、実務に沿って解説します。",
+    category: "最終保障供給を知る",
+    categorySlug: "last-resort-supply",
+    order: 8,
+    publishedAt: "2025-09-02",
+  },
+  {
+    title: "ワーストシナリオとは",
+    slug: "worst-case-electricity-cost-risk",
+    description: "主要要因を重ねた場合に想定される上振れリスクを整理します。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 1,
+    publishedAt: "2025-09-03",
+  },
+  {
+    title: "猛暑で電気料金・電気代はどう上がるか",
+    slug: "electricity-cost-risk-heatwave",
+    description: "夏季需要増による上振れリスクの特徴を確認できます。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 2,
+    publishedAt: "2025-09-04",
+  },
+  {
+    title: "厳冬で電気料金・電気代はどう上がるか",
+    slug: "electricity-cost-risk-severe-winter",
+    description: "冬季需要増時に起きやすい料金上振れの見方を整理します。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 3,
+    publishedAt: "2025-09-05",
+  },
+  {
+    title: "円安で電気料金・電気代はどう上がるか",
+    slug: "electricity-cost-risk-yen-depreciation",
+    description: "為替変動が燃料調達コストへ与える影響を確認できます。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 4,
+    publishedAt: "2025-09-06",
+  },
+  {
+    title: "地政学リスクで電気料金・電気代はどう上がるか",
+    slug: "electricity-cost-risk-geopolitics",
+    description: "国際情勢による調達不安が料金へ波及する流れを整理します。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 5,
+    publishedAt: "2025-09-07",
+  },
+  {
+    title: "災害で電気料金・電気代はどう上がるか",
+    slug: "electricity-cost-risk-disaster",
+    description: "供給力低下時に起きやすい上振れリスクを確認できます。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 6,
+    publishedAt: "2025-09-08",
+  },
+  {
+    title: "電気はどこから来るのか｜電力会社の仕入れの全体像",
+    slug: "how-electricity-is-procured",
+    description:
+      "法人向け電気料金の背景には、電力会社の調達構造があります。自社発電、市場調達、相対契約など、仕入れの全体像を整理した入口ページです。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 1,
+    featured: true,
+    publishedAt: "2026-03-10",
+  },
+  {
+    title: "JEPXとは何か｜卸電力市場の仕組み",
+    slug: "jepx-explained",
+    description:
+      "JEPXとは何か、どのような事業者が参加し、なぜ法人向け電気料金にも関係するのかを整理したページです。市場連動プランの理解にもつながります。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 2,
+    featured: true,
+    publishedAt: "2026-03-11",
+  },
+  {
+    title: "電気の価格はどう決まるのか｜JEPX価格の決まり方",
+    slug: "how-electricity-prices-are-determined",
+    description:
+      "電気の価格は需要と供給、燃料価格、天候、供給余力などで動きます。価格変動の背景を理解するための中核ページです。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 3,
+    publishedAt: "2026-03-12",
+  },
+  {
+    title: "相対契約とは何か｜市場に依存しない仕入れの考え方",
+    slug: "bilateral-power-contracts",
+    description:
+      "市場だけに頼らず、発電事業者との契約で電気を調達する考え方を解説します。安定性を重視した調達の見方につながるページです。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 4,
+    publishedAt: "2026-03-13",
+  },
+  {
+    title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
+    slug: "power-risk-management",
+    description:
+      "市場価格の変動や需要予測のずれに対して、電力会社がどのように分散調達やヘッジを考えるのかを解説するまとめページです。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 5,
+    publishedAt: "2026-03-14",
+  },
+  {
+    title: "【2026年2月】法人の電気料金はどう動いた？",
+    slug: "business-electricity-retrospective/2026-02",
+    description:
+      "補助政策と推移データをもとに、補助終了前後で確認したい論点を契約区分別に整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 1,
+    publishedAt: "2026-02-20",
+  },
+  {
+    title: "【2026年1月】法人の電気料金はどう動いた？",
+    slug: "business-electricity-retrospective/2026-01",
+    description:
+      "秋以降の上昇局面を踏まえ、1月使用分で見えた変化と今後の確認ポイントを整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 2,
+    publishedAt: "2026-01-20",
+  },
+];
