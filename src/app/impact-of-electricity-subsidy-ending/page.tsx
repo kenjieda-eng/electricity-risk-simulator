@@ -1,0 +1,185 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+
+const pageTitle = "法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説";
+const pageDescription =
+  "法人向け電気料金の補助金終了や縮小で、請求額や見積もりの見え方がどう変わるのかを解説します。単価上昇との違い、確認したい請求項目、今後の見直しポイントも法人向けに整理します。";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    "法人 電気料金 補助金終了",
+    "電気料金 補助金 縮小 影響",
+    "法人 電気代 単価改定 違い",
+    "請求書 補助金 反映",
+    "法人 電力契約 見直し",
+  ],
+  alternates: {
+    canonical: "https://simulator.eic-jp.org/impact-of-electricity-subsidy-ending",
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "https://simulator.eic-jp.org/impact-of-electricity-subsidy-ending",
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "法人向け電気料金の補助金終了で何が変わるか" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/twitter-default.png"],
+  },
+};
+
+export default function ImpactOfElectricitySubsidyEndingPage() {
+  return (
+    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の補助金終了で何が変わるのか</h1>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+          法人向け電気料金では、政府の補助金や負担軽減策で請求額の一部が抑えられている時期があります。こうした補助が縮小・終了すると、
+          電気の調達環境が大きく変わっていなくても、請求額は上がったように見えます。
+        </p>
+        <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          このページでは、補助終了という政策要因によって請求額の見え方がどう変わるかを、実務で説明しやすい形で整理します。
+        </p>
+      </header>
+
+      <section className="mt-6 space-y-6">
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金はどのように請求額へ影響していたのか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金は、需要家が支払う電気料金の一部を軽減する形で反映されることがあります。このため、請求書上では実際の調達コストや本来の単価が
+            見えにくくなる場合があります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            補助がある期間は負担が和らぐ一方、終了すると元の水準が表面化し、結果として急な上昇に見えることがあります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金終了と単価改定は同じではない</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金終了は、電力会社が料金単価を引き上げたことと同じではありません。単価改定は契約条件や料金表そのものの変更ですが、
+            補助金終了は政策的に抑えられていた分が外れる動きです。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            この違いを明確にすると、請求額が上がった理由を社内や顧客へ説明しやすくなります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金終了で請求額が急に上がったように見える理由</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金がある間は、料金上昇の一部が見えにくくなります。そのため、終了後は同じ使用量でも請求額が一気に上がったように見えることがあります。
+            特に月次比較だけでは変化が大きく感じられるため、前年同月や補助反映前後の条件もあわせて確認することが重要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">どの法人が影響を受けやすいか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            使用量が多い法人ほど、1kWhあたりの軽減幅が総額へ与える影響は大きくなります。工場、商業施設、物流施設、空調負荷の大きい建物などでは、
+            補助終了後の影響が見えやすくなります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            複数拠点を持つ法人では、拠点別だけでなく全体の電気料金管理にも影響が広がるため、集計方法も含めた確認が必要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">請求書や見積書で確認したいポイント</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>補助金反映の有無と反映期間</li>
+            <li>電力量料金の単価・総額</li>
+            <li>燃料費調整額と市場価格調整額の変化</li>
+            <li>再エネ賦課金など制度項目の増減</li>
+            <li>契約更新の有無と単価条件の変更</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金終了後に法人が確認したいこと</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            まずは補助終了による増加額の目安を把握し、そのうえで契約メニューに見直し余地があるかを確認します。使用量の季節変動も含めて整理すると、
+            単月の変化に振り回されにくくなります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            補助終了に伴う説明では、単純な値上げではなく、政策支援の終了という背景を明確に示すことが有効です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約見直しの判断で見たいポイント</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金がなくなると、本来の料金構造が見えやすくなります。このタイミングで、固定型か市場連動型か、燃料費調整額や市場価格調整額の扱い、
+            見積条件の妥当性を見直すことが有効です。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            比較検討を進める前提として、上昇要因の全体像は{" "}
+            <Link href="/why-business-electricity-prices-rise" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              法人の電気料金が上がる理由
+            </Link>
+            でも確認できます。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            法人向け電気料金の補助金終了は、単価改定とは別の理由で請求額を押し上げることがあります。補助終了後の請求額は急に上がったように見えやすいため、
+            どの項目が増えたのかを切り分けて確認することが重要です。
+          </p>
+        </section>
+
+        <RelatedLinks
+          heading="関連ページ"
+          intro="補助終了の影響を整理した後に、上昇要因の全体像と見直し実務へ接続するための導線です。"
+          links={[
+            {
+              href: "/why-business-electricity-bills-rise-suddenly",
+              title: "法人の電気料金はなぜ急に上がるのか",
+              description: "今月から上がった場面の原因切り分けを確認できます。",
+            },
+            {
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "恒常的な制度項目と政策支援の違いを整理できます。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "補助要因以外の調整項目を確認できます。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "請求変化を契約判断へつなげる視点を整理できます。",
+            },
+            {
+              href: "/compare",
+              title: "料金メニュー比較ページ",
+              description: "補助要因を踏まえて同条件比較を進められます。",
+            },
+          ]}
+        />
+
+        <ContentCta
+          heading="補助金終了後の条件差を比較する"
+          description="補助の有無と単価条件を分けて比較すると、社内説明と契約見直しの判断を進めやすくなります。"
+          links={[
+            { href: "/compare", label: "比較ページを見る" },
+            { href: "/articles/price-increase", label: "料金上昇カテゴリを見る" },
+            { href: "/", label: "シミュレーションを始める" },
+          ]}
+        />
+      </section>
+    </main>
+  );
+}

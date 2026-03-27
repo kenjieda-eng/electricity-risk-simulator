@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { GoogleAnalytics } from "../components/analytics/GoogleAnalytics";
+import { Footer } from "../components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -39,7 +40,8 @@ export default function RootLayout({
             </Link>
           </div>
         </header>
-        {children}
+        <main>{children}</main>
+        <Footer />
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>

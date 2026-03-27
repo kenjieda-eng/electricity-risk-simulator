@@ -17,5 +17,10 @@ export default function AdminLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <style>{'footer[data-public-footer="true"] { display: none; }'}</style>
+      {children}
+    </>
+  );
 }
