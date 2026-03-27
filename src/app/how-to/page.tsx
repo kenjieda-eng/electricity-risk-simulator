@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+  title: "電力料金上昇リスク診断の使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
   description:
     "契約種別、エリア、季節ごとの電気代などを入力して、法人向けの電気料金上昇・高騰リスクを確認する方法をわかりやすく解説します。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/how-to",
   },
   openGraph: {
-    title: "使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "電力料金上昇リスク診断の使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
       "契約種別、エリア、季節ごとの電気代などを入力して、法人向けの電気料金上昇・高騰リスクを確認する方法をわかりやすく解説します。",
     url: "https://simulator.eic-jp.org/how-to",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "電力料金上昇リスク診断の使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
     description:
       "契約種別、エリア、季節ごとの電気代などを入力して、法人向けの電気料金上昇・高騰リスクを確認する方法をわかりやすく解説します。",
     images: ["/twitter-default.png"],
@@ -38,7 +38,7 @@ export default function HowToPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-6 py-8 text-slate-800">
       <header className="mb-8 border-b border-slate-200 pb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">使い方</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">電力料金上昇リスク診断の使い方</h1>
         <p className="mt-3 text-base leading-7 text-slate-600">
           このページでは、法人向け電気料金上昇、高騰リスクシミュレーターで何がわかるか、どう入力すればよいか、結果をどう読めば
           電力契約の見直しに使えるかを整理しています。企業・自治体・各種法人の担当者が、高圧・特別高圧を含む電力契約の

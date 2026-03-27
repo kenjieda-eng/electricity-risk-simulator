@@ -810,7 +810,7 @@ export default function HomePageClient() {
       <header className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            法人向け 電気料金上昇リスク シナリオ分析
+            法人向け 電気料金上昇リスクにデータ入力する
           </h1>
           <p className="mt-2 text-sm text-slate-600 sm:text-base">
             企業向け・法人向けに、契約条件や価格上昇リスク要因をもとに開始月から12か月間の累計電気代と上昇リスクを比較・可視化できます。
@@ -826,7 +826,10 @@ export default function HomePageClient() {
 
       <section className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-          <h2 className="mb-6 text-xl font-semibold text-slate-900">入力条件</h2>
+          <h2 className="text-xl font-semibold text-slate-900">入力条件</h2>
+          <p className="mt-1 mb-6 text-sm font-medium text-rose-600">
+            1〜9の項目を、プルダウン選択または数値入力してください。
+          </p>
           <div className="space-y-4">
             <div>
               <label htmlFor="contractType" className="mb-1.5 block text-base font-medium text-slate-700">
@@ -995,6 +998,9 @@ export default function HomePageClient() {
               <label htmlFor="floorArea" className="mb-1.5 block text-base font-medium text-slate-700">
                 9. 延床面積（㎡）
               </label>
+              <p className="mb-2 text-sm text-slate-500">
+                参考: 1㎡ = 約0.3025坪（30坪の場合は約99㎡）
+              </p>
               <input
                 id="floorArea"
                 type="number"
@@ -1138,7 +1144,10 @@ export default function HomePageClient() {
           </section>
 
           <section className="order-1 rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
-            <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">電気料金が上がるリスク要因</h3>
+            <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900 sm:text-xl">
+              電気料金が上がるリスク要因
+              <span className="text-sm font-medium text-slate-500 sm:text-base">チェック項目</span>
+            </h3>
             <p className="mt-1 text-sm leading-6 text-slate-500 sm:text-base">
               チェックしたリスク要因が累積で反映され、料金が上振れするシナリオとしてグラフに反映されます。
             </p>

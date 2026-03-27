@@ -2,14 +2,13 @@ import Link from "next/link";
 
 const siteLinks = [
   { href: "/", label: "電気料金上昇リスクを診断する" },
-  { href: "/how-to", label: "使い方を見る" },
-  { href: "/compare", label: "比較ポイントを見る" },
-  { href: "/articles", label: "法人向け電気料金の基礎知識を見る" },
+  { href: "/how-to", label: "電力料金上昇リスク診断の使い方" },
+  { href: "/articles", label: "法人向け電気料金の基礎知識" },
 ];
 
 const retrospectiveLink = {
   href: "/business-electricity-retrospective",
-  label: "法人電気料金振り返りを見る",
+  label: "法人電気料金振り返り",
 };
 
 export function Footer() {
@@ -51,16 +50,32 @@ export function Footer() {
 
           <section aria-labelledby="footer-related-info">
             <h2 id="footer-related-info" className="text-xs font-semibold tracking-wide text-slate-900">
-              関連情報
+              サイト運営
             </h2>
             <ul className="mt-4 space-y-2.5">
-              <li className="text-sm text-slate-600">一般社団法人エネルギー情報センター</li>
+              <li>
+                <a
+                  href="https://eic-jp.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-600 transition hover:text-slate-900"
+                >
+                  一般社団法人エネルギー情報センター
+                </a>
+              </li>
             </ul>
           </section>
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-5">
-          <p className="text-xs text-slate-500">© EIC</p>
+          <div className="mb-4">
+            <a href="#page-top" className="text-sm text-slate-600 transition hover:text-slate-900">
+              ページ上部へ戻る
+            </a>
+          </div>
+          <p className="text-xs text-slate-500">
+            Copyright © 一般社団法人エネルギー情報センター All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

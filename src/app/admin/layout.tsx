@@ -19,7 +19,7 @@ export default function AdminLayout({
 }>) {
   return (
     <>
-      <style>{'footer[data-public-footer="true"] { display: none; }'}</style>
+      <style>{'header[data-public-header="true"], footer[data-public-footer="true"] { display: none; }'}</style>
       {children}
     </>
   );
