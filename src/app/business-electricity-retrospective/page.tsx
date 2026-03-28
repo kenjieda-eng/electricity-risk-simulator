@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CATEGORY_KEYS, RETROSPECTIVE_YEARS } from "./_lib/retrospective-data";
 
 const pageTitle = "法人電気料金振り返り | 月次で見る電気料金動向";
 const pageDescription =
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
 };
 
 export default function BusinessElectricityRetrospectivePage() {
+  const yearlyRetrospectiveYears = [2019, ...RETROSPECTIVE_YEARS];
+
+  const categoryLabels: Record<(typeof CATEGORY_KEYS)[number], string> = {
+    "extra-high-voltage": "特別高圧",
+    "high-voltage": "高圧",
+    "low-voltage-power": "低圧電力",
+    "low-voltage-lighting": "低圧電灯",
+  };
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -48,6 +58,32 @@ export default function BusinessElectricityRetrospectivePage() {
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">記事一覧</h2>
+        <section className="mt-4 rounded-lg border border-slate-200 bg-sky-50/40 p-4">
+          <h3 className="text-lg font-semibold text-slate-900">2019年〜2025年 年次振り返り（4区分）</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            2019年から2025年まで、特別高圧・高圧・低圧電力・低圧電灯の4区分を年別ページで整理しています。
+            すべて小数点第一位で四捨五入した値を掲載し、グラフと前後年比較を確認できます。
+          </p>
+          <div className="mt-4 space-y-3">
+            {yearlyRetrospectiveYears.map((year) => (
+              <div key={year} className="rounded-md border border-slate-200 bg-white p-3">
+                <p className="text-sm font-semibold text-slate-900">{year}年</p>
+                <div className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                  {CATEGORY_KEYS.map((categoryKey) => (
+                    <Link
+                      key={`${year}-${categoryKey}`}
+                      href={`/business-electricity-retrospective/${year}-${categoryKey}`}
+                      className="rounded-md border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                    >
+                      {year}年 {categoryLabels[categoryKey]}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
           <h3 className="text-lg font-semibold text-slate-900">
             <Link
