@@ -53,8 +53,15 @@ const guideCards = [
   },
   {
     title: "電気料金上昇リスクを知りたい方におすすめ",
-    description: "要因別に上振れリスクを確認し、説明しやすい形で整理したい方向けです。",
-    articleSlugs: ["worst-case-electricity-cost-risk", "electricity-cost-risk-heatwave", "electricity-cost-risk-geopolitics"],
+    description:
+      "リスクシナリオの意味や使い方を先に整理し、そのうえで要因別の上振れリスクを確認したい方向けです。",
+    articleSlugs: [
+      "what-is-electricity-price-risk-scenario",
+      "why-electricity-prices-should-be-viewed-by-scenario",
+      "how-to-use-electricity-price-risk-scenarios",
+      "how-to-compare-electricity-price-risk-scenarios",
+      "which-electricity-price-risk-scenarios-to-check-first",
+    ],
   },
   {
     title: "調達構造から理解したい方におすすめ",
