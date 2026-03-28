@@ -75,6 +75,9 @@ export function PublicHeader() {
           <p className="text-base font-medium leading-tight text-slate-700 sm:text-lg">
             法人向け電気料金上昇、高騰リスクシミュレーター
           </p>
+          <p className="text-sm font-semibold leading-tight text-blue-600 sm:text-base">
+            電気代の値上がりリスクを30秒で診断
+          </p>
         </div>
 
         <nav aria-label="主要導線" className="mt-4">
