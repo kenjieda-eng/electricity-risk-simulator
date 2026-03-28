@@ -1,52 +1,158 @@
+import { promises as fs } from "node:fs";
+import path from "node:path";
 import type { MetadataRoute } from "next";
+import { articleCategories, articleList } from "../data/articles";
+import { getAllRetrospectiveSlugs } from "./business-electricity-retrospective/_lib/retrospective-data";
 
 const SITE_URL = "https://simulator.eic-jp.org";
-const PUBLIC_PATHS = [
-  "/",
-  "/how-to",
-  "/compare",
-  "/articles",
-  "/market-linked-plan",
-  "/fixed-price-plan",
-  "/market-linked-vs-fixed",
-  "/compare-market-linked-and-fixed-by-risk-pattern",
-  "/does-fuel-cost-adjustment-change-even-in-fixed-plan",
-  "/what-is-market-price-adjustment",
-  "/power-procurement-adjustment-fee",
-  "/who-should-choose-market-linked-plan",
-  "/who-should-choose-fixed-price-plan",
-  "/electricity-contract-cancellation-renewal-terms",
-  "/lng-electricity-price",
-  "/fuel-cost-adjustment",
-  "/market-price-adjustment",
-  "/why-business-electricity-prices-rise",
-  "/why-business-electricity-bills-rise-suddenly",
-  "/impact-of-electricity-subsidy-ending",
-  "/why-market-linked-electricity-prices-rise",
-  "/how-much-business-electricity-prices-increase",
-  "/when-business-electricity-price-increases-start",
-  "/high-voltage-electricity-pricing",
-  "/when-to-review-electricity-contract",
-  "/how-to-compare-electricity-suppliers",
-  "/is-business-electricity-price-increase-unreasonable",
-  "/renewable-energy-surcharge",
-  "/business-electricity-price-trend-10-years",
-  "/how-long-business-electricity-price-surge-lasts",
-  "/worst-case-electricity-cost-risk",
-  "/electricity-cost-risk-heatwave",
-  "/electricity-cost-risk-severe-winter",
-  "/electricity-cost-risk-yen-depreciation",
-  "/electricity-cost-risk-geopolitics",
-  "/electricity-cost-risk-disaster",
-] as const;
+const REQUIRED_PATHS = ["/", "/how-to", "/compare", "/articles"] as const;
+const APP_DIR = path.join(process.cwd(), "src", "app");
+const ARTICLES_DATA_FILE = path.join(process.cwd(), "src", "data", "articles.ts");
+const CATEGORY_PAGE_FILE = path.join(APP_DIR, "articles", "[categorySlug]", "page.tsx");
+const RETROSPECTIVE_DYNAMIC_PAGE_FILE = path.join(APP_DIR, "business-electricity-retrospective", "[slug]", "page.tsx");
+const RETROSPECTIVE_DATA_FILE = path.join(
+  APP_DIR,
+  "business-electricity-retrospective",
+  "_lib",
+  "retrospective-data.ts",
+);
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+const PRIORITY_BY_PATH: Record<string, number> = {
+  "/": 1,
+  "/how-to": 0.95,
+  "/compare": 0.95,
+  "/articles": 0.95,
+};
 
-  return PUBLIC_PATHS.map((path, index) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: now,
-    changeFrequency: index === 0 ? "weekly" : "monthly",
-    priority: index === 0 ? 1 : 0.8,
+const CHANGE_FREQUENCY_BY_PATH: Partial<Record<string, MetadataRoute.Sitemap[number]["changeFrequency"]>> = {
+  "/": "weekly",
+  "/articles": "weekly",
+};
+
+type PageRoute = {
+  route: string;
+  lastModified: Date;
+};
+
+const normalizeRoutePath = (segments: string[]) => (segments.length === 0 ? "/" : `/${segments.join("/")}`);
+
+const toPosixPath = (targetPath: string) => targetPath.split(path.sep).join("/");
+
+const isDynamicSegment = (segment: string) => segment.startsWith("[") && segment.endsWith("]");
+const isRouteGroupSegment = (segment: string) => segment.startsWith("(") && segment.endsWith(")");
+const isPrivateSegment = (segment: string) => segment.startsWith("_");
+
+const maxDate = (a: Date, b: Date) => (a.getTime() >= b.getTime() ? a : b);
+
+async function collectStaticPageRoutes(dirPath: string): Promise<PageRoute[]> {
+  const entries = await fs.readdir(dirPath, { withFileTypes: true });
+  const results: PageRoute[] = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name);
+
+    if (entry.isDirectory()) {
+      if (entry.name === "admin" || entry.name === "api" || isPrivateSegment(entry.name)) {
+        continue;
+      }
+      results.push(...(await collectStaticPageRoutes(fullPath)));
+      continue;
+    }
+
+    if (!entry.isFile() || entry.name !== "page.tsx") {
+      continue;
+    }
+
+    const relativeDir = path.relative(APP_DIR, path.dirname(fullPath));
+    const rawSegments = relativeDir === "" ? [] : toPosixPath(relativeDir).split("/");
+    const publicSegments: string[] = [];
+    let hasDynamicSegment = false;
+
+    for (const segment of rawSegments) {
+      if (isRouteGroupSegment(segment)) {
+        continue;
+      }
+      if (isDynamicSegment(segment)) {
+        hasDynamicSegment = true;
+        break;
+      }
+      publicSegments.push(segment);
+    }
+
+    if (hasDynamicSegment) {
+      continue;
+    }
+
+    const stat = await fs.stat(fullPath);
+    results.push({
+      route: normalizeRoutePath(publicSegments),
+      lastModified: stat.mtime,
+    });
+  }
+
+  return results;
+}
+
+async function getFileMtime(targetPath: string): Promise<Date> {
+  const stat = await fs.stat(targetPath);
+  return stat.mtime;
+}
+
+function upsertRouteDate(routeDateMap: Map<string, Date>, route: string, candidate: Date) {
+  const current = routeDateMap.get(route);
+  if (!current) {
+    routeDateMap.set(route, candidate);
+    return;
+  }
+  routeDateMap.set(route, maxDate(current, candidate));
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const staticPageRoutes = await collectStaticPageRoutes(APP_DIR);
+  const routeDateMap = new Map<string, Date>();
+
+  for (const pageRoute of staticPageRoutes) {
+    if (pageRoute.route.startsWith("/admin")) {
+      continue;
+    }
+    upsertRouteDate(routeDateMap, pageRoute.route, pageRoute.lastModified);
+  }
+
+  const articlesDataMtime = await getFileMtime(ARTICLES_DATA_FILE);
+  const categoryPageMtime = await getFileMtime(CATEGORY_PAGE_FILE);
+
+  for (const article of articleList) {
+    const articleRoute = article.slug.startsWith("/") ? article.slug : `/${article.slug}`;
+    const publishedAt = new Date(`${article.publishedAt}T00:00:00+09:00`);
+    upsertRouteDate(routeDateMap, articleRoute, publishedAt);
+  }
+
+  for (const category of articleCategories) {
+    const categoryRoute = `/articles/${category.slug}`;
+    upsertRouteDate(routeDateMap, categoryRoute, maxDate(articlesDataMtime, categoryPageMtime));
+  }
+
+  const retrospectivePageMtime = await getFileMtime(RETROSPECTIVE_DYNAMIC_PAGE_FILE);
+  const retrospectiveDataMtime = await getFileMtime(RETROSPECTIVE_DATA_FILE);
+  const retrospectiveLastmod = maxDate(retrospectivePageMtime, retrospectiveDataMtime);
+  for (const retrospectiveSlug of getAllRetrospectiveSlugs()) {
+    upsertRouteDate(routeDateMap, `/business-electricity-retrospective/${retrospectiveSlug}`, retrospectiveLastmod);
+  }
+
+  for (const requiredPath of REQUIRED_PATHS) {
+    if (!routeDateMap.has(requiredPath)) {
+      routeDateMap.set(requiredPath, new Date());
+    }
+  }
+
+  const allRoutes = [...routeDateMap.keys()]
+    .filter((route) => !route.startsWith("/admin"))
+    .sort((a, b) => a.localeCompare(b));
+
+  return allRoutes.map((route) => ({
+    url: `${SITE_URL}${route}`,
+    lastModified: routeDateMap.get(route),
+    changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
+    priority: PRIORITY_BY_PATH[route] ?? 0.8,
   }));
 }
