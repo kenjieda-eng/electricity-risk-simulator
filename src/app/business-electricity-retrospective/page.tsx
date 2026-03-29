@@ -87,6 +87,90 @@ export default function BusinessElectricityRetrospectivePage() {
         <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
           <h3 className="text-lg font-semibold text-slate-900">
             <Link
+              href="/business-electricity-retrospective/special-high-voltage-2019-2025"
+              className="underline-offset-2 hover:underline"
+            >
+              特別高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説
+            </Link>
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            2019年から2025年までの特別高圧データをもとに、コロナ禍、ウクライナ危機、電気・ガス料金支援の影響を
+            年別に整理した長文解説ページです。月次推移と年平均推移のグラフも掲載しています。
+          </p>
+          <Link
+            href="/business-electricity-retrospective/special-high-voltage-2019-2025"
+            className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+          >
+            記事を読む
+          </Link>
+        </article>
+
+        <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-lg font-semibold text-slate-900">
+            <Link
+              href="/business-electricity-retrospective/high-voltage-2019-2025"
+              className="underline-offset-2 hover:underline"
+            >
+              高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説
+            </Link>
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            2019年から2025年までの高圧データをもとに、コロナ禍、ウクライナ危機、電気・ガス料金支援の影響を
+            年別に整理した長文解説ページです。月次推移と年平均推移のグラフも掲載しています。
+          </p>
+          <Link
+            href="/business-electricity-retrospective/high-voltage-2019-2025"
+            className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+          >
+            記事を読む
+          </Link>
+        </article>
+
+        <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-lg font-semibold text-slate-900">
+            <Link
+              href="/business-electricity-retrospective/low-voltage-lighting-2019-2025"
+              className="underline-offset-2 hover:underline"
+            >
+              低圧電灯の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説
+            </Link>
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            2019年から2025年までの低圧電灯データをもとに、コロナ禍、燃料高騰、電気・ガス料金支援の影響を
+            年別に整理した長文解説ページです。月次推移と年平均推移のグラフも掲載しています。
+          </p>
+          <Link
+            href="/business-electricity-retrospective/low-voltage-lighting-2019-2025"
+            className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+          >
+            記事を読む
+          </Link>
+        </article>
+
+        <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-lg font-semibold text-slate-900">
+            <Link
+              href="/business-electricity-retrospective/low-voltage-power-2019-2025"
+              className="underline-offset-2 hover:underline"
+            >
+              低圧電力の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説
+            </Link>
+          </h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            2019年から2025年までの低圧電力データをもとに、コロナ禍、燃料高騰、電気・ガス料金支援の影響を
+            年別に整理した長文解説ページです。月次推移と年平均推移のグラフも掲載しています。
+          </p>
+          <Link
+            href="/business-electricity-retrospective/low-voltage-power-2019-2025"
+            className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+          >
+            記事を読む
+          </Link>
+        </article>
+
+        <article className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-lg font-semibold text-slate-900">
+            <Link
               href="/business-electricity-retrospective/2026-02"
               className="underline-offset-2 hover:underline"
             >

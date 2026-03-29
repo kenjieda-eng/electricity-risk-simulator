@@ -242,8 +242,12 @@ export const articleCategories: ArticleCategory[] = [
       "翌月以降の予算検討に使える確認ポイント",
     ],
     recommendedReadingOrder: [
-      "business-electricity-retrospective-2026-02",
-      "business-electricity-retrospective-2026-01",
+      "business-electricity-retrospective/special-high-voltage-2019-2025",
+      "business-electricity-retrospective/high-voltage-2019-2025",
+      "business-electricity-retrospective/low-voltage-power-2019-2025",
+      "business-electricity-retrospective/low-voltage-lighting-2019-2025",
+      "business-electricity-retrospective/2026-02",
+      "business-electricity-retrospective/2026-01",
     ],
     order: 9,
     group: "monthly",
@@ -838,6 +842,46 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "power-procurement",
     order: 5,
     publishedAt: "2026-03-14",
+  },
+  {
+    title: "特別高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説",
+    slug: "business-electricity-retrospective/special-high-voltage-2019-2025",
+    description:
+      "2019年から2025年までの特別高圧データをもとに、コロナ禍、ウクライナ危機、補助政策の影響を年別に整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 3,
+    publishedAt: "2026-03-29",
+  },
+  {
+    title: "高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説",
+    slug: "business-electricity-retrospective/high-voltage-2019-2025",
+    description:
+      "2019年から2025年までの高圧データをもとに、コロナ禍、ウクライナ危機、補助政策の影響を年別に整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 4,
+    publishedAt: "2026-03-29",
+  },
+  {
+    title: "低圧電力の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説",
+    slug: "business-electricity-retrospective/low-voltage-power-2019-2025",
+    description:
+      "2019年から2025年までの低圧電力データをもとに、コロナ禍、燃料高騰、補助政策の影響を年別に整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 5,
+    publishedAt: "2026-03-29",
+  },
+  {
+    title: "低圧電灯の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説",
+    slug: "business-electricity-retrospective/low-voltage-lighting-2019-2025",
+    description:
+      "2019年から2025年までの低圧電灯データをもとに、コロナ禍、燃料高騰、補助政策の影響を年別に整理します。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 6,
+    publishedAt: "2026-03-29",
   },
   {
     title: "【2026年2月】法人の電気料金はどう動いた？",
