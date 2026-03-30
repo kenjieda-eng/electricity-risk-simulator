@@ -58,71 +58,151 @@ export default function HowToReadElectricityQuotePage() {
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">このページで分かること</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>見積書で最初に確認したい項目</li>
+            <li>現在契約と同じ前提で比較する方法</li>
+            <li>単価が安く見えても有利とは限らない理由</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">請求書と見積書は役割が違う</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>請求書は現在の実績を確認する書類</li>
+            <li>見積書は将来の契約条件を比較する書類</li>
+            <li>見積書は前提条件がそろっているかの確認が最優先</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">見積書でまず確認したい項目</h2>
           <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力との関係を確認し、現在契約と同じ前提で算出されているかを見ます。前提が異なると単純比較はできません。
+            契約電力が同じ前提か、固定費部分が増えていないか、現在契約と条件差がないかを確認します。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">電力量料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            単価だけでなく課金方式を確認します。時間帯別単価や条件差がある場合は、実際の使用実態に照らして評価する必要があります。
+            単価だけでなく課金方式を確認します。時間帯別単価の有無や条件差がある場合は、実際の使用実態に合うか評価が必要です。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">燃料費調整額の扱い</h3>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>見積に含まれている前提か</li>
             <li>別建てで加算されるか</li>
-            <li>変動の考え方はどうか</li>
+            <li>上限有無や現在契約との差</li>
           </ul>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">再エネ賦課金の扱い</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積書の見せ方によって分かりにくいことがあるため、請求総額比較で見落とさないことが重要です。
+            見積総額に含める表示か別建て表示かで見え方が変わります。現在契約比較で見落とさないことが重要です。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">契約期間・更新条件・解約条件</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            料金条件だけでなく、契約期間や自動更新、中途解約条件を確認します。導入後の運用負担や柔軟性に直結する項目です。
+            料金条件だけでなく、契約期間、自動更新、中途解約、違約金、切替時期まで確認します。導入後の柔軟性に直結する項目です。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見積比較で特に注意したいポイント</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>単価だけで比較しない</li>
-            <li>契約電力の前提をそろえる</li>
-            <li>現在契約との比較条件をそろえる</li>
-            <li>燃料費調整額や市場連動の影響を見落とさない</li>
-            <li>安く見える場合でも条件差を確認する</li>
-          </ul>
+          <h2 className="text-xl font-semibold text-slate-900">見積比較で特に注意したい条件差</h2>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">確認項目</th>
+                  <th className="border border-slate-200 px-3 py-2">現在契約</th>
+                  <th className="border border-slate-200 px-3 py-2">提案見積</th>
+                  <th className="border border-slate-200 px-3 py-2">確認ポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">契約電力</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">同じ前提か</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">固定費が増えていないか</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">単価体系が違わないか</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">燃料費調整額</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">含む/含まない差はないか</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">見せ方の差で見落としていないか</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">契約期間</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">長すぎないか</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">中途解約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">柔軟性を失わないか</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場連動型か固定型かも確認したい</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動型と固定型では、料金の安定性や相場変動時の影響が異なります。自社のリスク許容度と予算管理方針に合うかをあわせて確認することが重要です。
+            単価が低く見えても、市場連動型では将来の変動リスクが大きいことがあります。固定型は安定性を見やすい一方、相場下落局面では割高に見える場合もあります。
+            予算管理方針やリスク許容度に合わせて判断することが重要です。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">見積書を見る前に用意したい資料</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>直近の請求書</li>
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>直近数か月の請求書</li>
             <li>契約電力</li>
             <li>使用量推移</li>
             <li>現在の契約条件</li>
             <li>更新時期</li>
             <li>拠点ごとの情報</li>
+          </ol>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">安く見える提案で確認したい具体例</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>基本料金の前提が違い、固定費が増える</li>
+            <li>燃料費調整額の扱いが違い、見積段階で安く見える</li>
+            <li>市場連動型で将来の変動リスクを含む</li>
+            <li>契約期間が長く中途解約条件が重い</li>
           </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見積書をどう判断につなげるか</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            最終判断では、総額の決まり方と契約条件をあわせて比較します。すぐ切り替えるか、まず追加診断するかを判断するためにも、
-            現在の請求構造と見積条件を同じ前提で照合することが有効です。
-          </p>
+          <h2 className="text-xl font-semibold text-slate-900">見積比較を判断につなげる流れ</h2>
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>現在の請求構造を整理する</li>
+            <li>見積書の前提条件をそろえて確認する</li>
+            <li>単価だけでなく条件差を確認する</li>
+            <li>必要に応じてシミュレーターで固定型・市場連動型の違いを確認する</li>
+          </ol>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -130,6 +210,25 @@ export default function HowToReadElectricityQuotePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書は単価だけでなく条件まで見る必要があります。契約電力、燃料費調整額、契約条件を確認し、現在の請求書と並べて判断することが実務上の基本です。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">こんな方におすすめ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>初めて請求書を見る担当者</li>
+            <li>契約更新前に全体像を確認したい方</li>
+            <li>見積比較の前提知識を整理したい方</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">次に読むページ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>現在の請求を確認するなら「電気料金の請求書で確認したいポイント」</li>
+            <li>固定と市場連動の違いを見るなら「市場連動プランと固定プランの違い」</li>
+            <li>契約条件を詳しく見るなら「法人向け電力契約で確認したい契約条件」</li>
+            <li>比較前提を理解するなら「契約電力とは」</li>
+          </ul>
         </section>
 
         <RelatedLinks

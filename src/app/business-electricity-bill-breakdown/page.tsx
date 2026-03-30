@@ -58,72 +58,130 @@ export default function BusinessElectricityBillBreakdownPage() {
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人向け電気料金は何で構成されるか</h2>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            基本料金は契約条件、とくに契約電力との関係が大きい固定費部分です。使用量とは別にかかるため、総額を読むときの起点になります。
-          </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">電力量料金</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電力量料金は実際に使った電力量に応じて変わる部分です。使用量が多い月は影響が大きく、繁忙期との関係も確認が必要です。
-          </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">燃料費調整額</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額は、燃料価格などの変動を反映する項目です。毎月の請求増減を説明するときの重要な要素になります。
-          </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">再エネ賦課金</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は制度に基づく費用項目です。使用量が多い法人ほど金額が大きくなりやすく、制度要因として分けて把握する必要があります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜ内訳を分けて見る必要があるのか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">このページで分かること</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>請求額が増えた理由を切り分けやすくなる</li>
-            <li>使用量要因・燃料要因・制度要因を整理しやすくなる</li>
-            <li>見積比較や契約見直しの判断精度を上げやすくなる</li>
+            <li>請求額を「固定費・使用量連動・調整項目・制度項目」の4つで見る考え方</li>
+            <li>請求書や見積書で内訳をどの順番で確認すると切り分けしやすいか</li>
+            <li>総額上昇時に見直し判断へつなげるための初期チェックの進め方</li>
           </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">内訳を見るときによくある誤解</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            法人向け電気料金は「固定費」「使用量連動」「調整項目」「制度項目」に分けて見る
+          </h2>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">項目</th>
+                  <th className="border border-slate-200 px-3 py-2">何を表すか</th>
+                  <th className="border border-slate-200 px-3 py-2">何で変わるか</th>
+                  <th className="border border-slate-200 px-3 py-2">実務での見方</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2">固定的にかかる費用</td>
+                  <td className="border border-slate-200 px-3 py-2">契約電力・契約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">固定費が高すぎないかを見る</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2">使った分に応じた費用</td>
+                  <td className="border border-slate-200 px-3 py-2">使用量・単価</td>
+                  <td className="border border-slate-200 px-3 py-2">使用量増減の影響を見る</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">燃料費調整額</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料価格などを反映する費用</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料市況・制度</td>
+                  <td className="border border-slate-200 px-3 py-2">前月比・前年同月比で確認する</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2">制度に基づく費用</td>
+                  <td className="border border-slate-200 px-3 py-2">使用量・年度単価</td>
+                  <td className="border border-slate-200 px-3 py-2">制度要因として別枠で見る</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">請求額が上がったときの内訳の見方</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            例えば「使用量は前年同月とほぼ同じなのに総額が上がった」場合、使用量以外の要因が動いた可能性があります。
+            まず燃料費調整額と再エネ賦課金を確認し、次に契約電力や契約条件の変化を確認すると切り分けしやすくなります。
+          </p>
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>使用量が増えたか</li>
+            <li>基本料金が変わったか</li>
+            <li>燃料費調整額が動いたか</li>
+            <li>再エネ賦課金の影響が増えたか</li>
+            <li>契約条件に変更がないか</li>
+          </ol>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある誤解</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>単価だけ見れば十分だと思う</li>
-            <li>すべて使用量の影響だと考える</li>
-            <li>燃料費調整額と再エネ賦課金を同じ項目のように見る</li>
-            <li>固定費部分を見落とす</li>
+            <li>単価だけ見れば十分と考えてしまう</li>
+            <li>請求額はすべて使用量で決まると考えてしまう</li>
+            <li>燃料費調整額と再エネ賦課金を同じ要因として扱ってしまう</li>
+            <li>固定費である基本料金の影響を軽く見てしまう</li>
           </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人担当者がまず確認したいポイント</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金の水準</li>
+          <h2 className="text-xl font-semibold text-slate-900">請求書と見積書で内訳を見る順番</h2>
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約電力</li>
+            <li>基本料金</li>
             <li>使用量</li>
             <li>燃料費調整額</li>
             <li>再エネ賦課金</li>
-            <li>前月・前年同月との差分</li>
-          </ul>
+            <li>前月・前年同月との差</li>
+          </ol>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            この順で確認すると、請求構造を理解したうえで見積比較に進みやすくなります。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">内訳を理解すると見積比較もしやすくなる</h2>
+          <h2 className="text-xl font-semibold text-slate-900">このページで扱わないこと</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            現在の請求構造が分かると、提案見積との差分を構造的に読みやすくなります。単価だけでなく、総額の決まり方で比較できるようになる点が実務上の利点です。
+            このページは全体像の把握が目的です。契約電力の詳細な算定やデマンドの実務運用は、関連ページで個別に確認してください。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人向け電気料金は、複数の要素で構成されます。内訳を分けて見ることで、値上がり理由や見直し余地が分かりやすくなります。
-            請求書や見積書を読む前提知識として活用してください。
+            現在の請求構造を理解しておくと、見積書の単価だけで判断しにくくなり、条件差を正確に比較できます。
+            このページは、請求確認と見積比較に進む前の地図として使うのがおすすめです。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">こんな方におすすめ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>初めて請求書を見る担当者</li>
+            <li>契約更新前に全体像を確認したい方</li>
+            <li>見積比較の前提知識を整理したい方</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">次に読むページ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>基本料金との関係を詳しく見るなら「契約電力とは」</li>
+            <li>ピーク使用との関係を見るなら「デマンドとは」</li>
+            <li>請求書を確認するなら「電気料金の請求書で確認したいポイント」</li>
+            <li>見積比較に進むなら「法人向け電気料金見積書の見方」</li>
+          </ul>
         </section>
 
         <RelatedLinks

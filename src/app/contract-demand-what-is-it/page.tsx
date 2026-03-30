@@ -59,69 +59,104 @@ export default function ContractDemandWhatIsItPage() {
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">契約電力とは何か</h2>
+          <h2 className="text-xl font-semibold text-slate-900">このページで分かること</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>契約電力が何を決める数値なのか</li>
+            <li>使用量とどこが違い、請求書のどこで確認するか</li>
+            <li>見積比較や契約見直しで判断を誤らないための確認軸</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約電力は何を決める数値なのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力は、電力契約の前提となる重要な数値のひとつです。基本料金の計算や契約条件に関わることが多く、
-            単なる使用量とは役割が異なります。
+            契約電力は、電力契約の前提条件を表す重要な数値です。実際に使った電力量そのものではなく、基本料金や契約条件を読む起点になります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            請求書や見積書で金額を正しく読むためには、契約電力を「契約の枠組みを決める値」として理解することが有効です。
+            そのため、請求書や見積書では使用量とは別に確認し、契約前提としての整合性を見ていく必要があります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">使用量とは何が違うか</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>使用量は、実際に使った電力量を示す値</li>
-            <li>契約電力は、契約条件の前提となる値</li>
-            <li>この2つを混同すると、請求書や見積書の解釈を誤りやすい</li>
-          </ul>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">項目</th>
+                  <th className="border border-slate-200 px-3 py-2">契約電力</th>
+                  <th className="border border-slate-200 px-3 py-2">使用量</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">意味</td>
+                  <td className="border border-slate-200 px-3 py-2">契約条件の前提になる数値</td>
+                  <td className="border border-slate-200 px-3 py-2">実際に使った電力量</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">主に関係するもの</td>
+                  <td className="border border-slate-200 px-3 py-2">基本料金・契約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">電力量料金</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">実務で見る場面</td>
+                  <td className="border border-slate-200 px-3 py-2">見積比較・契約更新・見直し</td>
+                  <td className="border border-slate-200 px-3 py-2">月次請求確認・使用実績把握</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">契約電力はなぜ重要か</h2>
           <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金に関係しやすい</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力は固定費部分に影響します。使用量が少ない月でも基本料金に関係するため、総額を見るうえで見逃せません。
+            使用量が少ない月でも、基本料金は契約条件の影響を受けます。「あまり使っていないのに高い」と感じる場合は、契約電力と基本料金の関係確認が必要です。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">見積比較の前提になる</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力が異なる見積同士は単純比較しにくくなります。比較時は、同じ前提条件で算出されているかを必ず確認する必要があります。
+            契約電力が異なる前提で算出された見積同士は単純比較できません。必ず同じ契約電力、同じ使用条件で比較しているかを確認します。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">設備更新や稼働変化とも関係する</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            拠点の使用実態が変わると、以前に設定した契約条件が現在に合わなくなる場合があります。設備増設や稼働パターンの変化は、
-            契約電力見直しのきっかけになります。
+            空調設備の更新、生産ラインの増設、稼働時間帯の変更、拠点統廃合などがあると、過去の契約条件が現在の実態に合わなくなることがあります。
+            使用量やピークの出方が変わった時は見直しトリガーです。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約電力を見るときによくある誤解</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>契約電力はその月の使用量そのものだと考えてしまう</li>
+            <li>契約電力が大きいほど、使わない月の固定費にも影響しやすいことを見落とす</li>
+            <li>契約電力の数字だけで判断し、基本料金や使用実態と合わせて見ない</li>
+            <li>見積比較で契約電力の前提差を確認せず、単価だけで判断してしまう</li>
+          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">請求書や見積書ではどこを見ればよいか</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約電力の記載欄</li>
-            <li>基本料金との関係</li>
-            <li>他の条件とあわせた前提の一致</li>
-            <li>見積比較時に同じ前提条件かどうか</li>
+            <li>基本料金の算出前提</li>
+            <li>契約種別（低圧・高圧・特別高圧）</li>
+            <li>現在契約と提案条件の差</li>
+            <li>更新条件と見直し時期</li>
           </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">契約電力を確認したい主な場面</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>請求額が高いと感じたとき</li>
-            <li>契約更新時</li>
-            <li>見積比較時</li>
-            <li>設備増設・更新時</li>
-            <li>拠点の使用状況が変わったとき</li>
-          </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">契約電力を見るときの注意点</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力は数字だけで判断しにくい項目です。使用量、契約条件、料金体系をセットで確認し、一部分だけで結論を出さないことが重要です。
+            契約電力の意味合いは契約区分によって見え方が異なるため、高圧・特別高圧のページもあわせて確認すると実務で使いやすくなります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">短い具体例</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            単価が安く見える見積を受け取っても、契約電力の前提が現在契約より大きければ、固定費が増える可能性があります。
+            単価だけでなく、契約電力を同一条件でそろえて比較することが重要です。
           </p>
         </section>
 
@@ -130,6 +165,24 @@ export default function ContractDemandWhatIsItPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約電力は、請求書と見積書の理解に欠かせない基礎概念です。使用量とは別の概念として押さえ、比較や見直しでは基本料金との関係を含めて確認することが大切です。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">こんな方におすすめ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>初めて請求書を見る担当者</li>
+            <li>契約更新前に全体像を確認したい方</li>
+            <li>見積比較の前提知識を整理したい方</li>
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">次に読むページ</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>契約電力とピーク使用の関係を知るなら「デマンドとは」</li>
+            <li>現在の請求書を確認するなら「電気料金の請求書で確認したいポイント」</li>
+            <li>見積比較へ進むなら「法人向け電気料金見積書の見方」</li>
+          </ul>
         </section>
 
         <RelatedLinks
