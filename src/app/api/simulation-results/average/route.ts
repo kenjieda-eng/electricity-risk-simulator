@@ -6,6 +6,14 @@ type RiskScoreRow = {
 
 export async function GET() {
   try {
+    const { count: totalSimulationCount, error: totalCountError } = await supabase
+      .from("simulation_results")
+      .select("id", { count: "exact", head: true });
+
+    if (totalCountError) {
+      return Response.json({ ok: false, error: totalCountError.message }, { status: 500 });
+    }
+
     const { data, error } = await supabase
       .from("simulation_results")
       .select("risk_score")
@@ -19,7 +27,7 @@ export async function GET() {
       return Response.json({
         ok: true,
         averageRiskScore: null,
-        count: 0,
+        count: totalSimulationCount ?? 0,
       });
     }
 
@@ -36,7 +44,7 @@ export async function GET() {
       return Response.json({
         ok: true,
         averageRiskScore: null,
-        count: 0,
+        count: totalSimulationCount ?? 0,
       });
     }
 
@@ -46,7 +54,7 @@ export async function GET() {
     return Response.json({
       ok: true,
       averageRiskScore,
-      count: scores.length,
+      count: totalSimulationCount ?? 0,
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unexpected error";

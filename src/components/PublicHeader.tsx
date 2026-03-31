@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import type { ReactElement, SVGProps } from "react";
 
 type HeaderLink = {
@@ -57,6 +58,42 @@ const isActivePath = (pathname: string, href: string): boolean => {
 
 export function PublicHeader() {
   const pathname = usePathname();
+  const [simulationCount, setSimulationCount] = useState<number | null>(null);
+  const [averageRiskScore, setAverageRiskScore] = useState<number | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadHeaderStats = async () => {
+      try {
+        const response = await fetch("/api/simulation-results/average", {
+          method: "GET",
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        const json = (await response.json()) as {
+          ok?: boolean;
+          averageRiskScore?: number | null;
+          count?: number;
+        };
+        if (!response.ok || !json.ok) return;
+
+        setSimulationCount(
+          typeof json.count === "number" && Number.isFinite(json.count) ? json.count : null
+        );
+        setAverageRiskScore(
+          typeof json.averageRiskScore === "number" && Number.isFinite(json.averageRiskScore)
+            ? json.averageRiskScore
+            : null
+        );
+      } catch {
+        if (controller.signal.aborted) return;
+      }
+    };
+
+    void loadHeaderStats();
+    return () => controller.abort();
+  }, []);
 
   return (
     <header data-public-header="true" className="border-b border-sky-300 bg-white">
@@ -109,6 +146,21 @@ export function PublicHeader() {
             })}
           </ul>
         </nav>
+
+        <section className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+          <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <p className="text-xs font-semibold text-slate-600">シミュレーション実施回数（最新）</p>
+            <p className="mt-1 text-lg font-bold text-slate-900">
+              {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
+            </p>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <p className="text-xs font-semibold text-slate-600">リスク平均スコア（最新）</p>
+            <p className="mt-1 text-lg font-bold text-slate-900">
+              {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
+            </p>
+          </div>
+        </section>
       </div>
     </header>
   );
