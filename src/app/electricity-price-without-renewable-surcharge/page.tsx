@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import RenewableSurchargeCharts from "./_components/RenewableSurchargeCharts";
+import { RENEWABLE_SURCHARGE_DATA } from "./_lib/renewable-surcharge-data";
 
 const pageTitle = "再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理";
 const pageDescription =
@@ -45,6 +47,10 @@ export const metadata: Metadata = {
 };
 
 export default function ElectricityPriceWithoutRenewableSurchargePage() {
+  const firstYear = RENEWABLE_SURCHARGE_DATA[0];
+  const latestYear = RENEWABLE_SURCHARGE_DATA[RENEWABLE_SURCHARGE_DATA.length - 1];
+  const unitPriceGrowthMultiple = latestYear.unitPriceYenPerKwh / firstYear.unitPriceYenPerKwh;
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -60,6 +66,63 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
       </header>
 
       <section className="mt-6 space-y-6">
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">再エネ賦課金とは</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            再エネ賦課金は、太陽光・風力など再生可能エネルギーの固定価格買取制度（FIT/FIP）を支えるために、電気使用量に
+            応じて電気料金に上乗せされる制度負担です。燃料費調整額とは別項目で、毎年度に単価が見直されます。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            標準家庭（300kWh/月）で見ると、2012年度の月額66円から2026年度は月額1,254円まで上昇し、買い取り単価は約
+            {unitPriceGrowthMultiple.toFixed(1)} 倍になっています。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            再エネ賦課金データ（2012年度〜2026年度、標準家庭300kWh/月）
+          </h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600 sm:text-base">
+            ご提示いただいたデータをそのまま掲載しています。2023年度は単価が一時的に低下した一方、2024年度に大きく反発し、
+            2026年度は4.18円/kWhとなっています。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-[980px] table-auto border-collapse text-left text-sm">
+              <thead className="bg-slate-100 text-slate-700">
+                <tr>
+                  <th className="px-3 py-3 font-semibold">年度</th>
+                  <th className="px-3 py-3 font-semibold">適用期間</th>
+                  <th className="px-3 py-3 font-semibold">買い取り単価</th>
+                  <th className="px-3 py-3 font-semibold">昨年度比</th>
+                  <th className="px-3 py-3 font-semibold">標準家庭の負担（300kWh/月）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {RENEWABLE_SURCHARGE_DATA.map((row) => (
+                  <tr key={row.fiscalYear} className="border-t border-slate-100 align-top hover:bg-slate-50">
+                    <td className="px-3 py-3 whitespace-nowrap">{row.fiscalYear}年度</td>
+                    <td className="px-3 py-3">{row.periodLabel}</td>
+                    <td className="px-3 py-3 whitespace-nowrap">{row.unitPriceYenPerKwh.toFixed(2)} 円/kWh</td>
+                    <td className="px-3 py-3 whitespace-nowrap">
+                      {row.yearOverYearYen === null || row.yearOverYearPercent === null
+                        ? "–"
+                        : `${row.yearOverYearYen >= 0 ? "+" : ""}${row.yearOverYearYen.toFixed(2)}円（${
+                            row.yearOverYearPercent >= 0 ? "+" : ""
+                          }${row.yearOverYearPercent}%）`}
+                    </td>
+                    <td className="px-3 py-3 whitespace-nowrap">
+                      年額 {row.annualBurdenYen.toLocaleString("ja-JP")} 円、月額{" "}
+                      {row.monthlyBurdenYen.toLocaleString("ja-JP")} 円
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <RenewableSurchargeCharts />
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">今回のデータは再エネ賦課金を含まない</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

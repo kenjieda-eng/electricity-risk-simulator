@@ -105,16 +105,40 @@ export function PublicHeader() {
               alt="法人向け電気料金上昇、高騰リスクシミュレーターのロゴ"
               width={300}
               height={57}
-              className="h-auto w-[250px] sm:w-[286px]"
+              className="h-auto w-[300px] sm:w-[343px]"
               priority
             />
           </Link>
-          <p className="text-base font-medium leading-tight text-slate-700 sm:text-lg">
-            法人向け電気料金上昇、高騰リスクシミュレーター
-          </p>
-          <p className="text-sm font-semibold leading-tight text-blue-600 sm:text-base">
-            電気代の値上がりリスクを30秒で診断
-          </p>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-3">
+              <p className="whitespace-nowrap text-base font-medium leading-tight text-slate-700 sm:text-lg">
+                法人向け電気料金上昇、高騰リスクシミュレーター
+              </p>
+              <p className="whitespace-nowrap text-base font-semibold leading-tight text-blue-600 sm:text-lg">
+                電気代の値上がりリスクを30秒で診断
+              </p>
+            </div>
+            <div className="mt-1.5 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+              <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
+                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                  <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+                    シミュレーション実施回数（最新）:{" "}
+                    <span className="text-xl font-bold text-slate-900 sm:text-2xl">
+                      {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
+                    </span>
+                  </p>
+                </div>
+                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                  <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+                    リスク平均スコア（最新）:{" "}
+                    <span className="text-xl font-bold text-slate-900 sm:text-2xl">
+                      {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
+                    </span>
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
 
         <nav aria-label="主要導線" className="mt-4">
@@ -146,21 +170,6 @@ export function PublicHeader() {
             })}
           </ul>
         </nav>
-
-        <section className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
-            <p className="text-xs font-semibold text-slate-600">シミュレーション実施回数（最新）</p>
-            <p className="mt-1 text-lg font-bold text-slate-900">
-              {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
-            </p>
-          </div>
-          <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
-            <p className="text-xs font-semibold text-slate-600">リスク平均スコア（最新）</p>
-            <p className="mt-1 text-lg font-bold text-slate-900">
-              {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
-            </p>
-          </div>
-        </section>
       </div>
     </header>
   );
