@@ -4,48 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import type { ReactElement, SVGProps } from "react";
 
 type HeaderLink = {
   href: string;
   label: string;
-  icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
+  iconSrc: string;
   highlight?: boolean;
 };
 
-const RiskCheckIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
-    <path d="M12 3l8 4v6c0 4.2-3 8.2-8 9-5-0.8-8-4.8-8-9V7l8-4z" />
-    <path d="M8.5 12l2.3 2.3 4.7-4.7" />
-  </svg>
-);
-
-const HowToIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
-    <rect x="4" y="3.5" width="16" height="17" rx="2.5" />
-    <path d="M8 8h8M8 12h8M8 16h5" />
-  </svg>
-);
-
-const KnowledgeIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
-    <path d="M4 6.5a2.5 2.5 0 0 1 2.5-2.5H20v15.5H6.5A2.5 2.5 0 0 1 4 17V6.5z" />
-    <path d="M8 8h8M8 12h8M8 16h6" />
-  </svg>
-);
-
-const RetrospectiveIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
-    <path d="M4 19.5h16M7 17V9m5 8V5m5 12v-6" />
-    <path d="M6 9l5-4 5 6 2.5-2.5" />
-  </svg>
-);
-
 const headerLinks: HeaderLink[] = [
-  { href: "/", label: "電気料金上昇リスクを診断する", icon: RiskCheckIcon },
-  { href: "/how-to", label: "電力料金上昇リスク診断の使い方", icon: HowToIcon },
-  { href: "/articles", label: "法人向け電気料金の基礎知識", icon: KnowledgeIcon },
-  { href: "/business-electricity-retrospective", label: "法人電気料金振り返り", icon: RetrospectiveIcon },
+  { href: "/", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
+  { href: "/how-to", label: "電力料金上昇リスク診断の使い方", iconSrc: "/icons/nav-how-to.png" },
+  { href: "/articles", label: "法人向け電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
+  {
+    href: "/business-electricity-retrospective",
+    label: "法人電気料金振り返り",
+    iconSrc: "/icons/nav-retrospective.png",
+  },
 ];
 
 const isActivePath = (pathname: string, href: string): boolean => {
@@ -96,7 +71,10 @@ export function PublicHeader() {
   }, []);
 
   return (
-    <header data-public-header="true" className="border-b border-sky-300 bg-white">
+    <header
+      data-public-header="true"
+      className="border-b-2 border-sky-500 bg-gradient-to-b from-sky-50 to-white"
+    >
       <div className="mx-auto max-w-[1600px] px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-3 sm:gap-4">
           <Link href="/" aria-label="法人向け電気料金上昇、高騰リスクシミュレーターへ戻る">
@@ -120,7 +98,7 @@ export function PublicHeader() {
             </div>
             <div className="mt-1.5 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
               <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-lg font-semibold text-slate-700 sm:text-xl">
                     シミュレーション実施回数（最新）:{" "}
                     <span className="text-xl font-bold text-slate-900 sm:text-2xl">
@@ -128,7 +106,7 @@ export function PublicHeader() {
                     </span>
                   </p>
                 </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-lg font-semibold text-slate-700 sm:text-xl">
                     リスク平均スコア（最新）:{" "}
                     <span className="text-xl font-bold text-slate-900 sm:text-2xl">
@@ -145,15 +123,14 @@ export function PublicHeader() {
           <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-3">
             {headerLinks.map((link) => {
               const active = isActivePath(pathname, link.href);
-              const Icon = link.icon;
               const baseClass =
-                "flex items-center gap-2 border-b-2 border-transparent px-3 py-2 text-[14px] leading-tight transition-colors duration-150";
+                "flex items-center gap-2.5 border-b-2 border-transparent px-3 py-1.5 text-base leading-tight transition-colors duration-150 sm:text-[17px]";
               const highlightedClass = active
                 ? "bg-sky-700 text-white border-sky-700"
                 : "bg-sky-50 text-sky-800 hover:bg-sky-200 hover:border-sky-400";
               const normalClass = active
                 ? "text-sky-700 border-sky-600 font-semibold"
-                : "text-slate-700 hover:bg-slate-100 hover:text-slate-900 hover:border-sky-400";
+                : "text-sky-900 hover:bg-sky-100 hover:text-sky-950 hover:border-sky-400";
 
               return (
                 <li key={link.href} className="min-w-0 lg:flex-1">
@@ -162,7 +139,14 @@ export function PublicHeader() {
                     className={`${baseClass} ${link.highlight ? highlightedClass : normalClass}`}
                     aria-current={active ? "page" : undefined}
                   >
-                    <Icon className="h-5 w-5 shrink-0" />
+                    <Image
+                      src={link.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      width={26}
+                      height={26}
+                      className="h-[26px] w-[26px] shrink-0"
+                    />
                     {link.label}
                   </Link>
                 </li>

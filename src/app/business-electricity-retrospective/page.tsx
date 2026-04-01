@@ -4,6 +4,7 @@ import {
   HISTORICAL_EXPLANATION_ITEMS,
   HUB_SERIES_POINTS,
   MONTHLY_RETROSPECTIVE_ITEMS,
+  UKRAINE_SHOCK_FEATURE_ITEMS,
 } from "./_lib/hub-data";
 
 const pageTitle = "法人電気料金振り返り｜月次動向・年次推移を実務視点で確認";
@@ -80,6 +81,30 @@ export default function BusinessElectricityRetrospectivePage() {
         <p className="mt-4 text-xs leading-6 text-slate-500 sm:text-sm">
           今後の月次記事もこのセクションに追加していく想定です。
         </p>
+      </section>
+
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
+        <h2 className="text-xl font-semibold text-slate-900">検証特集：ウクライナショックと法人電気料金</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          2022年のウクライナ危機は、燃料調達、卸電力市場、補助政策、契約実務まで含めて、法人電気料金の見え方を大きく変えました。
+          年別ページだけでは追いにくい「何が起点で、どこに波及し、いま何を学ぶべきか」を、検証特集としてまとめます。
+          2026年3月のホルムズ海峡封鎖を受けて、過去のショックをどう読み直すかという視点もあわせて整理します。
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {UKRAINE_SHOCK_FEATURE_ITEMS.map((item) => (
+            <article key={item.href} className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5">
+              <h3 className="text-base font-semibold leading-7 text-slate-900 sm:text-lg">
+                <Link href={item.href} className="underline-offset-2 hover:underline">
+                  {item.title}
+                </Link>
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
+              <Link href={item.href} className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+                {item.ctaLabel}
+              </Link>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">

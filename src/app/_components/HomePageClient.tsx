@@ -806,11 +806,11 @@ export default function HomePageClient() {
   };
 
   return (
-    <main className="mx-auto max-w-[1600px] bg-white px-4 py-5 text-slate-800 antialiased sm:px-6 lg:px-8">
+    <main className="mx-auto max-w-[1600px] px-4 py-5 text-slate-800 antialiased sm:px-6 lg:px-8">
       <header className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            法人向け 電気料金上昇リスクにデータ入力する
+            法人向け 電気料金上昇リスクシュミレーターにデータ入力する（診断をする）
           </h1>
           <p className="mt-2 text-sm text-slate-600 sm:text-base">
             企業向け・法人向けに、契約条件や価格上昇リスク要因をもとに開始月から12か月間の累計電気代と上昇リスクを比較・可視化できます。

@@ -24,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body id="page-top">
+      <body id="page-top" className="bg-violet-50/30">
         <PublicHeader />
-        <main>{children}</main>
+        <main className="bg-violet-50/30">{children}</main>
         <Footer />
         <Suspense fallback={null}>
           <GoogleAnalytics />
