@@ -75,41 +75,41 @@ export function PublicHeader() {
       data-public-header="true"
       className="border-b-2 border-sky-500 bg-gradient-to-b from-sky-50 to-white"
     >
-      <div className="mx-auto max-w-[1600px] px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+      <div className="mx-auto max-w-[1600px] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+        <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-4">
           <Link href="/" aria-label="法人向け電気料金上昇、高騰リスクシミュレーターへ戻る">
             <Image
               src="/logo.png"
               alt="法人向け電気料金上昇、高騰リスクシミュレーターのロゴ"
               width={300}
               height={57}
-              className="h-auto w-[300px] sm:w-[343px]"
+              className="h-auto w-[220px] sm:w-[300px] lg:w-[343px]"
               priority
             />
           </Link>
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-3">
-              <p className="whitespace-nowrap text-base font-medium leading-tight text-slate-700 sm:text-lg">
+          <div className="min-w-0 w-full flex-1">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+              <p className="text-sm font-medium leading-tight text-slate-700 sm:text-lg">
                 法人向け電気料金上昇、高騰リスクシミュレーター
               </p>
-              <p className="whitespace-nowrap text-base font-semibold leading-tight text-blue-600 sm:text-lg">
+              <p className="text-sm font-semibold leading-tight text-blue-600 sm:text-lg">
                 電気代の値上がりリスクを30秒で診断
               </p>
             </div>
             <div className="mt-1.5 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
               <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
-                  <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+                  <p className="text-sm font-semibold text-slate-700 sm:text-xl">
                     シミュレーション実施回数（最新）:{" "}
-                    <span className="text-xl font-bold text-slate-900 sm:text-2xl">
+                    <span className="text-base font-bold text-slate-900 sm:text-2xl">
                       {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
                     </span>
                   </p>
                 </div>
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
-                  <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+                  <p className="text-sm font-semibold text-slate-700 sm:text-xl">
                     リスク平均スコア（最新）:{" "}
-                    <span className="text-xl font-bold text-slate-900 sm:text-2xl">
+                    <span className="text-base font-bold text-slate-900 sm:text-2xl">
                       {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
                     </span>
                   </p>
@@ -120,11 +120,11 @@ export function PublicHeader() {
         </div>
 
         <nav aria-label="主要導線" className="mt-4">
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-3">
+          <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-3">
             {headerLinks.map((link) => {
               const active = isActivePath(pathname, link.href);
               const baseClass =
-                "flex items-center gap-2.5 border-b-2 border-transparent px-3 py-1.5 text-base leading-tight transition-colors duration-150 sm:text-[17px]";
+                "flex items-center gap-2 border-b-2 border-transparent px-2.5 py-1.5 text-sm leading-tight transition-colors duration-150 sm:px-3 sm:text-[17px]";
               const highlightedClass = active
                 ? "bg-sky-700 text-white border-sky-700"
                 : "bg-sky-50 text-sky-800 hover:bg-sky-200 hover:border-sky-400";
@@ -145,7 +145,7 @@ export function PublicHeader() {
                       aria-hidden="true"
                       width={26}
                       height={26}
-                      className="h-[26px] w-[26px] shrink-0"
+                      className="h-6 w-6 shrink-0 sm:h-[26px] sm:w-[26px]"
                     />
                     {link.label}
                   </Link>

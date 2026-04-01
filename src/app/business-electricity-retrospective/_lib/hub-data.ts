@@ -3,6 +3,8 @@ export type RetrospectiveCardItem = {
   description: string;
   href: string;
   ctaLabel: string;
+  iconSrc?: string;
+  iconAlt?: string;
 };
 
 type ArchiveCategory = {
@@ -34,74 +36,72 @@ export const MONTHLY_RETROSPECTIVE_ITEMS: RetrospectiveCardItem[] = [
 ];
 
 export const HISTORICAL_EXPLANATION_ITEMS: RetrospectiveCardItem[] = [
+];
+
+export const HISTORICAL_EXPLANATION_ALL_LINKS = [
   {
     title: "特別高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説",
-    description: "特別高圧の推移データをもとに、年ごとの変化と背景要因を整理した長文解説です。",
     href: "/business-electricity-retrospective/special-high-voltage-2019-2025",
-    ctaLabel: "記事を読む",
   },
   {
     title: "高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説",
-    description: "高圧の推移データをもとに、年ごとの変化と背景要因を整理した長文解説です。",
     href: "/business-electricity-retrospective/high-voltage-2019-2025",
-    ctaLabel: "記事を読む",
   },
   {
     title: "低圧電灯の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説",
-    description: "低圧電灯の推移データをもとに、年ごとの変化と背景要因を整理した長文解説です。",
     href: "/business-electricity-retrospective/low-voltage-lighting-2019-2025",
-    ctaLabel: "記事を読む",
   },
   {
     title: "低圧電力の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説",
-    description: "低圧電力の推移データをもとに、年ごとの変化と背景要因を整理した長文解説です。",
     href: "/business-electricity-retrospective/low-voltage-power-2019-2025",
-    ctaLabel: "記事を読む",
   },
-];
+] as const;
 
 export const UKRAINE_SHOCK_FEATURE_ITEMS: RetrospectiveCardItem[] = [
   {
     title: "ウクライナショックとは何だったのか",
     description:
-      "2022年のウクライナ危機が、法人電気料金にどのような変化をもたらしたのかを全体整理。高騰、高止まり、補助政策までまとめて確認できます。",
+      "2022年のウクライナ危機による料金変化を、高騰・高止まり・補助政策まで通して整理します。危機直後から政策対応期までの時系列を押さえ、全体像を短時間で確認できます。",
     href: "/business-electricity-retrospective/ukraine-shock-overview",
     ctaLabel: "記事を読む",
+    iconSrc: "/icons/retrospective/ukraine-shock-overview.png",
+    iconAlt: "価格急騰の推移を示すアイコン",
   },
   {
     title: "なぜ法人電気料金は上がったのか",
     description:
-      "LNG、石炭、為替、卸市場などがどう連鎖したのかを整理。遠い出来事が日本の法人電気料金にどう響いたかを説明します。",
+      "LNG、石炭、為替、卸市場がどう連鎖し、日本の法人料金に波及したかを整理します。どの要因がどの局面で効いたのかを分解し、上昇要因の優先度を理解できます。",
     href: "/business-electricity-retrospective/why-business-electricity-prices-rose-after-ukraine",
     ctaLabel: "記事を読む",
-  },
-  {
-    title: "2021年後半〜2023年の時系列整理",
-    description:
-      "高騰局面がどの順番で進んだのかを時系列で確認。社内説明用の整理にも使いやすい構成です。",
-    href: "/business-electricity-retrospective/ukraine-shock-timeline-2021-2023",
-    ctaLabel: "記事を読む",
+    iconSrc: "/icons/retrospective/price-rise-causes.png",
+    iconAlt: "燃料と市場要因の連鎖を示すアイコン",
   },
   {
     title: "区分別に見る影響の違い",
     description:
-      "特別高圧、高圧、低圧電力、低圧電灯で影響がどう違ったのかを横比較。区分ごとの意味合いを整理します。",
+      "特別高圧・高圧・低圧電力・低圧電灯の違いを横比較し、区分別の影響を整理します。同じ外部ショックでも契約区分で受け止め方が異なる理由を、実務目線で確認できます。",
     href: "/business-electricity-retrospective/ukraine-shock-by-voltage-class",
     ctaLabel: "記事を読む",
+    iconSrc: "/icons/retrospective/voltage-class-diff.png",
+    iconAlt: "電圧区分の比較を示すアイコン",
   },
   {
     title: "契約実務には何が起きたのか",
     description:
-      "市場連動、新電力、最終保障供給など、ウクライナショックが契約実務に与えた影響を分かりやすくまとめます。",
+      "市場連動、新電力、最終保障供給など、契約実務への影響を要点で整理します。調達先選定や更新交渉で押さえるべき判断ポイントを、具体的に振り返ります。",
     href: "/business-electricity-retrospective/ukraine-shock-and-contract-practice",
     ctaLabel: "記事を読む",
+    iconSrc: "/icons/retrospective/contract-practice.png",
+    iconAlt: "契約書と実務対応を示すアイコン",
   },
   {
     title: "ホルムズ海峡封鎖が示したこと",
     description:
-      "2026年3月の出来事を踏まえ、ウクライナショックから何を学び、今後の電力契約や予算策定にどう備えるかを整理します。",
+      "2026年3月の出来事を踏まえ、今後の電力契約と予算策定への備えを整理します。過去ショックとの共通点と相違点から、次の変動局面に備える視点を明確にします。",
     href: "/business-electricity-retrospective/lessons-from-ukraine-shock-for-2026",
     ctaLabel: "記事を読む",
+    iconSrc: "/icons/retrospective/hormuz-lessons.png",
+    iconAlt: "海峡封鎖リスクを示すアイコン",
   },
 ];
 

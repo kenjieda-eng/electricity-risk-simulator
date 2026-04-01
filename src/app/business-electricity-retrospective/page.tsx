@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
+  HISTORICAL_EXPLANATION_ALL_LINKS,
   HISTORICAL_EXPLANATION_ITEMS,
   HUB_SERIES_POINTS,
   MONTHLY_RETROSPECTIVE_ITEMS,
@@ -43,6 +45,8 @@ export const metadata: Metadata = {
 };
 
 export default function BusinessElectricityRetrospectivePage() {
+  const historicalExplanationItemsForHub = HISTORICAL_EXPLANATION_ITEMS.slice(0, 2);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -86,35 +90,40 @@ export default function BusinessElectricityRetrospectivePage() {
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
         <h2 className="text-xl font-semibold text-slate-900">検証特集：ウクライナショックと法人電気料金</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2022年のウクライナ危機は、燃料調達、卸電力市場、補助政策、契約実務まで含めて、法人電気料金の見え方を大きく変えました。
-          年別ページだけでは追いにくい「何が起点で、どこに波及し、いま何を学ぶべきか」を、検証特集としてまとめます。
-          2026年3月のホルムズ海峡封鎖を受けて、過去のショックをどう読み直すかという視点もあわせて整理します。
+          2022年のウクライナ危機が法人電気料金に与えた影響を、起点・波及・実務対応の流れで整理した特集です。
+          2026年3月のホルムズ海峡封鎖を踏まえ、過去のショックを今どう読み直すかも扱います。
         </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {UKRAINE_SHOCK_FEATURE_ITEMS.map((item) => (
-            <article key={item.href} className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5">
-              <h3 className="text-base font-semibold leading-7 text-slate-900 sm:text-lg">
-                <Link href={item.href} className="underline-offset-2 hover:underline">
-                  {item.title}
-                </Link>
-              </h3>
-              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
-              <Link href={item.href} className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
-                {item.ctaLabel}
-              </Link>
-            </article>
-          ))}
+        <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-sm font-semibold text-slate-900 sm:text-base">検証特集の全ページ</h3>
+          <ul className="mt-2 space-y-2 text-sm leading-7 text-slate-700">
+            {UKRAINE_SHOCK_FEATURE_ITEMS.map((item) => (
+              <li key={`all-ukraine-${item.href}`} className="flex items-center gap-3">
+                {item.iconSrc ? (
+                  <Image src={item.iconSrc} alt={item.iconAlt ?? ""} width={36} height={36} className="h-9 w-9 shrink-0" />
+                ) : null}
+                <div className="flex min-w-0 items-baseline gap-2">
+                  <Link href={item.href} className="shrink-0 underline-offset-2 hover:underline">
+                    {item.title}
+                  </Link>
+                  <span className="shrink-0 text-slate-400" aria-hidden="true">
+                    -
+                  </span>
+                  <p className="min-w-0 truncate text-slate-600">{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
         <h2 className="text-xl font-semibold text-slate-900">区分別の通史解説（2019年〜2025年）</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2019年から2025年までの推移を、契約区分ごとにまとめて確認したい方向けの解説です。
-          コロナ禍、燃料高騰、ウクライナ危機、補助政策の影響を、区分ごとに整理しています。
+          2019年から2025年の推移を契約区分別に確認できる解説です。
+          コロナ禍、燃料高騰、ウクライナ危機、補助政策の影響を通史で整理しています。
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {HISTORICAL_EXPLANATION_ITEMS.map((item) => (
+          {historicalExplanationItemsForHub.map((item) => (
             <article key={item.href} className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4">
               <h3 className="text-base font-semibold leading-7 text-slate-900 sm:text-lg">
                 <Link href={item.href} className="underline-offset-2 hover:underline">
@@ -127,6 +136,18 @@ export default function BusinessElectricityRetrospectivePage() {
               </Link>
             </article>
           ))}
+        </div>
+        <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-sm font-semibold text-slate-900 sm:text-base">区分別通史の全ページ</h3>
+          <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
+            {HISTORICAL_EXPLANATION_ALL_LINKS.map((item) => (
+              <li key={`all-history-${item.href}`}>
+                <Link href={item.href} className="underline-offset-2 hover:underline">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
