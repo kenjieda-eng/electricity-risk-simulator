@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -34,6 +35,20 @@ export const metadata: Metadata = {
   },
 };
 
+type SectionHeadingProps = {
+  iconSrc: string;
+  text: string;
+};
+
+function SectionHeading({ iconSrc, text }: SectionHeadingProps) {
+  return (
+    <h2 className="flex items-center gap-3 text-xl font-semibold text-slate-900">
+      <Image src={iconSrc} alt="" width={28} height={28} className="h-7 w-7 shrink-0" aria-hidden />
+      <span>{text}</span>
+    </h2>
+  );
+}
+
 export default function HowToPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-6 py-8 text-slate-800">
@@ -59,7 +74,7 @@ export default function HowToPage() {
 
       <section className="space-y-6 text-base leading-7 text-slate-700">
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">1. このツールで何がわかるか</h2>
+          <SectionHeading iconSrc="/icons/howto-overview.png" text="1. このツールで何がわかるか" />
           <p className="mt-2">
             この電気料金シミュレーターでは、平時の実績値を起点に、リスク要因を加えた場合の年間コストの動きを比較できます。
             市場連動の影響が大きいケースと、固定プランで上振れを抑えやすいケースの違いを、同じ条件で確認できる点が特徴です。
@@ -74,7 +89,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">2. 入力項目の設定方法（左側の入力条件）</h2>
+          <SectionHeading iconSrc="/icons/howto-input.png" text="2. 入力項目の設定方法（左側の入力条件）" />
           <p className="mt-2">
             入力値を変更すると、結果は自動で再計算されます。まずは現状に近い値を入力し、その後に条件を変えて比較すると、
             電力契約の見直しポイントが把握しやすくなります。
@@ -97,7 +112,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">3. リスク要因の見方（非常時シナリオの表示）</h2>
+          <SectionHeading iconSrc="/icons/howto-risk.png" text="3. リスク要因の見方（非常時シナリオの表示）" />
           <p className="mt-2">
             「電気料金が上がるリスク要因」でチェックした内容は累積で反映され、非常時を想定した上振れシナリオとして表示されます。
             要因ごとに、なぜ料金が上がる可能性があるのかを押さえておくと、比較結果を読み取りやすくなります。
@@ -116,7 +131,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">4. グラフと結果の見方</h2>
+          <SectionHeading iconSrc="/icons/howto-chart.png" text="4. グラフと結果の見方" />
           <p className="mt-2">
             右側の「年間シミュレーション」では、12か月の推移と月次差分を確認できます。単に増減を見るだけでなく、
             どのリスク要因で固定プランと市場連動型プランの差が広がるかを意識して読むことが重要です。
@@ -135,7 +150,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">5. リスクスコア確認と比較画面へのつながり</h2>
+          <SectionHeading iconSrc="/icons/howto-score.png" text="5. リスクスコア確認と比較画面へのつながり" />
           <p className="mt-2">
             「この入力内容で電力料金上昇リスクスコア（点数）を確認する」ボタンを押すと、入力内容を保存して比較画面へ移動します。
             比較画面では、リスクスコアとリスク判定（例: 注意、高い、非常に高い）を確認できます。
@@ -148,7 +163,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">6. どんな人に向いているか</h2>
+          <SectionHeading iconSrc="/icons/howto-people.png" text="6. どんな人に向いているか" />
           <p className="mt-2">
             本ページは、次のような業務で電気料金の比較検討を行う担当者に向いています。
           </p>
@@ -162,7 +177,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">7. おすすめの使い方手順</h2>
+          <SectionHeading iconSrc="/icons/howto-steps.png" text="7. おすすめの使い方手順" />
           <p className="mt-2">
             まず現在条件を入れて基準を作り、次に要因を重ねていくと、上振れの背景と契約選択の考え方を整理しやすくなります。
           </p>
@@ -175,7 +190,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">8. 保存結果の比較と履歴確認</h2>
+          <SectionHeading iconSrc="/icons/howto-history.png" text="8. 保存結果の比較と履歴確認" />
           <p className="mt-2">
             比較ページでは、保存した条件の差分や要因分析を確認できます。条件変更の影響や、契約候補ごとのリスク傾向を
             検討する際に有効です。
@@ -186,7 +201,7 @@ export default function HowToPage() {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-slate-900">9. 関連ページ</h2>
+          <SectionHeading iconSrc="/icons/howto-links.png" text="9. 関連ページ" />
           <p className="mt-2">目的に応じて、次のページもあわせて確認してください。</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             <Link
@@ -208,7 +223,10 @@ export default function HowToPage() {
       </section>
 
       <footer className="mt-10 border-t border-slate-200 pt-6 text-base leading-7 text-slate-600">
-        <h2 className="text-base font-semibold text-slate-900 sm:text-lg">10. 注意事項</h2>
+        <h2 className="flex items-center gap-3 text-base font-semibold text-slate-900 sm:text-lg">
+          <Image src="/icons/howto-notice.png" alt="" width={24} height={24} className="h-6 w-6 shrink-0" aria-hidden />
+          <span>10. 注意事項</span>
+        </h2>
         <p className="mt-2">
           本ツールは将来の市場価格や実際の請求額を保証するものではありません。実際の料金は、契約条件、燃料費調整、
           請求条件、運用状況などによって変動します。シミュレーション結果は、法人向けの比較検討やリスク把握の参考情報としてご活用ください。
