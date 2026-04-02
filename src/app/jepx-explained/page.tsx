@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
+import FlowDiagram from "../../components/simulator/FlowDiagram";
+import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "JEPXとは何か｜卸電力市場の仕組みと法人向け電気料金への影響";
+const pageTitle = "JEPXとは何か｜卸電力市場の仕組み";
 const pageDescription =
-  "JEPX（日本卸電力取引所）とは何か。電力会社が利用する卸電力市場の仕組み、価格変動の背景、法人向け電気料金との関係をわかりやすく解説します。";
+  "JEPXは、日本の電力会社や発電事業者などが電気を売買する卸電力市場です。一日前市場、時間前市場などの基本的な仕組みと、電力会社がJEPXをどのような場面で使っているのかを法人向けに整理します。";
 const pageUrl = "https://simulator.eic-jp.org/jepx-explained";
 
 export const metadata: Metadata = {
@@ -38,112 +41,187 @@ export const metadata: Metadata = {
 };
 
 export default function JepxExplainedPage() {
+  const marketRows = [
+    {
+      market: "一日前市場（スポット市場）",
+      timing: "受渡前日に翌日の30分単位を売買するとき",
+      adjust: "翌日の需要見込みに対する主な調達量",
+      usage: "不足見込みを前日に埋める、余剰見込みを売却する",
+    },
+    {
+      market: "時間前市場",
+      timing: "当日に需要予測や発電計画のずれを修正するとき",
+      adjust: "当日発生した過不足や見込み差",
+      usage: "天候急変や需要変動を受けた追加調整",
+    },
+  ];
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">JEPXとは何か｜卸電力市場の仕組み</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          JEPX（日本卸電力取引所）は、電気を売りたい事業者と買いたい事業者が取引する市場です。法人向け電気料金の背景を理解するうえで、市場調達の位置づけを知っておくことは重要です。
+          電力会社の仕入れを理解するとき、まず押さえておきたいのがJEPXです。JEPXは、日本の卸電力市場として、
+          発電事業者や小売電気事業者などが電気を売買する場です。
+        </p>
+        <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          価格ニュースで名前が出ることが多い一方で、実務では不足分を調達したり、需給見込みのずれを調整したりする場でもあります。
+          このページでは制度紹介だけで終わらせず、電力会社がJEPXを何のために使うのかという視点で整理します。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">JEPXは電気を売買する市場</h2>
+          <h2 className="text-xl font-semibold text-slate-900">JEPXとは何か</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            小売電気事業者がすべてを自社発電で賄うわけではないため、外部調達の場が必要になります。JEPXは、必要な量を調達するための主要な仕組みの一つとして機能しています。
+            JEPXは、日本卸電力取引所として、発電事業者、小売電気事業者などが電気を売買する市場です。
+            電気は大量にためておきにくく、受渡時刻ごとに需給を合わせる必要があるため、卸市場は調達実務の中核的な機能を持ちます。
+          </p>
+          <InfoBox title="ここで押さえたい前提">
+            小売電気事業者が必要量のすべてをJEPXだけで調達するわけではありません。相対契約や自社電源などと併用しつつ、
+            JEPXを短中期の調整弁として使う見方が基本です。
+          </InfoBox>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">なぜ卸電力市場が必要なのか</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            電力会社は、翌日や当日の需要をかなりの精度で予測しますが、実需は天候、操業状況、再エネ出力などでずれます。
+            卸市場がなければ、このずれを埋める場が限られ、供給の柔軟性が下がります。JEPXは、過不足を調整しつつ価格シグナルも示す市場として機能しています。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            価格が高いか安いかだけでなく、どれだけ需給が引き締まっているかを読み取る指標としても見られます。
+            法人向け料金の背景を考えるとき、JEPXは単なるニュースの数字ではなく、調達コスト形成の一部です。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">一日前市場と時間前市場の基本</h2>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">市場名</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">いつ使うか</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">何を調整するか</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主な使い方</th>
+              </tr>
+            </thead>
+            <tbody>
+              {marketRows.map((row) => (
+                <tr key={row.market} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.market}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.timing}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.adjust}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.usage}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs leading-6 text-slate-500">
+            2026年4月2日時点でJEPX公式サイト上で案内されている現行の中核市場区分に絞って整理しています。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">どんな事業者がJEPXを利用しているのか</h2>
-          <h3 className="mt-3 text-lg font-semibold text-slate-900">小売電気事業者</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            需要変動や調達計画のズレを補うために市場を利用します。柔軟性は高い一方、価格上昇局面では調達コストが増える可能性があります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">発電事業者</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            発電した電気の販売先として市場を活用します。相対契約と市場売電を使い分けながら、販売機会を確保します。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">その他の市場参加者</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            市場は複数の立場の参加者で成り立っています。読者にとって重要なのは、料金の背景に市場取引が組み込まれている点です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">JEPXで取引される電気とは何か</h2>
+          <h2 className="text-xl font-semibold text-slate-900">電力会社はJEPXをどんな場面で使うのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気は大量に保存しにくく、必要な時間帯に需給を合わせる必要があります。そのため、余裕がある時間帯と逼迫する時間帯では価格の動き方が変わりやすくなります。
+            典型的には、翌日の需要に対して不足しそうな量を一日前市場で確保し、当日になって気温や再エネ出力が変わった場合に時間前市場で微調整します。
+            発電事業者側にとっては、余剰になりそうな電気を売る出口としても機能します。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜJEPXが重要なのか</h2>
-          <h3 className="mt-3 text-lg font-semibold text-slate-900">必要な電気を機動的に調達できる</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            市場は、短期の需要変化に対応しやすいという強みがあります。予測と実需の差を埋める役割を担います。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">価格シグナルが見える</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            市場価格は、需給の厳しさや燃料事情が反映される場面があります。調達判断や料金設計の参考指標として使われます。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">一方で価格変動リスクもある</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            需給逼迫や燃料高騰が重なると、調達コストが急に上がる可能性があります。市場調達の利便性とリスクは表裏一体です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">JEPXの動きが法人向け電気料金に与える影響</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            すべての料金メニューが同じ形で市場価格を反映するわけではありません。ただし、市場連動型では影響が見えやすく、固定型でも見積時点の調達環境が条件に反映されることがあります。
+            ここで重要なのは、JEPXが「全部を買う場所」ではなく、「調達全体の中で不足やずれを吸収する場所」になっていることです。
+            相対契約や長期契約でベースを持ちながら、市場を活用する構造が一般的です。
           </p>
+          <div className="mt-4">
+            <FlowDiagram
+              heading="卸市場が調達全体のどこに位置するか"
+              steps={[
+                {
+                  title: "1. ベース調達",
+                  description: "自社発電、相対契約、長期契約などで基礎量を確保する",
+                },
+                {
+                  title: "2. 翌日計画",
+                  description: "需要見込みに対して一日前市場で不足や余剰を調整する",
+                },
+                {
+                  title: "3. 当日修正",
+                  description: "時間前市場で天候や需要変動によるずれを微調整する",
+                },
+                {
+                  title: "4. 小売供給",
+                  description: "最終的な調達コストと需給バランスが料金設計の背景になる",
+                },
+              ]}
+            />
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">市場連動プランを理解するうえでもJEPXは重要</h2>
+          <h2 className="text-xl font-semibold text-slate-900">JEPXだけで仕入れるわけではない理由</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動型の料金はJEPXの価格動向と関係が深いため、市場の仕組みを知ると変動の意味が読みやすくなります。次ページでは、価格そのものがどう決まるかを掘り下げます。
+            JEPXは柔軟性が高い反面、需給が引き締まった局面では価格が大きく動きます。もし全量を市場に依存すると、価格急変や需給逼迫の影響が
+            そのまま仕入れコストに表れやすくなります。そのため、多くの電力会社は市場の機動性を活かしつつ、市場依存度が高くなりすぎないように設計します。
+          </p>
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <InfoBox title="JEPXの強み">
+              需要予測との差分を埋めやすく、価格シグナルが見えるため、短期調達には欠かせない手段です。
+            </InfoBox>
+            <InfoBox title="JEPXの限界">
+              市場価格が急騰した局面では、柔軟性の高さがそのままコスト変動の大きさにもつながります。
+            </InfoBox>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">JEPXを見るときに押さえたいポイント</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+            <li>市場価格は調達全体の一部であり、相対契約や長期契約と切り分けて読むこと</li>
+            <li>価格だけでなく、どの時間帯・どのエリアで動いたかを見ること</li>
+            <li>需給逼迫、燃料、再エネ出力、系統制約が重なると価格変動が大きくなりやすいこと</li>
+          </ul>
+          <p className="mt-3 text-xs leading-6 text-slate-500">
+            参考: JEPX公式サイトのスポット市場・時間前市場ページ（2026年4月2日確認）。
           </p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
-          intro="JEPXの理解を起点に、価格決定と契約メニューへつなげて確認できます。"
+          intro="JEPXの仕組みを押さえたら、次は価格形成と市場以外の調達手段を見ると全体像がつながります。"
           links={[
             {
-              href: "/market-linked-plan",
-              title: "市場連動プランとは",
-              description: "市場価格と料金メニューの関係を実務目線で整理します。",
-            },
-            {
               href: "/how-electricity-prices-are-determined",
-              title: "電気の価格はどう決まるのか",
-              description: "需給、燃料、天候などの価格決定要因を解説します。",
+              title: "電気の価格はどう決まるのか｜JEPX価格の決まり方",
+              description: "JEPX価格がなぜ時間帯ごとに動くのかを掘り下げます。",
             },
             {
               href: "/how-electricity-is-procured",
               title: "電力会社の仕入れの全体像",
-              description: "自社発電・市場・相対契約の全体構造を確認できます。",
+              description: "市場が調達全体のどこに位置するかを入口から確認できます。",
             },
             {
-              href: "/compare",
-              title: "料金メニューを比較する",
-              description: "仕組みの理解を踏まえて、契約条件の比較に進めます。",
+              href: "/bilateral-power-contracts",
+              title: "相対契約とは何か｜市場に依存しない仕入れの考え方",
+              description: "市場以外の調達ルートがなぜ必要かを確認できます。",
+            },
+            {
+              href: "/market-linked-plan",
+              title: "市場連動プランとは",
+              description: "JEPX価格が料金メニューへどう波及するかを整理します。",
             },
           ]}
         />
 
         <ContentCta
           heading="次のステップ"
-          description="価格の決まり方まで理解すると、料金メニューの比較軸が明確になります。"
+          description="JEPXの次は価格形成を見ると、なぜ同じ日でも価格差が出るのか、なぜ高騰時に影響が大きいのかが読みやすくなります。"
           links={[
             { href: "/how-electricity-prices-are-determined", label: "JEPX価格の決まり方を見る" },
-            { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/articles/power-procurement", label: "カテゴリ一覧を見る" },
           ]}
         />
+
+        <PowerProcurementSeriesNav currentSlug="jepx-explained" />
       </section>
     </main>
   );

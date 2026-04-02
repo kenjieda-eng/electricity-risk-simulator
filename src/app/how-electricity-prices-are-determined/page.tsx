@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import JepxYearlySystemPriceChart from "../../components/articles/JepxYearlySystemPriceChart";
+import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
+import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/businessElectricityTrendHubData";
 
-const pageTitle = "電気の価格はどう決まるのか｜JEPX価格の仕組みをわかりやすく解説";
+const pageTitle = "電気の価格はどう決まるのか｜JEPX価格の決まり方";
 const pageDescription =
-  "電気の価格はどのように決まるのか。JEPXにおける需給、燃料価格、天候、需給逼迫など、法人向け電気料金にも関係する価格決定の仕組みを解説します。";
+  "JEPX価格は、需要と供給だけでなく、天候、時間帯、燃料価格、発電構成、需給逼迫など複数要因で動きます。電気の価格がどのように決まり、なぜ大きく変動することがあるのかを整理します。";
 const pageUrl = "https://simulator.eic-jp.org/how-electricity-prices-are-determined";
 
 export const metadata: Metadata = {
@@ -38,117 +42,191 @@ export const metadata: Metadata = {
 };
 
 export default function HowElectricityPricesAreDeterminedPage() {
+  const factorRows = [
+    {
+      factor: "需要の増加",
+      direction: "上がりやすい",
+      scene: "猛暑・厳冬、平日昼間、操業増などで使用量が膨らむ場面",
+    },
+    {
+      factor: "再エネ出力の低下",
+      direction: "上がりやすい",
+      scene: "日射が弱い、風が弱い、夕方に太陽光が落ちる場面",
+    },
+    {
+      factor: "燃料価格の上昇",
+      direction: "上がりやすい",
+      scene: "LNGや石炭など火力燃料の調達コストが上がる場面",
+    },
+    {
+      factor: "発電設備の停止・供給余力低下",
+      direction: "上がりやすい",
+      scene: "定期点検、トラブル、需給ひっ迫で使える電源が少ない場面",
+    },
+    {
+      factor: "系統制約・エリア差",
+      direction: "エリアごとに差が出やすい",
+      scene: "送電制約やエリア間連系の限界で地域別の価格差が広がる場面",
+    },
+    {
+      factor: "需要が弱く供給余力がある",
+      direction: "下がりやすい",
+      scene: "中間期、需要が落ち着き再エネ出力も高い場面",
+    },
+  ];
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電気の価格はどう決まるのか｜JEPX価格の決まり方</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電気の価格は、需要と供給のバランスを軸に、燃料価格や天候など複数要因が重なって決まります。法人の契約比較では、単価水準だけでなく変動幅まで見る視点が重要です。
+          JEPXの価格は、「電気の相場」として一言で語られることがあります。ただ、実際には、単純に需要と供給だけで決まっているわけではありません。
+        </p>
+        <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          暑い日や寒い日には需要が増えやすく、太陽光や風力の発電量が変われば供給側の条件も変わります。そこに火力発電の燃料価格、
+          時間帯ごとの需要差、設備の稼働状況、送電制約などが重なることで、電気の価格は大きく動くことがあります。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電気の価格は需要と供給の影響を受ける</h2>
+          <h2 className="text-xl font-semibold text-slate-900">JEPX価格は何で決まるのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            需要が強く供給余力が小さいと価格は上がりやすく、余裕があると落ち着きやすくなります。電気は保存しにくく同時同量が必要なため、需給変化が価格に出やすいのが特徴です。
+            基本は需給のバランスです。需要が強く、すぐ使える供給余力が小さいほど価格は上がりやすく、余力があるほど価格は落ち着きやすくなります。
+            ただし、電気は保存が難しく、30分単位で同時同量を合わせる必要があるため、価格は平均値よりも「その時間帯の厳しさ」に反応しやすい特徴があります。
+          </p>
+          <InfoBox title="読み方のコツ">
+            「今日は高いのか」を考えるときは、需要、再エネ出力、火力の稼働状況、燃料、系統制約が同じ方向に重なっていないかを見ると背景がつかみやすくなります。
+          </InfoBox>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">需要と供給だけでは見えない要因</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            需給だけを見ると抽象的になりがちですが、実際には「どの需要が増えたのか」「どの電源が使いにくかったのか」で価格の上がり方は変わります。
+            同じ需要増でも、再エネがよく出ている日と、火力依存が強まる日では価格の出方が異なります。
+          </p>
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <InfoBox title="短期要因">
+              気温、天候、曜日、時間帯、再エネ出力の変化など、その日その時間に効く要因です。
+            </InfoBox>
+            <InfoBox title="中期要因">
+              燃料価格、火力の運転条件、需給見通し、供給余力の水準など、しばらく続く前提条件です。
+            </InfoBox>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">時間帯と天候で価格が変わる理由</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            夏冬の昼夕方は冷暖房需要が膨らみやすく、価格が上がりやすい時間帯です。特に太陽光が落ち始める夕方は、需要が高いまま再エネ出力が低下し、
+            火力で埋める比率が高まりやすくなります。逆に需要が低く再エネ出力が高い時間帯は、価格が落ち着くことがあります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">需要が増えると価格が上がりやすい理由</h2>
-          <h3 className="mt-3 text-lg font-semibold text-slate-900">夏や冬の需要増</h3>
+          <h2 className="text-xl font-semibold text-slate-900">燃料価格と発電構成の影響</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            冷暖房需要が増える季節は、オフィス・工場・商業施設などで使用量が伸びやすく、価格が上がりやすい傾向があります。
+            日本では火力発電が需給調整の中心を担う場面が多いため、LNGや石炭などの燃料価格が上がると、火力の発電コストが上昇し、
+            結果として市場価格の上昇圧力になります。どの電源がその時間帯の追加供給を担うかで、価格の重みづけも変わります。
           </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">猛暑・厳寒の影響</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            気温の振れが大きい年は需要が想定以上に増え、需給逼迫につながることがあります。短期間の高騰が発生する背景として重要な要素です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">供給側の事情でも価格は変わる</h2>
-          <h3 className="mt-3 text-lg font-semibold text-slate-900">燃料価格の上昇</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            火力発電の比重が高い局面では、LNGなど燃料価格の上昇が発電コストに反映されやすくなります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">発電所トラブルや供給余力の低下</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            設備停止や点検の重なりで供給余力が低下すると、同じ需要でも価格が上がりやすくなります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">再エネ出力の変動</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            太陽光や風力は天候に左右されるため、期待した出力が得られない時間帯には他電源で補う必要があり、価格変動につながる場面があります。
+            ここは「燃料価格が上がれば必ず同じ幅でJEPXが上がる」という単純な話ではありません。需要水準、再エネ出力、使える火力の量、
+            系統状況が同時に影響するため、燃料高は価格形成の重要な要因の一つとして見るのが実務的です。
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">価格変動要因の整理表</h2>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">要因</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">価格が動きやすい方向</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">どういう場面で起こるか</th>
+              </tr>
+            </thead>
+            <tbody>
+              {factorRows.map((row) => (
+                <tr key={row.factor} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.factor}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.direction}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.scene}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜ急に高騰することがあるのか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">需給逼迫や系統制約が価格に与える影響</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            高騰は、需要増、供給余力の低下、燃料高、天候要因などが同時に重なると起きやすくなります。平常時の単価だけでは見えにくい上振れリスクがある点に注意が必要です。
+            需給が逼迫すると、わずかな需給差でも価格が大きく動きやすくなります。また、送電線の制約やエリア間連系の余力が限られると、
+            地域ごとの価格差が開くことがあります。法人の読者にとっては、「全国で同じ値動き」とは限らない点を押さえておくと理解しやすくなります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">JEPX価格の変動は法人の電気料金にどう影響するか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">JEPX価格の推移を見ると何が分かるか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動型では価格変動が直接的に反映されやすく、固定型でも調達環境が新規見積や更新条件に影響する場合があります。料金比較では、価格の安さと安定性を分けて判断することが大切です。
+            下のグラフは、JEPXスポット市場のシステムプライス年度平均の推移です。短期高騰の山谷をそのまま示すものではありませんが、
+            2021年以降に価格変動が大きくなったことや、2022年度の高止まりが市場環境に与えた影響を読み取る補助線になります。
+          </p>
+          <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <JepxYearlySystemPriceChart data={JEPX_SYSTEM_PRICE_YEARLY} />
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500">
+            出典: JEPX公開値ベースのシステムプライス年度平均。単位は円/kWh。図は説明用に年度平均へ整理したもので、短期の高騰局面は別途日次・月次で確認が必要です。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">価格だけでなく、変動幅を見ることも重要</h2>
+          <h2 className="text-xl font-semibold text-slate-900">JEPX価格を見るときの読み方</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            使用量が大きい法人では、単価差より変動幅の影響が大きくなることがあります。予算管理の観点でも、平均単価だけでなく上振れ時の水準を確認しておくと判断しやすくなります。
+            「なぜ今日は高いのか」を考えるときは、単に需要増だけでなく、燃料、再エネ、供給余力、エリア差を重ねて見ることが大切です。
+            市場連動メニューではこの変動が直接見えやすく、固定型でも更新時の調達条件に反映されることがあります。
           </p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
-          intro="価格決定の仕組みを、契約メニューの違いとあわせて確認できます。"
+          intro="価格形成の背景を押さえたら、燃料調達や市場以外の調達手段に進むと理解が深まります。"
           links={[
             {
               href: "/jepx-explained",
-              title: "JEPXとは何か",
+              title: "JEPXとは何か｜卸電力市場の仕組み",
               description: "価格形成の前提となる卸電力市場の基本を解説します。",
+            },
+            {
+              href: "/fuel-procurement-and-electricity-prices",
+              title: "燃料調達と電力調達はどうつながっているのか｜LNG・石炭・原油価格の影響",
+              description: "燃料高が市場価格へどう波及するかを掘り下げます。",
+            },
+            {
+              href: "/bilateral-power-contracts",
+              title: "相対契約とは何か｜市場に依存しない仕入れの考え方",
+              description: "市場価格以外で条件を持つ調達手段を確認できます。",
             },
             {
               href: "/market-linked-plan",
               title: "市場連動プランとは",
-              description: "価格変動が料金にどう反映されるかを確認できます。",
-            },
-            {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動プランと固定プランの違い",
-              description: "価格水準と変動性のバランスで比較できます。",
-            },
-            {
-              href: "/why-business-electricity-prices-rise",
-              title: "法人の電気料金が上がる理由",
-              description: "価格上昇要因を全体構造で整理した解説です。",
-            },
-            {
-              href: "/lng-electricity-price",
-              title: "法人の電気料金とLNGの関係",
-              description: "燃料価格が料金に波及する背景を確認できます。",
-            },
-            {
-              href: "/compare",
-              title: "料金メニューを比較する",
-              description: "価格と変動幅の観点で自社条件を比較できます。",
+              description: "市場価格が料金へ反映される契約を実務目線で見直します。",
             },
           ]}
         />
 
         <ContentCta
-          heading="契約比較に進む"
-          description="価格の動きを理解したら、自社の許容リスクに合わせて市場連動型と固定型を比較すると判断しやすくなります。"
+          heading="背景理解を次の記事へつなげる"
+          description="価格形成が見えたら、市場依存を下げる相対契約や、燃料価格の影響を補う燃料調達の記事へ進むと全体像がつながります。"
           links={[
-            { href: "/market-linked-vs-fixed", label: "市場連動と固定の違いを見る" },
-            { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/fuel-procurement-and-electricity-prices", label: "燃料調達との関係を見る" },
+            { href: "/articles/power-procurement", label: "カテゴリ一覧を見る" },
           ]}
+        />
+
+        <PowerProcurementSeriesNav
+          currentSlug="how-electricity-prices-are-determined"
+          extraLinks={[{ href: "/fuel-procurement-and-electricity-prices", title: "燃料調達との関係も読む" }]}
         />
       </section>
     </main>

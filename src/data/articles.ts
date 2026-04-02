@@ -233,19 +233,24 @@ export const articleCategories: ArticleCategory[] = [
     name: "電力調達の仕組みを知る",
     slug: "power-procurement",
     description:
-      "法人向け電気料金の背景にある、電力会社の調達構造を整理したカテゴリです。自社発電、市場調達（JEPX）、相対契約、分散調達とヘッジまでを順に確認できます。",
+      "法人向け電気料金の背景にある、電力会社の仕入れ・調達構造を整理したカテゴリです。JEPX、相対契約、長期契約、先物、燃料調達、再エネ調達、非化石証書、分散調達とヘッジまでを段階的に確認できます。",
     intro:
-      "電気料金は使用量だけで決まるものではなく、電力会社の調達構造とも深く関係します。自社発電、市場調達、相対契約、分散調達とヘッジを順に確認することで、価格変動や契約メニューの背景を理解しやすくなります。",
+      "電気料金の背景を理解するには、電力会社がどこから、どのような条件で電気を仕入れているかを見る必要があります。このカテゴリでは、自社発電、市場調達、相対契約、長期契約、先物、燃料調達、再エネ調達、非化石証書、リスク管理までを順番にたどりながら、仕入れ手段ごとの役割と使い分けを実務目線で整理します。",
     learnPoints: [
-      "電力会社がどこから電気を仕入れているか",
-      "JEPXや相対契約が法人向け電気料金とどう関係するか",
-      "調達の分散やヘッジという考え方がなぜ必要か",
+      "電力会社がどの調達手段を組み合わせて数量と価格を管理しているか",
+      "JEPX、相対契約、長期契約、先物、再エネ調達の役割分担",
+      "燃料価格や制度変更を含むリスクをどう分散・ヘッジしているか",
     ],
     recommendedReadingOrder: [
       "how-electricity-is-procured",
       "jepx-explained",
       "how-electricity-prices-are-determined",
       "bilateral-power-contracts",
+      "long-term-power-procurement",
+      "power-futures",
+      "fuel-procurement-and-electricity-prices",
+      "renewable-power-procurement",
+      "non-fossil-certificates",
       "power-risk-management",
     ],
     order: 8,
@@ -963,7 +968,7 @@ export const articleList: ArticleMeta[] = [
     title: "電気はどこから来るのか｜電力会社の仕入れの全体像",
     slug: "how-electricity-is-procured",
     description:
-      "法人向け電気料金の背景には、電力会社の調達構造があります。自社発電、市場調達、相対契約など、仕入れの全体像を整理した入口ページです。",
+      "電力会社は、自社発電だけでなく、JEPX、相対契約、長期契約、再エネ調達など複数の手段を組み合わせて電気を仕入れています。電気料金の背景を理解する前提として、電力調達の全体像を法人向けに整理します。",
     category: "電力調達の仕組みを知る",
     categorySlug: "power-procurement",
     order: 1,
@@ -974,7 +979,7 @@ export const articleList: ArticleMeta[] = [
     title: "JEPXとは何か｜卸電力市場の仕組み",
     slug: "jepx-explained",
     description:
-      "JEPXとは何か、どのような事業者が参加し、なぜ法人向け電気料金にも関係するのかを整理したページです。市場連動プランの理解にもつながります。",
+      "JEPXは、日本の電力会社や発電事業者などが電気を売買する卸電力市場です。一日前市場、時間前市場などの基本的な仕組みと、電力会社がJEPXをどのような場面で使っているのかを法人向けに整理します。",
     category: "電力調達の仕組みを知る",
     categorySlug: "power-procurement",
     order: 2,
@@ -985,7 +990,7 @@ export const articleList: ArticleMeta[] = [
     title: "電気の価格はどう決まるのか｜JEPX価格の決まり方",
     slug: "how-electricity-prices-are-determined",
     description:
-      "電気の価格は需要と供給、燃料価格、天候、供給余力などで動きます。価格変動の背景を理解するための中核ページです。",
+      "JEPX価格は、需要と供給だけでなく、天候、時間帯、燃料価格、発電構成、需給逼迫など複数要因で動きます。電気の価格がどのように決まり、なぜ大きく変動することがあるのかを整理します。",
     category: "電力調達の仕組みを知る",
     categorySlug: "power-procurement",
     order: 3,
@@ -995,20 +1000,70 @@ export const articleList: ArticleMeta[] = [
     title: "相対契約とは何か｜市場に依存しない仕入れの考え方",
     slug: "bilateral-power-contracts",
     description:
-      "市場だけに頼らず、発電事業者との契約で電気を調達する考え方を解説します。安定性を重視した調達の見方につながるページです。",
+      "相対契約は、電力会社や発電事業者が市場を通さず、個別条件で電気を取引する仕組みです。JEPXとの違い、価格安定との関係、契約期間や数量の考え方を法人向けに整理します。",
     category: "電力調達の仕組みを知る",
     categorySlug: "power-procurement",
     order: 4,
     publishedAt: "2026-03-13",
   },
   {
-    title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
-    slug: "power-risk-management",
+    title: "長期契約とは何か｜安定調達のために期間を長く取る考え方",
+    slug: "long-term-power-procurement",
     description:
-      "市場価格の変動や需要予測のずれに対して、電力会社がどのように分散調達やヘッジを考えるのかを解説するまとめページです。",
+      "電力会社は短期市場だけでなく、長期契約で数量や価格の安定を図ることがあります。長期契約の役割、短期市場との違い、価格安定と柔軟性のトレードオフを整理します。",
     category: "電力調達の仕組みを知る",
     categorySlug: "power-procurement",
     order: 5,
+    publishedAt: "2026-04-02",
+  },
+  {
+    title: "先物取引とは何か｜将来の価格を先に固定する仕組み",
+    slug: "power-futures",
+    description:
+      "先物取引は、将来の価格変動に備えるための手段です。現物市場との違い、電力会社が先物をどう位置づけるのか、価格変動リスクへの備えとしての役割を整理します。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 6,
+    publishedAt: "2026-04-03",
+  },
+  {
+    title: "燃料調達と電力調達はどうつながっているのか｜LNG・石炭・原油価格の影響",
+    slug: "fuel-procurement-and-electricity-prices",
+    description:
+      "電気の仕入れを理解するには、その前段にある燃料調達も重要です。LNG、石炭、原油などの価格や調達環境が、火力発電コストやJEPX価格にどう影響しうるのかを整理します。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 7,
+    publishedAt: "2026-04-04",
+  },
+  {
+    title: "再エネ電気はどう調達しているのか｜FIT・FIP・PPA・相対契約の考え方",
+    slug: "renewable-power-procurement",
+    description:
+      "再エネ電気の調達方法は一つではありません。FIT、FIP、PPA、相対契約などの違いを整理しながら、電力会社が再エネをどう調達し、どのような特徴やリスクを持つのかを法人向けに解説します。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 8,
+    publishedAt: "2026-04-05",
+  },
+  {
+    title: "非化石証書とは何か｜再エネ価値をどう確保するのか",
+    slug: "non-fossil-certificates",
+    description:
+      "非化石証書は、電気そのものとは別に、非化石価値や環境価値を扱う仕組みです。再エネメニューの背景を理解する前提として、電気の調達と環境価値の調達の違いを整理します。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 9,
+    publishedAt: "2026-04-06",
+  },
+  {
+    title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
+    slug: "power-risk-management",
+    description:
+      "電力調達では、価格リスク、数量リスク、需給逼迫リスク、燃料リスクなど複数の不確実性に備える必要があります。長期契約、相対契約、先物、再エネ調達などをどう組み合わせるのかを整理します。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 10,
     publishedAt: "2026-03-14",
   },
   {

@@ -70,7 +70,7 @@ const categoryDescriptions: Record<string, string> = {
   "review-points": "見直し準備から比較・切替まで実務の流れを整理できます。",
   "last-resort-supply": "最終保障供給の対象、料金、切替の基本を確認できます。",
   "risk-scenarios": "リスク要因別の上振れパターンと確認順を整理できます。",
-  "power-procurement": "電力会社の調達構造と価格変動の関係を把握できます。",
+  "power-procurement": "電力会社の仕入れ・調達構造を、JEPXから再エネ価値まで段階的に把握できます。",
 };
 
 const categoryIcons: Record<string, { src: string; alt: string }> = {

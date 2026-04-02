@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
+import FlowDiagram from "../../components/simulator/FlowDiagram";
+import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方";
 const pageDescription =
-  "電力会社は価格変動や需給変動のリスクをどう管理しているのか。市場調達、相対契約、分散調達、ヘッジの考え方を、法人向け電気料金の背景としてわかりやすく解説します。";
+  "電力調達では、価格リスク、数量リスク、需給逼迫リスク、燃料リスクなど複数の不確実性に備える必要があります。長期契約、相対契約、先物、再エネ調達などをどう組み合わせるのかを整理します。";
 const pageUrl = "https://simulator.eic-jp.org/power-risk-management";
 
 export const metadata: Metadata = {
@@ -38,6 +41,34 @@ export const metadata: Metadata = {
 };
 
 export default function PowerRiskManagementPage() {
+  const riskRows = [
+    {
+      risk: "価格リスク",
+      response: "相対契約、長期契約、先物、価格設計の分散",
+      note: "短期市場への依存度を下げ、急変時の振れ幅を抑えやすくする",
+    },
+    {
+      risk: "数量リスク",
+      response: "JEPX、時間前調整、複数契約の組み合わせ",
+      note: "需要予測との差分を市場で吸収しやすくする",
+    },
+    {
+      risk: "需給逼迫リスク",
+      response: "ベース調達の厚み確保、分散調達、需給監視",
+      note: "必要量を短期市場だけに依存しない構造を持つ",
+    },
+    {
+      risk: "燃料リスク",
+      response: "燃料連動の把握、先物・長期契約、電源構成の分散",
+      note: "LNG・石炭・原油の影響を単一燃料へ寄せすぎない",
+    },
+    {
+      risk: "制度変更リスク",
+      response: "制度依存度の分散、証書・再エネ価値の確認、契約条項管理",
+      note: "FIT/FIPや非化石価値の扱い変更を調達設計へ織り込む",
+    },
+  ];
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -45,116 +76,154 @@ export default function PowerRiskManagementPage() {
           電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電力会社は、価格変動や需給変動に常に向き合いながら調達を組み立てています。法人向け契約を比較する側も、単価だけでなくリスク管理の考え方を理解しておくと判断しやすくなります。
+          ここまで見てきたように、電力会社の仕入れには、市場調達、相対契約、長期契約、先物、再エネ調達、環境価値の確保など、いくつもの手段があります。
+          その理由は、どれか一つが万能だからではなく、対応できるリスクの種類がそれぞれ違うためです。
+        </p>
+        <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          電力調達では、価格が上がるリスクだけでなく、必要量を確保しきれないリスク、需給が急に引き締まるリスク、燃料価格の変動、
+          制度変更の影響など、複数の不確実性を同時に抱えます。そのため、調達の現場では「一番安い方法を一つ選ぶ」というより、
+          「性格の違う手段をどう組み合わせるか」という発想が重要になります。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電力会社にとって何がリスクになるのか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">電力調達で管理したい主なリスク</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            主なリスクは、市場価格の変動、需要予測のずれ、燃料価格や天候要因です。複数要因が同時に動くため、調達方針の設計は料金メニューの性格に直結します。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">市場価格の変動</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            市場依存度が高いほど、急騰局面の調達コスト影響を受けやすくなります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">需要予測のずれ</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            需要が予測より増えると追加調達が必要になり、減っても調整コストが生じる可能性があります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">燃料価格や天候の変動</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料コストと再エネ出力は外部要因の影響を受けやすく、調達環境を変動させます。
+            主なリスクは、市場価格の変動、需要予測のずれ、需給逼迫、燃料価格、制度変更です。これらは別々に動くのではなく、
+            同時に重なることがあります。たとえば、燃料高と猛暑と供給余力低下が重なれば、価格も数量確保も厳しくなります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">なぜ一つの調達方法に依存しないのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            どの手段にも強みと弱みがあるためです。市場調達は柔軟ですが変動が大きく、相対契約は安定しやすい一方で需要変化に完全一致させるのは難しいため、分散が合理的になります。
+            どの手段にも強みと弱みがあるためです。JEPXは柔軟ですが価格変動を受けやすく、相対契約や長期契約は安定しやすい一方で、
+            需要変化に完全一致させるのは難しくなります。再エネ調達は電源構成や環境価値の面で有効ですが、出力変動や制度面の読み替えも必要です。
           </p>
+          <InfoBox title="分散調達の前提">
+            分散調達は、必ず平均コストを最小化するためだけの考え方ではありません。極端な上振れを抑え、供給継続性を高めるための設計でもあります。
+          </InfoBox>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスクと対応手段の対応表</h2>
+          <table className="mt-4 min-w-[860px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">リスクの種類</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主な対応手段</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">補足</th>
+              </tr>
+            </thead>
+            <tbody>
+              {riskRows.map((row) => (
+                <tr key={row.risk} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.risk}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.response}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">分散調達という考え方</h2>
+          <h2 className="text-xl font-semibold text-slate-900">長期契約・相対契約・先物・再エネ調達の役割分担</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            分散調達は、必ず安くすることより、極端な振れを抑えながら安定供給を維持するための考え方です。
+            長期契約や相対契約は、ベース需要に対する数量確保と価格安定に向きやすい手段です。先物は、その上で残る将来価格の変動を抑える役割があります。
+            再エネ調達は、電源構成の多様化や環境価値の確保に寄与し、非化石証書は価値のレイヤーを補います。
           </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">市場調達</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            不足分へ機動的に対応しやすい反面、急騰局面の影響を受けやすい面があります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">相対契約</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            条件を見通しやすく、急騰時の影響を一部抑えやすい手段です。ただし単独では過不足調整が難しいため、併用が前提になります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">その他のリスク分散の考え方</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            調達先、期間、契約条件を分散させ、一つの要因に偏りすぎないよう設計する実務が行われます。
-          </p>
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <InfoBox title="ベースを支える手段">
+              相対契約、長期契約、自社電源、PPAなどは、数量確保と見通しの土台を作る役割を持ちます。
+            </InfoBox>
+            <InfoBox title="変動に備える手段">
+              JEPX、時間前市場、先物、複数の契約期間の組み合わせは、短期変動や将来価格変動を吸収する役割を持ちます。
+            </InfoBox>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">ヘッジという考え方</h2>
+          <h2 className="text-xl font-semibold text-slate-900">調達ポートフォリオという見方</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            ヘッジは、価格を必ず下げるためではなく、極端な変動の影響を抑えるための手段です。コスト最小化だけでなく、振れ幅管理の視点で使われます。
+            実務では、一番安い手段を一つ選ぶのではなく、ベース部分を安定的な契約で押さえ、残る変動を市場やヘッジで吸収するというポートフォリオ発想が重要です。
+            これに再エネ調達や環境価値の確保を重ねていくことで、価格、数量、制度、環境価値のバランスを取ります。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">それでもリスクをゼロにはできない理由</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気は需給調整が必要で、燃料・天候・需要といった外部要因の影響を受けます。現実的なリスク管理は、ゼロ化ではなく大きな上振れを抑える設計に近い考え方です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人が契約を比較するときに見るべきポイント</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            比較時は、単価に加えて変動性、契約条件、見直しタイミングを確認することが重要です。特に使用量が大きい事業所では、料金の安定性が経営管理に与える影響も小さくありません。
-          </p>
+          <div className="mt-4">
+            <FlowDiagram
+              heading="典型的な調達ポートフォリオの考え方"
+              steps={[
+                {
+                  title: "1. ベース需要",
+                  description: "長期契約・相対契約・自社電源で基礎量を押さえる",
+                },
+                {
+                  title: "2. 残る変動需要",
+                  description: "JEPXや時間前市場で不足分を調整する",
+                },
+                {
+                  title: "3. 将来価格リスク",
+                  description: "先物などで大きな価格変動に備える",
+                },
+                {
+                  title: "4. 再エネ・価値",
+                  description: "再エネ調達や非化石証書で商品設計や価値要件を補う",
+                },
+              ]}
+            />
+          </div>
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="シリーズ全体と既存解説を横断すると、契約比較に必要な視点を整理できます。"
+          heading="このカテゴリのまとめ"
+          intro="リスク管理は単独では完結しません。ここまでの各記事へ戻ると、どの手段がどのリスクに効くかを再確認できます。"
           links={[
             {
               href: "/bilateral-power-contracts",
-              title: "相対契約とは何か",
+              title: "相対契約とは何か｜市場に依存しない仕入れの考え方",
               description: "市場以外の調達手段としての役割を確認できます。",
             },
             {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動プランと固定プランの違い",
-              description: "リスク管理の違いが料金メニューにどう現れるかを比較できます。",
+              href: "/long-term-power-procurement",
+              title: "長期契約とは何か｜安定調達のために期間を長く取る考え方",
+              description: "ベース需要の安定調達をどう考えるかを振り返れます。",
             },
             {
-              href: "/when-to-review-electricity-contract",
-              title: "法人が電力契約を見直すタイミング",
-              description: "実務で見直し判断を行う際の確認軸を整理できます。",
+              href: "/power-futures",
+              title: "先物取引とは何か｜将来の価格を先に固定する仕組み",
+              description: "価格ヘッジの役割を確認できます。",
             },
             {
-              href: "/how-to-compare-electricity-suppliers",
-              title: "新電力を比較するときのポイント",
-              description: "単価以外に確認すべき契約条件やリスクを確認できます。",
+              href: "/renewable-power-procurement",
+              title: "再エネ電気はどう調達しているのか｜FIT・FIP・PPA・相対契約の考え方",
+              description: "電源構成と価値の観点からポートフォリオを広げられます。",
             },
             {
-              href: "/compare",
-              title: "料金メニューを比較する",
-              description: "調達背景を踏まえた比較・試算に進めます。",
+              href: "/non-fossil-certificates",
+              title: "非化石証書とは何か｜再エネ価値をどう確保するのか",
+              description: "環境価値のレイヤーをポートフォリオにどう入れるかを確認できます。",
             },
           ]}
         />
 
         <ContentCta
-          heading="実際の比較へ進む"
-          description="調達とリスク管理の考え方を理解したら、自社の予算管理方針に合う契約条件を比較してください。"
+          heading="読み終えたらカテゴリ全体を見直す"
+          description="10本を通して読むと、料金の背景ではなく、電力会社がどのように仕入れ・調達を設計しているかが順につながって見えるようになります。"
           links={[
-            { href: "/how-to-compare-electricity-suppliers", label: "比較ポイントを確認する" },
-            { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/articles/power-procurement", label: "カテゴリ一覧を見る" },
+            { href: "/market-linked-vs-fixed", label: "料金メニュー比較の記事を見る" },
+          ]}
+        />
+
+        <PowerProcurementSeriesNav
+          currentSlug="power-risk-management"
+          extraLinks={[
+            { href: "/bilateral-power-contracts", title: "相対契約に戻る" },
+            { href: "/long-term-power-procurement", title: "長期契約に戻る" },
+            { href: "/power-futures", title: "先物に戻る" },
+            { href: "/renewable-power-procurement", title: "再エネ調達に戻る" },
+            { href: "/non-fossil-certificates", title: "非化石証書に戻る" },
           ]}
         />
       </section>
