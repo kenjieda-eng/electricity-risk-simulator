@@ -303,7 +303,7 @@ export const articleList: ArticleMeta[] = [
   {
     title: "法人向け電気料金の内訳とは",
     slug: "business-electricity-bill-breakdown",
-    description: "基本料金・電力量料金・調整項目など、電気料金の内訳をわかりやすく解説します。",
+    description: "基本料金・電力量料金・燃料費調整額・再エネ賦課金を4分類で整理し、請求書確認から見積比較へのつなげ方をまとめます。",
     category: "基礎から知る",
     categorySlug: "basic",
     order: 3,
