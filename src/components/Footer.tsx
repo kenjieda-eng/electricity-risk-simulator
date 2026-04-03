@@ -23,6 +23,7 @@ const lowerLevelLinkGroups = [
       { href: "/articles/last-resort-supply", label: "最終保障供給を知る" },
       { href: "/articles/risk-scenarios", label: "リスクシナリオ別に知る" },
       { href: "/articles/power-procurement", label: "電力調達の仕組みを知る" },
+      { href: "/articles/by-industry", label: "業種別に知る" },
     ],
   },
   {

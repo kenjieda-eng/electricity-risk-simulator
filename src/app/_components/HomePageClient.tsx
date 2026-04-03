@@ -884,6 +884,8 @@ export default function HomePageClient() {
               </select>
             </div>
 
+            <p className="text-sm font-medium text-red-600">金額は万円単位で入力してください</p>
+
             <div>
               <label htmlFor="springCost" className="mb-1.5 block text-base font-medium text-slate-700">
                 3. 春の月間電気代（万円）

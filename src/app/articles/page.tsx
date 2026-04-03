@@ -7,6 +7,10 @@ import {
   getLatestArticles,
   getSortedCategories,
 } from "../../lib/articles";
+import {
+  INDUSTRY_ARTICLES_CATEGORY_CARD,
+  INDUSTRY_ARTICLES_QUICK_GUIDE_CARD,
+} from "../../lib/articleIndustryCategories";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
@@ -60,6 +64,7 @@ const quickGuideCards = [
     icon: "/icons/articles/trend-chart.svg",
     alt: "推移チャートのアイコン",
   },
+  INDUSTRY_ARTICLES_QUICK_GUIDE_CARD,
 ] as const;
 
 const categoryDescriptions: Record<string, string> = {
@@ -108,7 +113,7 @@ export default function ArticlesPage() {
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{pageDescription}</p>
 
-        <div className="mt-5 grid gap-3 md:grid-cols-3">
+        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {quickGuideCards.map((card) => (
             <article key={card.title} className="rounded-xl border border-slate-200 bg-white p-4">
               <div className="flex items-center gap-3">
@@ -152,6 +157,28 @@ export default function ArticlesPage() {
               </article>
             );
           })}
+          <article className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
+            <div className="flex items-center gap-2">
+              <Image
+                src={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.src}
+                alt={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.alt}
+                width={36}
+                height={36}
+              />
+              <p className="text-xs font-semibold tracking-wide text-slate-500">
+                カテゴリ {INDUSTRY_ARTICLES_CATEGORY_CARD.order}
+              </p>
+            </div>
+            <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
+            <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
+            <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
+            <Link
+              href={INDUSTRY_ARTICLES_CATEGORY_CARD.href}
+              className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+            >
+              カテゴリを見る
+            </Link>
+          </article>
         </div>
       </section>
 
