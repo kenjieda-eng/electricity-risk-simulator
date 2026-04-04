@@ -225,15 +225,15 @@ export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
       "太陽光、自家消費、排熱活用の余地",
     ],
     industries: [
-      { name: "鉄鋼・金属（高炉・電炉）", description: "大型設備の連続運転がコストに直結しやすい業種です。", plannedSlug: "steel-metalworks" },
-      { name: "化学・石油化学プラント", description: "連続工程と保安設備の負荷が大きい業種です。", plannedSlug: "chemical-petrochemical-plant" },
-      { name: "自動車・輸送機器組立", description: "ライン稼働時間と空調負荷の両方が重要な業種です。", plannedSlug: "automotive-transport-equipment-assembly" },
-      { name: "電子部品・半導体工場", description: "クリーン環境維持と装置負荷が大きい業種です。", plannedSlug: "semiconductor-electronics-factory" },
+      { name: "鉄鋼・金属（高炉・電炉）", description: "大型設備の連続運転がコストに直結しやすい業種です。", plannedSlug: "steel-metal" },
+      { name: "化学・石油化学プラント", description: "連続工程と保安設備の負荷が大きい業種です。", plannedSlug: "chemical-petrochemical" },
+      { name: "自動車・輸送機器組立", description: "ライン稼働時間と空調負荷の両方が重要な業種です。", plannedSlug: "automobile-transport-equipment" },
+      { name: "電子部品・半導体工場", description: "クリーン環境維持と装置負荷が大きい業種です。", plannedSlug: "electronics-semiconductor" },
       { name: "食品加工・飲料工場", description: "冷却・加熱・搬送の設備が重なりやすい業種です。", plannedSlug: "food-beverage-factory" },
-      { name: "製紙・パルプ工場", description: "大型モーターと乾燥工程の負荷が特徴になりやすい業種です。", plannedSlug: "paper-pulp-mill" },
-      { name: "繊維・アパレル工場", description: "操業時間と空調・機械負荷の組み合わせを見たい業種です。", plannedSlug: "textile-apparel-factory" },
-      { name: "医薬品・化粧品工場", description: "品質管理と空調維持の負荷が安定して出やすい業種です。", plannedSlug: "pharmaceutical-cosmetics-factory" },
-      { name: "印刷・包装工場", description: "工程別の稼働差でピークが出やすい業種です。", plannedSlug: "printing-packaging-factory" },
+      { name: "製紙・パルプ工場", description: "大型モーターと乾燥工程の負荷が特徴になりやすい業種です。", plannedSlug: "paper-pulp" },
+      { name: "繊維・アパレル工場", description: "操業時間と空調・機械負荷の組み合わせを見たい業種です。", plannedSlug: "textile-apparel" },
+      { name: "医薬品・化粧品工場", description: "品質管理と空調維持の負荷が安定して出やすい業種です。", plannedSlug: "pharmaceutical-cosmetics" },
+      { name: "印刷・包装工場", description: "工程別の稼働差でピークが出やすい業種です。", plannedSlug: "printing-packaging" },
     ],
   },
   {
@@ -257,10 +257,10 @@ export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
       "太陽光やピーク回避との相性",
     ],
     industries: [
-      { name: "物流センター（常温）", description: "照明・搬送設備・空調の組み合わせが中心の施設です。", plannedSlug: "distribution-center-ambient" },
+      { name: "物流センター（常温）", description: "照明・搬送設備・空調の組み合わせが中心の施設です。", plannedSlug: "logistics-center-ambient" },
       { name: "冷蔵・冷凍倉庫", description: "冷凍機の継続運転がベース負荷になりやすい施設です。", plannedSlug: "cold-storage-warehouse" },
-      { name: "配送拠点・トラックターミナル", description: "入出庫時間帯に負荷が寄りやすい業種です。", plannedSlug: "truck-terminal-delivery-hub" },
-      { name: "上下水道・浄水施設", description: "ポンプ設備の継続運転がコストに影響しやすい施設です。", plannedSlug: "water-treatment-utility" },
+      { name: "配送拠点・トラックターミナル", description: "入出庫時間帯に負荷が寄りやすい業種です。", plannedSlug: "truck-terminal" },
+      { name: "上下水道・浄水施設", description: "ポンプ設備の継続運転がコストに影響しやすい施設です。", plannedSlug: "water-infrastructure" },
       { name: "通信基地局・鉄塔", description: "小規模でも24時間負荷が継続しやすい設備です。", plannedSlug: "telecom-base-station" },
     ],
   },
@@ -286,7 +286,7 @@ export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
     ],
     industries: [
       { name: "データセンター（ハイパースケール）", description: "サーバー密度と冷却効率が重要な大規模施設です。", plannedSlug: "hyperscale-data-center" },
-      { name: "データセンター（中小規模）", description: "設備更新と契約条件の見直し余地が出やすい施設です。", plannedSlug: "regional-data-center" },
+      { name: "データセンター（中小規模）", description: "設備更新と契約条件の見直し余地が出やすい施設です。", plannedSlug: "mid-small-data-center" },
       { name: "IT企業オフィス", description: "執務負荷に加えてサーバーや空調の継続負荷を見たい業種です。", plannedSlug: "it-office" },
     ],
   },
@@ -497,6 +497,91 @@ const PUBLISHED_INDUSTRY_ARTICLES: PublishedIndustryArticle[] = [
     middleSlug: "hotel-leisure",
     industrySlug: "golf-outdoor-leisure",
     href: "/articles/by-industry/hotel-leisure/golf-outdoor-leisure",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "steel-metal",
+    href: "/articles/by-industry/manufacturing/steel-metal",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "chemical-petrochemical",
+    href: "/articles/by-industry/manufacturing/chemical-petrochemical",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "automobile-transport-equipment",
+    href: "/articles/by-industry/manufacturing/automobile-transport-equipment",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "electronics-semiconductor",
+    href: "/articles/by-industry/manufacturing/electronics-semiconductor",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "food-beverage-factory",
+    href: "/articles/by-industry/manufacturing/food-beverage-factory",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "paper-pulp",
+    href: "/articles/by-industry/manufacturing/paper-pulp",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "textile-apparel",
+    href: "/articles/by-industry/manufacturing/textile-apparel",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "pharmaceutical-cosmetics",
+    href: "/articles/by-industry/manufacturing/pharmaceutical-cosmetics",
+  },
+  {
+    middleSlug: "manufacturing",
+    industrySlug: "printing-packaging",
+    href: "/articles/by-industry/manufacturing/printing-packaging",
+  },
+  {
+    middleSlug: "logistics-infrastructure",
+    industrySlug: "logistics-center-ambient",
+    href: "/articles/by-industry/logistics-infrastructure/logistics-center-ambient",
+  },
+  {
+    middleSlug: "logistics-infrastructure",
+    industrySlug: "cold-storage-warehouse",
+    href: "/articles/by-industry/logistics-infrastructure/cold-storage-warehouse",
+  },
+  {
+    middleSlug: "logistics-infrastructure",
+    industrySlug: "truck-terminal",
+    href: "/articles/by-industry/logistics-infrastructure/truck-terminal",
+  },
+  {
+    middleSlug: "logistics-infrastructure",
+    industrySlug: "water-infrastructure",
+    href: "/articles/by-industry/logistics-infrastructure/water-infrastructure",
+  },
+  {
+    middleSlug: "logistics-infrastructure",
+    industrySlug: "telecom-base-station",
+    href: "/articles/by-industry/logistics-infrastructure/telecom-base-station",
+  },
+  {
+    middleSlug: "it-technology",
+    industrySlug: "hyperscale-data-center",
+    href: "/articles/by-industry/it-technology/hyperscale-data-center",
+  },
+  {
+    middleSlug: "it-technology",
+    industrySlug: "mid-small-data-center",
+    href: "/articles/by-industry/it-technology/mid-small-data-center",
+  },
+  {
+    middleSlug: "it-technology",
+    industrySlug: "it-office",
+    href: "/articles/by-industry/it-technology/it-office",
   },
 ] as const;
 
