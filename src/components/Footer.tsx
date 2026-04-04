@@ -8,7 +8,7 @@ const siteDescription =
 const mainPageLinks = [
   { href: "/", label: "電気料金上昇リスクを診断する" },
   { href: "/how-to", label: "電力料金上昇リスク診断の使い方" },
-  { href: "/articles", label: "法人向け電気料金の基礎知識" },
+  { href: "/articles/basic", label: "法人向け電気料金の基礎知識" },
   { href: "/business-electricity-retrospective", label: "法人電気料金振り返り" },
   { href: "/articles", label: "解説ページ一覧" },
 ] as const;
@@ -30,11 +30,11 @@ const retrospectiveDataLinks = [
   { href: "/business-electricity-retrospective/2026-02", label: "2026年2月の電気料金 振り返り" },
   { href: "/business-electricity-retrospective/2026-01", label: "2026年1月の電気料金 振り返り" },
   { href: "/business-electricity-retrospective/archive", label: "電気料金振り返り｜年次アーカイブ" },
-  { href: "/business-electricity-retrospective/ukraine-shock-overview", label: "ウクライナショックからの学び" },
   {
     href: "/business-electricity-price-trend-10-years",
     label: "法人向け電気料金の推移を10年で見る",
   },
+  { href: "/business-electricity-retrospective/ukraine-shock-overview", label: "ウクライナショックからの学び" },
 ] as const;
 
 const blockHeadingClass =
