@@ -312,7 +312,7 @@ export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
     ],
     industries: [
       { name: "植物工場・大規模温室", description: "空調・照明・ポンプ負荷が継続しやすい施設です。", plannedSlug: "plant-factory-greenhouse" },
-      { name: "水産加工・養殖施設", description: "水温管理やポンプ設備の電力比率が高くなりやすい業種です。", plannedSlug: "aquaculture-processing-facility" },
+      { name: "水産加工・養殖施設", description: "水温管理やポンプ設備の電力比率が高くなりやすい業種です。", plannedSlug: "fisheries-processing-aquaculture" },
     ],
   },
 ];
@@ -582,6 +582,16 @@ const PUBLISHED_INDUSTRY_ARTICLES: PublishedIndustryArticle[] = [
     middleSlug: "it-technology",
     industrySlug: "it-office",
     href: "/articles/by-industry/it-technology/it-office",
+  },
+  {
+    middleSlug: "agriculture-primary",
+    industrySlug: "plant-factory-greenhouse",
+    href: "/articles/by-industry/agriculture-primary/plant-factory-greenhouse",
+  },
+  {
+    middleSlug: "agriculture-primary",
+    industrySlug: "fisheries-processing-aquaculture",
+    href: "/articles/by-industry/agriculture-primary/fisheries-processing-aquaculture",
   },
 ] as const;
 

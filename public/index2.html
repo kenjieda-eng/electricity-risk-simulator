@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>（サンプル）法人向け電気料金上昇、高騰リスクシミュレーター</title>
+    <meta
+      name="description"
+      content="ビジュアル制作ガイドラインに沿ったトップページのデザインサンプルです。本番のトップページ（/）とは別の静的HTMLです。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+        ビジュアル制作ガイドライン（2026-01-22）に基づく抜粋適用:
+        - フォント: Noto Sans JP（Regular 400 / Bold 700 のみ）
+        - 行の高さ: フォントサイズ × 1.5
+        - 影: 原則不使用
+        - ボタン: 2px ボーダー、8px 角丸、テキスト Bold
+        - ボーダー色: BorderGray #CCCCCC（文書記載）
+        色見本の詳細（1-1）はPDF内画像のため、本文で明示のある値を優先しつつトーンを揃えています。
+      */
+      :root {
+        --border-gray: #cccccc;
+        --graph-gray: #dbdbdb;
+        --text: #333333;
+        --text-heading: #1a1a1a;
+        --bg: #ffffff;
+        --bg-muted: #f7f7f7;
+        --accent-orange: #e65100;
+        --accent-orange-dark: #bf360c;
+        --focus: #1565c0;
+        --space-8: 8px;
+        --space-16: 16px;
+        --space-24: 24px;
+        --space-32: 32px;
+        --space-48: 48px;
+        --radius-button: 8px;
+        --radius-card: 8px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text);
+        background: var(--bg-muted);
+      }
+
+      a {
+        color: var(--focus);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      .page-header {
+        background: var(--bg);
+        border-bottom: 1px solid var(--border-gray);
+      }
+
+      .page-header__inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: var(--space-16) var(--space-24);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-16);
+      }
+
+      .page-header__brand {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-heading);
+      }
+
+      .page-header__brand a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-header__brand a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--border-gray);
+      }
+
+      .page-header__tag {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: var(--text);
+        padding: var(--space-8) var(--space-16);
+        border: 1px solid var(--border-gray);
+        border-radius: var(--radius-button);
+        background: var(--bg);
+      }
+
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: var(--space-32) var(--space-24) var(--space-48);
+      }
+
+      .hero {
+        background: var(--bg);
+        border: 1px solid var(--border-gray);
+        border-radius: var(--radius-card);
+        padding: var(--space-24) var(--space-24) var(--space-32);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(22px, 4vw, 30px);
+        line-height: 1.5;
+        font-weight: 700;
+        color: var(--text-heading);
+        letter-spacing: 0.02em;
+      }
+
+      .hero__lead {
+        margin: var(--space-16) 0 0;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 72ch;
+      }
+
+      .hero__actions {
+        margin-top: var(--space-24);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-16);
+        align-items: center;
+      }
+
+      /* ガイドライン 2-5 ボタン: 2px 枠・8px 角丸・Bold */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-8);
+        padding: 12px 20px;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 700;
+        border-radius: var(--radius-button);
+        border: 2px solid var(--border-gray);
+        background: var(--bg);
+        color: var(--text-heading);
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      .btn--primary {
+        border-color: var(--accent-orange);
+        background: var(--accent-orange);
+        color: #ffffff;
+      }
+
+      .btn--primary:hover {
+        background: var(--accent-orange-dark);
+        border-color: var(--accent-orange-dark);
+        color: #ffffff;
+      }
+
+      .btn--secondary:hover {
+        border-color: #999999;
+      }
+
+      .section {
+        margin-top: var(--space-48);
+      }
+
+      .section__title {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: var(--space-16);
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: var(--text-heading);
+      }
+
+      .section__title svg {
+        flex-shrink: 0;
+      }
+
+      .grid-cards {
+        margin-top: var(--space-24);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-16);
+      }
+
+      @media (min-width: 640px) {
+        .grid-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 2-4 バナー相当: 内側 1px BorderGray（コンテンツブロックにもトーン統一で適用） */
+      .card {
+        background: var(--bg);
+        border: 1px solid var(--border-gray);
+        border-radius: var(--radius-card);
+        padding: var(--space-16) var(--space-16) var(--space-24);
+      }
+
+      .card__head {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: var(--text-heading);
+      }
+
+      .card__body {
+        margin: var(--space-8) 0 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      .list-audience {
+        margin: var(--space-24) 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: var(--space-16);
+      }
+
+      @media (min-width: 640px) {
+        .list-audience {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .list-audience li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: var(--space-16);
+        background: var(--bg);
+        border: 1px solid var(--border-gray);
+        border-radius: var(--radius-card);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .icon {
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .page-footer {
+        margin-top: var(--space-48);
+        padding-top: var(--space-24);
+        border-top: 1px solid var(--border-gray);
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      .page-footer strong {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <p class="page-header__brand">
+          <a href="/">法人向け電気料金シミュレーター</a>
+        </p>
+        <p class="page-header__tag">デザインサンプル（静的HTML・本番レイアウト非適用）</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">法人向け電気料金上昇、高騰リスクシミュレーター</h1>
+        <p class="hero__lead">
+          市場価格や燃料費の変動を踏まえて、企業や自治体を含む法人組織の電気料金上昇・高騰リスクを簡易に確認できる電気料金シミュレーターです。
+          月次・年間の電気代と電気料金の両面で、どれだけ負担が増えるかを試算できます。
+          固定プランと市場連動型プランの比較を通じて、電力契約の更新や見直し時の検討材料を整理できます。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/#simulator">シミュレーターを開く</a>
+          <a class="btn btn--secondary" href="/">現在のトップページへ</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="sec-tools">
+        <h2 class="section__title" id="sec-tools">
+          <svg class="icon" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <rect x="4" y="4" width="28" height="28" rx="4" fill="none" stroke="#333" stroke-width="2" />
+            <path d="M12 18h12M18 12v12" stroke="#333" stroke-width="2" />
+          </svg>
+          このツールでわかること
+        </h2>
+        <div class="grid-cards">
+          <article class="card">
+            <h3 class="card__head">
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+                <path
+                  d="M14 4L4 22h20L14 4zm0 8v6m0 3v.01"
+                  fill="none"
+                  stroke="#333"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              電気料金上昇時の影響イメージ
+            </h3>
+            <p class="card__body">
+              季節変動やリスク要因を重ねたときに、年間の電気料金がどの程度上振れしうるかを確認できます。
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__head">
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+                <path d="M6 20V8h6v12H6zm10 8V4h6v24h-6z" fill="#333" />
+              </svg>
+              固定プランと市場連動の比較
+            </h3>
+            <p class="card__body">
+              固定プランと市場連動型プランの差分を同じ条件で見比べ、価格変動への強さを把握できます。
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__head">
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+                <path
+                  d="M6 6h16v4H6V6zm0 8h10v4H6v-4zm0 8h14v4H6v-4z"
+                  fill="none"
+                  stroke="#333"
+                  stroke-width="2"
+                />
+              </svg>
+              電力契約の見直しポイント
+            </h3>
+            <p class="card__body">
+              契約更新時に確認したい条件を整理し、新電力を含む候補プラン比較のたたき台として使えます。
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card__head">
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+                <rect x="6" y="4" width="16" height="20" rx="2" fill="none" stroke="#333" stroke-width="2" />
+                <path d="M10 10h8M10 14h8M10 18h5" stroke="#333" stroke-width="2" />
+              </svg>
+              社内検討の説明材料
+            </h3>
+            <p class="card__body">
+              想定条件ごとの数値差を可視化できるため、担当者間での比較や稟議前の整理に活用できます。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="sec-users">
+        <h2 class="section__title" id="sec-users">
+          <svg class="icon" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <circle cx="18" cy="12" r="5" fill="none" stroke="#333" stroke-width="2" />
+            <path d="M8 30c0-6 4.5-9 10-9s10 3 10 9" fill="none" stroke="#333" stroke-width="2" />
+          </svg>
+          どんな利用者に向いているか
+        </h2>
+        <ul class="list-audience">
+          <li>
+            <svg class="icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+              <path d="M5 11l4 4 8-8" fill="none" stroke="#333" stroke-width="2" />
+            </svg>
+            高圧・特別高圧の電力契約を見直したい企業・自治体・各種法人
+          </li>
+          <li>
+            <svg class="icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+              <path d="M5 11l4 4 8-8" fill="none" stroke="#333" stroke-width="2" />
+            </svg>
+            市場連動型プランのリスクを整理し、固定プランとの比較を進めたい担当者
+          </li>
+          <li>
+            <svg class="icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+              <path d="M5 11l4 4 8-8" fill="none" stroke="#333" stroke-width="2" />
+            </svg>
+            電気料金の変動幅を確認し、新電力を含む選択肢を検討したい企業や法人
+          </li>
+          <li>
+            <svg class="icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+              <path d="M5 11l4 4 8-8" fill="none" stroke="#333" stroke-width="2" />
+            </svg>
+            電気料金上昇リスクを社内・庁内で説明するための下準備をしたい担当者
+          </li>
+        </ul>
+      </section>
+
+      <footer class="page-footer">
+        <p>
+          <strong>本ページについて:</strong>
+          <code>public/index2.html</code>
+          の静的サンプルです。既存の Next.js ページやレイアウト（<code>layout.tsx</code>）には変更を加えていません。
+          シミュレーター本体は
+          <a href="/#simulator">トップページのアンカー</a>
+          からご利用ください。
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
