@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 import {
   CATEGORY_KEYS,
   getAllRetrospectiveSlugs,
@@ -135,6 +136,59 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
       : q1ToQ4Diff < 0
         ? `Q1からQ4にかけて${q1ToQ4Diff.toFixed(1)}円/kWh`
         : "Q1とQ4は同水準";
+
+  const categoryKey = data.category.key;
+  const prevYearSlug =
+    data.year > 2020 ? (`${data.year - 1}-${categoryKey}` as const) : null;
+  const nextYearSlug =
+    data.year < 2025 ? (`${data.year + 1}-${categoryKey}` as const) : null;
+  const alternateCategoryKey = CATEGORY_KEYS.find((key) => key !== categoryKey) ?? categoryKey;
+  const alternateYearSlug = `${data.year}-${alternateCategoryKey}` as const;
+
+  const retrospectiveRelatedLinks = [
+    {
+      href: "/business-electricity-retrospective",
+      title: "法人電気料金振り返り（一覧・月次）",
+      description: "年次ページの前後関係や最新月次記事へ戻る入口です。",
+    },
+    {
+      href: "/business-electricity-price-trend-10-years",
+      title: "法人向け電気料金の10年推移で長期の位置づけを確認する",
+      description: "単年データの前後を、長期チャートと解説で補います。",
+    },
+    {
+      href: "/why-business-electricity-prices-rise",
+      title: "法人の電気料金が上がる理由",
+      description: "その年の水準を、構造要因の観点から説明しやすくなります。",
+    },
+    ...(prevYearSlug
+      ? [
+          {
+            href: `/business-electricity-retrospective/${prevYearSlug}`,
+            title: `【${data.year - 1}年】${data.category.label}の電気料金を振り返る`,
+            description: "前年同区分の年間推移で、変化の幅を比較できます。",
+          },
+        ]
+      : []),
+    ...(nextYearSlug
+      ? [
+          {
+            href: `/business-electricity-retrospective/${nextYearSlug}`,
+            title: `【${data.year + 1}年】${data.category.label}の電気料金を振り返る`,
+            description: "翌年同区分へ進むと、トレンドの続きを確認できます。",
+          },
+        ]
+      : []),
+    ...(alternateYearSlug !== data.slug
+      ? [
+          {
+            href: `/business-electricity-retrospective/${alternateYearSlug}`,
+            title: `【${data.year}年】${categoryLinkLabels[alternateCategoryKey]}の電気料金を振り返る`,
+            description: "同じ年の別契約区分を見て、横比較の軸を補います。",
+          },
+        ]
+      : []),
+  ];
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -428,22 +482,27 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
           </p>
         </section>
 
+        <RelatedLinks
+          heading="あわせて読みたい記事"
+          intro="単年・単区分の数値だけで終わらせず、長期推移や上昇要因、前後年・別区分の比較へ進むと説明がしやすくなります。"
+          links={retrospectiveRelatedLinks}
+        />
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-lg font-semibold text-slate-900">関連ページ</h2>
+          <h2 className="text-lg font-semibold text-slate-900">{data.year}年の別契約区分へ</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            同じ年のほかの区分ページへ移動し、契約区分ごとの違いを並べて確認できます。
+          </p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <Link
-              href="/business-electricity-retrospective"
-              className="rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-            >
-              法人電気料金振り返り一覧
-            </Link>
-            {CATEGORY_KEYS.map((categoryKey) => (
+            {CATEGORY_KEYS.map((key) => (
               <Link
-                key={categoryKey}
-                href={`/business-electricity-retrospective/${data.year}-${categoryKey}`}
-                className="rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                key={key}
+                href={`/business-electricity-retrospective/${data.year}-${key}`}
+                className={`rounded-lg border px-4 py-3 text-sm font-semibold hover:bg-slate-50 ${
+                  key === categoryKey ? "border-sky-300 bg-sky-50 text-sky-900" : "border-slate-200 text-slate-800"
+                }`}
               >
-                {data.year}年 {categoryLinkLabels[categoryKey]}
+                {data.year}年 {categoryLinkLabels[key]}
               </Link>
             ))}
           </div>

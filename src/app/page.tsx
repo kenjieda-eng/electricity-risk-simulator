@@ -192,6 +192,75 @@ export default function Page() {
             </ul>
           </section>
 
+          <section className="mt-6">
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">解説・比較・月次動向の入口</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
+              試算の前後に、基礎解説や比較診断、月次の単価動向をあわせて確認すると判断材料が揃いやすくなります。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-sm">
+              <Link
+                href="/articles"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-sky-800 shadow-sm hover:bg-slate-50"
+              >
+                解説ページ一覧
+              </Link>
+              <Link
+                href="/how-to"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-sky-800 shadow-sm hover:bg-slate-50"
+              >
+                使い方
+              </Link>
+              <Link
+                href="/compare"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-sky-800 shadow-sm hover:bg-slate-50"
+              >
+                料金メニュー比較
+              </Link>
+              <Link
+                href="/articles/basic"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+              >
+                基礎から知る
+              </Link>
+              <Link
+                href="/articles/price-increase"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+              >
+                料金が上がる理由
+              </Link>
+              <Link
+                href="/articles/risk-scenarios"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+              >
+                リスクシナリオ
+              </Link>
+              <Link
+                href="/business-electricity-retrospective"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+              >
+                法人電気料金振り返り
+              </Link>
+            </div>
+            <p className="mt-3 text-xs text-slate-500 sm:text-sm">
+              代表例:{" "}
+              <Link href="/business-electricity-bill-breakdown" className="text-sky-700 underline-offset-2 hover:underline">
+                料金の内訳
+              </Link>
+              ／
+              <Link href="/why-business-electricity-prices-rise" className="text-sky-700 underline-offset-2 hover:underline">
+                上がる理由
+              </Link>
+              ／
+              <Link href="/when-to-review-electricity-contract" className="text-sky-700 underline-offset-2 hover:underline">
+                見直しタイミング
+              </Link>
+              ／
+              <Link href="/business-electricity-price-trend-10-years" className="text-sky-700 underline-offset-2 hover:underline">
+                10年推移
+              </Link>
+            </p>
+          </section>
+
         </div>
       </section>
 

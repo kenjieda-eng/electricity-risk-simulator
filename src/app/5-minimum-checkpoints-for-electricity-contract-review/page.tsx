@@ -80,32 +80,32 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           ],
         },
       ]}
-      relatedIntro="5項目の各論を深掘りしたい場合は、次のページを順に確認すると見直し実務を進めやすくなります。"
+      relatedIntro="5項目を押さえたら、資料・見積・切替までを同じ流れで読むと、比較から実行までがつながります。"
       relatedLinks={[
         {
-          href: "/how-to-read-electricity-bills-for-review",
-          title: "請求書のどこを見れば電力契約見直しのヒントが分かるのか",
-          description: "項目1の請求構造確認を詳しく確認できます。",
+          href: "/documents-needed-for-electricity-contract-review",
+          title: "法人の電気料金見直しで集めるべき資料一覧",
+          description: "比較前にそろえる請求書・契約書・見積書の範囲を確認できます。",
         },
         {
-          href: "/where-to-check-in-electricity-contract",
-          title: "契約書のどこに見直し時の注意点が書かれているのか",
-          description: "項目2と4の契約条件確認を詳しく確認できます。",
+          href: "/when-to-review-electricity-contract",
+          title: "法人が電力契約を見直すタイミング",
+          description: "着手時期と確認順序を実務目線で整理できます。",
         },
         {
-          href: "/how-to-start-electricity-contract-review",
-          title: "法人の電力契約見直しは何から始めるべきか",
-          description: "5項目を全体手順へつなげる入口ページです。",
+          href: "/switching-business-electricity-contract",
+          title: "法人が電力契約を切り替えるときの注意点",
+          description: "比較後の切替実行でつまずきやすい点を整理できます。",
         },
         {
-          href: "/compare-business-electricity-estimates",
-          title: "法人向け電力見積書の比較で見落としやすい項目",
-          description: "項目3の見積比較を実務的に整理できます。",
+          href: "/how-to-read-electricity-quote",
+          title: "法人向け電気料金見積書の見方",
+          description: "見積比較の前提条件を項目別に確認できます。",
         },
         {
-          href: "/cheap-unit-price-not-always-better",
-          title: "なぜ単価が安い提案でも、必ずしも有利とは限らないのか",
-          description: "単価偏重を避ける判断軸を補強できます。",
+          href: "/compare",
+          title: "料金メニューの比較・診断",
+          description: "固定と市場連動の差分を、自社に近い条件で試算できます。",
         },
       ]}
       ctaDescription="最低限の5項目を整理したら、比較ページで候補条件を並べ、使い方ページを見ながら実務フローに沿って確認を進めます。"

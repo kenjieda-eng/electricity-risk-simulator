@@ -128,8 +128,8 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="値上げ幅の見方を整理した後に、要因ごとの詳細確認と比較実務へ進むための導線です。"
+          heading="あわせて読みたい記事"
+          intro="上がり幅の次は、要因の分解・制度費目・長期・年次で位置づけを補うと社内説明がしやすくなります。"
           links={[
             {
               href: "/why-business-electricity-prices-rise",
@@ -137,24 +137,24 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
               description: "上昇要因の全体像を確認できます。",
             },
             {
-              href: "/fuel-cost-adjustment",
-              title: "燃料費調整額（燃調費）とは",
-              description: "調整項目の反映ルールを確認できます。",
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "制度費目が請求にどう乗るかを切り分けられます。",
             },
             {
-              href: "/market-price-adjustment",
-              title: "市場価格調整額とは",
-              description: "市場要因による振れ幅の見方を整理できます。",
+              href: "/business-electricity-price-trend-10-years",
+              title: "法人向け電気料金の10年推移",
+              description: "単年の変化を長期チャートの中で読み解けます。",
             },
             {
-              href: "/impact-of-electricity-subsidy-ending",
-              title: "法人向け電気料金の補助金終了で何が変わるか",
-              description: "政策要因の見え方を確認できます。",
+              href: "/business-electricity-retrospective",
+              title: "法人電気料金振り返り",
+              description: "年次・月次のデータで、直近の水準感を補えます。",
             },
             {
               href: "/compare",
-              title: "料金メニュー比較ページ",
-              description: "自社条件で差分を比較できます。",
+              title: "料金メニューの比較・診断",
+              description: "自社条件で固定と市場連動の差分を試算できます。",
             },
           ]}
         />

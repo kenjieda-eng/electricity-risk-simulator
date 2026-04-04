@@ -159,33 +159,33 @@ export default function WhyBusinessElectricityPricesRisePage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="上昇要因を構造で理解した後は、個別テーマと契約比較を組み合わせると判断しやすくなります。"
+          heading="次に確認したいページ"
+          intro="「なぜ上がるか」を押さえたら、上がり幅・制度費目・長期推移・年次データへ進むと説明が具体化しやすくなります。"
           links={[
             {
-              href: "/lng-electricity-price",
-              title: "LNGと電気料金の関係",
-              description: "燃料市場と法人料金のつながりを、波及経路と実務観点で確認できます。",
+              href: "/how-much-business-electricity-prices-increase",
+              title: "法人の電気料金はどの程度上がるのか",
+              description: "単価改定と調整項目を分けて、上がり幅の見方を整理できます。",
+            },
+            {
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "制度要因として請求に乗る賦課金の位置づけを確認できます。",
+            },
+            {
+              href: "/business-electricity-price-trend-10-years",
+              title: "法人向け電気料金の10年推移",
+              description: "長期の転換点と高止まりを、区分別に位置づけられます。",
+            },
+            {
+              href: "/business-electricity-retrospective",
+              title: "法人電気料金振り返り",
+              description: "月次・年次の実データから、直近の動きを補完できます。",
             },
             {
               href: "/fuel-cost-adjustment",
               title: "燃料費調整額の仕組み",
-              description: "請求額に影響する燃調費の基本と、確認ポイントを整理しています。",
-            },
-            {
-              href: "/market-linked-plan",
-              title: "市場連動型プランの特徴",
-              description: "市場価格の影響を受ける契約のメリットと注意点を確認できます。",
-            },
-            {
-              href: "/fixed-price-plan",
-              title: "固定プランの特徴",
-              description: "料金の見通しを重視する契約の考え方を整理しています。",
-            },
-            {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動型と固定型の違い",
-              description: "どちらが自社に合うかを比較軸で確認できます。",
+              description: "燃調費が請求に反映される流れを個別に深掘りできます。",
             },
           ]}
         />

@@ -596,28 +596,28 @@ export default function BusinessElectricityBillBreakdownPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="全体像を押さえた後に、請求確認や個別項目の詳細へ進むための導線です。"
+          heading="関連する解説ページ"
+          intro="内訳を押さえたら、見積・相場・制度要因・上昇理由へ進むと請求の読み解きが一段深まります。"
           links={[
             {
-              href: "/contract-demand-what-is-it",
-              title: "契約電力とは",
-              description: "基本料金の前提となる考え方を整理できます。",
+              href: "/how-to-read-electricity-quote",
+              title: "法人向け電気料金見積書の見方",
+              description: "請求内訳と同じ項目軸で、見積の前提を確認できます。",
             },
             {
-              href: "/demand-charge",
-              title: "デマンドとは",
-              description: "ピーク使用と契約電力の関係を詳しく確認できます。",
-            },
-            {
-              href: "/fuel-cost-adjustment",
-              title: "燃料費調整額（燃調費）とは",
-              description: "月次変動要因としての燃調費を個別に確認できます。",
+              href: "/business-electricity-price-benchmark",
+              title: "法人向け電気料金の相場はどう見るか",
+              description: "単価水準を判断するときの相場観のつかみ方です。",
             },
             {
               href: "/renewable-energy-surcharge",
               title: "再エネ賦課金とは",
-              description: "制度要因としての賦課金を整理できます。",
+              description: "制度要因として請求に乗る賦課金の位置づけを整理できます。",
+            },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "内訳のどの要因が効いているかを全体像でつなげられます。",
             },
             {
               href: "/how-to-read-electricity-bill",
@@ -625,9 +625,9 @@ export default function BusinessElectricityBillBreakdownPage() {
               description: "実際の請求書確認の手順へ進めます。",
             },
             {
-              href: "/how-to-read-electricity-quote",
-              title: "法人向け電気料金見積書の見方",
-              description: "比較・見直し判断に進むときの確認軸を整理できます。",
+              href: "/contract-demand-what-is-it",
+              title: "契約電力とは",
+              description: "基本料金の前提となる考え方を整理できます。",
             },
           ]}
         />

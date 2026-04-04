@@ -11,6 +11,8 @@ import {
   INDUSTRY_ARTICLES_CATEGORY_CARD,
   INDUSTRY_ARTICLES_QUICK_GUIDE_CARD,
 } from "../../lib/articleIndustryCategories";
+import { ARTICLES_THEME_ROWS, CATEGORY_HUB_SPOTLIGHT } from "../../lib/articleHubFeatured";
+import type { ArticleCategorySlug } from "../../data/articles";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
@@ -100,6 +102,15 @@ const starterArticleSlugs = [
 const learningCategories = getSortedCategories().filter((category) => category.group === "learning");
 const monthlyCategory = getSortedCategories().find((category) => category.slug === "monthly-review");
 
+function quickSlugsForCategoryCard(slug: ArticleCategorySlug): string[] {
+  const spotlight = CATEGORY_HUB_SPOTLIGHT[slug];
+  if (spotlight) {
+    return spotlight.slugs.slice(0, 3);
+  }
+  const category = learningCategories.find((c) => c.slug === slug);
+  return category ? category.recommendedReadingOrder.slice(0, 3) : [];
+}
+
 export default function ArticlesPage() {
   const latestArticles = getLatestArticles(3);
   const starterArticles = getArticlesBySlugs(starterArticleSlugs);
@@ -112,6 +123,46 @@ export default function ArticlesPage() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">{pageTitle}</h1>
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{pageDescription}</p>
+
+        <nav
+          className="mt-5 flex flex-wrap gap-x-4 gap-y-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700"
+          aria-label="サイト内の主な入口"
+        >
+          <span className="font-semibold text-slate-900">主な入口:</span>
+          <Link href="/how-to" className="text-sky-700 underline-offset-2 hover:underline">
+            シミュレーターの使い方
+          </Link>
+          <span className="text-slate-300" aria-hidden>
+            |
+          </span>
+          <Link href="/compare" className="text-sky-700 underline-offset-2 hover:underline">
+            料金メニューの比較・診断
+          </Link>
+          <span className="text-slate-300" aria-hidden>
+            |
+          </span>
+          <Link href="/articles/basic" className="text-sky-700 underline-offset-2 hover:underline">
+            基礎から知る
+          </Link>
+          <span className="text-slate-300" aria-hidden>
+            |
+          </span>
+          <Link href="/articles/price-increase" className="text-sky-700 underline-offset-2 hover:underline">
+            料金が上がる理由
+          </Link>
+          <span className="text-slate-300" aria-hidden>
+            |
+          </span>
+          <Link href="/articles/risk-scenarios" className="text-sky-700 underline-offset-2 hover:underline">
+            リスクシナリオ
+          </Link>
+          <span className="text-slate-300" aria-hidden>
+            |
+          </span>
+          <Link href="/business-electricity-retrospective" className="text-sky-700 underline-offset-2 hover:underline">
+            法人電気料金振り返り
+          </Link>
+        </nav>
 
         <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {quickGuideCards.map((card) => (
@@ -132,6 +183,58 @@ export default function ArticlesPage() {
         </div>
       </header>
 
+      <section className="mt-8" aria-labelledby="theme-hub-heading">
+        <h2 id="theme-hub-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
+          テーマから読み始める
+        </h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          カテゴリ全体に入る前に、文脈の近い代表記事から入ると読み進めやすい組み合わせです。
+        </p>
+        <div className="mt-5 space-y-8">
+          {ARTICLES_THEME_ROWS.map((row) => {
+            const articles = row.slugList.length ? getArticlesBySlugs(row.slugList) : [];
+            return (
+              <section key={row.key} className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 sm:p-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">{row.title}</h3>
+                    <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-700">{row.intro}</p>
+                  </div>
+                  <Link
+                    href={row.categoryHref}
+                    className="mt-2 inline-flex shrink-0 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 sm:mt-0"
+                  >
+                    カテゴリを見る
+                  </Link>
+                </div>
+                <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {articles.map((article) => (
+                    <article key={article.slug} className="rounded-xl border border-slate-200 bg-white p-4">
+                      <h4 className="text-base font-semibold text-slate-900">
+                        <Link href={`/${article.slug}`} className="underline-offset-2 hover:underline">
+                          {article.title}
+                        </Link>
+                      </h4>
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{article.description}</p>
+                    </article>
+                  ))}
+                  {row.extraCards?.map((card) => (
+                    <article key={card.href} className="rounded-xl border border-sky-200 bg-sky-50/80 p-4">
+                      <h4 className="text-base font-semibold text-slate-900">
+                        <Link href={card.href} className="underline-offset-2 hover:underline">
+                          {card.title}
+                        </Link>
+                      </h4>
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{card.description}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      </section>
+
       <section className="mt-8" aria-labelledby="categories-heading">
         <h2 id="categories-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
           カテゴリから探す
@@ -148,6 +251,24 @@ export default function ArticlesPage() {
                 <h3 className="mt-2 text-lg font-semibold text-slate-900">{category.name}</h3>
                 <p className="mt-1.5 text-sm leading-6 text-slate-700">{categoryDescriptions[category.slug] ?? category.description}</p>
                 <p className="mt-2 text-sm text-slate-600">記事数: {getArticlesByCategory(category.slug).length}件</p>
+                {(() => {
+                  const quick = getArticlesBySlugs(quickSlugsForCategoryCard(category.slug));
+                  if (!quick.length) return null;
+                  return (
+                    <div className="mt-3 border-t border-slate-100 pt-3">
+                      <p className="text-xs font-semibold text-slate-500">代表記事</p>
+                      <ul className="mt-2 space-y-1.5 text-sm">
+                        {quick.map((a) => (
+                          <li key={a.slug}>
+                            <Link href={`/${a.slug}`} className="text-sky-700 underline-offset-2 hover:underline">
+                              {a.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
                 <Link
                   href={`/articles/${category.slug}`}
                   className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"

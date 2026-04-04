@@ -284,33 +284,38 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="図表で全体像を確認した後に、背景・区分差・契約比較へ進むための導線です。"
+          heading="あわせて読みたい記事"
+          intro="10年推移の次は、上昇要因・制度費目・年次データ・診断比較で、自社の説明資料を厚くできます。"
           links={[
             {
-              href: "/why-electricity-prices-have-not-returned",
-              title: "急騰後も元に戻らないのはなぜか",
-              description: "高止まりの背景を要因分解で確認できます。",
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "チャートの転換点を、要因の言葉で説明しやすくなります。",
             },
             {
-              href: "/impact-of-electricity-subsidy-ending",
-              title: "法人向け電気料金の補助金終了で何が変わるか",
-              description: "補助要因と実力単価の差を整理できます。",
+              href: "/how-much-business-electricity-prices-increase",
+              title: "法人の電気料金はどの程度上がるのか",
+              description: "長期トレンドと直近の上がり幅の関係を整理できます。",
             },
             {
-              href: "/electricity-price-by-voltage-type",
-              title: "特別高圧・高圧・低圧で上がり方はどう違うか",
-              description: "契約区分差を比較しやすい形で確認できます。",
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "制度費目が長期推移の中でどう見えるかを補えます。",
             },
             {
               href: "/business-electricity-retrospective",
               title: "法人電気料金振り返り",
-              description: "月次動向を継続監視する入口ページです。",
+              description: "年別・月次の実データで、直近の位置づけを確認できます。",
             },
             {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動プランと固定プランの違い",
-              description: "推移理解を契約メニュー比較へつなげられます。",
+              href: "/compare",
+              title: "料金メニューの比較・診断",
+              description: "長期リスクの理解を、契約タイプの比較に接続できます。",
+            },
+            {
+              href: "/why-electricity-prices-have-not-returned",
+              title: "急騰後も元に戻らないのはなぜか",
+              description: "高止まりの背景を要因分解で深掘りできます。",
             },
           ]}
         />

@@ -130,53 +130,33 @@ export default function LastResortSupplyPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページから詳しく確認する"
-          intro="最終保障供給の論点を、料金・対象・切り替え・自治体実務・約款まで分けて確認できます。"
+          heading="関連する解説ページ"
+          intro="制度の位置づけを押さえたら、通常契約との違いと切替実務へ進むと次の手が決めやすくなります。"
           links={[
-            {
-              href: "/last-resort-supply-price",
-              title: "最終保障供給の料金はなぜ高いのか",
-              description: "通常契約との違いと、料金が高く見えやすい理由を整理します。",
-            },
-            {
-              href: "/last-resort-supply-target",
-              title: "最終保障供給の対象は誰か",
-              description: "高圧・特別高圧の違いと対象判定の考え方を整理します。",
-            },
-            {
-              href: "/last-resort-supply-switch",
-              title: "最終保障供給から切り替えるには",
-              description: "切り替えまでの流れ、必要情報、注意点を実務順で確認できます。",
-            },
-            {
-              href: "/municipality-last-resort-supply",
-              title: "自治体が最終保障供給になったとき",
-              description: "入札不調との関係や予算・契約事務への影響を整理します。",
-            },
             {
               href: "/last-resort-vs-retail-contract",
               title: "最終保障供給と通常契約の違い",
               description: "役割、料金、継続前提の差を比較して判断軸を整理します。",
             },
             {
-              href: "/last-resort-supply-high-voltage",
-              title: "高圧・特別高圧で確認したいポイント",
-              description: "受電区分ごとに、請求確認と切り替え準備の要点を確認できます。",
-            },
-            {
-              href: "/last-resort-supply-terms",
-              title: "最終保障供給の約款はどう読むか",
-              description: "約款・料金表で先に見るべき実務項目を整理します。",
+              href: "/last-resort-supply-switch",
+              title: "最終保障供給から切り替えるには",
+              description: "次契約への移行で必要な実務ステップを確認できます。",
             },
             {
               href: "/when-to-review-electricity-contract",
               title: "法人が電力契約を見直すタイミング",
-              description: "見直し着手の時期と確認順序を整理できます。",
+              description: "橋渡しから本契約へ戻るタイミングの整理に使えます。",
             },
             {
-              href: "/how-to-compare-electricity-suppliers",
-              title: "新電力を比較するときのポイント",
-              description: "比較時に単価以外で確認すべき軸を整理できます。",
+              href: "/switching-business-electricity-contract",
+              title: "法人が電力契約を切り替えるときの注意点",
+              description: "切替時の期限・請求のズレなど実行フェーズの論点です。",
+            },
+            {
+              href: "/articles/power-procurement",
+              title: "電力調達の仕組みを知る（カテゴリ）",
+              description: "通常契約側の調達構造をあわせて押さえられます。",
             },
           ]}
         />

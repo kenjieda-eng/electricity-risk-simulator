@@ -144,11 +144,19 @@ export default function WhenToReviewElectricityContractPage() {
             <li>他拠点との差が大きい</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            このような状態は、比較や診断に進む合理的なタイミングです。比較の進め方は{" "}
+            このような状態は、比較や診断に進む合理的なタイミングです。見積の読み方は{" "}
+            <Link href="/how-to-read-electricity-quote" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              法人向け電気料金見積書の見方
+            </Link>
+            、切替の実務は{" "}
+            <Link href="/switching-business-electricity-contract" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              法人が電力契約を切り替えるときの注意点
+            </Link>
+            で整理できます。比較の進め方は{" "}
             <Link href="/how-to-compare-electricity-suppliers" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               新電力を比較するときのポイント
             </Link>{" "}
-            で整理できます。
+            も参照ください。
           </p>
 
           <h2 className="mt-6 text-xl font-semibold text-slate-900">法人が電力契約を見直すときの注意点</h2>
@@ -177,33 +185,33 @@ export default function WhenToReviewElectricityContractPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="見直しタイミングを整理した後は、要因理解と比較軸の確認を組み合わせると判断しやすくなります。"
+          heading="次に確認したいページ"
+          intro="タイミングを押さえたら、資料準備・見積確認・切替までを同じ流れで読み進めると実務がつながります。"
           links={[
             {
-              href: "/lng-electricity-price",
-              title: "法人の電気料金とLNGの関係",
-              description: "燃料市場の変動が請求額へ波及する背景を確認できます。",
+              href: "/switching-business-electricity-contract",
+              title: "法人が電力契約を切り替えるときの注意点",
+              description: "更新・切替の期限と請求のズレなど、実行フェーズの論点を整理できます。",
             },
             {
-              href: "/why-business-electricity-prices-rise",
-              title: "法人の電気料金が上がる理由",
-              description: "請求額が増える主因を全体像で整理できます。",
+              href: "/documents-needed-for-electricity-contract-review",
+              title: "法人の電気料金見直しで集めるべき資料一覧",
+              description: "比較前にそろえる請求書・契約書・見積書の範囲を確認できます。",
             },
             {
-              href: "/fuel-cost-adjustment",
-              title: "燃料費調整額の仕組み",
-              description: "見落としやすい燃調費の影響を確認できます。",
+              href: "/5-minimum-checkpoints-for-electricity-contract-review",
+              title: "法人の電力契約見直しで最低限確認したい5項目",
+              description: "単価以外の条件まで含めた最低限のチェックに進めます。",
             },
             {
-              href: "/how-to-compare-electricity-suppliers",
-              title: "新電力を比較するときのポイント",
-              description: "比較前にそろえる情報と判断軸を確認できます。",
+              href: "/how-to-read-electricity-quote",
+              title: "法人向け電気料金見積書の見方",
+              description: "比較段階で見落としやすい前提条件の確認に使えます。",
             },
             {
-              href: "/last-resort-supply",
-              title: "最終保障供給とは",
-              description: "契約不成立時に確認したい制度の基本と切り替えの考え方を整理できます。",
+              href: "/compare",
+              title: "料金メニューの比較・診断",
+              description: "固定と市場連動の差分を、自社に近い条件で試算できます。",
             },
           ]}
         />

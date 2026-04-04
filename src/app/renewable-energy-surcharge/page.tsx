@@ -159,13 +159,13 @@ export default function RenewableEnergySurchargePage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="請求書理解を、要因分析と比較判断へつなげるための導線です。"
+          heading="関連する解説ページ"
+          intro="賦課金を燃料調整や内訳・上昇幅・長期推移と分けて見ると、請求の説明がしやすくなります。"
           links={[
             {
-              href: "/fuel-cost-adjustment",
-              title: "燃料費調整額の仕組み",
-              description: "燃料価格変動が請求額へ反映される構造を確認できます。",
+              href: "/business-electricity-bill-breakdown",
+              title: "法人向け電気料金の内訳とは",
+              description: "賦課金が請求のどこに位置するかを全体像で確認できます。",
             },
             {
               href: "/why-business-electricity-prices-rise",
@@ -173,14 +173,19 @@ export default function RenewableEnergySurchargePage() {
               description: "制度要因を含めた上昇要因の全体像を整理できます。",
             },
             {
-              href: "/high-voltage-electricity-pricing",
-              title: "高圧電力の料金の見方",
-              description: "請求書の内訳を実務目線で確認できます。",
+              href: "/how-much-business-electricity-prices-increase",
+              title: "法人の電気料金はどの程度上がるのか",
+              description: "賦課金を含めた上がり幅の見方に進めます。",
             },
             {
-              href: "/compare",
-              title: "法人向け電気料金比較ページ",
-              description: "請求構造を踏まえて、契約条件の比較に進めます。",
+              href: "/business-electricity-price-trend-10-years",
+              title: "法人向け電気料金の10年推移",
+              description: "制度改定を含む長期の位置づけを確認できます。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額の仕組み",
+              description: "賦課金と混同しやすい燃調費の役割を切り分けられます。",
             },
           ]}
         />

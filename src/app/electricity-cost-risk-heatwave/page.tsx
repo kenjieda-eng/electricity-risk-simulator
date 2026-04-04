@@ -150,33 +150,33 @@ export default function ElectricityCostRiskHeatwavePage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="夏の上振れ要因を、契約メニューと見直し判断につなげるための導線です。"
+          heading="あわせて読みたい記事"
+          intro="猛暑リスクの次は、ほかのシナリオ・長期推移・診断比較・上昇要因へ進むと、予算と契約の説明が揃いやすくなります。"
           links={[
             {
-              href: "/market-linked-plan",
-              title: "市場連動プランとは",
-              description: "夏場の価格変動が反映されやすい契約の特徴を確認できます。",
+              href: "/articles/risk-scenarios",
+              title: "リスクシナリオ別に知る（カテゴリ）",
+              description: "厳冬・円安など、ほかの上振れパターンへ横展開できます。",
             },
             {
-              href: "/fixed-price-plan",
-              title: "固定プランとは",
-              description: "料金安定を重視する契約の考え方を整理できます。",
+              href: "/business-electricity-price-trend-10-years",
+              title: "法人向け電気料金の10年推移",
+              description: "夏要因を長期の需給・単価の流れの中で位置づけられます。",
+            },
+            {
+              href: "/compare",
+              title: "料金メニューの比較・診断",
+              description: "猛暑要因を重ねたときの固定と市場連動の差分を試算できます。",
+            },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "気温・需給以外の構造要因も含めて説明を補えます。",
             },
             {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
-              description: "契約タイプ別にリスクの出方を比較できます。",
-            },
-            {
-              href: "/when-to-review-electricity-contract",
-              title: "電力契約を見直すタイミング",
-              description: "更新時期と見直し順序を実務目線で確認できます。",
-            },
-            {
-              href: "/how-to-compare-electricity-suppliers",
-              title: "新電力を比較するときのポイント",
-              description: "単価だけでない比較軸を整理できます。",
+              description: "夏場の変動を受け止め方ごとに比較軸を整理できます。",
             },
           ]}
         />

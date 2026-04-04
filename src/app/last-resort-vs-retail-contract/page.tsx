@@ -113,7 +113,8 @@ export default function LastResortVsRetailContractPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
+          heading="次に確認したいページ"
+          intro="違いを押さえたら、制度の全体像と切替実務へ進み、通常契約の準備に戻ります。"
           links={[
             {
               href: "/last-resort-supply",
@@ -121,19 +122,14 @@ export default function LastResortVsRetailContractPage() {
               description: "制度の全体像と基本事項を確認できます。",
             },
             {
-              href: "/last-resort-supply-price",
-              title: "最終保障供給の料金はなぜ高いのか",
-              description: "料金が高く見えやすい背景を整理できます。",
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "本契約へ戻る計画を、見直しの流れの中で整理できます。",
             },
             {
-              href: "/last-resort-supply-switch",
-              title: "最終保障供給から切り替えるには",
-              description: "次契約への移行実務を確認できます。",
-            },
-            {
-              href: "/compare",
-              title: "比較ページ",
-              description: "実際の候補比較を進める入口です。",
+              href: "/switching-business-electricity-contract",
+              title: "法人が電力契約を切り替えるときの注意点",
+              description: "切替手続きと初回請求確認の論点を整理できます。",
             },
           ]}
         />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
 
 const pageTitle = "法人の電気料金見直しで集めるべき資料一覧";
@@ -47,9 +48,18 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
         {
           heading: "まず集めたい請求書・契約書・見積書",
           paragraphs: [
-            "請求書は過去数か月から1年分、契約書は現契約本文と覚書、見積書は比較対象分をそろえます。資料の更新日や適用期間も合わせて確認しておくと誤読を防げます。",
+            "請求書は過去数か月から1年分、契約書は現契約本文と覚書、見積書は比較対象分をそろえます。資料の更新日や適用期間も合わせて確認しておくと誤読を防げます。見積の読み方は別ページで整理してから集めると、不足資料の洗い出しがしやすくなります。",
             "見積書は最新版だけでなく、前提条件が分かる補足資料も保管しておくと、社内説明時に役立ちます。",
           ],
+          note: (
+            <p>
+              見積書の確認項目は{" "}
+              <Link href="/how-to-read-electricity-quote" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+                法人向け電気料金見積書の見方
+              </Link>
+              を参照してください。
+            </p>
+          ),
           bullets: [
             "過去数か月から1年分の請求書",
             "現契約書、別紙、覚書、更新条件資料",
@@ -79,27 +89,32 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
           ],
         },
       ]}
-      relatedIntro="資料収集を実行に移すために、請求書の読み方・社内確認項目・多拠点実務・全体手順をあわせて確認できます。"
+      relatedIntro="資料がそろったら、チェック項目・タイミング・切替までを同じ流れで読み進めると実務がつながります。"
       relatedLinks={[
+        {
+          href: "/5-minimum-checkpoints-for-electricity-contract-review",
+          title: "法人の電力契約見直しで最低限確認したい5項目",
+          description: "請求構造と契約条件の最低限チェックに進めます。",
+        },
+        {
+          href: "/when-to-review-electricity-contract",
+          title: "法人が電力契約を見直すタイミング",
+          description: "いつ本格比較に入るかの判断軸を整理できます。",
+        },
+        {
+          href: "/switching-business-electricity-contract",
+          title: "法人が電力契約を切り替えるときの注意点",
+          description: "資料がそろった後の切替実行フェーズの論点です。",
+        },
+        {
+          href: "/how-to-read-electricity-quote",
+          title: "法人向け電気料金見積書の見方",
+          description: "比較対象の前提条件を、項目別に確認できます。",
+        },
         {
           href: "/how-to-read-electricity-bills-for-review",
           title: "請求書のどこを見れば電力契約見直しのヒントが分かるのか",
           description: "収集した請求書の確認視点を具体化できます。",
-        },
-        {
-          href: "/internal-checklist-for-electricity-contract-review",
-          title: "法人の電力契約見直しで社内確認したい項目一覧",
-          description: "資料収集を部署連携に落とし込めます。",
-        },
-        {
-          href: "/review-multi-site-electricity-contracts",
-          title: "複数拠点の電力契約を見直すときの進め方",
-          description: "多拠点での資料整理・優先順位判断に使えます。",
-        },
-        {
-          href: "/how-to-start-electricity-contract-review",
-          title: "法人の電力契約見直しは何から始めるべきか",
-          description: "資料収集を含む全体手順を確認できます。",
         },
       ]}
       ctaDescription="必要資料をそろえたら、使い方ページで入力前提を確認し、比較ページで条件差を同じ土台で評価して見直し判断を進めます。"

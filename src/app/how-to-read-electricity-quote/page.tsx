@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
@@ -175,6 +176,17 @@ export default function HowToReadElectricityQuotePage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">見積書を見る前に用意したい資料</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            資料の洗い出しは{" "}
+            <Link href="/documents-needed-for-electricity-contract-review" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              法人の電気料金見直しで集めるべき資料一覧
+            </Link>
+            で先に整理すると、比較依頼の段階で抜け漏れが減ります。見直しの着手時期は{" "}
+            <Link href="/when-to-review-electricity-contract" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              法人が電力契約を見直すタイミング
+            </Link>
+            も参照してください。
+          </p>
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>直近数か月の請求書</li>
             <li>契約電力</li>
@@ -232,38 +244,38 @@ export default function HowToReadElectricityQuotePage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="見積比較の前提整理と契約タイプ理解に役立つ関連ページです。"
+          heading="あわせて読みたい記事"
+          intro="見積の前提を、内訳・相場・見直し実務までつなげると比較判断が安定しやすくなります。"
           links={[
             {
-              href: "/how-to-compare-electricity-suppliers",
-              title: "新電力を比較するときのポイント",
-              description: "見積比較時の判断軸を全体で確認できます。",
+              href: "/business-electricity-bill-breakdown",
+              title: "法人向け電気料金の内訳とは",
+              description: "請求書と見積書を同じ項目軸で読むための全体像です。",
             },
             {
-              href: "/market-linked-plan",
-              title: "市場連動プランとは",
-              description: "変動型契約の特徴と注意点を整理できます。",
+              href: "/business-electricity-price-benchmark",
+              title: "法人向け電気料金の相場はどう見るか",
+              description: "単価の妥当性を判断するときの相場観のつかみ方です。",
             },
             {
-              href: "/fixed-price-plan",
-              title: "固定プランとは",
-              description: "安定性重視の契約の考え方を確認できます。",
+              href: "/documents-needed-for-electricity-contract-review",
+              title: "法人の電気料金見直しで集めるべき資料一覧",
+              description: "見積比較前にそろえる資料の範囲を整理できます。",
+            },
+            {
+              href: "/5-minimum-checkpoints-for-electricity-contract-review",
+              title: "法人の電力契約見直しで最低限確認したい5項目",
+              description: "単価以外の条件まで含めた最低限のチェックに進めます。",
+            },
+            {
+              href: "/switching-business-electricity-contract",
+              title: "法人が電力契約を切り替えるときの注意点",
+              description: "比較後の切替で確認したい期限と請求のズレを整理できます。",
             },
             {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
-              description: "契約タイプごとの差分を比較できます。",
-            },
-            {
-              href: "/contract-demand-what-is-it",
-              title: "契約電力とは",
-              description: "見積前提の基礎概念を確認できます。",
-            },
-            {
-              href: "/how-to-read-electricity-bill",
-              title: "電気料金の請求書で確認したいポイント",
-              description: "現在請求の確認項目を整理して比較精度を高められます。",
+              description: "見積に現れやすい契約タイプ差を比較軸で確認できます。",
             },
           ]}
         />

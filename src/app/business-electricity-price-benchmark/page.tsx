@@ -156,8 +156,8 @@ export default function BusinessElectricityPriceBenchmarkPage() {
         </section>
 
         <RelatedLinks
-          heading="関連ページ"
-          intro="相場感の整理を、請求確認と比較判断に接続するための導線です。"
+          heading="あわせて読みたい記事"
+          intro="相場感を、内訳・見積・見直し判断までつなげると、単価だけに頼らない比較がしやすくなります。"
           links={[
             {
               href: "/business-electricity-bill-breakdown",
@@ -165,19 +165,24 @@ export default function BusinessElectricityPriceBenchmarkPage() {
               description: "相場比較の前提となる料金構造を確認できます。",
             },
             {
-              href: "/how-to-read-electricity-bill",
-              title: "電気料金の請求書で確認したいポイント",
-              description: "現状把握に必要な請求書の見方を整理できます。",
-            },
-            {
               href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積比較で確認したい項目を整理できます。",
             },
             {
-              href: "/articles",
-              title: "法人向け電気料金の基礎知識",
-              description: "関連する基礎・見直しテーマを一覧で確認できます。",
+              href: "/compare",
+              title: "料金メニューの比較・診断",
+              description: "固定と市場連動の差分を、自社に近い条件で試算できます。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "相場感を得たうえで、いつ本格比較に入るか整理できます。",
+            },
+            {
+              href: "/articles/basic",
+              title: "基礎から知る（カテゴリ）",
+              description: "内訳や契約の基礎テーマをカテゴリ単位で辿れます。",
             },
           ]}
         />

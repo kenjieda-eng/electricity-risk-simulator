@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ComparePageClient from "./ComparePageClient";
 
 export const metadata: Metadata = {
@@ -74,6 +75,40 @@ export default function ComparePage() {
           <p className="mt-2 text-sm leading-6 sm:text-base">
             本シミュレーション結果は、新電力を含む電力契約の見直しやリスク把握の参考情報です。実際の請求単価・燃料費調整・契約条件により結果は変動するため、必要に応じて再度入力して比較をご確認ください。
           </p>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
+          <RelatedLinks
+            heading="あわせて読みたい記事"
+            intro="診断結果を、見積の読み方・上昇要因・リスクシナリオ・長期推移の理解に接続すると説明がしやすくなります。"
+            links={[
+              {
+                href: "/how-to-read-electricity-quote",
+                title: "法人向け電気料金見積書の見方",
+                description: "比較結果を実際の見積条件に落とし込むときの確認軸です。",
+              },
+              {
+                href: "/why-business-electricity-prices-rise",
+                title: "法人の電気料金が上がる理由",
+                description: "リスク要因と構造要因を分けて説明する材料になります。",
+              },
+              {
+                href: "/articles/risk-scenarios",
+                title: "リスクシナリオ別に知る（カテゴリ）",
+                description: "猛暑・円安など、ほかの上振れパターンへ広げられます。",
+              },
+              {
+                href: "/business-electricity-price-trend-10-years",
+                title: "法人向け電気料金の10年推移",
+                description: "長期の位置づけをチャートと解説で補えます。",
+              },
+              {
+                href: "/how-to",
+                title: "電力料金上昇リスク診断の使い方",
+                description: "入力とリスク要因の読み方をあらためて確認できます。",
+              },
+            ]}
+          />
         </div>
       </section>
     </>

@@ -218,6 +218,34 @@ export default function HowToPage() {
               <p className="font-semibold text-slate-900">固定プランと市場連動型プランの比較を見る</p>
               <p className="mt-1">保存した条件ごとの差分、リスクスコア、判定結果をまとめて確認できます。</p>
             </Link>
+            <Link
+              href="/articles"
+              className="rounded-lg border border-slate-200 p-4 text-base text-slate-700 transition hover:bg-slate-50"
+            >
+              <p className="font-semibold text-slate-900">解説ページ一覧（基礎知識）</p>
+              <p className="mt-1">料金構造、上昇要因、見直し、リスクシナリオをテーマ別に辿れます。</p>
+            </Link>
+            <Link
+              href="/articles/risk-scenarios"
+              className="rounded-lg border border-slate-200 p-4 text-base text-slate-700 transition hover:bg-slate-50"
+            >
+              <p className="font-semibold text-slate-900">リスクシナリオ別の解説</p>
+              <p className="mt-1">猛暑・厳冬など、要因別の上振れの見方を深掘りできます。</p>
+            </Link>
+            <Link
+              href="/business-electricity-price-trend-10-years"
+              className="rounded-lg border border-slate-200 p-4 text-base text-slate-700 transition hover:bg-slate-50"
+            >
+              <p className="font-semibold text-slate-900">法人向け電気料金の10年推移</p>
+              <p className="mt-1">シミュレーションで得た感覚を、長期データで位置づけられます。</p>
+            </Link>
+            <Link
+              href="/when-to-review-electricity-contract"
+              className="rounded-lg border border-slate-200 p-4 text-base text-slate-700 transition hover:bg-slate-50"
+            >
+              <p className="font-semibold text-slate-900">電力契約を見直すタイミング</p>
+              <p className="mt-1">診断結果を契約見直しの実務フローにつなげる入口です。</p>
+            </Link>
           </div>
         </div>
       </section>
