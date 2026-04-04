@@ -165,14 +165,14 @@ export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
       "冬場・夜間の負荷の出方",
     ],
     industries: [
-      { name: "シティホテル・リゾートホテル", description: "客室稼働と共用部負荷が重なりやすい宿泊業です。", plannedSlug: "city-hotel-resort" },
+      { name: "シティホテル・リゾートホテル", description: "客室稼働と共用部負荷が重なりやすい宿泊業です。", plannedSlug: "city-hotel-resort-hotel" },
       { name: "ビジネスホテル", description: "客室回転と共用空調の効率が重要な業種です。", plannedSlug: "business-hotel" },
       { name: "旅館・温泉施設", description: "給湯と暖房の比率が高くなりやすい施設です。", plannedSlug: "ryokan-onsen" },
-      { name: "スポーツジム・フィットネス", description: "営業時間の長さと空調負荷が目立ちやすい業種です。", plannedSlug: "gym-fitness-club" },
+      { name: "スポーツジム・フィットネス", description: "営業時間の長さと空調負荷が目立ちやすい業種です。", plannedSlug: "gym-fitness" },
       { name: "パチンコ・アミューズメント", description: "大型空間の照明と空調負荷が継続しやすい業種です。", plannedSlug: "pachinko-amusement" },
       { name: "映画館・劇場", description: "上映時間や催事時間に応じて負荷が変わりやすい施設です。", plannedSlug: "cinema-theater" },
-      { name: "温浴施設・サウナ", description: "給湯と加温設備のコスト影響が大きい施設です。", plannedSlug: "spa-sauna-facility" },
-      { name: "ゴルフ場・屋外レジャー", description: "季節変動と付帯施設の負荷が見えやすい業種です。", plannedSlug: "golf-course-outdoor-leisure" },
+      { name: "温浴施設・サウナ", description: "給湯と加温設備のコスト影響が大きい施設です。", plannedSlug: "spa-sauna" },
+      { name: "ゴルフ場・屋外レジャー", description: "季節変動と付帯施設の負荷が見えやすい業種です。", plannedSlug: "golf-outdoor-leisure" },
     ],
   },
   {
@@ -457,6 +457,46 @@ const PUBLISHED_INDUSTRY_ARTICLES: PublishedIndustryArticle[] = [
     middleSlug: "medical-welfare",
     industrySlug: "nursery-kindergarten",
     href: "/articles/by-industry/medical-welfare/nursery-kindergarten",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "city-hotel-resort-hotel",
+    href: "/articles/by-industry/hotel-leisure/city-hotel-resort-hotel",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "business-hotel",
+    href: "/articles/by-industry/hotel-leisure/business-hotel",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "ryokan-onsen",
+    href: "/articles/by-industry/hotel-leisure/ryokan-onsen",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "gym-fitness",
+    href: "/articles/by-industry/hotel-leisure/gym-fitness",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "pachinko-amusement",
+    href: "/articles/by-industry/hotel-leisure/pachinko-amusement",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "cinema-theater",
+    href: "/articles/by-industry/hotel-leisure/cinema-theater",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "spa-sauna",
+    href: "/articles/by-industry/hotel-leisure/spa-sauna",
+  },
+  {
+    middleSlug: "hotel-leisure",
+    industrySlug: "golf-outdoor-leisure",
+    href: "/articles/by-industry/hotel-leisure/golf-outdoor-leisure",
   },
 ] as const;
 
