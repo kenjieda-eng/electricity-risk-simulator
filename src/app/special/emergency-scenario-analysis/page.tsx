@@ -6,7 +6,7 @@ import { EMERGENCY_SCENARIO_BASE_PATH } from "../../../lib/emergencyScenarioAnal
 
 const pageTitle = "有事シナリオ分析｜法人電気代への影響を3シナリオで比較";
 const pageDescription =
-  "原油高騰・補助金終了・再エネ賦課金・円安の4重苦を前提に、法人電気代の上振れリスクをシナリオ別に比較する特集です。";
+  "原油高騰・補助金終了・再エネ賦課金・円安の四重苦を前提に、法人電気代の上振れリスクをシナリオ別に比較する特集です。";
 const canonicalUrl = `https://simulator.eic-jp.org${EMERGENCY_SCENARIO_BASE_PATH}`;
 
 export const metadata: Metadata = {
@@ -151,7 +151,7 @@ export default function EmergencyScenarioAnalysisTopPage() {
           {[
             { href: "/background", title: "背景", desc: "有事局面の時系列と供給制約を把握" },
             { href: "/mechanism", title: "仕組み", desc: "価格反映のタイムラグを確認" },
-            { href: "/quadruple-pressure", title: "4重苦", desc: "複合上昇の構造を分解" },
+            { href: "/quadruple-pressure", title: "四重苦", desc: "複合上昇の構造を分解" },
             { href: "/scenario-1", title: "シナリオ1", desc: "短期安定化でも残る負担を確認" },
             { href: "/scenario-2", title: "シナリオ2", desc: "夏ピークのダブルパンチを想定" },
             { href: "/scenario-3", title: "シナリオ3", desc: "長期化時の事業継続リスクを把握" },

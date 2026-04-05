@@ -15,7 +15,7 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
     label: "総論トップ",
     title: "有事シナリオ分析｜法人電気代の3シナリオを比較",
     description:
-      "有事局面での法人電気料金リスクを、背景・仕組み・4重苦・契約別・業種別・対策まで10ページで整理した特集トップです。",
+      "有事局面での法人電気料金リスクを、背景・仕組み・四重苦・契約別・業種別・対策まで10ページで整理した特集トップです。",
     heroKicker: "EMERGENCY SCENARIO ANALYSIS",
     heroAccentClass: "from-slate-900 to-sky-900",
   },
@@ -39,8 +39,8 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
   },
   {
     slug: "quadruple-pressure",
-    label: "4重苦",
-    title: "4重苦｜原油・補助金終了・再エネ賦課金・円安の複合影響",
+    label: "四重苦",
+    title: "四重苦｜原油・補助金終了・再エネ賦課金・円安の複合影響",
     description:
       "2026年に法人電気代を押し上げる4要因を、積み上げで見える化しながら構造的な上昇圧力を解説します。",
     heroKicker: "QUADRUPLE PRESSURE",
@@ -76,7 +76,7 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
   {
     slug: "contract-risk",
     label: "契約別",
-    title: "契約別リスク比較｜固定単価・市場連動・新電力の差",
+    title: "契約別リスク比較｜固定単価・市場連動の差",
     description:
       "契約タイプごとの上振れ幅をシナリオ横断で比較し、見直し優先度を判断できるように整理します。",
     heroKicker: "CONTRACT RISK",

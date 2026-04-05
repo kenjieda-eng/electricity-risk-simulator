@@ -25,6 +25,7 @@ type ChartKind =
   | "scenario-1"
   | "scenario-2"
   | "scenario-3"
+  | "contract-risk"
   | "industry-impact"
   | "action-priority";
 
@@ -215,6 +216,17 @@ function ScenarioBarChart({ kind }: { kind: ChartKind }) {
       };
     }
 
+    if (kind === "contract-risk") {
+      return {
+        labels: ["高圧・固定", "高圧・市場連動", "特別高圧・固定", "特別高圧・市場連動"],
+        datasets: [
+          { label: "シナリオ1", data: [6.5, 11.5, 5.5, 8], backgroundColor: `${COLORS.s1}b3`, borderRadius: 4 },
+          { label: "シナリオ2", data: [14, 27.5, 17, 21.5], backgroundColor: `${COLORS.s2}b3`, borderRadius: 4 },
+          { label: "シナリオ3", data: [23, 40, 27.5, 32.5], backgroundColor: `${COLORS.s3}b3`, borderRadius: 4 },
+        ],
+      };
+    }
+
     if (kind === "industry-impact") {
       return {
         labels: ["製造業", "冷凍冷蔵", "データセンター", "商業施設", "物流", "オフィス"],
@@ -233,6 +245,24 @@ function ScenarioBarChart({ kind }: { kind: ChartKind }) {
   }, [kind]);
 
   const options = useMemo<ChartOptions<"bar">>(() => {
+    if (kind === "contract-risk") {
+      return {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: "y",
+        plugins: { legend: { position: "bottom" } },
+        scales: {
+          x: {
+            min: 0,
+            max: 45,
+            grid: { color: COLORS.grid },
+            ticks: { callback: (value) => `+${value}%`, color: COLORS.text },
+          },
+          y: { grid: { display: false }, ticks: { color: COLORS.text } },
+        },
+      };
+    }
+
     if (kind === "industry-impact") {
       return {
         responsive: true,

@@ -33,27 +33,30 @@ export default function EmergencyScenarioLayout({ slug, lead, children }: Emerge
         ) : null}
       </nav>
 
-      <header className={`rounded-xl border border-slate-200 bg-gradient-to-r p-6 text-white ${page.heroAccentClass}`}>
-        <p className="text-xs font-semibold tracking-[0.18em] text-slate-200">{page.heroKicker}</p>
-        <h1 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">{page.title}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-100 sm:text-base">{lead}</p>
+      <header className="rounded-xl border border-slate-200 bg-white p-6">
+        <p className="text-xs font-semibold tracking-[0.18em] text-slate-500">{page.heroKicker}</p>
+        <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{page.title}</h1>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">{lead}</p>
       </header>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="text-lg font-semibold text-slate-900">特集の全体構成（10ページ）</h2>
         <ol className="mt-3 grid gap-2 text-sm leading-7 text-slate-700 sm:grid-cols-2">
-          {EMERGENCY_SCENARIO_SERIES.map((item, index) => {
+          {EMERGENCY_SCENARIO_SERIES.map((item) => {
             const href = getEmergencyScenarioPagePath(item.slug);
             const active = item.slug === slug;
+            const titleParts = item.title.split("｜");
+            const subheading = titleParts.length > 1 ? titleParts.slice(1).join("｜") : item.title;
+            const listLabel = `${item.label}｜${subheading}`;
             return (
               <li key={item.slug} className="list-decimal list-inside">
                 {active ? (
                   <span className="font-semibold text-slate-900">
-                    {index + 1}. {item.label}
+                    {listLabel}
                   </span>
                 ) : (
                   <Link href={href} className="underline-offset-2 hover:underline">
-                    {index + 1}. {item.label}
+                    {listLabel}
                   </Link>
                 )}
               </li>

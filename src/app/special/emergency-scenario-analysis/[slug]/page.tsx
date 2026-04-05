@@ -250,7 +250,7 @@ function QuadrupleContent() {
           <article className="rounded-lg border border-orange-200 bg-orange-50 p-3"><p className="text-xs">④ 円安進行</p><p className="text-xl font-bold text-orange-800">+2〜4%</p></article>
         </div>
         <p className="mt-4 text-sm leading-7 text-slate-700">
-          4重苦の本質は、単独要因の足し算ではなく「相互増幅」にあります。原油上昇が円安を呼び、円安が燃料輸入コストをさらに押し上げる循環が
+          四重苦の本質は、単独要因の足し算ではなく「相互増幅」にあります。原油上昇が円安を呼び、円安が燃料輸入コストをさらに押し上げる循環が
           生じるため、シナリオ長期化時ほど同じ原油価格でも請求負担が重くなります。
         </p>
       </section>
@@ -562,36 +562,17 @@ function ScenarioContent(kind: "scenario-1" | "scenario-2" | "scenario-3") {
 function ContractRiskContent() {
   return (
     <>
-      <section className="rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">契約タイプ × シナリオ リスクマトリクス</h2>
-        <p className="mt-3 text-sm leading-7 text-slate-700">
-          同じ原油局面でも、契約タイプによって上振れ幅は大きく変わります。特に市場連動比率と調達依存度が高い契約は、
-          シナリオ2・3で急激にリスクが拡大します。
-        </p>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[700px] border-collapse text-sm">
-            <thead>
-              <tr className="bg-slate-100 text-left">
-                <th className="border border-slate-200 px-3 py-2">契約タイプ</th>
-                <th className="border border-slate-200 px-3 py-2">S1</th>
-                <th className="border border-slate-200 px-3 py-2">S2</th>
-                <th className="border border-slate-200 px-3 py-2">S3</th>
-              </tr>
-            </thead>
-            <tbody className="text-slate-700">
-              <tr><td className="border border-slate-200 px-3 py-2">高圧・固定単価</td><td className="border px-3 py-2">+5〜8%</td><td className="border px-3 py-2">+10〜18%</td><td className="border px-3 py-2">+18〜28%</td></tr>
-              <tr><td className="border border-slate-200 px-3 py-2">市場連動型</td><td className="border px-3 py-2">+8〜15%</td><td className="border px-3 py-2">+20〜35%</td><td className="border px-3 py-2">+30〜50%</td></tr>
-              <tr><td className="border border-slate-200 px-3 py-2">特別高圧</td><td className="border px-3 py-2">+4〜7%</td><td className="border px-3 py-2">+12〜22%</td><td className="border px-3 py-2">+20〜35%</td></tr>
-              <tr><td className="border border-slate-200 px-3 py-2">新電力（中小PPS）</td><td className="border px-3 py-2">+7〜12%</td><td className="border px-3 py-2">+18〜30%</td><td className="border px-3 py-2">+25〜45%</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <EmergencyScenarioChartCard
+        kind="contract-risk"
+        title="契約タイプ × シナリオ リスクマトリクス"
+        description="同じ原油局面でも、契約タイプによって上振れ幅は大きく変わります。特に市場連動比率と調達依存度が高い契約は、シナリオ2・3で急激にリスクが拡大します。"
+        heightClassName="h-[300px] sm:h-[360px]"
+      />
 
       <section className="rounded-xl border border-red-200 bg-red-50 p-5">
-        <h2 className="text-xl font-semibold text-red-900">市場連動型で特に注意する点</h2>
+        <h2 className="text-xl font-semibold text-red-900">市場連動型契約で特に注意する点</h2>
         <p className="mt-3 text-sm leading-7 text-red-900">
-          JEPX 上昇が即時反映されるため、夏季ピーク時は固定単価より高い上振れになりやすく、資金繰り上の安全余裕が小さくなります。
+          高圧・市場連動、特別高圧・市場連動ともに JEPX 上昇が即時反映されるため、夏季ピーク時は固定契約より高い上振れになりやすく、資金繰り上の安全余裕が小さくなります。
         </p>
       </section>
 
@@ -599,22 +580,21 @@ function ContractRiskContent() {
         <h2 className="text-xl font-semibold text-slate-900">契約タイプごとの特徴と注意点</h2>
         <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700">
           <div>
-            <p className="font-semibold text-slate-900">高圧・固定単価</p>
+            <p className="font-semibold text-slate-900">高圧・固定</p>
             <p>急騰時のショックは市場連動より緩やかですが、2026年4月以降は反映速度が上がっており、旧来ほど緩衝材が効きません。</p>
           </div>
           <div>
-            <p className="font-semibold text-slate-900">市場連動型プラン</p>
+            <p className="font-semibold text-slate-900">高圧・市場連動</p>
             <p>JEPX価格が直接反映されるため、短期間で請求が急伸しやすい契約です。シナリオ3では+30〜50%の上振れを想定します。</p>
           </div>
           <div>
-            <p className="font-semibold text-slate-900">特別高圧</p>
+            <p className="font-semibold text-slate-900">特別高圧・固定</p>
             <p>個別契約条件で差が出ます。長期契約は短期変動に強い一方、更新時に高止まりした相場が織り込まれるリスクがあります。</p>
           </div>
           <div>
-            <p className="font-semibold text-slate-900">新電力（中小PPS）</p>
+            <p className="font-semibold text-slate-900">特別高圧・市場連動</p>
             <p>
-              JEPX依存度が高い事業者では逆ザヤが発生しやすく、撤退リスクも考慮が必要です。万一の際は最終保障供給への移行で単価上昇が
-              追加発生する可能性があります。
+              特別高圧の大口需要に市場連動が組み合わさるため、JEPX高騰時のインパクトが大きくなります。シナリオ2以上では固定単価への切替検討が急務です。
             </p>
           </div>
         </div>
