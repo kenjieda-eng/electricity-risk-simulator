@@ -52,6 +52,11 @@ export default function EmergencyScenarioAnalysisTopPage() {
       <section className="rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">3つのシナリオの影響サマリー</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          2026年2月末の有事発生を起点に、原油価格は短期間で大きく変動しました。攻撃前の 67 ドル近辺から一時 120 ドル近辺まで急騰し、
+          足元でも 100 ドル前後の高い水準が意識される局面が続いています。法人電気代への反映は、情勢そのものよりも「高値が何カ月続くか」で
+          差が開く点が重要です。
+        </p>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           有事局面の収束時期によって、法人電気代への影響は大きく変わります。短期安定化なら上昇幅は限定的ですが、夏以降まで長期化するほど
           原油高と為替の影響が積み上がり、請求ベースの負担は急拡大します。
         </p>
@@ -92,12 +97,51 @@ export default function EmergencyScenarioAnalysisTopPage() {
           今回の局面は、原油高騰に加えて補助金終了、再エネ賦課金の高止まり、円安圧力が重なる「複合上昇」が特徴です。
           単月の市場価格だけでなく、契約条件・業種特性・投資回収の視点を含めて判断する必要があります。
         </p>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          さらに 2026 年 4 月の料金算定変更により、固定単価プランでも高騰時の反映スピードが速くなっています。
+          従来のように「燃料費調整は時間差で効くから急変には強い」と言い切りにくくなっており、原油下落時の戻りよりも、
+          上昇局面の転嫁を先に受けやすい実務環境に変化しています。
+        </p>
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
           市場連動型プランや JEPX 依存度の高い契約では、シナリオ2・3で上振れリスクが大きくなります。{" "}
           <Link href={`${EMERGENCY_SCENARIO_BASE_PATH}/contract-risk`} className="font-semibold underline underline-offset-2">
             契約別リスク比較
           </Link>{" "}
           で自社契約を先に確認してください。
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">あなたの会社はどのシナリオに備えるべきか</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          業種・契約タイプ・電力使用の季節性によって、最適な対策は変わります。シナリオ1は「傷は浅い」一方で構造的な上昇が残り、
+          シナリオ2は「使用量ピークと単価ピークの重なり」、シナリオ3は「高コストの定着」が論点になります。自社に近い前提から確認してください。
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          <Link
+            href={`${EMERGENCY_SCENARIO_BASE_PATH}/scenario-1`}
+            className="rounded-lg border border-emerald-200 bg-emerald-50 p-4 transition hover:bg-emerald-100"
+          >
+            <p className="text-xs font-semibold text-emerald-800">シナリオ1</p>
+            <p className="mt-1 text-sm font-semibold text-emerald-900">短期安定化</p>
+            <p className="mt-1 text-xs leading-6 text-emerald-800">4月末停戦を前提に、残る上昇要因を確認</p>
+          </Link>
+          <Link
+            href={`${EMERGENCY_SCENARIO_BASE_PATH}/scenario-2`}
+            className="rounded-lg border border-amber-200 bg-amber-50 p-4 transition hover:bg-amber-100"
+          >
+            <p className="text-xs font-semibold text-amber-800">シナリオ2</p>
+            <p className="mt-1 text-sm font-semibold text-amber-900">夏まで長期化</p>
+            <p className="mt-1 text-xs leading-6 text-amber-800">冷房需要ピークと高単価が重なるケースを確認</p>
+          </Link>
+          <Link
+            href={`${EMERGENCY_SCENARIO_BASE_PATH}/scenario-3`}
+            className="rounded-lg border border-rose-200 bg-rose-50 p-4 transition hover:bg-rose-100"
+          >
+            <p className="text-xs font-semibold text-rose-800">シナリオ3</p>
+            <p className="mt-1 text-sm font-semibold text-rose-900">秋以降も継続</p>
+            <p className="mt-1 text-xs leading-6 text-rose-800">事業計画見直しが必要な長期化ケースを確認</p>
+          </Link>
         </div>
       </section>
 
