@@ -25,7 +25,7 @@ const headerLinks: HeaderLink[] = [
 
 const specialFeatureLink = {
   href: "/special/emergency-scenario-analysis",
-  label: "有事シナリオ分析：26年4月作成",
+  label: "特集：有事シナリオ分析：26年4月作成",
 };
 
 const isActivePath = (pathname: string, href: string): boolean => {
@@ -106,7 +106,7 @@ export function PublicHeader() {
                 <Link
                   href={specialFeatureLink.href}
                   className="inline-flex items-center rounded-md border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-semibold leading-snug text-violet-900 transition hover:bg-violet-100 sm:py-2 sm:text-xl"
-                  aria-label="有事シナリオ分析：26年4月作成 特集ページへ移動"
+                  aria-label="特集：有事シナリオ分析：26年4月作成 特集ページへ移動"
                 >
                   {specialFeatureLink.label}
                 </Link>
