@@ -109,56 +109,73 @@ function upsertRouteDate(routeDateMap: Map<string, Date>, route: string, candida
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticPageRoutes = await collectStaticPageRoutes(APP_DIR);
-  const routeDateMap = new Map<string, Date>();
+  try {
+    const staticPageRoutes = await collectStaticPageRoutes(APP_DIR);
+    const routeDateMap = new Map<string, Date>();
 
-  for (const pageRoute of staticPageRoutes) {
-    if (pageRoute.route.startsWith("/admin")) {
-      continue;
+    for (const pageRoute of staticPageRoutes) {
+      if (pageRoute.route.startsWith("/admin")) {
+        continue;
+      }
+      upsertRouteDate(routeDateMap, pageRoute.route, pageRoute.lastModified);
     }
-    upsertRouteDate(routeDateMap, pageRoute.route, pageRoute.lastModified);
-  }
 
-  const articlesDataMtime = await getFileMtime(ARTICLES_DATA_FILE);
-  const categoryPageMtime = await getFileMtime(CATEGORY_PAGE_FILE);
+    const articlesDataMtime = await getFileMtime(ARTICLES_DATA_FILE);
+    const categoryPageMtime = await getFileMtime(CATEGORY_PAGE_FILE);
 
-  for (const article of articleList) {
-    const articleRoute = article.slug.startsWith("/") ? article.slug : `/${article.slug}`;
-    const publishedAt = new Date(`${article.publishedAt}T00:00:00+09:00`);
-    upsertRouteDate(routeDateMap, articleRoute, publishedAt);
-  }
-
-  for (const category of articleCategories) {
-    const categoryRoute = `/articles/${category.slug}`;
-    upsertRouteDate(routeDateMap, categoryRoute, maxDate(articlesDataMtime, categoryPageMtime));
-  }
-
-  const retrospectivePageMtime = await getFileMtime(RETROSPECTIVE_DYNAMIC_PAGE_FILE);
-  const retrospectiveDataMtime = await getFileMtime(RETROSPECTIVE_DATA_FILE);
-  const retrospectiveLastmod = maxDate(retrospectivePageMtime, retrospectiveDataMtime);
-  for (const retrospectiveSlug of getAllRetrospectiveSlugs()) {
-    upsertRouteDate(routeDateMap, `/business-electricity-retrospective/${retrospectiveSlug}`, retrospectiveLastmod);
-  }
-
-  const emergencyScenarioLastmod = new Date();
-  for (const slug of EMERGENCY_SCENARIO_SLUGS) {
-    upsertRouteDate(routeDateMap, `/special/emergency-scenario-analysis/${slug}`, emergencyScenarioLastmod);
-  }
-
-  for (const requiredPath of REQUIRED_PATHS) {
-    if (!routeDateMap.has(requiredPath)) {
-      routeDateMap.set(requiredPath, new Date());
+    for (const article of articleList) {
+      const articleRoute = article.slug.startsWith("/") ? article.slug : `/${article.slug}`;
+      const publishedAt = new Date(`${article.publishedAt}T00:00:00+09:00`);
+      upsertRouteDate(routeDateMap, articleRoute, publishedAt);
     }
+
+    for (const category of articleCategories) {
+      const categoryRoute = `/articles/${category.slug}`;
+      upsertRouteDate(routeDateMap, categoryRoute, maxDate(articlesDataMtime, categoryPageMtime));
+    }
+
+    const retrospectivePageMtime = await getFileMtime(RETROSPECTIVE_DYNAMIC_PAGE_FILE);
+    const retrospectiveDataMtime = await getFileMtime(RETROSPECTIVE_DATA_FILE);
+    const retrospectiveLastmod = maxDate(retrospectivePageMtime, retrospectiveDataMtime);
+    for (const retrospectiveSlug of getAllRetrospectiveSlugs()) {
+      upsertRouteDate(routeDateMap, `/business-electricity-retrospective/${retrospectiveSlug}`, retrospectiveLastmod);
+    }
+
+    const emergencyScenarioLastmod = new Date();
+    for (const slug of EMERGENCY_SCENARIO_SLUGS) {
+      upsertRouteDate(routeDateMap, `/special/emergency-scenario-analysis/${slug}`, emergencyScenarioLastmod);
+    }
+
+    for (const requiredPath of REQUIRED_PATHS) {
+      if (!routeDateMap.has(requiredPath)) {
+        routeDateMap.set(requiredPath, new Date());
+      }
+    }
+
+    const allRoutes = [...routeDateMap.keys()]
+      .filter((route) => !route.startsWith("/admin"))
+      .sort((a, b) => a.localeCompare(b));
+
+    return allRoutes.map((route) => ({
+      url: `${SITE_URL}${route}`,
+      lastModified: routeDateMap.get(route),
+      changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
+      priority: PRIORITY_BY_PATH[route] ?? 0.8,
+    }));
+  } catch {
+    const fallbackPaths = [
+      ...REQUIRED_PATHS,
+      "/business-electricity-retrospective",
+      "/special/emergency-scenario-analysis",
+      ...EMERGENCY_SCENARIO_SLUGS.map((slug) => `/special/emergency-scenario-analysis/${slug}`),
+    ];
+    const uniquePaths = [...new Set(fallbackPaths)];
+    const now = new Date();
+    return uniquePaths.map((route) => ({
+      url: `${SITE_URL}${route}`,
+      lastModified: now,
+      changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
+      priority: PRIORITY_BY_PATH[route] ?? 0.8,
+    }));
   }
-
-  const allRoutes = [...routeDateMap.keys()]
-    .filter((route) => !route.startsWith("/admin"))
-    .sort((a, b) => a.localeCompare(b));
-
-  return allRoutes.map((route) => ({
-    url: `${SITE_URL}${route}`,
-    lastModified: routeDateMap.get(route),
-    changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
-    priority: PRIORITY_BY_PATH[route] ?? 0.8,
-  }));
 }
