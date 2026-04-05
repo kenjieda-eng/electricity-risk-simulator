@@ -3,6 +3,7 @@ import path from "node:path";
 import type { MetadataRoute } from "next";
 import { articleCategories, articleList } from "../data/articles";
 import { getAllRetrospectiveSlugs } from "./business-electricity-retrospective/_lib/retrospective-data";
+import { EMERGENCY_SCENARIO_SLUGS } from "../lib/emergencyScenarioAnalysis";
 
 const SITE_URL = "https://simulator.eic-jp.org";
 const REQUIRED_PATHS = ["/", "/how-to", "/compare", "/articles"] as const;
@@ -16,6 +17,15 @@ const RETROSPECTIVE_DATA_FILE = path.join(
   "_lib",
   "retrospective-data.ts",
 );
+const EMERGENCY_SCENARIO_TOP_PAGE_FILE = path.join(APP_DIR, "special", "emergency-scenario-analysis", "page.tsx");
+const EMERGENCY_SCENARIO_DYNAMIC_PAGE_FILE = path.join(
+  APP_DIR,
+  "special",
+  "emergency-scenario-analysis",
+  "[slug]",
+  "page.tsx",
+);
+const EMERGENCY_SCENARIO_DATA_FILE = path.join(process.cwd(), "src", "lib", "emergencyScenarioAnalysis.ts");
 
 const PRIORITY_BY_PATH: Record<string, number> = {
   "/": 1,
@@ -137,6 +147,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const retrospectiveLastmod = maxDate(retrospectivePageMtime, retrospectiveDataMtime);
   for (const retrospectiveSlug of getAllRetrospectiveSlugs()) {
     upsertRouteDate(routeDateMap, `/business-electricity-retrospective/${retrospectiveSlug}`, retrospectiveLastmod);
+  }
+
+  const emergencyScenarioTopMtime = await getFileMtime(EMERGENCY_SCENARIO_TOP_PAGE_FILE);
+  const emergencyScenarioDynamicMtime = await getFileMtime(EMERGENCY_SCENARIO_DYNAMIC_PAGE_FILE);
+  const emergencyScenarioDataMtime = await getFileMtime(EMERGENCY_SCENARIO_DATA_FILE);
+  const emergencyScenarioLastmod = maxDate(
+    emergencyScenarioTopMtime,
+    maxDate(emergencyScenarioDynamicMtime, emergencyScenarioDataMtime),
+  );
+  for (const slug of EMERGENCY_SCENARIO_SLUGS) {
+    upsertRouteDate(routeDateMap, `/special/emergency-scenario-analysis/${slug}`, emergencyScenarioLastmod);
   }
 
   for (const requiredPath of REQUIRED_PATHS) {

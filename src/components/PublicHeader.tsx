@@ -23,6 +23,11 @@ const headerLinks: HeaderLink[] = [
   },
 ];
 
+const specialFeatureLink = {
+  href: "/special/emergency-scenario-analysis",
+  label: "有事シナリオ分析",
+};
+
 const isActivePath = (pathname: string, href: string): boolean => {
   if (href === "/") {
     return pathname === "/";
@@ -97,6 +102,15 @@ export function PublicHeader() {
               </p>
             </div>
             <div className="mt-1.5 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex">
+                <Link
+                  href={specialFeatureLink.href}
+                  className="inline-flex items-center rounded-md border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-semibold text-violet-900 transition hover:bg-violet-100"
+                  aria-label="有事シナリオ分析 特集ページへ移動"
+                >
+                  {specialFeatureLink.label}
+                </Link>
+              </div>
               <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-sm font-semibold text-slate-700 sm:text-xl">
