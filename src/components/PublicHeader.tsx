@@ -24,8 +24,8 @@ const headerLinks: HeaderLink[] = [
 ];
 
 const specialFeatureLink = {
-  href: "/special/emergency-scenario-analysis",
-  label: "特集：有事シナリオ分析：26年4月作成",
+  href: "/special",
+  label: "特集：有事シナリオ分析：26年4月",
 };
 
 const isActivePath = (pathname: string, href: string): boolean => {
@@ -106,7 +106,7 @@ export function PublicHeader() {
                 <Link
                   href={specialFeatureLink.href}
                   className="inline-flex items-center rounded-md border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-semibold leading-snug text-violet-900 transition hover:bg-violet-100 sm:py-2 sm:text-xl"
-                  aria-label="特集：有事シナリオ分析：26年4月作成 特集ページへ移動"
+                  aria-label="特集：有事シナリオ分析：26年4月 特集一覧ページへ移動"
                 >
                   {specialFeatureLink.label}
                 </Link>
@@ -114,7 +114,7 @@ export function PublicHeader() {
               <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-sm font-semibold text-slate-700 sm:text-xl">
-                    シミュレーション実施回数（最新）:{" "}
+                    シミュレーション実施回数:{" "}
                     <span className="text-base font-bold text-slate-900 sm:text-2xl">
                       {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
                     </span>
@@ -122,7 +122,7 @@ export function PublicHeader() {
                 </div>
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-sm font-semibold text-slate-700 sm:text-xl">
-                    リスク平均スコア（最新）:{" "}
+                    リスク平均スコア:{" "}
                     <span className="text-base font-bold text-slate-900 sm:text-2xl">
                       {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
                     </span>
