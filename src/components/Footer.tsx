@@ -35,7 +35,9 @@ const retrospectiveDataLinks = [
     label: "法人向け電気料金の推移を10年で見る",
   },
   { href: "/business-electricity-retrospective/ukraine-shock-overview", label: "ウクライナショックからの学び" },
+  { href: "/special/emergency-scenario-analysis", label: "法人電気代の3シナリオを比較" },
   { href: "/special/oil-scenario-analysis", label: "原油高・物流コストのシナリオ分析" },
+  { href: "/special/gas-scenario-analysis", label: "法人ガス代のシナリオ分析" },
 ] as const;
 
 const blockHeadingClass =

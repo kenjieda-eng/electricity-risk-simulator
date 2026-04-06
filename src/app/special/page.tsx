@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const pageTitle = "有事シナリオ分析 特集一覧｜法人向けシナリオ特集";
 const pageDescription =
-  "法人のエネルギー関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版と原油・物流コスト版の2テーマから選んで確認できます。";
+  "法人のエネルギー関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版の3テーマから選んで確認できます。";
 const canonicalUrl = "https://simulator.eic-jp.org/special";
 
 export const metadata: Metadata = {
@@ -41,6 +41,12 @@ const specialLinks = [
     title: "有事シナリオ分析（原油・物流コスト）",
     description:
       "イラン情勢を前提に、ガソリン・軽油価格の変動と物流コスト・社用車費用・出張旅費への影響をシナリオ別に確認できます。",
+  },
+  {
+    href: "/special/gas-scenario-analysis",
+    title: "有事シナリオ分析（法人ガス代）",
+    description:
+      "都市ガス・LPガスの料金見通し、補助金の持続性、業種別コスト増、電化比較をシナリオ別に確認できます。",
   },
 ] as const;
 
