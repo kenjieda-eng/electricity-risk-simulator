@@ -35,6 +35,7 @@ const retrospectiveDataLinks = [
     label: "法人向け電気料金の推移を10年で見る",
   },
   { href: "/business-electricity-retrospective/ukraine-shock-overview", label: "ウクライナショックからの学び" },
+  { href: "/special/oil-scenario-analysis", label: "原油高・物流コストのシナリオ分析" },
 ] as const;
 
 const blockHeadingClass =
@@ -104,16 +105,23 @@ export function Footer() {
             <h2 id="footer-site-operation" className={blockHeadingClass}>
               サイト運営
             </h2>
-            <div className="mt-3 sm:mt-4">
-              <a
-                href="https://eic-jp.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm leading-relaxed text-sky-900/80 transition hover:text-sky-950"
-              >
-                一般社団法人エネルギー情報センター
-              </a>
-            </div>
+            <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
+              <li>
+                <Link href="/about-this-site" className="text-sm text-sky-900/80 transition hover:text-sky-950">
+                  このサイトの思い
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://eic-jp.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-relaxed text-sky-900/80 transition hover:text-sky-950"
+                >
+                  一般社団法人エネルギー情報センター
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
 
