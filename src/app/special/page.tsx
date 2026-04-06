@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const pageTitle = "有事シナリオ分析 特集一覧｜法人向けシナリオ特集";
 const pageDescription =
-  "法人のエネルギー関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版の3テーマから選んで確認できます。";
+  "法人のエネルギー・原材料関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版・原材料包装資材版の4テーマから選んで確認できます。";
 const canonicalUrl = "https://simulator.eic-jp.org/special";
 
 export const metadata: Metadata = {
@@ -47,6 +47,12 @@ const specialLinks = [
     title: "有事シナリオ分析（法人ガス代）",
     description:
       "都市ガス・LPガスの料金見通し、補助金の持続性、業種別コスト増、電化比較をシナリオ別に確認できます。",
+  },
+  {
+    href: "/special/materials-packaging-scenario-analysis",
+    title: "有事シナリオ分析（原材料・包装資材）",
+    description:
+      "ナフサ不足・エチレン減産を前提に、プラスチック・包装資材・化学品・非鉄金属の価格動向と業種別影響を確認できます。",
   },
 ] as const;
 
