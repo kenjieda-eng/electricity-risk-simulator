@@ -114,7 +114,7 @@ export function PublicHeader() {
               <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
                 <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
                   <p className="text-sm font-semibold text-slate-700 sm:text-xl">
-                    シミュレーション実施回数:{" "}
+                    診断実施回数:{" "}
                     <span className="text-base font-bold text-slate-900 sm:text-2xl">
                       {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
                     </span>
