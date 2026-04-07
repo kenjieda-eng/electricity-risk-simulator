@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const pageTitle = "有事シナリオ分析 特集一覧｜法人向けシナリオ特集";
 const pageDescription =
-  "法人のエネルギー・原材料関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版・原材料包装資材版の4テーマから選んで確認できます。";
+  "法人のエネルギー・原材料関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版・原材料包装資材版・食料品仕入コスト版の5テーマから選んで確認できます。";
 const canonicalUrl = "https://simulator.eic-jp.org/special";
 
 export const metadata: Metadata = {
@@ -53,6 +53,12 @@ const specialLinks = [
     title: "有事シナリオ分析（原材料・包装資材）",
     description:
       "ナフサ不足・エチレン減産を前提に、プラスチック・包装資材・化学品・非鉄金属の価格動向と業種別影響を確認できます。",
+  },
+  {
+    href: "/special/food-procurement-scenario-analysis",
+    title: "有事シナリオ分析（食料品仕入コスト）",
+    description:
+      "小麦・食用油・畜産・水産・青果の価格上昇と、飲食業・食品製造業への影響、対策ロードマップを確認できます。",
   },
 ] as const;
 

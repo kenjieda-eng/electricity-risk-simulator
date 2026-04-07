@@ -7,6 +7,7 @@ import { EMERGENCY_SCENARIO_SLUGS } from "../lib/emergencyScenarioAnalysis";
 import { OIL_SCENARIO_SLUGS } from "../lib/oilScenarioAnalysis";
 import { GAS_SCENARIO_SLUGS } from "../lib/gasScenarioAnalysis";
 import { MATERIALS_SCENARIO_SLUGS } from "../lib/materialsPackagingScenarioAnalysis";
+import { FOOD_SCENARIO_SLUGS } from "../lib/foodProcurementScenarioAnalysis";
 
 const SITE_URL = "https://simulator.eic-jp.org";
 const REQUIRED_PATHS = ["/", "/how-to", "/compare", "/articles"] as const;
@@ -164,6 +165,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       upsertRouteDate(routeDateMap, `/special/materials-packaging-scenario-analysis/${slug}`, materialsScenarioLastmod);
     }
 
+    const foodScenarioLastmod = new Date();
+    for (const slug of FOOD_SCENARIO_SLUGS) {
+      upsertRouteDate(routeDateMap, `/special/food-procurement-scenario-analysis/${slug}`, foodScenarioLastmod);
+    }
+
     for (const requiredPath of REQUIRED_PATHS) {
       if (!routeDateMap.has(requiredPath)) {
         routeDateMap.set(requiredPath, new Date());
@@ -188,10 +194,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       "/special/oil-scenario-analysis",
       "/special/gas-scenario-analysis",
       "/special/materials-packaging-scenario-analysis",
+      "/special/food-procurement-scenario-analysis",
       ...EMERGENCY_SCENARIO_SLUGS.map((slug) => `/special/emergency-scenario-analysis/${slug}`),
       ...OIL_SCENARIO_SLUGS.map((slug) => `/special/oil-scenario-analysis/${slug}`),
       ...GAS_SCENARIO_SLUGS.map((slug) => `/special/gas-scenario-analysis/${slug}`),
       ...MATERIALS_SCENARIO_SLUGS.map((slug) => `/special/materials-packaging-scenario-analysis/${slug}`),
+      ...FOOD_SCENARIO_SLUGS.map((slug) => `/special/food-procurement-scenario-analysis/${slug}`),
     ];
     const uniquePaths = [...new Set(fallbackPaths)];
     const now = new Date();
