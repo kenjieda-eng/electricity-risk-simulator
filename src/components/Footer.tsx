@@ -38,6 +38,7 @@ const retrospectiveDataLinks = [
   { href: "/special/emergency-scenario-analysis", label: "法人電気代の3シナリオを比較" },
   { href: "/special/oil-scenario-analysis", label: "原油高・物流コストのシナリオ分析" },
   { href: "/special/gas-scenario-analysis", label: "法人ガス代のシナリオ分析" },
+  { href: "/special/fx-double-effect-scenario-analysis", label: "円安×原油高のシナリオ分析" },
   { href: "/special/materials-packaging-scenario-analysis", label: "原材料・包装資材のシナリオ分析" },
   { href: "/special/food-procurement-scenario-analysis", label: "食料品仕入コストのシナリオ分析" },
 ] as const;

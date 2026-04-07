@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const pageTitle = "有事シナリオ分析 特集一覧｜法人向けシナリオ特集";
 const pageDescription =
-  "法人のエネルギー・原材料関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・ガス料金版・原材料包装資材版・食料品仕入コスト版の5テーマから選んで確認できます。";
+  "法人のエネルギー・原材料関連コスト上昇リスクをシナリオ別に確認できる特集ページです。電気料金版・原油物流版・円安原油版・ガス料金版・原材料包装資材版・食料品仕入コスト版の6テーマから選んで確認できます。";
 const canonicalUrl = "https://simulator.eic-jp.org/special";
 
 export const metadata: Metadata = {
@@ -41,6 +41,12 @@ const specialLinks = [
     title: "有事シナリオ分析（原油・物流コスト）",
     description:
       "イラン情勢を前提に、ガソリン・軽油価格の変動と物流コスト・社用車費用・出張旅費への影響をシナリオ別に確認できます。",
+  },
+  {
+    href: "/special/fx-double-effect-scenario-analysis",
+    title: "有事シナリオ分析（円安×原油高 W効果）",
+    description:
+      "為替と原油の掛け算で輸入コストが増えるW効果を、連鎖構造、シナリオ比較、家計・法人影響、対策まで整理します。",
   },
   {
     href: "/special/gas-scenario-analysis",
