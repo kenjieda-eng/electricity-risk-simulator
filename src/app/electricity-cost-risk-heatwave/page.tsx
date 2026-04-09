@@ -189,6 +189,47 @@ export default function ElectricityCostRiskHeatwavePage() {
             { href: "/", label: "シミュレーションを始める" },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">他のリスクシナリオも確認する</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            猛暑以外にも、法人の電気料金に影響するリスク要因があります。要因ごとに上振れのパターンが異なるため、自社に関係の深いシナリオから確認できます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/electricity-cost-risk-severe-winter" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">厳冬リスク</span>
+              <span className="ml-2 text-slate-600">— 暖房需要とLNG需要増での上振れ</span>
+            </Link>
+            <Link href="/electricity-cost-risk-yen-depreciation" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">円安リスク</span>
+              <span className="ml-2 text-slate-600">— 為替変動が燃料調達コストに影響</span>
+            </Link>
+            <Link href="/electricity-cost-risk-geopolitics" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">地政学リスク</span>
+              <span className="ml-2 text-slate-600">— 国際情勢による供給不安と価格上昇</span>
+            </Link>
+            <Link href="/worst-case-electricity-cost-risk" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最悪ケースの想定</span>
+              <span className="ml-2 text-slate-600">— 複数リスクが重なった場合の影響</span>
+            </Link>
+            <Link href="/what-is-electricity-price-risk-scenario" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">リスクシナリオとは</span>
+              <span className="ml-2 text-slate-600">— 予測ではなく備えとしての考え方</span>
+            </Link>
+            <Link href="/how-to-use-electricity-price-risk-scenarios" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">リスクシナリオの使い方</span>
+              <span className="ml-2 text-slate-600">— 予算策定や社内説明への活用法</span>
+            </Link>
+            <Link href="/why-electricity-prices-should-be-viewed-by-scenario" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">なぜシナリオ別に見るべきか</span>
+              <span className="ml-2 text-slate-600">— 要因ごとに異なる影響の出方</span>
+            </Link>
+            <Link href="/which-electricity-price-risk-scenarios-to-check-first" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">どのシナリオから確認すべきか</span>
+              <span className="ml-2 text-slate-600">— 自社条件に合わせた確認順の考え方</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

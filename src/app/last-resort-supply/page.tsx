@@ -169,6 +169,33 @@ export default function LastResortSupplyPage() {
             { href: "/", label: "シミュレーターを使う" },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">最終保障供給シリーズの関連記事</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            最終保障供給について、対象・料金・切替実務・自治体向けなど、テーマ別にさらに詳しく確認できます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/last-resort-supply-target" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の対象は誰か</span>
+            </Link>
+            <Link href="/last-resort-supply-price" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の料金はなぜ高いのか</span>
+            </Link>
+            <Link href="/municipality-last-resort-supply" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">自治体向け最終保障供給の注意点</span>
+            </Link>
+            <Link href="/last-resort-supply-high-voltage" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">高圧需要家の最終保障供給</span>
+            </Link>
+            <Link href="/last-resort-supply-terms" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の契約条件と注意点</span>
+            </Link>
+            <Link href="/articles/last-resort-supply" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-sky-900">最終保障供給カテゴリ一覧へ</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

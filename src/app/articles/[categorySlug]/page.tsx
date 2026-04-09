@@ -334,6 +334,36 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
           </Link>
         </div>
       </section>
+
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">他のカテゴリも確認する</h2>
+        <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/articles/basic" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">基礎から知る</span>
+            <span className="ml-1 text-slate-600">— 内訳・請求書・見積書の基本</span>
+          </Link>
+          <Link href="/articles/price-increase" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">料金が上がる理由</span>
+            <span className="ml-1 text-slate-600">— 燃調費・賦課金・制度要因</span>
+          </Link>
+          <Link href="/articles/plan-types" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">契約メニューの違い</span>
+            <span className="ml-1 text-slate-600">— 市場連動・固定の比較</span>
+          </Link>
+          <Link href="/articles/review-points" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">見直しポイント</span>
+            <span className="ml-1 text-slate-600">— 見積比較・契約切替の実務</span>
+          </Link>
+          <Link href="/articles/risk-scenarios" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">リスクシナリオ別</span>
+            <span className="ml-1 text-slate-600">— 猛暑・円安・地政学リスク</span>
+          </Link>
+          <Link href="/articles/by-industry" className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition hover:bg-slate-100">
+            <span className="font-semibold text-slate-900">業種別に知る</span>
+            <span className="ml-1 text-slate-600">— 業種ごとの電力リスク</span>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

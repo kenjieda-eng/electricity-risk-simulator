@@ -329,6 +329,33 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             { href: "/business-electricity-bill-breakdown", label: "内訳の確認に進む" },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">推移と高止まりに関連する記事</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            10年推移の全体像を踏まえたうえで、個別の論点を深掘りできます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/electricity-price-trend-2019-2025" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">法人向け電気料金は高止まりしているのか</span>
+            </Link>
+            <Link href="/how-long-business-electricity-price-surge-lasts" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電気料金の高騰はいつまで続くのか</span>
+            </Link>
+            <Link href="/electricity-price-without-renewable-surcharge" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">再エネ賦課金を除いても電気料金は高いのか</span>
+            </Link>
+            <Link href="/electricity-price-by-voltage-type" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">特別高圧・高圧・低圧で上がり方はどう違うか</span>
+            </Link>
+            <Link href="/electricity-price-subsidy-impact" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">補助金縮小で見え方はどう変わったか</span>
+            </Link>
+            <Link href="/capacity-contribution-cost-impact" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">容量拠出金で電気代はどのくらい上がるのか</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

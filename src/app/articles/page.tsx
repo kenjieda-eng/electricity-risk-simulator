@@ -388,6 +388,42 @@ export default function ArticlesPage() {
           ))}
         </div>
       </section>
+
+      <section className="mt-8" aria-labelledby="deep-dive-heading">
+        <h2 id="deep-dive-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
+          注目テーマを深掘りする
+        </h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          カテゴリ横断で関連性の高いページをピックアップしています。気になるテーマから読み進められます。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/capacity-contribution-explained" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-xs font-semibold text-amber-700">NEW</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">容量拠出金とは</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">2024年度から始まった新たな制度負担の仕組みと影響を解説</p>
+          </Link>
+          <Link href="/market-linked-plan" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-base font-semibold text-slate-900">市場連動プランとは</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">市場価格に連動するプランの特徴と注意点</p>
+          </Link>
+          <Link href="/fixed-price-plan" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-base font-semibold text-slate-900">固定プランとは</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">単価が安定しやすい固定プランの特徴と活用場面</p>
+          </Link>
+          <Link href="/electricity-price-trend-2019-2025" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-base font-semibold text-slate-900">法人向け電気料金は高止まりしているのか</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">推移データをもとに急騰後の高止まり実態を確認</p>
+          </Link>
+          <Link href="/what-is-electricity-price-risk-scenario" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-base font-semibold text-slate-900">電気料金のリスクシナリオとは</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">リスクシナリオの意味と予算策定での使い方</p>
+          </Link>
+          <Link href="/articles/by-industry/manufacturing" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-base font-semibold text-slate-900">業種別ガイド：製造業</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">鉄鋼・化学・自動車・半導体など製造業の電力リスク</p>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

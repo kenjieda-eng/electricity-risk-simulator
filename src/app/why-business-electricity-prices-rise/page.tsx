@@ -198,6 +198,47 @@ export default function WhyBusinessElectricityPricesRisePage() {
             { href: "/", label: "シミュレーションを始める" },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">上昇要因をさらに個別に確認する</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            料金上昇の背景にある個別要因を、それぞれのページで詳しく確認できます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/capacity-contribution-explained" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">容量拠出金とは</span>
+              <span className="ml-2 text-slate-600">— 2024年度から始まった新たな制度負担</span>
+            </Link>
+            <Link href="/market-price-adjustment" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">市場価格調整額とは</span>
+              <span className="ml-2 text-slate-600">— 市場連動型で発生する調整項目</span>
+            </Link>
+            <Link href="/impact-of-electricity-subsidy-ending" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">補助金終了の影響</span>
+              <span className="ml-2 text-slate-600">— 補助縮小後の請求額の変化</span>
+            </Link>
+            <Link href="/why-market-linked-electricity-prices-rise" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">市場連動プランで上がる仕組み</span>
+              <span className="ml-2 text-slate-600">— 市場連動特有の上昇パターン</span>
+            </Link>
+            <Link href="/why-business-electricity-bills-rise-suddenly" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">なぜ急に上がるのか</span>
+              <span className="ml-2 text-slate-600">— ある月から請求が急増する理由</span>
+            </Link>
+            <Link href="/when-business-electricity-price-increases-start" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">値上げはいつから反映されるか</span>
+              <span className="ml-2 text-slate-600">— 検針月・契約更新との関係</span>
+            </Link>
+            <Link href="/lng-electricity-price" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">LNGと電気料金の関係</span>
+              <span className="ml-2 text-slate-600">— LNG市場の動きが法人料金に波及する背景</span>
+            </Link>
+            <Link href="/power-procurement-adjustment-fee" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電源調達調整費とは</span>
+              <span className="ml-2 text-slate-600">— 燃調費との違いと見積比較での確認</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -170,6 +170,39 @@ export default function EmergencyScenarioAnalysisTopPage() {
           ))}
         </div>
       </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">他の有事シナリオ特集</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          電気料金以外のコスト上昇リスクも、テーマ別の特集で確認できます。
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <Link href="/special/oil-scenario-analysis/price-mechanism" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">原油・物流：価格メカニズム</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">原油価格が物流コストに波及する仕組みを確認</p>
+          </Link>
+          <Link href="/special/gas-scenario-analysis/price-mechanism" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">ガス：価格メカニズム</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">都市ガス・LPガスの価格変動構造を把握</p>
+          </Link>
+          <Link href="/special/fx-double-effect-scenario-analysis/chain-mechanism" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">円安×原油：連鎖メカニズム</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">為替と原油の掛け算で輸入コストが増える構造</p>
+          </Link>
+          <Link href="/special/materials-packaging-scenario-analysis/naphtha-petrochemical" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">原材料：ナフサ・石化</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">ナフサ不足・エチレン減産の影響を業種別に確認</p>
+          </Link>
+          <Link href="/special/food-procurement-scenario-analysis/cost-structure" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">食料品仕入：コスト構造</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">小麦・食用油・畜産・水産の価格上昇と飲食業への影響</p>
+          </Link>
+          <Link href="/special" className="rounded-lg border border-sky-200 bg-sky-50 p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-sky-900">特集一覧を見る</p>
+            <p className="mt-1 text-xs leading-6 text-sky-700">6テーマの特集から選んで確認できます</p>
+          </Link>
+        </div>
+      </section>
     </EmergencyScenarioLayout>
   );
 }

@@ -288,6 +288,39 @@ export default function HowToReadElectricityQuotePage() {
             { href: "/", label: "シミュレーションを始める" },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">見積書の次に確認したい実務ステップ</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            見積書の見方を押さえたら、比較・確認・切替の各ステップに進むと、見直しの精度を高められます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/compare-business-electricity-estimates" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">法人の電力見積もりを比較する方法</span>
+            </Link>
+            <Link href="/cheap-unit-price-not-always-better" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">安い単価が必ずしも良いとは限らない</span>
+            </Link>
+            <Link href="/how-to-compare-electricity-suppliers" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電力会社の比較の進め方</span>
+            </Link>
+            <Link href="/electricity-contract-terms" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電力契約の契約条件を理解する</span>
+            </Link>
+            <Link href="/where-to-check-in-electricity-contract" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電力契約のどこを確認すべきか</span>
+            </Link>
+            <Link href="/capacity-contribution-what-to-check" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">容量拠出金を踏まえた確認ポイント</span>
+            </Link>
+            <Link href="/internal-checklist-for-electricity-contract-review" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">社内チェックリスト</span>
+            </Link>
+            <Link href="/who-should-handle-electricity-contract-review" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">見直しは誰が担当すべきか</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -223,6 +223,56 @@ export default function BusinessElectricityRetrospectivePage() {
           </Link>
         </div>
       </section>
+
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
+        <h2 className="text-xl font-semibold text-slate-900">契約区分別の長期推移</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          月次データだけでなく、2019年以降の長期推移を契約区分ごとに確認すると、現在の水準を構造的に位置づけられます。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          <Link href="/business-electricity-retrospective/special-high-voltage-2019-2025" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">特別高圧の長期推移（2019〜2025）</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">大口需要家区分の年間平均単価の変遷</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/low-voltage-power-2019-2025" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">低圧電力の長期推移（2019〜2025）</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">動力用途の低圧区分の推移を確認</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/low-voltage-lighting-2019-2025" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">低圧電灯の長期推移（2019〜2025）</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">店舗・小規模拠点の代表区分の推移</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/2026-02" className="rounded-lg border border-sky-200 bg-sky-50 p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-sky-900">【2026年2月】法人の電気料金はどう動いた？</p>
+            <p className="mt-1 text-xs leading-6 text-sky-700">最新の月次データで直近の動向を確認</p>
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
+        <h2 className="text-xl font-semibold text-slate-900">ウクライナ危機と電気料金の特集</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          2022年の急騰を引き起こしたウクライナ危機の影響を、時系列・区分別・教訓の観点から整理した特集です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/business-electricity-retrospective/why-business-electricity-prices-rose-after-ukraine" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">なぜ急騰したのか</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">ウクライナ危機後の料金急騰メカニズム</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/ukraine-shock-by-voltage-class" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">契約区分別の影響</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">特別高圧・高圧・低圧で異なる急騰の出方</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/ukraine-shock-and-contract-practice" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">契約実務への影響</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">危機を経て変わった契約の考え方</p>
+          </Link>
+          <Link href="/business-electricity-retrospective/lessons-from-ukraine-shock-for-2026" className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-slate-100">
+            <p className="text-sm font-semibold text-slate-900">2026年への教訓</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">急騰経験から学ぶ今後の備え</p>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
