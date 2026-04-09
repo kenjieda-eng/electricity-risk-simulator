@@ -259,7 +259,7 @@ export default function HowToReadElectricityBillPage() {
           description="請求書で増減要因を切り分けた後に比較へ進むと、条件差を実務的に判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

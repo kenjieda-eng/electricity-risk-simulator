@@ -312,7 +312,7 @@ export default function AgriculturePrimaryIndustryArticlePage({ article }: Props
           description={article.ctaDescription}
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを始める" },
+            { href: "/simulate", label: "シミュレーターを始める" },
             { href: `/articles/by-industry/${middleCategory.slug}`, label: "農業・一次産業系一覧へ戻る" },
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
           ]}

@@ -6,7 +6,7 @@ const siteDescription =
   "法人・企業・自治体向けに、電気料金の上昇リスク、料金比較、契約見直しに役立つ情報を掲載しています。";
 
 const mainPageLinks = [
-  { href: "/", label: "電気料金上昇リスクを診断する" },
+  { href: "/simulate", label: "電気料金上昇リスクを診断する" },
   { href: "/how-to", label: "電力料金上昇リスク診断の使い方" },
   { href: "/articles/basic", label: "法人向け電気料金の基礎知識" },
   { href: "/business-electricity-retrospective", label: "法人電気料金振り返り" },

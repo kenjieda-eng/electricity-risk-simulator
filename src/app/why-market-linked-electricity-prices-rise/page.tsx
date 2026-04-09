@@ -189,7 +189,7 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/articles/plan-types", label: "契約メニューカテゴリを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

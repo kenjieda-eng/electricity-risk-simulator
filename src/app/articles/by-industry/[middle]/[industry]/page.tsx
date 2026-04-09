@@ -551,7 +551,7 @@ export default async function SupermarketLargeScaleIndustryPage({ params }: Page
           description="大型スーパーでは、契約条件と設備の使い方を切り分けずに見ることが大切です。比較ページやシミュレーションで、自社の負荷構造に合う見直し方を確認してください。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
             { href: `/articles/by-industry/${middleCategory.slug}`, label: "商業系一覧へ戻る" },
           ]}
         />

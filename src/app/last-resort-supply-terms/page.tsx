@@ -130,7 +130,7 @@ export default function LastResortSupplyTermsPage() {
           description="確認項目を整理したら、比較ページとシミュレーターで次契約の判断を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを使う" },
+            { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
       </section>

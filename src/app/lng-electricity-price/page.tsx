@@ -209,7 +209,7 @@ export default function LngElectricityPricePage() {
           links={[
             { href: "/how-to", label: "シミュレーターの使い方を見る" },
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

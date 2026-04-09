@@ -148,7 +148,7 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           description="使い分け方を整理したら、比較ページやシミュレーターで同条件の比較表を作成し、実務判断につなげます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

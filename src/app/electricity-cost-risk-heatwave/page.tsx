@@ -186,7 +186,7 @@ export default function ElectricityCostRiskHeatwavePage() {
           description="猛暑リスクの構造を押さえた後は、比較ページやシミュレーションで自社に近い条件を試算すると、契約見直しの判断がしやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
 

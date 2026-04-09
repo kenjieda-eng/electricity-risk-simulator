@@ -325,7 +325,7 @@ export default function CapacityContributionWhatToCheckPage() {
           heading="容量拠出金を含めた料金リスクを確認する"
           description="制度負担の変化を含めた電気料金の上昇リスクを、30秒で診断できます。見直しの判断材料としてご活用ください。"
           links={[
-            { href: "/", label: "シミュレーターで診断する" },
+            { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/articles/review-points", label: "見直しポイントを確認する" },
           ]}
         />

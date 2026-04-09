@@ -183,7 +183,7 @@ export default function FuelCostAdjustmentPage() {
           description="解説を押さえたうえで、現在契約と候補プランを同条件で比較すると、見直しの方向性を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

@@ -195,7 +195,7 @@ export default function AboutThisSitePage() {
           heading="まずはリスクを診断してみませんか？"
           description="契約条件を入力するだけで、電気料金の上昇リスクを簡易診断できます。現状把握の第一歩として、ぜひお試しください。"
           links={[
-            { href: "/", label: "シミュレーターで診断する" },
+            { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/articles", label: "解説記事を読む" },
           ]}
         />

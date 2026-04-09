@@ -166,7 +166,7 @@ export default function LastResortSupplyPage() {
           description="最終保障供給の基本を整理したら、比較ページとシミュレーターで次契約の方向性を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを使う" },
+            { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
 

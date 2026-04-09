@@ -159,7 +159,7 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
           description="自社に合う優先順位を決めた後は、重点シナリオから順に比較と試算を行うと、判断の抜け漏れを減らせます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

@@ -143,7 +143,7 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
           description="複数シナリオで見る意味を押さえた後は、比較ページやシミュレーターで契約条件ごとの差を確認すると判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

@@ -156,7 +156,7 @@ export default function LastResortSupplyPricePage() {
           description="最終保障供給の料金の見方を押さえたら、比較ページとシミュレーターで切り替え判断を具体化できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを使う" },
+            { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
       </section>

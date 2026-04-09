@@ -285,7 +285,7 @@ export default function HowToReadElectricityQuotePage() {
           description="見積書の読み方を押さえたら、比較ページで条件差を整理し、総額と契約条件の両面で判断できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
 

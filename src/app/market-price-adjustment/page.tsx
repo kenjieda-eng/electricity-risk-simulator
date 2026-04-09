@@ -174,7 +174,7 @@ export default function MarketPriceAdjustmentPage() {
           description="調整項目の違いを整理したら、同じ前提条件で複数メニューを比較し、総額差を確認することが有効です。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

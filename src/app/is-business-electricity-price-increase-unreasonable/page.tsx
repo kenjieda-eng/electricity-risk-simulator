@@ -169,7 +169,7 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/articles/review-points", label: "見直しポイントカテゴリを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

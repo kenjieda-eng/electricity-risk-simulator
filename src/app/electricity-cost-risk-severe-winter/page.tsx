@@ -187,7 +187,7 @@ export default function ElectricityCostRiskSevereWinterPage() {
           description="厳冬リスクを把握した後は、契約条件の比較とシミュレーションで、自社・自施設の上振れ幅を具体的に確認できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

@@ -146,7 +146,7 @@ export default function LastResortSupplySwitchPage() {
           description="必要情報をそろえたら、比較ページとシミュレーターで次契約の候補を具体化できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを使う" },
+            { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
       </section>

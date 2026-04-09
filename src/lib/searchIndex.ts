@@ -108,7 +108,7 @@ export function buildSearchIndex(): SearchEntry[] {
     {
       title: "電気料金上昇リスク診断シミュレーター",
       description: "電気料金の値上がりリスクを30秒で診断できるシミュレーターです。",
-      href: "/",
+      href: "/simulate",
       category: "ツール",
     },
     {

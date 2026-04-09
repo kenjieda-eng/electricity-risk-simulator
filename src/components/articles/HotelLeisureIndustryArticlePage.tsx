@@ -250,7 +250,7 @@ export default function HotelLeisureIndustryArticlePage({ article }: Props) {
           description={article.ctaDescription}
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
             { href: "/articles/by-industry/hotel-leisure", label: "宿泊・レジャー系一覧へ戻る" },
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
           ]}

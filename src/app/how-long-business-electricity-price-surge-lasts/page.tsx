@@ -168,7 +168,7 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/articles/price-trends", label: "推移と高止まりカテゴリを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

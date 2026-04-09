@@ -192,7 +192,7 @@ export default function BusinessElectricityPriceBenchmarkPage() {
           description="相場感を整理したら、比較ページとシミュレーションで条件差を具体的に確認することが有効です。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

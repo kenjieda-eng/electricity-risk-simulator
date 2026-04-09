@@ -14,7 +14,7 @@ type HeaderLink = {
 };
 
 const headerLinks: HeaderLink[] = [
-  { href: "/", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
+  { href: "/simulate", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
   { href: "/how-to", label: "電力料金上昇リスク診断の使い方", iconSrc: "/icons/nav-how-to.png" },
   { href: "/articles", label: "法人向け電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
   {

@@ -71,7 +71,7 @@ export default function ReviewArticlePage({
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/how-to", label: "使い方ページを見る" },
-            { href: "/", label: "シミュレーターを開く" },
+            { href: "/simulate", label: "シミュレーターを開く" },
           ]}
         />
       </section>

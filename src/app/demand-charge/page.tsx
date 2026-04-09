@@ -252,7 +252,7 @@ export default function DemandChargePage() {
           description="デマンドと契約電力の関係を整理したら、現行契約と候補条件を比較して見直し余地を確認できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

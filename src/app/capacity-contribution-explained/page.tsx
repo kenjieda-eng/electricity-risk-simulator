@@ -277,7 +277,7 @@ export default function CapacityContributionExplainedPage() {
           heading="容量拠出金も含めた電気料金リスクを確認する"
           description="制度要因を含む電気料金の上昇リスクを、30秒でシミュレーションできます。"
           links={[
-            { href: "/", label: "シミュレーターで診断する" },
+            { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/articles/price-increase", label: "料金が上がる理由をもっと知る" },
           ]}
         />

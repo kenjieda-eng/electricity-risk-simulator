@@ -200,7 +200,7 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/articles", label: "解説ページ一覧を見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

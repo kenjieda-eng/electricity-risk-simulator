@@ -193,7 +193,7 @@ export default function HighVoltageElectricityPricingPage() {
           description="解説で確認した観点をもとに、現行契約と候補を同じ前提で比較すると、見直し余地が見えやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

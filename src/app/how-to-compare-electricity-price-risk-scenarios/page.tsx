@@ -159,7 +159,7 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           description="比較の見方をそろえた後は、同じ前提条件で複数メニューを試算し、資料化しやすい形で判断材料を整えます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

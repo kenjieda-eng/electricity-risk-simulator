@@ -184,7 +184,7 @@ export default function ElectricityContractTermsPage() {
           description="契約条件を整理した後に比較ページで候補を並べると、単価と運用条件を一体で判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

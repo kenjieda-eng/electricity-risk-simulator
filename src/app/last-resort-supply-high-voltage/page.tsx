@@ -139,7 +139,7 @@ export default function LastResortSupplyHighVoltagePage() {
           description="受電区分と使用実績を整理したら、比較ページで切り替え候補を具体化できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを使う" },
+            { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
       </section>

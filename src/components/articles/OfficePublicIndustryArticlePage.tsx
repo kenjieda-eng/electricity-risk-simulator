@@ -208,7 +208,7 @@ export default function OfficePublicIndustryArticlePage({
             { href: "/articles/by-industry/office-public", label: "業務・公共系一覧へ戻る" },
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを始める" },
+            { href: "/simulate", label: "シミュレーターを始める" },
           ]}
         />
       </section>

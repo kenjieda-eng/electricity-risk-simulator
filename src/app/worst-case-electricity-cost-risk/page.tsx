@@ -228,7 +228,7 @@ export default function WorstCaseElectricityCostRiskPage() {
           description="ワーストシナリオの考え方を押さえた後は、現在契約と候補条件を比較し、自社に近い条件でシミュレーションしておくと判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

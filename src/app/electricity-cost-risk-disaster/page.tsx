@@ -175,7 +175,7 @@ export default function ElectricityCostRiskDisasterPage() {
           description="災害リスクの見方を押さえた後は、比較ページとシミュレーションで契約メニューごとの影響差を確認し、見直し判断に役立てることができます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

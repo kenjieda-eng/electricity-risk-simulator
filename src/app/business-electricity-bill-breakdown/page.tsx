@@ -637,7 +637,7 @@ export default function BusinessElectricityBillBreakdownPage() {
           description="現在の請求構造を整理してから比較に進むと、単価差だけでなく条件差まで含めて判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

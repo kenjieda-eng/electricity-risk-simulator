@@ -221,7 +221,7 @@ export default function WhenToReviewElectricityContractPage() {
           description="見直しタイミングと確認項目を整理したら、現行契約と候補条件を同じ前提で比較すると方針を決めやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

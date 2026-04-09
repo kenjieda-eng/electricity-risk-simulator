@@ -188,7 +188,7 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           description="円安リスクの構造を理解した後は、比較ページとシミュレーションで自社条件に近い試算を行うと、見直し判断が具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

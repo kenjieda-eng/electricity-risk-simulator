@@ -181,7 +181,7 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           description="特別高圧は条件差の金額影響が大きくなりやすいため、同じ前提条件で比較して総額を確認することが重要です。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

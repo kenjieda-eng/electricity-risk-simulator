@@ -135,7 +135,7 @@ export default function FixedPricePlanPage() {
             { href: "/market-linked-vs-fixed", label: "違いを比較して確認する" },
             { href: "/how-to", label: "使い方ページを見る" },
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

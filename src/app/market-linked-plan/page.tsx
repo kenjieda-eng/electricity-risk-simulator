@@ -159,7 +159,7 @@ export default function MarketLinkedPlanPage() {
           links={[
             { href: "/how-to", label: "まずは使い方を確認する" },
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

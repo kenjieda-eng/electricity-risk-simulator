@@ -195,7 +195,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
           description="原因を切り分けた後は、現行契約と候補条件を同じ前提で比較することで、見直し方針を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
 

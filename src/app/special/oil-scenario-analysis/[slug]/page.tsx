@@ -755,7 +755,7 @@ export default async function OilScenarioPage({ params }: PageProps) {
         links={[
           { href: OIL_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
           { href: "/special/emergency-scenario-analysis", label: "電気代シナリオ分析を見る" },
-          { href: "/", label: "電気料金上昇リスクを診断する" },
+          { href: "/simulate", label: "電気料金上昇リスクを診断する" },
         ]}
       />
     </OilScenarioLayout>

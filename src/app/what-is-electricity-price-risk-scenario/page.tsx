@@ -167,7 +167,7 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           description="基本を押さえた後は、比較ページやシミュレーターで自社条件に近いケースを確認すると、契約判断に使いやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

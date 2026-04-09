@@ -222,7 +222,7 @@ export default function ContractDemandWhatIsItPage() {
           description="契約電力を含む前提条件をそろえて比較することで、見積の差を実務的に判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

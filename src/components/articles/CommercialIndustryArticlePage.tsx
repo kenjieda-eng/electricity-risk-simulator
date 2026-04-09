@@ -186,7 +186,7 @@ export default function CommercialIndustryArticlePage({
           description={article.ctaDescription}
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを始める" },
+            { href: "/simulate", label: "シミュレーターを始める" },
             { href: "/articles/by-industry/commercial", label: "商業系一覧へ戻る" },
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
           ]}

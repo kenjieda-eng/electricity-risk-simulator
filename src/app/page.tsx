@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import HomePageClient from "./_components/HomePageClient";
 
 export const metadata: Metadata = {
   title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
@@ -294,8 +293,32 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="simulator" className="scroll-mt-24">
-        <HomePageClient />
+      <section className="mx-auto max-w-[1600px] px-4 pb-10 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border-2 border-sky-400 bg-gradient-to-br from-sky-50 to-white p-6 text-center shadow-md sm:p-8">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            電気料金の上昇リスクを30秒で診断
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
+            契約条件やリスク要因を入力するだけで、年間の電気代がどれだけ上振れしうるかを試算できます。固定プランと市場連動型プランの比較も可能です。
+          </p>
+          <div className="mt-5">
+            <Link
+              href="/simulate"
+              className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-8 py-3.5 text-base font-bold text-white shadow-sm transition hover:bg-sky-700 sm:text-lg"
+            >
+              <Image
+                src="/icons/nav-risk-check.png"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={28}
+                className="h-7 w-7"
+              />
+              シミュレーターで診断する
+            </Link>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">無料・登録不要でご利用いただけます</p>
+        </div>
       </section>
     </>
   );

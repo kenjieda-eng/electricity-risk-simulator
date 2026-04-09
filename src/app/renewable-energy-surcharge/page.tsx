@@ -200,7 +200,7 @@ export default function RenewableEnergySurchargePage() {
           description="制度項目を理解したうえで、現行契約と候補条件を同条件で比較すると、見直し判断を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

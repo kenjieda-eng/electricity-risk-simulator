@@ -231,7 +231,7 @@ export default function HowToCompareElectricitySuppliersPage() {
           description="比較軸を整理したら、現行契約と候補条件を同じ前提で照合して判断するのが実務的です。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

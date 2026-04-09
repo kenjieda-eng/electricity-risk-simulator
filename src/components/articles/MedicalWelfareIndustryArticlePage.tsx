@@ -195,7 +195,7 @@ export default function MedicalWelfareIndustryArticlePage({
             { href: "/articles/by-industry/medical-welfare", label: "医療・福祉系一覧へ戻る" },
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーターを始める" },
+            { href: "/simulate", label: "シミュレーターを始める" },
           ]}
         />
       </section>

@@ -185,7 +185,7 @@ export default function ElectricityCostRiskGeopoliticsPage() {
           description="地政学リスクの構造を確認した後は、比較ページとシミュレーションで契約条件ごとの上振れ影響を具体的に確認できます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>

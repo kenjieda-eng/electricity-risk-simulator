@@ -11,7 +11,7 @@ import { FOOD_SCENARIO_SLUGS } from "../lib/foodProcurementScenarioAnalysis";
 import { FX_DOUBLE_EFFECT_SLUGS } from "../lib/fxDoubleEffectScenarioAnalysis";
 
 const SITE_URL = "https://simulator.eic-jp.org";
-const REQUIRED_PATHS = ["/", "/how-to", "/compare", "/articles"] as const;
+const REQUIRED_PATHS = ["/", "/simulate", "/how-to", "/compare", "/articles"] as const;
 const APP_DIR = path.join(process.cwd(), "src", "app");
 const ARTICLES_DATA_FILE = path.join(process.cwd(), "src", "data", "articles.ts");
 const CATEGORY_PAGE_FILE = path.join(APP_DIR, "articles", "[categorySlug]", "page.tsx");
@@ -25,6 +25,7 @@ const RETROSPECTIVE_DATA_FILE = path.join(
 
 const PRIORITY_BY_PATH: Record<string, number> = {
   "/": 1,
+  "/simulate": 0.95,
   "/how-to": 0.95,
   "/compare": 0.95,
   "/articles": 0.95,

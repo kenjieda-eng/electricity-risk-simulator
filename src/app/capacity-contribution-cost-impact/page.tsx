@@ -281,7 +281,7 @@ export default function CapacityContributionCostImpactPage() {
           heading="容量拠出金を含めた電気料金リスクを把握する"
           description="制度負担の増加を含めた上昇リスクを、シミュレーターで30秒で診断できます。"
           links={[
-            { href: "/", label: "シミュレーターで診断する" },
+            { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />

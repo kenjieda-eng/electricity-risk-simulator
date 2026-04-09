@@ -182,7 +182,7 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
           description="自己診断で整理したポイントをもとに、比較ページとシミュレーションで自社条件に近い判断を進められます。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/", label: "シミュレーションを始める" },
+            { href: "/simulate", label: "シミュレーションを始める" },
           ]}
         />
       </section>
