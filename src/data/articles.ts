@@ -81,6 +81,9 @@ export const articleCategories: ArticleCategory[] = [
       "market-price-adjustment",
       "why-market-linked-electricity-prices-rise",
       "renewable-energy-surcharge",
+      "capacity-contribution-explained",
+      "capacity-contribution-cost-impact",
+      "capacity-contribution-what-to-check",
       "impact-of-electricity-subsidy-ending",
       "lng-electricity-price",
     ],
@@ -445,6 +448,36 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "price-increase",
     order: 10,
     publishedAt: "2026-03-27",
+  },
+  {
+    title: "容量拠出金とは｜法人の電気料金にどう影響するか",
+    slug: "capacity-contribution-explained",
+    description:
+      "容量拠出金の仕組みと法人電気料金への影響を解説。容量市場の目的、拠出金の転嫁構造、請求書での見え方を整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 11,
+    publishedAt: "2026-04-09",
+  },
+  {
+    title: "容量拠出金で電気代はどのくらい上がるのか",
+    slug: "capacity-contribution-cost-impact",
+    description:
+      "容量拠出金のkWhあたり影響額を契約区分別に試算。再エネ賦課金・燃調費との比較や年度推移も含めて整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 12,
+    publishedAt: "2026-04-09",
+  },
+  {
+    title: "容量拠出金を踏まえて法人が確認したいこと",
+    slug: "capacity-contribution-what-to-check",
+    description:
+      "容量拠出金に関して見積書・契約書で確認すべきポイントと、予算策定への織り込み方を実務向けに整理します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 13,
+    publishedAt: "2026-04-09",
   },
   {
     title: "法人向け電気料金は高止まりしているのか",

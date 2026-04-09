@@ -54,8 +54,8 @@ export const ARTICLES_THEME_ROWS: ArticlesThemeRow[] = [
     key: "power-procurement",
     title: "電力調達の仕組みを知る",
     intro:
-      "仕入れ構造を理解したうえで最終保障供給の位置づけを押さえると、通常契約との違いが実務で説明しやすくなります。",
-    slugList: ["last-resort-supply", "last-resort-vs-retail-contract"],
+      "電力会社がどこから電気を仕入れているかを押さえると、料金変動の背景が理解しやすくなります。",
+    slugList: ["how-electricity-is-procured", "jepx-explained", "power-risk-management"],
     categoryHref: "/articles/power-procurement",
   },
   {
@@ -125,9 +125,9 @@ export const CATEGORY_HUB_SPOTLIGHT: Partial<
     slugs: ["electricity-cost-risk-heatwave", "business-electricity-price-trend-10-years"],
   },
   "power-procurement": {
-    heading: "調達の全体像と最終保障供給の位置づけ",
+    heading: "電力調達の全体像をつかむ代表記事",
     intro:
-      "シリーズで仕入れ構造を追うほか、通常契約と異なる最終保障供給を先に押さえると、切替実務の説明がしやすくなります。",
-    slugs: ["last-resort-supply", "last-resort-vs-retail-contract"],
+      "仕入れの全体像→市場の仕組み→リスク管理の順に読むと、電力会社の調達構造が整理しやすくなります。",
+    slugs: ["how-electricity-is-procured", "jepx-explained", "power-risk-management"],
   },
 };

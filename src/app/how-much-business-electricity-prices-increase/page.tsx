@@ -156,6 +156,11 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
               title: "料金メニューの比較・診断",
               description: "自社条件で固定と市場連動の差分を試算できます。",
             },
+            {
+              href: "/capacity-contribution-cost-impact",
+              title: "容量拠出金で電気代はどのくらい上がるのか",
+              description: "制度要因の新たな柱である容量拠出金の影響額を契約区分別に確認できます。",
+            },
           ]}
         />
 

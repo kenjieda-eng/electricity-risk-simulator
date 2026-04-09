@@ -10,6 +10,7 @@ import {
 import {
   INDUSTRY_ARTICLES_CATEGORY_CARD,
   INDUSTRY_ARTICLES_QUICK_GUIDE_CARD,
+  INDUSTRY_MIDDLE_CATEGORIES,
 } from "../../lib/articleIndustryCategories";
 import { ARTICLES_THEME_ROWS, CATEGORY_HUB_SPOTLIGHT } from "../../lib/articleHubFeatured";
 import type { ArticleCategorySlug } from "../../data/articles";
@@ -293,6 +294,21 @@ export default function ArticlesPage() {
             <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
             <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
             <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
+            <div className="mt-3 border-t border-slate-100 pt-3">
+              <p className="text-xs font-semibold text-slate-500">代表カテゴリ</p>
+              <ul className="mt-2 space-y-1.5 text-sm">
+                {INDUSTRY_MIDDLE_CATEGORIES.slice(0, 3).map((middle) => (
+                  <li key={middle.slug}>
+                    <Link
+                      href={`/articles/by-industry/${middle.slug}`}
+                      className="text-sky-700 underline-offset-2 hover:underline"
+                    >
+                      {middle.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <Link
               href={INDUSTRY_ARTICLES_CATEGORY_CARD.href}
               className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"

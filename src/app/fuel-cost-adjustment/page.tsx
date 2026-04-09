@@ -170,6 +170,11 @@ export default function FuelCostAdjustmentPage() {
               title: "市場連動型と固定型の違い",
               description: "料金の動き方や運用面の違いを比較し、選び方の軸を整理できます。",
             },
+            {
+              href: "/capacity-contribution-explained",
+              title: "容量拠出金とは",
+              description: "燃調費と並ぶ料金上昇要因として、容量拠出金の仕組みと転嫁構造を確認できます。",
+            },
           ]}
         />
 

@@ -187,6 +187,11 @@ export default function RenewableEnergySurchargePage() {
               title: "燃料費調整額の仕組み",
               description: "賦課金と混同しやすい燃調費の役割を切り分けられます。",
             },
+            {
+              href: "/capacity-contribution-explained",
+              title: "容量拠出金とは",
+              description: "再エネ賦課金と並ぶ制度要因として、容量拠出金の仕組みと影響を確認できます。",
+            },
           ]}
         />
 
