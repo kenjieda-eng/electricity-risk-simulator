@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import HeaderSearch from "./search/HeaderSearch";
 
 type HeaderLink = {
   href: string;
@@ -80,7 +81,7 @@ export function PublicHeader() {
       data-public-header="true"
       className="border-b-2 border-sky-500 bg-gradient-to-b from-sky-50 to-white"
     >
-      <div className="mx-auto max-w-[1600px] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <div className="relative mx-auto max-w-[1600px] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-4">
           <Link href="/" aria-label="法人向け電気料金上昇、高騰リスクシミュレーターへ戻る">
             <Image
@@ -93,6 +94,9 @@ export function PublicHeader() {
             />
           </Link>
           <div className="min-w-0 w-full flex-1">
+            <div className="flex items-center justify-end mb-1.5 sm:mb-0 sm:absolute sm:right-4 sm:top-3 lg:right-8">
+              <HeaderSearch />
+            </div>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
               <p className="text-sm font-medium leading-tight text-slate-700 sm:text-lg">
                 法人向け電気料金上昇、高騰リスクシミュレーター
