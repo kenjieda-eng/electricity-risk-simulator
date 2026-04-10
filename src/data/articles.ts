@@ -8,7 +8,10 @@ export type ArticleCategorySlug =
   | "risk-scenarios"
   | "power-procurement"
   | "monthly-review"
-  | "industry-guide";
+  | "industry-guide"
+  | "energy-equipment"
+  | "internal-explanation"
+  | "diagnostic-tools";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -338,6 +341,94 @@ export const articleCategories: ArticleCategory[] = [
       "data-center-electricity-cost-review",
     ],
     order: 10,
+    group: "learning",
+  },
+  {
+    name: "蓄電池・太陽光・DRを知る",
+    slug: "energy-equipment",
+    description:
+      "蓄電池、自家消費型太陽光、デマンドレスポンスなど、設備面での電気料金対策を整理したカテゴリです。",
+    intro:
+      "契約見直しと並行して検討される設備対策について、法人視点でのコスト効果、導入条件、契約見直しとの組み合わせ方を整理しています。",
+    learnPoints: [
+      "蓄電池・太陽光・DRの電気料金対策としての効果",
+      "業種や施設条件別の導入適性の考え方",
+      "契約見直しと設備対策を組み合わせるときの優先順位",
+    ],
+    recommendedReadingOrder: [
+      "why-corporations-consider-batteries",
+      "battery-electricity-cost-benefit",
+      "self-consumption-solar-cost-benefit",
+      "solar-battery-combination-benefit",
+      "demand-response-cost-benefit",
+      "demand-suppression-effectiveness",
+      "factory-battery-considerations",
+      "warehouse-battery-considerations",
+      "commercial-facility-battery-considerations",
+      "hospital-battery-considerations",
+      "municipality-battery-considerations",
+      "battery-suited-corporations",
+      "solar-suited-corporations",
+      "demand-response-suited-corporations",
+      "contract-review-and-equipment-combination",
+    ],
+    order: 11,
+    group: "learning",
+  },
+  {
+    name: "社内説明・稟議を知る",
+    slug: "internal-explanation",
+    description:
+      "電力契約見直しの社内説明、稟議書作成、経営層報告に使える論点整理をまとめたカテゴリです。",
+    intro:
+      "見直し結果の社内共有から稟議書の作成、経営層や庁内での説明まで、法人担当者が実務で使える説明方法を整理しています。",
+    learnPoints: [
+      "説明先（経営層・経理・施設管理・自治体庁内）別の伝え方",
+      "稟議書・比較表・説明資料で押さえたい論点",
+      "シミュレーター結果を説明材料として活用する方法",
+    ],
+    recommendedReadingOrder: [
+      "how-to-explain-electricity-cost-review-internally",
+      "explaining-to-executives",
+      "explaining-in-municipality",
+      "approval-document-key-points",
+      "sharing-comparison-table-internally",
+      "explaining-bill-fluctuation-factors",
+      "explaining-price-surge-risk",
+      "explaining-fixed-vs-market-to-management",
+      "market-linked-risk-internal-explanation",
+      "using-simulator-results-for-explanation",
+      "information-to-prepare-before-inquiry",
+      "internal-consensus-building-order",
+    ],
+    order: 12,
+    group: "learning",
+  },
+  {
+    name: "診断・チェックツール",
+    slug: "diagnostic-tools",
+    description:
+      "チェックリスト形式や簡易診断形式で、自社の状況を整理できる準ツール型ページをまとめたカテゴリです。",
+    intro:
+      "電力契約の見直しが必要か、どのプランが向いているか、請求書の確認漏れがないかなどを、チェックリストや簡易診断で確認できます。",
+    learnPoints: [
+      "見直しの必要性や緊急度を自己診断する方法",
+      "固定・市場連動の向き不向きを簡易的に判断する方法",
+      "設備対策や社内説明の準備状況を確認する方法",
+    ],
+    recommendedReadingOrder: [
+      "self-diagnosis-contract-review",
+      "fixed-vs-market-quick-diagnosis",
+      "bill-check-diagnosis",
+      "quotation-comparison-pre-check",
+      "contract-renewal-timing-diagnosis",
+      "last-resort-supply-risk-diagnosis",
+      "industry-risk-diagnosis",
+      "battery-suitability-diagnosis",
+      "solar-suitability-diagnosis",
+      "internal-explanation-preparation-checklist",
+    ],
+    order: 13,
     group: "learning",
   },
 ];
@@ -1742,4 +1833,90 @@ export const articleList: ArticleMeta[] = [
     order: 21,
     publishedAt: "2026-04-10",
   },
+  // ===== Phase 2+3: 2026-04-10 追加分 =====
+  // --- 業種別 追加18本 ---
+  { title: "大学キャンパスの電気料金見直しポイント", slug: "university-electricity-cost-review", description: "複数棟・研究設備を踏まえた大学の電力契約見直しの考え方を整理します。", category: "業種別に知る", categorySlug: "industry-guide", order: 16, publishedAt: "2026-04-10" },
+  { title: "上下水道施設の電気料金リスク", slug: "water-sewage-electricity-cost-review", description: "ポンプ負荷と24時間稼働を踏まえた上下水道施設の電力契約見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 17, publishedAt: "2026-04-10" },
+  { title: "公共体育館の電気料金見直しポイント", slug: "public-gym-electricity-cost-review", description: "空調・照明と稼働パターンを踏まえた公共体育館の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 18, publishedAt: "2026-04-10" },
+  { title: "ドラッグストアの電気料金見直しポイント", slug: "drugstore-electricity-cost-review", description: "冷蔵・照明と多拠点を踏まえたドラッグストアの見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 19, publishedAt: "2026-04-10" },
+  { title: "百貨店の電気料金リスク", slug: "department-store-electricity-cost-review", description: "大規模空調と営業時間を踏まえた百貨店の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 20, publishedAt: "2026-04-10" },
+  { title: "単独飲食店の電気料金見直しポイント", slug: "single-restaurant-electricity-cost-review", description: "調理設備と低利益率を踏まえた単独飲食店の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 21, publishedAt: "2026-04-10" },
+  { title: "アミューズメント施設の電気料金リスク", slug: "amusement-facility-electricity-cost-review", description: "照明・空調・設備の高負荷を踏まえたアミューズメント施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 22, publishedAt: "2026-04-10" },
+  { title: "小売店舗の電気料金見直しポイント", slug: "retail-store-electricity-cost-review", description: "照明・空調と営業時間を踏まえた小売店舗の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 23, publishedAt: "2026-04-10" },
+  { title: "ビジネスホテルの電気料金見直しポイント", slug: "business-hotel-electricity-cost-review", description: "客室稼働と設備効率を踏まえたビジネスホテルの見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 24, publishedAt: "2026-04-10" },
+  { title: "クリニックの電気料金見直しポイント", slug: "clinic-electricity-cost-review", description: "医療機器と空調負荷を踏まえたクリニックの見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 25, publishedAt: "2026-04-10" },
+  { title: "温浴施設の電気料金リスク", slug: "hot-spring-facility-electricity-cost-review", description: "給湯・循環・空調の高負荷を踏まえた温浴施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 26, publishedAt: "2026-04-10" },
+  { title: "連続操業工場の電気料金リスク", slug: "continuous-operation-factory-electricity-cost-review", description: "24時間稼働の大きなベースロードを踏まえた連続操業工場の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 27, publishedAt: "2026-04-10" },
+  { title: "組立工場の電気料金見直しポイント", slug: "assembly-factory-electricity-cost-review", description: "生産ラインとデマンド管理を踏まえた組立工場の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 28, publishedAt: "2026-04-10" },
+  { title: "ディストリビューションセンターの電気料金見直しポイント", slug: "distribution-center-electricity-cost-review", description: "仕分け設備と稼働時間を踏まえたDCの見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 29, publishedAt: "2026-04-10" },
+  { title: "通信施設の電気料金リスク", slug: "telecom-facility-electricity-cost-review", description: "24時間稼働と冗長設備を踏まえた通信施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 30, publishedAt: "2026-04-10" },
+  { title: "研究施設の電気料金見直しポイント", slug: "research-facility-electricity-cost-review", description: "精密機器と環境管理を踏まえた研究施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 31, publishedAt: "2026-04-10" },
+  { title: "半導体関連施設の電気料金リスク", slug: "semiconductor-facility-electricity-cost-review", description: "クリーンルームと大規模電力を踏まえた半導体施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 32, publishedAt: "2026-04-10" },
+  { title: "文化施設・ホールの電気料金見直しポイント", slug: "cultural-facility-electricity-cost-review", description: "照明・空調・イベント負荷を踏まえた文化施設の見直しの考え方。", category: "業種別に知る", categorySlug: "industry-guide", order: 33, publishedAt: "2026-04-10" },
+  // --- リスクシナリオ 10本 ---
+  { title: "LNG高騰で法人の電気料金はどう上がるか", slug: "lng-price-surge-electricity-cost-impact", description: "LNG価格の上昇が法人電気料金に波及する仕組みと備え方を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 12, publishedAt: "2026-04-10" },
+  { title: "JEPX急騰で法人の電気料金はどう上がるか", slug: "jepx-spike-electricity-cost-impact", description: "JEPX市場価格の急騰が市場連動プランの法人に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 13, publishedAt: "2026-04-10" },
+  { title: "燃料費調整額上昇で法人の電気料金はどう上がるか", slug: "fuel-adjustment-surge-impact", description: "燃料費調整額の上昇が請求額に与える影響と確認ポイントを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 14, publishedAt: "2026-04-10" },
+  { title: "再エネ賦課金上昇で法人の電気料金はどう変わるか", slug: "renewable-surcharge-increase-impact", description: "再エネ賦課金の改定が法人の負担にどう影響するかを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 15, publishedAt: "2026-04-10" },
+  { title: "容量拠出金増加で法人の負担はどう変わるか", slug: "capacity-contribution-increase-impact", description: "容量拠出金の増加が法人電気料金に与える影響と確認ポイントを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 16, publishedAt: "2026-04-10" },
+  { title: "需給逼迫で法人の電気料金はどう変わるか", slug: "supply-demand-tightness-impact", description: "電力需給の逼迫が市場価格と法人料金に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 17, publishedAt: "2026-04-10" },
+  { title: "利益率の低い企業が電気料金高騰に直面したときのリスク", slug: "low-margin-company-price-surge-risk", description: "低利益率企業が料金高騰で受ける収益への影響と対策を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 18, publishedAt: "2026-04-10" },
+  { title: "多拠点企業が電気料金高騰に直面したときのリスク", slug: "multi-site-company-price-surge-risk", description: "多拠点企業の料金高騰リスクの累積影響と管理の考え方を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 19, publishedAt: "2026-04-10" },
+  { title: "24時間稼働企業が料金高騰に直面したときのリスク", slug: "24h-operation-price-surge-risk", description: "24時間稼働企業のベースロードと上振れリスクの関係を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 20, publishedAt: "2026-04-10" },
+  { title: "店舗チェーンが料金高騰に直面したときのリスク", slug: "retail-chain-price-surge-risk", description: "多店舗チェーンの料金高騰リスクの累積影響と対策を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 21, publishedAt: "2026-04-10" },
+  // --- 高圧・特別高圧 5本 ---
+  { title: "高圧と特別高圧の違い", slug: "high-voltage-vs-extra-high-voltage-differences", description: "契約区分の基本と料金構造の違いを比較します。", category: "基礎から知る", categorySlug: "basic", order: 19, publishedAt: "2026-04-10" },
+  { title: "力率とは何か", slug: "what-is-power-factor", description: "力率割引・割増の仕組みと基本料金への影響を解説します。", category: "基礎から知る", categorySlug: "basic", order: 20, publishedAt: "2026-04-10" },
+  { title: "高圧契約の見直しで確認したいこと", slug: "high-voltage-contract-review-points", description: "高圧契約の料金構造と契約条件の着眼点を整理します。", category: "見直しポイントを知る", categorySlug: "review-points", order: 38, publishedAt: "2026-04-10" },
+  { title: "特別高圧契約の見直しで確認したいこと", slug: "extra-high-voltage-contract-review-points", description: "大規模契約の比較と注意点を整理します。", category: "見直しポイントを知る", categorySlug: "review-points", order: 39, publishedAt: "2026-04-10" },
+  { title: "高圧・特別高圧で市場連動を考えるときの注意点", slug: "high-voltage-market-linked-considerations", description: "使用量の大きい高圧・特別高圧での市場連動リスクを整理します。", category: "契約メニューの違いを知る", categorySlug: "plan-types", order: 22, publishedAt: "2026-04-10" },
+  // --- 最終保障供給 4本 ---
+  { title: "特別高圧で最終保障供給を使うときの注意点", slug: "last-resort-supply-extra-high-voltage", description: "大規模需要家が最終保障供給を利用する際の留意事項を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 9, publishedAt: "2026-04-10" },
+  { title: "最終保障供給を社内説明するときのポイント", slug: "last-resort-supply-internal-explanation", description: "最終保障供給の料金が高い理由の伝え方を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 10, publishedAt: "2026-04-10" },
+  { title: "最終保障供給に入りそうなときの対応手順", slug: "last-resort-supply-emergency-response", description: "早期発見と切替準備の進め方を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 11, publishedAt: "2026-04-10" },
+  { title: "最終保障供給を比較検討の中でどう位置づけるか", slug: "last-resort-supply-comparison-positioning", description: "通常契約との判断基準を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 12, publishedAt: "2026-04-10" },
+  // --- 電力調達 5本 ---
+  { title: "調達構成の違いが法人料金にどう影響するか", slug: "how-procurement-affects-corporate-rates", description: "電力会社の仕入れ構成と法人料金の関係を整理します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 11, publishedAt: "2026-04-10" },
+  { title: "市場価格が法人料金に反映される仕組み", slug: "market-price-reflected-in-corporate-rates", description: "JEPXから請求書までの価格波及の流れを解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 12, publishedAt: "2026-04-10" },
+  { title: "原油価格と法人電気料金の関係", slug: "oil-and-corporate-electricity-price", description: "原油価格の変動が法人電気料金に影響する経路を整理します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 13, publishedAt: "2026-04-10" },
+  { title: "為替と法人電気料金の関係", slug: "fx-and-corporate-electricity-price", description: "円安が電気料金に影響する仕組みを解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 14, publishedAt: "2026-04-10" },
+  { title: "容量市場と法人料金の関係", slug: "capacity-market-and-corporate-rates", description: "容量市場の仕組みと今後の法人負担の見通しを整理します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 15, publishedAt: "2026-04-10" },
+  // --- 蓄電池・太陽光・DR 15本 ---
+  { title: "法人が蓄電池を検討する理由", slug: "why-corporations-consider-batteries", description: "電気料金対策とBCPの両面から蓄電池導入の背景を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 1, publishedAt: "2026-04-10" },
+  { title: "蓄電池は電気料金対策としてどう効くか", slug: "battery-electricity-cost-benefit", description: "デマンド抑制とピークカットの仕組みを解説します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 2, publishedAt: "2026-04-10" },
+  { title: "自家消費型太陽光は電気料金対策としてどう効くか", slug: "self-consumption-solar-cost-benefit", description: "購入電力削減の考え方を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 3, publishedAt: "2026-04-10" },
+  { title: "太陽光と蓄電池を組み合わせる意味", slug: "solar-battery-combination-benefit", description: "自家消費率向上とコスト削減の相乗効果を解説します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 4, publishedAt: "2026-04-10" },
+  { title: "DRは電気料金対策としてどう考えるか", slug: "demand-response-cost-benefit", description: "需要抑制の仕組みと参加メリットを解説します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 5, publishedAt: "2026-04-10" },
+  { title: "デマンド抑制はどこまで効果があるか", slug: "demand-suppression-effectiveness", description: "基本料金削減の可能性と限界を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 6, publishedAt: "2026-04-10" },
+  { title: "工場で蓄電池を検討するときの着眼点", slug: "factory-battery-considerations", description: "生産ラインとの両立を踏まえた蓄電池導入の考え方。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 7, publishedAt: "2026-04-10" },
+  { title: "倉庫で蓄電池を検討するときの着眼点", slug: "warehouse-battery-considerations", description: "屋根面積と太陽光の組み合わせを踏まえた考え方。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 8, publishedAt: "2026-04-10" },
+  { title: "商業施設で蓄電池を検討するときの着眼点", slug: "commercial-facility-battery-considerations", description: "ピーク負荷と営業への影響を踏まえた考え方。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 9, publishedAt: "2026-04-10" },
+  { title: "病院で蓄電池を検討するときの着眼点", slug: "hospital-battery-considerations", description: "BCP対策と料金削減の両立を踏まえた考え方。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 10, publishedAt: "2026-04-10" },
+  { title: "自治体施設で蓄電池を検討するときの着眼点", slug: "municipality-battery-considerations", description: "防災拠点との兼用を踏まえた考え方。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 11, publishedAt: "2026-04-10" },
+  { title: "蓄電池導入が向く法人の特徴", slug: "battery-suited-corporations", description: "投資対効果が出やすい条件を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 12, publishedAt: "2026-04-10" },
+  { title: "自家消費型太陽光が向く法人の特徴", slug: "solar-suited-corporations", description: "屋根面積と使用パターンの条件を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 13, publishedAt: "2026-04-10" },
+  { title: "DR活用が向く法人の特徴", slug: "demand-response-suited-corporations", description: "柔軟な需要調整ができる条件を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 14, publishedAt: "2026-04-10" },
+  { title: "契約見直しと設備対策をどう組み合わせるか", slug: "contract-review-and-equipment-combination", description: "両面からのコスト最適化の考え方を整理します。", category: "蓄電池・太陽光・DRを知る", categorySlug: "energy-equipment", order: 15, publishedAt: "2026-04-10" },
+  // --- 社内説明・稟議 10本 ---
+  { title: "経営層向けに電力契約見直しを説明するときのポイント", slug: "explaining-to-executives", description: "コストとリスクを経営層に伝えるための論点を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 1, publishedAt: "2026-04-10" },
+  { title: "自治体庁内で電力契約見直しを説明するときのポイント", slug: "explaining-in-municipality", description: "議会・住民への説明を見据えた庁内説明の整理方法。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 2, publishedAt: "2026-04-10" },
+  { title: "電力契約見直しの稟議書に入れたい論点整理", slug: "approval-document-key-points", description: "承認を得やすい稟議書の構成と論点を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 3, publishedAt: "2026-04-10" },
+  { title: "比較表を社内共有するときのポイント", slug: "sharing-comparison-table-internally", description: "わかりやすい比較表の作り方と共有の注意点を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 4, publishedAt: "2026-04-10" },
+  { title: "請求書の変動要因を社内で説明するときのポイント", slug: "explaining-bill-fluctuation-factors", description: "なぜ金額が変わるのかの伝え方を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 5, publishedAt: "2026-04-10" },
+  { title: "値上がりリスクを社内で説明するときのポイント", slug: "explaining-price-surge-risk", description: "数値で伝えるリスクの見せ方を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 6, publishedAt: "2026-04-10" },
+  { title: "シミュレーター結果を説明材料にする方法", slug: "using-simulator-results-for-explanation", description: "診断結果の読み方と社内説明への活用方法を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 7, publishedAt: "2026-04-10" },
+  { title: "問い合わせ前に社内で揃えたい情報", slug: "information-to-prepare-before-inquiry", description: "見積依頼や相談の質を上げるための社内準備を整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 8, publishedAt: "2026-04-10" },
+  { title: "契約見直しの社内合意を進める順番", slug: "internal-consensus-building-order", description: "関係者の巻き込み方と段取りを整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 9, publishedAt: "2026-04-10" },
+  { title: "固定と市場連動の比較を経営層に説明するときのポイント", slug: "explaining-fixed-vs-market-to-management", description: "判断材料の整理と経営層向けの伝え方を解説します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 10, publishedAt: "2026-04-10" },
+  // --- 準ツール型・診断型 10本 ---
+  { title: "法人向け電力契約見直し自己診断", slug: "self-diagnosis-contract-review", description: "見直しが必要かを簡易チェックで確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 1, publishedAt: "2026-04-10" },
+  { title: "固定プラン向き・市場連動向き簡易診断", slug: "fixed-vs-market-quick-diagnosis", description: "自社に合うプランタイプを簡易的に整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 2, publishedAt: "2026-04-10" },
+  { title: "請求書確認ポイント診断", slug: "bill-check-diagnosis", description: "請求書の見落としがないかをチェックできます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 3, publishedAt: "2026-04-10" },
+  { title: "見積比較前チェック診断", slug: "quotation-comparison-pre-check", description: "見積比較を始める前に確認したいことを整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 4, publishedAt: "2026-04-10" },
+  { title: "契約更新タイミング診断", slug: "contract-renewal-timing-diagnosis", description: "いつ見直しを始めるべきかを残り期間から判断できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 5, publishedAt: "2026-04-10" },
+  { title: "最終保障供給リスク診断", slug: "last-resort-supply-risk-diagnosis", description: "自社に最終保障供給のリスクがあるかを確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 6, publishedAt: "2026-04-10" },
+  { title: "業種別リスク診断", slug: "industry-risk-diagnosis", description: "自社の業種特性から電気料金リスクを確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 7, publishedAt: "2026-04-10" },
+  { title: "蓄電池導入向き不向き診断", slug: "battery-suitability-diagnosis", description: "自社に蓄電池が合うかをチェックリストで整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 8, publishedAt: "2026-04-10" },
+  { title: "太陽光導入向き不向き診断", slug: "solar-suitability-diagnosis", description: "自家消費型太陽光が合うかをチェックリストで整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 9, publishedAt: "2026-04-10" },
+  { title: "社内説明準備チェックリスト", slug: "internal-explanation-preparation-checklist", description: "稟議・報告前に揃えたい情報を一覧で確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 10, publishedAt: "2026-04-10" },
 ];
