@@ -14,6 +14,7 @@ type HeaderLink = {
 };
 
 const headerLinks: HeaderLink[] = [
+  { href: "/", label: "TOP", iconSrc: "/icons/nav-top.png" },
   { href: "/simulate", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
   { href: "/how-to", label: "電力料金上昇リスク診断の使い方", iconSrc: "/icons/nav-how-to.png" },
   { href: "/articles", label: "法人向け電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
@@ -151,7 +152,7 @@ export function PublicHeader() {
                 : "text-sky-900 hover:bg-sky-100 hover:text-sky-950 hover:border-sky-400";
 
               return (
-                <li key={link.href} className="min-w-0 lg:flex-1">
+                <li key={link.href} className={`min-w-0 ${link.href === "/" ? "lg:flex-[0.5]" : "lg:flex-1"}`}>
                   <Link
                     href={link.href}
                     className={`${baseClass} ${link.highlight ? highlightedClass : normalClass}`}

@@ -7,7 +7,8 @@ export type ArticleCategorySlug =
   | "last-resort-supply"
   | "risk-scenarios"
   | "power-procurement"
-  | "monthly-review";
+  | "monthly-review"
+  | "industry-guide";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -55,6 +56,8 @@ export const articleCategories: ArticleCategory[] = [
       "extra-high-voltage-electricity-pricing",
       "how-to-read-electricity-bill",
       "how-to-read-electricity-quote",
+      "how-to-read-business-electricity-bill",
+      "how-to-read-business-electricity-quotation",
     ],
     order: 1,
     group: "learning",
@@ -137,6 +140,8 @@ export const articleCategories: ArticleCategory[] = [
       "who-should-choose-market-linked-plan",
       "who-should-choose-fixed-price-plan",
       "electricity-contract-cancellation-renewal-terms",
+      "businesses-suited-for-fixed-price-electricity-plan",
+      "businesses-not-suited-for-market-linked-electricity-plan",
     ],
     order: 4,
     group: "learning",
@@ -175,6 +180,9 @@ export const articleCategories: ArticleCategory[] = [
       "review-multi-site-electricity-contracts",
       "why-business-electricity-costs-are-high",
       "is-business-electricity-price-increase-unreasonable",
+      "business-electricity-contract-checklist",
+      "what-to-do-3-months-before-electricity-contract-renewal",
+      "how-to-explain-electricity-cost-review-internally",
     ],
     order: 5,
     group: "learning",
@@ -281,6 +289,26 @@ export const articleCategories: ArticleCategory[] = [
     ],
     order: 9,
     group: "monthly",
+  },
+  {
+    name: "業種別に知る",
+    slug: "industry-guide",
+    description:
+      "業種ごとの負荷特性、電気料金が上がりやすい構造、固定プランと市場連動の向き不向き、契約見直しの着眼点を整理したカテゴリです。",
+    intro:
+      "法人の電気料金は、業種によって負荷特性やリスクの出方が異なります。自社の業種に合った見直しの考え方を確認し、契約比較やシミュレーターの活用に役立ててください。",
+    learnPoints: [
+      "業種特有の負荷パターンと電気料金への影響",
+      "固定プランと市場連動プランの業種別の向き不向き",
+      "業種ごとの契約見直しと設備対策の考え方",
+    ],
+    recommendedReadingOrder: [
+      "supermarket-electricity-cost-review",
+      "warehouse-electricity-cost-review",
+      "hospital-electricity-cost-review",
+    ],
+    order: 10,
+    group: "learning",
   },
 ];
 
@@ -1158,5 +1186,107 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "monthly-review",
     order: 2,
     publishedAt: "2026-01-20",
+  },
+  // --- 2026-04 新規追加：契約見直し実務・請求書/見積書・業種別・固定vs市場連動・社内説明 ---
+  {
+    title: "法人の電力契約見直しチェックリスト",
+    slug: "business-electricity-contract-checklist",
+    description:
+      "契約見直しを始めるとき、何から整理すべきかをチェックリスト形式で解説。見積依頼前の準備から社内確認まで一覧できます。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 21,
+    featured: true,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "法人向け電気料金見積書の見方",
+    slug: "how-to-read-business-electricity-quotation",
+    description:
+      "見積書を受け取ったときにどこを比較すればよいかを項目別に整理。単価以外に確認したいポイントを解説します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 9,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "法人向け電気料金請求書の見方",
+    slug: "how-to-read-business-electricity-bill",
+    description:
+      "請求書の各項目の意味と、見積比較や社内説明に活用するための確認ポイントを整理します。",
+    category: "基礎から知る",
+    categorySlug: "basic",
+    order: 10,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "スーパーマーケットの電気料金見直しポイント",
+    slug: "supermarket-electricity-cost-review",
+    description:
+      "冷蔵・冷凍・空調負荷の特性を踏まえ、スーパー向けの契約見直しの着眼点を解説します。",
+    category: "業種別に知る",
+    categorySlug: "industry-guide",
+    order: 1,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "物流倉庫の電気料金見直しポイント",
+    slug: "warehouse-electricity-cost-review",
+    description:
+      "稼働時間・照明・搬送設備の負荷特性を踏まえた、物流倉庫の電力契約見直しの考え方を整理します。",
+    category: "業種別に知る",
+    categorySlug: "industry-guide",
+    order: 2,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "病院の電気料金見直しポイント",
+    slug: "hospital-electricity-cost-review",
+    description:
+      "24時間稼働の病院特有の負荷特性と安定供給の重要性を踏まえた、契約見直しの考え方を整理します。",
+    category: "業種別に知る",
+    categorySlug: "industry-guide",
+    order: 3,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "固定プランが向く法人の特徴",
+    slug: "businesses-suited-for-fixed-price-electricity-plan",
+    description:
+      "予算管理重視・利益率が低い・価格転嫁が難しいなど、固定プランとの相性がよい法人の特徴を整理します。",
+    category: "契約メニューの違いを知る",
+    categorySlug: "plan-types",
+    order: 11,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "市場連動プランが向かない法人の特徴",
+    slug: "businesses-not-suited-for-market-linked-electricity-plan",
+    description:
+      "市場連動プランのリスクが大きく影響しやすい法人の特徴を整理。慎重に検討すべき条件を解説します。",
+    category: "契約メニューの違いを知る",
+    categorySlug: "plan-types",
+    order: 12,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "法人の電力契約更新の3か月前にやること",
+    slug: "what-to-do-3-months-before-electricity-contract-renewal",
+    description:
+      "契約更新が近い法人向けに、請求書整理・見積依頼・社内共有・契約手続きまでの準備手順を時系列で整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 22,
+    publishedAt: "2026-04-10",
+  },
+  {
+    title: "電気料金見直しを社内で説明するときのポイント",
+    slug: "how-to-explain-electricity-cost-review-internally",
+    description:
+      "稟議・上司説明・経営層報告で押さえたい論点構成と、シミュレーター結果の活用方法を整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 23,
+    publishedAt: "2026-04-10",
   },
 ];
