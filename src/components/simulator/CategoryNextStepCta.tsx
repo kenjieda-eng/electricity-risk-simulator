@@ -1,20 +1,32 @@
 import Link from "next/link";
+import type { ArticleCategorySlug } from "../../data/articles";
 import { getArticleBySlug } from "../../lib/articles";
 import { CATEGORY_CTA } from "../../lib/categoryCta";
 
 type CategoryNextStepCtaProps = {
-  slug: string;
+  /** 記事slug。articleListから自動的にカテゴリを解決する。 */
+  slug?: string;
+  /** カテゴリを直接指定する場合（業種別など、articleListに含まれないページ向け）。 */
+  categorySlug?: ArticleCategorySlug;
 };
 
 /**
  * 記事ページ・カテゴリ詳細ページに「次の一手」を示すNEXT STEP CTAブロック。
  * 記事のslugからカテゴリを解決し、カテゴリ別にチューニングされた文案と
  * シミュレーター/お問い合わせへの導線を表示する。
+ * categorySlug を直接指定することもできる。
  */
-export default function CategoryNextStepCta({ slug }: CategoryNextStepCtaProps) {
-  const article = getArticleBySlug(slug);
-  if (!article) return null;
-  const cta = CATEGORY_CTA[article.categorySlug];
+export default function CategoryNextStepCta({
+  slug,
+  categorySlug,
+}: CategoryNextStepCtaProps) {
+  let resolvedCategorySlug: ArticleCategorySlug | undefined = categorySlug;
+  if (!resolvedCategorySlug && slug) {
+    const article = getArticleBySlug(slug);
+    resolvedCategorySlug = article?.categorySlug;
+  }
+  if (!resolvedCategorySlug) return null;
+  const cta = CATEGORY_CTA[resolvedCategorySlug];
   if (!cta) return null;
 
   return (

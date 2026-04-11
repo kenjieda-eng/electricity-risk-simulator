@@ -3,6 +3,7 @@ import ContentCta from "../simulator/ContentCta";
 import FlowDiagram from "../simulator/FlowDiagram";
 import InfoBox from "../simulator/InfoBox";
 import RelatedLinks from "../simulator/RelatedLinks";
+import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 import {
   getIndustryArticleHref,
   getIndustryMiddleCategory,
@@ -255,6 +256,7 @@ export default function HotelLeisureIndustryArticlePage({ article }: Props) {
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
           ]}
         />
+      <CategoryNextStepCta categorySlug="industry-guide" />
       </section>
     </main>
   );

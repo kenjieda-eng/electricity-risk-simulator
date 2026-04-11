@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ContentCta from "../../../../../components/simulator/ContentCta";
+import CategoryNextStepCta from "../../../../../components/simulator/CategoryNextStepCta";
 import FlowDiagram from "../../../../../components/simulator/FlowDiagram";
 import InfoBox from "../../../../../components/simulator/InfoBox";
 import RelatedLinks from "../../../../../components/simulator/RelatedLinks";
@@ -555,6 +556,8 @@ export default async function SupermarketLargeScaleIndustryPage({ params }: Page
             { href: `/articles/by-industry/${middleCategory.slug}`, label: "商業系一覧へ戻る" },
           ]}
         />
+
+        <CategoryNextStepCta categorySlug="industry-guide" />
       </section>
     </main>
   );

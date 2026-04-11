@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ContentCta from "../simulator/ContentCta";
 import RelatedLinks from "../simulator/RelatedLinks";
+import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 import {
   getIndustryArticleHref,
   getIndustryMiddleCategory,
@@ -257,6 +258,7 @@ export default function ITTechnologyIndustryArticlePage({ article }: ITTechnolog
             { href: "/articles/by-industry", label: "業種別トップへ戻る" },
           ]}
         />
+      <CategoryNextStepCta categorySlug="industry-guide" />
       </section>
     </main>
   );

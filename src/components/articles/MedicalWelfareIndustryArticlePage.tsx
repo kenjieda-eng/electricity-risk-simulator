@@ -2,6 +2,7 @@ import Link from "next/link";
 import ContentCta from "../simulator/ContentCta";
 import FlowDiagram from "../simulator/FlowDiagram";
 import RelatedLinks from "../simulator/RelatedLinks";
+import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 import {
   getIndustryArticleHref,
   getIndustryMiddleCategory,
@@ -198,6 +199,7 @@ export default function MedicalWelfareIndustryArticlePage({
             { href: "/simulate", label: "シミュレーターを始める" },
           ]}
         />
+      <CategoryNextStepCta categorySlug="industry-guide" />
       </section>
     </main>
   );

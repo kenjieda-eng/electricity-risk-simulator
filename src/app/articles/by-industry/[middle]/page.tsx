@@ -6,6 +6,7 @@ import {
   getIndustryMiddleCategories,
   getIndustryMiddleCategory,
 } from "../../../../lib/articleIndustryCategories";
+import CategoryNextStepCta from "../../../../components/simulator/CategoryNextStepCta";
 
 type PageParams = {
   middle: string;
@@ -157,6 +158,10 @@ export default async function IndustryMiddlePage({ params }: PageProps) {
           </Link>
         </div>
       </section>
+
+      <div className="mt-6">
+        <CategoryNextStepCta categorySlug="industry-guide" />
+      </div>
     </main>
   );
 }
