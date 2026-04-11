@@ -31,6 +31,13 @@ const categoryLinks = [
   { href: "/articles/energy-equipment", label: "蓄電池・太陽光・DRを知る" },
   { href: "/articles/internal-explanation", label: "社内説明・稟議を知る" },
   { href: "/articles/diagnostic-tools", label: "診断・チェックツール" },
+  { href: "/articles/case-studies", label: "事例・削減実績を知る" },
+  { href: "/articles/emergency-response", label: "緊急対応・トラブル解決" },
+  { href: "/articles/municipality", label: "自治体・公共向け" },
+  { href: "/articles/benchmarks", label: "相場・削減効果を知る" },
+  { href: "/articles/subsidies", label: "補助金・助成金を知る" },
+  { href: "/articles/for-executives", label: "経営層・CFO向け" },
+  { href: "/articles/by-region", label: "地域別電気料金事情" },
 ] as const;
 
 // --- よく読まれる基礎記事 ---

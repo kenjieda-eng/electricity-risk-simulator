@@ -11,7 +11,14 @@ export type ArticleCategorySlug =
   | "industry-guide"
   | "energy-equipment"
   | "internal-explanation"
-  | "diagnostic-tools";
+  | "diagnostic-tools"
+  | "case-studies"
+  | "emergency-response"
+  | "municipality"
+  | "benchmarks"
+  | "subsidies"
+  | "for-executives"
+  | "by-region";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -445,6 +452,174 @@ export const articleCategories: ArticleCategory[] = [
       "internal-explanation-preparation-checklist",
     ],
     order: 13,
+    group: "learning",
+  },
+  {
+    name: "事例・削減実績を知る",
+    slug: "case-studies",
+    description:
+      "法人・自治体が実際に電力契約の見直しや設備対策でどのような成果を出したかを、業種・状況別にまとめた事例集です。",
+    intro:
+      "電気料金の見直しで実際にどれくらい削減できるのか、交渉や切替の流れはどうだったのか。業種別・状況別のケーススタディを通じて、自社に近い事例から判断材料を得られるように整理しています。",
+    learnPoints: [
+      "業種別・規模別の削減金額と実施プロセス",
+      "値上げ通知への交渉や最終保障からの脱出事例",
+      "契約見直しと設備対策を組み合わせた事例",
+    ],
+    recommendedReadingOrder: [
+      "case-study-manufacturing-cost-reduction",
+      "case-study-retail-chain-review",
+      "case-study-hotel-market-linked-switch",
+      "case-study-hospital-peak-cut",
+      "case-study-logistics-solar-integration",
+      "case-study-office-building-review",
+      "case-study-restaurant-chain-reduction",
+      "case-study-municipality-procurement",
+      "case-study-price-increase-negotiation",
+      "case-study-last-resort-recovery",
+    ],
+    order: 14,
+    group: "learning",
+  },
+  {
+    name: "緊急対応・トラブル解決",
+    slug: "emergency-response",
+    description:
+      "値上げ通知・最終保障供給通知・新電力撤退・違約金請求など、今すぐ対応しなければならない電力契約のトラブルを状況別にまとめたカテゴリです。",
+    intro:
+      "電力契約では、突然の値上げ通知、最終保障供給への切り替え警告、新電力からの契約解除通知など、緊急対応を迫られる場面があります。本カテゴリではそれぞれの状況別に、まずやるべきことと判断の順序を整理します。",
+    learnPoints: [
+      "値上げ通知・契約解除通知を受けたときの初動",
+      "最終保障供給・違約金・自動更新トラブルへの対応手順",
+      "時間切れを避けるための判断と相談タイミング",
+    ],
+    recommendedReadingOrder: [
+      "emergency-price-increase-notice",
+      "emergency-electricity-bill-doubled",
+      "emergency-last-resort-notification",
+      "emergency-supplier-withdrawal",
+      "emergency-cancellation-fee",
+      "emergency-auto-renewal-refusal",
+    ],
+    order: 15,
+    group: "learning",
+  },
+  {
+    name: "自治体・公共向け",
+    slug: "municipality",
+    description:
+      "自治体の電力調達・議会説明・入札実務・公共施設管理に特化した解説をまとめたカテゴリです。",
+    intro:
+      "自治体では電力契約が入札調達や年度予算と強く結びつくため、企業とは異なる判断軸が必要です。入札不調、補正予算対応、議会説明、公共施設包括管理、自治体新電力まで、公共セクター固有の論点を整理します。",
+    learnPoints: [
+      "自治体電力入札の実務と入札不調への対応",
+      "年度予算・補正予算・議会説明の進め方",
+      "公共施設包括管理・自治体新電力の検討フレーム",
+    ],
+    recommendedReadingOrder: [
+      "municipality-procurement-bidding-failure",
+      "municipality-procurement-methods",
+      "municipality-annual-budget-impact",
+      "municipality-supplementary-budget",
+      "municipality-council-explanation",
+      "municipality-resident-service-impact",
+      "municipality-facility-management-package",
+      "municipality-local-new-power",
+    ],
+    order: 16,
+    group: "learning",
+  },
+  {
+    name: "相場・削減効果を知る",
+    slug: "benchmarks",
+    description:
+      "業種別・規模別の法人電気代相場と、見直し施策ごとの削減効果をデータで整理したカテゴリです。",
+    intro:
+      "「うちの電気代は高いのか」「どの施策で何%削減できるか」を判断するには、相場データと削減効果の目安が必要です。業種別・規模別のベンチマークと、契約見直し・デマンド制御・LED化・空調最適化などの施策別効果をまとめました。",
+    learnPoints: [
+      "業種・規模別の電気代月額相場",
+      "契約見直しと設備対策による削減額の目安",
+      "施策ごとの効果と実行難易度の比較",
+    ],
+    recommendedReadingOrder: [
+      "electricity-cost-benchmark-by-industry",
+      "office-electricity-cost-benchmark",
+      "factory-electricity-cost-benchmark",
+      "retail-store-electricity-cost-benchmark",
+      "restaurant-electricity-cost-benchmark",
+      "electricity-cost-reduction-action-map",
+      "contract-review-reduction-effect",
+      "demand-control-reduction-effect",
+      "led-air-conditioning-reduction-effect",
+      "reduction-measure-difficulty-matrix",
+    ],
+    order: 17,
+    group: "learning",
+  },
+  {
+    name: "補助金・助成金を知る",
+    slug: "subsidies",
+    description:
+      "法人・自治体が活用できる省エネ・電力関連の補助金制度を整理したカテゴリです。",
+    intro:
+      "省エネ投資や再エネ導入の補助金を活用すれば、電気代対策の投資回収期間を大きく短縮できます。SII省エネ補助金、需要家主導型PPA、SHIFT事業、自治体別補助金など、最新の主要制度と申請ポイントをまとめます。",
+    learnPoints: [
+      "主要な法人向け省エネ・電力補助金制度の概要",
+      "申請時期・対象要件・補助率の違い",
+      "補助金活用を前提とした稟議書の書き方",
+    ],
+    recommendedReadingOrder: [
+      "subsidies-overview",
+      "subsidy-sii-energy-saving",
+      "subsidy-demand-side-ppa",
+      "subsidy-shift-project",
+      "subsidy-local-government-list",
+      "subsidy-application-approval-document",
+    ],
+    order: 18,
+    group: "learning",
+  },
+  {
+    name: "経営層・CFO向け",
+    slug: "for-executives",
+    description:
+      "経営層・CFO・役員が電気料金を経営課題として捉えるための視点と判断材料をまとめたカテゴリです。",
+    intro:
+      "電気料金は単なる固定費ではなく、EBITDAや事業継続リスクに直結する経営課題です。経営層・CFO・取締役が知っておくべき電力市場の基礎、財務インパクトの測り方、取締役会で報告すべき項目までを整理します。",
+    learnPoints: [
+      "電気代がEBITDA・営業利益に与える影響の測り方",
+      "事業継続リスクとしての電力コスト",
+      "取締役会・経営会議で押さえたい論点",
+    ],
+    recommendedReadingOrder: [
+      "executive-ebitda-impact",
+      "executive-business-continuity-risk",
+      "executive-cfo-electricity-basics",
+      "executive-board-reporting-items",
+    ],
+    order: 19,
+    group: "learning",
+  },
+  {
+    name: "地域別電気料金事情",
+    slug: "by-region",
+    description:
+      "東京電力・関西電力・中部電力・九州電力などエリア別に、法人電気代の特性・料金改定・新電力動向を整理したカテゴリです。",
+    intro:
+      "電気料金はエリアによって単価構造・燃調費・市場価格の影響度が大きく異なります。主要10エリアのうち特にニーズの大きい4エリアを先行して解説し、撤退動向もマップ化しました。",
+    learnPoints: [
+      "エリアごとの料金水準と最近の改定動向",
+      "新電力撤退・契約解除の発生状況",
+      "エリア事情を踏まえた契約戦略のヒント",
+    ],
+    recommendedReadingOrder: [
+      "region-tokyo-business-electricity",
+      "region-kansai-business-electricity",
+      "region-chubu-business-electricity",
+      "region-kyushu-business-electricity",
+      "region-supplier-withdrawal-map",
+    ],
+    order: 20,
     group: "learning",
   },
 ];
@@ -2052,4 +2227,60 @@ export const articleList: ArticleMeta[] = [
   { title: "蓄電池導入向き不向き診断", slug: "battery-suitability-diagnosis", description: "自社に蓄電池が合うかをチェックリストで整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 8, publishedAt: "2026-04-10" },
   { title: "太陽光導入向き不向き診断", slug: "solar-suitability-diagnosis", description: "自家消費型太陽光が合うかをチェックリストで整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 9, publishedAt: "2026-04-10" },
   { title: "社内説明準備チェックリスト", slug: "internal-explanation-preparation-checklist", description: "稟議・報告前に揃えたい情報を一覧で確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 10, publishedAt: "2026-04-10" },
+  // --- D. 事例・削減実績 10本 ---
+  { title: "製造業：年間電気代を18%削減した契約見直し事例", slug: "case-study-manufacturing-cost-reduction", description: "関東地方の金属加工工場が契約電力・デマンド制御・市場連動プラン切替で年間18%削減した事例を数値で整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "小売チェーン30店舗：一括見直しで年間4,200万円削減した事例", slug: "case-study-retail-chain-review", description: "ドラッグストア30店舗を運営する小売チェーンが、一括見直しで削減した事例と実行プロセスを整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 2, featured: true, publishedAt: "2026-04-11" },
+  { title: "ホテル：市場連動プランから固定プランへ切り替えた事例", slug: "case-study-hotel-market-linked-switch", description: "首都圏ビジネスホテルが市場連動型の変動リスクを回避するため固定プランへ切り替えた判断プロセスを解説します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 3, publishedAt: "2026-04-11" },
+  { title: "病院：デマンド制御で基本料金を22%圧縮した事例", slug: "case-study-hospital-peak-cut", description: "中規模病院が空調と滅菌機のピーク調整を中心にデマンドを抑制し基本料金を削減した事例を整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 4, publishedAt: "2026-04-11" },
+  { title: "物流倉庫：自家消費太陽光併設で年間9%削減した事例", slug: "case-study-logistics-solar-integration", description: "食品物流センターが屋根型太陽光と電力契約見直しを組み合わせた事例を解説します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 5, publishedAt: "2026-04-11" },
+  { title: "オフィスビル：契約電力の適正化で年間580万円削減した事例", slug: "case-study-office-building-review", description: "中規模オフィスビルが過大な契約電力を適正化して削減を実現した事例を整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 6, publishedAt: "2026-04-11" },
+  { title: "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例", slug: "case-study-restaurant-chain-reduction", description: "居酒屋チェーンが全店舗の契約と設備を見直して削減を実現した事例を整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 7, publishedAt: "2026-04-11" },
+  { title: "自治体：12施設統合調達で年間3,100万円削減した事例", slug: "case-study-municipality-procurement", description: "地方自治体が庁舎・図書館・体育館を含む12施設を統合入札して削減を実現した事例を整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 8, featured: true, publishedAt: "2026-04-11" },
+  { title: "値上げ通知の交渉で15%圧縮した事例", slug: "case-study-price-increase-negotiation", description: "製造業が電力会社から届いた値上げ通知について、データを根拠に交渉して15%圧縮した事例を解説します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 9, publishedAt: "2026-04-11" },
+  { title: "最終保障供給から通常契約に切り替えた事例", slug: "case-study-last-resort-recovery", description: "新電力の撤退により最終保障供給に切り替わった中小企業が、通常契約への復帰を果たした事例を整理します。", category: "事例・削減実績を知る", categorySlug: "case-studies", order: 10, publishedAt: "2026-04-11" },
+  // --- E. 緊急対応 6本 ---
+  { title: "値上げ通知が届いたら、まずやるべき7つのこと", slug: "emergency-price-increase-notice", description: "電力会社からの値上げ通知を受け取ったときに、担当者が最初に確認・対応すべき7項目を優先順位つきで整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "電気代が急に2倍になったときの対応手順", slug: "emergency-electricity-bill-doubled", description: "先月と比べて電気代が急騰した場合に、原因切り分けと緊急対応を進めるための手順を整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 2, featured: true, publishedAt: "2026-04-11" },
+  { title: "最終保障供給の通知が来たときの対応", slug: "emergency-last-resort-notification", description: "最終保障供給に切り替わる通知が届いたら何日以内に何をすべきか、タイムラインとチェックリストで整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 3, publishedAt: "2026-04-11" },
+  { title: "新電力から契約解除通知が届いたときの対応", slug: "emergency-supplier-withdrawal", description: "電力会社から一方的な契約解除通知を受け取った場合の初動と切替先選定の手順を整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 4, publishedAt: "2026-04-11" },
+  { title: "電力契約の違約金を請求されたときの対応", slug: "emergency-cancellation-fee", description: "解約や切替の際に違約金を請求された場合に、請求の妥当性を確認し交渉するための手順を整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 5, publishedAt: "2026-04-11" },
+  { title: "自動更新契約の停止・拒否の進め方", slug: "emergency-auto-renewal-refusal", description: "自動更新条項で不利な契約が継続されるのを防ぐため、期限管理と停止手続きの進め方を整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 6, publishedAt: "2026-04-11" },
+  // --- B. 自治体特化 8本 ---
+  { title: "自治体電力入札が不調になったときの対応ガイド", slug: "municipality-procurement-bidding-failure", description: "近年急増する電力入札の不調・不落に対して、自治体が取るべき選択肢と実務フローを整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "自治体電力調達の入札実務（一般・指名・随契）", slug: "municipality-procurement-methods", description: "一般競争入札・指名競争入札・随意契約の使い分けと、電力調達における判断軸を整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 2, publishedAt: "2026-04-11" },
+  { title: "年度予算と電気代高騰のバランスをどう取るか", slug: "municipality-annual-budget-impact", description: "電気代が当初予算を上回る局面で、自治体財政担当が検討すべき対応策を整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 3, publishedAt: "2026-04-11" },
+  { title: "電気代高騰と補正予算の組み方", slug: "municipality-supplementary-budget", description: "補正予算で電気代の不足を補う際の論点と議会説明のポイントを解説します。", category: "自治体・公共向け", categorySlug: "municipality", order: 4, publishedAt: "2026-04-11" },
+  { title: "議会で電気代高騰を説明するための資料作成ガイド", slug: "municipality-council-explanation", description: "議会答弁・委員会説明で電気代高騰の背景と対応策を伝えるための資料構成と論点を整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 5, publishedAt: "2026-04-11" },
+  { title: "電気代高騰が住民サービスに与える影響と対応", slug: "municipality-resident-service-impact", description: "公共施設の運営費増加が住民サービスに波及する経路と、対応の選択肢を整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 6, publishedAt: "2026-04-11" },
+  { title: "公共施設包括管理委託と電力契約の関係", slug: "municipality-facility-management-package", description: "包括管理委託の中で電力契約をどう位置づけるか、メリットと注意点を整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 7, publishedAt: "2026-04-11" },
+  { title: "自治体新電力（シュタットベルケ）の検討フレーム", slug: "municipality-local-new-power", description: "自治体が出資する新電力会社の設立・活用について、検討すべき論点とリスクを整理します。", category: "自治体・公共向け", categorySlug: "municipality", order: 8, publishedAt: "2026-04-11" },
+  // --- A. 相場感・削減効果 10本 ---
+  { title: "業種別 法人電気代の月額相場一覧", slug: "electricity-cost-benchmark-by-industry", description: "製造業・小売・飲食・宿泊・医療・物流など主要業種の月額電気代相場を規模別に整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "オフィスの電気代相場（人数・坪数別）", slug: "office-electricity-cost-benchmark", description: "オフィス規模別の月額電気代相場と、一人あたり・一坪あたりのベンチマークを整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 2, publishedAt: "2026-04-11" },
+  { title: "工場の電気代相場（業種・規模別）", slug: "factory-electricity-cost-benchmark", description: "金属加工・食品・化学・組立など業種別・規模別の工場電気代相場を整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 3, publishedAt: "2026-04-11" },
+  { title: "小売店舗の電気代相場（業態・坪数別）", slug: "retail-store-electricity-cost-benchmark", description: "コンビニ・ドラッグストア・スーパー・アパレルなど業態別・坪数別の電気代相場を整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 4, publishedAt: "2026-04-11" },
+  { title: "飲食店の電気代相場（業態・席数別）", slug: "restaurant-electricity-cost-benchmark", description: "居酒屋・カフェ・ファミレス・焼肉店など業態別・席数別の電気代相場を整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 5, publishedAt: "2026-04-11" },
+  { title: "電気代削減アクション一覧（即効〜中長期）", slug: "electricity-cost-reduction-action-map", description: "即効性の高い施策から中長期の設備投資まで、削減アクションを効果と難易度で整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 6, featured: true, publishedAt: "2026-04-11" },
+  { title: "契約見直しによる削減額の目安", slug: "contract-review-reduction-effect", description: "プラン切替・契約電力見直し・市場連動→固定切替など、契約見直し施策ごとの削減額目安を整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 7, publishedAt: "2026-04-11" },
+  { title: "デマンドコントロールの削減効果", slug: "demand-control-reduction-effect", description: "デマンド監視装置・制御システム導入による基本料金削減の目安を実例ベースで整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 8, publishedAt: "2026-04-11" },
+  { title: "LED化・空調最適化の削減効果", slug: "led-air-conditioning-reduction-effect", description: "照明LED化と高効率空調への更新がもたらす電力使用量削減の目安を整理します。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 9, publishedAt: "2026-04-11" },
+  { title: "削減施策の効果・難易度マトリクス", slug: "reduction-measure-difficulty-matrix", description: "主要な電気代削減施策を効果と実行難易度の2軸で整理し、優先順位を判断できるようにします。", category: "相場・削減効果を知る", categorySlug: "benchmarks", order: 10, publishedAt: "2026-04-11" },
+  // --- C. 補助金 6本 ---
+  { title: "法人向け電力・省エネ補助金まとめ", slug: "subsidies-overview", description: "2026年度に法人が活用できる主要な省エネ・電力関連補助金を一覧で整理し、制度選びの軸を解説します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "省エネ補助金（SII）の申請ガイド", slug: "subsidy-sii-energy-saving", description: "SII（環境共創イニシアチブ）の省エネ投資促進補助金について、対象・補助率・申請の流れを整理します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 2, publishedAt: "2026-04-11" },
+  { title: "需要家主導型太陽光PPAの補助金活用", slug: "subsidy-demand-side-ppa", description: "需要家主導型太陽光発電導入支援事業の概要と、PPAモデルでの活用ポイントを解説します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 3, publishedAt: "2026-04-11" },
+  { title: "SHIFT事業と電力コスト戦略", slug: "subsidy-shift-project", description: "SHIFT事業（SBT認証・脱炭素経営支援）の概要と、電力コスト戦略への組み込み方を整理します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 4, publishedAt: "2026-04-11" },
+  { title: "自治体別 電力関連補助金の探し方", slug: "subsidy-local-government-list", description: "都道府県・市区町村が独自に実施する省エネ・再エネ補助金の探し方と主要自治体の事例を整理します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 5, publishedAt: "2026-04-11" },
+  { title: "補助金申請を前提とした稟議書の書き方", slug: "subsidy-application-approval-document", description: "補助金活用を組み込んだ省エネ投資の稟議書について、構成と数値の示し方を整理します。", category: "補助金・助成金を知る", categorySlug: "subsidies", order: 6, publishedAt: "2026-04-11" },
+  // --- F. 経営層向け 4本 ---
+  { title: "電気代がEBITDAに与える影響の測り方", slug: "executive-ebitda-impact", description: "電気代が営業利益・EBITDAに及ぼす影響を業種別の原価率をもとに定量化する方法を解説します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "電気代高騰と事業継続リスク", slug: "executive-business-continuity-risk", description: "電気代高騰を事業継続リスク（BCP・財務リスク）として捉えた場合の論点を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 2, publishedAt: "2026-04-11" },
+  { title: "CFOのための電力市場基礎", slug: "executive-cfo-electricity-basics", description: "CFO・財務責任者が知っておくべき電力市場構造、燃調費・市場連動・容量拠出金の基礎を1ページでまとめます。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 3, publishedAt: "2026-04-11" },
+  { title: "取締役会で報告すべき電力リスク5項目", slug: "executive-board-reporting-items", description: "取締役会や経営会議で電力コスト・リスクを報告する際に必ず押さえたい5項目を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 4, publishedAt: "2026-04-11" },
+  // --- H. 地域別 5本 ---
+  { title: "東京電力エリアの法人電気代事情", slug: "region-tokyo-business-electricity", description: "東京電力エナジーパートナー管内の法人電気代水準、最近の改定動向、新電力動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 1, featured: true, publishedAt: "2026-04-11" },
+  { title: "関西電力エリアの法人電気代事情", slug: "region-kansai-business-electricity", description: "関西電力管内の法人電気代水準、原発比率の高さによる特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 2, publishedAt: "2026-04-11" },
+  { title: "中部電力エリアの法人電気代事情", slug: "region-chubu-business-electricity", description: "中部電力ミライズ管内の法人電気代水準、製造業が多いエリア特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 3, publishedAt: "2026-04-11" },
+  { title: "九州電力エリアの法人電気代事情", slug: "region-kyushu-business-electricity", description: "九州電力管内の法人電気代水準、太陽光比率の高さによる特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 4, publishedAt: "2026-04-11" },
+  { title: "エリア別 新電力撤退状況マップ", slug: "region-supplier-withdrawal-map", description: "2022年以降の新電力撤退・契約解除通知の発生状況をエリア別に整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 5, publishedAt: "2026-04-11" },
 ];
