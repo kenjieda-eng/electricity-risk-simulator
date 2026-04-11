@@ -241,21 +241,67 @@ export default function ArticlesPage() {
           カテゴリから探す
         </h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {learningCategories.map((category) => {
-            const icon = categoryIcons[category.slug] ?? categoryIcons.basic;
-            return (
-              <article key={category.slug} className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
+          {(() => {
+            const renderedCards: React.ReactNode[] = [];
+            let industryHubRendered = false;
+
+            const industryHubCard = (
+              <article key="by-industry-hub" className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
                 <div className="flex items-center gap-2">
-                  <Image src={icon.src} alt={icon.alt} width={36} height={36} />
-                  <p className="text-xs font-semibold tracking-wide text-slate-500">カテゴリ {category.order}</p>
+                  <Image
+                    src={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.src}
+                    alt={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.alt}
+                    width={36}
+                    height={36}
+                  />
+                  <p className="text-xs font-semibold tracking-wide text-slate-500">
+                    カテゴリ {INDUSTRY_ARTICLES_CATEGORY_CARD.order}
+                  </p>
                 </div>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">{category.name}</h3>
-                <p className="mt-1.5 text-sm leading-6 text-slate-700">{categoryDescriptions[category.slug] ?? category.description}</p>
-                <p className="mt-2 text-sm text-slate-600">記事数: {getArticlesByCategory(category.slug).length}件</p>
-                {(() => {
-                  const quick = getArticlesBySlugs(quickSlugsForCategoryCard(category.slug));
-                  if (!quick.length) return null;
-                  return (
+                <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
+                <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
+                <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
+                <div className="mt-3 border-t border-slate-100 pt-3">
+                  <p className="text-xs font-semibold text-slate-500">代表カテゴリ</p>
+                  <ul className="mt-2 space-y-1.5 text-sm">
+                    {INDUSTRY_MIDDLE_CATEGORIES.slice(0, 3).map((middle) => (
+                      <li key={middle.slug}>
+                        <Link
+                          href={`/articles/by-industry/${middle.slug}`}
+                          className="text-sky-700 underline-offset-2 hover:underline"
+                        >
+                          {middle.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Link
+                  href={INDUSTRY_ARTICLES_CATEGORY_CARD.href}
+                  className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+                >
+                  カテゴリを見る
+                </Link>
+              </article>
+            );
+
+            for (const category of learningCategories) {
+              if (!industryHubRendered && category.order >= INDUSTRY_ARTICLES_CATEGORY_CARD.order) {
+                renderedCards.push(industryHubCard);
+                industryHubRendered = true;
+              }
+              const icon = categoryIcons[category.slug] ?? categoryIcons.basic;
+              const quick = getArticlesBySlugs(quickSlugsForCategoryCard(category.slug));
+              renderedCards.push(
+                <article key={category.slug} className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
+                  <div className="flex items-center gap-2">
+                    <Image src={icon.src} alt={icon.alt} width={36} height={36} />
+                    <p className="text-xs font-semibold tracking-wide text-slate-500">カテゴリ {category.order}</p>
+                  </div>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">{category.name}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-slate-700">{categoryDescriptions[category.slug] ?? category.description}</p>
+                  <p className="mt-2 text-sm text-slate-600">記事数: {getArticlesByCategory(category.slug).length}件</p>
+                  {quick.length ? (
                     <div className="mt-3 border-t border-slate-100 pt-3">
                       <p className="text-xs font-semibold text-slate-500">代表記事</p>
                       <ul className="mt-2 space-y-1.5 text-sm">
@@ -268,54 +314,23 @@ export default function ArticlesPage() {
                         ))}
                       </ul>
                     </div>
-                  );
-                })()}
-                <Link
-                  href={`/articles/${category.slug}`}
-                  className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
-                >
-                  カテゴリを見る
-                </Link>
-              </article>
-            );
-          })}
-          <article className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
-            <div className="flex items-center gap-2">
-              <Image
-                src={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.src}
-                alt={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.alt}
-                width={36}
-                height={36}
-              />
-              <p className="text-xs font-semibold tracking-wide text-slate-500">
-                カテゴリ {INDUSTRY_ARTICLES_CATEGORY_CARD.order}
-              </p>
-            </div>
-            <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
-            <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
-            <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
-            <div className="mt-3 border-t border-slate-100 pt-3">
-              <p className="text-xs font-semibold text-slate-500">代表カテゴリ</p>
-              <ul className="mt-2 space-y-1.5 text-sm">
-                {INDUSTRY_MIDDLE_CATEGORIES.slice(0, 3).map((middle) => (
-                  <li key={middle.slug}>
-                    <Link
-                      href={`/articles/by-industry/${middle.slug}`}
-                      className="text-sky-700 underline-offset-2 hover:underline"
-                    >
-                      {middle.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Link
-              href={INDUSTRY_ARTICLES_CATEGORY_CARD.href}
-              className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
-            >
-              カテゴリを見る
-            </Link>
-          </article>
+                  ) : null}
+                  <Link
+                    href={`/articles/${category.slug}`}
+                    className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+                  >
+                    カテゴリを見る
+                  </Link>
+                </article>
+              );
+            }
+
+            if (!industryHubRendered) {
+              renderedCards.push(industryHubCard);
+            }
+
+            return renderedCards;
+          })()}
         </div>
       </section>
 

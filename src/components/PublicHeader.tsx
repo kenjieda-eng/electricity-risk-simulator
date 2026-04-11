@@ -106,7 +106,7 @@ export function PublicHeader() {
                 電気代の値上がりリスクを30秒で診断
               </p>
             </div>
-            <div className="mt-1.5 flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+            <div className="mt-3 flex flex-col gap-2 sm:mt-4 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex">
                 <Link
                   href={specialFeatureLink.href}

@@ -260,36 +260,36 @@ export default function Page() {
             </p>
           </section>
 
-        </div>
-
-        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 className="text-lg font-semibold text-slate-900">テーマ別にさらに詳しく</h2>
-          <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            <Link href="/articles/plan-types" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">契約メニューの違いを知る</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">市場連動・固定など契約タイプごとのリスクと選び方を比較</p>
-            </Link>
-            <Link href="/articles/review-points" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">見直しポイントを知る</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">契約見直しの進め方と確認すべき書類・条件を整理</p>
-            </Link>
-            <Link href="/capacity-contribution-explained" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">容量拠出金とは</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">2024年度から始まった新たな制度負担の仕組みと影響</p>
-            </Link>
-            <Link href="/articles/last-resort-supply" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">最終保障供給を知る</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">制度の対象・料金・通常契約との違いと切替の基本</p>
-            </Link>
-            <Link href="/special/emergency-scenario-analysis/background" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">有事シナリオ：背景と原油価格</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">有事局面で原油価格が動く背景と電気代への波及</p>
-            </Link>
-            <Link href="/articles/by-industry/commercial" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-              <p className="text-sm font-semibold text-slate-900">業種別ガイド：商業系</p>
-              <p className="mt-1 text-xs leading-relaxed text-slate-600">スーパー・飲食・小売など営業時間と設備負荷の影響</p>
-            </Link>
+          <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <h2 className="text-lg font-semibold text-slate-900">テーマ別にさらに詳しく</h2>
+            <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              <Link href="/articles/plan-types" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">契約メニューの違いを知る</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">市場連動・固定など契約タイプごとのリスクと選び方を比較</p>
+              </Link>
+              <Link href="/articles/review-points" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">見直しポイントを知る</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">契約見直しの進め方と確認すべき書類・条件を整理</p>
+              </Link>
+              <Link href="/capacity-contribution-explained" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">容量拠出金とは</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">2024年度から始まった新たな制度負担の仕組みと影響</p>
+              </Link>
+              <Link href="/articles/last-resort-supply" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">最終保障供給を知る</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">制度の対象・料金・通常契約との違いと切替の基本</p>
+              </Link>
+              <Link href="/special/emergency-scenario-analysis/background" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">有事シナリオ：背景と原油価格</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">有事局面で原油価格が動く背景と電気代への波及</p>
+              </Link>
+              <Link href="/articles/by-industry/commercial" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">業種別ガイド：商業系</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">スーパー・飲食・小売など営業時間と設備負荷の影響</p>
+              </Link>
+            </div>
           </div>
+
         </div>
       </section>
 
