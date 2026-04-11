@@ -118,6 +118,43 @@ export default function ArticlesByIndustryPage() {
           </Link>
         </div>
       </section>
+
+      {/* NEXT STEP CTA */}
+      <section className="mt-8 rounded-xl border-2 border-sky-300 bg-gradient-to-br from-sky-50 to-white p-6">
+        <div className="flex items-start gap-3">
+          <span className="hidden shrink-0 rounded-full bg-sky-600 px-3 py-1 text-xs font-semibold text-white sm:inline-flex">
+            NEXT STEP
+          </span>
+          <div className="flex-1">
+            <h2 className="text-xl font-bold text-slate-900">
+              業種の特性を踏まえた見直しを、数値から始める
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              業種別の傾向を押さえたら、次は自社の電気代をシミュレーターで数値化しましょう。業種特性を踏まえた個別の提案が必要なときや、社内説明の材料づくりに迷ったときは、一般社団法人エネルギー情報センターまでお気軽にご相談ください。中立的な立場で伴走いたします。
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700 sm:text-base"
+              >
+                シミュレーターで現状診断する
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-amber-400 bg-amber-50 px-5 py-3 text-sm font-semibold text-amber-900 transition hover:bg-amber-100 sm:text-base"
+              >
+                業種別の相談をする
+              </Link>
+              <Link
+                href="/articles/industry-guide"
+                className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 sm:text-base"
+              >
+                業種別の見直しポイント集
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
