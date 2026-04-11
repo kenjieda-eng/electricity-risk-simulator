@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "契約見直し時に総務が見るポイント｜社内調整と手続きの進め方";
@@ -247,6 +248,9 @@ export default function ContractReviewForGeneralAffairsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="contract-review-for-general-affairs" />
+      </div>
     </main>
   );
 }

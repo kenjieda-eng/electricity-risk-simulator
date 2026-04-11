@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "年度予算と電気代高騰のバランスをどう取るか｜自治体財政担当者向け";
 const pageDescription =
@@ -334,6 +335,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-annual-budget-impact" />
       </div>
     </main>
   );

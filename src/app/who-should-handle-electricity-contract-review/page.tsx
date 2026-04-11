@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function WhoShouldHandleElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      slug="who-should-handle-electricity-contract-review"
       title={pageTitle}
       lead={[
         "電力契約見直しは、誰が担当するかが曖昧なままだと進みにくい業務です。比較先を探す作業より先に、主導部署と協力部署の役割を明確にすることが実務上の近道になります。",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "東京電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -422,6 +423,9 @@ export default function RegionTokyoBusinessElectricityPage() {
             { href: "/articles", label: "解説記事一覧へ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="region-tokyo-business-electricity" />
       </div>
     </main>
   );

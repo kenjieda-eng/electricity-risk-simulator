@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場連動プランで電気料金が上がるときの仕組み｜法人向けにわかりやすく解説";
 const pageDescription =
@@ -193,6 +194,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-market-linked-electricity-prices-rise" />
+      </div>
     </main>
   );
 }

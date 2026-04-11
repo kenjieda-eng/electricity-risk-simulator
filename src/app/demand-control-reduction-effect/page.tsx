@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "デマンドコントロールの削減効果｜基本料金を下げる仕組み";
 const pageDescription =
@@ -293,6 +294,9 @@ export default function DemandControlReductionEffectPage() {
             { href: "/demand-charge", label: "デマンドの仕組みを学ぶ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="demand-control-reduction-effect" />
       </div>
     </main>
   );

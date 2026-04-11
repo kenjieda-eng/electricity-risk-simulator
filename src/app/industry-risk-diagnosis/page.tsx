@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "業種別リスク診断｜自社の業種から見た電気料金リスクと対策";
@@ -311,6 +312,9 @@ export default function IndustryRiskDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="industry-risk-diagnosis" />
+      </div>
     </main>
   );
 }

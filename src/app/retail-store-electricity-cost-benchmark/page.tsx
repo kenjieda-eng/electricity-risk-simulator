@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "小売店舗の電気代相場｜業態・坪数別のベンチマーク";
 const pageDescription =
@@ -269,6 +270,9 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
             { href: "/how-to-start-electricity-contract-review", label: "電力契約の見直し方を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="retail-store-electricity-cost-benchmark" />
       </div>
     </main>
   );

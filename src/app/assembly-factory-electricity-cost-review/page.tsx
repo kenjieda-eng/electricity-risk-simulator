@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "組立工場の電気料金見直しポイント｜生産ラインとデマンド管理を踏まえた考え方";
@@ -334,6 +335,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="assembly-factory-electricity-cost-review" />
+      </div>
     </main>
   );
 }

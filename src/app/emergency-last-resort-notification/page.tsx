@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の通知が来たときの対応｜タイムラインとチェックリスト";
 const pageDescription =
@@ -416,6 +417,9 @@ export default function EmergencyLastResortNotificationPage() {
             { href: "/contact", label: "専門家に今すぐ相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="emergency-last-resort-notification" />
       </div>
     </main>
   );

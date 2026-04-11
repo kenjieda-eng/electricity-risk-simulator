@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "飲食店チェーンの電気料金見直しポイント｜調理・空調負荷と多拠点を踏まえた考え方";
@@ -304,6 +305,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="restaurant-chain-electricity-cost-review" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "燃料費調整額上昇で法人の電気料金はどう上がるか｜請求への影響と確認ポイント";
@@ -265,6 +266,9 @@ export default function FuelAdjustmentSurgeImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fuel-adjustment-surge-impact" />
+      </div>
     </main>
   );
 }

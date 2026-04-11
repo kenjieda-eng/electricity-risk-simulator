@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "燃料費調整額の扱いを確認する方法｜契約比較で見落としやすいポイント";
@@ -243,6 +244,9 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-check-fuel-cost-adjustment-terms" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "DRは電気料金対策としてどう考えるか｜需要抑制の仕組みと参加メリット";
@@ -337,6 +338,9 @@ export default function DemandResponseCostBenefitPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="demand-response-cost-benefit" />
+      </div>
     </main>
   );
 }

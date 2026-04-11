@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "中部電力エリアの法人電気代事情｜製造業集積地の電力事情";
 const pageDescription =
@@ -431,6 +432,9 @@ export default function RegionChubuBusinessElectricityPage() {
             { href: "/articles", label: "解説記事一覧へ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="region-chubu-business-electricity" />
       </div>
     </main>
   );

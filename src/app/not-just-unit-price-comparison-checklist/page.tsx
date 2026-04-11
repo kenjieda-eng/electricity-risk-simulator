@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "請求単価だけで比較しないためのチェックポイント｜総額比較の考え方";
@@ -246,6 +247,9 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="not-just-unit-price-comparison-checklist" />
+      </div>
     </main>
   );
 }

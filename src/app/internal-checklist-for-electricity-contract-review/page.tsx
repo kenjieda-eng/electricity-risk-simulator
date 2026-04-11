@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function InternalChecklistForElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      slug="internal-checklist-for-electricity-contract-review"
       title={pageTitle}
       lead={[
         "電力契約の見直しは、外部比較だけで完結する業務ではありません。社内で必要情報がそろわないと、見積比較や稟議が進まず、期限超過につながることがあります。",

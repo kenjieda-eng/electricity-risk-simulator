@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function WhereToCheckInElectricityContractPage() {
   return (
     <ReviewArticlePage
+      slug="where-to-check-in-electricity-contract"
       title={pageTitle}
       lead={[
         "見直し時に契約条件を理解しているつもりでも、実際には重要条項の確認漏れが起きやすいのが契約書です。特に更新・解約・単価改定に関する条項は、小さな記載でも実務影響が大きくなります。",

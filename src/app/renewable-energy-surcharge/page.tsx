@@ -7,6 +7,7 @@ import {
   BUSINESS_USAGE_PROFILES,
   RENEWABLE_SURCHARGE_DATA,
 } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
 const pageDescription =
@@ -320,6 +321,9 @@ export default function RenewableEnergySurchargePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-energy-surcharge" />
+      </div>
     </main>
   );
 }

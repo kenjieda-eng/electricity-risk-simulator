@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { RENEWABLE_SURCHARGE_DATA } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金の推移と変動要因｜2012〜2026年度を完全分析";
 const pageDescription =
@@ -233,6 +234,9 @@ export default function RenewableEnergySurchargeHistoryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-energy-surcharge-history" />
+      </div>
     </main>
   );
 }

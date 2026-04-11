@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "ドラッグストアの電気料金見直しポイント｜冷蔵・照明と多拠点を踏まえた考え方";
@@ -327,6 +328,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="drugstore-electricity-cost-review" />
+      </div>
     </main>
   );
 }

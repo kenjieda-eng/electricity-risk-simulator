@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "工場の電気代相場｜業種・契約電力・使用量別のベンチマーク";
 const pageDescription =
@@ -297,6 +298,9 @@ export default function FactoryElectricityCostBenchmarkPage() {
             { href: "/demand-control-reduction-effect", label: "デマンドコントロールの効果を見る" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="factory-electricity-cost-benchmark" />
       </div>
     </main>
   );

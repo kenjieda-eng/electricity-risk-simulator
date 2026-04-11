@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ReviewContractRenewalDeadlinesPage() {
   return (
     <ReviewArticlePage
+      slug="review-contract-renewal-deadlines"
       title={pageTitle}
       lead={[
         "更新前の見直しでは、料金単価より先に期限管理を確認することが重要です。更新月だけを見ていると、通知期限や解約申出期限を過ぎてしまい、比較や切替の余地を失うことがあります。",

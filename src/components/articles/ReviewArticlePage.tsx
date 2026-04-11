@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import ContentCta from "../simulator/ContentCta";
 import RelatedLinks from "../simulator/RelatedLinks";
+import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 
 type LinkCard = {
   href: string;
@@ -22,6 +23,7 @@ type ReviewArticlePageProps = {
   relatedIntro: string;
   relatedLinks: LinkCard[];
   ctaDescription: string;
+  slug?: string;
 };
 
 export default function ReviewArticlePage({
@@ -31,6 +33,7 @@ export default function ReviewArticlePage({
   relatedIntro,
   relatedLinks,
   ctaDescription,
+  slug,
 }: ReviewArticlePageProps) {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -74,6 +77,8 @@ export default function ReviewArticlePage({
             { href: "/simulate", label: "シミュレーターを開く" },
           ]}
         />
+
+        {slug ? <CategoryNextStepCta slug={slug} /> : null}
       </section>
     </main>
   );

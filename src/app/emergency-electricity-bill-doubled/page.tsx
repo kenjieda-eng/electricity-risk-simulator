@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気代が急に2倍になったときの対応手順｜原因切り分けと緊急対応";
 const pageDescription =
@@ -418,6 +419,9 @@ export default function EmergencyElectricityBillDoubledPage() {
             { href: "/contact", label: "専門家に無料相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="emergency-electricity-bill-doubled" />
       </div>
     </main>
   );

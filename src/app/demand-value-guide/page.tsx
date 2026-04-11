@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "デマンド値の見方｜契約電力と基本料金への影響を理解する";
@@ -289,6 +290,9 @@ export default function DemandValueGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="demand-value-guide" />
+      </div>
     </main>
   );
 }

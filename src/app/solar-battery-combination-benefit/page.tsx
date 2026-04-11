@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "太陽光と蓄電池を組み合わせる意味｜自家消費率向上とコスト削減の相乗効果";
@@ -317,6 +318,9 @@ export default function SolarBatteryCombinationBenefitPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="solar-battery-combination-benefit" />
+      </div>
     </main>
   );
 }

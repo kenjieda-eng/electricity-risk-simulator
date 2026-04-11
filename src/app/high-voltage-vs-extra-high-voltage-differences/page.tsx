@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "高圧と特別高圧の違い｜契約区分の基本と料金構造の比較";
@@ -292,6 +293,9 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="high-voltage-vs-extra-high-voltage-differences" />
+      </div>
     </main>
   );
 }

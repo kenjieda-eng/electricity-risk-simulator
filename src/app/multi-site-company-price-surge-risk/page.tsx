@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "多拠点企業が電気料金高騰に直面したときのリスク｜拠点間の影響と管理";
@@ -223,6 +224,9 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="multi-site-company-price-surge-risk" />
+      </div>
     </main>
   );
 }

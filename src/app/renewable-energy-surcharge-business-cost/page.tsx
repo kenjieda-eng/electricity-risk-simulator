@@ -7,6 +7,7 @@ import {
   BUSINESS_USAGE_PROFILES,
   RENEWABLE_SURCHARGE_DATA,
 } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金の法人別月額試算｜業態・規模ごとの負担額シミュレーション";
 const pageDescription =
@@ -217,6 +218,9 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-energy-surcharge-business-cost" />
+      </div>
     </main>
   );
 }

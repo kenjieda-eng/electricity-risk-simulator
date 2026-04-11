@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "クリニックの電気料金見直しポイント｜医療機器と空調負荷を踏まえた考え方";
@@ -357,6 +358,9 @@ export default function ClinicElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="clinic-electricity-cost-review" />
+      </div>
     </main>
   );
 }

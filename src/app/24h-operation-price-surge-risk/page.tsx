@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "24時間稼働企業が料金高騰に直面したときのリスク｜ベースロードと上振れの関係";
@@ -251,6 +252,9 @@ export default function TwentyFourHourOperationPriceSurgeRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="24h-operation-price-surge-risk" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "関西電力エリアの法人電気代事情｜原発比率と料金の特性";
 const pageDescription =
@@ -435,6 +436,9 @@ export default function RegionKansaiBusinessElectricityPage() {
             { href: "/articles", label: "解説記事一覧へ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="region-kansai-business-electricity" />
       </div>
     </main>
   );

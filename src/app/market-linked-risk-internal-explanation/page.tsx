@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場連動プランのリスクを社内説明するときのポイント｜経営層・上司への伝え方";
@@ -282,6 +283,9 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-linked-risk-internal-explanation" />
+      </div>
     </main>
   );
 }

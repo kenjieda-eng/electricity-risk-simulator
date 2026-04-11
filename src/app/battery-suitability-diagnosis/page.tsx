@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "蓄電池導入向き不向き診断｜自社に蓄電池が合うかを整理する";
@@ -319,6 +320,9 @@ export default function BatterySuitabilityDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="battery-suitability-diagnosis" />
+      </div>
     </main>
   );
 }

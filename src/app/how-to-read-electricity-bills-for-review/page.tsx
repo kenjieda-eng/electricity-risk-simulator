@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function HowToReadElectricityBillsForReviewPage() {
   return (
     <ReviewArticlePage
+      slug="how-to-read-electricity-bills-for-review"
       title={pageTitle}
       lead={[
         "見直し実務の入口として最も使いやすい資料は請求書です。まず請求書から現状を把握すると、契約書や見積書で何を確認すべきかが明確になります。",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "社内説明準備チェックリスト｜電力契約見直しの稟議・報告前に揃えたい情報";
@@ -363,6 +364,9 @@ export default function InternalExplanationPreparationChecklistPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="internal-explanation-preparation-checklist" />
+      </div>
     </main>
   );
 }

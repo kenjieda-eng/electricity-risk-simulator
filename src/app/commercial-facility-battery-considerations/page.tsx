@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "商業施設で蓄電池を検討するときの着眼点｜ピーク負荷と営業への影響";
@@ -280,6 +281,9 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="commercial-facility-battery-considerations" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方";
@@ -291,6 +292,9 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="self-consumption-solar-cost-benefit" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気代高騰と事業継続リスク｜BCPと財務リスクの観点から";
 const pageDescription =
@@ -402,6 +403,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
             { href: "/contact", label: "経営相談はこちら" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="executive-business-continuity-risk" />
       </div>
     </main>
   );

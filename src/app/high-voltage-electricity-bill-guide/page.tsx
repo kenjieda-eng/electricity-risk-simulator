@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "高圧電力の請求書の見方｜法人の見積比較に使いたい確認ポイント";
@@ -318,6 +319,9 @@ export default function HighVoltageElectricityBillGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="high-voltage-electricity-bill-guide" />
+      </div>
     </main>
   );
 }

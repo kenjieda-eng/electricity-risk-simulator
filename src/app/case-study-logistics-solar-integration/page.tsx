@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "物流倉庫：自家消費太陽光併設で年間9%削減した事例｜食品物流センター";
 const pageDescription =
@@ -288,6 +289,9 @@ export default function CaseStudyLogisticsSolarPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-logistics-solar-integration" />
       </div>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "再エネ賦課金上昇で法人の電気料金はどう変わるか｜制度改定と負担増の見方";
@@ -248,6 +249,9 @@ export default function RenewableSurchargeIncreaseImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-surcharge-increase-impact" />
+      </div>
     </main>
   );
 }

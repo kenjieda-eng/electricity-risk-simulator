@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "特別高圧電力の請求書の見方｜大規模施設の請求書確認ポイント";
@@ -290,6 +291,9 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="extra-high-voltage-electricity-bill-guide" />
+      </div>
     </main>
   );
 }

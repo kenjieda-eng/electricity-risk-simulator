@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金の請求書で確認したいポイント｜法人担当者がまず見るべき項目を整理";
 const pageDescription =
@@ -263,6 +264,9 @@ export default function HowToReadElectricityBillPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-read-electricity-bill" />
+      </div>
     </main>
   );
 }

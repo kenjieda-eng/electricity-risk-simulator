@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金の相場はどう見る？比較前に知りたい考え方を解説";
 const pageDescription =
@@ -196,6 +197,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="business-electricity-price-benchmark" />
+      </div>
     </main>
   );
 }

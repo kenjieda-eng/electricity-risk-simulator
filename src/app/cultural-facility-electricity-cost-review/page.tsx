@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "文化施設・ホールの電気料金見直しポイント｜照明・空調・イベント負荷を踏まえた考え方";
@@ -330,6 +331,9 @@ export default function CulturalFacilityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="cultural-facility-electricity-cost-review" />
+      </div>
     </main>
   );
 }

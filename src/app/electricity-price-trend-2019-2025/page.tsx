@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金は高止まりしているのか｜2019年から2025年の推移で見る実態";
 const pageDescription =
@@ -182,6 +183,9 @@ export default function ElectricityPriceTrend20192025Page() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-price-trend-2019-2025" />
+      </div>
     </main>
   );
 }

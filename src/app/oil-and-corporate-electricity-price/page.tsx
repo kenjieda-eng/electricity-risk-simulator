@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "原油価格と法人電気料金の関係｜燃料価格の波及経路と影響の見方";
@@ -298,6 +299,9 @@ export default function OilAndCorporateElectricityPricePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="oil-and-corporate-electricity-price" />
+      </div>
     </main>
   );
 }

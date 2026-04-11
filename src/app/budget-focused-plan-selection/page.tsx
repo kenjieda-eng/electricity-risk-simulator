@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "予算管理を重視する法人はどちらを選ぶべきか｜固定と市場連動の判断軸";
@@ -281,6 +282,9 @@ export default function BudgetFocusedPlanSelectionPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="budget-focused-plan-selection" />
+      </div>
     </main>
   );
 }

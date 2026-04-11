@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説";
 const pageDescription =
@@ -180,6 +181,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="impact-of-electricity-subsidy-ending" />
+      </div>
     </main>
   );
 }

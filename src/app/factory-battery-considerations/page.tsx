@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "工場で蓄電池を検討するときの着眼点｜生産ラインとの両立";
@@ -294,6 +295,9 @@ export default function FactoryBatteryConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="factory-battery-considerations" />
+      </div>
     </main>
   );
 }

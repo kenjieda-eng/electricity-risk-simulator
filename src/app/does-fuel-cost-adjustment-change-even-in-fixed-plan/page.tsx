@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
 const pageDescription =
@@ -152,6 +153,9 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="does-fuel-cost-adjustment-change-even-in-fixed-plan" />
+      </div>
     </main>
   );
 }

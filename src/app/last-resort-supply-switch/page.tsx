@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給から切り替えるには 法人が確認したい流れと注意点";
 const pageDescription =
@@ -150,6 +151,9 @@ export default function LastResortSupplySwitchPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-switch" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "比較表を社内共有するときのポイント｜わかりやすい比較表の作り方";
@@ -278,6 +279,9 @@ export default function SharingComparisonTableInternallyPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="sharing-comparison-table-internally" />
+      </div>
     </main>
   );
 }

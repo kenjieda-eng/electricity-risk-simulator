@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自治体施設は固定と市場連動のどちらが向くか｜年度予算制と説明責任から考える";
@@ -321,6 +322,9 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-fixed-vs-market-linked" />
+      </div>
     </main>
   );
 }

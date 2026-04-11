@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "省エネ補助金（SII）の申請ガイド｜対象・補助率・スケジュール";
 const pageDescription =
@@ -316,6 +317,9 @@ export default function SubsidySiiEnergySavingPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidy-sii-energy-saving" />
       </div>
     </main>
   );

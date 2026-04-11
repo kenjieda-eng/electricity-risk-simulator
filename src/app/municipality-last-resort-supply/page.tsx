@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体が最終保障供給になったとき 何が起きるかを整理";
 const pageDescription =
@@ -134,6 +135,9 @@ export default function MunicipalityLastResortSupplyPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-last-resort-supply" />
+      </div>
     </main>
   );
 }

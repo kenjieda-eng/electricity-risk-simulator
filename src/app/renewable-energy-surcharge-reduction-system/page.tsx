@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金の減免制度｜電気多消費事業者向けの要件と申請の流れ";
 const pageDescription =
@@ -215,6 +216,9 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-energy-surcharge-reduction-system" />
+      </div>
     </main>
   );
 }

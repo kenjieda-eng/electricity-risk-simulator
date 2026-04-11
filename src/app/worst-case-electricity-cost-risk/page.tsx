@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "ワーストシナリオとは？法人・企業・自治体の電気料金・電気代が最も上がるケースを解説";
@@ -232,6 +233,9 @@ export default function WorstCaseElectricityCostRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="worst-case-electricity-cost-risk" />
+      </div>
     </main>
   );
 }

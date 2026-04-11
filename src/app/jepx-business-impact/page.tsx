@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXが法人の電気料金に与える影響｜調達経路別の波及と備え方";
 const pageDescription =
@@ -197,6 +198,9 @@ export default function JepxBusinessImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="jepx-business-impact" />
+      </div>
     </main>
   );
 }

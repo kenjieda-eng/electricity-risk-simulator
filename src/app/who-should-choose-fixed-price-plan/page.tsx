@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "固定プランが向いている法人・向いていない法人｜予算管理しやすい電力契約の考え方";
 const pageDescription =
@@ -159,6 +160,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="who-should-choose-fixed-price-plan" />
+      </div>
     </main>
   );
 }

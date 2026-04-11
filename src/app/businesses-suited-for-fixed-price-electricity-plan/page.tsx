@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "固定プランが向く法人の特徴｜予算管理と安定性を重視する場合の考え方";
@@ -299,6 +300,9 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="businesses-suited-for-fixed-price-electricity-plan" />
+      </div>
     </main>
   );
 }

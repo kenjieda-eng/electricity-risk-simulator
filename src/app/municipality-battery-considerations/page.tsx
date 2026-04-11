@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自治体施設で蓄電池を検討するときの着眼点｜防災拠点との兼用";
@@ -267,6 +268,9 @@ export default function MunicipalityBatteryConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-battery-considerations" />
+      </div>
     </main>
   );
 }

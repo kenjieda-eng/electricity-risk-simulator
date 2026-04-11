@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function CheapUnitPriceNotAlwaysBetterPage() {
   return (
     <ReviewArticlePage
+      slug="cheap-unit-price-not-always-better"
       title={pageTitle}
       lead={[
         "見積比較で最も起きやすい誤解は『単価が安いほど有利』という判断です。法人向け電力契約では、単価以外の条件が実請求に強く影響するため、総合評価が必要です。",

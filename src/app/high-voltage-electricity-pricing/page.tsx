@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "高圧電力の料金の見方とは？法人向け請求書で確認したいポイントを解説";
 const pageDescription =
@@ -197,6 +198,9 @@ export default function HighVoltageElectricityPricingPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="high-voltage-electricity-pricing" />
+      </div>
     </main>
   );
 }

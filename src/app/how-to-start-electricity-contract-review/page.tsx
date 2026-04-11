@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function HowToStartElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      slug="how-to-start-electricity-contract-review"
       title={pageTitle}
       lead={[
         "見直し担当者が最初に必要なのは、完璧な比較資料ではなく、全体の進め方です。順序を誤ると、資料不足や社内調整不足で途中停止しやすくなります。",

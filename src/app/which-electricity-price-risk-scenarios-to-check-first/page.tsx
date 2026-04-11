@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオはどれから優先して見るべきか｜法人の契約条件や使用状況に応じた考え方";
 const pageDescription =
@@ -163,6 +164,9 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="which-electricity-price-risk-scenarios-to-check-first" />
+      </div>
     </main>
   );
 }

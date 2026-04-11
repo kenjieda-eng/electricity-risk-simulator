@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "百貨店の電気料金リスク｜大規模空調と営業時間を踏まえた考え方";
@@ -320,6 +321,9 @@ export default function DepartmentStoreElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="department-store-electricity-cost-review" />
+      </div>
     </main>
   );
 }

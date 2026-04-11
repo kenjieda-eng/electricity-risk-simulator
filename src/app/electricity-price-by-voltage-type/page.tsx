@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "特別高圧・高圧・低圧で電気料金の上がり方はどう違うのか｜法人向けに推移を比較";
 const pageDescription =
@@ -185,6 +186,9 @@ export default function ElectricityPriceByVoltageTypePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-price-by-voltage-type" />
+      </div>
     </main>
   );
 }

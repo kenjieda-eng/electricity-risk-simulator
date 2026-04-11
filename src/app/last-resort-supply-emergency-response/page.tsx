@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "最終保障供給に入りそうなときの対応手順｜早期発見と切替準備";
@@ -264,6 +265,9 @@ export default function LastResortSupplyEmergencyResponsePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-emergency-response" />
+      </div>
     </main>
   );
 }

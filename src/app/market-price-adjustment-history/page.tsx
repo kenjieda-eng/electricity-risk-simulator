@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場価格調整額の推移とJEPX価格の関係｜2016〜2025年度の動きを分析";
 const pageDescription =
@@ -194,6 +195,9 @@ export default function MarketPriceAdjustmentHistoryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-price-adjustment-history" />
+      </div>
     </main>
   );
 }

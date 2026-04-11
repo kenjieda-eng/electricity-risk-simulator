@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXスポット市場の価格推移｜2016〜2025年度の年度別詳細";
 const pageDescription =
@@ -175,6 +176,9 @@ export default function JepxSpotMarketHistoryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="jepx-spot-market-history" />
+      </div>
     </main>
   );
 }

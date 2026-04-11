@@ -3,6 +3,7 @@ import PowerProcurementSeriesNav from "../../components/articles/PowerProcuremen
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "長期契約とは何か｜安定調達のために期間を長く取る考え方";
 const pageDescription =
@@ -214,6 +215,9 @@ export default function LongTermPowerProcurementPage() {
 
         <PowerProcurementSeriesNav currentSlug="long-term-power-procurement" />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="long-term-power-procurement" />
+      </div>
     </main>
   );
 }

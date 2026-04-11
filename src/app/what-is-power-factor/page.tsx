@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "力率とは何か｜力率割引・割増の仕組みと確認ポイント";
@@ -246,6 +247,9 @@ export default function WhatIsPowerFactorPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="what-is-power-factor" />
+      </div>
     </main>
   );
 }

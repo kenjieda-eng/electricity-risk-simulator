@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "2022年の急騰後も電気料金が元に戻らないのはなぜか｜法人向けに高止まりの背景を解説";
 const pageDescription =
@@ -158,6 +159,9 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-electricity-prices-have-not-returned" />
+      </div>
     </main>
   );
 }

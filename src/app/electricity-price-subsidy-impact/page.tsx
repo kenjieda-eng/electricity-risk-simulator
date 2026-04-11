@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "補助金縮小で電気料金はどう見え方が変わったのか｜法人向けに推移データから整理";
 const pageDescription =
@@ -146,6 +147,9 @@ export default function ElectricityPriceSubsidyImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-price-subsidy-impact" />
+      </div>
     </main>
   );
 }

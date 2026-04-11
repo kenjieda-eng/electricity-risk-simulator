@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "高圧・特別高圧で市場連動を考えるときの注意点｜使用量の大きさとリスク";
@@ -232,6 +233,9 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="high-voltage-market-linked-considerations" />
+      </div>
     </main>
   );
 }

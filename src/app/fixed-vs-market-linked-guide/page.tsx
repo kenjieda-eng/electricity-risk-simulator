@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "固定プランと市場連動プランの判断ガイド一覧｜法人の契約選択を整理する";
@@ -346,6 +347,9 @@ export default function FixedVsMarketLinkedGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fixed-vs-market-linked-guide" />
+      </div>
     </main>
   );
 }

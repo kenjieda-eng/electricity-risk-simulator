@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "需要家主導型太陽光PPAの補助金活用｜オフサイトPPAで電力コスト削減";
 const pageDescription =
@@ -299,6 +300,9 @@ export default function SubsidyDemandSidePpaPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidy-demand-side-ppa" />
       </div>
     </main>
   );

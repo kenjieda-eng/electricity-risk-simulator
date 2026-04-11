@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場価格調整額の有無を確認する方法｜固定と市場連動を見分けるポイント";
@@ -258,6 +259,9 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-check-market-price-adjustment-terms" />
+      </div>
     </main>
   );
 }

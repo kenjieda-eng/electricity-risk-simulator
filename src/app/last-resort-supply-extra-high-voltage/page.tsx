@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "特別高圧で最終保障供給を使うときの注意点｜大規模需要家の留意事項";
@@ -245,6 +246,9 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-extra-high-voltage" />
+      </div>
     </main>
   );
 }

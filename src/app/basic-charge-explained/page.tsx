@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "基本料金の見方｜契約電力と単価の関係を理解する";
@@ -305,6 +306,9 @@ export default function BasicChargeExplainedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="basic-charge-explained" />
+      </div>
     </main>
   );
 }

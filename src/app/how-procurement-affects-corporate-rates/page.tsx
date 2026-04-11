@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "調達構成の違いが法人料金にどう影響するか｜電力会社の仕入れと料金の関係";
@@ -323,6 +324,9 @@ export default function HowProcurementAffectsCorporateRatesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-procurement-affects-corporate-rates" />
+      </div>
     </main>
   );
 }

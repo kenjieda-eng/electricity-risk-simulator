@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "問い合わせ前に社内で揃えたい情報｜見積依頼・相談の質を上げる準備";
@@ -271,6 +272,9 @@ export default function InformationToPrepareBeforeInquiryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="information-to-prepare-before-inquiry" />
+      </div>
     </main>
   );
 }

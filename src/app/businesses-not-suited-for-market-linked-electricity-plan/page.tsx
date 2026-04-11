@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場連動プランが向かない法人の特徴｜価格変動リスクを踏まえた判断ポイント";
@@ -282,6 +283,9 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="businesses-not-suited-for-market-linked-electricity-plan" />
+      </div>
     </main>
   );
 }

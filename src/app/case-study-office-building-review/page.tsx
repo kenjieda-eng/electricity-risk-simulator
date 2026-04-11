@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "オフィスビル：契約電力の適正化で年間580万円削減した事例";
 const pageDescription =
@@ -288,6 +289,9 @@ export default function CaseStudyOfficeBuildingPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-office-building-review" />
       </div>
     </main>
   );

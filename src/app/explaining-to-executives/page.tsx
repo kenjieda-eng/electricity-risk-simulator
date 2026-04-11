@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "経営層向けに電力契約見直しを説明するときのポイント｜コストとリスクの伝え方";
@@ -264,6 +265,9 @@ export default function ExplainingToExecutivesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="explaining-to-executives" />
+      </div>
     </main>
   );
 }

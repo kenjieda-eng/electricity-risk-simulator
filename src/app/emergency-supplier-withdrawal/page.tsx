@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "新電力から契約解除通知が届いたときの対応｜初動と切替先選定";
 const pageDescription =
@@ -404,6 +405,9 @@ export default function EmergencySupplierWithdrawalPage() {
             { href: "/contact", label: "専門家に今すぐ相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="emergency-supplier-withdrawal" />
       </div>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
 const pageDescription =
@@ -235,6 +236,9 @@ export default function HowToCompareElectricitySuppliersPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-compare-electricity-suppliers" />
+      </div>
     </main>
   );
 }

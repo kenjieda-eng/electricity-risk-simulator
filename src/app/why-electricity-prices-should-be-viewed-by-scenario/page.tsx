@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金はなぜシナリオ別に見る必要があるのか｜法人の予算策定と説明資料で役立つ考え方";
 const pageDescription =
@@ -147,6 +148,9 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-electricity-prices-should-be-viewed-by-scenario" />
+      </div>
     </main>
   );
 }

@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function SwitchingBusinessElectricityContractPage() {
   return (
     <ReviewArticlePage
+      slug="switching-business-electricity-contract"
       title={pageTitle}
       lead={[
         "見積比較で契約先を決めた後、実務でつまずきやすいのが切替手続きです。現契約の解約条件や開始日の扱いを誤ると、請求確認や社内説明が難しくなります。",

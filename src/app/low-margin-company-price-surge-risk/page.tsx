@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "利益率の低い企業が電気料金高騰に直面したときのリスク｜収益への影響と対策";
@@ -230,6 +231,9 @@ export default function LowMarginCompanyPriceSurgeRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="low-margin-company-price-surge-risk" />
+      </div>
     </main>
   );
 }

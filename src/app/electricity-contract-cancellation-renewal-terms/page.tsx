@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電力契約で確認したい違約金・契約期間・更新条件｜比較時の見落とし防止";
 const pageDescription =
@@ -147,6 +148,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-contract-cancellation-renewal-terms" />
+      </div>
     </main>
   );
 }

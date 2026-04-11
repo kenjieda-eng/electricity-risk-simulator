@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "新電力の相見積もり前に整理したい情報｜見積精度を上げるための準備";
@@ -283,6 +284,9 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="information-to-prepare-before-quotation-request" />
+      </div>
     </main>
   );
 }

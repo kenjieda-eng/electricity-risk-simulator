@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給と通常の電力契約の違いを法人向けに比較";
 const pageDescription =
@@ -143,6 +144,9 @@ export default function LastResortVsRetailContractPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-vs-retail-contract" />
+      </div>
     </main>
   );
 }

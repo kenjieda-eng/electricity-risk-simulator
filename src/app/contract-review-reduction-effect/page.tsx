@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "契約見直しによる削減額の目安｜プラン切替・契約電力見直しの効果";
 const pageDescription =
@@ -282,6 +283,9 @@ export default function ContractReviewReductionEffectPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="contract-review-reduction-effect" />
       </div>
     </main>
   );

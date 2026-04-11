@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "先物取引とは何か｜将来の価格を先に固定する仕組み";
 const pageDescription =
@@ -211,6 +212,9 @@ export default function PowerFuturesPage() {
 
         <PowerProcurementSeriesNav currentSlug="power-futures" />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="power-futures" />
+      </div>
     </main>
   );
 }

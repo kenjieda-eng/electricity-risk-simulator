@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "オフィスの電気代相場｜従業員数・坪数・ビル規模別のベンチマーク";
 const pageDescription =
@@ -265,6 +266,9 @@ export default function OfficeElectricityCostBenchmarkPage() {
             { href: "/how-to-start-electricity-contract-review", label: "電力契約の見直し方を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="office-electricity-cost-benchmark" />
       </div>
     </main>
   );

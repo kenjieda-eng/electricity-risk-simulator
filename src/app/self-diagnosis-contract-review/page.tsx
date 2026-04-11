@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック";
@@ -337,6 +338,9 @@ export default function SelfDiagnosisContractReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="self-diagnosis-contract-review" />
+      </div>
     </main>
   );
 }

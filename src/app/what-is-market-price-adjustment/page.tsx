@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電力契約でよくある市場価格調整とは｜市場連動との違いも解説";
 const pageDescription =
@@ -164,6 +165,9 @@ export default function WhatIsMarketPriceAdjustmentPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="what-is-market-price-adjustment" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "特別高圧電力の料金の見方｜法人が請求書と料金構造で確認したいポイント";
 const pageDescription =
@@ -185,6 +186,9 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="extra-high-voltage-electricity-pricing" />
+      </div>
     </main>
   );
 }

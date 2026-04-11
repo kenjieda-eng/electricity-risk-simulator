@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "特別高圧電力見積書の見方｜大規模契約の比較で確認したい項目";
@@ -292,6 +293,9 @@ export default function ExtraHighVoltageQuotationGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="extra-high-voltage-quotation-guide" />
+      </div>
     </main>
   );
 }

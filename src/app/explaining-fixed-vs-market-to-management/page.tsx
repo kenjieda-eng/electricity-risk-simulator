@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "固定と市場連動の比較を経営層に説明するときのポイント｜判断材料の整理";
@@ -266,6 +267,9 @@ export default function ExplainingFixedVsMarketToManagementPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="explaining-fixed-vs-market-to-management" />
+      </div>
     </main>
   );
 }

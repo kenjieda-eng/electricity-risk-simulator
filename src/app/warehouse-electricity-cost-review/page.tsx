@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "物流倉庫の電気料金見直しポイント｜稼働時間と設備負荷を踏まえた考え方";
@@ -334,6 +335,9 @@ export default function WarehouseElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="warehouse-electricity-cost-review" />
+      </div>
     </main>
   );
 }

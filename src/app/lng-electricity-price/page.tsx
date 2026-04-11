@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人の電気料金とLNGの関係｜なぜ海外のガス市場が日本の電気代に影響するのか";
 const pageDescription =
@@ -213,6 +214,9 @@ export default function LngElectricityPricePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="lng-electricity-price" />
+      </div>
     </main>
   );
 }

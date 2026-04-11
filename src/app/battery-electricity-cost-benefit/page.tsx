@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "蓄電池は電気料金対策としてどう効くか｜デマンド抑制とピークカットの仕組み";
@@ -295,6 +296,9 @@ export default function BatteryElectricityCostBenefitPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="battery-electricity-cost-benefit" />
+      </div>
     </main>
   );
 }

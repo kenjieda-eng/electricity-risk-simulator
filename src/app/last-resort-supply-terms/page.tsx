@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の約款はどう読むか 法人担当者向けの確認ポイント";
 const pageDescription =
@@ -134,6 +135,9 @@ export default function LastResortSupplyTermsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-terms" />
+      </div>
     </main>
   );
 }

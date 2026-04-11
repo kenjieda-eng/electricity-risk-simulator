@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ShouldYouReviewAroundSubsidyEndPage() {
   return (
     <ReviewArticlePage
+      slug="should-you-review-around-subsidy-end"
       title={pageTitle}
       lead={[
         "補助金終了や縮小の局面では、電気料金の見え方が急に変わるため、契約問題と政策要因が混同されやすくなります。見直し判断を誤らないには、要因を分けて整理することが重要です。",

@@ -31,3 +31,7 @@ export function getFeaturedArticles(limit = 5) {
   return articleList.filter((article) => article.featured).slice(0, limit);
 }
 
+export function getArticleBySlug(slug: string) {
+  return articleList.find((article) => article.slug === slug);
+}
+

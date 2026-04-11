@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説";
 const pageDescription =
@@ -180,6 +181,9 @@ export default function FuelCostAdjustmentUpperLimitPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fuel-cost-adjustment-upper-limit" />
+      </div>
     </main>
   );
 }

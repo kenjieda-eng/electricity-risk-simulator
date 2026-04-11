@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "固定プラン向き・市場連動向き簡易診断｜自社に合うプランを整理する";
@@ -300,6 +301,9 @@ export default function FixedVsMarketQuickDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fixed-vs-market-quick-diagnosis" />
+      </div>
     </main>
   );
 }

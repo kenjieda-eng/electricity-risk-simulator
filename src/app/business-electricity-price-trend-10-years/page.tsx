@@ -8,6 +8,7 @@ import {
   TRANSITION_COMPARISON_CARDS,
   TREND_EVENT_TIMELINE,
 } from "../../data/businessElectricityTrendHubData";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -357,6 +358,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           </div>
         </div>
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="business-electricity-price-trend-10-years" />
+      </div>
     </main>
   );
 }

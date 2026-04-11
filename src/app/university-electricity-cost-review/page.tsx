@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "大学キャンパスの電気料金見直しポイント｜複数棟・研究設備を踏まえた考え方";
@@ -327,6 +328,9 @@ export default function UniversityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="university-electricity-cost-review" />
+      </div>
     </main>
   );
 }

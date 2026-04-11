@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "工場は固定と市場連動のどちらが向くか｜稼働パターンと負荷から考える";
@@ -276,6 +277,9 @@ export default function FactoryFixedVsMarketLinkedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="factory-fixed-vs-market-linked" />
+      </div>
     </main>
   );
 }

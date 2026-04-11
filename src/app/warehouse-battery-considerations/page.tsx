@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "倉庫で蓄電池を検討するときの着眼点｜屋根面積と太陽光の組み合わせ";
@@ -336,6 +337,9 @@ export default function WarehouseBatteryConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="warehouse-battery-considerations" />
+      </div>
     </main>
   );
 }

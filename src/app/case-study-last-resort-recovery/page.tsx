@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給から通常契約に切り替えた事例｜中小製造業";
 const pageDescription =
@@ -316,6 +317,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-last-resort-recovery" />
       </div>
     </main>
   );

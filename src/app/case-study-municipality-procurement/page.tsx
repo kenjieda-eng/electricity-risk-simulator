@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体：12施設統合調達で年間3,100万円削減した事例｜地方自治体";
 const pageDescription =
@@ -290,6 +291,9 @@ export default function CaseStudyMunicipalityPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-municipality-procurement" />
       </div>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPX価格変動の要因｜需給・燃料・再エネ出力・気象の影響を解説";
 const pageDescription =
@@ -174,6 +175,9 @@ export default function JepxPriceVolatilityPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="jepx-price-volatility" />
+      </div>
     </main>
   );
 }

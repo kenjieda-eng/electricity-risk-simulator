@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント";
 const pageDescription =
@@ -225,6 +226,9 @@ export default function WhenToReviewElectricityContractPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="when-to-review-electricity-contract" />
+      </div>
     </main>
   );
 }

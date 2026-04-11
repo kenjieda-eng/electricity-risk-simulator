@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人の電気料金が高い会社に共通する特徴とは？見直しポイントを解説";
 const pageDescription =
@@ -186,6 +187,9 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-business-electricity-costs-are-high" />
+      </div>
     </main>
   );
 }

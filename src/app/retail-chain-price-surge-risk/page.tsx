@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "店舗チェーンが料金高騰に直面したときのリスク｜多店舗への累積影響";
@@ -232,6 +233,9 @@ export default function RetailChainPriceSurgeRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="retail-chain-price-surge-risk" />
+      </div>
     </main>
   );
 }

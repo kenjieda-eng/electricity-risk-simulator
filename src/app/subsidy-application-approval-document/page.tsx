@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "補助金申請を前提とした稟議書の書き方｜構成と数値の示し方";
 const pageDescription =
@@ -324,6 +325,9 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidy-application-approval-document" />
       </div>
     </main>
   );

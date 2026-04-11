@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "研究施設の電気料金見直しポイント｜精密機器と環境管理を踏まえた考え方";
@@ -310,6 +311,9 @@ export default function ResearchFacilityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="research-facility-electricity-cost-review" />
+      </div>
     </main>
   );
 }

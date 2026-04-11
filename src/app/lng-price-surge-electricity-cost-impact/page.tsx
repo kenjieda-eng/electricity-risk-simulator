@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "LNG高騰で法人の電気料金はどう上がるか｜価格波及の仕組みと備え方";
@@ -291,6 +292,9 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="lng-price-surge-electricity-cost-impact" />
+      </div>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "契約電力とは｜法人の電気料金・基本料金・見積比較で押さえたい考え方";
 const pageDescription =
@@ -226,6 +227,9 @@ export default function ContractDemandWhatIsItPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="contract-demand-what-is-it" />
+      </div>
     </main>
   );
 }

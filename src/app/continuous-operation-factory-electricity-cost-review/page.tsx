@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "連続操業工場の電気料金リスク｜24時間稼働の大きなベースロードを踏まえた考え方";
@@ -312,6 +313,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="continuous-operation-factory-electricity-cost-review" />
+      </div>
     </main>
   );
 }

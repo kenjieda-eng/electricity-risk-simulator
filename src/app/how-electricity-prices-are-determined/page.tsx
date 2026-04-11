@@ -5,6 +5,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/businessElectricityTrendHubData";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気の価格はどう決まるのか｜JEPX価格の決まり方";
 const pageDescription =
@@ -229,6 +230,9 @@ export default function HowElectricityPricesAreDeterminedPage() {
           extraLinks={[{ href: "/fuel-procurement-and-electricity-prices", title: "燃料調達との関係も読む" }]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-electricity-prices-are-determined" />
+      </div>
     </main>
   );
 }

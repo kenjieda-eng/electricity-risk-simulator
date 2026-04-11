@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "電力量料金の見方｜使用量と単価の関係を理解する";
@@ -308,6 +309,9 @@ export default function EnergyChargeExplainedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="energy-charge-explained" />
+      </div>
     </main>
   );
 }

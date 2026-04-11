@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例｜居酒屋チェーン";
 const pageDescription =
@@ -255,6 +256,9 @@ export default function CaseStudyRestaurantChainPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-restaurant-chain-reduction" />
       </div>
     </main>
   );

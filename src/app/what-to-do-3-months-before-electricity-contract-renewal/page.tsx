@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人の電力契約更新の3か月前にやること｜見積比較と社内準備の進め方";
@@ -263,6 +264,9 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="what-to-do-3-months-before-electricity-contract-renewal" />
+      </div>
     </main>
   );
 }

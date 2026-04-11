@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "公共体育館の電気料金見直しポイント｜空調・照明と稼働パターンを踏まえた考え方";
@@ -320,6 +321,9 @@ export default function PublicGymElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="public-gym-electricity-cost-review" />
+      </div>
     </main>
   );
 }

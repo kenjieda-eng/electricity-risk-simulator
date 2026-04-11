@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "ホテルの電気料金見直しポイント｜24時間稼働と客室管理を踏まえた考え方";
@@ -300,6 +301,9 @@ export default function HotelElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="hotel-electricity-cost-review" />
+      </div>
     </main>
   );
 }

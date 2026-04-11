@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "ホテル：市場連動プランから固定プランへ切り替えた事例｜首都圏ビジネスホテル";
 const pageDescription =
@@ -250,6 +251,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-hotel-market-linked-switch" />
       </div>
     </main>
   );

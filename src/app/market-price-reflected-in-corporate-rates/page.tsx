@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場価格が法人料金に反映される仕組み｜JEPXから請求書までの流れ";
@@ -307,6 +308,9 @@ export default function MarketPriceReflectedInCorporateRatesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-price-reflected-in-corporate-rates" />
+      </div>
     </main>
   );
 }

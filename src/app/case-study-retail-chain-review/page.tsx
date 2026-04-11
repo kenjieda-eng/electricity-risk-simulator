@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "小売チェーン30店舗：一括見直しで年間4,200万円削減した事例｜ドラッグストア";
 const pageDescription =
@@ -277,6 +278,9 @@ export default function CaseStudyRetailChainPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-retail-chain-review" />
       </div>
     </main>
   );

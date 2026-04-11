@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "スーパーマーケットの電気料金見直しポイント｜冷蔵・空調負荷を踏まえた考え方";
@@ -327,6 +328,9 @@ export default function SupermarketElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="supermarket-electricity-cost-review" />
+      </div>
     </main>
   );
 }

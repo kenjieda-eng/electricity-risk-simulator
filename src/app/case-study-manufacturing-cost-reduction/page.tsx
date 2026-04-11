@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "製造業：年間電気代を18%削減した契約見直し事例｜関東の金属加工工場";
 const pageDescription =
@@ -263,6 +264,9 @@ export default function CaseStudyManufacturingPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-manufacturing-cost-reduction" />
       </div>
     </main>
   );

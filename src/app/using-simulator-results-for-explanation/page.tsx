@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "シミュレーター結果を説明材料にする方法｜診断結果の読み方と活用";
@@ -249,6 +250,9 @@ export default function UsingSimulatorResultsForExplanationPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="using-simulator-results-for-explanation" />
+      </div>
     </main>
   );
 }

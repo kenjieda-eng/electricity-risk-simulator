@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人が蓄電池を検討する理由｜電気料金対策とBCPの両面から考える";
@@ -309,6 +310,9 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-corporations-consider-batteries" />
+      </div>
     </main>
   );
 }

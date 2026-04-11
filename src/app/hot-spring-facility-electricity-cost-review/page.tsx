@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "温浴施設の電気料金リスク｜給湯・循環・空調の高負荷を踏まえた考え方";
@@ -320,6 +321,9 @@ export default function HotSpringFacilityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="hot-spring-facility-electricity-cost-review" />
+      </div>
     </main>
   );
 }

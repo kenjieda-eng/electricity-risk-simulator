@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "ショッピングモールの電気料金見直しポイント｜大規模施設の空調・共用部を踏まえた考え方";
@@ -320,6 +321,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="shopping-mall-electricity-cost-review" />
+      </div>
     </main>
   );
 }

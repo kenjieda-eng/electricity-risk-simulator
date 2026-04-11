@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "蓄電池導入が向く法人の特徴｜投資対効果が出やすい条件";
@@ -299,6 +300,9 @@ export default function BatterySuitedCorporationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="battery-suited-corporations" />
+      </div>
     </main>
   );
 }

@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import InfoBox from "../../components/simulator/InfoBox";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "容量拠出金を踏まえて法人が確認したいこと｜見積書・契約書・予算策定のポイント";
 const pageDescription =
@@ -329,6 +330,9 @@ export default function CapacityContributionWhatToCheckPage() {
             { href: "/articles/review-points", label: "見直しポイントを確認する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="capacity-contribution-what-to-check" />
       </div>
     </main>
   );

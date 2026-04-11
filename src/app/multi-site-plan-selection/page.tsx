@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "多拠点企業はどちらを選ぶべきか｜拠点ごとの最適化と全体管理";
@@ -278,6 +279,9 @@ export default function MultiSitePlanSelectionPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="multi-site-plan-selection" />
+      </div>
     </main>
   );
 }

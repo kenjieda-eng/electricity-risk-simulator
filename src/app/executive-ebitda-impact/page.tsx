@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気代がEBITDAに与える影響の測り方｜CFO向けインパクト分析";
 const pageDescription =
@@ -357,6 +358,9 @@ export default function ExecutiveEbitdaImpactPage() {
             { href: "/contact", label: "経営相談はこちら" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="executive-ebitda-impact" />
       </div>
     </main>
   );

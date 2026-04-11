@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "削減施策の効果・難易度マトリクス｜優先順位の判断軸";
 const pageDescription =
@@ -340,6 +341,9 @@ export default function ReductionMeasureDifficultyMatrixPage() {
             { href: "/how-to-start-electricity-contract-review", label: "電力契約の見直し方を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="reduction-measure-difficulty-matrix" />
       </div>
     </main>
   );

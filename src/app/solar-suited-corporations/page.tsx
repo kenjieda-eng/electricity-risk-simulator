@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自家消費型太陽光が向く法人の特徴｜屋根面積と使用パターンの条件";
@@ -297,6 +298,9 @@ export default function SolarSuitedCorporationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="solar-suited-corporations" />
+      </div>
     </main>
   );
 }

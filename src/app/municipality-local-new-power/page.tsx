@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体新電力（シュタットベルケ）の検討フレーム｜設立判断と運営リスク";
 const pageDescription =
@@ -411,6 +412,9 @@ export default function MunicipalityLocalNewPowerPage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-local-new-power" />
       </div>
     </main>
   );

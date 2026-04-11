@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自治体庁内で電力契約見直しを説明するときのポイント｜議会・住民への説明を見据えた整理";
@@ -235,6 +236,9 @@ export default function ExplainingInMunicipalityPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="explaining-in-municipality" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "容量市場と法人料金の関係｜制度の仕組みと今後の負担見通し";
@@ -293,6 +294,9 @@ export default function CapacityMarketAndCorporateRatesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="capacity-market-and-corporate-rates" />
+      </div>
     </main>
   );
 }

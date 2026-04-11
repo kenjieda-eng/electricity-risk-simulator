@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "太陽光導入向き不向き診断｜自家消費型太陽光が自社に合うかを整理";
@@ -349,6 +350,9 @@ export default function SolarSuitabilityDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="solar-suitability-diagnosis" />
+      </div>
     </main>
   );
 }

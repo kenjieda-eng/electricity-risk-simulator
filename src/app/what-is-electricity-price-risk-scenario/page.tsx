@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオとは｜法人が上振れリスクを把握するための基本的な考え方";
 const pageDescription =
@@ -171,6 +172,9 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="what-is-electricity-price-risk-scenario" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "災害で法人・企業・自治体の電気料金・電気代はどう上がる？供給停止リスクを解説";
@@ -179,6 +180,9 @@ export default function ElectricityCostRiskDisasterPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-cost-risk-disaster" />
+      </div>
     </main>
   );
 }

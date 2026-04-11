@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "アミューズメント施設の電気料金リスク｜照明・空調・設備の高負荷を踏まえた考え方";
@@ -327,6 +328,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="amusement-facility-electricity-cost-review" />
+      </div>
     </main>
   );
 }

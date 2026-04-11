@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ReviewContractWhenUsageChangesPage() {
   return (
     <ReviewArticlePage
+      slug="review-contract-when-usage-changes"
       title={pageTitle}
       lead={[
         "値上げ通知がなくても、使用量やデマンドの変化は契約見直しの重要なサインです。運用実態が変わると、契約条件との相性が崩れ、電気料金や電気代が想定どおりに下がらないことがあります。",

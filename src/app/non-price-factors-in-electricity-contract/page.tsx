@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理";
@@ -260,6 +261,9 @@ export default function NonPriceFactorsInElectricityContractPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="non-price-factors-in-electricity-contract" />
+      </div>
     </main>
   );
 }

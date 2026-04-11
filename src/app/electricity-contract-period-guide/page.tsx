@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "電力契約の契約期間の見方と注意点｜1年・2年・3年契約の違い";
@@ -257,6 +258,9 @@ export default function ElectricityContractPeriodGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-contract-period-guide" />
+      </div>
     </main>
   );
 }

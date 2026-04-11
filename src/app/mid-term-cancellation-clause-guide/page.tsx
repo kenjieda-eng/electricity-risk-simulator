@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "電力契約の中途解約条項の見方と注意点｜違約金と予告期間の確認";
@@ -249,6 +250,9 @@ export default function MidTermCancellationClauseGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="mid-term-cancellation-clause-guide" />
+      </div>
     </main>
   );
 }

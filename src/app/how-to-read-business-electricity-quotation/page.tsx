@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人向け電気料金見積書の見方｜比較前に確認したい項目";
@@ -319,6 +320,9 @@ export default function HowToReadBusinessElectricityQuotationPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-read-business-electricity-quotation" />
+      </div>
     </main>
   );
 }

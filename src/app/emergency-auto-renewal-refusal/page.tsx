@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自動更新契約の停止・拒否の進め方｜期限管理と手続きガイド";
 const pageDescription =
@@ -432,6 +433,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
             { href: "/contact", label: "専門家に無料相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="emergency-auto-renewal-refusal" />
       </div>
     </main>
   );

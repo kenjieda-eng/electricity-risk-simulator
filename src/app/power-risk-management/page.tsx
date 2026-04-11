@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方";
 const pageDescription =
@@ -227,6 +228,9 @@ export default function PowerRiskManagementPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="power-risk-management" />
+      </div>
     </main>
   );
 }

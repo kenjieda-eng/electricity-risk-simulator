@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電力・省エネ補助金まとめ｜2026年度に使える主要制度一覧";
 const pageDescription =
@@ -280,6 +281,9 @@ export default function SubsidiesOverviewPage() {
             { href: "/articles/subsidies", label: "補助金記事一覧を見る" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidies-overview" />
       </div>
     </main>
   );

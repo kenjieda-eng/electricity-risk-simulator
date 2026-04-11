@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人の電力契約見直しチェックリスト｜見積依頼前に確認したいポイント";
@@ -341,6 +342,9 @@ export default function BusinessElectricityContractChecklistPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="business-electricity-contract-checklist" />
+      </div>
     </main>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算";
 const pageDescription =
@@ -285,6 +286,9 @@ export default function CapacityContributionCostImpactPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="capacity-contribution-cost-impact" />
       </div>
     </main>
   );

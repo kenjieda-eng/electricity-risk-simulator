@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "需給逼迫で法人の電気料金はどう変わるか｜市場価格高騰と契約への影響";
@@ -240,6 +241,9 @@ export default function SupplyDemandTightnessImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="supply-demand-tightness-impact" />
+      </div>
     </main>
   );
 }

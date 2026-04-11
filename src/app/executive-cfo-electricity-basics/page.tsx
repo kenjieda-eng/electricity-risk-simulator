@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "CFOのための電力市場基礎｜燃調費・市場連動・容量拠出金を1ページで";
 const pageDescription =
@@ -454,6 +455,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             { href: "/contact", label: "経営相談はこちら" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="executive-cfo-electricity-basics" />
       </div>
     </main>
   );

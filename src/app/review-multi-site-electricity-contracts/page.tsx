@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ReviewMultiSiteElectricityContractsPage() {
   return (
     <ReviewArticlePage
+      slug="review-multi-site-electricity-contracts"
       title={pageTitle}
       lead={[
         "複数拠点を持つ法人の電力契約見直しは、単一拠点より整理対象が多くなります。契約条件、更新月、使用実態が拠点ごとに違うため、本社一括で進めるだけでは混乱しやすくなります。",

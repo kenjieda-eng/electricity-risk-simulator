@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体電力入札が不調になったときの対応ガイド｜近年増える不落への実務";
 const pageDescription =
@@ -343,6 +344,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-procurement-bidding-failure" />
       </div>
     </main>
   );

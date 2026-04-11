@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "見積書比較表の作り方｜法人の電力契約で比較しやすい整理方法";
@@ -359,6 +360,9 @@ export default function QuotationComparisonTableGuidePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="quotation-comparison-table-guide" />
+      </div>
     </main>
   );
 }

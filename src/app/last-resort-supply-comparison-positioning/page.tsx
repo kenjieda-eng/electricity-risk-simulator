@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "最終保障供給を比較検討の中でどう位置づけるか｜通常契約との判断基準";
@@ -246,6 +247,9 @@ export default function LastResortSupplyComparisonPositioningPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-comparison-positioning" />
+      </div>
     </main>
   );
 }

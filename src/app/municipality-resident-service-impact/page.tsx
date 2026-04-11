@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気代高騰が住民サービスに与える影響と対応｜公共施設の運営";
 const pageDescription =
@@ -343,6 +344,9 @@ export default function MunicipalityResidentServiceImpactPage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-resident-service-impact" />
       </div>
     </main>
   );

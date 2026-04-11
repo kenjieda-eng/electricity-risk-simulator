@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "電力契約見直しの稟議書に入れたい論点整理｜承認を得やすい構成";
@@ -266,6 +267,9 @@ export default function ApprovalDocumentKeyPointsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="approval-document-key-points" />
+      </div>
     </main>
   );
 }

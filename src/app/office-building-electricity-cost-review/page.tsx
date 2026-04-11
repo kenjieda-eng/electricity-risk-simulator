@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "オフィスビルの電気料金見直しポイント｜空調・照明負荷を踏まえた考え方";
@@ -325,6 +326,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="office-building-electricity-cost-review" />
+      </div>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 export const metadata: Metadata = {
   title: "固定プランとは？法人の電気料金を安定させやすい契約の考え方",
@@ -139,6 +140,9 @@ export default function FixedPricePlanPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fixed-price-plan" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "エリア別 新電力撤退状況マップ｜2022年以降の契約解除動向";
 const pageDescription =
@@ -548,6 +549,9 @@ export default function RegionSupplierWithdrawalMapPage() {
             { href: "/emergency-supplier-withdrawal", label: "緊急対応ガイドを見る" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="region-supplier-withdrawal-map" />
       </div>
     </main>
   );

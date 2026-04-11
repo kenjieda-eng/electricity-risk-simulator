@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "自治体庁舎の電気料金見直しポイント｜年度予算制を踏まえた考え方";
@@ -296,6 +297,9 @@ export default function MunicipalityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-electricity-cost-review" />
+      </div>
     </main>
   );
 }

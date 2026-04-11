@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
   return (
     <ReviewArticlePage
+      slug="should-you-review-after-price-increase-notice"
       title={pageTitle}
       lead={[
         "値上げ通知を受けると、すぐ切替を検討したくなりますが、まずは通知内容の確認が先です。適用時期や対象条件を把握しないまま比較すると、判断を誤る可能性があります。",

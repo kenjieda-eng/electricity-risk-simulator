@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function DocumentsNeededForElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      slug="documents-needed-for-electricity-contract-review"
       title={pageTitle}
       lead={[
         "見直し実務が止まる原因の多くは、比較前に必要資料がそろっていないことです。何を集めるべきかを先に整理すると、見積取得や社内確認をスムーズに進められます。",

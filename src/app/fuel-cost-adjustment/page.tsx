@@ -7,6 +7,7 @@ import {
   FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE,
   FUEL_IMPORT_PRICE_YEARLY,
 } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説";
 const pageDescription =
@@ -224,6 +225,9 @@ export default function FuelCostAdjustmentPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fuel-cost-adjustment" />
+      </div>
     </main>
   );
 }

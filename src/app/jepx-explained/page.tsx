@@ -7,6 +7,7 @@ import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXとは｜卸電力市場の仕組み・価格推移・法人料金への影響を徹底解説";
 const pageDescription =
@@ -264,6 +265,9 @@ export default function JepxExplainedPage() {
 
         <PowerProcurementSeriesNav currentSlug="jepx-explained" />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="jepx-explained" />
+      </div>
     </main>
   );
 }

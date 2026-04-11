@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "病院：デマンド制御で基本料金を22%圧縮した事例｜中規模総合病院";
 const pageDescription =
@@ -281,6 +282,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-hospital-peak-cut" />
       </div>
     </main>
   );

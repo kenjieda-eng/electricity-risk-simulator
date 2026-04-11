@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "デマンドとは？法人の電気料金と契約電力の関係を解説";
 const pageDescription =
@@ -256,6 +257,9 @@ export default function DemandChargePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="demand-charge" />
+      </div>
     </main>
   );
 }

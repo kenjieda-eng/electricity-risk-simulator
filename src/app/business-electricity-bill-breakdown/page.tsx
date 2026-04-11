@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金の内訳とは｜基本料金・電力量料金・燃料費調整額・再エネ賦課金の見方";
 const pageDescription =
@@ -641,6 +642,9 @@ export default function BusinessElectricityBillBreakdownPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="business-electricity-bill-breakdown" />
+      </div>
     </main>
   );
 }

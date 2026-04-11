@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "契約見直しの社内合意を進める順番｜関係者の巻き込み方と段取り";
@@ -283,6 +284,9 @@ export default function InternalConsensusBuildingOrderPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="internal-consensus-building-order" />
+      </div>
     </main>
   );
 }

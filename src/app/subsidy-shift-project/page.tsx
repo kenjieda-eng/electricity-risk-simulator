@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "SHIFT事業と電力コスト戦略｜SBT認証・脱炭素経営支援の活用";
 const pageDescription =
@@ -281,6 +282,9 @@ export default function SubsidyShiftProjectPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidy-shift-project" />
       </div>
     </main>
   );

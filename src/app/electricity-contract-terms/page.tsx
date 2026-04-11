@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電力契約で確認したい契約条件とは？更新・違約金を整理";
 const pageDescription =
@@ -188,6 +189,9 @@ export default function ElectricityContractTermsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-contract-terms" />
+      </div>
     </main>
   );
 }

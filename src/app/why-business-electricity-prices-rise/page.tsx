@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人の電気料金が上がる理由とは？値上がりの主な要因と見直しポイントを解説";
 const pageDescription =
@@ -240,6 +241,9 @@ export default function WhyBusinessElectricityPricesRisePage() {
           </div>
         </div>
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="why-business-electricity-prices-rise" />
+      </div>
     </main>
   );
 }

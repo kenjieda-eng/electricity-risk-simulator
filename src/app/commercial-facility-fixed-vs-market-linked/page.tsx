@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "商業施設は固定と市場連動のどちらが向くか｜営業時間と設備負荷から考える";
@@ -304,6 +305,9 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="commercial-facility-fixed-vs-market-linked" />
+      </div>
     </main>
   );
 }

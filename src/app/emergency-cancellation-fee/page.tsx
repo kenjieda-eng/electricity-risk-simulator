@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電力契約の違約金を請求されたときの対応｜妥当性確認と交渉手順";
 const pageDescription =
@@ -408,6 +409,9 @@ export default function EmergencyCancellationFeePage() {
             { href: "/", label: "シミュレーターで現状診断する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="emergency-cancellation-fee" />
       </div>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "請求書確認ポイント診断｜電気料金請求書の見落としをチェック";
@@ -303,6 +304,9 @@ export default function BillCheckDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="bill-check-diagnosis" />
+      </div>
     </main>
   );
 }

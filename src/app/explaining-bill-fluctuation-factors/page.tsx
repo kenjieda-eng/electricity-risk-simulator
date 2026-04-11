@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "請求書の変動要因を社内で説明するときのポイント｜なぜ金額が変わるのかの伝え方";
@@ -251,6 +252,9 @@ export default function ExplainingBillFluctuationFactorsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="explaining-bill-fluctuation-factors" />
+      </div>
     </main>
   );
 }

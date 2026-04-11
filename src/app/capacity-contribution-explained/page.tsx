@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "容量拠出金とは｜法人の電気料金にどう影響するか";
 const pageDescription =
@@ -281,6 +282,9 @@ export default function CapacityContributionExplainedPage() {
             { href: "/articles/price-increase", label: "料金が上がる理由をもっと知る" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="capacity-contribution-explained" />
       </div>
     </main>
   );

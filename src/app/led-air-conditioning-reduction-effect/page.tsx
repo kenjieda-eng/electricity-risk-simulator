@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "LED化・空調最適化の削減効果｜設備対策で使用量を下げる";
 const pageDescription =
@@ -315,6 +316,9 @@ export default function LedAirConditioningReductionEffectPage() {
             { href: "/electricity-cost-reduction-action-map", label: "削減施策一覧を見る" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="led-air-conditioning-reduction-effect" />
       </div>
     </main>
   );

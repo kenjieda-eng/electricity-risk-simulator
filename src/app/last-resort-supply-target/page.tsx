@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の対象は誰か 高圧・特別高圧の違いも解説";
 const pageDescription =
@@ -149,6 +150,9 @@ export default function LastResortSupplyTargetPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-target" />
+      </div>
     </main>
   );
 }

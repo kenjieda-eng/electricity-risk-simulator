@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
 const pageDescription =
@@ -176,6 +177,9 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="compare-market-linked-and-fixed-by-risk-pattern" />
+      </div>
     </main>
   );
 }

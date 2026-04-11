@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気代削減アクション一覧｜即効・短期・中長期で整理";
 const pageDescription =
@@ -326,6 +327,9 @@ export default function ElectricityCostReductionActionMapPage() {
             { href: "/how-to-start-electricity-contract-review", label: "電力契約の見直し方を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-cost-reduction-action-map" />
       </div>
     </main>
   );

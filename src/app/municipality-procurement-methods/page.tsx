@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体電力調達の入札実務｜一般競争・指名競争・随意契約の使い分け";
 const pageDescription =
@@ -330,6 +331,9 @@ export default function MunicipalityProcurementMethodsPage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="municipality-procurement-methods" />
       </div>
     </main>
   );

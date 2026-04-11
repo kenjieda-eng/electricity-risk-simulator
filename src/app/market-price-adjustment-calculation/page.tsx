@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場価格調整額の計算方法と契約約款の読み方｜法人向けに詳細解説";
 const pageDescription =
@@ -146,6 +147,9 @@ export default function MarketPriceAdjustmentCalculationPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-price-adjustment-calculation" />
+      </div>
     </main>
   );
 }

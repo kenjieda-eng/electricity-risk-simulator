@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "電気料金見直しを社内で説明するときのポイント｜稟議・共有で押さえたい論点";
@@ -384,6 +385,9 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-explain-electricity-cost-review-internally" />
+      </div>
     </main>
   );
 }

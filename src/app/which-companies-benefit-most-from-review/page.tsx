@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function WhichCompaniesBenefitMostFromReviewPage() {
   return (
     <ReviewArticlePage
+      slug="which-companies-benefit-most-from-review"
       title={pageTitle}
       lead={[
         "電力契約の見直しは、すべての法人で同じ効果が出るわけではありません。自社に見直し余地があるかを先に把握すると、比較の優先度を決めやすくなります。",

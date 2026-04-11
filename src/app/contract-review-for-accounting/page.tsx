@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "契約見直し時に経理が見るポイント｜予算管理と会計処理の確認";
@@ -255,6 +256,9 @@ export default function ContractReviewForAccountingPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="contract-review-for-accounting" />
+      </div>
     </main>
   );
 }

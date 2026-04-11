@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "非化石証書とは何か｜再エネ価値をどう確保するのか";
 const pageDescription =
@@ -188,6 +189,9 @@ export default function NonFossilCertificatesPage() {
           extraLinks={[{ href: "/renewable-power-procurement", title: "再エネ調達の記事に戻る" }]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="non-fossil-certificates" />
+      </div>
     </main>
   );
 }

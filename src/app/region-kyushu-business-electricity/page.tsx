@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性";
 const pageDescription =
@@ -435,6 +436,9 @@ export default function RegionKyushuBusinessElectricityPage() {
             { href: "/articles", label: "解説記事一覧へ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="region-kyushu-business-electricity" />
       </div>
     </main>
   );

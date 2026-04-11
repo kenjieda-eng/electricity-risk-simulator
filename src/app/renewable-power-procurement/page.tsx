@@ -3,6 +3,7 @@ import PowerProcurementSeriesNav from "../../components/articles/PowerProcuremen
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ電気はどう調達しているのか｜FIT・FIP・PPA・相対契約の考え方";
 const pageDescription =
@@ -198,6 +199,9 @@ export default function RenewablePowerProcurementPage() {
           extraLinks={[{ href: "/non-fossil-certificates", title: "非化石証書も続けて読む" }]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="renewable-power-procurement" />
+      </div>
     </main>
   );
 }

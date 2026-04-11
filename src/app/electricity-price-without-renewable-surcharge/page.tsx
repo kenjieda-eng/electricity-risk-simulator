@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import RenewableSurchargeCharts from "./_components/RenewableSurchargeCharts";
 import { RENEWABLE_SURCHARGE_DATA } from "./_lib/renewable-surcharge-data";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理";
 const pageDescription =
@@ -220,6 +221,9 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-price-without-renewable-surcharge" />
+      </div>
     </main>
   );
 }

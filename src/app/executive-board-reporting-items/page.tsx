@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "取締役会で報告すべき電力リスク5項目｜経営会議の議題として";
 const pageDescription =
@@ -422,6 +423,9 @@ export default function ExecutiveBoardReportingItemsPage() {
             { href: "/contact", label: "経営相談はこちら" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="executive-board-reporting-items" />
       </div>
     </main>
   );

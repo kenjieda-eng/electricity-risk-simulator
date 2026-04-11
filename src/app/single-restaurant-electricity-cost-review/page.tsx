@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "単独飲食店の電気料金見直しポイント｜調理設備と低利益率を踏まえた考え方";
@@ -327,6 +328,9 @@ export default function SingleRestaurantElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="single-restaurant-electricity-cost-review" />
+      </div>
     </main>
   );
 }

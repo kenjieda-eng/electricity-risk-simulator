@@ -7,6 +7,7 @@ import {
   LAST_RESORT_SUPPLY_MONTHLY,
   NEW_POWER_EXIT_YEARLY,
 } from "../../data/lastResortSupplyHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の件数推移と2022年急増の詳細｜新電力撤退と受付再開の流れ";
 const pageDescription =
@@ -199,6 +200,9 @@ export default function LastResortSupplyHistoryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-history" />
+      </div>
     </main>
   );
 }

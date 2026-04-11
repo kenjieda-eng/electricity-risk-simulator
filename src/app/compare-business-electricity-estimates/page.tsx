@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function CompareBusinessElectricityEstimatesPage() {
   return (
     <ReviewArticlePage
+      slug="compare-business-electricity-estimates"
       title={pageTitle}
       lead={[
         "見積書比較で起きやすい失敗は、見た目の単価だけで判断してしまうことです。法人向け電力契約では、後から効く調整項目や契約条件で総額が変わるため、項目のそろえ方が重要になります。",

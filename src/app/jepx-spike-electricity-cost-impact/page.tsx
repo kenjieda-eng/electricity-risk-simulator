@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "JEPX急騰で法人の電気料金はどう上がるか｜市場連動プランへの影響";
@@ -283,6 +284,9 @@ export default function JepxSpikeElectricityCostImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="jepx-spike-electricity-cost-impact" />
+      </div>
     </main>
   );
 }

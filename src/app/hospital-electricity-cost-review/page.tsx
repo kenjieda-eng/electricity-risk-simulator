@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -320,6 +321,9 @@ export default function HospitalElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="hospital-electricity-cost-review" />
+      </div>
     </main>
   );
 }

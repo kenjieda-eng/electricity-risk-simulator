@@ -4,6 +4,7 @@ import PowerProcurementSeriesNav from "../../components/articles/PowerProcuremen
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気はどこから来るのか｜電力会社の仕入れの全体像";
 const pageDescription =
@@ -247,6 +248,9 @@ export default function HowElectricityIsProcuredPage() {
 
         <PowerProcurementSeriesNav currentSlug="how-electricity-is-procured" />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-electricity-is-procured" />
+      </div>
     </main>
   );
 }

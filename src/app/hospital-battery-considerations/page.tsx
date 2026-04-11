@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "病院で蓄電池を検討するときの着眼点｜BCP対策と料金削減の両立";
@@ -252,6 +253,9 @@ export default function HospitalBatteryConsiderationsPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="hospital-battery-considerations" />
+      </div>
     </main>
   );
 }

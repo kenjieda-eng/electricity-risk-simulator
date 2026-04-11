@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "最終保障供給を社内説明するときのポイント｜なぜ料金が高いのかの伝え方";
@@ -250,6 +251,9 @@ export default function LastResortSupplyInternalExplanationPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-internal-explanation" />
+      </div>
     </main>
   );
 }

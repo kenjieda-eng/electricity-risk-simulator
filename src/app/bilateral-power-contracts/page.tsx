@@ -3,6 +3,7 @@ import PowerProcurementSeriesNav from "../../components/articles/PowerProcuremen
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "相対契約とは何か｜市場に依存しない仕入れの考え方";
 const pageDescription =
@@ -195,6 +196,9 @@ export default function BilateralPowerContractsPage() {
           extraLinks={[{ href: "/long-term-power-procurement", title: "長期契約も続けて読む" }]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="bilateral-power-contracts" />
+      </div>
     </main>
   );
 }

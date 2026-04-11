@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function FiveMinimumCheckpointsForElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      slug="5-minimum-checkpoints-for-electricity-contract-review"
       title={pageTitle}
       lead={[
         "見直し担当者が最初に迷いやすいのは、何をどこまで確認すべきかです。このページはカテゴリ5の入口として、最低限外せない5項目を実務向けに整理しています。",

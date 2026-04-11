@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体別 電力関連補助金の探し方｜都道府県・市区町村の独自制度";
 const pageDescription =
@@ -348,6 +349,9 @@ export default function SubsidyLocalGovernmentListPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="subsidy-local-government-list" />
       </div>
     </main>
   );

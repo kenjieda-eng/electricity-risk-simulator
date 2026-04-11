@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場価格調整額の上振れリスクと備え方｜2021年冬・2022年事例で学ぶ";
 const pageDescription =
@@ -186,6 +187,9 @@ export default function MarketPriceAdjustmentRiskPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-price-adjustment-risk" />
+      </div>
     </main>
   );
 }

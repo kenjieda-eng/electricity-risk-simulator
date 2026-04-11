@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人の電気料金はどのくらい上がるのか｜値上げ幅の見方を解説";
 const pageDescription =
@@ -174,6 +175,9 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-much-business-electricity-prices-increase" />
+      </div>
     </main>
   );
 }

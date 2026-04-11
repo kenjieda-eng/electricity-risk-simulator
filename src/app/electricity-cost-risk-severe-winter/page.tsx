@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "厳冬で法人・企業・自治体の電気料金・電気代はどう上がる？冬の上振れリスクを解説";
@@ -191,6 +192,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-cost-risk-severe-winter" />
+      </div>
     </main>
   );
 }

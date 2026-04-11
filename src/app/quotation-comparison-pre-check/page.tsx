@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "見積比較前チェック診断｜電力見積依頼を始める前に確認したいこと";
@@ -314,6 +315,9 @@ export default function QuotationComparisonPreCheckPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="quotation-comparison-pre-check" />
+      </div>
     </main>
   );
 }

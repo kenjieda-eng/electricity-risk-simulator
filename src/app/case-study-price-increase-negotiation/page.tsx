@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "値上げ通知の交渉で15%圧縮した事例｜製造業B社";
 const pageDescription =
@@ -274,6 +275,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="case-study-price-increase-negotiation" />
       </div>
     </main>
   );

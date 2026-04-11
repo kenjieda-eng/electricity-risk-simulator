@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオはどう使い分けるか｜法人の予算策定・比較検討・社内説明のための見方";
 const pageDescription =
@@ -152,6 +153,9 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-use-electricity-price-risk-scenarios" />
+      </div>
     </main>
   );
 }

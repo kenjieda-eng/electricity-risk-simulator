@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "業種別 法人電気代の月額相場一覧｜製造・小売・飲食・宿泊・医療・物流";
 const pageDescription =
@@ -292,6 +293,9 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
             { href: "/articles", label: "節約・見直しの解説を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="electricity-cost-benchmark-by-industry" />
       </div>
     </main>
   );

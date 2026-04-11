@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオを比較するときの見方｜影響時期・継続性・上振れの出方の整理";
 const pageDescription =
@@ -163,6 +164,9 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="how-to-compare-electricity-price-risk-scenarios" />
+      </div>
     </main>
   );
 }

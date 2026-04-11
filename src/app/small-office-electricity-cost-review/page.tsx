@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "中小オフィスの電気料金見直しポイント｜限られた使用量でも効果を出す考え方";
@@ -320,6 +321,9 @@ export default function SmallOfficeElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="small-office-electricity-cost-review" />
+      </div>
     </main>
   );
 }

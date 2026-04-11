@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "飲食店の電気代相場｜業態・席数・営業時間別のベンチマーク";
 const pageDescription =
@@ -258,6 +259,9 @@ export default function RestaurantElectricityCostBenchmarkPage() {
             { href: "/articles", label: "節約・見直しの解説を読む" },
           ]}
         />
+      </div>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="restaurant-electricity-cost-benchmark" />
       </div>
     </main>
   );

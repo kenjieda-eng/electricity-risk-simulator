@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "契約見直し時に施設管理が見るポイント｜設備と供給安定性の確認";
@@ -248,6 +249,9 @@ export default function ContractReviewForFacilityManagementPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="contract-review-for-facility-management" />
+      </div>
     </main>
   );
 }

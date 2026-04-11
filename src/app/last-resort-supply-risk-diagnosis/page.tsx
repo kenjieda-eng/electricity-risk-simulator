@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "最終保障供給リスク診断｜自社が最終保障供給になるリスクを確認";
@@ -315,6 +316,9 @@ export default function LastResortSupplyRiskDiagnosisPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="last-resort-supply-risk-diagnosis" />
+      </div>
     </main>
   );
 }

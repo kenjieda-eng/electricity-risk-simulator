@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界";
@@ -338,6 +339,9 @@ export default function DemandSuppressionEffectivenessPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="demand-suppression-effectiveness" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "容量拠出金増加で法人の負担はどう変わるか｜制度の今後と確認ポイント";
@@ -243,6 +244,9 @@ export default function CapacityContributionIncreaseImpactPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="capacity-contribution-increase-impact" />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "コンビニの電気料金見直しポイント｜24時間営業と多拠点を踏まえた考え方";
@@ -320,6 +321,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="convenience-store-electricity-cost-review" />
+      </div>
     </main>
   );
 }

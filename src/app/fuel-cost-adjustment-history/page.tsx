@@ -7,6 +7,7 @@ import {
   FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE,
   FUEL_IMPORT_PRICE_YEARLY,
 } from "../../data/priceAdjustmentHistory";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額の推移詳細｜2018〜2026年度の変動とウクライナ危機・激変緩和措置の影響";
 const pageDescription =
@@ -222,6 +223,9 @@ export default function FuelCostAdjustmentHistoryPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="fuel-cost-adjustment-history" />
+      </div>
     </main>
   );
 }

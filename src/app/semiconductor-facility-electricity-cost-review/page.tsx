@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "半導体関連施設の電気料金リスク｜クリーンルームと大規模電力を踏まえた考え方";
@@ -311,6 +312,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="semiconductor-facility-electricity-cost-review" />
+      </div>
     </main>
   );
 }

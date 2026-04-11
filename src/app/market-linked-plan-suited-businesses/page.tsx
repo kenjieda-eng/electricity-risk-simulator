@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場連動プランが向く可能性がある法人の特徴｜検討の前提と条件整理";
@@ -274,6 +275,9 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
           ]}
         />
       </section>
+      <div className="mt-6">
+        <CategoryNextStepCta slug="market-linked-plan-suited-businesses" />
+      </div>
     </main>
   );
 }
