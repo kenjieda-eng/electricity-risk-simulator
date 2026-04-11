@@ -95,7 +95,15 @@ export function PublicHeader() {
             />
           </Link>
           <div className="min-w-0 w-full flex-1">
-            <div className="flex items-center justify-end mb-1.5 sm:mb-0 sm:absolute sm:right-4 sm:top-3 lg:right-8">
+            <div className="flex items-center justify-end gap-2 mb-1.5 sm:mb-0 sm:absolute sm:right-4 sm:top-3 sm:gap-3 lg:right-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1 rounded-md border border-amber-400 bg-amber-50 px-2.5 py-1.5 text-xs font-semibold leading-tight text-amber-900 shadow-sm transition hover:bg-amber-100 hover:border-amber-500 sm:px-3 sm:py-2 sm:text-sm"
+                aria-label="お問い合わせ・ご相談受付ページへ移動"
+              >
+                <span aria-hidden="true">✉</span>
+                お問い合わせ・ご相談
+              </Link>
               <HeaderSearch />
             </div>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
