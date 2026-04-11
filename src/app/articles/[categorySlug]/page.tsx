@@ -548,6 +548,18 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         <h2 className="text-lg font-semibold text-slate-900">戻り導線と関連ページ</h2>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-md border-2 border-sky-500 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
+          >
+            シミュレーターで診断する
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md border-2 border-amber-400 bg-amber-50 px-4 py-2.5 text-sm font-semibold text-amber-900 transition hover:bg-amber-100"
+          >
+            お問い合わせ・ご相談受付
+          </Link>
+          <Link
             href="/articles"
             className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
