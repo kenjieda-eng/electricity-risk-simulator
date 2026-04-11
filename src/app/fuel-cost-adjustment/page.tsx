@@ -2,39 +2,38 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
+import {
+  FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE,
+  FUEL_IMPORT_PRICE_YEARLY,
+} from "../../data/priceAdjustmentHistory";
 
-const pageTitle = "燃料費調整額（燃調費）とは？法人の電気料金への影響と確認ポイントをわかりやすく解説";
+const pageTitle = "燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説";
 const pageDescription =
-  "燃料費調整額（燃調費）とは何か、法人の電気料金にどう影響するのかをわかりやすく解説。請求書で確認したいポイントや市場連動型との違い、見直し時の注意点も紹介します。";
+  "燃料費調整額（燃調費）の仕組み、LNG・原油・石炭CIF価格との関係、計算式、2018〜2026年度の推移、2022年の急騰、激変緩和措置（補助金）の影響まで、実データとグラフで解説します。";
+const pageUrl = "https://simulator.eic-jp.org/fuel-cost-adjustment";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
     "燃料費調整額",
-    "燃調費 法人",
-    "法人 電気料金 見直し",
-    "市場連動型 燃調費",
-    "電気料金 明細 見方",
+    "燃調費",
+    "燃料費調整額 推移",
+    "燃料費調整額 計算",
+    "燃料費調整額 LNG",
+    "電気料金 燃調費",
+    "激変緩和措置 電気料金",
   ],
-  alternates: {
-    canonical: "https://simulator.eic-jp.org/fuel-cost-adjustment",
-  },
+  alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: "https://simulator.eic-jp.org/fuel-cost-adjustment",
+    url: pageUrl,
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
-    images: [
-      {
-        url: "/ogp-default.png",
-        width: 1200,
-        height: 630,
-        alt: "燃料費調整額（燃調費）とは",
-      },
-    ],
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,141 +44,179 @@ export const metadata: Metadata = {
 };
 
 export default function FuelCostAdjustmentPage() {
+  const labels = FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE.map((r) => `${r.fiscalYear}年度`);
+  const values = FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE.map((r) => r.yenPerKwh);
+  const lngLabels = FUEL_IMPORT_PRICE_YEARLY.map((r) => `${r.fiscalYear}年度`);
+  const lngValues = FUEL_IMPORT_PRICE_YEARLY.map((r) => r.lngYenPerTon / 1000);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          燃料費調整額（燃調費）とは？法人の電気料金への影響をわかりやすく解説
-        </h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">燃料費調整額（燃調費）とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人の電気料金を見直すとき、契約単価や基本料金だけを見て判断してしまうと、実際の請求額とのずれが生じることがあります。
-          その理由の一つが、毎月変動する燃料費調整額（燃調費）です。
+          燃料費調整額（燃調費）は、発電用燃料である LNG・原油・石炭の価格変動を電気料金に反映する仕組みです。
+          月ごとに単価が変わるため、同じ使用量でも請求額が毎月変動する主な原因になります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          燃料費調整額は、発電に使う燃料価格の変動を電気料金に反映する仕組みです。特にLNGや石炭、原油などの価格が動くと、
-          法人向けの電気料金にも影響が及びます。このページでは、燃料費調整額の基本、請求書で確認すべき点、契約見直し時の整理軸を解説します。
+          このページでは、燃調費の計算式、貿易統計 CIF 価格との関係、2018〜2026 年度の推移、
+          2022 年ウクライナ危機時の急騰、激変緩和措置（電気料金値引き補助金）の影響までを、実データとグラフで整理します。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額とは</h2>
+          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額の仕組み</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額とは、発電に使う燃料の価格変動を電気料金に反映するための調整項目です。日本の電気料金は、常に同じ条件で発電できるわけではありません。
-            火力発電に使うLNG、石炭、原油などの価格が上がれば、電力会社の調達コストも上がります。
+            日本の電気料金は、発電コストの中でも大きな割合を占める燃料費が変動した場合に、
+            一定のルールで料金に反映する「燃料費調整制度」が設けられています（電気事業法に基づく算定規則）。
           </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            この変動分を一定のルールで電気料金に反映する仕組みが燃料費調整額です。そのため、同じ使用量でも月によって請求額が変わることがあります。
-            法人の電気料金では、基本料金や電力量料金と並んで、請求額に影響する重要な項目です。
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            具体的には、貿易統計上の LNG・原油・石炭の平均 CIF 価格を 3 ヶ月分平均し、
+            基準燃料価格との差に応じて kWh あたりの単価を毎月改定します。
+            改定は 3 ヶ月前の貿易統計を参照するため、実際の燃料市況とは 3〜5 ヶ月程度のタイムラグがあります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜ燃料費調整額は毎月変わるのか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額の計算式</h2>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-900">
+            <p className="font-semibold">
+              燃料費調整単価 =（平均燃料価格 − 基準燃料価格）× 基準単価 ÷ 1,000
+            </p>
+            <p className="mt-2 text-xs text-slate-700">
+              平均燃料価格 = 原油 CIF × α + LNG CIF × β + 石炭 CIF × γ（換算係数は会社・契約区分ごとに定める）
+            </p>
+          </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額が毎月変わるのは、発電用燃料の価格が一定ではないためです。LNGや石炭、原油などの国際価格は、世界の需給、
-            産地のトラブル、地政学リスク、為替の変動などによって動きます。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            日本は燃料の多くを海外から輸入しているため、海外市況や円安の影響を受けやすい構造です。その結果、発電コストが変わり、
-            それが燃料費調整額を通じて電気料金に反映されます。請求額が増えたときは、使用量だけでなく燃料費調整額の変化も確認する必要があります。
+            平均燃料価格が基準値を上回ると燃調はプラス（上乗せ）、下回るとマイナス（値引き）になります。
+            2020 年度のようにコロナ禍で世界的に燃料需要が落ち込んだ時期はマイナスの月が続きました。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人の電気料金で燃料費調整額が影響するポイント</h2>
+          <h2 className="text-xl font-semibold text-slate-900">2018〜2026年度の推移（東京電力EP 高圧）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人の電気料金を見るときは、単に契約単価が安いかどうかだけでなく、最終的な請求額に何が乗っているかを見ることが大切です。
-            燃料費調整額は、電力量料金に上乗せまたは調整される形で反映されることが多く、使用量が多い法人ほど影響額も大きくなりやすくなります。
+            以下は東京電力エナジーパートナーの高圧料金メニューにおける、年度平均の燃調単価の概算推移です。
+            2022 年度にウクライナ危機起点の LNG 急騰で過去最高水準まで上昇し、
+            2023 年度は政府の激変緩和措置（電気料金値引き）で見かけ上は低く抑えられています。
           </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            工場、倉庫、商業施設、オフィスビルなどでは、燃料費調整額の変動が月次コストに与える影響を無視できません。請求書や料金明細では、
-            基本料金、電力量料金、燃料費調整額、再エネ賦課金を分けて見て、どの項目が増減しているかを確認することが重要です。
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <PriceAdjustmentLineChart
+              labels={labels}
+              series={[
+                {
+                  label: "燃調単価 年度平均（円/kWh）※補助反映後",
+                  values,
+                  color: "#dc2626",
+                  fillColor: "rgba(220,38,38,0.14)",
+                },
+              ]}
+              yTitle="円/kWh"
+            />
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 実績は月次で大きく変動します。激変緩和措置（2023年1月〜）の値引きを反映した概算です。
+            正確な月次値は東京電力エナジーパートナーの公表資料をご確認ください。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">年度別の燃調と解説</h2>
+          <table className="mt-4 w-full min-w-[680px] border-collapse text-sm text-slate-700">
+            <thead className="bg-slate-50 text-slate-900">
+              <tr>
+                <th className="border border-slate-200 px-3 py-2 text-left">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">燃調（概算）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">補助反映分</th>
+                <th className="border border-slate-200 px-3 py-2 text-left">背景</th>
+              </tr>
+            </thead>
+            <tbody>
+              {FUEL_COST_ADJUSTMENT_TEPCO_HIGH_VOLTAGE.map((r) => (
+                <tr key={r.fiscalYear} className="border-t border-slate-100">
+                  <td className="border border-slate-200 px-3 py-2">{r.fiscalYear}年度</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold">
+                    {r.yenPerKwh > 0 ? "+" : ""}{r.yenPerKwh.toFixed(2)} 円/kWh
+                  </td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-500">
+                    {r.subsidyAppliedYen ? `▲${r.subsidyAppliedYen.toFixed(2)}` : "—"}
+                  </td>
+                  <td className="border border-slate-200 px-3 py-2">{r.comment}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">LNG輸入価格との連動</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            燃調費の最大の変動要因は LNG 輸入価格です。日本の火力発電はガス火力が中心のため、
+            LNG の CIF 価格が動けば、その 3〜5 ヶ月後に燃調単価が動きます。
+          </p>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <PriceAdjustmentLineChart
+              labels={lngLabels}
+              series={[
+                {
+                  label: "LNG CIF価格（千円/トン）",
+                  values: lngValues,
+                  color: "#0891b2",
+                  fillColor: "rgba(8,145,178,0.12)",
+                },
+              ]}
+              unit="千円/トン"
+              yTitle="千円/トン"
+            />
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            出典: 財務省貿易統計（年度平均の概算）。2022年度は 128,000 円/トンまで急騰しました。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">市場連動型プランとの違い</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額と混同されやすいのが、市場連動型プランの価格変動です。燃料費調整額は主に発電用燃料の価格変動をもとに調整される仕組みですが、
-            市場連動型プランはJEPXなどの市場価格の影響を受けやすい点が異なります。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            同じく請求額が変動する要素でも、見ている対象は別です。契約比較の際は、燃調費の扱いと市場価格の影響度を分けて確認する必要があります。
-            市場連動型の全体像は{" "}
-            <Link href="/market-linked-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              市場連動プランの解説
-            </Link>
-            、固定型との違いは{" "}
-            <Link href="/market-linked-vs-fixed" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              比較ページ
-            </Link>
-            で確認できます。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額を確認するときの実務ポイント</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人が燃料費調整額を確認するときは、請求書や見積書の中で、どのように表示されているかをまず確認します。
-            実務上は次の観点が重要です。
-          </p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>燃料費調整額がどこに記載されているか</li>
-            <li>単価に含まれているのか、別立てなのか</li>
-            <li>上限の考え方があるか</li>
-            <li>契約比較時に同条件で比較できているか</li>
+          <h2 className="text-xl font-semibold text-slate-900">法人で確認したいポイント</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>燃調単価は電力会社ごとに異なる（同じ月でも数円単位で差が出る場合あり）</li>
+            <li>規制料金には燃調の上限があり、自由料金（法人向け高圧・特別高圧）には上限がない会社が多い</li>
+            <li>市場連動メニューでは燃調ではなく「市場価格調整額」で反映される仕組みが一般的</li>
+            <li>激変緩和措置による値引きは一時的なもので、終了すると請求額が急増する可能性がある</li>
           </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            見積比較では、基本料金や電力量料金の見た目だけで判断すると、実際の請求額ベースで逆転することがあります。
-            そのため、燃料費調整額を含めた総額ベースで確認する視点が欠かせません。
-          </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電気料金を見直すときにあわせて確認したいこと</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額だけを見ても、電気料金全体の判断はできません。実務では、契約プランが市場連動型か固定型か、基本料金と電力量料金の構成、
-            使用量の季節変動やピークの有無、再エネ賦課金など他の上乗せ項目もあわせて確認すると整理しやすくなります。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            請求構造全体を見ながら、自社に合った契約を考えることが重要です。比較を進める場合は{" "}
-            <Link href="/compare" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              比較ページ
-            </Link>
-            も活用してください。
-          </p>
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ</h2>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                燃料費調整額の推移詳細｜ウクライナ危機と激変緩和措置
+              </Link>
+            </li>
+            <li>
+              <Link href="/fuel-cost-adjustment-calculation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                燃料費調整額の計算式の詳細｜基準燃料価格と換算係数
+              </Link>
+            </li>
+            <li>
+              <Link href="/fuel-cost-adjustment-upper-limit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                燃料費調整額の上限制度｜規制料金と自由料金の違い
+              </Link>
+            </li>
+          </ul>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
-          intro="燃料費調整額の理解を、契約タイプの違いや実際の比較判断に接続するための導線です。"
           links={[
-            {
-              href: "/lng-electricity-price",
-              title: "法人の電気料金とLNGの関係",
-              description: "燃料市場の動きが法人料金へ波及する背景を、実務目線で整理しています。",
-            },
-            {
-              href: "/market-linked-plan",
-              title: "市場連動型プランの仕組み",
-              description: "市場価格の変動を受ける契約の特徴と、注意点を確認できます。",
-            },
-            {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動型と固定型の違い",
-              description: "料金の動き方や運用面の違いを比較し、選び方の軸を整理できます。",
-            },
-            {
-              href: "/capacity-contribution-explained",
-              title: "容量拠出金とは",
-              description: "燃調費と並ぶ料金上昇要因として、容量拠出金の仕組みと転嫁構造を確認できます。",
-            },
+            { href: "/lng-electricity-price", title: "法人の電気料金とLNGの関係", description: "LNG市況が料金に波及する流れを整理。" },
+            { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調と混同しやすい別の調整項目。" },
+            { href: "/market-linked-plan", title: "市場連動プランとは", description: "燃調ではなくJEPX連動で請求される契約。" },
+            { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "燃調と並ぶ請求書の変動要因。" },
           ]}
         />
 
         <ContentCta
-          heading="実際に比較して判断したい方へ"
+          heading="実際に比較して判断する"
           description="解説を押さえたうえで、現在契約と候補プランを同条件で比較すると、見直しの方向性を具体化しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },

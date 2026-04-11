@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
+import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 
-const pageTitle = "JEPXとは何か｜卸電力市場の仕組み";
+const pageTitle = "JEPXとは｜卸電力市場の仕組み・価格推移・法人料金への影響を徹底解説";
 const pageDescription =
-  "JEPXは、日本の電力会社や発電事業者などが電気を売買する卸電力市場です。一日前市場、時間前市場などの基本的な仕組みと、電力会社がJEPXをどのような場面で使っているのかを法人向けに整理します。";
+  "JEPX（日本卸電力取引所）の仕組み、一日前市場・時間前市場の役割、2016〜2025年度のシステムプライス推移、電力会社の調達実務、法人料金への影響を、グラフと過去データで詳しく解説します。";
 const pageUrl = "https://simulator.eic-jp.org/jepx-explained";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  alternates: {
-    canonical: pageUrl,
-  },
+  keywords: [
+    "JEPX",
+    "JEPX とは",
+    "日本卸電力取引所",
+    "卸電力市場",
+    "一日前市場",
+    "時間前市場",
+    "JEPX 推移",
+  ],
+  alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -23,14 +33,7 @@ export const metadata: Metadata = {
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
-    images: [
-      {
-        url: "/ogp-default.png",
-        width: 1200,
-        height: 630,
-        alt: "JEPXとは何か",
-      },
-    ],
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: "summary_large_image",
@@ -56,17 +59,20 @@ export default function JepxExplainedPage() {
     },
   ];
 
+  const labels = JEPX_SYSTEM_PRICE_YEARLY.map((r) => `${r.year}年度`);
+  const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">JEPXとは何か｜卸電力市場の仕組み</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電力会社の仕入れを理解するとき、まず押さえておきたいのがJEPXです。JEPXは、日本の卸電力市場として、
-          発電事業者や小売電気事業者などが電気を売買する場です。
+          JEPX（日本卸電力取引所）は、発電事業者や小売電気事業者などが電気を売買する日本唯一の卸電力市場です。
+          2003 年に設立され、電力自由化の拡大とともに日本の電力取引の中核機能を担っています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          価格ニュースで名前が出ることが多い一方で、実務では不足分を調達したり、需給見込みのずれを調整したりする場でもあります。
-          このページでは制度紹介だけで終わらせず、電力会社がJEPXを何のために使うのかという視点で整理します。
+          このページでは、JEPX の基本機能、一日前市場・時間前市場の役割、2016 年以降の価格推移、
+          電力会社の調達実務、そして法人料金への波及までを、実データとグラフで整理します。
         </p>
       </header>
 
@@ -74,24 +80,43 @@ export default function JepxExplainedPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">JEPXとは何か</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            JEPXは、日本卸電力取引所として、発電事業者、小売電気事業者などが電気を売買する市場です。
+            JEPX（Japan Electric Power Exchange、日本卸電力取引所）は、発電事業者と小売電気事業者などが電気を売買する市場です。
             電気は大量にためておきにくく、受渡時刻ごとに需給を合わせる必要があるため、卸市場は調達実務の中核的な機能を持ちます。
           </p>
           <InfoBox title="ここで押さえたい前提">
             小売電気事業者が必要量のすべてをJEPXだけで調達するわけではありません。相対契約や自社電源などと併用しつつ、
             JEPXを短中期の調整弁として使う見方が基本です。
           </InfoBox>
+          <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li>設立：2003 年（2005 年に本格運営開始）</li>
+            <li>取引主体：旧一般電気事業者、新電力、発電事業者、卸専門会社など</li>
+            <li>取引対象：30 分単位の電気（受渡し日時指定）</li>
+            <li>取引量：年間 3,000〜4,000 億 kWh 規模（日本の年間電力需要の約 35〜40%）</li>
+          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜ卸電力市場が必要なのか</h2>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            電力会社は、翌日や当日の需要をかなりの精度で予測しますが、実需は天候、操業状況、再エネ出力などでずれます。
-            卸市場がなければ、このずれを埋める場が限られ、供給の柔軟性が下がります。JEPXは、過不足を調整しつつ価格シグナルも示す市場として機能しています。
+          <h2 className="text-xl font-semibold text-slate-900">2016〜2025年度のシステムプライス推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            JEPX の価格動向は、法人の電気料金の背景を読む上で最も重要な指標の一つです。
+            2016 年度以降の年度平均システムプライスは次のように推移してきました。
           </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            価格が高いか安いかだけでなく、どれだけ需給が引き締まっているかを読み取る指標としても見られます。
-            法人向け料金の背景を考えるとき、JEPXは単なるニュースの数字ではなく、調達コスト形成の一部です。
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <PriceAdjustmentLineChart
+              labels={labels}
+              series={[
+                {
+                  label: "JEPXシステムプライス年度平均（円/kWh）",
+                  values,
+                  color: "#2563eb",
+                  fillColor: "rgba(37,99,235,0.14)",
+                },
+              ]}
+              yTitle="円/kWh"
+            />
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            出典: 日本卸電力取引所（JEPX）公表値。2022 年度は 20.37 円/kWh と過去最高。
           </p>
         </section>
 
@@ -117,41 +142,42 @@ export default function JepxExplainedPage() {
               ))}
             </tbody>
           </table>
-          <p className="mt-3 text-xs leading-6 text-slate-500">
-            2026年4月2日時点でJEPX公式サイト上で案内されている現行の中核市場区分に絞って整理しています。
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">価格はどう決まるのか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            JEPX スポット市場の価格は、売り入札と買い入札を束ねて作られる需給曲線の交点（ブラインド・シングルプライス方式）で決まります。
+            時間帯（30 分コマ）ごとに全国一律の「システムプライス」が決まり、
+            送電制約が発生した時間帯はエリアごとに「エリアプライス」が分離します。
           </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <h3 className="text-base font-semibold text-slate-900">システムプライス</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">送電制約がない場合の全国一律価格。市場の基準価格。</p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <h3 className="text-base font-semibold text-slate-900">エリアプライス</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">
+                北海道・東北・東京・中部・北陸・関西・中国・四国・九州の 9 エリアごとの価格。送電制約がある時間帯に分離する。
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">電力会社はJEPXをどんな場面で使うのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             典型的には、翌日の需要に対して不足しそうな量を一日前市場で確保し、当日になって気温や再エネ出力が変わった場合に時間前市場で微調整します。
-            発電事業者側にとっては、余剰になりそうな電気を売る出口としても機能します。
-          </p>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            ここで重要なのは、JEPXが「全部を買う場所」ではなく、「調達全体の中で不足やずれを吸収する場所」になっていることです。
-            相対契約や長期契約でベースを持ちながら、市場を活用する構造が一般的です。
           </p>
           <div className="mt-4">
             <FlowDiagram
               heading="卸市場が調達全体のどこに位置するか"
               steps={[
-                {
-                  title: "1. ベース調達",
-                  description: "自社発電、相対契約、長期契約などで基礎量を確保する",
-                },
-                {
-                  title: "2. 翌日計画",
-                  description: "需要見込みに対して一日前市場で不足や余剰を調整する",
-                },
-                {
-                  title: "3. 当日修正",
-                  description: "時間前市場で天候や需要変動によるずれを微調整する",
-                },
-                {
-                  title: "4. 小売供給",
-                  description: "最終的な調達コストと需給バランスが料金設計の背景になる",
-                },
+                { title: "1. ベース調達", description: "自社発電、相対契約、長期契約などで基礎量を確保する" },
+                { title: "2. 翌日計画", description: "需要見込みに対して一日前市場で不足や余剰を調整する" },
+                { title: "3. 当日修正", description: "時間前市場で天候や需要変動によるずれを微調整する" },
+                { title: "4. 小売供給", description: "最終的な調達コストと需給バランスが料金設計の背景になる" },
               ]}
             />
           </div>
@@ -160,8 +186,9 @@ export default function JepxExplainedPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">JEPXだけで仕入れるわけではない理由</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            JEPXは柔軟性が高い反面、需給が引き締まった局面では価格が大きく動きます。もし全量を市場に依存すると、価格急変や需給逼迫の影響が
-            そのまま仕入れコストに表れやすくなります。そのため、多くの電力会社は市場の機動性を活かしつつ、市場依存度が高くなりすぎないように設計します。
+            JEPXは柔軟性が高い反面、需給が引き締まった局面では価格が大きく動きます。
+            2021年1月、2022年度の状況では、全量を市場に依存していた新電力の多くが経営危機に陥りました。
+            そのため、多くの電力会社は市場の機動性を活かしつつ、市場依存度が高くなりすぎないよう調達ポートフォリオを設計しています。
           </p>
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
             <InfoBox title="JEPXの強み">
@@ -173,16 +200,25 @@ export default function JepxExplainedPage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 className="text-lg font-semibold text-slate-900">JEPXを見るときに押さえたいポイント</h2>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-            <li>市場価格は調達全体の一部であり、相対契約や長期契約と切り分けて読むこと</li>
-            <li>価格だけでなく、どの時間帯・どのエリアで動いたかを見ること</li>
-            <li>需給逼迫、燃料、再エネ出力、系統制約が重なると価格変動が大きくなりやすいこと</li>
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ</h2>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link href="/jepx-spot-market-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                JEPXスポット市場の価格推移｜2016〜2025年度の年度別詳細
+              </Link>
+            </li>
+            <li>
+              <Link href="/jepx-price-volatility" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                JEPX価格変動の要因｜需給・燃料・再エネ出力の影響
+              </Link>
+            </li>
+            <li>
+              <Link href="/jepx-business-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                JEPXが法人の電気料金に与える影響｜調達経路別の波及を整理
+              </Link>
+            </li>
           </ul>
-          <p className="mt-3 text-xs leading-6 text-slate-500">
-            参考: JEPX公式サイトのスポット市場・時間前市場ページ（2026年4月2日確認）。
-          </p>
         </section>
 
         <RelatedLinks
@@ -208,6 +244,11 @@ export default function JepxExplainedPage() {
               href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "JEPX価格が料金メニューへどう波及するかを整理します。",
+            },
+            {
+              href: "/market-price-adjustment",
+              title: "市場価格調整額とは",
+              description: "JEPX連動の請求反映方法。",
             },
           ]}
         />

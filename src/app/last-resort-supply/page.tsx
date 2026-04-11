@@ -2,39 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
+import { LAST_RESORT_SUPPLY_MONTHLY } from "../../data/lastResortSupplyHistory";
 
-const pageTitle = "最終保障供給とは？法人・自治体向けに仕組みをわかりやすく解説";
+const pageTitle = "最終保障供給とは｜仕組み・料金・契約件数推移・切替実務を徹底解説";
 const pageDescription =
-  "最終保障供給とは何か、対象になる法人・自治体、契約の考え方、注意点をわかりやすく解説します。高圧・特別高圧の需要家が確認したい基本を整理したページです。";
+  "最終保障供給の仕組み、料金水準、契約件数の推移（2021〜2025年）、2022年の急増と新電力撤退の背景、切替実務までを法人・自治体向けに解説します。グラフと公表データで詳しく整理。";
+const pageUrl = "https://simulator.eic-jp.org/last-resort-supply";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
-    "最終保障供給 法人",
-    "最終保障供給 自治体",
-    "最終保障供給 高圧 特別高圧",
-    "最終保障供給 対象",
-    "最終保障供給 切り替え",
+    "最終保障供給",
+    "最終保障供給 とは",
+    "最終保障供給 契約件数",
+    "最終保障供給 推移",
+    "最終保障供給 料金",
+    "新電力 撤退",
+    "最終保障供給 高圧",
   ],
-  alternates: {
-    canonical: "https://simulator.eic-jp.org/last-resort-supply",
-  },
+  alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: "https://simulator.eic-jp.org/last-resort-supply",
+    url: pageUrl,
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
-    images: [
-      {
-        url: "/ogp-default.png",
-        width: 1200,
-        height: 630,
-        alt: "最終保障供給とは",
-      },
-    ],
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,119 +41,145 @@ export const metadata: Metadata = {
 };
 
 export default function LastResortSupplyPage() {
+  const labels = LAST_RESORT_SUPPLY_MONTHLY.map((r) => r.yearMonth);
+  const values = LAST_RESORT_SUPPLY_MONTHLY.map((r) => r.contractCount);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="mb-4 text-sm text-slate-600">
-        <Link href="/" className="underline underline-offset-2 hover:text-slate-900">
-          トップ
-        </Link>
+        <Link href="/" className="underline underline-offset-2 hover:text-slate-900">トップ</Link>
         <span className="mx-2">/</span>
-        <Link href="/articles" className="underline underline-offset-2 hover:text-slate-900">
-          法人向け電気料金の基礎知識
-        </Link>
+        <Link href="/articles/last-resort-supply" className="underline underline-offset-2 hover:text-slate-900">最終保障供給を知る</Link>
         <span className="mx-2">/</span>
         <span className="text-slate-900">最終保障供給とは</span>
       </nav>
 
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          最終保障供給とは？法人・自治体向けに仕組みをわかりやすく解説
-        </h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">最終保障供給とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          最終保障供給は、高圧または特別高圧で電気を使う法人・企業・自治体などが、どの小売電気事業者とも契約合意に至らない場合に、
-          一般送配電事業者から臨時的に供給を受ける仕組みです。
+          最終保障供給は、高圧または特別高圧で電気を使う法人・企業・自治体などが、
+          どの小売電気事業者とも契約合意に至らない場合に、一般送配電事業者から臨時的に供給を受ける仕組みです。
+          電気事業法第 17 条に基づく供給義務に支えられており、電気が止まらないためのセーフティネットです。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          通常の法人向け電力契約の代替として長期利用する前提ではなく、供給を止めないためのセーフティネットとして位置づけて理解することが重要です。
+          2022 年のウクライナ危機と新電力撤退の連鎖で利用件数が一時 52,000 件まで急増し、
+          それまで一般にほとんど知られていなかった制度が広く注目されるようになりました。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">最終保障供給とは何か</h2>
+          <h2 className="text-xl font-semibold text-slate-900">契約件数の推移（2021〜2025年）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2021 年までは月末時点で全国 100 件以下の小規模な制度でしたが、2022 年春から新電力の撤退・新規受付停止を受けて急増。
+            2022 年 12 月に過去最高の約 52,000 件に達しました。その後、市場の落ち着きと旧一般電気事業者の受付再開により、
+            2025 年時点では 5,000 件台で落ち着いています。
+          </p>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <PriceAdjustmentLineChart
+              labels={labels}
+              series={[
+                {
+                  label: "最終保障供給の契約件数（月末時点、全国合計）",
+                  values,
+                  color: "#b91c1c",
+                  fillColor: "rgba(185,28,28,0.14)",
+                },
+              ]}
+              unit="件"
+              yTitle="契約件数"
+            />
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            出典: 電力・ガス取引監視等委員会公表資料等に基づく概算。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給の基本</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給は、通常の小売契約が成立しない局面で電気供給を継続するための制度です。料金の安さを競う契約ではなく、
             事業継続や公共サービス継続の観点で電気を途切れさせないことが主眼です。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">最終保障供給の対象になるのはどんな需要家か</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            主な対象は高圧・特別高圧で受電する需要家です。工場、オフィスビル、商業施設、病院、学校、自治体施設などが該当し得ます。
-            まずは受電区分と契約電力の確認が出発点になります。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            詳細は{" "}
-            <Link href="/last-resort-supply-target" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              最終保障供給の対象は誰か
-            </Link>{" "}
-            で整理できます。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜ最終保障供給が必要になるのか</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            実務では、既存契約の終了、切り替え交渉の不成立、価格高騰局面での小売撤退、自治体の入札不調などを契機に利用されます。
-            特に公共施設では電気供給の継続が不可欠なため、次の調達先が決まるまでの橋渡しとして使われる場面があります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">最終保障供給はずっと続ける前提の契約ではない</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            最終保障供給は、通常の法人向け小売契約と役割が異なります。長く使い続けるよりも、次の契約へ切り替える計画を早めに進めるほうが、
-            料金面・契約運用面の見通しを立てやすくなります。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            切り替えの進め方は{" "}
-            <Link href="/last-resort-supply-switch" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              最終保障供給から切り替えるには
-            </Link>{" "}
-            で確認してください。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">最終保障供給中に確認したいこと</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>自社・自施設が高圧か特別高圧か</li>
-            <li>料金表と約款で確認すべき項目</li>
-            <li>次契約の見積依頼に必要なデータ</li>
-            <li>契約切り替えまでの社内・庁内スケジュール</li>
+          <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>供給主体：各エリアの一般送配電事業者（送電会社）</li>
+            <li>対象：高圧・特別高圧需要家（低圧は「最終保障供給」ではなく別制度）</li>
+            <li>料金水準：通常の小売契約より 2〜3 割高い設定（激変緩和措置あり）</li>
+            <li>継続期間：原則として次の供給者が見つかるまでの暫定</li>
+            <li>申請：小売から供給拒否通知を受けた後に送配電事業者に申込み</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">なぜ2022年に急増したのか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2022 年 2 月のウクライナ危機以降、LNG スポット価格が急騰し、JEPX 年度平均は 20 円/kWh 超に達しました。
+            これにより、JEPX 依存度が高い新電力の多くが赤字に転落し、次のような連鎖反応が発生しました。
+          </p>
+          <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>新電力が新規受付停止 → 契約満了需要家が行き場を失う</li>
+            <li>旧一般電気事業者も新規受付停止 → 切替先がない状態</li>
+            <li>やむなく最終保障供給へ移行 → 件数急増</li>
+            <li>2022 年 12 月に 52,000 件のピーク</li>
+            <li>2023 年から段階的に市場正常化 → 順次減少</li>
+          </ol>
+          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+            <p className="text-sm leading-7 text-slate-800">
+              <strong>ポイント：</strong>最終保障供給の料金水準は通常より 2〜3 割高いため、
+              法人の請求額は急増。自治体でも補正予算で数千万〜数億円規模の追加計上が相次ぎました。
+            </p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給シリーズの関連ページ</h2>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/last-resort-supply-history" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">最終保障供給の件数推移と2022年急増の詳細</span>
+            </Link>
+            <Link href="/last-resort-supply-target" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の対象は誰か</span>
+            </Link>
+            <Link href="/last-resort-supply-price" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の料金はなぜ高いのか</span>
+            </Link>
+            <Link href="/last-resort-supply-switch" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給から切り替えるには</span>
+            </Link>
+            <Link href="/municipality-last-resort-supply" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">自治体向け最終保障供給の注意点</span>
+            </Link>
+            <Link href="/last-resort-supply-high-voltage" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">高圧需要家の最終保障供給</span>
+            </Link>
+            <Link href="/last-resort-supply-extra-high-voltage" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">特別高圧での最終保障供給の注意点</span>
+            </Link>
+            <Link href="/last-resort-supply-terms" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給の契約条件</span>
+            </Link>
+            <Link href="/last-resort-vs-retail-contract" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給と通常契約の違い</span>
+            </Link>
+            <Link href="/last-resort-supply-emergency-response" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">最終保障供給に入りそうなときの対応</span>
+            </Link>
+            <Link href="/last-resort-supply-internal-explanation" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">社内説明のポイント</span>
+            </Link>
+            <Link href="/articles/last-resort-supply" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-sky-900">最終保障供給カテゴリ一覧へ</span>
+            </Link>
+          </div>
         </section>
 
         <RelatedLinks
           heading="関連する解説ページ"
-          intro="制度の位置づけを押さえたら、通常契約との違いと切替実務へ進むと次の手が決めやすくなります。"
           links={[
-            {
-              href: "/last-resort-vs-retail-contract",
-              title: "最終保障供給と通常契約の違い",
-              description: "役割、料金、継続前提の差を比較して判断軸を整理します。",
-            },
-            {
-              href: "/last-resort-supply-switch",
-              title: "最終保障供給から切り替えるには",
-              description: "次契約への移行で必要な実務ステップを確認できます。",
-            },
-            {
-              href: "/when-to-review-electricity-contract",
-              title: "法人が電力契約を見直すタイミング",
-              description: "橋渡しから本契約へ戻るタイミングの整理に使えます。",
-            },
-            {
-              href: "/switching-business-electricity-contract",
-              title: "法人が電力契約を切り替えるときの注意点",
-              description: "切替時の期限・請求のズレなど実行フェーズの論点です。",
-            },
-            {
-              href: "/articles/power-procurement",
-              title: "電力調達の仕組みを知る（カテゴリ）",
-              description: "通常契約側の調達構造をあわせて押さえられます。",
-            },
+            { href: "/last-resort-vs-retail-contract", title: "最終保障供給と通常契約の違い", description: "役割・料金・期間の差を比較。" },
+            { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "2022年の新電力撤退の背景。" },
+            { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX急騰の請求影響。" },
+            { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "橋渡しから本契約への整理。" },
           ]}
         />
 
@@ -169,33 +191,6 @@ export default function LastResortSupplyPage() {
             { href: "/simulate", label: "シミュレーターを使う" },
           ]}
         />
-
-        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 className="text-lg font-semibold text-slate-900">最終保障供給シリーズの関連記事</h2>
-          <p className="mt-2 text-sm leading-7 text-slate-600">
-            最終保障供給について、対象・料金・切替実務・自治体向けなど、テーマ別にさらに詳しく確認できます。
-          </p>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
-            <Link href="/last-resort-supply-target" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">最終保障供給の対象は誰か</span>
-            </Link>
-            <Link href="/last-resort-supply-price" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">最終保障供給の料金はなぜ高いのか</span>
-            </Link>
-            <Link href="/municipality-last-resort-supply" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">自治体向け最終保障供給の注意点</span>
-            </Link>
-            <Link href="/last-resort-supply-high-voltage" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">高圧需要家の最終保障供給</span>
-            </Link>
-            <Link href="/last-resort-supply-terms" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">最終保障供給の契約条件と注意点</span>
-            </Link>
-            <Link href="/articles/last-resort-supply" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">
-              <span className="font-semibold text-sky-900">最終保障供給カテゴリ一覧へ</span>
-            </Link>
-          </div>
-        </div>
       </section>
     </main>
   );

@@ -2,39 +2,38 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
+import {
+  BUSINESS_USAGE_PROFILES,
+  RENEWABLE_SURCHARGE_DATA,
+} from "../../data/priceAdjustmentHistory";
 
-const pageTitle = "再エネ賦課金とは｜法人の電気料金への影響と請求書での見方、燃料費調整額との違い";
+const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
 const pageDescription =
-  "再エネ賦課金の仕組みや法人の電気料金への影響を解説。請求書での見方、燃料費調整額との違い、高圧契約でも押さえておきたいポイントを整理します。";
+  "再エネ賦課金（再生可能エネルギー発電促進賦課金）の仕組み、2012〜2026年度の単価推移、計算方法、法人の月額負担試算、燃料費調整額との違いを、グラフと過去データを交えて解説します。";
+const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "再エネ賦課金",
     "再エネ賦課金 とは",
+    "再エネ賦課金 推移",
+    "再エネ賦課金 2025",
+    "再エネ賦課金 計算方法",
     "法人 電気料金 制度負担",
     "再エネ賦課金 燃料費調整額 違い",
-    "電気料金 請求書 見方",
-    "電力契約 見直し ポイント",
   ],
-  alternates: {
-    canonical: "https://simulator.eic-jp.org/renewable-energy-surcharge",
-  },
+  alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: "https://simulator.eic-jp.org/renewable-energy-surcharge",
+    url: pageUrl,
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
-    images: [
-      {
-        url: "/ogp-default.png",
-        width: 1200,
-        height: 630,
-        alt: "再エネ賦課金とは",
-      },
-    ],
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,63 +44,172 @@ export const metadata: Metadata = {
 };
 
 export default function RenewableEnergySurchargePage() {
+  const first = RENEWABLE_SURCHARGE_DATA[0];
+  const latest = RENEWABLE_SURCHARGE_DATA[RENEWABLE_SURCHARGE_DATA.length - 1];
+  const growthMultiple = latest.unitPriceYenPerKwh / first.unitPriceYenPerKwh;
+  const chartLabels = RENEWABLE_SURCHARGE_DATA.map((row) => `${row.fiscalYear}年度`);
+  const chartValues = RENEWABLE_SURCHARGE_DATA.map((row) => row.unitPriceYenPerKwh);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">再エネ賦課金とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電気料金の請求書には、基本料金や電力量料金のほかに再エネ賦課金が記載されます。名称は見たことがあっても、
-          仕組みや意味は分かりにくい項目です。
+          再エネ賦課金（再生可能エネルギー発電促進賦課金）は、FIT・FIP 制度で買い取られた再生可能エネルギー電力のコストを、
+          電気の使用者全員で負担するための制度上の上乗せ費用です。電力会社を問わず全ての需要家の請求書に計上されます。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、法人の請求実務で押さえたい範囲に絞って、再エネ賦課金の役割、請求への反映、燃料費調整額との違いを整理します。
+          このページでは、2012年度（制度開始）から{latest.fiscalYear}年度までの単価推移、計算方法、燃料費調整額との違い、
+          法人規模別の月額負担までを、実データとグラフを交えて整理します。
         </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          <div className="rounded-lg border border-sky-200 bg-white p-3">
+            <p className="text-xs text-slate-500">{first.fiscalYear}年度 単価</p>
+            <p className="mt-1 text-lg font-bold text-slate-900">{first.unitPriceYenPerKwh.toFixed(2)} 円/kWh</p>
+          </div>
+          <div className="rounded-lg border border-sky-200 bg-white p-3">
+            <p className="text-xs text-slate-500">{latest.fiscalYear}年度 単価</p>
+            <p className="mt-1 text-lg font-bold text-slate-900">{latest.unitPriceYenPerKwh.toFixed(2)} 円/kWh</p>
+          </div>
+          <div className="rounded-lg border border-sky-200 bg-white p-3">
+            <p className="text-xs text-slate-500">増加倍率（{first.fiscalYear}→{latest.fiscalYear}）</p>
+            <p className="mt-1 text-lg font-bold text-slate-900">約 {growthMultiple.toFixed(1)} 倍</p>
+          </div>
+        </div>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">再エネ賦課金とは何か</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は、再生可能エネルギー導入を支える制度の一部として、電気料金に上乗せされる費用です。小売料金の一部として請求されるため、
-            多くの法人で請求書上に現れます。
+            再エネ賦課金は、2012年7月に施行された「電気事業者による再生可能エネルギー電気の調達に関する特別措置法」
+            （いわゆるFIT法）に基づき、再生可能エネルギーの普及拡大を支えるため電気使用量 1kWh あたりで課される負担金です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            契約先の電力会社が変わっても、制度項目として理解しておく必要があります。契約比較のときも、単価だけでなくこの項目を含めて確認することが重要です。
+            電力会社は再エネ電力を国が定めた調達価格で買い取る義務を負いますが、そのコストを単独で負担するのではなく、
+            電気を使用する全ての需要家が使用量に比例して分担する仕組みです。小売料金の一部として請求書に記載されます。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人の電気料金ではどのように反映されるか</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は使用量に応じて影響が大きくなる項目です。使用量が多い法人ほど負担感を持ちやすく、請求額全体を見るうえで無視できません。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            単価の問題だけではなく、月間使用量との掛け合わせで金額が決まる点を押さえると、請求増の説明がしやすくなります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">請求書ではどこを見ればよいか</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金の欄、使用量、他の調整項目を分けて確認すると、請求変動の要因を切り分けやすくなります。
-          </p>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>再エネ賦課金の記載欄</li>
-            <li>月間使用量との関係</li>
-            <li>燃料費調整額など他項目との差分</li>
+          <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>単価は年度単位で経済産業大臣が告示（毎年3月ごろ）</li>
+            <li>5月検針分から翌年4月検針分まで、全国一律で適用</li>
+            <li>電力会社を切り替えても単価は同じ（契約先による差はない）</li>
+            <li>用途に関係なく家庭・法人・自治体すべてに適用</li>
           </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            請求額が増えた理由が賦課金によるものか、燃料費調整額によるものか、使用量によるものかを区別することが大切です。
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">2012〜{latest.fiscalYear}年度の単価推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            制度開始時の {first.unitPriceYenPerKwh.toFixed(2)} 円/kWh から、FIT 買取認定量の拡大とともに単価は急上昇しました。
+            2022 年度まで右肩上がりで推移した後、2023 年度は卸電力市場価格の高騰により回避可能費用が大幅に上がった影響で、
+            いったん 1.40 円/kWh まで急落。しかし 2024 年度以降は再上昇し、{latest.fiscalYear}年度には {latest.unitPriceYenPerKwh.toFixed(2)} 円/kWh と過去最高水準になっています。
+          </p>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <PriceAdjustmentLineChart
+              labels={chartLabels}
+              series={[
+                {
+                  label: "再エネ賦課金（円/kWh）",
+                  values: chartValues,
+                  color: "#0284c7",
+                  fillColor: "rgba(2,132,199,0.12)",
+                },
+              ]}
+              yTitle="円/kWh"
+            />
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500">
+            出典: 資源エネルギー庁「再生可能エネルギー発電促進賦課金」単価告示（2012〜{latest.fiscalYear}年度）。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">年度別の単価・前年比・家庭月額負担</h2>
+          <table className="mt-4 w-full min-w-[720px] border-collapse text-sm text-slate-700">
+            <thead className="bg-slate-50 text-slate-900">
+              <tr>
+                <th className="border border-slate-200 px-3 py-2 text-left">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">単価（円/kWh）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">前年差（円）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">前年比（%）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right">家庭月額（300kWh換算）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {RENEWABLE_SURCHARGE_DATA.map((row) => (
+                <tr key={row.fiscalYear} className="border-t border-slate-100 hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">{row.fiscalYear}年度</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold">{row.unitPriceYenPerKwh.toFixed(2)}</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">
+                    {row.yearOverYearYen === null ? "—" : `${row.yearOverYearYen > 0 ? "+" : ""}${row.yearOverYearYen.toFixed(2)}`}
+                  </td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">
+                    {row.yearOverYearPercent === null ? "—" : `${row.yearOverYearPercent > 0 ? "+" : ""}${row.yearOverYearPercent}%`}
+                  </td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">{row.monthlyBurdenYen.toLocaleString("ja-JP")} 円</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">計算方法</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            請求額に占める再エネ賦課金は、次の単純な式で求められます。
+          </p>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 p-4 text-center text-base font-semibold text-slate-900">
+            再エネ賦課金 = 単価（円/kWh）× 当月使用量（kWh）
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            単価は全国一律なので、契約電力会社やメニューを切り替えても金額は変わりません。
+            月間使用量が大きい法人ほど金額に大きく影響する、純粋な「使用量比例」の費目です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">法人規模別の月額負担（{latest.fiscalYear}年度 単価 {latest.unitPriceYenPerKwh.toFixed(2)} 円/kWh）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            同じ単価でも、月間使用量が違えば再エネ賦課金の負担額は大きく変わります。主要な業態別に月額・年額を試算しました。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">業態目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">月間使用量</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">月額負担</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">年額負担</th>
+                </tr>
+              </thead>
+              <tbody>
+                {BUSINESS_USAGE_PROFILES.map((p) => {
+                  const monthly = Math.round(p.monthlyKwh * latest.unitPriceYenPerKwh);
+                  return (
+                    <tr key={p.label} className="border-t border-slate-100">
+                      <td className="border border-slate-200 px-3 py-2">
+                        <div className="font-semibold text-slate-900">{p.label}</div>
+                        <div className="text-xs text-slate-500">{p.description}</div>
+                      </td>
+                      <td className="border border-slate-200 px-3 py-2 text-right">{p.monthlyKwh.toLocaleString("ja-JP")} kWh</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right font-semibold">{monthly.toLocaleString("ja-JP")} 円</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right">{(monthly * 12).toLocaleString("ja-JP")} 円</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500">
+            ※ 単価は全国一律のため、電力会社を切り替えても同じ金額が計上されます。月次 1,000,000 kWh の大規模工場では、
+            再エネ賦課金だけで月 400 万円規模の負担になります。
           </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額との違い</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金と燃料費調整額は、どちらも請求額に影響するため混同されがちですが、役割は異なります。
-          </p>
           <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
-            <table className="w-full min-w-[520px] border-collapse text-sm text-slate-700">
+            <table className="w-full min-w-[600px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
                 <tr>
                   <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold">比較観点</th>
@@ -111,51 +219,64 @@ export default function RenewableEnergySurchargePage() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border-b border-slate-200 px-3 py-2">何に基づいて変わるか</td>
-                  <td className="border-b border-slate-200 px-3 py-2">制度上の負担項目</td>
-                  <td className="border-b border-slate-200 px-3 py-2">発電用燃料価格などの変動</td>
+                  <td className="border-b border-slate-200 px-3 py-2">根拠</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FIT・FIP法</td>
+                  <td className="border-b border-slate-200 px-3 py-2">電気事業法および料金算定規則</td>
                 </tr>
                 <tr>
-                  <td className="border-b border-slate-200 px-3 py-2">請求額への反映</td>
-                  <td className="border-b border-slate-200 px-3 py-2">使用量に応じて反映</td>
-                  <td className="border-b border-slate-200 px-3 py-2">調整単価として反映</td>
+                  <td className="border-b border-slate-200 px-3 py-2">変動要因</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FIT認定量・回避可能費用</td>
+                  <td className="border-b border-slate-200 px-3 py-2">LNG・原油・石炭のCIF価格</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2">確認ポイント</td>
-                  <td className="px-3 py-2">制度要因として理解する</td>
-                  <td className="px-3 py-2">燃料市況の影響として把握する</td>
+                  <td className="border-b border-slate-200 px-3 py-2">改定頻度</td>
+                  <td className="border-b border-slate-200 px-3 py-2">年1回（毎年5月検針分〜）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">毎月</td>
+                </tr>
+                <tr>
+                  <td className="border-b border-slate-200 px-3 py-2">電力会社差</td>
+                  <td className="border-b border-slate-200 px-3 py-2">全国一律（同じ単価）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">電力会社ごとに異なる</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2">符号</td>
+                  <td className="px-3 py-2">常にプラス</td>
+                  <td className="px-3 py-2">プラスにもマイナスにもなる</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額の詳細は{" "}
-            <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+            詳しくは{" "}
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
               燃料費調整額の解説
-            </Link>{" "}
-            で確認できます。同じ調整項目のように一括で見るのではなく、役割を分けて理解することが重要です。
+            </Link>
+            で確認できます。
           </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">再エネ賦課金を理解しておく意味</h2>
+        <section className="rounded-xl border border-slate-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金を理解しておくと、料金内訳の説明がしやすくなります。値上がり理由の切り分けや契約比較時の誤解防止にもつながります。
-            制度要因と契約要因を分けて考えるための基礎として有効です。
+            再エネ賦課金は、過去推移・計算方法・減免制度など切り口が多いテーマです。個別論点は次の解説ページで整理しています。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人が確認しておきたいポイント</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>使用量との関係</li>
-            <li>請求額に占める割合感</li>
-            <li>燃料費調整額との違い</li>
-            <li>契約比較時にどこまで含めて見るか</li>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link href="/renewable-energy-surcharge-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                再エネ賦課金の推移と変動要因｜2012〜2026年度の変化を解説
+              </Link>
+            </li>
+            <li>
+              <Link href="/renewable-energy-surcharge-business-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                再エネ賦課金の法人別月額試算｜業態・規模で比較
+              </Link>
+            </li>
+            <li>
+              <Link href="/renewable-energy-surcharge-reduction-system" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                再エネ賦課金の減免制度｜対象要件と申請の流れ
+              </Link>
+            </li>
           </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は請求書で目にする重要項目です。使用量が多い法人ほど影響を意識しやすく、燃料費調整額と分けて理解することで判断しやすくなります。
-          </p>
         </section>
 
         <RelatedLinks
@@ -171,11 +292,6 @@ export default function RenewableEnergySurchargePage() {
               href: "/why-business-electricity-prices-rise",
               title: "法人の電気料金が上がる理由",
               description: "制度要因を含めた上昇要因の全体像を整理できます。",
-            },
-            {
-              href: "/how-much-business-electricity-prices-increase",
-              title: "法人の電気料金はどの程度上がるのか",
-              description: "賦課金を含めた上がり幅の見方に進めます。",
             },
             {
               href: "/business-electricity-price-trend-10-years",
