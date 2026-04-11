@@ -231,6 +231,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/kenji-eda" className={linkClass}>
+                  理事プロフィール（江田健二）
+                </Link>
+              </li>
+              <li>
                 <Link href="/articles" className={linkClass}>
                   解説ページ一覧
                 </Link>
