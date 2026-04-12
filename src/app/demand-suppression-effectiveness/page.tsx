@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_SEASON_HOUR, DEMAND_WEEKDAY_WEEKEND } from "../../data/demandData";
+import { CDD_TREND, HDD_TREND } from "../../data/weatherData";
 
 const pageTitle =
   "デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界";
@@ -409,6 +410,76 @@ export default function DemandSuppressionEffectivenessPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">
             ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            温暖化トレンドとデマンド抑制の優先度変化
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            冷房需要（CDD）は全都市で+24〜40%増加する一方、暖房需要（HDD）は-10〜19%減少。この構造的変化は、デマンド抑制の夏季重視へのシフトを意味します。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-lg border border-rose-200 bg-rose-50 p-4">
+              <p className="text-sm font-semibold text-rose-900">CDD増加（冷房需要拡大）</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-rose-100">
+                      <th className="border border-rose-200 p-2 text-left font-semibold text-rose-900">都市</th>
+                      <th className="border border-rose-200 p-2 text-right font-semibold text-rose-900">1995〜99年</th>
+                      <th className="border border-rose-200 p-2 text-right font-semibold text-rose-900">2020〜24年</th>
+                      <th className="border border-rose-200 p-2 text-right font-semibold text-rose-900">増加率</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-rose-100">
+                    {CDD_TREND.map((row) => (
+                      <tr key={row.cityJa} className="bg-white">
+                        <td className="border border-rose-100 p-2 text-slate-800">{row.cityJa}</td>
+                        <td className="border border-rose-100 p-2 text-right text-slate-700">{row.cdd1995_99}</td>
+                        <td className="border border-rose-100 p-2 text-right text-slate-700">{row.cdd2020_24}</td>
+                        <td className="border border-rose-100 p-2 text-right font-semibold text-rose-700">+{row.changePercent}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-900">HDD減少（暖房需要縮小）</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-sky-100">
+                      <th className="border border-sky-200 p-2 text-left font-semibold text-sky-900">都市</th>
+                      <th className="border border-sky-200 p-2 text-right font-semibold text-sky-900">1995〜99年</th>
+                      <th className="border border-sky-200 p-2 text-right font-semibold text-sky-900">2020〜24年</th>
+                      <th className="border border-sky-200 p-2 text-right font-semibold text-sky-900">変化率</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-sky-100">
+                    {HDD_TREND.map((row) => (
+                      <tr key={row.cityJa} className="bg-white">
+                        <td className="border border-sky-100 p-2 text-slate-800">{row.cityJa}</td>
+                        <td className="border border-sky-100 p-2 text-right text-slate-700">{row.hdd1995_99}</td>
+                        <td className="border border-sky-100 p-2 text-right text-slate-700">{row.hdd2020_24}</td>
+                        <td className="border border-sky-100 p-2 text-right font-semibold text-sky-700">{row.changePercent}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+            <p className="text-sm font-semibold text-amber-900">冬のデマンド管理も引き続き重要</p>
+            <p className="mt-2 text-sm leading-6 text-amber-800">
+              ただし冬の18時台ピークは依然として夏の14時台に匹敵する水準（約12.3万MW）であり、冬のデマンド管理を軽視すべきではありません。
+            </p>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※CDD（冷房度日）: 基準温度22℃。HDD（暖房度日）: 基準温度14℃。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
           </p>
         </section>
 

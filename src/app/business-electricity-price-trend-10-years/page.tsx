@@ -11,6 +11,7 @@ import {
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import { DEMAND_FY_TREND } from "../../data/demandData";
+import { CDD_TREND, HDD_TREND, DECADAL_AVG_TEMP } from "../../data/weatherData";
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -347,6 +348,67 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             </table>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">気候変動と電力需要の構造変化</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全都市で10年平均気温が+0.5〜1.2℃上昇。電力需要は全体としては緩やかに減少していますが、夏のピーク需要は増大傾向にあり、「平均は下がるがピークは上がる」という構造が、電力システムと料金に影響を与え続けています。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">10年平均気温の推移（東京）</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead className="bg-sky-50">
+                    <tr>
+                      <th className="border border-slate-200 p-2 text-left font-semibold text-slate-900">年代</th>
+                      <th className="border border-slate-200 p-2 text-right font-semibold text-slate-900">東京（℃）</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    {DECADAL_AVG_TEMP.map((row, i) => (
+                      <tr key={row.decade} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                        <td className="border border-slate-200 p-2 text-slate-700">{row.decade}</td>
+                        <td className="border border-slate-200 p-2 text-right font-semibold text-slate-800">{row.tokyo.toFixed(2)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-2 text-xs text-slate-500">1990年代16.78℃ → 2020年代17.14℃（+0.36℃）</p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">冷暖房需要の変化（CDD vs HDD）</p>
+              <div className="mt-3 space-y-3">
+                <div className="rounded-lg border border-rose-200 bg-rose-50 p-3">
+                  <p className="text-xs font-semibold text-rose-900">冷房需要（CDD）+24〜40%増加</p>
+                  <div className="mt-2 space-y-1">
+                    {CDD_TREND.map((row) => (
+                      <div key={row.cityJa} className="flex items-center justify-between text-xs text-rose-800">
+                        <span>{row.cityJa}</span>
+                        <span className="font-semibold">+{row.changePercent}%</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-lg border border-sky-200 bg-sky-50 p-3">
+                  <p className="text-xs font-semibold text-sky-900">暖房需要（HDD）-10〜19%減少</p>
+                  <div className="mt-2 space-y-1">
+                    {HDD_TREND.map((row) => (
+                      <div key={row.cityJa} className="flex items-center justify-between text-xs text-sky-800">
+                        <span>{row.cityJa}</span>
+                        <span className="font-semibold">{row.changePercent}%</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※CDD（冷房度日）: 基準温度22℃。HDD（暖房度日）: 基準温度14℃。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
+          </p>
         </section>
 
         <RelatedLinks

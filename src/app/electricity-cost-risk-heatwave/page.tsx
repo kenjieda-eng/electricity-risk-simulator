@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_PEAK_DAYS, DEMAND_SEASON_HOUR } from "../../data/demandData";
+import { EXTREME_HOT_DAYS, SUMMER_TMAX_TREND, CDD_TREND, TROPICAL_NIGHTS_TOKYO } from "../../data/weatherData";
 
 const pageTitle =
   "猛暑で法人・企業・自治体の電気料金・電気代はどう上がる？夏の上振れリスクを解説";
@@ -183,6 +184,138 @@ export default function ElectricityCostRiskHeatwavePage() {
             夏の14時台は全国需要が{DEMAND_SEASON_HOUR.find(h => h.hour === 14)?.summer.toLocaleString()}MWに達し、冷房需要が集中。
             この時間帯にJEPX価格も急騰しやすく、市場連動プランの上振れリスクが最大化します。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">30年の気象データで見る猛暑リスクの構造的増大</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            猛暑リスクは単なる「今年の暑さ」ではなく、30年単位で構造的に拡大しています。気象庁データが示す長期トレンドを確認することで、夏の電気代上振れリスクが今後も続く理由が分かります。
+          </p>
+
+          {/* A: 猛暑日の10年ごと推移 */}
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">猛暑日（35℃超）の10年ごと累計日数</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            各10年間における猛暑日の累計日数（気象庁データより集計）。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">都市</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">1990年代</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2000年代</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2010年代</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2020年代</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">倍率</th>
+                </tr>
+              </thead>
+              <tbody>
+                {EXTREME_HOT_DAYS.map((row, i) => {
+                  const ratio = row.d1990s > 0 ? (row.d2020s / row.d1990s).toFixed(1) : "—";
+                  const is2020sHigh = row.d2020s > 100;
+                  return (
+                    <tr key={row.city} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.cityJa}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.d1990s}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.d2000s}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.d2010s}</td>
+                      <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${is2020sHigh ? "bg-red-50 text-red-700" : "text-slate-700"}`}>{row.d2020s}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.d1990s > 0 ? `${ratio}倍` : "—"}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            東京は1990年代の21日→2020年代の101日で約5倍。名古屋は179日と全都市最多。猛暑日の急増は冷房稼働時間の長期化を意味し、夏の電力需要を構造的に押し上げています。
+          </div>
+
+          {/* B: 夏の平均最高気温上昇 */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">夏（7〜8月）の平均最高気温の変化</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            1995〜99年平均と2020〜25年平均の比較（気象庁データより）。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">都市</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">1995〜99年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2020〜25年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">上昇幅</th>
+                </tr>
+              </thead>
+              <tbody>
+                {SUMMER_TMAX_TREND.map((row, i) => (
+                  <tr key={row.regionKey} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.cityJa}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.tmax1995_99.toFixed(1)}℃</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.tmax2020_25.toFixed(1)}℃</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+{row.change.toFixed(1)}℃</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            仙台+2.7℃、札幌+2.6℃ — 北日本の上昇が最も顕著。かつて冷房不要だった地域でも冷房需要が急増しており、全国的な夏の電力需要底上げにつながっています。
+          </div>
+
+          {/* C: 冷房度日(CDD) */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">冷房度日（CDD）の増加：電力需要への構造的影響</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            冷房度日（基準温度22℃）は冷房電力需要の規模感を示す指標。1995〜99年平均と2020〜24年平均を比較（主要5都市）。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">都市</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">1995〜99年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2020〜24年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">増加率</th>
+                </tr>
+              </thead>
+              <tbody>
+                {CDD_TREND.map((row, i) => (
+                  <tr key={row.regionKey} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.cityJa}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.cdd1995_99}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.cdd2020_24}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+{row.changePercent}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            名古屋+40%、福岡+38% — 冷房による電力需要が構造的に増大しており、夏のピーク電力とJEPX高騰リスクは今後も拡大する見通しです。
+          </div>
+
+          {/* D: 熱帯夜 */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">東京の熱帯夜：夜間電力需要の押し上げ要因</h3>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">熱帯夜日数</th>
+                </tr>
+              </thead>
+              <tbody>
+                {TROPICAL_NIGHTS_TOKYO.map((row, i) => (
+                  <tr key={row.year} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.year}年</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.count >= 50 ? "text-red-700" : "text-slate-700"}`}>{row.count}日</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            東京の熱帯夜は2023年に57日、2025年も55日と高水準が続いています。深夜でも冷房が切れない日が増加することで、夜間電力需要が押し上げられ、翌日の需給にも影響します。
+          </div>
         </section>
 
         <RelatedLinks

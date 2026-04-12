@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
+import { getWeatherByRegion } from "../../data/weatherData";
 
 const pageTitle = "中国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -128,6 +129,7 @@ const newPowerStatus = [
 ];
 
 export default function RegionChugokuBusinessElectricityPage() {
+  const weather = getWeatherByRegion("chugoku");
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* ヘッダー */}
@@ -436,6 +438,55 @@ export default function RegionChugokuBusinessElectricityPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
+      </section>
+
+      {/* 気候データと電力需要の関係 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          広島の気象データから、当エリアの電力需要に影響する気候特性を整理します。
+        </p>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {weather.summerTmax && (
+            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
+              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
+              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
+              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
+            </div>
+          )}
+          {weather.winterTmin && (
+            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
+              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
+              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
+              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
+            </div>
+          )}
+          {weather.hotDays && (
+            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
+              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
+              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
+              <p className="mt-1 text-sm font-semibold text-amber-900">
+                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
+              </p>
+            </div>
+          )}
+          {weather.cdd ? (
+            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
+              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
+              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
+              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
+            </div>
+          ) : weather.hdd ? (
+            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
+              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
+              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
+            </div>
+          ) : null}
+        </div>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+          広島の猛暑日は25日→109日に急増。冷房度日は+27%増加。西日本の気温相関が非常に高く（名古屋-大阪: 0.992）、広域的な猛暑時には西日本全体で同時にピーク需要が発生しやすい構造です。
+        </p>
       </section>
 
       {/* 関連リンク */}

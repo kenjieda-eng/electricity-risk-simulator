@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { CDD_TREND } from "../../data/weatherData";
 
 const pageTitle = "法人の電気料金が上がる理由とは？値上がりの主な要因と見直しポイントを解説";
 const pageDescription =
@@ -157,6 +158,38 @@ export default function WhyBusinessElectricityPricesRisePage() {
             <li>市場連動型の影響を受けているのか</li>
             <li>契約条件が自社の実態に合っているか</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">気候変動による構造的な需要変化</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            温暖化による冷房需要の増加（CDD: 東京+24%, 名古屋+40%）は、夏のピーク電力を構造的に押し上げ、JEPX卸価格の上昇要因になっています。猛暑日の増加（東京: 1990年代21日→2020年代101日）は、電力需給逼迫のリスクを高め、法人電気料金の上振れ要因として長期的に作用します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">都市</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">1995〜99年CDD</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">2020〜24年CDD</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">増加率</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {CDD_TREND.map((row, i) => (
+                  <tr key={row.cityJa} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 p-3 font-medium text-slate-800">{row.cityJa}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{row.cdd1995_99}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{row.cdd2020_24}</td>
+                    <td className="border border-slate-200 p-3 text-right font-semibold text-rose-600">+{row.changePercent}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※CDD（冷房度日）: 基準温度22℃を超えた日の積算値。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
+          </p>
         </section>
 
         <RelatedLinks

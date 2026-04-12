@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_HOURLY_AVG } from "../../data/demandData";
+import { CDD_TREND } from "../../data/weatherData";
 
 const pageTitle =
   "蓄電池は電気料金対策としてどう効くか｜デマンド抑制とピークカットの仕組み";
@@ -357,6 +358,45 @@ export default function BatteryElectricityCostBenefitPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">
             ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            冷房需要の増加と蓄電池の長期投資価値
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            冷房度日（CDD）は過去25年で名古屋+40%、福岡+38%、東京+24%増加。夏のピーク電力需要が年々増加する構造的トレンドのなかで、蓄電池によるピークシフトの経済価値は長期的に上昇し続けます。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            2020年代の猛暑日（35℃超）は東京で10年間に101日、名古屋で179日。蓄電池の投資回収を10〜15年で見積もる場合、この温暖化トレンドは投資判断にプラスに働く要素です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">都市</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">1995〜99年平均CDD</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">2020〜24年平均CDD</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">増加量</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">増加率</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {CDD_TREND.map((row, i) => (
+                  <tr key={row.cityJa} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 p-3 font-medium text-slate-800">{row.cityJa}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{row.cdd1995_99}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{row.cdd2020_24}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">+{row.change}</td>
+                    <td className="border border-slate-200 p-3 text-right font-semibold text-rose-600">+{row.changePercent}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※CDD（冷房度日）: 基準温度22℃を超えた日の積算値。値が大きいほど冷房需要が高い。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
           </p>
         </section>
 

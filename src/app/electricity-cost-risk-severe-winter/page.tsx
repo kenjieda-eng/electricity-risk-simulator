@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_MONTHLY_AVG, DEMAND_SEASON_HOUR } from "../../data/demandData";
+import { WINTER_TMIN_TREND, HDD_TREND, SAPPORO_EXTREME_COLD } from "../../data/weatherData";
 
 const pageTitle =
   "厳冬で法人・企業・自治体の電気料金・電気代はどう上がる？冬の上振れリスクを解説";
@@ -183,6 +184,117 @@ export default function ElectricityCostRiskSevereWinterPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">30年の気象データで見る厳冬リスクの変化</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            長期的な気象トレンドは、厳冬リスクの性質を変えつつあります。暖房需要の全体的な減少傾向と、依然として残る短期集中型の寒波リスクを気象庁データで確認します。
+          </p>
+
+          {/* A: 冬の平均最低気温 */}
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">冬（1〜2月）の平均最低気温の変化</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            1995〜99年平均と2020〜25年平均の比較（気象庁データより）。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">都市</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">1995〜99年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2020〜25年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">変化</th>
+                </tr>
+              </thead>
+              <tbody>
+                {WINTER_TMIN_TREND.map((row, i) => (
+                  <tr key={row.regionKey} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.cityJa}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.tmin1995_99.toFixed(1)}℃</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.tmin2020_25.toFixed(1)}℃</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.change >= 0 ? "text-sky-700" : "text-slate-600"}`}>
+                      {row.change >= 0 ? `+${row.change.toFixed(1)}` : row.change.toFixed(1)}℃
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            名古屋+1.4℃、札幌+1.2℃ — 冬の最低気温は全都市で上昇傾向。温暖化により暖房需要は緩やかに減少しています。
+          </div>
+
+          {/* B: 暖房度日(HDD) */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">暖房度日（HDD）の減少トレンド</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            暖房度日（基準温度14℃）は暖房エネルギー需要の目安。1995〜99年平均と2020〜24年平均を比較（主要5都市）。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">都市</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">1995〜99年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">2020〜24年</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">減少率</th>
+                </tr>
+              </thead>
+              <tbody>
+                {HDD_TREND.map((row, i) => (
+                  <tr key={row.regionKey} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.cityJa}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-600">{row.hdd1995_99.toLocaleString()}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.hdd2020_24.toLocaleString()}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-sky-700">{row.changePercent}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            大阪-19%、仙台-16%、金沢-16% — 暖房の必要日数は着実に減少しています。長期的には暖房電力需要の水準が下がる傾向にあります。
+          </div>
+
+          {/* C: 札幌の極寒日 */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">札幌の極寒日（-10℃以下）の推移</h3>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">期間</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">-10℃以下の日数（累計）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: "1990年代", value: SAPPORO_EXTREME_COLD.d1990s },
+                  { label: "2000年代", value: SAPPORO_EXTREME_COLD.d2000s },
+                  { label: "2010年代", value: SAPPORO_EXTREME_COLD.d2010s },
+                  { label: "2020年代", value: SAPPORO_EXTREME_COLD.d2020s },
+                ].map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.label}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.value}日</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm leading-7 text-slate-700">
+            札幌の-10℃以下の日数: 1990年代64日 → 2020年代35日（約半減）。北海道でも厳寒日は明確に減少しており、暖房需要の長期的な減少と整合します。
+          </div>
+
+          {/* D: 注意喚起 */}
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">それでも厳冬リスクが残る理由</h3>
+          <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm leading-7 text-slate-700">
+            <p>
+              暖房需要の減少トレンドにもかかわらず、1〜2月は依然として全国需要が最大（約11.2万MW）の季節です。厳冬リスクが「なくなった」わけではなく、<strong className="text-slate-900">LNG需給逼迫や寒波の短期集中リスクは依然として残ります。</strong>
+            </p>
+            <p className="mt-2">
+              2021年1月のJEPX高騰（最大251円/kWh）は、まさに寒波が直接の引き金でした。年単位の需要が減っても、数日間の急激な寒波で需給は瞬時に逼迫します。市場連動プランを契約する法人にとって、冬の短期リスク管理は引き続き重要です。
+            </p>
           </div>
         </section>
 
