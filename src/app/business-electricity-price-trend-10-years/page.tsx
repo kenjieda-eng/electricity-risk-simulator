@@ -10,6 +10,7 @@ import {
 } from "../../data/businessElectricityTrendHubData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
+import { DEMAND_FY_TREND } from "../../data/demandData";
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -313,6 +314,39 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             特に実務では、総額だけでなく単価系列を継続監視し、自社契約区分のデータを基準に政策要因を上書きして読むことが有効です。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">全国電力需要の推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            需要はFY2017の10.2万MWをピークに緩やかに減少(-3.6%)。しかし電気料金は上昇している — 需要減少にもかかわらず料金が高止まりする「ねじれ」構造が、
+            制度コスト(容量拠出金・再エネ賦課金)や燃料費の影響を裏付けています。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（万MW）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">ピーク（万MW）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">前年比</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEMAND_FY_TREND.map((row, i) => (
+                  <tr key={row.fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{row.fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{(row.avgMW / 10000).toFixed(1)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{(row.peakMW / 10000).toFixed(1)}</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-medium ${row.yoyChange === null ? "text-slate-400" : row.yoyChange > 0 ? "text-red-600" : "text-emerald-600"}`}>
+                      {row.yoyChange === null ? "—" : `${row.yoyChange > 0 ? "+" : ""}${row.yoyChange}%`}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
         </section>
 
         <RelatedLinks

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_SEASON_HOUR, DEMAND_WEEKDAY_WEEKEND } from "../../data/demandData";
 
 const pageTitle =
   "デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界";
@@ -350,6 +351,64 @@ export default function DemandSuppressionEffectivenessPage() {
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド抑制は高圧・特別高圧契約の法人にとって有効な基本料金削減手段ですが、月に1回でもピークが発生するとその月のデマンドが更新される仕組みのため、確実な抑制が重要です。デマンドコントローラー・蓄電池・稼働スケジュール分散などの手段を組み合わせ、継続的にデマンドを管理することで、基本料金の長期的な削減効果が期待できます。ただし、低圧契約や基本料金比率が低い場合は効果が限定的なため、自社の料金構造を確認した上で優先順位を判断することが重要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            実需要データで見る最適な抑制タイミング
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全国実需要データ（OCCTO、FY2016〜2023）から季節別・時間帯別のピークを確認し、抑制対象とすべき時間帯を特定します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">時間帯</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">夏（MW）</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">冬（MW）</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">差（MW）</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {DEMAND_SEASON_HOUR.filter((d) => d.hour >= 12 && d.hour <= 20).map((d, i) => (
+                  <tr key={d.hour} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 p-3 font-medium text-slate-800">{d.hour}時</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{d.summer.toLocaleString()}</td>
+                    <td className="border border-slate-200 p-3 text-right text-slate-700">{d.winter.toLocaleString()}</td>
+                    <td className="border border-slate-200 p-3 text-right font-semibold text-sky-700">
+                      {(d.summer - d.winter > 0 ? "+" : "") + (d.summer - d.winter).toLocaleString()}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 space-y-3">
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
+              <p className="text-sm font-semibold text-amber-900">夏の抑制ターゲット: 13〜15時（冷房ピーク）</p>
+              <p className="mt-1 text-sm leading-6 text-amber-800">
+                夏のピークは14時台（123,372MW）に到達します。空調の設定温度調整、ブラインド制御が有効な対策です。
+              </p>
+            </div>
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-900">冬の抑制ターゲット: 17〜19時（暖房+照明ピーク）</p>
+              <p className="mt-1 text-sm leading-6 text-sky-800">
+                冬のピークは18時台（123,157MW）に到達します。照明の段階消灯、空調の予熱制御が有効な対策です。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">平日vs休日: デマンド制御は平日に集中投資</p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">
+                平日の平均需要（{DEMAND_WEEKDAY_WEEKEND.weekdayAvgMW.toLocaleString()}MW）は休日（{DEMAND_WEEKDAY_WEEKEND.weekendAvgMW.toLocaleString()}MW）より
+                +{DEMAND_WEEKDAY_WEEKEND.diffMW.toLocaleString()}MW高くなっています。
+                デマンドピークは平日に集中しやすいため、平日の抑制対策に優先的に投資すべきです。
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
           </p>
         </section>
 

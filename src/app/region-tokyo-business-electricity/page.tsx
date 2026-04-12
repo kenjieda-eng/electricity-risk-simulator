@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
+import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 
 const pageTitle = "東京電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -412,6 +413,39 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           東京エリアは全期間を通じてシステムプライスを上回る傾向があり、FY2022は+3.09円、FY2026は+5.33円と需要集中によるプレミアムが拡大しています。
         </p>
+      </section>
+
+      {/* エリア需要の特徴 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          東京電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "tokyo")?.share}%を占めます。全国最大の需要エリア。負荷率はFY2016の{LOAD_FACTOR_FY.find(r => r.fy === 2016)?.tokyo}%→FY2022の{LOAD_FACTOR_FY.find(r => r.fy === 2022)?.tokyo}%と全国最低水準まで低下し、ピーク尖鋭化が顕著。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-sky-50">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[2016, 2023].map((fy, i) => {
+                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
+                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
+                return (
+                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.tokyo.toLocaleString()}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.tokyo}%</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
       {/* 関連リンク */}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_HOURLY_AVG } from "../../data/demandData";
 
 const pageTitle =
   "蓄電池は電気料金対策としてどう効くか｜デマンド抑制とピークカットの仕組み";
@@ -302,6 +303,60 @@ export default function BatteryElectricityCostBenefitPage() {
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池は、デマンド抑制による基本料金削減とピークシフトによる電力量料金の最適化という2つの経路で電気料金削減に貢献できます。効果の大きさは自社の電力使用パターン・契約プラン・蓄電池の容量・設計次第です。導入前に自社のデマンドパターンを分析し、どちらの効果が主たる便益になるかを明確にした上で投資判断を行うことが重要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            需要データで見る蓄電池の最適運用タイミング
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全国の時間帯別平均需要データから、充電・放電の最適ウィンドウを特定します。
+          </p>
+          <div className="mt-4 space-y-2">
+            {DEMAND_HOURLY_AVG.map((d) => {
+              const isCharge = d.hour >= 1 && d.hour <= 5;
+              const isDischarge = d.hour >= 17 && d.hour <= 18;
+              const barWidth = Math.round(((d.avgMW - 80000) / 35000) * 100);
+              return (
+                <div key={d.hour} className="flex items-center gap-2">
+                  <span className="w-10 shrink-0 text-right text-xs text-slate-600">{d.hour}時</span>
+                  <div className="flex-1 rounded bg-slate-100">
+                    <div
+                      className={`h-3.5 rounded transition-all ${
+                        isDischarge
+                          ? "bg-rose-500"
+                          : isCharge
+                          ? "bg-sky-400"
+                          : "bg-slate-300"
+                      }`}
+                      style={{ width: `${Math.max(barWidth, 2)}%` }}
+                    />
+                  </div>
+                  <span className="w-24 shrink-0 text-right text-xs text-slate-600">
+                    {d.avgMW.toLocaleString()} MW
+                    {isCharge && (
+                      <span className="ml-1 rounded-full bg-sky-100 px-1 text-sky-700">充電</span>
+                    )}
+                    {isDischarge && (
+                      <span className="ml-1 rounded-full bg-rose-100 px-1 text-rose-700">放電</span>
+                    )}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">ピークシフトの経済的根拠</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">
+              深夜1時台（{DEMAND_HOURLY_AVG.find((d) => d.hour === 1)?.avgMW.toLocaleString()}MW）に充電し、
+              夕方18時台（{DEMAND_HOURLY_AVG.find((d) => d.hour === 18)?.avgMW.toLocaleString()}MW）に放電することで、
+              需要ピーク時の契約電力を抑制できます。深夜と夕方の需要差は約29,000MW（+35%）であり、
+              この差分がピークシフトの経済価値の源泉です。
+            </p>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
           </p>
         </section>
 

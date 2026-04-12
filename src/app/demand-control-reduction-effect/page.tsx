@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { LOAD_FACTOR_FY, DEMAND_FY_TREND } from "../../data/demandData";
 
 const pageTitle = "デマンドコントロールの削減効果｜基本料金を下げる仕組み";
 const pageDescription =
@@ -302,6 +303,67 @@ export default function DemandControlReductionEffectPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の施策実績を反映）
         </p>
+      </section>
+
+      {/* 負荷率低下トレンドとデマンド制御の投資価値 */}
+      <section className="mt-6">
+        <div className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">負荷率低下トレンドとデマンド制御の投資価値</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            東京エリアのFY2016〜2023の実績データから、負荷率（平均需要÷ピーク需要）の推移を確認します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">年度</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">平均需要（MW）</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">ピーク（MW）</th>
+                  <th className="border border-slate-200 p-3 text-right font-semibold text-slate-900">負荷率（東京）</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {DEMAND_FY_TREND.map((row, i) => {
+                  const lf = LOAD_FACTOR_FY.find((l) => l.fy === row.fy);
+                  return (
+                    <tr key={row.fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="border border-slate-200 p-3 font-medium text-slate-800">FY{row.fy}</td>
+                      <td className="border border-slate-200 p-3 text-right text-slate-700">{row.avgMW.toLocaleString()}</td>
+                      <td className="border border-slate-200 p-3 text-right text-slate-700">{row.peakMW.toLocaleString()}</td>
+                      <td className="border border-slate-200 p-3 text-right font-semibold text-sky-700">{lf ? lf.tokyo : "—"}%</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-5">
+            <p className="text-sm font-semibold text-slate-900 mb-3">東京エリア 負荷率の推移</p>
+            <div className="space-y-2">
+              {LOAD_FACTOR_FY.map((row) => (
+                <div key={row.fy} className="flex items-center gap-3">
+                  <span className="w-16 shrink-0 text-sm text-slate-700">FY{row.fy}</span>
+                  <div className="flex-1 rounded bg-slate-100">
+                    <div
+                      className="h-4 rounded bg-sky-500 transition-all"
+                      style={{ width: `${(row.tokyo / 70) * 100}%` }}
+                    />
+                  </div>
+                  <span className="w-12 shrink-0 text-right text-sm font-semibold text-sky-700">{row.tokyo}%</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+            <p className="text-sm leading-7 text-amber-800">
+              <span className="font-semibold">投資価値の高まり:</span>{" "}
+              負荷率の低下は「ピークが尖鋭化」していることを意味します。平均は下がっているのにピークは下がらない（むしろ上がっている）。この構造では、デマンド制御による基本料金削減の投資対効果が年々高まっています。
+            </p>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。
+          </p>
+        </div>
       </section>
 
       {/* 関連リンク */}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_MONTHLY_AVG, DEMAND_PEAK_DAYS } from "../../data/demandData";
 
 const pageTitle = "デマンドとは？法人の電気料金と契約電力の関係を解説";
 const pageDescription =
@@ -219,6 +220,78 @@ export default function DemandChargePage() {
             <li>請求書を確認するなら「電気料金の請求書で確認したいポイント」</li>
             <li>見積比較に進むなら「法人向け電気料金見積書の見方」</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">需要データで見るデマンドのピーク時期</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            実際の全国電力需要データ（OCCTO公表データ集計）から、デマンドが高くなりやすい月・日を確認します。季節的なパターンを把握することが、デマンド管理のタイミングを決める上で重要です。
+          </p>
+
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">月別平均需要（全国）</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <span className="font-semibold text-red-700">1〜2月（11.2万MW）が年間最大、5月（8.5万MW）が最小</span>。冬の暖房需要が大きく、夏の冷房需要も7〜8月に顕著に現れます。
+          </p>
+          <div className="mt-4 space-y-1">
+            {DEMAND_MONTHLY_AVG.map((d) => {
+              const maxMW = 120000;
+              const pct = Math.round((d.avgMW / maxMW) * 100);
+              const color =
+                d.avgMW >= 110000
+                  ? "bg-red-500"
+                  : d.avgMW >= 100000
+                  ? "bg-yellow-400"
+                  : "bg-sky-400";
+              return (
+                <div key={d.month} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-8 shrink-0 text-right">{d.label}</span>
+                  <div className="flex-1 rounded bg-slate-100">
+                    <div
+                      className={`${color} h-4 rounded`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="w-24 shrink-0 text-right tabular-nums">
+                    {d.avgMW.toLocaleString()} MW
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex flex-wrap gap-4 text-xs text-slate-600">
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-sky-400" />100,000MW未満</span>
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-yellow-400" />100,000〜110,000MW</span>
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-red-500" />110,000MW超</span>
+          </div>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">ピーク需要日 Top10</h3>
+          <div className="mt-3 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">順位</th>
+                  <th className="border border-slate-200 px-3 py-2">日付</th>
+                  <th className="border border-slate-200 px-3 py-2">曜日</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">ピーク需要（MW）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEMAND_PEAK_DAYS.map((d, i) => (
+                  <tr key={d.date} className={i === 0 ? "bg-red-50" : ""}>
+                    <td className="border border-slate-200 px-3 py-2 text-center font-semibold">{i + 1}</td>
+                    <td className="border border-slate-200 px-3 py-2 tabular-nums">{d.date}</td>
+                    <td className="border border-slate-200 px-3 py-2">{d.day}</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right tabular-nums font-semibold ${i === 0 ? "text-red-700" : "text-slate-700"}`}>
+                      {d.peakMW.toLocaleString()}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm leading-7 text-amber-900">
+            Top10は全て7〜8月の平日。最大は2020年8月20日の164,910MW。<span className="font-semibold">猛暑×平日がデマンドのワーストケース</span>であり、夏季の平日を重点的に管理することが最も効果的です。
+          </p>
         </section>
 
         <RelatedLinks

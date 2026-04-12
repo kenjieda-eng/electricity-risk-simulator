@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
+import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 
 const pageTitle = "関西電力エリアの法人電気代事情｜原発比率と料金の特性";
 const pageDescription =
@@ -425,6 +426,39 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           関西エリアは原発比率の高さからシステムプライスとほぼ同水準〜やや安で推移。FY2022は-0.87円と需給安定性を反映。
         </p>
+      </section>
+
+      {/* エリア需要の特徴 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          関西電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "kansai")?.share}%を占めます。東京に次ぐ需要規模。原発稼働でベースロードが安定し負荷率は{LOAD_FACTOR_FY.find(r => r.fy === 2023)?.kansai}%と中位。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-indigo-50">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[2016, 2023].map((fy, i) => {
+                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
+                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
+                return (
+                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.kansai.toLocaleString()}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.kansai}%</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
       {/* 関連リンク */}

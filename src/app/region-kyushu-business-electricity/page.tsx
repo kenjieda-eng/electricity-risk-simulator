@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
+import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 
 const pageTitle = "九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性";
 const pageDescription =
@@ -425,6 +426,39 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           九州エリアは太陽光発電の大量導入により、昼間の余剰電力でエリアプライスが全国最安水準。FY2022ですら14.42円と全国平均を-5.99円下回りました。
         </p>
+      </section>
+
+      {/* エリア需要の特徴 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          九州電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "kyushu")?.share}%を占めます。太陽光大量導入で昼間の余剰が発生。需要の変動パターンが他エリアと異なる。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-amber-50">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[2016, 2023].map((fy, i) => {
+                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
+                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
+                return (
+                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.kyushu.toLocaleString()}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.kyushu}%</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
       {/* 関連リンク */}

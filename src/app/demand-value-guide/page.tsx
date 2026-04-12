@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_SEASON_HOUR } from "../../data/demandData";
 
 const pageTitle =
   "デマンド値の見方｜契約電力と基本料金への影響を理解する";
@@ -233,6 +234,61 @@ export default function DemandValueGuidePage() {
                 <li>始業時の一斉起動を段階的に分散する運用がある</li>
                 <li>デマンド削減の年間効果を金額で把握している</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">季節×時間帯で見るデマンドのターゲット</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            デマンド抑制の効果を最大化するには、「どの季節の何時台」にピークが集中するかを把握することが重要です。全国実測データ（OCCTO公表データ集計）による季節別・時間帯別の需要パターンを確認します。
+          </p>
+
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">季節×時間帯の需要比較（抜粋）</h3>
+          <div className="mt-3 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">時間帯</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">夏（MW）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">冬（MW）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">春（MW）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">秋（MW）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEMAND_SEASON_HOUR.filter((d) => [8, 10, 12, 14, 16, 18, 20].includes(d.hour)).map((d) => {
+                  const isSummerPeak = d.hour === 14;
+                  const isWinterPeak = d.hour === 18;
+                  return (
+                    <tr key={d.hour}>
+                      <td className="border border-slate-200 px-3 py-2 font-semibold">{d.hour}時</td>
+                      <td className={`border border-slate-200 px-3 py-2 text-right tabular-nums ${isSummerPeak ? "bg-red-50 font-bold text-red-700" : ""}`}>
+                        {d.summer.toLocaleString()}
+                      </td>
+                      <td className={`border border-slate-200 px-3 py-2 text-right tabular-nums ${isWinterPeak ? "bg-red-50 font-bold text-red-700" : ""}`}>
+                        {d.winter.toLocaleString()}
+                      </td>
+                      <td className="border border-slate-200 px-3 py-2 text-right tabular-nums">
+                        {d.spring.toLocaleString()}
+                      </td>
+                      <td className="border border-slate-200 px-3 py-2 text-right tabular-nums">
+                        {d.autumn.toLocaleString()}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-4 space-y-3">
+            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm leading-7 text-red-900">
+              <span className="font-semibold">夏は13〜14時の冷房ピーク、冬は18時の暖房+照明ピークが最大。</span>デマンド抑制はこの時間帯をターゲットにすると最も効果的です。
+              夏14時（123,372MW）・冬18時（123,157MW）が各季節の最大ポイントです。
+            </div>
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm leading-7 text-sky-900">
+              春・秋は10万MW以下で安定しており、この時期のデマンド管理は比較的容易です。設備点検やデマンドコントローラーの目標値再設定など、準備作業を行うのに適した時期です。
             </div>
           </div>
         </section>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_PEAK_DAYS, DEMAND_SEASON_HOUR } from "../../data/demandData";
 
 const pageTitle =
   "猛暑で法人・企業・自治体の電気料金・電気代はどう上がる？夏の上振れリスクを解説";
@@ -147,6 +148,40 @@ export default function ElectricityCostRiskHeatwavePage() {
               ワーストシナリオ
             </Link>
             と比較すると、夏要因の寄与を把握しやすくなります。自社・自施設に近い使用条件で確認することが精度向上につながります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">需要データで見る猛暑リスクの実態</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            歴代ピーク需要Top10は全て7-8月の平日に記録。最大は2020年8月20日の164,910MW。
+            これらのデータはOCCTO（電力広域的運営推進機関）の公表データを集計したものです。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">順位</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">日付</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">曜日</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">ピーク需要（MW）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEMAND_PEAK_DAYS.map((row, i) => (
+                  <tr key={row.date} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">{i + 1}</td>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.date}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-600">{row.day}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.peakMW.toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            夏の14時台は全国需要が{DEMAND_SEASON_HOUR.find(h => h.hour === 14)?.summer.toLocaleString()}MWに達し、冷房需要が集中。
+            この時間帯にJEPX価格も急騰しやすく、市場連動プランの上振れリスクが最大化します。
           </p>
         </section>
 

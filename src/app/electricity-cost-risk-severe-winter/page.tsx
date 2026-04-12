@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_MONTHLY_AVG, DEMAND_SEASON_HOUR } from "../../data/demandData";
 
 const pageTitle =
   "厳冬で法人・企業・自治体の電気料金・電気代はどう上がる？冬の上振れリスクを解説";
@@ -149,6 +150,40 @@ export default function ElectricityCostRiskSevereWinterPage() {
             </Link>
             と照合することで、年間の安全幅を検討しやすくなります。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">需要データで見る厳冬リスクの実態</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            1月({DEMAND_MONTHLY_AVG.find(m => m.month === 1)?.avgMW.toLocaleString()}MW)と
+            2月({DEMAND_MONTHLY_AVG.find(m => m.month === 2)?.avgMW.toLocaleString()}MW)が年間最大需要月。
+            暖房需要が夏のピークを上回ります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            冬の18時台は{DEMAND_SEASON_HOUR.find(h => h.hour === 18)?.winter.toLocaleString()}MWに達し、暖房と照明が重なるピーク。
+            夏の14時台({DEMAND_SEASON_HOUR.find(h => h.hour === 14)?.summer.toLocaleString()}MW)にほぼ匹敵する水準です。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            厳冬時はLNG消費量も増加するため、燃料費調整額の上昇と需要ピークによるJEPX高騰が同時に発生するリスクがあります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">月</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEMAND_MONTHLY_AVG.filter(m => m.month <= 3 || m.month >= 11).map((row, i) => (
+                  <tr key={row.month} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">{row.label}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.avgMW.toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <RelatedLinks

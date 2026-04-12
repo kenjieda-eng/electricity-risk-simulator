@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_HOURLY_AVG, DEMAND_WEEKDAY_WEEKEND, LOAD_FACTOR_FY } from "../../data/demandData";
 
 const pageTitle = "契約電力とは｜法人の電気料金・基本料金・見積比較で押さえたい考え方";
 const pageDescription =
@@ -184,6 +185,108 @@ export default function ContractDemandWhatIsItPage() {
             <li>現在の請求書を確認するなら「電気料金の請求書で確認したいポイント」</li>
             <li>見積比較へ進むなら「法人向け電気料金見積書の見方」</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">実際の電力需要データで見る契約電力の重要性</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全国の実測データ（OCCTO公表データ集計）をもとに、電力需要がどのような時間帯パターンを持つかを確認します。需要のピーク構造を知ることが、契約電力の最適化につながります。
+          </p>
+
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">24時間の需要パターン（全国平均）</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <span className="font-semibold text-red-700">11時台（111,061MW）と18時台（111,247MW）にダブルピーク</span>が発生しています。この二山構造が契約電力の決定に影響します。
+          </p>
+          <div className="mt-4 space-y-1">
+            {DEMAND_HOURLY_AVG.map((d) => {
+              const maxMW = 115000;
+              const pct = Math.round((d.avgMW / maxMW) * 100);
+              const color =
+                d.avgMW > 105000
+                  ? "bg-red-500"
+                  : d.avgMW >= 90000
+                  ? "bg-yellow-400"
+                  : "bg-green-500";
+              return (
+                <div key={d.hour} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-10 shrink-0 text-right">{d.hour}時</span>
+                  <div className="flex-1 rounded bg-slate-100">
+                    <div
+                      className={`${color} h-4 rounded`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="w-24 shrink-0 text-right tabular-nums">
+                    {d.avgMW.toLocaleString()} MW
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex flex-wrap gap-4 text-xs text-slate-600">
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-green-500" />90,000MW未満</span>
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-yellow-400" />90,000〜105,000MW</span>
+            <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-red-500" />105,000MW超</span>
+          </div>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">平日 vs 休日の需要差</h3>
+          <div className="mt-3 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">区分</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">平均需要（MW）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">平日</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right tabular-nums">{DEMAND_WEEKDAY_WEEKEND.weekdayAvgMW.toLocaleString()}</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">休日</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right tabular-nums">{DEMAND_WEEKDAY_WEEKEND.weekendAvgMW.toLocaleString()}</td>
+                </tr>
+                <tr className="bg-amber-50">
+                  <td className="border border-slate-200 px-3 py-2">差分</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-amber-700 tabular-nums">
+                    +{DEMAND_WEEKDAY_WEEKEND.diffMW.toLocaleString()} MW（+{DEMAND_WEEKDAY_WEEKEND.diffPercent}%）
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            平日は休日より<span className="font-semibold">+{DEMAND_WEEKDAY_WEEKEND.diffMW.toLocaleString()}MW（+{DEMAND_WEEKDAY_WEEKEND.diffPercent}%）高い</span>ため、平日の需要パターンがデマンド値（ひいては契約電力）を決定します。休日に需要が下がっても、平日ピークが契約電力に反映される点に注意が必要です。
+          </p>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">負荷率低下トレンド（東京エリア）</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            負荷率とは「平均需要 ÷ 最大需要」の比率です。低下するほどピークが尖鋭化しており、契約電力の最適化が重要になります。
+          </p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">東京エリア負荷率</th>
+                </tr>
+              </thead>
+              <tbody>
+                {LOAD_FACTOR_FY.map((row) => (
+                  <tr key={row.fy}>
+                    <td className="border border-slate-200 px-3 py-2">FY{row.fy}</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right tabular-nums font-semibold ${row.tokyo <= 55 ? "text-red-700" : "text-slate-700"}`}>
+                      {row.tokyo}%
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm leading-7 text-amber-900">
+            東京エリアの負荷率はFY2016の61%→FY2022の54%に低下。ピークが尖鋭化しており、契約電力の最適化がますます重要になっています。
+          </p>
         </section>
 
         <RelatedLinks

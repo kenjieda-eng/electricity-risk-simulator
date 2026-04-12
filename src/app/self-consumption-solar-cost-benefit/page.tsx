@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { DEMAND_HOURLY_AVG } from "../../data/demandData";
 
 const pageTitle =
   "自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方";
@@ -243,6 +244,70 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光は、購入電力量を減らすことで電力量料金・燃料費調整額・再エネ賦課金を同時に削減する効果があります。昼間に電力消費が集中する業態で、屋根や架台スペースを確保できる法人にとっては有効な電気料金対策です。電気料金の上昇傾向が続く環境では、将来のコスト上昇リスクをヘッジする意味合いも高まっています。蓄電池との組み合わせを検討する場合は、自家消費率をどこまで高められるかを中心に試算することが重要です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            需要パターンと太陽光発電のミスマッチ
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全国の時間帯別平均需要データと太陽光発電の出力特性を照合すると、重要な構造的ミスマッチが見えてきます。
+          </p>
+          <div className="mt-4 space-y-3">
+            <div className="rounded-lg border border-rose-200 bg-rose-50 p-4">
+              <p className="text-sm font-semibold text-rose-900">夕方ピーク（18時台）に太陽光はほぼゼロ</p>
+              <p className="mt-2 text-sm leading-6 text-rose-800">
+                全国需要は18時台（{DEMAND_HOURLY_AVG.find((d) => d.hour === 18)?.avgMW.toLocaleString()}MW）にピークを迎えますが、
+                太陽光発電の出力はこの時間帯にはほぼゼロです。
+                自家消費型太陽光だけではデマンドピーク対策として機能しません。
+              </p>
+            </div>
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-900">昼12時台の需要落ち込み（太陽光の影響）</p>
+              <p className="mt-2 text-sm leading-6 text-sky-800">
+                昼12時台の全国需要は{DEMAND_HOURLY_AVG.find((d) => d.hour === 12)?.avgMW.toLocaleString()}MWに落ち込みます。
+                これは太陽光の大量導入により自家消費・逆潮流が増えた影響です。
+                自家消費型太陽光は昼間の購入電力削減には有効ですが、夕方のデマンドピーク対策には蓄電池の併用が必要です。
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 overflow-x-auto">
+            <div className="space-y-1.5">
+              {DEMAND_HOURLY_AVG.map((d) => {
+                const isPeak = d.hour === 18;
+                const isDip = d.hour === 12;
+                const barWidth = Math.round(((d.avgMW - 80000) / 35000) * 100);
+                return (
+                  <div key={d.hour} className="flex items-center gap-2">
+                    <span className="w-10 shrink-0 text-right text-xs text-slate-600">{d.hour}時</span>
+                    <div className="flex-1 rounded bg-slate-100">
+                      <div
+                        className={`h-3 rounded ${
+                          isPeak ? "bg-rose-500" : isDip ? "bg-amber-400" : "bg-slate-300"
+                        }`}
+                        style={{ width: `${Math.max(barWidth, 2)}%` }}
+                      />
+                    </div>
+                    <span className="w-24 shrink-0 text-right text-xs text-slate-600">
+                      {d.avgMW.toLocaleString()} MW
+                      {isPeak && <span className="ml-1 rounded-full bg-rose-100 px-1 text-rose-700">ピーク</span>}
+                      {isDip && <span className="ml-1 rounded-full bg-amber-100 px-1 text-amber-700">昼間谷</span>}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">太陽光の導入効果を最大化する複合戦略</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">
+              太陽光の導入効果を最大化するには、昼間の自家消費で電力量料金を削減しつつ、蓄電池で夕方ピークの基本料金削減も狙う複合戦略が有効です。
+              太陽光のみでは夕方18時台のデマンドには対応できないため、蓄電池との組み合わせが戦略の核となります。
+            </p>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
           </p>
         </section>
 
