@@ -354,6 +354,41 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         </ol>
       </section>
 
+      {/* 電源構成の実績データ */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          2024〜2026年の30分値データ（35,280レコード）を集計した北海道エリアの電源構成実績です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold text-slate-600">石炭火力</p>
+            <p className="mt-1 text-2xl font-bold text-slate-800">37.8%</p>
+            <p className="text-xs text-slate-500">平均 1,328 MW</p>
+          </div>
+          <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-4">
+            <p className="text-xs font-semibold text-cyan-700">風力</p>
+            <p className="mt-1 text-2xl font-bold text-cyan-900">9.9%</p>
+            <p className="text-xs text-cyan-600">全国最高 / 平均 348 MW</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">太陽光</p>
+            <p className="mt-1 text-2xl font-bold text-amber-900">10.5%</p>
+            <p className="text-xs text-amber-600">最大 2,153 MW</p>
+          </div>
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+            <p className="text-xs font-semibold text-emerald-700">再エネ季節変動</p>
+            <p className="mt-1 text-2xl font-bold text-emerald-900">61.2% ↔ 30.5%</p>
+            <p className="text-xs text-emerald-600">5月最大 / 1月最小</p>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          風力9.9%は全国最高で、再エネ比率は5月に61.2%に達する一方、1月は30.5%まで低下する極端な季節変動が特徴です。
+          原子力はゼロ（全停止）で、冬季は石炭火力への依存度がさらに高まります。蓄電池稼働率98.8%は全国トップですが容量は小規模です。
+          <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
+        </p>
+      </section>
+
       {/* 注記 */}
       <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
         <p className="text-xs text-slate-500">

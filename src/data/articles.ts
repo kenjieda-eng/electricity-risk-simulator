@@ -306,6 +306,11 @@ export const articleCategories: ArticleCategory[] = [
       "renewable-power-procurement",
       "non-fossil-certificates",
       "power-risk-management",
+      "area-power-supply-mix-comparison",
+      "duck-curve-electricity-price-impact",
+      "solar-curtailment-by-area",
+      "thermal-vs-renewable-trend",
+      "inter-area-power-flow-explained",
     ],
     order: 8,
     group: "learning",
@@ -2315,4 +2320,11 @@ export const articleList: ArticleMeta[] = [
   { title: "停電・計画停電が発生したときの法人対応マニュアル", slug: "emergency-power-outage-response", description: "停電発生時の初動から復電後の手順、設備保護、BCP連携までを法人担当者向けに整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 7, publishedAt: "2026-04-12" },
   { title: "電力会社が倒産・事業撤退したときの対応", slug: "emergency-supplier-bankruptcy", description: "新電力の倒産・廃業通知を受けた場合の対応手順、最終保障供給への切替、切替先選定のタイムラインを整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 8, publishedAt: "2026-04-12" },
   { title: "電気料金の二重請求・過請求が発生したときの対応", slug: "emergency-billing-dispute", description: "二重請求・過大請求の原因確認手順、電力会社への問い合わせ方法、返金交渉のプロセスを整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 9, publishedAt: "2026-04-12" },
+
+  // --- L. 電源構成データ分析 5本 ---
+  { title: "エリア別電源構成マップ", slug: "area-power-supply-mix-comparison", description: "9エリアの電源構成比率を30分値データから可視化。LNG・石炭・原子力・再エネの違いと法人電気料金への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", featured: true, order: 20, publishedAt: "2026-04-12" },
+  { title: "太陽光出力制御の実態", slug: "solar-curtailment-by-area", description: "九州13.8%、四国10.5%、関西10.1%──エリア別・月別の太陽光出力抑制量を30分値データから可視化し、法人の投資判断への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 21, publishedAt: "2026-04-12" },
+  { title: "ダックカーブとは何か", slug: "duck-curve-electricity-price-impact", description: "昼12時のネット需要7,819MWから夕方18時の11,923MWへの急上昇。太陽光が生むダックカーブと市場価格への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 22, publishedAt: "2026-04-12" },
+  { title: "火力 vs 再エネ 年度別推移", slug: "thermal-vs-renewable-trend", description: "FY2023→FY2026で火力66.6%→56.4%、再エネ26.1%→27.7%。年度別の電源構成推移と法人の中長期戦略への示唆を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 23, publishedAt: "2026-04-12" },
+  { title: "エリア間電力融通の実態", slug: "inter-area-power-flow-explained", description: "東京は常時+4,456MW輸入、東北は-4,041MW輸出。連系線・揚水発電・蓄電池のデータから法人電気料金への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 24, publishedAt: "2026-04-12" },
 ];

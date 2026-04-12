@@ -362,6 +362,42 @@ export default function RegionHokurikuBusinessElectricityPage() {
         </ol>
       </section>
 
+      {/* 電源構成の実績データ */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          2024〜2026年の30分値データ（36,960レコード）を集計した北陸エリアの電源構成実績です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold text-slate-600">石炭火力</p>
+            <p className="mt-1 text-2xl font-bold text-slate-800">53.8%</p>
+            <p className="text-xs text-slate-500">全国最高 / 平均 1,770 MW</p>
+          </div>
+          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+            <p className="text-xs font-semibold text-blue-700">水力</p>
+            <p className="mt-1 text-2xl font-bold text-blue-900">26.9%</p>
+            <p className="text-xs text-blue-600">全国最高 / 平均 886 MW</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">太陽光</p>
+            <p className="mt-1 text-2xl font-bold text-amber-900">5.9%</p>
+            <p className="text-xs text-amber-600">最大 1,260 MW</p>
+          </div>
+          <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+            <p className="text-xs font-semibold text-indigo-700">原子力</p>
+            <p className="mt-1 text-2xl font-bold text-indigo-900">0.0%</p>
+            <p className="text-xs text-indigo-600">全停止（志賀原発）</p>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          石炭53.8%＋水力26.9%は北陸特有の電源構成です。石炭依存度は全国最高で、石炭価格の国際変動が
+          料金に直結します。一方、水力26.9%も全国最高で、従来は安価な水力が料金安の一因でした。
+          原子力（志賀原発）は全停止中で、再稼働の見通しが立てば電源構成が大きく変わる可能性があります。
+          <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
+        </p>
+      </section>
+
       {/* 注記 */}
       <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
         <p className="text-xs text-slate-500">

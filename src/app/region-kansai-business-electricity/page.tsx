@@ -383,6 +383,42 @@ export default function RegionKansaiBusinessElectricityPage() {
         </ol>
       </section>
 
+      {/* 電源構成の実績データ */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          2024〜2026年の30分値データ（36,960レコード）を集計した関西エリアの電源構成実績です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+            <p className="text-xs font-semibold text-indigo-700">原子力</p>
+            <p className="mt-1 text-2xl font-bold text-indigo-900">34.8%</p>
+            <p className="text-xs text-indigo-600">平均 5,368 MW / 稼働率 100%</p>
+          </div>
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
+            <p className="text-xs font-semibold text-orange-700">LNG火力</p>
+            <p className="mt-1 text-2xl font-bold text-orange-900">27.1%</p>
+            <p className="text-xs text-orange-600">平均 4,181 MW</p>
+          </div>
+          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+            <p className="text-xs font-semibold text-blue-700">揚水発電</p>
+            <p className="mt-1 text-2xl font-bold text-blue-900">充電率 47.7%</p>
+            <p className="text-xs text-blue-600">全国最積極的な揚水活用</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">太陽光抑制</p>
+            <p className="mt-1 text-2xl font-bold text-amber-900">10.1%</p>
+            <p className="text-xs text-amber-600">昼間の出力制御頻度</p>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          原子力34.8%（稼働率100%）は全国最高で、ベースロード電源が安定しています。
+          その一方、原子力＋太陽光の同時供給により昼間に余剰が発生し、太陽光抑制率は10.1%と高水準です。
+          揚水発電を全国で最も積極的に活用（充電率47.7%）し、余剰吸収とピーク対応を行っています。
+          <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
+        </p>
+      </section>
+
       {/* 注記 */}
       <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
         <p className="text-xs text-slate-500">

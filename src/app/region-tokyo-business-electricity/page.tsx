@@ -370,6 +370,42 @@ export default function RegionTokyoBusinessElectricityPage() {
         </ol>
       </section>
 
+      {/* 電源構成の実績データ */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          2024〜2026年の30分値データ（35,501レコード）を集計した東京エリアの電源構成実績です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
+            <p className="text-xs font-semibold text-orange-700">LNG火力</p>
+            <p className="mt-1 text-2xl font-bold text-orange-900">55.7%</p>
+            <p className="text-xs text-orange-600">平均 15,260 MW（全国最大）</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold text-slate-600">石炭火力</p>
+            <p className="mt-1 text-2xl font-bold text-slate-800">20.2%</p>
+            <p className="text-xs text-slate-500">平均 5,539 MW</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">太陽光</p>
+            <p className="mt-1 text-2xl font-bold text-amber-900">10.7%</p>
+            <p className="text-xs text-amber-600">最大 17,840 MW / 抑制率 0.0%</p>
+          </div>
+          <div className="rounded-xl border border-red-200 bg-red-50 p-4">
+            <p className="text-xs font-semibold text-red-700">連系線（輸入）</p>
+            <p className="mt-1 text-2xl font-bold text-red-900">+4,456 MW</p>
+            <p className="text-xs text-red-600">常時輸入（最小+217MW）</p>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          LNG火力55.7%は全国最高の依存度です。太陽光出力は最大17,840MWと全国最大ですが、
+          需要規模も最大のため抑制は発生していません（抑制率0.0%）。常時4,456MWを他エリア（主に東北）から
+          輸入しており、連系線への依存度も高い構造です。
+          <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
+        </p>
+      </section>
+
       {/* 注記 */}
       <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
         <p className="text-xs text-slate-500">

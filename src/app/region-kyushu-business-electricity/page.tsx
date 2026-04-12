@@ -383,6 +383,41 @@ export default function RegionKyushuBusinessElectricityPage() {
         </ol>
       </section>
 
+      {/* 電源構成の実績データ */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          2023〜2026年の30分値データ（12,144レコード）を集計した九州エリアの電源構成実績です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+            <p className="text-xs font-semibold text-indigo-700">原子力</p>
+            <p className="mt-1 text-2xl font-bold text-indigo-900">29.5%</p>
+            <p className="text-xs text-indigo-600">平均 3,378 MW / 稼働率 100%</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold text-slate-600">石炭火力</p>
+            <p className="mt-1 text-2xl font-bold text-slate-800">30.1%</p>
+            <p className="text-xs text-slate-500">平均 3,449 MW</p>
+          </div>
+          <div className="rounded-xl border border-red-200 bg-red-50 p-4">
+            <p className="text-xs font-semibold text-red-700">太陽光抑制</p>
+            <p className="mt-1 text-2xl font-bold text-red-900">13.8%</p>
+            <p className="text-xs text-red-600">全国最多 / 最大 4,838 MW</p>
+          </div>
+          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+            <p className="text-xs font-semibold text-blue-700">連系線（輸出）</p>
+            <p className="mt-1 text-2xl font-bold text-blue-900">−1,637 MW</p>
+            <p className="text-xs text-blue-600">常時輸出エリア</p>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          原子力29.5%（稼働率100%）と太陽光13.3%の組合せが特徴です。太陽光出力制御は全国最多の13.8%（昼間時間帯）で、
+          3月には平均565.6MW、4月には851.8MWが抑制されています。余剰電力は連系線で常時1,637MWを輸出しています。
+          <a href="/solar-curtailment-by-area" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 太陽光出力制御の実態を見る</a>
+        </p>
+      </section>
+
       {/* 注記 */}
       <div className="mt-6 rounded-xl border border-slate-100 bg-slate-50 p-4">
         <p className="text-xs text-slate-500">
