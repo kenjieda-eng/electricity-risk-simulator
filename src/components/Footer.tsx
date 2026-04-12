@@ -137,11 +137,11 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-labelledby="footer-category-links">
+          <nav aria-labelledby="footer-category-links" className="sm:col-span-2">
             <h3 id="footer-category-links" className={blockHeadingClass}>
               解説カテゴリから探す
             </h3>
-            <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
+            <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 sm:mt-4 sm:gap-y-2.5">
               {categoryLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className={linkClass}>
@@ -152,7 +152,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-labelledby="footer-popular-basic">
+          <nav aria-labelledby="footer-popular-basic" className="sm:col-span-2 lg:col-span-1">
             <h3 id="footer-popular-basic" className={blockHeadingClass}>
               よく読まれる基礎記事
             </h3>
