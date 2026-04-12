@@ -203,6 +203,71 @@ export default function SolarBatteryCombinationBenefitPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            モデルケース試算表
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            100kW太陽光を例に、蓄電池あり・なしの比較試算を示します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">項目</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">太陽光のみ</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">太陽光＋蓄電池</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">太陽光容量</td><td className="border border-slate-200 p-3 text-slate-700">100 kW</td><td className="border border-slate-200 p-3 text-slate-700">100 kW</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">蓄電池容量</td><td className="border border-slate-200 p-3 text-slate-700">—</td><td className="border border-slate-200 p-3 text-slate-700">50 kWh</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">年間発電量</td><td className="border border-slate-200 p-3 text-slate-700">約110,000 kWh</td><td className="border border-slate-200 p-3 text-slate-700">約110,000 kWh</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">自家消費率</td><td className="border border-slate-200 p-3 text-slate-700">約60%（66,000 kWh）</td><td className="border border-slate-200 p-3 text-slate-700">約85%（93,500 kWh）</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">購入電力削減額</td><td className="border border-slate-200 p-3 text-slate-700">約132万円</td><td className="border border-slate-200 p-3 text-slate-700">約187万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">ピーク削減による基本料金削減</td><td className="border border-slate-200 p-3 text-slate-700">—</td><td className="border border-slate-200 p-3 text-slate-700">約30万円/年</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">年間トータル削減額</td><td className="border border-slate-200 p-3 text-slate-700">約132万円</td><td className="border border-slate-200 p-3 text-slate-700">約217万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">導入費用目安</td><td className="border border-slate-200 p-3 text-slate-700">約1,500万円</td><td className="border border-slate-200 p-3 text-slate-700">約2,250万円</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">単純回収年数</td><td className="border border-slate-200 p-3 text-slate-700">約11年</td><td className="border border-slate-200 p-3 text-slate-700">約10年</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※電力量料金20円/kWh、基本料金1,650円/kW想定。上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            システムサイズ別費用の目安
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            導入規模に応じた概算費用と回収期間の目安を整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">太陽光容量</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">蓄電池容量</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">概算費用</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">年間削減目安</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">回収目安</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">30 kW</td><td className="border border-slate-200 p-3 text-slate-700">—</td><td className="border border-slate-200 p-3 text-slate-700">約500万円</td><td className="border border-slate-200 p-3 text-slate-700">約40万円</td><td className="border border-slate-200 p-3 text-slate-700">約12年</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">50 kW</td><td className="border border-slate-200 p-3 text-slate-700">25 kWh</td><td className="border border-slate-200 p-3 text-slate-700">約1,100万円</td><td className="border border-slate-200 p-3 text-slate-700">約100万円</td><td className="border border-slate-200 p-3 text-slate-700">約11年</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">100 kW</td><td className="border border-slate-200 p-3 text-slate-700">50 kWh</td><td className="border border-slate-200 p-3 text-slate-700">約2,250万円</td><td className="border border-slate-200 p-3 text-slate-700">約217万円</td><td className="border border-slate-200 p-3 text-slate-700">約10年</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">200 kW</td><td className="border border-slate-200 p-3 text-slate-700">100 kWh</td><td className="border border-slate-200 p-3 text-slate-700">約4,200万円</td><td className="border border-slate-200 p-3 text-slate-700">約420万円</td><td className="border border-slate-200 p-3 text-slate-700">約10年</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             設計時の主要な検討ポイント
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

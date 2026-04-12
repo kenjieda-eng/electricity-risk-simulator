@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "固定プラン向き・市場連動向き簡易診断｜自社に合うプランを整理する";
@@ -61,37 +62,6 @@ const decisionNodes = [
     yesResult: "fixed",
     noNext: true,
   },
-];
-
-const fixedPlanTraits = [
-  { label: "料金の予見性が高い", detail: "基本料金・電力量料金が原則固定されるため、月々の電気料金をある程度見通すことができます。予算管理・財務計画を立てやすい組織に向いています。" },
-  { label: "相場が上がっても単価は上がりにくい", detail: "電力市場価格が高騰しても、契約時の単価が変わらないため、外部ショックを受けにくい構造です。" },
-  { label: "燃料費調整額に上限設定があるプランが多い", detail: "固定型プランは燃料費調整額に上限を設けているケースが多く、極端な上振れを防げます。ただし上限の有無と算定方法はプランごとに異なります。" },
-  { label: "中途解約違約金が発生しやすい", detail: "固定単価の裏返しとして、契約期間内の解約に違約金が設定されているプランが多くあります。契約期間と中途解約条件を事前に確認してください。" },
-];
-
-const marketPlanTraits = [
-  { label: "市場価格が下がると料金も安くなる可能性がある", detail: "JEPXなどの電力市場価格に連動するため、相場が安定・下落した局面では固定型より低コストになる可能性があります。" },
-  { label: "市場価格が上がると料金も上昇する", detail: "燃料高・需給逼迫・季節変動の影響を直接受けます。2021〜2022年の電力価格高騰局面では、市場連動プランの料金が大幅に上昇しました。" },
-  { label: "上限なしの調整額には注意が必要", detail: "市場連動型で燃料費調整額に上限がないプランは、極端な相場上昇時に請求額が大きく膨らむリスクがあります。" },
-  { label: "使用量が多い・安定している組織には一定のメリットがある", detail: "使用量が大きく安定していて、市場動向を自社でモニタリングできる組織であれば、コストメリットを享受しやすい構造です。" },
-];
-
-const checklist = [
-  { category: "固定プランが向く傾向", items: [
-    "毎月の電気料金を予算に組み込んで管理している",
-    "電気料金の変動を財務・経営上の大きなリスクと捉えている",
-    "料金高騰時に対応できる余力（コスト吸収・価格転嫁）が乏しい",
-    "長期的に安定した契約関係を重視する",
-    "エネルギー担当者がおらず、料金動向のモニタリングが難しい",
-  ]},
-  { category: "市場連動プランが向く傾向", items: [
-    "市場価格が安い局面でのコスト削減を優先したい",
-    "電力使用量が大きく、コスト変動を吸収できる体力がある",
-    "電気料金動向を定期的にモニタリングできる体制がある",
-    "短期的な価格変動よりも長期的なトータルコストを重視する",
-    "太陽光・蓄電池など自家消費設備があり、市場連動を活用できる",
-  ]},
 ];
 
 export default function FixedVsMarketQuickDiagnosisPage() {
@@ -174,63 +144,7 @@ export default function FixedVsMarketQuickDiagnosisPage() {
           </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">固定型プランの特徴と注意点</h2>
-          <div className="mt-4 space-y-3">
-            {fixedPlanTraits.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">市場連動型プランの特徴と注意点</h2>
-          <div className="mt-4 space-y-3">
-            {marketPlanTraits.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">自社が向くプランを確認するチェックリスト</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            当てはまる項目が多い方のプランが、自社の傾向に合っている可能性が高いといえます。ただし、最終判断は見積条件の比較で行ってください。
-          </p>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
-            {checklist.map((section) => (
-              <div key={section.category} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <p className="text-sm font-semibold text-slate-800">{section.category}</p>
-                <ul className="mt-3 space-y-2">
-                  {section.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                        ✓
-                      </span>
-                      <span className="text-sm leading-6 text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+        <DiagnosisClient />
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">プラン選択時に必ず確認したいポイント</h2>

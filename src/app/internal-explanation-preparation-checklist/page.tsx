@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "社内説明準備チェックリスト｜電力契約見直しの稟議・報告前に揃えたい情報";
@@ -39,86 +40,6 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
-
-const currentStatusItems = [
-  {
-    label: "現在の電力契約の基本情報（プラン名・電力会社・契約電力・契約期間）",
-    note: "説明の出発点として、現行契約がどのような条件かを整理します。プラン名・電力会社・契約種別（高圧・低圧等）・契約電力（kW）・満了日を1枚の表にまとめると説明しやすくなります。",
-  },
-  {
-    label: "直近12か月分の月次電気料金（総額・使用量・主要項目別内訳）",
-    note: "月次の請求金額推移グラフがあると、「いつから・どのくらい上がったか」が視覚的に伝わります。前年同月比での増減額も示すと、上昇の実感を共有しやすくなります。",
-  },
-  {
-    label: "電気料金が上昇している場合、その原因の特定（燃料費調整額・市場価格調整額・再エネ賦課金等）",
-    note: "「なぜ上がったか」を説明できないと、見直しの必要性に説得力がありません。変動費項目ごとの金額推移を整理し、上昇原因を特定しておきましょう。",
-  },
-  {
-    label: "年間電気料金の総額と、売上・原価に占める比率（電力コスト比率）",
-    note: "「年間○○万円かかっている」という絶対額と、「原価の○%を占める」という相対的な大きさの両方を示すことで、見直しの優先度が伝わりやすくなります。",
-  },
-];
-
-const riskItems = [
-  {
-    label: "シミュレーターを使った今後の上振れリスク試算結果",
-    note: "現行プランのままだと今後どの程度のコスト上振れが起こりうるかを試算した結果を示します。「楽観シナリオ・標準シナリオ・悲観シナリオ」の3パターンで示すと理解が得やすくなります。",
-  },
-  {
-    label: "現在のプランが固定型か市場連動型か、それぞれのリスク構造の説明",
-    note: "市場連動型は上振れリスクが大きいこと、固定型は安定性が高いが割高になる可能性があることを簡潔に説明します。プラン選択の方向性の根拠になります。",
-  },
-  {
-    label: "燃料費調整額に上限設定があるかどうか（上限なしの場合はリスクの大きさを明示）",
-    note: "上限なしプランのリスクは、2021〜2022年の価格高騰局面の実績データで示すと説得力が増します。「過去の高騰局面では○○万円上振れした」という事実があれば有効です。",
-  },
-  {
-    label: "契約の自動更新リスク（更新を見逃した場合の影響）",
-    note: "「見直しをしない場合に起こりうること」を示すことで、意思決定を促す材料になります。自動更新で不利な条件が延長されるリスクを数値で示せると効果的です。",
-  },
-];
-
-const comparisonItems = [
-  {
-    label: "2社以上の見積書（同一前提条件での比較）",
-    note: "1社だけでは比較にならず、社内承認を得にくい場合があります。最低2〜3社の見積を揃え、同一前提条件での比較であることを明示してください。",
-  },
-  {
-    label: "現行プランとの年間総額比較（削減見込み額・削減率）",
-    note: "「現行より年間○○万円削減できる」という数字は意思決定の最大の根拠になります。変動費を含めた年間総額ベースで比較し、削減見込みの根拠も示すことが重要です。",
-  },
-  {
-    label: "各プランの変動リスク比較（固定費・変動費の構成比、燃料費調整額の上限有無）",
-    note: "単価だけでなく、リスク構造の違いを比較することで、単純な最安値選びではなく「自社に合ったリスク水準の選択」として説明できます。",
-  },
-  {
-    label: "切替先電力会社の信頼性・実績情報（倒産リスク等）",
-    note: "新電力の撤退・倒産リスクを懸念する声が出ることがあります。切替先の設立年・資本関係・実績を簡単に示しておくと安心感につながります。",
-  },
-  {
-    label: "契約期間・中途解約条件の比較（各社の違いを明示）",
-    note: "「縛り期間がどれくらいあるか」「中途解約時の違約金はいくらか」は特に経営者・法務担当が気にするポイントです。各社の条件を横断的に整理してください。",
-  },
-];
-
-const internalProcessItems = [
-  {
-    label: "稟議・決裁に必要な書類フォーマットを確認・用意している",
-    note: "社内の稟議書フォーマットに合わせて資料を準備することで、担当部門の手戻りを減らせます。見積書の原本・比較表・説明資料をセットで提出できるようにしてください。",
-  },
-  {
-    label: "関係部署（経理・経営企画・法務・施設管理等）への事前根回しが済んでいる",
-    note: "稟議で突然反対意見が出ることを防ぐため、意思決定に関わる部署へ事前に内容を共有し、懸念事項を把握・対処しておくことが有効です。",
-  },
-  {
-    label: "切替スケジュールと手続きの工数を整理している",
-    note: "承認後に「いつまでに、誰が、何をするか」を整理しておくと、決裁後に素早く動けます。切替完了まで通常1〜2か月かかる点を踏まえたスケジュールを準備してください。",
-  },
-  {
-    label: "切替後のモニタリング方法（コスト効果確認の仕組み）を説明できる",
-    note: "「切り替えた後にきちんと効果を検証します」という説明があると、意思決定者の不安を軽減しやすくなります。月次のコスト確認方法を簡単に示すことを推奨します。",
-  },
-];
 
 const qaItems = [
   {
@@ -191,89 +112,16 @@ export default function InternalExplanationPreparationChecklistPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">① 現状確認：揃えておくべき情報（4項目）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">準備チェックリスト（全17項目）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            「現在どのような状況か」を示す情報です。請求書と契約書から整理できます。
-          </p>
-          <div className="mt-4 space-y-3">
-            {currentStatusItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">② リスク説明：上振れリスクの試算と根拠（4項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            「このままにしておくとどうなるか」を示す情報です。シミュレーターの活用が有効です。
-          </p>
-          <div className="mt-4 space-y-3">
-            {riskItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-amber-100 bg-amber-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-amber-300 bg-white text-xs text-amber-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-3 text-sm leading-6 text-slate-600">
-            リスク試算にはサイト内の{" "}
+            各項目をクリックしてチェックしてください。準備が整っている項目にチェックを入れることで、社内説明の準備完了度を確認できます。リスク試算には{" "}
             <Link href="/simulate" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
               シミュレーター
             </Link>{" "}
-            を活用してください。現行プランの条件を入力すると上振れリスクを数値で確認できます。
+            を活用してください。
           </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">③ 比較資料：見積比較と判断根拠（5項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            「なぜこの選択肢を選ぶか」の根拠となる情報です。複数社の見積書をもとに整理します。
-          </p>
-          <div className="mt-4 space-y-3">
-            {comparisonItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-sky-100 bg-sky-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-sky-300 bg-white text-xs text-sky-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">④ 社内プロセスの準備（4項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            「スムーズに意思決定してもらうための準備」です。根回し・スケジュール・フォローアップの整理が含まれます。
-          </p>
-          <div className="mt-4 space-y-3">
-            {internalProcessItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-4">
+            <DiagnosisClient />
           </div>
         </section>
 

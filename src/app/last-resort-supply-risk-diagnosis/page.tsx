@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "最終保障供給リスク診断｜自社が最終保障供給になるリスクを確認";
@@ -39,53 +40,6 @@ export const metadata: Metadata = {
   },
 };
 
-const riskCheckItems = [
-  {
-    label: "現在の電力会社が小規模な新電力会社である",
-    note: "資本力・財務基盤が脆弱な新電力は、電力市場の急騰局面で撤退・倒産するリスクがあります。供給元の財務状況を定期的に確認することが重要です。",
-    level: "high",
-  },
-  {
-    label: "現在の電力会社から「供給停止」「事業撤退」「契約終了」の通知を受けたことがある",
-    note: "このような通知を受けた場合、速やかに代替の電力会社に切り替えないと最終保障供給に移行するリスクがあります。すぐに行動を開始してください。",
-    level: "high",
-  },
-  {
-    label: "現在の電力契約が終了しているが、新たな契約先を決めていない",
-    note: "契約が空白になっている場合、自動的に最終保障供給（一般送配電事業者の提供）に移行することがあります。最終保障供給は通常の小売より単価が高い傾向があります。",
-    level: "high",
-  },
-  {
-    label: "現在の電力会社の経営状況・ニュースを直近1年以内に確認していない",
-    note: "電力小売会社の事業撤退・廃業は突然告知されることがあります。主要な新電力のニュースを年数回チェックする習慣が、早期対応につながります。",
-    level: "medium",
-  },
-  {
-    label: "現在の電力契約の満了日を把握していない",
-    note: "契約が終了した後に放置されると最終保障供給に移行します。満了日を把握し、更新または切替の手続きを確実に行う体制が必要です。",
-    level: "medium",
-  },
-  {
-    label: "電力契約の担当者が不在・引き継ぎ不足で、契約状況が把握できていない",
-    note: "担当者交代や引き継ぎ漏れで、電力契約の状況が把握できていないケースがあります。契約情報の管理体制を確認してください。",
-    level: "medium",
-  },
-  {
-    label: "複数拠点があり、一部拠点の契約状況を把握していない",
-    note: "複数拠点を管理している場合、一部拠点が最終保障供給になっていることに気づかないケースがあります。定期的に全拠点の契約状況を確認する体制が重要です。",
-    level: "medium",
-  },
-  {
-    label: "電力使用量が多く、最終保障供給になった場合のコスト増加が大きい",
-    note: "最終保障供給は単価が高いため、使用量が多い法人ほどコストへのインパクトが大きくなります。予備の切替候補を事前に検討しておくことが有効です。",
-    level: "low",
-  },
-  {
-    label: "現在の電力会社との契約が単年度更新で、更新のたびに条件変更の可能性がある",
-    note: "単年度契約は柔軟性がある反面、年度ごとに条件交渉が必要です。更新時に不利な条件提示があった場合、速やかに代替候補を検討できる体制を持っておくことが重要です。",
-    level: "low",
-  },
-];
 
 const lastResortFacts = [
   {
@@ -162,64 +116,10 @@ export default function LastResortSupplyRiskDiagnosisPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">リスク診断チェックリスト（9項目）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            以下の項目に当てはまるものが多いほど、最終保障供給に移行するリスクが高い状況といえます。
+            以下の項目に当てはまるものをクリックしてチェックしてください。該当項目が多いほど、最終保障供給に移行するリスクが高い状況といえます。
           </p>
-
           <div className="mt-4">
-            <p className="text-sm font-semibold text-red-700">重要度：高（1つでも該当したら早急に確認）</p>
-            <div className="mt-3 space-y-3">
-              {riskCheckItems
-                .filter((item) => item.level === "high")
-                .map((item) => (
-                  <div key={item.label} className="flex items-start gap-3 rounded-lg border border-red-100 bg-red-50 p-4">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-red-300 bg-white text-xs text-red-400">
-                      ✓
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <p className="text-sm font-semibold text-amber-700">重要度：中（複数該当したら対策を検討）</p>
-            <div className="mt-3 space-y-3">
-              {riskCheckItems
-                .filter((item) => item.level === "medium")
-                .map((item) => (
-                  <div key={item.label} className="flex items-start gap-3 rounded-lg border border-amber-100 bg-amber-50 p-4">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-amber-300 bg-white text-xs text-amber-400">
-                      ✓
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <p className="text-sm font-semibold text-slate-600">重要度：低（把握しておくと安心）</p>
-            <div className="mt-3 space-y-3">
-              {riskCheckItems
-                .filter((item) => item.level === "low")
-                .map((item) => (
-                  <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                      ✓
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                    </div>
-                  </div>
-                ))}
-            </div>
+            <DiagnosisClient />
           </div>
         </section>
 

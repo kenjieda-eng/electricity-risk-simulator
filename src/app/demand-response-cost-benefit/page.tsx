@@ -252,6 +252,63 @@ export default function DemandResponseCostBenefitPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            DR参加による対価の目安
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            DR参加によって得られる対価は種類・アグリゲーターによって異なります。以下は2025〜2026年時点の業界概算値です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">DR種類</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">対価の目安</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">拠出条件</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">下げDR（需要抑制型）</td><td className="border border-slate-200 p-3 text-slate-700">削減1kWあたり 5〜15円/kWh</td><td className="border border-slate-200 p-3 text-slate-700">4時間以上の抑制が一般的</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">容量市場型（kW価値）</td><td className="border border-slate-200 p-3 text-slate-700">年間 約3,000〜5,000円/kW</td><td className="border border-slate-200 p-3 text-slate-700">年間数回の発動、応答義務あり</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">アグリゲーター経由</td><td className="border border-slate-200 p-3 text-slate-700">基本料: 月額数万円＋実績報酬</td><td className="border border-slate-200 p-3 text-slate-700">契約内容による</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            業種別DR効果の目安
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            業種ごとの典型的な削減可能容量と年間インセンティブ目安を整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">業種</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">典型的な削減可能容量</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">年間インセンティブ目安</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">製造業（金属加工）</td><td className="border border-slate-200 p-3 text-slate-700">100〜300 kW</td><td className="border border-slate-200 p-3 text-slate-700">30〜90万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">冷凍冷蔵倉庫</td><td className="border border-slate-200 p-3 text-slate-700">50〜200 kW</td><td className="border border-slate-200 p-3 text-slate-700">15〜60万円</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">大型商業施設</td><td className="border border-slate-200 p-3 text-slate-700">200〜500 kW</td><td className="border border-slate-200 p-3 text-slate-700">60〜150万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">データセンター（蓄電池活用）</td><td className="border border-slate-200 p-3 text-slate-700">500〜2000 kW</td><td className="border border-slate-200 p-3 text-slate-700">150〜600万円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             DRと他の対策の組み合わせ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

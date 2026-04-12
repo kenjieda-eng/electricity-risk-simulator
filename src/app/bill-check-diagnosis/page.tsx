@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "請求書確認ポイント診断｜電気料金請求書の見落としをチェック";
@@ -38,82 +39,6 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
-
-const basicItems = [
-  {
-    label: "基本料金の計算基準（契約電力kW）を確認している",
-    note: "契約電力は基本料金の算定根拠です。実際の使用実績に対して過大に設定されていないかを確認しましょう。特に設備変更・移転後に見直されていないケースがあります。",
-  },
-  {
-    label: "電力量料金の単価と時間帯区分を把握している",
-    note: "時間帯別料金が設定されているプランでは、昼間・夜間・深夜の単価が異なります。稼働時間帯と料金帯が合っているかを確認することが最適化の基本です。",
-  },
-  {
-    label: "再エネ賦課金の単価と月額負担を確認している",
-    note: "再エネ賦課金は全需要家に一律適用されますが、年度ごとに単価が改定されます。使用量が多い事業者ほど負担が大きくなるため、金額推移を把握してください。",
-  },
-  {
-    label: "電気料金の合計額を前月・前年同月と比較している",
-    note: "変動要因を把握するために、月次・前年同月比での推移確認が基本です。使用量が変わっていないのに金額が上がっている場合は、単価要因（調整額等）が増えている可能性があります。",
-  },
-];
-
-const adjustmentItems = [
-  {
-    label: "燃料費調整額の符号（プラス・マイナス）と金額を確認している",
-    note: "燃料費調整額はLNG・石油などの燃料価格に連動して毎月変動します。プラス（追加負担）になっている月が多い場合、その累積額が年間コストに与える影響を確認しましょう。",
-  },
-  {
-    label: "燃料費調整額に上限設定があるか確認している",
-    note: "上限なしのプランでは燃料価格が高騰した際に調整額が青天井になります。上限の有無と上限単価を契約書で確認してください。固定型プランでは上限付きが多い傾向があります。",
-  },
-  {
-    label: "市場価格調整額が加算されているかを確認している",
-    note: "市場連動型プランでは、JEPX等の卸電力取引所の価格に連動した調整額が加算されます。請求書に「市場価格調整額」または同様の名称の項目がある場合、その算定方式を確認してください。",
-  },
-  {
-    label: "容量拠出金が請求書に反映されているかを確認している",
-    note: "容量拠出金は2024年度から導入された制度負担です。電力会社によって請求書への反映方法が異なります（単価に込みの場合・別建ての場合）。明細での表示方法を確認してください。",
-  },
-  {
-    label: "託送料金の内訳（系統利用料）を確認したことがある",
-    note: "新電力から電力を購入している場合、送配電網の利用料（託送料金）は電力小売価格に含まれています。プランによっては明細として開示されているケースもあります。",
-  },
-];
-
-const usageItems = [
-  {
-    label: "月間電力使用量（kWh）の推移を直近12か月分把握している",
-    note: "使用量の推移を把握することで、季節変動・設備変更の影響を把握できます。見積比較や契約電力の見直しにも必要な基礎情報です。",
-  },
-  {
-    label: "デマンド値（最大需要電力）を確認したことがある",
-    note: "高圧以上の契約では、30分単位の最大需要電力（デマンド）が基本料金に影響します。デマンドが高い月が契約電力の基準になる場合があるため、ピークカットの効果を検証できます。",
-  },
-  {
-    label: "力率（パワーファクター）と割引・割増の適用を確認している",
-    note: "力率が高い（進み力率）場合、基本料金の割引が適用されることがあります。力率が低い場合は逆に割増になるプランもあります。請求書に力率の記載があれば確認しましょう。",
-  },
-];
-
-const contractConditionItems = [
-  {
-    label: "現在の契約電力（kW）が実態に即しているかを確認している",
-    note: "契約電力が実使用量より大幅に大きい場合、基本料金を過剰に払っている可能性があります。特に設備縮小・移転・閉鎖後に契約変更をしていないケースに注意が必要です。",
-  },
-  {
-    label: "複数拠点分の請求書を一元的に管理できている",
-    note: "複数拠点がある場合、拠点ごとに電力会社・プランが異なることがあります。まとめて比較するには各拠点の供給地点特定番号と使用量データを一元管理することが有効です。",
-  },
-  {
-    label: "前回の契約更新時から単価条件が変更されていないか確認している",
-    note: "自動更新時に単価条件が変わっているケースがあります。更新のたびに契約書と請求書単価を照合するクセをつけると、見落としを防ぎやすくなります。",
-  },
-  {
-    label: "補助金・価格激変緩和措置の終了が料金に反映されているか確認している",
-    note: "政府の電気・ガス価格激変緩和対策は段階的に縮小・終了しています。補助金終了後の請求書で料金が上がっているかを確認し、その分を現行コストとして認識することが重要です。",
-  },
-];
 
 export default function BillCheckDiagnosisPage() {
   return (
@@ -157,82 +82,7 @@ export default function BillCheckDiagnosisPage() {
           </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">基本料金・電力量料金の確認（4項目）</h2>
-          <div className="mt-4 space-y-3">
-            {basicItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">変動費用項目の確認（5項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            近年の電気料金上昇の多くは、この変動費用項目の増加によるものです。各項目の有無と金額規模を必ず確認してください。
-          </p>
-          <div className="mt-4 space-y-3">
-            {adjustmentItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-amber-100 bg-amber-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-amber-300 bg-white text-xs text-amber-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">使用量データの把握（3項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            使用量データは、見積比較・シミュレーター入力・社内説明のいずれにも必要な基礎情報です。
-          </p>
-          <div className="mt-4 space-y-3">
-            {usageItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">契約条件の実態確認（3項目）</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            請求書と契約書を照合することで、実態に即した契約条件になっているかを確認できます。
-          </p>
-          <div className="mt-4 space-y-3">
-            {contractConditionItems.map((item) => (
-              <div key={item.label} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                  ✓
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        <DiagnosisClient />
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">確認できていない項目が多い場合の対応</h2>

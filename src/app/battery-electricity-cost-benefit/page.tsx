@@ -211,6 +211,61 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実際の試算には、充放電ロス・蓄電池容量の制約・メンテナンスコストを考慮した上で、回収年数を算出することが重要です。
           </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">項目</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">数値</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">現行契約電力</td><td className="border border-slate-200 p-3 text-slate-700">500 kW</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">ピーク削減見込み</td><td className="border border-slate-200 p-3 text-slate-700">75 kW（15%削減）</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">基本料金単価</td><td className="border border-slate-200 p-3 text-slate-700">1,650 円/kW</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">年間基本料金削減額</td><td className="border border-slate-200 p-3 text-slate-700">75 × 1,650 × 12 = 約1,485,000円</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">蓄電池容量</td><td className="border border-slate-200 p-3 text-slate-700">200 kWh</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">蓄電池導入費用目安</td><td className="border border-slate-200 p-3 text-slate-700">200 kWh × 15万円 = 約3,000万円</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">単純回収年数</td><td className="border border-slate-200 p-3 text-slate-700">約20年（基本料金削減のみ）</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">ピークシフト併用時</td><td className="border border-slate-200 p-3 text-slate-700">約12〜15年（電力量料金削減効果を加算）</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            業種別 蓄電池導入効果の目安
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            業種・規模ごとの蓄電池導入効果の概算を整理します。実際の効果は施設条件・契約内容・補助金活用の有無によって異なります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">業種</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">契約電力</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">ピーク削減率</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">年間削減額目安</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">回収目安</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">金属加工工場</td><td className="border border-slate-200 p-3 text-slate-700">500kW</td><td className="border border-slate-200 p-3 text-slate-700">10〜20%</td><td className="border border-slate-200 p-3 text-slate-700">100〜300万円</td><td className="border border-slate-200 p-3 text-slate-700">12〜20年</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">スーパーマーケット</td><td className="border border-slate-200 p-3 text-slate-700">200kW</td><td className="border border-slate-200 p-3 text-slate-700">15〜25%</td><td className="border border-slate-200 p-3 text-slate-700">60〜120万円</td><td className="border border-slate-200 p-3 text-slate-700">15〜20年</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">病院</td><td className="border border-slate-200 p-3 text-slate-700">300kW</td><td className="border border-slate-200 p-3 text-slate-700">10〜15%</td><td className="border border-slate-200 p-3 text-slate-700">60〜90万円</td><td className="border border-slate-200 p-3 text-slate-700">18〜25年※BCP価値別</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">物流倉庫</td><td className="border border-slate-200 p-3 text-slate-700">400kW</td><td className="border border-slate-200 p-3 text-slate-700">15〜25%</td><td className="border border-slate-200 p-3 text-slate-700">120〜250万円</td><td className="border border-slate-200 p-3 text-slate-700">10〜15年（太陽光併用時）</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">データセンター</td><td className="border border-slate-200 p-3 text-slate-700">1000kW</td><td className="border border-slate-200 p-3 text-slate-700">5〜10%</td><td className="border border-slate-200 p-3 text-slate-700">100〜200万円</td><td className="border border-slate-200 p-3 text-slate-700">20年超※UPS兼用で短縮可</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の蓄電池価格（15〜20万円/kWh、産業用リチウムイオン）をベースとした概算です。補助金活用により回収期間は大幅に短縮できます。
+          </p>
+          <p className="mt-1 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

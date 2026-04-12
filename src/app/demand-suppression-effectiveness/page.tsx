@@ -216,6 +216,66 @@ export default function DemandSuppressionEffectivenessPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            デマンド抑制による基本料金削減の具体例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            基本料金単価1,650円/kWを前提に、削減幅ごとの削減効果を整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">削減幅(kW)</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">基本料金単価</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">月額削減</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">年間削減</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">30 kW</td><td className="border border-slate-200 p-3 text-slate-700">1,650円</td><td className="border border-slate-200 p-3 text-slate-700">49,500円</td><td className="border border-slate-200 p-3 text-slate-700">594,000円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">50 kW</td><td className="border border-slate-200 p-3 text-slate-700">1,650円</td><td className="border border-slate-200 p-3 text-slate-700">82,500円</td><td className="border border-slate-200 p-3 text-slate-700">990,000円</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">100 kW</td><td className="border border-slate-200 p-3 text-slate-700">1,650円</td><td className="border border-slate-200 p-3 text-slate-700">165,000円</td><td className="border border-slate-200 p-3 text-slate-700">1,980,000円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">200 kW</td><td className="border border-slate-200 p-3 text-slate-700">1,650円</td><td className="border border-slate-200 p-3 text-slate-700">330,000円</td><td className="border border-slate-200 p-3 text-slate-700">3,960,000円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            デマンド監視装置の費用対効果
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            導入方法ごとの費用と想定削減効果・回収期間の目安を整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">導入方法</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">初期費用</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">月額費用</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">想定削減効果</th>
+                  <th className="border border-slate-200 p-3 text-left font-semibold text-slate-900">回収期間</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="border border-slate-200 p-3 text-slate-700">クラウド型監視のみ</td><td className="border border-slate-200 p-3 text-slate-700">10〜30万円</td><td className="border border-slate-200 p-3 text-slate-700">3,000〜5,000円</td><td className="border border-slate-200 p-3 text-slate-700">10〜20kW削減</td><td className="border border-slate-200 p-3 text-slate-700">6〜12ヶ月</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 p-3 text-slate-700">監視＋自動制御</td><td className="border border-slate-200 p-3 text-slate-700">50〜150万円</td><td className="border border-slate-200 p-3 text-slate-700">5,000〜10,000円</td><td className="border border-slate-200 p-3 text-slate-700">30〜80kW削減</td><td className="border border-slate-200 p-3 text-slate-700">3〜12ヶ月</td></tr>
+                <tr><td className="border border-slate-200 p-3 text-slate-700">BEMS連携型</td><td className="border border-slate-200 p-3 text-slate-700">200〜500万円</td><td className="border border-slate-200 p-3 text-slate-700">10,000〜30,000円</td><td className="border border-slate-200 p-3 text-slate-700">50〜150kW削減</td><td className="border border-slate-200 p-3 text-slate-700">12〜24ヶ月</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             効果を最大化するための組み合わせ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

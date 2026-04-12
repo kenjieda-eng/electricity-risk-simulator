@@ -42,12 +42,13 @@ export const metadata: Metadata = {
 const overviewTable = [
   { item: "事業名", value: "脱炭素化に向けた省エネ等の推進事業（SHIFT事業）" },
   { item: "実施機関", value: "環境省" },
-  { item: "主な支援内容", value: "GHG排出量算定・削減計画策定・SBT等認証取得費用等" },
-  { item: "補助率（目安）", value: "対象費用の概ね1/2〜2/3（事業区分・規模による）" },
-  { item: "補助上限額（目安）", value: "区分・事業規模による（要公募要領確認）" },
-  { item: "対象企業", value: "主にサプライチェーン上の中小企業、自社削減目標設定を目指す法人" },
-  { item: "公募時期（目安）", value: "2026年度：環境省サイトで要確認" },
-  { item: "特徴", value: "削減計画策定後の設備投資（省エネ・再エネ）との連携が期待される" },
+  { item: "主な支援内容", value: "GHG排出量算定・削減計画策定・SBT等認証取得費用、省エネ設備導入" },
+  { item: "補助率（目安）", value: "対象費用の概ね1/2〜2/3以内（事業区分・規模による）" },
+  { item: "補助上限額（目安）", value: "計画策定支援: 最大2,000万円 ／ 設備導入支援: 最大1億円（中小）、最大5,000万円（大企業）" },
+  { item: "対象企業", value: "SBT認証の取得を目指す企業、GHG排出削減計画を策定する中小〜大企業" },
+  { item: "公募時期（目安）", value: "2026年6月〜8月（一次公募予定）※環境省公式サイトで要確認" },
+  { item: "採択率（参考）", value: "過去実績から概ね50〜60%程度（年度・区分により変動）" },
+  { item: "特徴", value: "削減計画策定後の設備投資（SII省エネ補助金・PPA補助金）との組み合わせが効果的" },
 ];
 
 const subsidyTargets = [
@@ -155,6 +156,43 @@ export default function SubsidyShiftProjectPage() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* 補助上限額 詳細 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助上限額の詳細（目安）</h2>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 以下は2026年4月時点の概算です。正式な上限額・補助率は公募要領でご確認ください。年度途中の変更・追加公募の可能性があります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100 text-left">
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">支援区分</th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">補助率（目安）</th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">中小企業 上限額（目安）</th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">大企業 上限額（目安）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">計画策定支援（GHG算定・SBT申請等）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2/3以内</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-emerald-700">最大2,000万円</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-emerald-700">最大2,000万円</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">設備導入支援（省エネ・再エネ設備）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">1/2以内</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-emerald-700">最大1億円</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-emerald-700">最大5,000万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 採択率は過去実績から概ね50〜60%程度とされていますが、年度・区分・申請内容により変動します。申請書の完成度が採否を大きく左右します。
+          </p>
         </section>
 
         {/* 主な補助対象 */}

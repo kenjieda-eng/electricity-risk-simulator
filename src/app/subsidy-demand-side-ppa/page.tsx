@@ -42,12 +42,14 @@ export const metadata: Metadata = {
 const overviewTable = [
   { item: "事業名", value: "需要家主導型太陽光発電導入支援事業" },
   { item: "実施機関", value: "環境省（委託先：民間事業者）" },
-  { item: "事業形態", value: "オフサイトPPA／コーポレートPPA" },
+  { item: "事業形態", value: "オフサイトPPA／自己託送モデル" },
   { item: "補助対象", value: "発電設備・系統接続費用・蓄電池（条件による）等の初期費用の一部" },
-  { item: "補助率（目安）", value: "初期費用の概ね1/3〜1/2（案件・区分による）" },
-  { item: "補助上限額（目安）", value: "案件規模・発電容量等による（要公募要領確認）" },
-  { item: "公募時期（目安）", value: "2026年度：環境省サイトで要確認" },
-  { item: "再エネ要件", value: "PPA事業者経由で需要家に供給する太陽光発電が対象" },
+  { item: "補助額（目安）", value: "定額補助 2〜4万円/kW相当（設備容量ベース）" },
+  { item: "補助上限（目安）", value: "事業費の1/2〜2/3（案件規模・容量による）" },
+  { item: "公募時期（目安）", value: "2026年4月〜6月（目安）※環境省公式サイトで要確認" },
+  { item: "再エネ要件", value: "FIT/FIP認定を受けない太陽光発電によりPPA事業者経由で需要家に供給するもの" },
+  { item: "PPA契約期間", value: "原則10年以上（長期固定価格の電力購入契約）" },
+  { item: "申請主体の要件", value: "需要家が主導する調達であること（需要家が申請または共同申請）" },
 ];
 
 const simulationPatterns = [
@@ -144,6 +146,33 @@ export default function SubsidyDemandSidePpaPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* 補助額の詳細 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助額・主な要件の詳細（目安）</h2>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 以下は2026年4月時点の公開情報に基づく概算です。正式な数値は環境省の公募要領でご確認ください。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+              <h3 className="text-base font-semibold text-slate-800">補助額（目安）</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                <li>・ <strong>定額補助：</strong>2〜4万円/kW相当（設備容量ベース）</li>
+                <li>・ <strong>補助上限：</strong>事業費の1/2〜2/3</li>
+                <li>・ 例）1,000kW案件の場合、2,000〜4,000万円相当の補助が目安</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+              <h3 className="text-base font-semibold text-slate-800">主な申請要件</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                <li>・ <strong>需要家主導：</strong>需要家が調達を主導すること</li>
+                <li>・ <strong>FIT/FIP対象外：</strong>FIT・FIP認定を受けない発電設備であること</li>
+                <li>・ <strong>契約期間：</strong>PPA契約は原則10年以上</li>
+                <li>・ <strong>事業形態：</strong>オフサイトPPAまたは自己託送モデル</li>
+              </ul>
+            </div>
           </div>
         </section>
 

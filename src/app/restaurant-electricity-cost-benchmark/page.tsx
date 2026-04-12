@@ -236,6 +236,47 @@ export default function RestaurantElectricityCostBenchmarkPage() {
         </div>
       </section>
 
+      {/* データの根拠と出典 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">データの根拠と出典</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          本ページの相場データは以下の公的統計・業界データを参考に、エネルギー情報センターが独自に整理・概算したものです。
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+          <li>
+            <span className="font-semibold">経済産業省 資源エネルギー庁</span>「電力調査統計」（電灯電力需要実績 月次・年次）
+            ― 契約種別・地域別の販売電力量・料金収入から平均単価を算出
+          </li>
+          <li>
+            <span className="font-semibold">電力・ガス取引監視等委員会</span>「電力取引報」（小売電気事業者の販売実績）
+            ― 高圧・特別高圧の事業者別販売量・単価水準の参照
+          </li>
+          <li>
+            <span className="font-semibold">経済産業省</span>「エネルギー消費統計調査」
+            ― 業種別・規模別のエネルギー消費原単位データ
+          </li>
+          <li>
+            <span className="font-semibold">総務省統計局</span>「経済センサス―活動調査」
+            ― 業種別事業所数・従業者数の規模区分
+          </li>
+          <li>
+            <span className="font-semibold">一般社団法人エネルギー情報センター</span> 独自調査・ヒアリング
+            ― 法人向け電力見積・契約実績データの集計分析
+          </li>
+        </ul>
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+          <p className="text-sm leading-7 text-amber-800">
+            <span className="font-semibold">重要:</span> 本ページの数値は上記データをもとにした概算・目安であり、
+            特定の契約条件や時期における正確な請求額を保証するものではありません。
+            実際の電気料金は契約プラン・使用パターン・地域・時期により大きく異なります。
+            最終的な判断には、必ず電力会社の見積書や請求書の実データをご確認ください。
+          </p>
+        </div>
+        <p className="mt-3 text-xs text-slate-500">
+          最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
+        </p>
+      </section>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "太陽光導入向き不向き診断｜自家消費型太陽光が自社に合うかを整理";
@@ -38,99 +39,6 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
-
-const suitabilityCategories = [
-  {
-    category: "設置場所・建物の条件",
-    items: [
-      {
-        label: "屋根・屋上・駐車場に一定の面積がある（目安：50坪以上のスペース）",
-        note: "自家消費型太陽光発電では、屋根・屋上・駐車場の遊休スペースが設置面積となります。10kW以上のシステムを設置するには数十坪以上のスペースが必要です。",
-        positive: true,
-      },
-      {
-        label: "屋根の向きが南向き〜東西向きで、日当たりが確保されている",
-        note: "南向きが最も発電効率が高く、東・西向きでも一定の発電量が期待できます。北向き屋根や周囲の建物・木によって日当たりが大幅に遮られる場合は発電量が少なくなります。",
-        positive: true,
-      },
-      {
-        label: "建物の築年数が新しく（目安：20年以内）、屋根の強度が十分にある",
-        note: "太陽光パネルは重量があるため、屋根の耐荷重が不足している場合は補強工事が必要になるか、設置が難しい場合があります。事前に構造調査が推奨されます。",
-        positive: true,
-      },
-      {
-        label: "建物が老朽化しており、近いうちに解体・建替えの予定がある",
-        note: "建物の寿命が残り5〜10年程度の場合、太陽光発電の投資回収（一般的に7〜15年）が間に合わない可能性があります。",
-        positive: false,
-      },
-      {
-        label: "賃借建物であり、オーナーの許可取得が難しい",
-        note: "賃借物件では建物オーナーの同意が必要です。オーナーの理解が得られない場合は設置が困難になります。ただし、最近はオーナー同意を得た導入事例も増えています。",
-        positive: false,
-      },
-    ],
-  },
-  {
-    category: "電力使用パターン",
-    items: [
-      {
-        label: "昼間（9〜17時頃）に電力使用量が多い",
-        note: "太陽光発電は昼間に発電するため、昼間の消費量が多いほど自家消費率が高まり、コスト削減効果が出やすくなります。夜間のみ稼働する工場などは自家消費率が低くなります。",
-        positive: true,
-      },
-      {
-        label: "年間を通じて安定した電力需要がある",
-        note: "太陽光発電量は季節・天候によって変動します。通年で電力需要がある施設（工場・病院・オフィス等）は自家消費率を確保しやすい傾向があります。",
-        positive: true,
-      },
-      {
-        label: "業種的に電力使用量が多く、現在の買電コストが高い",
-        note: "買電単価が高いほど、同じ発電量でも経済的なメリットが大きくなります。特に高圧・特別高圧の需要家や電力多消費産業では投資回収が早くなりやすい傾向があります。",
-        positive: true,
-      },
-      {
-        label: "稼働が週末・祝日含む年中で、発電量を無駄なく使いやすい",
-        note: "週5日稼働・祝日休業の施設では、休日の余剰発電量が多くなります。余剰電力を売電（余剰売電）する形でも収益化できますが、自家消費型の場合は自家使用量の最大化が基本です。",
-        positive: true,
-      },
-    ],
-  },
-  {
-    category: "資金・予算・補助金",
-    items: [
-      {
-        label: "初期投資の目処が立っている（100kWシステムで数百万〜数千万円規模）",
-        note: "産業用太陽光発電の導入コストは容量・工事条件によって異なりますが、100kWクラスで概ね1,000〜3,000万円程度が目安です。補助金活用で圧縮できる場合があります。",
-        positive: true,
-      },
-      {
-        label: "国・自治体の補助金・税制優遇の活用を検討できる",
-        note: "中小企業省エネ補助金・RE100関連補助金・地方自治体の補助制度など、太陽光設備に活用できる補助金が複数あります。毎年公募内容が変わるため最新情報の確認が必要です。",
-        positive: true,
-      },
-      {
-        label: "PPA（電力購入協定）や屋根貸しモデルを活用できる可能性がある",
-        note: "初期費用ゼロで太陽光を設置できるPPAモデルや、屋根を事業者に貸すことで固定賃料を受け取る屋根貸しモデルも選択肢になります。自己資金が限られる場合でも検討できます。",
-        positive: true,
-      },
-    ],
-  },
-  {
-    category: "環境・ESG目標との連携",
-    items: [
-      {
-        label: "CO2削減・脱炭素目標（RE100・SBT等）への取り組みが求められている",
-        note: "自家消費型太陽光は再エネ由来の電力を直接使用することで、Scope2（間接排出）の削減に直結します。サプライチェーン上の要求や投資家対応としても有効です。",
-        positive: true,
-      },
-      {
-        label: "取引先・顧客から再エネ使用の証明を求められている",
-        note: "自家消費型太陽光は、再エネ使用の証明（電力使用報告・グリーン電力証書等）に活用できます。非化石証書と組み合わせることで証明力がさらに高まります。",
-        positive: true,
-      },
-    ],
-  },
-];
 
 const notSuitableConditions = [
   "屋根・屋上・駐車場等の設置スペースがほとんどない（都市部の狭小ビル等）",
@@ -184,48 +92,15 @@ export default function SolarSuitabilityDiagnosisPage() {
           </div>
         </section>
 
-        {suitabilityCategories.map((section) => (
-          <section key={section.category} className="rounded-xl border border-slate-200 bg-white p-5">
-            <h2 className="text-xl font-semibold text-slate-900">{section.category}</h2>
-            <div className="mt-4 space-y-3">
-              {section.items.map((item) => (
-                <div
-                  key={item.label}
-                  className={`flex items-start gap-3 rounded-lg border p-4 ${
-                    item.positive
-                      ? "border-sky-100 bg-sky-50"
-                      : "border-amber-100 bg-amber-50"
-                  }`}
-                >
-                  <span
-                    className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border bg-white text-xs ${
-                      item.positive
-                        ? "border-sky-300 text-sky-500"
-                        : "border-amber-300 text-amber-500"
-                    }`}
-                  >
-                    {item.positive ? "✓" : "✕"}
-                  </span>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                      <span
-                        className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
-                          item.positive
-                            ? "bg-sky-100 text-sky-700"
-                            : "bg-amber-100 text-amber-700"
-                        }`}
-                      >
-                        {item.positive ? "向いている" : "注意が必要"}
-                      </span>
-                    </div>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">導入向き不向き診断チェックリスト</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            各項目をクリックしてチェックしてください。「向いている」条件が多いほど自家消費型太陽光の効果が期待できます。
+          </p>
+          <div className="mt-4">
+            <DiagnosisClient />
+          </div>
+        </section>
 
         <section className="rounded-xl border border-amber-100 bg-amber-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">自家消費型太陽光が向いていない条件</h2>

@@ -500,6 +500,9 @@ export const articleCategories: ArticleCategory[] = [
       "emergency-supplier-withdrawal",
       "emergency-cancellation-fee",
       "emergency-auto-renewal-refusal",
+      "emergency-power-outage-response",
+      "emergency-supplier-bankruptcy",
+      "emergency-billing-dispute",
     ],
     order: 15,
     group: "learning",
@@ -596,6 +599,10 @@ export const articleCategories: ArticleCategory[] = [
       "executive-business-continuity-risk",
       "executive-cfo-electricity-basics",
       "executive-board-reporting-items",
+      "executive-mid-term-plan-electricity",
+      "executive-esg-electricity-disclosure",
+      "executive-multi-site-cost-management",
+      "executive-ma-electricity-due-diligence",
     ],
     order: 19,
     group: "learning",
@@ -606,17 +613,23 @@ export const articleCategories: ArticleCategory[] = [
     description:
       "東京電力・関西電力・中部電力・九州電力などエリア別に、法人電気代の特性・料金改定・新電力動向を整理したカテゴリです。",
     intro:
-      "電気料金はエリアによって単価構造・燃調費・市場価格の影響度が大きく異なります。主要10エリアのうち特にニーズの大きい4エリアを先行して解説し、撤退動向もマップ化しました。",
+      "電気料金はエリアによって単価構造・燃調費・市場価格の影響度が大きく異なります。全国10エリアそれぞれの法人電気代水準・改定動向・新電力状況を解説し、エリア別の撤退動向もマップ化しています。",
     learnPoints: [
       "エリアごとの料金水準と最近の改定動向",
       "新電力撤退・契約解除の発生状況",
       "エリア事情を踏まえた契約戦略のヒント",
     ],
     recommendedReadingOrder: [
+      "region-hokkaido-business-electricity",
+      "region-tohoku-business-electricity",
       "region-tokyo-business-electricity",
-      "region-kansai-business-electricity",
+      "region-hokuriku-business-electricity",
       "region-chubu-business-electricity",
+      "region-kansai-business-electricity",
+      "region-chugoku-business-electricity",
+      "region-shikoku-business-electricity",
       "region-kyushu-business-electricity",
+      "region-okinawa-business-electricity",
       "region-supplier-withdrawal-map",
     ],
     order: 20,
@@ -2283,4 +2296,23 @@ export const articleList: ArticleMeta[] = [
   { title: "中部電力エリアの法人電気代事情", slug: "region-chubu-business-electricity", description: "中部電力ミライズ管内の法人電気代水準、製造業が多いエリア特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 3, publishedAt: "2026-04-11" },
   { title: "九州電力エリアの法人電気代事情", slug: "region-kyushu-business-electricity", description: "九州電力管内の法人電気代水準、太陽光比率の高さによる特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 4, publishedAt: "2026-04-11" },
   { title: "エリア別 新電力撤退状況マップ", slug: "region-supplier-withdrawal-map", description: "2022年以降の新電力撤退・契約解除通知の発生状況をエリア別に整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 5, publishedAt: "2026-04-11" },
+
+  // --- I. 地域別 追加6本 ---
+  { title: "北海道電力エリアの法人電気代事情", slug: "region-hokkaido-business-electricity", description: "北海道電力管内の法人電気代水準、石炭火力依存・寒冷地特性、改定動向を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 6, publishedAt: "2026-04-12" },
+  { title: "東北電力エリアの法人電気代事情", slug: "region-tohoku-business-electricity", description: "東北電力管内の法人電気代水準、再エネ比率の高さ、製造業集積の特性を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 7, publishedAt: "2026-04-12" },
+  { title: "北陸電力エリアの法人電気代事情", slug: "region-hokuriku-business-electricity", description: "北陸電力管内の法人電気代水準、水力発電の豊富さ、2023年大幅値上げの影響を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 8, publishedAt: "2026-04-12" },
+  { title: "中国電力エリアの法人電気代事情", slug: "region-chugoku-business-electricity", description: "中国電力管内の法人電気代水準、石炭火力依存、島根原発再稼働の影響を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 9, publishedAt: "2026-04-12" },
+  { title: "四国電力エリアの法人電気代事情", slug: "region-shikoku-business-electricity", description: "四国電力管内の法人電気代水準、伊方原発の安定稼働、太陽光出力制御の影響を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 10, publishedAt: "2026-04-12" },
+  { title: "沖縄電力エリアの法人電気代事情", slug: "region-okinawa-business-electricity", description: "沖縄電力管内の法人電気代水準、離島・孤立系統特性、全国最高水準の料金を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 11, publishedAt: "2026-04-12" },
+
+  // --- J. 経営層・CFO向け 追加4本 ---
+  { title: "中期経営計画への電力コスト織り込み方", slug: "executive-mid-term-plan-electricity", description: "中計でシナリオ別に電力コストをどう織り込むか。経営企画部が押さえるべきKPIと前提の置き方を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 5, publishedAt: "2026-04-12" },
+  { title: "IR・ESG開示における電力リスクの記載ガイド", slug: "executive-esg-electricity-disclosure", description: "統合報告書・有価証券報告書でのエネルギーリスク開示、TCFD/ISSB対応、Scope2算定のポイントを整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 6, publishedAt: "2026-04-12" },
+  { title: "複数拠点の電力コスト一元管理フレームワーク", slug: "executive-multi-site-cost-management", description: "5拠点以上を持つ法人の拠点別コスト可視化、一括調達と個別最適の比較、ダッシュボード設計を解説します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 7, publishedAt: "2026-04-12" },
+  { title: "M&A・拠点統廃合時の電力契約デューデリジェンス", slug: "executive-ma-electricity-due-diligence", description: "M&Aで引き継ぐ電力契約の確認ポイント、違約金・PMI電力コスト最適化を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 8, publishedAt: "2026-04-12" },
+
+  // --- K. 緊急対応・トラブル解決 追加3本 ---
+  { title: "停電・計画停電が発生したときの法人対応マニュアル", slug: "emergency-power-outage-response", description: "停電発生時の初動から復電後の手順、設備保護、BCP連携までを法人担当者向けに整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 7, publishedAt: "2026-04-12" },
+  { title: "電力会社が倒産・事業撤退したときの対応", slug: "emergency-supplier-bankruptcy", description: "新電力の倒産・廃業通知を受けた場合の対応手順、最終保障供給への切替、切替先選定のタイムラインを整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 8, publishedAt: "2026-04-12" },
+  { title: "電気料金の二重請求・過請求が発生したときの対応", slug: "emergency-billing-dispute", description: "二重請求・過大請求の原因確認手順、電力会社への問い合わせ方法、返金交渉のプロセスを整理します。", category: "緊急対応・トラブル解決", categorySlug: "emergency-response", order: 9, publishedAt: "2026-04-12" },
 ];

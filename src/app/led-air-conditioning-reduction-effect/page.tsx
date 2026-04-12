@@ -293,6 +293,39 @@ export default function LedAirConditioningReductionEffectPage() {
         </div>
       </section>
 
+      {/* データの根拠と出典 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">データの根拠と出典</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          本ページの削減効果データは以下を参考にしています。
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+          <li>
+            <span className="font-semibold">経済産業省</span>「省エネルギー政策」関連資料（省エネ診断事業の実績データ）
+          </li>
+          <li>
+            <span className="font-semibold">一般財団法人 省エネルギーセンター（ECCJ）</span>「省エネ事例集」
+          </li>
+          <li>
+            <span className="font-semibold">SII（環境共創イニシアチブ）</span>「補助金交付先の省エネ実績報告」
+          </li>
+          <li>
+            <span className="font-semibold">一般社団法人エネルギー情報センター</span> 独自調査・シミュレーション結果
+          </li>
+        </ul>
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+          <p className="text-sm leading-7 text-amber-800">
+            <span className="font-semibold">重要:</span> 本ページの数値は上記データをもとにした概算・目安であり、
+            特定の契約条件や時期における正確な削減額を保証するものではありません。
+            実際の削減効果は設備状況・使用パターン・建物特性により大きく異なります。
+            最終的な判断には、必ず専門業者の診断や見積もりをご確認ください。
+          </p>
+        </div>
+        <p className="mt-3 text-xs text-slate-500">
+          最終更新: 2026年4月（2024〜2025年度の施策実績を反映）
+        </p>
+      </section>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks

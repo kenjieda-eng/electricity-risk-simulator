@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
   "法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック";
@@ -38,59 +39,6 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
-
-const checkItems = [
-  {
-    label: "直近1年間で電気料金が目に見えて上がった",
-    note: "料金の上昇は見直しの最も基本的なきっかけです。燃料費調整額・市場価格調整額・容量拠出金など、変動要素が増えているか確認しましょう。",
-    weight: "high",
-  },
-  {
-    label: "現在の契約プランが固定型か市場連動型か、正確に把握していない",
-    note: "プランの種類によってリスク構造が大きく異なります。請求書や契約書でプラン名を確認し、料金変動の仕組みを理解することが見直しの前提になります。",
-    weight: "high",
-  },
-  {
-    label: "契約の満了日・更新時期を把握していない",
-    note: "自動更新で1年延長されるケースがあります。満了の3〜6か月前から動き始めることが、選択肢を広げるうえで重要です。",
-    weight: "high",
-  },
-  {
-    label: "現在の電力会社から値上げ通知を受け取ったことがある",
-    note: "値上げ通知を受けた後は、現行プランの条件が変わっている可能性があります。改めて見積を取り、比較することが有効です。",
-    weight: "high",
-  },
-  {
-    label: "過去2年以内に電力契約を比較・見直ししていない",
-    note: "電力市場は2021年以降に大きく変化しました。2年以上見直しをしていない場合、現行プランが現在の相場と乖離している可能性があります。",
-    weight: "medium",
-  },
-  {
-    label: "請求書に「市場価格調整額」や「容量拠出金」が加算されているか確認したことがない",
-    note: "これらの項目は近年新たに導入された変動費用です。加算されているかどうか、また月々の変動幅がどの程度かを確認することが見直し判断の材料になります。",
-    weight: "medium",
-  },
-  {
-    label: "現在のプランの「燃料費調整額に上限があるか」を知らない",
-    note: "上限なしの市場連動プランでは、燃料価格が高騰した際に調整額が青天井になります。上限設定の有無はリスク管理上の重要ポイントです。",
-    weight: "medium",
-  },
-  {
-    label: "電力使用量が過去と比べて大きく変わった（増加・減少どちらも）",
-    note: "使用量が変わると最適な契約プランも変わります。特に大幅増加した場合は、現行の契約電力（kW）設定が割高になっていないか確認が必要です。",
-    weight: "medium",
-  },
-  {
-    label: "複数拠点を持つが、まとめて見直しを検討したことがない",
-    note: "複数拠点を一括で見直すと、交渉力が上がり、より有利な条件を引き出せる場合があります。拠点別の契約を横断的に確認するタイミングです。",
-    weight: "low",
-  },
-  {
-    label: "再エネ・脱炭素目標に関連して、電力調達の方針を整理する必要がある",
-    note: "サステナビリティ要件（RE100・SBT等）の対応や、非化石証書・グリーン電力調達のニーズがある場合は、コストと環境価値の両面から見直しを検討する価値があります。",
-    weight: "low",
-  },
-];
 
 export default function SelfDiagnosisContractReviewPage() {
   return (
@@ -144,80 +92,7 @@ export default function SelfDiagnosisContractReviewPage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">重要度：高 ― すぐに確認すべき項目</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            1項目でも該当する場合は、現行の契約条件を早急に確認することを推奨します。
-          </p>
-          <div className="mt-4 space-y-3">
-            {checkItems
-              .filter((item) => item.weight === "high")
-              .map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-start gap-3 rounded-lg border border-red-100 bg-red-50 p-4"
-                >
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-red-300 bg-white text-xs text-red-400">
-                    ✓
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">重要度：中 ― 近く対応を検討したい項目</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            複数該当する場合、見直しに向けた情報収集・準備を始めることが有効です。
-          </p>
-          <div className="mt-4 space-y-3">
-            {checkItems
-              .filter((item) => item.weight === "medium")
-              .map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-start gap-3 rounded-lg border border-amber-100 bg-amber-50 p-4"
-                >
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-amber-300 bg-white text-xs text-amber-400">
-                    ✓
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">重要度：低 ― 中長期的に検討したい項目</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            すぐに対応が必要な項目ではありませんが、今後の方針検討の参考にしてください。
-          </p>
-          <div className="mt-4 space-y-3">
-            {checkItems
-              .filter((item) => item.weight === "low")
-              .map((item) => (
-                <div
-                  key={item.label}
-                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4"
-                >
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 bg-white text-xs text-slate-400">
-                    ✓
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </section>
+        <DiagnosisClient />
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">診断結果の見方と次のアクション</h2>
