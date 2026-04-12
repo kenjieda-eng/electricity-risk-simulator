@@ -111,59 +111,113 @@ export default function LowVoltageLightingRetrospectivePage() {
         <LowVoltageLightingRetrospectiveCharts />
       </section>
 
+      <section className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">7年間を3つのフェーズで読む</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          2019年から2025年の推移は、大きく3つのフェーズに分けると構造的な変化を整理しやすくなります。
+        </p>
+        <div className="mt-4 space-y-4">
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-emerald-800">フェーズ1：安定・低下期（2019〜2021年前半）</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              コロナ禍による需要減と燃料安が重なり、低圧電灯の年平均は22.7円→21.2円/kWhへと緩やかに低下しました。
+              低圧電灯は照明・コンセント系の一般家庭・小規模店舗・事務所が対象で、需要家数が最も多い区分です。
+              この時期の水準が「コロナ前の基準値」として、後の急騰の比較対象になります。
+            </p>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-red-800">フェーズ2：急騰・危機期（2021年後半〜2023年初頭）</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              LNG価格急騰・ウクライナ侵攻・円安の三重苦で単価が上昇し、低圧電灯の年平均は21.2円→26.8円/kWhへ+26%超の急騰となりました。
+              月次では31円台の高値も記録し、一般家庭・店舗・小規模事務所にとって電気代の急増が家計・経営双方に大きな影響を与えました。
+              大手電力会社が規制料金の値上げ申請を相次いで実施したのもこの局面で、2023年6月に多くの大手電力が規制料金を大幅値上げしました。
+            </p>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-amber-800">フェーズ3：高止まり・構造変化期（2023年中盤〜2025年）</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              補助金効果で急騰は一服しましたが、低圧電灯の年平均は2025年も26.9円/kWhとコロナ前比+19%の高止まりです。
+              規制料金の値上げが恒久的に単価水準を切り上げたことに加え、容量拠出金・再エネ賦課金という固定的コストが下値を支えており、
+              「補助金が終わっても元の水準には戻らない」構造変化が起きています。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2019年：コロナ前の比較的安定した水準</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           2019年の低圧電灯は、年平均で22.7円/kWhでした。月別では21.7円～23.2円/kWhの範囲で推移しており、
           年内の振れ幅は限定的です。後年と比べると、この年は低圧電灯単価が比較的安定していた時期といえます。
+          再エネ賦課金が2.95円/kWhと年々増加する中でも、燃料費調整額の変動は小さく、多くの需要家にとって
+          電気代を予測・管理しやすい時期でした。規制料金の単価体系は大きく変更されておらず、単価水準は安定していました。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2020年：コロナ禍で低下基調に</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2020年の年平均は21.4円/kWhで、2019年より約5.7%低下しました。年後半にかけて下がる流れが続き、12月は
-          19.7円/kWhまで低下しています。世界的な需要減と燃料価格の軟化が、低圧電灯の単価にも反映された年でした。
+          2020年の年平均は21.4円/kWhで、2019年の22.7円/kWhから約5.7%低下しました。年後半にかけて下がる流れが続き、12月は
+          19.7円/kWhまで低下しています。新型コロナウイルス感染拡大による緊急事態宣言・外出自粛で飲食店・小売店・
+          サービス業の照明系電力需要が大幅に減少しました。
+          世界的な需要減と燃料価格の軟化が燃料費調整額を引き下げ、低圧電灯の単価にも反映された年でした。
+          この年の低下は一時的なものでしたが、2020年の水準が後年の急騰比較の基準になっています。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2021年：低水準で推移しつつ後半に持ち直し</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2021年の年平均は21.2円/kWhで、2020年よりわずかに低下しました。前半は19円台中心でしたが、年後半には
-          22円台まで戻しており、翌年の上昇局面につながる変化が見られます。
+          2021年の年平均は21.2円/kWhで、2020年の21.4円/kWhからわずかに低下しました（前年比約0.9%低下）。
+          前半は19円台中心でしたが、年後半には22円台まで戻しており、翌年の上昇局面につながる変化が見られます。
+          この上昇の背景は、コロナ禍からの経済活動再開に伴う電力需要の回復と、LNGスポット価格の上昇が燃料費調整に反映され始めたことです。
+          照明・コンセント系の低圧電灯は需要家数が最も多い区分のため、単価変化の社会的影響も大きく、
+          後半の上昇傾向は翌2022年の本格急騰の予兆として位置づけられます。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2022年：燃料高で急上昇、31円台まで到達</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2022年の年平均は26.8円/kWhで、前年比26.4%増の大幅上昇でした。1月22.9円/kWhから12月31.2円/kWhへ
+          2022年の年平均は26.8円/kWhで、2021年（21.2円）から前年比26.4%増の大幅上昇でした。1月22.9円/kWhから12月31.2円/kWhへ
           一気に上がり、低圧電灯でも仕入環境の悪化が強く反映された年です。
+          2022年2月のウクライナ侵攻をきっかけに国際エネルギー価格が急騰し、LNG輸入コストが急増しました。
+          円安（115円→150円近辺）も輸入コストを押し上げ、燃料費調整額がプラス方向に大きく振れました。
+          低圧電灯は規制料金との関係が深い区分のため、大手電力各社が相次いで燃料費調整の上限撤廃・見直しを行い、
+          需要家への影響が大きく拡大した局面でもあります。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2023年：補助金が下支えするも高値圏が続く</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2023年の年平均は25.5円/kWhで、2022年比では4.9%低下しました。ただし年初は31.3円/kWhと非常に高く、
-          年間を通じて24〜26円台中心の高値圏です。補助政策の効果で急騰は緩和された一方、平時水準には戻っていません。
+          2023年の年平均は25.5円/kWhで、2022年（26.8円）から4.9%低下しました。ただし年初は31.3円/kWhと非常に高く、
+          年間を通じて24〜26円台中心の高値圏です。政府の電気・ガス価格激変緩和対策による値引きが下支えしましたが、
+          補助を除いた実力値は依然高く、平時水準には戻っていません。
+          2023年6月には大手電力各社の規制料金値上げが実施され、低圧電灯の単価水準が構造的に切り上がりました。
+          この規制料金値上げは過去最大級のものとなり、以後の単価の下限が大きく引き上げられた歴史的転換点です。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2024年：再び上昇し、夏場に29円台</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2024年の年平均は26.4円/kWhで、前年比3.5%上昇しました。夏場にかけて上昇し、7月は29.0円/kWhまで
-          上がっています。低圧電灯は需要家数が多く、単価水準の変化が広い業種に影響する点が特徴です。
+          2024年の年平均は26.4円/kWhで、2023年（25.5円）から前年比3.5%上昇しました。夏場にかけて上昇し、7月は29.0円/kWhまで
+          上がっています。2024年度から容量拠出金の本格賦課が始まり、規制料金値上げ後の単価底上げとあわせて固定的なコスト要因が増大しました。
+          激変緩和補助金の縮小・終了も価格の戻りを加速させた要因です。
+          低圧電灯は需要家数が多く、単価水準の変化が広い業種・家庭に影響する点が特徴であり、
+          社会的な節電意識の高まりや省エネ機器への切り替えが加速した年でもあります。
         </p>
       </section>
 
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">2025年：高止まりのまま年平均は26.9円/kWh</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          2025年の年平均は26.9円/kWhで、2024年からさらに1.9%上昇しました。年内では25円台後半〜28円台後半で
-          推移しており、低圧電灯単価は依然としてコロナ前より高い水準にあります。
+          2025年の年平均は26.9円/kWhで、2024年（26.4円）からさらに1.9%上昇しました。年内では25円台後半〜28円台後半で
+          推移しており、低圧電灯単価は依然としてコロナ前より高い水準にあります。2019年（22.7円）比で約19%高い水準です。
+          2023年の規制料金大幅値上げが単価の恒久的な底上げをもたらし、補助金が終了した後も以前の水準には戻らない構造が定着しています。
+          容量拠出金・再エネ賦課金の高止まりも下値を形成しており、燃料価格が下がっても単価が大きく低下しにくい環境が続いています。
+          店舗・小規模事務所・一般家庭にとって、電気代の「高止まり」を前提とした支出管理が求められる状況です。
         </p>
       </section>
 

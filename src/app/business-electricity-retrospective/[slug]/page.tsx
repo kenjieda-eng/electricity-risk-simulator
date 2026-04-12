@@ -7,6 +7,7 @@ import {
   CATEGORY_KEYS,
   getAllRetrospectiveSlugs,
   getRetrospectivePageData,
+  YEAR_CONTEXTS,
   type CategoryKey,
 } from "../_lib/retrospective-data";
 
@@ -83,6 +84,8 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
   if (!data) {
     notFound();
   }
+
+  const yearContext = YEAR_CONTEXTS[data.year];
 
   const chartWidth = 800;
   const chartHeight = 320;
@@ -401,28 +404,43 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">この年の背景</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{yearContext.headline}</p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            {yearContext.backgroundFactors.map((factor) => (
+              <li key={factor}>{factor}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">年間の流れは3つの場面で読むと整理しやすい</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             {data.year}年の{data.category.label}単価は、12カ月をそのまま追うだけでも傾向が見えますが、実務的には「前半・中盤・後半」の
             3つに分けて読むと、社内説明に使いやすい形になります。
           </p>
-          <h3 className="mt-5 text-lg font-semibold text-slate-900">1. 年初から春先（1〜4月）</h3>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">1. 年初〜春先（1〜3月）</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            1月は{data.monthlyRows[0].value.toFixed(1)}円/kWh、4月は{data.monthlyRows[3].value.toFixed(1)}円/kWhです。
-            年初時点の単価がその年の体感を左右しやすいため、この時期の水準は「その年の出発点」として重要です。
+            1月は{data.monthlyRows[0].value.toFixed(1)}円/kWh、3月は{data.monthlyRows[2].value.toFixed(1)}円/kWhです。
+            {yearContext.q1Context}
           </p>
-          <h3 className="mt-5 text-lg font-semibold text-slate-900">2. 初夏から夏場（5〜8月）</h3>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">2. 春〜初夏（4〜6月）</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            5月は{data.monthlyRows[4].value.toFixed(1)}円/kWh、8月は{data.monthlyRows[7].value.toFixed(1)}円/kWhです。
-            この区間は、上昇が継続しているのか、横ばいに移るのか、または下降へ転じるのかを見極める節目になります。
+            4月は{data.monthlyRows[3].value.toFixed(1)}円/kWh、6月は{data.monthlyRows[5].value.toFixed(1)}円/kWhです。
+            {yearContext.q2Context}
           </p>
-          <h3 className="mt-5 text-lg font-semibold text-slate-900">3. 秋から年末（9〜12月）</h3>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">3. 夏〜秋（7〜9月）</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            9月は{data.monthlyRows[8].value.toFixed(1)}円/kWh、12月は{data.monthlyRows[11].value.toFixed(1)}円/kWhです。
-            年末着地の水準は、翌年の予算策定や契約更新方針を決めるうえで参照されることが多く、翌年比較の起点になります。
+            7月は{data.monthlyRows[6].value.toFixed(1)}円/kWh、9月は{data.monthlyRows[8].value.toFixed(1)}円/kWhです。
+            {yearContext.q3Context}
+          </p>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">4. 秋〜年末（10〜12月）</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            10月は{data.monthlyRows[9].value.toFixed(1)}円/kWh、12月は{data.monthlyRows[11].value.toFixed(1)}円/kWhです。
+            {yearContext.q4Context}
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            こうした3区分での読み方を固定しておくと、年度が変わっても同じフォーマットで比較でき、担当者間での認識ズレを抑えられます。
+            こうした4区分での読み方を固定しておくと、年度が変わっても同じフォーマットで比較でき、担当者間での認識ズレを抑えられます。
           </p>
         </section>
 
@@ -438,16 +456,12 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
             社内で「以前より高い/低い」と説明する際は、比較元の月を明確にそろえることが重要です。同じ年の中でも基準月が違えば
             印象が大きく変わるため、誤解を避けるには比較軸の統一が欠かせません。
           </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">単月ではなく連続した流れで見る</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            単月の上下だけでは、一時的なノイズかトレンド転換かを見誤ることがあります。月次推移と四半期平均を併用し、
-            連続した流れとして確認することで、予算見通しの精度を上げやすくなります。
-          </p>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">前提条件をそろえて比較する</h3>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            本ページの単価は消費税および再生可能エネルギー発電促進賦課金を含まない値です。請求総額と直接一致する値ではないため、
-            請求額比較ではなく、単価トレンドの把握と年度間比較の基準として活用するのが適しています。
-          </p>
+          {yearContext.practicalNotes.map((note, index) => (
+            <div key={index}>
+              <h3 className="mt-4 text-lg font-semibold text-slate-900">{data.year}年の実務ポイント {index + 1}</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">{note}</p>
+            </div>
+          ))}
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

@@ -138,13 +138,58 @@ export default function LessonsFromUkraineShockFor2026Page() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人がいま確認すべきこと</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>契約更新時期：更新集中を避け、交渉余地を確保する。</li>
-            <li>単価以外の調整項目：燃料費調整、連動係数、上限条項を明示する。</li>
-            <li>燃料・市場リスクの説明：経営会議で前提と不確実性を分けて示す。</li>
-            <li>複数見積：固定・市場連動・ハイブリッドを横並びで評価する。</li>
-            <li>予算シナリオ：平常・高止まり・再上昇の3ケースで管理する。</li>
-          </ul>
+          <div className="mt-4 space-y-3">
+            {[
+              {
+                priority: "★最優先",
+                priorityColor: "bg-red-100 text-red-800 border-red-200",
+                title: "契約更新時期の把握と前倒し交渉",
+                detail: "更新集中を避け、交渉余地を確保する。特に複数拠点を持つ法人は、拠点ごとの更新月を一覧化し、市況の高い時期に更新が重ならないよう分散させる。",
+                steps: ["全拠点の契約終了日を一覧化する", "更新が集中する時期を特定する", "主要拠点は6ヶ月前から複数業者へ打診を開始する"],
+              },
+              {
+                priority: "★最優先",
+                priorityColor: "bg-red-100 text-red-800 border-red-200",
+                title: "複数見積の取得と条件比較の標準化",
+                detail: "固定・市場連動・ハイブリッドを横並びで評価する。単価だけでなく、燃料費調整・市場連動係数・上限条項・供給継続条件を同一フォーマットで比較できる体制を作る。",
+                steps: ["見積比較シートに「単価以外の調整項目」列を追加する", "最低2〜3案を取得することを社内ルール化する", "上限条項の有無を必須確認項目とする"],
+              },
+              {
+                priority: "★★重要",
+                priorityColor: "bg-orange-100 text-orange-800 border-orange-200",
+                title: "燃料・市場リスクの社内説明体制の整備",
+                detail: "経営会議で前提と不確実性を分けて示す。「確定値」「推定レンジ」「示唆」の3層表記を導入し、未確定領域を断定せずに経営層へ説明できる資料テンプレートを用意する。",
+                steps: ["電気代予算資料に「前提条件」欄を設ける", "補助政策の反映有無を明示する", "前年同期比と直近3ヶ月平均を併記する"],
+              },
+              {
+                priority: "★★重要",
+                priorityColor: "bg-orange-100 text-orange-800 border-orange-200",
+                title: "予算の複数シナリオ管理",
+                detail: "平常・高止まり・再上昇の3ケースで管理する。「元に戻る前提」の単一予算は、ショック時に説明がつかなくなる。上振れシナリオの根拠を資料に残しておくことが重要。",
+                steps: ["予算に平常・高止まり・再上昇の3ケースを設定する", "各ケースの前提（LNG価格・為替・補助有無）を明示する", "月次でシナリオとの乖離をモニタリングする"],
+              },
+              {
+                priority: "★★★推奨",
+                priorityColor: "bg-sky-100 text-sky-800 border-sky-200",
+                title: "市場連動比率の確認とヘッジ方針の社内合意",
+                detail: "市場連動比率が高い拠点は、上限設定やヘッジ方針を社内合意しておく。上昇局面では市場連動が即請求に反映されるため、事前の閾値設定と対応手順が重要。",
+                steps: ["拠点ごとの市場連動比率を把握する", "許容できる単価上限を経営層と合意する", "上限を超えた際の対応フローを文書化する"],
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-lg border border-slate-200 bg-white p-4">
+                <div className="flex flex-wrap items-start gap-2">
+                  <span className={`inline-flex rounded-full border px-2 py-0.5 text-xs font-bold ${item.priorityColor}`}>{item.priority}</span>
+                  <p className="text-sm font-semibold text-slate-900">{item.title}</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.detail}</p>
+                <ul className="mt-2 space-y-0.5 pl-4 text-sm leading-6 text-slate-600">
+                  {item.steps.map((step) => (
+                    <li key={step} className="list-disc">{step}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

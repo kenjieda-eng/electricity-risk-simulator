@@ -143,6 +143,36 @@ export default function UkraineShockAndContractPracticePage() {
           </div>
         </section>
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積単価の変動例（高圧・契約電力300kWモデル）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            以下は、同一条件（高圧300kW、月間使用量8万kWh）で2021年と2022年秋に取得した見積の比較イメージです。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">項目</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">2021年秋の見積</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">2022年秋の見積</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">差額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white"><td className="border border-slate-200 px-3 py-2">基本料金</td><td className="border border-slate-200 px-3 py-2">約45万円/月</td><td className="border border-slate-200 px-3 py-2">約48万円/月</td><td className="border border-slate-200 px-3 py-2 text-red-600">+3万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 px-3 py-2">電力量料金</td><td className="border border-slate-200 px-3 py-2">約112万円/月</td><td className="border border-slate-200 px-3 py-2">約152万円/月</td><td className="border border-slate-200 px-3 py-2 text-red-600">+40万円</td></tr>
+                <tr className="bg-white"><td className="border border-slate-200 px-3 py-2">燃料費調整額</td><td className="border border-slate-200 px-3 py-2">約▲8万円/月</td><td className="border border-slate-200 px-3 py-2">約+24万円/月</td><td className="border border-slate-200 px-3 py-2 text-red-600">+32万円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 px-3 py-2">再エネ賦課金</td><td className="border border-slate-200 px-3 py-2">約26万円/月</td><td className="border border-slate-200 px-3 py-2">約28万円/月</td><td className="border border-slate-200 px-3 py-2 text-red-600">+2万円</td></tr>
+                <tr className="bg-white font-semibold"><td className="border border-slate-200 px-3 py-2">月額合計</td><td className="border border-slate-200 px-3 py-2">約175万円</td><td className="border border-slate-200 px-3 py-2">約252万円</td><td className="border border-slate-200 px-3 py-2 text-red-600">+77万円（+44%）</td></tr>
+                <tr className="bg-slate-50 font-semibold"><td className="border border-slate-200 px-3 py-2">年間換算</td><td className="border border-slate-200 px-3 py-2">約2,100万円</td><td className="border border-slate-200 px-3 py-2">約3,024万円</td><td className="border border-slate-200 px-3 py-2 text-red-600">+924万円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※上記はモデルケースの概算です。実際の見積条件は電力会社・契約条件・時期により異なります。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人が比較時に見るべき条件</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">

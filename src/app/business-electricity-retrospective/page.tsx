@@ -65,6 +65,27 @@ export default function BusinessElectricityRetrospectivePage() {
         </section>
       </header>
 
+      <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">どこから読むか迷ったら</h2>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <p className="text-sm font-semibold text-sky-800">直近の動向を知りたい</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">最新の月次レポートから確認できます</p>
+            <Link href="/business-electricity-retrospective/2026-02" className="mt-2 inline-block text-sm font-medium text-sky-700 underline">2026年2月の振り返り →</Link>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <p className="text-sm font-semibold text-sky-800">長期トレンドを把握したい</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">7年間の推移を区分別に確認できます</p>
+            <Link href="/business-electricity-retrospective/high-voltage-2019-2025" className="mt-2 inline-block text-sm font-medium text-sky-700 underline">高圧の7年推移 →</Link>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-white p-4">
+            <p className="text-sm font-semibold text-sky-800">危機の教訓を確認したい</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">ウクライナショックの影響を総括</p>
+            <Link href="/business-electricity-retrospective/ukraine-shock-overview" className="mt-2 inline-block text-sm font-medium text-sky-700 underline">ウクライナショック特集 →</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
         <h2 className="text-xl font-semibold text-slate-900">年次データから背景理解へつなげる</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

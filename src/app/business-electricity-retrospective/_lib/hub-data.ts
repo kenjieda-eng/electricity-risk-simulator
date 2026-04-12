@@ -33,6 +33,27 @@ export const MONTHLY_RETROSPECTIVE_ITEMS: RetrospectiveCardItem[] = [
     href: "/business-electricity-retrospective/2026-01",
     ctaLabel: "記事を読む",
   },
+  {
+    title: "【2025年12月】法人の電気料金はどう動いた？",
+    description:
+      "補助金終了後3ヶ月目・暖房需要ピーク接近の年末着地を整理します。2025年の年間振り返りと、2026年の予算・契約戦略への見通しを確認できます。",
+    href: "/business-electricity-retrospective/2025-12",
+    ctaLabel: "記事を読む",
+  },
+  {
+    title: "【2025年11月】法人の電気料金はどう動いた？",
+    description:
+      "補助金終了2ヶ月目・暖房シーズン入りで実力値ベースの上昇が本格化した月を整理します。冬季本番に向けた予算と契約見直しのポイントを確認できます。",
+    href: "/business-electricity-retrospective/2025-11",
+    ctaLabel: "記事を読む",
+  },
+  {
+    title: "【2025年10月】法人の電気料金はどう動いた？",
+    description:
+      "激変緩和措置が正式終了し、補助なし実力値ベースの請求が初めてフルに見えた転換点の月を整理します。今後の予算策定の新しい基準点として確認できます。",
+    href: "/business-electricity-retrospective/2025-10",
+    ctaLabel: "記事を読む",
+  },
 ];
 
 export const HISTORICAL_EXPLANATION_ITEMS: RetrospectiveCardItem[] = [

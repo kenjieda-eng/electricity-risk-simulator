@@ -51,9 +51,22 @@ export default function BusinessElectricityRetrospectiveArchivePage() {
       </header>
 
       <section className="mt-8 space-y-4">
-        {YEARLY_ARCHIVE_ITEMS.map((yearlyItem) => (
+        {YEARLY_ARCHIVE_ITEMS.map((yearlyItem) => {
+          const yearSubtitles: Record<number, string> = {
+            2019: "コロナ前の安定期 ― 基準水準の確認に",
+            2020: "コロナ禍で需要減退 ― 異常値としての位置づけ",
+            2021: "回復と転換 ― 年末からの上昇開始",
+            2022: "歴史的急騰 ― ウクライナショックの直撃",
+            2023: "補助で見かけ沈静 ― 実力値は高止まり",
+            2024: "制度コスト増 ― 容量拠出金・賦課金の新常態",
+            2025: "高止まり定着 ― 補助復活と地政学リスク",
+          };
+          return (
           <section key={yearlyItem.year} className="rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
             <h2 className="text-xl font-semibold text-slate-900">{yearlyItem.year}年</h2>
+            {yearSubtitles[yearlyItem.year] && (
+              <p className="mt-1 text-sm text-slate-500">{yearSubtitles[yearlyItem.year]}</p>
+            )}
             <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {yearlyItem.links.map((linkItem) => (
                 <Link
@@ -66,7 +79,8 @@ export default function BusinessElectricityRetrospectiveArchivePage() {
               ))}
             </div>
           </section>
-        ))}
+          );
+        })}
       </section>
 
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">

@@ -102,6 +102,35 @@ export default function UkraineShockOverviewPage() {
           </div>
         </section>
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">ウクライナショックの波及メカニズム（フロー図）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ウクライナ侵攻がどのような経路で日本の法人電気料金に影響したかを、段階別に整理します。
+          </p>
+          <div className="mt-4 space-y-1">
+            {[
+              { step: "1", label: "ロシアのウクライナ侵攻（2022年2月）", detail: "欧州がロシア産天然ガスからの脱却を宣言", color: "bg-red-100 border-red-200" },
+              { step: "2", label: "欧州がLNGを大量調達", detail: "パイプラインガスの代替として世界中からLNGを争奪。スポット価格が70ドル/MMBtu超に", color: "bg-orange-100 border-orange-200" },
+              { step: "3", label: "アジアLNG価格が連れ高", detail: "日本のLNG調達コストも急騰。長期契約分は安定だが、スポット調達分が急上昇", color: "bg-amber-100 border-amber-200" },
+              { step: "4", label: "円安が追い打ち（115円→150円）", detail: "ドル建て燃料価格の上昇に加え、円安が輸入コストをさらに20〜30%押し上げ", color: "bg-yellow-100 border-yellow-200" },
+              { step: "5", label: "燃料費調整額が急上昇", detail: "3〜6ヶ月のタイムラグを経て、燃調費が月々の請求額に反映。高圧で月額数十万円の増加も", color: "bg-lime-100 border-lime-200" },
+              { step: "6", label: "JEPX卸市場が高騰", detail: "燃料高と需給逼迫で卸市場も連日の高値。市場連動プランの需要家に直撃", color: "bg-sky-100 border-sky-200" },
+              { step: "7", label: "新電力の経営悪化・撤退", detail: "仕入れコスト急騰に耐えられず、60社超が撤退。契約解除通知が法人に送付", color: "bg-violet-100 border-violet-200" },
+              { step: "8", label: "法人電気代が過去最高水準に", detail: "2022年秋〜冬にかけて、多くの法人で電気代が前年同期比50〜100%増", color: "bg-rose-100 border-rose-200" },
+            ].map((item) => (
+              <div key={item.step} className={`flex items-start gap-3 rounded-lg border p-3 ${item.color}`}>
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-slate-700 shadow-sm">
+                  {item.step}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-0.5 text-sm leading-6 text-slate-600">{item.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人電気料金にどう波及したか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
