@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 
 export const metadata: Metadata = {
   title: "市場連動プランとは？法人の電気料金が変動する仕組みと注意点",
@@ -43,6 +44,9 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
+
+const FY2016_ONWARDS = JEPX_YEARLY_SUMMARY.filter((r) => r.fy >= 2016 && r.fy <= 2025);
+const MAX_AVG = Math.max(...FY2016_ONWARDS.map((r) => r.avg));
 
 export default function MarketLinkedPlanPage() {
   return (
@@ -125,6 +129,55 @@ export default function MarketLinkedPlanPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動は「安いか高いか」の単純比較より、リスク許容度と社内運用体制との適合性を見て判断することが実務上は重要です。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランの仕入れ単価推移（JEPXデータ）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランの電力量料金は、このJEPX価格に調達コスト・マージンを上乗せした単価で決まります。
+            FY2019の7.93円とFY2022の20.41円では、同じ使用量でも仕入れ単価が2.6倍に開きました。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">年度平均（円/kWh）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">最低値</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">最高値</th>
+                </tr>
+              </thead>
+              <tbody>
+                {FY2016_ONWARDS.map((row) => (
+                  <tr key={row.fy} className="align-top hover:bg-slate-50">
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">FY{row.fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right">{row.avg.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right">{row.min.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right">{row.max.toFixed(2)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-5">
+            <p className="mb-2 text-xs font-semibold text-slate-600">年度平均の推移（CSSバーチャート）</p>
+            <div className="space-y-2">
+              {FY2016_ONWARDS.map((row) => (
+                <div key={row.fy} className="flex items-center gap-2">
+                  <span className="w-14 shrink-0 text-right text-xs text-slate-600">FY{row.fy}</span>
+                  <div className="flex-1 rounded bg-slate-100">
+                    <div
+                      className="rounded bg-sky-500 py-1 text-right pr-2 text-xs font-medium text-white"
+                      style={{ width: `${Math.max((row.avg / MAX_AVG) * 100, 8)}%` }}
+                    >
+                      {row.avg.toFixed(2)}円
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-1 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度平均）</p>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

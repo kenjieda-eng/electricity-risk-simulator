@@ -9,6 +9,7 @@ import {
   TREND_EVENT_TIMELINE,
 } from "../../data/businessElectricityTrendHubData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -215,6 +216,36 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               補助金縮小で見え方はどう変わったか
             </Link>
             で確認できます。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">卸市場（JEPX）の推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            法人向け小売料金の背後には、日本卸電力取引所（JEPX）のスポット市場があります。発電事業者と小売事業者が電力を売買するこの市場の価格動向は、
+            燃料費調整額や市場連動型プランを通じて法人の請求額に直結します。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            {(() => {
+              const fy2019 = JEPX_YEARLY_SUMMARY.find((r) => r.fy === 2019);
+              const fy2022 = JEPX_YEARLY_SUMMARY.find((r) => r.fy === 2022);
+              const fy2025 = JEPX_YEARLY_SUMMARY.find((r) => r.fy === 2025);
+              return [
+                { label: "FY2019（直近の最安値）", value: `${fy2019?.avg.toFixed(2) ?? "7.93"}円/kWh`, note: "電力自由化後の底値圏。安定供給が続いた基準年" },
+                { label: "FY2022（歴代最高値）", value: `${fy2022?.avg.toFixed(2) ?? "20.41"}円/kWh`, note: "ウクライナショック直撃。スパイク282コマ、最高100円/kWh" },
+                { label: "FY2025（直近）", value: `${fy2025?.avg.toFixed(2) ?? "11.06"}円/kWh`, note: "スパイク発生ゼロ。ただしFY2019比では+39%" },
+              ].map((item) => (
+                <article key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-1 text-2xl font-bold text-sky-700">{item.value}</p>
+                  <p className="mt-1 text-xs leading-5 text-slate-600">{item.note}</p>
+                </article>
+              ));
+            })()}
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            約定量の拡大も見逃せない動きです。FY2010の31万kWh/コマからFY2025の1,624万kWh/コマへ50倍超に成長しており、
+            市場の厚みが増しています。一方でスパイク発生時の影響も拡大するため、市場連動プランを利用する法人はボラティリティの変化を継続監視することが重要です。
           </p>
         </section>
 

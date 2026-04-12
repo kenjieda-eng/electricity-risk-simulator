@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPX価格変動の要因｜需給・燃料・再エネ出力・気象の影響を解説";
@@ -153,6 +154,118 @@ export default function JepxPriceVolatilityPage() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">年度別ボラティリティ推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            実データによるボラティリティの推移です。FY2020は日次ボラティリティが20.79と突出して高く、
+            2021年1月の歴史的スパイク（最高251円）が全年度の数値を大きく押し上げています。
+            FY2024以降はスパイク発生ゼロとなり、市場は安定化傾向にあります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">日次ボラティリティ</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">コマ単位StdDev</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最高値</th>
+                </tr>
+              </thead>
+              <tbody>
+                {JEPX_YEARLY_SUMMARY.map((row) => (
+                  <tr
+                    key={row.fy}
+                    className={
+                      row.fy === 2020
+                        ? "bg-red-50"
+                        : row.fy === 2021 || row.fy === 2022
+                        ? "bg-orange-50"
+                        : "odd:bg-white even:bg-slate-50"
+                    }
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">{row.fy}年度</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.fy === 2020 ? "text-red-700" : "text-slate-700"}`}>
+                      {row.dailyVolatility.toFixed(2)}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.stdDev.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.max.toFixed(0)}円</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">日次ボラティリティの推移（棒グラフ）</h3>
+          <div className="mt-3 space-y-1">
+            {JEPX_YEARLY_SUMMARY.map((row) => {
+              const maxVol = 22;
+              const pct = Math.min((row.dailyVolatility / maxVol) * 100, 100);
+              const barColor =
+                row.fy === 2020
+                  ? "bg-red-500"
+                  : row.fy === 2021 || row.fy === 2022
+                  ? "bg-orange-400"
+                  : row.dailyVolatility < 2
+                  ? "bg-green-400"
+                  : "bg-sky-500";
+              return (
+                <div key={row.fy} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-16 shrink-0 text-right font-medium">{row.fy}年度</span>
+                  <div className="flex-1 rounded-sm bg-slate-100">
+                    <div
+                      className={`${barColor} h-5 rounded-sm transition-all`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="w-10 shrink-0 font-semibold">{row.dailyVolatility.toFixed(2)}</span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">スパイク発生頻度（50円/kWh超のコマ）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            FY2020は749コマ（全体の4.3%）で50円超のスパイクが発生し、最高値は251円に達しました。
+            <strong className="text-red-700">FY2024以降はスパイク発生ゼロ</strong>となっており、市場は安定化傾向が続いています。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">50円超コマ数</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">発生率</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最高値</th>
+                </tr>
+              </thead>
+              <tbody>
+                {JEPX_YEARLY_SUMMARY.map((row) => (
+                  <tr
+                    key={row.fy}
+                    className={
+                      row.fy === 2020
+                        ? "bg-red-50"
+                        : row.fy >= 2024
+                        ? "bg-green-50"
+                        : "odd:bg-white even:bg-slate-50"
+                    }
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">{row.fy}年度</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.fy === 2020 ? "text-red-700" : row.fy >= 2024 ? "text-green-700" : "text-slate-700"}`}>
+                      {row.spikeCount.toLocaleString()}コマ
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.spikeRatio.toFixed(1)}%</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.max.toFixed(0)}円</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データを集計。スパイク = システムプライスが50円/kWhを超えたコマ。</p>
         </section>
 
         <RelatedLinks

@@ -411,6 +411,12 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
               <li key={factor}>{factor}</li>
             ))}
           </ul>
+          {yearContext.jepxContext && (
+            <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-800">JEPX卸市場の状況</p>
+              <p className="mt-1 text-sm leading-7 text-slate-700">{yearContext.jepxContext}</p>
+            </div>
+          )}
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

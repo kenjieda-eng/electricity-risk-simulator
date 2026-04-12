@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { JEPX_MONTHLY_SUMMARY } from "../../data/jepxData";
 
 const pageTitle = "市場連動プランで電気料金が上がるときの仕組み｜法人向けにわかりやすく解説";
 const pageDescription =
@@ -37,6 +38,16 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
+
+const LAST_12_MONTHS = JEPX_MONTHLY_SUMMARY.slice(-12);
+
+// months where max >= 35 are flagged as high-spike
+const HIGH_MAX_THRESHOLD = 35;
+
+function formatMonth(yyyyMm: string) {
+  const [y, m] = yyyyMm.split("-");
+  return `${y}年${parseInt(m, 10)}月`;
+}
 
 export default function WhyMarketLinkedElectricityPricesRisePage() {
   return (
@@ -147,6 +158,51 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
             </Link>
             もあわせて参照してください。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">直近の月次JEPX推移で見る上昇パターン</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランでは、このMAX値に近い単価が一部の時間帯で適用されるため、月平均以上のコスト負担が生じます。
+            直近12ヶ月の動向を確認してください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">月</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">月平均（円/kWh）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">最高値（円/kWh）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                {LAST_12_MONTHS.map((row) => {
+                  const isHighMax = row.max >= HIGH_MAX_THRESHOLD;
+                  return (
+                    <tr key={row.month} className={`align-top ${isHighMax ? "bg-red-50" : ""}`}>
+                      <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">{formatMonth(row.month)}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right">{row.avg.toFixed(2)}</td>
+                      <td className={`border border-slate-200 px-3 py-2 text-right ${isHighMax ? "font-semibold text-red-700" : ""}`}>
+                        {row.max.toFixed(2)}
+                      </td>
+                      <td className="border border-slate-200 px-3 py-2 text-xs text-slate-600">
+                        {row.month === "2024-09" && "平均13.96円、最高45.01円 — 猛暑で需要急増"}
+                        {row.month === "2025-03" && "最高37.55円 — 年度末需要集中"}
+                        {row.month === "2025-07" && "夏季需要増加"}
+                        {row.month === "2026-04" && "地政学リスクの影響"}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランでは、このMAX値に近い単価が一部の時間帯で適用されるため、月平均以上のコスト負担が生じます。
+            特に夏季（7〜9月）・冬季（1〜2月）は変動幅が大きくなりやすい傾向があります。
+          </p>
+          <p className="mt-1 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス月次集計）</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

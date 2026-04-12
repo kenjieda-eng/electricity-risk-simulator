@@ -7,6 +7,7 @@ import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXとは｜卸電力市場の仕組み・価格推移・法人料金への影響を徹底解説";
@@ -199,6 +200,50 @@ export default function JepxExplainedPage() {
               市場価格が急騰した局面では、柔軟性の高さがそのままコスト変動の大きさにもつながります。
             </InfoBox>
           </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">JEPXの市場規模</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            FY2025のコマあたり平均約定量は<strong>1,624万kWh</strong>、年間総約定量は<strong>約2,845億kWh</strong>に達しています。
+            FY2010の31万kWh/コマから<strong>50倍超</strong>に成長しており、電力小売自由化以降、JEPXの約定量は急増し、
+            市場の流動性と価格発見機能が大幅に向上しました。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">コマ平均約定量</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">年度平均価格</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">主なトピック</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[2010, 2016, 2019, 2022, 2025].map((fy) => {
+                  const row = JEPX_YEARLY_SUMMARY.find((r) => r.fy === fy)!;
+                  const topics: Record<number, string> = {
+                    2010: "市場黎明期",
+                    2016: "電力小売全面自由化",
+                    2019: "過去最安値（7.93円）",
+                    2022: "ウクライナ危機・過去最高値（20.41円）",
+                    2025: "約定量50倍超・安定化傾向",
+                  };
+                  return (
+                    <tr key={fy} className={fy === 2022 ? "bg-red-50" : fy === 2025 ? "bg-sky-50" : "odd:bg-white even:bg-slate-50"}>
+                      <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">{fy}年度</td>
+                      <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{(row.avgVolume / 10000).toFixed(0)}万kWh/コマ</td>
+                      <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${fy === 2022 ? "text-red-700" : fy === 2019 ? "text-green-700" : "text-slate-700"}`}>
+                        {row.avg.toFixed(2)}円/kWh
+                      </td>
+                      <td className="border border-slate-200 px-3 py-2 text-slate-700">{topics[fy]}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">出典: 日本卸電力取引所（JEPX）公表データを集計。</p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">

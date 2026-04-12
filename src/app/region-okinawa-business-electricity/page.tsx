@@ -365,6 +365,17 @@ export default function RegionOkinawaBusinessElectricityPage() {
         </p>
       </div>
 
+      {/* JEPX卸市場との関係 */}
+      <section className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場との関係</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          沖縄電力エリアは本土との送電線（連系線）がなく、JEPX（日本卸電力取引所）のエリアプライスが設定されていません。
+          このため、市場連動型プランの概念が他エリアとは異なり、電力調達は沖縄電力の自社電源に大きく依存しています。
+          JEPXの価格変動が直接影響しないことは、市場リスク面ではメリットですが、競争環境が限定的なため
+          新電力による値下げ余地も小さい構造です。
+        </p>
+      </section>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks

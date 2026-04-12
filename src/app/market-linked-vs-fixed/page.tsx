@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 
 export const metadata: Metadata = {
   title: "市場連動プランと固定プランの違いを比較｜法人は何を基準に選ぶべきか",
@@ -43,6 +44,27 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
+
+const jepxRiskRows = [
+  {
+    jepxAvg: "7.93円",
+    fy: "FY2019",
+    diff: "基準（0円）",
+    diffClass: "text-slate-700",
+  },
+  {
+    jepxAvg: "11.06円",
+    fy: "FY2025",
+    diff: "+約25万円/月",
+    diffClass: "text-amber-700 font-semibold",
+  },
+  {
+    jepxAvg: "20.41円",
+    fy: "FY2022",
+    diff: "+約100万円/月",
+    diffClass: "text-red-700 font-semibold",
+  },
+];
 
 const comparisonRows = [
   {
@@ -145,6 +167,42 @@ export default function MarketLinkedVsFixedPage() {
             <li>変動を許容し、下落局面のメリットも取り込みたいなら市場連動を検討しやすい</li>
             <li>業種、稼働時間、拠点数、社内意思決定プロセスで最適解は変わる</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">JEPXデータで見る市場連動のリスク幅</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間使用量8万kWhの法人が市場連動プランを使用する場合、JEPX年度平均の水準によって以下のような仕入れ差額が生じます（FY2019基準）。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">JEPX年度平均</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">月間使用量8万kWhの場合の仕入れ差額（FY2019基準）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {jepxRiskRows.map((row) => (
+                  <tr key={row.fy} className="align-top">
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">{row.jepxAvg}</td>
+                    <td className="border border-slate-200 px-3 py-2">{row.fy}</td>
+                    <td className={`border border-slate-200 px-3 py-2 ${row.diffClass}`}>{row.diff}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-slate-800">
+            <p>
+              <strong>ボラティリティ比較：</strong>FY2019のStdDev 3.12円 vs FY2022の10.41円 — 変動リスクも3倍超
+            </p>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            固定プランなら、このJEPX変動は契約期間中は転嫁されません。ただし更新時に反映される可能性があります。
+          </p>
+          <p className="mt-1 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度平均）</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

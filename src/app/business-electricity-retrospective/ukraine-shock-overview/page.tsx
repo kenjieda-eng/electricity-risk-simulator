@@ -155,6 +155,29 @@ export default function UkraineShockOverviewPage() {
           </p>
         </section>
 
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">JEPXデータで見るウクライナショック</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            日本卸電力取引所（JEPX）のスポット市場データは、ウクライナショックの影響を定量的に裏付けます。
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>
+              <span className="font-semibold text-slate-900">FY2019平均: 7.93円/kWh</span> →{" "}
+              <span className="font-semibold text-slate-900">FY2022平均: 20.41円/kWh（+157%）</span> — 3年間で価格が2.5倍超に上昇
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">FY2022のスパイク: 282コマ、最高100円/kWh</span> — 市場連動プランの法人が直撃を受けた時期と一致
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">FY2023に10.74円/kWhへ急落（-47%）</span>だが、FY2019比ではまだ+35%の水準にあり、「元に戻った」とは言えない
+            </li>
+          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            卸市場の急変は燃料費調整額を通じて法人料金に波及します。スパイク発生やボラティリティの高まりは、市場連動プランのリスクを直接的に示す指標です。
+            FY2022のボラティリティ（日次標準偏差6.74）は、FY2019（1.76）の約4倍に達しており、不確実性の大きさを数字で説明できます。
+          </p>
+        </section>
+
         <HormuzInsight
           same="海外起点の供給不安が、燃料・卸市場を通じて日本の法人電気料金へ時間差で波及し得る点です。"
           diff="ウクライナショックは欧州ガス需給の長期ひっ迫色が強く、ホルムズ海峡封鎖は輸送途絶リスクの即時性が強い点が異なります。"

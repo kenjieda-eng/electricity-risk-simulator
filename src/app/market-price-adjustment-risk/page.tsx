@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場価格調整額の上振れリスクと備え方｜2021年冬・2022年事例で学ぶ";
@@ -38,6 +39,21 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
+
+type RiskLevel = { label: string; colorClass: string; bgClass: string };
+
+function getRiskLevel(fy: number, spikeRatio: number, dailyVolatility: number): RiskLevel {
+  if (fy === 2020 || spikeRatio >= 4) return { label: "極めて高い", colorClass: "text-red-700 font-semibold", bgClass: "bg-red-50" };
+  if (spikeRatio >= 1 || dailyVolatility >= 5) return { label: "高い", colorClass: "text-orange-700 font-semibold", bgClass: "bg-orange-50" };
+  return { label: "安定", colorClass: "text-emerald-700 font-semibold", bgClass: "bg-emerald-50" };
+}
+
+const VOLATILITY_ROWS = JEPX_YEARLY_SUMMARY.filter((r) => r.fy >= 2019 && r.fy <= 2026).map((r) => ({
+  fy: r.fy,
+  dailyVolatility: r.dailyVolatility,
+  spikeRatio: r.spikeRatio,
+  risk: getRiskLevel(r.fy, r.spikeRatio, r.dailyVolatility),
+}));
 
 export default function MarketPriceAdjustmentRiskPage() {
   const labels = JEPX_SYSTEM_PRICE_YEARLY.map((r) => `${r.year}年度`);
@@ -165,6 +181,42 @@ export default function MarketPriceAdjustmentRiskPage() {
             <li>契約更新前に過去 3 年の最悪月の単価で試算</li>
             <li>経営層への説明資料に「市場連動リスク」の項目を入れる</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場価格調整額のリスク指標（JEPXボラティリティ推移）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場価格調整額は、JEPXの変動幅に連動して上下します。ボラティリティが高い年度ほど、月次の調整額の振れ幅が大きくなります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">日次ボラティリティ（円/kWh）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold">スパイク発生率（%）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-center font-semibold">リスク評価</th>
+                </tr>
+              </thead>
+              <tbody>
+                {VOLATILITY_ROWS.map((row) => (
+                  <tr key={row.fy} className={`align-top ${row.risk.bgClass}`}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">FY{row.fy}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right">{row.dailyVolatility.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right">{row.spikeRatio.toFixed(1)}</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-center ${row.risk.colorClass}`}>{row.risk.label}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
+            <p>
+              FY2024以降はスパイク発生ゼロ・ボラティリティも2〜3円台に安定しており、市場価格調整額のリスクは相対的に低下しています。
+              ただしFY2026は4.67円台に再上昇しており、地政学リスクの影響を注視する必要があります。
+            </p>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度集計）</p>
         </section>
 
         <RelatedLinks

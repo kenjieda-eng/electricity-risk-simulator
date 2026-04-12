@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXスポット市場の価格推移｜2016〜2025年度の年度別詳細";
@@ -154,6 +155,106 @@ export default function JepxSpotMarketHistoryPage() {
               <strong>深夜（0〜5時）</strong>：需要減で安定的に低価格
             </li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">JEPX年度別推移データ（2010〜2026年度）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電力自由化前後を含む2010年度以降の全データを整理しました。FY2019が最安（7.93円）、FY2022が過去最高（20.41円）で、
+            FY2025は11.06円と落ち着いた水準となっています。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">平均</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">中央値</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最高</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">標準偏差</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">平均約定量</th>
+                </tr>
+              </thead>
+              <tbody>
+                {JEPX_YEARLY_SUMMARY.map((row) => (
+                  <tr
+                    key={row.fy}
+                    className={
+                      row.fy === 2022
+                        ? "bg-red-50"
+                        : row.fy === 2019
+                        ? "bg-green-50"
+                        : "odd:bg-white even:bg-slate-50"
+                    }
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">{row.fy}年度</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.fy === 2022 ? "text-red-700" : row.fy === 2019 ? "text-green-700" : "text-slate-700"}`}>
+                      {row.avg.toFixed(2)}円
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.median.toFixed(2)}円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.min.toFixed(2)}円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.max.toFixed(0)}円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.stdDev.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{(row.avgVolume / 10000).toFixed(0)}万kWh</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: 日本卸電力取引所（JEPX）公表値を集計。単位: 円/kWh（約定量を除く）。</p>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">年度平均価格の推移（棒グラフ）</h3>
+          <div className="mt-3 space-y-1">
+            {JEPX_YEARLY_SUMMARY.map((row) => {
+              const maxAvg = 21;
+              const pct = Math.min((row.avg / maxAvg) * 100, 100);
+              const barColor =
+                row.fy === 2022
+                  ? "bg-red-500"
+                  : row.fy === 2020 || row.fy === 2021
+                  ? "bg-orange-400"
+                  : row.fy === 2019
+                  ? "bg-green-500"
+                  : "bg-sky-500";
+              return (
+                <div key={row.fy} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-16 shrink-0 text-right font-medium">{row.fy}年度</span>
+                  <div className="flex-1 rounded-sm bg-slate-100">
+                    <div
+                      className={`${barColor} h-5 rounded-sm transition-all`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="w-16 shrink-0 font-semibold">{row.avg.toFixed(2)}円</span>
+                </div>
+              );
+            })}
+          </div>
+
+          <h3 className="mt-6 text-lg font-semibold text-slate-900">約定量の推移 — 市場規模の拡大</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            FY2010のコマあたり平均約定量は約31万kWhでしたが、FY2025には1,624万kWhと<strong>50倍超</strong>に拡大しました。
+            電力小売全面自由化（2016年度）以降、市場参加者が急増し、JEPX の流動性と価格発見機能が大幅に向上しています。
+          </p>
+          <div className="mt-3 space-y-1">
+            {JEPX_YEARLY_SUMMARY.filter((r) => r.fy <= 2025).map((row) => {
+              const maxVol = 19000000;
+              const pct = Math.min((row.avgVolume / maxVol) * 100, 100);
+              return (
+                <div key={row.fy} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-16 shrink-0 text-right font-medium">{row.fy}年度</span>
+                  <div className="flex-1 rounded-sm bg-slate-100">
+                    <div
+                      className="h-5 rounded-sm bg-indigo-400 transition-all"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="w-20 shrink-0 font-semibold">{(row.avgVolume / 10000).toFixed(0)}万kWh</span>
+                </div>
+              );
+            })}
+          </div>
         </section>
 
         <RelatedLinks

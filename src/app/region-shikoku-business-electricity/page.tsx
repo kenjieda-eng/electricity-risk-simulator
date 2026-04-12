@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 
 const pageTitle = "四国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -363,6 +364,45 @@ export default function RegionShikokuBusinessElectricityPage() {
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
       </div>
+
+      {/* JEPXエリアプライスの推移 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead className="bg-sky-50">
+              <tr>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">当エリア（円/kWh）</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">システムプライス（円/kWh）</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">差額</th>
+              </tr>
+            </thead>
+            <tbody>
+              {JEPX_AREA_YEARLY_AVG.filter(r => r.fy >= 2016).map((row, i) => {
+                const areaPrice = row.shikoku;
+                const diff = Number((areaPrice - row.systemPrice).toFixed(2));
+                return (
+                  <tr key={row.fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium">{row.fy}年度</td>
+                    <td className="border border-slate-200 px-3 py-2">{areaPrice.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-500">{row.systemPrice.toFixed(2)}</td>
+                    <td className={`border border-slate-200 px-3 py-2 font-semibold ${diff > 0 ? "text-red-600" : diff < 0 ? "text-emerald-600" : "text-slate-500"}`}>
+                      {diff > 0 ? "+" : ""}{diff.toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          四国エリアは伊方原発と太陽光の組み合わせにより、FY2025は8.85円とシステムプライスを-2.21円下回る安値傾向。
+        </p>
+      </section>
 
       {/* 関連リンク */}
       <div className="mt-8">

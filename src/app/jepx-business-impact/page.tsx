@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
+import { JEPX_HOURLY_AVG, JEPX_AREA_SPREAD_2026 } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "JEPXが法人の電気料金に与える影響｜調達経路別の波及と備え方";
@@ -175,6 +176,102 @@ export default function JepxBusinessImpactPage() {
             <li>長期契約は安定の代わりに、市場下落時の割高感を受け入れる覚悟が必要</li>
             <li>単一電力会社への依存を避け、複数メニュー・複数拠点分散を検討</li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">時間帯別JEPX平均価格</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            全期間の30分コマデータを時間帯別に集計しました。太陽光発電の普及により昼間（特に12時台）の卸価格が大幅に低下しており、
+            反対に夕方（17〜18時台）は需要急増と太陽光出力減少が重なり最も高くなります。
+          </p>
+          <div className="mt-4 space-y-1">
+            {JEPX_HOURLY_AVG.map((row) => {
+              const maxPrice = 17;
+              const pct = Math.min((row.avg / maxPrice) * 100, 100);
+              const barColor =
+                row.avg < 11
+                  ? "bg-green-400"
+                  : row.avg > 14
+                  ? "bg-red-400"
+                  : "bg-yellow-400";
+              const isMin = row.hour === 12;
+              const isMax = row.hour === 17;
+              return (
+                <div key={row.hour} className="flex items-center gap-2 text-xs text-slate-700">
+                  <span className="w-14 shrink-0 text-right font-medium">{row.label}</span>
+                  <div className="flex-1 rounded-sm bg-slate-100">
+                    <div
+                      className={`${barColor} h-5 rounded-sm transition-all`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className={`w-24 shrink-0 font-semibold ${isMin ? "text-green-700" : isMax ? "text-red-700" : ""}`}>
+                    {row.avg.toFixed(2)}円{isMin ? "（最安）" : isMax ? "（最高）" : ""}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4">
+            <p className="text-sm leading-7 text-slate-800">
+              <strong>12時台 9.84円（最安）vs 17時台 15.76円（最高）</strong> — 差は約6円/kWhに達します。
+              市場連動プランの場合、この時間差が月次コストに直接影響します。
+              昼間の安価な電力を積極的に活用（蓄電・シフト生産）すると電力調達コストを抑えやすくなります。
+            </p>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（2010年4月〜2026年4月）の全30分コマを時間帯別に集計。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">エリア間価格差（FY2026）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            FY2026のエリアプライスとシステムプライスの差を整理しました。
+            東京エリアは平均+5.33円と大幅に高く、一方で九州・四国は太陽光大量導入の影響でシステムプライスより安くなる傾向があります。
+            エリアによって「実際に適用される価格」が大きく異なることに注意が必要です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="bg-sky-50">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">エリア</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">システムプライスとの差（平均）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">標準偏差</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最安差</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">最高差</th>
+                </tr>
+              </thead>
+              <tbody>
+                {JEPX_AREA_SPREAD_2026.map((row) => (
+                  <tr
+                    key={row.area}
+                    className={
+                      row.area === "tokyo"
+                        ? "bg-red-50"
+                        : row.area === "kyushu" || row.area === "shikoku"
+                        ? "bg-green-50"
+                        : "odd:bg-white even:bg-slate-50"
+                    }
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">{row.areaJa}</td>
+                    <td className={`border border-slate-200 px-3 py-2 text-right font-semibold ${row.mean > 0 ? "text-red-700" : "text-green-700"}`}>
+                      {row.mean > 0 ? "+" : ""}{row.mean.toFixed(2)}円
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">±{row.std.toFixed(2)}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{row.min.toFixed(2)}円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">+{row.max.toFixed(2)}円</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+            <p className="text-sm leading-7 text-slate-800">
+              <strong>太陽光が多い九州・四国では昼間にマイナス差が拡大。</strong>
+              再エネ出力が集中する時間帯は卸価格がシステムプライスを大幅に下回ることがあります。
+              一方、首都圏（東京）は送電容量制約で高止まりしやすく、FY2026は平均+5.33円と突出しています。
+            </p>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（FY2026 4月期）のエリアプライスとシステムプライスの差を集計。</p>
         </section>
 
         <RelatedLinks

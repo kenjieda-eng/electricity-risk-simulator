@@ -276,6 +276,7 @@ export type YearContext = {
   q3Context: string;
   q4Context: string;
   practicalNotes: string[];
+  jepxContext: string;  // JEPX market context for that year
 };
 
 export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
@@ -297,6 +298,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "年後半の単価低下は需要減と燃料安の両方が重なった結果であり、どちらか一方では説明できない",
       "この年の単価水準を契約更新時の比較基準にする場合は、コロナ禍の特殊性を注記として明記する必要がある",
     ],
+    jepxContext: "JEPXスポット市場は年度平均11.21円/kWh。1月の寒波で史上最高値251円/kWhを記録し、スパイクが749コマ(4.3%)発生。日次ボラティリティ20.79円は歴代最悪。",
   },
   2021: {
     headline: "コロナ回復で需要増、年末にかけてLNG価格急騰が始まった転換の年",
@@ -316,6 +318,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "1月のJEPX高騰は市場連動プランのリスクを顕在化させた最初の大きな事例であり、この教訓がその後のプラン選択に影響した",
       "年後半からの燃料価格上昇は、翌2022年の急騰の「助走期間」だったことを認識しておくべき",
     ],
+    jepxContext: "JEPX年度平均13.46円/kWh。年後半にLNG高を反映して上昇基調に入り、スパイク(50円超)が193コマ(1.1%)発生。",
   },
   2022: {
     headline: "ウクライナ侵攻で燃料・電力価格が歴史的急騰、法人電気代が過去最高水準に達した年",
@@ -337,6 +340,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "新電力の撤退ラッシュは「安い=良い」ではなく「供給安定性」も比較軸に入れる教訓を残した",
       "この年の最高値月を予算の「ストレスシナリオ」として保存しておくことが、今後のリスク管理に有用",
     ],
+    jepxContext: "JEPX年度平均20.41円/kWhで歴代最高値。スパイク282コマ(1.6%)。東京エリアは23.50円と全国最高、九州は14.42円と最安で差が9.08円に拡大。",
   },
   2023: {
     headline: "政府補助で見かけ上は沈静化したが、補助を除いた実力値は依然として高止まりの年",
@@ -356,6 +360,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "年間平均で前年より下がっていても、「元の水準に戻った」わけではない。比較する際は2019年水準も並べて提示すべき",
       "再エネ賦課金の大幅減は一時的要因（回避可能費用の増加）であり、翌年以降の再上昇リスクに注意が必要",
     ],
+    jepxContext: "JEPX年度平均10.74円/kWhに急落（前年比-47%）。スパイクは1コマのみ。ボラティリティも2.50に低下し安定化。",
   },
   2024: {
     headline: "容量拠出金制度開始・補助金終了で新たなコスト要因が加わり、高止まりが定着した年",
@@ -375,6 +380,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "補助金終了後の実力値を基準にした予算策定が初めて求められた年であり、過去の補助込み水準との混同に注意",
       "容量拠出金は今後も継続・増加する可能性があり、中期経営計画では制度コスト増を織り込む必要がある",
     ],
+    jepxContext: "JEPX年度平均12.29円/kWh。スパイク発生ゼロ。ボラティリティ2.71と安定推移。ただし夏場(7-9月)は14円台に上昇。",
   },
   2025: {
     headline: "補助復活で一時的に下がったが実力値は高止まり、ホルムズ海峡問題で新たなリスクが浮上した年",
@@ -394,5 +400,6 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
       "ホルムズ海峡問題は「次のウクライナショック」になり得るリスク要因として、予算のストレスシナリオに織り込む価値がある",
       "2019年→2025年の6年間で恒常的に50〜70%高い水準が定着しており、「元に戻る」前提での予算策定は非現実的",
     ],
+    jepxContext: "JEPX年度平均11.06円/kWh。スパイク発生ゼロ。ボラティリティ2.17と低水準を維持。約定量は1,624万kWh/コマに成長。",
   },
 };
