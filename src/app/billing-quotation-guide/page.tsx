@@ -268,6 +268,58 @@ export default function BillingQuotationGuidePage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">6種類の書類 確認ポイント比較</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">書類</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主な確認目的</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最重要チェック項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">入手タイミング</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書（低圧）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現状コストの把握</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量・単価・調整額の内訳</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月届く</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書（高圧）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンドと変動費の確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力・デマンド値・力率</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月届く</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書（特別高圧）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大口契約の総額管理</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金比率・負荷率</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月届く</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積書（高圧）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新規・切替の条件比較</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">単価・燃調上限・違約金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積依頼時</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積書（特別高圧）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大口交渉の条件整理</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">負荷率前提・特約条件</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積依頼時</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約書</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">条件拘束の確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">期間・自動更新・解約条件</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約締結時</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

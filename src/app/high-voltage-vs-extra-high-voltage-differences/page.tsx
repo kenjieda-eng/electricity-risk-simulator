@@ -247,6 +247,46 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧と特別高圧のコスト差分析</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">比較項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">高圧（500kW・5万kWh/月）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特別高圧（3,000kW・150万kWh/月）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500〜1,900円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">1,200〜1,600円/kW</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15〜20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">12〜18円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額合計目安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約160〜195万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約2,400〜4,400万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1円/kWh差の年間影響</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±60万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±1,800万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">受電設備費用</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">需要家負担（キュービクル）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">需要家負担（特高受電設備・変圧器）</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

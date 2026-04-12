@@ -244,6 +244,59 @@ export default function HowToReadElectricityQuotePage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">3社見積比較テンプレート（高圧・月50,000kWh想定）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">比較項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">A社（固定型）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">B社（市場連動型）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">C社（ハイブリッド型）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">20円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">JEPX+8円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">15円+0.3×JEPX差</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額目安（JEPX 10円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約100万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約90万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約75万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額目安（JEPX 20円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約100万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">約140万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約90万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃調費上限</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">あり</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">あり（+3円上限）</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約期間</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1年</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">違約金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金は含まず電力量料金部分のみの比較例。実際の見積は条件により異なります。</p>
+        </section>
+
         <RelatedLinks
           heading="あわせて読みたい記事"
           intro="見積の前提を、内訳・相場・見直し実務までつなげると比較判断が安定しやすくなります。"

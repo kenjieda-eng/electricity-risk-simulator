@@ -201,6 +201,49 @@ export default function WhatIsPowerFactorPage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別 力率の目安と改善効果</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">施設タイプ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">一般的な力率</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">改善後目標</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">基本料金への影響</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">オフィスビル</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">90〜95%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">95%以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲3〜5%割引</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">工場（モーター多数）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">70〜85%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">90%以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜15%割引</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">商業施設（空調中心）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">85〜92%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">95%以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲3〜10%割引</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">病院</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">80〜90%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">90%以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜10%割引</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            契約電力500kW・基本料金80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年で回収可能なケースが多いです。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

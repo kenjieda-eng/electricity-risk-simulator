@@ -156,6 +156,93 @@ export default function BusinessElectricityPriceBenchmarkPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別 法人電気料金の単価目安（高圧・2024〜2025年度参考）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">業種・施設タイプ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電力量料金単価</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間電気代目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">オフィスビル（中規模）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30,000〜60,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">18〜23円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">900〜1,800万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">工場（中規模）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000〜150,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">16〜22円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200〜4,500万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">スーパー・商業施設</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">40,000〜100,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">19〜25円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,100〜3,000万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">病院（200床規模）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">60,000〜120,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">18〜24円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500〜3,600万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">学校・大学</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20,000〜80,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">20〜26円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">600〜2,500万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">ホテル（中規模）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000〜100,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">19〜24円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,400〜3,000万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金・燃料費調整額・再エネ賦課金を含む概算。エリア・契約条件・使用パターンにより異なります。</p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">使用量規模別 1円/kWhの差が年間に与える影響</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間使用量</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">1円/kWh差の年間影響</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">3円/kWh差の年間影響</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">120,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±12万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±36万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">600,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±60万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±180万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">100,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±120万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">±360万円</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="あわせて読みたい記事"
           intro="相場感を、内訳・見積・見直し判断までつなげると、単価だけに頼らない比較がしやすくなります。"

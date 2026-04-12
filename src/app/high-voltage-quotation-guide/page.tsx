@@ -237,6 +237,52 @@ export default function HighVoltageQuotationGuidePage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">3社見積シミュレーション（高圧・月50,000kWh・契約500kW）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">A社（大手電力）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">B社（新電力・固定）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">C社（新電力・市場連動）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,800円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,650円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500円/kW</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">18.5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">17.0円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX+8円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額概算（JEPX 10円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約180万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約165万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約163万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額概算（JEPX 20円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約180万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約165万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">約213万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間差額レンジ</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基準</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲180万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲204万〜+396万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧電力の見積書を正確に比較するための関連ページです。"

@@ -256,6 +256,41 @@ export default function EnergyChargeExplainedPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">時間帯別・季節別の単価差イメージ（高圧）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">時間帯</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">夏季（7〜9月）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">その他季</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月50,000kWhでの差</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">昼間（8〜22時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">18〜24円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">16〜21円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">夏季で月+10〜15万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">夜間（22〜8時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜16円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">11〜15円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">夜間シフトで▲15〜25万円/月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">ピーク（13〜16時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">22〜30円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">ピーク回避で▲5〜10万円/月</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 時間帯別料金体系の契約の場合。全時間帯一律単価の契約では適用されません。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="電力量料金の理解を深め、見直しや見積比較に活かすための関連ページです。"

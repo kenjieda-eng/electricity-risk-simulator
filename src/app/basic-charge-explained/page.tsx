@@ -253,6 +253,50 @@ export default function BasicChargeExplainedPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">施設規模別 基本料金の早見表</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">単価1,650円/kW、力率割引0.97で計算した場合の目安です。</p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">施設規模</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約電力</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">基本料金（月額）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間基本料金</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">小規模オフィス</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">100kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約16万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約192万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中規模工場</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">500kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約80万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約960万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大型商業施設</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,000kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約160万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,920万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大規模工場（特高）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3,000kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約480万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約5,760万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            デマンド値を<span className="font-semibold text-slate-900">10%</span>削減できれば、500kW契約で年間約<span className="font-semibold text-slate-900">96万円</span>の基本料金削減になります。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="基本料金の理解を深め、見直しや見積比較に活かすための関連ページです。"

@@ -273,6 +273,51 @@ export default function HowToReadBusinessElectricityQuotationPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧見積書の項目別金額例（月50,000kWh・契約電力500kW）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見積項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">確認すべき前提条件</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約72〜92万円/月</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力の設定根拠、力率割引の有無</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約75〜100万円/月</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">単価の時間帯別設定、季節別単価の有無</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲10〜+25万円/月</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">上限の有無、算定式の違い</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0〜+50万円/月</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">連動率、基準単価、上限の有無</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.5万円/月</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">全社共通（年度改定）</td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約155〜285万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">変動項目の幅で月130万円の差が出る</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="見積書の比較をさらに進めるための関連情報をまとめています。"

@@ -152,6 +152,53 @@ export default function HighVoltageElectricityPricingPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧電力の料金構成と計算例（契約電力500kW・月50,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定方法</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">単価目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力×単価×力率割引</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500〜1,900円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約72.8万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15〜20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約80万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×調整単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲2〜+5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲10〜+25万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×賦課金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.5万円</span></td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約160〜195万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金は500kW×1,500円/kW×力率割引0.97＝727,500円で計算。電力量料金は16円/kWh想定。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧料金の読み方を、要因分析と契約比較へつなげるための導線です。"

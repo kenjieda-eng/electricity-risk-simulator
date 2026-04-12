@@ -240,6 +240,48 @@ export default function ExtraHighVoltageQuotationGuidePage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">負荷率別のコスト影響（特別高圧・契約電力3,000kW）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            負荷率（実際の平均使用量÷契約電力）が異なると、kWhあたりの実質単価が大きく変わります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">負荷率</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">基本料金/kWh</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">実質単価目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額合計目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">40%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">864,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">4.9円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">約19.4円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,676万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">60%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,296,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.2円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.7円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約2,295万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">80%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,728,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2.4円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">約16.9円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約2,921万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金1,400円/kW、電力量料金14.5円/kWh、力率割引0.97で算定。燃調費・再エネ賦課金含まず。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="特別高圧電力の見積書理解と比較判断に役立てるための関連ページです。"

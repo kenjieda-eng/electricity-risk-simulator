@@ -145,6 +145,49 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">特別高圧の料金構成と計算例（契約電力3,000kW・月1,500,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">単価目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200〜1,600円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約350〜465万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜18円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約1,800〜2,700万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲2〜+5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲300〜+750万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約524万円</span></td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約2,400〜4,400万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            特別高圧では、電力量料金の<span className="font-semibold text-slate-900">1円/kWh</span>の差が年間<span className="font-semibold text-slate-900">1,800万円</span>の差になります。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="特別高圧の料金理解を、請求確認と比較判断につなげるための導線です。"

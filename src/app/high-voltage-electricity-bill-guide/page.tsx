@@ -268,6 +268,46 @@ export default function HighVoltageElectricityBillGuidePage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧請求書の実例数値（契約電力300kW・月30,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">300kW × 1,650円 × 0.97</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">480,150円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30,000kWh × 17.5円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">525,000円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30,000kWh × +1.8円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">54,000円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30,000kWh × 3.49円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">104,700円</span></td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">請求合計（税抜）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">1,163,850円</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧電力の請求書理解を深め、見積比較に活かすための関連ページです。"

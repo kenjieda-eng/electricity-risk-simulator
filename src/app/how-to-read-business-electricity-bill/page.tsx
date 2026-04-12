@@ -320,6 +320,46 @@ export default function HowToReadBusinessElectricityBillPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">各変動項目の月額影響レンジ（高圧・月50,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">変動項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">通常時の変動幅</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">高騰時の変動幅</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">確認頻度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月±5〜10万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">月+25〜50万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月±5〜15万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">月+50〜100万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年度改定で±3〜5万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年1回（4月）</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量変動</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月±10〜20万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑・厳冬で+30万円超</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">毎月</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="請求書の理解を深め、見積比較や契約見直しに活かすための関連ページです。"

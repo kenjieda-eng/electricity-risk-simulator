@@ -223,6 +223,46 @@ export default function HowToReadElectricityBillPage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">請求書の主要項目と金額レンジ（高圧・月50,000kWh目安）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額レンジ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">変動要因</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">前年比チェック</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">15〜90万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力・力率</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンド変化がなければほぼ同額</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">75〜125万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量・単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量±10%以上なら要確認</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲10〜+25万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料価格</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">前年同月と比較して急変していないか</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.5万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年度改定</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">4月の改定単価を確認</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="請求書確認を、要因分析と比較判断につなげるための関連ページです。"
