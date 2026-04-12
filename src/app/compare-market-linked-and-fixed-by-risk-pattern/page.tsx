@@ -131,6 +131,67 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスクパターン別 固定 vs 市場連動 年間コスト比較（月50,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">リスクパターン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX想定</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定20円</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場連動</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">有利</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">安定期</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">平均10円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,080万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲120万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-sky-700 font-semibold">市場連動</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑単月型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年平均13円（8月25円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,260万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+60万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700 font-semibold">固定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安高止まり</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年16円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,440万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+240万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700 font-semibold">固定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年20円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,680万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+480万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700 font-semibold">固定</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">ワースト複合</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年25円（夏35円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,980万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+780万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700 font-semibold">固定</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            安定期には市場連動が年間<span className="font-semibold text-slate-900">120万円</span>有利ですが、ワーストシナリオでは固定が<span className="font-semibold text-slate-900">780万円</span>有利になります。リスク許容度に応じた判断が必要です。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="カテゴリ内の主要ページ"
           intro="このページを起点に、変動要素と契約条件を個別に確認すると比較精度が上がります。"

@@ -100,6 +100,52 @@ export default function LastResortSupplyTermsPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給の料金水準目安（エリア別・高圧）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            最終保障供給の電力量料金は、一般的な小売契約より<span className="font-semibold text-slate-900">20〜40%</span>割高に設定されています。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">エリア</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最終保障 電力量料金</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">小売平均（参考）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">東京</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約25〜28円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約18〜22円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+5〜8円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">関西</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約23〜26円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約17〜20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+5〜7円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中部</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約24〜27円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約17〜21円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+5〜8円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">九州</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約22〜25円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約16〜19円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+5〜7円/kWh</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間50,000kWh使用の高圧事業所では、最終保障供給のまま1年間継続した場合、通常小売より年間<span className="font-semibold text-slate-900">+300〜480万円</span>の追加コストが見込まれます。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

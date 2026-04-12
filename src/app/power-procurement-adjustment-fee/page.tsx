@@ -108,6 +108,55 @@ export default function PowerProcurementAdjustmentFeePage() {
           </ul>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">電源調達調整費の月額影響シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電源調達調整費が<span className="font-semibold text-slate-900">JEPX月平均と基準単価の差額</span>で算定される場合の月額影響です。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX月平均</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">基準単価</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">調整単価</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額影響（50,000kWh）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間影響</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">8円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲2円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲10万円（減額）</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲120万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">±0</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">±0</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">±0</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+25万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+300万円</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">25円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+15円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+75万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+900万円</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 算定方法は事業者により異なります。上限の有無で高騰時の影響が大きく変わります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

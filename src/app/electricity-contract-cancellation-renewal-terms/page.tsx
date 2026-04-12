@@ -112,6 +112,47 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">電力会社タイプ別の解約・更新条件の目安</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電力会社タイプ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">解約通知期限</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">違約金目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大手電力（旧一般電気事業者）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1年（自動更新）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし〜少額</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力（短期契約型）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0〜10万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力（長期契約型）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜3年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜6か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">10〜50万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力（低単価+拘束型）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜5年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">6か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">20〜100万円</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 違約金は契約条件・残存期間・使用量により大きく異なります。契約書で必ず確認してください。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="単価比較に加えて契約条件を確認する際に、あわせて見ておきたいページです。"

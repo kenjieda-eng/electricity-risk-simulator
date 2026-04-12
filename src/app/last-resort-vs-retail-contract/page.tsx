@@ -113,6 +113,41 @@ export default function LastResortVsRetailContractPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給と小売契約の年間コスト比較（高圧・月50,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最終保障供給</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">小売契約（固定）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約25〜28円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約18〜22円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+5〜8円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約125〜140万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約90〜110万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+25〜40万円/月</span></td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">年間差額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+300〜480万円/年</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金・燃料費調整額・再エネ賦課金を除いた電力量料金部分の概算です。エリアにより異なります。</p>
+        </section>
+
         <RelatedLinks
           heading="次に確認したいページ"
           intro="違いを押さえたら、制度の全体像と切替実務へ進み、通常契約の準備に戻ります。"

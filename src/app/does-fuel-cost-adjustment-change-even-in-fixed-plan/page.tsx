@@ -108,6 +108,62 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">固定プラン請求額の内訳分解（月50,000kWh使用の高圧事業所）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定/変動</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">単価目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">変動幅</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">固定</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,800円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約18万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">固定</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">16円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約80万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-amber-700">変動</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲2〜+5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲10〜+25万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">月35万円幅</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-amber-700">年度変動</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約17.5万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年度改定あり</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">合計</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約105〜140万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定項目98万円+変動項目</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            「固定プラン」でも請求額は月<span className="font-semibold text-slate-900">約35万円</span>の変動幅を持ちます。
+            これは燃料費調整額が別建てのためで、固定されているのは電力量料金単価だけである点に注意が必要です。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

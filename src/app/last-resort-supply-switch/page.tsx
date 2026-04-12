@@ -116,6 +116,49 @@ export default function LastResortSupplySwitchPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給からの切替スケジュール目安</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">ステップ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">所要期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主な作業</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現状整理</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2週間</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書・使用量データ収集、契約条件確認</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積依頼・取得</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜4週間</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜5社へ見積依頼、条件比較</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">社内検討・決裁</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3週間</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">比較検討、稟議・庁内手続き</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約・供給切替</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜4週間</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新契約締結、メーター切替手続き</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">合計</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約2〜3か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">最終保障のコスト増は毎月続くため早期着手が重要</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月50,000kWh使用の場合、最終保障供給のまま<span className="font-semibold text-slate-900">3か月遅れるだけで+75〜120万円</span>の追加コストが発生します。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

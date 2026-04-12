@@ -115,6 +115,54 @@ export default function ElectricityPriceSubsidyImpactPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金有無による月額比較（高圧・月50,000kWh）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">時期</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">補助単価</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額軽減額</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">補助なし月額</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">補助あり月額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023年前半</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲3.5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲17.5万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約115万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約97.5万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023年後半</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲1.8円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲9万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約115万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約106万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024年8〜10月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲2円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲10万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約120万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約110万円</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2025年4月〜（終了後）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約120万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">= 補助なし月額</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金3.5円/kWh適用時と終了後を比較すると、年間で<span className="font-semibold text-slate-900">約210万円</span>の差が生じます。請求書の「急な上昇」が補助終了によるものか、単価改定によるものかを切り分けることが重要です。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="補助金の見え方を整理したうえで、比較実務に接続するためのページです。"

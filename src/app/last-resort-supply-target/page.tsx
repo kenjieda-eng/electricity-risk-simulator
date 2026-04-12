@@ -120,6 +120,43 @@ export default function LastResortSupplyTargetPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">電圧区分別 最終保障供給の対象条件</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電圧区分</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約電力</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">該当する施設例</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最終保障の位置づけ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">特別高圧</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2,000kW以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大規模工場、大型商業施設、データセンター</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">一般送配電事業者が供給義務</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高圧</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50kW〜2,000kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中規模工場、オフィスビル、病院、学校</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">一般送配電事業者が供給義務</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">低圧</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50kW未満</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">小規模店舗、事務所</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">経過措置料金または規制料金が適用</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2025年3月時点で最終保障供給を利用中の法人は全国で約<span className="font-semibold text-slate-900">3,800件</span>。2022年のピーク時（約14,000件）からは減少していますが、依然として小売契約への移行が完了していない事業所が残っています。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           links={[

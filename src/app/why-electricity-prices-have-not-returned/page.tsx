@@ -127,6 +127,69 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">電圧区分別 電気料金単価の推移（円/kWh・年平均）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特別高圧</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">高圧</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">低圧電灯</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">低圧電力</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2019〜2021平均</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">11.43</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15.02</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">22.96</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">21.15</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">2022（ピーク）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">17.14</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20.58</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">26.84</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30.34</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">17.84</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">21.47</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">29.25</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">29.86</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">16.52</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20.24</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">28.21</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">28.07</td>
+              </tr>
+              <tr className="bg-amber-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">2025</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">17.41</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">21.15</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">28.58</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">29.48</td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">基準期比（2025/基準）</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+52%</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+41%</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+24%</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+39%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2025年の単価は、基準期（2019〜2021年平均）と比較して特別高圧で<span className="font-semibold text-slate-900">+52%</span>、高圧で<span className="font-semibold text-slate-900">+41%</span>の水準です。
+            ピークからの低下はあるものの、基準期への回帰には程遠い状態が続いています。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="背景を理解した後は、契約メニュー差と比較実務へ進む流れが有効です。"

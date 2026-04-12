@@ -117,6 +117,55 @@ export default function WhatIsMarketPriceAdjustmentPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場価格調整額の影響レンジ（過去実績ベース）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で、基準単価10円/kWhの場合の影響試算です。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場環境</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX月平均</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">調整単価</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額影響</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">過去の該当時期</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">安定期</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">7〜9円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲1〜3円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜15万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2020年春〜秋</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">やや上昇</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜15円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+2〜5円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+10〜25万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023〜2024年通常期</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高騰期</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20〜30円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+10〜20円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+50〜100万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2022年通年</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">異常高騰</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50円超</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+40円超</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+200万円超</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2021年1月</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 上限設定がない契約では、異常高騰時に月額が数百万円単位で増加する可能性があります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
