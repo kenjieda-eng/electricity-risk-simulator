@@ -197,4 +197,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/contact", label: "地域別の相談をする" },
     ],
   },
+  "market-data": {
+    heading: "データで把握した市場動向を、自社の契約に活かす",
+    description:
+      "JEPX価格・需要パターン・気象データの分析結果を踏まえて、自社の電気料金リスクをシミュレーターで定量化できます。データに基づく契約判断をサポートします。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "専門家に無料相談する" },
+      { href: "/articles/market-data", label: "市場データ記事一覧" },
+    ],
+  },
 };

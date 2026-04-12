@@ -18,7 +18,8 @@ export type ArticleCategorySlug =
   | "benchmarks"
   | "subsidies"
   | "for-executives"
-  | "by-region";
+  | "by-region"
+  | "market-data";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -638,6 +639,35 @@ export const articleCategories: ArticleCategory[] = [
       "region-supplier-withdrawal-map",
     ],
     order: 20,
+    group: "learning",
+  },
+  {
+    name: "データで見る電力市場",
+    slug: "market-data",
+    description:
+      "JEPXスポット価格・電力需要・気象データ・電源構成の30分値実績データをクロス分析し、法人電気料金の変動要因をデータで可視化したカテゴリです。",
+    intro:
+      "30万件超の30分値データ、17年分のJEPXスポット価格、30年分の気象データを統合分析。気温→需要→価格の因果チェーン、ダックカーブ、価格スパイクの発生条件、エリア間スプレッドなど、他にないデータドリブンの知見を提供します。",
+    learnPoints: [
+      "JEPXスポット価格の17年間トレンドと変動パターン",
+      "気温・需要・価格の因果関係とU字構造",
+      "再エネ比率・需要水準と価格リスクの定量的関係",
+      "温暖化が電力需要と料金に与える中長期的影響",
+    ],
+    recommendedReadingOrder: [
+      "jepx-spot-price-dashboard",
+      "electricity-demand-pattern",
+      "weather-electricity-price-link",
+      "winter-vs-summer-electricity",
+      "price-spike-analysis",
+      "zero-price-hours-analysis",
+      "area-price-spread",
+      "renewable-share-price-correlation",
+      "demand-decile-price-risk",
+      "warming-trend-30-years",
+      "extreme-heat-electricity-risk",
+    ],
+    order: 21,
     group: "learning",
   },
 ];
@@ -2327,4 +2357,17 @@ export const articleList: ArticleMeta[] = [
   { title: "ダックカーブとは何か", slug: "duck-curve-electricity-price-impact", description: "昼12時のネット需要7,819MWから夕方18時の11,923MWへの急上昇。太陽光が生むダックカーブと市場価格への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 22, publishedAt: "2026-04-12" },
   { title: "火力 vs 再エネ 年度別推移", slug: "thermal-vs-renewable-trend", description: "FY2023→FY2026で火力66.6%→56.4%、再エネ26.1%→27.7%。年度別の電源構成推移と法人の中長期戦略への示唆を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 23, publishedAt: "2026-04-12" },
   { title: "エリア間電力融通の実態", slug: "inter-area-power-flow-explained", description: "東京は常時+4,456MW輸入、東北は-4,041MW輸出。連系線・揚水発電・蓄電池のデータから法人電気料金への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 24, publishedAt: "2026-04-12" },
+
+  // --- M. データで見る電力市場 11本 ---
+  { title: "JEPXスポット価格の全体像", slug: "jepx-spot-price-dashboard", description: "FY2010〜2026の17年間のJEPXスポット価格を集計。年度別・時間帯別の変動パターンとスパイク発生条件をデータで解説します。", category: "データで見る電力市場", categorySlug: "market-data", featured: true, order: 1, publishedAt: "2026-04-12" },
+  { title: "全国電力需要パターン", slug: "electricity-demand-pattern", description: "9エリアの時間別需要データから、月別・時間帯別・年度別の需要構造とピーク需要日Top10を可視化します。", category: "データで見る電力市場", categorySlug: "market-data", order: 2, publishedAt: "2026-04-12" },
+  { title: "気温と電力価格の因果チェーン", slug: "weather-electricity-price-link", description: "気温→需要→価格のU字構造を相関データで実証。極寒日は通常の2.6倍、猛暑日は1.3倍の価格リスクを示します。", category: "データで見る電力市場", categorySlug: "market-data", order: 3, publishedAt: "2026-04-12" },
+  { title: "電力価格スパイクはいつ起きるか", slug: "price-spike-analysis", description: "50円超のスパイクはFY2020に749回発生。1月と17-18時に集中する発生パターンと法人の対策を分析します。", category: "データで見る電力市場", categorySlug: "market-data", order: 4, publishedAt: "2026-04-12" },
+  { title: "JEPX 0円コマの実態", slug: "zero-price-hours-analysis", description: "再エネ比率40%超で価格は6.49円（通常の半分以下）に。0円コマの発生メカニズムと法人への影響を解説します。", category: "データで見る電力市場", categorySlug: "market-data", order: 5, publishedAt: "2026-04-12" },
+  { title: "エリア間価格スプレッドの読み方", slug: "area-price-spread", description: "東京-九州スプレッドは4月に最大4.19円。エリアプライスの乖離パターンと17年間の推移を分析します。", category: "データで見る電力市場", categorySlug: "market-data", order: 6, publishedAt: "2026-04-12" },
+  { title: "温暖化30年と電力需要", slug: "warming-trend-30-years", description: "1995年からの30年で東京+0.36℃、札幌+1.18℃。気温上昇がCDD・HDDと電力需要に与える中長期影響を分析します。", category: "データで見る電力市場", categorySlug: "market-data", order: 7, publishedAt: "2026-04-12" },
+  { title: "猛暑日・熱帯夜と電力リスク", slug: "extreme-heat-electricity-risk", description: "東京の猛暑日は1995年の13日→2025年29日に倍増。大阪の熱帯夜は81日。極端気象と電力価格リスクの関係を分析します。", category: "データで見る電力市場", categorySlug: "market-data", order: 8, publishedAt: "2026-04-12" },
+  { title: "冬と夏、どちらが電気料金リスクか", slug: "winter-vs-summer-electricity", description: "冬の平均価格13.96円は夏の11.67円より20%高く、ボラティリティは2倍。季節別の需要・価格データで検証します。", category: "データで見る電力市場", categorySlug: "market-data", order: 9, publishedAt: "2026-04-12" },
+  { title: "再エネ比率が上がると価格はどう動くか", slug: "renewable-share-price-correlation", description: "35,000コマの実績データで再エネ比率と価格の逆相関(r=-0.46)を実証。40%超で価格は半分以下に急落します。", category: "データで見る電力市場", categorySlug: "market-data", order: 10, publishedAt: "2026-04-12" },
+  { title: "需要が上位10%に入ると価格は2.6倍", slug: "demand-decile-price-risk", description: "需要をデシル分析すると、上位10%(D10)の平均価格は20.59円で下位10%の2.6倍。ボラティリティは4.6倍に跳ね上がります。", category: "データで見る電力市場", categorySlug: "market-data", order: 11, publishedAt: "2026-04-12" },
 ];
