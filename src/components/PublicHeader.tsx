@@ -16,8 +16,8 @@ type HeaderLink = {
 const headerLinks: HeaderLink[] = [
   { href: "/", label: "TOP", iconSrc: "/icons/nav-top.png" },
   { href: "/simulate", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
-  { href: "/how-to", label: "電力料金上昇リスク診断の使い方", iconSrc: "/icons/nav-how-to.png" },
-  { href: "/articles", label: "法人向け電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
+  { href: "/articles", label: "電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
+  { href: "/articles/by-industry", label: "業種別・実務ガイド", iconSrc: "/icons/nav-how-to.png" },
   {
     href: "/business-electricity-retrospective",
     label: "法人電気料金振り返り",
@@ -33,6 +33,13 @@ const specialFeatureLink = {
 const isActivePath = (pathname: string, href: string): boolean => {
   if (href === "/") {
     return pathname === "/";
+  }
+
+  // /articles/by-industry が /articles より優先されるよう、
+  // /articles は by-industry 配下を除外する
+  if (href === "/articles") {
+    if (pathname.startsWith("/articles/by-industry")) return false;
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   return pathname === href || pathname.startsWith(`${href}/`);
