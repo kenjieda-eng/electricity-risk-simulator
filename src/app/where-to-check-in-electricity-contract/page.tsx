@@ -80,6 +80,51 @@ export default function WhereToCheckInElectricityContractPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "契約書の確認ポイントと金額影響の目安",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">確認項目</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見落としリスク</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額影響の目安</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金の算定方法</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約容量の設定ミス</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲5〜30万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整の上限有無</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">高騰時の請求急増</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">月<span className="font-semibold text-slate-900">▲5〜50万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動の算定方式</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX連動率の違い</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲20〜100万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">解約違約金条項</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">切替コストの見落とし</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1回<span className="font-semibold text-slate-900">▲10〜50万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約期間と自動更新</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">意図しない長期拘束</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">見直し機会の喪失</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="契約書確認を見直し実務へつなげるために、既存の契約条件解説や期限管理・請求書確認ページをあわせて活用できます。"
       relatedLinks={[
         {

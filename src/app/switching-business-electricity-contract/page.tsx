@@ -90,6 +90,89 @@ export default function SwitchingBusinessElectricityContractPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "電力会社切替の標準スケジュール",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">ステップ</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">所要期間</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主な作業</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">情報整理・現状把握</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2週間</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書収集、使用量把握、契約条件確認</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">相見積の取得</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜4週間</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜5社に見積依頼、条件比較</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">見積比較・社内検討</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2週間</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">単価比較、リスク評価、稟議</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約手続き</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2週間</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">新契約締結、旧契約解約通知</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">供給開始切替</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜4週間</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">スマートメーター切替、計量開始</td>
+                  </tr>
+                  <tr className="bg-slate-50">
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">合計</td>
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約2〜3か月</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">余裕を持って4か月前から開始が理想</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ),
+        },
+        {
+          heading: "切替時の注意点と想定コスト",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">内容</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額目安</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">解約違約金</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約期間内解約の場合</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0〜50万円</span>（契約による）</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">切替工事費</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">メーター交換等</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">通常<span className="font-semibold text-slate-900">0円</span>（一般送配電負担）</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">事務手数料</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力側の手数料</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0〜数万円</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="切替前後は、タイミング判断・資料・見積確認・比較を一連の流れで読むと手戻りが減ります。"
       relatedLinks={[
         {

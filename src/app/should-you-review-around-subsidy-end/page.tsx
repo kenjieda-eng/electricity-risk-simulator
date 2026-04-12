@@ -79,6 +79,39 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "補助金終了前後の単価変化と見直し効果",
+          note: (
+            <div className="overflow-x-auto">
+              <p className="mb-3">月間50,000kWh使用の高圧事業所を想定した、補助金終了時の影響と見直し余地の目安です。</p>
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額影響</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">補助金3.5円/kWh終了による月額増</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+17.5万円/月（年間+210万円）</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">補助金1.8円/kWh終了による月額増</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+9万円/月（年間+108万円）</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">このタイミングでの契約見直し効果</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">年間▲30〜80万円</span>の最適化余地</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-slate-500">※ 補助金単価は過去実績に基づく参考値です。見直し効果は契約条件・エリアにより異なります。</p>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="補助前後の判断を安定させるために、請求書確認と見積比較の実務ページをあわせて確認できます。"
       relatedLinks={[
         {

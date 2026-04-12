@@ -107,6 +107,89 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">要因別の影響比較テーブル</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気料金の上振れ要因を横並びで比較すると、影響の出方や持続期間の違いが明確になります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">要因</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主な影響時期</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">持続期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX上振れ目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間影響度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">7〜9月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+5〜15円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">厳冬</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜2月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+5〜20円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中〜大</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数か月〜1年超</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+2〜5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">半年〜数年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+3〜10円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大規模災害</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">不定</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数日〜2か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+10〜50円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">小〜中</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ JEPX上振れ目安は過去実績をもとにした参考値です。実際の影響は契約条件・エリア・需給状況により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">単月急騰と高止まりの年間コスト差 ― 試算例</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で比較すると、年間への効き方が大きく異なります。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">パターンA: 単月急騰型（猛暑）</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-700">8月のみJEPX +10円/kWh上昇</p>
+              <p className="mt-1 text-sm text-slate-700">月間増分: <span className="font-semibold text-slate-900">+50万円</span>（8月のみ）</p>
+              <p className="text-sm text-slate-700">年間影響: <span className="font-semibold text-slate-900">+50万円</span></p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">パターンB: 高止まり型（円安・地政学）</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-700">通年でJEPX +3円/kWh上昇</p>
+              <p className="mt-1 text-sm text-slate-700">月間増分: <span className="font-semibold text-slate-900">+15万円</span>×12か月</p>
+              <p className="text-sm text-slate-700">年間影響: <span className="font-semibold text-slate-900">+180万円</span></p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            月次で見ると猛暑のインパクトが大きく見えますが、年間では高止まり型のほうが<span className="font-semibold text-slate-900">約3.6倍</span>重くなります。
+            この違いを把握するには、シナリオ別に影響時期と持続性を分けて確認する必要があります。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="必要性の理解から、使い分け・比較・個別要因の確認へ進む導線です。"

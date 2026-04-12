@@ -176,6 +176,77 @@ export default function PowerRiskManagementPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">調達ポートフォリオの構成比イメージ</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            中規模新電力の典型的な調達構成例です。実際の比率は事業規模や顧客構成で異なります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">調達手段</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">構成比目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">価格水準イメージ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">リスク特性</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">相対契約（ベース）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">40〜50%</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">11〜14円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">価格安定・数量固定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX（変動調整）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">20〜30%</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">8〜25円/kWh（変動大）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">柔軟だが価格リスク</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">先物ヘッジ</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">10〜20%</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜16円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">価格上限を制御</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ・PPA</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">5〜15%</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10〜15円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">長期安定・環境価値</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">2022年の燃料高騰で何が起きたか ― ポートフォリオ分散の実効性</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2022年のウクライナ情勢を契機とした燃料高騰は、調達ポートフォリオの設計が経営存続を左右することを示しました。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl border border-red-200 bg-red-50 p-4">
+              <h3 className="text-lg font-semibold text-slate-900">JEPX依存率80%のA社</h3>
+              <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
+                <li>年間調達コスト: 前年比<span className="font-semibold text-slate-900">+120%</span></li>
+                <li>JEPX年平均22円/kWhの影響を直接被る</li>
+                <li>結果: <span className="font-semibold text-slate-900">経営破綻・事業撤退</span></li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-green-200 bg-green-50 p-4">
+              <h3 className="text-lg font-semibold text-slate-900">相対60%+先物20%+JEPX20%のB社</h3>
+              <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
+                <li>年間調達コスト: 前年比<span className="font-semibold text-slate-900">+30%</span></li>
+                <li>ベースを相対で押さえ、先物でヘッジ</li>
+                <li>結果: <span className="font-semibold text-slate-900">経営継続・収益確保</span></li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            同じ市場環境でもコスト増加率に<span className="font-semibold text-slate-900">約4倍の差</span>が出ました。2022年には新電力<span className="font-semibold text-slate-900">31社</span>が倒産・撤退しており、その多くがJEPX依存率の高い事業者でした。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="このカテゴリのまとめ"
           intro="リスク管理は単独では完結しません。ここまでの各記事へ戻ると、どの手段がどのリスクに効くかを再確認できます。"

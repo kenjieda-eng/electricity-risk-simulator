@@ -163,6 +163,62 @@ export default function RenewablePowerProcurementPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">再エネ調達手法別の価格帯目安</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">調達手法</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">価格帯目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">環境価値</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">法人コスト影響</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">FIT電気+非化石証書</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">10〜14円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">短〜中期</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">証書で付与</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通常電気+0.3〜1円/kWh</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">FIP電気</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">11〜16円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中期</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電源由来</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場変動あり</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">コーポレートPPA</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">10〜15円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10〜20年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電源由来</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">長期固定で安定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自家消費（屋根上太陽光）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">8〜12円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">設備寿命</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自家消費</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">最も安価な可能性</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 価格は概算参考値です。実際は規模・エリア・条件により異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">再エネ比率と追加コストの関係（月50,000kWh使用の高圧事業所）</h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>再エネ比率<span className="font-semibold text-slate-900">30%</span>: 追加コスト 月+約4.5〜15万円（年間<span className="font-semibold text-slate-900">+54〜180万円</span>）</li>
+            <li>再エネ比率<span className="font-semibold text-slate-900">50%</span>: 追加コスト 月+約7.5〜25万円（年間<span className="font-semibold text-slate-900">+90〜300万円</span>）</li>
+            <li>再エネ比率<span className="font-semibold text-slate-900">100%</span>: 追加コスト 月+約15〜50万円（年間<span className="font-semibold text-slate-900">+180〜600万円</span>）</li>
+          </ul>
+          <p className="mt-2 text-xs text-slate-500">※ 通常電気料金との差額として算出。非化石証書の価格帯・調達手法により幅があります。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="再エネ電気の調達方法を押さえたら、次は非化石証書で環境価値の持ち方を確認すると全体像がつながります。"

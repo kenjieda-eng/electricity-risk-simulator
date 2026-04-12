@@ -159,6 +159,65 @@ export default function PowerFuturesPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">電力先物市場の実績データ</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            日本の電力先物はEEX（欧州エネルギー取引所）のJapanese Power Futuresおよび東京商品取引所（TOCOM）で取引されています。
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>EEX Japanese Power Futures（東京エリア・ベースロード）: 2024年4月受渡は約<span className="font-semibold text-slate-900">12.5円/kWh</span>（取引開始時）→ 約<span className="font-semibold text-slate-900">14.2円/kWh</span>（受渡直前）</li>
+            <li>2025年度受渡分: 2024年末時点で約<span className="font-semibold text-slate-900">13.8円/kWh</span></li>
+            <li>TOCOM電力先物: 2022年設立、東京・関西エリアのベースロード・ピークロードで取引</li>
+          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            参考: 2022年度はJEPXスポット年平均約<span className="font-semibold text-slate-900">22円/kWh</span>に対し、先物ヘッジを活用した電力会社では<span className="font-semibold text-slate-900">15〜18円/kWh</span>程度で調達コストを抑えた事例も報告されています。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">先物ヘッジの効果シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧需要家で、年間調達の<span className="font-semibold text-slate-900">50%</span>を先物（13円/kWh）でヘッジした場合の試算です。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場環境</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX平均</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">ヘッジなし年間費</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">50%ヘッジ年間費</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">効果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">やや上昇</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約900万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約840万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲60万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高騰</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">25円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,500万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,140万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲360万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">下落</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約600万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約690万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-amber-700">+90万円（ヘッジコスト）</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場下落時にはヘッジコストが発生しますが、高騰時の削減効果が大きく、保険的な位置づけとして機能します。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">電力会社の調達全体の中での位置づけ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

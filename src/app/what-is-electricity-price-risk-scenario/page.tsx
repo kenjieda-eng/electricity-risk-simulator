@@ -136,6 +136,72 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           </ul>
         </section>
 
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスクシナリオの実例: 2021年1月のJEPXスパイク</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            リスクシナリオが「なぜ必要か」を最も端的に示す実例が、2021年1月のJEPX価格高騰です。
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>通常時のJEPX: <span className="font-semibold text-slate-900">7〜10円/kWh</span></li>
+            <li>2021年1月のピーク: 一時<span className="font-semibold text-slate-900">251円/kWh</span>（通常の約25倍）</li>
+            <li>2021年1月の月平均: <span className="font-semibold text-slate-900">66.5円/kWh</span>（通常の約7倍）</li>
+            <li>原因: LNG在庫枯渇＋全国的寒波＋需給逼迫が同時発生</li>
+          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランの法人では、月額電気代が通常の<span className="font-semibold text-slate-900">3〜5倍</span>に膨らんだケースもありました。
+            この事例が示すのは、「単一の想定（通常ケースのみ）では把握できないリスクが現実に存在する」ということです。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスク要因と過去の実績一覧</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">リスク要因</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">代表的な過去事例</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX影響</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">持続期間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023年7月（全国猛暑）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+3〜8円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜2か月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">厳冬</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2021年1月（寒波＋LNG不足）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+50〜200円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜4週間</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2022年（1ドル150円台）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+3〜5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">6か月超</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2022年（ウクライナ情勢）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+5〜10円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1年超</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大規模災害</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2018年（北海道胆振東部地震）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+30〜100円/kWh</span>（エリア）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数日〜2か月</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ JEPX影響はエリアプライスの一時的なピーク値を含みます。通常時のJEPXは7〜12円/kWh程度です。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="リスクシナリオの基本を押さえた後に、必要な順序で読み進められる導線です。"

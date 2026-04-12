@@ -78,6 +78,71 @@ export default function SpecialTopPage() {
         </p>
       </header>
 
+      <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">特集シリーズの概要</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          各特集は、通常の記事では扱いきれない複合的なリスクシナリオを、3段階（軽微・中程度・深刻）で分析します。
+        </p>
+        <table className="mt-4 w-full border-collapse text-sm">
+          <thead>
+            <tr>
+              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特集テーマ</th>
+              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対象リスク</th>
+              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">影響を受けやすい業種</th>
+              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">有事シナリオ（電気料金）</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク全般</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">全業種</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">原油・物流コスト</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">原油価格高騰</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">製造業・物流業</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">円安×原油高 W効果</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">為替+商品高の複合</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">輸入依存業種全般</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">法人ガス代</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">LNG価格変動</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">電力多消費産業</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">原材料・包装資材</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">コストプッシュ</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">食品・製造・小売</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">食料品仕入コスト</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">食料価格高騰</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700">外食・食品製造</td>
+              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
+        <h2 className="text-lg font-semibold text-slate-900">どの特集から読むべきか</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li><span className="font-semibold text-slate-900">全業種共通:</span> まず「有事シナリオ分析（電気料金）」で電気代の上振れ幅を把握</li>
+          <li><span className="font-semibold text-slate-900">製造・物流業:</span> 「原油・物流コスト」→「円安×原油高 W効果」の順で複合リスクを確認</li>
+          <li><span className="font-semibold text-slate-900">食品・外食業:</span> 「食料品仕入コスト」→「原材料・包装資材」で仕入全体を把握</li>
+          <li><span className="font-semibold text-slate-900">ガス使用が大きい施設:</span> 「法人ガス代」で都市ガス・LPガスへの影響を確認</li>
+        </ul>
+      </section>
+
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">特集ページを選ぶ</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2">

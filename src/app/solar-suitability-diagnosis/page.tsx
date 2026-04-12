@@ -178,6 +178,85 @@ export default function SolarSuitabilityDiagnosisPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">自家消費型太陽光のコスト・回収期間の目安</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">導入規模</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">初期費用目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間削減効果</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">回収期間目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10kW（小規模屋根）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">200〜300万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20〜35万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">7〜12年</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50kW（中規模工場・倉庫）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">800〜1,200万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">100〜170万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">6〜10年</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">100kW（大規模施設）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">1,500〜2,200万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">200〜340万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">5〜8年</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">500kW（メガソーラー級）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">6,000〜8,500万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">800〜1,400万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">5〜7年</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 補助金適用前の概算。日照条件・自家消費率・電気料金単価により大きく変動します。</p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">導入モデル別のコスト比較</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">モデル</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">初期費用</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額費用目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電気代削減</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自己投資</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">全額負担</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">0円（メンテ費除く）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">最大</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">回収後のメリット大</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">PPAモデル</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10〜15円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中程度</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">初期投資不要</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">屋根貸し</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">賃料収入あり</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">なし〜小</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">リスク最小</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="太陽光導入検討と合わせて確認したいページです。"

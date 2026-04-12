@@ -79,6 +79,48 @@ export default function ReviewContractRenewalDeadlinesPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "契約更新タイミング別 見直し効果の目安",
+          note: (
+            <div className="overflow-x-auto">
+              <p className="mb-3">月間50,000kWh使用の高圧事業所を想定した、更新タイミング別の見直し効果目安です。</p>
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">更新までの期間</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見直し可能な範囲</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間効果目安</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">6か月以上前</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">プラン変更・電力会社切替</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲50〜200万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜6か月前</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">条件交渉・相見積取得</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲30〜100万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月前</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約条項の微調整</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲10〜30万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">1か月未満</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">更新条件の確認のみ</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">効果限定的</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-slate-500">※ 効果は契約条件・エリア・使用パターンにより異なります。</p>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="期限管理を整理した後は、契約条件・見直し手順・切替実務まで確認すると、更新前の判断が進めやすくなります。"
       relatedLinks={[
         {

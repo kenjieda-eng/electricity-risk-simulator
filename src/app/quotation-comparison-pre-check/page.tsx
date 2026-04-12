@@ -102,6 +102,58 @@ export default function QuotationComparisonPreCheckPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積書で比較すべき項目と見落としやすいポイント</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">比較項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見るべき数値</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見落とし例</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">金額影響の目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">時間帯別単価の見落とし</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲20〜100万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円/kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約容量の設定差</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲5〜30万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">上限有無・算定式</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">上限なしの高騰リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">月<span className="font-semibold text-slate-900">▲5〜50万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">連動率・基準価格</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基準価格の違い</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲20〜100万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約期間・違約金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年数・解約条件</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自動更新条項</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1回<span className="font-semibold text-slate-900">▲10〜50万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">力率割引</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">割引率</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">力率改善で基本料金割引</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲5〜15万円</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="見積比較の準備から比較・判断まで、関連する情報をまとめました。"

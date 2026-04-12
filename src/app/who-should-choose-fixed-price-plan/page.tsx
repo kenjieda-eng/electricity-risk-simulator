@@ -123,6 +123,77 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">固定プランの実勢価格帯（2024〜2025年度参考）</h2>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電力量料金単価（税抜目安）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高圧（50kW〜）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">18〜24円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">エリア・使用時間帯で差</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">特別高圧（2,000kW〜）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">15〜20円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大口ほど交渉余地</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">低圧電力</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">22〜30円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">小規模事業所向け</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">固定 vs 市場連動 年間コスト比較シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所（固定プラン20円/kWh）の場合。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場環境</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定プラン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場連動プラン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">有利な方</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">安定期（JEPX 10円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">960万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+240万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">市場連動</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">やや高騰（JEPX 18円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">±0</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">同等</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高騰期（JEPX 25円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,680万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲480万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">固定</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="あわせて確認したいページ"
           intro="固定プランの適性判断を、比較実務や見直しタイミングへつなげるための関連ページです。"

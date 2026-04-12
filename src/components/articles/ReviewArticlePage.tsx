@@ -20,6 +20,7 @@ type ReviewArticlePageProps = {
   title: string;
   lead: string[];
   sections: ArticleSection[];
+  extraSections?: ArticleSection[];
   relatedIntro: string;
   relatedLinks: LinkCard[];
   ctaDescription: string;
@@ -30,6 +31,7 @@ export default function ReviewArticlePage({
   title,
   lead,
   sections,
+  extraSections,
   relatedIntro,
   relatedLinks,
   ctaDescription,
@@ -48,6 +50,25 @@ export default function ReviewArticlePage({
 
       <section className="mt-6 space-y-6">
         {sections.map((section) => (
+          <section key={section.heading} className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
+            {section.paragraphs?.map((paragraph) => (
+              <p key={paragraph} className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                {paragraph}
+              </p>
+            ))}
+            {section.bullets ? (
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+                {section.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            ) : null}
+            {section.note ? <div className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{section.note}</div> : null}
+          </section>
+        ))}
+
+        {extraSections?.map((section) => (
           <section key={section.heading} className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
             {section.paragraphs?.map((paragraph) => (

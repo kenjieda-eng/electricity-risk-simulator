@@ -80,6 +80,57 @@ export default function WhichCompaniesBenefitMostFromReviewPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "見直し効果が出やすい企業の特徴と削減目安",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">企業タイプ</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間電気代目安</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">削減率目安</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間削減額</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">中規模工場</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">80,000kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">約2,400万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">5〜10%</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">120〜240万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">大型商業施設</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">200,000kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">約6,000万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜8%</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">180〜480万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">オフィスビル</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,500万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">3〜7%</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">45〜105万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">多拠点チェーン（10店舗）</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">300,000kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">約9,000万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">5〜12%</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">450〜1,080万円</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-slate-500">※ 削減率は現契約条件・エリア・見直し範囲により異なります。</p>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="自社の見直し優先度を判断するために、使用実態変化や基本確認項目をあわせて確認できます。"
       relatedLinks={[
         {

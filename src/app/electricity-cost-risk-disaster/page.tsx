@@ -128,6 +128,104 @@ export default function ElectricityCostRiskDisasterPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">過去の災害と電力市場への影響実績</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            過去の大規模災害では、発電所停止や送電設備の損傷を通じてJEPX（卸電力取引所）価格が大きく上振れした事例があります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">時期</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">災害</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">電力への影響</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX価格影響</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">復旧期間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2018年9月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">北海道胆振東部地震</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">全道ブラックアウト、苫東厚真火力停止</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">北海道エリア一時<span className="font-semibold text-slate-900">100円/kWh超</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数日〜2か月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2019年9月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">台風15号（房総半島）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">千葉県大規模停電、送配電設備損壊</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">東京エリア<span className="font-semibold text-slate-900">+3〜8円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2週間〜1か月超</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2021年2月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">福島県沖地震（M7.3）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">火力発電所複数停止、供給力低下</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">東北・東京エリア<span className="font-semibold text-slate-900">+5〜15円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数週間</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2022年3月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">福島県沖地震（M7.4）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">東北・東京エリア需給逼迫警報発令</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">一時<span className="font-semibold text-slate-900">200円/kWh超</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数日〜数週間</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ JEPX価格はエリアプライスの一時的なピーク値を含みます。実際の請求への反映は契約条件により異なります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">災害時の電気料金影響シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動プランの場合、災害によるJEPX上昇がそのまま月額に反映されます。以下は、JEPXが平均<span className="font-semibold text-slate-900">+5円/kWh</span>上昇した場合の月額増加試算です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額増加（+5円/kWh）</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額増加（+15円/kWh）</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額増加（+50円/kWh）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">低圧（小規模店舗）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">3,000kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+1.5万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+4.5万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+15万円</span></td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">高圧（工場・商業施設）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+25万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+75万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+250万円</span></td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">特別高圧（大規模工場）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">500,000kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+250万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+750万円</span></td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+2,500万円</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            固定プランの場合、災害月の請求額には直接反映されませんが、次回の契約更新時に単価見直しが行われる可能性があります。
+            2022年の福島沖地震後には、複数の新電力が契約条件の見直しや撤退を行った事例があります。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">災害リスクをシミュレーターでどう見るか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

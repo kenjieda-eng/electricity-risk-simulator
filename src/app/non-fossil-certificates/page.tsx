@@ -141,6 +141,60 @@ export default function NonFossilCertificatesPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">非化石証書の価格帯と取引実績</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            非化石証書は入札方式で取引されており、区分によって価格帯が異なります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">区分</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最低入札価格</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">約定平均価格（2024年度）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">取引量傾向</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ指定（FIT）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">0.3円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0.3〜0.6円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">増加傾向</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ指定（非FIT）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">0.6円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0.6〜1.3円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">拡大中</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">非再エネ（原子力等）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">0.6円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">0.6〜0.8円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">横ばい</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2023年度のFIT非化石証書取引量は約<span className="font-semibold text-slate-900">1,200億kWh</span>相当で、RE100対応などの企業需要を背景に増加しています。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">法人の電気料金への影響目安</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で再エネメニューを選択した場合の追加コスト目安です。
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>FIT証書（0.3円/kWh）使用時: 月額<span className="font-semibold text-slate-900">+約1.5万円</span>、年間<span className="font-semibold text-slate-900">+約18万円</span></li>
+            <li>非FIT証書（1.3円/kWh）使用時: 月額<span className="font-semibold text-slate-900">+約6.5万円</span>、年間<span className="font-semibold text-slate-900">+約78万円</span></li>
+          </ul>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            RE100対応を目指す企業にとって、FIT証書の低コストは大きな利点ですが、供給量の上限やトラッキング情報の扱いも確認が必要です。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-lg font-semibold text-slate-900">読むときに混同しやすいポイント</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">

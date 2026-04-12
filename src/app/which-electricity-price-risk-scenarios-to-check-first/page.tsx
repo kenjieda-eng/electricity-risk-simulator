@@ -93,6 +93,76 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約タイプ別 優先確認シナリオ早見表</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自社の契約条件と使用パターンに応じて、最初に確認すべきシナリオは異なります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">自社の条件</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">最優先シナリオ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">次に確認</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX影響目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動+夏季使用多</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学・円安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+5〜15円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動+冬季使用多</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">厳冬</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学・円安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+5〜20円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動+通年稼働</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安・地政学</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑・厳冬</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+2〜10円/kWh</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定+更新1年以内</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安・地政学</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑・災害</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">更新時単価<span className="font-semibold text-slate-900">+2〜5円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定+更新2年以上先</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">ワースト（全体把握）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中長期トレンド確認</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">複数拠点・エリア分散</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">災害</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地域需給逼迫</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">エリア価格差に注目</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">試算例: 夏季偏重の商業施設</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            年間使用量600,000kWhのうち7〜9月で<span className="font-semibold text-slate-900">40%（240,000kWh）</span>を使用する商業施設の場合:
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li>猛暑シナリオ（+5円/kWh × 3か月集中）: 年間コスト影響 <span className="font-semibold text-slate-900">+約120万円</span></li>
+            <li>円安シナリオ（+3円/kWh × 通年）: 年間コスト影響 <span className="font-semibold text-slate-900">+約180万円</span></li>
+          </ul>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            単月のインパクトは猛暑が大きいですが、年間では円安のほうが<span className="font-semibold text-slate-900">約1.5倍</span>重くなります。
+            夏季偏重でも、通年の高止まり要因を無視すべきではないことを示しています。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">固定プランでも確認したいシナリオ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

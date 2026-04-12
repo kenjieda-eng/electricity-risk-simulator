@@ -131,6 +131,104 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金の経緯と単価推移</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            政府の電気・ガス価格激変緩和対策は、段階的に縮小・終了してきました。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">時期</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">低圧（家庭・小規模）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">高圧・特別高圧</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023年1月〜9月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲7円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲3.5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">激変緩和対策開始</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023年10月〜2024年4月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲3.5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲1.8円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">補助単価縮小</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024年5〜7月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">終了</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">終了</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">一時終了</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024年8〜10月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲4円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲2円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">酷暑対策として再開</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2025年1〜3月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲2.5円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲1.3円/kWh</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">冬季補助</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2025年4月〜</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">終了</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">終了</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">補助終了</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">補助金による軽減額の目安（高圧3.5円/kWh時）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            補助金<span className="font-semibold text-slate-900">3.5円/kWh</span>（2023年前半の高圧向け水準）での軽減額目安です。補助終了後はこの分が請求額に上乗せされます。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額軽減額</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間軽減額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">低圧（小規模店舗）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約1.05万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約12.6万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高圧（中規模オフィス）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約7万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約84万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高圧（工場・商業施設）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.5万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約210万円</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">特別高圧（大規模工場）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">500,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約175万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約2,100万円</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

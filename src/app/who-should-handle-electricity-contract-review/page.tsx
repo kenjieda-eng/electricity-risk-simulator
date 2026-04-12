@@ -79,6 +79,46 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "担当部門別の見直し対応範囲と確認数値",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">担当部門</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主な対応範囲</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">確認すべき数値</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">総務・管理部門</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書確認、契約更新管理</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">月額推移、前年同月比</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">経理・財務部門</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">予算策定、コスト分析</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間電力費、予算差異率</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">設備・施設管理</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量管理、省エネ対応</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンド値、力率、時間帯別使用量</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">経営企画・調達</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">電力会社選定、契約交渉</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">見積比較（円/kWh）、契約期間、違約金</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="担当体制を決めた後は、社内確認項目と多拠点実務の進め方を合わせて確認すると実行しやすくなります。"
       relatedLinks={[
         {

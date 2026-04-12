@@ -74,6 +74,46 @@ export default function ReviewContractWhenUsageChangesPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "使用量変動パターン別 見直し効果の目安",
+          note: (
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">変動パターン</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見直し内容</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">効果目安</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量が20%以上増加</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約容量の最適化・プラン変更</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金<span className="font-semibold text-slate-900">▲5〜15%</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量が20%以上減少</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">契約容量の縮小</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間<span className="font-semibold text-slate-900">▲10〜20万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">季節偏差が拡大</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動プランへの切替検討</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">閑散期で<span className="font-semibold text-slate-900">▲3〜5%</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンドピークが変化</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">ピークカット・蓄電池導入</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金<span className="font-semibold text-slate-900">▲10〜30万円/年</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="使用実態の変化を確認した後は、請求書の読み方と見直し優先度の整理を組み合わせると判断しやすくなります。"
       relatedLinks={[
         {

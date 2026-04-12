@@ -124,6 +124,65 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">市場連動プランのリスクリターン実績（2020〜2024年）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で、市場連動プラン（JEPX+手数料8円/kWh）と固定プラン（20円/kWh）を比較した過去実績です。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX年平均</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場連動 年間費</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定20円との差</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">有利な方</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2020</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">6.5円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約870万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲330万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">市場連動</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2021</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12.7円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,242万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲42万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">市場連動</span></td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2022</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">22.1円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,806万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">+606万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">固定</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2023</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">13.9円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,314万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲114万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">市場連動</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">14.2円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,332万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲96万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">市場連動</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            5年中4年で市場連動が有利ですが、2022年の1年だけで<span className="font-semibold text-slate-900">+606万円</span>のコスト増が発生。
+            数年分のメリットが1年の高騰で吹き飛ぶリスクがあることを示しています。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="あわせて読みたいページ"
           intro="市場連動の適性判断を、比較検討と社内説明の実務へつなげる導線です。"

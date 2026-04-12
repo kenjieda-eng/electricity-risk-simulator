@@ -117,6 +117,87 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">予算策定に使える3段階シナリオの試算例</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所を想定した、3段階シナリオの試算です。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">前提条件</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額電力費</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間電力費</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">通常比 増分</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通常ケース</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX平均 10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約50万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約600万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">注意ケース</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX平均 13円/kWh、円安130円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約65万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約780万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+180万円/年</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">厳しめケース</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">JEPX平均 18円/kWh、円安145円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約90万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約1,080万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+480万円/年</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 電力量料金のみの概算です。基本料金・再エネ賦課金・燃料費調整額等は含みません。
+          </p>
+        </section>
+
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積比較で見えるシナリオ別の差 ― 市場連動 vs 固定</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            平常時は市場連動が安く見えても、リスクシナリオで逆転するケースがあります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場環境</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場連動プラン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定プラン（20円/kWh）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">平常時（JEPX 10円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約18円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動が<span className="font-semibold text-slate-900">▲2円安い</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑月（JEPX 20円）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約28円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動が<span className="font-semibold text-slate-900">+8円高い</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間平均</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約19円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">リスク許容度次第</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="使い分けを実務に落とし込むための比較・優先順位・個別要因ページです。"

@@ -80,6 +80,51 @@ export default function ReviewMultiSiteElectricityContractsPage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "複数拠点 一括見直しの効果事例",
+          note: (
+            <div className="overflow-x-auto">
+              <p className="mb-3">電力会社の統一・条件交渉による一括見直しで、平均10%程度のコスト削減が見込める事例です。</p>
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">拠点数</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">合計使用量</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見直し前</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">見直し後</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">削減効果</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">5拠点</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">120,000kWh/月</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間3,600万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間3,240万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲360万円（▲10%）</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">10拠点</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">350,000kWh/月</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間1.05億円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間9,450万円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲1,050万円（▲10%）</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">20拠点</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">800,000kWh/月</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間2.4億円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">年間2.16億円</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲2,400万円（▲10%）</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-slate-500">※ 削減率は電力会社・エリア・契約条件により異なります。交渉力はスケールメリットに左右されます。</p>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="多拠点の見直しを実行に移すために、資料整理・社内確認・優先度判断を補完するページをあわせて確認できます。"
       relatedLinks={[
         {

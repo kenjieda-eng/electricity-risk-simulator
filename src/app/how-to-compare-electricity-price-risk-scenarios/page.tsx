@@ -128,6 +128,115 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスクシナリオ比較一覧表</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所を基準に、各シナリオの影響を横断比較します。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">影響タイプ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">影響時期</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">持続期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX上振れ目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間コスト増</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">契約影響度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">猛暑</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">単月急騰型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">7〜9月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+5〜15円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+30〜90万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動＞固定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">厳冬</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">単月急騰型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12〜2月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1〜3か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+5〜20円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+30〜120万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動＞固定</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高止まり型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数か月〜1年超</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+2〜5円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+120〜300万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定含め全般</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">高止まり型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">半年〜数年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+3〜10円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+180〜600万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定含め全般</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">災害</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">不定期ショック</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">不定</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">数日〜2か月</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+10〜50円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+10〜100万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動＞固定</td>
+              </tr>
+              <tr className="bg-red-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">ワースト</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">複合型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">通年+季節集中</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">半年〜</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+10〜25円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">+600〜1,500万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">全メニュー</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 月間50,000kWh使用の市場連動プランでの概算。固定プランは更新時に影響が出る場合があります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">シナリオ別 月次コスト推移の比較イメージ</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            同じ年間増分でも、月次の出方が違うと資金繰りや予算管理への影響が異なります。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">猛暑シナリオ（山型）</h3>
+              <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
+                <li>4〜6月: 通常（増分なし）</li>
+                <li>7〜9月: 月<span className="font-semibold text-slate-900">+25〜75万円</span>集中</li>
+                <li>10月以降: 通常に戻る</li>
+              </ul>
+              <p className="mt-2 text-sm text-slate-700">年間増分: <span className="font-semibold text-slate-900">+75〜225万円</span></p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">円安シナリオ（平坦型）</h3>
+              <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
+                <li>毎月: <span className="font-semibold text-slate-900">+10〜25万円</span>が継続</li>
+                <li>季節変動: 小さい</li>
+                <li>終了時期: 不透明</li>
+              </ul>
+              <p className="mt-2 text-sm text-slate-700">年間増分: <span className="font-semibold text-slate-900">+120〜300万円</span></p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            山型は特定月のキャッシュフローを圧迫し、平坦型は年間利益率をじわじわ押し下げます。比較時は月次と年間の両面で見ることが重要です。
+          </p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="比較軸の整理と、実際の優先順位付けをつなげるためのページです。"

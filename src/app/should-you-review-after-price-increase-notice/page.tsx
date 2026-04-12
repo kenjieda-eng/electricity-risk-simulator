@@ -80,6 +80,45 @@ export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
           ],
         },
       ]}
+      extraSections={[
+        {
+          heading: "値上げ通知後の見直しで期待できる効果",
+          note: (
+            <div className="overflow-x-auto">
+              <p className="mb-3">月間50,000kWh使用の高圧事業所を想定した、値上げ幅別の見直し効果目安です。</p>
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">値上げ幅</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間増加額</th>
+                    <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">相見積で期待できる削減</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+2円/kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+120万円/年</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲60〜120万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+3円/kWh</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+180万円/年</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲90〜180万円</span></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+5円/kWh以上</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">+300万円以上/年</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">▲150〜300万円</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="mt-3 text-sm text-slate-700">
+                <span className="font-semibold text-slate-900">実例:</span> 月50,000kWh使用の商業施設が3円/kWh値上げ通知を受けて相見積を取得 → 他社で1.5円/kWh安い条件を獲得し、年間<span className="font-semibold text-slate-900">▲90万円</span>のコスト削減を実現。
+              </p>
+            </div>
+          ),
+        },
+      ]}
       relatedIntro="値上げ通知対応の精度を上げるために、期限確認・契約書確認・単価比較の見方をあわせて確認できます。"
       relatedLinks={[
         {
