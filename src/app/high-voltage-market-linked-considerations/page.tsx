@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
-  "高圧・特別高圧で市場連動を考えるときの注意点｜使用量の大きさとリスク";
+  "高圧・特別高圧で市場連動を考えるときの注意点｜規模別リスク試算と判断基準";
 const pageDescription =
   "高圧・特別高圧需要家が市場連動プランを検討する際の注意点を解説。使用量が大きいほど価格変動リスクが増幅される仕組み、固定プランとの年間コスト比較の考え方を説明します。";
 
@@ -70,9 +69,51 @@ const considerations = [
   },
 ];
 
+const marketLinkedChecklist = [
+  {
+    item: "価格上限（キャップ）の設定があるか",
+    detail: "急騰時の影響を一定額でキャップするプランを優先します。キャップ水準と適用条件を契約書で確認。",
+  },
+  {
+    item: "最悪ケースの月額影響を試算したか",
+    detail: "2021年1月のJEPX急騰（最大251円/kWh）を想定した場合の月額コスト増を数値で把握しておきます。",
+  },
+  {
+    item: "インバランス料金の負担条件を確認したか",
+    detail: "計画値と実績値のズレが大きい場合のインバランス料金の負担が契約者側に生じるかを確認します。",
+  },
+  {
+    item: "需給調整コストの扱いを確認したか",
+    detail: "市場連動プランでは需給調整コストが別途発生するプランもあります。電力量料金に含まれるかを確認。",
+  },
+  {
+    item: "経営層・財務部門との合意を取ったか",
+    detail: "高騰時に年間数千万円〜数億円のコスト増が生じる可能性を経営層に説明し、リスク許容度を合意します。",
+  },
+  {
+    item: "年度予算に変動幅のバッファを確保したか",
+    detail: "市場連動プランを選ぶ場合は、固定プランの年間コストを基準に±20〜30%程度のバッファを予算計画に組み込みます。",
+  },
+];
+
 export default function HighVoltageMarketLinkedConsiderationsPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくずナビ */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link>
+          </li>
+          <li className="before:mx-1 before:content-['>']">
+            <Link href="/articles/plan-types" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約メニューの違いを知る</Link>
+          </li>
+          <li className="before:mx-1 before:content-['>']">
+            <span className="text-slate-700">高圧・特高の市場連動注意点</span>
+          </li>
+        </ol>
+      </nav>
+
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           高圧・特別高圧で市場連動を考えるときの注意点
@@ -86,10 +127,10 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
-            <li>使用量の大きさがリスクを増幅させる仕組み</li>
+            <li>使用量規模別の市場連動リスク試算</li>
             <li>大口需要家特有の5つの注意点</li>
-            <li>固定プランとの比較で確認すべきこと</li>
-            <li>市場連動を選ぶ場合の条件確認</li>
+            <li>固定vs市場連動の年間コスト比較シミュレーション</li>
+            <li>市場連動を選ぶ場合の6項目チェックリスト</li>
           </ul>
         </div>
       </header>
@@ -116,6 +157,56 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           </p>
         </section>
 
+        {/* 使用量規模別の市場連動リスク */}
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">使用量規模別の市場連動リスク</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            JEPXスポット価格が現在より上昇した場合の月額コスト増を使用量規模別に示します。高騰幅が大きいほど、大口需要家への影響が事業規模に比べて非対称に増大します。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月間使用量</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX+5円/kWh時の月額増</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX+10円/kWh時の月額増</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPX+20円/kWh時の月額増</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">リスク評価</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">10,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+5万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+10万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+20万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">50,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">+25万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+50万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+100万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">高</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">200,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+100万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+200万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+400万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">最高</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">1,000,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+500万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+1,000万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+2,000万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">極めて高い</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 価格上昇分が全て需要家負担になると仮定した試算です。実際はキャップ条件・調整条項により異なります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
             大口需要家特有の5つの注意点
@@ -128,6 +219,70 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
               >
                 <p className="font-semibold text-slate-900">{item.title}</p>
                 <p className="mt-1 text-sm leading-7 text-slate-700">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 固定vs市場連動の年間コスト比較シミュレーション */}
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">固定vs市場連動の年間コスト比較シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間使用量50,000kWhの高圧施設を想定し、固定プランと市場連動プランの年間コストをJEPX水準別に比較します。固定プランの電力量料金単価を20円/kWhと仮定。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">JEPXスポット平均単価（目安）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">市場連動プランの年間電力量料金</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">固定プランの年間電力量料金</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">差額（市場連動－固定）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">市場安定（コスト優位）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">15円/kWh（+諸費用）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,080万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-sky-700">▲120万円（市場連動が有利）</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">市場高騰（同等〜不利）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">20円/kWh（+諸費用）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,440万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">+240万円（ほぼ同等〜不利）</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">市場急騰（大幅不利）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30円/kWh（+諸費用）</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">約2,160万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約1,200万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">+960万円（市場連動が大幅不利）</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 月間50,000kWh×12か月の電力量料金のみの比較試算です。基本料金・再エネ賦課金・燃調等は含みません。実際の単価・諸費用は契約内容によります。</p>
+        </section>
+
+        {/* 市場連動を選ぶ場合のチェックリスト */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧・特高で市場連動を選ぶ場合のチェックリスト</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            リスクを理解したうえで市場連動プランを採用する場合、以下の6項目を契約前に必ず確認してください。
+          </p>
+          <div className="mt-4 space-y-3">
+            {marketLinkedChecklist.map((c, i) => (
+              <div key={c.item} className="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="font-semibold text-slate-900">{c.item}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-700">{c.detail}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -160,82 +315,56 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           </ul>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">
-            市場連動を選ぶ場合の条件確認
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            リスクを認識したうえで市場連動プランを選ぶ場合は、以下の条件を必ず確認します。
-          </p>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>
-              <span className="font-semibold text-slate-900">価格上限（キャップ）の設定があるか：</span>
-              急騰時の影響を一定額でキャップするプランを優先します。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">インバランス料金の扱い：</span>
-              計画値と実績値のズレが大きい場合のインバランス料金の負担条件を確認します。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">需給調整コストの扱い：</span>
-              市場連動プランでは需給調整コストが別途発生するプランもあります。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">予算策定での変動幅の設定：</span>
-              市場連動プランを選ぶ場合は、年度予算に変動幅のバッファを設定しておきます。
-            </li>
-          </ul>
-        </section>
+        <div className="mt-8">
+          <RelatedLinks
+            heading="関連ページ"
+            links={[
+              {
+                href: "/jepx-spike-electricity-cost-impact",
+                title: "JEPX急騰で法人の電気料金はどう上がるか",
+                description: "大口需要家に特に影響が大きいJEPX急騰のリスク。",
+              },
+              {
+                href: "/supply-demand-tightness-impact",
+                title: "需給逼迫で法人の電気料金はどう変わるか",
+                description: "大口需要家への需給逼迫時の影響。",
+              },
+              {
+                href: "/high-voltage-contract-review-points",
+                title: "高圧契約の見直しで確認したいこと",
+                description: "市場連動vs固定の選択を含む高圧契約の見直し。",
+              },
+              {
+                href: "/extra-high-voltage-contract-review-points",
+                title: "特別高圧契約の見直しで確認したいこと",
+                description: "大規模需要家の契約見直しの包括的な着眼点。",
+              },
+              {
+                href: "/businesses-not-suited-for-market-linked-electricity-plan",
+                title: "市場連動プランが向かない法人の特徴",
+                description: "市場連動リスクを慎重に考えるべき法人のケース。",
+              },
+              {
+                href: "/market-linked-vs-fixed",
+                title: "市場連動プランと固定プランの違い",
+                description: "プラン比較の基礎知識。",
+              },
+            ]}
+          />
+        </div>
 
-        <RelatedLinks
-          heading="関連ページ"
-          links={[
-            {
-              href: "/jepx-spike-electricity-cost-impact",
-              title: "JEPX急騰で法人の電気料金はどう上がるか",
-              description: "大口需要家に特に影響が大きいJEPX急騰のリスク。",
-            },
-            {
-              href: "/supply-demand-tightness-impact",
-              title: "需給逼迫で法人の電気料金はどう変わるか",
-              description: "大口需要家への需給逼迫時の影響。",
-            },
-            {
-              href: "/high-voltage-contract-review-points",
-              title: "高圧契約の見直しで確認したいこと",
-              description: "市場連動vs固定の選択を含む高圧契約の見直し。",
-            },
-            {
-              href: "/extra-high-voltage-contract-review-points",
-              title: "特別高圧契約の見直しで確認したいこと",
-              description: "大規模需要家の契約見直しの包括的な着眼点。",
-            },
-            {
-              href: "/businesses-not-suited-for-market-linked-electricity-plan",
-              title: "市場連動プランが向かない法人の特徴",
-              description: "市場連動リスクを慎重に考えるべき法人のケース。",
-            },
-            {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動プランと固定プランの違い",
-              description: "プラン比較の基礎知識。",
-            },
-          ]}
-        />
-
-        <ContentCta
-          heading="高圧・特別高圧の市場連動リスクを試算する"
-          description="現在の使用量をもとに、市場価格が高騰した場合の年間コスト増加額と固定プランとの比較をシミュレーターで確認できます。"
-          links={[
-            { href: "/simulate", label: "シミュレーターで診断する" },
-            { href: "/compare", label: "料金メニューを比較する" },
-            { href: "/how-to", label: "使い方を見る" },
-          ]}
-        />
+        <div className="mt-6">
+          <ContentCta
+            heading="高圧・特別高圧の市場連動リスクを試算する"
+            description="現在の使用量をもとに、市場価格が高騰した場合の年間コスト増加額と固定プランとの比較をシミュレーターで確認できます。"
+            links={[
+              { href: "/simulate", label: "シミュレーターで診断する" },
+              { href: "/compare", label: "料金メニューを比較する" },
+              { href: "/how-to", label: "使い方を見る" },
+            ]}
+          />
+        </div>
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="high-voltage-market-linked-considerations" />
-      </div>
     </main>
   );
 }

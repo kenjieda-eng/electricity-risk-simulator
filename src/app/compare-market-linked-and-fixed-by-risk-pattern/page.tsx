@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
-
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
 const pageDescription =
   "市場連動と固定の違いを、単純な安さではなく、電気料金の変動の受け方、予算管理、社内説明、契約条件の違いから整理します。法人向け電力契約の比較軸を分かりやすく解説します。";
@@ -34,7 +32,14 @@ export const metadata: Metadata = {
 export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/plan-types" className="underline-offset-2 hover:underline">契約メニューの違いを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">安さではなく変動の受け方で比べる</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動と固定は安さではなく変動の受け方で比べる</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           市場連動と固定を比較するとき、「どちらが安いか」を先に知りたくなりますが、実務ではそれだけでは判断しにくい場面が多くあります。年によって有利不利は動くため、
@@ -238,9 +243,6 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="compare-market-linked-and-fixed-by-risk-pattern" />
-      </div>
     </main>
   );
 }

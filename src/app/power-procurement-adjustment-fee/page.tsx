@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
-
 const pageTitle = "電源調達調整費とは何か｜燃料費調整額との違いを法人向けに解説";
 const pageDescription =
   "電源調達調整費とは何かを、燃料費調整額との違いとあわせて解説します。法人向け電力契約の見積比較で見落としやすい追加費用の考え方を整理し、電気料金の読み方に役立てます。";
@@ -34,7 +32,14 @@ export const metadata: Metadata = {
 export default function PowerProcurementAdjustmentFeePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/plan-types" className="underline-offset-2 hover:underline">契約メニューの違いを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">電源調達調整費とは</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電源調達調整費とは何か</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           法人向けの電力契約では、基本料金や電力量料金だけでなく、調整費の扱いによって実際の請求額の見え方が変わります。中でも電源調達調整費は、
@@ -200,9 +205,6 @@ export default function PowerProcurementAdjustmentFeePage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="power-procurement-adjustment-fee" />
-      </div>
     </main>
   );
 }

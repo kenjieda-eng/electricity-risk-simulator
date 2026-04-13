@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
-
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
 const pageDescription =
   "固定プランでも燃料費調整額によって請求額が変わることがあります。法人向け電力契約における固定単価と燃料費調整額の違い、見積比較や社内説明で押さえたいポイントを解説します。";
@@ -34,7 +32,14 @@ export const metadata: Metadata = {
 export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/plan-types" className="underline-offset-2 hover:underline">契約メニューの違いを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">固定でも燃調費は変わるのか</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">燃料費調整額は固定プランでも変わるのか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           「固定プランなのに請求額が増えた」という疑問は、法人の契約見直しでよく出てくる論点です。固定されているのは契約単価の一部であり、
@@ -209,9 +214,6 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="does-fuel-cost-adjustment-change-even-in-fixed-plan" />
-      </div>
     </main>
   );
 }

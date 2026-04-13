@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
-
 const pageTitle = "固定プランが向いている法人・向いていない法人｜予算管理しやすい電力契約の考え方";
 const pageDescription =
   "固定プランが向いている法人と向いていない法人の違いを、電気料金の安定性、予算管理、社内説明、契約条件の確認ポイントから整理します。法人向けの電力契約見直しに役立つ解説ページです。";
@@ -34,7 +32,14 @@ export const metadata: Metadata = {
 export default function WhoShouldChooseFixedPricePlanPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/plan-types" className="underline-offset-2 hover:underline">契約メニューの違いを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">固定が向く法人</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">固定プランが向いている法人・向いていない法人</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           固定プランは「絶対に請求額が変わらない契約」ではなく、単価の見通しを持ちやすい契約です。法人の契約見直しでは、電気料金をどこまで安定させたいか、
@@ -231,9 +236,6 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="who-should-choose-fixed-price-plan" />
-      </div>
     </main>
   );
 }

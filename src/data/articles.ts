@@ -205,6 +205,9 @@ export const articleCategories: ArticleCategory[] = [
       "commercial-facility-fixed-vs-market-linked",
       "municipality-fixed-vs-market-linked",
       "market-linked-risk-internal-explanation",
+      "high-voltage-market-linked-considerations",
+      "hybrid-electricity-plan-explained",
+      "renewable-energy-plan-explained",
     ],
     order: 4,
     group: "learning",
@@ -2372,6 +2375,8 @@ export const articleList: ArticleMeta[] = [
   { title: "高圧契約の見直しで確認したいこと", slug: "high-voltage-contract-review-points", description: "高圧契約の料金構造と契約条件の着眼点を整理します。", category: "見直しポイントを知る", categorySlug: "review-points", order: 38, publishedAt: "2026-04-10" },
   { title: "特別高圧契約の見直しで確認したいこと", slug: "extra-high-voltage-contract-review-points", description: "大規模契約の比較と注意点を整理します。", category: "見直しポイントを知る", categorySlug: "review-points", order: 39, publishedAt: "2026-04-10" },
   { title: "高圧・特別高圧で市場連動を考えるときの注意点", slug: "high-voltage-market-linked-considerations", description: "使用量の大きい高圧・特別高圧での市場連動リスクを整理します。", category: "契約メニューの違いを知る", categorySlug: "plan-types", order: 22, publishedAt: "2026-04-10" },
+  { title: "ハイブリッド型電力プランとは", slug: "hybrid-electricity-plan-explained", description: "固定と市場連動を組み合わせたハイブリッド型プランの仕組み、メリット・デメリット、向いている法人を解説。", category: "契約メニューの違いを知る", categorySlug: "plan-types", order: 23, publishedAt: "2026-04-13" },
+  { title: "再エネメニュー（RE100対応）とは", slug: "renewable-energy-plan-explained", description: "RE100対応の再エネ電力メニューの料金構造、非化石証書の扱い、通常プランとのコスト差を解説。", category: "契約メニューの違いを知る", categorySlug: "plan-types", order: 24, publishedAt: "2026-04-13" },
   // --- 最終保障供給 4本 ---
   { title: "特別高圧で最終保障供給を使うときの注意点", slug: "last-resort-supply-extra-high-voltage", description: "大規模需要家が最終保障供給を利用する際の留意事項を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 9, publishedAt: "2026-04-10" },
   { title: "最終保障供給を社内説明するときのポイント", slug: "last-resort-supply-internal-explanation", description: "最終保障供給の料金が高い理由の伝え方を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 10, publishedAt: "2026-04-10" },
