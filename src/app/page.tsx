@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getLatestArticles } from "../lib/articles";
 
 export const metadata: Metadata = {
   title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
   description:
-    "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
+    "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。基礎知識・料金推移・契約メニュー比較・業種別ガイドも充実。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/",
   },
@@ -36,6 +37,8 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const latestArticles = getLatestArticles(6);
+
   return (
     <>
       <section className="px-4 pb-6 pt-4 text-slate-800 sm:px-6 sm:pt-6 lg:px-8">
@@ -228,6 +231,12 @@ export default function Page() {
                 料金が上がる理由
               </Link>
               <Link
+                href="/articles/price-trends"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+              >
+                推移と高止まり
+              </Link>
+              <Link
                 href="/articles/risk-scenarios"
                 className="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-800 shadow-sm hover:bg-slate-50"
               >
@@ -257,6 +266,10 @@ export default function Page() {
               <Link href="/business-electricity-price-trend-10-years" className="text-sky-700 underline-offset-2 hover:underline">
                 10年推移
               </Link>
+              ／
+              <Link href="/hidden-electricity-price-increases" className="text-sky-700 underline-offset-2 hover:underline">
+                見えない値上げ
+              </Link>
             </p>
           </section>
 
@@ -265,11 +278,19 @@ export default function Page() {
             <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
               <Link href="/articles/plan-types" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
                 <p className="text-sm font-semibold text-slate-900">契約メニューの違いを知る</p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-600">市場連動・固定など契約タイプごとのリスクと選び方を比較</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">市場連動・固定・ハイブリッド型など契約タイプごとのリスクと選び方を比較</p>
               </Link>
               <Link href="/articles/review-points" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
                 <p className="text-sm font-semibold text-slate-900">見直しポイントを知る</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">契約見直しの進め方と確認すべき書類・条件を整理</p>
+              </Link>
+              <Link href="/articles/price-trends" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">電気料金の推移と高止まり</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">10年推移・高止まり・国際比較・エリア別差など25本の分析ページ</p>
+              </Link>
+              <Link href="/articles/for-executives" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">経営層・CFO向け</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">EBITDA影響・取締役会報告・ESG開示など経営視点の判断材料</p>
               </Link>
               <Link href="/capacity-contribution-explained" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
                 <p className="text-sm font-semibold text-slate-900">容量拠出金とは</p>
@@ -280,15 +301,39 @@ export default function Page() {
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">制度の対象・料金・通常契約との違いと切替の基本</p>
               </Link>
               <Link href="/special/emergency-scenario-analysis/background" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-                <p className="text-sm font-semibold text-slate-900">有事シナリオ：背景と原油価格</p>
+                <p className="text-sm font-semibold text-slate-900">有事シナリオ分析</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">有事局面で原油価格が動く背景と電気代への波及</p>
               </Link>
               <Link href="/articles/by-industry/commercial" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
                 <p className="text-sm font-semibold text-slate-900">業種別ガイド：商業系</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">スーパー・飲食・小売など営業時間と設備負荷の影響</p>
               </Link>
+              <Link href="/international-electricity-price-comparison" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">法人電気料金の国際比較</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">主要7カ国の産業用電気料金と日本が高い構造的理由</p>
+              </Link>
             </div>
           </div>
+
+          {/* 最近追加されたページ */}
+          <section className="mt-6">
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">最近追加されたページ</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              新しい解説ページを随時追加しています。
+            </p>
+            <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+              {latestArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/${article.slug}`}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+                >
+                  <p className="font-semibold text-slate-900">{article.title}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-600 line-clamp-2">{article.description}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
 
         </div>
       </section>
@@ -320,6 +365,44 @@ export default function Page() {
           <p className="mt-3 text-xs text-slate-500">無料・登録不要でご利用いただけます</p>
         </div>
       </section>
+
+      {/* JSON-LD 構造化データ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "法人向け電気料金上昇、高騰リスクシミュレーター",
+            url: "https://simulator.eic-jp.org/",
+            description:
+              "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
+            publisher: {
+              "@type": "Organization",
+              name: "一般社団法人エネルギー情報センター",
+              url: "https://eic-jp.org/",
+            },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://simulator.eic-jp.org/articles?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "一般社団法人エネルギー情報センター",
+            url: "https://eic-jp.org/",
+            logo: "https://simulator.eic-jp.org/ogp-default.png",
+            sameAs: [],
+          }),
+        }}
+      />
     </>
   );
 }
