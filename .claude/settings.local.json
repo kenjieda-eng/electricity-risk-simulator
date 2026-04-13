@@ -52,7 +52,9 @@
       "Bash(rm -rf src/app/how-to-read-business-electricity-quotation)",
       "Bash(rm -rf src/app/how-to-read-business-electricity-bill)",
       "Bash(rm -rf src/app/demand-charge)",
-      "Bash([ -d \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$dir\" ])"
+      "Bash([ -d \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$dir\" ])",
+      "Bash(fuel-mix-price)",
+      "Bash(monthly-electricity-price-trend\")"
     ]
   }
 }
