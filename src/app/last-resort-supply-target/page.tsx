@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "最終保障供給の対象は誰か 高圧・特別高圧の違いも解説";
+const pageTitle = "最終保障供給の対象とは｜該当する5つのケースと回避策";
 const pageDescription =
   "最終保障供給の対象になる法人・自治体、高圧と特別高圧の違い、低圧との違い、自社が対象か確認するときの考え方を整理します。";
 
@@ -160,6 +160,60 @@ export default function LastResortSupplyTargetPage() {
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2025年3月時点で最終保障供給を利用中の法人は全国で約<span className="font-semibold text-slate-900">3,800件</span>。2022年のピーク時（約14,000件）からは減少していますが、依然として小売契約への移行が完了していない事業所が残っています。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給の対象になるケース</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            高圧・特別高圧の法人が最終保障供給に移行するケースは、大きく5つに整理できます。それぞれの状況と回避策を確認します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">ケース</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">具体的な状況</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">最終保障の適用</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">回避策</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">新電力の撤退</td>
+                  <td className="border border-slate-200 px-3 py-2">契約中の新電力会社が事業撤退・倒産した</td>
+                  <td className="border border-slate-200 px-3 py-2">自動的に移行（需要家の申請不要）</td>
+                  <td className="border border-slate-200 px-3 py-2">財務安定性が高い複数社から選択・分散</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">契約期間切れ</td>
+                  <td className="border border-slate-200 px-3 py-2">契約満了前に次契約の手続きが完了しなかった</td>
+                  <td className="border border-slate-200 px-3 py-2">旧契約終了後に移行</td>
+                  <td className="border border-slate-200 px-3 py-2">満了3か月前から見積取得・決裁を開始</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">新規受付停止</td>
+                  <td className="border border-slate-200 px-3 py-2">既存の小売事業者が新規受付・更新を停止した</td>
+                  <td className="border border-slate-200 px-3 py-2">代替先が見つからない場合に移行</td>
+                  <td className="border border-slate-200 px-3 py-2">更新停止の連絡後すぐに代替探索を開始</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">供給拒否</td>
+                  <td className="border border-slate-200 px-3 py-2">信用・設備要件等で小売事業者に断られた</td>
+                  <td className="border border-slate-200 px-3 py-2">引受先がない場合に移行</td>
+                  <td className="border border-slate-200 px-3 py-2">複数社へ並行して見積依頼・条件交渉</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">自主的切替</td>
+                  <td className="border border-slate-200 px-3 py-2">コスト・条件の観点から意図的に移行した（まれ）</td>
+                  <td className="border border-slate-200 px-3 py-2">申請により移行（制度趣旨に反するため非推奨）</td>
+                  <td className="border border-slate-200 px-3 py-2">通常契約との差額を計算し即座に再契約検討</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 最終保障供給への移行は、多くのケースでやむを得ない状況です。しかし各ケースに対応した「早期の代替確保」により移行自体を回避できる場合があります。
           </p>
         </section>
 

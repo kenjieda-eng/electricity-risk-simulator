@@ -4,7 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle =
-  "最終保障供給を比較検討の中でどう位置づけるか｜通常契約との判断基準";
+  "最終保障供給の比較での位置づけ｜状況別の判断基準と優先アクション";
 const pageDescription =
   "最終保障供給を、通常の電力小売契約と比較した場合の位置づけを解説。料金水準の差、選択すべきでない理由、通常契約との判断基準、切り替えを急ぐべき理由を詳しく説明します。";
 
@@ -190,6 +190,54 @@ export default function LastResortSupplyComparisonPositioningPage() {
               より良い条件を待っている間にも、高い最終保障供給料金のコストが積み上がります。合理的な範囲で早期に判断します。
             </li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約選択の判断基準マトリクス</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            現在の状況を以下の5パターンと照らし合わせて、最終保障供給を選ぶべきかどうかと、取るべきアクションを判断します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">状況</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">最終保障供給を選ぶべきか</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">優先アクション</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">新電力が撤退し代替先が見つからない</td>
+                  <td className="border border-slate-200 px-3 py-2 text-amber-700 font-semibold">やむを得ず利用</td>
+                  <td className="border border-slate-200 px-3 py-2">即座に3社以上に見積依頼</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">契約切れが迫り準備が間に合わない</td>
+                  <td className="border border-slate-200 px-3 py-2 text-amber-700 font-semibold">一時的に利用</td>
+                  <td className="border border-slate-200 px-3 py-2">並行して見積取得を進める</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">他社の見積単価が最終保障より高い</td>
+                  <td className="border border-slate-200 px-3 py-2 text-amber-700 font-semibold">最終保障を短期利用</td>
+                  <td className="border border-slate-200 px-3 py-2">市場安定後に再見積</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">通常契約の候補がある</td>
+                  <td className="border border-slate-200 px-3 py-2 text-green-700 font-semibold">利用不要</td>
+                  <td className="border border-slate-200 px-3 py-2">通常切替手続きを進める</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">最終保障に入っている期間が長期化</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700 font-bold">早急に離脱</td>
+                  <td className="border border-slate-200 px-3 py-2">条件を緩めて切替先を確保</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 「最終保障を短期利用」の場合も、原則として移行から3か月以内に通常契約への切替を完了させることを目標にします。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

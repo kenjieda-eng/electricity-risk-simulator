@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle =
-  "最終保障供給に入りそうなときの対応手順｜早期発見と切替準備";
+  "最終保障供給に入りそうなときの対応手順｜タイムラインと警告サイン一覧";
 const pageDescription =
-  "電力会社との契約が失効しそうな場合や最終保障供給に移行しそうな場合の対応手順を解説。早期察知のポイント、連絡先の確認、代替供給先の確保手順を詳しく説明します。";
+  "最終保障供給に移行しそうな場合の対応手順を解説。警告サインの早期察知、発覚から切替完了までの緊急タイムライン、6項目チェックリストを掲載します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -40,29 +40,6 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
-
-const warningSignals = [
-  {
-    signal: "電力会社から燃料費調整額の上限超過に関する通知が届く",
-    detail:
-      "上限超過分を電力会社が吸収し続けている状態は、電力会社の経営を圧迫しており、最悪の場合は事業継続困難につながるリスクシグナルです。",
-  },
-  {
-    signal: "電力会社の契約・供給に関する通知文書が届く",
-    detail:
-      "「供給条件の変更」「契約の見直しについて」などの通知は、状況が変化していることを示している可能性があります。内容を確認し、疑問があれば直接問い合わせます。",
-  },
-  {
-    signal: "ニュースや業界情報で電力会社の経営悪化が報道される",
-    detail:
-      "契約先の電力会社について、経営状況に関する報道がある場合は早めに対応を検討します。",
-  },
-  {
-    signal: "料金の請求が届かない・連絡が取れない",
-    detail:
-      "通常通りの請求書が届かない、担当者への連絡が繋がりにくいなどの異変は、迅速な確認が必要なシグナルです。",
-  },
-];
 
 const responseSteps = [
   {
@@ -107,6 +84,15 @@ const responseSteps = [
   },
 ];
 
+const checklistItems = [
+  "現行の電力契約書と直近12カ月分の請求書を手元に用意している",
+  "供給地点特定番号（22桁）を把握している（見積依頼に必須）",
+  "月間使用量と最大需要電力（kW）のデータを準備している",
+  "最終保障供給の適用開始日と上限期間（通常9カ月）を確認している",
+  "3社以上の電力会社・新電力に見積依頼を送付済みである",
+  "経営層への第一報を完了し、切替完了の目標期日を合意している",
+];
+
 export default function LastResortSupplyEmergencyResponsePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -125,37 +111,132 @@ export default function LastResortSupplyEmergencyResponsePage() {
           最終保障供給に移行すると、電気料金が通常より大幅に高くなります。できる限り短期間で通常の小売契約に戻ることが重要ですが、そのためには早期発見と迅速な行動が不可欠です。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、最終保障供給に入りそうな兆候を早期に察知するためのシグナルと、察知してから代替契約を結ぶまでの対応手順を5ステップで整理します。
+          このページでは、最終保障供給に入りそうな兆候を早期に察知するための警告サイン、発覚から代替契約を結ぶまでの緊急タイムライン、そして担当者が確認すべき6項目チェックリストを整理します。
         </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
-            <li>最終保障供給に近づいているサインの早期発見方法</li>
-            <li>発覚から代替契約締結までの5ステップ</li>
+            <li>最終保障供給に近づいている警告サイン一覧</li>
+            <li>発覚から切替完了までの緊急対応タイムライン</li>
             <li>各ステップで優先すべき行動</li>
-            <li>最終保障供給期間中にすべきこと</li>
+            <li>担当者が確認すべき6項目チェックリスト</li>
           </ul>
         </div>
       </header>
 
       <section className="mt-6 space-y-6">
+
+        {/* Table 1: 緊急対応タイムライン */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            最終保障供給に近づいているサインを早期に察知する
+            緊急対応タイムライン
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            最終保障供給に至る前に、以下のような兆候に注意することで早期対応が可能になります。
+            最終保障供給への移行が確実・濃厚になった時点から、以下のタイムラインで動くことが重要です。スピードが早期離脱のカギです。
           </p>
-          <div className="mt-4 space-y-3">
-            {warningSignals.map((item) => (
-              <div
-                key={item.signal}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-4"
-              >
-                <p className="font-semibold text-slate-900">⚠ {item.signal}</p>
-                <p className="mt-1 text-sm leading-7 text-slate-700">{item.detail}</p>
-              </div>
-            ))}
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">時期</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">アクション</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">担当</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">必要な情報・資料</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">ゴール</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">発覚直後（1〜3日）</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">状況把握・社内報告</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">総務／施設管理</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">現行契約書・請求書</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">経営層への第一報</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-orange-700">1週間以内</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">見積依頼開始</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">総務／調達</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">供給地点番号・使用量</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">3社以上に見積依頼</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-700">2〜4週間</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">見積比較・候補選定</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">総務／経理</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">見積書・契約条件</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">切替先の決定</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-700">1〜2ヶ月</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">切替手続き完了</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">総務</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">申込書・供給開始日</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">最終保障からの離脱</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-sky-700">切替後</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">請求書確認・社内報告</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">経理</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">新契約の請求書</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">正常化の確認</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Table 2: 警告サイン */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            最終保障供給に入る警告サイン
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            以下のサインを早期に察知することで、最終保障供給への移行前に代替先の確保を開始できます。緊急度に応じて即座に動いてください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">警告サイン</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">具体的な状況</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">対応の緊急度</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">確認先</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">電力会社から撤退通知</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">契約先が事業撤退を通知</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">最高</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">電力会社／送配電</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">契約満了の見落とし</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">更新手続きの期限切れ</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">最高</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">契約書の確認</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">受付停止の情報</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">候補先が新規受付を停止</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-orange-700">高</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">電力会社HP</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">見積が取れない</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">複数社から見積拒否</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-orange-700">高</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">代理店／コンサル</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">異常な単価提示</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">通常の2倍以上の提示</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-600">中</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">他社との比較</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
@@ -178,6 +259,26 @@ export default function LastResortSupplyEmergencyResponsePage() {
                     <li key={i}>{action}</li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Checklist */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            緊急時のチェックリスト（6項目）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            最終保障供給への移行が判明した直後に確認すべき6項目です。すべてにチェックが入るまでが初動対応です。
+          </p>
+          <div className="mt-4 space-y-2">
+            {checklistItems.map((item, index) => (
+              <div key={index} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded border-2 border-slate-400 bg-white text-xs font-bold text-slate-500">
+                  {index + 1}
+                </div>
+                <p className="text-sm leading-6 text-slate-700">{item}</p>
               </div>
             ))}
           </div>

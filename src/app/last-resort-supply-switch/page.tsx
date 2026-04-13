@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "最終保障供給から切り替えるには 法人が確認したい流れと注意点";
+const pageTitle = "最終保障供給から切り替えるには｜切替パターン別の所要期間と手続き";
 const pageDescription =
   "最終保障供給から通常の法人向け電力契約へ切り替えるときに、確認したい流れ、必要情報、注意点をわかりやすく解説します。";
 
@@ -162,6 +162,54 @@ export default function LastResortSupplySwitchPage() {
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月50,000kWh使用の場合、最終保障供給のまま<span className="font-semibold text-slate-900">3か月遅れるだけで+75〜120万円</span>の追加コストが発生します。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">切替パターン別の所要期間と注意点</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            切替の方向によって手続き内容と所要期間が異なります。どのパターンに該当するかを確認してから準備を進めます。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">切替パターン</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">所要期間</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">手続き内容</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">通常契約 → 最終保障</td>
+                  <td className="border border-slate-200 px-3 py-2">数日〜2週間</td>
+                  <td className="border border-slate-200 px-3 py-2">一般送配電事業者へ申請、契約終了確認</td>
+                  <td className="border border-slate-200 px-3 py-2">移行後は料金が即座に高くなる。早期脱出の計画を同時に立てる</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">最終保障 → 通常契約（旧来大手）</td>
+                  <td className="border border-slate-200 px-3 py-2">2〜4週間</td>
+                  <td className="border border-slate-200 px-3 py-2">見積依頼・契約締結・供給開始日調整</td>
+                  <td className="border border-slate-200 px-3 py-2">申込から供給開始まで最低2週間かかる場合が多い</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">最終保障 → 新電力</td>
+                  <td className="border border-slate-200 px-3 py-2">4〜8週間</td>
+                  <td className="border border-slate-200 px-3 py-2">見積・審査・契約・スイッチング手続き</td>
+                  <td className="border border-slate-200 px-3 py-2">スイッチング申請からメーター切替まで追加の期間が必要。3社以上に並行見積を出す</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">通常契約 → 別の通常契約</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜2か月</td>
+                  <td className="border border-slate-200 px-3 py-2">現契約の解約確認・違約金確認・新契約締結</td>
+                  <td className="border border-slate-200 px-3 py-2">違約金の有無を先に確認。契約満了に合わせるとコスト最小化しやすい</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 所要期間はエリア・事業者・設備状況によって異なります。高圧・特別高圧ではメーター切替工事が必要な場合があり、さらに時間がかかることがあります。
           </p>
         </section>
 

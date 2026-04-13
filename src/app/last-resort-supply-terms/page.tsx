@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "最終保障供給の約款はどう読むか 法人担当者向けの確認ポイント";
+const pageTitle = "最終保障供給の約款はどう読むか｜確認すべき7項目と見落としリスク";
 const pageDescription =
   "最終保障供給の約款や料金表を見るときに、法人担当者がどこを確認すればよいかを、難しい条文をそのまま並べずに整理します。";
 
@@ -150,6 +150,72 @@ export default function LastResortSupplyTermsPage() {
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月間50,000kWh使用の高圧事業所では、最終保障供給のまま1年間継続した場合、通常小売より年間<span className="font-semibold text-slate-900">+300〜480万円</span>の追加コストが見込まれます。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">約款で確認すべき7項目</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            条文を最初から読むより、以下の7項目を絞って確認する方が実務的です。見落とすと予算超過や手続き漏れにつながるリスクがあります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">項目</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">約款での記載箇所（目安）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">確認ポイント</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">見落としリスク</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">料金算定方法</td>
+                  <td className="border border-slate-200 px-3 py-2">料金表・別表</td>
+                  <td className="border border-slate-200 px-3 py-2">基本料金・電力量料金・調整額の計算式</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">請求額の読み違いで予算オーバー</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">適用期間</td>
+                  <td className="border border-slate-200 px-3 py-2">供給条件の章</td>
+                  <td className="border border-slate-200 px-3 py-2">供給開始日・上限期間・延長の可否</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">期限切れで突然供給停止のリスク</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">解約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">契約解除の章</td>
+                  <td className="border border-slate-200 px-3 py-2">通常契約への切替時の手続きと期間</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">切替手続きに想定以上の期間がかかる</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">供給開始日</td>
+                  <td className="border border-slate-200 px-3 py-2">供給開始の章</td>
+                  <td className="border border-slate-200 px-3 py-2">申請からどのくらいで供給が始まるか</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">空白期間が生じて電気が止まるリスク</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">需給調整</td>
+                  <td className="border border-slate-200 px-3 py-2">需給管理・調整の章</td>
+                  <td className="border border-slate-200 px-3 py-2">計画外の電力使用増減時の対応</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">使用量変動時に追加費用が発生することがある</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">託送料金</td>
+                  <td className="border border-slate-200 px-3 py-2">料金表・付則</td>
+                  <td className="border border-slate-200 px-3 py-2">送配電費用の取り扱いと請求方法</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">総額計算時に託送分を見落とす</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">変更届</td>
+                  <td className="border border-slate-200 px-3 py-2">届出・通知の章</td>
+                  <td className="border border-slate-200 px-3 py-2">設備変更・使用量変更時の届出義務</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">届出漏れで契約違反・追加請求のリスク</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 約款の章構成はエリア（一般送配電事業者）ごとに異なります。上記は確認すべき内容の整理であり、実際の章番号は各事業者の公表資料をご確認ください。
           </p>
         </section>
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "最終保障供給と通常の電力契約の違いを法人向けに比較";
+const pageTitle = "最終保障供給と通常契約の違い｜8項目で比較する料金・条件・リスク";
 const pageDescription =
   "最終保障供給と通常の法人向け電力契約の違いを、料金、契約の考え方、継続前提、見直しの必要性の観点から比較します。";
 
@@ -152,6 +152,69 @@ export default function LastResortVsRetailContractPage() {
             </tbody>
           </table>
           <p className="mt-3 text-xs text-slate-500">※ 基本料金・燃料費調整額・再エネ賦課金を除いた電力量料金部分の概算です。エリアにより異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給と通常契約の詳細比較</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            料金単価だけでなく、契約条件・リスク・柔軟性の観点から8項目で比較します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[560px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">比較項目</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">通常契約（小売）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">最終保障供給</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">料金単価</td>
+                  <td className="border border-slate-200 px-3 py-2">15〜22円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700 font-semibold">25〜35円/kWh</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2">1,500〜1,900円/kW</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700 font-semibold">2,000〜2,500円/kW</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">燃調費上限</td>
+                  <td className="border border-slate-200 px-3 py-2">プランにより異なる</td>
+                  <td className="border border-slate-200 px-3 py-2">なし（上振れリスクあり）</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">契約期間</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜3年</td>
+                  <td className="border border-slate-200 px-3 py-2">原則1年以内</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">違約金</td>
+                  <td className="border border-slate-200 px-3 py-2">あり（プランによる）</td>
+                  <td className="border border-slate-200 px-3 py-2">なし</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">選択の自由度</td>
+                  <td className="border border-slate-200 px-3 py-2">複数社から選択可能</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">送配電事業者指定のみ</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">切替の容易さ</td>
+                  <td className="border border-slate-200 px-3 py-2">随時（解約条件による）</td>
+                  <td className="border border-slate-200 px-3 py-2">通常契約確保後に離脱</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">予算の見通し</td>
+                  <td className="border border-slate-200 px-3 py-2">立てやすい（固定プラン）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-red-700">立てにくい（料金改定リスク）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 料金単価・基本料金は高圧契約・関東エリアの参考値です。エリア・時期・需要規模により変動します。
+          </p>
         </section>
 
         <RelatedLinks

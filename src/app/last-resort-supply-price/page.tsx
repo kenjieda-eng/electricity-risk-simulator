@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "最終保障供給の料金はなぜ高いのか｜通常契約との差と実額試算";
+const pageTitle = "最終保障供給の料金｜通常契約との差額を使用量別に試算";
 const pageDescription =
   "最終保障供給の料金水準、通常契約との差の理由、JEPX連動部分の仕組み、2022年ピーク時の高騰、激変緩和措置、実額試算までを法人向けに詳しく解説します。";
 const pageUrl = "https://simulator.eic-jp.org/last-resort-supply-price";
@@ -135,6 +135,59 @@ export default function LastResortSupplyPricePage() {
               その調達コストが料金に反映される。
             </li>
           </ul>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">使用量規模別の月額コスト差</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            使用量が大きいほど、最終保障供給と通常契約の差額が急拡大します。月1万kWhから月50万kWhまでの規模別試算です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm text-slate-700">
+              <thead className="bg-slate-50 text-slate-900">
+                <tr>
+                  <th className="border border-slate-200 px-3 py-2 text-left">使用量規模</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">通常契約 月額</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">最終保障 月額</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">月額差</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right">年額差</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">月1万kWh（小規模オフィス）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約18万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約26万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+8万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+96万円</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">月5万kWh（中規模ビル・工場）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約90万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約130万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+40万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+480万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">月20万kWh（大規模工場・商業施設）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約360万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約520万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+160万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+1,920万円</td>
+                </tr>
+                <tr className="bg-red-50">
+                  <td className="border border-slate-200 px-3 py-2">月50万kWh（大型施設・特別高圧）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約900万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right">約1,300万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-bold text-red-700">+400万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-bold text-red-700">+4,800万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 通常契約は電力量料金約18円/kWh、最終保障供給は約26円/kWhで概算。基本料金・燃調・再エネ賦課金は別途加算。実際の料金はエリア・契約区分・JEPX連動部分により変動します。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

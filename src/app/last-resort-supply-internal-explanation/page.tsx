@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle =
-  "最終保障供給を社内説明するときのポイント｜なぜ料金が高いのかの伝え方";
+  "最終保障供給を社内説明するときのポイント｜比較表・報告テンプレート・FAQ";
 const pageDescription =
-  "最終保障供給に移行した、または移行可能性がある際の社内説明のポイントを解説。なぜ料金が高いのか、制度の位置づけ、早期脱出の必要性を経営層・担当者に伝える方法を説明します。";
+  "最終保障供給に移行した際の社内説明のポイントを解説。通常契約との比較表、経営層への3ステップ報告テンプレート、よくある質問と回答を掲載します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-const explanationPoints = [
+const faqItems = [
   {
     question: "なぜ料金が通常より高いのか",
     answer:
@@ -61,6 +61,11 @@ const explanationPoints = [
     question: "今後どう対処するのか",
     answer:
       "代替の電力会社・新電力との交渉を直ちに開始しています。供給期間の上限である○カ月以内を目標に通常契約への切替を完了させます。見積比較を行い、コスト最小化と供給安定性を両立できる先を選定します。",
+  },
+  {
+    question: "再発を防ぐためにどうするか",
+    answer:
+      "契約先の定期的な財務モニタリング、更新半年前からの複数社見積収集、代替候補リストの常時更新という3点を管理体制に組み込みます。担当者交代時の引き継ぎ手順も整備します。",
   },
 ];
 
@@ -87,10 +92,10 @@ export default function LastResortSupplyInternalExplanationPage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
-            <li>社内で聞かれる典型的な疑問とその回答のポイント</li>
-            <li>なぜ料金が高いのかの説明方法</li>
-            <li>経営層への報告に含めるべき情報</li>
-            <li>早期脱出に向けた行動計画の説明方法</li>
+            <li>通常契約と最終保障供給の比較表（社内説明用）</li>
+            <li>経営層への3ステップ報告テンプレート</li>
+            <li>社内でよく出る質問と回答（FAQ 5問）</li>
+            <li>早期脱出に向けた行動計画の提示方法</li>
           </ul>
         </div>
       </header>
@@ -121,52 +126,124 @@ export default function LastResortSupplyInternalExplanationPage() {
           </p>
         </section>
 
+        {/* Table 1: 社内説明用比較表 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            社内でよく出る疑問と回答のポイント
+            社内説明で使える最終保障供給 vs 通常契約の比較表
           </h2>
-          <div className="mt-3 space-y-3">
-            {explanationPoints.map((item) => (
-              <div
-                key={item.question}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-4"
-              >
-                <p className="font-semibold text-slate-900">Q：{item.question}</p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            経営層や関係部門への説明資料として、そのまま使える比較表です。「説明のポイント」欄の言い回しを参考にしてください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">比較項目</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">通常契約</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">最終保障供給</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">説明のポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">料金水準</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">契約ベース</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">通常比+20〜60%高い</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">「割高だが供給は継続」</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">契約期間</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">1〜3年</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">原則1年以内の切替前提</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">「一時的な措置」</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">選択の自由度</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">複数社から選択</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">送配電事業者が指定</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">「選べない」</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">料金の予見性</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">契約条件で見通せる</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">市場環境で変動しやすい</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">「予算超過リスク」</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">切替に必要な期間</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">1〜3ヶ月</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">最終保障→通常は1〜2ヶ月</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">「早期離脱が基本」</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Table 2: 経営層への報告テンプレート */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            経営層への報告テンプレート（3ステップ）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            口頭報告・メール・稟議資料いずれの場合も、以下の3ステップで構成すると伝わりやすくなります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[540px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">ステップ</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">内容</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">伝えるべきポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-sky-700">Step 1：現状説明</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">最終保障供給に入った／入りそうな状況</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">なぜこうなったか（新電力撤退／契約切れ）</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-sky-700">Step 2：コスト影響</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">月額・年額の増加額</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">通常契約との差額を具体的に</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-sky-700">Step 3：対応策</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">切替先の候補と見積取得状況</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">早期離脱のスケジュール</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <p className="font-semibold text-slate-900">行動計画のサンプル構成</p>
+            <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700">
+              <li>○月○日まで：代替候補の電力会社・新電力のリストアップ</li>
+              <li>○月○日まで：使用量データを各社に提供し、見積を要求</li>
+              <li>○月○日まで：見積比較表の作成・上司への報告</li>
+              <li>○月○日まで：最終候補との交渉・契約条件の確定</li>
+              <li>○月○日まで：切替手続き完了・最終保障供給からの脱出</li>
+            </ol>
+          </div>
+        </section>
+
+        {/* FAQ Table */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            社内でよく出る質問と回答（FAQ）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            経営層・関係部門から寄せられることが多い5つの質問と、回答のポイントを整理しました。
+          </p>
+          <div className="mt-4 space-y-3">
+            {faqItems.map((item, index) => (
+              <div key={index} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <p className="font-semibold text-slate-900">Q{index + 1}：{item.question}</p>
                 <p className="mt-2 text-sm leading-7 text-slate-700">A：{item.answer}</p>
               </div>
             ))}
           </div>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">
-            経営層への報告に含めるべき情報
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            経営層（役員・CFO・事業責任者）への報告では、以下の情報を明確に伝えることが重要です。
-          </p>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>
-              <span className="font-semibold text-slate-900">現在の状況：</span>
-              最終保障供給に移行した（または移行可能性がある）という事実と、その原因。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">財務的な影響：</span>
-              現在の料金と最終保障供給の料金の差額、月次・年次での追加コスト見込み。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">供給期間の上限：</span>
-              最終保障供給がいつまで利用できるか（通常9カ月程度）と、その期限。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">対処方針と目標期日：</span>
-              代替先との交渉を○月○日までに完了させる、という具体的な目標。
-            </li>
-            <li>
-              <span className="font-semibold text-slate-900">意思決定が必要な事項：</span>
-              複数候補の中から選択する場合の判断基準の確認、決裁権限の確認。
-            </li>
-          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -190,25 +267,6 @@ export default function LastResortSupplyInternalExplanationPage() {
               契約先の定期的なモニタリング、代替候補のリスト作成、更新タイミングでの複数社見積など、今後の管理強化策を提示します。
             </li>
           </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">
-            早期脱出に向けた行動計画の提示
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            社内説明の最後に、具体的な行動計画を提示することで、経営層に「問題に対処している」という安心感を与えることができます。
-          </p>
-          <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
-            <p className="font-semibold text-slate-900">行動計画のサンプル構成</p>
-            <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700">
-              <li>○月○日まで：代替候補の電力会社・新電力のリストアップ</li>
-              <li>○月○日まで：使用量データを各社に提供し、見積を要求</li>
-              <li>○月○日まで：見積比較表の作成・上司への報告</li>
-              <li>○月○日まで：最終候補との交渉・契約条件の確定</li>
-              <li>○月○日まで：切替手続き完了・最終保障供給からの脱出</li>
-            </ol>
-          </div>
         </section>
 
         <RelatedLinks

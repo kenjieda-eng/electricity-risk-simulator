@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle =
-  "特別高圧で最終保障供給を使うときの注意点｜大規模需要家の留意事項";
+  "特別高圧で最終保障供給を使うときの注意点｜料金差シミュレーションと確認ポイント";
 const pageDescription =
-  "特別高圧需要家が最終保障供給に切り替わる場合の注意点を解説。高圧との違い、料金水準、供給条件、早期脱出のための準備事項を詳しく説明します。";
+  "特別高圧需要家が最終保障供給に切り替わる場合の注意点を解説。高圧との料金差、月100万kWhのコストシミュレーション、確認すべき5項目を詳しく説明します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -64,6 +64,29 @@ const differencePoints = [
   },
 ];
 
+const checklistItems = [
+  {
+    item: "現在の月間使用量（kWh）と最大需要電力（kW）を把握しているか",
+    note: "見積依頼・コスト試算の基礎データ。30分コマ別データが理想",
+  },
+  {
+    item: "最終保障供給の適用期間の上限と残余日数を確認しているか",
+    note: "通常9カ月。残余期間内に代替契約を完了させるスケジュールを逆算する",
+  },
+  {
+    item: "特別高圧を受け入れ可能な電力会社・新電力へ打診を開始しているか",
+    note: "対応可能な事業者は限られるため、早期に複数社へ同時打診することが重要",
+  },
+  {
+    item: "経営層へ月額・年額の追加コスト影響を数字で報告しているか",
+    note: "下記シミュレーション表を活用して具体的な金額を伝える",
+  },
+  {
+    item: "一般送配電事業者との連絡窓口と切替手続きの流れを確認しているか",
+    note: "切替完了まで数週間〜2カ月かかるため、早期に手続きを開始する",
+  },
+];
+
 export default function LastResortSupplyExtraHighVoltagePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -87,10 +110,10 @@ export default function LastResortSupplyExtraHighVoltagePage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
-            <li>特別高圧の最終保障供給の基本的な仕組み</li>
+            <li>特別高圧と高圧の最終保障供給料金差（比較表）</li>
+            <li>月100万kWhでの費用シミュレーション</li>
             <li>高圧との違いと特別高圧特有の注意点</li>
-            <li>料金水準と影響額の把握</li>
-            <li>早期脱出のための準備事項</li>
+            <li>早期脱出のための5つの確認ポイント</li>
           </ul>
         </div>
       </header>
@@ -118,6 +141,110 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           </p>
         </section>
 
+        {/* Table 1: 料金差比較 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            特別高圧と高圧の最終保障供給料金差
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            特別高圧は通常契約の単価が低い分、最終保障供給に移行した際の絶対額の影響が極めて大きくなります。下表で高圧との差を確認してください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">項目</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">高圧</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">特別高圧</th>
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">特別高圧の特記事項</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">契約電力</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">50〜2,000kW</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">2,000kW超</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">個別設定が多い</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">通常契約の単価目安</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">18〜22円/kWh</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">14〜18円/kWh</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">個別交渉ベース</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">最終保障供給の単価目安</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">25〜30円/kWh</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">22〜28円/kWh</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">通常比+40〜60%</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">月5万kWhの月額差</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">+15〜40万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-500">―</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-500">―</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">月50万kWhの月額差</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-500">―</td>
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-red-700">+200〜500万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">年間2,400〜6,000万円増</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">※単価・差額は目安です。電力会社・時期・地域により異なります。</p>
+        </section>
+
+        {/* Table 2: シミュレーション */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            特別高圧で最終保障供給に入った場合のシミュレーション（月100万kWh）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            大規模工場やデータセンターを想定した月間使用量100万kWhのケースで試算すると、最終保障供給移行による年間影響額は約9,600万円に達します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[540px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900">費目</th>
+                  <th className="border border-slate-300 px-4 py-2 text-right font-semibold text-slate-900">通常契約時</th>
+                  <th className="border border-slate-300 px-4 py-2 text-right font-semibold text-slate-900">最終保障供給時</th>
+                  <th className="border border-slate-300 px-4 py-2 text-right font-semibold text-slate-900">差額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">電力量料金</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-700">1,500万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-700">2,200万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-semibold text-red-700">+700万円</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-300 px-4 py-2 text-slate-700">基本料金</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-700">480万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-700">600万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-semibold text-red-700">+120万円</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">月額合計</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-semibold text-slate-900">約2,000万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-semibold text-slate-900">約2,800万円</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-semibold text-red-700">+約800万円</td>
+                </tr>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-300 px-4 py-2 font-semibold text-slate-900">年額影響</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-500">―</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right text-slate-500">―</td>
+                  <td className="border border-slate-300 px-4 py-2 text-right font-bold text-red-700">+約9,600万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">※試算値です。実際の料金は電力会社・契約条件・燃料費調整額等により異なります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
             特別高圧の最終保障供給：高圧との違いと注意点
@@ -135,24 +262,27 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           </div>
         </section>
 
+        {/* Checklist */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            料金水準と影響額
+            特別高圧需要家が確認すべき5項目
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            最終保障供給の料金は、通常の高圧・特別高圧小売契約に比べて高い水準に設定されています。一般的に、電力量料金は通常契約の1.5倍〜2倍以上になるケースがあります（電力会社・時期によって異なります）。
+            最終保障供給に入った直後、または入る可能性が生じた時点で以下の5項目を確認してください。
           </p>
-          <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
-            <p className="font-semibold text-slate-900">影響額のイメージ</p>
-            <p className="mt-2 text-sm text-slate-600">※ 電力量料金が1.5倍になった場合の試算例</p>
-            <div className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
-              <p>月間使用量 500,000kWh × 追加コスト +10円/kWh ＝ 月額 +500万円</p>
-              <p>月間使用量 1,000,000kWh × 追加コスト +10円/kWh ＝ 月額 +1,000万円</p>
-            </div>
+          <div className="mt-4 space-y-3">
+            {checklistItems.map((item, index) => (
+              <div key={index} className="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
+                  {index + 1}
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">{item.item}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            大規模工場やデータセンターでは、最終保障供給に長期間留まることで事業採算性が大きく悪化するリスクがあります。
-          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
