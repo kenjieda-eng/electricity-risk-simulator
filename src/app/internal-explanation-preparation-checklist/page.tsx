@@ -175,12 +175,12 @@ export default function InternalExplanationPreparationChecklistPage() {
               description: "見直し全体の準備チェックリストを網羅的に確認。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "現状説明に使う請求書の読み方と確認ポイントを解説。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "比較資料作成に使う見積書の読み方を解説。",
             },

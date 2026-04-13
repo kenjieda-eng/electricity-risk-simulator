@@ -161,7 +161,7 @@ export default function FixedVsMarketQuickDiagnosisPage() {
           </ol>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書の読み方は{" "}
-            <Link href="/how-to-read-business-electricity-quotation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+            <Link href="/how-to-read-electricity-quote" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
               法人向け電気料金見積書の見方
             </Link>{" "}
             で詳しく解説しています。
@@ -193,7 +193,7 @@ export default function FixedVsMarketQuickDiagnosisPage() {
               description: "価格高騰・安定・下落の各シナリオで2プランを比較する。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書でどの項目を比較すればよいかを項目別に解説。",
             },

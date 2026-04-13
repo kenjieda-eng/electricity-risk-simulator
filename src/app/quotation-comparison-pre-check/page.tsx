@@ -159,7 +159,7 @@ export default function QuotationComparisonPreCheckPage() {
           intro="見積比較の準備から比較・判断まで、関連する情報をまとめました。"
           links={[
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書の各項目の意味と、比較判断に使える確認ポイントを解説。",
             },

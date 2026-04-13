@@ -309,7 +309,7 @@ export default function OfficeBuildingElectricityCostReviewPage() {
               description: "安定性重視の医療施設における契約設計の考え方。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンド料金（基本料金）の仕組み",
               description: "契約電力とデマンドの関係、基本料金の削減方法。",
             },

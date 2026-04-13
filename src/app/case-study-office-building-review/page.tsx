@@ -260,7 +260,7 @@ export default function CaseStudyOfficeBuildingPage() {
         <h2 className="text-xl font-semibold text-slate-900">ビルオーナー・管理会社の方へ</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           テナント構成が変わった、増減床があった、契約電力を長年変更していない、という場合は契約電力の見直し余地がある可能性があります。
-          <Link href="/demand-charge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドと契約電力の仕組み</Link>を確認の上、
+          <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドと契約電力の仕組み</Link>を確認の上、
           過去2年分の最大デマンド実績と現在の契約電力を比較してみてください。
         </p>
       </section>
@@ -273,7 +273,7 @@ export default function CaseStudyOfficeBuildingPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
-            { href: "/demand-charge", title: "デマンドとは", description: "契約電力の決まり方とデマンド管理の基本" },
+            { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "契約電力の決まり方とデマンド管理の基本" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきこと" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と新電力切り替えの組み合わせ事例" },
             { href: "/case-study-hospital-peak-cut", title: "病院：デマンド制御で基本料金22%圧縮", description: "非医療設備を対象にしたデマンド制御事例" },

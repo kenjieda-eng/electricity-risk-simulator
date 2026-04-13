@@ -248,7 +248,7 @@ export default function LastResortSupplyEmergencyResponsePage() {
               description: "定期的な管理体制の確認項目。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "代替先選定時の見積比較の方法。",
             },

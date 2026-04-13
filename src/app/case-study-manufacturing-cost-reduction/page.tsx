@@ -248,7 +248,7 @@ export default function CaseStudyManufacturingPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
-            { href: "/demand-charge", title: "デマンドとは", description: "基本料金を決めるデマンド（最大需要電力）の仕組みと削減方法を解説" },
+            { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "基本料金を決めるデマンド（最大需要電力）の仕組みと削減方法を解説" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "契約見直しの手順と注意点を初心者向けに解説" },
             { href: "/case-study-hospital-peak-cut", title: "病院：デマンド制御で基本料金を22%圧縮した事例", description: "中規模総合病院のデマンド制御導入事例" },
             { href: "/case-study-office-building-review", title: "オフィスビル：契約電力の適正化で年間580万円削減", description: "オフィスビルの契約見直し事例" },

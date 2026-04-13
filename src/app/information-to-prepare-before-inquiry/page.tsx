@@ -192,7 +192,7 @@ export default function InformationToPrepareBeforeInquiryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書の読み方については{" "}
             <Link
-              href="/how-to-read-business-electricity-bill"
+              href="/how-to-read-electricity-bill"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金請求書の見方
@@ -230,12 +230,12 @@ export default function InformationToPrepareBeforeInquiryPage() {
           heading="関連ページ"
           links={[
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "見積依頼に必要な使用量データを請求書から読み取る方法。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "受け取った見積書を正確に読み解くためのポイント。",
             },

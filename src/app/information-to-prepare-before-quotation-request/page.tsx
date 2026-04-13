@@ -229,7 +229,7 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積を受け取ったら、まず前提条件が揃っているか確認します。使用量・契約電力・契約期間が統一されているかを確認し、ズレがある場合は同じ条件で再提出を求めます。その後、基本料金・電力量料金・調整額の各項目を比較し、年間総額でも試算します。見積比較の詳細な手順は{" "}
             <Link
-              href="/how-to-read-business-electricity-quotation"
+              href="/how-to-read-electricity-quote"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金見積書の見方
@@ -252,12 +252,12 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
               description: "情報収集・市場調査・社内調整の準備フェーズ。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "受け取った見積書のどこを確認すればよいか。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書から見積比較に使う情報を読み取る方法。",
             },

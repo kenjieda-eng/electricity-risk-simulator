@@ -279,7 +279,7 @@ export default function DemandResponseSuitedCorporationsPage() {
               description: "市場価格連動型の電力契約の仕組みとリスク。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンドとは",
               description: "契約電力と基本料金の関係をわかりやすく解説。",
             },

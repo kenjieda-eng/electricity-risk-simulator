@@ -283,7 +283,7 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
               description: "固定vs市場連動の選択を社内でどう説明するか。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書で固定プランの条件を正しく比較する方法。",
             },

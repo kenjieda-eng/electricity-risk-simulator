@@ -222,7 +222,7 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
               description: "総額比較の考え方と確認事項一覧。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書の構成と比較すべき項目の解説。",
             },

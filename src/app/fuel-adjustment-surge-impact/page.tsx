@@ -239,7 +239,7 @@ export default function FuelAdjustmentSurgeImpactPage() {
               description: "燃調以外の電気料金上昇要因の解説。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書で燃調の条件を正しく比較する方法。",
             },

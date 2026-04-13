@@ -142,7 +142,7 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンドの仕組みについては{" "}
             <Link
-              href="/demand-charge"
+              href="/contract-demand-what-is-it"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               デマンドとは
@@ -278,7 +278,7 @@ export default function BatterySuitedCorporationsPage() {
               description: "太陽光発電の費用対効果が出やすい条件の整理。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンドとは",
               description: "契約電力と基本料金の関係をわかりやすく解説。",
             },

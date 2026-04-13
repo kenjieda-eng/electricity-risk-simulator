@@ -214,7 +214,7 @@ export default function WarehouseElectricityCostReviewPage() {
             </Link>{" "}
             で一覧できます。請求書の読み方は{" "}
             <Link
-              href="/how-to-read-business-electricity-bill"
+              href="/how-to-read-electricity-bill"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               請求書の見方
@@ -313,7 +313,7 @@ export default function WarehouseElectricityCostReviewPage() {
               description: "見直しの準備段階で確認すべき項目を一覧で整理。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の各項目と見積比較への活用ポイント。",
             },

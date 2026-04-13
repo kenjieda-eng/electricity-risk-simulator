@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金見積書の見方｜比較時に確認したい項目と注意点";
 const pageDescription =
-  "法人向け電気料金見積書の見方を解説。基本料金、電力量料金、燃料費調整額、契約条件、リスクの見方など、比較時に確認したいポイントを整理します。";
+  "法人向け電気料金見積書の見方を解説。基本料金・電力量料金・燃調費・市場連動の確認ポイントから、3社比較テンプレート、契約条件の見落とし防止まで、見積比較の実務を網羅的に整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -45,70 +44,231 @@ export const metadata: Metadata = {
   },
 };
 
+const quotationItems = [
+  {
+    heading: "基本料金",
+    points: [
+      "契約電力（kW）×基本料金単価で算出される。見積書によっては力率割引を含んだ金額で表示されている場合がある。",
+      "契約電力の設定が現行と異なる場合、単純な単価比較ができない点に注意する。",
+      "基本料金単価が安くても、電力量料金側で調整されているケースがあるため、総額で確認する。",
+    ],
+  },
+  {
+    heading: "電力量料金",
+    points: [
+      "使用量（kWh）×電力量料金単価で算出される。時間帯別（昼間・夜間など）で単価が異なるプランもある。",
+      "見積書で提示される単価が「燃料費調整額込み」か「別途」かを確認する。込みの場合は見た目の単価が高く見えることがある。",
+      "使用量が季節で大きく変動する施設では、年間平均ではなく月別の試算で比較するほうが正確になる。",
+    ],
+  },
+  {
+    heading: "燃料費調整額",
+    points: [
+      "見積書に燃料費調整額がどう反映されているかは重要な比較ポイント。「単価に含む」「別途加算」「独自算定」など扱いが異なる。",
+      "上限の有無や算定式が異なる場合、単価が安く見えても請求時に差が出ることがある。",
+      "旧一般電気事業者（大手電力）の規制料金では上限が設定されているが、新電力では上限がないケースもある。",
+    ],
+  },
+  {
+    heading: "再エネ賦課金",
+    points: [
+      "全需要家に一律適用される制度負担。年度ごとに単価が改定される。",
+      "見積書に含まれていない場合でも、実際の請求では加算されるため、比較時は「再エネ賦課金を除いた部分」と「含めた総額」の両方で確認するとよい。",
+    ],
+  },
+  {
+    heading: "市場価格調整額・電源調達調整費",
+    points: [
+      "市場連動型プランの場合、JEPX（日本卸電力取引所）のスポット価格に連動する調整額が加算される。",
+      "見積書では「電源調達調整費」「市場連動調整額」など名称が異なる場合がある。有無そのものを確認することが最初のステップ。",
+      "この項目の有無が、固定プランと市場連動プランの実質的な違いとなる。",
+    ],
+  },
+  {
+    heading: "容量拠出金",
+    points: [
+      "2024年度から始まった制度負担。請求書や見積書への反映方法は電力会社によって異なる。",
+      "見積書に「容量拠出金相当額」として明記される場合と、電力量料金に含まれている場合がある。",
+      "比較時には、この費用が見積単価に含まれているかどうかを確認する。",
+    ],
+  },
+];
+
+const contractConditions = [
+  {
+    label: "契約期間",
+    detail:
+      "1年・2年・3年などの設定。長期契約は単価が安くなるケースがあるが、中途解約条件とセットで確認する。",
+  },
+  {
+    label: "中途解約条項",
+    detail:
+      "契約期間中に解約する場合の違約金や解約予告期間の有無。予告なしで解約できるケースは少ない。",
+  },
+  {
+    label: "自動更新条項",
+    detail:
+      "契約満了時に自動更新される条件と、更新拒否の申出期限を確認する。",
+  },
+  {
+    label: "価格改定条項",
+    detail:
+      "契約期間中に単価改定が行われる可能性があるか。「固定」と表示されていても調整費の変動で実質的に変わる場合がある。",
+  },
+  {
+    label: "支払条件",
+    detail:
+      "請求サイクル、支払期日、遅延損害金の有無。経理部門の処理フローに影響する。",
+  },
+];
+
 export default function HowToReadElectricityQuotePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくず */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              ホーム
+            </Link>
+          </li>
+          <li aria-hidden="true">&rsaquo;</li>
+          <li>
+            <Link href="/articles/basic" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              基礎から知る
+            </Link>
+          </li>
+          <li aria-hidden="true">&rsaquo;</li>
+          <li className="text-slate-700">見積書の見方</li>
+        </ol>
+      </nav>
+
+      {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金見積書の見方</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          法人向け電気料金見積書の見方
+        </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          見積書を受け取ると、単価だけを見て判断したくなります。ただ、法人の電力契約では料金項目だけでなく契約条件や変動リスクの確認が重要です。
+          電力会社から見積書を受け取ったとき、「どこを見れば正しく比較できるか」は、法人の契約見直しで最も重要な実務スキルのひとつです。単価の数字だけを見て判断すると、実際の請求額で差が出るケースは少なくありません。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、切り替えや比較を検討する場面で、見積書のどこを確認するかを実務目線で整理します。
+          このページでは、法人向け電気料金の見積書に含まれる主な項目の見方と、比較時に注意したいポイントを整理しています。切り替えや比較を初めて担当する方から、複数社の見積を精査したい方まで参考にしてください。
         </p>
+        <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li>見積書でまず確認すべき料金項目とその見方</li>
+            <li>燃料費調整額・市場価格調整額・容量拠出金の扱いの違い</li>
+            <li>契約条件で見落としやすいポイント</li>
+            <li>3社見積比較テンプレートと高圧の金額例</li>
+            <li>社内説明用に整理しやすい見方</li>
+          </ul>
+        </div>
       </header>
 
       <section className="mt-6 space-y-6">
+        {/* 1. 最初に確認したいこと */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">このページで分かること</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>見積書で最初に確認したい項目</li>
-            <li>現在契約と同じ前提で比較する方法</li>
-            <li>単価が安く見えても有利とは限らない理由</li>
-          </ul>
+          <h2 className="text-xl font-semibold text-slate-900">
+            見積書を比較するときに最初に確認したいこと
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            複数の電力会社から見積を取ると、フォーマットや項目名がそれぞれ異なることがあります。比較を始める前に、以下の3点を確認しておくと判断がしやすくなります。
+            <Link href="/how-to-read-electricity-bill" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              現在の請求書の構造
+            </Link>
+            を先に把握しておくと、見積との差分が捉えやすくなります。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">前提条件が揃っているか</p>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                契約電力、使用量の前提が各見積書で同じ条件になっているかを確認する。前提が異なると比較にならない。
+                <Link href="/contract-demand-what-is-it" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                  契約電力とは
+                </Link>
+                も参照。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">含まれる項目の範囲</p>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                燃料費調整額、再エネ賦課金、容量拠出金が単価に含まれているか別途かを確認する。含む範囲が違うと見た目の金額が大きく変わる。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">契約タイプの確認</p>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                固定プランか市場連動プランか。同じ「固定」でも調整費の扱いが異なるケースがあるため、契約タイプの定義を確認する。詳細は
+                <Link href="/market-linked-vs-fixed" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                  市場連動と固定の違い
+                </Link>
+                へ。
+              </p>
+            </div>
+          </div>
         </section>
 
+        {/* 2. 主要項目の見方 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">請求書と見積書は役割が違う</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>請求書は現在の実績を確認する書類</li>
-            <li>見積書は将来の契約条件を比較する書類</li>
-            <li>見積書は前提条件がそろっているかの確認が最優先</li>
-          </ul>
+          <h2 className="text-xl font-semibold text-slate-900">見積書の主要項目の見方</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            見積書には複数の費用項目が含まれます。
+            <Link href="/business-electricity-bill-breakdown" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              電気料金の内訳
+            </Link>
+            を理解した上で、各項目の見方を確認すると比較が正確になります。
+          </p>
+          <div className="mt-4 space-y-4">
+            {quotationItems.map((item) => (
+              <div key={item.heading} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">{item.heading}の見方</p>
+                <ul className="mt-2 space-y-2">
+                  {item.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2 text-sm leading-7 text-slate-700 sm:text-base"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            燃料費調整額の仕組みについては
+            <Link href="/fuel-cost-adjustment" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              燃料費調整額（燃調費）とは
+            </Link>
+            で詳しく解説しています。
+          </p>
         </section>
 
+        {/* 3. 契約条件 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見積書でまず確認したい項目</h2>
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金</h3>
+          <h2 className="text-xl font-semibold text-slate-900">契約条件で確認したいこと</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力が同じ前提か、固定費部分が増えていないか、現在契約と条件差がないかを確認します。
+            料金項目だけでなく、契約条件の違いも比較判断に大きく影響します。以下は見積段階で確認しておきたい主な条件です。
           </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">電力量料金</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            単価だけでなく課金方式を確認します。時間帯別単価の有無や条件差がある場合は、実際の使用実態に合うか評価が必要です。
-          </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">燃料費調整額の扱い</h3>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>見積に含まれている前提か</li>
-            <li>別建てで加算されるか</li>
-            <li>上限有無や現在契約との差</li>
-          </ul>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">再エネ賦課金の扱い</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積総額に含める表示か別建て表示かで見え方が変わります。現在契約比較で見落とさないことが重要です。
-          </p>
-
-          <h3 className="mt-4 text-lg font-semibold text-slate-900">契約期間・更新条件・解約条件</h3>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            料金条件だけでなく、契約期間、自動更新、中途解約、違約金、切替時期まで確認します。導入後の柔軟性に直結する項目です。
-          </p>
+          <div className="mt-4 space-y-3">
+            {contractConditions.map((item) => (
+              <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
+        {/* 4. 比較で特に注意したい条件差 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">見積比較で特に注意したい条件差</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            現在契約と提案見積を並べて比較するとき、以下の項目が揃っているかを確認します。前提条件の差は、見積段階では見えにくい請求差の原因になります。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
               <thead>
@@ -151,6 +311,12 @@ export default function HowToReadElectricityQuotePage() {
                   <td className="border border-slate-200 px-3 py-2">見せ方の差で見落としていないか</td>
                 </tr>
                 <tr>
+                  <td className="border border-slate-200 px-3 py-2">市場連動調整額</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">要確認</td>
+                  <td className="border border-slate-200 px-3 py-2">連動率・上限の差はないか</td>
+                </tr>
+                <tr>
                   <td className="border border-slate-200 px-3 py-2">契約期間</td>
                   <td className="border border-slate-200 px-3 py-2">要確認</td>
                   <td className="border border-slate-200 px-3 py-2">要確認</td>
@@ -167,111 +333,64 @@ export default function HowToReadElectricityQuotePage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">市場連動型か固定型かも確認したい</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            単価が低く見えても、市場連動型では将来の変動リスクが大きいことがあります。固定型は安定性を見やすい一方、相場下落局面では割高に見える場合もあります。
-            予算管理方針やリスク許容度に合わせて判断することが重要です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見積書を見る前に用意したい資料</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            資料の洗い出しは{" "}
-            <Link href="/documents-needed-for-electricity-contract-review" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              法人の電気料金見直しで集めるべき資料一覧
-            </Link>
-            で先に整理すると、比較依頼の段階で抜け漏れが減ります。見直しの着手時期は{" "}
-            <Link href="/when-to-review-electricity-contract" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              法人が電力契約を見直すタイミング
-            </Link>
-            も参照してください。
-          </p>
-          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>直近数か月の請求書</li>
-            <li>契約電力</li>
-            <li>使用量推移</li>
-            <li>現在の契約条件</li>
-            <li>更新時期</li>
-            <li>拠点ごとの情報</li>
-          </ol>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">安く見える提案で確認したい具体例</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金の前提が違い、固定費が増える</li>
-            <li>燃料費調整額の扱いが違い、見積段階で安く見える</li>
-            <li>市場連動型で将来の変動リスクを含む</li>
-            <li>契約期間が長く中途解約条件が重い</li>
-          </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">見積比較を判断につなげる流れ</h2>
-          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>現在の請求構造を整理する</li>
-            <li>見積書の前提条件をそろえて確認する</li>
-            <li>単価だけでなく条件差を確認する</li>
-            <li>必要に応じてシミュレーターで固定型・市場連動型の違いを確認する</li>
-          </ol>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積書は単価だけでなく条件まで見る必要があります。契約電力、燃料費調整額、契約条件を確認し、現在の請求書と並べて判断することが実務上の基本です。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">こんな方におすすめ</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>初めて請求書を見る担当者</li>
-            <li>契約更新前に全体像を確認したい方</li>
-            <li>見積比較の前提知識を整理したい方</li>
-          </ul>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">次に読むページ</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>現在の請求を確認するなら「電気料金の請求書で確認したいポイント」</li>
-            <li>固定と市場連動の違いを見るなら「市場連動プランと固定プランの違い」</li>
-            <li>契約条件を詳しく見るなら「法人向け電力契約で確認したい契約条件」</li>
-            <li>比較前提を理解するなら「契約電力とは」</li>
-          </ul>
-        </section>
-
+        {/* 5. 3社比較テンプレート */}
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">3社見積比較テンプレート（高圧・月50,000kWh想定）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            3社見積比較テンプレート（高圧・月50,000kWh想定）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            実際の比較では、固定型・市場連動型・ハイブリッド型の組み合わせで提案を受けることがあります。以下は比較の判断軸を整理するためのテンプレート例です。
+            <Link href="/how-to-compare-electricity-suppliers" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              電力会社の比較の進め方
+            </Link>
+            もあわせて参照してください。
+          </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
               <tr>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">比較項目</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">A社（固定型）</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">B社（市場連動型）</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">C社（ハイブリッド型）</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  比較項目
+                </th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  A社（固定型）
+                </th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  B社（市場連動型）
+                </th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  C社（ハイブリッド型）
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金単価</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">20円/kWh</span></td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">JEPX+8円</span></td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">15円+0.3×JEPX差</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">20円/kWh</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">JEPX+8円</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">15円+0.3×JEPX差</span>
+                </td>
               </tr>
               <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額目安（JEPX 10円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  月額目安（JEPX 10円時）
+                </td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">約100万円</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">約90万円</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">約75万円</td>
               </tr>
               <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">月額目安（JEPX 20円時）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  月額目安（JEPX 20円時）
+                </td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">約100万円</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-red-700">約140万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-red-700">約140万円</span>
+                </td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">約90万円</td>
               </tr>
               <tr>
@@ -294,11 +413,243 @@ export default function HowToReadElectricityQuotePage() {
               </tr>
             </tbody>
           </table>
-          <p className="mt-3 text-xs text-slate-500">※ 基本料金は含まず電力量料金部分のみの比較例。実際の見積は条件により異なります。</p>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 基本料金は含まず電力量料金部分のみの比較例。実際の見積は条件により異なります。
+          </p>
         </section>
 
+        {/* 6. 高圧見積書の金額例 */}
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            高圧見積書の項目別金額例（月50,000kWh・契約電力500kW）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            高圧契約の見積書では、各項目の金額規模と変動幅を把握しておくと比較精度が上がります。より詳細な確認方法は
+            <Link href="/high-voltage-quotation-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              高圧見積書の確認ガイド
+            </Link>
+            も参照してください。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  見積項目
+                </th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  金額目安
+                </th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">
+                  確認すべき前提条件
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">約72〜92万円/月</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  契約電力の設定根拠、力率割引の有無
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">約75〜100万円/月</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  単価の時間帯別設定、季節別単価の有無
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">▲10〜+25万円/月</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  上限の有無、算定式の違い
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">0〜+50万円/月</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  連動率、基準単価、上限の有無
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  <span className="font-semibold text-slate-900">約17.5万円/月</span>
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  全社共通（年度改定）
+                </td>
+              </tr>
+              <tr className="bg-sky-50">
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">
+                  月額合計
+                </td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">
+                  約155〜285万円
+                </td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                  変動項目の幅で月130万円の差が出る
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 特別高圧契約の場合は
+            <Link href="/extra-high-voltage-quotation-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              特別高圧見積書の確認ガイド
+            </Link>
+            を参照してください。
+          </p>
+        </section>
+
+        {/* 7. 社内説明で整理しやすい見方 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">社内説明で整理しやすい見方</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            見積比較の結果を社内で説明するときは、以下の4つの軸で整理すると伝わりやすくなります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-slate-300 bg-slate-50">
+                  <th className="p-3 text-left font-semibold text-slate-900">比較軸</th>
+                  <th className="p-3 text-left font-semibold text-slate-900">確認内容</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr>
+                  <td className="p-3 text-slate-700">年間総額</td>
+                  <td className="p-3 text-slate-700">
+                    同じ使用量前提での年間概算額（調整費込み）
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-3 text-slate-700">リスク幅</td>
+                  <td className="p-3 text-slate-700">
+                    燃料費・市場価格の変動でどこまで上振れしうるか
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-3 text-slate-700">契約条件</td>
+                  <td className="p-3 text-slate-700">
+                    期間、解約条件、自動更新、価格改定条項
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-3 text-slate-700">運用面</td>
+                  <td className="p-3 text-slate-700">
+                    請求書の見やすさ、問い合わせ対応、切替手続き
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            社内説明の進め方については
+            <Link
+              href="/how-to-explain-electricity-cost-review-internally"
+              className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電気料金見直しを社内で説明するときのポイント
+            </Link>
+            で詳しく整理しています。
+          </p>
+        </section>
+
+        {/* 8. 見積書を見る前に用意したい資料 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積書を見る前に用意したい資料</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            資料の洗い出しは
+            <Link
+              href="/documents-needed-for-electricity-contract-review"
+              className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              法人の電気料金見直しで集めるべき資料一覧
+            </Link>
+            で先に整理すると、比較依頼の段階で抜け漏れが減ります。
+          </p>
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>直近数か月の請求書</li>
+            <li>契約電力（kW）</li>
+            <li>月別使用量推移（kWh）</li>
+            <li>現在の契約条件（期間・更新日・解約条件）</li>
+            <li>更新時期・切替希望時期</li>
+            <li>拠点ごとの供給地点特定番号</li>
+          </ol>
+        </section>
+
+        {/* 9. 見積書の次に確認したい実務ステップ */}
+        <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積書の次に確認したい実務ステップ</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            見積書の見方を押さえたら、比較・確認・切替の各ステップに進むと、見直しの精度を高められます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link
+              href="/how-to-compare-electricity-suppliers"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">電力会社の比較の進め方</span>
+            </Link>
+            <Link
+              href="/compare"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">料金メニュー比較ページ</span>
+            </Link>
+            <Link
+              href="/market-linked-vs-fixed"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">市場連動と固定プランの違い</span>
+            </Link>
+            <Link
+              href="/fuel-cost-adjustment"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">燃料費調整額の仕組み</span>
+            </Link>
+            <Link
+              href="/documents-needed-for-electricity-contract-review"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">見直しで集めるべき資料一覧</span>
+            </Link>
+            <Link
+              href="/how-to-explain-electricity-cost-review-internally"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">社内説明のポイント</span>
+            </Link>
+            <Link
+              href="/high-voltage-quotation-guide"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">高圧見積書の確認ガイド</span>
+            </Link>
+            <Link
+              href="/extra-high-voltage-quotation-guide"
+              className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"
+            >
+              <span className="font-semibold text-slate-900">特別高圧見積書の確認ガイド</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* RelatedLinks */}
         <RelatedLinks
-          heading="あわせて読みたい記事"
+          heading="関連ページ"
           intro="見積の前提を、内訳・相場・見直し実務までつなげると比較判断が安定しやすくなります。"
           links={[
             {
@@ -307,78 +658,43 @@ export default function HowToReadElectricityQuotePage() {
               description: "請求書と見積書を同じ項目軸で読むための全体像です。",
             },
             {
-              href: "/business-electricity-price-benchmark",
-              title: "法人向け電気料金の相場はどう見るか",
-              description: "単価の妥当性を判断するときの相場観のつかみ方です。",
+              href: "/how-to-read-electricity-bill",
+              title: "電気料金の請求書で確認したいポイント",
+              description: "現在の請求構造を把握し、見積比較の前提を整理します。",
             },
             {
-              href: "/documents-needed-for-electricity-contract-review",
-              title: "法人の電気料金見直しで集めるべき資料一覧",
-              description: "見積比較前にそろえる資料の範囲を整理できます。",
+              href: "/contract-demand-what-is-it",
+              title: "契約電力とは",
+              description: "見積前提となる契約電力の仕組みを理解するための基本解説です。",
             },
             {
-              href: "/5-minimum-checkpoints-for-electricity-contract-review",
-              title: "法人の電力契約見直しで最低限確認したい5項目",
-              description: "単価以外の条件まで含めた最低限のチェックに進めます。",
-            },
-            {
-              href: "/switching-business-electricity-contract",
-              title: "法人が電力契約を切り替えるときの注意点",
-              description: "比較後の切替で確認したい期限と請求のズレを整理できます。",
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "燃料費調整額の仕組みと、見積比較での確認ポイントを整理。",
             },
             {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
               description: "見積に現れやすい契約タイプ差を比較軸で確認できます。",
             },
+            {
+              href: "/how-to-compare-electricity-suppliers",
+              title: "電力会社の比較の進め方",
+              description: "比較判断で見落としやすい観点を整理しています。",
+            },
           ]}
         />
 
+        {/* ContentCta */}
         <ContentCta
           heading="同じ前提で見積を比較する"
-          description="見積書の読み方を押さえたら、比較ページで条件差を整理し、総額と契約条件の両面で判断できます。"
+          description="見積書の読み方を押さえたら、比較ページで条件差を整理し、総額と契約条件の両面で判断できます。シミュレーターで固定型・市場連動型の年間コスト差も確認してください。"
           links={[
-            { href: "/compare", label: "比較ページを見る" },
-            { href: "/simulate", label: "シミュレーションを始める" },
+            { href: "/compare", label: "料金メニューを比較する" },
+            { href: "/", label: "シミュレーターで診断する" },
           ]}
         />
-
-        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
-          <h2 className="text-lg font-semibold text-slate-900">見積書の次に確認したい実務ステップ</h2>
-          <p className="mt-2 text-sm leading-7 text-slate-600">
-            見積書の見方を押さえたら、比較・確認・切替の各ステップに進むと、見直しの精度を高められます。
-          </p>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
-            <Link href="/compare-business-electricity-estimates" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">法人の電力見積もりを比較する方法</span>
-            </Link>
-            <Link href="/cheap-unit-price-not-always-better" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">安い単価が必ずしも良いとは限らない</span>
-            </Link>
-            <Link href="/how-to-compare-electricity-suppliers" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">電力会社の比較の進め方</span>
-            </Link>
-            <Link href="/electricity-contract-terms" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">電力契約の契約条件を理解する</span>
-            </Link>
-            <Link href="/where-to-check-in-electricity-contract" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">電力契約のどこを確認すべきか</span>
-            </Link>
-            <Link href="/capacity-contribution-what-to-check" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">容量拠出金を踏まえた確認ポイント</span>
-            </Link>
-            <Link href="/internal-checklist-for-electricity-contract-review" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">社内チェックリスト</span>
-            </Link>
-            <Link href="/who-should-handle-electricity-contract-review" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">見直しは誰が担当すべきか</span>
-            </Link>
-          </div>
-        </div>
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="how-to-read-electricity-quote" />
-      </div>
     </main>
   );
 }

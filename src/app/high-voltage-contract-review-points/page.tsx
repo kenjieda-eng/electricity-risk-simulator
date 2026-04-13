@@ -219,7 +219,7 @@ export default function HighVoltageContractReviewPointsPage() {
               description: "高圧需要家が市場連動プランを検討する際の注意点。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "高圧見積書を正しく読んで比較する方法。",
             },

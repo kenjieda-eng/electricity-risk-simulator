@@ -318,7 +318,7 @@ export default function HighVoltageQuotationGuidePage() {
                 "デマンド値が基本料金に与える影響と管理方法を解説。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の全体構造と主要項目の読み方を整理。",
             },

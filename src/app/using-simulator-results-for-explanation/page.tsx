@@ -131,7 +131,7 @@ export default function UsingSimulatorResultsForExplanationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             これらのデータは請求書から読み取ることができます。確認方法は{" "}
             <Link
-              href="/how-to-read-business-electricity-bill"
+              href="/how-to-read-electricity-bill"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金請求書の見方
@@ -223,7 +223,7 @@ export default function UsingSimulatorResultsForExplanationPage() {
               description: "リスクを数値化して伝えるための構成と方法。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "シミュレーター入力に必要なデータを請求書から読み取る方法。",
             },

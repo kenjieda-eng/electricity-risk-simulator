@@ -209,7 +209,7 @@ export default function HospitalElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書の読み方は{" "}
             <Link
-              href="/how-to-read-business-electricity-quotation"
+              href="/how-to-read-electricity-quote"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金見積書の見方
@@ -304,7 +304,7 @@ export default function HospitalElectricityCostReviewPage() {
               description: "長時間稼働の施設における契約見直し。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を受け取った際にどこを比較すればよいか。",
             },

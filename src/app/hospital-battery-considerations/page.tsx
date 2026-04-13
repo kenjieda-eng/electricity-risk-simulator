@@ -226,7 +226,7 @@ export default function HospitalBatteryConsiderationsPage() {
               description: "需要応答プログラムに参加しやすい法人の条件。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンドとは",
               description: "契約電力と基本料金の関係をわかりやすく解説。",
             },

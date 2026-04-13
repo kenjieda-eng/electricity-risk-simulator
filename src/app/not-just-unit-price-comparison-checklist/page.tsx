@@ -220,7 +220,7 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
               description: "見積比較での容量拠出金の確認方法。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書の構成と比較すべき項目の解説。",
             },

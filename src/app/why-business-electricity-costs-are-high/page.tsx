@@ -86,7 +86,7 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             関連する基礎は
             {" "}
-            <Link href="/demand-charge" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+            <Link href="/contract-demand-what-is-it" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               デマンドの解説
             </Link>
             と
@@ -156,7 +156,7 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
           intro="自己診断で見えた課題を、具体的な比較行動につなげるための導線です。"
           links={[
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンドとは",
               description: "ピーク電力と基本料金の関係を確認できます。",
             },

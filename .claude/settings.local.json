@@ -43,7 +43,15 @@
       "Bash(sed -n '699p' index.html)",
       "Read(//tmp/**)",
       "Bash(find /c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app -name \"page.tsx\" -type f -exec wc -l {} +)",
-      "Bash(sort -k2)"
+      "Bash(sort -k2)",
+      "Bash(awk '$1 >= 100 && $1 <= 250 {print $0}')",
+      "Bash(find src/app -name \"*.tsx\" -exec sed -i 's|/how-to-read-business-electricity-quotation|/how-to-read-electricity-quote|g' {} +)",
+      "Bash(find src/app -name \"*.tsx\" -exec sed -i 's|/how-to-read-business-electricity-bill|/how-to-read-electricity-bill|g' {} +)",
+      "Bash(find src/app -name \"*.tsx\" -exec sed -i 's|\"/demand-charge\"|\"/contract-demand-what-is-it\"|g' {} +)",
+      "Bash(find src/components -name \"*.tsx\" -exec sed -i 's|/how-to-read-business-electricity-quotation|/how-to-read-electricity-quote|g; s|/how-to-read-business-electricity-bill|/how-to-read-electricity-bill|g; s|\"/demand-charge\"|\"/contract-demand-what-is-it\"|g' {} +)",
+      "Bash(rm -rf src/app/how-to-read-business-electricity-quotation)",
+      "Bash(rm -rf src/app/how-to-read-business-electricity-bill)",
+      "Bash(rm -rf src/app/demand-charge)"
     ]
   }
 }

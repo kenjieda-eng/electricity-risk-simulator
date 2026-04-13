@@ -202,7 +202,7 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
               description: "多拠点管理の観点を含む契約確認項目。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "多拠点の見積比較で確認すべきポイント。",
             },

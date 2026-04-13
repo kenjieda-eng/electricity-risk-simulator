@@ -316,7 +316,7 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
               description: "高圧・特別高圧を含む電気料金の全構成要素。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "高圧・特別高圧の見積書を正しく読む方法。",
             },

@@ -252,7 +252,7 @@ export default function SharingComparisonTableInternallyPage() {
               description: "比較表でプラン特性の差を示すための説明方法。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を比較表に整理するための読み方。",
             },

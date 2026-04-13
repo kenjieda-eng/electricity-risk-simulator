@@ -2,21 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
-const pageTitle = "高圧電力の料金の見方とは？法人向け請求書で確認したいポイントを解説";
+const pageTitle = "高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説";
 const pageDescription =
-  "高圧電力の料金の見方を法人向けにわかりやすく解説。基本料金、電力量料金、燃料費調整額、再エネ賦課金、契約電力、請求書で確認したいポイントを整理します。";
+  "高圧電力の料金構成を法人向けに解説。基本料金・電力量料金・燃料費調整額の仕組みから、小・中・大規模別のコスト試算、見直しポイントまで体系的に整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
     "高圧電力 料金 見方",
-    "高圧電力 請求書",
-    "基本料金 電力量料金",
+    "高圧電力 料金構成",
+    "高圧電力 基本料金",
     "契約電力 見直し",
-    "法人 電気料金",
+    "法人 電気料金 計算",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/high-voltage-electricity-pricing",
@@ -48,21 +47,37 @@ export const metadata: Metadata = {
 export default function HighVoltageElectricityPricingPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくずナビ */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link>
+          </li>
+          <li className="before:mr-1 before:content-['>']">
+            <Link href="/articles/basic" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基礎から知る</Link>
+          </li>
+          <li className="before:mr-1 before:content-['>']">
+            <span className="text-slate-700">高圧電力の料金</span>
+          </li>
+        </ol>
+      </nav>
+
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          高圧電力の料金の見方とは？法人向けに請求書の確認ポイントを解説
+          高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           高圧電力の請求書には、基本料金、電力量料金、燃料費調整額、再エネ賦課金など複数の項目が並びます。
           総額だけを見ても、何が原因で高くなっているのか、どこに見直し余地があるのかは分かりにくいことがあります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          高圧契約を見直すときは、単価だけでなく、料金がどの項目で構成されているかを理解することが大切です。このページでは、
-          高圧電力の基本と、請求書で確認したい実務ポイントを整理します。
+          このページは「高圧電力の料金構造全体」を俯瞰するための入口です。料金の仕組みを理解したうえで、
+          請求書の読み方・見積の確認・契約見直しへと段階的に進む構成になっています。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
+        {/* 高圧電力とは */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">高圧電力とは</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -70,34 +85,202 @@ export default function HighVoltageElectricityPricingPage() {
             家庭向けや小規模店舗向けの低圧契約とは料金の見方や契約条件が異なります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            高圧受電では、使用量だけでなく、契約電力や設備条件、契約内容なども請求額に影響します。請求構造全体を見て判断する視点が必要です。
+            <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>
+            は高圧料金の根幹をなす指標です。使用量だけでなく、設備条件・契約内容なども請求額に影響するため、
+            請求構造全体を見て判断する視点が必要です。
           </p>
         </section>
 
+        {/* 料金構成 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">高圧電力の料金は何で構成されるのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            高圧電力の請求額は、一般に複数項目の組み合わせで決まります。主な構成要素は、基本料金、電力量料金、燃料費調整額、再エネ賦課金、
-            その他の契約条件に応じた項目です。
+            高圧電力の請求額は、一般に複数項目の組み合わせで決まります。主な構成要素は次のとおりです。
           </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <p className="font-semibold text-slate-900">
+                <Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>
+              </p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">
+                契約電力をベースに決まる固定的な費用。使用量がゼロでもかかるため、コスト全体に占める比率が高い。
+              </p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <p className="font-semibold text-slate-900">
+                <Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>
+              </p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">
+                実際に使用した電力量（kWh）に単価を掛けた変動費。使用量や時間帯の条件によって変わる。
+              </p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <p className="font-semibold text-slate-900">
+                <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>
+              </p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">
+                燃料価格変動を毎月反映する調整項目。使用量に乗じる形で請求額を増減させる。
+              </p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <p className="font-semibold text-slate-900">再エネ賦課金</p>
+              <p className="mt-1 text-sm leading-6 text-slate-700">
+                再生可能エネルギー固定価格買取制度に基づく費用。使用量が多いほど金額影響も大きくなる。
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書を見るときは、どの項目が固定的か、どの項目が変動しやすいかを先に切り分けると整理しやすくなります。
+            <Link href="/demand-value-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値</Link>
+            の管理も基本料金の最適化に直結します。
           </p>
         </section>
 
+        {/* コスト構成シミュレーション */}
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧電力のコスト構成シミュレーション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            規模別に月額コストの目安を試算しました。基本料金・電力量料金・調整項目の構成比が規模によってどう変わるかを確認できます。
+          </p>
+
+          {/* 小規模 */}
+          <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200 bg-white p-4">
+            <h3 className="text-lg font-semibold text-slate-900">小規模：契約100kW・月10,000kWh</h3>
+            <p className="mt-1 text-xs text-slate-500">小規模オフィス・店舗・クリニックなどに多いケース</p>
+            <table className="mt-3 w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定条件</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">100kW × 1,650円/kW × 力率割引0.97</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約16万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">10,000kWh × 16円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約16万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額・再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量ベース</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約3〜5万円</td>
+                </tr>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約30〜40万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 中規模 */}
+          <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white p-4">
+            <h3 className="text-lg font-semibold text-slate-900">中規模：契約500kW・月50,000kWh</h3>
+            <p className="mt-1 text-xs text-slate-500">中規模工場・スーパー・病院・複合施設などに多いケース</p>
+            <table className="mt-3 w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定条件</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">500kW × 1,500円/kW × 力率割引0.97</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約73万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">50,000kWh × 16円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約80万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額・再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量ベース</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約15〜27万円</td>
+                </tr>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約160〜200万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 大規模 */}
+          <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white p-4">
+            <h3 className="text-lg font-semibold text-slate-900">大規模：契約1,500kW・月200,000kWh</h3>
+            <p className="mt-1 text-xs text-slate-500">大型工場・物流センター・大規模商業施設などに多いケース</p>
+            <table className="mt-3 w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定条件</th>
+                  <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500kW × 1,500円/kW × 力率割引0.97</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約218万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">200,000kWh × 16円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約320万円</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額・再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量ベース</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">約28〜70万円</td>
+                </tr>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約550〜750万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 単価は大手電力会社の標準メニュー目安。力率割引0.97適用。燃料費調整額は市場状況によって変動します。実際の料金はご契約内容をご確認ください。
+          </p>
+        </section>
+
+        {/* 基本料金 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">基本料金の見方</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            <Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>
+            の見方
+          </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             基本料金は、高圧契約の中でも重要な項目です。一般に契約電力などの条件をもとに決まり、使用量が少ない月でも一定額がかかることがあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             使用量だけを減らしても、基本料金の影響が大きいと総額は想定ほど下がらない場合があります。見直し時には、
             現在の契約電力や契約条件が実態に合っているかを確認することが大切です。
+            <Link href="/demand-value-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値の管理</Link>
+            は、基本料金を下げるための実務的な手段のひとつです。
           </p>
         </section>
 
+        {/* 電力量料金 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電力量料金の見方</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            <Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>
+            の見方
+          </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力量料金は、実際に使用した電力量に応じて増減する項目です。使用量が増えれば請求額も増え、使用量が減れば請求額も下がるのが基本です。
           </p>
@@ -107,21 +290,22 @@ export default function HighVoltageElectricityPricingPage() {
           </p>
         </section>
 
+        {/* 燃料費調整額・再エネ賦課金 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">燃料費調整額・再エネ賦課金の見方</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>
+            ・再エネ賦課金の見方
+          </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧電力の請求書では、燃料費調整額や再エネ賦課金も重要な項目です。これらは、基本料金や電力量料金とは別に請求額へ影響します。
             使用量の変化だけでなく、調整項目の増減もあわせて確認することが大切です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            使用量があまり変わっていないのに請求額が増えた場合、これらの項目が要因になっていることがあります。燃料費調整額の考え方は{" "}
-            <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              こちらの解説
-            </Link>
-            でも確認できます。
+            使用量があまり変わっていないのに請求額が増えた場合、これらの項目が要因になっていることがあります。
           </p>
         </section>
 
+        {/* 請求書で確認したい実務ポイント */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">請求書で確認したい実務ポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -133,10 +317,45 @@ export default function HighVoltageElectricityPricingPage() {
             <li>燃料費調整額の影響はどの程度か</li>
             <li>再エネ賦課金はいくらか</li>
             <li>使用量は前月・前年同月と比べてどうか</li>
-            <li>契約電力や契約条件に変化はないか</li>
+            <li>
+              <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>
+              や契約条件に変化はないか
+            </li>
           </ul>
         </section>
 
+        {/* 高圧電力の関連ガイドハブ */}
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">高圧電力の関連ガイド</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            料金構造の全体像を把握したうえで、目的に応じた詳細ガイドへ進んでください。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            <Link
+              href="/high-voltage-electricity-bill-guide"
+              className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-300 hover:shadow-md"
+            >
+              <p className="font-semibold text-sky-700">高圧電力の請求書ガイド</p>
+              <p className="mt-1 text-xs text-slate-600">実際の請求書を項目別に読み解く手順を整理。確認漏れを防ぐためのチェックリスト付き。</p>
+            </Link>
+            <Link
+              href="/high-voltage-quotation-guide"
+              className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-300 hover:shadow-md"
+            >
+              <p className="font-semibold text-sky-700">高圧電力の見積ガイド</p>
+              <p className="mt-1 text-xs text-slate-600">新規契約・切替時に見積書で確認すべき項目と比較の落とし穴を解説。</p>
+            </Link>
+            <Link
+              href="/high-voltage-contract-review-points"
+              className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-300 hover:shadow-md"
+            >
+              <p className="font-semibold text-sky-700">高圧電力の契約見直しポイント</p>
+              <p className="mt-1 text-xs text-slate-600">更新時期・解約条件・単価比較の実務ポイントを体系的にまとめています。</p>
+            </Link>
+          </div>
+        </section>
+
+        {/* 高圧契約の見直し */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">高圧契約の見直しで確認したいこと</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -144,59 +363,10 @@ export default function HighVoltageElectricityPricingPage() {
             燃料費調整額や市場連動の影響、固定型と市場連動型の適合性、リスク許容度との一致をあわせて確認します。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            料金表の見た目だけでは分からない差が、請求構造の中にあることもあります。比較の実行は{" "}
-            <Link href="/compare" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              比較ページ
-            </Link>
-            が起点になります。
+            料金表の見た目だけでは分からない差が、請求構造の中にあることもあります。
+            <Link href="/compare" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">比較ページ</Link>
+            を起点に、現行契約と候補を同じ前提で比較してみてください。
           </p>
-        </section>
-
-        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">高圧電力の料金構成と計算例（契約電力500kW・月50,000kWh）</h2>
-          <table className="mt-4 w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">請求項目</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">算定方法</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">単価目安</th>
-                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">月額</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力×単価×力率割引</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500〜1,900円/kW</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約72.8万円</span></td>
-              </tr>
-              <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×単価</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">15〜20円/kWh</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約80万円</span></td>
-              </tr>
-              <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×調整単価</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲2〜+5円/kWh</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">▲10〜+25万円</td>
-              </tr>
-              <tr>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量×賦課金単価</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約17.5万円</span></td>
-              </tr>
-              <tr className="bg-sky-50">
-                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
-                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約160〜195万円</td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="mt-3 text-xs text-slate-500">※ 基本料金は500kW×1,500円/kW×力率割引0.97＝727,500円で計算。電力量料金は16円/kWh想定。</p>
         </section>
 
         <RelatedLinks
@@ -204,33 +374,33 @@ export default function HighVoltageElectricityPricingPage() {
           intro="高圧料金の読み方を、要因分析と契約比較へつなげるための導線です。"
           links={[
             {
+              href: "/contract-demand-what-is-it",
+              title: "契約電力とは",
+              description: "基本料金の算定に直結する契約電力の仕組みと、見直し判断の基礎を整理しています。",
+            },
+            {
+              href: "/basic-charge-explained",
+              title: "基本料金の仕組み",
+              description: "固定費として毎月発生する基本料金の算定方法と削減アプローチを解説しています。",
+            },
+            {
+              href: "/energy-charge-explained",
+              title: "電力量料金の仕組み",
+              description: "使用量に連動する変動費の見方と、単価比較の注意点を整理しています。",
+            },
+            {
+              href: "/demand-value-guide",
+              title: "デマンド値の管理",
+              description: "基本料金を左右するデマンド値の仕組みと、実務的な管理方法を確認できます。",
+            },
+            {
               href: "/fuel-cost-adjustment",
               title: "燃料費調整額の仕組み",
               description: "月次請求に影響する燃調費の基本と、確認ポイントを整理しています。",
             },
             {
-              href: "/why-business-electricity-prices-rise",
-              title: "法人の電気料金が上がる理由",
-              description: "請求額を押し上げる主な要因を全体像で確認できます。",
-            },
-            {
-              href: "/market-linked-plan",
-              title: "市場連動型プラン",
-              description: "市場価格の影響を受ける契約の特徴を確認できます。",
-            },
-            {
-              href: "/fixed-price-plan",
-              title: "固定プラン",
-              description: "料金の見通しを重視する契約の考え方を整理しています。",
-            },
-            {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動型と固定型の違い",
-              description: "契約選定時の比較軸をまとめて確認できます。",
-            },
-            {
               href: "/last-resort-supply-high-voltage",
-              title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
+              title: "高圧・特別高圧の最終保障供給",
               description: "最終保障供給局面での高圧実務の確認項目を整理できます。",
             },
           ]}
@@ -241,13 +411,10 @@ export default function HighVoltageElectricityPricingPage() {
           description="解説で確認した観点をもとに、現行契約と候補を同じ前提で比較すると、見直し余地が見えやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/simulate", label: "シミュレーションを始める" },
+            { href: "/articles/basic", label: "基礎知識をまとめて読む" },
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="high-voltage-electricity-pricing" />
-      </div>
     </main>
   );
 }

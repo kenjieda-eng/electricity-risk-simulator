@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
-const pageTitle = "法人向け電気料金の内訳とは｜基本料金・電力量料金・燃料費調整額・再エネ賦課金の見方";
+const pageTitle =
+  "法人向け電気料金の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金の構成を解説";
 const pageDescription =
-  "法人向け電気料金の内訳を、基本料金・電力量料金・燃料費調整額・再エネ賦課金の4項目から整理します。請求書をどの順番で確認すると切り分けしやすいか、総額が上がったときの初期チェックの進め方も分かります。";
+  "法人向け電気料金の内訳を基本料金・電力量料金・燃料費調整額・再エネ賦課金の4項目で解説。構成比の目安、契約区分別の料金水準、業種別の構成比の違いも整理。請求書確認や見積比較の基礎になります。";
 
 const linkClass = "text-sky-700 underline underline-offset-2 hover:text-sky-900";
 
@@ -71,6 +71,90 @@ const breakdownRows = [
     monthly: "使用量に連動",
     review: "契約見直しでは変えにくい",
     perspective: "契約の安さとは別枠の制度要因として整理します。",
+  },
+];
+
+const compositionRatioRows = [
+  {
+    item: "基本料金",
+    ratio: "25〜35%",
+    volatility: "固定的（契約電力に連動）",
+    note: "使用量が減っても下がりにくい",
+  },
+  {
+    item: "電力量料金",
+    ratio: "40〜50%",
+    volatility: "使用量に比例",
+    note: "最大の構成比を占めるケースが多い",
+  },
+  {
+    item: "燃料費調整額",
+    ratio: "5〜15%",
+    volatility: "月次変動（燃料価格連動）",
+    note: "高騰期には構成比が上昇しやすい",
+  },
+  {
+    item: "再エネ賦課金",
+    ratio: "5〜10%",
+    volatility: "年度改定・使用量比例",
+    note: "単価は毎年度改定",
+  },
+  {
+    item: "その他（容量拠出金等）",
+    ratio: "0〜5%",
+    volatility: "制度に基づく",
+    note: "契約種別や市場連動プランで変動",
+  },
+];
+
+const contractTierRows = [
+  {
+    tier: "低圧（動力）",
+    demand: "50kW未満",
+    usage: "1,000〜10,000kWh",
+    monthly: "3〜30万円",
+    detail: "/high-voltage-electricity-pricing",
+  },
+  {
+    tier: "高圧",
+    demand: "50〜2,000kW",
+    usage: "10,000〜500,000kWh",
+    monthly: "30〜1,500万円",
+    detail: "/high-voltage-electricity-pricing",
+  },
+  {
+    tier: "特別高圧",
+    demand: "2,000kW超",
+    usage: "500,000kWh〜",
+    monthly: "1,500万円〜",
+    detail: "/extra-high-voltage-electricity-pricing",
+  },
+];
+
+const industryPatterns = [
+  {
+    industry: "工場・製造業",
+    feature: "電力量料金の比率が高い",
+    reason: "稼働時間が長く使用量が大きいため、使用量連動費用が総額の過半を占めるケースが多い。",
+    tip: "燃料費調整額の影響も使用量分だけ拡大するため、調整項目の振れに注意が必要。",
+  },
+  {
+    industry: "オフィス・商業施設",
+    feature: "基本料金の比率が比較的高い",
+    reason: "空調・照明が多く契約電力は高めに設定されるが、稼働が昼間・平日に集中しやすい。",
+    tip: "契約電力の見直しで固定費を下げられる余地があるか確認する価値がある。",
+  },
+  {
+    industry: "冷凍倉庫・スーパー",
+    feature: "通年で使用量が安定的に高い",
+    reason: "冷凍・冷蔵設備の常時稼働により季節変動が小さく、ベースロード消費が大きい。",
+    tip: "使用量の変動幅が小さい分、燃料費調整額・再エネ賦課金の単価変動が読みやすい。",
+  },
+  {
+    industry: "病院・医療機関",
+    feature: "24時間稼働でベースロードが高い",
+    reason: "医療機器・空調・照明を24時間維持するため、基本料金・電力量料金とも高水準が続きやすい。",
+    tip: "固定費の比率が高いため、デマンド管理による契約電力の引き下げが効果的なケースがある。",
   },
 ];
 
@@ -180,7 +264,7 @@ const nextReadingLinks = [
     description: "基本料金の前提となる考え方を整理したいときに向いています。",
   },
   {
-    href: "/demand-charge",
+    href: "/contract-demand-what-is-it",
     title: "デマンドとは",
     description: "ピーク使用と契約電力の関係を確認したいときの詳細ページです。",
   },
@@ -216,6 +300,9 @@ export const metadata: Metadata = {
     "請求書 電気料金 内訳 法人",
     "法人向け 電気料金 見積書",
     "燃料費調整額 再エネ賦課金",
+    "電気料金 構成比",
+    "基本料金 電力量料金 割合",
+    "契約区分 料金水準",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/business-electricity-bill-breakdown",
@@ -247,6 +334,25 @@ export const metadata: Metadata = {
 export default function BusinessElectricityBillBreakdownPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくずナビ */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className={linkClass}>
+              ホーム
+            </Link>
+          </li>
+          <li aria-hidden="true">›</li>
+          <li>
+            <Link href="/articles/basic" className={linkClass}>
+              基礎から知る
+            </Link>
+          </li>
+          <li aria-hidden="true">›</li>
+          <li className="text-slate-700">電気料金の内訳</li>
+        </ol>
+      </nav>
+
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の内訳とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
@@ -264,7 +370,14 @@ export default function BusinessElectricityBillBreakdownPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             このページでは、まず全体像をつかむことに重点を置きます。詳細な算定ルールではなく、「どう分けて見るか」「どこから確認するか」を整理し、
-            請求書確認や見積比較へ自然につなげる入口ページとして使える構成にしています。
+            <Link href="/how-to-read-electricity-bill" className={linkClass}>
+              請求書確認
+            </Link>
+            や
+            <Link href="/how-to-read-electricity-quote" className={linkClass}>
+              見積比較
+            </Link>
+            へ自然につなげる入口ページとして使える構成にしています。
           </p>
         </section>
 
@@ -272,6 +385,9 @@ export default function BusinessElectricityBillBreakdownPage() {
           <h2 className="text-xl font-semibold text-slate-900">このページで分かること</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>4分類で法人向け電気料金の全体像を見る考え方</li>
+            <li>料金構成比の目安と変動特性</li>
+            <li>契約区分（低圧・高圧・特別高圧）ごとの料金水準</li>
+            <li>業種によって異なる構成比の違い</li>
             <li>請求書を見る順番と、総額上昇時の初期チェックの進め方</li>
             <li>請求確認から見積比較へつなげるときの基本的な視点</li>
           </ul>
@@ -289,7 +405,23 @@ export default function BusinessElectricityBillBreakdownPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人向け電気料金は複数の項目の積み上げで決まる</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            請求額の全体像は、まず「基本料金」「電力量料金」「燃料費調整額」「再エネ賦課金」の4分類でつかむと整理しやすくなります。
+            請求額の全体像は、まず「
+            <Link href="/basic-charge-explained" className={linkClass}>
+              基本料金
+            </Link>
+            」「
+            <Link href="/energy-charge-explained" className={linkClass}>
+              電力量料金
+            </Link>
+            」「
+            <Link href="/fuel-cost-adjustment" className={linkClass}>
+              燃料費調整額
+            </Link>
+            」「
+            <Link href="/renewable-energy-surcharge" className={linkClass}>
+              再エネ賦課金
+            </Link>
+            」の4分類でつかむと整理しやすくなります。
             それぞれ性質が違うため、同じ総額上昇でも見に行く先が変わります。
           </p>
           <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-900 sm:text-base">
@@ -345,14 +477,96 @@ export default function BusinessElectricityBillBreakdownPage() {
           </div>
         </section>
 
+        {/* 新規: 料金構成比の目安テーブル */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">料金構成比の目安</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            実際の請求書で各項目がどのくらいの割合を占めるかは、業種・使用量・市況によって変わります。
+            ただし、以下の目安を知っておくと「思ったより基本料金が高い」「燃料費調整額の影響が大きい」といった異常値に気づきやすくなります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">項目</th>
+                  <th className="border border-slate-200 px-3 py-2">構成比目安</th>
+                  <th className="border border-slate-200 px-3 py-2">変動特性</th>
+                  <th className="border border-slate-200 px-3 py-2">実務メモ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {compositionRatioRows.map((row) => (
+                  <tr key={row.item}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">{row.item}</td>
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-sky-700">{row.ratio}</td>
+                    <td className="border border-slate-200 px-3 py-2">{row.volatility}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-500">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500 sm:text-sm">
+            ※構成比は高圧契約の標準的な事業所を想定した目安です。燃料費調整額は市況によって構成比が大きく変動します。2022〜2023年の高騰期には15%を超えるケースも見られました。
+          </p>
+        </section>
+
+        {/* 新規: 契約区分別料金水準 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約区分別の料金水準目安</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            法人の電気契約は、契約電力の大きさによって
+            <Link href="/high-voltage-electricity-pricing" className={linkClass}>
+              高圧
+            </Link>
+            ・
+            <Link href="/extra-high-voltage-electricity-pricing" className={linkClass}>
+              特別高圧
+            </Link>
+            に区分されます。区分が変わると料金メニューの構造も変わるため、自社がどの区分に当たるかを把握しておくことが請求確認の出発点になります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">契約区分</th>
+                  <th className="border border-slate-200 px-3 py-2">契約電力目安</th>
+                  <th className="border border-slate-200 px-3 py-2">月間使用量目安</th>
+                  <th className="border border-slate-200 px-3 py-2">月額電気代目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                {contractTierRows.map((row) => (
+                  <tr key={row.tier}>
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">
+                      <Link href={row.detail} className={linkClass}>
+                        {row.tier}
+                      </Link>
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2">{row.demand}</td>
+                    <td className="border border-slate-200 px-3 py-2">{row.usage}</td>
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-sky-700">{row.monthly}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500 sm:text-sm">
+            ※月額の幅は契約電力・使用量・単価水準・調整項目の影響によって大きく変動します。実際の見積・請求書の数字と照合しながら使ってください。
+          </p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">請求額のイメージを数字で見る</h2>
           <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <p className="text-sm font-semibold text-slate-900">理解用サンプル</p>
+              <p className="text-sm font-semibold text-slate-900">理解用サンプル（高圧・月間50,000kWh規模）</p>
               <dl className="mt-3 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
                 {sampleBillItems.map((item) => (
-                  <div key={item.label} className="flex items-center justify-between gap-4 border-b border-slate-200 pb-2 last:border-b-0 last:pb-0">
+                  <div
+                    key={item.label}
+                    className="flex items-center justify-between gap-4 border-b border-slate-200 pb-2 last:border-b-0 last:pb-0"
+                  >
                     <dt>{item.label}</dt>
                     <dd className="font-semibold text-slate-900">{item.amount}</dd>
                   </div>
@@ -366,10 +580,36 @@ export default function BusinessElectricityBillBreakdownPage() {
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">この例で見たいこと</p>
               <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                この例では、使用量連動の費用だけでなく、燃料費調整額や再エネ賦課金も総額に影響しています。総額だけを見ると分かりにくい変化も、
-                4分類で分けると説明しやすくなります。
+                この例では電力量料金が総額の約58%を占め、基本料金は約18%です。燃料費調整額と再エネ賦課金を合算すると約24%になり、
+                使用量を変えなくても市況・制度要因だけで総額が数万円単位で動く可能性があります。
+              </p>
+              <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                自社の請求書でも同様に構成比を計算すると、どの項目が変動リスクを持つかが見えてきます。
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* 新規: 業種別構成比の違い */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別構成比の違い</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気料金の内訳構成比は業種によって異なります。同じ料金体系の契約でも、稼働パターンや設備特性によって
+            「どの項目が大きいか」が変わります。自社の業種に近いパターンを参考に、請求書の見方を調整してみてください。
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            {industryPatterns.map((pattern) => (
+              <article key={pattern.industry} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">{pattern.industry}</h3>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">
+                  {pattern.feature}
+                </p>
+                <p className="mt-2 text-sm leading-7 text-slate-700">{pattern.reason}</p>
+                <p className="mt-2 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-700">
+                  実務メモ: {pattern.tip}
+                </p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -378,7 +618,10 @@ export default function BusinessElectricityBillBreakdownPage() {
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">基本料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            基本料金は固定費としての性格が強く、
+            <Link href="/basic-charge-explained" className={linkClass}>
+              基本料金
+            </Link>
+            は固定費としての性格が強く、
             {" "}
             <Link href="/contract-demand-what-is-it" className={linkClass}>
               契約電力
@@ -389,7 +632,7 @@ export default function BusinessElectricityBillBreakdownPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             契約電力の背景には
             {" "}
-            <Link href="/demand-charge" className={linkClass}>
+            <Link href="/contract-demand-what-is-it" className={linkClass}>
               デマンド
             </Link>
             {" "}
@@ -398,7 +641,10 @@ export default function BusinessElectricityBillBreakdownPage() {
 
           <h3 className="mt-6 text-lg font-semibold text-slate-900">電力量料金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電力量料金は使用量に応じて増減する項目です。ただし、請求額を見るときは使用量だけでなく単価条件もあわせて確認する必要があります。
+            <Link href="/energy-charge-explained" className={linkClass}>
+              電力量料金
+            </Link>
+            は使用量に応じて増減する項目です。ただし、請求額を見るときは使用量だけでなく単価条件もあわせて確認する必要があります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             見積比較に進む場面では、
@@ -412,16 +658,13 @@ export default function BusinessElectricityBillBreakdownPage() {
 
           <h3 className="mt-6 text-lg font-semibold text-slate-900">燃料費調整額</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            燃料費調整額は、燃料価格や制度要因を反映する項目です。前月比や前年同月比で動きやすく、使用量が大きく変わっていなくても請求額差が出る理由になります。
+            <Link href="/fuel-cost-adjustment" className={linkClass}>
+              燃料費調整額
+            </Link>
+            は、燃料価格や制度要因を反映する項目です。前月比や前年同月比で動きやすく、使用量が大きく変わっていなくても請求額差が出る理由になります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            詳しい仕組みは
-            {" "}
-            <Link href="/fuel-cost-adjustment" className={linkClass}>
-              燃料費調整額（燃調費）とは
-            </Link>
-            {" "}
-            で確認できます。契約によっては
+            契約によっては
             {" "}
             <Link href="/market-price-adjustment" className={linkClass}>
               市場価格調整額
@@ -432,16 +675,13 @@ export default function BusinessElectricityBillBreakdownPage() {
 
           <h3 className="mt-6 text-lg font-semibold text-slate-900">再エネ賦課金</h3>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は制度に基づく費用で、使用量に応じて増えます。契約の安さとは別枠で見たほうが整理しやすく、燃料費調整額と同じ要因として扱わないことが重要です。
+            <Link href="/renewable-energy-surcharge" className={linkClass}>
+              再エネ賦課金
+            </Link>
+            は制度に基づく費用で、使用量に応じて増えます。契約の安さとは別枠で見たほうが整理しやすく、燃料費調整額と同じ要因として扱わないことが重要です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            詳細は
-            {" "}
-            <Link href="/renewable-energy-surcharge" className={linkClass}>
-              再エネ賦課金とは
-            </Link>
-            {" "}
-            で個別に確認できます。このページでは、制度項目として切り分ける視点を押さえることを優先します。
+            単価は毎年度改定されるため、前年と同じ使用量でも賦課金額が変わることがあります。このページでは、制度項目として切り分ける視点を押さえることを優先します。
           </p>
         </section>
 
@@ -524,7 +764,13 @@ export default function BusinessElectricityBillBreakdownPage() {
               見積書の見方
             </Link>
             {" "}
-            を分けて見ると、役割の違いが整理しやすくなります。
+            を分けて見ると、役割の違いが整理しやすくなります。料金メニューを比較したい場合は
+            {" "}
+            <Link href="/compare" className={linkClass}>
+              比較ページ
+            </Link>
+            {" "}
+            も活用できます。
           </p>
         </section>
 
@@ -548,6 +794,9 @@ export default function BusinessElectricityBillBreakdownPage() {
               <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
                 <li>請求額の全体構造</li>
                 <li>各項目の役割の違い</li>
+                <li>構成比の目安と変動特性</li>
+                <li>契約区分別の料金水準</li>
+                <li>業種別の構成比の傾向</li>
                 <li>請求確認・見積比較の入口となる考え方</li>
               </ul>
             </div>
@@ -569,6 +818,7 @@ export default function BusinessElectricityBillBreakdownPage() {
             <li>初めて請求書を見る担当者</li>
             <li>契約更新前に全体像を確認したい方</li>
             <li>見積比較の前提知識を整理したい方</li>
+            <li>業種ごとの電気代の特徴を把握したい方</li>
           </ul>
         </section>
 
@@ -588,11 +838,22 @@ export default function BusinessElectricityBillBreakdownPage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人向け電気料金は、使用量だけでなく固定費・調整項目・制度項目を分けて見ることが重要です。請求確認と見積比較は役割が異なるため、
-            まずはこのページで全体像をつかみ、その後に詳細ページへ進むと判断しやすくなります。
+            法人向け電気料金は、使用量だけでなく固定費・調整項目・制度項目を分けて見ることが重要です。構成比の目安を知ることで異常値に気づきやすくなり、
+            契約区分や業種ごとの特性を理解しておくと自社の請求書の見方が一段と具体的になります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            請求確認と見積比較は役割が異なるため、まずはこのページで全体像をつかみ、その後に
+            <Link href="/how-to-read-electricity-bill" className={linkClass}>
+              請求書確認
+            </Link>
+            ・
+            <Link href="/how-to-read-electricity-quote" className={linkClass}>
+              見積書確認
+            </Link>
+            の詳細ページへ進むと判断しやすくなります。
           </p>
         </section>
 
@@ -621,14 +882,14 @@ export default function BusinessElectricityBillBreakdownPage() {
               description: "内訳のどの要因が効いているかを全体像でつなげられます。",
             },
             {
-              href: "/how-to-read-electricity-bill",
-              title: "電気料金の請求書で確認したいポイント",
-              description: "実際の請求書確認の手順へ進めます。",
+              href: "/high-voltage-electricity-pricing",
+              title: "高圧電力の料金と仕組み",
+              description: "高圧契約の料金体系を詳しく確認できます。",
             },
             {
-              href: "/contract-demand-what-is-it",
-              title: "契約電力とは",
-              description: "基本料金の前提となる考え方を整理できます。",
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧電力の料金と仕組み",
+              description: "大規模需要家向けの特別高圧の料金体系を整理できます。",
             },
           ]}
         />
@@ -638,13 +899,10 @@ export default function BusinessElectricityBillBreakdownPage() {
           description="現在の請求構造を整理してから比較に進むと、単価差だけでなく条件差まで含めて判断しやすくなります。"
           links={[
             { href: "/compare", label: "比較ページを見る" },
-            { href: "/simulate", label: "シミュレーションを始める" },
+            { href: "/", label: "シミュレーションを始める" },
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="business-electricity-bill-breakdown" />
-      </div>
     </main>
   );
 }

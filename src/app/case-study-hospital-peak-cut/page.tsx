@@ -253,7 +253,7 @@ export default function CaseStudyHospitalPeakCutPage() {
         <h2 className="text-xl font-semibold text-slate-900">医療施設の電気代削減でお悩みの方へ</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           「医療機器があるからデマンド制御は無理」と思っている施設でも、設備を適切に分類することで十分な効果が得られます。
-          <Link href="/demand-charge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドの仕組み</Link>を理解した上で、
+          <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドの仕組み</Link>を理解した上で、
           まず過去1〜2年の最大デマンド値を確認することを推奨します。
         </p>
       </section>
@@ -266,7 +266,7 @@ export default function CaseStudyHospitalPeakCutPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
-            { href: "/demand-charge", title: "デマンドとは", description: "基本料金を決めるデマンドの仕組みと削減方法" },
+            { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "基本料金を決めるデマンドの仕組みと削減方法" },
             { href: "/business-electricity-bill-breakdown", title: "法人向け電気料金の内訳とは", description: "基本料金・電力量料金・燃調費・再エネ賦課金の仕組み" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と新電力切り替えを組み合わせた工場事例" },
             { href: "/case-study-office-building-review", title: "オフィスビル：契約電力の適正化で年間580万円削減", description: "オフィスビルの契約見直し事例" },

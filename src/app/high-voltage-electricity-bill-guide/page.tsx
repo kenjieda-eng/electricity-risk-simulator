@@ -135,7 +135,7 @@ export default function HighVoltageElectricityBillGuidePage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、高圧電力の請求書で確認すべき主要項目について、見積比較への活用方法も含めて整理します。全体の料金構造については{" "}
           <Link
-            href="/how-to-read-business-electricity-bill"
+            href="/how-to-read-electricity-bill"
             className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
           >
             法人向け電気料金請求書の見方
@@ -337,7 +337,7 @@ export default function HighVoltageElectricityBillGuidePage() {
                 "電力量料金の構造と時間帯別料金の確認ポイント。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の全体構造と主要項目の読み方を整理。",
             },

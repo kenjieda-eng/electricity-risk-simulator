@@ -268,7 +268,7 @@ export default function WhatIsPowerFactorPage() {
               description: "基本料金・電力量料金など電気料金構成の全体像。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "力率条件が記載された見積書の読み方。",
             },

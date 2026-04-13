@@ -322,7 +322,7 @@ export default function FactoryElectricityCostBenchmarkPage() {
           heading="関連ページ"
           links={[
             { href: "/electricity-cost-benchmark-by-industry", title: "業種別 法人電気代の月額相場一覧", description: "業種横断での電気代相場を一覧で比較" },
-            { href: "/demand-charge", title: "デマンドとは", description: "工場コスト削減の核心・デマンド管理の仕組みを解説" },
+            { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "工場コスト削減の核心・デマンド管理の仕組みを解説" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金をどれだけ下げられるかをシミュレーション" },
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "契約電力の設定と基本料金の関係" },
           ]}

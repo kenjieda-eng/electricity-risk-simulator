@@ -313,7 +313,7 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
               description: "見直しの準備段階で確認すべき項目を一覧で整理。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を受け取った際にどこを比較すればよいか。",
             },

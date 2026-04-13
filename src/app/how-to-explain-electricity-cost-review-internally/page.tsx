@@ -353,7 +353,7 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
               description: "更新が近い法人向けの時系列での準備手順。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書の比較ポイントを項目別に確認。",
             },

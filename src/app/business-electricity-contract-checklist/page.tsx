@@ -156,7 +156,7 @@ export default function BusinessElectricityContractChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書には、見積比較や社内説明に使える情報が多く含まれています。以下の項目を直近12か月分確認しておくと、見積の前提条件をそろえやすくなります。請求書の読み方については{" "}
             <Link
-              href="/how-to-read-business-electricity-bill"
+              href="/how-to-read-electricity-bill"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金請求書の見方
@@ -188,7 +188,7 @@ export default function BusinessElectricityContractChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積依頼を行う際に、以下の資料が揃っていると、提案の精度が上がり、比較作業もスムーズになります。見積書を受け取った後の確認については{" "}
             <Link
-              href="/how-to-read-business-electricity-quotation"
+              href="/how-to-read-electricity-quote"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金見積書の見方
@@ -300,12 +300,12 @@ export default function BusinessElectricityContractChecklistPage() {
           intro="チェックリストの各項目をさらに深掘りしたいときは、以下のページをあわせてご覧ください。"
           links={[
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の各項目の意味と、見積比較に使うための確認ポイントを整理。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を受け取ったとき、どこを比較すればよいかを項目別に解説。",
             },

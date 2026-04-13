@@ -186,7 +186,7 @@ export default function SelfDiagnosisContractReviewPage() {
               description: "2つのプランのリスク・コスト構造の違いを比較して理解する。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の各項目の意味と、見直し判断に使える確認ポイントを解説。",
             },

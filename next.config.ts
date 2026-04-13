@@ -17,6 +17,22 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/:path*`,
         permanent: true,
       },
+      // Consolidated pages: redirect deprecated slugs to surviving pages
+      {
+        source: "/how-to-read-business-electricity-quotation",
+        destination: `${CANONICAL_BASE_URL}/how-to-read-electricity-quote`,
+        permanent: true,
+      },
+      {
+        source: "/how-to-read-business-electricity-bill",
+        destination: `${CANONICAL_BASE_URL}/how-to-read-electricity-bill`,
+        permanent: true,
+      },
+      {
+        source: "/demand-charge",
+        destination: `${CANONICAL_BASE_URL}/contract-demand-what-is-it`,
+        permanent: true,
+      },
     ];
   },
 };

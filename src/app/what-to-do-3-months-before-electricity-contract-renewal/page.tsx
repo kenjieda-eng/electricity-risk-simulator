@@ -227,12 +227,12 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
               description: "見直しの準備で確認すべき全項目を一覧で整理。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を受け取った際にどこを比較すればよいか。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書から見積比較に使う情報を整理する方法。",
             },

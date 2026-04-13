@@ -386,7 +386,7 @@ export default function EmergencyElectricityBillDoubledPage() {
           heading="関連ページ"
           links={[
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "請求書の読み方",
               description: "電気料金請求書の各項目を法人担当者向けに解説。燃調・市場価格調整額の確認ポイント。",
             },

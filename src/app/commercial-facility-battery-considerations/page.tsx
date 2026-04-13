@@ -254,7 +254,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
               description: "太陽光発電の費用対効果が出やすい条件の整理。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンドとは",
               description: "契約電力と基本料金の関係をわかりやすく解説。",
             },

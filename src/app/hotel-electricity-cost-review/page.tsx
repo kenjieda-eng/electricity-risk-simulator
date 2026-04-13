@@ -279,7 +279,7 @@ export default function HotelElectricityCostReviewPage() {
               description: "使用量が大きい業種に固定プランが向きやすい理由。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンド料金（基本料金）の仕組み",
               description: "デマンドピーク管理と基本料金削減の基礎知識。",
             },

@@ -322,7 +322,7 @@ export default function DemandValueGuidePage() {
                 "見積書で基本料金・デマンド条件を確認する方法。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description:
                 "請求書全体の構造と各項目の読み方を整理。",

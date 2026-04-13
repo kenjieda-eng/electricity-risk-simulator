@@ -283,7 +283,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
               description: "利益率が低い業種に固定プランが向きやすい理由。",
             },
             {
-              href: "/demand-charge",
+              href: "/contract-demand-what-is-it",
               title: "デマンド料金（基本料金）の仕組み",
               description: "デマンドピーク管理と基本料金削減の基礎知識。",
             },

@@ -157,7 +157,7 @@ export default function ApprovalDocumentKeyPointsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書データの読み方については{" "}
             <Link
-              href="/how-to-read-business-electricity-bill"
+              href="/how-to-read-electricity-bill"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               法人向け電気料金請求書の見方
@@ -240,7 +240,7 @@ export default function ApprovalDocumentKeyPointsPage() {
               description: "診断結果を稟議書の根拠資料として活用する方法。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "稟議に必要な実績データを請求書から読み取る方法。",
             },

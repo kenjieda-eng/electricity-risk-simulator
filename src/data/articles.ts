@@ -61,14 +61,11 @@ export const articleCategories: ArticleCategory[] = [
     recommendedReadingOrder: [
       "business-electricity-bill-breakdown",
       "contract-demand-what-is-it",
-      "demand-charge",
       "business-electricity-price-benchmark",
       "high-voltage-electricity-pricing",
       "extra-high-voltage-electricity-pricing",
       "how-to-read-electricity-bill",
       "how-to-read-electricity-quote",
-      "how-to-read-business-electricity-bill",
-      "how-to-read-business-electricity-quotation",
       "high-voltage-electricity-bill-guide",
       "extra-high-voltage-electricity-bill-guide",
       "high-voltage-quotation-guide",
@@ -686,15 +683,7 @@ export const articleList: ArticleMeta[] = [
     order: 1,
     publishedAt: "2025-08-01",
   },
-  {
-    title: "デマンドとは",
-    slug: "demand-charge",
-    description: "デマンドの考え方と、契約電力・基本料金との関係を法人向けに整理します。",
-    category: "基礎から知る",
-    categorySlug: "basic",
-    order: 2,
-    publishedAt: "2025-08-02",
-  },
+  // demand-charge → merged into contract-demand-what-is-it (301 redirect)
   {
     title: "法人向け電気料金の内訳とは",
     slug: "business-electricity-bill-breakdown",
@@ -1680,26 +1669,8 @@ export const articleList: ArticleMeta[] = [
     featured: true,
     publishedAt: "2026-04-10",
   },
-  {
-    title: "法人向け電気料金見積書の見方",
-    slug: "how-to-read-business-electricity-quotation",
-    description:
-      "見積書を受け取ったときにどこを比較すればよいかを項目別に整理。単価以外に確認したいポイントを解説します。",
-    category: "基礎から知る",
-    categorySlug: "basic",
-    order: 9,
-    publishedAt: "2026-04-10",
-  },
-  {
-    title: "法人向け電気料金請求書の見方",
-    slug: "how-to-read-business-electricity-bill",
-    description:
-      "請求書の各項目の意味と、見積比較や社内説明に活用するための確認ポイントを整理します。",
-    category: "基礎から知る",
-    categorySlug: "basic",
-    order: 10,
-    publishedAt: "2026-04-10",
-  },
+  // how-to-read-business-electricity-quotation → merged into how-to-read-electricity-quote (301 redirect)
+  // how-to-read-business-electricity-bill → merged into how-to-read-electricity-bill (301 redirect)
   {
     title: "スーパーマーケットの電気料金見直しポイント",
     slug: "supermarket-electricity-cost-review",

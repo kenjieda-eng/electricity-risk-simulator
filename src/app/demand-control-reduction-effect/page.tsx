@@ -371,7 +371,7 @@ export default function DemandControlReductionEffectPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
-            { href: "/demand-charge", title: "デマンドとは", description: "デマンドの仕組みと基本料金への影響を詳しく解説" },
+            { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "デマンドの仕組みと基本料金への影響を詳しく解説" },
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "契約電力の設定方法と見直しのポイント" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した施策マップ" },
@@ -386,7 +386,7 @@ export default function DemandControlReductionEffectPage() {
           description="現在の契約電力・月間使用量を入力して、基本料金の削減余地とリスクをシミュレーションできます。"
           links={[
             { href: "/", label: "シミュレーターで診断する" },
-            { href: "/demand-charge", label: "デマンドの仕組みを学ぶ" },
+            { href: "/contract-demand-what-is-it", label: "デマンドの仕組みを学ぶ" },
           ]}
         />
       </div>

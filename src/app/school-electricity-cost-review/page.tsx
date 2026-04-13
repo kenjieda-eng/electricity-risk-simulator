@@ -299,7 +299,7 @@ export default function SchoolElectricityCostReviewPage() {
               description: "24時間稼働と予算制約を踏まえた考え方。",
             },
             {
-              href: "/how-to-read-business-electricity-bill",
+              href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の各項目を見積比較に活用するためのポイント。",
             },

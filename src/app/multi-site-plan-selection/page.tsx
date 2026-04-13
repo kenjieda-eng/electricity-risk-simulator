@@ -262,7 +262,7 @@ export default function MultiSitePlanSelectionPage() {
               description: "多拠点の見直し準備に使える確認項目一覧。",
             },
             {
-              href: "/how-to-read-business-electricity-quotation",
+              href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "複数拠点の見積書を比較する際のポイント。",
             },
