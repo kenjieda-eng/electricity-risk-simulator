@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle =
-  "円安で法人・企業・自治体の電気料金・電気代はどう上がる？為替リスクを解説";
+  "円安で電気料金・電気代はどう上がるか｜為替水準別の影響試算と過去の事例";
 const pageDescription =
-  "円安が法人・企業・自治体の電気料金・電気代に与える影響を解説。輸入燃料コスト、燃料費調整額、市場価格、固定プランと市場連動プランの違いを整理します。";
+  "円安が法人・企業・自治体の電気料金・電気代に与える影響を為替水準別に試算。110円〜170円の燃調費への影響と月5万kWhの月額コスト変化、過去3局面の事例を整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -45,6 +45,70 @@ export const metadata: Metadata = {
   },
 };
 
+const exchangeRateImpact = [
+  {
+    rate: "110円（2019年水準）",
+    lngImpact: "基準",
+    fuelAdjImpact: "±0円/kWh",
+    monthlyImpact: "±0",
+    isBase: true,
+  },
+  {
+    rate: "130円",
+    lngImpact: "+18%",
+    fuelAdjImpact: "+0.5〜1.0円/kWh",
+    monthlyImpact: "+2.5〜5万円",
+  },
+  {
+    rate: "150円（2024年水準）",
+    lngImpact: "+36%",
+    fuelAdjImpact: "+1.0〜2.0円/kWh",
+    monthlyImpact: "+5〜10万円",
+  },
+  {
+    rate: "160円",
+    lngImpact: "+45%",
+    fuelAdjImpact: "+1.5〜2.5円/kWh",
+    monthlyImpact: "+7.5〜12.5万円",
+  },
+  {
+    rate: "170円（危機水準）",
+    lngImpact: "+55%",
+    fuelAdjImpact: "+2.0〜3.5円/kWh",
+    monthlyImpact: "+10〜17.5万円",
+    isCrisis: true,
+  },
+];
+
+const historicalEvents = [
+  {
+    period: "2012-2013年",
+    rate: "80→105円",
+    background: "アベノミクス",
+    impact: "燃調費+1〜2円/kWh",
+  },
+  {
+    period: "2022年",
+    rate: "115→150円",
+    background: "日米金利差拡大",
+    impact: "燃調費+3〜5円/kWh（LNG高と重複）",
+  },
+  {
+    period: "2024年",
+    rate: "140→160円",
+    background: "金利差継続",
+    impact: "燃調費の高止まり要因",
+  },
+];
+
+const checklist = [
+  "直近3ヶ月の請求書で燃料費調整額の推移を確認し、為替との連動を把握する",
+  "現在の契約が固定か市場連動かを確認し、為替変動がどの項目に反映されるか整理する",
+  "見積取得時に「為替前提条件」を必ず確認し、前提が変わった場合の再見積条件を明確にする",
+  "年間予算に「円安+10円シナリオ（+1〜2円/kWh）」の安全幅を加えておく",
+  "契約更新の6ヶ月前に複数社へ見積依頼し、为替リスク込みの総額で比較する",
+];
+
 export default function ElectricityCostRiskYenDepreciationPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -57,14 +121,14 @@ export default function ElectricityCostRiskYenDepreciationPage() {
       </nav>
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          円安で法人・企業・自治体の電気料金・電気代はどう上がるか
+          円安で電気料金・電気代はどう上がるか｜為替水準別の影響試算と過去の事例
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           電気料金は国内要因だけで決まるわけではありません。燃料を海外から輸入する日本では、為替の変動が発電コストに波及しやすく、
           法人・企業・自治体の電気代にも影響します。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、円安がどのような経路で請求額に反映されるのかを、専門用語に偏りすぎず整理します。
+          このページでは、円安がどのような経路で請求額に反映されるのかを、為替水準別の影響試算と過去事例を交えて整理します。
         </p>
       </header>
 
@@ -77,6 +141,93 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             この変化は発電コストに波及し、結果として法人・企業・自治体の電気料金・電気代に反映されやすくなります。
           </p>
+        </section>
+
+        {/* Table 1: 為替水準と燃調費への影響 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">為替水準と燃調費への影響</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2019年水準（110円）を基準に、円安が進行した場合の燃料費調整額への影響と月5万kWhの月額コスト変化を試算します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50">
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">為替水準（円/ドル）</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">LNG調達コスト影響</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">燃調費への影響（目安）</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">月5万kWhの月額影響</th>
+                </tr>
+              </thead>
+              <tbody>
+                {exchangeRateImpact.map((row) => (
+                  <tr
+                    key={row.rate}
+                    className={`border-b border-slate-100 ${row.isCrisis ? "bg-red-50 font-semibold" : row.isBase ? "bg-slate-50" : "hover:bg-slate-50"}`}
+                  >
+                    <td className="px-4 py-3 text-slate-800">{row.rate}</td>
+                    <td className="px-4 py-3 text-slate-700">{row.lngImpact}</td>
+                    <td className={`px-4 py-3 ${row.isCrisis ? "text-red-700 font-bold" : "text-slate-700"}`}>{row.fuelAdjImpact}</td>
+                    <td className={`px-4 py-3 ${row.isCrisis ? "text-red-700 font-bold" : "text-slate-700"}`}>{row.monthlyImpact}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 影響幅は試算値。実際の燃調費は電力会社の計算方式・時期・LNG価格水準により異なります。基本料金・消費税は含みません。
+          </p>
+        </section>
+
+        {/* Table 2: 過去の円安局面と電気料金への影響 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">過去の円安局面と電気料金への影響</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            過去の主要な円安局面において、電気料金（特に燃料費調整額）にどのような影響が生じたかを整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50">
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">時期</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">為替水準</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">背景</th>
+                  <th className="px-4 py-3 text-left font-semibold text-slate-700">電気料金への影響</th>
+                </tr>
+              </thead>
+              <tbody>
+                {historicalEvents.map((row) => (
+                  <tr key={row.period} className="border-b border-slate-100 hover:bg-slate-50">
+                    <td className="px-4 py-3 font-medium text-slate-800">{row.period}</td>
+                    <td className="px-4 py-3 text-slate-700">{row.rate}</td>
+                    <td className="px-4 py-3 text-slate-700">{row.background}</td>
+                    <td className="px-4 py-3 text-slate-700">{row.impact}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 影響幅はLNG価格・需給状況との複合要因。円安単独の影響ではない場合を含みます。
+          </p>
+        </section>
+
+        {/* Checklist */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">円安リスクへの対応チェックリスト</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            円安局面では以下5点を確認・対応しておくことで、電気料金上振れへの備えを整えられます。
+          </p>
+          <ul className="mt-4 space-y-3">
+            {checklist.map((item, index) => (
+              <li key={index} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-slate-400 text-xs font-bold text-slate-500">
+                  {index + 1}
+                </span>
+                <span className="text-sm leading-7 text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -128,21 +279,6 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             これらを分けて確認すると、円安局面でどこに影響が出やすいかを把握しやすくなります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">円安局面で契約を見直すときの考え方</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積比較は単価だけでなく、調整項目を含めた総額で確認することが重要です。短期の安さだけでなく、
-            中長期の変動リスクに安全幅を持つ視点が、法人の実務では有効です。
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            比較の具体的な進め方は{" "}
-            <Link href="/how-to-compare-electricity-suppliers" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              新電力を比較するときのポイント
-            </Link>
-            をご確認ください。
           </p>
         </section>
 
