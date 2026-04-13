@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function WhichCompaniesBenefitMostFromReviewPage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="見直し効果が出やすい会社"
       slug="which-companies-benefit-most-from-review"
       title={pageTitle}
       lead={[

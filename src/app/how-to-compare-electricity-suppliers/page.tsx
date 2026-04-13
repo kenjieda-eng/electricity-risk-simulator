@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+
 
 const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
 const pageDescription =
@@ -48,7 +48,14 @@ export const metadata: Metadata = {
 export default function HowToCompareElectricitySuppliersPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/review-points" className="underline-offset-2 hover:underline">見直しポイントを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">新電力の比較ポイント</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">新電力を比較するときのポイント</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           電力会社の比較では、提示単価だけを見ると判断を誤りやすくなります。同じように見える見積でも、料金の仕組みや契約条件が異なる場合があります。
@@ -236,9 +243,6 @@ export default function HowToCompareElectricitySuppliersPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="how-to-compare-electricity-suppliers" />
-      </div>
     </main>
   );
 }

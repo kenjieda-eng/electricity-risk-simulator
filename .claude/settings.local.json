@@ -54,7 +54,8 @@
       "Bash(rm -rf src/app/demand-charge)",
       "Bash([ -d \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$dir\" ])",
       "Bash(fuel-mix-price)",
-      "Bash(monthly-electricity-price-trend\")"
+      "Bash(monthly-electricity-price-trend\")",
+      "Bash(awk 'NR % 2 {printf \"%s \", $0; next} {print $0}')"
     ]
   }
 }

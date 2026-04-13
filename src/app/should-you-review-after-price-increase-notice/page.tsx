@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="値上げ通知が来たとき"
       slug="should-you-review-after-price-increase-notice"
       title={pageTitle}
       lead={[

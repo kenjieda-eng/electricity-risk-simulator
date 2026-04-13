@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function SwitchingBusinessElectricityContractPage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="切り替えの注意点"
       slug="switching-business-electricity-contract"
       title={pageTitle}
       lead={[

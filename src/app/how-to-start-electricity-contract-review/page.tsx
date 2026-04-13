@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "法人の電力契約見直しは何から始めるべきか";
+const pageTitle =
+  "法人の電力契約見直しは何から始めるべきか｜5ステップと優先度判断の考え方";
 const pageDescription =
-  "法人向け電力契約の見直しを始めたいが、何から手を付ければよいか分からない担当者向けに、資料確認から比較、社内整理までの進め方を整理します。";
+  "法人向け電力契約の見直し手順を5ステップで解説。請求書収集から見積比較・切替判断まで所要時間と担当部署を整理し、優先度判断マトリクスで着手タイミングを明確にします。";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    "電力契約 見直し 始め方",
+    "法人 電気料金 見直し 手順",
+    "電力契約 優先度",
+    "電力 見直し ステップ",
+    "法人 電気代 削減 方法",
+  ],
   alternates: {
-    canonical: "https://simulator.eic-jp.org/how-to-start-electricity-contract-review",
+    canonical:
+      "https://simulator.eic-jp.org/how-to-start-electricity-contract-review",
   },
   openGraph: {
     title: pageTitle,
@@ -18,7 +29,9 @@ export const metadata: Metadata = {
     siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
+    images: [
+      { url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -28,86 +41,366 @@ export const metadata: Metadata = {
   },
 };
 
+const steps = [
+  {
+    step: "Step 1",
+    title: "請求書3ヶ月分を集める",
+    description:
+      "直近3ヶ月の電気料金請求書を手元にそろえます。月別の使用量・契約電力・調整額・基本料金の内訳を把握するための出発点です。",
+  },
+  {
+    step: "Step 2",
+    title: "契約条件を確認する",
+    description:
+      "現在の契約書・別紙・覚書を確認し、契約期間・更新時期・中途解約条件・通知期限を把握します。見直し可能なタイミングが分かります。",
+  },
+  {
+    step: "Step 3",
+    title: "使用量とデマンドを整理する",
+    description:
+      "月別使用量と直近12ヶ月の最大デマンド（契約電力の前提）を一覧化します。見積依頼時の前提条件として使用します。",
+  },
+  {
+    step: "Step 4",
+    title: "複数社へ見積を依頼する",
+    description:
+      "整理した前提条件をもとに複数社（最低3社）へ同じ条件で見積を依頼します。前提をそろえることで比較が意味を持ちます。",
+  },
+  {
+    step: "Step 5",
+    title: "比較して切替判断を行う",
+    description:
+      "年間総額・契約条件・リスクの出方の3点で比較し、切替の可否を判断します。判断根拠を記録しておくと次回更新時に役立ちます。",
+  },
+];
+
+const stepDetails = [
+  {
+    step: "Step 1",
+    content: "請求書3ヶ月分を収集",
+    duration: "1〜3日",
+    dept: "総務・経理",
+    docs: "電気料金請求書、検針票",
+  },
+  {
+    step: "Step 2",
+    content: "契約書・別紙・覚書の確認",
+    duration: "1〜2日",
+    dept: "総務・購買",
+    docs: "電力供給契約書、別紙、覚書",
+  },
+  {
+    step: "Step 3",
+    content: "使用量・デマンドの整理",
+    duration: "2〜5日",
+    dept: "施設管理・総務",
+    docs: "12ヶ月分の検針データ、デマンド履歴",
+  },
+  {
+    step: "Step 4",
+    content: "複数社への見積依頼",
+    duration: "1〜2週間",
+    dept: "総務・購買",
+    docs: "使用量・デマンド一覧、現契約条件",
+  },
+  {
+    step: "Step 5",
+    content: "比較・社内決裁・切替判断",
+    duration: "1〜3週間",
+    dept: "総務・経営・購買",
+    docs: "見積比較表、年間コスト試算、契約条件差一覧",
+  },
+];
+
+const priorityMatrix = [
+  {
+    scale: "年間1,000万円以上",
+    highChange: "優先度：高（即着手）",
+    midChange: "優先度：高（即着手）",
+    lowChange: "優先度：中（更新前に対応）",
+  },
+  {
+    scale: "年間300〜1,000万円",
+    highChange: "優先度：高（即着手）",
+    midChange: "優先度：中（更新前に対応）",
+    lowChange: "優先度：低（次回更新時）",
+  },
+  {
+    scale: "年間300万円未満",
+    highChange: "優先度：中（更新前に対応）",
+    midChange: "優先度：低（次回更新時）",
+    lowChange: "優先度：低（現状維持可）",
+  },
+];
+
+const doNotItems = [
+  {
+    title: "いきなり見積依頼を行う",
+    reason:
+      "請求書・契約条件の確認前に見積を依頼しても、前提条件がそろわず比較が意味をなしません。まず現状把握を先行させます。",
+  },
+  {
+    title: "単価だけで比較・判断する",
+    reason:
+      "燃調費の上限・市場連動の有無・容量拠出金の含み方など、単価以外の条件が実質コストを大きく左右します。年間総額と条件差を軸にします。",
+  },
+  {
+    title: "1社だけに見積を依頼する",
+    reason:
+      "比較対象がなければ現契約の有利不利が判断できません。最低3社に同じ前提で依頼し、横並び比較を行います。",
+  },
+];
+
 export default function HowToStartElectricityContractReviewPage() {
   return (
-    <ReviewArticlePage
-      slug="how-to-start-electricity-contract-review"
-      title={pageTitle}
-      lead={[
-        "見直し担当者が最初に必要なのは、完璧な比較資料ではなく、全体の進め方です。順序を誤ると、資料不足や社内調整不足で途中停止しやすくなります。",
-        "このページはカテゴリ5の起点として、請求書確認から切替後確認までを一連の実務フローで整理します。",
-      ]}
-      sections={[
-        {
-          heading: "法人の電力契約見直しを始める前に整理したいこと",
-          paragraphs: [
-            "まず、何をきっかけに見直すのかを明確にします。値上げ通知対応なのか、更新前対応なのか、使用実態変化への対応なのかで優先タスクが変わります。",
-            "目的と期限を整理してから着手すると、比較作業だけが先行する状態を避けられます。",
-          ],
-        },
-        {
-          heading: "最初に確認したい請求書と契約書",
-          paragraphs: [
-            "請求書では現状の請求構造、契約書では更新条件・解約条件・通知期限を確認します。両方を見ないと、見直し可能時期と比較前提を正しく設定できません。",
-            "契約書本文だけでなく、別紙や覚書も確認対象に含めることが重要です。",
-          ],
-        },
-        {
-          heading: "社内で確認したい情報と関係部署",
-          paragraphs: [
-            "見直しは一部署で完結しにくいため、総務・経理・施設管理・購買・拠点責任者の確認項目を早期に共有します。担当が曖昧だと、資料収集と決裁準備で停滞します。",
-            "社内確認では、契約情報、請求情報、使用実態、設備変更予定を同じフォーマットで整理すると進行しやすくなります。",
-          ],
-        },
-        {
-          heading: "比較・見積取得に進む前の準備",
-          paragraphs: [
-            "見積比較は、前提条件をそろえて初めて意味を持ちます。使用量前提、契約電力、調整項目の扱い、契約期間条件を統一してから比較へ進みます。",
-            "単価差だけで判断せず、年間総額、契約条件、リスクの出方を評価軸として設定しておくことが重要です。",
-          ],
-        },
-        {
-          heading: "切替までを見据えた見直しの進め方",
-          paragraphs: [
-            "見直しは契約選定で終わりではなく、切替手続きと初回請求確認まで含めて完了です。開始日、検針日、請求期間のズレを事前に確認し、社内説明を準備します。",
-            "切替後の確認結果を記録しておくと、次回更新時の判断をより迅速に進められます。",
-          ],
-        },
-      ]}
-      relatedIntro="見直し全体の入口として、最低限チェック項目・資料整理・社内確認・切替実務へ段階的に進める導線を用意しています。"
-      relatedLinks={[
-        {
-          href: "/5-minimum-checkpoints-for-electricity-contract-review",
-          title: "法人の電力契約見直しで最低限確認したい5項目",
-          description: "最初に押さえるべき確認項目を短時間で整理できます。",
-        },
-        {
-          href: "/documents-needed-for-electricity-contract-review",
-          title: "法人の電気料金見直しで集めるべき資料一覧",
-          description: "比較前に必要な資料の収集範囲を確認できます。",
-        },
-        {
-          href: "/internal-checklist-for-electricity-contract-review",
-          title: "法人の電力契約見直しで社内確認したい項目一覧",
-          description: "部署連携で確認すべき実務項目を把握できます。",
-        },
-        {
-          href: "/switching-business-electricity-contract",
-          title: "法人が電力契約を切り替えるときの注意点",
-          description: "見直し後半の切替実務と初回請求確認を整理できます。",
-        },
-        {
-          href: "/compare",
-          title: "比較ページ",
-          description: "整理した前提で候補条件を比較できます。",
-        },
-        {
-          href: "/",
-          title: "シミュレーター",
-          description: "自社条件に近い形で検討を始められます。",
-        },
-      ]}
-      ctaDescription="全体手順を整理したら、使い方ページで準備を確認し、比較ページとシミュレーターで見直し判断を実行段階へ進めます。"
-    />
+    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくずナビ */}
+      <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className="hover:text-sky-700 underline underline-offset-2">
+              ホーム
+            </Link>
+          </li>
+          <li aria-hidden="true">&gt;</li>
+          <li>
+            <Link
+              href="/articles/review-points"
+              className="hover:text-sky-700 underline underline-offset-2"
+            >
+              見直しポイントを知る
+            </Link>
+          </li>
+          <li aria-hidden="true">&gt;</li>
+          <li className="text-slate-700">見直しは何から始めるべきか</li>
+        </ol>
+      </nav>
+
+      {/* ヘッダー */}
+      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          法人の電力契約見直しは何から始めるべきか
+        </h1>
+        <p className="mt-1 text-sm text-slate-500">
+          5ステップと優先度判断の考え方
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+          見直し担当者に最初に必要なのは、完璧な比較資料ではなく全体の進め方です。順序を誤ると、資料不足や社内調整不足で途中停止しやすくなります。このページでは請求書確認から切替判断まで5ステップで整理し、着手優先度の判断基準と最初にやってはいけないことも解説します。
+        </p>
+      </header>
+
+      <div className="mt-6 space-y-6">
+        {/* セクション1: 5ステップのフロー */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            見直しの5ステップ
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電力契約の見直しは以下の順番で進めます。比較作業だけが先行すると、前提条件がそろわず判断が誤りやすくなるため、Step 1〜3の現状把握を先に完了させることが重要です。
+          </p>
+          <ol className="mt-4 space-y-3">
+            {steps.map((s, i) => (
+              <li key={i} className="flex gap-4 rounded-lg border border-slate-100 bg-slate-50 p-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-700 text-sm font-bold text-white">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="text-xs font-semibold text-sky-700">{s.step}</p>
+                  <p className="font-semibold text-slate-900">{s.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-700">
+                    {s.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* セクション2: ステップ別の所要時間と担当者テーブル */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            ステップ別の所要時間と担当部署
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            各ステップの所要目安と必要資料を整理しています。複数部署が関わるステップでは早期に役割分担を共有することで停滞を防げます。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100 text-left text-slate-700">
+                  <th className="border border-slate-200 px-3 py-2 font-semibold">
+                    ステップ
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold">
+                    内容
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold">
+                    所要目安
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold">
+                    担当部署
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold">
+                    必要な資料
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {stepDetails.map((row, i) => (
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-sky-700">
+                      {row.step}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-800">
+                      {row.content}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                      {row.duration}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                      {row.dept}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">
+                      {row.docs}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※所要目安は単拠点・担当者1名が兼務で対応した場合の目安です。複数拠点・多部署連携が必要な場合はさらに長くなります。
+          </p>
+        </section>
+
+        {/* セクション3: 優先度判断マトリクス */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            見直しの優先度判断マトリクス
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            「年間電気代の規模」と「前年比の変動幅」の2軸で、見直し着手の優先度を判断できます。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[600px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100 text-slate-700">
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-left">
+                    年間電気代規模
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-center">
+                    前年比＋15%以上
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-center">
+                    前年比＋5〜15%
+                  </th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-center">
+                    前年比±5%以内
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {priorityMatrix.map((row, i) => (
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                  >
+                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">
+                      {row.scale}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-center font-semibold text-red-700">
+                      {row.highChange}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-center font-semibold text-amber-700">
+                      {row.midChange}
+                    </td>
+                    <td className="border border-slate-200 px-3 py-2 text-center text-slate-600">
+                      {row.lowChange}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※更新時期が6ヶ月以内に迫っている場合は、上記判定より1段階優先度を上げて対応することを推奨します。
+          </p>
+        </section>
+
+        {/* セクション4: 最初にやってはいけないこと */}
+        <section className="rounded-xl border border-amber-100 bg-amber-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            最初にやってはいけないこと（3項目）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            見直し初期によくある判断ミスです。いずれも後から手戻りが発生しやすいパターンです。
+          </p>
+          <ul className="mt-4 space-y-3">
+            {doNotItems.map((item, i) => (
+              <li
+                key={i}
+                className="rounded-lg border border-amber-200 bg-white p-4"
+              >
+                <p className="font-semibold text-amber-800">
+                  NG {i + 1}：{item.title}
+                </p>
+                <p className="mt-1 text-sm leading-6 text-slate-700">
+                  {item.reason}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      {/* 関連リンク */}
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          intro="見直し全体の入口として、段階的に確認できるページです。"
+          links={[
+            {
+              href: "/documents-needed-for-electricity-contract-review",
+              title: "法人の電気料金見直しで集めるべき資料一覧",
+              description:
+                "Step 1〜3で必要な資料の収集範囲と優先順位を確認できます。",
+            },
+            {
+              href: "/how-to-read-electricity-bill",
+              title: "電気料金請求書の読み方：各行の意味と確認ポイント",
+              description:
+                "請求書の各行が何を意味するかをStep 1で確認できます。",
+            },
+            {
+              href: "/business-electricity-contract-checklist",
+              title: "法人の電力契約見直しで最低限確認したい5項目",
+              description:
+                "Step 2〜3で使える社内確認チェックリストを把握できます。",
+            },
+            {
+              href: "/compare",
+              title: "料金メニュー比較ページ",
+              description:
+                "Step 4〜5で前提をそろえた見積を横並びで確認できます。",
+            },
+          ]}
+        />
+      </div>
+
+      {/* CTA */}
+      <div className="mt-6">
+        <ContentCta
+          heading="全体手順を確認したら次のステップへ"
+          description="請求書と契約書の確認が済んだら、比較ページとシミュレーターで見直し判断を実行段階へ進めます。"
+          links={[
+            { href: "/compare", label: "料金メニューを比較する" },
+            { href: "/", label: "シミュレーターで診断する" },
+          ]}
+        />
+      </div>
+    </main>
   );
 }

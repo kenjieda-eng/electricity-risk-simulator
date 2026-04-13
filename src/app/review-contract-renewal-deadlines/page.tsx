@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ReviewContractRenewalDeadlinesPage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="更新前の確認期限"
       slug="review-contract-renewal-deadlines"
       title={pageTitle}
       lead={[

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import ContentCta from "../simulator/ContentCta";
 import RelatedLinks from "../simulator/RelatedLinks";
 import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
@@ -25,6 +26,7 @@ type ReviewArticlePageProps = {
   relatedLinks: LinkCard[];
   ctaDescription: string;
   slug?: string;
+  breadcrumbLabel?: string;
 };
 
 export default function ReviewArticlePage({
@@ -36,10 +38,20 @@ export default function ReviewArticlePage({
   relatedLinks,
   ctaDescription,
   slug,
+  breadcrumbLabel,
 }: ReviewArticlePageProps) {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      {breadcrumbLabel && (
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles/review-points" className="underline-offset-2 hover:underline">見直しポイントを知る</Link>
+          <span className="px-2">›</span>
+          <span className="text-slate-800">{breadcrumbLabel}</span>
+        </nav>
+      )}
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">{title}</h1>
         {lead.map((line) => (
           <p key={line} className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

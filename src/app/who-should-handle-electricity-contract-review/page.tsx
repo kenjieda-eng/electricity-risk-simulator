@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function WhoShouldHandleElectricityContractReviewPage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="担当部署"
       slug="who-should-handle-electricity-contract-review"
       title={pageTitle}
       lead={[

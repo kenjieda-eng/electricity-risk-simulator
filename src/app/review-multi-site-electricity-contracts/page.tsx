@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function ReviewMultiSiteElectricityContractsPage() {
   return (
     <ReviewArticlePage
+      breadcrumbLabel="複数拠点の見直し"
       slug="review-multi-site-electricity-contracts"
       title={pageTitle}
       lead={[
