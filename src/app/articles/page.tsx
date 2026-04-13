@@ -79,6 +79,7 @@ const categoryDescriptions: Record<string, string> = {
   "last-resort-supply": "最終保障供給の対象、料金、切替の基本を確認できます。",
   "risk-scenarios": "リスク要因別の上振れパターンと確認順を整理できます。",
   "power-procurement": "電力会社の仕入れ・調達構造を、JEPXから再エネ価値まで段階的に把握できます。",
+  "for-executives": "経営層・CFO向けに、電気料金の財務インパクトや取締役会報告、ESG開示の論点を整理できます。",
 };
 
 const categoryIcons: Record<string, { src: string; alt: string }> = {

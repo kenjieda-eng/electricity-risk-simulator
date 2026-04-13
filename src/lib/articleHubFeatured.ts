@@ -130,4 +130,10 @@ export const CATEGORY_HUB_SPOTLIGHT: Partial<
       "仕入れの全体像→市場の仕組み→リスク管理の順に読むと、電力会社の調達構造が整理しやすくなります。",
     slugs: ["how-electricity-is-procured", "jepx-explained", "power-risk-management"],
   },
+  "for-executives": {
+    heading: "経営層がまず確認したい3つの視点",
+    intro:
+      "経営者・CFOが電気料金を経営課題として扱うには、3つの視点を軸に整理するのが効果的です。第一は財務インパクト——電気代の変動がEBITDAや営業利益にどう影響するかを定量的に把握する視点です。第二はリスク管理——電力供給途絶や価格急騰がBCPや事業継続にどう波及するかを事前に評価する視点です。第三はガバナンス——取締役会・経営会議での報告項目の整理と、ESGレポーティングへの開示接続という視点です。以下の3記事がその入口になります。",
+    slugs: ["executive-ebitda-impact", "executive-business-continuity-risk", "executive-board-reporting-items"],
+  },
 };
