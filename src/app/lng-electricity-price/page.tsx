@@ -4,11 +4,10 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
-const pageTitle = "法人の電気料金とLNGの関係｜なぜ海外のガス市場が日本の電気代に影響するのか";
+const pageTitle = "法人の電気料金とLNGの関係｜価格推移・影響試算・調達リスクを解説";
 const pageDescription =
-  "LNG価格や供給不安が、日本の法人向け電気料金、JEPX、燃料費調整額、電力契約の見直しにどう影響するのかを、実務目線でわかりやすく解説します。";
+  "LNG価格と法人向け電気料金の関係を解説。2019〜2024年の輸入価格推移、価格変動が燃調費・月額に与える影響試算、日本の調達先構成とリスク要因を整理。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -19,6 +18,8 @@ export const metadata: Metadata = {
     "LNG JEPX 関係",
     "燃料費調整額 法人",
     "電力契約 見直し",
+    "LNG輸入価格 推移",
+    "LNG調達先 リスク",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/lng-electricity-price",
@@ -50,6 +51,22 @@ export const metadata: Metadata = {
 export default function LngElectricityPricePage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+
+      {/* パンくずナビ */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li>
+            <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link>
+          </li>
+          <li className="select-none">›</li>
+          <li>
+            <Link href="/articles/price-increase" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">料金が上がる理由を知る</Link>
+          </li>
+          <li className="select-none">›</li>
+          <li className="text-slate-700">LNGと電気料金の関係</li>
+        </ol>
+      </nav>
+
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人の電気料金とLNGの関係</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
@@ -60,6 +77,8 @@ export default function LngElectricityPricePage() {
       </header>
 
       <section className="mt-6 space-y-6">
+
+        {/* 日本の電力供給でLNGが重要な理由 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">日本の電力供給でLNGが重要な理由</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -68,6 +87,126 @@ export default function LngElectricityPricePage() {
           </p>
         </section>
 
+        {/* LNG輸入価格の推移 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">LNG輸入価格の推移（2019〜2024年度）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            日本のLNG輸入CIF価格は、世界的な需給動向や地政学的変動を反映して大きく変動してきました。
+            特に2022年はウクライナ危機による欧州需要の急増が、アジア市場にも波及し記録的な水準を記録しました。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[560px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">LNG輸入CIF価格（目安）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">前年比</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">背景</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2019</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約55円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-500">―</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">コロナ前の安定期</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2020</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約42円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-sky-700">▲24%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">コロナによる需要減</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2021</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約62円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-red-600">+48%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">経済回復＋アジア需要増</td>
+                </tr>
+                <tr className="bg-red-50 hover:bg-red-100">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">2022</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">約105円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+69%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">ウクライナ危機・欧州争奪</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2023</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約78円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-sky-700">▲26%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">暖冬・在庫積み増し</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">2024</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約72円/kg</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-sky-700">▲8%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">供給安定化</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 財務省貿易統計・資源エネルギー庁データをもとにした目安値。実際の契約価格は長期契約・スポット比率等により異なります。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2022年の価格高騰は、
+            <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の急騰</Link>
+            を通じて法人の電気料金を押し上げた主因の一つです。現在は落ち着いているものの、地政学リスクが再燃すれば同様の局面が再現しうる水準にあります。
+          </p>
+        </section>
+
+        {/* LNG価格変動と法人電気料金への影響試算 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">LNG価格変動と法人電気料金への影響試算</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            LNG輸入価格の上昇は、
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>
+            を通じて法人の電気料金に転嫁されます。以下は、価格変動シナリオ別に燃調費への影響と月額コスト増を試算した目安です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">LNG価格変動</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">燃調費への影響（目安）</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">月5万kWh施設</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">月20万kWh施設</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">+10円/kg上昇</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約+0.5〜1.0円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-orange-700">+2.5〜5万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-orange-700">+10〜20万円</td>
+                </tr>
+                <tr className="bg-orange-50 hover:bg-orange-100">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">+30円/kg上昇（2022年水準）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-orange-700">約+2.0〜3.5円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-orange-700">+10〜17.5万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-orange-700">+40〜70万円</td>
+                </tr>
+                <tr className="bg-red-50 hover:bg-red-100">
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">+50円/kg上昇（危機水準）</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-red-700">約+3.5〜5.0円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+17.5〜25万円</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-red-700">+70〜100万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 試算値は燃料費調整額の構造に基づく目安。実際は電力会社・契約種別・基準燃料価格の設定により異なります。
+            <Link href="/market-price-adjustment" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整費</Link>
+            も加わる場合は別途影響が生じます。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月20万kWhクラスの施設では、2022年水準の高騰が再来した場合、年間で500万円超のコスト増になりうる計算です。
+            <Link href="/market-price-adjustment-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整のリスク</Link>
+            とあわせて確認しておくことをお勧めします。
+          </p>
+        </section>
+
+        {/* LNG価格変動が電気料金に波及する流れ */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">LNG価格の変動が電気料金に波及する流れ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -98,18 +237,74 @@ export default function LngElectricityPricePage() {
             />
           </div>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動型の契約では、この流れの影響を比較的受けやすい傾向があります。仕組み自体を確認したい場合は{" "}
-            <Link href="/market-linked-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              市場連動プランの解説
+            市場連動型の契約では、この流れの影響を比較的受けやすい傾向があります。
+            <Link href="/why-business-electricity-prices-rise" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              法人電気料金が上がる仕組み
             </Link>
-            、固定単価を重視する考え方は{" "}
-            <Link href="/fixed-price-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              固定プランの解説
-            </Link>
-            で整理できます。
+            も合わせて確認すると、価格変動の全体像が把握しやすくなります。
           </p>
         </section>
 
+        {/* 日本のLNG調達先と供給リスク */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">日本のLNG調達先と供給リスク</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            日本のLNG調達は複数国から行われており、調達先の分散によるリスク低減が図られています。ただし、各供給国には固有のリスク要因があり、
+            特定地域での問題が市場全体に波及する可能性を念頭に置く必要があります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[480px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">調達先</th>
+                  <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">シェア目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">主なリスク要因</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">オーストラリア</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約35%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">設備老朽化・環境規制</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">マレーシア</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約13%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">国内需要増</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">カタール</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約12%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">中東地政学リスク</td>
+                </tr>
+                <tr className="bg-orange-50 hover:bg-orange-100">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">ロシア</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-orange-700">約9%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">制裁・地政学リスク</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">アメリカ</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約8%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">パナマ運河渋滞・輸送コスト</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">その他</td>
+                  <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約23%</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700">分散効果あり</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 資源エネルギー庁の統計をもとにした目安。年度・時期により変動します。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            調達先の上位はオーストラリア・マレーシア・カタールで全体の約60%を占めます。ロシア産については2022年以降の地政学リスクへの対応が課題となっており、
+            代替調達先の確保が進んでいます。中東地域の緊張が高まった場合はカタール産を含むルートへの影響も想定する必要があります。
+          </p>
+        </section>
+
+        {/* なぜ有事のときに電気料金が上がりやすいのか */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">なぜ有事のときに電気料金が上がりやすいのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -122,6 +317,7 @@ export default function LngElectricityPricePage() {
           </p>
         </section>
 
+        {/* 2022年のエネルギー危機から何を学ぶべきか */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2022年のエネルギー危機から何を学ぶべきか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -134,6 +330,7 @@ export default function LngElectricityPricePage() {
           </InfoBox>
         </section>
 
+        {/* 直近の中東リスクをどう見るべきか */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">直近の中東リスクをどう見るべきか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -145,6 +342,7 @@ export default function LngElectricityPricePage() {
           </p>
         </section>
 
+        {/* 法人が確認しておきたい契約ポイント */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人が確認しておきたい契約ポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -153,7 +351,10 @@ export default function LngElectricityPricePage() {
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>自社契約が市場連動型か固定型か（またはその中間設計か）</li>
-            <li>燃料費調整額の扱いと、請求への反映タイミング</li>
+            <li>
+              <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>
+              の扱いと、請求への反映タイミング
+            </li>
             <li>契約更新時の見直し条件、単価改定の考え方</li>
             <li>高騰時に想定される上振れ幅と、損益への影響範囲</li>
             <li>予算管理・稟議プロセスとの相性</li>
@@ -161,10 +362,8 @@ export default function LngElectricityPricePage() {
           </ul>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <InfoBox title="比較の視点">
-              市場連動型と固定型のどちらが良いかは一律ではありません。契約タイプの違いは{" "}
-              <Link href="/market-linked-vs-fixed" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-                比較ページ
-              </Link>
+              市場連動型と固定型のどちらが良いかは一律ではありません。
+              <Link href="/compare" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">料金メニュー比較ページ</Link>
               で、料金の動き方と運用面を合わせて確認できます。
             </InfoBox>
             <InfoBox title="実務の進め方">
@@ -174,49 +373,64 @@ export default function LngElectricityPricePage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">比較や見直しを進めたい方へ</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            LNGや海外市場の動きは、自社の電気料金に間接的な影響を与える可能性があります。だからこそ、契約の仕組みを理解したうえで比較し、
-            自社のリスク耐性に合う判断を進めることが重要です。
-          </p>
+        {/* まとめ */}
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">まとめ：LNG価格と法人電気料金の関係</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>LNG輸入価格は2022年に約105円/kgと記録的高水準に達し、2024年には約72円/kgまで落ち着いている</li>
+            <li>+30円/kg の上昇で、月20万kWhの施設では月額+40〜70万円の電気料金増が生じうる</li>
+            <li>日本の調達先はオーストラリア・マレーシア・カタールで約60%を占め、それぞれ固有のリスクがある</li>
+            <li>燃料費調整額を通じた波及には数か月のラグがあるため、先行指標として輸入価格の動向を追うことが重要</li>
+            <li>契約種別（市場連動型・固定型）によって影響の受け方が異なるため、自社契約の構造確認が優先事項</li>
+          </ul>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
-          intro="契約タイプごとの特徴や違いを確認すると、今回の構造理解を実務判断に落とし込みやすくなります。"
+          intro="LNGと電気料金の関係を把握したら、燃調費の仕組みや価格変動の影響を実務で確認するページもあわせてご覧ください。"
           links={[
             {
-              href: "/market-linked-plan",
-              title: "市場連動プランとは",
-              description: "市場価格の影響を受ける契約の特徴と、実務上の注意点を整理しています。",
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額の仕組み",
+              description: "LNG価格が電気料金に反映される燃料費調整額の計算構造と影響を解説。",
             },
             {
-              href: "/fixed-price-plan",
-              title: "固定プランとは",
-              description: "単価の見通しを重視する契約の考え方と、向いている法人像を解説しています。",
+              href: "/fuel-cost-adjustment-history",
+              title: "燃料費調整額の推移と高騰の記録",
+              description: "2022年を中心に燃調費がどこまで上昇したか、履歴と背景を整理。",
             },
             {
-              href: "/market-linked-vs-fixed",
-              title: "市場連動プランと固定プランの違い",
-              description: "料金の動き方、予算管理、リスクの出方を比較して確認できます。",
+              href: "/market-price-adjustment",
+              title: "市場価格調整費とは",
+              description: "JEPX連動で変動するもう一つのコスト要素の仕組みと実務への影響。",
+            },
+            {
+              href: "/market-price-adjustment-risk",
+              title: "市場価格調整のリスク",
+              description: "電力スポット価格高騰時に法人コストが膨らむ構造とリスク管理のポイント。",
+            },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人電気料金が上がる理由",
+              description: "LNG・燃調費・JEPXなど複数の要因が重なる価格上昇の全体像。",
+            },
+            {
+              href: "/articles/price-increase",
+              title: "料金が上がる理由を知る（カテゴリ）",
+              description: "電気料金値上がりの背景を体系的に学べる記事一覧。",
             },
           ]}
         />
 
         <ContentCta
-          heading="比較・試算を進める"
-          description="契約条件の違いを理解したら、使い方を確認し、比較ページやシミュレーション本体で自社条件に合わせて確認してください。"
+          heading="契約条件ごとの影響を試算する"
+          description="LNGや燃調費の動向を踏まえ、自社の電気料金リスクを数値で確認しましょう。シミュレーターと比較ページで契約ごとの影響幅を把握できます。"
           links={[
-            { href: "/how-to", label: "シミュレーターの使い方を見る" },
-            { href: "/compare", label: "比較ページを見る" },
-            { href: "/simulate", label: "シミュレーションを始める" },
+            { href: "/", label: "シミュレーターで診断する" },
+            { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="lng-electricity-price" />
-      </div>
     </main>
   );
 }

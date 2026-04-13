@@ -95,7 +95,7 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             関連する詳細は{" "}
-            <Link href="/what-is-market-price-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+            <Link href="/market-price-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               市場価格調整
             </Link>
             、{" "}
@@ -217,7 +217,7 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
               description: "固定契約で誤解されやすい論点を整理できます。",
             },
             {
-              href: "/what-is-market-price-adjustment",
+              href: "/market-price-adjustment",
               title: "法人向け電力契約でよくある市場価格調整とは",
               description: "契約単価外の変動要素を確認できます。",
             },

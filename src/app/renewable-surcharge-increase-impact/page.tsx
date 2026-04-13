@@ -212,8 +212,8 @@ export default function RenewableSurchargeIncreaseImpactPage() {
               description: "FIT制度と賦課金の仕組みを基礎から解説。",
             },
             {
-              href: "/capacity-contribution-increase-impact",
-              title: "容量拠出金増加で法人の負担はどう変わるか",
+              href: "/capacity-contribution-cost-impact",
+              title: "容量拠出金で電気代はどのくらい上がるのか",
               description: "再エネ賦課金に続く新たな制度負担の解説。",
             },
             {

@@ -159,7 +159,7 @@ export const articleCategories: ArticleCategory[] = [
       "market-linked-vs-fixed",
       "compare-market-linked-and-fixed-by-risk-pattern",
       "does-fuel-cost-adjustment-change-even-in-fixed-plan",
-      "what-is-market-price-adjustment",
+      // "what-is-market-price-adjustment", // consolidated into /market-price-adjustment
       "power-procurement-adjustment-fee",
       "who-should-choose-market-linked-plan",
       "who-should-choose-fixed-price-plan",
@@ -1051,15 +1051,16 @@ export const articleList: ArticleMeta[] = [
     order: 5,
     publishedAt: "2026-03-27",
   },
-  {
-    title: "法人向け電力契約でよくある市場価格調整とは",
-    slug: "what-is-market-price-adjustment",
-    description: "市場価格調整の意味と、市場連動との違い、見積比較で確認したいポイントを整理します。",
-    category: "契約メニューの違いを知る",
-    categorySlug: "plan-types",
-    order: 6,
-    publishedAt: "2026-03-27",
-  },
+  // Consolidated into /market-price-adjustment (2026-04-13)
+  // {
+  //   title: "法人向け電力契約でよくある市場価格調整とは",
+  //   slug: "what-is-market-price-adjustment",
+  //   description: "市場価格調整の意味と、市場連動との違い、見積比較で確認したいポイントを整理します。",
+  //   category: "契約メニューの違いを知る",
+  //   categorySlug: "plan-types",
+  //   order: 6,
+  //   publishedAt: "2026-03-27",
+  // },
   {
     title: "電源調達調整費とは何か、燃料費調整額との違い",
     slug: "power-procurement-adjustment-fee",
@@ -2189,7 +2190,8 @@ export const articleList: ArticleMeta[] = [
   { title: "JEPX急騰で法人の電気料金はどう上がるか", slug: "jepx-spike-electricity-cost-impact", description: "JEPX市場価格の急騰が市場連動プランの法人に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 13, publishedAt: "2026-04-10" },
   { title: "燃料費調整額上昇で法人の電気料金はどう上がるか", slug: "fuel-adjustment-surge-impact", description: "燃料費調整額の上昇が請求額に与える影響と確認ポイントを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 14, publishedAt: "2026-04-10" },
   { title: "再エネ賦課金上昇で法人の電気料金はどう変わるか", slug: "renewable-surcharge-increase-impact", description: "再エネ賦課金の改定が法人の負担にどう影響するかを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 15, publishedAt: "2026-04-10" },
-  { title: "容量拠出金増加で法人の負担はどう変わるか", slug: "capacity-contribution-increase-impact", description: "容量拠出金の増加が法人電気料金に与える影響と確認ポイントを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 16, publishedAt: "2026-04-10" },
+  // deprecated: merged into capacity-contribution-cost-impact
+  // { title: "容量拠出金増加で法人の負担はどう変わるか", slug: "capacity-contribution-increase-impact", description: "容量拠出金の増加が法人電気料金に与える影響と確認ポイントを解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 16, publishedAt: "2026-04-10" },
   { title: "需給逼迫で法人の電気料金はどう変わるか", slug: "supply-demand-tightness-impact", description: "電力需給の逼迫が市場価格と法人料金に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 17, publishedAt: "2026-04-10" },
   { title: "利益率の低い企業が電気料金高騰に直面したときのリスク", slug: "low-margin-company-price-surge-risk", description: "低利益率企業が料金高騰で受ける収益への影響と対策を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 18, publishedAt: "2026-04-10" },
   { title: "多拠点企業が電気料金高騰に直面したときのリスク", slug: "multi-site-company-price-surge-risk", description: "多拠点企業の料金高騰リスクの累積影響と管理の考え方を整理します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 19, publishedAt: "2026-04-10" },

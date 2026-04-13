@@ -51,7 +51,8 @@
       "Bash(find src/components -name \"*.tsx\" -exec sed -i 's|/how-to-read-business-electricity-quotation|/how-to-read-electricity-quote|g; s|/how-to-read-business-electricity-bill|/how-to-read-electricity-bill|g; s|\"/demand-charge\"|\"/contract-demand-what-is-it\"|g' {} +)",
       "Bash(rm -rf src/app/how-to-read-business-electricity-quotation)",
       "Bash(rm -rf src/app/how-to-read-business-electricity-bill)",
-      "Bash(rm -rf src/app/demand-charge)"
+      "Bash(rm -rf src/app/demand-charge)",
+      "Bash([ -d \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$dir\" ])"
     ]
   }
 }

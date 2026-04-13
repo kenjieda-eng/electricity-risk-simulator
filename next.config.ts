@@ -33,6 +33,16 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/contract-demand-what-is-it`,
         permanent: true,
       },
+      {
+        source: "/capacity-contribution-increase-impact",
+        destination: `${CANONICAL_BASE_URL}/capacity-contribution-cost-impact`,
+        permanent: true,
+      },
+      {
+        source: "/what-is-market-price-adjustment",
+        destination: `${CANONICAL_BASE_URL}/market-price-adjustment`,
+        permanent: true,
+      },
     ];
   },
 };

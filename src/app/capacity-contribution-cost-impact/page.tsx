@@ -3,7 +3,6 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算";
 const pageDescription =
@@ -43,6 +42,17 @@ export const metadata: Metadata = {
 export default function CapacityContributionCostImpactPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* パンくずナビ */}
+      <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
+        <ol className="flex flex-wrap items-center gap-1">
+          <li><Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link></li>
+          <li aria-hidden="true">&gt;</li>
+          <li><Link href="/articles/price-increase" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">料金が上がる理由を知る</Link></li>
+          <li aria-hidden="true">&gt;</li>
+          <li className="text-slate-700">容量拠出金の影響試算</li>
+        </ol>
+      </nav>
+
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">料金が上がる理由を知る</p>
@@ -245,6 +255,56 @@ export default function CapacityContributionCostImpactPage() {
             </li>
           </ul>
         </section>
+        {/* 増加の背景と今後の見通し */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">増加の背景と今後の見通し</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            容量拠出金が増加している主な背景として、以下の要因が挙げられます。
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>
+              <span className="font-semibold text-slate-900">容量市場の本格稼働：</span>
+              2024年度から容量市場の対価が本格的に支払われ始めたことで、拠出金の規模が大幅に拡大しました。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">火力発電の維持コスト：</span>
+              再エネ拡大の中でも安定供給のためにバックアップ電源（ガス・石炭火力）を維持する必要があり、そのコストが容量報酬として支払われます。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">将来の需給見通しの変化：</span>
+              電力需要の変化や供給力の過不足に応じてオークション価格が変動するため、将来の拠出金水準は不確実な面があります。
+            </li>
+          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            当面は相当規模の拠出金が継続する見通しであり、法人の電気料金コストの構造的な上昇要因の一つとして認識する必要があります。
+          </p>
+        </section>
+
+        {/* コスト管理上の対応策 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">コスト管理上の対応策</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            容量拠出金はプラン選択では回避できない制度負担ですが、以下の対応が有効です。
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>
+              <span className="font-semibold text-slate-900">請求書の項目を確認する：</span>
+              容量拠出金相当の費用がどの項目に含まれているかを把握し、コスト全体の構造を理解します。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">複数年の費用試算を行う：</span>
+              容量拠出金が増加した場合の年間コスト変動を、使用量をもとに試算しておきます。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">使用量削減でリスクを最小化する：</span>
+              使用量を削減することで、単価が上昇した際の影響額を最小化できます。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">予算策定で将来の上昇を織り込む：</span>
+              容量拠出金の将来的な変動を予算の想定幅に含め、急増時の影響を緩和します。
+            </li>
+          </ul>
+        </section>
       </section>
 
       {/* 関連リンク */}
@@ -286,9 +346,6 @@ export default function CapacityContributionCostImpactPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="capacity-contribution-cost-impact" />
       </div>
     </main>
   );

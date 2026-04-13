@@ -64,7 +64,7 @@ export default function PowerProcurementAdjustmentFeePage() {
               燃料費調整額の解説
             </Link>
             、市場調整との関係は{" "}
-            <Link href="/what-is-market-price-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+            <Link href="/market-price-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
               市場価格調整の解説
             </Link>
             と合わせて読むと整理しやすくなります。
@@ -169,9 +169,9 @@ export default function PowerProcurementAdjustmentFeePage() {
           intro="調整費の見方を、比較実務と契約タイプ理解へつなげるページです。"
           links={[
             {
-              href: "/what-is-market-price-adjustment",
-              title: "法人向け電力契約でよくある市場価格調整とは",
-              description: "市場価格調整との違いを整理できます。",
+              href: "/market-price-adjustment",
+              title: "市場価格調整額とは",
+              description: "市場価格調整の仕組みと、燃料費調整額との違いを整理できます。",
             },
             {
               href: "/fuel-cost-adjustment",
