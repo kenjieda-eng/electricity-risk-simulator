@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理";
@@ -128,7 +127,14 @@ const checkSections = [
 export default function NonPriceFactorsInElectricityContractPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/review-points" className="underline-offset-2 hover:underline">見直しポイントを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">単価以外の確認項目</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           法人の電力契約で単価以外に確認したい項目
         </h1>
@@ -261,9 +267,6 @@ export default function NonPriceFactorsInElectricityContractPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="non-price-factors-in-electricity-contract" />
-      </div>
     </main>
   );
 }
