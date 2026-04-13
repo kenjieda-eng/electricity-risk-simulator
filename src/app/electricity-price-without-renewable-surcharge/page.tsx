@@ -4,7 +4,6 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import RenewableSurchargeCharts from "./_components/RenewableSurchargeCharts";
 import { RENEWABLE_SURCHARGE_DATA } from "./_lib/renewable-surcharge-data";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理";
 const pageDescription =
@@ -54,7 +53,14 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/price-trends" className="underline-offset-2 hover:underline">電気料金の推移と高止まり</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">再エネ賦課金を除いた見方</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">再エネ賦課金を除いても電気料金は高いのか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           請求額が上がると、再エネ賦課金だけが原因だと捉えられることがあります。しかし、法人の料金判断では、賦課金を含む総額だけでなく、
@@ -221,9 +227,6 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="electricity-price-without-renewable-surcharge" />
-      </div>
     </main>
   );
 }

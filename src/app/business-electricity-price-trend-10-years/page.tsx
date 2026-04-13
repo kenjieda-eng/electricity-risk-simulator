@@ -8,7 +8,6 @@ import {
   TRANSITION_COMPARISON_CARDS,
   TREND_EVENT_TIMELINE,
 } from "../../data/businessElectricityTrendHubData";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import { DEMAND_FY_TREND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND, DECADAL_AVG_TEMP } from "../../data/weatherData";
@@ -50,7 +49,14 @@ export const metadata: Metadata = {
 export default function BusinessElectricityPriceTrend10YearsPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/price-trends" className="underline-offset-2 hover:underline">電気料金の推移と高止まり</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">10年推移</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の推移を10年で見る</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           法人向けの電気料金は、単月の上げ下げだけでは実態を捉えにくく、基準期、急騰期、高止まり、補助による見かけの低下、補助縮小後の再評価までを
@@ -485,9 +491,6 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           </div>
         </div>
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="business-electricity-price-trend-10-years" />
-      </div>
     </main>
   );
 }
