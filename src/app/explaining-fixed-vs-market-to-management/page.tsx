@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "固定と市場連動の比較を経営層に説明するときのポイント｜判断材料の整理";
@@ -101,7 +100,14 @@ const executiveKeyPoints = [
 export default function ExplainingFixedVsMarketToManagementPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/internal-explanation" className="underline-offset-2 hover:underline">社内説明・稟議の進め方</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">固定と市場連動の比較を経営層へ</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           固定と市場連動の比較を経営層に説明するときのポイント
         </h1>
@@ -267,9 +273,6 @@ export default function ExplainingFixedVsMarketToManagementPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="explaining-fixed-vs-market-to-management" />
-      </div>
     </main>
   );
 }

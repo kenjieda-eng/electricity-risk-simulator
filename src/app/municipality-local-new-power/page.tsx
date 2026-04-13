@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "自治体新電力（シュタットベルケ）の検討フレーム｜設立判断と運営リスク";
 const pageDescription =
@@ -149,8 +148,15 @@ const failureFactors = [
 export default function MunicipalityLocalNewPowerPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/municipality" className="underline-offset-2 hover:underline">自治体の電力契約</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">自治体新電力の検討</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
+      <header className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-indigo-700">MUNICIPALITY ／ 自治体・公共向け</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           自治体新電力（シュタットベルケ）の検討フレーム
@@ -412,9 +418,6 @@ export default function MunicipalityLocalNewPowerPage() {
             { href: "/contact", label: "専門家に相談する" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="municipality-local-new-power" />
       </div>
     </main>
   );

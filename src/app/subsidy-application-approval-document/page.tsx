@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "補助金申請を前提とした稟議書の書き方｜構成と数値の示し方";
 const pageDescription =
@@ -117,8 +116,15 @@ const returnReasons = [
 export default function SubsidyApplicationApprovalDocumentPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/subsidies" className="underline-offset-2 hover:underline">補助金・助成金を知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">補助金申請を前提とした稟議書</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-emerald-200 bg-emerald-50 p-6">
+      <header className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-emerald-700">SUBSIDY ／ 補助金・助成金</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           補助金申請を前提とした稟議書の書き方
@@ -325,9 +331,6 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             { href: "/subsidies-overview", label: "補助金一覧ページへ" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="subsidy-application-approval-document" />
       </div>
     </main>
   );

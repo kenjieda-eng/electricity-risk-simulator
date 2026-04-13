@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "公共体育館の電気料金見直しポイント｜空調・照明と稼働パターンを踏まえた考え方";
@@ -91,7 +90,14 @@ const reviewPoints = [
 export default function PublicGymElectricityCostReviewPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/industry-guide" className="underline-offset-2 hover:underline">業種別の見直しポイント集</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">公共体育館の見直しポイント</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           公共体育館の電気料金見直しポイント
         </h1>
@@ -321,9 +327,6 @@ export default function PublicGymElectricityCostReviewPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="public-gym-electricity-cost-review" />
-      </div>
     </main>
   );
 }

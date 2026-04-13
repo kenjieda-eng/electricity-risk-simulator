@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -128,8 +127,15 @@ const newPowerStatus = [
 export default function RegionOkinawaBusinessElectricityPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/by-region" className="underline-offset-2 hover:underline">地域別電気料金事情</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">沖縄電力エリアの事情</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">REGION ／ 地域別電気料金事情</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           沖縄電力エリアの法人電気代事情
@@ -426,9 +432,6 @@ export default function RegionOkinawaBusinessElectricityPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="region-okinawa-business-electricity" />
       </div>
     </main>
   );

@@ -49,8 +49,15 @@ const keyNumbers = [
 export default function DuckCurveElectricityPriceImpactPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/power-procurement" className="underline-offset-2 hover:underline">電力調達の仕組みを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">ダックカーブとは何か</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">POWER SUPPLY ／ 電力調達の仕組みを知る</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           ダックカーブとは何か

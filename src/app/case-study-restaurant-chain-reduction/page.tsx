@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例｜居酒屋チェーン";
 const pageDescription =
@@ -66,8 +65,15 @@ const measuresData = [
 export default function CaseStudyRestaurantChainPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/case-studies" className="underline-offset-2 hover:underline">事例・削減実績を知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">飲食チェーン：2,800万円削減事例</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">CASE STUDY ／ 事例・削減実績</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例
@@ -256,9 +262,6 @@ export default function CaseStudyRestaurantChainPage() {
             { href: "/contact", label: "相談・問い合わせ" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="case-study-restaurant-chain-reduction" />
       </div>
     </main>
   );

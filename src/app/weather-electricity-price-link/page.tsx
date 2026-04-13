@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import TempBinChart from "../../components/market-data/TempBinChart";
@@ -61,8 +62,15 @@ function corrColor(v: number): string {
 export default function WeatherElectricityPriceLinkPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/market-data" className="underline-offset-2 hover:underline">データで見る電力市場</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">気温と電力価格の因果チェーン</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">
           MARKET DATA ／ データで見る電力市場
         </p>

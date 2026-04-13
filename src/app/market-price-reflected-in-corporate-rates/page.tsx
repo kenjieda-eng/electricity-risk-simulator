@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "市場価格が法人料金に反映される仕組み｜JEPXから請求書までの流れ";
@@ -99,7 +98,14 @@ const marketLinkageTypes = [
 export default function MarketPriceReflectedInCorporateRatesPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/power-procurement" className="underline-offset-2 hover:underline">電力調達の仕組みを知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">市場価格の反映の仕組み</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           市場価格が法人料金に反映される仕組み
         </h1>
@@ -308,9 +314,6 @@ export default function MarketPriceReflectedInCorporateRatesPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="market-price-reflected-in-corporate-rates" />
-      </div>
     </main>
   );
 }

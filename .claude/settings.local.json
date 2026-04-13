@@ -63,7 +63,14 @@
       "Bash(grep -c CategoryNextStepCta src/app/__TRACKED_VAR__/page.tsx)",
       "Bash(grep -l \"Breadcrumb\" src/app/last-resort-supply*/page.tsx src/app/electricity-cost-risk*/page.tsx src/app/what-is-electricity*/page.tsx src/app/why-electricity*/page.tsx src/app/how-to-*-electricity*/page.tsx src/app/which-electricity*/page.tsx src/app/worst-case*/page.tsx)",
       "Bash(sed -n '47,54p' \"C:/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/last-resort-supply-target/page.tsx\")",
-      "Bash(sed -n '47,54p' \"C:/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/last-resort-supply-switch/page.tsx\")"
+      "Bash(sed -n '47,54p' \"C:/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/last-resort-supply-switch/page.tsx\")",
+      "Bash(bash /tmp/extract_slugs.sh)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -n \"breadcrumb\\\\|Breadcrumb\" /c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/*/page.tsx)",
+      "Bash(ls:*)",
+      "Bash([ -f \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$slug/page.tsx\" ])",
+      "Bash(python process_pages2.py)",
+      "Bash(grep -rL \"import Link\" src/app/*/page.tsx)"
     ]
   }
 }

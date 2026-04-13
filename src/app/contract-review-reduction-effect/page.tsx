@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "契約見直しによる削減額の目安｜プラン切替・契約電力見直しの効果";
 const pageDescription =
@@ -65,8 +64,15 @@ const reviewSteps = [
 export default function ContractReviewReductionEffectPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/benchmarks" className="underline-offset-2 hover:underline">ベンチマーク・数値で見る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">契約見直しの削減額目安</span>
+      </nav>
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">BENCHMARK ／ 相場・削減効果</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           契約見直しによる削減額の目安
@@ -316,9 +322,6 @@ export default function ContractReviewReductionEffectPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="contract-review-reduction-effect" />
       </div>
     </main>
   );

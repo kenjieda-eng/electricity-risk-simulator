@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import HighVoltageRetrospectiveCharts from "../_components/HighVoltageRetrospectiveCharts";
 import { HIGH_VOLTAGE_MONTHLY_PRICES, getYearlySummary } from "../_lib/high-voltage-price-data";
 
@@ -55,7 +56,14 @@ export default function HighVoltageRetrospectivePage() {
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/business-electricity-retrospective" className="underline-offset-2 hover:underline">法人電気料金振り返り</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">高圧 料金推移</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           高圧の電気料金は、2019年から2025年にかけて大きく変動しました。2019年から2021年は緩やかな低下傾向で

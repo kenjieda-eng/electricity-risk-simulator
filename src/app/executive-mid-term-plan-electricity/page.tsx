@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "中期経営計画への電力コスト織り込み方｜3年・5年シナリオ別前提設定ガイド";
 const pageDescription =
@@ -91,9 +90,16 @@ const actionItems = [
 export default function ExecutiveMidTermPlanElectricityPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/for-executives" className="underline-offset-2 hover:underline">経営層・CFO向け</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">中期経営計画への織り込み</span>
+      </nav>
 
       {/* ヘッダー */}
-      <header className="rounded-xl border border-slate-800 bg-slate-900 p-6 text-white">
+      <header className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-6 text-white">
         <p className="text-xs font-semibold tracking-wide text-amber-300">EXECUTIVE ／ 経営層・CFO向け</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white">
           中期経営計画への電力コスト織り込み方
@@ -397,9 +403,6 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             { href: "/compare", label: "料金メニューを比較する" },
           ]}
         />
-      </div>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="executive-mid-term-plan-electricity" />
       </div>
     </main>
   );

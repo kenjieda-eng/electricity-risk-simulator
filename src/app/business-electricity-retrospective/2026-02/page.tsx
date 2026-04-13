@@ -38,7 +38,14 @@ export const metadata: Metadata = {
 export default function BusinessElectricityRetrospective202602Page() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/business-electricity-retrospective" className="underline-offset-2 hover:underline">法人電気料金振り返り</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">2026年2月</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">【2026年2月】法人の電気料金はどう動いた？</h1>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           補助政策と当社団が運営している「新電力ネット」のデータから読む、補助終了前の最終確認

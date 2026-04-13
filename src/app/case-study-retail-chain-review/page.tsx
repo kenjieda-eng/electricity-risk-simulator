@@ -71,6 +71,13 @@ const checklist = [
 export default function CaseStudyRetailChainPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/case-studies" className="underline-offset-2 hover:underline">事例・削減実績を知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">小売チェーン：4,200万円削減事例</span>
+      </nav>
 
       {/* パンくずナビ */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -82,7 +89,7 @@ export default function CaseStudyRetailChainPage() {
       </nav>
 
       {/* ヘッダー */}
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">CASE STUDY ／ 多店舗事業者向け実務ガイド</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
           小売チェーンの電気料金見直し事例
