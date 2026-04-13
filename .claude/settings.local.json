@@ -55,7 +55,15 @@
       "Bash([ -d \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$dir\" ])",
       "Bash(fuel-mix-price)",
       "Bash(monthly-electricity-price-trend\")",
-      "Bash(awk 'NR % 2 {printf \"%s \", $0; next} {print $0}')"
+      "Bash(awk 'NR % 2 {printf \"%s \", $0; next} {print $0}')",
+      "Bash(awk '/categorySlug: \"last-resort-supply\"/{for\\(i=1;i<=5;i++\\){print NR-i\": \"prev[i]} print NR\": \"$0; for\\(i=4;i>=1;i--\\)prev[i+1]=prev[i]; prev[1]=$0} {if\\(NR<=5\\)prev[NR]=$0}' src/data/articles.ts)",
+      "Bash(wc -l src/app/__TRACKED_VAR__/page.tsx)",
+      "Bash(grep -c 'table\\\\|Table\\\\|<table' src/app/__TRACKED_VAR__/page.tsx)",
+      "Bash(grep -c 'Breadcrumb\\\\|breadcrumb' src/app/__TRACKED_VAR__/page.tsx)",
+      "Bash(grep -c CategoryNextStepCta src/app/__TRACKED_VAR__/page.tsx)",
+      "Bash(grep -l \"Breadcrumb\" src/app/last-resort-supply*/page.tsx src/app/electricity-cost-risk*/page.tsx src/app/what-is-electricity*/page.tsx src/app/why-electricity*/page.tsx src/app/how-to-*-electricity*/page.tsx src/app/which-electricity*/page.tsx src/app/worst-case*/page.tsx)",
+      "Bash(sed -n '47,54p' \"C:/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/last-resort-supply-target/page.tsx\")",
+      "Bash(sed -n '47,54p' \"C:/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/last-resort-supply-switch/page.tsx\")"
     ]
   }
 }

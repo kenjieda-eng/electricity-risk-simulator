@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
   "需給逼迫で法人の電気料金はどう変わるか｜市場価格高騰と契約への影響";
@@ -68,7 +67,14 @@ const causes = [
 export default function SupplyDemandTightnessImpactPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/risk-scenarios" className="underline-offset-2 hover:underline">リスクシナリオ別に知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">需給逼迫の影響</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           需給逼迫で法人の電気料金はどう変わるか
         </h1>
@@ -241,9 +247,6 @@ export default function SupplyDemandTightnessImpactPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="supply-demand-tightness-impact" />
-      </div>
     </main>
   );
 }

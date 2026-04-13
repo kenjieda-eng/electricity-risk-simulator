@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオはどう使い分けるか｜法人の予算策定・比較検討・社内説明のための見方";
 const pageDescription =
@@ -34,7 +33,14 @@ export const metadata: Metadata = {
 export default function HowToUseElectricityPriceRiskScenariosPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/risk-scenarios" className="underline-offset-2 hover:underline">リスクシナリオ別に知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">シナリオの使い方</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電気料金のリスクシナリオはどう使い分けるか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           リスクシナリオは、読むための知識ではなく、判断材料として使ってこそ価値が出ます。法人の実務では、予算策定、社内説明、
@@ -234,9 +240,6 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="how-to-use-electricity-price-risk-scenarios" />
-      </div>
     </main>
   );
 }

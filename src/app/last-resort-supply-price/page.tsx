@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の料金はなぜ高いのか｜通常契約との差と実額試算";
 const pageDescription =
@@ -168,9 +167,6 @@ export default function LastResortSupplyPricePage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="last-resort-supply-price" />
-      </div>
     </main>
   );
 }

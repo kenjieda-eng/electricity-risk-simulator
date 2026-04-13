@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "電気料金のリスクシナリオを比較するときの見方｜影響時期・継続性・上振れの出方の整理";
 const pageDescription =
@@ -34,7 +33,14 @@ export const metadata: Metadata = {
 export default function HowToCompareElectricityPriceRiskScenariosPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/risk-scenarios" className="underline-offset-2 hover:underline">リスクシナリオ別に知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">シナリオの比較方法</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電気料金のリスクシナリオを比較するときの見方</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           リスクシナリオ比較は「どれが一番怖いか」を決める作業ではなく、比較軸をそろえて意思決定に使える形へ整理する作業です。
@@ -273,9 +279,6 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="how-to-compare-electricity-price-risk-scenarios" />
-      </div>
     </main>
   );
 }

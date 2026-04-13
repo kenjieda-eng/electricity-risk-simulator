@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "最終保障供給の約款はどう読むか 法人担当者向けの確認ポイント";
 const pageDescription =
@@ -47,7 +47,14 @@ export const metadata: Metadata = {
 export default function LastResortSupplyTermsPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+      <nav aria-label="パンくず" className="text-sm text-slate-600">
+        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+        <span className="px-2">›</span>
+        <Link href="/articles/last-resort-supply" className="underline-offset-2 hover:underline">最終保障供給を知る</Link>
+        <span className="px-2">›</span>
+        <span className="text-slate-800">最終保障供給の契約条件</span>
+      </nav>
+      <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">最終保障供給の約款はどう読むか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           最終保障供給の情報は、一般送配電事業者ごとに約款や料金表として公表されています。条文を最初から順に読むと負担が大きいため、
@@ -181,9 +188,6 @@ export default function LastResortSupplyTermsPage() {
           ]}
         />
       </section>
-      <div className="mt-6">
-        <CategoryNextStepCta slug="last-resort-supply-terms" />
-      </div>
     </main>
   );
 }
