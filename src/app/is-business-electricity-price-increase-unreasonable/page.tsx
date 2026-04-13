@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 
-const pageTitle = "法人の電気料金の値上げはおかしいのか｜請求額に違和感があるときの確認ポイント";
+const pageTitle = "法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額";
 const pageDescription =
-  "法人の電気料金の値上げが急すぎる、おかしいと感じるときに、請求書や契約条件のどこを確認すべきかを解説します。燃料費調整額、市場価格要因、補助金終了、契約更新の見分け方も整理します。";
+  "法人の電気料金の値上げが急すぎる・おかしいと感じるときに使える6ステップの原因切り分けフローと、パターン別の月額影響額を解説。燃料費調整額、市場価格要因、補助金終了、契約更新の見分け方も整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -55,17 +55,124 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           補助政策、契約更新の影響で請求額が増えることがあります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、断定的に判断するのではなく、違和感があるときに何を確認すべきかを法人実務向けに整理します。
+          このページでは、違和感があるときに使える6ステップの原因切り分けフローとパターン別の月額影響を整理します。断定的に判断するのではなく、事実確認から見直し判断へつなげることが目的です。
         </p>
       </header>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">法人の電気料金の値上げはおかしいのか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">値上げの原因切り分けフロー（6ステップ）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            まずは「おかしい」と感じる原因を、使用量増加か、単価・調整項目の変化かに分けることが重要です。事実確認を先に行うことで、
-            交渉・見直しの判断が進めやすくなります。
+            請求書を手元に用意し、Step1から順番に確認していくことで、値上げの主因を特定できます。複数のステップで「あり」が出る場合は、複合要因として整理してください。
           </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">確認ステップ</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">確認内容</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">結果 → 原因</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">次のアクション</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step1: 使用量確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">kWhが前年同月比で変わったか</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">増加 → 使用量要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">省エネ・運用改善</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step2: 単価確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">電力量料金単価が変わったか</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">改定あり → 契約更新要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積比較</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step3: 燃調費確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">燃調単価が前月と変わったか</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">上昇 → 燃料市場要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">上限あり契約検討</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step4: 市場連動確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">市場価格調整額が増えたか</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">増加 → JEPX要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">固定切替検討</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step5: 補助金確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">補助金が縮小・終了したか</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">終了 → 政策要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">ベース単価で再評価</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">Step6: 制度確認</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">再エネ賦課金・容量拠出金</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">改定あり → 制度要因</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">コントロール不可（理解）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※調整項目の詳細は
+            {" "}<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>{" "}
+            と
+            {" "}<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>{" "}
+            の解説で確認できます。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">「おかしい」と感じるパターン別の月額影響</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月5万kWhを使用する高圧契約法人を想定した参考値です。使用量の変化と月額変化の組み合わせで原因を絞り込むことができます。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">パターン</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">使用量の変化</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">月額の変化</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">主な原因</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">月5万kWhの影響額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">使用量同じなのに+10万円</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">±0%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">+6〜8%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">燃調費上昇</td>
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">+10万円</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">使用量同じなのに+30万円</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">±0%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">+15〜20%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">市場連動+補助金終了</td>
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">+30万円</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">使用量減ったのに総額増</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">▲10%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">+5%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">基本料金+燃調費の固定コスト</td>
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">+8万円</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">更新後に急に+50万円</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">±0%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">+25〜30%</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">単価改定+調整項目改定</td>
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">+50万円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※上記は参考目安です。単価水準・契約内容・時期によって実際の影響額は異なります。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -73,28 +180,6 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求総額だけでは理由が分かりません。使用量（kWh）と実質単価を分けて見ると、節電で対応すべき論点か、契約条件を見直すべき論点かを
             切り分けやすくなります。
-          </p>
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">請求書で増えやすい項目</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金・電力量料金の単価改定</li>
-            <li>燃料費調整額（燃調費）</li>
-            <li>市場価格調整額</li>
-            <li>再エネ賦課金</li>
-            <li>補助政策の縮小・終了</li>
-          </ul>
-          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            調整項目の詳細は{" "}
-            <Link href="/fuel-cost-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              燃料費調整額
-            </Link>{" "}
-            と{" "}
-            <Link href="/market-price-adjustment" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
-              市場価格調整額
-            </Link>
-            の解説で確認できます。
           </p>
         </section>
 
@@ -131,11 +216,10 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人の電気料金に違和感があるときは、まず請求内訳を確認し、そのうえで契約条件との整合を見ます。原因を分解して整理することで、
-            感覚的な不安を実務的な見直し判断につなげやすくなります。
+            法人の電気料金に違和感があるときは、6ステップの切り分けフローで原因を特定し、パターン別の影響額と照らし合わせることで実務的な判断につなげやすくなります。使用量・単価・調整項目・政策要因を分けて整理したうえで、必要に応じて見積比較に進むことが重要です。
           </p>
         </section>
 

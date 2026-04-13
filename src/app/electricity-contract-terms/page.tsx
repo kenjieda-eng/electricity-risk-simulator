@@ -4,9 +4,9 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 
-const pageTitle = "法人向け電力契約で確認したい契約条件とは？更新・違約金を整理";
+const pageTitle = "法人向け電力契約で確認したい契約条件｜8項目の確認一覧と契約期間別比較";
 const pageDescription =
-  "法人向け電力契約で確認したい契約期間、更新条件、違約金、中途解約の注意点を整理。見積比較前後で見落としたくないポイントを解説します。";
+  "法人向け電力契約で確認したい契約期間、更新条件、違約金、中途解約の注意点を整理。8項目の確認一覧表と契約期間別比較で、見積比較前後で見落としたくないポイントを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -64,7 +64,7 @@ export default function ElectricityContractTermsPage() {
           見積書の数字が魅力的でも、契約条件を十分に確認しないまま切り替えると、後から想定外の制約が見つかることがあります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、見直し時に確認したい契約条件を整理し、比較後に詰めるべき実務ポイントを解説します。
+          このページでは、見直し時に確認したい契約条件を8項目の一覧表で整理し、契約期間別の特徴比較も含めて解説します。
         </p>
       </header>
 
@@ -82,6 +82,118 @@ export default function ElectricityContractTermsPage() {
             </Link>
             でも整理できます。
           </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">確認すべき契約条件一覧（8項目）</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            見積取得から契約締結までの各フェーズで確認すべき項目を一覧にまとめました。見落とした場合のリスクと確認タイミングも併せて整理しています。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">確認項目</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">確認すべき内容</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">見落とした場合のリスク</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">確認のタイミング</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">契約期間</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">開始日・終了日・年数</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見直し機会の喪失</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積取得時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">自動更新条項</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">更新拒否の通知期限（通常1〜3ヶ月前）</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">意図せず長期継続</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">更新6ヶ月前</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">違約金</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">算定方法・金額目安・適用条件</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">中途切替時の想定外コスト</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積比較時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">価格改定条項</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">契約期間中の単価改定可否</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">「固定」のはずが改定される</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">契約書精読時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">中途解約</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">解約予告期間・解約手数料</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">拠点統廃合時に解約不可</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積比較時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">燃調費の扱い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">上限有無・算定方式の違い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">上振れリスクの見落とし</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積比較時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">市場連動要素</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">連動係数・基準価格・キャップ</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">想定外の変動</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">見積比較時</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">支払条件</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">支払期日・遅延損害金・口座振替</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">経理処理への影響</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">契約締結前</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約期間別の特徴比較</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            契約期間の長さによって、単価水準・柔軟性・違約金リスクのバランスが変わります。自社の予算管理方針や拠点変動の見通しに合わせて選択することが重要です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">契約期間</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">単価傾向</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">柔軟性</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">違約金リスク</th>
+                  <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-800">向いている法人</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">1年</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">やや高め</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">高い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">低い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">市場を見ながら柔軟に対応したい法人</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">2年</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">標準的</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">中程度</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">中程度</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">コストと柔軟性のバランスを取りたい法人</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border border-slate-300 px-3 py-2 font-medium text-slate-800">3年以上</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">割安になることがある</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">低い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">高い</td>
+                  <td className="border border-slate-300 px-3 py-2 text-slate-700">予算安定を最優先する法人</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -148,10 +260,10 @@ export default function ElectricityContractTermsPage() {
           </p>
         </section>
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5">
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人向け電力契約では、単価比較に加えて契約条件を確認することが不可欠です。契約期間、更新条件、違約金、切替手続きまで含めて整理することで、導入後のギャップを減らせます。
+            法人向け電力契約では、単価比較に加えて契約条件を確認することが不可欠です。上記の8項目一覧を見積取得から契約締結まで各フェーズで活用し、契約期間の長短によるトレードオフも踏まえて判断することで、導入後のギャップを減らせます。
           </p>
         </section>
 
