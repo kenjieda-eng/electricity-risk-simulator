@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpactChart } from "../_components/MonthlyVisuals";
 
 const pageTitle = "【2026年2月】法人の電気料金はどう動いた？補助終了前の最終確認";
 const pageDescription =
@@ -33,6 +34,32 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: ["/twitter-default.png"],
   },
+};
+
+// 2026年2月の概算データ
+const FEB_2026_DATA = {
+  year: 2026,
+  month: 2,
+  categories: [
+    { label: "特別高圧", shortLabel: "特高", value: 16.3, prevMonthValue: 16.5, diff: -0.2, prevYearValue: 18.3, prevYearDiff: -2.0 },
+    { label: "高圧", shortLabel: "高圧", value: 20.2, prevMonthValue: 20.5, diff: -0.3, prevYearValue: 21.0, prevYearDiff: -0.8 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 24.8, prevMonthValue: 25.5, diff: -0.7, prevYearValue: 25.2, prevYearDiff: -0.4 },
+    { label: "低圧電力", shortLabel: "低力", value: 26.5, prevMonthValue: 27.0, diff: -0.5, prevYearValue: 27.4, prevYearDiff: -0.9 },
+  ],
+  trendData: [
+    { label: "2025/9", values: [16.9, 19.7, 25.7, 26.2] as [number, number, number, number] },
+    { label: "2025/10", values: [16.6, 20.1, 26.2, 29.3] as [number, number, number, number] },
+    { label: "2025/11", values: [16.8, 21.3, 27.3, 33.6] as [number, number, number, number] },
+    { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
+    { label: "2026/1", values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
+    { label: "2026/2", values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
+  ],
+  sameMonthHistory: [
+    { year: 2023, values: [24.2, 24.7, 25.6, 26.1] as [number, number, number, number] },
+    { year: 2024, values: [18.5, 20.9, 24.9, 27.1] as [number, number, number, number] },
+    { year: 2025, values: [18.3, 21.0, 25.2, 27.4] as [number, number, number, number] },
+    { year: 2026, values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
+  ],
 };
 
 export default function BusinessElectricityRetrospective202602Page() {
@@ -76,6 +103,8 @@ export default function BusinessElectricityRetrospective202602Page() {
         </p>
       </header>
 
+      <MonthlyDataCards data={FEB_2026_DATA} />
+
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2026年2月の結論3点</h2>
@@ -92,6 +121,14 @@ export default function BusinessElectricityRetrospective202602Page() {
             </li>
           </ol>
         </section>
+
+        <MonthlyTrendChart data={FEB_2026_DATA} />
+        <SubsidyImpactChart
+          data={FEB_2026_DATA}
+          subsidy={{ lowVoltage: 4.5, highVoltage: 2.3 }}
+          monthLabel="2026年2月使用分"
+        />
+        <YearComparisonTable data={FEB_2026_DATA} />
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">なぜ2026年2月使用分は下がって見えたのか</h2>

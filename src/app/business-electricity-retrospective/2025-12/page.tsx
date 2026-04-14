@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
+import { getMonthlyPageData } from "../_lib/monthly-page-data";
+import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable } from "../_components/MonthlyVisuals";
 
 const pageTitle = "【2025年12月】法人の電気料金はどう動いた？補助終了後の年末着地と2026年への見通し";
 const pageDescription =
@@ -38,6 +40,8 @@ export const metadata: Metadata = {
 };
 
 export default function BusinessElectricityRetrospective202512Page() {
+  const monthlyData = getMonthlyPageData(2025, 12);
+
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -64,6 +68,8 @@ export default function BusinessElectricityRetrospective202512Page() {
         </p>
       </header>
 
+      {monthlyData && <MonthlyDataCards data={monthlyData} />}
+
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2025年12月の結論3点</h2>
@@ -82,6 +88,9 @@ export default function BusinessElectricityRetrospective202512Page() {
             </li>
           </ol>
         </section>
+
+        {monthlyData && <MonthlyTrendChart data={monthlyData} />}
+        {monthlyData && <YearComparisonTable data={monthlyData} />}
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">なぜ2025年12月使用分は上昇が続いたのか</h2>
