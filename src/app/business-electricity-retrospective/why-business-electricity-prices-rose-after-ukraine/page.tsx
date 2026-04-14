@@ -91,6 +91,64 @@ export default function WhyPricesRoseAfterUkrainePage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">ウクライナ後の値上げ要因分解</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            法人電気料金の上昇を引き起こした主要因を、影響経路・時期・影響幅に分けて整理しました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">要因</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">影響開始時期</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">法人単価への影響幅（目安）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">影響期間</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">2025年時点の状況</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">LNGスポット価格急騰</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2021年後半〜</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃調費で+3〜8円/kWh（ピーク時）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2021年後半〜2023年中盤（約2年）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">市況落ち着きも長期契約への反映は継続</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">石炭・原油価格上昇</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022年前半〜</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃調費を通じて+1〜3円/kWh（高圧）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022〜2023年（ピーク後も高止まり）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">緩和傾向も、単価下限の底上げが残る</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">円安（115円→150円近辺）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022年中盤〜年末</td>
+                  <td className="border-b border-slate-200 px-3 py-2">輸入燃料コスト全体を20〜30%増幅</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022〜2023年（為替は2025年も不安定）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">円安基調が続くと再び上振れリスク</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">JEPX卸市場の高騰</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022年前半〜後半</td>
+                  <td className="border-b border-slate-200 px-3 py-2">市場連動プランで+5〜15円/kWh（ピーク時）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022〜2023年前半（断続的に発生）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2023以降は大幅低下も、FY2019比+35%水準</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">規制料金・構造コストの底上げ</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2023年6月〜（規制料金値上げ）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">単価下限を恒久的に+2〜4円/kWh引き上げ</td>
+                  <td className="border-b border-slate-200 px-3 py-2">恒久的（規制料金値上げ・容量拠出金・再エネ賦課金）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃料安でも単価が下がりにくい構造が定着</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※影響幅はモデルケースの概算です。実際の変化幅は契約区分・調達条件・電力会社により異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">石炭・原油・為替はどう効いたか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             LNGだけでなく、石炭・原油の高騰と円安が同時に進んだことで、発電燃料の円建てコストはさらに増幅されました。法人料金では、燃料費調整と調達条件改定が

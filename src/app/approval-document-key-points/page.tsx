@@ -148,6 +148,72 @@ export default function ApprovalDocumentKeyPointsPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            稟議書に盛り込むべき項目
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            承認を得やすい稟議書の各項目について、記載内容・記載例・省略した場合のリスクを整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">項目</th>
+                  <th className="border border-slate-200 px-3 py-2">記載内容</th>
+                  <th className="border border-slate-200 px-3 py-2">記載例</th>
+                  <th className="border border-slate-200 px-3 py-2">省略した場合のリスク</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">件名・目的</td>
+                  <td className="border border-slate-200 px-3 py-2">見直しの目的を1文で明示</td>
+                  <td className="border border-slate-200 px-3 py-2">「電力供給契約の変更による電気料金コスト削減のため」</td>
+                  <td className="border border-slate-200 px-3 py-2">目的が不明で差し戻しやすい</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">現状と課題</td>
+                  <td className="border border-slate-200 px-3 py-2">現行コスト・前年比・割高感を数値で示す</td>
+                  <td className="border border-slate-200 px-3 py-2">「年間○○万円、前年比＋○%の増加」</td>
+                  <td className="border border-slate-200 px-3 py-2">問題の大きさが伝わらず優先度が低く見られる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">検討経緯</td>
+                  <td className="border border-slate-200 px-3 py-2">比較検討した社数・プラン数と選定理由</td>
+                  <td className="border border-slate-200 px-3 py-2">「3社に見積依頼し、単価・条件・安定性を総合評価」</td>
+                  <td className="border border-slate-200 px-3 py-2">選定の合理性が疑われ差し戻しリスクが高まる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">契約条件の比較</td>
+                  <td className="border border-slate-200 px-3 py-2">現行と新契約の単価・料金・削減額を表形式で</td>
+                  <td className="border border-slate-200 px-3 py-2">「年間削減見込み：○○万円（試算根拠は別紙）」</td>
+                  <td className="border border-slate-200 px-3 py-2">経済的根拠が不明確で承認が遅れる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">リスクと対処</td>
+                  <td className="border border-slate-200 px-3 py-2">料金変動・供給安定・違約金リスクと各対処</td>
+                  <td className="border border-slate-200 px-3 py-2">「固定プランにより価格変動リスクを抑制」</td>
+                  <td className="border border-slate-200 px-3 py-2">リスク懸念が解消されず否決・差し戻しになりやすい</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">実施スケジュール</td>
+                  <td className="border border-slate-200 px-3 py-2">契約更新期限・申込期限・切替予定日</td>
+                  <td className="border border-slate-200 px-3 py-2">「○月○日までに申込。○月○日から切替完了予定」</td>
+                  <td className="border border-slate-200 px-3 py-2">審査が遅延し更新タイミングを逃すリスクがある</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">添付資料</td>
+                  <td className="border border-slate-200 px-3 py-2">見積書・請求書抜粋・シミュレーター結果</td>
+                  <td className="border border-slate-200 px-3 py-2">「別紙1：見積比較表、別紙2：シミュレーション結果」</td>
+                  <td className="border border-slate-200 px-3 py-2">根拠が薄く「信頼できる試算か」と追加確認が発生する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※7項目すべてを1つの稟議書に含める必要はありません。自社の規程・フォーマットに応じて適宜調整してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             数値根拠の示し方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

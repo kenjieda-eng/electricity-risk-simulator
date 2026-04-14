@@ -85,6 +85,58 @@ export default function UkraineShockOverviewPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">ウクライナショックの法人電気料金への影響サマリー</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ウクライナショック前・ピーク時・2025年現在の主要指標を区分別に比較しました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">指標・区分</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ショック前（2021年平均）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ピーク時（2022〜2023年最高水準）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">2025年現在（年平均）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">特別高圧 平均単価</td>
+                  <td className="border-b border-slate-200 px-3 py-2">10.8円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">24.2円/kWh（2023年1月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">17.4円/kWh（2019年比+41%）</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">高圧 平均単価</td>
+                  <td className="border-b border-slate-200 px-3 py-2">14.3円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">27.5円/kWh（2023年1月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">21.1円/kWh（2019年比+31%）</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電力 平均単価</td>
+                  <td className="border-b border-slate-200 px-3 py-2">25.2円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">36.8円/kWh（2022年11月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">30.2円/kWh（2019年比+15%）</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電灯 平均単価</td>
+                  <td className="border-b border-slate-200 px-3 py-2">21.2円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">31.3円/kWh（2023年1月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">26.9円/kWh（2019年比+19%）</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">JEPX卸市場（年度平均）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2021: 約10〜13円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">FY2022: 20.41円/kWh（+157% vs FY2019）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2023以降低下も、FY2019比+35%水準が継続</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※単価は当社団運営「新電力ネット」掲載データおよびJEPX公表データをもとにした参考値です。実際の契約単価は条件により異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2021年後半から2023年にかけて何が起きたか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2021年後半に始まった上昇圧力は、2022年2月以降の緊張拡大で加速し、2022年後半から2023年前半にピーク圏へ入りました。

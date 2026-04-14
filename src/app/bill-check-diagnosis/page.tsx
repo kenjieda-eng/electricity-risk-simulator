@@ -113,6 +113,55 @@ export default function BillCheckDiagnosisPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">請求書チェック結果の対応マップ</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            請求書確認で見つかった問題別の想定原因・対応優先度・次のステップをまとめました。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">チェック結果</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">想定される原因</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対応の優先度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">次のステップ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額の上限設定が不明</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">上限なしプランの可能性。市場高騰時に無制限で増加するリスク。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約書または電力会社へ問い合わせて上限設定を確認。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額が月ごとに大きく変動</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場連動型プランの特性。JEPX価格変動を直接受けている。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">固定型プランへの切り替えを検討。シミュレーターで比較試算。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金が使用量に対して割高</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力の過大設定。稼働実態に対してデマンド設定が高い。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">中高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">過去12か月の最大デマンド値を確認し、契約電力の適正化を検討。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量の月次推移を把握していない</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書の確認が合計額のみ。変動要因の分析ができていない。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">12か月分の使用量・単価・費目をExcelに整理してグラフ化。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">容量拠出金の請求額が不明</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2024年度から本格導入の新費目。認知・確認が遅れているケース。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">請求書の明細欄を確認。見積比較時も同一条件で比較できるよう把握。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="請求書の理解を深め、見直しに役立てるためのページです。"

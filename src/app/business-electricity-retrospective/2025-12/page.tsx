@@ -240,6 +240,52 @@ export default function BusinessElectricityRetrospective202512Page() {
           </ul>
         </section>
 
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">月次サマリー：2025年12月の電気料金概況</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2025年12月使用分の主要指標をまとめました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">2025年12月水準（目安）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">前月（11月）比変化</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">主な変動要因</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電灯・低圧電力</td>
+                  <td className="border-b border-slate-200 px-3 py-2">32〜35円/kWh程度（年間最高水準圏）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">上昇〜高止まり</td>
+                  <td className="border-b border-slate-200 px-3 py-2">暖房需要ピーク接近・LNG冬場上昇の本格反映</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">20〜23円/kWh程度</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">上昇（年末稼働増も重なる）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">暖房本格稼働・年末操業増・燃料費調整上昇</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">特別高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">16〜17円/kWh程度</td>
+                  <td className="border-b border-slate-200 px-3 py-2">小幅上昇</td>
+                  <td className="border-b border-slate-200 px-3 py-2">LNG価格上昇の直接反映・年末需給タイト化</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2026年度計画への影響</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助なし実力値の上限水準として参照</td>
+                  <td className="border-b border-slate-200 px-3 py-2">−</td>
+                  <td className="border-b border-slate-200 px-3 py-2">冬季・年末の複合要因が重なった月として記録価値大</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※水準は当社団運営「新電力ネット」掲載データをもとにした目安です。実際の請求額は電力会社・契約条件により異なります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

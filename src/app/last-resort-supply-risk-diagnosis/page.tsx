@@ -175,6 +175,49 @@ export default function LastResortSupplyRiskDiagnosisPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">リスクレベル別の対応</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            診断チェックの該当数に応じたリスクレベルと、推奨アクション・対応期限を整理しました。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">リスクレベル</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">該当条件</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">推奨アクション</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対応期限</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700">低</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">該当項目0〜1個。契約状況を把握・管理できている。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年1回の契約状況確認を習慣化。次回更新時期をカレンダーに設定。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">次回更新前（6か月前）</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">該当項目2〜3個。契約管理に一部抜けがある。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約書・更新時期を確認し、代替電力会社の候補をリストアップ。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1か月以内</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">該当項目4〜6個。複数の管理上の課題が重なっている。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">今すぐ全拠点の契約状況を棚卸し。見積依頼先も同時に探索する。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2週間以内</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">緊急</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">既に最終保障供給に移行している、または移行直前の状態。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">複数の電力会社に見積を依頼し、今すぐ切替先を決定・手続きを開始。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">今すぐ</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="最終保障供給の仕組みと対策についてさらに詳しく確認できるページです。"

@@ -248,6 +248,52 @@ export default function BusinessElectricityRetrospective202510Page() {
           </ul>
         </section>
 
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">月次サマリー：2025年10月の電気料金概況</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2025年10月使用分の主要指標をまとめました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">2025年10月水準（目安）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">前月（9月）比変化</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">主な変動要因</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電灯・低圧電力</td>
+                  <td className="border-b border-slate-200 px-3 py-2">29〜30円/kWh程度</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">上昇（補助終了で数円増）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">激変緩和補助金の正式終了</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">20〜21円/kWh程度</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">上昇（実力値に切替）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助終了・容量拠出金の継続</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">特別高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">16〜17円/kWh程度</td>
+                  <td className="border-b border-slate-200 px-3 py-2">小幅変動（補助対象外のため直接影響なし）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">容量拠出金・再エネ賦課金の継続</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">共通の構造要因</td>
+                  <td className="border-b border-slate-200 px-3 py-2">全区分に継続影響</td>
+                  <td className="border-b border-slate-200 px-3 py-2">−</td>
+                  <td className="border-b border-slate-200 px-3 py-2">容量拠出金・再エネ賦課金の上乗せ継続</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※水準は当社団運営「新電力ネット」掲載データをもとにした目安です。実際の請求額は電力会社・契約条件により異なります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

@@ -193,6 +193,51 @@ export default function LessonsFromUkraineShockFor2026Page() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">2026年に向けた教訓と確認事項</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ウクライナショックの経験から得られた主要な教訓と、2026年局面で法人が確認すべきアクションをまとめました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">教訓</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">具体的な内容</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">2026年局面での確認アクション</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">上昇は時間差で来る</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃料価格上昇から請求反映まで3〜6ヶ月のタイムラグがある。足元の請求が安定していても、先行指標の悪化には早期対応が必要</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃料費調整・JEPX動向を月次でモニタリングし、先行変化を早期検知する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">一度上がった単価は元に戻らない</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022〜2023年の急騰後、2025年時点でも2019年水準には戻っていない。規制料金値上げ・容量拠出金は恒久的コスト要因</td>
+                  <td className="border-b border-slate-200 px-3 py-2">予算は「急騰前に戻る前提」ではなく、高止まり基準での複数シナリオを置く</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">補助は実力値を隠す</td>
+                  <td className="border-b border-slate-200 px-3 py-2">政府補助が厚い期間は請求が下がって見えるが、実力値は変わっていない。補助終了時に一気に顕在化するリスクがある</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助有無・補助単価を請求書から分離し、実力値ベースで予算を管理する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">契約区分で影響の出方が異なる</td>
+                  <td className="border-b border-slate-200 px-3 py-2">同じ局面でも特別高圧・高圧・低圧で上昇速度・ピーク水準・補助の効き方が異なる。全社平均だけでは実態が見えにくい</td>
+                  <td className="border-b border-slate-200 px-3 py-2">拠点・区分別にKPIを設定し、契約更新月の分散管理を実施する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">供給不安は契約条件を先に締め付ける</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2022年の新電力撤退ラッシュのように、実際の請求上昇より先に見積条件や供給継続性が悪化する局面がある</td>
+                  <td className="border-b border-slate-200 px-3 py-2">契約更新を前倒しし、供給継続条項・上限条項・複数業者の競合状況を事前に確認する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">予算・契約見直し・社内説明への落とし込み</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実績確定を待つだけでは、更新交渉と予算再設定が後手になります。未確定領域は「断定しない」前提で示唆化し、判断に必要な条件を先に揃えることが、

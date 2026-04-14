@@ -191,6 +191,60 @@ export default function ExplainingPriceSurgeRiskPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            リスクシナリオ別の月額影響
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            月間使用量5万kWhの事業者を例に、シナリオ別の月額影響と社内説明のポイントを整理します。自社の使用量に合わせてスケールを調整してください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">シナリオ</th>
+                  <th className="border border-slate-200 px-3 py-2">発生条件</th>
+                  <th className="border border-slate-200 px-3 py-2">月5万kWhの影響（参考）</th>
+                  <th className="border border-slate-200 px-3 py-2">社内説明のポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">現状維持（ベース）</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料価格・市場価格が現水準で継続</td>
+                  <td className="border border-slate-200 px-3 py-2">変動なし（現行水準）</td>
+                  <td className="border border-slate-200 px-3 py-2">比較の基準として提示。「このまま何もしなければ現状が続く」という前提を示す</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">燃調単価＋1円/kWh上昇</td>
+                  <td className="border border-slate-200 px-3 py-2">LNG・石炭価格が10〜15%上昇</td>
+                  <td className="border border-slate-200 px-3 py-2">月額＋約5万円（年間＋約60万円）</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料価格上昇は外部要因であり自社では防げない。プランの見直しで抑制可能と説明</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">市場価格急騰（市場連動の場合）</td>
+                  <td className="border border-slate-200 px-3 py-2">JEPX価格が前年比2倍以上に上昇</td>
+                  <td className="border border-slate-200 px-3 py-2">月額＋数十万円規模（変動幅大）</td>
+                  <td className="border border-slate-200 px-3 py-2">市場連動プランのリスク。「最悪ケースの上限」を先に示すことで経営層の不安を軽減</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">複合リスク（燃調＋賦課金上昇）</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料高騰＋再エネ賦課金単価引き上げが重なる</td>
+                  <td className="border border-slate-200 px-3 py-2">月額＋10〜20万円規模（試算）</td>
+                  <td className="border border-slate-200 px-3 py-2">複合要因は予測が難しいが発生頻度は低くない。シミュレーター試算を根拠として使う</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">固定プランへ切替後</td>
+                  <td className="border border-slate-200 px-3 py-2">固定プランで価格変動リスクを遮断</td>
+                  <td className="border border-slate-200 px-3 py-2">上振れリスクを抑制（変動なし）</td>
+                  <td className="border border-slate-200 px-3 py-2">「見直しにより不確実性を排除できる」という対策効果として提示</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※月額影響は概算の参考値です。実際の影響額は契約単価・使用量・プラン種別によって異なります。シミュレーターで自社の数値を確認してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             経営層・財務担当に刺さる伝え方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

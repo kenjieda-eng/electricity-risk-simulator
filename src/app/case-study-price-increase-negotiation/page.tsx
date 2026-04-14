@@ -190,6 +190,50 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
         </div>
       </section>
 
+      {/* 交渉の経緯と結果テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">交渉の経緯と結果</h2>
+        <p className="mt-2 text-sm text-slate-600">各交渉ステップの内容と達成した結果のまとめ</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">交渉ステップ</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">内容</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">結果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-sky-700 whitespace-nowrap">STEP 1 通知精査</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">値上げ通知書の内容を確認し、電力量料金+28%・燃調費上限撤廃の財務影響を試算</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間+730万円相当のコスト増と判明。早急な対応が必要と認識。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-sky-700 whitespace-nowrap">STEP 2 代替調達探索</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力2社・大手電力に同一条件で見積依頼。交渉の「逃げ道」を確保。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">切替可能な代替先が存在することを確認。交渉の根拠が整った。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-sky-700 whitespace-nowrap">STEP 3 値上げ根拠追及</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現契約電力に「+28%の根拠データを開示してほしい」と文書で要求</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">根拠の一部が曖昧であることが判明し、交渉の余地が生まれた。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-sky-700 whitespace-nowrap">STEP 4 他社見積提示</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">他社見積もりを提示し「この条件で折り合えなければ切り替える」と期限を提示</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">相手の意思決定が迅速化。条件改善の提案が届くようになった。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-sky-700 whitespace-nowrap">STEP 5 最終合意</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">値上げ幅を+28%から+13%へ圧縮・燃調費上限の一部継続を文書で合意</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間▲216万円の圧縮を達成。燃調費リスクも上限設定により軽減。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* 交渉で有効だったポイント */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">交渉で有効だった3つのポイント</h2>

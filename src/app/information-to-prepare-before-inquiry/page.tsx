@@ -150,6 +150,78 @@ export default function InformationToPrepareBeforeInquiryPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            問い合わせ前に揃える情報チェックリスト
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            以下の8項目について、入手先・なぜ必要か・なくても進められるかを整理しました。問い合わせ前の準備チェックとして活用してください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">情報</th>
+                  <th className="border border-slate-200 px-3 py-2">入手先</th>
+                  <th className="border border-slate-200 px-3 py-2">なぜ必要か</th>
+                  <th className="border border-slate-200 px-3 py-2">なくても進められるか</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">月別電力使用量（直近12か月）</td>
+                  <td className="border border-slate-200 px-3 py-2">電気料金請求書・電力会社Webポータル</td>
+                  <td className="border border-slate-200 px-3 py-2">見積の基礎データ。正確な年間試算に不可欠</td>
+                  <td className="border border-slate-200 px-3 py-2">不可。概算見積しか出せず比較精度が落ちる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">現行の電力量単価（円/kWh）</td>
+                  <td className="border border-slate-200 px-3 py-2">請求書・契約書</td>
+                  <td className="border border-slate-200 px-3 py-2">候補先との単価比較の基準になる</td>
+                  <td className="border border-slate-200 px-3 py-2">不可。削減効果の試算ができない</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">現行の基本料金（円/kW）・契約電力（kW）</td>
+                  <td className="border border-slate-200 px-3 py-2">請求書・契約書</td>
+                  <td className="border border-slate-200 px-3 py-2">基本料金の比較と年間総額試算に必要</td>
+                  <td className="border border-slate-200 px-3 py-2">一部可能だが精度が落ちる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">現行契約の更新日・満了日</td>
+                  <td className="border border-slate-200 px-3 py-2">電力契約書・現行電力会社への問い合わせ</td>
+                  <td className="border border-slate-200 px-3 py-2">切替タイミングを決める最重要情報</td>
+                  <td className="border border-slate-200 px-3 py-2">不可。タイミングを逃すリスクが高い</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">解約条件・違約金の有無</td>
+                  <td className="border border-slate-200 px-3 py-2">電力契約書</td>
+                  <td className="border border-slate-200 px-3 py-2">中途解約時のコストを事前に把握するため</td>
+                  <td className="border border-slate-200 px-3 py-2">一応可能だが後でトラブルになりやすい</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">供給電圧と契約種別（高圧/特高/低圧）</td>
+                  <td className="border border-slate-200 px-3 py-2">請求書・設備管理資料</td>
+                  <td className="border border-slate-200 px-3 py-2">電力会社が適用できるプランを絞り込む基本情報</td>
+                  <td className="border border-slate-200 px-3 py-2">不可。正確な見積が出せない</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">施設の用途・業種</td>
+                  <td className="border border-slate-200 px-3 py-2">社内情報</td>
+                  <td className="border border-slate-200 px-3 py-2">業種・用途に応じたプランや優遇条件の確認のため</td>
+                  <td className="border border-slate-200 px-3 py-2">一応可能。ただし最適提案が受けにくくなる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">価格重視か安定性重視かの方針</td>
+                  <td className="border border-slate-200 px-3 py-2">社内での検討・合意</td>
+                  <td className="border border-slate-200 px-3 py-2">固定か市場連動かの選択方針を伝えるため</td>
+                  <td className="border border-slate-200 px-3 py-2">一応可能。ただし的外れな提案が多くなる</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※「なくても進められるか」欄の「一応可能」は概算見積は取得できるが、精度が落ちることを意味します。できるだけ事前に揃えることを推奨します。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             準備不足で起きるよくある問題
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

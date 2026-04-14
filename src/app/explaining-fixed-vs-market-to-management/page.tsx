@@ -187,6 +187,66 @@ export default function ExplainingFixedVsMarketToManagementPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            固定vs市場連動の経営層向け比較
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            経営層への説明に適した比較軸で、固定プランと市場連動プランを整理します。「どちらが安いか」ではなく「どちらのリスクをとるか」という経営判断の観点で示すことが重要です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">比較軸</th>
+                  <th className="border border-slate-200 px-3 py-2">固定プラン</th>
+                  <th className="border border-slate-200 px-3 py-2">市場連動プラン</th>
+                  <th className="border border-slate-200 px-3 py-2">経営判断での意味</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">コストの予測可能性</td>
+                  <td className="border border-slate-200 px-3 py-2">高い（予算計画が立てやすい）</td>
+                  <td className="border border-slate-200 px-3 py-2">低い（月次で大きく変動する）</td>
+                  <td className="border border-slate-200 px-3 py-2">利益率が低い事業者・予算管理が重要な組織は固定を優先すべき</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">価格高騰リスク</td>
+                  <td className="border border-slate-200 px-3 py-2">低い（上限が決まっている）</td>
+                  <td className="border border-slate-200 px-3 py-2">高い（市場価格急騰が直撃）</td>
+                  <td className="border border-slate-200 px-3 py-2">電気料金が事業コストに占める割合が高いほど、高騰リスクの影響が大きい</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">価格低下時の恩恵</td>
+                  <td className="border border-slate-200 px-3 py-2">なし（市場が安くても料金は固定）</td>
+                  <td className="border border-slate-200 px-3 py-2">あり（市場安値がコスト削減に直結）</td>
+                  <td className="border border-slate-200 px-3 py-2">市場連動は「運が良ければ安い」が、それを経営計画に織り込むのは難しい</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">説明責任のリスク</td>
+                  <td className="border border-slate-200 px-3 py-2">低い（価格変動の言い訳が不要）</td>
+                  <td className="border border-slate-200 px-3 py-2">高い（高騰時に意思決定の説明が必要）</td>
+                  <td className="border border-slate-200 px-3 py-2">市場連動を選ぶ場合は、高騰時の対応方針を事前に経営層と合意しておく</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">向いている事業者</td>
+                  <td className="border border-slate-200 px-3 py-2">利益率が低い・コスト安定を重視・予算管理が厳格</td>
+                  <td className="border border-slate-200 px-3 py-2">リスク許容度が高い・使用量調整が可能・短期コスト削減を優先</td>
+                  <td className="border border-slate-200 px-3 py-2">自社の財務体力・リスク許容度を確認した上で判断する</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">最悪ケースの影響</td>
+                  <td className="border border-slate-200 px-3 py-2">限定的（固定単価の範囲内）</td>
+                  <td className="border border-slate-200 px-3 py-2">大きい（JEPX急騰時は数倍になる可能性）</td>
+                  <td className="border border-slate-200 px-3 py-2">「最悪ケースで年間○万円追加」という上限を事前に示すことが重要</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※上記は一般的な特徴の比較です。プランの具体的な条件は電力会社・契約内容によって異なります。見積書で詳細を確認してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             担当者が事前に整理すべき判断材料
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

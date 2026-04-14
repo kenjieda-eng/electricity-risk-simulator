@@ -160,6 +160,61 @@ export default function QuotationComparisonPreCheckPage() {
           </table>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見積比較前の準備度チェック</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            準備項目ごとに完了状況と未完了のリスク、対応方法を整理しました。見積依頼前の確認にご活用ください。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">準備項目</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">完了していれば</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">未完了のリスク</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対応方法</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">供給地点特定番号の確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積計算を開始できない電力会社がある</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現行の電気料金請求書または電力会社Webサービスで確認</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">直近12か月の使用量データ</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年間コスト試算の精度が大幅に下がる</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力会社のWebサービスまたは請求書から月別kWhを集計</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">契約電力・受電電圧の確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">料金区分の見誤りで比較条件がずれる</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約書の「受電電圧」「契約電力（kW）」欄を確認</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">現契約の満了日と解約条件</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中途解約違約金が発生し、見直しのメリットが消える</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約書の「契約期間」「中途解約条件」欄を確認</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">見直しの目的・比較軸の社内共有</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">担当者間で優先軸がずれて比較・判断が迷走する</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">「コスト削減優先」「安定性優先」など目的を文書化して共有</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">稟議・決裁ルートの事前確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-green-700">○</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積完了後に社内調整が遅れ、更新タイミングを逃す</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">稟議書の形式・承認者・期間を事前に上長と確認</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="見積比較の準備から比較・判断まで、関連する情報をまとめました。"

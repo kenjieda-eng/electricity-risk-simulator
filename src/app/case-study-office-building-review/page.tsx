@@ -230,6 +230,62 @@ export default function CaseStudyOfficeBuildingPage() {
         </div>
       </section>
 
+      {/* 見直し前後の契約条件比較テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">見直し前後の契約条件比較</h2>
+        <p className="mt-2 text-sm text-slate-600">主要な契約条件の変更内容と差額の一覧</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">項目</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">見直し前</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">見直し後</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">差額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,200kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">900kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲300kW（▲25%）</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金（月額）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">2,544,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,908,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲636,000円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金（月額）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,840,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,780,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲60,000円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額（月額）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">580,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">560,000円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲20,000円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンド管理レビュー</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">なし（放置）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">2〜3年ごとに実施</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">継続効果</td>
+              </tr>
+              <tr className="bg-sky-100 font-bold">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">合計（年額）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約3,700万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約3,120万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲約580万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* 成功要因 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">成功要因・教訓</h2>

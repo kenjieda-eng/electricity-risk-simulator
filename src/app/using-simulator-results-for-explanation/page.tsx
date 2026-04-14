@@ -181,6 +181,60 @@ export default function UsingSimulatorResultsForExplanationPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーター結果の活用場面
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            シミュレーターの診断結果は複数の場面で活用できます。活用場面ごとに使うデータ・伝え方・注意点を整理しておくことで、説明の準備が効率的になります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">活用場面</th>
+                  <th className="border border-slate-200 px-3 py-2">使うデータ</th>
+                  <th className="border border-slate-200 px-3 py-2">伝え方のポイント</th>
+                  <th className="border border-slate-200 px-3 py-2">注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">予算策定</td>
+                  <td className="border border-slate-200 px-3 py-2">シナリオ別の年間コスト試算（上振れ・下振れ幅）</td>
+                  <td className="border border-slate-200 px-3 py-2">「来年度の電力コストはベースで○万円、最悪ケースで△万円」と幅を示す</td>
+                  <td className="border border-slate-200 px-3 py-2">試算は確定値ではないため「想定値」として扱う</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">見積比較</td>
+                  <td className="border border-slate-200 px-3 py-2">プラン比較の年間コスト差・リスクスコア</td>
+                  <td className="border border-slate-200 px-3 py-2">「A社固定プランとB社市場連動プランの年間コスト差は○万円」と数値で比較</td>
+                  <td className="border border-slate-200 px-3 py-2">比較は同一使用量・同一前提条件で行う</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">リスク説明</td>
+                  <td className="border border-slate-200 px-3 py-2">年間上振れリスク（金額）・リスクスコア</td>
+                  <td className="border border-slate-200 px-3 py-2">「現状のリスクスコアは○点で、最悪ケースで年間○万円の追加コストが発生しうる」</td>
+                  <td className="border border-slate-200 px-3 py-2">スコアは相対的な目安。絶対的な確率ではない</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">経営報告</td>
+                  <td className="border border-slate-200 px-3 py-2">リスクスコア・年間コスト見通し・対策後の改善効果</td>
+                  <td className="border border-slate-200 px-3 py-2">「現状リスクスコア○点→見直し後○点に改善見込み。コスト削減効果は年間○万円」</td>
+                  <td className="border border-slate-200 px-3 py-2">経営層向けには要点のみ1ページ以内に絞る</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">稟議書添付</td>
+                  <td className="border border-slate-200 px-3 py-2">診断結果のスクリーンショット・入力条件の記録</td>
+                  <td className="border border-slate-200 px-3 py-2">「別紙：シミュレーション結果（入力条件：月間使用量○kWh・現行単価○円/kWh）」</td>
+                  <td className="border border-slate-200 px-3 py-2">入力した前提条件を必ず明記して添付する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※シミュレーター結果はあくまでも試算です。最終的な意思決定は実際の見積書に基づいて行ってください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             シミュレーター結果を使う際の注意点
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

@@ -172,6 +172,49 @@ export default function SelfDiagnosisContractReviewPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">自己診断結果の目安</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            チェック数に応じた判定と推奨アクションの目安です。重要度「高」の項目に1つでも該当する場合は、スコアに関わらず早急な確認を推奨します。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">スコア</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">判定</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">推奨アクション</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">優先度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">0〜2点</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">様子見</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">年1回の定期チェックを継続。次回更新時期を把握しておく。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600">低</span></td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">3〜4点</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">情報収集</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">シミュレーターで現行プランのリスクを試算。他社のプラン情報を収集開始。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">5〜6点</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積依頼</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">複数社への見積依頼を開始。契約満了日と中途解約条件を確認する。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">高</span></td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">7点以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">早急に見直し</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">今すぐ見直し手続きに着手。社内稟議・比較・切替先決定を最速で進める。</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">緊急</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="診断結果をもとに、次のステップへ進むためのページをご紹介します。"

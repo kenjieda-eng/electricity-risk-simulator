@@ -267,6 +267,52 @@ export default function BusinessElectricityRetrospective202602Page() {
           </ul>
         </section>
 
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">月次サマリー：2026年2月の電気料金概況</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2026年2月使用分の主要指標をまとめました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">補助単価（1月・2月）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">3月以降の変化</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">実務上の注意点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧（電灯・電力）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">4.5円/kWh（最後の最大補助月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">3月は1.5円/kWhへ縮小、4月は終了予定</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2月の安さを通年の基準にしない</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">2.3円/kWh（最後の最大補助月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">3月は0.8円/kWhへ縮小、4月は終了予定</td>
+                  <td className="border-b border-slate-200 px-3 py-2">4月以降の実力値増加を先取りして予算修正する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">特別高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助対象外</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃料費調整・需給の推移に依存</td>
+                  <td className="border-b border-slate-200 px-3 py-2">低圧・高圧と異なる視点で中期調達戦略を確認</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">補助終了後の目安</td>
+                  <td className="border-b border-slate-200 px-3 py-2">−</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">低圧で3〜4円/kWh、高圧で2円超の実力値上昇が見込まれる</td>
+                  <td className="border-b border-slate-200 px-3 py-2">4月使用分（5月請求）から本格的な負担増が顕在化</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※補助単価は資源エネルギー庁の公表情報をもとにした参考値です。実際の請求額は電力会社・契約条件により異なります。</p>
+        </section>
+
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

@@ -102,6 +102,49 @@ export default function ContractRenewalTimingDiagnosisPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">更新時期別のアクション</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            現在の契約更新までの残り期間によって、取るべきアクションと優先度が変わります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">更新までの期間</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">やるべきこと</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">優先度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">注意点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">6か月前以上</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現状把握・シミュレーション・社内方針の確認</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600">低〜中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">余裕を持って情報収集できる最良のタイミング。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">3か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">2〜3社へ見積依頼・比較・社内稟議準備を開始</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積〜比較〜稟議に最低2か月必要。今月中に依頼を出す。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">1か月前</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積比較・切替先確定・現行会社への解約申告を急ぐ</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">時間が限られる。切替できない場合は現行更新も視野に入れる。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">期限切れ後</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自動更新・最終保障の確認と早急な切替先探索</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-200 px-2 py-0.5 text-xs font-semibold text-red-800">緊急</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">自動更新・最終保障供給移行の両パターンを確認。今すぐ動く。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="見直しのタイミングと手順を理解するための関連ページです。"

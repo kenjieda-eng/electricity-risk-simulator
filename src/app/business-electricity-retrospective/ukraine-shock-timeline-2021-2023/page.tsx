@@ -90,6 +90,71 @@ export default function UkraineShockTimeline20212023Page() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">ウクライナショック影響タイムライン</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2021年後半から2023年にかけての主要局面と、法人電気料金への影響を時系列で整理しました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">時期</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">主な出来事</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">JEPX・卸市場への影響</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">燃調費への影響</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">法人月額への影響（目安）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2021年後半</td>
+                  <td className="border-b border-slate-200 px-3 py-2">LNGスポット価格の急上昇開始、アジア需要回復</td>
+                  <td className="border-b border-slate-200 px-3 py-2">スポット価格が上昇傾向へ転換</td>
+                  <td className="border-b border-slate-200 px-3 py-2">プラス転換、月々に反映が始まる</td>
+                  <td className="border-b border-slate-200 px-3 py-2">前年比で数%〜10%程度の増加</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2022年2月〜6月</td>
+                  <td className="border-b border-slate-200 px-3 py-2">ロシアのウクライナ侵攻、欧州LNG争奪が激化</td>
+                  <td className="border-b border-slate-200 px-3 py-2">JEPX平均が急上昇、スパイク多発</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃調費が急速に上昇し請求への反映開始</td>
+                  <td className="border-b border-slate-200 px-3 py-2">高圧300kWで月額30〜50万円超の増加</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2022年7月〜12月</td>
+                  <td className="border-b border-slate-200 px-3 py-2">LNGスポット価格が過去最高水準、円安150円近辺</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2022平均20.41円/kWhと年度最高水準</td>
+                  <td className="border-b border-slate-200 px-3 py-2">上限撤廃・上限引き上げが相次ぐ</td>
+                  <td className="border-b border-slate-200 px-3 py-2">前年同期比50〜100%増の事例が続出</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2023年前半</td>
+                  <td className="border-b border-slate-200 px-3 py-2">政府の激変緩和補助金開始（高圧3.5円/kWh）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">市場価格は依然高水準</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助で実質的な請求上昇が緩和される</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助なしの実力値は依然高止まり</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2023年後半</td>
+                  <td className="border-b border-slate-200 px-3 py-2">大手電力の規制料金大幅値上げ（6月以降）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2023は10.74円/kWhへ急落（FY2022比▲47%）</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助継続により請求感は改善</td>
+                  <td className="border-b border-slate-200 px-3 py-2">単価の下限が規制料金値上げで恒久的に切り上がる</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">2024〜2025年</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃料市況の落ち着き、補助の段階的縮小</td>
+                  <td className="border-b border-slate-200 px-3 py-2">FY2019比で依然+35%超の水準が継続</td>
+                  <td className="border-b border-slate-200 px-3 py-2">容量拠出金が新たな固定コスト要因として加算</td>
+                  <td className="border-b border-slate-200 px-3 py-2">元の水準には戻らない「高止まり」が定着</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※月額影響はモデルケースの概算です。実際の変化幅は契約区分・使用量・契約条件により異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2022年2月以降に空気が変わった</h2>
           <div className="mt-3 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
             <p>2022年2月以降は、市場での供給不安評価が一段強まり、法人向け見積の前提も保守化しました。</p>

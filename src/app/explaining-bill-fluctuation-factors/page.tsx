@@ -199,6 +199,96 @@ export default function ExplainingBillFluctuationFactorsPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            請求変動の要因分解テンプレート
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            社内報告時に活用できる要因分解の表テンプレートです。各費目について当月・前月・前年同月を並べ、前月比・前年比と主な要因を記載することで、変動の全体像をひと目で伝えられます。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">費目</th>
+                  <th className="border border-slate-200 px-3 py-2">当月（円）</th>
+                  <th className="border border-slate-200 px-3 py-2">前月（円）</th>
+                  <th className="border border-slate-200 px-3 py-2">前年同月（円）</th>
+                  <th className="border border-slate-200 px-3 py-2">前月比</th>
+                  <th className="border border-slate-200 px-3 py-2">前年比</th>
+                  <th className="border border-slate-200 px-3 py-2">主な要因</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">基本料金</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">デマンド増減・設備追加など</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">電力量料金</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">使用量（kWh）の増減・季節変動</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">燃料費調整額</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">燃料（LNG・石炭）価格の変動</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">再エネ賦課金</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">単価改定（4月）・使用量変動</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">容量拠出金</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">容量市場の落札価格変動</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">その他加算</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">送配電関連費・託送料金等</td>
+                </tr>
+                <tr className="bg-slate-50 font-semibold text-slate-900">
+                  <td className="border border-slate-200 px-3 py-2">合計</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">総合的な変動要因のまとめ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※各費目の金額は電気料金請求書から読み取ります。請求書に項目が細分化されていない場合は、電力会社に内訳の確認を依頼してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             「どうすればよかったのか」という質問への対応
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

@@ -173,6 +173,63 @@ export default function CaseStudyHotelMarketLinkedPage() {
         </div>
       </section>
 
+      {/* 切替前後のコスト比較テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">切替前後のコスト比較</h2>
+        <p className="mt-2 text-sm text-slate-600">年間ベースでの費目別比較（市場連動プラン実績 vs 固定プラン切替後）</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">費目</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">市場連動（年間）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">固定切替後（年間）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">差額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力量料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約2,340万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約1,890万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲450万円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約890万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">なし（固定込み）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲890万円相当</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">基本料金</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約480万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約470万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲10万円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約980万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約660万円（上限設定あり）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲320万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約480万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約460万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲20万円</td>
+              </tr>
+              <tr className="bg-sky-100 font-bold">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">合計（年間）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約3,717万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約3,125万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">▲約592万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">※市場価格調整額は固定プランでは電力量料金に統合される形となるため、費目ベースの差額は参考値です。</p>
+      </section>
+
       {/* 固定プランへの切り替え判断 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">固定プランへの切り替え判断基準</h2>

@@ -197,6 +197,51 @@ export default function CaseStudyRestaurantChainPage() {
         </div>
       </section>
 
+      {/* 店舗規模別削減効果テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">店舗規模別の削減効果</h2>
+        <p className="mt-2 text-sm text-slate-600">店舗タイプ別の平均削減額と40店舗合計への寄与（年間ベース）</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">店舗タイプ</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">店舗数</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均削減額（1店舗・年間）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">合計削減額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大型店（100坪超・客席100席以上）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">8店舗</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約120万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約960万円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">中型店（50〜100坪・客席50〜99席）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">22店舗</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約65万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約1,430万円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">小型店（50坪未満・客席49席以下）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">10店舗</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約41万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約410万円</td>
+              </tr>
+              <tr className="bg-sky-100 font-bold">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">合計</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">40店舗</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">平均約70万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約2,800万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">※大型店は電力メニュー変更の効果が最大（単価改善の絶対額が大きい）。小型店はLED化・待機電力削減の割合が高い。</p>
+      </section>
+
       {/* 成功要因 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">成功要因</h2>

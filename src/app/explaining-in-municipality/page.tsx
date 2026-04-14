@@ -163,6 +163,66 @@ export default function ExplainingInMunicipalityPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            自治体庁内の説明ステップ
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自治体庁内では、説明する相手・段階によって内容と必要資料が異なります。以下のステップを参考に、段階的に合意形成を進めることが有効です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">ステップ</th>
+                  <th className="border border-slate-200 px-3 py-2">対象</th>
+                  <th className="border border-slate-200 px-3 py-2">説明内容</th>
+                  <th className="border border-slate-200 px-3 py-2">必要資料</th>
+                  <th className="border border-slate-200 px-3 py-2">所要目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">1. 担当課内</td>
+                  <td className="border border-slate-200 px-3 py-2">担当者・係長</td>
+                  <td className="border border-slate-200 px-3 py-2">現状コストの整理、見直しの必要性・検討開始の提案</td>
+                  <td className="border border-slate-200 px-3 py-2">電気料金実績・シミュレーション試算</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜2週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">2. 課長</td>
+                  <td className="border border-slate-200 px-3 py-2">担当課長</td>
+                  <td className="border border-slate-200 px-3 py-2">年間削減見込み・手続き概要・スケジュール</td>
+                  <td className="border border-slate-200 px-3 py-2">削減効果試算・手続きフロー</td>
+                  <td className="border border-slate-200 px-3 py-2">1週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">3. 財政課</td>
+                  <td className="border border-slate-200 px-3 py-2">財政担当者</td>
+                  <td className="border border-slate-200 px-3 py-2">予算への影響・削減額の財政上の位置づけ・調達手続きの確認</td>
+                  <td className="border border-slate-200 px-3 py-2">年間削減額試算・調達方法の検討資料</td>
+                  <td className="border border-slate-200 px-3 py-2">2〜3週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">4. 副市長・首長</td>
+                  <td className="border border-slate-200 px-3 py-2">副市長または首長</td>
+                  <td className="border border-slate-200 px-3 py-2">財政節減効果・供給安定性・政策目標との整合</td>
+                  <td className="border border-slate-200 px-3 py-2">比較表・5年間累積削減試算・脱炭素との関連資料</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜2週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">5. 議会報告</td>
+                  <td className="border border-slate-200 px-3 py-2">議会・委員会</td>
+                  <td className="border border-slate-200 px-3 py-2">調達手続きの透明性・削減効果・住民への説明</td>
+                  <td className="border border-slate-200 px-3 py-2">入札結果・落札理由・削減効果の公表資料</td>
+                  <td className="border border-slate-200 px-3 py-2">定例会スケジュールによる</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※ステップの順番・必要資料は自治体の規模・規程・調達金額によって異なります。事前に財政・契約担当部署へ確認してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             財政効果の説明を強化するために
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

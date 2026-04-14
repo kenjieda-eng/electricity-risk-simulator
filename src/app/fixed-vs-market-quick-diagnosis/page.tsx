@@ -174,6 +174,49 @@ export default function FixedVsMarketQuickDiagnosisPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">診断結果パターン別の推奨</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            診断フローの回答パターンに応じた、プラン選択の方向性と理由を整理しています。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">パターン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特徴</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">推奨プラン</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">理由</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">安定最優先型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">予算管理が厳格・変動コスト吸収余地なし</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">固定型</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">料金予測可能性が最優先。高騰リスクを完全に遮断できる。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">変動許容型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量が安定・モニタリング体制あり・節電余地あり</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-indigo-700">市場連動型</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">価格低下局面でのコスト削減メリットを取りやすい環境。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">繁閑差大型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">季節・稼働状況で使用量が大きく変動する</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-sky-700">固定型（時間帯別）</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">繁忙期の高騰リスクを固定単価で吸収。時間帯別設計も有効。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">コスト重視型</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">使用量が大きく・電力コストが経営の重要変数</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-amber-700">複数プラン比較</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">両プランの試算を比較し、年間総コストとリスク許容度で判断。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="プラン選択の判断をさらに深めるためのページです。"

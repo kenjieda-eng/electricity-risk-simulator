@@ -174,6 +174,57 @@ export default function UkraineShockAndContractPracticePage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">ウクライナショック後の契約実務の変化</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ウクライナショック前後で、法人電力契約の実務がどのように変化したかを整理しました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">項目</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ショック前（〜2021年）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ショック後（2022年〜）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">法人が確認すべきこと</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">見積取得の慣行</td>
+                  <td className="border-b border-slate-200 px-3 py-2">更新直前の1〜2社見積が一般的</td>
+                  <td className="border-b border-slate-200 px-3 py-2">早期に複数社比較、条件競争が常態化</td>
+                  <td className="border-b border-slate-200 px-3 py-2">更新6ヶ月前から2〜3案の取得を社内ルール化する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">契約条件の確認範囲</td>
+                  <td className="border-b border-slate-200 px-3 py-2">単価・基本料金の比較が中心</td>
+                  <td className="border-b border-slate-200 px-3 py-2">燃調上限・市場連動係数・解約条件まで精査</td>
+                  <td className="border-b border-slate-200 px-3 py-2">調整項目と上限条項を必須確認事項に追加する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">新電力の位置づけ</td>
+                  <td className="border-b border-slate-200 px-3 py-2">安価な代替手段として活用</td>
+                  <td className="border-b border-slate-200 px-3 py-2">供給継続性・財務安定性も評価軸に加わる</td>
+                  <td className="border-b border-slate-200 px-3 py-2">供給停止・撤退リスクと最終保障供給への移行手順を確認</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">予算の立て方</td>
+                  <td className="border-b border-slate-200 px-3 py-2">前年実績ベースの単一見積もりが主流</td>
+                  <td className="border-b border-slate-200 px-3 py-2">平常・上振れ・再上昇の複数シナリオ管理が標準化</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助有無・燃料価格・為替の前提を明示した複数予算を用意する</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">社内説明の方法</td>
+                  <td className="border-b border-slate-200 px-3 py-2">請求書の合計額報告が主体</td>
+                  <td className="border-b border-slate-200 px-3 py-2">補助反映値vs実力値・区分別・時系列での説明が求められる</td>
+                  <td className="border-b border-slate-200 px-3 py-2">経営会議向けに「確定値／推定レンジ／示唆」の3層表記を導入する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人が比較時に見るべき条件</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>単価だけでなく、燃料費調整・市場連動係数・上限条項まで見る。</li>

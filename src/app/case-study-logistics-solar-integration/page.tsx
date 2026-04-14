@@ -231,6 +231,50 @@ export default function CaseStudyLogisticsSolarPage() {
         </div>
       </section>
 
+      {/* 太陽光導入のコスト構造テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">太陽光導入のコスト構造</h2>
+        <p className="mt-2 text-sm text-slate-600">本事例における導入コスト・発電量・削減額・回収期間の全体像</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">項目</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">金額</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">導入費用（補助金適用前）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約7,500万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">500kWシステム・設置工事・諸経費含む</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">年間発電量</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約552,000kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">P50値。自家消費率99%で運用。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">自家消費率</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">99%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">余剰電力の売電はほぼなし。昼間需要が大きいため。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">年間削減額</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700 font-medium">約380万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">電力購入量11%削減。メンテ費控除前。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">投資回収期間</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約17.7年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">補助金活用後の実質投資額6,200万円÷年間純削減350万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* 成功要因 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">成功要因</h2>

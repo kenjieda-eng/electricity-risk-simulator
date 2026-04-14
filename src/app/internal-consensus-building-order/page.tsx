@@ -157,6 +157,66 @@ export default function InternalConsensusBuildingOrderPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            合意形成の5ステップ
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電力契約見直しの合意形成において、各ステップの内容・キーパーソン・説得のポイント・所要期間の目安を整理します。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">ステップ</th>
+                  <th className="border border-slate-200 px-3 py-2">内容</th>
+                  <th className="border border-slate-200 px-3 py-2">キーパーソン</th>
+                  <th className="border border-slate-200 px-3 py-2">説得のポイント</th>
+                  <th className="border border-slate-200 px-3 py-2">所要期間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">1. 現状把握・初期調査</td>
+                  <td className="border border-slate-200 px-3 py-2">使用量・コスト実績の整理、シミュレーション実施</td>
+                  <td className="border border-slate-200 px-3 py-2">担当者（総務・施設管理）</td>
+                  <td className="border border-slate-200 px-3 py-2">数値で問題の大きさを可視化し、検討開始の根拠を作る</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜2週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">2. 財務担当との連携</td>
+                  <td className="border border-slate-200 px-3 py-2">削減効果の試算共有・予算への影響確認</td>
+                  <td className="border border-slate-200 px-3 py-2">財務・経理担当者</td>
+                  <td className="border border-slate-200 px-3 py-2">「年間○万円の削減効果が見込める」という金額で伝える</td>
+                  <td className="border border-slate-200 px-3 py-2">1週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">3. 正式な見積取得・比較</td>
+                  <td className="border border-slate-200 px-3 py-2">複数社への見積依頼・比較表の作成</td>
+                  <td className="border border-slate-200 px-3 py-2">担当者・比較検討の承認者（課長など）</td>
+                  <td className="border border-slate-200 px-3 py-2">相見積もりの透明性を示し、選定の合理性を確保する</td>
+                  <td className="border border-slate-200 px-3 py-2">2〜3週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">4. 経営層への事前説明</td>
+                  <td className="border border-slate-200 px-3 py-2">口頭・簡易資料で削減効果・リスク・スケジュールを共有</td>
+                  <td className="border border-slate-200 px-3 py-2">経営層・決裁権者</td>
+                  <td className="border border-slate-200 px-3 py-2">稟議書提出前に大筋の理解を得ることで審査を形式化できる</td>
+                  <td className="border border-slate-200 px-3 py-2">1週間</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">5. 稟議書の提出・承認</td>
+                  <td className="border border-slate-200 px-3 py-2">比較表・見積書・シミュレーター結果を添付して提出</td>
+                  <td className="border border-slate-200 px-3 py-2">決裁権者（役員・代表）</td>
+                  <td className="border border-slate-200 px-3 py-2">期限を明記し「今月中の承認で次の更新に対応可能」と伝える</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜2週間</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※所要期間は目安です。組織規模・承認経路・稟議規程によって大きく異なります。契約更新期限から逆算してスケジュールを組んでください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             社内合意を進める6つのステップ
           </h2>
           <div className="mt-4 space-y-4">

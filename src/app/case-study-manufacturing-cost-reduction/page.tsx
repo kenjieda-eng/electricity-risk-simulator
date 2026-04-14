@@ -207,6 +207,56 @@ export default function CaseStudyManufacturingPage() {
         </div>
       </section>
 
+      {/* 施策別削減効果内訳テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">施策別の削減効果内訳</h2>
+        <p className="mt-2 text-sm text-slate-600">各施策が年間削減額430万円に占める割合と実施期間</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">施策</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">削減額（年間）</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">全体に占める割合</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">実施期間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">契約電力の適正化（500kW→410kW）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700 font-medium">約708万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約65%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">データ分析1か月・申請後即時反映</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">デマンド監視・ピークカット制御</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700 font-medium">（上記効果を維持）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">継続効果</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">設備導入2か月・試験運用3か月</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力への切り替え（電力量料金）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700 font-medium">約312万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約29%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">見積〜切替まで約2か月</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">燃料費調整額の上限設定（リスク軽減）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700 font-medium">約65万円（試算）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">約6%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">新電力切替と同時</td>
+              </tr>
+              <tr className="bg-sky-50 font-bold">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">合計</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約430万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">100%</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">着手から効果確定まで約6か月</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* 成功要因 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">成功要因</h2>

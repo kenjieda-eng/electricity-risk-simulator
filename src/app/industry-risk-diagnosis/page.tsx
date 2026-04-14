@@ -104,6 +104,61 @@ export default function IndustryRiskDiagnosisPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別のリスク傾向</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            主要6業種の電力コストリスクの傾向と、優先して確認すべきページをまとめました。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">業種</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">主なリスク要因</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">影響度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">推奨確認ページ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">製造業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">大型設備の同時稼働によるデマンド急騰・燃調費の影響大</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/case-study-manufacturing-cost-reduction" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業削減事例</Link></td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">小売業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">多店舗展開によるコスト管理の複雑化・夜間照明の電力割合</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">中高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/supermarket-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">スーパー電力コスト</Link></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">飲食業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">夜間・深夜帯の電力集中・厨房設備の高消費電力</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">中高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/case-study-restaurant-chain-reduction" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">飲食チェーン事例</Link></td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">医療</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">24時間稼働・停電不可設備が多く節電余地が限定的</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/case-study-hospital-peak-cut" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">病院デマンド事例</Link></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">オフィス</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">テナント変動による契約電力の過大設定リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/case-study-office-building-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビル事例</Link></td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">宿泊業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">空調・給湯の24時間稼働・市場連動プランの高騰リスク</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">中高</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/case-study-hotel-market-linked-switch" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホテル切替事例</Link></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="業種別リスク診断の後、さらに情報を深めるためのページです。"

@@ -147,6 +147,57 @@ export default function UkraineShockByVoltageClassPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約区分別のウクライナショック影響</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            各契約区分のショック前平均・ピーク時・上昇幅・上昇率を比較しました。
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="min-w-full border-collapse text-sm sm:text-base">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">契約区分</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ショック前平均（2021年年平均）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ピーク時（2022〜2023年最高値）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">上昇幅（円/kWh）</th>
+                  <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">上昇率（ピーク/2021年比）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">特別高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">10.8円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">24.2円/kWh（2023年2月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">+13.4円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">約+124%</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">高圧</td>
+                  <td className="border-b border-slate-200 px-3 py-2">14.3円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">27.5円/kWh（2023年1月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">+13.2円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">約+92%</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電力</td>
+                  <td className="border-b border-slate-200 px-3 py-2">25.2円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">36.8円/kWh（2022年11月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">+11.6円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">約+46%</td>
+                </tr>
+                <tr className="even:bg-slate-50">
+                  <td className="border-b border-slate-200 px-3 py-2 font-medium">低圧電灯</td>
+                  <td className="border-b border-slate-200 px-3 py-2">21.2円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">31.3円/kWh（2023年1月）</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">+10.1円/kWh</td>
+                  <td className="border-b border-slate-200 px-3 py-2 text-red-600">約+48%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※単価は当社団運営「新電力ネット」掲載データをもとにした参考値です。実際の契約単価は条件により異なります。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">補助政策の見え方はどう違ったか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             補助政策は需要家の請求負担を平準化する役割を持ちましたが、全区分で同一効果ではありません。契約電圧、調達構造、燃料費調整の反映方式が異なるため、

@@ -70,7 +70,8 @@
       "Bash(ls:*)",
       "Bash([ -f \"/c/Users/kenji/OneDrive/デスクトップ/ANAsyumiCursorNext/src/app/$slug/page.tsx\" ])",
       "Bash(python process_pages2.py)",
-      "Bash(grep -rL \"import Link\" src/app/*/page.tsx)"
+      "Bash(grep -rL \"import Link\" src/app/*/page.tsx)",
+      "Bash(grep -v \"business-electricity-retrospective$\")"
     ]
   }
 }

@@ -188,6 +188,60 @@ export default function ExplainingToExecutivesPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            経営層が気にする5つの質問と回答の方向性
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            経営層から出やすい質問を事前に整理し、回答の方向性・裏付けデータ・参照ページを把握しておくことで、説明の準備が具体的になります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">質問</th>
+                  <th className="border border-slate-200 px-3 py-2">回答の方向性</th>
+                  <th className="border border-slate-200 px-3 py-2">裏付けデータ</th>
+                  <th className="border border-slate-200 px-3 py-2">参照ページ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">切り替えてコストは本当に下がるか？</td>
+                  <td className="border border-slate-200 px-3 py-2">複数社の見積比較と年間削減試算を示す</td>
+                  <td className="border border-slate-200 px-3 py-2">見積書・シミュレーター試算結果</td>
+                  <td className="border border-slate-200 px-3 py-2">シミュレーター結果の活用方法</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">電力会社を変えて品質は落ちないか？</td>
+                  <td className="border border-slate-200 px-3 py-2">送配電設備は変わらず品質に影響しないことを説明</td>
+                  <td className="border border-slate-200 px-3 py-2">電力系統の仕組みに関する資料</td>
+                  <td className="border border-slate-200 px-3 py-2">電力自由化の基礎知識</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">なぜ今なのか？</td>
+                  <td className="border border-slate-200 px-3 py-2">契約更新期限と現在のコスト上昇トレンドを示す</td>
+                  <td className="border border-slate-200 px-3 py-2">契約書の更新日・電気料金の前年比推移</td>
+                  <td className="border border-slate-200 px-3 py-2">電気料金の推移と高止まり</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">変えてから料金が上がることはないか？</td>
+                  <td className="border border-slate-200 px-3 py-2">固定プラン選択・複数年契約で下振れリスクを抑制</td>
+                  <td className="border border-slate-200 px-3 py-2">固定プランの料金構造・解約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">固定プランと市場連動の違い</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">手続きに工数はかかるか？</td>
+                  <td className="border border-slate-200 px-3 py-2">担当者レベルの申込手続きのみで完結することが多い</td>
+                  <td className="border border-slate-200 px-3 py-2">切替手続きのフロー・スケジュール</td>
+                  <td className="border border-slate-200 px-3 py-2">社内合意を進める順番</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※回答の方向性は概要です。自社の状況に合わせて内容を調整してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             よくある質問と返答の準備
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

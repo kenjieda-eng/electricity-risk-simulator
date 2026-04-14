@@ -171,6 +171,39 @@ export default function InternalExplanationPreparationChecklistPage() {
           </p>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">準備度チェック結果の対応</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            17項目中のチェック数に応じた準備度の判定と、次に取るべき行動を整理しました。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">準備度</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">判定</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">次にやること</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">0〜6項目（35%未満）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">準備不足</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">現状確認パートの「請求書・契約書の確認」から着手。シミュレーターでリスク試算を優先。</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">7〜12項目（35〜70%）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">準備中</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">未完了の項目を特定し、見積比較資料・リスク説明資料を優先して整備する。</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">13〜17項目（70%以上）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="rounded bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700">説明可能</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">社内説明・稟議を進めるのに十分な準備ができています。想定質問への回答も準備して臨みましょう。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="社内説明の準備に役立つ関連ページをまとめました。"

@@ -224,6 +224,51 @@ export default function CaseStudyHospitalPeakCutPage() {
         </div>
       </section>
 
+      {/* デマンド制御の月別効果テーブル */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">デマンド制御の月別効果</h2>
+        <p className="mt-2 text-sm text-slate-600">代表的な4か月の制御前後のデマンド値と基本料金削減額の比較</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">月</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">制御前デマンド</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">制御後デマンド</th>
+                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">基本料金削減額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">8月（夏季ピーク）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,780kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,370kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約870,000円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1月（冬季）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,640kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,360kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約594,000円</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">4月（中間期）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,510kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,350kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約340,000円</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">10月（秋季）</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,480kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1,340kW</td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-green-700">約297,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">※基本料金削減額は契約電力変更後（1,400kW）の基本料金単価×削減kW数で試算。実際の削減額は変更後の月から確定します。</p>
+      </section>
+
       {/* 成功要因 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">成功要因</h2>

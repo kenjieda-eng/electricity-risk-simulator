@@ -159,6 +159,50 @@ export default function BatterySuitabilityDiagnosisPage() {
           </div>
         </section>
 
+        <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">蓄電池導入の費用対効果目安</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            施設規模別の導入費用・年間削減効果・投資回収期間の目安です。実際の数値は施設条件・補助金活用によって大きく異なります。
+          </p>
+          <table className="mt-4 w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">施設規模</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">導入費用目安</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">年間削減効果</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">回収期間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">小規模（契約電力50kW未満）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">500〜1,500万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">30〜80万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約15〜20年</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">中規模（契約電力50〜200kW）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,500〜5,000万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">100〜350万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約12〜17年</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">大規模（契約電力200〜500kW）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">5,000〜1億5,000万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">400〜1,200万円/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約10〜14年</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">超大規模（契約電力500kW超）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1億円〜</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">1,200万円〜/年</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約8〜12年</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-2 text-xs text-slate-500">※補助金活用（経産省・環境省・都道府県）により実質投資額は20〜30%程度圧縮できる場合があります。回収期間も大幅に短縮されます。</p>
+        </section>
+
         <RelatedLinks
           heading="関連ページ"
           intro="蓄電池検討と合わせて確認したいページです。"

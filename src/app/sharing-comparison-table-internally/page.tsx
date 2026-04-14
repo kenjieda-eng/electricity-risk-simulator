@@ -206,6 +206,87 @@ export default function SharingComparisonTableInternallyPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
+            比較表に入れるべき項目
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            以下は比較表の標準的な項目構成の例です。A社・B社は候補先、「現行契約」は現在の電力会社を指します。確認ポイントも合わせて整理することで、審査者が判断しやすい資料になります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
+              <thead>
+                <tr className="bg-slate-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2">項目</th>
+                  <th className="border border-slate-200 px-3 py-2">A社（候補1）</th>
+                  <th className="border border-slate-200 px-3 py-2">B社（候補2）</th>
+                  <th className="border border-slate-200 px-3 py-2">現行契約</th>
+                  <th className="border border-slate-200 px-3 py-2">確認ポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">電力量単価（円/kWh）</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">比較の基本単位。燃調込みか別か要確認</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">基本料金（円/kW）</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">デマンド契約の場合は契約電力との掛け合わせで確認</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">燃料費調整額</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">上限あり・なし、計算方式の違いに注意</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">市場連動の有無</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">変動リスクの有無を明示。固定か変動かで性質が大きく異なる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">契約期間</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">短期と長期では柔軟性とリスクのバランスが異なる</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">違約金・解約条件</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">中途解約時のペナルティの有無・金額を必ず確認</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">年間総額（試算）</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">同一使用量で揃えた試算が比較の前提。前提条件を脚注に明記</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-800">備考・特記事項</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">記入欄</td>
+                  <td className="border border-slate-200 px-3 py-2">再エネ比率・ポイント還元・特典など比較外の条件を記載</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">※各欄は実際の見積に基づく数値を記入します。比較の前提（使用量・期間）を脚注に明記してください。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
             社内共有時のポイント
           </h2>
           <div className="mt-4 space-y-4">
