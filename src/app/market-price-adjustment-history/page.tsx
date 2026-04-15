@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
@@ -174,6 +175,10 @@ export default function MarketPriceAdjustmentHistoryPage() {
             2019 年度と 2022 年度で年額の差は 1,500 万円規模。市場連動の振れ幅の大きさを示しています。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-price-adjustment-history" terms={["市場価格調整額", "JEPX", "市場連動プラン", "燃料費調整額", "再エネ賦課金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

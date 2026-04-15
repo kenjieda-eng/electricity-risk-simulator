@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "業種別の電気料金見直しガイド一覧｜業種特性を踏まえた契約見直しの考え方";
@@ -309,6 +310,10 @@ export default function IndustryElectricityGuidePage() {
             <li>業種ページの結果と照らし合わせ、社内説明の資料に活用する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="industry-electricity-guide" />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

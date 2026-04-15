@@ -161,6 +161,7 @@ export default function WhichCompaniesBenefitMostFromReviewPage() {
         },
       ]}
       ctaDescription="見直し優先度を整理したら、比較ページで高優先の契約から検討し、使い方ページを参照しながら実務フローへ落とし込みます。"
+      glossaryTerms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]}
     />
   );
 }

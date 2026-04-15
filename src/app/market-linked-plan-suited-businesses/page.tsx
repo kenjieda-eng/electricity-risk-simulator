@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "市場連動プランが向く可能性がある法人の特徴｜検討の前提と条件整理";
 const pageDescription =
@@ -233,6 +234,10 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
             これらを確認したうえで、シミュレーターで市場価格が高騰したシナリオと通常シナリオでのコスト差を比較することをお勧めします。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-linked-plan-suited-businesses" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "デマンド値"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

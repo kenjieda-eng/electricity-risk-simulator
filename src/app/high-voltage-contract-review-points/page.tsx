@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "高圧契約の見直しで確認したいこと｜料金構造と契約条件の着眼点";
@@ -200,6 +201,10 @@ export default function HighVoltageContractReviewPointsPage() {
             <li>社内稟議・決裁を得て、更新期日に合わせて切替手続きを進める。</li>
           </ol>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="high-voltage-contract-review-points" terms={["高圧電力", "燃料費調整額", "市場価格調整額", "容量拠出金", "契約電力", "デマンド値", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

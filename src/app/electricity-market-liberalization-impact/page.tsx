@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電力自由化後の法人電気料金はどう変わったか｜2016年からの構造変化を整理";
@@ -637,6 +638,10 @@ export default function ElectricityMarketLiberalizationImpactPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-market-liberalization-impact" terms={["市場連動プラン", "固定プラン", "JEPX", "最終保障供給", "燃料費調整額", "高圧電力"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

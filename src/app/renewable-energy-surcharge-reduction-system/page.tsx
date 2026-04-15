@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "再エネ賦課金の減免制度｜電気多消費事業者向けの要件と申請の流れ";
@@ -184,6 +185,10 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
             <li>オフピーク運転・夜間稼働シフトで市場連動リスクを軽減する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="renewable-energy-surcharge-reduction-system" terms={["再エネ賦課金", "電力量料金", "基本料金", "燃料費調整額", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

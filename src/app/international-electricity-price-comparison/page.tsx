@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "日本の法人電気料金は国際的に見て高いのか｜主要国との産業用電力料金比較";
@@ -406,6 +407,10 @@ export default function InternationalElectricityPriceComparisonPage() {
             <li>・国内でできる対策（契約見直し・エリア最適化・省エネ設備）を先に検討することが現実的な第一歩</li>
           </ul>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="international-electricity-price-comparison" terms={["再エネ賦課金", "燃料費調整額", "容量拠出金", "託送料金", "高圧電力"]} />
       </div>
 
       {/* 関連リンク */}

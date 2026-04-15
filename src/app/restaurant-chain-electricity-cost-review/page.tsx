@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "飲食店チェーンの電気料金見直しポイント｜調理・空調負荷と多拠点を踏まえた考え方";
@@ -269,6 +270,10 @@ export default function RestaurantChainElectricityCostReviewPage() {
             <li>多拠点の合計使用量で影響額をスケールアップして確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="restaurant-chain-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

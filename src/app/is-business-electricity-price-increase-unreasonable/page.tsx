@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle = "法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額";
@@ -222,6 +223,10 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
             法人の電気料金に違和感があるときは、6ステップの切り分けフローで原因を特定し、パターン別の影響額と照らし合わせることで実務的な判断につなげやすくなります。使用量・単価・調整項目・政策要因を分けて整理したうえで、必要に応じて見積比較に進むことが重要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="is-business-electricity-price-increase-unreasonable" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "電気料金の内訳", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

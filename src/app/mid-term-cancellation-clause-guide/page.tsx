@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電力契約の中途解約条項の見方と注意点｜違約金と予告期間の確認";
@@ -209,6 +210,10 @@ export default function MidTermCancellationClauseGuidePage() {
             <li>不可抗力条項（災害・事故等による免責）</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="mid-term-cancellation-clause-guide" terms={["燃料費調整額", "市場価格調整額", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

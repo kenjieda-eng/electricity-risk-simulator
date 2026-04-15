@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
 const pageDescription =
   "固定プランでも燃料費調整額によって請求額が変わることがあります。法人向け電力契約における固定単価と燃料費調整額の違い、見積比較や社内説明で押さえたいポイントを解説します。";
@@ -176,6 +177,10 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
             実務上の判断精度を高めるポイントです。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="does-fuel-cost-adjustment-change-even-in-fixed-plan" terms={["燃料費調整額", "固定プラン", "市場連動プラン", "電力量料金", "基本料金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

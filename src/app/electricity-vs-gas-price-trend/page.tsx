@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電気料金とガス料金の推移を比較する｜法人のエネルギーコスト全体像";
@@ -390,6 +391,10 @@ export default function ElectricityVsGasPriceTrendPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-vs-gas-price-trend" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

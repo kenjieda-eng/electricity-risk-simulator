@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 
 export const metadata: Metadata = {
@@ -219,6 +220,10 @@ export default function MarketLinkedVsFixedPage() {
             予算管理の考え方を前提にしたうえで、複数条件を試算し、差分で判断することをおすすめします。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-linked-vs-fixed" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="詳しく知りたい方・比較したい方へ"

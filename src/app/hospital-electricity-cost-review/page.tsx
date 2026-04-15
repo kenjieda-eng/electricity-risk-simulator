@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -280,6 +281,10 @@ export default function HospitalElectricityCostReviewPage() {
             <li>燃料費高騰シナリオでの影響を把握する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="hospital-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "最終保障供給", "高圧電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

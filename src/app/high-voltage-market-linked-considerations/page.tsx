@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "高圧・特別高圧で市場連動を考えるときの注意点｜規模別リスク試算と判断基準";
@@ -314,6 +315,10 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="high-voltage-market-linked-considerations" terms={["市場連動プラン", "固定プラン", "高圧電力", "JEPX", "市場価格調整額", "契約電力"]} />
+        </div>
 
         <div className="mt-8">
           <RelatedLinks

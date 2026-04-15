@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "自治体施設は固定と市場連動のどちらが向くか｜年度予算制と説明責任から考える";
 const pageDescription =
@@ -280,6 +281,10 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
             <li>2022年の高騰事例は、公共機関における市場連動プランのリスクを具体的に示した事例として参照価値がある</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="municipality-fixed-vs-market-linked" terms={["市場連動プラン", "固定プラン", "JEPX", "最終保障供給", "燃料費調整額"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

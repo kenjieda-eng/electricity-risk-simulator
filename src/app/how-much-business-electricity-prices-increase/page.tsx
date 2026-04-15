@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle = "法人の電気料金はどのくらい上がるのか｜要因別の影響幅と実績データ";
@@ -342,6 +343,10 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
             や上記チェックリストの活用が有効です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-much-business-electricity-prices-increase" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "託送料金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         {/* 関連リンク */}
         <RelatedLinks

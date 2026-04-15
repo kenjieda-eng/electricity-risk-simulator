@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { DEMAND_PEAK_DAYS, DEMAND_SEASON_HOUR } from "../../data/demandData";
 import { EXTREME_HOT_DAYS, SUMMER_TMAX_TREND, CDD_TREND, TROPICAL_NIGHTS_TOKYO } from "../../data/weatherData";
 
@@ -323,6 +324,10 @@ export default function ElectricityCostRiskHeatwavePage() {
             東京の熱帯夜は2023年に57日、2025年も55日と高水準が続いています。深夜でも冷房が切れない日が増加することで、夜間電力需要が押し上げられ、翌日の需給にも影響します。
           </div>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-cost-risk-heatwave" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="あわせて読みたい記事"

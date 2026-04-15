@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "利益率が低い業種はどちらを選ぶべきか｜電気料金変動と収益への影響";
 const pageDescription =
@@ -273,6 +274,10 @@ export default function LowMarginBusinessPlanSelectionPage() {
             <li>食品スーパー・飲食・冷凍物流については、固定プランを基本とし、差額を定量評価したうえで市場連動を検討する順序が現実的</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="low-margin-business-plan-selection" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "市場価格調整額", "JEPX"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

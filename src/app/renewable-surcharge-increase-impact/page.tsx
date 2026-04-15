@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "再エネ賦課金上昇で法人の電気料金はどう変わるか｜制度改定と負担増の見方";
@@ -208,6 +209,10 @@ export default function RenewableSurchargeIncreaseImpactPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="renewable-surcharge-increase-impact" terms={["再エネ賦課金", "燃料費調整額", "市場価格調整額", "容量拠出金", "非化石証書", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "請求単価だけで比較しないためのチェックポイント｜総額比較の考え方";
@@ -206,6 +207,10 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
             コスト面とリスク面を合わせた比較のために、シミュレーターを活用して上振れシナリオの年間コスト幅を試算することをお勧めします。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="not-just-unit-price-comparison-checklist" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

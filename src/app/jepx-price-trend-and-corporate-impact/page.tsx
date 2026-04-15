@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "JEPX卸電力市場価格の推移と法人電気料金への波及｜2016〜2025年の動きを解説";
@@ -319,6 +320,10 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
             <li>・固定プランと市場連動プランの選択はリスク許容度と使用規模に応じて判断する必要がある</li>
           </ul>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="jepx-price-trend-and-corporate-impact" terms={["JEPX", "市場価格調整額", "市場連動プラン", "燃料費調整額", "再エネ賦課金"]} />
       </div>
 
       {/* 関連リンク */}

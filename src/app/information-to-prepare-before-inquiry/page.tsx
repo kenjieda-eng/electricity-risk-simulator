@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "問い合わせ前に社内で揃えたい情報｜見積依頼・相談の質を上げる準備";
@@ -303,6 +304,10 @@ export default function InformationToPrepareBeforeInquiryPage() {
             見積依頼の前に、シミュレーターで現行の電力契約条件でのリスクを把握しておくことで、問い合わせ時の論点が明確になります。「現状のリスクスコア・上振れリスク額」を把握した上で見積を依頼することで、「どのような条件でリスクを抑えたいか」を具体的に伝えやすくなります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="information-to-prepare-before-inquiry" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "基本料金", "電力量料金", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

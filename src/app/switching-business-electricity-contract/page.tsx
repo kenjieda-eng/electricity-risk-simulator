@@ -208,6 +208,7 @@ export default function SwitchingBusinessElectricityContractPage() {
         },
       ]}
       ctaDescription="切替前後の確認項目を整理したら、使い方ページで入力準備を確認し、比較ページで現契約と候補を同条件で並べて最終判断へ進めます。"
+      glossaryTerms={["燃料費調整額", "市場価格調整額", "最終保障供給", "市場連動プラン", "固定プラン", "基本料金"]}
     />
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "市場価格調整額の計算方法と契約約款の読み方｜法人向けに詳細解説";
@@ -171,6 +172,10 @@ export default function MarketPriceAdjustmentCalculationPage() {
             <li>契約期間中に算定方法を変更する条項があるかどうかの確認</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-price-adjustment-calculation" terms={["市場価格調整額", "JEPX", "市場連動プラン", "燃料費調整額", "電力量料金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

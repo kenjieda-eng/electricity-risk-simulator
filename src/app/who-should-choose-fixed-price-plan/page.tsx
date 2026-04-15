@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle = "固定プランが向いている法人・向いていない法人｜予算管理しやすい電力契約の考え方";
 const pageDescription =
   "固定プランが向いている法人と向いていない法人の違いを、電気料金の安定性、予算管理、社内説明、契約条件の確認ポイントから整理します。法人向けの電力契約見直しに役立つ解説ページです。";
@@ -198,6 +199,10 @@ export default function WhoShouldChooseFixedPricePlanPage() {
             </tbody>
           </table>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="who-should-choose-fixed-price-plan" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "容量拠出金", "基本料金"]} />
+        </div>
 
         <RelatedLinks
           heading="あわせて確認したいページ"

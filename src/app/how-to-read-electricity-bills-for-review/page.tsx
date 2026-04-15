@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "請求書のどこを見れば見直しのヒントが分かるのか｜7つの確認ポイントと次のアクション";
@@ -258,6 +259,10 @@ export default function HowToReadElectricityBillsForReviewPage() {
           </p>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="how-to-read-electricity-bills-for-review" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "基本料金", "電力量料金", "契約電力", "デマンド値", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

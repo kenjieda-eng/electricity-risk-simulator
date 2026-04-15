@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "百貨店の電気料金リスク｜大規模空調と営業時間を踏まえた考え方";
@@ -280,6 +281,10 @@ export default function DepartmentStoreElectricityCostReviewPage() {
             <li>催事シーズンのピーク月を前提にした影響額を確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="department-store-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "特別高圧", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

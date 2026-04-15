@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "需給逼迫で法人の電気料金はどう変わるか｜市場価格高騰と契約への影響";
@@ -200,6 +201,10 @@ export default function SupplyDemandTightnessImpactPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="supply-demand-tightness-impact" terms={["JEPX", "市場価格調整額", "燃料費調整額", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

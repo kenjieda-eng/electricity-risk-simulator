@@ -155,6 +155,7 @@ export default function WhereToCheckInElectricityContractPage() {
         },
       ]}
       ctaDescription="契約書の確認箇所を整理したら、使い方ページで必要情報を整え、比較ページで見積条件と契約条項の整合を確認して進めます。"
+      glossaryTerms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]}
     />
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "ショッピングモールの電気料金見直しポイント｜大規模施設の空調・共用部を踏まえた考え方";
@@ -280,6 +281,10 @@ export default function ShoppingMallElectricityCostReviewPage() {
             <li>電力価格が高止まりするシナリオでの事業収支への影響を確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="shopping-mall-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "特別高圧"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

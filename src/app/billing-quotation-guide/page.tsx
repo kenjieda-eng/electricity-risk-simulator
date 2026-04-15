@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle =
@@ -319,6 +320,10 @@ export default function BillingQuotationGuidePage() {
             </tbody>
           </table>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="billing-quotation-guide" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の契約見直し実務ガイド一覧｜準備から比較・切替までの進め方";
@@ -310,6 +311,10 @@ export default function ContractReviewPracticeGuidePage() {
             ))}
           </div>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="contract-review-practice-guide" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

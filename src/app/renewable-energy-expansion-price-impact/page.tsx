@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "再エネ拡大は法人電気料金を下げるのか上げるのか｜両面の影響を整理";
@@ -461,6 +462,10 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="renewable-energy-expansion-price-impact" terms={["再エネ賦課金", "容量拠出金", "燃料費調整額", "JEPX", "非化石証書"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

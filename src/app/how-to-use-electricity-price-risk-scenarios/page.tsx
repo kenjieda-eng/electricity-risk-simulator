@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "電気料金のリスクシナリオはどう使い分けるか｜法人の予算策定・比較検討・社内説明のための見方";
 const pageDescription =
@@ -203,6 +204,10 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
             </tbody>
           </table>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-to-use-electricity-price-risk-scenarios" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

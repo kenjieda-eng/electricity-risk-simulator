@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "アミューズメント施設の電気料金リスク｜照明・空調・設備の高負荷を踏まえた考え方";
@@ -287,6 +288,10 @@ export default function AmusementFacilityElectricityCostReviewPage() {
             <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費</Link>高騰シナリオでの影響幅を把握し、事業計画に反映する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="amusement-facility-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "デマンド値"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

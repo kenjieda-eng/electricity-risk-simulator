@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "単独飲食店の電気料金見直しポイント｜調理設備と低利益率を踏まえた考え方";
@@ -287,6 +288,10 @@ export default function SingleRestaurantElectricityCostReviewPage() {
             <li>電力費が月次収支に占める割合を確認し、許容できる変動幅を逆算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="single-restaurant-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "新電力の相見積もり前に整理したい情報｜見積精度を上げるための準備";
@@ -243,6 +244,10 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
             で確認できます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="information-to-prepare-before-quotation-request" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "基本料金", "電力量料金", "契約電力", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

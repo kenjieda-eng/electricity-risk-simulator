@@ -149,6 +149,7 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
         },
       ]}
       ctaDescription="主導部署と役割分担を決めたら、使い方ページで準備手順を確認し、比較ページで共通前提をそろえて検討を進めます。"
+      glossaryTerms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]}
     />
   );
 }

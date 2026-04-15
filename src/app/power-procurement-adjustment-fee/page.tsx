@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle = "電源調達調整費とは何か｜燃料費調整額との違いを法人向けに解説";
 const pageDescription =
   "電源調達調整費とは何かを、燃料費調整額との違いとあわせて解説します。法人向け電力契約の見積比較で見落としやすい追加費用の考え方を整理し、電気料金の読み方に役立てます。";
@@ -168,6 +169,10 @@ export default function PowerProcurementAdjustmentFeePage() {
             電源調達調整費は、単価比較だけでは見えにくい実務論点です。法人の電気料金比較では、後から動く項目が何かまで読み込み、契約条件とセットで判断することが重要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="power-procurement-adjustment-fee" terms={["市場価格調整額", "燃料費調整額", "市場連動プラン", "固定プラン", "電力量料金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

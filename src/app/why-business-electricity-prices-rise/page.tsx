@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { CDD_TREND } from "../../data/weatherData";
 
@@ -191,6 +192,10 @@ export default function WhyBusinessElectricityPricesRisePage() {
             ※CDD（冷房度日）: 基準温度22℃を超えた日の積算値。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-business-electricity-prices-rise" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "託送料金", "市場連動プラン", "固定プラン", "JEPX"]} />
+        </div>
 
         <RelatedLinks
           heading="次に確認したいページ"

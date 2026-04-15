@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "データセンターの電気料金見直しポイント｜高負荷と冗長性を踏まえた考え方";
@@ -289,6 +290,10 @@ export default function DataCenterElectricityCostReviewPage() {
             <li>PUE改善で削減できる使用量を入力し、電気代削減額を試算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="data-center-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "特別高圧", "非化石証書"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

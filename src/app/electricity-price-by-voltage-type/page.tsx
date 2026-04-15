@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "特別高圧・高圧・低圧で上がり方はどう違うか｜年次データと区分間の構造差を解説";
@@ -455,6 +456,10 @@ export default function ElectricityPriceByVoltageTypePage() {
             を活用することで、自社の使用パターンに合った条件を見つけやすくなります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-price-by-voltage-type" terms={["高圧電力", "特別高圧", "基本料金", "電力量料金", "契約電力", "再エネ賦課金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

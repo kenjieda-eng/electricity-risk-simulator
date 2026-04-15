@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電力契約の契約期間の見方と注意点｜1年・2年・3年契約の違い";
@@ -217,6 +218,10 @@ export default function ElectricityContractPeriodGuidePage() {
             で整理しています。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-contract-period-guide" terms={["燃料費調整額", "市場価格調整額", "市場連動プラン", "固定プラン", "最終保障供給", "基本料金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "予算管理を重視する法人はどちらを選ぶべきか｜固定と市場連動の判断軸";
 const pageDescription =
@@ -240,6 +241,10 @@ export default function BudgetFocusedPlanSelectionPage() {
             <li>固定プランの場合も、燃料費調整額の扱いを確認し完全固定ではない部分を把握しているか</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="budget-focused-plan-selection" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "市場価格調整額", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

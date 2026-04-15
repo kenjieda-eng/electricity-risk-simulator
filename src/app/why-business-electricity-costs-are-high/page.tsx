@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle = "法人の電気料金が高い会社に共通する特徴｜7つの自己診断ポイントと月額影響";
@@ -251,6 +252,10 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
             電気料金が高い会社には、契約条件・使い方・比較手順に共通する傾向があります。7つの特徴と自己診断チェックリストを活用し、請求書・契約条件・使用実態の3点を先に整理することで、見直しの優先順位を明確にできます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-business-electricity-costs-are-high" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "基本料金", "電力量料金", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

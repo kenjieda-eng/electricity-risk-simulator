@@ -151,6 +151,7 @@ export default function ReviewContractRenewalDeadlinesPage() {
         },
       ]}
       ctaDescription="更新前に期限を整理したら、比較ページで候補条件を並べて、社内確認に使える判断材料を準備しておくと実行段階で混乱しにくくなります。"
+      glossaryTerms={["市場連動プラン", "固定プラン", "燃料費調整額", "最終保障供給", "基本料金"]}
     />
   );
 }

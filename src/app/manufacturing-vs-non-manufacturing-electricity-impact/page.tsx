@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "製造業と非製造業で電気料金推移の影響はどう出るか｜業種構造別の比較分析";
@@ -555,6 +556,10 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="manufacturing-vs-non-manufacturing-electricity-impact" terms={["高圧電力", "特別高圧", "契約電力", "デマンド値", "再エネ賦課金", "市場連動プラン"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

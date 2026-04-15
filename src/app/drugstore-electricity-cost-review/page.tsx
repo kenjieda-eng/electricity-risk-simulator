@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "ドラッグストアの電気料金見直しポイント｜冷蔵・照明と多拠点を踏まえた考え方";
@@ -287,6 +288,10 @@ export default function DrugstoreElectricityCostReviewPage() {
             <li>全店舗合算ベースでの電気料金変動の影響額を推計する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="drugstore-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

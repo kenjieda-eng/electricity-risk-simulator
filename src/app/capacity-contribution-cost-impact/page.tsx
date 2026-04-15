@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 
 const pageTitle = "容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算";
@@ -306,6 +307,10 @@ export default function CapacityContributionCostImpactPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="capacity-contribution-cost-impact" terms={["容量拠出金", "再エネ賦課金", "燃料費調整額", "電力量料金", "基本料金", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

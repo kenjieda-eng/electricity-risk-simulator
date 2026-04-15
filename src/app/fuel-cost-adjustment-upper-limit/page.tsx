@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説";
@@ -160,6 +161,10 @@ export default function FuelCostAdjustmentUpperLimitPage() {
             <li>最終保障供給に移行した場合の単価水準</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="fuel-cost-adjustment-upper-limit" terms={["燃料費調整額", "最終保障供給", "市場連動プラン", "固定プラン", "再エネ賦課金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

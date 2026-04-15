@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の電気料金はなぜ急に上がるのか｜6つの急上昇パターンと月額影響を解説";
@@ -588,6 +589,10 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
             もあわせて確認してください。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-business-electricity-bills-rise-suddenly" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "JEPX", "基本料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

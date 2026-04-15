@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度";
@@ -371,6 +372,10 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="fuel-mix-price-trend-and-electricity-impact" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

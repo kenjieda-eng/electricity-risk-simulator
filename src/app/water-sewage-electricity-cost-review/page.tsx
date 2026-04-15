@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "上下水道施設の電気料金リスク｜ポンプ負荷と24時間稼働を踏まえた考え方";
@@ -290,6 +291,10 @@ export default function WaterSewageElectricityCostReviewPage() {
             <li>夏季ピーク月の使用量増加を加味した影響額を確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="water-sewage-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

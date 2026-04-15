@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle =
@@ -463,6 +464,10 @@ export default function HybridElectricityPlanExplainedPage() {
             <li>担当者が毎月の請求データを照合できる体制を整えてから契約を判断する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="hybrid-electricity-plan-explained" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額"]} />
+        </div>
 
         {/* 関連リンク */}
         <div className="mt-8">

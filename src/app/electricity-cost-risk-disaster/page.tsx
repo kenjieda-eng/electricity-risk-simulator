@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "災害で法人・企業・自治体の電気料金・電気代はどう上がる？供給停止リスクを解説";
@@ -242,6 +243,10 @@ export default function ElectricityCostRiskDisasterPage() {
             と比較することで、上振れ幅の上限を検討しやすくなります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-cost-risk-disaster" terms={["燃料費調整額", "市場価格調整額", "JEPX", "最終保障供給", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

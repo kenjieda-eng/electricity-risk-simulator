@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "原子力発電所の稼働状況と電気料金の関係｜エリア別の料金差への影響を解説";
@@ -500,6 +501,10 @@ export default function NuclearPowerAndElectricityPricePage() {
             ))}
           </div>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="nuclear-power-and-electricity-price" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "電力量料金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

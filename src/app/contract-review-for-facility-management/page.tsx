@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "契約見直し時に施設管理が見るポイント｜設備と供給安定性の確認";
@@ -208,6 +209,10 @@ export default function ContractReviewForFacilityManagementPage() {
             <li>電力会社の緊急連絡先・担当者情報を施設管理の連絡先リストに追加する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="contract-review-for-facility-management" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "契約電力", "デマンド値", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

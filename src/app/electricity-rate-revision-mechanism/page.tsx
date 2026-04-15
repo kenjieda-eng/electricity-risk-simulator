@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle =
@@ -469,6 +470,10 @@ export default function ElectricityRateRevisionMechanismPage() {
           </ul>
         </section>
 
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-rate-revision-mechanism" terms={["基本料金", "電力量料金", "燃料費調整額", "再エネ賦課金", "容量拠出金", "託送料金"]} />
       </div>
 
       {/* 関連リンク */}

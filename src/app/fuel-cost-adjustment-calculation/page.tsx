@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "燃料費調整額の計算式の詳細｜基準燃料価格・換算係数・3ヶ月平均の仕組み";
@@ -156,6 +157,10 @@ export default function FuelCostAdjustmentCalculationPage() {
             年額では 360 万円の差になります。使用量規模が大きい事業者ほど、燃調の変動が経営に与える影響が大きくなります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="fuel-cost-adjustment-calculation" terms={["燃料費調整額", "電力量料金", "基本料金", "再エネ賦課金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "市場連動プランのリスクを社内説明するときのポイント｜経営層・上司への伝え方";
 const pageDescription =
@@ -241,6 +242,10 @@ export default function MarketLinkedRiskInternalExplanationPage() {
             <li>意思決定を文書化し、承認者の記録を残しておく</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-linked-risk-internal-explanation" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

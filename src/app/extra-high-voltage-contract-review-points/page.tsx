@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "特別高圧契約の見直しで確認したいこと｜大規模契約の比較と注意点";
@@ -199,6 +200,10 @@ export default function ExtraHighVoltageContractReviewPointsPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="extra-high-voltage-contract-review-points" terms={["特別高圧", "高圧電力", "燃料費調整額", "市場価格調整額", "容量拠出金", "契約電力", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "容量拠出金の扱いを確認する方法｜見積比較での確認ポイント";
@@ -180,6 +181,10 @@ export default function HowToCheckCapacityContributionTermsPage() {
             <li>容量拠出金は業界全体で発生するコストであり、「含まれていない」見積が実際に安いわけではない点に注意する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-to-check-capacity-contribution-terms" terms={["容量拠出金", "燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

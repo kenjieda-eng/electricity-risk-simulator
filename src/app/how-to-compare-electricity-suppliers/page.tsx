@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
@@ -191,6 +192,10 @@ export default function HowToCompareElectricitySuppliersPage() {
             <li>請求・運用面の扱いやすさ</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-to-compare-electricity-suppliers" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

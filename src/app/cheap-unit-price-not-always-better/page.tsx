@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "なぜ単価が安い提案でも有利とは限らないのか｜落とし穴5パターンと実質コスト比較";
@@ -291,6 +292,10 @@ export default function CheapUnitPriceNotAlwaysBetterPage() {
             単価差の説明だけで社内決裁を進めると、後から条件面の懸念が出て手戻りになりやすいため、5軸を先に統一することが実務上の近道です。
           </p>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="cheap-unit-price-not-always-better" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]} />
       </div>
 
       {/* 関連リンク */}

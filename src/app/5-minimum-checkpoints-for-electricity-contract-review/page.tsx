@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の電力契約見直しで最低限確認したい5項目｜確認方法とリスクを整理";
@@ -352,6 +353,10 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="5-minimum-checkpoints-for-electricity-contract-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

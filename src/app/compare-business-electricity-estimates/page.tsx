@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人向け電力見積書の比較で見落としやすい項目｜7つの確認ポイントと実例";
@@ -324,6 +325,10 @@ export default function CompareBusinessElectricityEstimatesPage() {
             見積書の前提がそろっていない段階での社内提案は、後から条件面の懸念が出て手戻りになりやすいため、前提統一を先行させることが重要です。
           </p>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="compare-business-electricity-estimates" terms={["燃料費調整額", "市場価格調整額", "容量拠出金", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]} />
       </div>
 
       {/* 関連リンク */}

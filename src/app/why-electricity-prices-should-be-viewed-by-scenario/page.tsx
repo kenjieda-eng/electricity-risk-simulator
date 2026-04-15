@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "電気料金はなぜシナリオ別に見る必要があるのか｜法人の予算策定と説明資料で役立つ考え方";
 const pageDescription =
@@ -195,6 +196,10 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
             この違いを把握するには、シナリオ別に影響時期と持続性を分けて確認する必要があります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-electricity-prices-should-be-viewed-by-scenario" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

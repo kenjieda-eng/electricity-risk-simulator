@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "電気料金のリスクシナリオはどれから優先して見るべきか｜法人の契約条件や使用状況に応じた考え方";
 const pageDescription =
@@ -203,6 +204,10 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
             最終的には一般論よりも、自社の契約条件・使用パターン・社内説明の必要性に合わせて優先順位を決めることが実務的です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="which-electricity-price-risk-scenarios-to-check-first" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

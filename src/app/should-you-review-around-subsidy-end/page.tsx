@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "補助金終了・縮小の前後で電力契約は見直すべきか｜タイムラインと影響シミュレーション";
@@ -230,6 +231,10 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
             上記のタイムラインと影響シミュレーションを社内資料として活用することを推奨します。
           </p>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="should-you-review-around-subsidy-end" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "市場連動プラン", "固定プラン"]} />
       </div>
 
       {/* 関連リンク */}

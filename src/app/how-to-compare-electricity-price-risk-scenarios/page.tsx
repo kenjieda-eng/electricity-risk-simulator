@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "電気料金のリスクシナリオを比較するときの見方｜影響時期・継続性・上振れの出方の整理";
 const pageDescription =
@@ -242,6 +243,10 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
             山型は特定月のキャッシュフローを圧迫し、平坦型は年間利益率をじわじわ押し下げます。比較時は月次と年間の両面で見ることが重要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-to-compare-electricity-price-risk-scenarios" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

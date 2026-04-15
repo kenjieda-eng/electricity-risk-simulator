@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "市場連動プランが向かない法人の特徴｜価格変動リスクを踏まえた判断ポイント";
 const pageDescription =
@@ -241,6 +242,10 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
             <li>上振れ幅が自社の利益率に対してどの程度のインパクトがあるかを確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="businesses-not-suited-for-market-linked-electricity-plan" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

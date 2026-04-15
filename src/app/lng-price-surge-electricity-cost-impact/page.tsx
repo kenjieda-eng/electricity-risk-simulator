@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "LNG高騰で法人の電気料金はどう上がるか｜価格波及の仕組みと備え方";
@@ -251,6 +252,10 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
             LNG高騰は過去に複数回発生しており、今後も発生し得るリスクシナリオです。事前の試算が、契約見直しや予算策定の判断材料になります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="lng-price-surge-electricity-cost-impact" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

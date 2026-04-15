@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_MONTHLY_SUMMARY } from "../../data/jepxData";
 
@@ -212,6 +213,10 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
             法人の電気料金も上がりやすくなります。契約内容を確認し、自社の使用パターンとリスク許容度に合うかを見極めることが重要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-market-linked-electricity-prices-rise" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "再エネ賦課金", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

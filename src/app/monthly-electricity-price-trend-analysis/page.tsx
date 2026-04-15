@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人電気料金の月次推移パターン｜直近12ヶ月の動きを読むフレームワーク";
@@ -455,6 +456,10 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="monthly-electricity-price-trend-analysis" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

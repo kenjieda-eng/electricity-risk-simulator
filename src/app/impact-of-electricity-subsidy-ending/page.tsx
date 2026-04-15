@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
 const pageTitle = "法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説";
@@ -236,6 +237,10 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
             どの項目が増えたのかを切り分けて確認することが重要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="impact-of-electricity-subsidy-ending" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

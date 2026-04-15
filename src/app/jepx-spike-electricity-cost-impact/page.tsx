@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "JEPX急騰で法人の電気料金はどう上がるか｜市場連動プランへの影響";
@@ -243,6 +244,10 @@ export default function JepxSpikeElectricityCostImpactPage() {
             </li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="jepx-spike-electricity-cost-impact" terms={["JEPX", "市場価格調整額", "燃料費調整額", "市場連動プラン", "固定プラン", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

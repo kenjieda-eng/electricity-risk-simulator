@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "クリニックの電気料金見直しポイント｜医療機器と空調負荷を踏まえた考え方";
@@ -317,6 +318,10 @@ export default function ClinicElectricityCostReviewPage() {
             で確認できます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="clinic-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "固定プラン", "市場連動プラン", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

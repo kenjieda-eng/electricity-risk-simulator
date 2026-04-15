@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "市場価格調整額の有無を確認する方法｜固定と市場連動を見分けるポイント";
@@ -218,6 +219,10 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
             <li>固定型との価格差と市場連動のリスクを比較し、どちらの選択が自社のリスク許容度に合っているかを判断する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="how-to-check-market-price-adjustment-terms" terms={["燃料費調整額", "市場価格調整額", "JEPX", "市場連動プラン", "固定プラン", "容量拠出金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

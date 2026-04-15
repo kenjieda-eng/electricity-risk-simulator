@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の電気料金見直しで集めるべき資料一覧｜8種類の資料と入手先・優先順位";
@@ -298,6 +299,10 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
           </p>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="documents-needed-for-electricity-contract-review" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "契約電力", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

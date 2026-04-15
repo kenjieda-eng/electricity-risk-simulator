@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "商業施設は固定と市場連動のどちらが向くか｜営業時間と設備負荷から考える";
 const pageDescription =
@@ -263,6 +264,10 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
             <li>大型商業施設はBEMSなどで時間帯別データを取得し、シミュレーションしたうえで判断することを推奨</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="commercial-facility-fixed-vs-market-linked" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "デマンド値", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

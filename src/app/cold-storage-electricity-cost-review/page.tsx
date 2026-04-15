@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "冷蔵倉庫の電気料金見直しポイント｜大きなベースロードを踏まえた考え方";
@@ -319,6 +320,10 @@ export default function ColdStorageElectricityCostReviewPage() {
             <li>電力価格が大幅に高騰したシナリオでの事業収支への影響を確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="cold-storage-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "市場連動プラン", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

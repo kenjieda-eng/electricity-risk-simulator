@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle = "法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント";
@@ -191,6 +192,10 @@ export default function WhenToReviewElectricityContractPage() {
             使用状況の変化も含めて捉えることが大切です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="when-to-review-electricity-contract" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="次に確認したいページ"

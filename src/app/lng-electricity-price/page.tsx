@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "法人の電気料金とLNGの関係｜価格推移・影響試算・調達リスクを解説";
 const pageDescription =
@@ -384,6 +385,10 @@ export default function LngElectricityPricePage() {
             <li>契約種別（市場連動型・固定型）によって影響の受け方が異なるため、自社契約の構造確認が優先事項</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="lng-electricity-price" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

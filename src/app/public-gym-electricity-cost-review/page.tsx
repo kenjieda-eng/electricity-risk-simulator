@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "公共体育館の電気料金見直しポイント｜空調・照明と稼働パターンを踏まえた考え方";
@@ -280,6 +281,10 @@ export default function PublicGymElectricityCostReviewPage() {
             <li>夏季イベントシーズンのピーク月を前提にした影響額を試算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="public-gym-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "デマンド値"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

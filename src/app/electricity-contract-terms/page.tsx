@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle = "法人向け電力契約で確認したい契約条件｜8項目の確認一覧と契約期間別比較";
@@ -266,6 +267,10 @@ export default function ElectricityContractTermsPage() {
             法人向け電力契約では、単価比較に加えて契約条件を確認することが不可欠です。上記の8項目一覧を見積取得から契約締結まで各フェーズで活用し、契約期間の長短によるトレードオフも踏まえて判断することで、導入後のギャップを減らせます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-contract-terms" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "契約電力", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

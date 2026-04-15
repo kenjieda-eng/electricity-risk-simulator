@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "エリア別（電力会社別）の電気料金推移比較｜法人向けに10エリアの単価差を整理";
@@ -328,6 +329,10 @@ export default function ElectricityPriceTrendByAreaPage() {
             <li>・移転よりも先に、現行契約の見直しとシミュレーションを行うことが現実的な第一歩</li>
           </ul>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-price-trend-by-area" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "高圧電力", "特別高圧", "電気料金の内訳"]} />
       </div>
 
       {/* 関連リンク */}

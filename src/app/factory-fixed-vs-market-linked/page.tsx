@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "工場は固定と市場連動のどちらが向くか｜稼働パターンと負荷から考える";
 const pageDescription =
@@ -235,6 +236,10 @@ export default function FactoryFixedVsMarketLinkedPage() {
             <li>大型特別高圧工場は、高騰時の追加コストの絶対額が非常に大きくなるため、財務部門との協議が不可欠</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="factory-fixed-vs-market-linked" terms={["市場連動プラン", "固定プラン", "JEPX", "特別高圧", "高圧電力", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

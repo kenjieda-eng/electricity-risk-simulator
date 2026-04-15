@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人向け電気料金は高止まりしているのか｜2019〜2025年の年次データと構造要因";
@@ -407,6 +408,10 @@ export default function ElectricityPriceTrend20192025Page() {
             を参照してください。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-price-trend-2019-2025" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "市場連動プラン", "高圧電力", "電気料金の内訳"]} />
+        </div>
 
         {/* ── 関連リンク ── */}
         <div className="mt-2">

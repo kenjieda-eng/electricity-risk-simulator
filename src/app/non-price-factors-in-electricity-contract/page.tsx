@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理";
@@ -220,6 +221,10 @@ export default function NonPriceFactorsInElectricityContractPage() {
             <li>サービス列：請求書の明細詳しさ・データ提供・問い合わせ対応</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="non-price-factors-in-electricity-contract" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

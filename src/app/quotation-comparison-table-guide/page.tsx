@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 
 const pageTitle =
@@ -313,6 +314,10 @@ export default function QuotationComparisonTableGuidePage() {
             「今の燃料費調整額の水準が将来どう変化するか」「市場連動型のリスクをどう評価するか」は、比較表だけでは答えが出ません。シミュレーションを活用して上振れシナリオを把握しておくことが、現実的な判断の助けになります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="quotation-comparison-table-guide" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

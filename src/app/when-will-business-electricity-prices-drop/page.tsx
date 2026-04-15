@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle = "法人の電気料金はいつ下がるのか｜値下がりの条件と今後の見通し";
@@ -608,6 +609,10 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
             </li>
           </ul>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="when-will-business-electricity-prices-drop" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "託送料金", "市場連動プラン", "JEPX"]} />
       </div>
 
       {/* 関連リンク */}

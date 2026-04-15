@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "食品工場の電気料金見直しポイント｜連続操業と冷蔵設備を踏まえた考え方";
@@ -267,6 +268,10 @@ export default function FoodFactoryElectricityCostReviewPage() {
             <li>燃料費高騰・円安シナリオでの影響額を生産コスト比で確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="food-factory-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "契約電力"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

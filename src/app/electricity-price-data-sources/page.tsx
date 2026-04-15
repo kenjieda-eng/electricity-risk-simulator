@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電気料金推移データの入手先と確認方法｜法人担当者のための情報源ガイド";
@@ -315,6 +316,10 @@ export default function ElectricityPriceDataSourcesPage() {
         </section>
 
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-price-data-sources" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

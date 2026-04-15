@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "急騰後も電気料金が元に戻らないのはなぜか｜一時的要因と構造的要因を整理";
 const pageDescription =
@@ -359,6 +360,10 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
             で確認できます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="why-electricity-prices-have-not-returned" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "託送料金", "JEPX", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

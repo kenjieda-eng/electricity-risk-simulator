@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import InfoBox from "../../components/simulator/InfoBox";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
@@ -280,6 +281,10 @@ export default function CapacityContributionWhatToCheckPage() {
           </div>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="capacity-contribution-what-to-check" terms={["容量拠出金", "燃料費調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

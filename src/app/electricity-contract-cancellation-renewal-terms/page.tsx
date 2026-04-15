@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "法人向け電力契約で確認したい違約金・契約期間・更新条件｜金額パターンとチェックリスト";
 const pageDescription =
@@ -273,6 +274,10 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             自動更新の通知期限と解約条件のチェックリストを活用してください。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-contract-cancellation-renewal-terms" terms={["市場連動プラン", "固定プラン", "燃料費調整額", "最終保障供給", "基本料金"]} />
+        </div>
 
         <div className="mt-8">
           <RelatedLinks

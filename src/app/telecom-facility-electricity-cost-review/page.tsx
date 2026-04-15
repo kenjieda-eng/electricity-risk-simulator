@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "通信施設の電気料金リスク｜24時間稼働と冗長設備を踏まえた考え方";
@@ -270,6 +271,10 @@ export default function TelecomFacilityElectricityCostReviewPage() {
             <li>PUE改善によるベースロード削減後のリスク変化を試算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="telecom-facility-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "特別高圧", "非化石証書"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

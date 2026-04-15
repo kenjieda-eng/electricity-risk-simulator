@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電気料金の「見えない値上げ」とは｜単価は変わらなくても負担が増える6つの理由";
@@ -484,6 +485,10 @@ export default function HiddenElectricityPriceIncreasesPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="hidden-electricity-price-increases" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "デマンド値", "契約電力", "電気料金の内訳"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

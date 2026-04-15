@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "電気料金上昇率と他の事業コスト上昇率を比較する｜法人のコスト構造全体で見る";
@@ -487,6 +488,10 @@ export default function ElectricityVsOtherBusinessCostsPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-vs-other-business-costs" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "市場連動プラン"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

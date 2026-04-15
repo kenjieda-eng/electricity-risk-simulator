@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "2026年度以降の法人電気料金見通し｜要因別の方向性とシナリオ別予算前提";
@@ -402,6 +403,10 @@ export default function ElectricityPriceOutlook2026Page() {
             ))}
           </ol>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-price-outlook-2026" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "託送料金", "JEPX", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

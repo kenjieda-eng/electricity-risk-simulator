@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "介護施設の電気料金見直しポイント｜安定供給と予算管理を踏まえた考え方";
@@ -281,6 +282,10 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
             <li>電力価格高止まりシナリオでの年間超過コストを試算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="nursing-care-facility-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "固定プラン", "最終保障供給", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

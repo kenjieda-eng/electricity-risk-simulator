@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "容量拠出金の年度別推移｜オークション結果と転嫁単価の変動を整理";
 const pageDescription =
@@ -336,6 +337,10 @@ export default function CapacityContributionHistoryPage() {
             <li>火力維持コストの構造的要因があるため、長期的には低位安定を見込みにくく、シナリオ別の影響試算が重要。</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="capacity-contribution-history" terms={["容量拠出金", "再エネ賦課金", "燃料費調整額", "電力量料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

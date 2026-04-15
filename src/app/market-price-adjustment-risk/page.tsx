@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
@@ -218,6 +219,10 @@ export default function MarketPriceAdjustmentRiskPage() {
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度集計）</p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="market-price-adjustment-risk" terms={["市場価格調整額", "JEPX", "市場連動プラン", "固定プラン", "燃料費調整額", "再エネ賦課金"]} />
+        </div>
 
         <RelatedLinks
           heading="関連する解説ページ"

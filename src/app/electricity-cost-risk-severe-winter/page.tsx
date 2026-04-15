@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { DEMAND_MONTHLY_AVG, DEMAND_SEASON_HOUR } from "../../data/demandData";
 import { WINTER_TMIN_TREND, HDD_TREND, SAPPORO_EXTREME_COLD } from "../../data/weatherData";
 
@@ -303,6 +304,10 @@ export default function ElectricityCostRiskSevereWinterPage() {
             </p>
           </div>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-cost-risk-severe-winter" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle =
@@ -499,6 +500,10 @@ export default function RenewableEnergyPlanExplainedPage() {
             <li>GHGプロトコルのScope 2開示では証書の詳細情報（番号・発電所・発電月）を書面で取得できるか確認する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="renewable-energy-plan-explained" terms={["非化石証書", "再エネ賦課金", "固定プラン", "市場連動プラン", "電力量料金"]} />
+        </div>
 
         {/* 関連リンク */}
         <div className="mt-8">

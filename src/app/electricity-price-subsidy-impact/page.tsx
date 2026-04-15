@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle = "補助金縮小で電気料金の見え方はどう変わったか｜経緯・区分別影響・年間コスト比較";
 const pageDescription =
@@ -314,6 +315,10 @@ export default function ElectricityPriceSubsidyImpactPage() {
             で確認できます。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="electricity-price-subsidy-impact" terms={["燃料費調整額", "再エネ賦課金", "電力量料金", "基本料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

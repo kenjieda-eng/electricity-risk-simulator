@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "中小企業と大企業で電気料金高騰の影響はどう違うか｜企業規模別の負担分析";
@@ -464,6 +465,10 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
           </ul>
         </section>
       </section>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="sme-vs-large-company-electricity-impact" terms={["高圧電力", "特別高圧", "基本料金", "電力量料金", "再エネ賦課金", "契約電力"]} />
+      </div>
 
       {/* 関連リンク */}
       <div className="mt-8">

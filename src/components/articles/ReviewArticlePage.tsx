@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import ContentCta from "../simulator/ContentCta";
 import RelatedLinks from "../simulator/RelatedLinks";
+import GlossaryLinks from "../simulator/GlossaryLinks";
 import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 
 type LinkCard = {
@@ -27,6 +28,7 @@ type ReviewArticlePageProps = {
   ctaDescription: string;
   slug?: string;
   breadcrumbLabel?: string;
+  glossaryTerms?: string[];
 };
 
 export default function ReviewArticlePage({
@@ -39,6 +41,7 @@ export default function ReviewArticlePage({
   ctaDescription,
   slug,
   breadcrumbLabel,
+  glossaryTerms,
 }: ReviewArticlePageProps) {
   return (
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -98,6 +101,12 @@ export default function ReviewArticlePage({
             {section.note ? <div className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{section.note}</div> : null}
           </section>
         ))}
+
+        {(slug || glossaryTerms) && (
+          <div className="mt-6">
+            <GlossaryLinks currentSlug={slug} terms={glossaryTerms} />
+          </div>
+        )}
 
         <RelatedLinks heading="関連ページ" intro={relatedIntro} links={relatedLinks} />
 

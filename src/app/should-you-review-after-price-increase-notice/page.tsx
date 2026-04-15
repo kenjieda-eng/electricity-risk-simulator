@@ -149,6 +149,7 @@ export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
         },
       ]}
       ctaDescription="通知内容と期限を整理したら、使い方ページで比較準備を確認し、比較ページで代替案を同条件で評価して判断を進めます。"
+      glossaryTerms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "最終保障供給"]}
     />
   );
 }

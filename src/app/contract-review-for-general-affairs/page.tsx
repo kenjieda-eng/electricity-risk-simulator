@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "契約見直し時に総務が見るポイント｜社内調整と手続きの進め方";
@@ -207,6 +208,10 @@ export default function ContractReviewForGeneralAffairsPage() {
             <li>切替後の請求書を確認せずに放置する → 初回請求書を受け取ったら契約条件と照合する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="contract-review-for-general-affairs" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle = "市場連動プランが向いている法人・向いていない法人｜電気料金の変動リスクをどう見るか";
 const pageDescription =
   "市場連動プランが向いている法人と向いていない法人の違いを、電気料金の変動、使用時間帯、予算管理、社内説明のしやすさから整理します。法人・企業・自治体の電力契約見直しに役立つ解説です。";
@@ -187,6 +188,10 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
             数年分のメリットが1年の高騰で吹き飛ぶリスクがあることを示しています。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="who-should-choose-market-linked-plan" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額"]} />
+        </div>
 
         <RelatedLinks
           heading="あわせて読みたいページ"

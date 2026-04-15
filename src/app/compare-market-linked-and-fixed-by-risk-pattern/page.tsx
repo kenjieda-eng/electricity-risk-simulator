@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
 const pageDescription =
   "市場連動と固定の違いを、単純な安さではなく、電気料金の変動の受け方、予算管理、社内説明、契約条件の違いから整理します。法人向け電力契約の比較軸を分かりやすく解説します。";
@@ -196,6 +197,10 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
             安定期には市場連動が年間<span className="font-semibold text-slate-900">120万円</span>有利ですが、ワーストシナリオでは固定が<span className="font-semibold text-slate-900">780万円</span>有利になります。リスク許容度に応じた判断が必要です。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="compare-market-linked-and-fixed-by-risk-pattern" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "再エネ賦課金"]} />
+        </div>
 
         <RelatedLinks
           heading="カテゴリ内の主要ページ"

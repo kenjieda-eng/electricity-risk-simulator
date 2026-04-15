@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "半導体関連施設の電気料金リスク｜クリーンルームと大規模電力を踏まえた考え方";
@@ -271,6 +272,10 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
             <li>省エネ投資によるベースロード削減後のコストリスク変化を試算する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="semiconductor-facility-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "特別高圧", "固定プラン", "非化石証書"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 // --- 定数 ---
 const pageTitle =
@@ -578,6 +579,10 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
             </li>
           </ul>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="electricity-price-increase-and-cpi" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "市場連動プラン"]} />
       </div>
 
       {/* 関連リンク */}

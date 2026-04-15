@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 const pageTitle =
   "多拠点企業はどちらを選ぶべきか｜拠点ごとの最適化と全体管理";
 const pageDescription =
@@ -237,6 +238,10 @@ export default function MultiSitePlanSelectionPage() {
             <li>電力会社との一括交渉の可能性を確認したうえで見積もりを比較する</li>
           </ol>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="multi-site-plan-selection" terms={["市場連動プラン", "固定プラン", "基本料金", "契約電力", "燃料費調整額"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

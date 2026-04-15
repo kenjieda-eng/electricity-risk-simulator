@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "使用量やデマンドが変わったとき電力契約は見直すべきか｜見直しトリガーと影響試算";
@@ -264,6 +265,10 @@ export default function ReviewContractWhenUsageChangesPage() {
             上記のトリガー表と影響試算を活用し、自社の変動パターンに当てはめて判断を進めることを推奨します。
           </p>
         </section>
+      </div>
+
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="review-contract-when-usage-changes" terms={["契約電力", "デマンド値", "基本料金", "電力量料金", "燃料費調整額", "力率"]} />
       </div>
 
       {/* 関連リンク */}

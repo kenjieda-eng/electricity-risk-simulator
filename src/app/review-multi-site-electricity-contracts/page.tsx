@@ -155,6 +155,7 @@ export default function ReviewMultiSiteElectricityContractsPage() {
         },
       ]}
       ctaDescription="多拠点情報を整えたら、使い方ページで入力手順を確認し、比較ページで拠点単位の条件差を可視化して優先拠点から進めるのが実務的です。"
+      glossaryTerms={["基本料金", "電力量料金", "契約電力", "燃料費調整額", "市場連動プラン", "固定プラン"]}
     />
   );
 }

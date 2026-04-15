@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "ビジネスホテルの電気料金見直しポイント｜客室稼働と設備効率を踏まえた考え方";
@@ -290,6 +291,10 @@ export default function BusinessHotelElectricityCostReviewPage() {
             <li>複数拠点の場合は拠点別に試算し全社合算での影響を把握する</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="business-hotel-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "デマンド値"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

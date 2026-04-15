@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "法人の電気料金の値上げはいつから反映されるのか｜要因別タイムラグと請求書の見方";
@@ -520,6 +521,10 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
             契約更新月を一覧化しておくことで、いつ・どの拠点で変化が起きるかを先読みできるようになります。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="when-business-electricity-price-increases-start" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "基本料金", "電気料金の内訳"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

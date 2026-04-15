@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "比較表を社内共有するときのポイント｜わかりやすい比較表の作り方";
@@ -319,6 +320,10 @@ export default function SharingComparisonTableInternallyPage() {
             で詳しく解説しています。
           </p>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="sharing-comparison-table-internally" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

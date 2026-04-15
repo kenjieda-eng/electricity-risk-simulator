@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import DiagnosisClient from "./DiagnosisClient";
 
 const pageTitle =
@@ -144,6 +145,10 @@ export default function ContractRenewalTimingDiagnosisPage() {
             </tbody>
           </table>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="contract-renewal-timing-diagnosis" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"

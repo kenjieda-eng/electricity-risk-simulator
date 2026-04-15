@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import BusinessElectricityTrendHubCharts from "./_components/BusinessElectricityTrendHubCharts";
 import {
   CONTRACT_VIEWPOINT_ROWS,
@@ -456,6 +457,10 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               <span className="font-semibold text-slate-900">容量拠出金で電気代はどのくらい上がるのか</span>
             </Link>
           </div>
+        </div>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="business-electricity-price-trend-10-years" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "市場連動プラン", "高圧電力", "電気料金の内訳"]} />
         </div>
 
         <ContentCta

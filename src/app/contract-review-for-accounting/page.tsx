@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 
 const pageTitle =
   "契約見直し時に経理が見るポイント｜予算管理と会計処理の確認";
@@ -215,6 +216,10 @@ export default function ContractReviewForAccountingPage() {
             <li>支払い条件の変更（振込から引落への変更など）がある場合は口座・手続きの準備を進める</li>
           </ul>
         </section>
+
+        <div className="mt-6">
+          <GlossaryLinks currentSlug="contract-review-for-accounting" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "電気料金の内訳", "市場連動プラン"]} />
+        </div>
 
         <RelatedLinks
           heading="関連ページ"
