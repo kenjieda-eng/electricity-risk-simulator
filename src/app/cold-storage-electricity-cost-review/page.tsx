@@ -353,6 +353,16 @@ export default function ColdStorageElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "冷蔵倉庫でのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
+            {
+              href: "/battery-consideration-for-business",
+              title: "法人向け蓄電池導入の検討ポイント",
+              description: "冷蔵倉庫における蓄電池活用でピーク電力削減とBCP強化を実現する方法。",
+            },
           ]}
         />
 

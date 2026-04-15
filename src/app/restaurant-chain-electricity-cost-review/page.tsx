@@ -298,6 +298,16 @@ export default function RestaurantChainElectricityCostReviewPage() {
               title: "ホテルの電気料金見直しポイント",
               description: "24時間稼働・客室管理を踏まえた契約設計の考え方。",
             },
+            {
+              href: "/retail-chain-price-surge-risk",
+              title: "小売チェーンの電気料金高騰リスク",
+              description: "飲食チェーンが複数店舗で直面する電気料金高騰リスクの管理方法。",
+            },
+            {
+              href: "/led-air-conditioning-reduction-effect",
+              title: "LED・空調更新による電気料金削減効果",
+              description: "飲食チェーンの照明・空調設備の更新で期待できる電気料金削減効果を解説。",
+            },
           ]}
         />
 

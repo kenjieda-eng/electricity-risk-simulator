@@ -319,6 +319,11 @@ export default function HospitalElectricityCostReviewPage() {
               title: "停電・電力不足時の対応と事前準備",
               description: "病院・医療機関向けの停電リスク対応の考え方。",
             },
+            {
+              href: "/battery-consideration-for-business",
+              title: "法人向け蓄電池導入の検討ポイント",
+              description: "病院・医療施設が蓄電池導入を検討する際の費用対効果と注意点。",
+            },
           ]}
         />
 

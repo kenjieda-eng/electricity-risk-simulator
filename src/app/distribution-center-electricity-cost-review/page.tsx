@@ -296,6 +296,11 @@ export default function DistributionCenterElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "物流センターでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
           ]}
         />
 

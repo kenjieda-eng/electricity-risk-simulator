@@ -328,6 +328,16 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/factory-fixed-vs-market-linked",
+              title: "工場向け：固定プランと市場連動プランの選び方",
+              description: "組立工場の操業特性に合った料金プランの選択基準を整理。",
+            },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "組立工場でのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
           ]}
         />
 

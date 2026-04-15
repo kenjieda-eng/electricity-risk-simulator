@@ -305,6 +305,16 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/executive-business-continuity-risk",
+              title: "経営層が知るべき電力調達とBCPリスク",
+              description: "半導体施設における電力供給途絶・コスト急騰が事業継続に与える影響を解説。",
+            },
+            {
+              href: "/emergency-power-outage-response",
+              title: "停電・電力不足時の対応と事前準備",
+              description: "半導体施設の停電リスク対応と非常用電源の準備について。",
+            },
           ]}
         />
 

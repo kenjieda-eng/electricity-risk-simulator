@@ -324,6 +324,11 @@ export default function WaterSewageElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/municipality-procurement-methods",
+              title: "自治体の電力調達方式の比較",
+              description: "上下水道施設を含む自治体向け調達手段（入札・随意契約・共同調達）の整理。",
+            },
           ]}
         />
 

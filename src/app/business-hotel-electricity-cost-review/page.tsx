@@ -324,6 +324,11 @@ export default function BusinessHotelElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "ビジネスホテルでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
           ]}
         />
 

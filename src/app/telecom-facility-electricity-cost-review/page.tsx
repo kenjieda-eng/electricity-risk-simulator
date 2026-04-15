@@ -304,6 +304,11 @@ export default function TelecomFacilityElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/emergency-power-outage-response",
+              title: "停電・電力不足時の対応と事前準備",
+              description: "通信施設の停電リスク対応と無停電電源・非常用発電の準備について。",
+            },
           ]}
         />
 

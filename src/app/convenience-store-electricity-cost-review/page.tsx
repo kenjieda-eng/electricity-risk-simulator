@@ -314,6 +314,16 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/multi-site-company-price-surge-risk",
+              title: "多拠点企業の電気料金高騰リスク",
+              description: "コンビニなど多店舗展開企業が直面する電気料金高騰リスクの管理方法。",
+            },
+            {
+              href: "/led-air-conditioning-reduction-effect",
+              title: "LED・空調更新による電気料金削減効果",
+              description: "コンビニの照明・空調設備の更新で期待できる電気料金削減効果を解説。",
+            },
           ]}
         />
 

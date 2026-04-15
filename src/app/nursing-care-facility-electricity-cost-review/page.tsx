@@ -315,6 +315,11 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/electricity-cost-benchmark-by-industry",
+              title: "業種別・電気料金の相場と目安",
+              description: "介護施設の電気料金水準を業界平均と比較し、コストの見直し根拠を把握する。",
+            },
           ]}
         />
 

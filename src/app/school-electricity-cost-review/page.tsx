@@ -314,6 +314,16 @@ export default function SchoolElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/municipality-annual-budget-impact",
+              title: "電気料金高騰が自治体予算に与える影響",
+              description: "学校を含む公共施設の電気料金上昇が自治体の年間予算に与える影響を試算。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "電気料金関連の補助金・助成金一覧",
+              description: "学校施設が活用できる省エネ・電気料金関連の補助金制度を整理。",
+            },
           ]}
         />
 

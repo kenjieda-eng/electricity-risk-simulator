@@ -318,6 +318,16 @@ export default function DataCenterElectricityCostReviewPage() {
               title: "病院の電気料金見直しポイント",
               description: "電力の安定供給を最優先とした契約設計の考え方。",
             },
+            {
+              href: "/executive-business-continuity-risk",
+              title: "経営層が知るべき電力調達とBCPリスク",
+              description: "データセンターにおける電力供給途絶・コスト急騰が事業継続に与える影響を解説。",
+            },
+            {
+              href: "/emergency-power-outage-response",
+              title: "停電・電力不足時の対応と事前準備",
+              description: "データセンターの停電リスク対応と無停電電源・非常用発電の準備について。",
+            },
           ]}
         />
 

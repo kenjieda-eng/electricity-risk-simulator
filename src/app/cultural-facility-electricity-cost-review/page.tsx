@@ -324,6 +324,11 @@ export default function CulturalFacilityElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/municipality-designated-manager-electricity",
+              title: "指定管理者制度と電気料金の関係",
+              description: "文化施設の指定管理者が電気料金コストをどのように負担・管理すべきかを解説。",
+            },
           ]}
         />
 

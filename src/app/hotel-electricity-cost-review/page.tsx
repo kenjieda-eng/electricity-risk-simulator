@@ -294,6 +294,11 @@ export default function HotelElectricityCostReviewPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備の基本項目を一覧で確認。",
             },
+            {
+              href: "/case-study-hotel-market-linked-switch",
+              title: "事例：ホテルの市場連動プラン切替",
+              description: "ホテルが市場連動プランから固定プランへ切り替えた際のコスト変化と判断プロセス。",
+            },
           ]}
         />
 

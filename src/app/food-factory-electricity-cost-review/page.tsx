@@ -296,6 +296,16 @@ export default function FoodFactoryElectricityCostReviewPage() {
               title: "病院の電気料金見直しポイント",
               description: "安定性最優先の施設における契約設計の考え方。",
             },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "食品工場でのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
+            {
+              href: "/factory-fixed-vs-market-linked",
+              title: "工場向け：固定プランと市場連動プランの選び方",
+              description: "食品工場の操業特性に合った料金プランの選択基準を整理。",
+            },
           ]}
         />
 

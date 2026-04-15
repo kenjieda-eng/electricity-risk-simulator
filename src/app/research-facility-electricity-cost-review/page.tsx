@@ -304,6 +304,11 @@ export default function ResearchFacilityElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/subsidies-overview",
+              title: "電気料金関連の補助金・助成金一覧",
+              description: "研究施設が活用できる省エネ・設備更新関連の補助金制度を整理。",
+            },
           ]}
         />
 

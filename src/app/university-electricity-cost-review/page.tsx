@@ -321,6 +321,16 @@ export default function UniversityElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/subsidies-overview",
+              title: "電気料金関連の補助金・助成金一覧",
+              description: "大学が活用できる省エネ・再エネ関連の補助金制度を整理。",
+            },
+            {
+              href: "/solar-self-consumption-for-business",
+              title: "法人向け太陽光自家消費の導入ポイント",
+              description: "大学キャンパスで太陽光発電の自家消費を活用して電気料金を削減する方法。",
+            },
           ]}
         />
 

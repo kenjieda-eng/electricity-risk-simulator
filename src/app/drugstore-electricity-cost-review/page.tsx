@@ -321,6 +321,11 @@ export default function DrugstoreElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/retail-chain-price-surge-risk",
+              title: "小売チェーンの電気料金高騰リスク",
+              description: "ドラッグストアチェーンが複数店舗で直面する電気料金高騰リスクを解説。",
+            },
           ]}
         />
 

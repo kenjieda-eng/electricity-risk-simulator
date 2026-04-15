@@ -314,6 +314,11 @@ export default function SmallOfficeElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/electricity-cost-benchmark-by-industry",
+              title: "業種別・電気料金の相場と目安",
+              description: "中小オフィスの電気料金水準を業界平均と比較し、コスト見直しの根拠を把握する。",
+            },
           ]}
         />
 

@@ -295,6 +295,11 @@ export default function MunicipalityElectricityCostReviewPage() {
               title: "自治体の電力調達方式の比較",
               description: "入札・随意契約・共同調達など自治体向け調達手段の整理。",
             },
+            {
+              href: "/municipality-bundled-procurement",
+              title: "自治体の電力一括調達のメリットと注意点",
+              description: "複数施設をまとめて調達するバンドル調達で自治体がコストを削減する方法。",
+            },
           ]}
         />
 

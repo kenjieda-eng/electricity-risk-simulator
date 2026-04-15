@@ -321,6 +321,16 @@ export default function SupermarketElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/retail-chain-price-surge-risk",
+              title: "小売チェーンの電気料金高騰リスク",
+              description: "スーパーマーケットチェーンが複数店舗で直面する電気料金高騰リスクを解説。",
+            },
+            {
+              href: "/electricity-cost-benchmark-by-industry",
+              title: "業種別・電気料金の相場と目安",
+              description: "スーパーマーケットの電気料金水準を業界平均と比較し、コスト見直しの根拠を把握する。",
+            },
           ]}
         />
 

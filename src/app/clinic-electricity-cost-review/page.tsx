@@ -351,6 +351,11 @@ export default function ClinicElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/electricity-cost-benchmark-by-industry",
+              title: "業種別・電気料金の相場と目安",
+              description: "クリニックを含む業種別の電気料金水準と、自社コストの位置づけを把握する。",
+            },
           ]}
         />
 

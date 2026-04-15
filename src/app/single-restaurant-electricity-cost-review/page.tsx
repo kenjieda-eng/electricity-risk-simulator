@@ -321,6 +321,11 @@ export default function SingleRestaurantElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/restaurant-electricity-cost-benchmark",
+              title: "飲食店の電気料金相場と目安",
+              description: "飲食店の業態別・席数規模別の電気料金水準を把握し、自店コストと比較する。",
+            },
           ]}
         />
 

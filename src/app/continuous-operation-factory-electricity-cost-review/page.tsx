@@ -306,6 +306,16 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
               title: "法人の電気料金が上がり続ける理由",
               description: "電気料金上昇の構造的な背景を整理した解説。",
             },
+            {
+              href: "/24h-operation-price-surge-risk",
+              title: "24時間操業施設の電気料金高騰リスク",
+              description: "連続操業工場が夜間・休日の市場価格急騰にさらされるリスクを解説。",
+            },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "連続操業工場でのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
           ]}
         />
 

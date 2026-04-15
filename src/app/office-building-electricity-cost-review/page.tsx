@@ -319,6 +319,16 @@ export default function OfficeBuildingElectricityCostReviewPage() {
               title: "デマンド料金（基本料金）の仕組み",
               description: "契約電力とデマンドの関係、基本料金の削減方法。",
             },
+            {
+              href: "/office-electricity-cost-benchmark",
+              title: "オフィスの電気料金相場と目安",
+              description: "オフィスビルの規模・用途別の電気料金水準を把握し、自社コストと比較する。",
+            },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "オフィスビルでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
           ]}
         />
 

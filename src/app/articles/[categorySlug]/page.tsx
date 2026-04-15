@@ -321,6 +321,114 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
       ) : null}
 
       {(() => {
+        const nextCategoryMap: Record<string, { slug: string; name: string; reason: string }[]> = {
+          basic: [
+            { slug: "price-increase", name: "料金が上がる理由を知る", reason: "基礎を理解したら、値上げの仕組みを確認しましょう" },
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "実際の価格データで料金の変化を把握できます" },
+          ],
+          "price-increase": [
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "値上げ要因を学んだ次は、実際の推移データで確認しましょう" },
+            { slug: "plan-types", name: "契約メニューの違いを知る", reason: "値上がりリスクに応じた契約形態の違いを比較できます" },
+          ],
+          "price-trends": [
+            { slug: "plan-types", name: "契約メニューの違いを知る", reason: "動向を踏まえて、自社に合う契約メニューを選びましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "価格動向を把握したら、具体的な見直し方法へ進みましょう" },
+          ],
+          "plan-types": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "契約メニューを理解したら、実際の見直し手順を確認しましょう" },
+            { slug: "power-procurement", name: "電力調達の仕組みを知る", reason: "メニューの背景にある電力調達の仕組みも押さえましょう" },
+          ],
+          "review-points": [
+            { slug: "benchmarks", name: "相場・削減効果を知る", reason: "見直しを進める前に、削減の目安感をつかんでおきましょう" },
+            { slug: "risk-scenarios", name: "リスクシナリオ別に知る", reason: "見直し後のリスクシナリオも想定しておくと安心です" },
+          ],
+          "last-resort-supply": [
+            { slug: "emergency-response", name: "緊急対応・トラブル解決", reason: "最終保障供給の仕組みを知ったら、緊急時の対応手順も確認しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "保障供給を脱するための契約見直し手順を確認しましょう" },
+          ],
+          "risk-scenarios": [
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "リスクシナリオと合わせて、実際の価格推移データも参照しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "リスクに備えるための具体的な見直し手順を確認しましょう" },
+          ],
+          "power-procurement": [
+            { slug: "plan-types", name: "契約メニューの違いを知る", reason: "調達構造を理解したら、それを反映した契約メニューを比較しましょう" },
+            { slug: "price-increase", name: "料金が上がる理由を知る", reason: "調達コストが料金に転嫁される仕組みと合わせて確認しましょう" },
+          ],
+          "industry-guide": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "業種の特徴を踏まえた見直し手順を具体的に確認しましょう" },
+            { slug: "benchmarks", name: "相場・削減効果を知る", reason: "業種別の削減相場感も把握しておきましょう" },
+          ],
+          "energy-equipment": [
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "蓄電池・太陽光の導入では補助金・助成金も合わせて確認しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "設備導入と並行して契約見直しも検討しましょう" },
+          ],
+          "internal-explanation": [
+            { slug: "for-executives", name: "経営層・CFO向け", reason: "担当者向け資料の次は、経営層向けの説明ポイントを確認しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "社内説明後すぐに実行できる見直し手順も押さえましょう" },
+          ],
+          municipality: [
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "自治体・公共機関は活用できる補助金・助成金も多くあります" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "入札・契約更新に向けた見直しの進め方を確認しましょう" },
+          ],
+          "case-studies": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "他社事例を参考に、自社の見直し手順を組み立てましょう" },
+            { slug: "benchmarks", name: "相場・削減効果を知る", reason: "削減実績と合わせて業界の相場感も把握しましょう" },
+          ],
+          "by-region": [
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "地域別の状況と全国の価格推移を合わせて理解しましょう" },
+            { slug: "plan-types", name: "契約メニューの違いを知る", reason: "地域別の料金事情を踏まえた契約メニュー選びを検討しましょう" },
+          ],
+          "market-data": [
+            { slug: "risk-scenarios", name: "リスクシナリオ別に知る", reason: "市場データを踏まえたリスクシナリオを確認しましょう" },
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "市場データと料金推移を組み合わせて全体像を把握しましょう" },
+          ],
+          "for-executives": [
+            { slug: "internal-explanation", name: "社内説明・稟議を知る", reason: "経営判断の後は、社内への説明・稟議の通し方を確認しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "経営層の承認を得たら、具体的な見直しの進め方へ移りましょう" },
+          ],
+          subsidies: [
+            { slug: "energy-equipment", name: "蓄電池・太陽光・DRを知る", reason: "補助金を活用した設備導入の具体的な手順を確認しましょう" },
+            { slug: "review-points", name: "見直しポイントを知る", reason: "補助金と合わせて契約見直しも同時に進めましょう" },
+          ],
+          benchmarks: [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "相場感を掴んだら、実際の見直し手順へ進みましょう" },
+            { slug: "case-studies", name: "事例・削減実績を知る", reason: "相場データと合わせて他社の削減事例も参考にしましょう" },
+          ],
+          "emergency-response": [
+            { slug: "last-resort-supply", name: "最終保障供給を知る", reason: "緊急対応と合わせて、最終保障供給の仕組みも確認しておきましょう" },
+            { slug: "risk-scenarios", name: "リスクシナリオ別に知る", reason: "緊急事態に備えたリスクシナリオ別の対処法も押さえましょう" },
+          ],
+          "diagnostic-tools": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "診断結果を踏まえて、具体的な見直し手順を確認しましょう" },
+            { slug: "benchmarks", name: "相場・削減効果を知る", reason: "自社の状況を業界相場と比較してみましょう" },
+          ],
+          "monthly-review": [
+            { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "毎月の動向と合わせて、中長期の価格推移も確認しましょう" },
+            { slug: "risk-scenarios", name: "リスクシナリオ別に知る", reason: "月次データから浮かび上がるリスクシナリオも想定しましょう" },
+          ],
+        };
+        const nextCategories = nextCategoryMap[category.slug];
+        if (!nextCategories || nextCategories.length === 0) return null;
+        return (
+          <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <h2 className="text-lg font-semibold text-slate-900">次に読むとよいカテゴリ</h2>
+            <div className={`mt-4 grid gap-3 ${nextCategories.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+              {nextCategories.map((next) => (
+                <Link
+                  key={next.slug}
+                  href={`/articles/${next.slug}`}
+                  className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-50"
+                >
+                  <p className="text-sm font-semibold text-slate-900">{next.name}</p>
+                  <p className="mt-1 text-xs text-slate-600">{next.reason}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
+      {(() => {
         const cta = CATEGORY_CTA[category.slug as ArticleCategorySlug];
         if (!cta) return null;
         return (

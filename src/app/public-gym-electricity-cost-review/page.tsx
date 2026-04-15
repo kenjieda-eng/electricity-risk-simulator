@@ -314,6 +314,11 @@ export default function PublicGymElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/municipality-annual-budget-impact",
+              title: "電気料金高騰が自治体予算に与える影響",
+              description: "公共体育館を含む公共施設の電気料金上昇が自治体の年間予算に与える影響を試算。",
+            },
           ]}
         />
 

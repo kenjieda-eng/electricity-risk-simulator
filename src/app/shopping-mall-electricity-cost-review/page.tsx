@@ -314,6 +314,16 @@ export default function ShoppingMallElectricityCostReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方とリスクの差を比較。",
             },
+            {
+              href: "/commercial-facility-fixed-vs-market-linked",
+              title: "商業施設向け：固定プランと市場連動プランの選び方",
+              description: "ショッピングモールの負荷特性に合った料金プランの選択基準を整理。",
+            },
+            {
+              href: "/demand-control-reduction-effect",
+              title: "デマンドコントロールによる電気料金削減効果",
+              description: "ショッピングモールでのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
           ]}
         />
 
