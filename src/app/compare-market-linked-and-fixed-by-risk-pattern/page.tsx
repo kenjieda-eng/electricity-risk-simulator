@@ -231,6 +231,11 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
               title: "電源調達調整費とは何か",
               description: "追加費用の見方を確認できます。",
             },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "リスクパターン別の比較判断後に進む見直し開始のタイミング。",
+            },
           ]}
         />
 

@@ -129,13 +129,13 @@ export default function BatterySuitedCorporationsPage() {
             蓄電池の主な効果の仕組み
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人向け蓄電池の主な電気料金削減効果は大きく2つに分類できます。どちらの効果が大きいかは法人の電力使用パターンと契約形態によって異なります。
+            法人向け蓄電池の主な電気料金削減効果は大きく2つに分類できます。ひとつは<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減、もうひとつは<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の最適化です。どちらの効果が大きいかは法人の電力使用パターンと契約形態によって異なります。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドカット（基本料金削減）</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                ピーク時間帯に蓄電池から放電して電力需要のピーク（デマンド）を抑制する。高圧・特別高圧では基本料金がデマンドに連動することが多く、ピーク削減が基本料金の削減に直結する。
+                ピーク時間帯に蓄電池から放電して電力需要のピーク（デマンド）を抑制する。<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>では基本料金がデマンドに連動することが多く、ピーク削減が基本料金の削減に直結する。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -292,6 +292,16 @@ export default function BatterySuitedCorporationsPage() {
               href: "/contract-review-and-equipment-combination",
               title: "契約見直しと設備対策をどう組み合わせるか",
               description: "契約と設備の両面からコストを最適化する考え方。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "省エネ・再エネ設備の補助金概要",
+              description: "蓄電池導入に活用できる補助金制度の整理。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "蓄電池導入と合わせて契約条件を最適化する考え方。",
             },
           ]}
         />

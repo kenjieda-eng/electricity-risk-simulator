@@ -488,6 +488,16 @@ export default function ContractDemandWhatIsItPage() {
                 title: "基礎から知るカテゴリ一覧",
                 description: "法人電気料金の基礎知識をカテゴリ別でまとめて確認できます。",
               },
+              {
+                href: "/how-to-start-electricity-contract-review",
+                title: "電力契約の見直しを始めるには",
+                description: "契約電力・デマンドの整理を、見直し検討のステップへつなげられます。",
+              },
+              {
+                href: "/market-linked-vs-fixed",
+                title: "市場連動プランと固定プランの違い",
+                description: "契約構造を理解したうえでプランの選択軸を確認できます。",
+              },
             ]}
           />
         </div>

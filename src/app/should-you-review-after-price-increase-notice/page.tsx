@@ -142,6 +142,11 @@ export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
           title: "なぜ単価が安い提案でも、必ずしも有利とは限らないのか",
           description: "通知後の比較で起きやすい単価偏重の誤判断を避けられます。",
         },
+        {
+          href: "/businesses-suited-for-fixed-price-electricity-plan",
+          title: "固定プランが向く法人の特徴",
+          description: "値上げ通知を受けて固定プランへの切替を検討する際の判断基準。",
+        },
       ]}
       ctaDescription="通知内容と期限を整理したら、使い方ページで比較準備を確認し、比較ページで代替案を同条件で評価して判断を進めます。"
     />

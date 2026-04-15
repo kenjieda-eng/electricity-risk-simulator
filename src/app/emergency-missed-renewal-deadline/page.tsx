@@ -341,6 +341,11 @@ export default function EmergencyMissedRenewalDeadlinePage() {
               title: "電力契約の解約条項の読み方ガイド",
               description: "解約・中途解約条項の確認ポイントをわかりやすく解説。",
             },
+            {
+              href: "/executive-business-continuity-risk",
+              title: "電気代高騰と事業継続リスク",
+              description: "更新失念による高コスト契約継続リスクをBCPの観点から整理。",
+            },
           ]}
         />
       </div>

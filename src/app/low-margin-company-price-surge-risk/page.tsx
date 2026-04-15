@@ -177,7 +177,7 @@ export default function LowMarginCompanyPriceSurgeRiskPage() {
               「電気料金が10%上昇したとき、営業利益が何%減少するか」を事前に計算しておきます。シミュレーターが活用できます。
             </li>
             <li>
-              <span className="font-semibold text-slate-900">固定プランで変動リスクをヘッジする：</span>
+              <span className="font-semibold text-slate-900"><Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>で変動リスクをヘッジする：</span>
               利益率が低いほど変動リスクの絶対額が大きいため、安定性を優先した固定プランの選択が有効です。
             </li>
             <li>

@@ -628,6 +628,11 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
               title: "料金メニュー比較ページ",
               description: "同条件で比較し、契約判断に必要な差分を確認できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "急上昇後の料金水準の推移実態をデータで確認できます。",
+            },
           ]}
         />
 

@@ -137,7 +137,7 @@ export default function FoodFactoryElectricityCostReviewPage() {
             <li>冷蔵・冷凍設備の常時稼働で、夏場に特に負荷が増加する</li>
             <li>衛生管理要求から空調を大幅に削減することが難しく、省エネの余地が限られる</li>
             <li>生産ラインの稼働計画が変更しにくく、デマンドピーク管理の制約が大きい</li>
-            <li>燃料費調整・再エネ賦課金・容量拠出金の増加による上乗せ費用</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の増加による上乗せ費用</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}
@@ -244,13 +244,13 @@ export default function FoodFactoryElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蒸気・廃熱回収</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                加熱・殺菌工程の廃熱を給湯・予熱に再利用するヒートリカバリーシステム。電力・ガスの合計コスト削減に貢献し、省エネ補助金の対象になる場合がある。
+                加熱・殺菌工程の廃熱を給湯・予熱に再利用するヒートリカバリーシステム。電力・ガスの合計コスト削減に貢献し、省エネ<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>の対象になる場合がある。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光・蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                工場屋根への太陽光発電設置で昼間の購入電力を削減。蓄電池と組み合わせてデマンド抑制・停電バックアップにも活用できる。PPAモデルで初期費用ゼロでの導入も可能。
+                工場屋根への<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電設置で昼間の購入電力を削減。<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>と組み合わせてデマンド抑制・停電バックアップにも活用できる。PPAモデルで初期費用ゼロでの導入も可能。
               </p>
             </div>
           </div>

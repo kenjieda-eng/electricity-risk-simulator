@@ -109,8 +109,8 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
         <p className="mt-1 text-lg font-medium text-amber-200">PMI電力コスト最適化ガイド</p>
         <p className="mt-4 text-sm leading-7 text-slate-200 sm:text-base">
           M&Aのデューデリジェンスで電力契約が見落とされることは珍しくありません。
-          しかし買収後に「高単価の市場連動型契約が残っていた」「解約に高額の違約金が発生する」
-          「最終保障供給に移行していた」といった問題が発覚するケースがあります。
+          しかし買収後に「高単価の<Link href="/market-linked-plan" className="text-sky-300 underline underline-offset-2 hover:text-sky-100">市場連動型契約</Link>が残っていた」「解約に高額の違約金が発生する」
+          「<Link href="/last-resort-supply" className="text-sky-300 underline underline-offset-2 hover:text-sky-100">最終保障供給</Link>に移行していた」といった問題が発覚するケースがあります。
           本ページでは、M&Aにおける電力契約DDのチェックリスト・契約条件確認マトリクス・
           PMI電力コスト最適化タイムラインを経営層・CFO・M&A担当者向けに解説します。
         </p>

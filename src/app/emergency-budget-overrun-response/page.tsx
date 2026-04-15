@@ -171,7 +171,7 @@ export default function EmergencyBudgetOverrunResponsePage() {
           電気料金の急騰で予算超過しそうなときの緊急対応
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          燃料費調整額の急騰・市場価格の上昇・想定外の使用量増加などにより、
+          <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の急騰・市場価格の上昇・想定外の使用量増加などにより、
           年度途中で電力費の予算超過リスクに気づくことがあります。
           このような状況では、<strong>早期に現状を把握し、社内報告と短期対策を並行して進めることが重要です。</strong>
           このページでは、予算超過に気づくタイミングから緊急対応フロー・削減アクション・

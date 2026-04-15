@@ -129,7 +129,7 @@ export default function BatteryElectricityCostBenefitPage() {
           蓄電池は電気料金対策としてどう効くか
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          産業用蓄電池が電気料金の削減に貢献する仕組みは主に2つあります。ひとつは「デマンド（最大需要電力）の抑制」による基本料金の削減、もうひとつは「ピークシフト」による電力量料金の最適化です。
+          産業用蓄電池が電気料金の削減に貢献する仕組みは主に2つあります。ひとつは「デマンド（最大需要電力）の抑制」による<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減、もうひとつは「ピークシフト」による<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の最適化です。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           どちらの効果がどれだけ期待できるかは、自社の電力使用パターンと契約条件によって大きく異なります。このページでは、仕組みと効果の出やすい条件、および限界を整理します。
@@ -151,7 +151,7 @@ export default function BatteryElectricityCostBenefitPage() {
             デマンド抑制による基本料金削減の仕組み
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            高圧・特別高圧契約の法人では、基本料金がデマンド（最大需要電力）に比例して決まります。蓄電池によるデマンド抑制が基本料金削減につながるメカニズムを確認します。
+            <Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>契約の法人では、基本料金がデマンド（最大需要電力）に比例して決まります。蓄電池によるデマンド抑制が基本料金削減につながるメカニズムを確認します。
           </p>
           <div className="mt-4 space-y-3">
             {demandSuppressMechanism.map((item) => (
@@ -179,7 +179,7 @@ export default function BatteryElectricityCostBenefitPage() {
             ピークシフトによる電力量料金の最適化
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            安い時間帯に充電し、高い時間帯に放電する「ピークシフト」によって、電力量料金の単価差を節約できます。以下はピークシフトが効果を発揮する主なケースです。
+            安い時間帯に充電し、高い時間帯に放電する「ピークシフト」によって、電力量料金の単価差を節約できます。<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>利用時は特に効果が大きくなります。以下はピークシフトが効果を発揮する主なケースです。
           </p>
           <div className="mt-4 space-y-4">
             {peakShiftBenefit.map((item) => (
@@ -246,7 +246,7 @@ export default function BatteryElectricityCostBenefitPage() {
             業種別 蓄電池導入効果の目安
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            業種・規模ごとの蓄電池導入効果の概算を整理します。実際の効果は施設条件・契約内容・補助金活用の有無によって異なります。
+            業種・規模ごとの蓄電池導入効果の概算を整理します。実際の効果は施設条件・契約内容・<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用の有無によって異なります。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -438,6 +438,16 @@ export default function BatteryElectricityCostBenefitPage() {
               href: "/demand-response-cost-benefit",
               title: "DRは電気料金対策としてどう考えるか",
               description: "需要応答への参加と蓄電池の連携メリット。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "省エネ・再エネ設備の補助金概要",
+              description: "蓄電池導入コストを圧縮できる補助金制度の整理。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "蓄電池導入前に契約条件を最適化する手順。",
             },
           ]}
         />

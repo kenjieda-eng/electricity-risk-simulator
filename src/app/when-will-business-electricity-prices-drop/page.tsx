@@ -651,6 +651,11 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
               description:
                 "自社の契約条件と市場の標準的なプランを比較して見直し余地を確認。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "価格が下がらない実態を直近の推移データで確認できます。",
+            },
           ]}
         />
       </div>

@@ -148,6 +148,11 @@ export default function WhereToCheckInElectricityContractPage() {
           title: "請求書のどこを見れば電力契約見直しのヒントが分かるのか",
           description: "契約書と請求書の突合に使える確認視点を整理できます。",
         },
+        {
+          href: "/electricity-contract-cancellation-renewal-terms",
+          title: "電力契約の解約・更新条件の確認ポイント",
+          description: "解約違約金と更新条件の実務的な確認方法。",
+        },
       ]}
       ctaDescription="契約書の確認箇所を整理したら、使い方ページで必要情報を整え、比較ページで見積条件と契約条項の整合を確認して進めます。"
     />

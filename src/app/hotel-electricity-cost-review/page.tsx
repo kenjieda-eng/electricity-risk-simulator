@@ -135,7 +135,7 @@ export default function HotelElectricityCostReviewPage() {
             <li>24時間稼働のベースロードが大きく、電力使用量の総量が多い</li>
             <li>夏の猛暑・冬の厳冬で空調負荷が増し、繁忙期と重なるリスクがある</li>
             <li>宴会・イベント時の大型空調・照明・厨房の同時稼働でデマンドが急増する</li>
-            <li>燃料費調整・再エネ賦課金・容量拠出金の増加で上乗せ費用が膨らむ</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の増加で上乗せ費用が膨らむ</li>
             <li>インバウンド需要増加などによる稼働率上昇が使用量増加につながる</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -248,7 +248,7 @@ export default function HotelElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                宴会・大型イベント時のデマンドピークを制御。空調設定の自動調整や一部設備の自動絞り込みで、契約電力を下げる可能性がある。
+                宴会・大型イベント時のデマンドピークを制御。空調設定の自動調整や一部設備の自動絞り込みで、<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>を下げる可能性がある。
               </p>
             </div>
           </div>

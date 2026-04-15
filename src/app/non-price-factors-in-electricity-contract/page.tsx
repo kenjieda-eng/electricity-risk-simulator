@@ -254,6 +254,11 @@ export default function NonPriceFactorsInElectricityContractPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備で確認すべき全項目の一覧。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "単価以外の条件確認と合わせてプラン選択の軸を整理。",
+            },
           ]}
         />
 

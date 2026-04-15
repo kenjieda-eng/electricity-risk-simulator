@@ -171,7 +171,7 @@ export default function ElectricityCostRiskSevereWinterPage() {
             夏の14時台({DEMAND_SEASON_HOUR.find(h => h.hour === 14)?.summer.toLocaleString()}MW)にほぼ匹敵する水準です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            厳冬時はLNG消費量も増加するため、燃料費調整額の上昇と需要ピークによるJEPX高騰が同時に発生するリスクがあります。
+            厳冬時はLNG消費量も増加するため、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇と需要ピークによる<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>高騰が同時に発生するリスクがあります。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">

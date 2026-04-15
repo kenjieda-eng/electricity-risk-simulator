@@ -388,6 +388,11 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
               title: "料金メニューの比較・診断",
               description: "自社条件で固定型と市場連動型の差分を試算できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "値上げ幅の積み重ねで形成された料金水準の推移をデータで確認できます。",
+            },
           ]}
         />
 

@@ -439,7 +439,7 @@ export default function WinterVsSummerElectricityPage() {
             { href: "/warming-trend-30-years", title: "温暖化30年と電力需要", description: "1995年からの気温上昇トレンドと電気料金への中長期影響。" },
             { href: "/extreme-heat-electricity-risk", title: "猛暑日・熱帯夜と電力リスク", description: "猛暑日・熱帯夜の増加トレンドと電力需要・価格への具体的影響。" },
             { href: "/electricity-cost-risk-severe-winter", title: "厳冬・寒波が電気料金に与える影響", description: "2021年1月大寒波事例と冬季電力価格の高騰リスク。" },
-            { href: "/jepx-spot-price-history", title: "JEPXスポット価格の推移", description: "2010年以降のJEPX年次・季節別価格トレンド。" },
+            { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "2010年以降のJEPX年次・季節別価格トレンド。" },
             { href: "/compare", title: "料金メニュー比較診断", description: "市場連動型と固定価格型、自社に最適なプランを診断。" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "冬夏のピーク管理でデマンド値を下げる方法。" },
           ]}

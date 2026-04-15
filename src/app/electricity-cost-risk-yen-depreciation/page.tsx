@@ -271,9 +271,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人・企業・自治体が確認したい請求書・見積書のポイント</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金と従量料金の構成</li>
-            <li>燃料費調整額の扱い</li>
-            <li>市場価格調整額などの調整項目</li>
+            <li><Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>と従量料金の構成</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の扱い</li>
+            <li><Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>などの調整項目</li>
             <li>契約期間と更新条件</li>
             <li>見積単価の前提条件</li>
           </ul>
@@ -322,6 +322,11 @@ export default function ElectricityCostRiskYenDepreciationPage() {
               href: "/how-to-compare-electricity-suppliers",
               title: "新電力を比較するときのポイント",
               description: "見積比較で確認したい実務項目を整理できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人の電気料金推移（2019〜2025年）",
+              description: "円安・LNG高騰の影響が実際の料金推移でどう現れたかを確認できます。",
             },
           ]}
         />

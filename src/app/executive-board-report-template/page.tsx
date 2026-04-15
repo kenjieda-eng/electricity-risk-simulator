@@ -371,6 +371,11 @@ export default function ExecutiveBoardReportTemplatePage() {
               title: "同業他社との電力コスト比較の進め方",
               description: "業界平均・競合他社との電力費比較に使える情報源と分析の5ステップ。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直し、まず何から始めるか",
+              description: "取締役会報告の後に担当者に指示する契約見直しの進め方と優先順位。",
+            },
           ]}
         />
       </div>

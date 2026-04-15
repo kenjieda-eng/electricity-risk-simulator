@@ -201,6 +201,11 @@ export default function LongTermPowerProcurementPage() {
               title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
               description: "長期契約がポートフォリオの中でどの役割を持つかを整理できます。",
             },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "長期調達の仕組みが背景にある安定型料金メニューを確認できます。",
+            },
           ]}
         />
 

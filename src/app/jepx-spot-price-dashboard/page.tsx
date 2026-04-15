@@ -433,14 +433,14 @@ export default function JepxSpotPriceDashboardPage() {
               description: "気温→需要→価格のU字構造。スパイクが起きる気象的メカニズムを詳述。",
             },
             {
-              href: "/jepx-real-market-data",
-              title: "JEPXスポット市場の実データ解説",
-              description: "日前市場の基本的な仕組みと取引データの読み方。",
+              href: "/market-linked-plan",
+              title: "市場連動型プランとは",
+              description: "スポット価格連動プランの料金構造・メリット・リスクを詳しく解説。",
             },
             {
-              href: "/market-linked-electricity-plan",
-              title: "市場連動型電力プランとは",
-              description: "スポット価格連動プランの料金構造・メリット・リスクを詳しく解説。",
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "2019〜2025年の料金推移データでJEPX価格と電気代の連動を確認。",
             },
           ]}
         />
@@ -453,7 +453,7 @@ export default function JepxSpotPriceDashboardPage() {
           description="JEPXスポット価格の変動が自社の電気料金にどう影響するか、シミュレーターで診断できます。現在の契約単価・使用量を入力するだけで、高騰シナリオ下の概算コスト増加額を確認できます。"
           links={[
             { href: "/", label: "シミュレーターで診断する" },
-            { href: "/market-linked-electricity-plan", label: "市場連動型プランを理解する" },
+            { href: "/market-linked-plan", label: "市場連動型プランを理解する" },
           ]}
         />
       </div>

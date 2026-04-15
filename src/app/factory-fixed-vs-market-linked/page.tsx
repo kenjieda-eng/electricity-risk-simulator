@@ -187,7 +187,7 @@ export default function FactoryFixedVsMarketLinkedPage() {
             大型工場の場合の特別高圧・高圧の違い
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            大規模工場では特別高圧（2万V以上）での受電になることが多く、電力会社との契約条件も中小規模の高圧や低圧とは異なります。特別高圧では個別交渉の比重が大きく、固定・市場連動の選択も交渉の中で提示されることがあります。
+            大規模工場では<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>（2万V以上）での受電になることが多く、電力会社との契約条件も中小規模の高圧や低圧とは異なります。特別高圧では個別交渉の比重が大きく、固定・市場連動の選択も交渉の中で提示されることがあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧の場合、使用量が非常に大きいため、市場価格が高騰した際の追加コストの絶対額も非常に大きくなります。たとえば月間使用量が500万kWhの大型工場で、市場価格が5円/kWh上昇した場合の月額追加コストは2,500万円になります。この規模の変動リスクを引き受けるかどうかは、財務部門との十分な協議が必要です。
@@ -268,6 +268,11 @@ export default function FactoryFixedVsMarketLinkedPage() {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
               description: "両プランの料金構造とリスクの差。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "工場のプラン変更を進めるための見直し開始タイミングの確認。",
             },
           ]}
         />

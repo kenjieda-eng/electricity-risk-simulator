@@ -292,6 +292,11 @@ export default function ReviewContractWhenUsageChangesPage() {
               title: "料金メニュー比較診断",
               description: "変動後の使用実態をもとに現契約と候補条件を実務的に比較できます。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "使用量・デマンド変化を踏まえたプラン選択の考え方。",
+            },
           ]}
         />
       </div>

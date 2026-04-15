@@ -56,7 +56,7 @@ export default function MarketPriceAdjustmentHistoryPage() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額の推移とJEPX価格の関係</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          市場価格調整額は JEPX スポット価格を参照するため、JEPX 推移を見ると、市場価格調整額がどの時期にどれだけ動いたかが概ね把握できます。
+          <Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>は <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> スポット価格を参照するため、JEPX 推移を見ると、市場価格調整額がどの時期にどれだけ動いたかが概ね把握できます。
           このページでは、2016 年度以降のシステムプライス年度平均と、契約への波及を整理します。
         </p>
       </header>
@@ -145,7 +145,7 @@ export default function MarketPriceAdjustmentHistoryPage() {
           <h2 className="text-xl font-semibold text-slate-900">法人請求額への試算（月10万kWh）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             JEPX 連動で 100% 仕入れされていたと仮定し、月 10 万 kWh の事業所の年額を試算します
-            （実際には託送料金・調達マージン・再エネ賦課金等が別途加算されます）。
+            （実際には<Link href="/wheeling-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">託送料金</Link>・調達マージン・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>等が別途加算されます）。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm text-slate-700">
@@ -183,6 +183,7 @@ export default function MarketPriceAdjustmentHistoryPage() {
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "備え方と判断軸。" },
             { href: "/jepx-explained", title: "JEPXとは何か", description: "卸電力市場の基本。" },
             { href: "/jepx-spot-market-history", title: "JEPXスポット市場の価格推移", description: "JEPX単体の推移分析。" },
+            { href: "/jepx-price-trend-and-corporate-impact", title: "JEPX卸電力市場価格の推移と法人電気料金への波及", description: "市場価格調整額の背景となるJEPX推移を詳しく確認できます。" },
           ]}
         />
 

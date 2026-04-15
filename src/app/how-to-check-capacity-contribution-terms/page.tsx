@@ -214,6 +214,11 @@ export default function HowToCheckCapacityContributionTermsPage() {
               title: "新電力の相見積もり前に整理したい情報",
               description: "見積依頼の精度を上げる事前準備。",
             },
+            {
+              href: "/does-fuel-cost-adjustment-change-even-in-fixed-plan",
+              title: "固定プランでも燃料費調整は変動するのか",
+              description: "固定プランの変動リスクを容量拠出金と合わせて確認。",
+            },
           ]}
         />
 

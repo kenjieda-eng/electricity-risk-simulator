@@ -116,7 +116,7 @@ export default function ExplainingInMunicipalityPage() {
             自治体の電力契約見直しの特徴
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            自治体が電力契約を見直す際は、民間企業と異なるいくつかの特徴があります。
+            自治体が電力契約を見直す際は、民間企業と異なるいくつかの特徴があります。なお<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>など変動要因の仕組みを理解しておくと、財政効果の定量的な説明がしやすくなります。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>公共調達手続き（入札・見積合わせなど）が必要なケースがある</li>
@@ -288,6 +288,11 @@ export default function ExplainingInMunicipalityPage() {
               href: "/explaining-to-executives",
               title: "経営層向けに電力契約見直しを説明するときのポイント",
               description: "コストとリスクを経営層に伝えるための構成。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しはどこから始めるか",
+              description: "見直し手順と優先事項を初心者向けに解説。",
             },
           ]}
         />

@@ -604,6 +604,11 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
               description:
                 "電気料金上昇に関するすべての解説ページをまとめています。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "説明資料の根拠となる料金推移データを確認できます。",
+            },
           ]}
         />
       </div>

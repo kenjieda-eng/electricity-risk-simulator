@@ -225,6 +225,11 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
               title: "地政学リスクで電気料金・電気代はどう上がるか",
               description: "国際要因の高止まりリスクを確認できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人の電気料金推移（2019〜2025年）",
+              description: "各シナリオが実際の料金推移でどう現れたかを確認できます。",
+            },
           ]}
         />
 

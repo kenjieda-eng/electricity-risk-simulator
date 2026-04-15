@@ -109,7 +109,7 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">契約メニューとの相性で比べる</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動プランは短期変動の影響を受けやすく、固定プランは更新時や調整項目で影響が出ることがあります。どのシナリオで差が
+            <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>は短期変動の影響を受けやすく、<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>は更新時や調整項目で影響が出ることがあります。どのシナリオで差が
             開きやすいかを比較できると、契約方針の検討が進めやすくなります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -266,6 +266,11 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
               href: "/articles",
               title: "解説ページ一覧",
               description: "カテゴリ全体から必要なページに戻れます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "シナリオ別の影響差を契約比較の観点から確認できます。",
             },
           ]}
         />

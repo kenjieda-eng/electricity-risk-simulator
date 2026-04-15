@@ -144,6 +144,11 @@ export default function ReviewContractRenewalDeadlinesPage() {
           title: "法人が電力契約を切り替えるときの注意点",
           description: "更新前の準備を切替実行に接続する際の注意点を確認できます。",
         },
+        {
+          href: "/electricity-contract-cancellation-renewal-terms",
+          title: "電力契約の解約・更新条件の確認ポイント",
+          description: "更新期限と解約条件を詳しく確認できます。",
+        },
       ]}
       ctaDescription="更新前に期限を整理したら、比較ページで候補条件を並べて、社内確認に使える判断材料を準備しておくと実行段階で混乱しにくくなります。"
     />

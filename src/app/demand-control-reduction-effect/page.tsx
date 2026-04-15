@@ -104,7 +104,7 @@ export default function DemandControlReductionEffectPage() {
         </h1>
         <p className="mt-1 text-lg font-medium text-slate-700">基本料金を下げる仕組みと数値で見る効果</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電気代の基本料金は「契約電力（kW）」に単価を掛けたものです。そして契約電力は「過去12か月の最大デマンド値」によって決まります。
+          電気代の<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>は「<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>（kW）」に単価を掛けたものです。そして契約電力は「過去12か月の最大デマンド値」によって決まります。
           つまり、月に1回でもデマンド値が高くなれば、その後1年間の基本料金がその高い値に固定されます。
           デマンドコントロールとは、この最大デマンド値を抑制して基本料金を下げる取り組みです。
         </p>

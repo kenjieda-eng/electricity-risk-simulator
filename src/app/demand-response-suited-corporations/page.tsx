@@ -162,6 +162,9 @@ export default function DemandResponseSuitedCorporationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             DR活用が向く5つの条件
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            特に<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>の大口需要家はDRプログラムの参加要件を満たしやすく、インセンティブの絶対額も大きくなりやすいです。
+          </p>
           <div className="mt-4 space-y-3">
             {suitedConditions.map((item) => (
               <div
@@ -247,7 +250,7 @@ export default function DemandResponseSuitedCorporationsPage() {
             <li>蓄電池との組み合わせ：DR発令時に蓄電池から放電して購入電力を削減</li>
             <li>太陽光との組み合わせ：上げDR時に余剰電力を吸収して充電、下げDR時に放電</li>
             <li>EMSとの連携：自動制御でDRへの対応を効率化し、運用負担を低減</li>
-            <li>市場連動型契約との組み合わせ：高騰局面でDRに参加してコストを抑制</li>
+            <li><Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約との組み合わせ：高騰局面でDRに参加してコストを抑制</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             設備対策との全体的な組み合わせについては{" "}

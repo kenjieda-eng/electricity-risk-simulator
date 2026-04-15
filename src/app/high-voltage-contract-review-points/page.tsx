@@ -234,6 +234,11 @@ export default function HighVoltageContractReviewPointsPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "高圧契約を含む全般的な見直し確認項目。",
             },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "高圧契約での固定プラン選択の判断軸と特徴。",
+            },
           ]}
         />
 

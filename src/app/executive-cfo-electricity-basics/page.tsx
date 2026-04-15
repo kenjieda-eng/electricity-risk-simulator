@@ -232,7 +232,7 @@ export default function ExecutiveCfoElectricityBasicsPage() {
         <h2 className="text-xl font-semibold text-slate-900">2. 燃料費調整額（燃調費）の仕組み</h2>
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <p className="text-sm leading-7 text-slate-700 sm:text-base">
-            燃調費は、電力会社が発電に使う燃料（LNG・石炭・石油）の輸入価格に連動して
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>（燃調費）は、電力会社が発電に使う燃料（LNG・石炭・石油）の輸入価格に連動して
             毎月変動する料金調整の仕組みです。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -303,7 +303,7 @@ export default function ExecutiveCfoElectricityBasicsPage() {
         <h2 className="text-xl font-semibold text-slate-900">4. 容量拠出金：2024年度から本格導入の新コスト</h2>
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <p className="text-sm leading-7 text-slate-700 sm:text-base">
-            容量拠出金とは、電力の安定供給を担保するための「発電設備容量」を確保する費用を、
+            <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>とは、電力の安定供給を担保するための「発電設備容量」を確保する費用を、
             電力使用者が負担する仕組みです。2020年度に容量市場のオークションが開始され、
             2024年度から実際の請求に算入されています。
           </p>

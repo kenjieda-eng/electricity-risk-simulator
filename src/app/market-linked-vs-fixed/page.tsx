@@ -207,7 +207,7 @@ export default function MarketLinkedVsFixedPage() {
             </p>
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            固定プランなら、このJEPX変動は契約期間中は転嫁されません。ただし更新時に反映される可能性があります。
+            固定プランなら、この<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>変動は契約期間中は転嫁されません。ただし更新時に反映される可能性があります。
           </p>
           <p className="mt-1 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度平均）</p>
         </section>
@@ -233,6 +233,16 @@ export default function MarketLinkedVsFixedPage() {
               href: "/fixed-price-plan",
               title: "固定プランとは",
               description: "料金を安定させやすい理由、メリット、注意点を法人向けに整理しています。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "プラン比較を検討し始めた際の見直し開始タイミングの確認。",
+            },
+            {
+              href: "/market-price-adjustment",
+              title: "市場価格調整額とは",
+              description: "市場連動プランで発生する調整項目の仕組みと変動幅を確認できます。",
             },
           ]}
         />

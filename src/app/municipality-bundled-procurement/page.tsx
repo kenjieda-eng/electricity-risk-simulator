@@ -294,6 +294,11 @@ export default function MunicipalityBundledProcurementPage() {
               title: "指定管理施設の電力契約は誰がどう見直すか",
               description: "指定管理者制度下の電力契約における自治体と管理者の役割分担を整理。",
             },
+            {
+              href: "/executive-multi-site-cost-management",
+              title: "複数拠点の電力コスト一元管理フレームワーク",
+              description: "多施設の電力費を効率的に管理するための体制と手順を解説。",
+            },
           ]}
         />
       </div>

@@ -429,6 +429,11 @@ export default function ElectricityPriceOutlook2026Page() {
               description:
                 "燃料費が下がっても料金が下がりにくい構造的な要因を整理。",
             },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "2026年以降も上昇を続ける構造的な要因を費目別に解説します。",
+            },
           ]}
         />
 

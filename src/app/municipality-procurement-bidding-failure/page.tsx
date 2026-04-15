@@ -212,7 +212,7 @@ export default function MunicipalityProcurementBiddingFailurePage() {
         <section className="rounded-xl border border-amber-200 bg-amber-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">最終保障供給に入ってしまう前に</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            入札不調後に契約締結が間に合わない場合、自動的に最終保障供給（最終保障料金）へ移行します。
+            入札不調後に契約締結が間に合わない場合、自動的に<Link href="/last-resort-supply" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給</Link>（最終保障料金）へ移行します。
             最終保障供給の単価は標準的な低圧契約と比べて大幅に高く、公共施設の電気代を押し上げる要因となります。
             契約満了の90日前には入札スケジュールを見直し、不調リスクをあらかじめ財政担当に伝えてください。
           </p>
@@ -335,6 +335,16 @@ export default function MunicipalityProcurementBiddingFailurePage() {
               href: "/articles/municipality",
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "法人向け電力・省エネ補助金まとめ",
+              description: "入札不調後の省エネ投資検討時に活用できる主要補助制度を横断比較。",
+            },
+            {
+              href: "/executive-business-continuity-risk",
+              title: "電気代高騰と事業継続リスク",
+              description: "電力調達リスクをBCPと財務リスク管理の視点で整理します。",
             },
           ]}
         />

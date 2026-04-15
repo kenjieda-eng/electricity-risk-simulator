@@ -126,7 +126,7 @@ export default function HospitalBatteryConsiderationsPage() {
             <li>医療機器・空調・照明など多様な設備が同時稼働し、電力使用量が大きい</li>
             <li>停電・電圧変動が患者の生命に直結するため、電力品質の要求水準が高い</li>
             <li>外来・手術・入院など機能区分によって電力使用パターンが異なる</li>
-            <li>大規模病院は特別高圧または高圧契約で、基本料金の占める割合が大きい</li>
+            <li>大規模病院は<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>または<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>契約で、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の占める割合が大きい</li>
           </ul>
         </section>
 
@@ -154,6 +154,9 @@ export default function HospitalBatteryConsiderationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             電気料金削減の観点から蓄電池を評価する
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気料金削減の主な経路は、デマンドカットによる<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と、ピークシフトによる<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減です。
+          </p>
           <div className="mt-4 space-y-4">
             {costReductionPoints.map((item) => (
               <div key={item.heading}>
@@ -206,7 +209,7 @@ export default function HospitalBatteryConsiderationsPage() {
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                 <li>停電時の診療継続・患者安全に対する価値</li>
                 <li>既存の非常用発電機設備との相乗効果</li>
-                <li>地域防災・行政からの補助金・支援の活用</li>
+                <li>地域防災・行政からの<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>・支援の活用</li>
                 <li>保険・リスク管理の観点からのコスト評価</li>
               </ul>
             </div>

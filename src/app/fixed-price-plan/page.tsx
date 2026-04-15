@@ -192,7 +192,7 @@ export default function FixedPricePlanPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           固定プランは、契約期間中の電力量料金単価を読みやすく抑えた設計の電力契約です。市場価格の短期変動に左右されにくく、
           法人の予算管理・稟議対応のしやすさを重視する場面で選ばれます。ただし「固定」とされるのは電力量料金部分が中心で、
-          燃料費調整額・再エネ賦課金・容量拠出金は別建てで変動するケースがほとんどです。本ページでは料金構成・メリット・デメリット・
+          <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>は別建てで変動するケースがほとんどです。本ページでは料金構成・メリット・デメリット・
           月額シミュレーション・注意点を整理します。
         </p>
       </header>
@@ -411,6 +411,11 @@ export default function FixedPricePlanPage() {
               href: "/articles/plan-types",
               title: "契約メニューの違いを知る（カテゴリ一覧）",
               description: "固定・市場連動・規制料金など電力契約メニューの違いをまとめたカテゴリページです。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "固定プランでも変動する燃調費の仕組みと請求への影響を確認できます。",
             },
           ]}
         />

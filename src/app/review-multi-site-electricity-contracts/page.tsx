@@ -148,6 +148,11 @@ export default function ReviewMultiSiteElectricityContractsPage() {
           title: "比較ページ",
           description: "拠点ごとに条件をそろえて比較する実行段階で活用できます。",
         },
+        {
+          href: "/businesses-suited-for-fixed-price-electricity-plan",
+          title: "固定プランが向く法人の特徴",
+          description: "多拠点法人のプラン選択判断の参考として。",
+        },
       ]}
       ctaDescription="多拠点情報を整えたら、使い方ページで入力手順を確認し、比較ページで拠点単位の条件差を可視化して優先拠点から進めるのが実務的です。"
     />

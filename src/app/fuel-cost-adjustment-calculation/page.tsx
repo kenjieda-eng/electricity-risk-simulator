@@ -164,6 +164,7 @@ export default function FuelCostAdjustmentCalculationPage() {
             { href: "/fuel-cost-adjustment-history", title: "燃料費調整額の推移詳細", description: "2018〜2026年度の変動を分析。" },
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "規制料金と自由料金の違い。" },
             { href: "/lng-electricity-price", title: "LNGと電気料金の関係", description: "燃料市況の背景を確認。" },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費推移を含む長期の料金水準をデータで確認できます。" },
           ]}
         />
 

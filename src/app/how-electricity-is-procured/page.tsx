@@ -111,7 +111,7 @@ export default function HowElectricityIsProcuredPage() {
           <h2 className="text-xl font-semibold text-slate-900">電力会社はどこから電気を仕入れているのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             小売電気事業者の仕入れは、発電所から電気を受け取って終わる単純な構造ではありません。自社発電を持つ会社もあれば、
-            発電事業者から契約で仕入れる会社もあり、不足分や需給見込みのずれをJEPXで調整することもあります。再エネメニューを扱う場合には、
+            発電事業者から契約で仕入れる会社もあり、不足分や需給見込みのずれを<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>で調整することもあります。再エネメニューを扱う場合には、
             再エネ電気そのものと環境価値をどう確保するかも調達構造に入ってきます。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -220,6 +220,11 @@ export default function HowElectricityIsProcuredPage() {
               href: "/articles/power-procurement",
               title: "電力調達の仕組みを知るカテゴリ一覧",
               description: "10本構成の読む順番をカテゴリページで確認できます。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "電力調達コストが料金に転嫁される仕組みを確認できます。",
             },
           ]}
         />

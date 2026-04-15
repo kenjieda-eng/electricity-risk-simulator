@@ -585,6 +585,11 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
               description:
                 "特別高圧・高圧・低圧の10年推移をグラフと年表で整理。急騰局面・補助政策の見え方も確認。",
             },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "製造業・非製造業を問わず共通する料金上昇の構造的要因を費目別に解説します。",
+            },
           ]}
         />
       </div>

@@ -149,7 +149,7 @@ export default function ColdStorageElectricityCostReviewPage() {
             <li>冷凍冷蔵設備が24時間365日稼働し、ベースロードが極めて大きい</li>
             <li>夏季は外気温の上昇によって設備負荷が著しく増加する</li>
             <li>電力使用量が大きいため、料金単価の上昇が金額ベースで甚大な影響になる</li>
-            <li>燃料費調整額の上昇が大使用量すべてに毎月上乗せされる</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇が大使用量すべてに毎月上乗せされる</li>
             <li>断熱性能の低下が設備稼働率を上げ、電力消費を増やす</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -293,13 +293,13 @@ export default function ColdStorageElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                フォークリフト充電・デフロスト・作業エリア空調などの稼働タイミングを制御してデマンドのピークを抑制します。契約電力の引き下げに成功すれば、基本料金の削減効果が毎月継続します。
+                フォークリフト充電・デフロスト・作業エリア空調などの稼働タイミングを制御してデマンドのピークを抑制します。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の引き下げに成功すれば、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減効果が毎月継続します。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                広大な屋根面積を持つ冷蔵倉庫は自家消費型太陽光の設置に適しています。昼間の電力購入量を削減するとともに、夏季ピーク期の電力調達量を抑制する効果が期待できます。
+                広大な屋根面積を持つ冷蔵倉庫は<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>の設置に適しています。昼間の電力購入量を削減するとともに、夏季ピーク期の電力調達量を抑制する効果が期待できます。
               </p>
             </div>
           </div>

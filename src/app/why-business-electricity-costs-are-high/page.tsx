@@ -276,6 +276,11 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
               title: "法人向け電気料金の基礎知識",
               description: "関連する見直しテーマをまとめて確認できます。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "コスト高の原因を踏まえたプラン選択の判断軸。",
+            },
           ]}
         />
 

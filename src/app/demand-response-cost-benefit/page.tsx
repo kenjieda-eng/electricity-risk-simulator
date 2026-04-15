@@ -191,7 +191,7 @@ export default function DemandResponseCostBenefitPage() {
             DR参加による法人のメリット
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            DRに参加することで、法人にはどのような経済的メリットが生じうるかを整理します。
+            DRに参加することで、法人にはどのような経済的メリットが生じうるかを整理します。主な経路はインセンティブ収入・<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>削減・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>への関与の3つです。
           </p>
           <div className="mt-4 space-y-4">
             {benefitTypes.map((item) => (
@@ -330,7 +330,7 @@ export default function DemandResponseCostBenefitPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">市場連動プランとの組み合わせ</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                電力価格が高い時間帯に需要を自動的に下げる制御と市場連動プランを組み合わせることで、購入単価を効果的に下げられます。
+                電力価格が高い時間帯に需要を自動的に下げる制御と<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>を組み合わせることで、購入単価を効果的に下げられます。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

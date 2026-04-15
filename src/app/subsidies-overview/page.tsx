@@ -276,6 +276,8 @@ export default function SubsidiesOverviewPage() {
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "構成と数値の示し方を具体的に解説" },
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光は電気料金対策としてどう効くか", description: "導入効果と費用対効果の考え方" },
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "補助金と並行して検討したい契約見直しの進め方と優先順位。" },
+            { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果。" },
           ]}
         />
       </div>

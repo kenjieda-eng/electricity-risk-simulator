@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
@@ -100,7 +101,7 @@ export default function BilateralPowerContractsPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">JEPX調達と何が違うのか</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            JEPXは市場参加者同士が短期の需給調整を行う場であり、価格は市場で決まります。相対契約はそれに対して、
+            <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>は市場参加者同士が短期の需給調整を行う場であり、価格は市場で決まります。相対契約はそれに対して、
             個別の相手と条件を組み立てる取引です。必要な量を柔軟にその都度買いやすいのはJEPXですが、価格や契約条件の見通しを持ちやすいのは相対契約です。
           </p>
         </section>
@@ -178,6 +179,11 @@ export default function BilateralPowerContractsPage() {
               href: "/power-risk-management",
               title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
               description: "相対契約を含むリスク管理の全体像を確認できます。",
+            },
+            {
+              href: "/market-linked-plan",
+              title: "市場連動プランとは",
+              description: "相対契約の仕組みが料金メニューに与える影響を確認できます。",
             },
           ]}
         />

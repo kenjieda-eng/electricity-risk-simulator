@@ -57,7 +57,7 @@ export default function LastResortSupplyPage() {
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">最終保障供給とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          最終保障供給は、高圧または特別高圧で電気を使う法人・企業・自治体などが、
+          最終保障供給は、<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧電力</Link>または<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>で電気を使う法人・企業・自治体などが、
           どの小売電気事業者とも契約合意に至らない場合に、一般送配電事業者から臨時的に供給を受ける仕組みです。
           電気事業法第 17 条に基づく供給義務に支えられており、電気が止まらないためのセーフティネットです。
         </p>
@@ -113,7 +113,7 @@ export default function LastResortSupplyPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">なぜ2022年に急増したのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            2022 年 2 月のウクライナ危機以降、LNG スポット価格が急騰し、JEPX 年度平均は 20 円/kWh 超に達しました。
+            2022 年 2 月のウクライナ危機以降、LNG スポット価格が急騰し、<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> 年度平均は 20 円/kWh 超に達しました。
             これにより、JEPX 依存度が高い新電力の多くが赤字に転落し、次のような連鎖反応が発生しました。
           </p>
           <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">

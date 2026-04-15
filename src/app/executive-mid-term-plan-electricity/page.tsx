@@ -138,7 +138,7 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             <div className="rounded-xl border border-red-200 bg-red-50 p-4">
               <h3 className="text-sm font-semibold text-red-800">制度的上昇圧力</h3>
               <p className="mt-2 text-xs leading-6 text-red-700">
-                GX賦課金・容量拠出金・再エネ賦課金など、政策起因の費用が中計期間中に段階的に増加する見込み。
+                GX賦課金・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>など、政策起因の費用が中計期間中に段階的に増加する見込み。
                 単価ベースで累積+5〜15円/kWh規模の影響も想定される。
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function ExecutiveMidTermPlanElectricityPage() {
               <h3 className="text-sm font-semibold text-orange-800">市場の不確実性</h3>
               <p className="mt-2 text-xs leading-6 text-orange-700">
                 LNG・石炭の国際価格、円安の進行度、需給逼迫の発生有無によって、年間電力費が数百万〜数千万円単位でブレる。
-                市場連動型契約では特に変動幅が大きい。
+                <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約では特に変動幅が大きい。
               </p>
             </div>
             <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">

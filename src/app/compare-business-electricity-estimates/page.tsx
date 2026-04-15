@@ -356,6 +356,11 @@ export default function CompareBusinessElectricityEstimatesPage() {
               description:
                 "整理した前提条件をもとに候補を横並びで確認できます。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "見積比較で市場連動・固定の条件差を判断する際の参考として。",
+            },
           ]}
         />
       </div>

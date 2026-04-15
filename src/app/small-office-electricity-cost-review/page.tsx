@@ -128,11 +128,11 @@ export default function SmallOfficeElectricityCostReviewPage() {
             中小オフィスは使用量が少ないにもかかわらず、料金構造の特性から割高になりやすい場合があります。主な要因は以下のとおりです。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>基本料金（最低料金・契約電力）が使用量に対して相対的に大きい</li>
+            <li><Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>（最低料金・<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>）が使用量に対して相対的に大きい</li>
             <li>夏・冬の空調需要が使用量を大きく押し上げる</li>
             <li>テナントビル一括受電では比較・交渉の余地が生まれにくい</li>
-            <li>燃料費調整単価の上昇が月額コストに毎月上乗せされる</li>
-            <li>再エネ賦課金が使用量に比例して増加している</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>単価の上昇が月額コストに毎月上乗せされる</li>
+            <li><Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>が使用量に比例して増加している</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}

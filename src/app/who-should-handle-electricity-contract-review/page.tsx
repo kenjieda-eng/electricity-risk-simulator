@@ -142,6 +142,11 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
           title: "見直しポイントを知るカテゴリ",
           description: "見直し実務の関連テーマを順に確認できます。",
         },
+        {
+          href: "/market-linked-vs-fixed",
+          title: "市場連動プランと固定プランの違い",
+          description: "担当体制が決まったら確認したいプラン選択の考え方。",
+        },
       ]}
       ctaDescription="主導部署と役割分担を決めたら、使い方ページで準備手順を確認し、比較ページで共通前提をそろえて検討を進めます。"
     />

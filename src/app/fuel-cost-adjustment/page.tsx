@@ -213,6 +213,7 @@ export default function FuelCostAdjustmentPage() {
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調と混同しやすい別の調整項目。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "燃調ではなくJEPX連動で請求される契約。" },
             { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "燃調と並ぶ請求書の変動要因。" },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移実態をデータで確認できます。" },
           ]}
         />
 

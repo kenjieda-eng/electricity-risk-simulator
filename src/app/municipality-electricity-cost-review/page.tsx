@@ -128,7 +128,7 @@ export default function MunicipalityElectricityCostReviewPage() {
             近年の電気料金上昇は、自治体の財政に直接影響しています。特に以下の要因が課題を大きくしています。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>燃料費調整・再エネ賦課金・容量拠出金の増加で、予算計上額が当初見込みを超えるケースが増えている</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の増加で、予算計上額が当初見込みを超えるケースが増えている</li>
             <li>自由化後に旧一般電気事業者から新電力に切り替えた施設で、新電力の撤退・経営悪化による再調達が必要になったケース</li>
             <li>電気代値上がりへの対応を住民・議会から求められることで、担当部署の説明負荷が高まっている</li>
             <li>省エネ・脱炭素の取組みとして再エネ電力の調達を求められるケースが増えている</li>
@@ -231,7 +231,7 @@ export default function MunicipalityElectricityCostReviewPage() {
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                 <li>再エネ指定電力メニューへの切替（プレミアム付きが多い）</li>
                 <li>非化石証書・J-クレジットの購入</li>
-                <li>庁舎への自家消費型太陽光の導入</li>
+                <li>庁舎への<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>の導入</li>
                 <li>PPA（電力購入契約）による再エネ調達</li>
               </ul>
             </div>
@@ -289,6 +289,11 @@ export default function MunicipalityElectricityCostReviewPage() {
               href: "/electricity-contract-cancellation-renewal-terms",
               title: "電力契約の解約・更新条件の確認ポイント",
               description: "解約通知期限・切替手続きの基本。",
+            },
+            {
+              href: "/municipality-procurement-methods",
+              title: "自治体の電力調達方式の比較",
+              description: "入札・随意契約・共同調達など自治体向け調達手段の整理。",
             },
           ]}
         />

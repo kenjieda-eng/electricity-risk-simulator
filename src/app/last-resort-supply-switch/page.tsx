@@ -100,7 +100,7 @@ export default function LastResortSupplySwitchPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">切り替えで注意したい契約条件</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>燃料費調整額・市場価格調整額の扱い</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>の扱い</li>
             <li>契約期間、更新条件、違約金</li>
             <li>供給開始可能日と手続き期限</li>
             <li>請求明細の粒度や運用サポート体制</li>

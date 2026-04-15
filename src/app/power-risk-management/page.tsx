@@ -276,6 +276,11 @@ export default function PowerRiskManagementPage() {
               title: "非化石証書とは何か｜再エネ価値をどう確保するのか",
               description: "環境価値のレイヤーをポートフォリオにどう入れるかを確認できます。",
             },
+            {
+              href: "/electricity-cost-risk-geopolitics",
+              title: "地政学リスクで電気料金はどう上がるか",
+              description: "リスク管理の背景にある燃料・地政学リスクの実例を確認できます。",
+            },
           ]}
         />
 

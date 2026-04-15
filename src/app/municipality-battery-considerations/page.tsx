@@ -162,13 +162,13 @@ export default function MunicipalityBatteryConsiderationsPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドカット</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                庁舎・学校では始業時間や夏季の空調稼働でピークが発生しやすい。蓄電池からの放電でデマンドを抑制し、基本料金削減を図る。
+                庁舎・学校では始業時間や夏季の空調稼働でピークが発生しやすい。蓄電池からの放電でデマンドを抑制し、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>削減を図る。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">ピークシフト</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                夜間の割安な電力で充電し、昼間の高単価時間帯に放電することで電力量料金を削減。施設の稼働時間と料金体系を確認した上で設計する。
+                夜間の割安な電力で充電し、昼間の高単価時間帯に放電することで<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>を削減。施設の稼働時間と料金体系を確認した上で設計する。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -190,6 +190,9 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             予算・財政の観点から検討する
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自治体施設での蓄電池導入では、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>・交付金の活用やPPAモデルの検討が初期費用の負担を軽減する有効な手段です。
+          </p>
           <div className="mt-4 space-y-4">
             {budgetPoints.map((item) => (
               <div key={item.heading}>

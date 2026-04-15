@@ -216,6 +216,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             契約見直しで確認したいこと
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>契約が多いビジネスホテルでは、<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>と<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の関係を確認することが見直しの基本です。
+          </p>
           <div className="mt-4 space-y-4">
             {reviewPoints.map((item) => (
               <div key={item.heading}>

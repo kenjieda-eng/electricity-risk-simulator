@@ -287,7 +287,7 @@ export default function CaseStudyManufacturingPage() {
         <h2 className="text-xl font-semibold text-slate-900">同じような課題を抱える製造業の方へ</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           「デマンドが高くて基本料金が重い」「契約電力が適正かどうかわからない」という悩みは多くの工場・製造業で共通しています。
-          まずは過去1〜2年分の電力使用量明細を確認し、最大デマンド値と契約電力の差を確認することが出発点です。
+          まずは過去1〜2年分の電力使用量明細を確認し、最大<Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値</Link>と<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の差を確認することが出発点です。
         </p>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           当センターでは電気代の高騰リスク診断や、現在の契約状況の課題を把握するためのシミュレーターを無料で提供しています。

@@ -242,6 +242,11 @@ export default function ContractReviewForFacilityManagementPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備で確認すべき全項目の一覧。",
             },
+            {
+              href: "/high-voltage-contract-review-points",
+              title: "高圧契約の見直しで確認したいこと",
+              description: "施設管理が関わる高圧契約の見直し着眼点。",
+            },
           ]}
         />
 

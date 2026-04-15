@@ -241,6 +241,11 @@ export default function ContractReviewForGeneralAffairsPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備で確認すべき全項目の一覧。",
             },
+            {
+              href: "/electricity-contract-cancellation-renewal-terms",
+              title: "電力契約の解約・更新条件の確認ポイント",
+              description: "総務が把握すべき解約条件と更新手続きの詳細。",
+            },
           ]}
         />
 

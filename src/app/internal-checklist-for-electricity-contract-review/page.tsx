@@ -307,6 +307,11 @@ export default function InternalChecklistForElectricityContractReviewPage() {
               description:
                 "社内整理を切替実務へつなげる際の確認点を把握できます。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "社内確認後のプラン選択比較の参考として。",
+            },
           ]}
         />
       </div>

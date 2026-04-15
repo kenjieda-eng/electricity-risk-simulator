@@ -292,6 +292,11 @@ export default function MunicipalityDesignatedManagerElectricityPage() {
               title: "電気料金高騰が住民サービスに与える影響",
               description: "コスト上昇が施設運営・サービス水準・住民負担に与える影響を解説。",
             },
+            {
+              href: "/subsidies-overview",
+              title: "法人向け電力・省エネ補助金まとめ",
+              description: "指定管理施設の省エネ改修に活用できる主要補助制度を横断比較。",
+            },
           ]}
         />
       </div>

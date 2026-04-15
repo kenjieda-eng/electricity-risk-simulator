@@ -96,7 +96,7 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
             <li>夏冬ピークと市場価格ピークの重なりやすさ</li>
             <li>高騰時の上限設定や想定外条件の有無</li>
             <li>市場価格調整の扱いと反映タイミング</li>
-            <li>燃料費調整額や追加費用が別建てかどうか</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や追加費用が別建てかどうか</li>
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             契約名だけで判断せず、見積条件を比較する際は{" "}
@@ -211,6 +211,11 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
               href: "/articles",
               title: "解説ページ一覧",
               description: "契約メニューカテゴリ全体を通して判断軸を確認できます。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "法人の電力契約見直しは何から始めるべきか",
+              description: "プラン選択の判断後に進める見直し手順の入口。",
             },
           ]}
         />

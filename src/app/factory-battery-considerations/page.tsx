@@ -144,7 +144,7 @@ export default function FactoryBatteryConsiderationsPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンド削減・基本料金節約</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                最大需要電力（デマンド）のピーク時に蓄電池から補完し、基本料金の算定基準となるデマンド値を下げます。高圧・特別高圧契約の工場で効果が大きいです。
+                最大需要電力（デマンド）のピーク時に蓄電池から補完し、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の算定基準となるデマンド値を下げます。<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>契約の工場で効果が大きいです。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -251,7 +251,7 @@ export default function FactoryBatteryConsiderationsPage() {
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            工場での蓄電池導入検討は、電力消費パターンの把握・生産ラインとの両立・安全要件・経済効果の試算という4つの観点から体系的に進めることが重要です。デマンド管理・電気料金削減の経済効果に加えて、停電による生産損失の回避価値を加味することで、投資判断の根拠がより明確になります。補助金制度の活用も含めて、専門業者との事前協議をお勧めします。
+            工場での蓄電池導入検討は、電力消費パターンの把握・生産ラインとの両立・安全要件・経済効果の試算という4つの観点から体系的に進めることが重要です。デマンド管理・電気料金削減の経済効果に加えて、停電による生産損失の回避価値を加味することで、投資判断の根拠がより明確になります。<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>制度の活用も含めて、専門業者との事前協議をお勧めします。
           </p>
         </section>
 
@@ -287,6 +287,16 @@ export default function FactoryBatteryConsiderationsPage() {
               href: "/demand-response-cost-benefit",
               title: "DRは電気料金対策としてどう考えるか",
               description: "工場でのDR参加と蓄電池の組み合わせ。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "蓄電池・太陽光の補助金制度まとめ",
+              description: "国・自治体の補助金を活用して初期費用を抑える方法。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電気料金の見直しを始める手順",
+              description: "現状把握から改善実行までのステップを解説。",
             },
           ]}
         />

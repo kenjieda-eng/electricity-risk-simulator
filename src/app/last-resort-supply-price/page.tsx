@@ -61,7 +61,7 @@ export default function LastResortSupplyPricePage() {
           <h2 className="text-xl font-semibold text-slate-900">料金体系の基本</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給の料金は、一般送配電事業者が経済産業大臣の認可を受けた料金表に基づいて算定されます。
-            通常の小売料金と同様に、基本料金＋電力量料金＋燃料費調整額＋再エネ賦課金の構成ですが、
+            通常の小売料金と同様に、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>＋<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>＋<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>＋<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の構成ですが、
             標準メニュー（旧一般電気事業者の規制料金）に比べて 20% 程度高い単価設定になっています。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -84,8 +84,8 @@ export default function LastResortSupplyPricePage() {
             JEPX 価格が高騰した 2022 年夏、最終保障供給に敢えて移行する事業者が現れ、制度の趣旨と矛盾しました。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            これを受けて、2022 年 10 月から最終保障供給料金に「市場価格調整額」が追加され、
-            JEPX 高騰時はより高くなる仕組みに見直されました。
+            これを受けて、2022 年 10 月から最終保障供給料金に「<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>」が追加され、
+            <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> 高騰時はより高くなる仕組みに見直されました。
           </p>
         </section>
 
@@ -208,6 +208,7 @@ export default function LastResortSupplyPricePage() {
             { href: "/last-resort-supply-switch", title: "最終保障供給から切り替えるには", description: "切替実務の手順。" },
             { href: "/last-resort-vs-retail-contract", title: "最終保障供給と通常契約の違い", description: "通常契約との比較。" },
             { href: "/last-resort-supply-emergency-response", title: "入りそうなときの対応", description: "早期発見と準備。" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約見直しの始め方", description: "最終保障供給からの脱出に向けた次契約の検討手順。" },
           ]}
         />
 

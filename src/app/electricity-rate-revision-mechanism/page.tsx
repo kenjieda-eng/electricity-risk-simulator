@@ -506,6 +506,11 @@ export default function ElectricityRateRevisionMechanismPage() {
               title: "料金が上がる理由を知る（カテゴリ）",
               description: "電気料金上昇の要因をテーマ別に学べる記事一覧。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "改定が続く料金水準の実態を直近の推移データで確認できます。",
+            },
           ]}
         />
       </div>

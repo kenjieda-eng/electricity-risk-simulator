@@ -341,6 +341,7 @@ export default function SubsidyLocalGovernmentListPage() {
             { href: "/subsidy-shift-project", title: "SHIFT事業と電力コスト戦略", description: "脱炭素経営支援と組み合わせる方法" },
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "社内承認を取りやすくする書き方" },
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
+            { href: "/municipality-procurement-methods", title: "自治体電力調達の入札実務", description: "自治体の補助金活用と電力調達を組み合わせる際の参考に。" },
           ]}
         />
       </div>

@@ -240,6 +240,11 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
               title: "新電力の相見積もり前に整理したい情報",
               description: "見積依頼の精度を上げる事前準備。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "総額比較に加えて、プラン選択の考え方を整理。",
+            },
           ]}
         />
 

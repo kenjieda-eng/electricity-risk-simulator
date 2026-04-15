@@ -258,6 +258,11 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
               title: "新電力を比較するときのポイント",
               description: "比較時に見落としやすい観点の整理。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "更新時のプラン選択判断に役立てる比較の軸。",
+            },
           ]}
         />
 

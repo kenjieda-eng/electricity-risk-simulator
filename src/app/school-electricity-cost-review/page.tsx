@@ -236,7 +236,7 @@ export default function SchoolElectricityCostReviewPage() {
             設備対策との組み合わせ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            学校施設では、省エネ改修と電力契約の見直しを組み合わせることで、総コスト削減効果を高められます。補助金制度が活用できる場合もあります。
+            学校施設では、省エネ改修と電力契約の見直しを組み合わせることで、総コスト削減効果を高められます。<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>制度が活用できる場合もあります。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -254,7 +254,7 @@ export default function SchoolElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">太陽光発電の設置</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                校舎屋上や体育館屋根への太陽光発電設置は、昼間の電力自給に貢献します。PPA（電力購入契約）モデルでは初期費用なしで導入できる場合もあります。
+                校舎屋上や体育館屋根への<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電設置は、昼間の電力自給に貢献します。PPA（電力購入契約）モデルでは初期費用なしで導入できる場合もあります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

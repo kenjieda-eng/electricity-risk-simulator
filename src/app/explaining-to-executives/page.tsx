@@ -165,7 +165,7 @@ export default function ExplainingToExecutivesPage() {
             数値で伝えることの重要性
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            経営層への説明で最も効果的なのは、「感覚」ではなく「数値」で伝えることです。特に以下の数値を準備しておくと説明が具体的になります。
+            経営層への説明で最も効果的なのは、「感覚」ではなく「数値」で伝えることです。特に以下の数値を準備しておくと説明が具体的になります。なお電気料金の上昇要因である<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の仕組みを事前に把握しておくと説明の説得力が高まります。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行の年間電気料金と前年比増加額・増加率</li>
@@ -311,6 +311,11 @@ export default function ExplainingToExecutivesPage() {
               href: "/sharing-comparison-table-internally",
               title: "比較表を社内共有するときのポイント",
               description: "わかりやすい比較表の作り方と共有方法。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しはどこから始めるか",
+              description: "見直しの手順と優先事項を初心者向けに解説。",
             },
           ]}
         />

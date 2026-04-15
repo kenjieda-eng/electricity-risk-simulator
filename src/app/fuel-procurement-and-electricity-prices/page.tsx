@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
@@ -155,7 +156,7 @@ export default function FuelProcurementAndElectricityPricesPage() {
           <h2 className="text-xl font-semibold text-slate-900">ウクライナ危機以降に何が起きたか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2022年以降は、欧州のエネルギー需給逼迫や地政学リスクの高まりを受けて、LNGを中心に燃料市場が大きく変動しました。
-            日本でも、燃料費調整額の上昇、市場価格の高騰、新電力の調達環境悪化といった形で影響が出ました。
+            日本でも、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇、市場価格の高騰、新電力の調達環境悪化といった形で影響が出ました。
           </p>
           <InfoBox title="ここでの読み方">
             この局面は「燃料価格が上がったから電気料金も同じだけ上がった」と単純化するより、燃料高と需給逼迫が同時に起きると、

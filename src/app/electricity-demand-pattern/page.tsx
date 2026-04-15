@@ -457,14 +457,14 @@ export default function ElectricityDemandPatternPage() {
               description: "気温→需要→価格のU字構造。需要パターンが価格に転化するプロセスを詳述。",
             },
             {
-              href: "/demand-management",
-              title: "デマンド管理で基本料金を削減する",
-              description: "最大需要（デマンド）の管理方法と具体的なコスト削減事例。",
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "2019〜2025年の料金推移データで高止まりの実態を確認。需要パターンと価格変動の関係を把握。",
             },
             {
-              href: "/peak-demand-strategy",
-              title: "ピーク需要対策の実践ガイド",
-              description: "夏季・冬季のピーク需要を抑制するための設備・運用両面の対策を解説。",
+              href: "/what-is-electricity-price-risk-scenario",
+              title: "電気料金リスクシナリオとは何か",
+              description: "需要急増や燃料高騰など複数のリスクシナリオと法人の電気料金への影響を解説。",
             },
           ]}
         />

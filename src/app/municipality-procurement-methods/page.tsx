@@ -216,7 +216,7 @@ export default function MunicipalityProcurementMethodsPage() {
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">固定型 vs. 変動型（市場連動型）</p>
             <p className="mt-1 text-sm leading-6 text-amber-700">
-              近年、固定単価での入札を忌避する事業者が増加し、市場連動型（スポット価格＋スプレッド）のみ応札可能という
+              近年、固定単価での入札を忌避する事業者が増加し、<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>（スポット価格＋スプレッド）のみ応札可能という
               事業者が増えています。仕様書に市場連動型を認める条件を盛り込むことで参加事業者数が増える可能性があります。
               ただし変動型はコスト予見性が低く、予算管理の難易度が上がる点に注意が必要です。
             </p>
@@ -322,6 +322,11 @@ export default function MunicipalityProcurementMethodsPage() {
               href: "/articles/municipality",
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "法人向け電力・省エネ補助金まとめ",
+              description: "入札準備と並行して検討したい主要補助制度を横断比較。",
             },
           ]}
         />

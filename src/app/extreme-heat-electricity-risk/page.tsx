@@ -316,7 +316,7 @@ export default function ExtremeHeatElectricityRiskPage() {
         <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4">
           <p className="text-sm font-semibold text-red-800">注意: 市場連動型プランの法人への影響</p>
           <p className="mt-1 text-sm leading-7 text-red-700">
-            <Link href="/market-linked-electricity-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型（JEPX連動）プラン</Link>
+            <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型（JEPX連動）プラン</Link>
             の法人は、猛暑日の電気代が通常日の1.3倍以上になる可能性があります。
             猛暑年が続く中で、市場連動型を選択している場合は特に夏季の電気料金予算管理が重要です。
           </p>
@@ -422,7 +422,7 @@ export default function ExtremeHeatElectricityRiskPage() {
             { href: "/winter-vs-summer-electricity", title: "冬と夏、どちらが電気料金リスクか", description: "季節別データで検証する電力コストリスク。" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "猛暑ピーク時のデマンド抑制で電気代を下げる方法。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "夏の高値時間帯を避けるための蓄電池活用法。" },
-            { href: "/jepx-spot-price-history", title: "JEPXスポット価格の推移", description: "猛暑年のJEPX価格がどう動いたかを詳解。" },
+            { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "猛暑年のJEPX価格がどう動いたかを詳解。" },
             { href: "/electricity-demand-pattern", title: "電力需要の時間帯・季節パターン", description: "需要パターンの詳細データと法人への影響。" },
           ]}
         />

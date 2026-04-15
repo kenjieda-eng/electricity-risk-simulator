@@ -249,6 +249,11 @@ export default function ContractReviewForAccountingPage() {
               title: "法人の電力契約更新の3か月前にやること",
               description: "更新準備の全体フローと時系列手順。",
             },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "予算管理重視の経理部門が評価しやすい固定プランの特徴。",
+            },
           ]}
         />
 

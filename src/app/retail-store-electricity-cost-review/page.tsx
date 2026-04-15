@@ -261,13 +261,13 @@ export default function RetailStoreElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                照明・空調の同時起動タイミングを制御し、最大需要電力のピークを抑えます。契約電力を下げることができれば、基本料金の削減につながります。
+                照明・空調の同時起動タイミングを制御し、最大需要電力のピークを抑えます。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>を下げることができれば、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減につながります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光（独立店舗）</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                独立した建物の小売店舗で屋根面積がある場合、太陽光発電の設置が検討できます。昼間の電力購入量を削減し、長期的なコスト削減に寄与します。
+                独立した建物の小売店舗で屋根面積がある場合、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電の設置が検討できます。昼間の電力購入量を削減し、長期的なコスト削減に寄与します。
               </p>
             </div>
           </div>

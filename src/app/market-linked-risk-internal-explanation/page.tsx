@@ -251,7 +251,7 @@ export default function MarketLinkedRiskInternalExplanationPage() {
               description: "市場連動を検討できる前提条件と判断軸。",
             },
             {
-              href: "/market-linked-electricity-plan",
+              href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "JEPXへの連動の仕組みと価格変動の特徴。",
             },
@@ -274,6 +274,11 @@ export default function MarketLinkedRiskInternalExplanationPage() {
               href: "/municipality-fixed-vs-market-linked",
               title: "自治体施設は固定と市場連動のどちらが向くか",
               description: "議会・住民への説明責任の観点から考える。",
+            },
+            {
+              href: "/how-to-explain-electricity-cost-review-internally",
+              title: "電気料金見直しを社内で説明するときのポイント",
+              description: "市場連動リスク説明を含む社内承認プロセスの進め方。",
             },
           ]}
         />

@@ -251,6 +251,11 @@ export default function ElectricityContractPeriodGuidePage() {
               title: "法人が電力契約を見直すタイミング",
               description: "見直しのきっかけと判断基準の整理。",
             },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "長期契約で検討しやすい固定プランの特徴と注意点。",
+            },
           ]}
         />
 

@@ -366,6 +366,7 @@ export default function ReductionMeasureDifficultyMatrixPage() {
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策の具体的な削減数値を解説" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金を下げるデマンド管理の効果" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
           ]}
         />
       </div>

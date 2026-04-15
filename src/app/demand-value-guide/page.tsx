@@ -333,6 +333,16 @@ export default function DemandValueGuidePage() {
               description:
                 "デマンド・契約電力を含む見積書の比較整理方法。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しを始めるには",
+              description: "デマンド管理の取り組みを契約見直しのステップへつなげられます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "デマンド・基本料金を把握したうえで、プラン選択の軸を整理できます。",
+            },
           ]}
         />
 

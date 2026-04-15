@@ -337,6 +337,16 @@ export default function BasicChargeExplainedPage() {
               description:
                 "複数の見積書を横並びで比較するための整理方法。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しを始めるには",
+              description: "基本料金の見方を踏まえて、見直し手順のステップを確認できます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "基本料金の構造を理解したうえで、プランの選択軸を整理できます。",
+            },
           ]}
         />
 

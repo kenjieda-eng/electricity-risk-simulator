@@ -99,7 +99,7 @@ export default function LastResortSupplyTargetPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人・工場・ビル・自治体での典型例</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>工場: 負荷が大きく、契約電力とデマンド管理が重要</li>
+            <li>工場: 負荷が大きく、<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>とデマンド管理が重要</li>
             <li>オフィスビル・商業施設: 稼働時間帯と空調負荷の影響が大きい</li>
             <li>病院・学校: 安定供給と契約継続性の優先度が高い</li>
             <li>自治体施設: 入札・予算・契約事務との連動が必要</li>
@@ -234,6 +234,11 @@ export default function LastResortSupplyTargetPage() {
               href: "/compare",
               title: "比較ページ",
               description: "対象区分を整理したあとに次契約の比較検討へ進めます。",
+            },
+            {
+              href: "/emergency-last-resort-notification",
+              title: "最終保障供給への移行通知が来たら",
+              description: "通知を受けた直後の対応手順を確認できます。",
             },
           ]}
         />

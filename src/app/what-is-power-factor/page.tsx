@@ -49,7 +49,7 @@ export default function WhatIsPowerFactorPage() {
           力率とは何か
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          高圧・特別高圧の電力契約では、電気料金の基本料金が「力率」によって増減します。力率が高ければ基本料金が割引になり、低ければ割増になるため、力率は法人の電気料金コストを左右する重要な指標です。
+          <Link href="/high-voltage-vs-extra-high-voltage-differences" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧・特別高圧</Link>の電力契約では、電気料金の<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>が「力率」によって増減します。力率が高ければ基本料金が割引になり、低ければ割増になるため、力率は法人の電気料金コストを左右する重要な指標です。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           しかし「力率」という概念は電気工学の専門用語であり、担当者が初めて聞いた場合には直感的に理解しにくい面があります。このページでは、法人の電気料金管理担当者が知っておくべき力率の基本と、実務での確認・対応ポイントを整理します。
@@ -240,7 +240,7 @@ export default function WhatIsPowerFactorPage() {
             </tbody>
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約電力500kW・基本料金80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年で回収可能なケースが多いです。
+            <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>500kW・基本料金80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年で回収可能なケースが多いです。
           </p>
         </section>
 
@@ -276,6 +276,16 @@ export default function WhatIsPowerFactorPage() {
               href: "/business-electricity-contract-checklist",
               title: "法人の電力契約見直しチェックリスト",
               description: "力率確認を含む契約見直しの総合チェック項目。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しを始めるには",
+              description: "力率改善の取り組みを契約見直しのステップへつなげられます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "力率の仕組みを踏まえてプラン選択の軸を整理できます。",
             },
           ]}
         />

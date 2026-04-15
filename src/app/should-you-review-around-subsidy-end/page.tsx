@@ -258,6 +258,11 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
               title: "料金メニュー比較診断",
               description: "補助なしベースの単価で現契約と候補条件を実務的に比較できます。",
             },
+            {
+              href: "/fixed-price-plan",
+              title: "固定プランとは",
+              description: "補助終了後の料金安定化に向けた固定プランの特徴と注意点。",
+            },
           ]}
         />
       </div>

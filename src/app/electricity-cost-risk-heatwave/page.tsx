@@ -130,7 +130,7 @@ export default function ElectricityCostRiskHeatwavePage() {
           <h2 className="text-xl font-semibold text-slate-900">夏の電気代対策として確認したいこと</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>空調運用の見直しとピーク時間帯の運転計画</li>
-            <li>デマンド管理と契約電力の整合</li>
+            <li><Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値</Link>管理と<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の整合</li>
             <li>見積比較時の調整項目・契約条件の確認</li>
             <li>契約更新前の再検討タイミングの設定</li>
           </ul>

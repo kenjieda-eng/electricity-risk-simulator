@@ -60,7 +60,7 @@ export default function RenewableEnergySurchargePage() {
           電気の使用者全員で負担するための制度上の上乗せ費用です。電力会社を問わず全ての需要家の請求書に計上されます。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、2012年度（制度開始）から{latest.fiscalYear}年度までの単価推移、計算方法、燃料費調整額との違い、
+          このページでは、2012年度（制度開始）から{latest.fiscalYear}年度までの単価推移、計算方法、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>との違い、
           法人規模別の月額負担までを、実データとグラフを交えて整理します。
         </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">

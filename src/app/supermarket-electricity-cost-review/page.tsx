@@ -249,13 +249,13 @@ export default function SupermarketElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                ピーク時間帯の電力を蓄電池から供給し、デマンド値を抑制する。基本料金の削減につながる可能性がある。停電時のバックアップ電源としても機能する。
+                ピーク時間帯の電力を<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>から供給し、デマンド値を抑制する。<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減につながる可能性がある。停電時のバックアップ電源としても機能する。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋根面積が広い郊外型店舗では、自家消費型太陽光発電が検討しやすい。昼間の購入電力を削減できるため、電力量料金の圧縮に効果がある。
+                屋根面積が広い郊外型店舗では、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>発電が検討しやすい。昼間の購入電力を削減できるため、<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の圧縮に効果がある。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -267,7 +267,7 @@ export default function SupermarketElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                設備の同時起動を制御し、最大需要電力のピークを抑える。契約電力の引き下げにつながり、基本料金の削減効果がある。
+                設備の同時起動を制御し、最大需要電力のピークを抑える。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の引き下げにつながり、基本料金の削減効果がある。
               </p>
             </div>
           </div>

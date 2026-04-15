@@ -320,6 +320,16 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
               title: "法人向け電気料金見積書の見方",
               description: "高圧・特別高圧の見積書を正しく読む方法。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "契約区分を理解したうえで、プランの選択軸を整理できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "高圧・特別高圧の単価推移の実態をデータで確認できます。",
+            },
           ]}
         />
 

@@ -179,7 +179,7 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
           <h2 className="text-xl font-semibold text-slate-900">減免が使えない場合の代替策</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>自家消費型太陽光・蓄電池の導入で、系統から買う kWh を物理的に減らす</li>
-            <li>デマンド制御で基本料金と電力量料金を同時に抑える</li>
+            <li><Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド</Link>制御で<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>と<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>を同時に抑える</li>
             <li>契約メニュー見直しで本体単価を下げ、トータルコストで相殺する</li>
             <li>オフピーク運転・夜間稼働シフトで市場連動リスクを軽減する</li>
           </ul>
@@ -204,6 +204,7 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
               title: "自家消費型太陽光の費用対効果",
               description: "減免の代替策として検討。",
             },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "賦課金を含む長期の料金水準をデータで確認できます。" },
           ]}
         />
 

@@ -305,6 +305,11 @@ export default function ExecutiveElectricityKpiDashboardPage() {
               title: "取締役会向け電力リスク報告テンプレートの作り方",
               description: "取締役会・経営会議で使える電力コスト・リスク報告のテンプレート構成と記載項目。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直し、まず何から始めるか",
+              description: "KPI管理と並行して進める契約見直しの優先順位と進め方。",
+            },
           ]}
         />
       </div>

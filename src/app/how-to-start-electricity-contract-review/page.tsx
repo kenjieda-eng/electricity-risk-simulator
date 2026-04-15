@@ -386,6 +386,11 @@ export default function HowToStartElectricityContractReviewPage() {
               description:
                 "Step 4〜5で前提をそろえた見積を横並びで確認できます。",
             },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "見積比較で確認すべき調整項目の代表格、燃調費の仕組みを事前に理解できます。",
+            },
           ]}
         />
       </div>

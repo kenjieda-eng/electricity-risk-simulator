@@ -277,6 +277,11 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
               title: "電力契約の契約期間の見方と注意点",
               description: "1年・2年・3年契約の違いと選択の考え方。",
             },
+            {
+              href: "/businesses-suited-for-fixed-price-electricity-plan",
+              title: "固定プランが向く法人の特徴",
+              description: "見積依頼前にプランの方向性を整理しておく際の参考。",
+            },
           ]}
         />
 

@@ -211,6 +211,7 @@ export default function FuelCostAdjustmentHistoryPage() {
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "規制料金と自由料金の違い。" },
             { href: "/lng-electricity-price", title: "LNGと電気料金の関係", description: "燃料市況の背景を深掘り。" },
             { href: "/impact-of-electricity-subsidy-ending", title: "電気料金補助金終了の影響", description: "激変緩和措置終了後の請求変化。" },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移をデータで確認できます。" },
           ]}
         />
 

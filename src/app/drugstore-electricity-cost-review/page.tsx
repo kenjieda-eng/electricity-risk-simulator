@@ -261,13 +261,13 @@ export default function DrugstoreElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                空調・照明・設備の同時稼働を制御してピーク需要を抑制します。契約電力の引き下げにより基本料金を削減できる可能性があります。
+                空調・照明・設備の同時稼働を制御してピーク需要を抑制します。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の引き下げにより<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>を削減できる可能性があります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                郊外型の独立店舗や屋根面積の大きな店舗では、太陽光発電の設置が検討できます。昼間の買電量を削減し、電力量料金を圧縮できます。
+                郊外型の独立店舗や屋根面積の大きな店舗では、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電の設置が検討できます。昼間の買電量を削減し、<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>を圧縮できます。
               </p>
             </div>
           </div>

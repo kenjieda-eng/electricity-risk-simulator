@@ -224,9 +224,9 @@ export default function ClinicElectricityCostReviewPage() {
               <p className="text-sm font-semibold text-slate-900">料金面の確認</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                 <li>年間の総額試算（繁忙期・閑散期を含む）</li>
-                <li>燃料費調整額の上限有無と算定方式</li>
-                <li>契約電力の設定が現実の使用状況と合っているか</li>
-                <li>容量拠出金の扱いと将来的な増加見込み</li>
+                <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上限有無と算定方式</li>
+                <li><Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の設定が現実の使用状況と合っているか</li>
+                <li><Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の扱いと将来的な増加見込み</li>
               </ul>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -269,7 +269,7 @@ export default function ClinicElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">LED照明への更新</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                待合室・廊下・診察室の照明をLEDに更新することで、照明消費電力を大幅に削減できます。補助金制度が活用できるケースもあります。
+                待合室・廊下・診察室の照明をLEDに更新することで、照明消費電力を大幅に削減できます。<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>制度が活用できるケースもあります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -287,7 +287,7 @@ export default function ClinicElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">契約電力の見直し</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                過去12か月の最大デマンドを確認し、実態に合った契約電力に変更することで基本料金を削減できる場合があります。
+                過去12か月の最大デマンドを確認し、実態に合った<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>に変更することで<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>を削減できる場合があります。
               </p>
             </div>
           </div>

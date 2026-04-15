@@ -565,6 +565,11 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
               title: "料金が上がる理由を知る",
               description: "値上げ要因ごとの解説記事をまとめて確認できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "値上げが積み重なった料金水準の推移をデータで確認できます。",
+            },
           ]}
         />
 

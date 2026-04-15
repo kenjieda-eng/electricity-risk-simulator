@@ -194,8 +194,8 @@ export default function TwentyFourHourOperationPriceSurgeRiskPage() {
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
-              <span className="font-semibold text-slate-900">固定プランで価格変動リスクをヘッジする：</span>
-              ベースロードが大きい法人ほど、市場連動プランの高騰影響が甚大になります。固定プランで単価を安定させる判断が合理的です。
+              <span className="font-semibold text-slate-900"><Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>で価格変動リスクをヘッジする：</span>
+              ベースロードが大きい法人ほど、<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>の高騰影響が甚大になります。固定プランで単価を安定させる判断が合理的です。
             </li>
             <li>
               <span className="font-semibold text-slate-900">高騰シナリオでの年間コストを事前に試算する：</span>

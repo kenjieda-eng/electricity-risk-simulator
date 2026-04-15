@@ -110,7 +110,7 @@ export default function WarehouseElectricityCostReviewPage() {
             <li>搬送設備のピーク稼働でデマンドが上がりやすい</li>
             <li>冷蔵・冷凍倉庫では冷凍機の常時稼働でベースロードが非常に大きい</li>
             <li>物流コスト全体が上昇傾向にある中、電気料金がさらに上乗せされる</li>
-            <li>燃料費調整額の上昇が使用量の大きさに比例して影響する</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇が使用量の大きさに比例して影響する</li>
           </ul>
         </section>
 
@@ -191,7 +191,7 @@ export default function WarehouseElectricityCostReviewPage() {
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
               <span className="font-semibold text-slate-900">契約電力の妥当性：</span>
-              デマンドの実績値と契約電力に乖離がないか。過剰な契約電力は基本料金の無駄につながる。
+              デマンドの実績値と<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>に乖離がないか。過剰な契約電力は<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の無駄につながる。
             </li>
             <li>
               <span className="font-semibold text-slate-900">稼働時間と料金体系の整合性：</span>
@@ -256,13 +256,13 @@ export default function WarehouseElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                倉庫の広い屋根面積を活用できる。昼間のベースロードが大きい倉庫では自家消費率が高くなりやすく、投資回収の見通しが立てやすい。
+                倉庫の広い屋根面積を活用できる。<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい倉庫では自家消費率が高くなりやすく、投資回収の見通しが立てやすい。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                デマンドピーク時に放電してピークカット。太陽光と組み合わせると自家消費率の向上と基本料金削減の両方が期待できる。
+                デマンドピーク時に放電してピークカット。<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>と太陽光を組み合わせると自家消費率の向上と基本料金削減の両方が期待できる。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

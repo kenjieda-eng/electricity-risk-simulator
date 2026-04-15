@@ -258,7 +258,7 @@ export default function MunicipalityLongTermContractPage() {
             <li>
               <span className="font-semibold">政令市・中核市の多くが3年契約を標準化：</span>
               大規模自治体では特別高圧・高圧施設を対象に3年の長期継続契約を締結する事例が増加。
-              単価を固定しつつ、燃料費調整単価のみ変動させる「ハイブリッド型」を採用するケースも見られます。
+              単価を固定しつつ、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>単価のみ変動させる「ハイブリッド型」を採用するケースも見られます。
             </li>
             <li>
               <span className="font-semibold">中小規模自治体は都道府県の共同調達と組み合わせ：</span>
@@ -317,6 +317,11 @@ export default function MunicipalityLongTermContractPage() {
               href: "/municipality-bundled-procurement",
               title: "公共施設の電力一括調達（バンドリング）の進め方",
               description: "複数施設の電力契約を一括調達するバンドリング手法のメリットと進め方。",
+            },
+            {
+              href: "/executive-mid-term-plan-electricity",
+              title: "中期経営計画への電力コスト織り込み方",
+              description: "複数年の電力費を計画に組み込む手法の参考として活用できます。",
             },
           ]}
         />

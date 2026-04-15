@@ -155,7 +155,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
             電気料金削減の4つのメカニズム
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            自家消費型太陽光が電気料金を削減する経路を整理します。
+            自家消費型太陽光が電気料金を削減する経路を整理します。主な削減対象は<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>・<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の3つです。
           </p>
           <div className="mt-4 space-y-4">
             {costReductionMechanism.map((item) => (
@@ -349,6 +349,16 @@ export default function SelfConsumptionSolarCostBenefitPage() {
               href: "/demand-suppression-effectiveness",
               title: "デマンド抑制はどこまで効果があるか",
               description: "基本料金削減の可能性と限界を整理。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "省エネ・再エネ設備の補助金概要",
+              description: "太陽光・蓄電池導入に使える補助金制度の整理。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "太陽光導入と合わせて契約条件を最適化する考え方。",
             },
           ]}
         />

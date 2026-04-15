@@ -292,6 +292,7 @@ export default function RestaurantElectricityCostBenchmarkPage() {
             { href: "/retail-store-electricity-cost-benchmark", title: "小売店舗の電気代相場", description: "コンビニ・スーパー・ドラッグストアの業態別相場" },
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した削減施策マップ" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
           ]}
         />
       </div>

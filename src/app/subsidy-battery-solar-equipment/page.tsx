@@ -171,7 +171,7 @@ export default function SubsidyBatterySolarEquipmentPage() {
         </h1>
         <p className="mt-1 text-lg font-medium text-slate-700">法人向け設備投資の支援制度｜対象設備・補助率・併用可否</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電気料金対策として蓄電池や自家消費型太陽光への投資を検討する法人が増えています。
+          電気料金対策として<Link href="/battery-electricity-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>や自家消費型<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>への投資を検討する法人が増えています。
           これらの設備には国や自治体の補助金が複数用意されており、うまく活用することで
           初期投資額を圧縮し、投資回収期間を大幅に短縮することができます。
           本ページでは設備別の主な補助制度と補助率の比較、国と自治体の補助金の併用可否、

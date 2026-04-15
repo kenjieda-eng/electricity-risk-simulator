@@ -341,6 +341,7 @@ export default function LedAirConditioningReductionEffectPage() {
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金を下げるデマンド管理の仕組みと効果" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/reduction-measure-difficulty-matrix", title: "削減施策の効果・難易度マトリクス", description: "施策の優先順位を可視化するマトリクス" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
           ]}
         />
       </div>

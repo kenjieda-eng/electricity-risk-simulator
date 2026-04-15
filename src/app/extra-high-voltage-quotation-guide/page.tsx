@@ -322,6 +322,16 @@ export default function ExtraHighVoltageQuotationGuidePage() {
               description:
                 "契約電力と基本料金単価の関係、力率調整の仕組み。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "特別高圧の見積比較後のプラン判断軸を整理できます。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額とは",
+              description: "見積書の燃調条件を読むための基礎知識を確認できます。",
+            },
           ]}
         />
 

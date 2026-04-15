@@ -240,7 +240,7 @@ export default function WarehouseBatteryConsiderationsPage() {
             倉庫での経済効果試算の考え方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            倉庫での蓄電池・太陽光の経済効果を試算する際の主要な観点を整理します。
+            倉庫での蓄電池・太陽光の経済効果を試算する際の主要な観点を整理します。デマンド抑制による<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>削減と、太陽光自家消費による<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>・<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の削減が主な経路です。
           </p>
           <div className="mt-4 space-y-4">
             {economicsForWarehouse.map((item) => (
@@ -284,7 +284,7 @@ export default function WarehouseBatteryConsiderationsPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">補助金・税制の確認</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                国・自治体の補助金（省エネ支援・再エネ導入支援等）や中小企業向け税制優遇（即時償却・税額控除）の活用可能性を確認します。
+                国・自治体の<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>（省エネ支援・再エネ導入支援等）や中小企業向け税制優遇（即時償却・税額控除）の活用可能性を確認します。
               </p>
             </div>
           </div>
@@ -329,6 +329,16 @@ export default function WarehouseBatteryConsiderationsPage() {
               href: "/demand-suppression-effectiveness",
               title: "デマンド抑制はどこまで効果があるか",
               description: "基本料金削減の可能性と限界を整理。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "蓄電池・太陽光の補助金制度まとめ",
+              description: "国・自治体の補助金を活用して初期費用を抑える方法。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電気料金の見直しを始める手順",
+              description: "現状把握から改善実行までのステップを解説。",
             },
           ]}
         />

@@ -238,7 +238,7 @@ export default function MunicipalityLastResortSupplyPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>施設別の使用実績と受電区分の整理</li>
             <li>仕様条件・評価項目の再点検（価格点と非価格点のバランス）</li>
-            <li>契約期間・リスク分担の見直し（固定型・市場連動型の選択肢比較）</li>
+            <li>契約期間・リスク分担の見直し（<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>・<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>の選択肢比較）</li>
             <li>調達スケジュールの前倒し検討（入札不調の猶予期間確保）</li>
             <li>複数年契約・一括調達による単価安定化の検討</li>
           </ul>

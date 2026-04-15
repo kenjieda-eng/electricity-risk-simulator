@@ -106,7 +106,7 @@ export default function LastResortVsRetailContractPage() {
           <h2 className="text-xl font-semibold text-slate-900">比較するときに見るべきポイント</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>総額ベースでの料金差</li>
-            <li>燃料費調整額・市場調整項目の扱い</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・市場調整項目の扱い</li>
             <li>契約期間、更新条件、違約金</li>
             <li>上振れ時のリスク許容度</li>
           </ul>

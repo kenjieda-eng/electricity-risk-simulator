@@ -237,6 +237,11 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
               title: "新電力の相見積もり前に整理したい情報",
               description: "見積依頼時に用意する情報の整理。",
             },
+            {
+              href: "/does-fuel-cost-adjustment-change-even-in-fixed-plan",
+              title: "固定プランでも燃料費調整は変動するのか",
+              description: "固定プランにおける燃料費調整額の変動リスクの整理。",
+            },
           ]}
         />
 

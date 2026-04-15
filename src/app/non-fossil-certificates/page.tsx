@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
@@ -184,7 +185,7 @@ export default function NonFossilCertificatesPage() {
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-lg font-semibold text-slate-900">法人の電気料金への影響目安</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で再エネメニューを選択した場合の追加コスト目安です。
+            月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>事業所で再エネメニューを選択した場合の追加コスト目安です。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>FIT証書（0.3円/kWh）使用時: 月額<span className="font-semibold text-slate-900">+約1.5万円</span>、年間<span className="font-semibold text-slate-900">+約18万円</span></li>
@@ -225,6 +226,11 @@ export default function NonFossilCertificatesPage() {
               href: "/articles/power-procurement",
               title: "電力調達の仕組みを知るカテゴリ一覧",
               description: "10本構成の流れを一覧で見直せます。",
+            },
+            {
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "非化石証書制度と関わる再エネ促進コストの仕組みを確認できます。",
             },
           ]}
         />

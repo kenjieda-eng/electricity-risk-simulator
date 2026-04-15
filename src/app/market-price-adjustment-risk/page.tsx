@@ -72,8 +72,8 @@ export default function MarketPriceAdjustmentRiskPage() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額の上振れリスクと備え方</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          市場価格調整額の最大のリスクは「上限がないこと」です。燃料費調整額（規制料金）には上限がありますが、
-          市場連動型契約の多くには上限がなく、JEPX 価格が急騰した月に請求額が予算の数倍になることがあります。
+          <Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>の最大のリスクは「上限がないこと」です。<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>（規制料金）には上限がありますが、
+          <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約の多くには上限がなく、<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> 価格が急騰した月に請求額が予算の数倍になることがあります。
         </p>
       </header>
 
@@ -227,6 +227,7 @@ export default function MarketPriceAdjustmentRiskPage() {
             { href: "/market-price-adjustment-calculation", title: "市場価格調整額の計算方法", description: "契約約款の読み方。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "契約タイプ全体の整理。" },
             { href: "/jepx-spike-electricity-cost-impact", title: "JEPX急騰で法人の電気料金はどう上がるか", description: "リスクシナリオ。" },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "市場価格調整額の影響を含む料金水準の推移を確認できます。" },
           ]}
         />
 

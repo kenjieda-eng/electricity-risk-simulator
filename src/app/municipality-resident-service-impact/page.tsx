@@ -299,7 +299,7 @@ export default function MunicipalityResidentServiceImpactPage() {
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">蓄電池・太陽光の活用も検討を</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気代高騰対策として、太陽光発電と蓄電池を組み合わせた自家発電・蓄電による
+            電気代高騰対策として、<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光発電</Link>と<Link href="/battery-electricity-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>を組み合わせた自家発電・蓄電による
             ピーク需要削減と電力コスト低減が注目されています。
             自治体施設での蓄電池導入検討のポイントは、以下のページで詳しく解説しています。
           </p>
@@ -335,6 +335,11 @@ export default function MunicipalityResidentServiceImpactPage() {
               href: "/articles/municipality",
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "法人向け電力・省エネ補助金まとめ",
+              description: "公共施設のLED化・省エネ改修に使える主要補助制度を横断比較。",
             },
           ]}
         />

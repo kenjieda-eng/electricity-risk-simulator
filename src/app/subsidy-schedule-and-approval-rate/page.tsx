@@ -306,6 +306,7 @@ export default function SubsidyScheduleAndApprovalRatePage() {
             { href: "/subsidy-sii-energy-saving", title: "省エネ補助金（SII）の申請ガイド", description: "対象設備・補助率・申請スケジュールの詳細" },
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "構成と数値の示し方を具体的に解説" },
             { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光の補助金活用ガイド", description: "設備別の補助率・上限額・併用可否を整理" },
+            { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果を把握。" },
           ]}
         />
       </div>

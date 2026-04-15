@@ -129,7 +129,7 @@ export default function SolarSuitedCorporationsPage() {
             自家消費型太陽光発電の費用対効果の仕組み
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            自家消費型太陽光発電の主な経済効果は「発電した電力を購入電力の代わりに使用することで電力量料金を削減する」ことです。売電収入を目的とするFIT（固定価格買取制度）とは異なり、自家消費率を高めることで電気料金削減効果が直接現れます。
+            自家消費型太陽光発電の主な経済効果は「発電した電力を購入電力の代わりに使用することで<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>を削減する」ことです。売電収入を目的とするFIT（固定価格買取制度）とは異なり、自家消費率を高めることで電気料金削減効果が直接現れます。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -217,7 +217,7 @@ export default function SolarSuitedCorporationsPage() {
                 <tr>
                   <td className="border border-slate-200 px-3 py-2">学校・自治体施設</td>
                   <td className="border border-slate-200 px-3 py-2">向きやすい</td>
-                  <td className="border border-slate-200 px-3 py-2">昼間稼働、補助金活用しやすい、脱炭素目標と整合</td>
+                  <td className="border border-slate-200 px-3 py-2">昼間稼働、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用しやすい、脱炭素目標と整合</td>
                 </tr>
                 <tr>
                   <td className="border border-slate-200 px-3 py-2">夜間稼働の工場</td>

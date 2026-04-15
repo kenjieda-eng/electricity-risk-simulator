@@ -87,10 +87,10 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動型プランの詳細については{" "}
             <Link
-              href="/market-linked-electricity-plan"
+              href="/market-linked-plan"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
-              市場連動型電力プランとは
+              市場連動プランとは
             </Link>{" "}
             で整理しています。
           </p>
@@ -238,8 +238,8 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
               description: "総額比較の考え方と確認事項。",
             },
             {
-              href: "/market-linked-electricity-plan",
-              title: "市場連動型電力プランとは",
+              href: "/market-linked-plan",
+              title: "市場連動プランとは",
               description: "市場連動型プランの仕組みとリスクの解説。",
             },
             {

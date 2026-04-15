@@ -499,6 +499,11 @@ export default function HybridElectricityPlanExplainedPage() {
                 description:
                   "自社の条件を入力して、プランタイプ別のコスト見通しを確認できます。",
               },
+              {
+                href: "/when-to-review-electricity-contract",
+                title: "法人が電力契約を見直すタイミング",
+                description: "ハイブリッドプランへの切替を検討する際の見直し開始タイミング。",
+              },
             ]}
           />
         </div>

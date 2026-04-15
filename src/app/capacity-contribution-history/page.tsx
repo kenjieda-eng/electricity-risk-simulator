@@ -145,7 +145,7 @@ export default function CapacityContributionHistoryPage() {
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">容量拠出金の年度別推移</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           容量拠出金は2024年度から電気料金に本格転嫁が始まりましたが、初年度は突出して高く、その後は低下傾向をたどっています。
-          このページでは、容量市場オークションの約定結果をもとに年度別の転嫁単価を整理し、燃料費調整額・再エネ賦課金との
+          このページでは、容量市場オークションの約定結果をもとに年度別の転嫁単価を整理し、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>との
           比較や法人への影響額、今後の見通しまでをデータで解説します。
         </p>
       </header>
@@ -369,6 +369,11 @@ export default function CapacityContributionHistoryPage() {
               href: "/compare",
               title: "料金メニュー比較診断",
               description: "契約メニューを比較して、容量拠出金を含めたトータルコストを診断できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "容量拠出金上昇が料金全体に与えた影響を推移データで確認できます。",
             },
           ]}
         />

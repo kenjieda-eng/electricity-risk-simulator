@@ -158,7 +158,7 @@ export default function EnergyChargeExplainedPage() {
             電力量料金の全体像
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気料金の変動費は電力量料金単体ではなく、燃料費調整額・再エネ賦課金・容量拠出金などの調整項目も含んだ形で請求されます。使用量（kWh）に連動するコスト全体を把握することが重要です。
+            電気料金の変動費は電力量料金単体ではなく、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>などの調整項目も含んだ形で請求されます。使用量（kWh）に連動するコスト全体を把握することが重要です。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">

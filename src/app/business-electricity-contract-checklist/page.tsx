@@ -336,6 +336,11 @@ export default function BusinessElectricityContractChecklistPage() {
               title: "法人が電力契約を見直すタイミング",
               description: "見直しを始める最適な時期と判断基準を確認できる。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "見積比較の際のプラン選択判断に役立てる。",
+            },
           ]}
         />
 

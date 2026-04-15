@@ -178,7 +178,7 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
             </li>
             <li>
               <strong>自家消費型再エネを導入する</strong>：自社屋根の太陽光など、系統から買う kWh そのものを減らせば、
-              基本料金以外の可変費目と一緒に賦課金も減ります。
+              <Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>以外の可変費目と一緒に賦課金も減ります。
             </li>
             <li>
               <strong>減免制度を活用する</strong>：電気使用量に対する電気料金比率が高く、かつ売上高に対する電気料金比率が高い事業者は、
@@ -206,6 +206,7 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
               title: "自家消費型太陽光の費用対効果",
               description: "使用量削減による賦課金低減効果も確認できます。",
             },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "賦課金を含む料金水準の推移をデータで確認できます。" },
           ]}
         />
 

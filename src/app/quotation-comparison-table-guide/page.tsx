@@ -354,6 +354,11 @@ export default function QuotationComparisonTableGuidePage() {
               description:
                 "比較表の前提となるデマンド・契約電力の理解。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "比較表に市場連動・固定の条件差を反映させる際の参考として。",
+            },
           ]}
         />
 

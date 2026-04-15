@@ -137,7 +137,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
             <li>ガスから電化が進む業態では、電力使用量が増加傾向にある</li>
             <li>営業時間が長い業態（24時間・深夜営業）はベースロードも大きくなる</li>
             <li>冷蔵・冷凍設備が24時間稼働でベースロードを形成する</li>
-            <li>燃料費調整・再エネ賦課金の増加で、固定費部分が膨らみやすい</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の増加で、固定費部分が膨らみやすい</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}
@@ -234,7 +234,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                調理設備・空調の同時起動を制御し、デマンドのピークを抑制。基本料金の削減につながる。複数店舗での導入では費用対効果を店舗別に評価する。
+                調理設備・空調の同時起動を制御し、デマンドのピークを抑制。<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減につながる。複数店舗での導入では費用対効果を店舗別に評価する。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

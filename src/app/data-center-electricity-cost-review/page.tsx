@@ -135,7 +135,7 @@ export default function DataCenterElectricityCostReviewPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>IT機器と冷却設備が24時間365日稼働し、ベースロードが極めて大きい</li>
             <li>AI・GPU利用の拡大によりIT機器の電力密度が上昇傾向にある</li>
-            <li>燃料費調整・再エネ賦課金・容量拠出金の増加で上乗せ費用が膨らむ</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の増加で上乗せ費用が膨らむ</li>
             <li>電力使用量が大きいため、単価の小さな変動が年間コストに大きく影響する</li>
             <li>再エネ100%対応のニーズで調達コストが上昇することがある</li>
           </ul>

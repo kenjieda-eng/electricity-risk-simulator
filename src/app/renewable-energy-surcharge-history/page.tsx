@@ -138,7 +138,7 @@ export default function RenewableEnergySurchargeHistoryPage() {
           <h2 className="text-xl font-semibold text-slate-900">2023年度：1.40円/kWhへの急落の理由</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2023 年度は単価が 3.45 円/kWh → 1.40 円/kWh と、前年比 59% 減（2.05 円/kWh マイナス）の異例の下落となりました。
-            これは 2022 年度の JEPX スポット価格が平均 20 円/kWh 台まで高騰した影響で、
+            これは 2022 年度の <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> スポット価格が平均 20 円/kWh 台まで高騰した影響で、
             「回避可能費用」が大幅に増えたためです。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

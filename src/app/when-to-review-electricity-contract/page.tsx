@@ -221,6 +221,11 @@ export default function WhenToReviewElectricityContractPage() {
               title: "料金メニューの比較・診断",
               description: "固定と市場連動の差分を、自社に近い条件で試算できます。",
             },
+            {
+              href: "/businesses-suited-for-fixed-price-electricity-plan",
+              title: "固定プランが向く法人の特徴",
+              description: "見直しタイミングに合わせてプラン選択の判断軸を確認。",
+            },
           ]}
         />
 

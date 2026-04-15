@@ -152,7 +152,7 @@ export default function JepxSpikeElectricityCostImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランの仕組みについては{" "}
             <Link
-              href="/market-linked-electricity-plan"
+              href="/market-linked-plan"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               市場連動プランとは
@@ -248,7 +248,7 @@ export default function JepxSpikeElectricityCostImpactPage() {
           heading="関連ページ"
           links={[
             {
-              href: "/market-linked-electricity-plan",
+              href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "JEPX連動型プランの仕組みとメリット・デメリット。",
             },
@@ -276,6 +276,11 @@ export default function JepxSpikeElectricityCostImpactPage() {
               href: "/high-voltage-market-linked-considerations",
               title: "高圧・特別高圧で市場連動を考えるときの注意点",
               description: "大口需要家が市場連動プランを選ぶ際の注意点。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人の電気料金推移（2019〜2025年）",
+              description: "JEPXスパイクが実際の電気料金推移に与えた影響を確認できます。",
             },
           ]}
         />

@@ -321,7 +321,7 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約先の決算・財務状況を年に一度確認する。</li>
-            <li>燃料費調整額の上限超過が継続している場合、電力会社の経営圧迫の可能性を検討する。</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上限超過が継続している場合、電力会社の経営圧迫の可能性を検討する。</li>
             <li>契約更新時期が近い場合は複数社から見積を取り、代替候補を持っておく。</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -368,6 +368,11 @@ export default function LastResortSupplyExtraHighVoltagePage() {
               href: "/last-resort-supply-comparison-positioning",
               title: "最終保障供給を比較検討の中でどう位置づけるか",
               description: "通常契約と最終保障供給の判断基準。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "最終保障供給脱出後の通常契約への移行手順。",
             },
           ]}
         />

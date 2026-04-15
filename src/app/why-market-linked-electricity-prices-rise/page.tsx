@@ -163,7 +163,7 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">直近の月次JEPX推移で見る上昇パターン</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動プランでは、このMAX値に近い単価が一部の時間帯で適用されるため、月平均以上のコスト負担が生じます。
+            市場連動プランでは、この<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>のMAX値に近い単価が一部の時間帯で適用されるため、月平均以上のコスト負担が生じます。
             直近12ヶ月の動向を確認してください。
           </p>
           <div className="mt-4 overflow-x-auto">

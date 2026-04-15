@@ -200,7 +200,7 @@ export default function LastResortSupplyTermsPage() {
                   <td className="border border-slate-200 px-3 py-2 text-red-700">使用量変動時に追加費用が発生することがある</td>
                 </tr>
                 <tr className="bg-slate-50">
-                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">託送料金</td>
+                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900"><Link href="/wheeling-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">託送料金</Link></td>
                   <td className="border border-slate-200 px-3 py-2">料金表・付則</td>
                   <td className="border border-slate-200 px-3 py-2">送配電費用の取り扱いと請求方法</td>
                   <td className="border border-slate-200 px-3 py-2 text-red-700">総額計算時に託送分を見落とす</td>
@@ -241,6 +241,11 @@ export default function LastResortSupplyTermsPage() {
               href: "/last-resort-supply-switch",
               title: "最終保障供給から切り替えるには",
               description: "約款確認後に進める切り替え準備を確認できます。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "次契約に向けた実務の最初のステップを整理できます。",
             },
           ]}
         />

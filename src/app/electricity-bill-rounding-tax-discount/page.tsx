@@ -94,7 +94,7 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
                 端数処理のルールが費目ごとに異なる
               </h3>
               <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-                基本料金・電力量料金・燃料費調整額・再エネ賦課金はそれぞれ個別に計算され、
+                <Link href="/basic-charge-explained" className={linkClass}>基本料金</Link>・<Link href="/energy-charge-explained" className={linkClass}>電力量料金</Link>・<Link href="/fuel-cost-adjustment" className={linkClass}>燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className={linkClass}>再エネ賦課金</Link>はそれぞれ個別に計算され、
                 各費目の計算結果に対して端数処理（切り捨て・切り上げ）が行われます。
                 電卓で合計単価を掛け算しても一致しないのはこのためです。
               </p>
@@ -174,7 +174,7 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
                   <td className="border border-slate-200 px-3 py-2 text-slate-700">年度ごとの単価で計算</td>
                 </tr>
                 <tr className="bg-white">
-                  <td className="border border-slate-200 px-3 py-2 text-slate-700">市場価格調整額</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-700"><Link href="/market-price-adjustment" className={linkClass}>市場価格調整額</Link></td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-700">円未満切り捨て</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-700">計算方式は電力会社による</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-700">30分値連動の場合は複雑</td>
@@ -440,6 +440,16 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
               href: "/compare",
               title: "料金メニュー比較診断",
               description: "現在の契約と他メニューを比較して見直しポイントを確認。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "見積比較の前提としてプランの選択軸を整理できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "単価の推移実態をデータで確認できます。",
             },
           ]}
         />

@@ -307,6 +307,11 @@ export default function LowMarginBusinessPlanSelectionPage() {
               title: "工場は固定と市場連動のどちらが向くか",
               description: "製造業の稼働パターンと負荷から考えるプラン選択。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "法人の電力契約見直しは何から始めるべきか",
+              description: "プラン選択後の見直し実務の進め方。",
+            },
           ]}
         />
 

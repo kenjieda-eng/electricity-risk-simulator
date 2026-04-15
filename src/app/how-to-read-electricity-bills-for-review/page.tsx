@@ -286,6 +286,16 @@ export default function HowToReadElectricityBillsForReviewPage() {
               description:
                 "請求書情報を比較検討へつなげる手順を確認できます。",
             },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額（燃調費）とは",
+              description: "請求書で毎月変動する燃調費の仕組みを事前に把握できます。",
+            },
+            {
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "請求書の制度項目として記載される再エネ賦課金の内容を確認できます。",
+            },
           ]}
         />
       </div>

@@ -102,7 +102,7 @@ export default function DepartmentStoreElectricityCostReviewPage() {
           百貨店の電気料金リスク
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          百貨店は大規模建物を全館空調・高照度照明・多数のエスカレーターで運営するため、電力使用量が非常に大きく、電気料金が経営コストに占める割合も高い業種です。特別高圧契約の適用やテナントへの電力転売など、電力管理の複雑さも特徴的です。
+          百貨店は大規模建物を全館空調・高照度照明・多数のエスカレーターで運営するため、電力使用量が非常に大きく、電気料金が経営コストに占める割合も高い業種です。<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>契約の適用やテナントへの電力転売など、電力管理の複雑さも特徴的です。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、百貨店特有の電力需要構造と設備特性を踏まえ、電気料金リスクの把握と契約見直しの考え方を整理します。
@@ -242,7 +242,7 @@ export default function DepartmentStoreElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">高効率熱源設備への更新</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                ターボ冷凍機・吸収冷凍機などの熱源設備を高効率型に更新することで、空調の電力消費を大幅に削減できます。更新効果が大きく、補助金活用で投資回収年数を短縮できる場合があります。
+                ターボ冷凍機・吸収冷凍機などの熱源設備を高効率型に更新することで、空調の電力消費を大幅に削減できます。更新効果が大きく、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用で投資回収年数を短縮できる場合があります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

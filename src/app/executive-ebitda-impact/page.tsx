@@ -267,7 +267,7 @@ export default function ExecutiveEbitdaImpactPage() {
           <div className="rounded-xl border border-slate-200 bg-white p-5">
             <h3 className="text-base font-semibold text-slate-900">設備投資判断への影響</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              省エネ設備・太陽光・蓄電池のNPV計算では、電気代単価の前提が変わると
+              省エネ設備・<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>・<Link href="/battery-electricity-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>のNPV計算では、電気代単価の前提が変わると
               回収期間が大幅に短縮されます。高い電気代を前提にしたNPVで投資判断を
               再評価することで、追加投資の正当性が増す場合があります。
             </p>

@@ -180,7 +180,7 @@ export default function ExecutiveRiskPlanningApproachesPage() {
         <h2 className="text-xl font-semibold text-slate-900">3. アプローチ2：ヘッジ</h2>
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <p className="text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動型契約を基本としながら、価格の上振れリスクを抑制するための手段を組み合わせるアプローチです。
+            <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約を基本としながら、価格の上振れリスクを抑制するための手段を組み合わせるアプローチです。
             主に大口需要家・電力費比率の高い業種で採用されます。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -210,7 +210,7 @@ export default function ExecutiveRiskPlanningApproachesPage() {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <p className="text-sm leading-7 text-slate-700 sm:text-base">
             電源・契約・拠点を分散させることで、特定のリスク要因への依存度を下げるアプローチです。
-            自家発電（太陽光・コージェネ）、複数電力会社との分割契約、蓄電池の組み合わせが代表例です。
+            自家発電（<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>・コージェネ）、複数電力会社との分割契約、<Link href="/battery-electricity-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>の組み合わせが代表例です。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-green-200 bg-green-50 p-4">

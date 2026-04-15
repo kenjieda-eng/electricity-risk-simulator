@@ -503,6 +503,16 @@ export default function ElectricityContractTypesOverviewPage() {
               description:
                 "自社の契約条件を入力して、現行メニューとの比較・最適プランの目安を確認できます。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "契約区分を決めたあとのプラン選択軸を整理できます。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しを始めるには",
+              description: "契約区分の整理を踏まえた見直し手順を確認できます。",
+            },
           ]}
         />
       </div>

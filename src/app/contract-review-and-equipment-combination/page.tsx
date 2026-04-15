@@ -119,7 +119,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
             契約見直しと設備対策の役割の違い
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気料金を削減するためのアプローチには大きく2つの軸があります。この2つは目的が違うため、補完関係として捉えることが重要です。
+            電気料金を削減するためのアプローチには大きく2つの軸があります。この2つは目的が違うため、補完関係として捉えることが重要です。<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>か<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>かの選択など、契約の見直しは設備対策と並行して検討する価値があります。
           </p>
           <div className="mt-4 space-y-3">
             {roles.map((item) => (
@@ -227,7 +227,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
             シミュレーターを判断材料に活用する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            契約見直しの効果を事前に把握するためには、現行の電力契約条件での料金上振れリスクと、見直し後の想定コストを比較することが重要です。シミュレーターを使うことで、燃料費調整額の変動シナリオや市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
+            契約見直しの効果を事前に把握するためには、現行の電力契約条件での料金上振れリスクと、見直し後の想定コストを比較することが重要です。シミュレーターを使うことで、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の変動シナリオや市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             シミュレーター結果の読み方については{" "}

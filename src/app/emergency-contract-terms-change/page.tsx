@@ -248,7 +248,7 @@ export default function EmergencyContractTermsChangePage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">変更の種類別の影響度と緊急度一覧</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          変更の種類によって対応の緊急度が異なります。特に市場連動・料金体系変更は影響が大きく、
+          変更の種類によって対応の緊急度が異なります。特に<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動</Link>・料金体系変更は影響が大きく、
           すぐに試算と判断が必要です。
         </p>
         <div className="mt-4 overflow-x-auto">
@@ -396,6 +396,11 @@ export default function EmergencyContractTermsChangePage() {
               href: "/market-price-adjustment",
               title: "市場価格調整の仕組みと注意点",
               description: "JEPX連動型の調整項目が請求に与える影響を整理します。",
+            },
+            {
+              href: "/executive-cfo-electricity-basics",
+              title: "CFOのための電力市場基礎",
+              description: "契約条件変更を経営層に説明する際の電力市場の基礎知識。",
             },
           ]}
         />

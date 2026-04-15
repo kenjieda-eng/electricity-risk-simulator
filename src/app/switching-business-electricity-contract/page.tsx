@@ -201,6 +201,11 @@ export default function SwitchingBusinessElectricityContractPage() {
           title: "料金メニューの比較・診断",
           description: "切替候補の受け止め方を、固定と市場連動の比較で補えます。",
         },
+        {
+          href: "/market-linked-vs-fixed",
+          title: "市場連動プランと固定プランの違い",
+          description: "切替先のプラン選択時に判断軸を整理できます。",
+        },
       ]}
       ctaDescription="切替前後の確認項目を整理したら、使い方ページで入力準備を確認し、比較ページで現契約と候補を同条件で並べて最終判断へ進めます。"
     />

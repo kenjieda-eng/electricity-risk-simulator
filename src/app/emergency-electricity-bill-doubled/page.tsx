@@ -411,6 +411,11 @@ export default function EmergencyElectricityBillDoubledPage() {
               title: "値上げ通知が届いたらまずやる7つのこと",
               description: "通知受領から対応完了までのステップと時間軸を整理しました。",
             },
+            {
+              href: "/executive-ebitda-impact",
+              title: "電気代がEBITDAに与える影響の測り方",
+              description: "倍増した電気代が経営指標に与える財務インパクトの試算方法。",
+            },
           ]}
         />
       </div>

@@ -284,7 +284,7 @@ export default function AmusementFacilityElectricityCostReviewPage() {
             <li>現行契約条件での年間上振れリスクを確認する</li>
             <li>固定プランと市場連動プランの年間コスト差を比較する</li>
             <li>夏季繁忙期のピーク月を前提にした影響額を試算する</li>
-            <li>燃料費高騰シナリオでの影響幅を把握し、事業計画に反映する</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費</Link>高騰シナリオでの影響幅を把握し、事業計画に反映する</li>
           </ul>
         </section>
 

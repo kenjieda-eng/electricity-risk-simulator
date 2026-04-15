@@ -120,12 +120,12 @@ export default function SubsidyDemandSidePpaPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">オフサイトPPAとは何か</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            PPA（Power Purchase Agreement：電力購入契約）とは、発電事業者が設置・所有する太陽光発電設備から電力を長期固定価格で購入する契約です。
+            PPA（Power Purchase Agreement：電力購入契約）とは、発電事業者が設置・所有する<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光発電</Link>設備から電力を長期固定価格で購入する契約です。
             オンサイトPPAは自社敷地内に設置するのに対し、オフサイトPPAは別の場所にある発電所から系統を通じて電力を調達します。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             需要家側のメリットは、初期費用ゼロ（あるいは大幅削減）で再エネ電力を長期固定価格で調達できる点です。
-            燃料費調整額や市場連動分の変動リスクをヘッジしながら、RE100・脱炭素宣言への対応が可能になります。
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や市場連動分の変動リスクをヘッジしながら、RE100・脱炭素宣言への対応が可能になります。
           </p>
         </section>
 
@@ -321,6 +321,7 @@ export default function SubsidyDemandSidePpaPage() {
             { href: "/solar-suitability-diagnosis", title: "太陽光導入向き不向き診断", description: "自社に太陽光導入が適しているかを確認" },
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光は電気料金対策としてどう効くか", description: "導入効果と費用対効果の考え方" },
             { href: "/battery-suitability-diagnosis", title: "蓄電池導入向き不向き診断", description: "蓄電池との組み合わせ効果を確認" },
+            { href: "/municipality-procurement-methods", title: "自治体電力調達の入札実務", description: "自治体向けPPA活用を検討する際の調達方式の基礎知識。" },
           ]}
         />
       </div>

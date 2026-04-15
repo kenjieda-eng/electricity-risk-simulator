@@ -419,6 +419,11 @@ export default function LngElectricityPricePage() {
               title: "料金が上がる理由を知る（カテゴリ）",
               description: "電気料金値上がりの背景を体系的に学べる記事一覧。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "LNG価格を含む料金水準の推移実態をデータで確認できます。",
+            },
           ]}
         />
 

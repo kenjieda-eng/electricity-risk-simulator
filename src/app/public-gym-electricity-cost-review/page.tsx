@@ -236,7 +236,7 @@ export default function PublicGymElectricityCostReviewPage() {
             設備対策との組み合わせ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            公共体育館では省エネ設備への改修に補助金が活用できるケースが多く、電力契約の見直しと設備改修を組み合わせることで効果が高まります。
+            公共体育館では省エネ設備への改修に<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>が活用できるケースが多く、電力契約の見直しと設備改修を組み合わせることで効果が高まります。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -254,7 +254,7 @@ export default function PublicGymElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">太陽光発電の設置</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋根面積が広い体育館は太陽光発電との相性が良く、昼間の電力購入を削減できます。PPA（電力購入契約）方式を利用することで初期投資ゼロでの導入も可能です。
+                屋根面積が広い体育館は<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電との相性が良く、昼間の電力購入を削減できます。PPA（電力購入契約）方式を利用することで初期投資ゼロでの導入も可能です。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

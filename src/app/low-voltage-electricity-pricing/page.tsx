@@ -649,6 +649,16 @@ export default function LowVoltageElectricityPricingPage() {
                 description:
                   "電気料金の仕組みをゼロから体系的に学べる記事一覧です。",
               },
+              {
+                href: "/market-linked-vs-fixed",
+                title: "市場連動プランと固定プランの違い",
+                description: "低圧から高圧へ切り替える際のプラン選択軸を確認できます。",
+              },
+              {
+                href: "/electricity-price-trend-2019-2025",
+                title: "法人向け電気料金は高止まりしているのか",
+                description: "低圧を含む料金水準の推移をデータで確認できます。",
+              },
             ]}
           />
         </div>

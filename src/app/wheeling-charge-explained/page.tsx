@@ -719,6 +719,11 @@ export default function WheelingChargeExplainedPage() {
               title: "料金メニュー比較診断",
               description: "契約メニューの違いを整理し、自社に合う選択肢を診断。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "託送料金を含む電気料金全体の水準推移をデータで確認できます。",
+            },
           ]}
         />
       </div>

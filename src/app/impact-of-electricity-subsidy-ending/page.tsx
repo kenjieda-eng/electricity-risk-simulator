@@ -98,9 +98,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           <h2 className="text-xl font-semibold text-slate-900">請求書や見積書で確認したいポイント</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>補助金反映の有無と反映期間</li>
-            <li>電力量料金の単価・総額</li>
-            <li>燃料費調整額と市場価格調整額の変化</li>
-            <li>再エネ賦課金など制度項目の増減</li>
+            <li><Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の単価・総額</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>と<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>の変化</li>
+            <li><Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>など制度項目の増減</li>
             <li>契約更新の有無と単価条件の変更</li>
           </ul>
         </section>
@@ -119,7 +119,7 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">契約見直しの判断で見たいポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            補助金がなくなると、本来の料金構造が見えやすくなります。このタイミングで、固定型か市場連動型か、燃料費調整額や市場価格調整額の扱い、
+            補助金がなくなると、本来の料金構造が見えやすくなります。このタイミングで、<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定型</Link>か<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>か、燃料費調整額や市場価格調整額の扱い、
             見積条件の妥当性を見直すことが有効です。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -265,6 +265,11 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
               href: "/compare",
               title: "料金メニュー比較ページ",
               description: "補助要因を踏まえて同条件比較を進められます。",
+            },
+            {
+              href: "/electricity-price-subsidy-impact",
+              title: "補助金縮小で見え方はどう変わったか",
+              description: "補助金の有無による料金水準の見え方の違いをデータで確認できます。",
             },
           ]}
         />

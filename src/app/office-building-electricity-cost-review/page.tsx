@@ -135,7 +135,7 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>空調設備が電気使用量の40〜60%を占め、夏冬の気温変動で大きく変わる</li>
             <li>近年の猛暑・厳冬化により、空調需要のピーク値が年々高まる傾向</li>
-            <li>燃料費調整・再エネ賦課金・容量拠出金など、コントロールできない上乗せ費用の増加</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>など、コントロールできない上乗せ費用の増加</li>
             <li>大規模ビルでは電力使用量が多く、単価変動の影響が金額ベースで大きい</li>
             <li>設備の老朽化により、効率が低下した空調・照明が使用量を押し上げる場合がある</li>
           </ul>
@@ -259,13 +259,13 @@ export default function OfficeBuildingElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                30分値デマンドのピークを監視し、設定値を超えそうになると空調・照明等を自動制御。契約電力の引き下げにつながり、基本料金の削減効果がある。
+                30分値デマンドのピークを監視し、設定値を超えそうになると空調・照明等を自動制御。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の引き下げにつながり、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減効果がある。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">屋上・壁面太陽光</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋上面積がある自社ビルでは、自家消費型太陽光発電で昼間の購入電力を削減できる。PPAモデルを活用することで初期投資を抑えて導入できる場合もある。
+                屋上面積がある自社ビルでは、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>発電で昼間の購入電力を削減できる。PPAモデルを活用することで初期投資を抑えて導入できる場合もある。
               </p>
             </div>
           </div>

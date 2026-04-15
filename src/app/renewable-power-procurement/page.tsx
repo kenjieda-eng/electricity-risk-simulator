@@ -238,6 +238,11 @@ export default function RenewablePowerProcurementPage() {
               title: "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方",
               description: "再エネ調達をポートフォリオ全体の中で位置づけられます。",
             },
+            {
+              href: "/renewable-energy-surcharge",
+              title: "再エネ賦課金とは",
+              description: "再エネ調達の背景にある制度コストの仕組みを確認できます。",
+            },
           ]}
         />
 

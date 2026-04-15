@@ -615,6 +615,11 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
               title: "料金メニュー比較診断",
               description: "現在の契約プランが自社に最適かどうかを診断できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "消費者物価と比較しながら電気料金の推移実態を確認できます。",
+            },
           ]}
         />
       </div>

@@ -252,6 +252,11 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
               title: "料金メニュー比較ページ",
               description: "自社条件で妥当性を確認できます。",
             },
+            {
+              href: "/does-fuel-cost-adjustment-change-even-in-fixed-plan",
+              title: "固定プランでも燃料費調整は変動するのか",
+              description: "値上げが固定プランでも起こる仕組みの整理。",
+            },
           ]}
         />
 

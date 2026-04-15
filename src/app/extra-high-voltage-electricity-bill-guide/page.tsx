@@ -318,6 +318,16 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
               title: "見積書比較表の作り方",
               description: "複数の見積書を横並びで比較するための整理方法。",
             },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額とは",
+              description: "請求書の燃調費項目の仕組みと変動要因を確認できます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "特別高圧契約でのプラン選択軸を整理できます。",
+            },
           ]}
         />
 

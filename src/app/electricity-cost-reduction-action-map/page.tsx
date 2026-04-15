@@ -352,6 +352,7 @@ export default function ElectricityCostReductionActionMapPage() {
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金を下げる仕組みと効果量を解説" },
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },
             { href: "/reduction-measure-difficulty-matrix", title: "削減施策の効果・難易度マトリクス", description: "施策の優先順位を可視化するマトリクス" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
           ]}
         />
       </div>

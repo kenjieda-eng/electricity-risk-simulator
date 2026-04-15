@@ -51,7 +51,7 @@ export default function MarketPriceAdjustmentCalculationPage() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額の計算方法</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          市場価格調整額の算定方法は、電力会社・契約メニューごとに大きく異なります。
+          <Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>の算定方法は、電力会社・契約メニューごとに大きく異なります。
           同じ「市場価格調整額」という名称でも、算定ルールが違えば請求額に数倍の差が出ます。
           このページでは代表的な 3 タイプの計算方法と、契約約款の読み方を整理します。
         </p>
@@ -180,6 +180,7 @@ export default function MarketPriceAdjustmentCalculationPage() {
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "備え方と判断軸。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "契約タイプ全体の整理。" },
             { href: "/how-to-read-electricity-quote", title: "電気料金見積書の見方", description: "見積書の確認ポイント。" },
+            { href: "/jepx-price-trend-and-corporate-impact", title: "JEPX卸電力市場価格の推移と法人電気料金への波及", description: "市場価格調整額の算定基礎となるJEPX推移を確認できます。" },
           ]}
         />
 

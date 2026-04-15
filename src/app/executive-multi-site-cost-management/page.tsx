@@ -291,7 +291,7 @@ export default function ExecutiveMultiSiteCostManagementPage() {
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <h3 className="text-sm font-semibold text-slate-900">契約形態リスクの分散</h3>
             <p className="mt-2 text-xs leading-6 text-slate-600">
-              固定単価契約と市場連動型契約の比率をグループ全体で管理する。
+              固定単価契約と<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約の比率をグループ全体で管理する。
               市場連動型が70%超になると価格急騰時の全社インパクトが大きくなりすぎる。
               理想的には固定60〜70%：市場連動30〜40%のバランスを目安とする。
             </p>

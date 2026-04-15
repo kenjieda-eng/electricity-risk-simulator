@@ -132,7 +132,7 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
             <li>坪当たりの電力使用量が一般小売店舗より大幅に高い</li>
             <li>夏場は冷蔵・空調の負荷が重なり使用量が急増する</li>
             <li>深夜帯も最低限の設備が稼働し続ける構造</li>
-            <li>燃料費調整額の上昇が24時間稼働分すべてに影響する</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇が24時間稼働分すべてに影響する</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}
@@ -254,7 +254,7 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                複数設備の同時起動を制御してデマンドのピークを抑制します。契約電力の引き下げが実現すれば、基本料金の削減に直結します。
+                複数設備の同時起動を制御してデマンドのピークを抑制します。<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>の引き下げが実現すれば、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減に直結します。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

@@ -131,7 +131,7 @@ export default function UniversityElectricityCostReviewPage() {
             <li>研究設備・実験装置が24時間稼働し、大きなベースロードを形成する</li>
             <li>複数棟が混在し、棟ごとの負荷特性が異なるため最適化が難しい</li>
             <li>実験室の換気・空調が法規上の基準を満たす必要があり稼働時間を削りにくい</li>
-            <li>特別高圧・高圧が混在する複雑な受電構成を持つ場合がある</li>
+            <li><Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>・<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>が混在する複雑な受電構成を持つ場合がある</li>
             <li>意思決定プロセスが複雑で契約更改のタイミングを逃しやすい</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -249,13 +249,13 @@ export default function UniversityElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                広い屋根面積を持つキャンパスでは、複数棟にまたがる大規模な太陽光設置が可能です。昼間の電力購入量を削減し、長期的に電力コストを抑制できます。
+                広い屋根面積を持つキャンパスでは、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>の複数棟にまたがる大規模設置が可能です。昼間の電力購入量を削減し、長期的に電力コストを抑制できます。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">BEMSの導入</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                建物エネルギー管理システム（BEMS）を導入することで、棟別・設備別の電力使用をリアルタイムで把握・制御できます。省エネ効果の可視化が補助金申請にも活用できます。
+                建物エネルギー管理システム（BEMS）を導入することで、棟別・設備別の電力使用をリアルタイムで把握・制御できます。省エネ効果の可視化が<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>申請にも活用できます。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -267,7 +267,7 @@ export default function UniversityElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                複数設備の同時起動を制御してピーク需要を抑制します。最大需要電力を下げることで基本料金の削減につながります。
+                複数設備の同時起動を制御してピーク需要を抑制します。最大需要電力を下げることで<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減につながります。
               </p>
             </div>
           </div>

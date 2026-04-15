@@ -197,9 +197,9 @@ export default function HospitalElectricityCostReviewPage() {
               <p className="text-sm font-semibold text-slate-900">料金面の確認</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                 <li>年間の総額試算（ピーク月と閑散月を分けて）</li>
-                <li>燃料費調整額の上限有無と算定方式</li>
+                <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上限有無と算定方式</li>
                 <li>契約期間と中途解約条件</li>
-                <li>容量拠出金の扱い</li>
+                <li><Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>の扱い</li>
               </ul>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -242,13 +242,13 @@ export default function HospitalElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                デマンドピークの抑制に加え、停電時のバックアップ電源として機能する。BCP対策としての投資対効果を評価する際に、電気料金削減効果を組み合わせて検討できる。
+                <Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>によるデマンドピークの抑制に加え、停電時のバックアップ電源として機能する。BCP対策としての投資対効果を評価する際に、電気料金削減効果を組み合わせて検討できる。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋上に設置スペースがある病院では検討対象になる。昼間のベースロードが大きい病院では自家消費率が高く、投資回収の見通しが立てやすい。
+                屋上に設置スペースがある病院では検討対象になる。<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい病院では自家消費率が高く、投資回収の見通しが立てやすい。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -260,7 +260,7 @@ export default function HospitalElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">高効率空調への更新</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                空調が電力使用量の最大割合を占める場合、高効率機器への更新は投資効果が大きい。補助金制度を活用できるケースもある。
+                空調が電力使用量の最大割合を占める場合、高効率機器への更新は投資効果が大きい。<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>制度を活用できるケースもある。
               </p>
             </div>
           </div>
@@ -313,6 +313,11 @@ export default function HospitalElectricityCostReviewPage() {
               href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "見積書を受け取った際にどこを比較すればよいか。",
+            },
+            {
+              href: "/emergency-power-outage-response",
+              title: "停電・電力不足時の対応と事前準備",
+              description: "病院・医療機関向けの停電リスク対応の考え方。",
             },
           ]}
         />

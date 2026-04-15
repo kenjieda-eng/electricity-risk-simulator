@@ -363,6 +363,11 @@ export default function EmergencyBillingDisputePage() {
               title: "燃料費調整額とは何か",
               description: "毎月変動する燃調費の仕組みと請求書での確認方法を解説。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直し、まず何から始めるか",
+              description: "請求トラブル解決後の契約見直しの優先順位と進め方。",
+            },
           ]}
         />
       </div>

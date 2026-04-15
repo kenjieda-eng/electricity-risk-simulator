@@ -216,6 +216,9 @@ export default function WaterSewageElectricityCostReviewPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             契約見直しで確認したいこと
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>・<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>契約が多い上下水道施設では、<Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>と<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の関係を確認することが見直しの第一歩です。
+          </p>
           <div className="mt-4 space-y-4">
             {reviewPoints.map((item) => (
               <div key={item.heading}>
@@ -261,7 +264,7 @@ export default function WaterSewageElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">太陽光発電・消化ガス発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                広大な敷地を持つ処理場では太陽光発電の設置が可能です。また下水処理場では消化ガスを利用したコジェネレーションの導入実績があります。
+                広大な敷地を持つ処理場では<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電の設置が可能です。また下水処理場では消化ガスを利用したコジェネレーションの導入実績があります。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

@@ -334,6 +334,11 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
               description:
                 "収集した請求書の確認視点を具体化できます。",
             },
+            {
+              href: "/businesses-suited-for-fixed-price-electricity-plan",
+              title: "固定プランが向く法人の特徴",
+              description: "資料準備後のプラン選択判断の参考として。",
+            },
           ]}
         />
       </div>

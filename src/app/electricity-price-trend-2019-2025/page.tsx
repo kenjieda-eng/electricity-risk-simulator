@@ -93,7 +93,7 @@ export default function ElectricityPriceTrend20192025Page() {
             2019〜2025年の年次単価推移（円/kWh、年平均）
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            以下は再エネ賦課金を含まない年平均単価の推移です。2022年を境に水準が切り上がり、
+            以下は<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>を含まない年平均単価の推移です。2022年を境に水準が切り上がり、
             2025年現在も2019〜2021年の水準には戻っていないことが読み取れます。
           </p>
           <div className="mt-4 overflow-x-auto">
@@ -443,6 +443,11 @@ export default function ElectricityPriceTrend20192025Page() {
                 href: "/how-long-business-electricity-price-surge-lasts",
                 title: "法人電気料金の高騰はいつまで続くか",
                 description: "各要因の見通しをもとに今後のシナリオを整理しています。",
+              },
+              {
+                href: "/market-linked-plan",
+                title: "市場連動プランとは",
+                description: "高止まり局面でのプラン選択リスクを確認できます。",
               },
             ]}
           />

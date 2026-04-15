@@ -251,7 +251,7 @@ export default function WarmingTrend30YearsPage() {
               <p className="mt-1 text-sm leading-7 text-slate-700">
                 猛暑日（35℃超）の昼〜夕方の電力需要は平均需要の130%超に達することがあります。
                 供給余力が逼迫するとJEPXスポット価格は急騰し、
-                <Link href="/market-linked-electricity-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型プラン</Link>
+                <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型プラン</Link>
                 の法人には直接のコスト増として波及します。
               </p>
             </div>
@@ -356,7 +356,7 @@ export default function WarmingTrend30YearsPage() {
             { href: "/extreme-heat-electricity-risk", title: "猛暑日・熱帯夜と電力リスク", description: "猛暑日・熱帯夜の増加トレンドと電力需要・価格への具体的影響。" },
             { href: "/winter-vs-summer-electricity", title: "冬と夏、どちらが電気料金リスクか", description: "季節別データで検証する電力コストリスクの実態。" },
             { href: "/electricity-demand-pattern", title: "電力需要の時間帯・季節パターン", description: "需要パターンの詳細データと法人への影響。" },
-            { href: "/jepx-spot-price-history", title: "JEPXスポット価格の推移", description: "2010年以降のJEPX年次・月次価格トレンド。" },
+            { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "2010年以降のJEPX年次・月次価格トレンド。" },
             { href: "/demand-suppression-effectiveness", title: "デマンドコントロールの効果", description: "猛暑ピーク時のデマンド抑制で電気代を下げる方法。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "夏の高値時間帯を避けるための蓄電池活用法。" },
           ]}

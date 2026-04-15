@@ -243,6 +243,11 @@ export default function MidTermCancellationClauseGuidePage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備で確認すべき全項目の一覧。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "中途解約を検討する際のプラン切替の判断軸。",
+            },
           ]}
         />
 

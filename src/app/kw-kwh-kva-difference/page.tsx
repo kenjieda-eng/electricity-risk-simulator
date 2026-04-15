@@ -432,6 +432,16 @@ export default function KwKwhKvaDifferencePage() {
               title: "法人電気料金の内訳",
               description: "基本料金・電力量料金・燃料費調整額など料金構成を総解説。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "kW・kWhを把握したうえで、プラン選択の軸を整理できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "単価推移の実態をデータで確認できます。",
+            },
           ]}
         />
       </div>

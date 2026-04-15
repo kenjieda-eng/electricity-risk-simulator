@@ -459,7 +459,7 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>・中小企業は低圧契約の単価の高さ、情報格差、交渉力の弱さ、転嫁困難という4重の構造的不利を抱えており、同じ値上げ率でも利益へのダメージが大きい。</li>
             <li>・売上高比での電気代負担は規模が小さいほど高くなる傾向があり、営業利益率が低い中小企業ほど「電気代+10%」が経営危機に直結しやすい。</li>
-            <li>・中小企業の優先アクションは、まず契約区分（低圧→高圧の検討）と電力会社の比較見直し。次にデマンド管理と省エネ投資（補助金活用）。</li>
+            <li>・中小企業の優先アクションは、まず契約区分（低圧→<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>の検討）と電力会社の比較見直し。次に<Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド</Link>管理と省エネ投資（補助金活用）。</li>
             <li>・シミュレーターを使って自社の電気代リスクスコアを把握し、見直しの「緊急度」を数字で経営判断に組み込むことが最初のステップ。</li>
           </ul>
         </section>

@@ -107,7 +107,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場価格（JEPX）と契約プランの影響</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            電気料金の上昇は、燃料価格だけで決まるわけではありません。市場連動型プランでは、JEPXなどの卸電力市場価格の変動が料金に反映されやすくなります。
+            電気料金の上昇は、燃料価格だけで決まるわけではありません。<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型プラン</Link>では、<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>などの卸電力市場価格の変動が料金に反映されやすくなります。
             需給が逼迫した時間帯や季節には、市場価格の上昇が請求額へ波及することがあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -122,7 +122,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額や制度要因の影響</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人の電気料金には、使用量や契約単価以外にも制度的な項目が上乗せされます。代表的なのが燃料費調整額や再エネ賦課金です。
+            法人の電気料金には、使用量や契約単価以外にも制度的な項目が上乗せされます。代表的なのが<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>です。
             これらは総額に直接影響するため、請求額が増えた際は単価以外の変化も確認する必要があります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">

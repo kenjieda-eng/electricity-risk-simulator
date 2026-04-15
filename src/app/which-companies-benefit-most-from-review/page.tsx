@@ -154,6 +154,11 @@ export default function WhichCompaniesBenefitMostFromReviewPage() {
           title: "法人の電力契約見直しで最低限確認したい5項目",
           description: "見直し優先度判断の前提を短時間で確認できます。",
         },
+        {
+          href: "/businesses-suited-for-fixed-price-electricity-plan",
+          title: "固定プランが向く法人の特徴",
+          description: "見直し優先度が高い法人のプラン選択判断の参考として。",
+        },
       ]}
       ctaDescription="見直し優先度を整理したら、比較ページで高優先の契約から検討し、使い方ページを参照しながら実務フローへ落とし込みます。"
     />

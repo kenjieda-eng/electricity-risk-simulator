@@ -79,7 +79,7 @@ export default function SupplyDemandTightnessImpactPage() {
           需給逼迫で法人の電気料金はどう変わるか
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          電力の需給が逼迫すると、JEPX（日本卸電力取引所）のスポット価格が急騰し、市場連動プランを契約している法人の電気料金が大きく上昇することがあります。2021年1月には国内の厳冬・需給逼迫からJEPXのスポット価格が急騰し、多くの法人が想定外のコスト増を経験しました。
+          電力の需給が逼迫すると、<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>（日本卸電力取引所）のスポット価格が急騰し、<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>を契約している法人の電気料金が大きく上昇することがあります。2021年1月には国内の厳冬・需給逼迫からJEPXのスポット価格が急騰し、多くの法人が想定外のコスト増を経験しました。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           需給逼迫は気候変動による極端な気象、発電設備のトラブル、燃料在庫の低下など複数の要因から発生し得るリスクです。このページでは、逼迫が起きるメカニズムと法人への影響、備え方を整理します。
@@ -215,7 +215,7 @@ export default function SupplyDemandTightnessImpactPage() {
               description: "需給逼迫と連動するLNG価格上昇リスクの解説。",
             },
             {
-              href: "/market-linked-electricity-plan",
+              href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "需給逼迫の影響を直接受けるプランの仕組み。",
             },

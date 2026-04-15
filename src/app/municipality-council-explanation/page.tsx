@@ -279,7 +279,7 @@ export default function MunicipalityCouncilExplanationPage() {
             <li>
               <span className="font-semibold">根拠なき単価設定：</span>
               「前年比〇%増」と書くだけで根拠のない場合、委員から「なぜその数字か」と追及される。
-              必ずJEPXや燃料費調整単価などの公的データを根拠として示す。
+              必ずJEPXや<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>単価などの公的データを根拠として示す。
             </li>
             <li>
               <span className="font-semibold">施設別内訳の省略：</span>
@@ -334,6 +334,11 @@ export default function MunicipalityCouncilExplanationPage() {
               href: "/articles/municipality",
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
+            },
+            {
+              href: "/executive-board-reporting-items",
+              title: "取締役会で報告すべき電力リスク5項目",
+              description: "議会への報告構成の参考にもなる電力リスク報告の論点整理。",
             },
           ]}
         />

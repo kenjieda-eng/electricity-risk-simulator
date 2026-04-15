@@ -192,7 +192,7 @@ export default function SolarBatteryCombinationBenefitPage() {
             経済性の考え方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            太陽光と蓄電池の組み合わせを経済的に評価する際の考え方を整理します。
+            太陽光と蓄電池の組み合わせを経済的に評価する際の考え方を整理します。削減効果には<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減の両面があり、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>の活用により投資回収を早めることもできます。
           </p>
           <div className="mt-4 space-y-4">
             {economicConsiderations.map((item) => (
@@ -375,6 +375,16 @@ export default function SolarBatteryCombinationBenefitPage() {
               href: "/why-corporations-consider-batteries",
               title: "法人が蓄電池を検討する理由",
               description: "電気料金対策とBCPの両面から検討の動機を整理。",
+            },
+            {
+              href: "/subsidies-overview",
+              title: "省エネ・再エネ設備の補助金概要",
+              description: "太陽光・蓄電池セット導入に使える補助金制度の整理。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約見直しの始め方",
+              description: "設備導入と合わせて契約条件を最適化する手順。",
             },
           ]}
         />

@@ -131,7 +131,7 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
             <li>居室・共用部の空調・照明が24時間365日稼働する</li>
             <li>利用者の体温調節能力の低下から室温管理基準が厳しく設定されやすい</li>
             <li>入浴・洗濯などの高電力設備が日常業務として毎日稼働する</li>
-            <li>燃料費調整額の上昇が24時間稼働分すべてに影響する</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇が24時間稼働分すべてに影響する</li>
             <li>介護報酬制度のなかで電気料金上昇を価格に転嫁しにくい</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -261,7 +261,7 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">非常用電源の整備</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                停電時の利用者安全確保のため、非常用発電機や蓄電池の整備は施設運営上の重要課題です。省エネ目的の蓄電池導入を非常用電源として兼用する設計も検討できます。
+                停電時の利用者安全確保のため、非常用発電機や<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>の整備は施設運営上の重要課題です。省エネ目的の蓄電池導入を非常用電源として兼用する設計も検討できます。
               </p>
             </div>
           </div>

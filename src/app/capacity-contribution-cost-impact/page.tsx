@@ -163,8 +163,8 @@ export default function CapacityContributionCostImpactPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">再エネ賦課金・燃調費と比べてどの程度か</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            容量拠出金は、再エネ賦課金（2025年度: 約3.5円/kWh）と比べると金額は小さいものの、
-            燃料費調整額と同規模の影響に成長しつつあります。制度要因が複数重なることで、合計の負担増は無視できない水準です。
+            容量拠出金は、<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>（2025年度: 約3.5円/kWh）と比べると金額は小さいものの、
+            <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>と同規模の影響に成長しつつあります。制度要因が複数重なることで、合計の負担増は無視できない水準です。
           </p>
 
           <div className="mt-4">

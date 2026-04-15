@@ -116,12 +116,12 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
           市場連動プランが向く可能性がある法人の特徴
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          市場連動プランは、電力量料金がJEPX（日本卸電力取引所）の取引価格に連動して変動する契約形態です。市場価格が低い時期にはコスト削減の機会がありますが、高騰時には想定外の費用が発生するリスクも伴います。
+          市場連動プランは、電力量料金が<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>（日本卸電力取引所）の取引価格に連動して変動する契約形態です。市場価格が低い時期にはコスト削減の機会がありますが、高騰時には想定外の費用が発生するリスクも伴います。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、市場連動プランを「向く」と断言するのではなく、「検討できる可能性がある」法人の特徴と、その前提条件を整理します。自社の状況と照らし合わせて判断するための材料としてご活用ください。市場連動プランの基本的な仕組みは{" "}
           <Link
-            href="/market-linked-electricity-plan"
+            href="/market-linked-plan"
             className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
           >
             市場連動プランとは
@@ -243,7 +243,7 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
               description: "料金の動き方とリスクの差を比較して理解する。",
             },
             {
-              href: "/market-linked-electricity-plan",
+              href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "JEPXへの連動の仕組みと価格変動の特徴。",
             },
@@ -266,6 +266,11 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
               href: "/budget-focused-plan-selection",
               title: "予算管理を重視する法人はどちらを選ぶべきか",
               description: "予算変動の許容度から契約プランを考える。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "法人の電力契約見直しは何から始めるべきか",
+              description: "市場連動プランへの切替を検討する際の見直し手順の入口。",
             },
           ]}
         />

@@ -169,6 +169,7 @@ export default function FuelCostAdjustmentUpperLimitPage() {
             { href: "/fuel-cost-adjustment-calculation", title: "燃料費調整額の計算式の詳細", description: "計算要素の内訳と電力会社差。" },
             { href: "/last-resort-supply", title: "最終保障供給とは", description: "新電力撤退時の受け皿制度。" },
             { href: "/last-resort-supply-price", title: "最終保障供給の料金水準", description: "標準料金より高い仕組みを確認。" },
+            { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調上限到達後の料金水準推移をデータで確認できます。" },
           ]}
         />
 

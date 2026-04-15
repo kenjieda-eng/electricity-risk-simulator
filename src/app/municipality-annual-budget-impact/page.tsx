@@ -196,7 +196,7 @@ export default function MunicipalityAnnualBudgetImpactPage() {
             <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
               <p className="font-semibold text-slate-900">市況連動型積算</p>
               <p className="mt-2 text-sm leading-6 text-slate-700">
-                JEPXスポット価格・燃料費調整単価の直近実績から来年度単価を試算。
+                JEPXスポット価格・<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整</Link>単価の直近実績から来年度単価を試算。
                 精度は高いが担当者に一定の知識が必要。
               </p>
             </div>
@@ -326,6 +326,11 @@ export default function MunicipalityAnnualBudgetImpactPage() {
               href: "/articles/municipality",
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
+            },
+            {
+              href: "/executive-ebitda-impact",
+              title: "電気代がEBITDAに与える影響の測り方",
+              description: "電力費上昇が財務指標に与える定量的インパクトを試算するフレームワーク。",
             },
           ]}
         />

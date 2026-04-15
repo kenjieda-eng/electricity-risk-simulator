@@ -70,7 +70,7 @@ export default function MarketLinkedPlanPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場連動プランの基本的な仕組み</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動プランは、電力の市場価格に応じて電力量料金の単価が変わる設計です。固定単価の契約と比べると、毎月の単価の読みやすさは下がるものの、
+            市場連動プランは、電力の市場価格に応じて<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の単価が変わる設計です。固定単価の契約と比べると、毎月の単価の読みやすさは下がるものの、
             市場価格が低位で推移した期間には、固定プランより有利に見えるケースもあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -141,7 +141,7 @@ export default function MarketLinkedPlanPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場連動プランの仕入れ単価推移（JEPXデータ）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            市場連動プランの電力量料金は、このJEPX価格に調達コスト・マージンを上乗せした単価で決まります。
+            市場連動プランの電力量料金は、この<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>価格に調達コスト・マージンを上乗せした単価で決まります。
             FY2019の7.93円とFY2022の20.41円では、同じ使用量でも仕入れ単価が2.6倍に開きました。
           </p>
           <div className="mt-4 overflow-x-auto">
@@ -210,6 +210,16 @@ export default function MarketLinkedPlanPage() {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方、予算管理、リスクの出方を比較しながら選び方を確認できます。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "法人の電力契約見直しは何から始めるべきか",
+              description: "市場連動プランへの切替を検討する際の見直し手順の入口。",
+            },
+            {
+              href: "/market-price-adjustment",
+              title: "市場価格調整額とは",
+              description: "市場連動プランで発生する調整項目の仕組みと変動幅を確認できます。",
             },
           ]}
         />

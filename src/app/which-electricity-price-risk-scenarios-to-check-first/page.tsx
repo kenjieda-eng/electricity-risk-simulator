@@ -228,6 +228,11 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
               title: "リスクシナリオ別に知る（カテゴリ一覧）",
               description: "カテゴリ7の全記事へアクセスできます。",
             },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "電力契約を見直すタイミング",
+              description: "優先シナリオの確認後に取るべき行動を整理できます。",
+            },
           ]}
         />
 

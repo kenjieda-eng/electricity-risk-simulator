@@ -145,6 +145,9 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             蓄電池導入の主な効果
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            商業施設での蓄電池活用は主に2つの経路で効果が出ます。デマンドカットによる<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と、ピークシフトによる<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減です。
+          </p>
           <div className="mt-4 space-y-4">
             {benefits.map((item) => (
               <div key={item.heading}>
@@ -182,7 +185,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
             投資回収の考え方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            蓄電池の投資回収期間は、導入コスト・削減効果・補助金活用の有無などによって大きく異なります。商業施設で蓄電池の投資回収を試算する際の基本的な整理方法は以下のとおりです。
+            蓄電池の投資回収期間は、導入コスト・削減効果・<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用の有無などによって大きく異なります。商業施設で蓄電池の投資回収を試算する際の基本的な整理方法は以下のとおりです。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -237,7 +240,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
             シミュレーターで現行リスクを把握する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            蓄電池導入の意思決定をする前に、現行の電力契約条件でどの程度の料金上振れリスクがあるかを把握しておくことが重要です。シミュレーターを使うことで、燃料費調整額の変動や市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
+            蓄電池導入の意思決定をする前に、現行の電力契約条件でどの程度の料金上振れリスクがあるかを把握しておくことが重要です。シミュレーターを使うことで、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の変動や市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
           </p>
         </section>
 

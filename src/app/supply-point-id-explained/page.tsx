@@ -447,6 +447,16 @@ export default function SupplyPointIdExplainedPage() {
               title: "料金メニュー比較診断",
               description: "固定・市場連動など契約メニューを条件別に比較できます。",
             },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しを始めるには",
+              description: "供給地点特定番号を手元に用意して見直しを進める手順を確認できます。",
+            },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "切り替え先を検討する際のプラン選択軸を整理できます。",
+            },
           ]}
         />
       </div>

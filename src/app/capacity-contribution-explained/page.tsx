@@ -268,6 +268,11 @@ export default function CapacityContributionExplainedPage() {
               title: "燃料費調整額（燃調費）とは",
               description: "燃料価格の変動が請求額へ反映される仕組みを確認できます。",
             },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人向け電気料金は高止まりしているのか",
+              description: "容量拠出金を含む料金水準の推移実態をデータで確認できます。",
+            },
           ]}
         />
       </div>

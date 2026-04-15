@@ -81,7 +81,7 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">見積比較や契約見直しで使うときの見方</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            見積比較では、平常時の単価差だけでなく、どのシナリオで差が開きやすいかを見ることが重要です。市場連動プランと固定プランで、
+            見積比較では、平常時の単価差だけでなく、どのシナリオで差が開きやすいかを見ることが重要です。<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>と<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>で、
             影響が出るタイミングと項目が異なるためです。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -227,6 +227,11 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
               href: "/electricity-cost-risk-disaster",
               title: "災害で電気料金・電気代はどう上がるか",
               description: "発生時期が読みづらい要因の見方を確認できます。",
+            },
+            {
+              href: "/electricity-price-trend-2019-2025",
+              title: "法人の電気料金推移（2019〜2025年）",
+              description: "各シナリオが実際の料金推移にどう現れたかを確認できます。",
             },
           ]}
         />

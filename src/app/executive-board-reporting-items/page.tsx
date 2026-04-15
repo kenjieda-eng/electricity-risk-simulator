@@ -348,7 +348,7 @@ export default function ExecutiveBoardReportingItemsPage() {
             <span className="font-bold text-amber-600 shrink-0 text-base">03</span>
             <div>
               <p className="font-semibold text-slate-800">電力契約形態を固定型に切り替えるか</p>
-              <p className="text-slate-600">市場連動型の変動リスクと固定型のプレミアムコストを比較し、財務リスク管理の方針として明確化する。</p>
+              <p className="text-slate-600"><Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>の変動リスクと固定型のプレミアムコストを比較し、財務リスク管理の方針として明確化する。</p>
             </div>
           </li>
           <li className="flex gap-3">

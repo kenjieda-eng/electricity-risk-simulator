@@ -187,7 +187,7 @@ export default function RetailChainPriceSurgeRiskPage() {
               LED照明、高効率冷蔵・冷凍ショーケース、省エネ空調を新規出店・改装の標準仕様にします。
             </li>
             <li>
-              <span className="font-semibold text-slate-900">更新時期が来た店舗から順次固定プランに切り替える：</span>
+              <span className="font-semibold text-slate-900">更新時期が来た店舗から順次<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>に切り替える：</span>
               一度に全店舗を動かすのは困難なため、更新時期を機に順次見直しを進めます。
             </li>
           </ul>

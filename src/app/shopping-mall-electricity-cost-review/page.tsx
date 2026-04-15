@@ -130,9 +130,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>大規模中央空調が電力消費全体の大部分を占める</li>
             <li>夏・冬の繁忙期は空調負荷が最大になり使用量が急増する</li>
-            <li>特別高圧受電では市場価格連動条件が適用されやすい</li>
-            <li>テナント区画も含めた使用量合計で燃料費調整額の影響が大きい</li>
-            <li>再エネ賦課金が全使用量に比例して増加している</li>
+            <li><Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>受電では市場価格連動条件が適用されやすい</li>
+            <li>テナント区画も含めた使用量合計で<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の影響が大きい</li>
+            <li><Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>が全使用量に比例して増加している</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}
@@ -254,13 +254,13 @@ export default function ShoppingMallElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池・デマンドコントローラー</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                ピーク時間帯の電力需要を蓄電池で補完しデマンド値を抑制することで、基本料金の削減につながります。大容量システムの導入は専門的な設計と費用対効果分析が必要です。
+                ピーク時間帯の電力需要を<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>で補完しデマンド値を抑制することで、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減につながります。大容量システムの導入は専門的な設計と費用対効果分析が必要です。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">屋根・駐車場への太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                広大な屋根や駐車場（カーポート型）への太陽光発電設置は、昼間の電力自給に有効です。PPA（電力購入契約）モデルでは初期費用なしでの導入も可能です。
+                広大な屋根や駐車場（カーポート型）への<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電設置は、昼間の電力自給に有効です。PPA（電力購入契約）モデルでは初期費用なしでの導入も可能です。
               </p>
             </div>
           </div>

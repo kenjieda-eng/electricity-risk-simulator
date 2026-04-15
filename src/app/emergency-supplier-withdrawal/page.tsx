@@ -397,6 +397,11 @@ export default function EmergencySupplierWithdrawalPage() {
               title: "電力契約の違約金を請求されたときの対応",
               description: "違約金の妥当性確認と交渉手順を解説します。",
             },
+            {
+              href: "/executive-business-continuity-risk",
+              title: "電気代高騰と事業継続リスク",
+              description: "新電力撤退リスクをBCPと財務リスク管理の観点から整理します。",
+            },
           ]}
         />
       </div>

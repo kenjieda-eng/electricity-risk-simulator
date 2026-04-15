@@ -132,7 +132,7 @@ export default function SingleRestaurantElectricityCostReviewPage() {
             <li>冷蔵・冷凍設備が24時間稼働しベースロードを形成する</li>
             <li>厨房の発熱を排気する換気設備が常時稼働し空調負荷も大きい</li>
             <li>夏季は空調・冷蔵の二重負荷で電力使用量が急増しやすい</li>
-            <li>低圧契約が多く単価が高圧・特別高圧より高い傾向がある</li>
+            <li>低圧契約が多く単価が<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>より高い傾向がある</li>
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇要因の全体像は{" "}

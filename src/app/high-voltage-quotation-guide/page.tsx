@@ -322,6 +322,16 @@ export default function HighVoltageQuotationGuidePage() {
               title: "法人向け電気料金請求書の見方",
               description: "請求書の全体構造と主要項目の読み方を整理。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "見積比較後のプラン選択判断に役立てられます。",
+            },
+            {
+              href: "/fuel-cost-adjustment",
+              title: "燃料費調整額とは",
+              description: "見積書の燃調条件を正しく読むための背景知識を確認できます。",
+            },
           ]}
         />
 

@@ -325,6 +325,11 @@ export default function MunicipalitySupplementaryBudgetPage() {
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
             },
+            {
+              href: "/emergency-budget-overrun-response",
+              title: "電気代急騰による予算超過の緊急対応手順",
+              description: "民間企業向けだが補正予算対応の参考になる緊急対応フローを解説。",
+            },
           ]}
         />
       </div>

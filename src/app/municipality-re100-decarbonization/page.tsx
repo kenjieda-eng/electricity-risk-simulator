@@ -285,7 +285,7 @@ export default function MunicipalityRe100DecarbonizationPage() {
             </li>
             <li>
               <span className="font-semibold">脱炭素先行地域選定自治体の事例：</span>
-              環境省の脱炭素先行地域に選定されたことで補助金を活用した大規模太陽光PPA導入が実現。
+              環境省の脱炭素先行地域に選定されたことで補助金を活用した大規模<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>PPA導入が実現。
               庁舎・公民館・学校10施設にオンサイトPPAを設置し、年間電力の30%を自家消費型太陽光で賄うことに成功。
             </li>
           </ul>
@@ -308,7 +308,7 @@ export default function MunicipalityRe100DecarbonizationPage() {
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ：脱炭素調達を進めるための優先事項</h2>
           <ol className="mt-3 list-decimal pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>まず<span className="font-semibold">非化石証書（トラッキング付き）</span>を活用して低コストで環境価値を調達する</li>
+            <li>まず<Link href="/non-fossil-certificates" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">非化石証書</Link><span className="font-semibold">（トラッキング付き）</span>を活用して低コストで環境価値を調達する</li>
             <li>次に主要施設から<span className="font-semibold">再エネメニュー</span>への切り替えを進める</li>
             <li>中長期的には<span className="font-semibold">PPAや自家消費型太陽光</span>を組み合わせてコスト安定化と脱炭素を両立する</li>
             <li>入札仕様書には<span className="font-semibold">総合評価落札方式や加点評価</span>で環境要件を組み込み不調リスクを管理する</li>
@@ -340,6 +340,11 @@ export default function MunicipalityRe100DecarbonizationPage() {
               href: "/municipality-local-new-power",
               title: "地域新電力と自治体電力調達の関係",
               description: "地域新電力の仕組みと自治体が連携するメリット・注意点を整理。",
+            },
+            {
+              href: "/when-to-review-electricity-contract",
+              title: "法人が電力契約を見直すタイミング",
+              description: "脱炭素調達と並行して電力コスト管理の見直し開始タイミングを確認。",
             },
           ]}
         />

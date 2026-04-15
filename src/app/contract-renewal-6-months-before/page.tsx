@@ -270,6 +270,11 @@ export default function ContractRenewal6MonthsBeforePage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し準備で確認すべき全項目の一覧。",
             },
+            {
+              href: "/market-linked-vs-fixed",
+              title: "市場連動プランと固定プランの違い",
+              description: "6か月前の準備段階でプラン選択の軸を整理しておく。",
+            },
           ]}
         />
 

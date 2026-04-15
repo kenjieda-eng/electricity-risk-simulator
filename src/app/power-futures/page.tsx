@@ -257,6 +257,11 @@ export default function PowerFuturesPage() {
               title: "JEPXとは何か｜卸電力市場の仕組み",
               description: "現物市場と先物の違いを前提から整理できます。",
             },
+            {
+              href: "/electricity-cost-risk-geopolitics",
+              title: "地政学リスクで電気料金はどう上がるか",
+              description: "先物ヘッジが有効になる価格変動リスクの実例を確認できます。",
+            },
           ]}
         />
 

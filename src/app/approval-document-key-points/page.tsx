@@ -217,7 +217,7 @@ export default function ApprovalDocumentKeyPointsPage() {
             数値根拠の示し方
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            稟議書で最も重要な要素のひとつが、削減効果の数値根拠です。審査者が「信頼できる計算根拠がある」と感じられるように、以下の観点で数値を準備します。
+            稟議書で最も重要な要素のひとつが、削減効果の数値根拠です。審査者が「信頼できる計算根拠がある」と感じられるように、以下の観点で数値を準備します。なお<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>など変動要因の仕組みを添付資料に補足すると、審査者の理解を助けられます。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>試算に使用した使用量データの出典（請求書実績○年○月〜○年○月）を明記する</li>
@@ -325,6 +325,11 @@ export default function ApprovalDocumentKeyPointsPage() {
               href: "/information-to-prepare-before-inquiry",
               title: "問い合わせ前に社内で揃えたい情報",
               description: "見積依頼前に準備すべき情報と稟議資料の準備。",
+            },
+            {
+              href: "/how-to-start-electricity-contract-review",
+              title: "電力契約の見直しはどこから始めるか",
+              description: "見直しの手順と優先事項を初心者向けに解説。",
             },
           ]}
         />

@@ -121,7 +121,7 @@ export default function ElectricityCostRiskDisasterPage() {
           <h2 className="text-xl font-semibold text-slate-900">災害時に請求書・見積書で確認したいこと</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>単価の変動がどの項目で出ているか</li>
-            <li>燃料費調整額や市場価格調整額などの調整項目</li>
+            <li><Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>などの調整項目</li>
             <li>契約条件と更新時期</li>
             <li>上振れが表れやすい項目の傾向</li>
           </ul>

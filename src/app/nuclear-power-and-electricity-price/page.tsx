@@ -527,6 +527,11 @@ export default function NuclearPowerAndElectricityPricePage() {
               description:
                 "GX-ETSと炭素税の導入が発電コストを通じて法人料金に波及する経路を解説。",
             },
+            {
+              href: "/why-business-electricity-prices-rise",
+              title: "法人の電気料金が上がる理由",
+              description: "原発再稼働を含む複数の要因が法人料金に与える影響を費目別に整理します。",
+            },
           ]}
         />
 
