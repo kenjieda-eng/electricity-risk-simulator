@@ -19,6 +19,7 @@ import {
 } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
 import { calculateRiskScore } from "../../lib/riskScore";
+import { trackEvent } from "../../lib/analytics/ga";
 
 ChartJS.register(
   CategoryScale,
@@ -763,6 +764,13 @@ export default function HomePageClient() {
       region_score: riskScoreResult.breakdown.regionScore,
       building_type_score: riskScoreResult.breakdown.buildingTypeScore,
     };
+
+    trackEvent("simulator_start", {
+      contract_type: state.contractType,
+      region: state.region,
+      building_type: state.buildingType,
+      usage_pattern: state.usagePattern,
+    });
 
     try {
       const response = await fetch("/api/simulation-results", {

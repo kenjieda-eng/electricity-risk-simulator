@@ -17,6 +17,7 @@ import {
 } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
 import { getRiskLabel } from "../../lib/riskScore";
+import { trackEvent } from "../../lib/analytics/ga";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
 
@@ -454,6 +455,13 @@ function ComparePageContent() {
           throw new Error(json.error || "対象データの取得に失敗しました。");
         }
         setCompareData(json.data);
+        trackEvent("compare_view", {
+          result_id: savedResultId,
+          risk_score: json.data.output.risk_score,
+          risk_label: json.data.output.risk_label,
+          contract_type: json.data.input.contract_type,
+          region: json.data.input.region,
+        });
       } catch (error) {
         if (controller.signal.aborted) return;
         setCompareData(null);

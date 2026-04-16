@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "法人向けの電気代・電気料金の上昇、高騰リスクを試算するシミュレーションツール",
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": "https://simulator.eic-jp.org/feed.xml",
+    },
   },
   verification: {
     google: "fO91QoZppqZzi-hvqHuPm5m_Cjdb5Lh4gmpAnynN_8c",

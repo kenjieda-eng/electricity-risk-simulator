@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackEvent } from "../../lib/analytics/ga";
 
 type CtaLinkItem = {
   href: string;
@@ -21,6 +24,7 @@ export default function ContentCta({ heading, description, links }: ContentCtaPr
           <Link
             key={link.href}
             href={link.href}
+            onClick={() => trackEvent("cta_click", { label: link.label, href: link.href })}
             className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
             {link.label}
