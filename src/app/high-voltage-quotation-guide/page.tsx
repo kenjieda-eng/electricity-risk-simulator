@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "高圧電力見積書の見方｜比較時に確認したい項目と注意点";
@@ -122,8 +124,27 @@ const quotationSections = [
   },
 ];
 
+const faq = [
+  { question: "高圧電力の見積書で最も重要な比較ポイントはどこですか？", answer: "燃料費調整額の扱い（上限あり/なし）と市場価格調整額の有無が最重要です。基本料金・電力量料金の単価だけで比較すると、調整費の差で実際の年間コストが大きく変わることがあります。" },
+  { question: "高圧電力の見積書で契約期間はどのくらいが多いですか？", answer: "1年・2年・3年の選択制が一般的です。長期契約は単価が固定されるためリスク管理しやすいですが、解約条件・違約金の確認が重要です。" },
+  { question: "複数社の高圧電力見積書を比較するとき、何に注意すればよいですか？", answer: "前提条件（使用電力量・デマンド・力率）を同一にして比較することが重要です。また燃調上限の有無、容量拠出金の含有状況、市場価格調整額の有無を揃えないと正確な比較になりません。" },
+];
+
 export default function HighVoltageQuotationGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧電力見積書の見方｜比較時に確認したい項目と注意点"
+        description="高圧電力の見積書で確認すべき項目を解説。基本料金単価・電力量料金単価・調整費の扱い・契約条件など、見積比較で失敗しないためのチェックポイントを整理します。"
+        url="https://simulator.eic-jp.org/high-voltage-quotation-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "高圧電力見積書の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -283,6 +304,16 @@ export default function HighVoltageQuotationGuidePage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・見積比較に関するガイダンス" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧電力の見積書を正確に比較するための関連ページです。"
@@ -349,5 +380,6 @@ export default function HighVoltageQuotationGuidePage() {
         <CategoryNextStepCta slug="high-voltage-quotation-guide" />
       </div>
     </main>
+    </>
   );
 }

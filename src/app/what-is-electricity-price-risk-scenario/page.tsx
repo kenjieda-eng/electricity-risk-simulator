@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電気料金のリスクシナリオとは｜法人が上振れリスクを把握するための基本的な考え方";
 const pageDescription =
@@ -31,8 +33,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "電気料金のリスクシナリオとは何ですか？",
+    answer: "将来の電気料金がどのように上振れし得るかを、複数の前提条件（季節、為替、燃料価格、需給など）で確認するための見方です。単一の想定だけでは把握できないリスクを可視化し、予算策定や契約判断に活用します。予言ではなく「備えのための確認手段」です。",
+  },
+  {
+    question: "なぜ電気料金は一つの想定だけで見ると不十分なのですか？",
+    answer: "猛暑・厳冬のような季節要因は特定時期に需要を押し上げ、円安・地政学リスクは燃料調達コストを通じて通年影響します。これらは影響時期・継続性が異なるため、一本の想定だけでは予算や契約判断の前提が粗くなり、実際に大きな上振れが発生した際に対応が後手に回るリスクがあります。",
+  },
+  {
+    question: "リスクシナリオは具体的にどのように活用できますか？",
+    answer: "主な活用場面は3つです。①予算策定時に通常ケースと厳しめケースを併記して承認を取りやすくする、②電力契約の比較検討時に市場連動プランと固定プランの条件差を評価する、③社内説明資料でリスクの出方と対策を共有する、といった使い方が有効です。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の構成要因・リスク要因に関する解説" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格の動向・需給状況のモニタリング" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場の過去価格データ" },
+];
+
 export default function WhatIsElectricityPriceRiskScenarioPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/what-is-electricity-price-risk-scenario"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "リスクシナリオとは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -213,6 +249,8 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           <GlossaryLinks currentSlug="what-is-electricity-price-risk-scenario" terms={["燃料費調整額", "市場価格調整額", "JEPX", "市場連動プラン", "固定プラン", "再エネ賦課金"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="リスクシナリオの基本を押さえた後に、必要な順序で読み進められる導線です。"
@@ -250,5 +288,6 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "最終保障供給リスク診断｜自社が最終保障供給になるリスクを確認";
@@ -70,6 +72,20 @@ const preventionSteps = [
 
 export default function LastResortSupplyRiskDiagnosisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="最終保障供給リスク診断｜自社が最終保障供給になるリスクを確認"
+        description="最終保障供給（最終保障）に移行するリスクがあるかを診断チェックで確認。契約状況・新電力との関係・倒産リスクへの備えなど、法人担当者が知っておくべき判断ポイントを解説します。"
+        url="https://simulator.eic-jp.org/last-resort-supply-risk-diagnosis"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -218,6 +234,19 @@ export default function LastResortSupplyRiskDiagnosisPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="最終保障供給の仕組みと対策についてさらに詳しく確認できるページです。"
@@ -266,5 +295,6 @@ export default function LastResortSupplyRiskDiagnosisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

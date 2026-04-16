@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "電源調達調整費とは何か｜燃料費調整額との違いを法人向けに解説";
 const pageDescription =
   "電源調達調整費とは何かを、燃料費調整額との違いとあわせて解説します。法人向け電力契約の見積比較で見落としやすい追加費用の考え方を整理し、電気料金の読み方に役立てます。";
@@ -30,8 +32,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  { question: "電源調達調整費とは何ですか？", answer: "電源調達調整費は、電力会社が電気を調達するコストの変動を料金に反映するための調整費目です。燃料費調整額と似た役割ですが、対象コストや算出方法が異なります。見積書に記載されている場合はその計算方式を確認することが重要です。" },
+  { question: "電源調達調整費と燃料費調整額はどう違いますか？", answer: "燃料費調整額は燃料費（LNG・石炭・石油）の変動を反映する制度的な仕組みです。電源調達調整費はより広い調達コスト変動（市場調達コストを含む場合もある）を反映するもので、電力会社により定義が異なります。" },
+  { question: "見積比較時に電源調達調整費はどこで確認すべきですか？", answer: "見積書の明細欄や別添の料金計算説明に記載されることが多いです。提案内容に含まれているかどうか、また計算方式と上限の有無を電力会社に確認することを推奨します。" },
+];
+
 export default function PowerProcurementAdjustmentFeePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/power-procurement-adjustment-fee"
+        datePublished="2026-03-27"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "電源調達調整費とは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -174,6 +195,15 @@ export default function PowerProcurementAdjustmentFeePage() {
           <GlossaryLinks currentSlug="power-procurement-adjustment-fee" terms={["市場価格調整額", "燃料費調整額", "市場連動プラン", "固定プラン", "電力量料金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・燃料費調整制度に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約条件の監視・情報公開" },
+          ]}
+          publishedAt="2026-03-27"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="調整費の見方を、比較実務と契約タイプ理解へつなげるページです。"
@@ -211,5 +241,6 @@ export default function PowerProcurementAdjustmentFeePage() {
         />
       </section>
     </main>
+    </>
   );
 }

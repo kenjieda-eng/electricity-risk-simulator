@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "オフィスビルの電気料金見直しポイント｜空調・照明負荷を踏まえた考え方";
@@ -93,8 +95,33 @@ const reviewPoints = [
   },
 ];
 
+const faqItems = [
+  { question: "オフィスビルで電気料金を削減するには何から始めればよいですか？", answer: "まず直近12か月の月次使用量とデマンドデータを収集し、ピーク時間帯と季節変動のパターンを把握することが出発点です。その上で、現行契約の基本料金と電力量料金の比率を確認し、固定プランと市場連動プランのどちらが自社に向いているかを判断します。" },
+  { question: "オフィスビルは固定プランと市場連動プランのどちらが向いていますか？", answer: "大規模ビルや予算管理の説明責任がある法人は、価格変動リスクを避けられる固定プランが向きやすいです。中小規模でモニタリング体制があれば市場連動も選択肢になりますが、夏の需給逼迫時に使用量が増えるオフィスビルの特性上、リスク管理が重要になります。" },
+  { question: "デマンドコントローラーはオフィスビルに効果がありますか？", answer: "効果があります。30分値デマンドのピークを監視し、設定値を超えそうになると空調・照明等を自動制御することで契約電力を引き下げられます。特に夏の空調集中時にデマンドピークが発生しやすいオフィスビルでは、基本料金削減の効果が期待できます。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・省エネ政策・電気料金制度に関する情報" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給状況・デマンドデータ・系統運用情報" },
+];
+
 export default function OfficeBuildingElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/office-building-electricity-cost-review"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+          { name: "オフィスビルの見直しポイント" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -291,6 +318,8 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           <GlossaryLinks currentSlug="office-building-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "デマンド値"]} />
         </div>
 
+        <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -348,5 +377,6 @@ export default function OfficeBuildingElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

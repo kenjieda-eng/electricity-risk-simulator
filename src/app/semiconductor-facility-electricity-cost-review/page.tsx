@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "半導体関連施設の電気料金リスク｜クリーンルームと大規模電力を踏まえた考え方";
@@ -72,6 +74,21 @@ const loadCharacteristics = [
 
 export default function SemiconductorFacilityElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="半導体関連施設の電気料金リスク｜クリーンルームと大規模電力を踏まえた考え方"
+        description="半導体製造・関連施設の電気料金リスクを解説。クリーンルームの空調・換気・超純水設備の高負荷、24時間稼働の特性、固定プランの重要性、設備対策まで整理します。"
+        url="https://simulator.eic-jp.org/semiconductor-facility-electricity-cost-review"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+        ]}
+        faq={[
+    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -274,6 +291,19 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="semiconductor-facility-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "特別高圧", "固定プラン", "非化石証書"]} />
         </div>
 
@@ -334,5 +364,6 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

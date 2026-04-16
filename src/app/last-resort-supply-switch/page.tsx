@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給から切り替えるには｜切替パターン別の所要期間と手続き";
 const pageDescription =
@@ -44,8 +46,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給から通常の電力契約への切替にはどのくらいの期間がかかりますか？",
+    answer: "一般的に低圧では2〜4週間、高圧では1〜2か月、特別高圧では2〜3か月以上かかる場合があります。メーター交換工事が必要な場合はさらに時間がかかることがあるため、できるだけ早めに手続きを開始することを推奨します。",
+  },
+  {
+    question: "最終保障供給から切り替えるために必要な情報は何ですか？",
+    answer: "現在の供給地点特定番号（お客さま番号）、月間使用量、受電電圧（高圧・特別高圧・低圧）、最大需要電力、契約電力などが必要です。これらを揃えた上で複数の小売電気事業者に見積もりを依頼してください。",
+  },
+  {
+    question: "最終保障供給中に通常契約の見積もりを並行して取ることはできますか？",
+    answer: "はい、可能です。最終保障供給は移行先が確定次第解除できます。複数社に見積もりを依頼し、料金水準・契約条件・燃料費調整額の上限有無を比較した上で、最も条件の良い事業者と契約することを検討してください。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約切替手続き・監視情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売切替制度・手続きに関する資料" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "小売電気事業者の比較・切替情報" },
+];
+
 export default function LastResortSupplySwitchPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-switch"
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "切り替えるには" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -213,6 +249,8 @@ export default function LastResortSupplySwitchPage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -249,5 +287,6 @@ export default function LastResortSupplySwitchPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "固定プラン向き・市場連動向き簡易診断｜自社に合うプランを整理する";
@@ -66,6 +68,20 @@ const decisionNodes = [
 
 export default function FixedVsMarketQuickDiagnosisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="固定プラン向き・市場連動向き簡易診断｜自社に合うプランを整理する"
+        description="固定型電力プランと市場連動型プランのどちらが自社に向いているかを、予算優先度・使用量・リスク許容度などの観点から診断。法人担当者がプラン選択の方向性を整理できます。"
+        url="https://simulator.eic-jp.org/fixed-vs-market-quick-diagnosis"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -219,6 +235,18 @@ export default function FixedVsMarketQuickDiagnosisPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="fixed-vs-market-quick-diagnosis" terms={["燃料費調整額", "市場価格調整額", "JEPX", "市場連動プラン", "固定プラン", "最終保障供給"]} />
         </div>
 
@@ -270,5 +298,6 @@ export default function FixedVsMarketQuickDiagnosisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

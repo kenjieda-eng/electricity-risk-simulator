@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "社内説明準備チェックリスト｜電力契約見直しの稟議・報告前に揃えたい情報";
@@ -61,6 +63,20 @@ const qaItems = [
 
 export default function InternalExplanationPreparationChecklistPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="社内説明準備チェックリスト｜電力契約見直しの稟議・報告前に揃えたい情報"
+        description="電力契約の見直しを社内で説明・稟議する前に揃えておくべき情報・資料・論点をチェックリスト形式で整理。上長・経営層・経理への説明をスムーズに進めるための実務準備ガイドです。"
+        url="https://simulator.eic-jp.org/internal-explanation-preparation-checklist"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -204,6 +220,19 @@ export default function InternalExplanationPreparationChecklistPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="社内説明の準備に役立つ関連ページをまとめました。"
@@ -252,5 +281,6 @@ export default function InternalExplanationPreparationChecklistPage() {
         />
       </section>
     </main>
+    </>
   );
 }

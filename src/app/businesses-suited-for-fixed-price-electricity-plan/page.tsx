@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "固定プランが向く法人の特徴｜予算管理と安定性を重視する場合の考え方";
 const pageDescription =
@@ -85,8 +87,27 @@ const industryFitTable = [
   { industry: "オフィスビル", fit: "中程度", reason: "使用量と利益率のバランスによる。" },
 ];
 
+const faqItems = [
+  { question: "固定プランが特に向いているのはどのような業種ですか？", answer: "飲食業・小売業・医療介護など、電気代の変動が損益に大きく影響する業種、年度予算を固定的に管理する自治体・学校、担当者リソースが限られている中小企業などに特に向いています。" },
+  { question: "利益率が低い業種はなぜ固定プランが向いていますか？", answer: "利益率が低い業種では電気代の単価が少し上昇するだけで利益を圧迫します。固定プランは電力量料金の単価変動リスクを抑えられるため、コスト予測が立てやすく経営の安定につながります。" },
+  { question: "固定プランを選ぶ際に見積で確認すべき点は何ですか？", answer: "燃料費調整額の計算方式と上限設定、容量拠出金の含有状況、契約期間と違約金条件を確認することが重要です。単価が安くても他の費目で不利になるケースがあるため総額比較が必要です。" },
+];
+
 export default function BusinessesSuitedForFixedPricePlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/businesses-suited-for-fixed-price-electricity-plan"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "固定プランが向く法人の特徴" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -264,6 +285,15 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           <GlossaryLinks currentSlug="businesses-suited-for-fixed-price-electricity-plan" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "JEPX", "基本料金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視に関する情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -311,5 +341,6 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

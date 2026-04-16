@@ -30,10 +30,25 @@ export const metadata: Metadata = {
 };
 
 export default function SwitchingBusinessElectricityContractPage() {
+  const faq = [
+    { question: "法人の電力契約切替で最初に確認すべきことは何ですか？", answer: "現契約の解約条件（通知期限・違約金）と新契約の開始日を確認することが最初のステップです。これを確認せずに切替を進めると、請求の重複や違約金の発生につながる場合があります。" },
+    { question: "電力会社を切り替えると電気が止まることはありますか？", answer: "適切な手続きを経れば電気が止まることはありません。切替は既存の配電線を維持したまま行われます。ただし手続きのタイミングや書類に不備がある場合は開始遅延が生じる場合があります。" },
+    { question: "切替後の請求で注意することは何ですか？", answer: "切替月の請求は日割り計算になるため、旧会社・新会社の両方から請求が来ることがあります。また検針日のズレにより1か月分の請求が2社にまたがる場合があるため、切替直後の請求書は慎重に確認してください。" },
+  ];
+  const sources = [
+    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給切替手続きに関する情報" },
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・スイッチングに関する情報" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="切り替えの注意点"
       slug="switching-business-electricity-contract"
+      jsonLdUrl="https://simulator.eic-jp.org/switching-business-electricity-contract"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "見積比較で契約先を決めた後、実務でつまずきやすいのが切替手続きです。現契約の解約条件や開始日の扱いを誤ると、請求確認や社内説明が難しくなります。",

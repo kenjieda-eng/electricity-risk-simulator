@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給の対象とは｜該当する5つのケースと回避策";
 const pageDescription =
@@ -44,8 +46,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給の対象になるのはどのような事業者ですか？",
+    answer: "高圧または特別高圧で電気を使用する法人・自治体・団体が対象です。低圧（家庭用・小規模事業者）は最終保障供給ではなく別制度が適用されます。契約中の新電力が撤退・倒産した場合や、どの小売事業者とも契約合意に至らない場合に移行します。",
+  },
+  {
+    question: "自社が最終保障供給の対象になるリスクを事前に判断するにはどうすればいいですか？",
+    answer: "契約中の新電力の財務状況や撤退リスクを確認し、契約満了の6〜12か月前から複数社に見積もりを依頼することが有効です。また現在の契約が燃料費調整額の上限なし条件かどうかの確認も重要です。",
+  },
+  {
+    question: "最終保障供給に移行したと通知された場合、すぐにやることは何ですか？",
+    answer: "まず移行した事業者（一般送配電事業者）へ連絡し、現在の料金水準と請求開始時期を確認します。次に、複数の小売電気事業者に見積もりを依頼し、早期の通常契約への切替を進めてください。長期化するほど割高な料金が蓄積します。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の対象・適用条件に関する解説" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気事業法第17条・最終保障供給制度の概要" },
+];
+
 export default function LastResortSupplyTargetPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-target"
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給の対象" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -217,6 +252,8 @@ export default function LastResortSupplyTargetPage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -253,5 +290,6 @@ export default function LastResortSupplyTargetPage() {
         />
       </section>
     </main>
+    </>
   );
 }

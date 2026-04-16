@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function WhichCompaniesBenefitMostFromReviewPage() {
+  const faq = [
+    { question: "電力契約の見直し効果が出やすい会社の条件は何ですか？", answer: "年間電気代が高い、複数拠点を持つ、契約更新が近い、長期間見直しをしていないといった条件が重なるほど見直し効果が出やすくなります。特に年間1,000万円以上の法人は優先度が高いです。" },
+    { question: "年間電気代が少ない中小企業でも見直す価値がありますか？", answer: "年間電気代が少なくても、長期間見直していない場合や市場連動プランのリスクが高い場合は見直す価値があります。ただし費用対効果を考慮して優先度を判断することが重要です。" },
+    { question: "複数拠点の企業が見直しをするとき、どこから着手すればよいですか？", answer: "使用量が多い・更新日が近い・現プランのリスクが高い拠点から優先的に着手するのが効果的です。本社が全拠点の契約条件を一覧化した上で優先順位をつけて進めることを推奨します。" },
+  ];
+  const sources = [
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力自由化・電力料金に関する情報" },
+    { name: "新電力ネット", url: "https://pps-net.org", description: "新電力シェア・電力市場動向データ" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="見直し効果が出やすい会社"
       slug="which-companies-benefit-most-from-review"
+      jsonLdUrl="https://simulator.eic-jp.org/which-companies-benefit-most-from-review"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "電力契約の見直しは、すべての法人で同じ効果が出るわけではありません。自社に見直し余地があるかを先に把握すると、比較の優先度を決めやすくなります。",

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給の料金｜通常契約との差額を使用量別に試算";
 const pageDescription =
@@ -36,8 +38,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給の料金は通常の電力契約と比べてどのくらい高いですか？",
+    answer: "最終保障供給の料金は通常の小売契約より一般的に2〜3割高く設定されています。JEPXの市場価格が高騰した2022年ピーク時には通常の数倍に達したケースもありました。月間使用量が多いほど差額も大きくなるため、早期の通常契約への切替が推奨されます。",
+  },
+  {
+    question: "最終保障供給に激変緩和措置は適用されますか？",
+    answer: "政府の電気代補助（激変緩和措置）は最終保障供給にも適用される場合がありますが、補助の終了後は通常の料金水準に戻ります。補助に頼った状態を継続することは中長期のコスト管理上リスクがあるため、通常契約への移行を早めに進めることが重要です。",
+  },
+  {
+    question: "最終保障供給に入ったまま放置するとどうなりますか？",
+    answer: "割高な料金が継続し、月額電気代が数十万〜数百万円規模で増加する可能性があります。自治体の場合は補正予算の計上が必要になることもあります。長期化するほど損失が積み上がるため、切替先が決まり次第、速やかに移行手続きを進めてください。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の料金規制・監視データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "最終保障供給制度・料金水準に関する資料" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+];
+
 export default function LastResortSupplyPricePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給の料金" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -200,6 +236,8 @@ export default function LastResortSupplyPricePage() {
           </ul>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
+
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
@@ -222,5 +260,6 @@ export default function LastResortSupplyPricePage() {
         />
       </section>
     </main>
+    </>
   );
 }

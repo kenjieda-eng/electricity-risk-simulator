@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "クリニックの電気料金見直しポイント｜医療機器と空調負荷を踏まえた考え方";
@@ -71,6 +73,21 @@ const loadCharacteristics = [
 
 export default function ClinicElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="クリニックの電気料金見直しポイント｜医療機器と空調負荷を踏まえた考え方"
+        description="クリニック・診療所の電気料金見直しの考え方を解説。医療機器・空調の負荷特性、固定プランの優位性、見積比較で確認すべきポイント、設備対策まで整理します。"
+        url="https://simulator.eic-jp.org/clinic-electricity-cost-review"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+        ]}
+        faq={[
+    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -320,6 +337,19 @@ export default function ClinicElectricityCostReviewPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="clinic-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "固定プラン", "市場連動プラン", "電気料金の内訳"]} />
         </div>
 
@@ -375,5 +405,6 @@ export default function ClinicElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

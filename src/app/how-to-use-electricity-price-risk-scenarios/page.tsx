@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電気料金のリスクシナリオはどう使い分けるか｜法人の予算策定・比較検討・社内説明のための見方";
 const pageDescription =
@@ -31,8 +33,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "リスクシナリオは予算策定でどのように使えばよいですか？",
+    answer: "ベースライン（通常想定）と上振れシナリオ（猛暑・円安など）を並記し、予算に幅を持たせる形で使うのが有効です。「通常ケースで〇〇円、厳しいケースで〇〇円」という形式で提示することで、稟議の通りやすさと追加計上の説明資料として活用できます。",
+  },
+  {
+    question: "社内説明資料にリスクシナリオを使うメリットは何ですか？",
+    answer: "電気料金が上振れた場合の根拠を事前に示せるため、実際に高騰した際の説明コストが減ります。また「なぜ固定プランにしたか」「なぜ市場連動プランを選ばなかったか」という判断の根拠資料としても機能します。",
+  },
+  {
+    question: "リスクシナリオを電力契約の比較検討でどう使えばよいですか？",
+    answer: "市場連動プランと固定プランで「猛暑シナリオ」や「円安シナリオ」ごとにコスト差がどう出るかを試算します。どのシナリオで市場連動が不利になるかを明示することで、契約選択の根拠が具体的になります。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の要因別解説・政策情報" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格・電力需給データ" },
+];
+
 export default function HowToUseElectricityPriceRiskScenariosPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/how-to-use-electricity-price-risk-scenarios"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "シナリオの使い分け" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -209,6 +244,8 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           <GlossaryLinks currentSlug="how-to-use-electricity-price-risk-scenarios" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="使い分けを実務に落とし込むための比較・優先順位・個別要因ページです。"
@@ -251,5 +288,6 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
         />
       </section>
     </main>
+    </>
   );
 }

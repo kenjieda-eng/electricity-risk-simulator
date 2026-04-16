@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "自治体庁内で電力契約見直しを説明するときのポイント｜議会・住民への説明を見据えた整理";
@@ -80,6 +82,20 @@ const assemblyQuestions = [
 
 export default function ExplainingInMunicipalityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体庁内で電力契約見直しを説明するときのポイント｜議会・住民への説明を見据えた整理"
+        description="自治体が電力契約の見直しを庁内・議会・住民に説明する際のポイントを解説。公共調達の手続き、財政効果の説明、住民への透明性確保、よくある質問への対応方法まで実務目線で整理します。"
+        url="https://simulator.eic-jp.org/explaining-in-municipality"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "社内説明・稟議サポート", url: "https://simulator.eic-jp.org/articles/internal-explanation" },
+        ]}
+        faq={[
+    { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -256,6 +272,19 @@ export default function ExplainingInMunicipalityPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -308,5 +337,6 @@ export default function ExplainingInMunicipalityPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function WhereToCheckInElectricityContractPage() {
+  const faq = [
+    { question: "電力契約書で最初に確認すべき条項はどこですか？", answer: "契約期間・更新条項・解約申出期限・違約金の4点が最優先です。特に自動更新条項は見落とすと更新後に解約できなくなるリスクがあるため、必ず確認してください。" },
+    { question: "電力契約書に単価改定条項がある場合どう対応すべきですか？", answer: "単価改定条項がある場合、いつ・どのような条件で改定されるかを確認します。一方的な改定が可能な場合はリスクが高いため、改定時の通知方法や拒否・解約の選択肢も把握しておくことが重要です。" },
+    { question: "電力契約書の別紙や覚書も確認すべきですか？", answer: "はい。本契約書だけでなく別紙や覚書に重要な条件が記載されているケースがあります。料金単価・調整費の扱い・特別条件などが別紙に定められていることが多いため必ず確認してください。" },
+  ];
+  const sources = [
+    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給契約の制度・ルールに関する情報" },
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約に関する情報" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="契約書の注意点"
       slug="where-to-check-in-electricity-contract"
+      jsonLdUrl="https://simulator.eic-jp.org/where-to-check-in-electricity-contract"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "見直し時に契約条件を理解しているつもりでも、実際には重要条項の確認漏れが起きやすいのが契約書です。特に更新・解約・単価改定に関する条項は、小さな記載でも実務影響が大きくなります。",

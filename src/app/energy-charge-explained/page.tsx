@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "電力量料金の見方｜使用量と単価の関係を理解する";
@@ -121,8 +123,27 @@ const energyChargeSections = [
   },
 ];
 
+const faq = [
+  { question: "電力量料金と基本料金の違いは何ですか？", answer: "電力量料金は使用した電気量（kWh）に応じて発生する変動費で、基本料金は契約電力（kW）に応じて毎月固定的に発生する費用です。電力量料金には燃料費調整額・再エネ賦課金が上乗せされます。" },
+  { question: "時間帯別電力量料金のメリットは何ですか？", answer: "夜間や休日の安い時間帯に電気を多く使うことで電気代を削減できます。ただし昼間単価が高いため、稼働パターンによってはかえって割高になるケースもあります。自社の使用時間帯パターンとの相性を確認することが重要です。" },
+  { question: "電力量料金単価を見積書で比較する際の注意点は何ですか？", answer: "燃料費調整額が単価に含まれているかどうかを確認することが重要です。燃調込みか燃調別かによって実質的な単価が大きく異なります。また季節・時間帯別の単価構成も含めて比較する必要があります。" },
+];
+
 export default function EnergyChargeExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力量料金の見方｜使用量と単価の関係を理解する"
+        description="電気料金の電力量料金がどのように計算されるかを解説。時間帯別料金・季節変動・プランによる単価の違いと、使用パターンに応じた比較方法を整理します。"
+        url="https://simulator.eic-jp.org/energy-charge-explained"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "電力量料金の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -291,6 +312,16 @@ export default function EnergyChargeExplainedPage() {
           <p className="mt-3 text-xs text-slate-500">※ 時間帯別料金体系の契約の場合。全時間帯一律単価の契約では適用されません。</p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力量料金の制度・時間帯別料金に関するデータ" },
+            { name: "JEPX 日本卸電力取引所", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="電力量料金の理解を深め、見直しや見積比較に活かすための関連ページです。"
@@ -348,5 +379,6 @@ export default function EnergyChargeExplainedPage() {
         <CategoryNextStepCta slug="energy-charge-explained" />
       </div>
     </main>
+    </>
   );
 }

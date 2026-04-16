@@ -5,6 +5,8 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { DEMAND_PEAK_DAYS, DEMAND_SEASON_HOUR } from "../../data/demandData";
 import { EXTREME_HOT_DAYS, SUMMER_TMAX_TREND, CDD_TREND, TROPICAL_NIGHTS_TOKYO } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "猛暑で法人・企業・自治体の電気料金・電気代はどう上がる？夏の上振れリスクを解説";
@@ -48,8 +50,43 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "猛暑のとき、法人の電気料金はどのくらい上がる可能性がありますか？",
+    answer: "猛暑の夏（7〜9月）は電力需要が急増し、JEPXスポット価格が通常比+3〜8円/kWh程度上昇することがあります。市場連動プランでは月額電気代が10〜30%程度増加するケースもあり得ます。2023年の猛暑では一時的に15円/kWhを超えるエリアもありました。",
+  },
+  {
+    question: "猛暑リスクの影響を受けやすいのはどのような契約ですか？",
+    answer: "市場連動プラン（JEPXスポット価格に連動）は猛暑時の需給逼迫による価格上昇を直接受けます。固定プランは短期の市場変動の影響を受けにくいですが、翌年の更新時に市場水準を反映した料金に改定されることがあります。",
+  },
+  {
+    question: "猛暑による電気料金上昇リスクに備えるには何をすべきですか？",
+    answer: "夏期の需要実績（月間使用量・ピーク電力）を事前に確認し、市場連動プランと固定プランの比較を行うことが有効です。特に空調使用が多い業種・施設では、夏季の上振れ幅を考慮した年間予算計画を立てることをお勧めします。",
+  },
+];
+
+const sources = [
+  { name: "気象庁", url: "https://www.jma.go.jp", description: "猛暑・高温データ・気候変動傾向" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "夏季需給逼迫・JEPX価格動向データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "夏季の電力需給・節電要請に関する資料" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "夏季スポット市場の価格データ" },
+];
+
 export default function ElectricityCostRiskHeatwavePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/electricity-cost-risk-heatwave"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "猛暑リスク" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -329,6 +366,8 @@ export default function ElectricityCostRiskHeatwavePage() {
           <GlossaryLinks currentSlug="electricity-cost-risk-heatwave" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="あわせて読みたい記事"
           intro="猛暑リスクの次は、ほかのシナリオ・長期推移・診断比較・上昇要因へ進むと、予算と契約の説明が揃いやすくなります。"
@@ -412,5 +451,6 @@ export default function ElectricityCostRiskHeatwavePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

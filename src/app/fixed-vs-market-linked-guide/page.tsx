@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "固定プランと市場連動プランの判断ガイド一覧｜法人の契約選択を整理する";
 const pageDescription =
@@ -106,8 +108,27 @@ const decisionFactors = [
   },
 ];
 
+const faqItems = [
+  { question: "固定プランと市場連動プランはどちらが法人に向いていますか？", answer: "一概にどちらとは言えません。予算管理の安定性を重視する場合は固定プラン、電力コスト管理体制があり変動を許容できる場合は市場連動が選択肢になります。業種・規模・社内体制によって判断が変わります。" },
+  { question: "プラン選択で最も重要な判断基準は何ですか？", answer: "電気代の変動に対するリスク許容度・予算管理のしやすさ・社内説明の容易さ・コスト管理体制の3点が重要です。単純な単価の高低だけでなく、変動の受け方と運用負荷を総合的に評価することを推奨します。" },
+  { question: "業種別にプランの向き不向きはありますか？", answer: "飲食・小売・医療介護・自治体など利益率が低く変動許容度が低い業種は固定が向く傾向があります。製造業・物流など使用量が多く管理体制がある場合は市場連動も選択肢になります。詳細は業種別ガイドを参照してください。" },
+];
+
 export default function FixedVsMarketLinkedGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/fixed-vs-market-linked-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "固定プランと市場連動プランの判断ガイド" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -321,6 +342,16 @@ export default function FixedVsMarketLinkedGuidePage() {
           <GlossaryLinks currentSlug="fixed-vs-market-linked-guide" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "容量拠出金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視に関する情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -358,5 +389,6 @@ export default function FixedVsMarketLinkedGuidePage() {
         />
       </section>
     </main>
+    </>
   );
 }

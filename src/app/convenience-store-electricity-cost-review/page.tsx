@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "コンビニの電気料金見直しポイント｜24時間営業と多拠点を踏まえた考え方";
@@ -90,6 +92,21 @@ const reviewPoints = [
 
 export default function ConvenienceStoreElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="コンビニの電気料金見直しポイント｜24時間営業と多拠点を踏まえた考え方"
+        description="コンビニエンスストアの電気料金見直しを解説。24時間365日の冷蔵・照明負荷、面積当たりの高い電力密度、フランチャイズ契約の制約、多拠点一括見直しの考え方まで実務的に整理します。"
+        url="https://simulator.eic-jp.org/convenience-store-electricity-cost-review"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+        ]}
+        faq={[
+    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -283,6 +300,19 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="convenience-store-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
         </div>
 
@@ -343,5 +373,6 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

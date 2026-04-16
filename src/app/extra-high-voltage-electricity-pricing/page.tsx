@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "特別高圧電力の料金の見方｜高圧との違い・負荷率・個別交渉のポイントを解説";
 const pageDescription =
@@ -44,8 +46,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "特別高圧と高圧の料金の主な違いは何ですか？", answer: "特別高圧（2,000kW以上・20kV以上）は高圧と比べて個別交渉型の料金設定が多く、負荷率・使用時間帯・需要調整への協力度合いが単価に影響します。高圧より基本的に単価は低くなりますが、契約条件が複雑です。" },
+  { question: "特別高圧の電力契約は何年単位が多いですか？", answer: "1〜3年の長期契約が多く、交渉余地がある分、更新交渉では使用量実績や負荷率のデータを整理して臨むことが重要です。" },
+  { question: "特別高圧の需要調整契約とは何ですか？", answer: "電力の需給逼迫時に電力会社の要請に応じて使用量を削減する代わりに、料金割引を受けられる契約です。製造業など一定程度の使用量変動が可能な事業者に向いています。" },
+];
+
 export default function ExtraHighVoltageElectricityPricingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="特別高圧電力の料金の見方｜高圧との違い・負荷率・個別交渉のポイントを解説"
+        description="特別高圧電力の料金を法人向けに解説。高圧との比較表、負荷率の重要性、需要調整契約、託送料金の比重、個別交渉の実態まで体系的に整理します。"
+        url="https://simulator.eic-jp.org/extra-high-voltage-electricity-pricing"
+        datePublished="2025-08-06"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "特別高圧電力の料金の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -291,6 +312,16 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           </div>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "特別高圧の料金規制・制度データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給調整・系統情報" },
+          ]}
+          publishedAt="2025-08-06"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="特別高圧の料金理解を、請求確認と比較判断につなげるための導線です。"
@@ -333,5 +364,6 @@ export default function ExtraHighVoltageElectricityPricingPage() {
         />
       </section>
     </main>
+    </>
   );
 }

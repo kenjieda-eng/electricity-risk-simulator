@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "最終保障供給に入りそうなときの対応手順｜タイムラインと警告サイン一覧";
@@ -93,8 +95,42 @@ const checklistItems = [
   "経営層への第一報を完了し、切替完了の目標期日を合意している",
 ];
 
+const faqItems = [
+  {
+    question: "最終保障供給に移行しそうだと気づいたら最初に何をすべきですか？",
+    answer: "まず現在の電力会社または一般送配電事業者に連絡し、供給継続の可否と最終保障供給移行の見通しを確認します。次に使用量データ（月間・30分コマ別）を取得し、複数の代替電力会社への見積依頼を即時に開始することが優先です。",
+  },
+  {
+    question: "最終保障供給への移行に気づく「警告サイン」にはどのようなものがありますか？",
+    answer: "契約中の電力会社から「供給継続困難」「新規受付停止」「契約解除予告」などの通知が届いた場合が主な警告サインです。また、電力会社の財務悪化・倒産報道も早期対応のトリガーになります。年に一度は現行電力会社の経営状況を確認することが推奨されます。",
+  },
+  {
+    question: "最終保障供給の適用期間内に移行先が見つからない場合はどうなりますか？",
+    answer: "供給期間の上限（通常9か月程度）が来ても代替先が見つからない場合は、電力供給が停止するリスクがあります。この事態を避けるためにも、発覚後できる限り早く複数社への相談を開始し、必要であれば電力コンサルタントに支援を依頼することも選択肢になります。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の移行手続き・対応に関する情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力供給継続制度・最終保障供給の実務ガイド" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "電力会社の撤退・倒産情報" },
+];
+
 export default function LastResortSupplyEmergencyResponsePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-emergency-response"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "入りそうなときの対応手順" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -326,6 +362,8 @@ export default function LastResortSupplyEmergencyResponsePage() {
           </ul>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -373,5 +411,6 @@ export default function LastResortSupplyEmergencyResponsePage() {
         />
       </section>
     </main>
+    </>
   );
 }

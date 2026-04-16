@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "自治体と最終保障供給｜公共施設の電力契約リスクと備え方を解説";
 const pageDescription =
@@ -45,8 +47,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "自治体が最終保障供給になってしまう主な原因は何ですか？",
+    answer: "電力調達の一般競争入札が不調（応札ゼロ・最低価格超過）となった場合が主な原因です。年度予算制約により契約電力単価に上限が設けられることが多く、市場価格が上昇した局面では応札事業者が現れないケースが発生します。",
+  },
+  {
+    question: "最終保障供給になった場合、自治体の予算や議会承認にどう影響しますか？",
+    answer: "最終保障供給の料金は通常契約より高いため、予算超過が発生し補正予算の計上が必要になる場合があります。年度途中の補正は議会承認が必要なため、説明準備と対応に時間がかかります。早期に切替準備を進めることが重要です。",
+  },
+  {
+    question: "自治体が入札不調を回避するために事前にできることは何ですか？",
+    answer: "調達仕様の柔軟化（価格点の配点見直し・変動費条件の緩和）、調達スケジュールの前倒し、複数年契約や一括調達による単価安定化などが有効です。また市場価格の動向を定期的にモニタリングし、価格上昇期には早めに入札条件を再検討することも重要です。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の件数・自治体事例に関するデータ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "公共施設の電力調達・制度解説" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "入札不調・調達実務に関する情報" },
+];
+
 export default function MunicipalityLastResortSupplyPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/municipality-last-resort-supply"
+        datePublished="2025-08-30"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "自治体と最終保障供給" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -244,6 +280,8 @@ export default function MunicipalityLastResortSupplyPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-30" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -285,5 +323,6 @@ export default function MunicipalityLastResortSupplyPage() {
         />
       </section>
     </main>
+    </>
   );
 }

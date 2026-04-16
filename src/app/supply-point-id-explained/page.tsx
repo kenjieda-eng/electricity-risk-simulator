@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -130,9 +132,28 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "供給地点特定番号はどこに記載されていますか？", answer: "毎月の電気料金の請求書または検針票に記載されています。「供給地点特定番号」「地点番号」などの名称で22桁の数字が印字されています。オンラインの電力会社マイページでも確認できます。" },
+  { question: "供給地点特定番号はいつ必要になりますか？", answer: "電力会社の切り替え（新電力への変更）を依頼する際、または複数社に見積依頼をする際に必要です。この番号がないと正確な見積が取れないため、事前に請求書から確認しておくことが重要です。" },
+  { question: "複数拠点ある場合、供給地点特定番号は拠点ごとに異なりますか？", answer: "はい。供給地点（メーター設置場所）ごとに固有の22桁番号が割り当てられています。複数拠点を一括で見直す際は、拠点リストと各拠点の供給地点特定番号をまとめて管理することが効率的です。" },
+];
+
 // --- Page Component ---
 export default function SupplyPointIdExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="供給地点特定番号とは｜電力切り替え・見積依頼で必要になる基本情報を解説"
+        description="供給地点特定番号の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。"
+        url="https://simulator.eic-jp.org/supply-point-id-explained"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "供給地点特定番号とは" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -417,6 +438,18 @@ export default function SupplyPointIdExplainedPage() {
         </section>
       </div>
 
+      <div className="mt-6">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "供給地点特定番号・電力切り替え制度に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "供給地点管理・系統情報" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -473,5 +506,6 @@ export default function SupplyPointIdExplainedPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "自家消費型太陽光が向く法人の特徴｜屋根面積と使用パターンの条件";
@@ -93,6 +95,21 @@ const lessEffectiveConditions = [
 
 export default function SolarSuitedCorporationsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自家消費型太陽光が向く法人の特徴｜屋根面積と使用パターンの条件"
+        description="自家消費型太陽光発電の投資対効果が出やすい法人の特徴と条件を解説。屋根面積・電力使用パターン・契約形態・業種別の傾向など、費用対効果を左右する主要な判断軸を実務目線で整理します。"
+        url="https://simulator.eic-jp.org/solar-suited-corporations"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "省エネ設備・エネルギー装備", url: "https://simulator.eic-jp.org/articles/energy-equipment" },
+        ]}
+        faq={[
+    { question: "蓄電池や太陽光の導入で電気代はどのくらい下がりますか？", answer: "条件により異なりますが、自家消費型太陽光で5〜15%、蓄電池併用でさらに数%の削減が一般的な目安です。" },
+    { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -258,6 +275,21 @@ export default function SolarSuitedCorporationsPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "蓄電池や太陽光の導入で電気代はどのくらい下がりますか？", answer: "条件により異なりますが、自家消費型太陽光で5〜15%、蓄電池併用でさらに数%の削減が一般的な目安です。" },
+          { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
+          { name: "環境省", url: "https://www.env.go.jp" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -305,5 +337,6 @@ export default function SolarSuitedCorporationsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

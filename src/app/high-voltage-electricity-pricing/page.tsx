@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説";
 const pageDescription =
@@ -44,8 +46,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "高圧電力の基本料金はどのように決まりますか？", answer: "高圧電力の基本料金は契約電力（kW）×基本料金単価で算定されます。契約電力は当月を含む直近12か月の最大デマンド値をもとに決まるため、ピーク電力を抑えることが基本料金削減の鍵です。" },
+  { question: "高圧電力の月間電気代の目安はどのくらいですか？", answer: "使用量や契約規模によって大きく異なりますが、中小規模の高圧契約（100〜500kW程度）では月数十万円〜数百万円が一般的な目安です。燃料費調整額の変動によって大きく上下します。" },
+  { question: "高圧電力の見直し頻度はどのくらいが適切ですか？", answer: "契約更新時期（1〜3年ごと）に加えて、燃料費調整額や市場価格が大きく変動した際も見直しのタイミングです。更新6か月前から情報収集を始めるのが効果的です。" },
+];
+
 export default function HighVoltageElectricityPricingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説"
+        description="高圧電力の料金構成を法人向けに解説。基本料金・電力量料金・燃料費調整額の仕組みから、小・中・大規模別のコスト試算、見直しポイントまで体系的に整理します。"
+        url="https://simulator.eic-jp.org/high-voltage-electricity-pricing"
+        datePublished="2025-08-05"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "高圧電力の料金の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -369,6 +390,16 @@ export default function HighVoltageElectricityPricingPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "高圧電力の契約制度・料金規制データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統情報" },
+          ]}
+          publishedAt="2025-08-05"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧料金の読み方を、要因分析と契約比較へつなげるための導線です。"
@@ -416,5 +447,6 @@ export default function HighVoltageElectricityPricingPage() {
         />
       </section>
     </main>
+    </>
   );
 }

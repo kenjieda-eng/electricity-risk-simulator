@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給と通常契約の違い｜8項目で比較する料金・条件・リスク";
 const pageDescription =
@@ -44,8 +46,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給と通常の電力契約の最大の違いは何ですか？",
+    answer: "目的と料金水準が根本的に異なります。通常の小売契約は競争市場での調達コスト最適化を前提としますが、最終保障供給は供給継続を最優先とした「緊急措置」です。そのため料金は通常より2〜3割高く設定され、コスト最小化を目的とした契約ではありません。",
+  },
+  {
+    question: "最終保障供給は長期間使い続けることができますか？",
+    answer: "制度上の期限はありませんが、長期継続は推奨されません。割高な料金が継続するためコストが蓄積し、また電力市場が安定した後も移行しないままでいると機会損失が大きくなります。通常契約への移行が可能になった時点で速やかに切り替えることが重要です。",
+  },
+  {
+    question: "最終保障供給に移行中でも通常契約の比較・検討はできますか？",
+    answer: "はい、最終保障供給中でも複数の小売電気事業者に見積もりを依頼し、通常契約の候補を検討することができます。切替が完了するまでは最終保障供給が継続されますが、早期に移行先を確保することで割高な料金の継続期間を短縮できます。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給と通常供給の料金・条件に関するデータ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度の比較・解説" },
+];
+
 export default function LastResortVsRetailContractPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-vs-retail-contract"
+        datePublished="2025-08-31"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給と通常契約の違い" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -217,6 +252,8 @@ export default function LastResortVsRetailContractPage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-31" />
+
         <RelatedLinks
           heading="次に確認したいページ"
           intro="違いを押さえたら、制度の全体像と切替実務へ進み、通常契約の準備に戻ります。"
@@ -249,5 +286,6 @@ export default function LastResortVsRetailContractPage() {
         />
       </section>
     </main>
+    </>
   );
 }

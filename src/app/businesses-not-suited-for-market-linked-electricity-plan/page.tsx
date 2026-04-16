@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "市場連動プランが向かない法人の特徴｜価格変動リスクを踏まえた判断ポイント";
 const pageDescription =
@@ -80,8 +82,27 @@ const notSuitedCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "市場連動プランが向かないのはどのような法人ですか？", answer: "年間予算を固定的に管理したい法人、電気代変動が損益に直結する業種（飲食・小売・医療など）、月次モニタリング体制がない法人、社内説明で変動理由を毎月説明するリソースがない組織は特に慎重に検討すべきです。" },
+  { question: "市場連動プランのリスクは具体的にどのくらいですか？", answer: "JEPXの年度平均価格はFY2019の約8円/kWhからFY2022には約20円/kWhまで上昇しました。使用量100万kWh/年の法人では、この変動だけで年間コストが1,200万円以上増加する計算になります。" },
+  { question: "既に市場連動プランに加入しているがリスクが心配です。どうすればよいですか？", answer: "まず契約書の解約条件・通知期限・違約金を確認します。次の更新タイミングで固定プランへの切替を検討するか、電力使用量の削減・使用時間帯のシフトでリスクを軽減する対応が有効です。" },
+];
+
 export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/businesses-not-suited-for-market-linked-electricity-plan"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "市場連動プランが向かない法人の特徴" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -247,6 +268,15 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
           <GlossaryLinks currentSlug="businesses-not-suited-for-market-linked-electricity-plan" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度に関する情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -294,5 +324,6 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

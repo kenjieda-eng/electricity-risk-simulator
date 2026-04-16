@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "高圧・特別高圧の法人が最終保障供給で確認したいポイント｜料金差と回避策";
 const pageDescription =
@@ -45,8 +47,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "高圧需要家が最終保障供給に移行した場合、月額電気代はどのくらい増加しますか？",
+    answer: "受電規模や市場状況によりますが、通常契約と比べて月額数十万〜数百万円の増加が発生することがあります。高圧・特別高圧は使用電力量が大きいため、単価差が小さくても月額影響は大きくなります。早期の通常契約への切替が不可欠です。",
+  },
+  {
+    question: "高圧需要家が最終保障供給に入りやすいのはどのような状況ですか？",
+    answer: "契約中の新電力が撤退・倒産した場合、市場価格急騰期に新規受付停止が相次いだ場合、契約満了後の切替先が見つからない場合などです。大規模需要家ほど受入可能な事業者が限られるため、最終保障供給に移行するリスクがある点に注意が必要です。",
+  },
+  {
+    question: "特別高圧の最終保障供給と高圧の最終保障供給で手続きに違いはありますか？",
+    answer: "基本的な仕組みは同じですが、特別高圧では受電設備の確認や切替工事に時間がかかるため、通常契約への切替期間がより長くなる傾向があります。また特別高圧の最終保障供給は対応可能な事業者が限られるため、早めの複数社への相談が重要です。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "高圧・特別高圧の最終保障供給件数・料金データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "高圧電力・特別高圧の制度解説" },
+];
+
 export default function LastResortSupplyHighVoltagePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-high-voltage"
+        datePublished="2025-09-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "高圧・特別高圧のポイント" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -261,6 +296,8 @@ export default function LastResortSupplyHighVoltagePage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-09-01" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -302,5 +339,6 @@ export default function LastResortSupplyHighVoltagePage() {
         />
       </section>
     </main>
+    </>
   );
 }

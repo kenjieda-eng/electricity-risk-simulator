@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_SEASON_HOUR } from "../../data/demandData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "デマンド値の見方｜契約電力と基本料金への影響を理解する";
@@ -122,8 +124,27 @@ const demandSections = [
   },
 ];
 
+const faq = [
+  { question: "デマンド値はどのように計測されますか？", answer: "電力会社の電力量計が30分ごとの平均電力（kW）を計測します。その月の最大値が「当月最大デマンド」となり、直近12か月の最高値が契約電力（翌年度分）の算定に使用されます。" },
+  { question: "デマンド値が上がると電気代はどのくらい増えますか？", answer: "契約電力が1kW増加すると基本料金単価（高圧で概ね1,500〜2,000円/kW程度）分だけ毎月の基本料金が増加します。50kW上昇すると月7.5〜10万円、年間90〜120万円の基本料金増加になる計算です。" },
+  { question: "デマンド値を下げるためにできることは何ですか？", answer: "デマンドコントローラーによる自動制御、ピーク時間帯の大電力設備の稼働ずらし、空調の集中起動回避などが効果的です。夏冬のピーク月（7月・8月・1月・2月）に集中的に取り組むことが重要です。" },
+];
+
 export default function DemandValueGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="デマンド値の見方｜契約電力と基本料金への影響を理解する"
+        description="デマンド値（最大需要電力）が契約電力・基本料金にどう影響するかを解説。30分計測の仕組み・デマンドコントローラーの役割・デマンド管理の実務ポイントを整理します。"
+        url="https://simulator.eic-jp.org/demand-value-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "デマンド値の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -293,6 +314,16 @@ export default function DemandValueGuidePage() {
           </div>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "デマンド制度・契約電力に関するデータ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="デマンド管理と基本料金削減に役立てるための関連ページです。"
@@ -360,5 +391,6 @@ export default function DemandValueGuidePage() {
         <CategoryNextStepCta slug="demand-value-guide" />
       </div>
     </main>
+    </>
   );
 }

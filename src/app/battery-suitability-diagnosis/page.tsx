@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "蓄電池導入向き不向き診断｜自社に蓄電池が合うかを整理する";
@@ -48,6 +50,20 @@ const notSuitableConditions = [
 
 export default function BatterySuitabilityDiagnosisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="蓄電池導入向き不向き診断｜自社に蓄電池が合うかを整理する"
+        description="法人向け蓄電池（産業用蓄電池）の導入に自社が向いているかを診断チェックで確認。施設規模・電力使用パターン・予算・電気料金プランとの相性など、導入判断のポイントを解説します。"
+        url="https://simulator.eic-jp.org/battery-suitability-diagnosis"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -203,6 +219,19 @@ export default function BatterySuitabilityDiagnosisPage() {
           <p className="mt-2 text-xs text-slate-500">※補助金活用（経産省・環境省・都道府県）により実質投資額は20〜30%程度圧縮できる場合があります。回収期間も大幅に短縮されます。</p>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="蓄電池検討と合わせて確認したいページです。"
@@ -251,5 +280,6 @@ export default function BatterySuitabilityDiagnosisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

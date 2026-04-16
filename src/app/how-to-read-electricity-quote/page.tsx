@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "法人向け電気料金見積書の見方｜比較時に確認したい項目と注意点";
 const pageDescription =
@@ -122,8 +124,27 @@ const contractConditions = [
   },
 ];
 
+const faq = [
+  { question: "電力の見積書で最初に確認すべき項目は何ですか？", answer: "基本料金単価・電力量料金単価・燃料費調整額の扱い（上限あり/なし）・市場価格調整額の有無の4点を最初に確認します。これらが異なると年間コストに大きな差が生じます。" },
+  { question: "見積書の「税込/税抜」はどちらで比較すべきですか？", answer: "消費税率は統一されているため税抜単価で比較するのが基本です。ただし支払いは税込になるため最終的な年間コスト試算は税込で確認しましょう。" },
+  { question: "見積書に燃料費調整額の上限がない場合、リスクはありますか？", answer: "はい。上限なしの場合、燃料価格高騰時に請求額が上振れするリスクがあります。2022年度には上限なしの自由料金で燃調費が大幅に上昇し、予算を超過した事例が多発しました。" },
+];
+
 export default function HowToReadElectricityQuotePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金見積書の見方｜比較時に確認したい項目と注意点"
+        description="法人向け電気料金見積書の見方。比較時に確認すべき項目と注意点を整理します。"
+        url="https://simulator.eic-jp.org/how-to-read-electricity-quote"
+        datePublished="2025-08-08"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "法人向け電気料金見積書の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -647,6 +668,16 @@ export default function HowToReadElectricityQuotePage() {
           </div>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・見積書の規制情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2025-08-08"
+        />
+
         {/* RelatedLinks */}
         <RelatedLinks
           heading="関連ページ"
@@ -696,5 +727,6 @@ export default function HowToReadElectricityQuotePage() {
         />
       </section>
     </main>
+    </>
   );
 }

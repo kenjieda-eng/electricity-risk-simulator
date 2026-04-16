@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { LAST_RESORT_SUPPLY_MONTHLY } from "../../data/lastResortSupplyHistory";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給とは｜仕組み・料金・契約件数推移・切替実務を徹底解説";
 const pageDescription =
@@ -40,11 +42,45 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給とはどういう制度ですか？",
+    answer: "どの小売電気事業者とも契約合意に至らない高圧・特別高圧の法人・自治体に対して、一般送配電事業者が電気事業法第17条に基づき臨時供給する制度です。事業継続のためのセーフティネットであり、料金は通常の小売契約より2〜3割高く設定されています。",
+  },
+  {
+    question: "2022年に最終保障供給が急増した理由は何ですか？",
+    answer: "ウクライナ危機によるLNGスポット価格の急騰で新電力が相次いで撤退・新規受付停止し、旧一般電気事業者も受付を絞ったため行き場を失った需要家が急増しました。2022年12月に過去最高の約52,000件に達しました。",
+  },
+  {
+    question: "最終保障供給に入った場合、どう対応すれば良いですか？",
+    answer: "早期に通常の小売契約へ切り替えることが優先です。複数の電力会社に見積もりを依頼し、料金比較とシミュレーターで条件を確認した上で契約を進めてください。長期間にわたる最終保障供給は追加コストが蓄積するため、早期解消が重要です。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の件数推移・公表データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・最終保障供給の制度解説" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "新電力の撤退状況・市場動向" },
+];
+
 export default function LastResortSupplyPage() {
   const labels = LAST_RESORT_SUPPLY_MONTHLY.map((r) => r.yearMonth);
   const values = LAST_RESORT_SUPPLY_MONTHLY.map((r) => r.contractCount);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給とは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="mb-4 text-sm text-slate-600">
         <Link href="/" className="underline underline-offset-2 hover:text-slate-900">トップ</Link>
@@ -173,6 +209,8 @@ export default function LastResortSupplyPage() {
           </div>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
+
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
@@ -193,5 +231,6 @@ export default function LastResortSupplyPage() {
         />
       </section>
     </main>
+    </>
   );
 }

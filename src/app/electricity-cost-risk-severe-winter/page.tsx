@@ -5,6 +5,8 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { DEMAND_MONTHLY_AVG, DEMAND_SEASON_HOUR } from "../../data/demandData";
 import { WINTER_TMIN_TREND, HDD_TREND, SAPPORO_EXTREME_COLD } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "厳冬で法人・企業・自治体の電気料金・電気代はどう上がる？冬の上振れリスクを解説";
@@ -48,8 +50,43 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "厳冬のとき、法人の電気料金はなぜ上がるのですか？",
+    answer: "厳冬時は暖房需要の急増と、火力発電用LNGの消費増が重なります。需給逼迫によりJEPXスポット価格が上昇し、市場連動プランの法人は請求額が増加します。2021年1月の厳冬時にはJEPXが一時251円/kWhまで急騰し、市場連動の法人では月額が通常の数倍になったケースもありました。",
+  },
+  {
+    question: "厳冬リスクへの備えとして有効な対策は何ですか？",
+    answer: "冬季の電力需要実績（ピーク電力・月間使用量）を把握し、市場連動プランと固定プランの差を冬季ベースで比較することが有効です。また特に暖房使用が多い施設では、固定プランへの切替や省エネ投資を検討することでリスクを低減できます。",
+  },
+  {
+    question: "厳冬リスクは猛暑リスクとどのように違いますか？",
+    answer: "厳冬リスクはLNG在庫の枯渇と需給逼迫が同時に発生しやすいため、価格上昇が猛暑より急激になる場合があります。猛暑は主に需要側の増加ですが、厳冬はLNG供給制約（輸入量・在庫）という供給側リスクも重なるため、より大きな上振れになりやすい傾向があります。",
+  },
+];
+
+const sources = [
+  { name: "気象庁", url: "https://www.jma.go.jp", description: "厳冬・低温データ・寒波の気象情報" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "冬季需給逼迫・JEPX価格動向" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "冬季電力需給・LNG在庫に関する資料" },
+  { name: "財務省貿易統計", url: "https://www.customs.go.jp", description: "LNG輸入量・価格データ" },
+];
+
 export default function ElectricityCostRiskSevereWinterPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/electricity-cost-risk-severe-winter"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "厳冬リスク" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -309,6 +346,8 @@ export default function ElectricityCostRiskSevereWinterPage() {
           <GlossaryLinks currentSlug="electricity-cost-risk-severe-winter" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="冬季の上振れ要因を、契約比較と見直し判断に接続するための関連ページです。"
@@ -351,5 +390,6 @@ export default function ElectricityCostRiskSevereWinterPage() {
         />
       </section>
     </main>
+    </>
   );
 }

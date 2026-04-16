@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -222,9 +224,28 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "電気料金が最も高くなる月はいつですか？", answer: "一般的に夏（7〜8月）と冬（1〜2月）の使用量ピーク月が高くなります。さらに燃料費調整額の反映タイムラグ（3〜5か月）を考慮すると、実際の請求額ピークは使用量ピークより数か月遅れることがあります。" },
+  { question: "再エネ賦課金はいつ変わりますか？", answer: "毎年4月に単価が改定されます。年度初めの請求（5月支払い分）から新単価が適用されます。2025年度の単価は過去最高水準に達しており、年間コストへの影響が大きくなっています。" },
+  { question: "月別予算策定に使えるデータはどこで取れますか？", answer: "電力会社の請求書・検針票に月別の使用量・単価・各調整費が記録されています。過去12〜24か月分を整理すると季節変動パターンが把握でき、翌年度予算の前提として活用できます。" },
+];
+
 // --- Page Component ---
 export default function ElectricityCostSeasonalPatternPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金の年間変動パターン｜月別に見る請求額の動き方と予算への活かし方"
+        description="法人の電気料金が月ごとにどう変動するかを解説。業種別の使用量パターン、夏季・冬季ピークの特徴、燃調費の季節遅延、再エネ賦課金の4月改定、月別予算策定の考え方を整理。"
+        url="https://simulator.eic-jp.org/electricity-cost-seasonal-pattern"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "電気料金の年間変動パターン" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -583,6 +604,18 @@ export default function ElectricityCostSeasonalPatternPage() {
         </section>
       </section>
 
+      <div className="mt-6">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "再エネ賦課金・燃調費の月次データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "月次需給データ・季節変動情報" },
+            { name: "気象庁", url: "https://www.jma.go.jp", description: "気温・気象データ（季節変動要因）" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -634,5 +667,6 @@ export default function ElectricityCostSeasonalPatternPage() {
         />
       </div>
     </main>
+    </>
   );
 }

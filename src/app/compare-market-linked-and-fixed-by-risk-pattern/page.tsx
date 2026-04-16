@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
 const pageDescription =
   "市場連動と固定の違いを、単純な安さではなく、電気料金の変動の受け方、予算管理、社内説明、契約条件の違いから整理します。法人向け電力契約の比較軸を分かりやすく解説します。";
@@ -30,8 +32,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  { question: "市場連動と固定プランはどのように比べるべきですか？", answer: "単価の安さだけでなく、電気料金の変動の受け方・予算管理のしやすさ・社内説明のしやすさ・契約条件の違いという4つの軸で比較することが重要です。相場環境によってどちらが有利かは変わります。" },
+  { question: "市場連動プランで料金が急騰した場合、どうすればよいですか？", answer: "まず契約書で途中解約条項・違約金・更新条件を確認します。次の更新タイミングまで固定プランへの切替を検討するか、電力使用量の削減・時間帯移行などで影響を抑える対応を検討します。" },
+  { question: "固定プランに変えれば電気代の変動は完全になくなりますか？", answer: "契約単価は固定されますが、燃料費調整額・再エネ賦課金は固定プランでも変動します。完全に変動がなくなるわけではなく、変動リスクの大きい部分（電力量料金の市場連動）を抑えるという意味での安定化です。" },
+];
+
 export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/compare-market-linked-and-fixed-by-risk-pattern"
+        datePublished="2026-03-27"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "市場連動と固定の比較軸" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -202,6 +223,16 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           <GlossaryLinks currentSlug="compare-market-linked-and-fixed-by-risk-pattern" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "再エネ賦課金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視に関する情報" },
+          ]}
+          publishedAt="2026-03-27"
+        />
+
         <RelatedLinks
           heading="カテゴリ内の主要ページ"
           intro="このページを起点に、変動要素と契約条件を個別に確認すると比較精度が上がります。"
@@ -254,5 +285,6 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
         />
       </section>
     </main>
+    </>
   );
 }

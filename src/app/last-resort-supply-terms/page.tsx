@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給の約款はどう読むか｜確認すべき7項目と見落としリスク";
 const pageDescription =
@@ -44,8 +46,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給の約款で特に重要な確認ポイントはどこですか？",
+    answer: "料金算定方式（JEPX連動の有無・基本料金の計算方法）、供給終了条件（移行完了後の扱い）、支払い条件・遅延損害金の扱い、および適用エリア・事業者ごとの特有条件の4点が特に重要です。エリアごとに約款内容が異なるため、一般送配電事業者の公表資料を直接確認することが必要です。",
+  },
+  {
+    question: "最終保障供給の約款は一般の事業者でも入手できますか？",
+    answer: "はい、各エリアの一般送配電事業者（東京電力パワーグリッドなど）がウェブサイトで約款・料金表を公開しています。難解な条文が多いため、必要に応じて電力コンサルタントや専門家への確認も選択肢になります。",
+  },
+  {
+    question: "最終保障供給の約款を確認せずに放置するとどのようなリスクがありますか？",
+    answer: "料金の変動条件（JEPX高騰時の請求増加）や解約条件を理解しないまま在籍し続けると、予期しない高額請求が発生することがあります。また切替のタイミングを逃すと、割高な料金が長期間継続するリスクがあります。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の供給条件・約款規制に関する情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気供給約款・制度解説" },
+];
+
 export default function LastResortSupplyTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-terms"
+        datePublished="2025-09-02"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給の約款" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -219,6 +254,8 @@ export default function LastResortSupplyTermsPage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-09-02" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -260,5 +297,6 @@ export default function LastResortSupplyTermsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

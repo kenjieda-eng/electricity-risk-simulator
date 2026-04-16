@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -44,9 +46,28 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "電気料金の請求書と自分で計算した金額が合わない理由は何ですか？", answer: "電力会社の端数処理（切り捨て・四捨五入）や、消費税の計算タイミング（税抜で積み上げてから課税するか、各項目に課税するか）の違いが原因になることがあります。数円〜数十円の差は端数処理の違いで正常範囲です。" },
+  { question: "口座振替割引は今でも使えますか？", answer: "大手電力会社を中心に口座振替割引（1〜55円/月程度）を廃止・縮小する傾向が続いています。現在の契約が割引対象かどうかは電力会社の料金規定や請求書で確認できます。" },
+  { question: "電気料金の消費税はどのタイミングで計算されますか？", answer: "基本的には各費目（基本料金・電力量料金・燃料費調整額など）の合計に対して10%の消費税が課税されます。一部の電力会社では項目ごとに消費税を積み上げる場合もあり、計算方法は電力会社の約款で確認できます。" },
+];
+
 // --- Page Component ---
 export default function ElectricityBillRoundingTaxDiscountPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金の端数処理・消費税・割引の見方｜請求書の計算が合わないときの確認ポイント"
+        description="電気料金の端数処理ルール、消費税の課税タイミング、口座振替割引の廃止傾向を解説。請求書と手計算が合わない原因、見積比較時の端数差の見方を法人向けに整理。"
+        url="https://simulator.eic-jp.org/electricity-bill-rounding-tax-discount"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "電気料金の端数処理・消費税・割引の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -411,6 +432,17 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
         </section>
       </div>
 
+      <div className="mt-6">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の計算方法・消費税課税に関するデータ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -467,5 +499,6 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
         />
       </div>
     </main>
+    </>
   );
 }

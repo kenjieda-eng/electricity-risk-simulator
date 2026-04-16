@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "見積比較前チェック診断｜電力見積依頼を始める前に確認したいこと";
@@ -41,6 +43,20 @@ export const metadata: Metadata = {
 
 export default function QuotationComparisonPreCheckPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="見積比較前チェック診断｜電力見積依頼を始める前に確認したいこと"
+        description="電力見積を依頼する前に確認すべき情報・資料・社内調整を診断チェックリスト形式で整理。準備不足のまま見積を取ると比較精度が下がるリスクを防ぐための実務チェックページです。"
+        url="https://simulator.eic-jp.org/quotation-comparison-pre-check"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -215,6 +231,19 @@ export default function QuotationComparisonPreCheckPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="見積比較の準備から比較・判断まで、関連する情報をまとめました。"
@@ -263,5 +292,6 @@ export default function QuotationComparisonPreCheckPage() {
         />
       </section>
     </main>
+    </>
   );
 }

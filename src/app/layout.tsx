@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { GoogleAnalytics } from "../components/analytics/GoogleAnalytics";
 import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
+import { WebSiteJsonLd } from "../components/seo/JsonLd";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,6 +26,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body id="page-top" className="bg-violet-50/30">
+        <WebSiteJsonLd
+          name="法人向け電気料金上昇、高騰リスクシミュレーター"
+          url="https://simulator.eic-jp.org"
+          description="法人向けの電気代・電気料金の上昇、高騰リスクを試算するシミュレーションツール"
+        />
         <PublicHeader />
         <main className="bg-violet-50/30">{children}</main>
         <Footer />

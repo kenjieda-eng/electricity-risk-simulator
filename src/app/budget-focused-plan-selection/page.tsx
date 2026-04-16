@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "予算管理を重視する法人はどちらを選ぶべきか｜固定と市場連動の判断軸";
 const pageDescription =
@@ -95,8 +97,27 @@ const decisionFramework = [
   },
 ];
 
+const faqItems = [
+  { question: "予算管理重視の法人はどのプランを選ぶべきですか？", answer: "年間予算を固定的に管理したい法人には固定プランが向いています。固定プランは電力量料金の単価が変動しないため、予算策定時のコスト見通しが立てやすくなります。ただし燃料費調整額は固定プランでも変動します。" },
+  { question: "年度予算に電気代の変動リスクを組み込む方法はありますか？", answer: "市場連動プランを選ぶ場合は、過去の市場価格の変動幅（例：JEPXの最大値・最小値・平均値）を参考にシナリオ別の予算前提を置くことが有効です。ベースケースに加えてワーストシナリオの予備費を確保することを推奨します。" },
+  { question: "固定プランで長期契約をした場合のリスクは何ですか？", answer: "市場価格が下落した場合に固定プランの方が割高になる可能性があります。また長期契約では途中での解約に違約金が発生するケースがあります。市場環境の変化を想定した契約期間の選択が重要です。" },
+];
+
 export default function BudgetFocusedPlanSelectionPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/budget-focused-plan-selection"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "予算管理重視の法人の判断軸" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -246,6 +267,15 @@ export default function BudgetFocusedPlanSelectionPage() {
           <GlossaryLinks currentSlug="budget-focused-plan-selection" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "市場価格調整額", "容量拠出金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度に関する情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -293,5 +323,6 @@ export default function BudgetFocusedPlanSelectionPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "請求書確認ポイント診断｜電気料金請求書の見落としをチェック";
@@ -42,6 +44,20 @@ export const metadata: Metadata = {
 
 export default function BillCheckDiagnosisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="請求書確認ポイント診断｜電気料金請求書の見落としをチェック"
+        description="法人の電気料金請求書で見落としやすい項目を15チェックで診断。基本料金・燃料費調整額・市場価格調整額・容量拠出金など、各項目の意味と確認ポイントを解説します。"
+        url="https://simulator.eic-jp.org/bill-check-diagnosis"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -164,6 +180,18 @@ export default function BillCheckDiagnosisPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="bill-check-diagnosis" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "基本料金", "電力量料金", "電気料金の内訳"]} />
         </div>
 
@@ -215,5 +243,6 @@ export default function BillCheckDiagnosisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

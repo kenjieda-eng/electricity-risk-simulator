@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function WhoShouldHandleElectricityContractReviewPage() {
+  const faq = [
+    { question: "電力契約見直しは総務と経理どちらが担当すべきですか？", answer: "会社規模や体制によりますが、契約管理に強い組織は総務主導、コスト管理に強い組織は経理主導が機能しやすい傾向があります。重要なのは期限管理・情報収集・判断基準の統一を担える部署が主導することです。" },
+    { question: "施設管理部門は電力契約見直しにどう関わりますか？", answer: "施設管理は使用量・デマンド実績の把握に強みがあります。見積依頼の前提条件となるデータの提供や、切替後の設備影響確認などで重要な役割を担います。" },
+    { question: "複数部署で見直しを進めるとき、役割をどう決めますか？", answer: "主導部署が全体進行と期限管理を担い、協力部署は専門情報の提供と確認を担う形が実務的です。役割を文書化しておくと依頼漏れや判断遅延を防げます。" },
+  ];
+  const sources = [
+    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="担当部署"
       slug="who-should-handle-electricity-contract-review"
+      jsonLdUrl="https://simulator.eic-jp.org/who-should-handle-electricity-contract-review"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "電力契約見直しは、誰が担当するかが曖昧なままだと進みにくい業務です。比較先を探す作業より先に、主導部署と協力部署の役割を明確にすることが実務上の近道になります。",

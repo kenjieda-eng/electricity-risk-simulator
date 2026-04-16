@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "経営層向けに電力契約見直しを説明するときのポイント｜コストとリスクの伝え方";
@@ -93,6 +95,20 @@ const explanationStructure = [
 
 export default function ExplainingToExecutivesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="経営層向けに電力契約見直しを説明するときのポイント｜コストとリスクの伝え方"
+        description="電力契約の見直しを経営層・役員に説明する際のポイントを解説。コスト削減の数値化、リスクの伝え方、意思決定を促す説明構成、よくある質問への対応方法まで実務目線でまとめます。"
+        url="https://simulator.eic-jp.org/explaining-to-executives"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "社内説明・稟議サポート", url: "https://simulator.eic-jp.org/articles/internal-explanation" },
+        ]}
+        faq={[
+    { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -279,6 +295,19 @@ export default function ExplainingToExecutivesPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -331,5 +360,6 @@ export default function ExplainingToExecutivesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

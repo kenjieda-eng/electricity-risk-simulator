@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "市場連動プランが向く可能性がある法人の特徴｜検討の前提と条件整理";
 const pageDescription =
@@ -102,8 +104,27 @@ const comparisonPoints = [
   },
 ];
 
+const faqItems = [
+  { question: "市場連動プランを検討できる法人にはどのような前提条件がありますか？", answer: "月次でのコスト管理体制がある、価格変動を一定程度許容できる財務的余裕がある、電力使用パターンの時間帯シフトが可能、といった前提条件がある場合に検討の余地があります。" },
+  { question: "市場連動プランを部分的に導入することはできますか？", answer: "複数拠点がある場合は拠点ごとに異なるプランを選択することが可能です。リスク許容度が高い拠点に市場連動を適用し、変動を許容しにくい拠点は固定プランにするという分散型の対応も選択肢です。" },
+  { question: "市場連動プランの検討を始める前に何を準備すべきですか？", answer: "過去12か月の使用量・デマンド実績データ、現契約の条件（解約条件・違約金・更新日）、市場価格の変動シナリオ別の年間コスト試算、社内の予算管理ルールの確認が必要です。" },
+];
+
 export default function MarketLinkedPlanSuitedBusinessesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/market-linked-plan-suited-businesses"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "市場連動プランが向く可能性がある法人" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -239,6 +260,15 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
           <GlossaryLinks currentSlug="market-linked-plan-suited-businesses" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "デマンド値"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度に関する情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -291,5 +321,6 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

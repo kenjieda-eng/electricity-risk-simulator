@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "低圧電力の料金の見方｜法人の小規模契約で確認したい料金構造と見直し判断";
@@ -45,8 +47,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "低圧電力と従量電灯（低圧電灯）の違いは何ですか？", answer: "低圧電力（動力）は3相200Vで主に工場・設備用、従量電灯（電灯）は単相100V/200Vで主に照明・コンセント用です。法人でも両方の契約を持つ場合があり、契約種別によって料金体系が異なります。" },
+  { question: "低圧から高圧への切り替えはどのくらいの規模から検討できますか？", answer: "一般的に電力使用量が50kW以上になると高圧への切り替えを検討できます。高圧移行には変電設備の設置費用がかかりますが、単価が低くなるため大規模になるほどコスト削減効果が大きくなります。" },
+  { question: "主開閉器契約と負荷設備契約の違いは何ですか？", answer: "主開閉器契約は電力量計のブレーカー容量で契約電力を決める方式、負荷設備契約は施設内の設備容量をもとに契約電力を算出する方式です。実際の使用パターンによってどちらが有利かが変わります。" },
+];
+
 export default function LowVoltageElectricityPricingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="低圧電力の料金の見方｜法人の小規模契約で確認したい料金構造と見直し判断"
+        description="低圧電力（動力・電灯）の料金構造を法人向けに解説。従量電灯と動力の違い、主開閉器契約と負荷設備契約、低圧から高圧への切り替え判断基準（50kWの壁）を整理。"
+        url="https://simulator.eic-jp.org/low-voltage-electricity-pricing"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "低圧電力の料金の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -602,6 +623,16 @@ export default function LowVoltageElectricityPricingPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "低圧・高圧の料金制度・契約区分データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+
         {/* 関連リンク */}
         <div className="mt-2">
           <RelatedLinks
@@ -676,5 +707,6 @@ export default function LowVoltageElectricityPricingPage() {
         />
       </div>
     </main>
+    </>
   );
 }

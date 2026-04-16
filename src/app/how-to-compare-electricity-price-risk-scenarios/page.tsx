@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電気料金のリスクシナリオを比較するときの見方｜影響時期・継続性・上振れの出方の整理";
 const pageDescription =
@@ -31,8 +33,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "電気料金のリスクシナリオを比較するときの主な軸は何ですか？",
+    answer: "主に4つの軸が有効です。①影響が出る時期（夏季・冬季・通年など）、②継続性（一時的か高止まりか）、③上振れの大きさ（単価上昇幅の目安）、④契約メニューとの相性（市場連動か固定かで影響の受け方が異なる）です。これらを表形式で整理すると比較資料として使いやすくなります。",
+  },
+  {
+    question: "リスクシナリオの比較で特に重要なのはどの要因ですか？",
+    answer: "実務的には「継続性」と「契約メニューとの相性」が最も重要です。猛暑・厳冬は影響が大きくても一時的ですが、円安や地政学リスクは半年以上継続することがあります。また市場連動プランは短期の価格急騰に、固定プランは長期の高止まりにそれぞれ異なるリスクがあります。",
+  },
+  {
+    question: "複数のリスクシナリオが重なった場合はどう考えればよいですか？",
+    answer: "複数要因の重なりはワーストシナリオとして整理するのが有効です。例えば「厳冬＋円安」が重なった2021〜2022年冬のような状況では、単独要因の単純合算より大きな上振れが発生しました。ワーストシナリオで上限感を押さえておくことで、最大リスクへの備えができます。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の要因別分析・データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格・需給データの比較資料" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "要因別スポット価格の過去データ" },
+];
+
 export default function HowToCompareElectricityPriceRiskScenariosPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/how-to-compare-electricity-price-risk-scenarios"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "シナリオの比較の仕方" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -248,6 +284,8 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           <GlossaryLinks currentSlug="how-to-compare-electricity-price-risk-scenarios" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="比較軸の整理と、実際の優先順位付けをつなげるためのページです。"
@@ -290,5 +328,6 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
         />
       </section>
     </main>
+    </>
   );
 }

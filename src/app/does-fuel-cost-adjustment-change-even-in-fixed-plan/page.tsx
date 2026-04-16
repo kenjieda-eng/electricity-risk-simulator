@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
 const pageDescription =
   "固定プランでも燃料費調整額によって請求額が変わることがあります。法人向け電力契約における固定単価と燃料費調整額の違い、見積比較や社内説明で押さえたいポイントを解説します。";
@@ -30,8 +32,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  { question: "固定プランでも燃料費調整額は変わりますか？", answer: "はい。固定プランは契約単価（電力量料金の単価）が固定されますが、燃料費調整額は固定プランでも毎月変動します。燃料費調整額は契約単価とは別に発生するため、固定プランでも請求額が変わることがあります。" },
+  { question: "燃料費調整額に上限のある固定プランはありますか？", answer: "電力会社や契約内容によって、燃料費調整額に上限を設けている場合があります。見積比較の際は燃料費調整額の計算方式と上限設定の有無を確認することが重要です。" },
+  { question: "固定プランの見積で燃料費調整額はどう確認すべきですか？", answer: "見積書や契約書で燃料費調整額の計算基準・参照指標・上限設定の有無を確認します。複数社の見積を比較する際は燃料費調整額の扱いを統一した条件で比較することが正確な比較につながります。" },
+];
+
 export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/does-fuel-cost-adjustment-change-even-in-fixed-plan"
+        datePublished="2026-03-27"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "燃料費調整額は固定プランでも変わるのか" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -182,6 +203,15 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           <GlossaryLinks currentSlug="does-fuel-cost-adjustment-change-even-in-fixed-plan" terms={["燃料費調整額", "固定プラン", "市場連動プラン", "電力量料金", "基本料金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・燃料費調整制度に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約条件の監視・情報公開" },
+          ]}
+          publishedAt="2026-03-27"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="固定契約の見方を、燃調費と契約タイプ比較へつなげるページです。"
@@ -220,5 +250,6 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

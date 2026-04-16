@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewContractRenewalDeadlinesPage() {
+  const faq = [
+    { question: "電力契約の更新前に確認すべき期限は何ですか？", answer: "更新月・通知期限・解約申出期限の3点を確認します。通知期限（多くは更新月の2〜3か月前）を過ぎると比較検討の余地が狭まるため、少なくとも6か月前から準備することが推奨されます。" },
+    { question: "自動更新された場合、すぐに解約できますか？", answer: "多くの契約では自動更新後も解約可能ですが、途中解約の場合は違約金が発生する場合があります。契約書の中途解約条項と違約金の計算方法を事前に確認することが重要です。" },
+    { question: "法人の電力契約の更新は何か月前から準備すべきですか？", answer: "理想は更新月の6か月前から情報収集を始め、3か月前には見積依頼を行い、1〜2か月前に解約通知・切替判断を行うスケジュールが推奨されます。" },
+  ];
+  const sources = [
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約に関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="更新前の確認期限"
       slug="review-contract-renewal-deadlines"
+      jsonLdUrl="https://simulator.eic-jp.org/review-contract-renewal-deadlines"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "更新前の見直しでは、料金単価より先に期限管理を確認することが重要です。更新月だけを見ていると、通知期限や解約申出期限を過ぎてしまい、比較や切替の余地を失うことがあります。",

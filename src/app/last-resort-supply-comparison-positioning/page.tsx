@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "最終保障供給の比較での位置づけ｜状況別の判断基準と優先アクション";
@@ -69,8 +71,41 @@ const comparisonItems = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "最終保障供給と通常の電力小売契約はどのように比較すればよいですか？",
+    answer: "料金水準・供給期間・選択肢・コスト予測性の4軸で比較するのが実務的です。最終保障供給は通常契約より1.5〜2倍以上高い料金水準で、供給期間に上限（通常9か月）があり、選択肢も限られます。通常契約が結べる状況であれば、最終保障供給を継続するメリットはありません。",
+  },
+  {
+    question: "最終保障供給から通常契約に切り替えるタイミングの判断基準は何ですか？",
+    answer: "切替を急ぐべき状況としては、供給期間の残余が半分を切っている場合、利益率が低く追加コストが損益直撃になる場合、複数拠点が同時に移行しており累積コストが膨らんでいる場合などが挙げられます。基本的には可能な限り早期の切替が推奨されます。",
+  },
+  {
+    question: "最終保障供給を一時的に継続しながら通常契約を探すことは可能ですか？",
+    answer: "はい、最終保障供給は通常契約が結ばれるまでの「橋渡し」として機能します。ただし高い料金が継続するため、並行して複数の電力会社への打診・見積依頼を即時に開始し、できるだけ早く代替契約に切り替えることが重要です。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給と通常供給の比較・料金監視データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・最終保障供給の位置づけ解説" },
+];
+
 export default function LastResortSupplyComparisonPositioningPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-comparison-positioning"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "比較での位置づけ" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -255,6 +290,8 @@ export default function LastResortSupplyComparisonPositioningPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -302,5 +339,6 @@ export default function LastResortSupplyComparisonPositioningPage() {
         />
       </section>
     </main>
+    </>
   );
 }

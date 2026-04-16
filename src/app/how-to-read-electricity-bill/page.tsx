@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "法人向け電気料金請求書の見方｜項目別の確認ポイントと見直しへのつなげ方";
@@ -162,8 +164,27 @@ const billSections = [
   },
 ];
 
+const faq = [
+  { question: "電気料金の請求書で最初に確認すべき項目は何ですか？", answer: "まず契約電力（kW）と総使用電力量（kWh）を確認し、前月・前年同月と比較します。次に燃料費調整額の単価変動と再エネ賦課金の金額を確認すると、請求額変動の主な要因を特定できます。" },
+  { question: "請求書の「実績総合単価」はどうやって計算しますか？", answer: "月間請求総額（税抜）を月間総使用電力量（kWh）で割ることで算出できます。この実績単価を見積単価や相場と比較すると、コスト水準の判断がしやすくなります。" },
+  { question: "請求額が突然増えたときはどこを見ればよいですか？", answer: "燃料費調整額の単価変動、再エネ賦課金の改定、デマンド値の上昇（基本料金増加）、補助金終了の4つを確認します。複数要因が重なることが多いため、項目ごとに金額を分解して確認しましょう。" },
+];
+
 export default function HowToReadElectricityBillPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金請求書の見方｜項目別の確認ポイントと見直しへのつなげ方"
+        description="法人向け電気料金の請求書で確認すべき項目を解説。契約電力・基本料金・電力量料金・燃調費・再エネ賦課金の見方、総額上昇時の切り分け方、見積比較への活かし方を整理します。"
+        url="https://simulator.eic-jp.org/how-to-read-electricity-bill"
+        datePublished="2025-08-07"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "電気料金の請求書で確認したいポイント" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -583,6 +604,16 @@ export default function HowToReadElectricityBillPage() {
           </div>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・請求項目に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・料金情報" },
+          ]}
+          publishedAt="2025-08-07"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="請求書確認を、要因分析と比較判断につなげるための関連ページです。"
@@ -640,5 +671,6 @@ export default function HowToReadElectricityBillPage() {
         />
       </section>
     </main>
+    </>
   );
 }

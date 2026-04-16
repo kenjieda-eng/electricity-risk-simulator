@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "利益率が低い業種はどちらを選ぶべきか｜電気料金変動と収益への影響";
 const pageDescription =
@@ -109,8 +111,27 @@ const breakEvenImpact = [
   },
 ];
 
+const faqItems = [
+  { question: "利益率が低い業種が市場連動プランを選ぶリスクは何ですか？", answer: "市場価格が上昇すると電気代が増加し、薄い利益がさらに圧迫されます。利益率が3〜5%程度の業種では電気代が10%上昇するだけで収益に大きなインパクトを与えます。予算管理の安定性を優先する場合は固定プランを推奨します。" },
+  { question: "飲食業・食品小売業などで電気代を抑えるための方法はありますか？", answer: "電力プランの見直し（固定プランへの切替）、デマンド管理（ピーク電力の抑制による基本料金削減）、省エネ設備の導入、複数拠点の一括見積による交渉力向上などが有効な対策です。" },
+  { question: "物流業で電力契約を見直す際の注意点は何ですか？", answer: "倉庫・仕分けセンターなど24時間稼働施設の使用量は大きいため見直し効果も大きくなります。夜間電力の活用や時間帯別料金の検討、デマンド管理も合わせて確認することを推奨します。" },
+];
+
 export default function LowMarginBusinessPlanSelectionPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/low-margin-business-plan-selection"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "利益率が低い業種の判断軸" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -279,6 +300,15 @@ export default function LowMarginBusinessPlanSelectionPage() {
           <GlossaryLinks currentSlug="low-margin-business-plan-selection" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "市場価格調整額", "JEPX"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -331,5 +361,6 @@ export default function LowMarginBusinessPlanSelectionPage() {
         />
       </section>
     </main>
+    </>
   );
 }

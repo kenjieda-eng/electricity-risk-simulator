@@ -3,7 +3,15 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
+
+const faqItems = [
+  { question: "市場連動プランと固定プランの最大の違いは何ですか？", answer: "市場連動プランは電力量料金の単価が市場価格に連動して毎月変動します。固定プランは契約単価が固定されるため予算管理がしやすいです。どちらが有利かは市場動向と自社のリスク許容度によって変わります。" },
+  { question: "法人が固定プランと市場連動プランを選ぶ基準は何ですか？", answer: "予算管理の安定性を重視する場合は固定プランが向いています。一方、コスト管理体制があり価格変動をある程度許容できる場合は市場連動も選択肢になります。電気代の規模・業種・社内管理体制を総合的に判断することが重要です。" },
+  { question: "固定プランに切り替えると電気代は必ず下がりますか？", answer: "固定プランへの切替で電気代が下がるかどうかは現契約の条件と市場動向によります。固定プランは単価の安定性が特徴であり、必ずしも現行より安くなるとは限りません。見積比較で年間コスト差を試算して判断することが重要です。" },
+];
 
 export const metadata: Metadata = {
   title: "市場連動プランと固定プランの違いを比較｜法人は何を基準に選ぶべきか",
@@ -97,6 +105,19 @@ const comparisonRows = [
 
 export default function MarketLinkedVsFixedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場連動プランと固定プランの違いを比較｜法人は何を基準に選ぶべきか"
+        description="市場連動プランと固定プランの違いを、料金の動き方、予算管理、リスク、向いている法人の観点から比較し、選び方の考え方を整理します。"
+        url="https://simulator.eic-jp.org/market-linked-vs-fixed"
+        datePublished="2025-08-21"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "市場連動プランと固定プランの違い" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -225,6 +246,16 @@ export default function MarketLinkedVsFixedPage() {
           <GlossaryLinks currentSlug="market-linked-vs-fixed" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "容量拠出金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視・市場動向に関する情報" },
+          ]}
+          publishedAt="2025-08-21"
+        />
+
         <RelatedLinks
           heading="詳しく知りたい方・比較したい方へ"
           intro="個別解説ページを読むと、比較表で示した違いの背景をより具体的に確認できます。"
@@ -265,5 +296,6 @@ export default function MarketLinkedVsFixedPage() {
         />
       </section>
     </main>
+    </>
   );
 }

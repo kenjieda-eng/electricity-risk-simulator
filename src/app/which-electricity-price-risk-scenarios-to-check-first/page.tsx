@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電気料金のリスクシナリオはどれから優先して見るべきか｜法人の契約条件や使用状況に応じた考え方";
 const pageDescription =
@@ -31,8 +33,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "市場連動プランの場合、最初に確認すべきリスクシナリオは何ですか？",
+    answer: "市場連動プランでは、JEPXスポット価格が直接料金に反映されるため、まず「厳冬（冬季需給逼迫）」と「猛暑（夏季需給逼迫）」のシナリオを優先して確認することをお勧めします。次に「地政学リスク・LNG価格高騰」シナリオで通年の高止まりリスクを把握するのが実務的な優先順序です。",
+  },
+  {
+    question: "固定プランを契約中の場合は、どのシナリオを優先すべきですか？",
+    answer: "固定プランは短期の市場変動の影響を受けにくいため、「再エネ賦課金の上昇」と「容量拠出金の増加」という中長期の制度変更シナリオを優先して確認するのが有効です。また固定プランの契約更新時期に合わせて、その時点での市場水準を確認するシナリオも重要です。",
+  },
+  {
+    question: "リスクシナリオの優先順位はどのくらいの頻度で見直すべきですか？",
+    answer: "少なくとも年1回、電力契約の更新タイミングと予算策定時期に見直すことを推奨します。地政学リスクや為替変動が大きく動いた局面では、四半期ごとの確認も有効です。市場環境の変化によって各シナリオの発生可能性や影響度も変わるためです。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の構成要因・優先確認項目の整理" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場リスク・需給動向データ" },
+];
+
 export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/which-electricity-price-risk-scenarios-to-check-first"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "優先して見るべきシナリオ" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -209,6 +244,8 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
           <GlossaryLinks currentSlug="which-electricity-price-risk-scenarios-to-check-first" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="優先順位を決める前提として、比較軸や使い分けもあわせて確認できます。"
@@ -251,5 +288,6 @@ export default function WhichElectricityPriceRiskScenariosToCheckFirstPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "ワーストシナリオとは｜全要因重複時の上振れ試算と備え方";
@@ -134,8 +136,43 @@ const preparationChecklist = [
   "契約更新の6ヶ月前から複数社に見積を依頼し、ワーストケース単価での比較を行う",
 ];
 
+const faqItems = [
+  {
+    question: "電気料金のワーストシナリオとはどのような状況を指しますか？",
+    answer: "LNG価格急騰、円安進行、JEPXスポット価格の急騰、再エネ賦課金・容量拠出金の増加、補助金終了などが同時に重なった場合を指します。過去にも2021年冬のLNG不足と寒波、2022年のウクライナ危機と円安のように複数要因が重なる事象が実際に発生しています。",
+  },
+  {
+    question: "ワーストシナリオ時の月額電気代増加はどのくらいになりますか？",
+    answer: "月間使用量が5万kWhの場合、通常時から+35円/kWhの上振れが重なると月額+175万円（年間+2,100万円）規模の増加になる試算です。使用量が多いほど影響額も大きくなるため、大規模施設や製造業では特に注意が必要です。",
+  },
+  {
+    question: "ワーストシナリオへの備えとして何をすれば良いですか？",
+    answer: "①契約メニューが市場連動かどうかを確認、②予算に中度リスク相当の安全幅を加える、③確定済みの上振れ要因（補助金終了・制度変更）を先に予算に反映、④契約更新6か月前からワーストケース単価での複数社比較を実施、の4点が基本的な備えになります。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の各要因データ・補助政策情報" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格・需給の複合リスクデータ" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場の過去急騰データ" },
+  { name: "財務省貿易統計", url: "https://www.customs.go.jp", description: "LNG・燃料輸入価格データ" },
+];
+
 export default function WorstCaseElectricityCostRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/worst-case-electricity-cost-risk"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "ワーストシナリオとは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -375,6 +412,8 @@ export default function WorstCaseElectricityCostRiskPage() {
           <GlossaryLinks currentSlug="worst-case-electricity-cost-risk" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="個別リスクと契約メニューの理解をつなげると、見直し判断を具体化しやすくなります。"
@@ -422,5 +461,6 @@ export default function WorstCaseElectricityCostRiskPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
+  const faq = [
+    { question: "値上げ通知が届いたらすぐに電力会社を切り替えるべきですか？", answer: "すぐに切り替えるより、まず通知内容（適用時期・対象条件）と契約の解約条件を確認することが先決です。通知に反論・交渉の余地がある場合もあり、慌てて比較すると判断を誤るリスクがあります。" },
+    { question: "値上げ通知と実際の適用はどのくらい前に来ますか？", answer: "一般的に1〜3か月前に通知が来るケースが多いですが、契約内容によって異なります。通知が来たら即座に適用時期と契約更新日を確認し、見直しに使える時間を把握することが重要です。" },
+    { question: "値上げ通知後に見積比較をする際に注意することは？", answer: "現契約の解約条件・違約金・切替タイミングを確認した上で、複数社に同じ条件で見積依頼することが重要です。単価だけでなく、燃調費や容量拠出金の扱いも含めて比較します。" },
+  ];
+  const sources = [
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・料金改定に関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給契約の制度・ルールに関する情報" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="値上げ通知が来たとき"
       slug="should-you-review-after-price-increase-notice"
+      jsonLdUrl="https://simulator.eic-jp.org/should-you-review-after-price-increase-notice"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "値上げ通知を受けると、すぐ切替を検討したくなりますが、まずは通知内容の確認が先です。適用時期や対象条件を把握しないまま比較すると、判断を誤る可能性があります。",

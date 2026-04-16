@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "基本料金の見方｜契約電力と単価の関係を理解する";
@@ -120,8 +122,27 @@ const basicChargeTopics = [
   },
 ];
 
+const faq = [
+  { question: "基本料金は毎月必ず発生しますか？", answer: "はい。電気を使用しなくても、契約電力（kW）に基本料金単価を掛けた金額が毎月発生します。基本料金は固定費的な性格を持つため、使用量削減だけでは削減できず、契約電力の見直しが必要です。" },
+  { question: "基本料金を下げるにはどうすればよいですか？", answer: "デマンド値（30分最大需要電力）を下げることで契約電力を引き下げ、基本料金を削減できます。デマンドコントローラーの導入やピーク時間帯の設備稼働調整が有効です。" },
+  { question: "力率割引とは何ですか？", answer: "力率（有効電力と皮相電力の比）が高いほど電気を効率よく使っているとみなされ、基本料金の割引が適用されます。高圧契約では力率85%を基準に1%ごとに0.5%の割引/割増が適用されます。" },
+];
+
 export default function BasicChargeExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="基本料金の見方｜契約電力と単価の関係を理解する"
+        description="電気料金の基本料金がどのように計算されるかを解説。契約電力（kW）・基本料金単価・力率割引の仕組みと、基本料金を下げるための考え方を整理します。"
+        url="https://simulator.eic-jp.org/basic-charge-explained"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "基本料金の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -297,6 +318,16 @@ export default function BasicChargeExplainedPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の基本料金制度・力率割引に関するデータ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="基本料金の理解を深め、見直しや見積比較に活かすための関連ページです。"
@@ -364,5 +395,6 @@ export default function BasicChargeExplainedPage() {
         <CategoryNextStepCta slug="basic-charge-explained" />
       </div>
     </main>
+    </>
   );
 }

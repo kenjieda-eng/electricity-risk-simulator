@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "業種別リスク診断｜自社の業種から見た電気料金リスクと対策";
@@ -42,6 +44,20 @@ export const metadata: Metadata = {
 
 export default function IndustryRiskDiagnosisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="業種別リスク診断｜自社の業種から見た電気料金リスクと対策"
+        description="製造業・小売業・飲食業・医療・オフィスなど業種ごとの電気料金リスクの特徴と、優先すべき対策を整理。自社の業種特性から見た電力コスト管理のポイントをチェックします。"
+        url="https://simulator.eic-jp.org/industry-risk-diagnosis"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -159,6 +175,19 @@ export default function IndustryRiskDiagnosisPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="業種別リスク診断の後、さらに情報を深めるためのページです。"
@@ -207,5 +236,6 @@ export default function IndustryRiskDiagnosisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

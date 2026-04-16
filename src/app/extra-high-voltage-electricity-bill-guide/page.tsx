@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "特別高圧電力の請求書の見方｜大規模施設の請求書確認ポイント";
@@ -121,8 +123,27 @@ const billSections = [
   },
 ];
 
+const faq = [
+  { question: "特別高圧の請求書が高圧より複雑な理由は何ですか？", answer: "特別高圧は時間帯別料金・季節別料金・負荷率調整などの要素が複合的に含まれるほか、個別交渉型の契約が多いため、請求内訳が契約ごとに異なります。高圧と比べて確認すべき項目が多くなります。" },
+  { question: "特別高圧の年間電気代の目安はどのくらいですか？", answer: "2,000kW以上の特別高圧契約では、使用量や負荷率によって異なりますが、年間数千万円〜数億円規模になることが多く、燃料費調整額の動向が年間コストに大きく影響します。" },
+  { question: "特別高圧の請求書で時間帯別電力量の確認が重要な理由は何ですか？", answer: "特別高圧では昼間・夜間・深夜で単価が異なるため、使用時間帯のシフトによってコスト削減余地が生まれることがあります。時間帯別の使用量実績を把握することが見直し判断の第一歩です。" },
+];
+
 export default function ExtraHighVoltageElectricityBillGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="特別高圧電力の請求書の見方｜大規模施設の請求書確認ポイント"
+        description="特別高圧電力契約の請求書で確認すべき項目を解説。複雑な料金構造・時間帯別単価・デマンド管理・各種調整費の見方と、高圧契約との違いを整理します。"
+        url="https://simulator.eic-jp.org/extra-high-voltage-electricity-bill-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "特別高圧電力の請求書の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -279,6 +300,16 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "特別高圧の料金制度・請求項目データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="特別高圧電力の理解を深め、見積比較や見直しに役立てるための関連ページです。"
@@ -345,5 +376,6 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
         <CategoryNextStepCta slug="extra-high-voltage-electricity-bill-guide" />
       </div>
     </main>
+    </>
   );
 }

@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "中小オフィスの電気料金見直しポイント｜限られた使用量でも効果を出す考え方";
@@ -88,8 +90,33 @@ const reviewPoints = [
   },
 ];
 
+const faqItems = [
+  { question: "中小オフィスでも電力契約の見直しは効果がありますか？", answer: "はい。使用量が少ない中小オフィスでも、基本料金（デマンド料金）の比率が高い場合は見直し効果が出やすいです。契約電力の設定が実態より高くなっている場合、引き下げるだけで毎月の基本料金を削減できます。" },
+  { question: "テナントビル入居の中小オフィスは契約を変えられますか？", answer: "テナントビルの場合、一括受電方式では個別に電力会社を変えられないことがあります。まず自社の電力契約が直接契約か一括受電かを確認し、直接契約であれば新電力への切り替えや料金プランの見直しが可能です。" },
+  { question: "中小オフィスで市場連動プランは向きますか？", answer: "電力使用量が少ない中小オフィスでは、価格変動の絶対額が小さいため市場連動のメリット・デメリットも限定的です。ただしモニタリング体制が取れない場合は固定プランの方が管理しやすく、予算予測も立てやすいです。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・電気料金制度に関する情報" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給状況・デマンドデータ情報" },
+];
+
 export default function SmallOfficeElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/small-office-electricity-cost-review"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+          { name: "中小オフィスの見直しポイント" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -286,6 +313,8 @@ export default function SmallOfficeElectricityCostReviewPage() {
           <GlossaryLinks currentSlug="small-office-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]} />
         </div>
 
+        <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -338,5 +367,6 @@ export default function SmallOfficeElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

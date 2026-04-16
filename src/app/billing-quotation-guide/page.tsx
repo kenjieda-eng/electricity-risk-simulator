@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "請求書・見積書・契約条件の見方ガイド一覧｜比較と判断に使える確認ポイント";
@@ -114,8 +116,27 @@ const guideItems = [
   },
 ];
 
+const faq = [
+  { question: "電気料金の請求書・見積書・契約条件書はどう違いますか？", answer: "請求書は毎月の請求内容を記載した書類、見積書は切替前の試算を示す書類、契約条件書は契約期間・解約条件・調整費の扱いなどを定める書類です。比較時はこの3種類を揃えて確認することが重要です。" },
+  { question: "見積書と実際の請求書で金額が異なる場合はなぜですか？", answer: "燃料費調整額・市場価格調整額が見積条件と異なる場合に差が生じます。見積書が「調整費別途」の場合、燃料価格が変動すると実際の請求額は見積を超える可能性があります。" },
+  { question: "電力契約書のどの条項を優先して確認すべきですか？", answer: "自動更新の有無・解約予告期間・燃料費調整額の扱い（上限の有無）・市場価格調整額の条件・容量拠出金の負担方式の5点が特に重要です。これらを見落とすと予算超過や解約トラブルの原因になります。" },
+];
+
 export default function BillingQuotationGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="請求書・見積書・契約条件の見方ガイド一覧｜比較と判断に使える確認ポイント"
+        description="法人向け電気料金の請求書・見積書・契約条件書の読み方を解説するガイド一覧。基本料金・燃料費調整・再エネ賦課金・市場連動条件の確認ポイントと、見積比較での落とし穴を整理します。"
+        url="https://simulator.eic-jp.org/billing-quotation-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "請求書・見積書・契約条件の見方ガイド一覧" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -325,6 +346,16 @@ export default function BillingQuotationGuidePage() {
           <GlossaryLinks currentSlug="billing-quotation-guide" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・請求書の規制情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -365,5 +396,6 @@ export default function BillingQuotationGuidePage() {
         <CategoryNextStepCta slug="billing-quotation-guide" />
       </div>
     </main>
+    </>
   );
 }

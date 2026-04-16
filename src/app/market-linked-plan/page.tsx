@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 
 export const metadata: Metadata = {
@@ -45,11 +47,30 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  { question: "市場連動プランとはどのような契約ですか？", answer: "JEPX（日本卸電力取引所）のスポット市場価格に連動して電力量料金の単価が変動する電力契約です。相場が低い局面ではコストを抑えられる可能性がある一方、相場急騰時は負担が増えるリスクがあります。" },
+  { question: "市場連動プランが向いている法人の特徴は何ですか？", answer: "月次で電気代をモニタリングできる体制がある、価格変動をある程度許容できる、電力コスト管理の専任担当がいる、といった法人に向いています。逆に年間予算を固定管理したい法人には向きにくいです。" },
+  { question: "市場連動プランのリスクはどのくらいですか？", answer: "FY2022年度のJEPX年度平均は約20円/kWhと、FY2019年度の約8円/kWhに比べ2.5倍以上に上昇しました。使用量の多い法人では単価の小さな変動でも年間コストへの影響が大きくなります。" },
+];
+
 const FY2016_ONWARDS = JEPX_YEARLY_SUMMARY.filter((r) => r.fy >= 2016 && r.fy <= 2025);
 const MAX_AVG = Math.max(...FY2016_ONWARDS.map((r) => r.avg));
 
 export default function MarketLinkedPlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場連動プランとは？法人の電気料金が変動する仕組みと注意点"
+        description="市場連動プランの基本、料金が変動する仕組み、向いている法人・向かない法人、見直し時の注意点を法人向けにわかりやすく解説します。"
+        url="https://simulator.eic-jp.org/market-linked-plan"
+        datePublished="2025-08-19"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "市場連動プランとは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -197,6 +218,16 @@ export default function MarketLinkedPlanPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場システムプライス公表データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視・市場動向に関する情報" },
+          ]}
+          publishedAt="2025-08-19"
+        />
+
         <RelatedLinks
           heading="固定プランとの違いを知りたい方へ"
           intro="市場連動プラン単体の理解に加えて、固定プランの考え方や比較軸も押さえると、契約方針を整理しやすくなります。"
@@ -235,5 +266,6 @@ export default function MarketLinkedPlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

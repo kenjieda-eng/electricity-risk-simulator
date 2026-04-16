@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "法人向け電力契約で確認したい違約金・契約期間・更新条件｜金額パターンとチェックリスト";
 const pageDescription =
@@ -58,8 +60,27 @@ const renewalChecklist = [
   },
 ];
 
+const faqItems = [
+  { question: "法人の電力契約で違約金が発生するのはどんな場合ですか？", answer: "契約期間中に解約する場合に違約金が発生するケースが多いです。違約金の計算方法は残期間に応じた月数×月額基本料金などさまざまです。契約書の中途解約条項を必ず確認してください。" },
+  { question: "自動更新条項がある電力契約の注意点は何ですか？", answer: "通知期限（多くは更新月の2〜3か月前）までに解約・変更の申し出をしないと自動更新されます。自動更新後は違約金なしに解約できない場合があるため、更新日と通知期限をカレンダー管理することが重要です。" },
+  { question: "電力契約の更新条件はどこで確認できますか？", answer: "電力供給契約書の本文、または別紙・覚書に記載されています。更新月・通知期限・自動更新の有無・更新後の契約期間を確認してください。不明な点は電力会社に直接問い合わせることを推奨します。" },
+];
+
 export default function ElectricityContractCancellationRenewalTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/electricity-contract-cancellation-renewal-terms"
+        datePublished="2026-03-27"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "違約金・契約期間・更新条件" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -279,6 +300,15 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
           <GlossaryLinks currentSlug="electricity-contract-cancellation-renewal-terms" terms={["市場連動プラン", "固定プラン", "燃料費調整額", "最終保障供給", "基本料金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給契約の制度・ルールに関する情報" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+          ]}
+          publishedAt="2026-03-27"
+        />
+
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
@@ -320,5 +350,6 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

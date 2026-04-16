@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "高圧と特別高圧の違い｜契約区分の基本と料金構造の比較";
@@ -75,8 +77,27 @@ const comparisonData = [
   },
 ];
 
+const faq = [
+  { question: "高圧と特別高圧の主な違いは何ですか？", answer: "高圧は受電電圧が6,600V・契約電力50kW以上、特別高圧は受電電圧が20,000V（20kV）以上・契約電力2,000kW以上が目安です。特別高圧は大規模工場やデータセンターなどが対象で、高圧より単価が低い傾向があります。" },
+  { question: "高圧から特別高圧へ切り替えるメリットはありますか？", answer: "特別高圧に移行すると単価が下がる可能性がありますが、自家用変電設備の設置費用や維持費が必要になります。電力コストの削減効果と設備投資のトレードオフを慎重に検討する必要があります。" },
+  { question: "契約電力がどのくらいになると特別高圧の対象になりますか？", answer: "一般的に契約電力2,000kW以上が目安ですが、エリアや電力会社によって異なります。受電電圧の変更には電気工作物の設置届出が必要で、専門家への相談が推奨されます。" },
+];
+
 export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧と特別高圧の違い｜契約区分の基本と料金構造の比較"
+        description="高圧電力と特別高圧電力の違いを解説。契約電力・受電電圧・料金構造・適用される事業所タイプの違いを整理し、法人が契約区分を理解するための基礎知識をまとめます。"
+        url="https://simulator.eic-jp.org/high-voltage-vs-extra-high-voltage-differences"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "高圧と特別高圧の違い" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -287,6 +308,16 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "高圧・特別高圧の契約制度・料金規制データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -347,5 +378,6 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
         <CategoryNextStepCta slug="high-voltage-vs-extra-high-voltage-differences" />
       </div>
     </main>
+    </>
   );
 }

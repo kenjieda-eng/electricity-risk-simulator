@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "力率とは何か｜力率割引・割増の仕組みと確認ポイント";
@@ -41,8 +43,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "力率とは何ですか？", answer: "力率は有効電力（実際に仕事をする電力）と皮相電力（電線に流れる電力の見かけ量）の比率です。力率が高いほど電気を効率よく使っており、100%が理想値です。力率が低いと無効電力が増え、電力会社の設備負担が増えます。" },
+  { question: "力率を改善すると電気代はどのくらい安くなりますか？", answer: "高圧契約では力率85%を基準に1%改善するごとに基本料金が0.5%割引になります。力率75%→95%に改善すると基本料金が5%（20%改善分×0.5%）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年での回収が可能なケースも多いです。" },
+  { question: "力率はどこで確認できますか？", answer: "電力会社から毎月届く請求書や検針票に記載されています。高圧・特別高圧契約では力率が基本料金の計算に直接影響するため、毎月確認することを推奨します。" },
+];
+
 export default function WhatIsPowerFactorPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="力率とは何か｜力率割引・割増の仕組みと確認ポイント"
+        description="高圧・特別高圧契約における力率の概念と、力率割引・割増が電気料金の基本料金に与える影響を解説。改善方法と実務での確認ポイントを詳しく説明します。"
+        url="https://simulator.eic-jp.org/what-is-power-factor"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "力率とは何か" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -244,6 +265,16 @@ export default function WhatIsPowerFactorPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "力率割引制度・電力料金規制データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -304,5 +335,6 @@ export default function WhatIsPowerFactorPage() {
         <CategoryNextStepCta slug="what-is-power-factor" />
       </div>
     </main>
+    </>
   );
 }

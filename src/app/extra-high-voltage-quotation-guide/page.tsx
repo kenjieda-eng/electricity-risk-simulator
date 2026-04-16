@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "特別高圧電力見積書の見方｜大規模契約の比較で確認したい項目";
@@ -122,8 +124,27 @@ const quotationSections = [
   },
 ];
 
+const faq = [
+  { question: "特別高圧電力の見積書で最初に確認すべきことは何ですか？", answer: "負荷率・デマンド前提・時間帯別の使用量実績を確認し、見積が適切な前提で作成されているかを確認します。特別高圧は条件差の金額インパクトが大きいため、前提条件の統一が比較の精度を左右します。" },
+  { question: "特別高圧の個別交渉型見積ではどのような項目が交渉対象になりますか？", answer: "基本料金単価・電力量料金単価・力率の扱い・燃料費調整額の上限設定・需要調整対応の有無・契約期間などが主な交渉項目です。使用量・負荷率が高いほど交渉力が増す傾向があります。" },
+  { question: "特別高圧の見積書で負荷率はなぜ重要ですか？", answer: "特別高圧では負荷率（年間最大電力に対する平均電力の比率）が高いほど電力会社のコスト回収率が高まり、より有利な単価を引き出せる場合があります。見積依頼時に実績の負荷率データを提供することが重要です。" },
+];
+
 export default function ExtraHighVoltageQuotationGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="特別高圧電力見積書の見方｜大規模契約の比較で確認したい項目"
+        description="特別高圧電力の見積書で確認すべき項目を解説。負荷率・デマンド条件・複雑な料金体系・需要調整対応など、大規模契約の比較で失敗しないためのポイントを整理します。"
+        url="https://simulator.eic-jp.org/extra-high-voltage-quotation-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "特別高圧電力見積書の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -282,6 +303,16 @@ export default function ExtraHighVoltageQuotationGuidePage() {
           <p className="mt-3 text-xs text-slate-500">※ 基本料金1,400円/kW、電力量料金14.5円/kWh、力率割引0.97で算定。燃調費・再エネ賦課金含まず。</p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "特別高圧の料金制度・見積書の規制情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="特別高圧電力の見積書理解と比較判断に役立てるための関連ページです。"
@@ -349,5 +380,6 @@ export default function ExtraHighVoltageQuotationGuidePage() {
         <CategoryNextStepCta slug="extra-high-voltage-quotation-guide" />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "法人向け電気料金の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金の構成を解説";
@@ -331,8 +333,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "法人の電気料金の内訳で最も大きいのはどれですか？", answer: "多くの場合、基本料金と電力量料金が大部分を占めます。ただし燃料費調整額が高騰した2022〜2023年度には調整項目の比率が大きく増加しました。契約区分や使用量によって構成比は異なります。" },
+  { question: "再エネ賦課金は契約区分によって金額が変わりますか？", answer: "単価（円/kWh）は全国一律ですが、使用電力量に比例するため契約電力が大きい事業者ほど負担が増えます。電気多消費事業者向けの減免制度もあります。" },
+  { question: "燃料費調整額はどのくらい変動しますか？", answer: "毎月変動し、燃料市況によっては月間数十万円単位での変動が生じることもあります。2022年度は急騰し、規制料金の上限に達した電力会社も出ました。" },
+];
+
 export default function BusinessElectricityBillBreakdownPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金の構成を解説"
+        description="法人向け電気料金の内訳を基本料金・電力量料金・燃料費調整額・再エネ賦課金の4項目で解説。構成比の目安、契約区分別の料金水準、業種別の構成比の違いも整理。"
+        url="https://simulator.eic-jp.org/business-electricity-bill-breakdown"
+        datePublished="2025-08-03"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "法人向け電気料金の内訳とは" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -857,6 +878,16 @@ export default function BusinessElectricityBillBreakdownPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の構成・制度に関するデータ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・料金情報" },
+          ]}
+          publishedAt="2025-08-03"
+        />
+
         <RelatedLinks
           heading="関連する解説ページ"
           intro="内訳を押さえたら、見積・相場・制度要因・上昇理由へ進むと請求の読み解きが一段深まります。"
@@ -904,5 +935,6 @@ export default function BusinessElectricityBillBreakdownPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle = "固定プランとは｜法人向け電力契約の料金構造・メリット・注意点を解説";
@@ -46,6 +48,12 @@ export const metadata: Metadata = {
     images: ["/twitter-default.png"],
   },
 };
+
+const faqItems = [
+  { question: "固定プランでも電気料金は変動しますか？", answer: "固定プランは契約単価が固定されますが、燃料費調整額（燃調費）や再エネ賦課金は固定プランでも変動します。そのため請求額が毎月同じになるわけではありません。単価の安定性と請求額の安定性は別物と理解することが重要です。" },
+  { question: "固定プランと市場連動プランはどちらが安いですか？", answer: "どちらが安いかは市場動向によって異なります。市場価格が高い局面では固定が有利になりやすく、市場価格が低い局面では市場連動が有利になりやすいです。単純な比較より、自社のリスク許容度と予算管理の観点から選択することが重要です。" },
+  { question: "固定プランに向いている法人はどのような会社ですか？", answer: "年間予算を固定的に管理したい法人、電気代の変動が損益に大きく影響する業種（飲食・小売など）、電力コストを担当するリソースが限られている法人が向いています。予算管理の安定性を優先する場合に適しています。" },
+];
 
 // --- 料金構成テーブルデータ ---
 const feeStructureRows = [
@@ -176,6 +184,19 @@ const checklistItems = [
 // --- Page Component ---
 export default function FixedPricePlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/fixed-price-plan"
+        datePublished="2025-08-20"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "固定プランとは" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -377,6 +398,16 @@ export default function FixedPricePlanPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・料金規制に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約・取引監視に関する情報" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力プラン・新電力市場動向データ" },
+          ]}
+          publishedAt="2025-08-20"
+        />
+
         {/* 関連リンク */}
         <RelatedLinks
           heading="あわせて確認したいページ"
@@ -432,5 +463,6 @@ export default function FixedPricePlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

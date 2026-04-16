@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "法人向け電気料金の相場｜契約区分別の単価レンジと年間コスト目安";
 const pageDescription =
@@ -45,8 +47,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "高圧電力の相場単価はどのくらいですか？", answer: "エリアや契約条件によりますが、2024〜2025年時点で高圧の総合単価は概ね15〜22円/kWh程度が目安です。2022年以前と比べると大幅に高止まりしており、燃料費調整額・容量拠出金の影響が続いています。" },
+  { question: "特別高圧と高圧で単価はどのくらい違いますか？", answer: "特別高圧は高圧よりも基本的に単価が低くなる傾向があります。大口需要家向けのため個別交渉が中心となり、使用量や負荷率によって大きく異なります。" },
+  { question: "電気料金の相場はどこで確認できますか？", answer: "資源エネルギー庁の電力調査統計や電力・ガス取引監視等委員会のデータで電圧別・エリア別の平均単価を確認できます。自社の実績単価（総請求額÷使用電力量）と比較するのが効果的です。" },
+];
+
 export default function BusinessElectricityPriceBenchmarkPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金の相場｜契約区分別の単価レンジと年間コスト目安"
+        description="法人向け電気料金の相場を契約区分別・業種別に整理。高圧・特別高圧の単価レンジ、年間電気代の規模感、2022年以降の単価推移データを掲載。"
+        url="https://simulator.eic-jp.org/business-electricity-price-benchmark"
+        datePublished="2025-08-04"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "法人向け電気料金の相場はどう見るか" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -406,6 +427,16 @@ export default function BusinessElectricityPriceBenchmarkPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力調査統計・契約区分別単価データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2025-08-04"
+        />
+
         <RelatedLinks
           heading="あわせて読みたい記事"
           intro="相場感を、内訳・見積・見直し判断までつなげると、単価だけに頼らない比較がしやすくなります。"
@@ -468,5 +499,6 @@ export default function BusinessElectricityPriceBenchmarkPage() {
         />
       </section>
     </main>
+    </>
   );
 }

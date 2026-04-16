@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "最終保障供給を社内説明するときのポイント｜比較表・報告テンプレート・FAQ";
@@ -69,8 +71,26 @@ const faqItems = [
   },
 ];
 
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の制度・件数データ" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "最終保障供給制度の解説・法令根拠" },
+];
+
 export default function LastResortSupplyInternalExplanationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-internal-explanation"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "社内説明のポイント" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -269,6 +289,8 @@ export default function LastResortSupplyInternalExplanationPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -316,5 +338,6 @@ export default function LastResortSupplyInternalExplanationPage() {
         />
       </section>
     </main>
+    </>
   );
 }

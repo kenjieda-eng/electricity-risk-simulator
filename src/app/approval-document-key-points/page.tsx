@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "電力契約見直しの稟議書に入れたい論点整理｜承認を得やすい構成";
@@ -99,6 +101,20 @@ const returnReasons = [
 
 export default function ApprovalDocumentKeyPointsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力契約見直しの稟議書に入れたい論点整理｜承認を得やすい構成"
+        description="電力契約見直しの稟議書に必要な論点と記載内容を解説。承認を得やすい構成、数値の根拠の示し方、リスクへの対処の書き方、よくある差し戻し理由への対応まで実務目線でまとめます。"
+        url="https://simulator.eic-jp.org/approval-document-key-points"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "社内説明・稟議サポート", url: "https://simulator.eic-jp.org/articles/internal-explanation" },
+        ]}
+        faq={[
+    { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -295,6 +311,18 @@ export default function ApprovalDocumentKeyPointsPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="approval-document-key-points" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン"]} />
         </div>
 
@@ -350,5 +378,6 @@ export default function ApprovalDocumentKeyPointsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

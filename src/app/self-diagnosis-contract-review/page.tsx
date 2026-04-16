@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック";
@@ -41,6 +43,20 @@ export const metadata: Metadata = {
 
 export default function SelfDiagnosisContractReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック"
+        description="現在の電力契約を見直す必要があるかを10項目の簡易チェックで確認。契約内容・料金推移・満足度など、法人担当者が自社の状況を素早く棚卸しできる診断ページです。"
+        url="https://simulator.eic-jp.org/self-diagnosis-contract-review"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+        ]}
+        faq={[
+    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -215,6 +231,19 @@ export default function SelfDiagnosisContractReviewPage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={[
+          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
+
         <RelatedLinks
           heading="関連ページ"
           intro="診断結果をもとに、次のステップへ進むためのページをご紹介します。"
@@ -263,5 +292,6 @@ export default function SelfDiagnosisContractReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

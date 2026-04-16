@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "高圧電力の請求書の見方｜法人の見積比較に使いたい確認ポイント";
@@ -122,8 +124,27 @@ const billSections = [
   },
 ];
 
+const faq = [
+  { question: "高圧電力の請求書でデマンド値はどこに記載されていますか？", answer: "「最大需要電力」または「デマンド」の欄に記載されています。直近12か月の最高値が契約電力の算定に使用されるため、毎月確認してデマンド管理に活かすことが重要です。" },
+  { question: "高圧電力の請求書で燃料費調整額がマイナスになることはありますか？", answer: "はい。燃料価格が基準燃料価格を下回った場合、燃料費調整額がマイナス（値引き）になります。ただし近年は燃料価格が高止まりしているためプラスが続いています。" },
+  { question: "高圧電力の請求書と見積書の項目が一致しない場合はどうすればよいですか？", answer: "燃料費調整額や市場価格調整額の扱いが異なる場合があります。見積書の単価が「調整前」か「調整後込み」かを電力会社に確認し、同じ条件で比較することが重要です。" },
+];
+
 export default function HighVoltageElectricityBillGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧電力の請求書の見方｜法人の見積比較に使いたい確認ポイント"
+        description="高圧電力契約の請求書で確認すべき項目を解説。契約電力・デマンド・基本料金・電力量料金・各種調整費など、見積比較や社内説明に使える読み方のポイントを整理します。"
+        url="https://simulator.eic-jp.org/high-voltage-electricity-bill-guide"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "高圧電力の請求書の見方" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -308,6 +329,16 @@ export default function HighVoltageElectricityBillGuidePage() {
           </table>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・請求項目データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="高圧電力の請求書理解を深め、見積比較に活かすための関連ページです。"
@@ -373,5 +404,6 @@ export default function HighVoltageElectricityBillGuidePage() {
         <CategoryNextStepCta slug="high-voltage-electricity-bill-guide" />
       </div>
     </main>
+    </>
   );
 }

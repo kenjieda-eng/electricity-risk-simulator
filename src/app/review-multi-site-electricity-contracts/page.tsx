@@ -29,10 +29,25 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewMultiSiteElectricityContractsPage() {
+  const faq = [
+    { question: "複数拠点の電力契約を一括で見直すことはできますか？", answer: "可能ですが、拠点ごとに契約更新日・電力会社・使用量が異なるため、まず全拠点の契約条件を一覧化することが重要です。一括と個別のどちらが効果的かは契約状況によって異なります。" },
+    { question: "複数拠点の見直しはどの拠点から始めるべきですか？", answer: "使用量が多い拠点・更新日が近い拠点・現契約のリスクが高い拠点から優先するのが一般的です。本社が管理しやすい規模の拠点から始め、成功体験を積んでから他拠点に展開する方法も有効です。" },
+    { question: "複数拠点をまとめて同一電力会社に統一するメリットは何ですか？", answer: "一括管理による事務コスト削減、ボリュームディスカウント交渉の余地、請求の一元化などがメリットです。ただし拠点ごとの供給エリアが異なる場合は一社統一ができないケースもあります。" },
+  ];
+  const sources = [
+    { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力自由化・小売事業者に関する情報" },
+    { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場・新電力動向データ" },
+  ];
   return (
     <ReviewArticlePage
       breadcrumbLabel="複数拠点の見直し"
       slug="review-multi-site-electricity-contracts"
+      jsonLdUrl="https://simulator.eic-jp.org/review-multi-site-electricity-contracts"
+      jsonLdHeadline={pageTitle}
+      jsonLdDescription={pageDescription}
+      publishedAt="2026-03-29"
+      faq={faq}
+      sources={sources}
       title={pageTitle}
       lead={[
         "複数拠点を持つ法人の電力契約見直しは、単一拠点より整理対象が多くなります。契約条件、更新月、使用実態が拠点ごとに違うため、本社一括で進めるだけでは混乱しやすくなります。",

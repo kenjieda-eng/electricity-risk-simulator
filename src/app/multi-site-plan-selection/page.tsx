@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
   "多拠点企業はどちらを選ぶべきか｜拠点ごとの最適化と全体管理";
 const pageDescription =
@@ -88,8 +90,27 @@ const approaches = [
   },
 ];
 
+const faqItems = [
+  { question: "多拠点企業が電力契約を一括でまとめるメリットは何ですか？", answer: "使用量が合算されることでボリュームディスカウントの交渉力が上がる、管理コストが削減される、請求の一元化で経理処理が効率化されるなどのメリットがあります。ただし供給エリアが異なる場合は一社統一ができないことがあります。" },
+  { question: "多拠点企業がプランを拠点ごとに分ける理由は何ですか？", answer: "拠点ごとにリスク許容度・使用パターン・契約更新時期が異なる場合、一括契約より拠点別に最適なプランを選ぶ方が総コストを抑えられることがあります。大規模拠点と小規模拠点で異なる戦略が有効です。" },
+  { question: "多拠点の電力契約見直しはどこから始めるべきですか？", answer: "まず全拠点の契約条件（契約更新日・現プラン・使用量）を一覧化します。次に使用量が多い拠点・更新日が近い拠点・市場連動リスクが高い拠点を優先して着手することが効果的です。" },
+];
+
 export default function MultiSitePlanSelectionPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/multi-site-plan-selection"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "多拠点企業の判断軸" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -290,5 +311,6 @@ export default function MultiSitePlanSelectionPage() {
         />
       </section>
     </main>
+    </>
   );
 }

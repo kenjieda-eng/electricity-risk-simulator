@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "特別高圧で最終保障供給を使うときの注意点｜料金差シミュレーションと確認ポイント";
@@ -87,8 +89,41 @@ const checklistItems = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "特別高圧需要家が最終保障供給に移行した場合の月額コスト影響はどのくらいですか？",
+    answer: "使用量が非常に大きいため、単価差が数円/kWhでも月額では数百万〜数千万円規模の増加になることがあります。月間100万kWhの需要家が2〜3円/kWh高い料金を適用される場合、月額200〜300万円の追加コストが発生します。",
+  },
+  {
+    question: "特別高圧では最終保障供給から抜け出すのが難しいのはなぜですか？",
+    answer: "特別高圧を受け入れられる小売電気事業者が限られており、切替交渉や受電設備の調整に時間がかかるためです。また供給期間の上限（通常9か月程度）があるため、早期に複数社へ並行して打診を開始することが不可欠です。",
+  },
+  {
+    question: "特別高圧の最終保障供給リスクを事前に防ぐにはどうすればよいですか？",
+    answer: "契約満了の12か月以上前から複数の電力会社・新電力に打診を開始し、早期に代替候補を確保することが最も重要です。契約中の新電力の財務状況を定期確認し、撤退リスクが高まる前に切替準備を始めることが有効です。",
+  },
+];
+
+const sources = [
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "特別高圧の最終保障供給件数・監視情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "特別高圧電力供給制度・最終保障供給に関する資料" },
+];
+
 export default function LastResortSupplyExtraHighVoltagePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/last-resort-supply-extra-high-voltage"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "特別高圧の注意点" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -336,6 +371,8 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -388,5 +425,6 @@ export default function LastResortSupplyExtraHighVoltagePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -240,9 +242,28 @@ const detailPages = [
   },
 ];
 
+const faq = [
+  { question: "法人電力契約の4区分の違いは何ですか？", answer: "低圧電灯（100/200V・家庭用と同じ）、低圧電力（3相200V・動力用）、高圧（6,600V・50kW〜2,000kW未満）、特別高圧（20kV以上・2,000kW以上）の4つがあります。使用電力量と施設規模によって適切な区分が決まります。" },
+  { question: "契約区分はどのタイミングで見直すべきですか？", answer: "使用量が大幅に増減したとき（特に50kWの壁・2,000kWの壁に近づいたとき）、施設の増改築時、既存設備の撤廃・追加時などに見直しを検討します。区分変更には電力会社への申請と設備工事が必要です。" },
+  { question: "自社の電力契約区分はどこで確認できますか？", answer: "毎月の電気料金の請求書・検針票に記載されています。「高圧電力」「特別高圧電力」など契約種別が明記されています。複数拠点がある場合は拠点ごとに異なる区分になることがあります。" },
+];
+
 // --- Page Component ---
 export default function ElectricityContractTypesOverviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力契約の種類と選び方の基本｜法人が最初に知りたい契約区分を一覧で整理"
+        description="法人向け電力契約の種類を一覧で解説。低圧電灯・低圧電力・高圧・特別高圧の4区分の違い、契約容量の目安、業種別の対応表、契約区分の選び方フローを整理。"
+        url="https://simulator.eic-jp.org/electricity-contract-types-overview"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "電力契約の種類と選び方の基本" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -468,6 +489,18 @@ export default function ElectricityContractTypesOverviewPage() {
         </section>
       </div>
 
+      <div className="mt-6">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力契約区分・制度に関するデータ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・新電力情報" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -529,5 +562,6 @@ export default function ElectricityContractTypesOverviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

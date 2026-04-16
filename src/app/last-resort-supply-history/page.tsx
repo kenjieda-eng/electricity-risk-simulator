@@ -7,6 +7,8 @@ import {
   LAST_RESORT_SUPPLY_MONTHLY,
   NEW_POWER_EXIT_YEARLY,
 } from "../../data/lastResortSupplyHistory";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle = "最終保障供給の歴史とは｜制度の流れと現在の契約見直しへの示唆";
@@ -96,6 +98,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "最終保障供給の件数が2022年に急増した背景は何ですか？",
+    answer: "ウクライナ危機によるLNGスポット価格の急騰で新電力が相次いで撤退・受付停止したためです。旧一般電気事業者も新規受付を絞った結果、行き場を失った法人需要家が急増し、2022年12月には約52,000件の過去最高を記録しました。",
+  },
+  {
+    question: "最終保障供給は今後また急増する可能性はありますか？",
+    answer: "LNGスポット価格の再急騰、原子力停止による火力依存の高まり、新電力の財務脆弱性など構造的な問題は解消されていないため、同様の連鎖が再発する可能性は残っています。平時から通常契約の見直しや複数社への相見積もりを行うことが重要です。",
+  },
+  {
+    question: "最終保障供給の歴史から法人担当者が学ぶべきことは何ですか？",
+    answer: "「自社は関係ない」という油断が最大のリスクです。契約満了6〜12か月前から次の契約候補を探す、燃料費調整額の上限有無を確認する、複数社から見積もりを取るという3点が具体的な備えになります。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売全面自由化の進捗状況・最終保障供給件数データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給件数の月次推移・公表資料" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "新電力の撤退状況・事業停止件数の集計" },
+];
+
 // --- Page Component ---
 export default function LastResortSupplyHistoryPage() {
   const labels = LAST_RESORT_SUPPLY_MONTHLY.map((r) => r.yearMonth);
@@ -104,6 +127,19 @@ export default function LastResortSupplyHistoryPage() {
   const exitValues = NEW_POWER_EXIT_YEARLY.map((r) => r.exitCount);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給を知る", url: "https://simulator.eic-jp.org/articles/last-resort-supply" },
+          { name: "最終保障供給の歴史" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
 
       {/* パンくず */}
@@ -429,6 +465,8 @@ export default function LastResortSupplyHistoryPage() {
           </p>
         </section>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
+
         {/* 関連リンク */}
         <RelatedLinks
           heading="関連する解説ページ"
@@ -455,5 +493,6 @@ export default function LastResortSupplyHistoryPage() {
         />
       </section>
     </main>
+    </>
   );
 }

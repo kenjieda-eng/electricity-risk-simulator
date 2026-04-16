@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 // --- 定数 ---
 const pageTitle = "kW・kWh・kVAの違い｜電気料金で使われる単位の基礎をわかりやすく解説";
@@ -41,9 +43,28 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "kWとkWhの違いは何ですか？", answer: "kW（キロワット）は電力の大きさ（瞬間的な使用量）で、契約電力や基本料金の算定に使います。kWh（キロワット時）は電力量で、使用した電力の総量を表し電力量料金の算定に使います。1kWの機器を1時間使うと1kWhになります。" },
+  { question: "kVAはどのような場合に関係しますか？", answer: "kVA（キロボルトアンペア）は皮相電力で、電気機器に供給される電力の見かけの大きさです。kWとkVAの比率が力率で、力率が低いと無駄な電力が流れるため電力会社の設備負担が増え、基本料金の割増対象になります。" },
+  { question: "請求書でkW・kWhはどこに記載されていますか？", answer: "kW（契約電力・デマンド）は基本料金の項目欄に、kWh（使用電力量）は電力量料金の項目欄に記載されています。kVAは力率計算に用いられ、直接表示されない場合もあります。" },
+];
+
 // --- Page Component ---
 export default function KwKwhKvaDifferencePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="kW・kWh・kVAの違い｜電気料金で使われる単位の基礎をわかりやすく解説"
+        description="kW・kWh・kVAの違いを法人向けに解説。請求書のどこに出るか、契約電力・使用量・力率との関係を具体例で整理。"
+        url="https://simulator.eic-jp.org/kw-kwh-kva-difference"
+        datePublished="2026-04-13"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "kW・kWh・kVAの違い" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -392,6 +413,17 @@ export default function KwKwhKvaDifferencePage() {
 
       </div>
 
+      <div className="mt-6">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力の単位・料金制度に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+          ]}
+          publishedAt="2026-04-13"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -458,5 +490,6 @@ export default function KwKwhKvaDifferencePage() {
         />
       </div>
     </main>
+    </>
   );
 }

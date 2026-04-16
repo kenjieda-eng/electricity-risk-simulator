@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "固定プランが向いている法人・向いていない法人｜予算管理しやすい電力契約の考え方";
 const pageDescription =
   "固定プランが向いている法人と向いていない法人の違いを、電気料金の安定性、予算管理、社内説明、契約条件の確認ポイントから整理します。法人向けの電力契約見直しに役立つ解説ページです。";
@@ -30,8 +32,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  { question: "固定プランが向いている法人の特徴は何ですか？", answer: "年間予算を固定的に管理したい法人、電気代の変動が損益に大きく影響する業種、担当者のリソースが限られている、社内説明で変動理由を毎月説明するのが難しい組織に向いています。" },
+  { question: "固定プランは燃料費の高騰時に本当に安全ですか？", answer: "固定プランは契約単価が固定されるため電力量料金の変動リスクを抑えられます。ただし燃料費調整額は固定プランでも変動します。見積時に燃調費の計算方式と上限設定を確認することが重要です。" },
+  { question: "固定プランへ切り替える際の注意点は何ですか？", answer: "現契約の解約条件・違約金・通知期限を確認することが最初のステップです。また切替タイミングによっては市場連動の方が有利な局面もあるため、見積比較で年間コスト差を試算して判断することが重要です。" },
+];
+
 export default function WhoShouldChooseFixedPricePlanPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/who-should-choose-fixed-price-plan"
+        datePublished="2026-03-27"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
+          { name: "固定プランが向いている法人" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -204,6 +225,15 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           <GlossaryLinks currentSlug="who-should-choose-fixed-price-plan" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "容量拠出金", "基本料金"]} />
         </div>
 
+        <SourcesAndFaq
+          faq={faqItems}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視に関する情報" },
+          ]}
+          publishedAt="2026-03-27"
+        />
+
         <RelatedLinks
           heading="あわせて確認したいページ"
           intro="固定プランの適性判断を、比較実務や見直しタイミングへつなげるための関連ページです。"
@@ -242,5 +272,6 @@ export default function WhoShouldChooseFixedPricePlanPage() {
         />
       </section>
     </main>
+    </>
   );
 }

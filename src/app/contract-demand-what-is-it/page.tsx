@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { DEMAND_HOURLY_AVG, DEMAND_WEEKDAY_WEEKEND, LOAD_FACTOR_FY, DEMAND_MONTHLY_AVG, DEMAND_PEAK_DAYS } from "../../data/demandData";
 
 const pageTitle = "契約電力とデマンドとは｜法人の電気料金・基本料金との関係を解説";
@@ -48,8 +50,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "契約電力とデマンドはどう違いますか？", answer: "契約電力は電力会社との契約上の最大電力（kW）で、基本料金の算定基準になります。デマンドは実際に計測された30分間の平均最大電力です。デマンドが契約電力を超えると翌年度の契約電力が引き上げられ基本料金が上がります。" },
+  { question: "デマンド値を下げると基本料金は減りますか？", answer: "はい。デマンド値（最大需要電力）が下がれば契約電力を引き下げられ、基本料金の削減につながります。ピーク時間帯の消費を抑えるデマンド管理が有効です。" },
+  { question: "契約電力の変更はいつでもできますか？", answer: "契約電力の変更は、申請から実際の変更まで1〜3か月程度かかるケースが多く、電力会社によって手続き方法や時期が異なります。更新タイミングや現行契約の条件を事前に確認することが重要です。" },
+];
+
 export default function ContractDemandWhatIsItPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約電力とデマンドとは｜法人の電気料金・基本料金との関係を解説"
+        description="契約電力とデマンドの意味を法人向けに解説。基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。"
+        url="https://simulator.eic-jp.org/contract-demand-what-is-it"
+        datePublished="2025-08-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
+          { name: "契約電力とデマンドとは" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくず">
@@ -437,6 +458,16 @@ export default function ContractDemandWhatIsItPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力需給・契約制度に関するデータ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ・契約制度情報" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
+          ]}
+          publishedAt="2025-08-01"
+        />
+
         {/* 関連リンク */}
         <div className="mt-8">
           <RelatedLinks
@@ -515,5 +546,6 @@ export default function ContractDemandWhatIsItPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

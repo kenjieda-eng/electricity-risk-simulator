@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電気料金はなぜシナリオ別に見る必要があるのか｜法人の予算策定と説明資料で役立つ考え方";
 const pageDescription =
@@ -31,8 +33,42 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "電気料金をシナリオ別に見る必要性はなぜ生まれましたか？",
+    answer: "電気料金に影響する要因（季節需要、燃料価格、為替、地政学リスクなど）は影響時期と継続性がそれぞれ異なります。一本の想定だけでは、これらの組み合わせによる上振れを過小評価しがちなため、複数の前提で確認する見方が実務上有効になりました。",
+  },
+  {
+    question: "シナリオ別の見方は予算策定でどのように役立ちますか？",
+    answer: "通常ケースと厳しめケースを並記することで、予算超過が発生した際にも「想定の範囲内」として説明できる資料を作成できます。単一の見通しよりも関係者の合意を取りやすくなり、稟議の通りやすさにもつながります。",
+  },
+  {
+    question: "シナリオ別の見方と通常の電気料金予測の違いは何ですか？",
+    answer: "通常の予測は一つのベースラインを算出しますが、シナリオ別の見方は「猛暑になった場合」「円安が続いた場合」など複数の前提ごとに上振れ幅を確認します。どれが当たるかを予測するのではなく、どの状況になっても対応できる準備を整えることが目的です。",
+  },
+];
+
+const sources = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の構成要因・季節変動データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の価格動向・需給データ" },
+  { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場の価格変動データ" },
+];
+
 export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/why-electricity-prices-should-be-viewed-by-scenario"
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "リスクシナリオ別に知る", url: "https://simulator.eic-jp.org/articles/risk-scenarios" },
+          { name: "シナリオ別に見る必要性" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -201,6 +237,8 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
           <GlossaryLinks currentSlug="why-electricity-prices-should-be-viewed-by-scenario" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 
+        <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-03-28" />
+
         <RelatedLinks
           heading="関連ページ"
           intro="必要性の理解から、使い分け・比較・個別要因の確認へ進む導線です。"
@@ -248,5 +286,6 @@ export default function WhyElectricityPricesShouldBeViewedByScenarioPage() {
         />
       </section>
     </main>
+    </>
   );
 }

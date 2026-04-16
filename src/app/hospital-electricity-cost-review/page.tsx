@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -70,8 +72,33 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "病院は固定プランと市場連動プランのどちらが向いていますか？", answer: "医療機器の安定稼働と患者への供給責任があるため、価格変動リスクを排除できる固定プランが病院には向きやすいです。市場価格が高騰した際に節電を求められる市場連動プランは、医療の安全性と相容れない場合があります。" },
+  { question: "病院の電気料金を削減する主な方法は何ですか？", answer: "デマンドコントロールによる基本料金の引き下げ、空調・照明のLED化・高効率化による電力量削減、自家消費型太陽光+蓄電池の組み合わせによるピークカットが主な手段です。ただし医療機器の稼働を妨げない範囲での対策が前提となります。" },
+  { question: "病院が電力契約を見直す際に最低限確認すべきことは何ですか？", answer: "現在の契約種別（高圧・特別高圧）、契約電力、最大デマンド実績、停電時の自家発電設備の有無を確認することが基本です。特に安定供給を条件とした特約がある場合は、切り替え先の供給責任条項を詳しく確認する必要があります。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給状況・系統運用情報" },
+];
+
 export default function HospitalElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/hospital-electricity-cost-review"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+          { name: "病院の見直しポイント" },
+        ]}
+        faq={faqItems}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -286,6 +313,8 @@ export default function HospitalElectricityCostReviewPage() {
           <GlossaryLinks currentSlug="hospital-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "最終保障供給", "高圧電力"]} />
         </div>
 
+        <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-10" />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -343,5 +372,6 @@ export default function HospitalElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }

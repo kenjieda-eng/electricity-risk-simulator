@@ -3,6 +3,8 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle =
   "ディストリビューションセンターの電気料金見直しポイント｜仕分け設備と稼働時間を踏まえた考え方";
@@ -72,6 +74,21 @@ const loadCharacteristics = [
 
 export default function DistributionCenterElectricityCostReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="ディストリビューションセンターの電気料金見直しポイント｜仕分け設備と稼働時間を踏まえた考え方"
+        description="ディストリビューションセンター（DC）の電気料金見直しの考え方を解説。仕分け・搬送設備の負荷特性、稼働時間パターン、固定プランの選び方、省エネ対策まで整理します。"
+        url="https://simulator.eic-jp.org/distribution-center-electricity-cost-review"
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+        ]}
+        faq={[
+    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -265,6 +282,19 @@ export default function DistributionCenterElectricityCostReviewPage() {
         </section>
 
         <div className="mt-6">
+          <SourcesAndFaq
+          faq={[
+          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
+          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
+          ]}
+          sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
+          { name: "新電力ネット", url: "https://pps-net.org" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
+
           <GlossaryLinks currentSlug="distribution-center-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "契約電力"]} />
         </div>
 
@@ -320,5 +350,6 @@ export default function DistributionCenterElectricityCostReviewPage() {
         />
       </section>
     </main>
+    </>
   );
 }
