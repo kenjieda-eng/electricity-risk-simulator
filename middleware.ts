@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 const BASIC_AUTH_USER = "kenji";
-const BASIC_AUTH_PASSWORD = "edaedaeda";
+const BASIC_AUTH_PASSWORD = process.env.ADMIN_PASSWORD || "";
 const AUTH_REALM = 'Basic realm="Admin Area"';
 
 function unauthorizedResponse() {

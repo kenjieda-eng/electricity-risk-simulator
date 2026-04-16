@@ -44,7 +44,7 @@ const categoryLinks = [
 const popularBasicLinks = [
   { href: "/business-electricity-bill-breakdown", label: "法人向け電気料金の内訳とは" },
   { href: "/contract-demand-what-is-it", label: "契約電力とは" },
-  { href: "/contract-demand-what-is-it", label: "デマンドとは" },
+  { href: "/demand-value-guide", label: "デマンドとは" },
   { href: "/fuel-cost-adjustment", label: "燃料費調整額とは" },
   { href: "/renewable-energy-surcharge", label: "再エネ賦課金とは" },
   { href: "/capacity-contribution-explained", label: "容量拠出金とは" },

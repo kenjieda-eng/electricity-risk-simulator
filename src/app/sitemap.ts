@@ -9,6 +9,15 @@ import { GAS_SCENARIO_SLUGS } from "../lib/gasScenarioAnalysis";
 import { MATERIALS_SCENARIO_SLUGS } from "../lib/materialsPackagingScenarioAnalysis";
 import { FOOD_SCENARIO_SLUGS } from "../lib/foodProcurementScenarioAnalysis";
 import { FX_DOUBLE_EFFECT_SLUGS } from "../lib/fxDoubleEffectScenarioAnalysis";
+import { INDUSTRY_MIDDLE_CATEGORIES } from "../lib/articleIndustryCategories";
+import { getOfficePublicIndustrySlugs } from "../lib/industryOfficePublicArticles";
+import { getCommercialIndustrySlugs } from "../lib/industryCommercialArticles";
+import { getHotelLeisureIndustrySlugs } from "../lib/industryHotelLeisureArticles";
+import { getMedicalWelfareIndustrySlugs } from "../lib/industryMedicalWelfareArticles";
+import { getManufacturingIndustrySlugs } from "../lib/industryManufacturingArticles";
+import { getLogisticsInfrastructureIndustrySlugs } from "../lib/industryLogisticsInfrastructureArticles";
+import { getITTechnologyIndustrySlugs } from "../lib/industryITTechnologyArticles";
+import { getAgriculturePrimaryIndustrySlugs } from "../lib/industryAgriculturePrimaryArticles";
 
 const SITE_URL = "https://simulator.eic-jp.org";
 const REQUIRED_PATHS = ["/", "/simulate", "/how-to", "/compare", "/articles"] as const;
@@ -177,6 +186,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       upsertRouteDate(routeDateMap, `/special/fx-double-effect-scenario-analysis/${slug}`, fxDoubleEffectLastmod);
     }
 
+    // --- Industry category pages ---
+    const industryLastmod = new Date();
+
+    // Middle-level category pages: /articles/by-industry/[middle]
+    for (const category of INDUSTRY_MIDDLE_CATEGORIES) {
+      upsertRouteDate(routeDateMap, `/articles/by-industry/${category.slug}`, industryLastmod);
+    }
+
+    // Individual industry pages: /articles/by-industry/[middle]/[industry]
+    const industrySlugsByMiddle: Record<string, string[]> = {
+      "office-public": getOfficePublicIndustrySlugs(),
+      "commercial": getCommercialIndustrySlugs(),
+      "hotel-leisure": getHotelLeisureIndustrySlugs(),
+      "medical-welfare": getMedicalWelfareIndustrySlugs(),
+      "manufacturing": getManufacturingIndustrySlugs(),
+      "logistics-infrastructure": getLogisticsInfrastructureIndustrySlugs(),
+      "it-technology": getITTechnologyIndustrySlugs(),
+      "agriculture-primary": getAgriculturePrimaryIndustrySlugs(),
+    };
+
+    for (const [middle, slugs] of Object.entries(industrySlugsByMiddle)) {
+      for (const industrySlug of slugs) {
+        upsertRouteDate(routeDateMap, `/articles/by-industry/${middle}/${industrySlug}`, industryLastmod);
+      }
+    }
+
     for (const requiredPath of REQUIRED_PATHS) {
       if (!routeDateMap.has(requiredPath)) {
         routeDateMap.set(requiredPath, new Date());
@@ -209,6 +244,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...MATERIALS_SCENARIO_SLUGS.map((slug) => `/special/materials-packaging-scenario-analysis/${slug}`),
       ...FOOD_SCENARIO_SLUGS.map((slug) => `/special/food-procurement-scenario-analysis/${slug}`),
       ...FX_DOUBLE_EFFECT_SLUGS.map((slug) => `/special/fx-double-effect-scenario-analysis/${slug}`),
+      "/articles/by-industry",
+      ...INDUSTRY_MIDDLE_CATEGORIES.map((c) => `/articles/by-industry/${c.slug}`),
+      ...Object.entries({
+        "office-public": getOfficePublicIndustrySlugs(),
+        "commercial": getCommercialIndustrySlugs(),
+        "hotel-leisure": getHotelLeisureIndustrySlugs(),
+        "medical-welfare": getMedicalWelfareIndustrySlugs(),
+        "manufacturing": getManufacturingIndustrySlugs(),
+        "logistics-infrastructure": getLogisticsInfrastructureIndustrySlugs(),
+        "it-technology": getITTechnologyIndustrySlugs(),
+        "agriculture-primary": getAgriculturePrimaryIndustrySlugs(),
+      }).flatMap(([middle, slugs]) => slugs.map((s) => `/articles/by-industry/${middle}/${s}`)),
     ];
     const uniquePaths = [...new Set(fallbackPaths)];
     const now = new Date();

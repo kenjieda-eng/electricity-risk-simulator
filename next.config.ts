@@ -4,6 +4,9 @@ const PRODUCTION_VERCEL_HOST = "electricity-risk-simulator.vercel.app";
 const CANONICAL_BASE_URL = "https://simulator.eic-jp.org";
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   async redirects() {
     return [
       {
