@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電力会社が倒産・事業撤退したときの対応｜法人向け緊急対応ガイド";
 const pageDescription =
@@ -150,6 +152,12 @@ const reportTemplate = {
 　・切替先の最終承認（○月○日までに必要）`,
 };
 
+const faqForSchema = [
+  { question: "電力会社が倒産したら電気が突然止まりますか？", answer: "いいえ、突然停電になることはありません。小売電気事業者が倒産・廃業した場合、一般送配電事業者による「最終保障供給」に自動的に移行するため、電力供給は継続されます。ただし料金が高くなるため、早急に新たな契約先を探す必要があります。" },
+  { question: "倒産した電力会社に払いすぎた電気代は返ってきますか？", answer: "破産手続きが開始された場合、過払い金やデポジットは一般債権として破産管財人に届け出ることになります。回収できる金額は破産財団の資産状況によって異なり、全額回収できないケースも多くあります。弁護士に相談のうえ、確実に債権届出を行うことが重要です。" },
+  { question: "新しい電力会社に切り替える際の申し込みから完了まで何日かかりますか？", answer: "低圧では通常1〜2週間、高圧以上では検針月サイクルの関係から1〜2カ月程度かかります。最終保障供給中でも切替申し込みは通常通り進められます。供給停止予定日前から動き始めると、最終保障供給への移行自体を避けられる場合もあります。" },
+];
+
 const faqs = [
   {
     q: "電力会社が倒産したら電気が突然止まりますか？",
@@ -179,6 +187,19 @@ const faqs = [
 
 export default function EmergencySupplierBankruptcyPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-12"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "電力会社倒産の対応" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -340,6 +361,17 @@ export default function EmergencySupplierBankruptcyPage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "最終保障供給制度・電力小売制度に関する公式情報" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "新電力の撤退・倒産に関する監視データと相談窓口" },
+          { name: "新電力ネット", url: "https://pps-net.org", description: "新電力の撤退状況・市場動向・切替手続き情報" },
+        ]}
+        publishedAt="2026-04-12"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -382,5 +414,6 @@ export default function EmergencySupplierBankruptcyPage() {
         />
       </div>
     </main>
+    </>
   );
 }

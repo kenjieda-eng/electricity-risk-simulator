@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "自治体新電力（シュタットベルケ）の検討フレーム｜設立判断と運営リスク";
 const pageDescription =
@@ -145,8 +147,27 @@ const failureFactors = [
   "電力市場の急激な変化に対応できる経営判断ができない",
 ];
 
+const faq = [
+  { question: "自治体が新電力会社を設立するメリットは何ですか？", answer: "地域の再エネ電源を活用した地産地消の実現、収益の地域還流による地域経済活性化、SDGs・カーボンニュートラル推進などが主なメリットです。ただし電力市況変動リスクや初期投資の回収リスクが大きいため、設立前にフィジビリティスタディ（FS）が不可欠です。" },
+  { question: "自治体系新電力が廃業する主な原因は何ですか？", answer: "2022年以降の電力市場高騰による逆ザヤ（販売単価＜調達単価）が最大の要因です。加えて、小規模設立による固定費負担の大きさ、需給管理の専門人材不足、インバランス料金の想定外発生なども共通する失敗要因です。" },
+  { question: "新電力設立以外に自治体が電力コストを下げる方法はありますか？", answer: "広域連合による共同調達、入札による競争的な電力調達、包括管理委託への電力調達組み込み、PPA（電力購入契約）による再エネ直接調達など、設立リスクを負わない代替手段が複数あります。自治体の規模や地域の電源事情に応じて選択してください。" },
+];
+
 export default function MunicipalityLocalNewPowerPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体の電力契約", url: "https://simulator.eic-jp.org/articles/municipality" },
+          { name: "自治体新電力の検討" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -379,6 +400,19 @@ export default function MunicipalityLocalNewPowerPage() {
         </section>
       </section>
 
+      {/* FAQ・出典 */}
+      <div className="mt-8">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "小売電気事業者の登録・届出制度、電力市場データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "新電力の事業撤退・廃業に関する市場監視データ" },
+            { name: "総務省 地方公営企業制度", url: "https://www.soumu.go.jp", description: "自治体の出資法人・第三セクターに関する制度情報" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -420,5 +454,6 @@ export default function MunicipalityLocalNewPowerPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
@@ -40,11 +42,30 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "JEPXスポット市場の価格はどのように推移してきましたか？", answer: "2016年度は8.47円/kWhで安定していましたが、2020年度末に寒波で250円超のスパイクが発生。2022年度はウクライナ危機でLNGが高騰し、年度平均20.37円/kWhと過去最高を記録しました。2023年度以降はLNG正常化で10〜12円台に落ち着いています。" },
+  { question: "2021年1月のJEPX歴史的スパイクとは何ですか？", answer: "記録的な寒波とLNG在庫逼迫により、2021年1月中旬にJEPXスポット価格が一時250円/kWhを超える30分コマが発生しました。月平均は60円/kWhを突破し、市場連動プラン契約の中小事業者・新電力で経営破綻が相次ぎました。" },
+  { question: "JEPXの市場規模はどれくらい拡大しましたか？", answer: "FY2010のコマあたり平均約定量は約31万kWhでしたが、FY2025には1,624万kWhと50倍超に成長しました。電力小売全面自由化（2016年度）以降、市場参加者が急増し、流動性と価格発見機能が大幅に向上しています。" },
+];
+
 export default function JepxSpotMarketHistoryPage() {
   const labels = JEPX_SYSTEM_PRICE_YEARLY.map((r) => `${r.year}年度`);
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力調達の仕組みを知る", url: "https://simulator.eic-jp.org/articles/power-procurement" },
+          { name: "JEPXスポット市場の価格推移" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -257,6 +278,16 @@ export default function JepxSpotMarketHistoryPage() {
           </div>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場のシステムプライス・約定量の公表データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場の動向分析・LNG調達に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "卸電力市場の価格動向レポート" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
@@ -281,5 +312,6 @@ export default function JepxSpotMarketHistoryPage() {
         <CategoryNextStepCta slug="jepx-spot-market-history" />
       </div>
     </main>
+    </>
   );
 }

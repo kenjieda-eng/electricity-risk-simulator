@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import JepxYearlySystemPriceChart from "../../components/articles/JepxYearlySystemPriceChart";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/businessElectricityTrendHubData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
@@ -42,6 +44,12 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "JEPXの電気の価格はどのように決まりますか？", answer: "JEPX価格は需給バランスを基本に、再エネ出力、火力の稼働状況、燃料価格、系統制約が複合的に影響して決まります。需要が供給余力に対して逼迫するほど価格は上がりやすく、30分単位で同時同量を合わせる必要があるため「その時間帯の厳しさ」に敏感に反応します。" },
+  { question: "時間帯や天候で電気の価格が変わるのはなぜですか？", answer: "夏冬の昼夕方は冷暖房需要で価格が上がりやすくなります。特に太陽光が落ち始める夕方は、需要が高いまま再エネ出力が低下し火力で埋める比率が高まるため高値になります。逆に、需要が低く再エネ出力が高い時間帯は価格が落ち着きます。" },
+  { question: "燃料価格の上昇はJEPX価格にどう影響しますか？", answer: "日本では火力発電が需給調整の中心を担う場面が多いため、LNGや石炭などの燃料価格上昇は市場価格の上昇圧力になります。ただし、需要水準・再エネ出力・使える火力の量・系統状況が同時に影響するため、燃料高だけで価格が決まるわけではありません。" },
+];
+
 export default function HowElectricityPricesAreDeterminedPage() {
   const factorRows = [
     {
@@ -77,6 +85,19 @@ export default function HowElectricityPricesAreDeterminedPage() {
   ];
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-03-12"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力調達の仕組みを知る", url: "https://simulator.eic-jp.org/articles/power-procurement" },
+          { name: "電気の価格はどう決まるのか" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電気の価格はどう決まるのか｜JEPX価格の決まり方</h1>
@@ -189,6 +210,16 @@ export default function HowElectricityPricesAreDeterminedPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場のシステムプライス・エリアプライスの公表データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力需給・燃料価格・発電構成に関するデータ" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統制約・連系線情報" },
+          ]}
+          publishedAt="2026-03-12"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="価格形成の背景を押さえたら、燃料調達や市場以外の調達手段に進むと理解が深まります。"
@@ -234,5 +265,6 @@ export default function HowElectricityPricesAreDeterminedPage() {
         <CategoryNextStepCta slug="how-electricity-prices-are-determined" />
       </div>
     </main>
+    </>
   );
 }

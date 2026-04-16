@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "公共施設包括管理委託と電力契約の関係｜メリットと注意点";
 const pageDescription =
@@ -139,8 +141,27 @@ const checkPoints = [
   },
 ];
 
+const faq = [
+  { question: "包括管理委託に電力調達を含めるべきですか？", answer: "施設規模・手続き負担・省エネインセンティブのバランスによります。電力費の透明性を重視するなら分離調達、省エネ促進と手続き省力化を重視するなら包括委託に含める方式が適しています。月次報告義務を付けることで透明性も確保できます。" },
+  { question: "包括委託で電力市況が高騰した場合の費用負担はどうなりますか？", answer: "契約書に市況変動時の精算ルール（改定計算式と協議プロセス）を明記しておくことが重要です。ルールが不明確なまま委託すると、高騰時に委託料の増額交渉が難航し、受託事業者との関係悪化や事業継続リスクにつながります。" },
+  { question: "包括外部監査で電力費が問題になることはありますか？", answer: "はい。電力費を含む包括委託は、包括外部監査で「委託費の妥当性」が指摘されやすい項目です。電力費の積算根拠・市場価格との比較・競争性の証明資料を日頃から整備しておくことが対策になります。" },
+];
+
 export default function MunicipalityFacilityManagementPackagePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体の電力契約", url: "https://simulator.eic-jp.org/articles/municipality" },
+          { name: "包括管理と電力契約" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -321,6 +342,19 @@ export default function MunicipalityFacilityManagementPackagePage() {
         </section>
       </section>
 
+      {/* FAQ・出典 */}
+      <div className="mt-8">
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "総務省 地方公共団体の行政改革に関する取組状況", url: "https://www.soumu.go.jp", description: "包括管理委託・指定管理者制度の導入状況データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力調達・小売電気事業に関する制度情報" },
+            { name: "内閣府 PFI推進室", url: "https://www8.cao.go.jp/pfi/", description: "PFI・PPP事業の導入ガイドライン" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+      </div>
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -362,5 +396,6 @@ export default function MunicipalityFacilityManagementPackagePage() {
         />
       </div>
     </main>
+    </>
   );
 }

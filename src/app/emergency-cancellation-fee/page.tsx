@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "電力契約の違約金を請求されたときの対応｜妥当性確認と交渉手順";
 const pageDescription =
@@ -145,6 +147,12 @@ const expertSigns = [
   "電力会社が交渉に応じず、監督機関への申告を検討している場合",
 ];
 
+const faqForSchema = [
+  { question: "契約書に違約金の記載がない場合でも支払い義務はありますか？", answer: "原則として、契約書に明記されていない違約金の請求には根拠がありません。ただし民法の一般原則（損害賠償責任）が適用される場合もあるため、具体的な状況については法律の専門家に相談することをお勧めします。" },
+  { question: "電力会社が一方的に値上げしたのに解約すると違約金が発生しますか？", answer: "値上げが契約内容の実質的な変更に当たる場合、違約金の免除・減額を交渉できる余地があります。特に料金の大幅な変更や、契約時の条件と大きく異なる変更が行われた場合は、弁護士または専門家に相談してください。" },
+  { question: "違約金を支払わないと電気を止められますか？", answer: "違約金の未払いと電力供給の継続は別の問題です。ただし電力会社が法的手続き（訴訟・仮差押えなど）を取る可能性はあります。異議がある場合でも、専門家の助言を受けながら対応することが重要です。" },
+];
+
 const faqs = [
   {
     q: "契約書に違約金の記載がない場合でも支払い義務はありますか？",
@@ -182,6 +190,19 @@ const faqs = [
 
 export default function EmergencyCancellationFeePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "違約金請求の対応" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -376,6 +397,17 @@ export default function EmergencyCancellationFeePage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の違約金・不当請求に関する相談窓口と監視データ" },
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約条件に関する公式情報" },
+          { name: "新電力ネット", url: "https://pps-net.org", description: "電力契約の解約・違約金に関する市場動向情報" },
+        ]}
+        publishedAt="2026-04-11"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -417,5 +449,6 @@ export default function EmergencyCancellationFeePage() {
         />
       </div>
     </main>
+    </>
   );
 }

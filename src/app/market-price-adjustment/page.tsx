@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 
@@ -39,11 +41,30 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "市場価格調整額とは何ですか？", answer: "市場価格調整額は、卸電力市場（JEPX）の価格動向を電気料金に反映する調整項目です。燃料費調整額と似た役割を持ちますが、参照している価格が「燃料CIF価格」ではなく「JEPXの市場価格」である点が異なります。電力会社ごとに名称や算定ルールが異なります。" },
+  { question: "市場価格調整額と燃料費調整額の違いは何ですか？", answer: "市場価格調整額はJEPX市場価格を参照し月次で反映されるため変動幅が大きく、上限が原則ありません。一方、燃料費調整額は燃料CIF価格を参照し3〜5ヶ月のラグで反映され、規制料金には上限が設定されています。" },
+  { question: "固定単価プランでも市場価格調整額は発生しますか？", answer: "はい。固定単価プランでも、別立てで市場連動項目（市場価格調整額）が含まれているケースがあります。契約書の末尾の小さな条項に算定ルールが記載されていることが多いため、見積比較時には注意が必要です。" },
+];
+
 export default function MarketPriceAdjustmentPage() {
   const labels = JEPX_SYSTEM_PRICE_YEARLY.map((r) => `${r.year}年度`);
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2025-08-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "料金が上がる理由を知る", url: "https://simulator.eic-jp.org/articles/price-increase" },
+          { name: "市場価格調整額とは" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav className="mb-4 text-xs text-slate-500">
         <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link>
@@ -246,6 +267,16 @@ export default function MarketPriceAdjustmentPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場のシステムプライス公表データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金制度・調整項目に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "小売電気事業者の料金メニュー・約款の監視データ" },
+          ]}
+          publishedAt="2025-08-11"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -266,5 +297,6 @@ export default function MarketPriceAdjustmentPage() {
         />
       </section>
     </main>
+    </>
   );
 }

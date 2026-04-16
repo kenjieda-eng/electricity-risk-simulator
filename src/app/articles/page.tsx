@@ -14,6 +14,7 @@ import {
 } from "../../lib/articleIndustryCategories";
 import { ARTICLES_THEME_ROWS, CATEGORY_HUB_SPOTLIGHT } from "../../lib/articleHubFeatured";
 import type { ArticleCategorySlug } from "../../data/articles";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =

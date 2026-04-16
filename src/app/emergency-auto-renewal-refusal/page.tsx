@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "自動更新契約の停止・拒否の進め方｜期限管理と手続きガイド";
 const pageDescription =
@@ -133,6 +135,12 @@ const expertSigns = [
   "切替後の料金条件（燃調・市場価格調整）の評価が困難な場合",
 ];
 
+const faqForSchema = [
+  { question: "自動更新の解約通告期限を過ぎてしまった場合どうすればいいですか？", answer: "まず電力会社に連絡し、状況を正直に説明して更新拒否・猶予の交渉を行ってください。期限超過の場合でも、電力会社が交渉に応じてくれることがあります。応じない場合は、次の更新期間の通告期限に向けて今すぐ準備を始めてください。" },
+  { question: "解約通告期限は一般的にいつですか？", answer: "電力会社や契約内容によって異なりますが、契約満了の1カ月前〜3カ月前が多いです。一部の契約では6カ月前というケースもあります。必ず手元の契約書で確認してください。" },
+  { question: "自動更新を拒否した後、同じ電力会社に新条件で再契約できますか？", answer: "可能です。更新拒否後に相見積もりを取り、現在の電力会社が最も競争力のある条件を提示した場合は、改めて新条件で契約することができます。更新拒否は「現在の条件での継続を断る」ことであり、電力会社との取引を終了する意思表示ではありません。" },
+];
+
 const faqs = [
   {
     q: "自動更新の解約通告期限を過ぎてしまいました。どうすればいいですか？",
@@ -166,6 +174,19 @@ const faqs = [
 
 export default function EmergencyAutoRenewalRefusalPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "自動更新の停止手続き" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -400,6 +421,17 @@ export default function EmergencyAutoRenewalRefusalPage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力契約制度・自動更新条項に関する公式情報" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の解約・更新に関する監視データ" },
+          { name: "新電力ネット", url: "https://pps-net.org", description: "電力契約の切替手続き・市場動向情報" },
+        ]}
+        publishedAt="2026-04-11"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -441,5 +473,6 @@ export default function EmergencyAutoRenewalRefusalPage() {
         />
       </div>
     </main>
+    </>
   );
 }

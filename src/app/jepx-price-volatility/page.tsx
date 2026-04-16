@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 
@@ -38,8 +40,27 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "JEPX価格が大きく変動する主な要因は何ですか？", answer: "JEPX価格を動かす主要因は、需給バランス、燃料CIF価格、再エネ出力、気象条件、系統制約の5つです。これらが同じ方向に重なると価格が大きく動きやすくなります。2021年1月には寒波+LNG逼迫+発電所停止が重なり250円/kWhを超えました。" },
+  { question: "太陽光発電の普及はJEPX価格にどう影響していますか？", answer: "晴天の昼間（10〜15時）は太陽光出力が集中するため、限界費用が下がりスポット価格が急落するパターンが定着しています。一方、曇天・雨天・夜間は火力依存が高まり価格が上昇します。特に冬の曇天夕方は高値になりやすい傾向があります。" },
+  { question: "JEPXのスパイク（異常高騰）は近年どうなっていますか？", answer: "FY2020は50円/kWh超のスパイクが749コマ（全体の4.3%）発生し最高値は251円でしたが、FY2024以降はスパイク発生ゼロとなっており、市場は安定化傾向にあります。" },
+];
+
 export default function JepxPriceVolatilityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力調達の仕組みを知る", url: "https://simulator.eic-jp.org/articles/power-procurement" },
+          { name: "JEPX価格変動の要因" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -268,6 +289,16 @@ export default function JepxPriceVolatilityPage() {
           <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データを集計。スパイク = システムプライスが50円/kWhを超えたコマ。</p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場の約定価格データ・ボラティリティ分析用元データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "需給逼迫時の対応・広域予備率の基準" },
+            { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統制約情報" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
@@ -292,5 +323,6 @@ export default function JepxPriceVolatilityPage() {
         <CategoryNextStepCta slug="jepx-price-volatility" />
       </div>
     </main>
+    </>
   );
 }

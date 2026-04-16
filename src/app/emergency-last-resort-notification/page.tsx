@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "最終保障供給の通知が来たときの対応｜タイムラインとチェックリスト";
 const pageDescription =
@@ -134,6 +136,12 @@ const expertSigns = [
   "切替後の料金メニュー（燃調・市場価格調整）のリスク評価が難しい場合",
 ];
 
+const faqForSchema = [
+  { question: "最終保障供給とはどういう制度ですか？", answer: "最終保障供給とは、電力の供給者が決まらない場合に、一般送配電事業者が最終的に電力を供給する制度です。供給期間は最大9カ月で、通常の電力料金より割高になることが多く、早急な切替先確保が求められます。" },
+  { question: "最終保障供給の料金はどのくらい高いですか？", answer: "最終保障供給の料金は事業者や時期によって異なりますが、通常の市場料金と比較して20〜100%程度高くなるケースが報告されています。現在の最終保障供給料金は経済産業省のウェブサイトまたは一般送配電事業者の窓口で確認できます。" },
+  { question: "切替完了まで何日かかりますか？", answer: "高圧・特別高圧の場合、新規契約から供給開始まで通常30〜60日かかります。最終保障供給の通知を受けた時点で、即座に切替活動を開始することが重要です。" },
+];
+
 const faqs = [
   {
     q: "最終保障供給とはどういう制度ですか？",
@@ -167,6 +175,19 @@ const faqs = [
 
 export default function EmergencyLastResortNotificationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "最終保障供給通知の対応" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -384,6 +405,17 @@ export default function EmergencyLastResortNotificationPage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "最終保障供給制度の仕組みと料金に関する公式情報" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の件数推移・公表データ" },
+          { name: "新電力ネット", url: "https://pps-net.org", description: "新電力の撤退状況・市場動向" },
+        ]}
+        publishedAt="2026-04-11"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -425,5 +457,6 @@ export default function EmergencyLastResortNotificationPage() {
         />
       </div>
     </main>
+    </>
   );
 }

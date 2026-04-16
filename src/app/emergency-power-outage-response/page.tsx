@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "停電・計画停電が発生したときの法人対応マニュアル｜緊急対応ガイド";
 const pageDescription =
@@ -131,6 +133,12 @@ const damageRecordItems = [
   "電力会社の停電原因証明書（場合により発行）を入手する",
 ];
 
+const faqForSchema = [
+  { question: "停電で設備が壊れた場合、電力会社に損害賠償を請求できますか？", answer: "電力会社の過失（設備故障・工事ミスなど）による停電の場合は損害賠償請求が可能なケースがあります。ただし、自然災害・第三者の過失・計画停電など、電力会社に帰責がない場合は請求困難です。損害の記録を保存したうえで弁護士や保険会社に相談することを推奨します。" },
+  { question: "非常用発電機の定期点検はどのくらいの頻度で行うべきですか？", answer: "消防法上、特定防火対象物に設置された非常用発電機は年1回以上の負荷試験が義務付けられています。それ以外の施設でも、月1回の無負荷試運転と年1回の負荷試験を実施することが推奨されます。" },
+  { question: "BCPに停電シナリオを組み込む際の最低限のポイントは何ですか？", answer: "停電時の指揮命令系統と連絡先リスト、重要システムのバックアップ電源稼働時間、代替手段（紙運用・別拠点への移行）、顧客・取引先への対応基準、復旧優先順位の明確化の5点が最低限必要です。年1回以上の訓練で手順の実効性を確認することを推奨します。" },
+];
+
 const faqs = [
   {
     q: "UPSのバッテリー時間はどの程度あれば十分ですか？",
@@ -160,6 +168,19 @@ const faqs = [
 
 export default function EmergencyPowerOutageResponsePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-12"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "停電発生時の対応" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -372,6 +393,17 @@ export default function EmergencyPowerOutageResponsePage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力供給の安定性・停電対応に関する公式情報" },
+          { name: "電力広域的運営推進機関（OCCTO）", url: "https://www.occto.or.jp", description: "電力需給データ・停電情報" },
+          { name: "総務省消防庁", url: "https://www.fdma.go.jp", description: "非常用発電機の点検義務・消防法に関する情報" },
+        ]}
+        publishedAt="2026-04-12"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -414,5 +446,6 @@ export default function EmergencyPowerOutageResponsePage() {
         />
       </div>
     </main>
+    </>
   );
 }

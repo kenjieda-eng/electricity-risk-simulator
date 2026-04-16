@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
@@ -45,6 +47,12 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "JEPXとは何ですか？", answer: "JEPX（日本卸電力取引所）は、発電事業者と小売電気事業者などが電気を売買する日本唯一の卸電力市場です。2003年に設立され、30分単位の電気を取引対象とし、年間3,000〜4,000億kWh規模の取引が行われています。" },
+  { question: "JEPXの一日前市場と時間前市場の違いは何ですか？", answer: "一日前市場（スポット市場）は翌日の30分単位の電気を前日に売買する市場で、主な調達量の確保に使われます。時間前市場は当日に需要予測や発電計画のずれを修正するための市場で、天候急変などへの追加調整に使われます。" },
+  { question: "JEPXの価格が法人の電気料金にどう影響しますか？", answer: "市場連動プランでは JEPX 価格が直接請求単価に反映されます。固定単価プランでも、電力会社の調達コストとして間接的に影響し、契約更新時の単価に反映されることがあります。2022年度にはJEPX年度平均が20円/kWhを超え、多くの法人で料金が上昇しました。" },
+];
+
 export default function JepxExplainedPage() {
   const marketRows = [
     {
@@ -65,6 +73,19 @@ export default function JepxExplainedPage() {
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-03-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力調達の仕組みを知る", url: "https://simulator.eic-jp.org/articles/power-procurement" },
+          { name: "JEPXとは何か" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">JEPXとは何か｜卸電力市場の仕組み</h1>
@@ -267,6 +288,16 @@ export default function JepxExplainedPage() {
           </ul>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場・時間前市場の取引データ・約定結果" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場制度・卸電力市場の概要" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "卸電力市場の監視・分析レポート" },
+          ]}
+          publishedAt="2026-03-11"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           intro="JEPXの仕組みを押さえたら、次は価格形成と市場以外の調達手段を見ると全体像がつながります。"
@@ -314,5 +345,6 @@ export default function JepxExplainedPage() {
         <CategoryNextStepCta slug="jepx-explained" />
       </div>
     </main>
+    </>
   );
 }

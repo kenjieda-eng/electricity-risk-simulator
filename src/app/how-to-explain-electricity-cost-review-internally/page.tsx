@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 
 const pageTitle =
@@ -100,6 +102,12 @@ const explanationStructure = [
   },
 ];
 
+const faqForSchema = [
+  { question: "電気料金の見直しを社内で説明するときに最も重要なポイントは何ですか？", answer: "「なぜ見直すのか」「何を比較したのか」「どれくらいの効果があるのか」「リスクはあるのか」「次に何をすればよいのか」の5点を構造的に伝えることが重要です。特に年間コストのインパクトを数値で示すと承認が得られやすくなります。" },
+  { question: "市場連動プランを経営層に説明するときの注意点は何ですか？", answer: "コスト削減の可能性だけでなく、高騰時の上振れリスクを具体的な金額で示すことが不可欠です。「最悪ケースでいくらまで上がる可能性があるか」をシミュレーション結果で見せることで、リスクを正確に伝えられます。" },
+  { question: "シミュレーター結果は社内説明にどう活用できますか？", answer: "現行契約と候補プランの条件でシミュレーションした結果を比較資料として使えます。客観的な数値に基づく判断材料として提示でき、担当者個人の意見ではなくデータに基づく提案として説得力が増します。" },
+];
+
 const audienceSpecificPoints = [
   {
     audience: "経営層・役員",
@@ -141,6 +149,19 @@ const audienceSpecificPoints = [
 
 export default function HowToExplainElectricityCostReviewInternallyPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/how-to-explain-electricity-cost-review-internally"
+        datePublished="2026-04-10"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "見直しポイントを知る", url: "https://simulator.eic-jp.org/articles/review-points" },
+          { name: "見直しの社内説明" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -346,6 +367,16 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
           </p>
         </section>
 
+        <SourcesAndFaq
+          faq={faqForSchema}
+          sources={[
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金制度・契約見直しに関する公式情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ・料金比較情報" },
+            { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場の動向・料金比較情報" },
+          ]}
+          publishedAt="2026-04-10"
+        />
+
         <RelatedLinks
           heading="関連ページ"
           links={[
@@ -393,5 +424,6 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
         />
       </section>
     </main>
+    </>
   );
 }

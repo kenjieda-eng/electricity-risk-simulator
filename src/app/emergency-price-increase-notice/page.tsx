@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
 const pageTitle = "値上げ通知が届いたらまずやる7つのこと｜法人向け電気料金の緊急対応";
 const pageDescription =
@@ -132,6 +134,12 @@ const expertSigns = [
   "切替後のリスク（燃調・市場連動）について独自評価が難しい場合",
 ];
 
+const faqForSchema = [
+  { question: "値上げ通知の「異議申立期限」とは何ですか？", answer: "電力会社が値上げを通告する際、「○月○日までに異議を申し立てなければ同意とみなす」と設定する期限です。この期限を過ぎると値上げを承諾したとみなされるため、必ず期限を確認してください。" },
+  { question: "交渉で値上げ幅を下げることはできますか？", answer: "年間使用量が大きい法人の場合、相見積もりを持参した交渉で値上げ幅の圧縮や、固定料金メニューへの変更を勝ち取れることがあります。特に年間使用量が100万kWh以上の場合は交渉余地が大きいです。" },
+  { question: "値上げを断ったら電気を止められますか？", answer: "値上げを承諾しないからといって即座に供給停止になることはありません。ただし契約終了後に新たな供給者を確保できない場合は、最終保障供給に移行する可能性があります。" },
+];
+
 const faqs = [
   {
     q: "値上げ通知の「異議申立期限」とは何ですか？",
@@ -165,6 +173,19 @@ const faqs = [
 
 export default function EmergencyPriceIncreaseNoticePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "緊急対応・トラブル解決", url: "https://simulator.eic-jp.org/articles/emergency-response" },
+          { name: "値上げ通知への対応" },
+        ]}
+        faq={faqForSchema}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -375,6 +396,17 @@ export default function EmergencyPriceIncreaseNoticePage() {
         </div>
       </section>
 
+      {/* 出典・FAQ構造化データ */}
+      <SourcesAndFaq
+        faq={faqForSchema}
+        sources={[
+          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金制度・燃料費調整額の仕組みに関する公式情報" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力会社の料金変更・契約条件に関する監視データ" },
+          { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場の動向・新電力の料金情報" },
+        ]}
+        publishedAt="2026-04-11"
+      />
+
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
@@ -416,5 +448,6 @@ export default function EmergencyPriceIncreaseNoticePage() {
         />
       </div>
     </main>
+    </>
   );
 }

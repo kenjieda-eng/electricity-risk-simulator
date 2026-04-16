@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_HOURLY_AVG, JEPX_AREA_SPREAD_2026 } from "../../data/jepxData";
@@ -40,11 +42,30 @@ export const metadata: Metadata = {
   },
 };
 
+const faq = [
+  { question: "JEPXの価格変動は法人の電気料金にどのように影響しますか？", answer: "JEPX価格は「直接反映（市場連動プラン）」「間接反映（固定プランの更新時転嫁）」「遅延反映（長期契約でほぼ影響なし）」の3つの経路で法人料金に波及します。どの経路で影響するかは契約メニュー次第です。" },
+  { question: "市場連動プランと固定プランで、JEPX高騰時の影響はどれくらい違いますか？", answer: "月10万kWh使用の場合、2019年度と2022年度を比較すると、完全市場連動プランでは年額+約1,490万円の増加に対し、固定単価の2年契約では契約期間中の影響はゼロです。ただし固定契約も更新時に値上げを受ける可能性があります。" },
+  { question: "JEPX高騰に対してどのような備えが有効ですか？", answer: "市場連動プランの場合は上限条項の有無を確認することが重要です。また、複数メニュー・複数拠点への分散、長期契約や相対契約の活用、再エネPPAなどの選択肢を検討することで、JEPX高騰リスクを軽減できます。" },
+];
+
 export default function JepxBusinessImpactPage() {
   const labels = JEPX_SYSTEM_PRICE_YEARLY.map((r) => `${r.year}年度`);
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-11"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力調達の仕組みを知る", url: "https://simulator.eic-jp.org/articles/power-procurement" },
+          { name: "JEPXが法人料金に与える影響" },
+        ]}
+        faq={faq}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -274,6 +295,16 @@ export default function JepxBusinessImpactPage() {
           <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（FY2026 4月期）のエリアプライスとシステムプライスの差を集計。</p>
         </section>
 
+        <SourcesAndFaq
+          faq={faq}
+          sources={[
+            { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場の約定価格・約定量データ" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場制度・料金制度の概要" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "小売電気事業者の撤退・経営状況の監視レポート" },
+          ]}
+          publishedAt="2026-04-11"
+        />
+
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
@@ -299,5 +330,6 @@ export default function JepxBusinessImpactPage() {
         <CategoryNextStepCta slug="jepx-business-impact" />
       </div>
     </main>
+    </>
   );
 }
