@@ -287,6 +287,7 @@ const LOGISTICS_INFRASTRUCTURE_ARTICLES: LogisticsInfrastructureIndustryArticle[
       "物流センター（常温）の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "物流センターは照明が全電力の30〜40%を占め、EC拡大に伴う自動化で消費が構造的に増加しています。LED化の投資回収が最も早い業態の一つである物流施設の見直しポイントを整理します。",
+    keywords: ["物流センター 電気料金", "倉庫 電気代", "物流施設 電力契約", "物流倉庫 電力コスト", "物流センター 電力見直し"],
     learnPoints: [
       "高天井照明の比率とLED化の優先度",
       "自動化・充電・時間帯別契約との相性",
@@ -475,6 +476,7 @@ const LOGISTICS_INFRASTRUCTURE_ARTICLES: LogisticsInfrastructureIndustryArticle[
       "冷蔵・冷凍倉庫の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "冷蔵・冷凍倉庫は冷凍機が電力消費の圧倒的主因で、電力比率80〜90%と全業態中で最も電力依存度が高い業態です。冷凍機の効率が全てを決める構造の中での見直しポイントを整理します。",
+    keywords: ["冷蔵倉庫 電気料金", "冷凍倉庫 電気代", "冷蔵冷凍 電力契約", "冷凍設備 電力コスト", "冷蔵倉庫 電力見直し"],
     learnPoints: [
       "冷凍機のCOPと更新優先度",
       "断熱・冷気漏れ・デフロストなど運用・設備の論点",
@@ -656,6 +658,7 @@ const LOGISTICS_INFRASTRUCTURE_ARTICLES: LogisticsInfrastructureIndustryArticle[
       "配送拠点・トラックターミナルの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "配送拠点は現在の消費量は比較的小さいものの、EVトラック普及に伴い充電インフラの電力消費が今後急増する可能性があります。入出庫時間帯の負荷集中と将来の見直しポイントを整理します。",
+    keywords: ["トラックターミナル 電気料金", "配送拠点 電気代", "物流拠点 電力契約", "配送センター 電力コスト", "配送拠点 電力見直し"],
     learnPoints: [
       "照明・換気を中心とした現状の負荷構造",
       "EVトラック充電がもたらし得る受電容量・デマンドの論点",
@@ -748,6 +751,7 @@ const LOGISTICS_INFRASTRUCTURE_ARTICLES: LogisticsInfrastructureIndustryArticle[
       "上下水道・浄水施設の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "上下水道はポンプの電力消費が全体の60〜80%を占め、電力コストは水道料金の主要構成要素です。人口減少で水需要が減っても維持コストは下がらない中での見直しポイントを整理します。",
+    keywords: ["浄水場 電気料金", "上下水道 電気代", "水道施設 電力契約", "ポンプ 電力コスト", "水道事業 電力見直し"],
     learnPoints: [
       "ポンプ・曝気を中心とした消費構造と処理量あたり指標",
       "漏水・定速運転・公共料金の制約",
@@ -874,6 +878,7 @@ const LOGISTICS_INFRASTRUCTURE_ARTICLES: LogisticsInfrastructureIndustryArticle[
       "通信基地局・鉄塔の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "通信基地局は5G化で消費が2〜3倍に増加しており、小規模でも24時間負荷が継続する設備です。数十万局規模の展開で全社の電力コストが急増する中での見直しポイントを整理します。",
+    keywords: ["通信基地局 電気料金", "基地局 電気代", "通信設備 電力契約", "鉄塔 電力コスト", "通信インフラ 電力見直し"],
     learnPoints: [
       "1局あたりの消費と全国規模での積み上げ",
       "通信機器と冷却の比率、5G化の影響",

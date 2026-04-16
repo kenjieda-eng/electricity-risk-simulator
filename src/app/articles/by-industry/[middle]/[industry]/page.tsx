@@ -7,7 +7,7 @@ import FlowDiagram from "../../../../../components/simulator/FlowDiagram";
 import InfoBox from "../../../../../components/simulator/InfoBox";
 import RelatedLinks from "../../../../../components/simulator/RelatedLinks";
 import { getIndustryMiddleCategory } from "../../../../../lib/articleIndustryCategories";
-import { BreadcrumbJsonLd } from "../../../../../components/seo/JsonLd";
+import { ArticleJsonLd } from "../../../../../components/seo/JsonLd";
 
 type PageParams = {
   middle: string;
@@ -168,10 +168,14 @@ export default async function SupermarketLargeScaleIndustryPage({ params }: Page
 
   return (
     <>
-    <BreadcrumbJsonLd
-      items={[
+    <ArticleJsonLd
+      headline={pageTitle}
+      description={pageDescription}
+      url={canonicalPath}
+      datePublished="2025-04-01"
+      breadcrumbItems={[
         { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
         { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
         { name: middleCategory.name, url: `https://simulator.eic-jp.org/articles/by-industry/${middleCategory.slug}` },
         { name: "スーパーマーケット（大型）" },

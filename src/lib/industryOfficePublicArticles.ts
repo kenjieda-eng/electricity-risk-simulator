@@ -40,6 +40,7 @@ export type OfficePublicIndustryArticle = {
   name: string;
   metadataTitle: string;
   metadataDescription: string;
+  keywords?: string[];
   learnPoints?: string[];
   sections: OfficePublicIndustrySection[];
   relatedIndustrySlugs: string[];
@@ -54,6 +55,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "大規模オフィスビルの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "大規模オフィスビルは、空調・照明・エレベーターが消費の大半を占め、特別高圧契約を通じて燃料費調整・再エネ賦課金の変動を直接受ける施設です。テナントへの転嫁の仕組みも含めた消費構造、上がりやすい理由、契約プランの考え方、見直しの方向性を整理します。",
+    keywords: [
+      "オフィスビル 電気料金",
+      "大規模ビル 電気代",
+      "オフィスビル 電力契約",
+      "ビル空調 電力コスト",
+      "高層ビル 電力見直し",
+    ],
     learnPoints: [
       "空調、照明、共用部動力が請求額へどう響きやすいか",
       "デマンド、テナント転嫁、設備年式で見たい実務ポイント",
@@ -253,6 +261,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "中規模オフィスビルの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "中規模オフィスビルは高圧契約が一般的で、大規模ビルほどの交渉力がない一方、テナント構成で消費パターンが変わりやすい業種です。消費構造、上がりやすい理由、契約と見直しの方向性を整理します。",
+    keywords: [
+      "中規模オフィスビル 電気料金",
+      "オフィスビル 電気代",
+      "テナントビル 電力契約",
+      "ビル管理 電力コスト",
+      "オフィスビル 電力見直し",
+    ],
     learnPoints: [
       "高圧単価とテナント構成の変化がどう響くか",
       "契約容量と実際の最大需要のズレをどう見るか",
@@ -426,6 +441,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "小規模オフィス・テナントの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "小規模オフィスやテナント入居型は低圧契約が多く単価が高い一方、消費の実態把握が難しい業種です。消費構造、リスク、見直しの方向性を整理します。",
+    keywords: [
+      "小規模オフィス 電気料金",
+      "テナントオフィス 電気代",
+      "事務所 電力契約",
+      "オフィス 空調 電力コスト",
+      "オフィス 電力見直し",
+    ],
     learnPoints: [
       "低圧単価の高さと一括受電の不透明さがどう影響するか",
       "サブメーターや按分方式で見たいポイント",
@@ -583,6 +605,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "コワーキングスペースの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "コワーキングスペースは営業時間が長く、利用者密度の変動が大きいため、電力コストが売上に対して変動しやすい業態です。消費構造とリスク、見直しの方向性を整理します。",
+    keywords: [
+      "コワーキング 電気料金",
+      "シェアオフィス 電気代",
+      "コワーキングスペース 電力契約",
+      "共用オフィス 電力コスト",
+      "コワーキング 電力見直し",
+    ],
     learnPoints: [
       "長時間営業と利用者変動がどう負荷を作るか",
       "在館人数と空調・照明のズレをどう見るか",
@@ -733,6 +762,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "官公庁・行政庁舎の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "官公庁は電力入札で調達先を決めますが、入札不調のリスクが増加しています。予算制約のある中での電力コスト管理と、築年数の古い庁舎の設備効率の課題を整理します。",
+    keywords: [
+      "官公庁 電気料金",
+      "行政庁舎 電気代",
+      "官公庁 電力契約",
+      "庁舎 空調 電力コスト",
+      "自治体 電力見直し",
+    ],
     learnPoints: [
       "平日集中型の負荷と入札調達の難しさがどう重なるか",
       "入札仕様書や複数年契約で見たいポイント",
@@ -912,6 +948,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "公共ホール・文化施設の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "公共ホールや美術館はイベント時と非稼働時の消費差が極めて大きく、デマンド管理が電気料金の鍵を握る施設です。催事の有無で負荷が激しく変動する中での見直しポイントを整理します。",
+    keywords: [
+      "公共ホール 電気料金",
+      "文化施設 電気代",
+      "ホール 電力契約",
+      "公共施設 空調 電力コスト",
+      "文化施設 電力見直し",
+    ],
     learnPoints: [
       "催事日と非催事日の差が基本料金へどう響くか",
       "ホール型と展示施設型で見方をどう分けるか",
@@ -1062,6 +1105,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "図書館・博物館の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "図書館・博物館は収蔵品保全のための温湿度管理が24時間必要で、空調コストの削減余地が限られる施設です。制約の中でできる見直しの方向性を整理します。",
+    keywords: [
+      "図書館 電気料金",
+      "博物館 電気代",
+      "美術館 電力契約",
+      "文化施設 空調 電力コスト",
+      "図書館 電力見直し",
+    ],
     learnPoints: [
       "収蔵品保全のために止められない設備がどこか",
       "除湿・加湿や展示照明で確認したいポイント",
@@ -1212,6 +1262,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "大学・研究機関の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "大学は講義棟から実験設備まで消費パターンが大きく異なり、キャンパス全体のエネルギー管理が求められる施設です。研究設備と空調負荷が重なる構造の中での見直しポイントを整理します。",
+    keywords: [
+      "大学 電気料金",
+      "研究機関 電気代",
+      "大学 電力契約",
+      "研究施設 電力コスト",
+      "大学 電力見直し",
+    ],
     learnPoints: [
       "講義棟と研究棟の差がキャンパス全体へどう効くか",
       "建物別・学部別の見える化で何を確認したいか",
@@ -1362,6 +1419,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "高校・中学・小学校の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "学校は近年のエアコン普及で夏季の電力消費が急増しています。授業時間帯に需要が集中しやすい中での、自治体予算内での電力コスト管理を整理します。",
+    keywords: [
+      "学校 電気料金",
+      "小中高 電気代",
+      "学校 電力契約",
+      "教育施設 空調 電力コスト",
+      "学校 電力見直し",
+    ],
     learnPoints: [
       "教室エアコンの一斉起動が基本料金へどう響くか",
       "夏季と長期休暇の差をどう確認したいか",
@@ -1528,6 +1592,13 @@ const OFFICE_PUBLIC_INDUSTRY_ARTICLES: OfficePublicIndustryArticle[] = [
     metadataTitle: "専門学校・予備校の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "専門学校・予備校は朝から夜まで長時間営業し、土日も開講するケースが多いため、一般の学校より電力消費が多い教育施設です。夜間講義や季節講習で負荷パターンが変わりやすい中での見直しポイントを整理します。",
+    keywords: [
+      "専門学校 電気料金",
+      "予備校 電気代",
+      "塾 電力契約",
+      "教育施設 電力コスト",
+      "専門学校 電力見直し",
+    ],
     learnPoints: [
       "長時間営業と夜間講義がどう請求を押し上げるか",
       "季節講習時のデマンドで何を確認したいか",

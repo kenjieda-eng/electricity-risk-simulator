@@ -176,7 +176,7 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
     <BreadcrumbJsonLd
       items={[
         { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
         { name: category.name },
       ]}
     />

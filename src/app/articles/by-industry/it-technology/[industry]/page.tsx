@@ -6,7 +6,7 @@ import {
   getITTechnologyIndustrySlugs,
 } from "../../../../../lib/industryITTechnologyArticles";
 import { getIndustryMiddleCategory } from "../../../../../lib/articleIndustryCategories";
-import { BreadcrumbJsonLd } from "../../../../../components/seo/JsonLd";
+import { ArticleJsonLd } from "../../../../../components/seo/JsonLd";
 
 type PageParams = {
   industry: string;
@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: article.metadataTitle,
     description: article.metadataDescription,
+    ...(article.keywords?.length ? { keywords: article.keywords } : {}),
     alternates: {
       canonical: canonicalPath,
     },
@@ -72,10 +73,14 @@ export default async function ITTechnologyIndustryArticleRoute({ params }: PageP
 
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
+      <ArticleJsonLd
+        headline={article.metadataTitle}
+        description={article.metadataDescription}
+        url={`https://simulator.eic-jp.org/articles/by-industry/${middle}/${industry}`}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-          { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+          { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
           { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
           { name: middleCategory?.name ?? "IT・テクノロジー系", url: `https://simulator.eic-jp.org/articles/by-industry/${middle}` },
           { name: article.name },

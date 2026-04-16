@@ -46,6 +46,7 @@ export type MedicalWelfareIndustryArticle = {
   name: string;
   metadataTitle: string;
   metadataDescription: string;
+  keywords?: string[];
   learnPoints?: string[];
   sections: MedicalWelfareIndustrySection[];
   relatedIndustrySlugs: string[];
@@ -60,6 +61,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "総合病院の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "総合病院は、24時間365日の稼働とMRI等の高電力医療機器を前提に、電力の安定供給が患者の生命に直結する施設です。電力コストを診療報酬では転嫁できない中での消費構造、上がりやすい理由、契約プランの考え方、見直しの方向性を整理します。",
+    keywords: ["総合病院 電気料金", "病院 電気代", "医療施設 電力契約", "病院 空調 電力コスト", "病院 電力見直し"],
     learnPoints: [
       "総合病院で空調・照明・医療機器がどう請求額に響きやすいか",
       "デマンド、供給安定性、BCPを含めて確認したいポイント",
@@ -319,6 +321,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "中小病院の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "中小病院は総合病院と同じ24時間稼働の構造を持ちながら、高圧契約で単価が割高になりやすく、経営基盤が脆弱なケースも多い施設です。消費構造、上がりやすい理由、契約と見直しの方向性を整理します。",
+    keywords: ["中小病院 電気料金", "病院 電気代 削減", "中小病院 電力契約", "病床 電力コスト", "中小病院 電力見直し"],
     sections: [
       {
         heading: "中小病院の電気料金はなぜ上がりやすいのか",
@@ -503,6 +506,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "クリニック・診療所の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "クリニック・診療所は診療時間帯の空調と医療機器が消費の中心で、低圧契約の高い単価が構造的な課題です。消費構造、リスク、見直しの方向性を整理します。",
+    keywords: ["クリニック 電気料金", "診療所 電気代", "クリニック 電力契約", "医院 電力コスト", "クリニック 電力見直し"],
     sections: [
       {
         heading: "クリニック・診療所の電気料金はなぜ上がりやすいのか",
@@ -674,6 +678,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "歯科医院の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "歯科医院はコンプレッサーやオートクレーブ等の専用機器が独特の電力消費を生み出す業態です。消費構造、リスク、見直しの方向性を整理します。",
+    keywords: ["歯科医院 電気料金", "歯医者 電気代", "歯科 電力契約", "歯科診療 電力コスト", "歯科医院 電力見直し"],
     sections: [
       {
         heading: "歯科医院の電気料金はなぜ上がりやすいのか",
@@ -814,6 +819,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "介護施設・老人ホームの電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "介護施設は入居者の安全・快適性のために空調と給湯を落とせず、介護報酬の公定価格ではコスト転嫁ができない施設です。消費構造、リスク、見直しの方向性を整理します。",
+    keywords: ["介護施設 電気料金", "老人ホーム 電気代", "介護施設 電力契約", "福祉施設 電力コスト", "介護施設 電力見直し"],
     sections: [
       {
         heading: "介護施設の電気料金はなぜ上がりやすいのか",
@@ -1001,6 +1007,7 @@ const MEDICAL_WELFARE_INDUSTRY_ARTICLES: MedicalWelfareIndustryArticle[] = [
     metadataTitle: "保育園・幼稚園の電気料金はなぜ上がりやすい？値上がりリスク・契約プラン・見直しポイント",
     metadataDescription:
       "保育園・幼稚園は園児の安全が最優先で空調は夏冬ともに必須です。公的補助金と保育料で運営される中で、電力コスト増を吸収しにくい施設の見直しポイントを整理します。",
+    keywords: ["保育園 電気料金", "幼稚園 電気代", "保育施設 電力契約", "保育園 空調 電力コスト", "保育園 電力見直し"],
     sections: [
       {
         heading: "保育園・幼稚園の電気料金はなぜ上がりやすいのか",

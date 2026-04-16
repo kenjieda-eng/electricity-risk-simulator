@@ -70,7 +70,7 @@ export default async function IndustryMiddlePage({ params }: PageProps) {
     <BreadcrumbJsonLd
       items={[
         { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
         { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
         { name: category.name },
       ]}
