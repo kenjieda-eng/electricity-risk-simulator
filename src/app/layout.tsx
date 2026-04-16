@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "../components/analytics/GoogleAnalytics";
 import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
+import BackToTop from "../components/BackToTop";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({
         <PublicHeader />
         <main className="bg-violet-50/30">{children}</main>
         <Footer />
+        <BackToTop />
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
