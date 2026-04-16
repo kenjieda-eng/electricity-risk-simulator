@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "電力料金上昇リスク診断の使い方 | 法人向け電気料金上昇、高騰リスクシミュレーター",
@@ -51,6 +52,13 @@ function SectionHeading({ iconSrc, text }: SectionHeadingProps) {
 
 export default function HowToPage() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力料金上昇リスク診断の使い方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-6 py-8 text-slate-800">
       <header className="mb-8 border-b border-slate-200 pb-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電力料金上昇リスク診断の使い方</h1>
@@ -261,5 +269,6 @@ export default function HowToPage() {
         </p>
       </footer>
     </main>
+    </>
   );
 }

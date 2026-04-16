@@ -119,6 +119,13 @@ export default function ArticlesPage() {
   const starterArticles = getArticlesBySlugs(starterArticleSlugs);
 
   return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電気料金の基礎知識" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-6 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
         <div className="flex items-center gap-3">
@@ -442,5 +449,6 @@ export default function ArticlesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

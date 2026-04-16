@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import ComparePageClient from "./ComparePageClient";
 
 export const metadata: Metadata = {
@@ -38,6 +39,12 @@ export const metadata: Metadata = {
 export default function ComparePage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "固定プランと市場連動プランの比較" },
+        ]}
+      />
       <section className="mx-auto mt-6 max-w-[1600px] bg-slate-50 px-4 py-[18px] sm:px-6 lg:px-8">
         <div className="rounded-xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
           <h1 className="text-lg font-bold text-slate-900 sm:text-xl">
