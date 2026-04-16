@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
 import {
   CATEGORY_KEYS,
@@ -194,11 +195,23 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
   ];
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          【{data.year}年】{data.category.label}の電気料金を振り返る
-        </h1>
+    <>
+      <ArticleJsonLd
+        headline={data.pageTitle}
+        description={data.pageDescription}
+        url={`${baseUrl}/business-electricity-retrospective/${slug}`}
+        datePublished={`${data.year}-01-01`}
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: data.pageTitle },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            【{data.year}年】{data.category.label}の電気料金を振り返る
+          </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、{data.year}年の{data.category.label}のkWhあたり単価を月別に整理します。数値はすべて
           小数点第一位で四捨五入しており、年間平均・高値安値・前後年比較まで一つのページで確認できます。
@@ -528,6 +541,7 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
           </div>
         </section>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

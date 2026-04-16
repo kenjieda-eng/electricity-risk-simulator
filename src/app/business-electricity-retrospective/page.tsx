@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import {
   HISTORICAL_EXPLANATION_ALL_LINKS,
   HISTORICAL_EXPLANATION_ITEMS,
@@ -48,9 +49,16 @@ export default function BusinessElectricityRetrospectivePage() {
   const historicalExplanationItemsForHub = HISTORICAL_EXPLANATION_ITEMS.slice(0, 2);
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人電気料金振り返り</h1>
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人電気料金振り返り</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           月次の法人向け電気料金動向を、補助政策と当社団が運営している「新電力ネット」の推移データをもとに整理するコンテンツです。
           「なぜ下がったのか・上がったのか」「契約区分ごとに意味がどう違うか」を、実務視点で確認できます。
@@ -294,6 +302,7 @@ export default function BusinessElectricityRetrospectivePage() {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

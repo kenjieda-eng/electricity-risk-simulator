@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "../../../../components/seo/JsonLd";
 import ContentCta from "../../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../../components/simulator/RelatedLinks";
 import {
@@ -813,22 +814,36 @@ export default async function GasScenarioPage({ params }: PageProps) {
   }
 
   const related = relatedLinksBySlug[slug];
+  const url = `https://simulator.eic-jp.org${GAS_SCENARIO_BASE_PATH}/${slug}`;
 
   return (
-    <GasScenarioLayout slug={slug} lead={leadBySlug[slug]}>
-      {renderContent(slug)}
-
-      <RelatedLinks heading={related.heading} links={related.links} />
-
-      <ContentCta
-        heading="次にすること"
-        description="総論トップとガソリン・電気代の特集も併せて確認すると、エネルギーコスト全体での意思決定に繋げやすくなります。"
-        links={[
-          { href: GAS_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
-          { href: "/special/oil-scenario-analysis", label: "ガソリン代シナリオ分析を見る" },
-          { href: "/special/emergency-scenario-analysis", label: "電気代シナリオ分析を見る" },
+    <>
+      <ArticleJsonLd
+        headline={page.title}
+        description={page.description}
+        url={url}
+        datePublished="2026-03-25"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "有事シナリオ分析（法人ガス代）", url: `https://simulator.eic-jp.org${GAS_SCENARIO_BASE_PATH}` },
+          { name: page.label },
         ]}
       />
-    </GasScenarioLayout>
+      <GasScenarioLayout slug={slug} lead={leadBySlug[slug]}>
+        {renderContent(slug)}
+
+        <RelatedLinks heading={related.heading} links={related.links} />
+
+        <ContentCta
+          heading="次にすること"
+          description="総論トップとガソリン・電気代の特集も併せて確認すると、エネルギーコスト全体での意思決定に繋げやすくなります。"
+          links={[
+            { href: GAS_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
+            { href: "/special/oil-scenario-analysis", label: "ガソリン代シナリオ分析を見る" },
+            { href: "/special/emergency-scenario-analysis", label: "電気代シナリオ分析を見る" },
+          ]}
+        />
+      </GasScenarioLayout>
+    </>
   );
 }

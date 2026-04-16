@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "../../../../components/seo/JsonLd";
 import ContentCta from "../../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../../components/simulator/RelatedLinks";
 import {
@@ -609,21 +610,36 @@ export default async function FoodScenarioPage({ params }: PageProps) {
   if (!page || slug === "index") notFound();
 
   const related = relatedLinksBySlug[slug];
+  const url = `https://simulator.eic-jp.org${FOOD_SCENARIO_BASE_PATH}/${slug}`;
+
   return (
-    <FoodScenarioLayout slug={slug} lead={leadBySlug[slug]}>
-      {renderContent(slug)}
-
-      <RelatedLinks heading={related.heading} links={related.links} />
-
-      <ContentCta
-        heading="次にすること"
-        description="総論ページとエネルギー関連特集を併せて確認すると、仕入・製造・物流を横断した対策優先順位を決めやすくなります。"
-        links={[
-          { href: FOOD_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
-          { href: "/special/gas-scenario-analysis", label: "法人ガス代シナリオ分析を見る" },
-          { href: "/special/oil-scenario-analysis", label: "原油高・物流コスト分析を見る" },
+    <>
+      <ArticleJsonLd
+        headline={page.title}
+        description={page.description}
+        url={url}
+        datePublished="2026-04-05"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "有事シナリオ分析（食料品仕入コスト）", url: `https://simulator.eic-jp.org${FOOD_SCENARIO_BASE_PATH}` },
+          { name: page.label },
         ]}
       />
-    </FoodScenarioLayout>
+      <FoodScenarioLayout slug={slug} lead={leadBySlug[slug]}>
+        {renderContent(slug)}
+
+        <RelatedLinks heading={related.heading} links={related.links} />
+
+        <ContentCta
+          heading="次にすること"
+          description="総論ページとエネルギー関連特集を併せて確認すると、仕入・製造・物流を横断した対策優先順位を決めやすくなります。"
+          links={[
+            { href: FOOD_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
+            { href: "/special/gas-scenario-analysis", label: "法人ガス代シナリオ分析を見る" },
+            { href: "/special/oil-scenario-analysis", label: "原油高・物流コスト分析を見る" },
+          ]}
+        />
+      </FoodScenarioLayout>
+    </>
   );
 }

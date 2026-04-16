@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "../../../../components/seo/JsonLd";
 import ContentCta from "../../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../../components/simulator/RelatedLinks";
 import {
@@ -580,21 +581,36 @@ export default async function FxDoubleEffectPage({ params }: PageProps) {
   if (!page || slug === "index") notFound();
 
   const related = relatedLinksBySlug[slug];
+  const url = `https://simulator.eic-jp.org${FX_DOUBLE_EFFECT_BASE_PATH}/${slug}`;
+
   return (
-    <FxDoubleEffectLayout slug={slug} lead={leadBySlug[slug]}>
-      {renderContent(slug)}
-
-      <RelatedLinks heading={related.heading} links={related.links} />
-
-      <ContentCta
-        heading="次にすること"
-        description="総論ページと他のコスト特集もあわせて確認すると、W効果を前提にした実務判断がしやすくなります。"
-        links={[
-          { href: FX_DOUBLE_EFFECT_BASE_PATH, label: "総論トップへ戻る" },
-          { href: "/special/oil-scenario-analysis", label: "ガソリン代特集を見る" },
-          { href: "/special/food-procurement-scenario-analysis", label: "食料仕入特集を見る" },
+    <>
+      <ArticleJsonLd
+        headline={page.title}
+        description={page.description}
+        url={url}
+        datePublished="2026-03-28"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "有事シナリオ分析（円安×原油高 W効果）", url: `https://simulator.eic-jp.org${FX_DOUBLE_EFFECT_BASE_PATH}` },
+          { name: page.label },
         ]}
       />
-    </FxDoubleEffectLayout>
+      <FxDoubleEffectLayout slug={slug} lead={leadBySlug[slug]}>
+        {renderContent(slug)}
+
+        <RelatedLinks heading={related.heading} links={related.links} />
+
+        <ContentCta
+          heading="次にすること"
+          description="総論ページと他のコスト特集もあわせて確認すると、W効果を前提にした実務判断がしやすくなります。"
+          links={[
+            { href: FX_DOUBLE_EFFECT_BASE_PATH, label: "総論トップへ戻る" },
+            { href: "/special/oil-scenario-analysis", label: "ガソリン代特集を見る" },
+            { href: "/special/food-procurement-scenario-analysis", label: "食料仕入特集を見る" },
+          ]}
+        />
+      </FxDoubleEffectLayout>
+    </>
   );
 }

@@ -5,6 +5,8 @@ import {
   getHotelLeisureIndustryArticle,
   getHotelLeisureIndustrySlugs,
 } from "../../../../../lib/industryHotelLeisureArticles";
+import { getIndustryMiddleCategory } from "../../../../../lib/articleIndustryCategories";
+import { BreadcrumbJsonLd } from "../../../../../components/seo/JsonLd";
 
 type PageParams = {
   industry: string;
@@ -67,5 +69,20 @@ export default async function HotelLeisureIndustryArticleRoute({ params }: PageP
     notFound();
   }
 
-  return <HotelLeisureIndustryArticlePage article={article} />;
+  const middleCategory = getIndustryMiddleCategory(middle);
+
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+          { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
+          { name: middleCategory?.name ?? "ホテル・レジャー系", url: `https://simulator.eic-jp.org/articles/by-industry/${middle}` },
+          { name: article.name },
+        ]}
+      />
+      <HotelLeisureIndustryArticlePage article={article} />
+    </>
+  );
 }

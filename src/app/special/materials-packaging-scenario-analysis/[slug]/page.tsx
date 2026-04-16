@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "../../../../components/seo/JsonLd";
 import ContentCta from "../../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../../components/simulator/RelatedLinks";
 import {
@@ -724,22 +725,36 @@ export default async function MaterialsScenarioPage({ params }: PageProps) {
   }
 
   const related = relatedLinksBySlug[slug];
+  const url = `https://simulator.eic-jp.org${MATERIALS_SCENARIO_BASE_PATH}/${slug}`;
 
   return (
-    <MaterialsScenarioLayout slug={slug} lead={leadBySlug[slug]}>
-      {renderContent(slug)}
-
-      <RelatedLinks heading={related.heading} links={related.links} />
-
-      <ContentCta
-        heading="次にすること"
-        description="総論ページとエネルギー関連特集も併せて確認すると、調達・製造・物流を横断した判断につながります。"
-        links={[
-          { href: MATERIALS_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
-          { href: "/special/oil-scenario-analysis", label: "原油・物流コスト分析を見る" },
-          { href: "/special/gas-scenario-analysis", label: "法人ガス代シナリオ分析を見る" },
+    <>
+      <ArticleJsonLd
+        headline={page.title}
+        description={page.description}
+        url={url}
+        datePublished="2026-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "有事シナリオ分析（原材料・包装資材）", url: `https://simulator.eic-jp.org${MATERIALS_SCENARIO_BASE_PATH}` },
+          { name: page.label },
         ]}
       />
-    </MaterialsScenarioLayout>
+      <MaterialsScenarioLayout slug={slug} lead={leadBySlug[slug]}>
+        {renderContent(slug)}
+
+        <RelatedLinks heading={related.heading} links={related.links} />
+
+        <ContentCta
+          heading="次にすること"
+          description="総論ページとエネルギー関連特集も併せて確認すると、調達・製造・物流を横断した判断につながります。"
+          links={[
+            { href: MATERIALS_SCENARIO_BASE_PATH, label: "総論トップへ戻る" },
+            { href: "/special/oil-scenario-analysis", label: "原油・物流コスト分析を見る" },
+            { href: "/special/gas-scenario-analysis", label: "法人ガス代シナリオ分析を見る" },
+          ]}
+        />
+      </MaterialsScenarioLayout>
+    </>
   );
 }

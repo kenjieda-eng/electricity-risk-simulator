@@ -5,6 +5,8 @@ import {
   getCommercialIndustryArticle,
   getCommercialIndustrySlugs,
 } from "../../../../../lib/industryCommercialArticles";
+import { getIndustryMiddleCategory } from "../../../../../lib/articleIndustryCategories";
+import { BreadcrumbJsonLd } from "../../../../../components/seo/JsonLd";
 
 type PageParams = {
   industry: string;
@@ -68,5 +70,20 @@ export default async function CommercialIndustryArticleRoute({ params }: PagePro
     notFound();
   }
 
-  return <CommercialIndustryArticlePage article={article} />;
+  const middleCategory = getIndustryMiddleCategory(middle);
+
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+          { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
+          { name: middleCategory?.name ?? "商業系", url: `https://simulator.eic-jp.org/articles/by-industry/${middle}` },
+          { name: article.name },
+        ]}
+      />
+      <CommercialIndustryArticlePage article={article} />
+    </>
+  );
 }

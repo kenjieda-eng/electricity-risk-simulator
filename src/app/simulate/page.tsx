@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomePageClient from "../_components/HomePageClient";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金上昇リスク診断｜法人向け電気料金上昇、高騰リスクシミュレーター";
@@ -38,8 +39,16 @@ export const metadata: Metadata = {
 
 export default function SimulatePage() {
   return (
-    <section id="simulator">
-      <HomePageClient />
-    </section>
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "シミュレーター" },
+        ]}
+      />
+      <section id="simulator">
+        <HomePageClient />
+      </section>
+    </>
   );
 }

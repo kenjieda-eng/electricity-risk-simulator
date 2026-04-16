@@ -7,6 +7,7 @@ import {
   getIndustryMiddleCategory,
 } from "../../../../lib/articleIndustryCategories";
 import CategoryNextStepCta from "../../../../components/simulator/CategoryNextStepCta";
+import { BreadcrumbJsonLd } from "../../../../components/seo/JsonLd";
 
 type PageParams = {
   middle: string;
@@ -65,6 +66,15 @@ export default async function IndustryMiddlePage({ params }: PageProps) {
   }
 
   return (
+    <>
+    <BreadcrumbJsonLd
+      items={[
+        { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
+        { name: category.name },
+      ]}
+    />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">
@@ -163,5 +173,6 @@ export default async function IndustryMiddlePage({ params }: PageProps) {
         <CategoryNextStepCta categorySlug="industry-guide" />
       </div>
     </main>
+    </>
   );
 }

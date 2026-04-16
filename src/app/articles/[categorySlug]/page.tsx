@@ -6,6 +6,7 @@ import { POWER_PROCUREMENT_SERIES } from "../../../lib/powerProcurementSeries";
 import { CATEGORY_HUB_SPOTLIGHT } from "../../../lib/articleHubFeatured";
 import type { ArticleCategorySlug } from "../../../data/articles";
 import { CATEGORY_CTA } from "../../../lib/categoryCta";
+import { BreadcrumbJsonLd } from "../../../components/seo/JsonLd";
 
 
 type PageParams = {
@@ -116,6 +117,14 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
       : [];
 
   return (
+    <>
+    <BreadcrumbJsonLd
+      items={[
+        { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: category.name },
+      ]}
+    />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">
@@ -529,5 +538,6 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         </div>
       </section>
     </main>
+    </>
   );
 }

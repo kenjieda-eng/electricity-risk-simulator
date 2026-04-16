@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleJsonLd } from "../../../../components/seo/JsonLd";
 import EmergencyScenarioChartCard from "../_components/EmergencyScenarioCharts";
 import EmergencyScenarioLayout from "../_components/EmergencyScenarioLayout";
 import {
@@ -863,5 +864,22 @@ export default async function EmergencyScenarioPage({ params }: PageProps) {
     "action-roadmap": "短期・中期・長期の3段階で、実行順序を持った対策を提示します。",
   };
 
-  return <EmergencyScenarioLayout slug={slug} lead={leadBySlug[slug]}>{renderContent(slug)}</EmergencyScenarioLayout>;
+  const url = `https://simulator.eic-jp.org${EMERGENCY_SCENARIO_BASE_PATH}/${slug}`;
+
+  return (
+    <>
+      <ArticleJsonLd
+        headline={page.title}
+        description={page.description}
+        url={url}
+        datePublished="2026-03-15"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "有事シナリオ分析（電気料金）", url: `https://simulator.eic-jp.org${EMERGENCY_SCENARIO_BASE_PATH}` },
+          { name: page.label },
+        ]}
+      />
+      <EmergencyScenarioLayout slug={slug} lead={leadBySlug[slug]}>{renderContent(slug)}</EmergencyScenarioLayout>
+    </>
+  );
 }

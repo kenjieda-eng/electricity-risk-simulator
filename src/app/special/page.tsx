@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "有事シナリオ分析 特集一覧｜法人向けシナリオ特集";
 const pageDescription =
@@ -70,7 +71,14 @@ const specialLinks = [
 
 export default function SpecialTopPage() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "特集" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">有事シナリオ分析 特集一覧</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
@@ -159,5 +167,6 @@ export default function SpecialTopPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

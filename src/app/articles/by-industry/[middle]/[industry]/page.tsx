@@ -7,6 +7,7 @@ import FlowDiagram from "../../../../../components/simulator/FlowDiagram";
 import InfoBox from "../../../../../components/simulator/InfoBox";
 import RelatedLinks from "../../../../../components/simulator/RelatedLinks";
 import { getIndustryMiddleCategory } from "../../../../../lib/articleIndustryCategories";
+import { BreadcrumbJsonLd } from "../../../../../components/seo/JsonLd";
 
 type PageParams = {
   middle: string;
@@ -166,6 +167,16 @@ export default async function SupermarketLargeScaleIndustryPage({ params }: Page
   }
 
   return (
+    <>
+    <BreadcrumbJsonLd
+      items={[
+        { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+        { name: "基礎知識", url: "https://simulator.eic-jp.org/articles" },
+        { name: "業種別", url: "https://simulator.eic-jp.org/articles/by-industry" },
+        { name: middleCategory.name, url: `https://simulator.eic-jp.org/articles/by-industry/${middleCategory.slug}` },
+        { name: "スーパーマーケット（大型）" },
+      ]}
+    />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">
@@ -560,5 +571,6 @@ export default async function SupermarketLargeScaleIndustryPage({ params }: Page
         <CategoryNextStepCta categorySlug="industry-guide" />
       </section>
     </main>
+    </>
   );
 }
