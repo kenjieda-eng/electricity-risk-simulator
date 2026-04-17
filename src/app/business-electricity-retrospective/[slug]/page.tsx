@@ -53,6 +53,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: data.pageTitle,
     description: data.pageDescription,
+    keywords: [
+      `${data.category.label} 電気料金 ${data.year}年`,
+      `${data.category.label} 電気代 推移`,
+      "法人 電気料金 振り返り",
+      `${data.year}年 電力コスト`,
+      `${data.category.label} kWh単価`,
+    ],
     alternates: { canonical: url },
     openGraph: {
       title: data.pageTitle,

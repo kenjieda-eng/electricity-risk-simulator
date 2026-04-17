@@ -18,6 +18,7 @@ const canonicalUrl = "https://simulator.eic-jp.org/business-electricity-retrospe
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人 電気料金 振り返り", "電気代 推移 法人", "特別高圧 高圧 低圧 推移", "法人 電力コスト 月次", "電気料金 年次推移"],
   alternates: {
     canonical: canonicalUrl,
   },

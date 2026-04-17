@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpactChart } from "../_components/MonthlyVisuals";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 
 const pageTitle = "【2026年2月】法人の電気料金はどう動いた？補助終了前の最終確認";
 const pageDescription =
@@ -9,6 +10,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人 電気料金 2026年2月", "電気代 推移 2026", "補助終了 電気料金", "法人 電力コスト", "電気料金 振り返り"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/business-electricity-retrospective/2026-02",
   },
@@ -64,7 +66,19 @@ const FEB_2026_DATA = {
 
 export default function BusinessElectricityRetrospective202602Page() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/business-electricity-retrospective/2026-02"
+        datePublished="2026-03-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "2026年2月" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
         <span className="px-2">›</span>
@@ -398,5 +412,6 @@ export default function BusinessElectricityRetrospective202602Page() {
         </section>
       </section>
     </main>
+    </>
   );
 }

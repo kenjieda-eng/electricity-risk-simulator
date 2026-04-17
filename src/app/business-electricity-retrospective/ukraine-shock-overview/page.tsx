@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -24,6 +25,7 @@ const canonicalUrl = "https://simulator.eic-jp.org/business-electricity-retrospe
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["ウクライナショック 電気料金", "法人 電気代 高騰", "ウクライナ 電力 影響", "電気料金 急騰 2022", "ウクライナ エネルギー危機"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -43,11 +45,23 @@ export default function UkraineShockOverviewPage() {
   const compareRows = getYearlyAverages(2021, 2023).map((row) => ({ label: `${row.year}年`, values: row.values }));
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          2021年後半からの燃料高に、2022年2月以降の地政学リスク、卸市場の緊張、補助政策が重なり、法人電気料金は単発ではない構造変化を経験しました。
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "ウクライナショックとは" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            2021年後半からの燃料高に、2022年2月以降の地政学リスク、卸市場の緊張、補助政策が重なり、法人電気料金は単発ではない構造変化を経験しました。
           このページは、6本の検証特集の入口として、2019年から2025年の俯瞰と、2021年後半〜2023年の急変局面を実務向けに整理します。
         </p>
       </header>
@@ -258,6 +272,7 @@ export default function UkraineShockOverviewPage() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

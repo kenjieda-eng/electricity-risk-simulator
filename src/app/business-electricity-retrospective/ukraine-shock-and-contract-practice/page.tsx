@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -23,6 +24,7 @@ const canonicalUrl =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["新電力 撤退 ウクライナ", "市場連動プラン リスク", "最終保障供給 電気料金", "電力契約 ウクライナショック", "新電力 経営悪化"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -46,11 +48,23 @@ export default function UkraineShockAndContractPracticePage() {
   const trendRows = getSeriesByRange("2021-01-01", "2023-12-01").map((row) => ({ label: row.label, values: row.values }));
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          このページは特集内で最も実務寄りの整理です。単価上昇そのものより、契約方式ごとに何が起き、どこでリスクが顕在化したかを整理し、
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "契約実務への波及" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            このページは特集内で最も実務寄りの整理です。単価上昇そのものより、契約方式ごとに何が起き、どこでリスクが顕在化したかを整理し、
           いまの見直しに直結する確認項目へ落とし込みます。
         </p>
       </header>
@@ -260,6 +274,7 @@ export default function UkraineShockAndContractPracticePage() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

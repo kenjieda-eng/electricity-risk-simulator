@@ -4,6 +4,7 @@ import ContentCta from "../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
 import { getMonthlyPageData } from "../_lib/monthly-page-data";
 import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable } from "../_components/MonthlyVisuals";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 
 const pageTitle = "【2025年12月】法人の電気料金はどう動いた？補助終了後の年末着地と2026年への見通し";
 const pageDescription =
@@ -12,6 +13,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人 電気料金 2025年12月", "電気代 推移 2025", "年末 電力コスト", "2026年 見通し", "電気料金 振り返り"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/business-electricity-retrospective/2025-12",
   },
@@ -43,7 +45,19 @@ export default function BusinessElectricityRetrospective202512Page() {
   const monthlyData = getMonthlyPageData(2025, 12);
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/business-electricity-retrospective/2025-12"
+        datePublished="2026-01-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "2025年12月" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">【2025年12月】法人の電気料金はどう動いた？</h1>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -348,5 +362,6 @@ export default function BusinessElectricityRetrospective202512Page() {
         />
       </div>
     </main>
+    </>
   );
 }

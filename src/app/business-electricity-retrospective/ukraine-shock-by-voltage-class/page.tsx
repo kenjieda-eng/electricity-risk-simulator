@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -22,6 +23,7 @@ const canonicalUrl = "https://simulator.eic-jp.org/business-electricity-retrospe
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["ウクライナショック 契約区分", "高圧 特別高圧 影響比較", "電気料金 区分別 推移", "低圧 高圧 電気代", "ウクライナ 電力 契約"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -58,11 +60,23 @@ export default function UkraineShockByVoltageClassPage() {
   ];
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          既存の通史ページは区分ごとに縦読みする構成です。本ページでは、同じ期間を4区分で横比較し、どの区分がどの局面で敏感だったかを
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "契約区分別の影響" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            既存の通史ページは区分ごとに縦読みする構成です。本ページでは、同じ期間を4区分で横比較し、どの区分がどの局面で敏感だったかを
           予算策定と契約説明に使える形で整理します。
         </p>
       </header>
@@ -240,6 +254,7 @@ export default function UkraineShockByVoltageClassPage() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

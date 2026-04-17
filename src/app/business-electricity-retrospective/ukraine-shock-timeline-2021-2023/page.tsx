@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -23,6 +24,7 @@ const canonicalUrl =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["ウクライナショック 時系列", "電気料金 高騰 2021 2023", "法人 電気代 推移", "LNG 価格高騰 時系列", "電力市場 ウクライナ"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -48,11 +50,23 @@ export default function UkraineShockTimeline20212023Page() {
   const trendRows = getSeriesByRange("2021-01-01", "2023-12-01").map((row) => ({ label: row.label, values: row.values }));
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          社内説明では「いつ何が起きたか」を1枚で示せるかが重要です。このページでは、2021年後半から2023年末までを時系列で追い、
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "時系列整理（2021-2023年）" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            社内説明では「いつ何が起きたか」を1枚で示せるかが重要です。このページでは、2021年後半から2023年末までを時系列で追い、
           高騰のピーク感と、落ち着き方が完全な復元ではなかった点を確認します。
         </p>
       </header>
@@ -215,6 +229,7 @@ export default function UkraineShockTimeline20212023Page() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

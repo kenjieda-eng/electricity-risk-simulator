@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -25,6 +26,7 @@ const canonicalUrl = "https://simulator.eic-jp.org/business-electricity-retrospe
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["ウクライナショック 教訓", "ホルムズ海峡 電気料金", "2026年 電力リスク", "地政学リスク 電気代", "エネルギーリスク 備え"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -55,9 +57,21 @@ export default function LessonsFromUkraineShockFor2026Page() {
   }
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "ウクライナショックの教訓" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           過去の整理で終わらせず、次のショックに備えるための実務ページです。2026年3月のホルムズ海峡封鎖は、まだ電気料金実績が出揃っていないため、
           本ページでは未来データを置かず、契約・予算・社内説明の観点で示唆を整理します。
@@ -272,6 +286,7 @@ export default function LessonsFromUkraineShockFor2026Page() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

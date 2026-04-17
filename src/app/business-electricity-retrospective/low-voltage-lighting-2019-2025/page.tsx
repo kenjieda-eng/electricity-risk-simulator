@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import LowVoltageLightingRetrospectiveCharts from "../_components/LowVoltageLightingRetrospectiveCharts";
 import {
   LOW_VOLTAGE_LIGHTING_MONTHLY_PRICES,
@@ -14,6 +15,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["低圧電灯 電気料金 推移", "低圧電灯 2019 2025", "法人 電気代 長期推移", "低圧電灯 コロナ ウクライナ", "低圧電灯 電力見直し"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/business-electricity-retrospective/low-voltage-lighting-2019-2025",
   },
@@ -58,9 +60,21 @@ export default function LowVoltageLightingRetrospectivePage() {
   );
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <nav aria-label="パンくず" className="text-sm text-slate-600">
-        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/business-electricity-retrospective/low-voltage-lighting-2019-2025"
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "低圧電灯の推移（2019-2025年）" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
         <span className="px-2">›</span>
         <Link href="/business-electricity-retrospective" className="underline-offset-2 hover:underline">法人電気料金振り返り</Link>
         <span className="px-2">›</span>
@@ -251,6 +265,7 @@ export default function LowVoltageLightingRetrospectivePage() {
           </p>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -23,6 +24,7 @@ const canonicalUrl =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["電気料金 なぜ上がった", "LNG 石炭 為替 電気代", "法人 電気料金 上昇 原因", "燃料費調整 仕組み", "ウクライナ 電気代 影響"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,
@@ -41,11 +43,23 @@ export default function WhyPricesRoseAfterUkrainePage() {
   const yearRows = getYearlyAverages(2021, 2023).map((row) => ({ label: `${row.year}年`, values: row.values }));
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          「戦争が遠い地域で起きても、なぜ日本の法人電気料金が上がるのか」を、燃料調達から請求単価までの経路で分解します。
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        datePublished="2025-04-01"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金振り返り", url: "https://simulator.eic-jp.org/business-electricity-retrospective" },
+          { name: "なぜ電気料金は上がったのか" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            「戦争が遠い地域で起きても、なぜ日本の法人電気料金が上がるのか」を、燃料調達から請求単価までの経路で分解します。
           社内説明で使えるよう、抽象論ではなく、どこでコストが積み上がったかを順番に整理しています。
         </p>
       </header>
@@ -202,6 +216,7 @@ export default function WhyPricesRoseAfterUkrainePage() {
           ]}
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }
