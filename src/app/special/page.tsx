@@ -10,6 +10,17 @@ const canonicalUrl = "https://simulator.eic-jp.org/special";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    "有事シナリオ分析",
+    "法人コスト上昇",
+    "電気料金シナリオ",
+    "原油高騰",
+    "円安 輸入コスト",
+    "ガス料金",
+    "原材料高",
+    "食料品仕入",
+    "地政学リスク 法人",
+  ],
   alternates: {
     canonical: canonicalUrl,
   },
@@ -35,39 +46,64 @@ const specialLinks = [
     href: "/special/emergency-scenario-analysis",
     title: "有事シナリオ分析（電気料金）",
     description:
-      "原油高騰・補助金終了・再エネ賦課金・円安の四重苦を前提に、法人電気代の上振れリスクを3シナリオで比較します。",
+      "原油高騰・補助金終了・再エネ賦課金・円安の四重苦で、法人電気代の上振れを3シナリオ比較。",
   },
   {
     href: "/special/oil-scenario-analysis",
     title: "有事シナリオ分析（原油・物流コスト）",
     description:
-      "イラン情勢を前提に、ガソリン・軽油価格の変動と物流コスト・社用車費用・出張旅費への影響をシナリオ別に確認できます。",
+      "イラン情勢を前提に、ガソリン・軽油と物流・社用車・出張費への影響を確認。",
   },
   {
     href: "/special/fx-double-effect-scenario-analysis",
     title: "有事シナリオ分析（円安×原油高 W効果）",
     description:
-      "為替と原油の掛け算で輸入コストが増えるW効果を、連鎖構造、シナリオ比較、家計・法人影響、対策まで整理します。",
+      "為替×原油の掛け算で膨らむ輸入コストを、連鎖構造と法人影響・対策で整理。",
   },
   {
     href: "/special/gas-scenario-analysis",
     title: "有事シナリオ分析（法人ガス代）",
     description:
-      "都市ガス・LPガスの料金見通し、補助金の持続性、業種別コスト増、電化比較をシナリオ別に確認できます。",
+      "都市ガス・LPガスの料金見通し、補助金持続性、業種別コスト増、電化比較を整理。",
   },
   {
     href: "/special/materials-packaging-scenario-analysis",
     title: "有事シナリオ分析（原材料・包装資材）",
     description:
-      "ナフサ不足・エチレン減産を前提に、プラスチック・包装資材・化学品・非鉄金属の価格動向と業種別影響を確認できます。",
+      "ナフサ不足・エチレン減産を前提に、プラ・包装・化学品・非鉄金属の影響を確認。",
   },
   {
     href: "/special/food-procurement-scenario-analysis",
     title: "有事シナリオ分析（食料品仕入コスト）",
     description:
-      "小麦・食用油・畜産・水産・青果の価格上昇と、飲食業・食品製造業への影響、対策ロードマップを確認できます。",
+      "小麦・食用油・畜産・水産・青果の価格動向と、飲食・食品製造への影響を整理。",
   },
 ] as const;
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: pageTitle,
+  description: pageDescription,
+  url: canonicalUrl,
+  inLanguage: "ja",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    url: "https://simulator.eic-jp.org",
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: specialLinks.length,
+    itemListElement: specialLinks.map((link, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://simulator.eic-jp.org${link.href}`,
+      name: link.title,
+      description: link.description,
+    })),
+  },
+};
 
 export default function SpecialTopPage() {
   return (
@@ -78,6 +114,10 @@ export default function SpecialTopPage() {
           { name: "特集" },
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">有事シナリオ分析 特集一覧</h1>
@@ -86,59 +126,62 @@ export default function SpecialTopPage() {
         </p>
       </header>
 
-      <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">特集シリーズの概要</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           各特集は、通常の記事では扱いきれない複合的なリスクシナリオを、3段階（軽微・中程度・深刻）で分析します。
         </p>
-        <table className="mt-4 w-full border-collapse text-sm">
-          <thead>
-            <tr>
-              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特集テーマ</th>
-              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対象リスク</th>
-              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">影響を受けやすい業種</th>
-              <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ数</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">有事シナリオ（電気料金）</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク全般</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">全業種</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">原油・物流コスト</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">原油価格高騰</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">製造業・物流業</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">円安×原油高 W効果</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">為替+商品高の複合</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">輸入依存業種全般</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">法人ガス代</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">LNG価格変動</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">電力多消費産業</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">原材料・包装資材</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">コストプッシュ</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">食品・製造・小売</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">食料品仕入コスト</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">食料価格高騰</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700">外食・食品製造</td>
-              <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">特集テーマ</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">対象リスク</th>
+                <th className="hidden border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900 md:table-cell">影響を受けやすい業種</th>
+                <th className="border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-slate-900">シナリオ数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">有事シナリオ（電気料金）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">地政学リスク全般</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">全業種</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">原油・物流コスト</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">原油価格高騰</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">製造業・物流業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">円安×原油高 W効果</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">為替+商品高の複合</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">輸入依存業種全般</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">法人ガス代</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">LNG価格変動</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">電力多消費産業</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">原材料・包装資材</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">コストプッシュ</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">食品・製造・小売</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">食料品仕入コスト</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">食料価格高騰</td>
+                <td className="hidden border border-slate-200 px-3 py-2 text-slate-700 md:table-cell">外食・食品製造</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">3</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="mt-2 text-xs text-slate-500 md:hidden">※ タブレット以上で「影響を受けやすい業種」列も表示されます。</p>
+        </div>
       </section>
 
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
