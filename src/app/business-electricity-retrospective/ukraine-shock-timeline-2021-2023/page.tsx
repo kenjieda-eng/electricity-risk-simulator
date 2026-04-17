@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -63,7 +64,9 @@ export default function UkraineShockTimeline20212023Page() {
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <UkraineShockSeriesNav currentSlug="ukraine-shock-timeline-2021-2023" />
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             社内説明では「いつ何が起きたか」を1枚で示せるかが重要です。このページでは、2021年後半から2023年末までを時系列で追い、
@@ -220,6 +223,8 @@ export default function UkraineShockTimeline20212023Page() {
             { href: "/business-electricity-retrospective/archive", label: "年次アーカイブ" },
           ]}
         />
+
+        <UkraineShockPrevNext currentSlug="ukraine-shock-timeline-2021-2023" />
 
         <SourceList
           items={[

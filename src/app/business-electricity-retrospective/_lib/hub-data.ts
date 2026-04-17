@@ -89,6 +89,13 @@ export const UKRAINE_SHOCK_FEATURE_ITEMS: RetrospectiveCardItem[] = [
     iconAlt: "価格急騰の推移を示すアイコン",
   },
   {
+    title: "【時系列整理】2021年後半〜2023年の法人電気料金高騰はどう進んだか",
+    description:
+      "2021年後半から2023年にかけて、法人電気料金高騰がどのように進んだのかを時系列で整理。燃料高、制度対応、補助政策まで一連の流れを確認できます。",
+    href: "/business-electricity-retrospective/ukraine-shock-timeline-2021-2023",
+    ctaLabel: "記事を読む",
+  },
+  {
     title: "なぜ法人電気料金は上がったのか",
     description:
       "LNG、石炭、為替、卸市場がどう連鎖し、日本の法人料金に波及したかを整理します。どの要因がどの局面で効いたのかを分解し、上昇要因の優先度を理解できます。",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -73,7 +74,9 @@ export default function UkraineShockByVoltageClassPage() {
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <UkraineShockSeriesNav currentSlug="ukraine-shock-by-voltage-class" />
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             既存の通史ページは区分ごとに縦読みする構成です。本ページでは、同じ期間を4区分で横比較し、どの区分がどの局面で敏感だったかを
@@ -95,6 +98,27 @@ export default function UkraineShockByVoltageClassPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約電圧と需要規模が違えば、価格リスクの伝わり方も変わります。特別高圧と高圧は調達コストの変化を先に受けやすく、
             低圧系は補助の反映度合いで請求感が変わりやすい点が特徴です。
+          </p>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">契約区分で差が出る構造的な理由</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>特別高圧</strong>は2000年の自由化開始以来、最も早く競争市場に組み込まれた区分です。需要家側に交渉力があり、契約条件を個別に設計できる反面、
+            市場連動比率が高い調達構造を採用しているケースが多く、卸電力市場（JEPX）や燃料価格の変動がダイレクトに反映されます。
+            ウクライナショック期には上昇も早かったものの、大口需要家は交渉や調達手段の多様化で緩和余地を持つことができました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>高圧</strong>は小売電気事業者の調達構造をそのまま反映しやすい区分です。多くの法人が小売事業者と相対契約を結んでおり、
+            契約更新のタイミングで大幅な値上げ通知が届くケースが2022年後半から2023年にかけて相次ぎました。
+            特に新電力から旧一般電気事業者への切り替えが集中した時期には、見積取得自体が困難になる事態も発生しています。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>低圧電力</strong>は、規制料金（経過措置料金）が残る場合にはタイムラグが大きくなります。燃料費調整制度を通じて徐々に反映されますが、
+            燃調上限の存在により、急騰局面では実際のコスト上昇分が請求に反映されない期間が生じました。
+            2023年6月の規制料金値上げ認可によって一気に水準訂正が行われ、需要家にとっては「突然の大幅値上げ」として体感されました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>低圧電灯</strong>は家庭向けと同じ規制料金体系に属するため、政策的に抑制されやすい特徴があります。
+            激変緩和措置（電気・ガス価格激変緩和対策事業）の恩恵も受けやすい一方、制度変更時のインパクトは大きく、
+            多拠点展開する法人では拠点数に応じた合算影響が無視できない規模になります。
           </p>
           <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
             <table className="min-w-full border-collapse text-sm sm:text-base">
@@ -209,6 +233,60 @@ export default function UkraineShockByVoltageClassPage() {
             </table>
           </div>
           <p className="mt-3 text-xs text-slate-500">※単価は当社団運営「新電力ネット」掲載データをもとにした参考値です。実際の契約単価は条件により異なります。</p>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">年平均で見た変動幅の違い</h3>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            ピーク値だけでなく年平均で比較すると、区分ごとの市場感応度の違いがより明確になります。
+            特別高圧は2021年平均約10.7円/kWhから2022年平均約17.1円/kWhへと約60%上昇しました。
+            高圧は2021年平均約14.1円/kWhから2022年平均約19.6円/kWhへと約39%の上昇です。
+            一方、低圧電灯は2021年平均約21.1円/kWhから2022年平均約26.8円/kWhへと約27%の上昇にとどまり、
+            低圧電力は2021年平均約24.8円/kWhから2022年平均約31.0円/kWhへと約25%の上昇でした。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            特別高圧の年平均上昇率が最大であることは、市場連動型の調達構造を持つ区分ほど燃料・卸電力価格の変動に敏感であることを示しています。
+            低圧系の上昇率が相対的に低いのは、規制料金の存在や燃料費調整の上限制度が緩衝材として機能した結果です。
+            ただし、2023年以降の規制料金値上げや燃調上限撤廃を経て、この緩衝効果は縮小しつつあります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">燃料費調整の反映タイムラグの違い</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気料金の変動を左右する大きな要素が燃料費調整制度です。しかし、この制度の適用方法は契約区分によって大きく異なります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>特別高圧・高圧の自由化料金</strong>では、燃料費調整は小売事業者の調達構造次第です。
+            JEPX連動型の契約では月次で市場価格が反映され、相対契約でも四半期ごとの見直し条項を含むケースが一般的です。
+            そのため、燃料価格の上昇が比較的短いタイムラグで請求単価に現れます。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong>低圧の規制料金</strong>では、燃料費調整は旧一般電気事業者が設定する基準燃料価格に連動し、
+            3〜5か月前の貿易統計をもとに算定されるため、市場実勢との間にタイムラグが生じます。
+            さらに2023年3月末まで適用されていた燃料費調整の上限規制により、実際の燃料コスト上昇分が請求に反映されない局面が続きました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            燃調上限を超えるコスト上昇分は小売事業者が自己負担する構造となっており、これが新電力の経営悪化・撤退の一因となりました。
+            結果として高圧需要家が契約先を失い、最終保障供給に移行するケースも発生しています。
+            2023年4月以降は多くの旧一般電気事業者が燃調上限を撤廃しており、今後の有事局面では低圧でもより早くコスト変動が反映される可能性があります。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">託送料金と容量拠出金の影響差</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気料金の構成要素のうち、託送料金（送配電網の利用料）も契約区分で単価が異なります。
+            高圧・特別高圧は送配電効率が高い（高電圧のまま受電するため変換ロスが少ない）ことから、低圧と比べて託送単価が低く設定されています。
+            これは平時の単価差の一因ですが、有事局面での上昇率の違いには直接的な影響は限定的です。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            一方、2024年4月から本格徴収が始まった容量拠出金は、主に高圧・特別高圧の契約単価に上乗せされる形で影響が出ています。
+            容量市場の導入は将来の供給力確保を目的としていますが、短期的には電気料金の上昇要因となり、
+            特にウクライナショック後の高止まり局面と重なったことで、法人需要家の負担感を強めています。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            再エネ賦課金は全区分で一律の単価が適用されますが、使用量が大きい特別高圧・高圧の需要家ほど絶対額への影響が大きくなります。
+            年間数千万kWhを消費する大規模工場では、賦課金単価の1円/kWhの変動が年間数千万円規模の負担増に直結するため、
+            予算策定時には賦課金の見通しも重要な変数となります。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -216,6 +294,11 @@ export default function UkraineShockByVoltageClassPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             補助政策は需要家の請求負担を平準化する役割を持ちましたが、全区分で同一効果ではありません。契約電圧、調達構造、燃料費調整の反映方式が異なるため、
             同じ支援局面でも「どれだけ効いたか」は区分別に確認する必要があります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            電気・ガス価格激変緩和対策事業による値引きは、低圧で7円/kWh、高圧で3.5円/kWhと区分によって単価が異なりました。
+            低圧需要家にとっては請求額の目に見える軽減となった一方、高圧・特別高圧では燃料高騰による上昇幅に対して補助の割合が相対的に小さく、
+            「補助があっても高い」という実感が残りやすい構造でした。
           </p>
         </section>
 
@@ -246,6 +329,8 @@ export default function UkraineShockByVoltageClassPage() {
             { href: "/compare", label: "市場連動/固定の比較ページ" },
           ]}
         />
+
+        <UkraineShockPrevNext currentSlug="ukraine-shock-by-voltage-class" />
 
         <SourceList
           items={[

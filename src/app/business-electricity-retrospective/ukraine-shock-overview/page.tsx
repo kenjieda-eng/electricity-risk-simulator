@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -58,7 +59,9 @@ export default function UkraineShockOverviewPage() {
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <UkraineShockSeriesNav currentSlug="ukraine-shock-overview" />
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             2021年後半からの燃料高に、2022年2月以降の地政学リスク、卸市場の緊張、補助政策が重なり、法人電気料金は単発ではない構造変化を経験しました。
@@ -262,6 +265,8 @@ export default function UkraineShockOverviewPage() {
             { href: "/business-electricity-retrospective/ukraine-shock-and-contract-practice", label: "契約実務への波及を見る" },
           ]}
         />
+
+        <UkraineShockPrevNext currentSlug="ukraine-shock-overview" />
 
         <SourceList
           items={[

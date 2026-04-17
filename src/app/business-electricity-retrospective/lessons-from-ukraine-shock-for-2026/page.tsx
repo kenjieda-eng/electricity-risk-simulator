@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -70,7 +71,9 @@ export default function LessonsFromUkraineShockFor2026Page() {
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <UkraineShockSeriesNav currentSlug="lessons-from-ukraine-shock-for-2026" />
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           過去の整理で終わらせず、次のショックに備えるための実務ページです。2026年3月のホルムズ海峡封鎖は、まだ電気料金実績が出揃っていないため、
@@ -277,6 +280,8 @@ export default function LessonsFromUkraineShockFor2026Page() {
             { href: "/compare", label: "市場連動/固定の比較ページ" },
           ]}
         />
+
+        <UkraineShockPrevNext currentSlug="lessons-from-ukraine-shock-for-2026" />
 
         <SourceList
           items={[

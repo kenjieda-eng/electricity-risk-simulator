@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
   ConclusionThreePoints,
@@ -56,7 +57,9 @@ export default function WhyPricesRoseAfterUkrainePage() {
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-        <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
+        <UkraineShockSeriesNav currentSlug="why-business-electricity-prices-rose-after-ukraine" />
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{pageTitle}</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             「戦争が遠い地域で起きても、なぜ日本の法人電気料金が上がるのか」を、燃料調達から請求単価までの経路で分解します。
@@ -86,6 +89,12 @@ export default function WhyPricesRoseAfterUkrainePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             LNGは火力発電の主要燃料であり、国際市場でのひっ迫は電力調達コストに直結します。契約形態が違っても、最終的には燃料費調整・新規見積条件・
             リスクプレミアムとして反映され、法人向け単価に時間差で乗ります。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            具体的な価格推移を見ると、アジアのLNGスポット価格は2021年前半には約10 USD/MMBtu前後で推移していましたが、欧州のガス危機が深刻化するにつれ急騰し、2022年8月には70 USD/MMBtuを超える水準に達しました。背景にあったのは、ロシアから欧州へのパイプラインガス供給が段階的に削減・停止され、EUがLNGの代替調達に殺到したことです。欧州がアジア向けスポットカーゴを高値で買い付けた結果、アジア市場の価格も連鎖的に押し上げられました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            日本は年間約7,000万トンのLNGを輸入する世界最大級の買い手ですが、そのうちスポット調達の比率は約10%です。残り約90%は長期契約でカバーされており、長期契約価格の多くは原油価格連動（JCC連動）で設定されています。この構造はスポット価格の急騰を直接受けにくい緩衝材となりましたが、原油価格自体も上昇していたため、3〜6か月のタイムラグを経て長期契約価格も上昇に転じ、燃料費調整額に反映される形で法人電気料金を押し上げました。
           </p>
           <div className="mt-4 space-y-4">
             <MultiLineChartCard
@@ -168,6 +177,12 @@ export default function WhyPricesRoseAfterUkrainePage() {
             LNGだけでなく、石炭・原油の高騰と円安が同時に進んだことで、発電燃料の円建てコストはさらに増幅されました。法人料金では、燃料費調整と調達条件改定が
             積み重なり、単月では見えにくい形で平均単価を押し上げます。
           </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            石炭については、豪州ニューカッスル炭の指標価格が2021年時点の約120 USD/トンから、2022年9月には約430 USD/トンまで急騰しました。日本の火力発電における石炭火力の比率は約30%を占めており、この価格上昇は燃料費調整額を通じて法人電気料金に直接反映されます。原油もBrent原油が2022年1月の約80 USD/バレルから一時120 USD/バレルまで上昇し、その後安定化しましたが、LNG長期契約の原油連動価格を押し上げる要因として間接的にも影響しました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            さらに深刻だったのが円安の同時進行です。ドル円レートは2022年1月の約115円から同年10月には約150円まで下落し、輸入燃料コストを円建てで約30%押し上げました。つまり、燃料価格の上昇と通貨の下落という二重のコスト増が同時に発生した形です。この「燃料高＋円安＋スポットプレミアム」の三重構造が、法人電気料金の上昇幅をかつてない水準に引き上げた主因です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -176,16 +191,25 @@ export default function WhyPricesRoseAfterUkrainePage() {
             日本では長期契約や油価連動が一定の緩衝材として機能し、短期の急騰を平滑化する面がありました。一方で、全体として燃料コストが高止まりしたため、
             企業向け見積の再設定やリスク反映を防ぎ切ることはできませんでした。
           </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            長期契約はLNG輸入量の約90%をカバーしており、スポット市場が70 USD/MMBtuに急騰した局面でも、長期契約価格は原油連動で20〜30 USD/MMBtu程度に収まっていました。この差額が日本の電力コストを欧州ほどの急騰から守った最大の要因です。しかし原油連動価格には約6か月のタイムラグがあるため、原油価格が上昇した2022年前半の影響は同年後半から2023年にかけて遅れて反映されました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            結果として、日本の法人電気料金は欧州のような「急騰→急落」のパターンではなく、「遅れて上昇し、高止まりが長期化する」という推移をたどりました。JEPXの卸電力市場平均価格で見ると、2021年の約13.5円/kWhから2022年には約20.4円/kWhへ上昇しており、スポット急騰が直接反映される市場連動プランの法人は特に大きな影響を受けました。長期契約による緩衝は「ピークの高さ」を抑えた一方、「上昇の持続期間」を長引かせる側面も持っていたといえます。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人電気料金に反映された経路</h2>
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-            <li>国際燃料価格の上昇（LNG・石炭・原油）</li>
-            <li>円安による輸入コスト増幅</li>
-            <li>卸市場・調達条件の見直し</li>
-            <li>燃料費調整、固定再見積、市場連動の変動として請求へ反映</li>
-          </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            国際燃料市場の変動が法人の請求書に届くまでには、複数の経路が並行して作用します。最も影響が大きかったのは燃料費調整単価です。LNG・石炭・原油の加重平均をもとに毎月算定され、法人向け単価の変動要因として最大の比重を占めました。燃料費調整は通常2〜3か月の遅延を伴って反映されるため、国際価格のピークと請求書のピークにはズレが生じます。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            市場連動型の契約を持つ法人にとっては、JEPXの卸電力価格がそのまま調達コストに直結します。卸市場価格は燃料費に加えて需給バランスにも左右されるため、燃料費調整とは異なるタイミングで変動が生じ、ピーク時には固定契約との単価差が5〜15円/kWhに達するケースもありました。
+          </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            さらに、2023年6月には大手電力7社が規制料金の本格改定を実施し、基本料金・電力量料金の水準自体が引き上げられました。これにより、燃料価格が下がっても単価の下限が以前より高い水準に固定される構造が生まれています。再生可能エネルギー発電促進賦課金も年度ごとに変動しており、2022年度の3.36円/kWhから2023年度に1.40円/kWhへ下がった後、2024年度には3.49円/kWhへ再上昇するなど、制度面のコスト変動も法人の負担構造に影響を与え続けています。
+          </p>
         </section>
 
         <HormuzInsight
@@ -206,6 +230,8 @@ export default function WhyPricesRoseAfterUkrainePage() {
             { href: "/compare", label: "市場連動・固定の比較ページ" },
           ]}
         />
+
+        <UkraineShockPrevNext currentSlug="why-business-electricity-prices-rose-after-ukraine" />
 
         <SourceList
           items={[
