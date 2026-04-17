@@ -756,7 +756,7 @@ export const articleCategories: ArticleCategory[] = [
       "GX-ETS・カーボンプライシングへの備え方",
     ],
     recommendedReadingOrder: [],
-    order: 10,
+    order: 22,
     group: "learning",
   },
   {
@@ -772,7 +772,7 @@ export const articleCategories: ArticleCategory[] = [
       "会計処理とScope2対応の注意点",
     ],
     recommendedReadingOrder: [],
-    order: 11,
+    order: 23,
     group: "learning",
   },
   {
@@ -788,7 +788,7 @@ export const articleCategories: ArticleCategory[] = [
       "スマートメーターデータの業務活用",
     ],
     recommendedReadingOrder: [],
-    order: 12,
+    order: 24,
     group: "learning",
   },
   {
@@ -804,7 +804,7 @@ export const articleCategories: ArticleCategory[] = [
       "需給ひっ迫時の節電要請と企業対応",
     ],
     recommendedReadingOrder: [],
-    order: 13,
+    order: 25,
     group: "learning",
   },
   {
@@ -820,7 +820,7 @@ export const articleCategories: ArticleCategory[] = [
       "限られた予算での電気代削減アイデア",
     ],
     recommendedReadingOrder: [],
-    order: 14,
+    order: 26,
     group: "learning",
   },
   {
@@ -836,7 +836,7 @@ export const articleCategories: ArticleCategory[] = [
       "蓄電池・太陽光の減価償却と税務扱い",
     ],
     recommendedReadingOrder: [],
-    order: 15,
+    order: 27,
     group: "learning",
   },
   {
@@ -852,7 +852,7 @@ export const articleCategories: ArticleCategory[] = [
       "設備関連用語（高圧・低圧・キュービクル）",
     ],
     recommendedReadingOrder: [],
-    order: 16,
+    order: 28,
     group: "learning",
   },
   {
@@ -868,7 +868,7 @@ export const articleCategories: ArticleCategory[] = [
       "最終保障供給・市場連動のFAQ",
     ],
     recommendedReadingOrder: [],
-    order: 17,
+    order: 29,
     group: "learning",
   },
   {
@@ -884,7 +884,7 @@ export const articleCategories: ArticleCategory[] = [
       "再エネ賦課金・減免制度の改正履歴",
     ],
     recommendedReadingOrder: [],
-    order: 18,
+    order: 30,
     group: "learning",
   },
   {
@@ -900,7 +900,7 @@ export const articleCategories: ArticleCategory[] = [
       "充電インフラ補助金・支援制度",
     ],
     recommendedReadingOrder: [],
-    order: 19,
+    order: 31,
     group: "learning",
   },
   {
@@ -916,7 +916,7 @@ export const articleCategories: ArticleCategory[] = [
       "自動更新条項と更新拒絶の進め方",
     ],
     recommendedReadingOrder: [],
-    order: 20,
+    order: 32,
     group: "learning",
   },
   {
@@ -932,7 +932,7 @@ export const articleCategories: ArticleCategory[] = [
       "M&A電力デューデリジェンス",
     ],
     recommendedReadingOrder: [],
-    order: 21,
+    order: 33,
     group: "learning",
   },
   {
@@ -948,7 +948,7 @@ export const articleCategories: ArticleCategory[] = [
       "多国籍企業の脱炭素・RE100対応",
     ],
     recommendedReadingOrder: [],
-    order: 22,
+    order: 34,
     group: "learning",
   },
   {
@@ -964,7 +964,7 @@ export const articleCategories: ArticleCategory[] = [
       "冷却効率（PUE）最適化の実務",
     ],
     recommendedReadingOrder: [],
-    order: 23,
+    order: 35,
     group: "learning",
   },
 ];
