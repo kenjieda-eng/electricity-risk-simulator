@@ -19,6 +19,20 @@ export type ArticleCategorySlug =
   | "subsidies"
   | "for-executives"
   | "by-region"
+  | "decarbonization"
+  | "corporate-ppa"
+  | "energy-dx"
+  | "energy-bcp"
+  | "sme-guide"
+  | "accounting-tax"
+  | "glossary"
+  | "faq"
+  | "regulation-timeline"
+  | "ev-charging"
+  | "contract-legal"
+  | "ma-organizational-change"
+  | "global-energy"
+  | "datacenter-ai-demand"
   | "market-data";
 
 export type CategoryGroup = "learning" | "monthly";
@@ -727,6 +741,230 @@ export const articleCategories: ArticleCategory[] = [
       "extreme-heat-electricity-risk",
     ],
     order: 21,
+    group: "learning",
+  },
+  {
+    name: "脱炭素・GX対応",
+    slug: "decarbonization",
+    description:
+      "RE100・非化石証書・Scope2報告など、法人の脱炭素対応に必要な電力調達と情報開示を整理します。",
+    intro:
+      "企業の脱炭素対応では、CO2排出量の把握、再エネ電力の調達、CDP・TCFD報告までを一貫して設計する必要があります。電力調達と情報開示の両面から、実務で使える情報を整理しました。",
+    learnPoints: [
+      "Scope2（電力排出量）の算定と報告の基本",
+      "RE100加盟・非化石証書活用の選び方",
+      "GX-ETS・カーボンプライシングへの備え方",
+    ],
+    recommendedReadingOrder: [],
+    order: 10,
+    group: "learning",
+  },
+  {
+    name: "コーポレートPPA",
+    slug: "corporate-ppa",
+    description:
+      "オンサイト・オフサイト・バーチャルPPAの違いと、契約期間・価格・リスクの読み解き方を整理します。",
+    intro:
+      "長期の再エネ電力調達手段として注目されるコーポレートPPAは、形態により価格、会計処理、リスクが大きく異なります。契約交渉前に押さえておきたい比較軸と落とし穴を整理しています。",
+    learnPoints: [
+      "オンサイト・オフサイト・バーチャルPPAの違い",
+      "PPA契約期間・単価・環境価値の設計",
+      "会計処理とScope2対応の注意点",
+    ],
+    recommendedReadingOrder: [],
+    order: 11,
+    group: "learning",
+  },
+  {
+    name: "エネルギーマネジメント・DX",
+    slug: "energy-dx",
+    description:
+      "BEMS/FEMS/EMS・AI最適化・スマートメーターデータ活用など、デジタル技術による電力管理を整理します。",
+    intro:
+      "電力データの活用とデジタル技術は、契約見直しや設備投資よりも初期コストを抑えて効果を出せる打ち手です。導入前に知っておきたい基礎と、投資対効果の判断軸をまとめています。",
+    learnPoints: [
+      "BEMS/FEMS/EMSの違いと選定基準",
+      "AI最適化・需要予測の精度と限界",
+      "スマートメーターデータの業務活用",
+    ],
+    recommendedReadingOrder: [],
+    order: 12,
+    group: "learning",
+  },
+  {
+    name: "電力BCP・災害対策",
+    slug: "energy-bcp",
+    description:
+      "停電・需給ひっ迫・災害時の電力確保と、非常用電源・マイクログリッド活用による事業継続を整理します。",
+    intro:
+      "電力BCPは、災害やブラックアウトだけでなく、新電力撤退や需給ひっ迫による計画停電にも備える領域です。事業継続に必要な電力量の把握から、非常用電源・マイクログリッドの設計まで実務視点で整理しています。",
+    learnPoints: [
+      "事業継続に必要な最低電力量の算定",
+      "非常用電源・蓄電池・マイクログリッドの比較",
+      "需給ひっ迫時の節電要請と企業対応",
+    ],
+    recommendedReadingOrder: [],
+    order: 13,
+    group: "learning",
+  },
+  {
+    name: "中小企業・小規模事業者向け",
+    slug: "sme-guide",
+    description:
+      "低圧契約・小規模店舗・SOHOなど、中小規模の法人に特化した電気料金の基礎と見直し手順を整理します。",
+    intro:
+      "高圧・特別高圧中心の情報が多いなか、低圧契約や小規模事業者向けに特化した見直しガイドが不足しています。限られた予算と担当者の中で成果を出すための、小規模向けの実務情報をまとめています。",
+    learnPoints: [
+      "低圧電力・低圧電灯の基本構造",
+      "中小企業向けプラン選定の着眼点",
+      "限られた予算での電気代削減アイデア",
+    ],
+    recommendedReadingOrder: [],
+    order: 14,
+    group: "learning",
+  },
+  {
+    name: "電気代の経理・税務",
+    slug: "accounting-tax",
+    description:
+      "電気代の勘定科目・インボイス制度・蓄電池の減価償却など、電気関連コストの経理処理を整理します。",
+    intro:
+      "電気代は毎月発生する固定費でありながら、インボイス・仕訳・資産計上など経理論点は意外と多い領域です。経理・総務担当者がつまずきやすいポイントを整理しています。",
+    learnPoints: [
+      "電気代の勘定科目と部門配賦",
+      "インボイス制度と電力会社の対応状況",
+      "蓄電池・太陽光の減価償却と税務扱い",
+    ],
+    recommendedReadingOrder: [],
+    order: 15,
+    group: "learning",
+  },
+  {
+    name: "用語集",
+    slug: "glossary",
+    description:
+      "電力契約・市場・設備に関する専門用語を横断的に整理した用語集です。検索や他記事から辿れます。",
+    intro:
+      "電気料金や電力契約を調べる際に繰り返し登場する用語を、分野別に整理した用語集です。関連記事へのリンクで詳しい解説も参照できます。",
+    learnPoints: [
+      "契約関連用語（契約電力・基本料金・デマンド）",
+      "市場関連用語（JEPX・スポット・先渡し）",
+      "設備関連用語（高圧・低圧・キュービクル）",
+    ],
+    recommendedReadingOrder: [],
+    order: 16,
+    group: "learning",
+  },
+  {
+    name: "FAQ集（よくある質問）",
+    slug: "faq",
+    description:
+      "電気代・契約見直し・最終保障供給など、検索されやすい質問を横断的にまとめたFAQ集です。",
+    intro:
+      "「法人電気代なぜ高い」「契約見直し何から」のようなよく調べられる疑問に対して、結論から先に答え、関連記事への導線を用意したFAQハブです。",
+    learnPoints: [
+      "電気代全般のよくある質問",
+      "契約見直し手順のFAQ",
+      "最終保障供給・市場連動のFAQ",
+    ],
+    recommendedReadingOrder: [],
+    order: 17,
+    group: "learning",
+  },
+  {
+    name: "制度改正タイムライン",
+    slug: "regulation-timeline",
+    description:
+      "電力自由化・容量市場・再エネ賦課金改正など、関連制度の時系列と事業者への影響を整理します。",
+    intro:
+      "電力制度は毎年のように改正・新設され、法人の電気料金に直接影響します。主要な制度改正の時系列と、それぞれが料金や契約に与える影響を時系列で整理しました。",
+    learnPoints: [
+      "電力自由化と小売全面自由化の歴史",
+      "容量市場・需給調整市場の制度変遷",
+      "再エネ賦課金・減免制度の改正履歴",
+    ],
+    recommendedReadingOrder: [],
+    order: 18,
+    group: "learning",
+  },
+  {
+    name: "EV・充電インフラ",
+    slug: "ev-charging",
+    description:
+      "法人EV導入時の電力コスト、充電設備の契約区分、基本料金インパクトと補助金を整理します。",
+    intro:
+      "法人EV・社用車EVの導入は電力コストに直結します。充電設備の契約区分、既存の電力契約への影響、活用できる補助金までを整理しています。",
+    learnPoints: [
+      "EV充電設備の電力契約区分と選び方",
+      "充電負荷による基本料金への影響",
+      "充電インフラ補助金・支援制度",
+    ],
+    recommendedReadingOrder: [],
+    order: 19,
+    group: "learning",
+  },
+  {
+    name: "契約書・約款の読み方",
+    slug: "contract-legal",
+    description:
+      "電力契約書・供給約款の主要条項、不可抗力・自動更新・違約金など法務視点で整理します。",
+    intro:
+      "電力契約書・供給約款は、平時は気にしなくても、トラブル発生時や更新交渉で初めて重要になります。条項の読み方と確認ポイントを法務視点で整理しています。",
+    learnPoints: [
+      "主要条項（供給条件・料金・期間・解約）",
+      "不可抗力・リスク条項の読み方",
+      "自動更新条項と更新拒絶の進め方",
+    ],
+    recommendedReadingOrder: [],
+    order: 20,
+    group: "learning",
+  },
+  {
+    name: "M&A・組織再編時の電力契約",
+    slug: "ma-organizational-change",
+    description:
+      "合併・分社・事業譲渡など、組織変更時の電力契約承継と再契約手続きを整理します。",
+    intro:
+      "M&Aや分社化の際、電力契約は名義変更・新規契約・解約のいずれかが必要になります。見落とすと最終保障供給への移行や違約金トラブルの原因となるため、手順を整理しました。",
+    learnPoints: [
+      "契約承継・名義変更の手続き",
+      "事業譲渡時の再契約と空白期間対策",
+      "M&A電力デューデリジェンス",
+    ],
+    recommendedReadingOrder: [],
+    order: 21,
+    group: "learning",
+  },
+  {
+    name: "海外拠点・グローバルエネルギー",
+    slug: "global-energy",
+    description:
+      "海外主要国の電気料金水準、グローバル拠点のエネルギー戦略、多国籍企業の脱炭素対応を整理します。",
+    intro:
+      "海外事業所を持つ企業では、各国の電力制度と価格水準を踏まえた拠点戦略が必要です。主要国の電気料金比較と、グローバルなエネルギー戦略の基本を整理しています。",
+    learnPoints: [
+      "主要国の電気料金水準と構造",
+      "海外拠点のエネルギー調達の考え方",
+      "多国籍企業の脱炭素・RE100対応",
+    ],
+    recommendedReadingOrder: [],
+    order: 22,
+    group: "learning",
+  },
+  {
+    name: "データセンター・AI需要",
+    slug: "datacenter-ai-demand",
+    description:
+      "AI時代の電力需要急増、データセンター立地要件、冷却最適化など最新の電力需要動向を整理します。",
+    intro:
+      "AIワークロードの増加により、データセンターの電力需要は世界的に急拡大しています。日本市場の動向、立地選定、冷却最適化など最新トピックを整理しました。",
+    learnPoints: [
+      "AI時代のデータセンター電力需要動向",
+      "立地選定と電力供給能力",
+      "冷却効率（PUE）最適化の実務",
+    ],
+    recommendedReadingOrder: [],
+    order: 23,
     group: "learning",
   },
 ];
@@ -2652,4 +2890,424 @@ export const articleList: ArticleMeta[] = [
   { title: "冬と夏、どちらが電気料金リスクか", slug: "winter-vs-summer-electricity", description: "冬の平均価格13.96円は夏の11.67円より20%高く、ボラティリティは2倍。季節別の需要・価格データで検証します。", category: "データで見る電力市場", categorySlug: "market-data", order: 9, publishedAt: "2026-04-12" },
   { title: "再エネ比率が上がると価格はどう動くか", slug: "renewable-share-price-correlation", description: "35,000コマの実績データで再エネ比率と価格の逆相関(r=-0.46)を実証。40%超で価格は半分以下に急落します。", category: "データで見る電力市場", categorySlug: "market-data", order: 10, publishedAt: "2026-04-12" },
   { title: "需要が上位10%に入ると価格は2.6倍", slug: "demand-decile-price-risk", description: "需要をデシル分析すると、上位10%(D10)の平均価格は20.59円で下位10%の2.6倍。ボラティリティは4.6倍に跳ね上がります。", category: "データで見る電力市場", categorySlug: "market-data", order: 11, publishedAt: "2026-04-12" },
+  {
+    title: "法人の脱炭素対応の全体像｜電力調達と情報開示の両輪",
+    slug: "corporate-decarbonization-overview",
+    description:
+      "企業の脱炭素対応は、排出量の把握、削減計画、再エネ調達、情報開示の4段階で設計します。それぞれの実務ポイントと関連制度を整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "RE100とは｜法人が参加する意義と実務フロー",
+    slug: "re100-overview-for-business",
+    description:
+      "RE100は事業用電力を100%再エネで賄うことを宣言する国際イニシアチブです。加盟要件、参加コスト、実務上の進め方を整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "Scope2（電力排出量）の算定と報告ガイド",
+    slug: "scope2-electricity-accounting",
+    description:
+      "Scope2は購入した電力・熱・蒸気に由来する間接排出量です。マーケット基準とロケーション基準の違いと算定手順を整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "コーポレートPPAとは｜3種類の契約形態と選び方",
+    slug: "corporate-ppa-overview",
+    description:
+      "コーポレートPPAは企業が発電事業者と直接交わす長期の再エネ電力調達契約です。オンサイト・オフサイト・バーチャルの違いと選定軸を整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "オンサイトPPAとオフサイトPPAの違い｜設置条件とコスト比較",
+    slug: "onsite-vs-offsite-ppa",
+    description:
+      "オンサイトPPAとオフサイトPPAの違いを、設置場所・規模・コスト・契約期間の観点で比較し、企業タイプ別の選び方を整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "バーチャルPPAとは｜仕組みと日本での実施可能性",
+    slug: "virtual-ppa-explained",
+    description:
+      "バーチャルPPAは物理的な電力ではなく、価格差と環境価値のみをやり取りする金融スキームです。欧米の普及状況と日本での実施条件を整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "コーポレートPPA契約の落とし穴｜10年以上の長期契約で失敗しないために",
+    slug: "ppa-contract-pitfalls",
+    description:
+      "PPA契約の10〜20年にわたる期間中に起こりやすい問題（需要変化・制度変更・発電量下振れ）と契約交渉での予防策を整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 4,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "BEMS/FEMS/EMSの違い｜目的と導入選定の基準",
+    slug: "bems-fems-ems-overview",
+    description:
+      "エネルギーマネジメントシステムの種類（BEMS・FEMS・HEMS・EMS）の違いと、法人の利用目的別に選ぶときの軸を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "AIによる電力最適化の実務｜需要予測と自動制御の現在地",
+    slug: "ai-electricity-optimization",
+    description:
+      "AI・機械学習を使った電力需要予測、デマンドピーク制御、市場連動時の購入タイミング最適化など、最新の実務事例を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "スマートメーターデータの業務活用｜30分値データを使いこなす",
+    slug: "smart-meter-data-utilization",
+    description:
+      "スマートメーターが取得する30分単位の電力使用データを、契約見直し・設備投資判断・BCPに活用する方法を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "デマンドレスポンス・需要家リソース（VPP）活用の基本",
+    slug: "demand-side-flexibility",
+    description:
+      "需要家側の柔軟性（需要抑制・創エネ・蓄電）を組み合わせて提供するVPP・デマンドレスポンスの仕組みと収益化を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 4,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "法人の電力BCP概論｜停電・需給ひっ迫に備えた事業継続",
+    slug: "energy-bcp-overview",
+    description:
+      "電力BCPは災害・需給ひっ迫・新電力撤退に備えた事業継続設計です。必要電力量の算定から対策手段の選び方までを整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "非常用電源の選び方｜ディーゼル・ガス・蓄電池・ハイブリッドの比較",
+    slug: "emergency-power-source-options",
+    description:
+      "非常用電源の主要な種類（ディーゼル発電機・ガス発電機・蓄電池・ハイブリッド）をコスト・稼働時間・用途別に比較します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "マイクログリッドとは｜法人拠点での自立運転を実現する仕組み",
+    slug: "microgrid-for-business",
+    description:
+      "マイクログリッドは、自家発電・蓄電池・制御システムを組み合わせて自立運転可能にする電力システムです。導入形態と効果を整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "中小企業の電気料金の基礎｜低圧契約を理解する",
+    slug: "sme-electricity-basics",
+    description:
+      "中小企業の電気料金はほぼ低圧契約。高圧との違い、料金体系、見直しの余地を分かりやすく整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "低圧契約の見直し要点｜小規模事業者向けチェックリスト",
+    slug: "low-voltage-review-essentials",
+    description:
+      "低圧契約の見直しで確認すべき項目を、料金プラン・契約アンペア・電力使用実態から整理したチェックリストです。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "中小企業の電気代削減｜今日から始める即効策",
+    slug: "sme-cost-reduction-quick-wins",
+    description:
+      "低予算・短期間で実施できる中小企業向けの電気代削減アイデア（運用改善・低コスト機器更新・契約見直し）を整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電気代の勘定科目と仕訳｜部門配賦と月次締めの実務",
+    slug: "electricity-expense-accounting",
+    description:
+      "電気代の基本的な勘定科目（水道光熱費・製造経費）、部門配賦の考え方、月次締め時の処理を整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "インボイス制度と電気代｜適格請求書発行事業者の確認と経費処理",
+    slug: "invoice-system-electricity",
+    description:
+      "インボイス制度導入後の電気代処理、電力会社の対応状況、免税事業者からの仕入税額控除の扱いを整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "蓄電池・太陽光設備の減価償却と税務扱い",
+    slug: "solar-battery-depreciation",
+    description:
+      "企業が導入する蓄電池・太陽光発電設備の耐用年数、減価償却方法、各種税制優遇措置を整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力契約の用語集｜契約電力・基本料金・デマンド・力率",
+    slug: "glossary-contract-terms",
+    description:
+      "法人向け電力契約でよく登場する契約関連用語を、意味・計算方法・関連記事へのリンクと共に整理します。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力市場の用語集｜JEPX・スポット・先渡し・先物・容量市場",
+    slug: "glossary-market-terms",
+    description:
+      "電力市場関連の用語（JEPX・スポット・時間前・先渡し・先物・容量市場・需給調整市場）を整理します。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力設備の用語集｜高圧・低圧・キュービクル・受変電設備",
+    slug: "glossary-equipment-terms",
+    description:
+      "電力設備関連の基本用語（高圧・低圧・受電方式・キュービクル・PAS・VCB）を整理します。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "【FAQ】法人電気代はなぜ高いのか｜主な原因と対処法",
+    slug: "faq-why-business-electricity-high",
+    description:
+      "「法人電気代 なぜ高い」の検索ニーズに答えるFAQ。燃料費調整・再エネ賦課金・契約条件の3軸で原因と対処法を整理します。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "【FAQ】法人の電力契約見直しは何から始める？｜手順と期間の目安",
+    slug: "faq-contract-review-where-to-start",
+    description:
+      "契約見直しの着手から切替完了までの標準的な流れと、各ステップで確認すべきポイントをFAQ形式で整理します。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "【FAQ】市場連動プランは怖い？｜向いている企業・避けるべき企業",
+    slug: "faq-market-linked-plan",
+    description:
+      "市場連動プランに関するよくある質問。価格変動の大きさ、向く企業・向かない企業の判断軸をFAQ形式で整理します。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力制度改正の全体像｜2000年代から現在までのタイムライン",
+    slug: "power-market-regulation-overview",
+    description:
+      "電力自由化から容量市場まで、電力制度改正の主要イベントを時系列で整理し、法人電気料金への影響を振り返ります。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "容量市場の制度変遷と電気料金への影響",
+    slug: "capacity-market-timeline",
+    description:
+      "2020年メインオークション開始から2024年本格稼働、2025年以降の価格動向まで、容量市場のタイムラインと法人料金への影響を整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "再エネ賦課金関連の制度改正タイムライン",
+    slug: "renewable-surcharge-reform-timeline",
+    description:
+      "2012年のFIT開始から、減免制度変更、2023年度の急落、2025年度の過去最高値まで、再エネ賦課金関連改正を時系列で整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "法人EV充電の基礎｜充電設備の種類と必要な電力契約",
+    slug: "corporate-ev-charging-basics",
+    description:
+      "法人が社用車EVを導入する際の、充電設備の種類（普通・急速）、必要な電力契約区分、費用構造を整理します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "EV充電設備の電力契約タイプ｜事業用・従業員用・一般開放の違い",
+    slug: "charging-station-contract-types",
+    description:
+      "EV充電設備の利用範囲（社内専用・従業員用・一般開放）により電力契約と課金方法が変わります。それぞれの要件を整理します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "社用車EV導入時の電力コスト試算",
+    slug: "ev-fleet-cost-calculation",
+    description:
+      "社用車をEV化する際の充電電力量、月間電気代、既存の燃料費との比較試算を、一般的な前提条件を使って整理します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力契約書の主要条項｜法人契約で必ず確認すべき項目",
+    slug: "electricity-contract-clauses",
+    description:
+      "電力契約書・供給約款の主要条項（供給条件・料金・期間・解約・不可抗力）を、法人担当者向けに読み解くポイントと共に整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "電力契約の不可抗力条項｜災害・需給ひっ迫時の責任範囲",
+    slug: "force-majeure-electricity",
+    description:
+      "電力契約における不可抗力（Force Majeure）条項の典型例と、災害・需給ひっ迫時の責任分担の考え方を整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "自動更新条項のリスク｜意図しない長期拘束を避ける契約管理",
+    slug: "auto-renewal-clause-risks",
+    description:
+      "電力契約の自動更新条項による意図しない契約継続を防ぐため、通知期限管理と解除の流れを整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "M&A時の電力契約引継｜合併・事業譲渡での手続きの違い",
+    slug: "ma-electricity-contract-handling",
+    description:
+      "M&A時に電力契約をどう扱うかは、スキーム（合併・事業譲渡・株式譲渡）により大きく異なります。手続きと注意点を整理します。",
+    category: "M&A・組織再編時の電力契約",
+    categorySlug: "ma-organizational-change",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "分社化・会社分割時の電力契約｜空白期間を避けるための設計",
+    slug: "spin-off-energy-contracts",
+    description:
+      "会社分割・分社化時の電力契約の分割・新規契約設定と、実行日前後の空白期間リスクを回避する手順を整理します。",
+    category: "M&A・組織再編時の電力契約",
+    categorySlug: "ma-organizational-change",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "海外拠点のエネルギー戦略｜多国籍企業の電力調達設計",
+    slug: "overseas-energy-strategy",
+    description:
+      "海外拠点を持つ企業の電力調達は、各国の制度・価格水準を踏まえた個別最適化が必要です。基本的な枠組みを整理します。",
+    category: "海外拠点・グローバルエネルギー",
+    categorySlug: "global-energy",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "世界主要国の電気料金比較｜日本の水準を国際ベンチマークで見る",
+    slug: "global-electricity-price-benchmark",
+    description:
+      "日本・米国・欧州主要国・東南アジア・中東の産業用電気料金を比較し、日本の水準がどこに位置するかを整理します。",
+    category: "海外拠点・グローバルエネルギー",
+    categorySlug: "global-energy",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "データセンター電力需要の急増｜AI時代の需要動向",
+    slug: "datacenter-electricity-demand-surge",
+    description:
+      "生成AI・クラウド需要の急拡大でデータセンターの電力需要が急増しています。日本・世界の動向と法人電気料金への波及を整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 1,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "AIワークロードのエネルギー影響｜学習・推論の電力消費",
+    slug: "ai-workload-energy-impact",
+    description:
+      "生成AI・機械学習の学習・推論プロセスが消費する電力の実態と、電力効率化の技術動向を整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 2,
+    publishedAt: "2026-04-17",
+  },
+  {
+    title: "データセンター冷却最適化｜PUE改善と液冷の実務",
+    slug: "datacenter-cooling-optimization",
+    description:
+      "データセンターのPUE（電力使用効率）改善の取り組み、空冷と液冷の比較、冷却関連電力の削減アプローチを整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 3,
+    publishedAt: "2026-04-17",
+  },
 ];

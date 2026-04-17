@@ -207,4 +207,144 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/articles/market-data", label: "市場データ記事一覧" },
     ],
   },
+  decarbonization: {
+    heading: "脱炭素対応を、電力契約の側面から設計する",
+    description:
+      "Scope2報告や再エネ調達の方針は、現行の電力契約とセットで設計することで実効性が高まります。自社に合った脱炭素ロードマップについては専門家へご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "脱炭素戦略を相談する" },
+      { href: "/articles/decarbonization", label: "脱炭素・GX記事一覧" },
+    ],
+  },
+  "corporate-ppa": {
+    heading: "PPA契約判断を、数値と制度の両面で進める",
+    description:
+      "コーポレートPPAは10〜20年の長期契約となるため、事前の需要予測・価格リスク評価が重要です。契約条件の確認ポイントや導入判断は専門家にご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/contact", label: "PPA導入を相談する" },
+      { href: "/articles/corporate-ppa", label: "コーポレートPPA記事一覧" },
+    ],
+  },
+  "energy-dx": {
+    heading: "エネマネDXの投資対効果を、現状データから評価する",
+    description:
+      "BEMS・AI最適化・需要予測などのDX投資は、まず現状の電力データを可視化するところから始まります。診断結果を踏まえた投資設計は専門家がサポートします。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "DX投資を相談する" },
+      { href: "/articles/energy-dx", label: "エネマネDX記事一覧" },
+    ],
+  },
+  "energy-bcp": {
+    heading: "電力BCPを、平時と有事の両面で設計する",
+    description:
+      "電力BCPは、非常用電源の検討だけでなく、平時の需給ひっ迫や新電力撤退への備えも含みます。設計ポイントのご相談は専門家へお気軽にどうぞ。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "電力BCPを相談する" },
+      { href: "/articles/energy-bcp", label: "電力BCP記事一覧" },
+    ],
+  },
+  "sme-guide": {
+    heading: "中小規模でも使える、現実的な削減策から始める",
+    description:
+      "限られた予算と人員でも取り組める電気代削減の選択肢を、シミュレーターで試算できます。どこから始めるか迷ったら専門家にご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "中小企業向け相談をする" },
+      { href: "/articles/sme-guide", label: "中小企業向け記事一覧" },
+    ],
+  },
+  "accounting-tax": {
+    heading: "経理・税務処理の実務を、契約実態と合わせて確認する",
+    description:
+      "インボイス・減価償却・税制優遇などの実務処理は、契約内容と合わせて検討することで抜け漏れを防げます。ご不明点は専門家へご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "経理・税務を相談する" },
+      { href: "/articles/accounting-tax", label: "経理・税務記事一覧" },
+    ],
+  },
+  glossary: {
+    heading: "用語の理解が進んだら、実際の契約にあてはめる",
+    description:
+      "用語の意味が分かったら、自社の契約書・請求書でそれぞれを確認しましょう。シミュレーターでは用語を活かした現状診断ができます。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/articles", label: "解説ページ一覧" },
+      { href: "/contact", label: "専門家に無料相談する" },
+    ],
+  },
+  faq: {
+    heading: "FAQで整理した疑問を、自社の数値で確認する",
+    description:
+      "よくある質問に当てはめた次は、自社の請求データで実際の状況を診断しましょう。個別事情が複雑なら、専門家への相談が近道です。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "個別相談をする" },
+      { href: "/articles", label: "解説ページ一覧" },
+    ],
+  },
+  "regulation-timeline": {
+    heading: "制度変更の影響を、自社契約で試算する",
+    description:
+      "制度改正の影響は契約条件により異なります。シミュレーターで将来の料金シナリオを試算し、必要に応じて専門家にご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/contact", label: "制度影響を相談する" },
+      { href: "/articles/regulation-timeline", label: "制度改正記事一覧" },
+    ],
+  },
+  "ev-charging": {
+    heading: "EV導入の電力インパクトを、基本料金ごと試算する",
+    description:
+      "社用EV導入は、充電電力量だけでなく契約電力・基本料金にも影響します。事前試算と契約見直しの相談は専門家が対応します。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/contact", label: "EV導入を相談する" },
+      { href: "/articles/ev-charging", label: "EV・充電記事一覧" },
+    ],
+  },
+  "contract-legal": {
+    heading: "契約条項の確認から、見直しや交渉へ",
+    description:
+      "契約書・約款の論点を整理したうえで、見直しや再交渉の可能性を検討できます。条項の解釈や交渉論点は専門家にご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "契約条項を相談する" },
+      { href: "/articles/contract-legal", label: "契約書・約款記事一覧" },
+    ],
+  },
+  "ma-organizational-change": {
+    heading: "組織再編時の電力契約を、実行前に整える",
+    description:
+      "M&A・分社・事業譲渡では電力契約の承継・再締結タイミングが事業継続の要です。スケジューリングのご相談は専門家へお気軽にどうぞ。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "組織再編を相談する" },
+      { href: "/articles/ma-organizational-change", label: "M&A・組織再編記事一覧" },
+    ],
+  },
+  "global-energy": {
+    heading: "海外拠点のエネルギー戦略を、グローバル視点で設計する",
+    description:
+      "各国の電力制度・価格水準を踏まえた拠点戦略の相談を承ります。国別比較データを踏まえた個別相談は専門家が対応します。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/contact", label: "グローバル戦略を相談する" },
+      { href: "/articles/global-energy", label: "海外拠点記事一覧" },
+    ],
+  },
+  "datacenter-ai-demand": {
+    heading: "データセンター需要の急増を、契約戦略に反映する",
+    description:
+      "データセンター・AI需要の拡大は、電気料金と供給制約の両面に影響します。立地選定・契約設計の相談は専門家へお気軽にどうぞ。",
+    links: [
+      { href: "/", label: "シミュレーターで試算する", primary: true },
+      { href: "/contact", label: "DC・AI需要を相談する" },
+      { href: "/articles/datacenter-ai-demand", label: "DC・AI需要記事一覧" },
+    ],
+  },
 };

@@ -42,6 +42,24 @@ const categoryPracticeLinks = [
   { href: "/articles/subsidies", label: "補助金・助成金を知る" },
   { href: "/articles/for-executives", label: "経営層・CFO向け" },
   { href: "/articles/by-region", label: "地域別電気料金事情" },
+  { href: "/articles/sme-guide", label: "中小企業・小規模事業者向け" },
+  { href: "/articles/accounting-tax", label: "電気代の経理・税務" },
+  { href: "/articles/contract-legal", label: "契約書・約款の読み方" },
+  { href: "/articles/ma-organizational-change", label: "M&A・組織再編時の電力契約" },
+] as const;
+
+// --- 解説カテゴリ：新領域・特集 ---
+const categoryAdvancedLinks = [
+  { href: "/articles/decarbonization", label: "脱炭素・GX対応" },
+  { href: "/articles/corporate-ppa", label: "コーポレートPPA" },
+  { href: "/articles/energy-dx", label: "エネルギーマネジメント・DX" },
+  { href: "/articles/energy-bcp", label: "電力BCP・災害対策" },
+  { href: "/articles/ev-charging", label: "EV・充電インフラ" },
+  { href: "/articles/datacenter-ai-demand", label: "データセンター・AI需要" },
+  { href: "/articles/global-energy", label: "海外拠点・グローバル" },
+  { href: "/articles/regulation-timeline", label: "制度改正タイムライン" },
+  { href: "/articles/glossary", label: "用語集" },
+  { href: "/articles/faq", label: "FAQ集" },
 ] as const;
 
 // --- よく読まれる基礎記事 ---
@@ -160,6 +178,16 @@ export function Footer() {
             <h4 className={`${subHeadingClass} mt-5`}>実務・属性別</h4>
             <ul className="mt-2 space-y-2 sm:space-y-2.5">
               {categoryPracticeLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className={`${subHeadingClass} mt-5`}>新領域・特集</h4>
+            <ul className="mt-2 space-y-2 sm:space-y-2.5">
+              {categoryAdvancedLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className={linkClass}>
                     {link.label}
