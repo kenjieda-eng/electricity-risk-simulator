@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "業種別 法人電気代の月額相場一覧｜製造・小売・飲食・宿泊・医療・物流";
 const pageDescription =
@@ -78,6 +79,17 @@ const breakdownData = [
 
 export default function ElectricityCostBenchmarkByIndustryPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="業種別 法人電気代の月額相場一覧｜製造・小売・飲食・宿泊・医療・物流"
+        description="製造業・小売業・飲食業・宿泊業・医療機関・物流倉庫など業種別の法人電気代月額相場を一覧で解説。規模・契約電力・使用量の目安と内訳構成もあわせて紹介します。"
+        url="https://simulator.eic-jp.org/electricity-cost-benchmark-by-industry"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "業種別 法人電気代の月額相場一覧" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -342,5 +354,6 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
         />
       </div>
     </main>
+    </>
   );
 }

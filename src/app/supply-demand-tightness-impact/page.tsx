@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "需給逼迫で法人の電気料金はどう変わるか｜市場価格高騰と契約への影響";
@@ -67,6 +68,17 @@ const causes = [
 
 export default function SupplyDemandTightnessImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="需給逼迫で法人の電気料金はどう変わるか｜市場価格高騰と契約への影響"
+        description="電力の需給が逼迫したとき、法人の電気料金にどう影響するかを解説。需給逼迫が起きる原因、JEPX価格急騰との関係、市場連動・固定プラン別の影響、法人の備え方を詳しく説明します。"
+        url="https://simulator.eic-jp.org/supply-demand-tightness-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "需給逼迫で法人の電気料金はどう変わるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -253,5 +265,6 @@ export default function SupplyDemandTightnessImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

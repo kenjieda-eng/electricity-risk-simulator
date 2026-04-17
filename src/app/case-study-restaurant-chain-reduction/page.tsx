@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例｜居酒屋チェーン";
 const pageDescription =
@@ -64,6 +65,17 @@ const measuresData = [
 
 export default function CaseStudyRestaurantChainPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例｜居酒屋チェーン"
+        description="居酒屋チェーン40店舗が電力契約を一括見直し、年間2,800万円（約17%）の電気代削減を達成した事例。夜間営業特有の電力需要パターンへの対応と施策の詳細を解説します。"
+        url="https://simulator.eic-jp.org/case-study-restaurant-chain-reduction"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -309,5 +321,6 @@ export default function CaseStudyRestaurantChainPage() {
         />
       </div>
     </main>
+    </>
   );
 }

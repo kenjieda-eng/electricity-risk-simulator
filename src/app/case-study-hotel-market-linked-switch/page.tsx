@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "ホテル：市場連動プランから固定プランへ切り替えた事例｜首都圏ビジネスホテル";
 const pageDescription =
@@ -48,6 +49,17 @@ const monthlyComparison = [
 
 export default function CaseStudyHotelMarketLinkedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="ホテル：市場連動プランから固定プランへ切り替えた事例｜首都圏ビジネスホテル"
+        description="首都圏ビジネスホテルが市場連動型電力プランから固定型プランへ切り替え、電気代の予測不能な変動リスクを解消した事例。切り替えの判断基準・実際のコスト比較・リスク管理の考え方を解説します。"
+        url="https://simulator.eic-jp.org/case-study-hotel-market-linked-switch"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "ホテル：市場連動プランから固定プランへ切り替えた事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -316,5 +328,6 @@ export default function CaseStudyHotelMarketLinkedPage() {
         />
       </div>
     </main>
+    </>
   );
 }

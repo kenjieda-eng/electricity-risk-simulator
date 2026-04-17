@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "容量拠出金とは｜法人の電気料金にどう影響するか";
 const pageDescription =
@@ -42,6 +43,17 @@ export const metadata: Metadata = {
 
 export default function CapacityContributionExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量拠出金とは｜法人の電気料金にどう影響するか"
+        description="容量拠出金の仕組みと法人電気料金への影響を解説。容量市場の目的、小売電気事業者から法人への転嫁構造、2024年度からの導入経緯、請求書での見え方を整理します。"
+        url="https://simulator.eic-jp.org/capacity-contribution-explained"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量拠出金とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -292,5 +304,6 @@ export default function CapacityContributionExplainedPage() {
         <CategoryNextStepCta slug="capacity-contribution-explained" />
       </div>
     </main>
+    </>
   );
 }

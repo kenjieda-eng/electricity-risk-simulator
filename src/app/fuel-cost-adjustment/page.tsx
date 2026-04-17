@@ -8,6 +8,7 @@ import {
   FUEL_IMPORT_PRICE_YEARLY,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説";
 const pageDescription =
@@ -51,6 +52,17 @@ export default function FuelCostAdjustmentPage() {
   const lngValues = FUEL_IMPORT_PRICE_YEARLY.map((r) => r.lngYenPerTon / 1000);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説"
+        description="燃料費調整額（燃調費）の仕組み、LNG・原油・石炭CIF価格との関係、計算式、2018〜2026年度の推移、2022年の急騰、激変緩和措置（補助金）の影響まで、実データとグラフで解説します。"
+        url="https://simulator.eic-jp.org/fuel-cost-adjustment"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額（燃調費）とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">燃料費調整額（燃調費）とは</h1>
@@ -230,5 +242,6 @@ export default function FuelCostAdjustmentPage() {
         <CategoryNextStepCta slug="fuel-cost-adjustment" />
       </div>
     </main>
+    </>
   );
 }

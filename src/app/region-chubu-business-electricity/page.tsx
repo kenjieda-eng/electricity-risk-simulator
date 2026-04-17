@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "中部電力エリアの法人電気代事情｜製造業集積地の電力事情";
 const pageDescription =
@@ -163,6 +164,17 @@ const newPowerStatus = [
 export default function RegionChubuBusinessElectricityPage() {
   const weather = getWeatherByRegion("chubu");
   return (
+    <>
+      <ArticleJsonLd
+        headline="中部電力エリアの法人電気代事情｜製造業集積地の電力事情"
+        description="中部電力エリア（東海5県＋長野・静岡富士川以西）の法人向け電気料金を詳解。製造業・自動車産業集積による大口産業電力の特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-chubu-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "中部電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -565,5 +577,6 @@ export default function RegionChubuBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

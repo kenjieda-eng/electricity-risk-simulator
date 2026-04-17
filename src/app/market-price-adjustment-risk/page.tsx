@@ -7,6 +7,7 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "市場価格調整額の上振れリスクと備え方｜2021年冬・2022年事例で学ぶ";
 const pageDescription =
@@ -61,6 +62,17 @@ export default function MarketPriceAdjustmentRiskPage() {
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場価格調整額の上振れリスクと備え方｜2021年冬・2022年事例で学ぶ"
+        description="市場価格調整額の上振れリスクを、2021年1月のJEPX高騰、2022年ウクライナ危機の事例から整理。経営への影響、リスクヘッジの考え方、備え方を法人向けに解説します。"
+        url="https://simulator.eic-jp.org/market-price-adjustment-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場価格調整額の上振れリスクと備え方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -249,5 +261,6 @@ export default function MarketPriceAdjustmentRiskPage() {
         <CategoryNextStepCta slug="market-price-adjustment-risk" />
       </div>
     </main>
+    </>
   );
 }

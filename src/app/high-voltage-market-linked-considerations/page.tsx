@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "高圧・特別高圧で市場連動を考えるときの注意点｜規模別リスク試算と判断基準";
@@ -99,6 +100,17 @@ const marketLinkedChecklist = [
 
 export default function HighVoltageMarketLinkedConsiderationsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧・特別高圧で市場連動を考えるときの注意点｜規模別リスク試算と判断基準"
+        description="高圧・特別高圧需要家が市場連動プランを検討する際の注意点を解説。使用量が大きいほど価格変動リスクが増幅される仕組み、固定プランとの年間コスト比較の考え方を説明します。"
+        url="https://simulator.eic-jp.org/high-voltage-market-linked-considerations"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "高圧・特別高圧で市場連動を考えるときの注意点" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -371,5 +383,6 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

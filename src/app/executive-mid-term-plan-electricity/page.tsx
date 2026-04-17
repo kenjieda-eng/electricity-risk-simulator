@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "中期経営計画への電力コスト織り込み方｜3年・5年シナリオ別前提設定ガイド";
 const pageDescription =
@@ -89,6 +90,17 @@ const actionItems = [
 
 export default function ExecutiveMidTermPlanElectricityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="中期経営計画への電力コスト織り込み方｜3年・5年シナリオ別前提設定ガイド"
+        description="中期経営計画（中計）で電力コストをどう織り込むか。3年・5年の計画期間でシナリオ別（基準/楽観/悲観）の電力コスト前提の置き方、GX賦課金等の制度変更インパクト、経営企画部が押さえるべきKPIを解説する経営層・CFO向け実践ガイド。"
+        url="https://simulator.eic-jp.org/executive-mid-term-plan-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "中期経営計画への電力コスト織り込み方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -405,5 +417,6 @@ export default function ExecutiveMidTermPlanElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

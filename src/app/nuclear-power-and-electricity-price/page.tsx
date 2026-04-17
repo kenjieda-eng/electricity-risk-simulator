@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "原子力発電所の稼働状況と電気料金の関係｜エリア別の料金差への影響を解説";
@@ -225,6 +226,17 @@ const keyPoints = [
 
 export default function NuclearPowerAndElectricityPricePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="原子力発電所の稼働状況と電気料金の関係｜エリア別の料金差への影響を解説"
+        description="原発稼働エリアと非稼働エリアの法人電気料金差を分析。再稼働が進んだ場合の料金見通し、法人の立地判断への示唆を整理。"
+        url="https://simulator.eic-jp.org/nuclear-power-and-electricity-price"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "原子力発電所の稼働状況と電気料金の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -550,5 +562,6 @@ export default function NuclearPowerAndElectricityPricePage() {
         />
       </section>
     </main>
+    </>
   );
 }

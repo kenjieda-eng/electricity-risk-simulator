@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "契約見直しによる削減額の目安｜プラン切替・契約電力見直しの効果";
 const pageDescription =
@@ -63,6 +64,17 @@ const reviewSteps = [
 
 export default function ContractReviewReductionEffectPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約見直しによる削減額の目安｜プラン切替・契約電力見直しの効果"
+        description="電力契約の見直しでどれだけ電気代を下げられるか？プラン切替・契約電力削減・小売電気事業者変更の削減効果を規模別に数値で解説。見直しの手順と注意点もあわせて紹介します。"
+        url="https://simulator.eic-jp.org/contract-review-reduction-effect"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約見直しによる削減額の目安" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -324,5 +336,6 @@ export default function ContractReviewReductionEffectPage() {
         />
       </div>
     </main>
+    </>
   );
 }

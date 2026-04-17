@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "物流倉庫：自家消費太陽光併設で年間9%削減した事例｜食品物流センター";
 const pageDescription =
@@ -52,6 +53,17 @@ const yearlyTotal = monthlyGeneration.reduce((acc, m) => ({
 
 export default function CaseStudyLogisticsSolarPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="物流倉庫：自家消費太陽光併設で年間9%削減した事例｜食品物流センター"
+        description="食品物流センターが屋根上への自家消費型太陽光発電を設置し、電力会社からの購入量を削減。年間電気代の9%・約380万円削減を達成した事例。導入コスト・発電量・回収期間を詳しく解説します。"
+        url="https://simulator.eic-jp.org/case-study-logistics-solar-integration"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "物流倉庫：自家消費太陽光併設で年間9%削減した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -341,5 +353,6 @@ export default function CaseStudyLogisticsSolarPage() {
         />
       </div>
     </main>
+    </>
   );
 }

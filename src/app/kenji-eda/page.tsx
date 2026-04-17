@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -143,6 +144,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function KenjiEdaProfilePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="江田健二 プロフィール｜一般社団法人エネルギー情報センター 理事"
+        description="一般社団法人エネルギー情報センター理事・江田健二のプロフィール。エネルギー・デジタル化・脱炭素化分野での執筆・講演活動、経歴、所属団体、著書、受賞歴などを紹介します。"
+        url="https://simulator.eic-jp.org/kenji-eda"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "江田健二 プロフィール" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -372,5 +384,6 @@ export default function KenjiEdaProfilePage() {
         </Link>
       </div>
     </main>
+    </>
   );
 }

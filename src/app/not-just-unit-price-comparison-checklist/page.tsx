@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "請求単価だけで比較しないためのチェックポイント｜総額比較の考え方";
@@ -83,6 +84,17 @@ const checkItems = [
 
 export default function NotJustUnitPriceComparisonChecklistPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="請求単価だけで比較しないためのチェックポイント｜総額比較の考え方"
+        description="電力の相見積もりで単価だけを比較することの問題点と、総額比較のアプローチを解説。調整費・前提条件・リスク要因を含めた正確な比較のためのチェックリストを提供します。"
+        url="https://simulator.eic-jp.org/not-just-unit-price-comparison-checklist"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "請求単価だけで比較しないためのチェックポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -264,5 +276,6 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
         />
       </section>
     </main>
+    </>
   );
 }

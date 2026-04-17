@@ -9,6 +9,7 @@ import {
   FUEL_IMPORT_PRICE_YEARLY,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "燃料費調整額の推移詳細｜2018〜2026年度の変動とウクライナ危機・激変緩和措置の影響";
 const pageDescription =
@@ -52,6 +53,17 @@ export default function FuelCostAdjustmentHistoryPage() {
   const fuelImportLabels = FUEL_IMPORT_PRICE_YEARLY.map((r) => `${r.fiscalYear}年度`);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額の推移詳細｜2018〜2026年度の変動とウクライナ危機・激変緩和措置の影響"
+        description="燃料費調整額の年度別推移を、LNG・原油・石炭CIF価格と対比しながら解説。2022年のウクライナ危機による急騰、激変緩和措置による値引き、補助終了後の再上昇までをデータで整理します。"
+        url="https://simulator.eic-jp.org/fuel-cost-adjustment-history"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額の推移詳細" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -233,5 +245,6 @@ export default function FuelCostAdjustmentHistoryPage() {
         <CategoryNextStepCta slug="fuel-cost-adjustment-history" />
       </div>
     </main>
+    </>
   );
 }

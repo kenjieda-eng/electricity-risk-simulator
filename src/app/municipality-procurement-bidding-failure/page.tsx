@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体電力入札が不調になったときの対応ガイド｜近年増える不落への実務";
 const pageDescription =
@@ -99,6 +100,17 @@ const comparisonRows = [
 
 export default function MunicipalityProcurementBiddingFailurePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体電力入札が不調になったときの対応ガイド｜近年増える不落への実務"
+        description="電力入札の不調・不落が増加する中、自治体担当者が直面する随意契約移行・再入札・最終保障供給回避の実務手順を解説。地方自治法234条の適用要件、議会報告のポイント、他自治体の対応事例もまとめています。"
+        url="https://simulator.eic-jp.org/municipality-procurement-bidding-failure"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体電力入札が不調になったときの対応ガイド" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -362,5 +374,6 @@ export default function MunicipalityProcurementBiddingFailurePage() {
         />
       </div>
     </main>
+    </>
   );
 }

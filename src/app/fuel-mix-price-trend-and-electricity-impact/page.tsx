@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度";
@@ -112,6 +113,17 @@ const actionPoints = [
 
 export default function FuelMixPriceTrendAndElectricityImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度"
+        description="LNG・石炭・原油の3燃料の国際価格推移を比較し、日本の電気料金への影響度の違いを解説。燃料構成の変化、燃調費への反映メカニズムを整理。"
+        url="https://simulator.eic-jp.org/fuel-mix-price-trend-and-electricity-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -413,5 +425,6 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "非化石証書とは何か｜再エネ価値をどう確保するのか";
 const pageDescription =
@@ -15,6 +16,7 @@ const pageUrl = "https://simulator.eic-jp.org/non-fossil-certificates";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "再エネ賦課金"],
   alternates: {
     canonical: pageUrl,
   },
@@ -58,6 +60,17 @@ const comparisonRows = [
 
 export default function NonFossilCertificatesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="非化石証書とは何か｜再エネ価値をどう確保するのか"
+        description="非化石証書は、電気そのものとは別に、非化石価値や環境価値を扱う仕組みです。再エネメニューの背景を理解する前提として、電気の調達と環境価値の調達の違いを整理します。"
+        url="https://simulator.eic-jp.org/non-fossil-certificates"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "非化石証書とは何か" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">非化石証書とは何か｜再エネ価値をどう確保するのか</h1>
@@ -253,5 +266,6 @@ export default function NonFossilCertificatesPage() {
         <CategoryNextStepCta slug="non-fossil-certificates" />
       </div>
     </main>
+    </>
   );
 }

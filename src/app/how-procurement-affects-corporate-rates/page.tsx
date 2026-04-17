@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "調達構成の違いが法人料金にどう影響するか｜電力会社の仕入れと料金の関係";
@@ -98,6 +99,17 @@ const rateComponentMap = [
 
 export default function HowProcurementAffectsCorporateRatesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="調達構成の違いが法人料金にどう影響するか｜電力会社の仕入れと料金の関係"
+        description="電力会社がどのように電力を調達しているかによって、法人向け電気料金の水準やリスク構造が変わります。調達コストが料金に反映される仕組みと、法人として押さえておくべき視点を解説します。"
+        url="https://simulator.eic-jp.org/how-procurement-affects-corporate-rates"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "調達構成の違いが法人料金にどう影響するか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -331,5 +343,6 @@ export default function HowProcurementAffectsCorporateRatesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

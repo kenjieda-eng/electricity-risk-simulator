@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "契約見直し時に経理が見るポイント｜予算管理と会計処理の確認";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function ContractReviewForAccountingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約見直し時に経理が見るポイント｜予算管理と会計処理の確認"
+        description="電力契約見直しにおける経理部門の確認ポイントを解説。予算への影響・会計処理の変更・支払い条件・料金変動の予算管理方法など、実務に即した確認事項を整理します。"
+        url="https://simulator.eic-jp.org/contract-review-for-accounting"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約見直し時に経理が見るポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -273,5 +285,6 @@ export default function ContractReviewForAccountingPage() {
         />
       </section>
     </main>
+    </>
   );
 }

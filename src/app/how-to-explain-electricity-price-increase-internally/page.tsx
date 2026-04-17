@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金が上がったときの社内説明の進め方｜要因分解と報告テンプレート";
@@ -181,6 +182,17 @@ const tips = [
 
 export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金が上がったときの社内説明の進め方｜要因分解と報告テンプレート"
+        description="法人の電気料金が上がったとき、経営層や管理部門への社内説明をどう進めるかを整理。要因分解の切り分け方、報告に使えるテンプレート構成、よくある質問への回答例を解説。"
+        url="https://simulator.eic-jp.org/how-to-explain-electricity-price-increase-internally"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金が上がったときの社内説明の進め方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -630,5 +642,6 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
         />
       </div>
     </main>
+    </>
   );
 }

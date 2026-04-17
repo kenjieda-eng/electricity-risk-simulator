@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金上昇率と他の事業コスト上昇率を比較する｜法人のコスト構造全体で見る";
@@ -194,6 +195,17 @@ const MANAGEMENT_POINTS = [
 
 export default function ElectricityVsOtherBusinessCostsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金上昇率と他の事業コスト上昇率を比較する｜法人のコスト構造全体で見る"
+        description="電気代、人件費、原材料費、物流費、賃料の上昇率を2019年→2025年で比較。業種別のコスト構造における電気代の位置づけ、経営判断への示唆を整理。"
+        url="https://simulator.eic-jp.org/electricity-vs-other-business-costs"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金上昇率と他の事業コスト上昇率を比較する" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -541,5 +553,6 @@ export default function ElectricityVsOtherBusinessCostsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

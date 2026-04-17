@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "補助金と電力契約見直し、どちらを先に進めるべきか｜優先順位の考え方";
 const pageDescription =
@@ -138,6 +139,17 @@ const decisionPoints = [
 
 export default function SubsidyVsContractReviewPriorityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="補助金と電力契約見直し、どちらを先に進めるべきか｜優先順位の考え方"
+        description="補助金による設備投資と電力契約見直しのどちらを先に進めるべきか、判断の軸と組み合わせ方を整理します。"
+        url="https://simulator.eic-jp.org/subsidy-vs-contract-review-priority"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "補助金と電力契約見直し、どちらを先に進めるべきか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -347,5 +359,6 @@ export default function SubsidyVsContractReviewPriorityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

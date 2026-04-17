@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代が急に2倍になったときの対応手順｜原因切り分けと緊急対応";
 const pageDescription =
@@ -178,6 +179,17 @@ const faqs = [
 
 export default function EmergencyElectricityBillDoubledPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代が急に2倍になったときの対応手順｜原因切り分けと緊急対応"
+        description="電気代が急に2倍・3倍に跳ね上がった場合の原因切り分けと緊急対応手順を解説。請求書の読み方から電力会社への問い合わせ、設備側の確認まで、法人担当者向けに整理しました。"
+        url="https://simulator.eic-jp.org/emergency-electricity-bill-doubled"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代が急に2倍になったときの対応手順" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -432,5 +444,6 @@ export default function EmergencyElectricityBillDoubledPage() {
         />
       </div>
     </main>
+    </>
   );
 }

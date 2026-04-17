@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "長期契約とは何か｜安定調達のために期間を長く取る考え方";
 const pageDescription =
@@ -13,6 +14,7 @@ const pageUrl = "https://simulator.eic-jp.org/long-term-power-procurement";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代"],
   alternates: {
     canonical: pageUrl,
   },
@@ -66,6 +68,17 @@ const comparisonRows = [
 
 export default function LongTermPowerProcurementPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="長期契約とは何か｜安定調達のために期間を長く取る考え方"
+        description="電力会社は短期市場だけでなく、長期契約で数量や価格の安定を図ることがあります。長期契約の役割、短期市場との違い、価格安定と柔軟性のトレードオフを整理します。"
+        url="https://simulator.eic-jp.org/long-term-power-procurement"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "長期契約とは何か" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -224,5 +237,6 @@ export default function LongTermPowerProcurementPage() {
         <CategoryNextStepCta slug="long-term-power-procurement" />
       </div>
     </main>
+    </>
   );
 }

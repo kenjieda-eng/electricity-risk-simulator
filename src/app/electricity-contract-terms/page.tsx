@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle = "法人向け電力契約で確認したい契約条件｜8項目の確認一覧と契約期間別比較";
@@ -48,6 +49,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityContractTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電力契約で確認したい契約条件｜8項目の確認一覧と契約期間別比較"
+        description="法人向け電力契約で確認したい契約期間、更新条件、違約金、中途解約の注意点を整理。8項目の確認一覧表と契約期間別比較で、見積比較前後で見落としたくないポイントを解説します。"
+        url="https://simulator.eic-jp.org/electricity-contract-terms"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電力契約で確認したい契約条件" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -314,5 +326,6 @@ export default function ElectricityContractTermsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

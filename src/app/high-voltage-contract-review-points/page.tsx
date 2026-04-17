@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "高圧契約の見直しで確認したいこと｜料金構造と契約条件の着眼点";
@@ -77,6 +78,17 @@ const reviewPoints = [
 
 export default function HighVoltageContractReviewPointsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="高圧契約の見直しで確認したいこと｜料金構造と契約条件の着眼点"
+        description="高圧電力契約を見直す際に確認すべき着眼点を解説。基本料金・デマンド・電力量料金・燃料費調整額の構造、複数社見積比較の注意点、切替時の手順を詳しく説明します。"
+        url="https://simulator.eic-jp.org/high-voltage-contract-review-points"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "高圧契約の見直しで確認したいこと" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -258,5 +270,6 @@ export default function HighVoltageContractReviewPointsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

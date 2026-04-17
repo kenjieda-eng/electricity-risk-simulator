@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "同業他社との電力コスト比較の進め方｜経営層向け";
 const pageDescription =
@@ -80,6 +81,17 @@ const analysisSteps = [
 
 export default function ExecutivePeerCostBenchmarkingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="同業他社との電力コスト比較の進め方｜経営層向け"
+        description="同業他社・業界平均との電力コスト比較を行うための情報源と分析の進め方を整理します。"
+        url="https://simulator.eic-jp.org/executive-peer-cost-benchmarking"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "同業他社との電力コスト比較の進め方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -319,5 +331,6 @@ export default function ExecutivePeerCostBenchmarkingPage() {
         />
       </div>
     </main>
+    </>
   );
 }

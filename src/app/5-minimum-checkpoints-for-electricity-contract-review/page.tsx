@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電力契約見直しで最低限確認したい5項目｜確認方法とリスクを整理";
@@ -156,6 +157,17 @@ const priorityOrder = [
 
 export default function FiveMinimumCheckpointsForElectricityContractReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電力契約見直しで最低限確認したい5項目｜確認方法とリスクを整理"
+        description="法人向け電力契約を見直すときに最低限確認しておきたい5項目を整理します。契約電力・電力量料金・燃調費・契約期間・更新条件ごとに、確認方法と見落としリスクを表で解説します。"
+        url="https://simulator.eic-jp.org/5-minimum-checkpoints-for-electricity-contract-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電力契約見直しで最低限確認したい5項目" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -409,5 +421,6 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
         />
       </div>
     </main>
+    </>
   );
 }

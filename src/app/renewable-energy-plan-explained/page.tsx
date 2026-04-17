@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -232,6 +233,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function RenewableEnergyPlanExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネメニュー（RE100対応）とは｜法人向け電力契約の料金構造と通常プランとの違い"
+        description="RE100対応の再エネ電力メニューの仕組みを解説。通常プランとの料金差、非化石証書・トラッキング付き証書の扱い、コスト増の目安、導入判断のポイントを整理。"
+        url="https://simulator.eic-jp.org/renewable-energy-plan-explained"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネメニュー（RE100対応）とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -552,5 +564,6 @@ export default function RenewableEnergyPlanExplainedPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

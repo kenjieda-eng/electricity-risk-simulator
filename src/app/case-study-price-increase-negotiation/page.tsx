@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "値上げ通知の交渉で15%圧縮した事例｜製造業B社";
 const pageDescription =
@@ -49,6 +50,17 @@ const impactCalc = [
 
 export default function CaseStudyPriceIncreaseNegotiationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="値上げ通知の交渉で15%圧縮した事例｜製造業B社"
+        description="新電力から突然の大幅値上げ通知を受けた製造業B社が、交渉と代替調達の同時並行で値上げ幅を15%圧縮した事例。値上げ通知への対処法・交渉の進め方・代替先の探し方を詳しく解説します。"
+        url="https://simulator.eic-jp.org/case-study-price-increase-negotiation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "値上げ通知の交渉で15%圧縮した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -327,5 +339,6 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
         />
       </div>
     </main>
+    </>
   );
 }

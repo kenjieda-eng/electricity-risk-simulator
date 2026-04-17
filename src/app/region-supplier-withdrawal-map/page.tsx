@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "エリア別 新電力撤退状況マップ｜2022年以降の契約解除動向";
 const pageDescription =
@@ -237,6 +238,17 @@ const switchingGuide = [
 
 export default function RegionSupplierWithdrawalMapPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="エリア別 新電力撤退状況マップ｜2022年以降の契約解除動向"
+        description="2022年以降の新電力撤退・契約解除状況を全国10エリアで比較。撤退が起きる理由、代表的な撤退事例、契約解除通知が来たときの対応、エリア別の切替先の考え方を詳しく解説します。"
+        url="https://simulator.eic-jp.org/region-supplier-withdrawal-map"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "エリア別 新電力撤退状況マップ" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -557,5 +569,6 @@ export default function RegionSupplierWithdrawalMapPage() {
         />
       </div>
     </main>
+    </>
   );
 }

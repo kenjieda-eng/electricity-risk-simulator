@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "利益率の低い企業が電気料金高騰に直面したときのリスク｜収益への影響と対策";
@@ -52,6 +53,17 @@ const lowMarginIndustries = [
 
 export default function LowMarginCompanyPriceSurgeRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="利益率の低い企業が電気料金高騰に直面したときのリスク｜収益への影響と対策"
+        description="利益率の低い法人が電気料金高騰に直面した場合、収益にどのような影響が生じるかを解説。損益分岐点への影響、コスト転嫁の難しさ、リスク管理の対策を詳しく説明します。"
+        url="https://simulator.eic-jp.org/low-margin-company-price-surge-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "利益率の低い企業が電気料金高騰に直面したときのリスク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -243,5 +255,6 @@ export default function LowMarginCompanyPriceSurgeRiskPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "商業施設で蓄電池を検討するときの着眼点｜ピーク負荷と営業への影響";
@@ -84,6 +85,17 @@ const benefits = [
 
 export default function CommercialFacilityBatteryConsiderationsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="商業施設で蓄電池を検討するときの着眼点｜ピーク負荷と営業への影響"
+        description="商業施設で蓄電池の導入を検討する際の主要な着眼点を解説。ピーク負荷の削減効果、テナント・営業への影響、投資回収の考え方、BCP対応の可能性まで実務目線で整理します。"
+        url="https://simulator.eic-jp.org/commercial-facility-battery-considerations"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "商業施設で蓄電池を検討するときの着眼点" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -291,5 +303,6 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

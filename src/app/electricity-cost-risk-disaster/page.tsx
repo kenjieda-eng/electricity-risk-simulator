@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "災害で法人・企業・自治体の電気料金・電気代はどう上がる？供給停止リスクを解説";
@@ -48,6 +49,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityCostRiskDisasterPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="災害で法人・企業・自治体の電気料金・電気代はどう上がる？供給停止リスクを解説"
+        description="災害によって法人・企業・自治体の電気料金・電気代が上がる仕組みを解説。発電所停止、供給力低下、発生月と翌月への影響、市場連動プランと固定プランの違いを整理します。"
+        url="https://simulator.eic-jp.org/electricity-cost-risk-disaster"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "災害で法人・企業・自治体の電気料金・電気代はどう上がる？供給停止リスクを解説" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -290,5 +302,6 @@ export default function ElectricityCostRiskDisasterPage() {
         />
       </section>
     </main>
+    </>
   );
 }

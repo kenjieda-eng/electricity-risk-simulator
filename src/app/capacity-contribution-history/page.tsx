@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "容量拠出金の年度別推移｜オークション結果と転嫁単価の変動を整理";
 const pageDescription =
@@ -133,6 +134,17 @@ const comparisonRows = [
 
 export default function CapacityContributionHistoryPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量拠出金の年度別推移｜オークション結果と転嫁単価の変動を整理"
+        description="容量拠出金の年度別推移をオークション結果・kWhあたり転嫁単価・法人への影響額で整理。2024年度の本格開始から今後の見通しまで、燃調費・再エネ賦課金との比較も含めて解説。"
+        url="https://simulator.eic-jp.org/capacity-contribution-history"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量拠出金の年度別推移" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -393,5 +405,6 @@ export default function CapacityContributionHistoryPage() {
         />
       </section>
     </main>
+    </>
   );
 }

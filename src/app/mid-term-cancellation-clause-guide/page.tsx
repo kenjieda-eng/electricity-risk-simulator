@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電力契約の中途解約条項の見方と注意点｜違約金と予告期間の確認";
@@ -67,6 +68,17 @@ const penaltyTypes = [
 
 export default function MidTermCancellationClauseGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力契約の中途解約条項の見方と注意点｜違約金と予告期間の確認"
+        description="法人の電力契約における中途解約条項の読み方を解説。違約金の種類・計算方法・予告期間の確認ポイント、中途解約が合理的になる条件と判断のしかたを整理します。"
+        url="https://simulator.eic-jp.org/mid-term-cancellation-clause-guide"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力契約の中途解約条項の見方と注意点" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -267,5 +279,6 @@ export default function MidTermCancellationClauseGuidePage() {
         />
       </section>
     </main>
+    </>
   );
 }

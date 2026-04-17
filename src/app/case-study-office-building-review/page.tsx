@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "オフィスビル：契約電力の適正化で年間580万円削減した事例";
 const pageDescription =
@@ -50,6 +51,17 @@ const floorData = [
 
 export default function CaseStudyOfficeBuildingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="オフィスビル：契約電力の適正化で年間580万円削減した事例"
+        description="築18年のオフィスビルが電力需要の実態調査と契約電力の適正化を行い、年間580万円（16%）の電気代削減を達成した事例。テナント変動に伴う過大契約の発見から見直し実施までの手順を詳説します。"
+        url="https://simulator.eic-jp.org/case-study-office-building-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "オフィスビル：契約電力の適正化で年間580万円削減した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -353,5 +365,6 @@ export default function CaseStudyOfficeBuildingPage() {
         />
       </div>
     </main>
+    </>
   );
 }

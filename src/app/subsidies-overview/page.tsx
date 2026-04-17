@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人向け電力・省エネ補助金まとめ｜2026年度に使える主要制度一覧";
 const pageDescription =
@@ -102,6 +103,17 @@ const comparisonPoints = [
 
 export default function SubsidiesOverviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電力・省エネ補助金まとめ｜2026年度に使える主要制度一覧"
+        description="2026年度に法人が活用できる電力・省エネ関連の補助金・助成金を一覧で解説。SII省エネ補助金、需要家主導型太陽光PPA支援、SHIFT事業など主要制度の概要・補助率・申請時期を比較し、自社に合った制度選択をサポートします。"
+        url="https://simulator.eic-jp.org/subsidies-overview"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電力・省エネ補助金まとめ" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -294,5 +306,6 @@ export default function SubsidiesOverviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

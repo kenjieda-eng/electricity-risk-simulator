@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "製造業：年間電気代を18%削減した契約見直し事例｜関東の金属加工工場";
 const pageDescription =
@@ -70,6 +71,17 @@ const successFactors = [
 
 export default function CaseStudyManufacturingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="製造業：年間電気代を18%削減した契約見直し事例｜関東の金属加工工場"
+        description="関東の金属加工工場が電力契約の見直しにより年間約430万円（18%）の電気代削減を達成した事例。デマンド制御・契約電力の適正化・新電力への切り替えを組み合わせた具体的な施策と Before/After 数値を詳しく解説します。"
+        url="https://simulator.eic-jp.org/case-study-manufacturing-cost-reduction"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "製造業：年間電気代を18%削減した契約見直し事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -322,5 +334,6 @@ export default function CaseStudyManufacturingPage() {
         />
       </div>
     </main>
+    </>
   );
 }

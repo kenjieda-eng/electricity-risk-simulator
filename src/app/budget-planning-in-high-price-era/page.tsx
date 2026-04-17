@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金高止まり時代の予算策定｜シナリオ別前提の置き方と社内合意の進め方";
@@ -50,6 +51,17 @@ export const metadata: Metadata = {
 
 export default function BudgetPlanningInHighPriceEraPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金高止まり時代の予算策定｜シナリオ別前提の置き方と社内合意の進め方"
+        description="電気料金が高止まりする時代の予算策定方法を解説。過去5年の変動レンジに基づくシナリオ別前提、費目ごとの変動幅の織り込み方、四半期見直しのポイントを整理。"
+        url="https://simulator.eic-jp.org/budget-planning-in-high-price-era"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金高止まり時代の予算策定" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -425,5 +437,6 @@ export default function BudgetPlanningInHighPriceEraPage() {
         />
       </div>
     </main>
+    </>
   );
 }

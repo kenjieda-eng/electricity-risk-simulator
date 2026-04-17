@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { AreaSpreadGroupedChart, AreaFyPriceLineChart } from "../../components/market-data/AreaSpreadCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   SPREAD_MONTHS,
   SPREAD_TK_KYUSHU,
@@ -54,6 +55,17 @@ export default function AreaPriceSpreadPage() {
   const maxSpreadMonthIdx = SPREAD_TK_KYUSHU.indexOf(maxSpreadKyushu);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="エリア間価格スプレッドの読み方｜東京プレミアムと地域格差"
+        description="JEPXエリアプライスの地域格差を徹底分析。東京-九州スプレッド最大4.19円（4月）、FY2026東京21.14円vs九州11.28円の乖離原因を解説。連系線混雑・需要集中・再エネ構成の違いが生む法人電気料金への影響。"
+        url="https://simulator.eic-jp.org/area-price-spread"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "エリア間価格スプレッドの読み方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -444,5 +456,6 @@ export default function AreaPriceSpreadPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "先物取引とは何か｜将来の価格を先に固定する仕組み";
 const pageDescription =
@@ -14,6 +15,7 @@ const pageUrl = "https://simulator.eic-jp.org/power-futures";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代"],
   alternates: {
     canonical: pageUrl,
   },
@@ -63,6 +65,17 @@ const comparisonRows = [
 
 export default function PowerFuturesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="先物取引とは何か｜将来の価格を先に固定する仕組み"
+        description="先物取引は、将来の価格変動に備えるための手段です。現物市場との違い、電力会社が先物をどう位置づけるのか、価格変動リスクへの備えとしての役割を整理します。"
+        url="https://simulator.eic-jp.org/power-futures"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "先物取引とは何か" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">先物取引とは何か｜将来の価格を先に固定する仕組み</h1>
@@ -280,5 +293,6 @@ export default function PowerFuturesPage() {
         <CategoryNextStepCta slug="power-futures" />
       </div>
     </main>
+    </>
   );
 }

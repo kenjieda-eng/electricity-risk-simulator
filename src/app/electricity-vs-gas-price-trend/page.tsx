@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金とガス料金の推移を比較する｜法人のエネルギーコスト全体像";
@@ -161,6 +162,17 @@ const decisionPoints = [
 
 export default function ElectricityVsGasPriceTrendPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金とガス料金の推移を比較する｜法人のエネルギーコスト全体像"
+        description="法人の電気料金とガス料金の推移を重ねて比較。都市ガスの原料費調整との違い、電化率が高い企業の依存度、オール電化vsガス併用のコスト比較を整理。"
+        url="https://simulator.eic-jp.org/electricity-vs-gas-price-trend"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金とガス料金の推移を比較する" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -432,5 +444,6 @@ export default function ElectricityVsGasPriceTrendPage() {
         />
       </section>
     </main>
+    </>
   );
 }

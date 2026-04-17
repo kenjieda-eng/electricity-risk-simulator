@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "原油価格と法人電気料金の関係｜燃料価格の波及経路と影響の見方";
@@ -90,6 +91,17 @@ const adjustmentMechanism = [
 
 export default function OilAndCorporateElectricityPricePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="原油価格と法人電気料金の関係｜燃料価格の波及経路と影響の見方"
+        description="原油・LNG・石炭などの燃料価格が、どのような経路で法人向け電気料金に影響するかを解説します。燃料費調整額の仕組みと、料金変動リスクの把握方法を整理します。"
+        url="https://simulator.eic-jp.org/oil-and-corporate-electricity-price"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "原油価格と法人電気料金の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -306,5 +318,6 @@ export default function OilAndCorporateElectricityPricePage() {
         />
       </section>
     </main>
+    </>
   );
 }

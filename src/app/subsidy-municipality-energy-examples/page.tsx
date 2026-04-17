@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体向け電力関連補助金・交付金の活用事例｜公共施設の省エネ支援";
 const pageDescription =
@@ -177,6 +178,17 @@ const practicalPoints = [
 
 export default function SubsidyMunicipalityEnergyExamplesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体向け電力関連補助金・交付金の活用事例｜公共施設の省エネ支援"
+        description="自治体が活用できる電力・省エネ関連の国庫補助金・交付金について、制度の種類と活用事例を整理します。"
+        url="https://simulator.eic-jp.org/subsidy-municipality-energy-examples"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体向け電力関連補助金・交付金の活用事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -369,5 +381,6 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

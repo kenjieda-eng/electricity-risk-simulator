@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -208,6 +209,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function ElectricityPriceIncreaseAndCpiPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金の値上げと物価の関係｜CPIに占める電気代の影響と経営への示唆"
+        description="電気料金の値上げが物価指数（CPI・企業物価指数）にどう影響するかを解説。電気代のCPI寄与度、他の光熱費との比較、業種別のコスト構造への影響を整理。経営層の判断材料に。"
+        url="https://simulator.eic-jp.org/electricity-price-increase-and-cpi"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金の値上げと物価の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -641,5 +653,6 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
         />
       </div>
     </main>
+    </>
   );
 }

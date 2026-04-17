@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ賦課金の減免制度｜電気多消費事業者向けの要件と申請の流れ";
 const pageDescription =
@@ -40,6 +41,17 @@ export const metadata: Metadata = {
 
 export default function RenewableEnergySurchargeReductionSystemPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ賦課金の減免制度｜電気多消費事業者向けの要件と申請の流れ"
+        description="電気多消費事業者向けの再エネ賦課金減免制度について、対象要件（売上高比・原単位）、減免率、認定〜還付までの流れ、年度別認定件数の推移を解説します。"
+        url="https://simulator.eic-jp.org/renewable-energy-surcharge-reduction-system"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ賦課金の減免制度" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -226,5 +238,6 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
         <CategoryNextStepCta slug="renewable-energy-surcharge-reduction-system" />
       </div>
     </main>
+    </>
   );
 }

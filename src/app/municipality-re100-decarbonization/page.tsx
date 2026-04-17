@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体のRE100・脱炭素調達と電力コストの両立｜自治体向け";
 const pageDescription =
@@ -117,6 +118,17 @@ const pitfalls = [
 
 export default function MunicipalityRe100DecarbonizationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体のRE100・脱炭素調達と電力コストの両立｜自治体向け"
+        description="自治体の脱炭素目標と電力コスト管理を両立させるための調達戦略と実務上の選択肢を整理します。"
+        url="https://simulator.eic-jp.org/municipality-re100-decarbonization"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体のRE100・脱炭素調達と電力コストの両立" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -361,5 +373,6 @@ export default function MunicipalityRe100DecarbonizationPage() {
         />
       </div>
     </main>
+    </>
   );
 }

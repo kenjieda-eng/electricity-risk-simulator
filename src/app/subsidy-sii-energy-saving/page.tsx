@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "省エネ補助金（SII）の申請ガイド｜対象・補助率・スケジュール";
 const pageDescription =
@@ -120,6 +121,17 @@ const pitfalls = [
 
 export default function SubsidySiiEnergySavingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="省エネ補助金（SII）の申請ガイド｜対象・補助率・スケジュール"
+        description="SII（環境共創イニシアチブ）が実施する省エネルギー投資促進支援事業の申請ガイド。対象設備・補助率・補助上限・申請スケジュールを解説し、採択率を高めるポイントと注意点をまとめました。2026年度版。"
+        url="https://simulator.eic-jp.org/subsidy-sii-energy-saving"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "省エネ補助金（SII）の申請ガイド" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -400,5 +412,6 @@ export default function SubsidySiiEnergySavingPage() {
         />
       </div>
     </main>
+    </>
   );
 }

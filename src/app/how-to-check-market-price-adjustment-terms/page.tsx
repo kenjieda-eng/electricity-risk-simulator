@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "市場価格調整額の有無を確認する方法｜固定と市場連動を見分けるポイント";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function HowToCheckMarketPriceAdjustmentTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場価格調整額の有無を確認する方法｜固定と市場連動を見分けるポイント"
+        description="電力契約の見積書・約款における市場価格調整額の有無の確認方法を解説。固定型と市場連動型の違い、名称のバリエーション、ベンダーへの確認方法など実務的なポイントを整理します。"
+        url="https://simulator.eic-jp.org/how-to-check-market-price-adjustment-terms"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場価格調整額の有無を確認する方法" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -271,5 +283,6 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

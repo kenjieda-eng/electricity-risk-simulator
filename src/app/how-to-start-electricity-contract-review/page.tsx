@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電力契約見直しは何から始めるべきか｜5ステップと優先度判断の考え方";
@@ -154,6 +155,17 @@ const doNotItems = [
 
 export default function HowToStartElectricityContractReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電力契約見直しは何から始めるべきか｜5ステップと優先度判断の考え方"
+        description="法人向け電力契約の見直し手順を5ステップで解説。請求書収集から見積比較・切替判断まで所要時間と担当部署を整理し、優先度判断マトリクスで着手タイミングを明確にします。"
+        url="https://simulator.eic-jp.org/how-to-start-electricity-contract-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電力契約見直しは何から始めるべきか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
@@ -412,5 +424,6 @@ export default function HowToStartElectricityContractReviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "特別高圧契約の見直しで確認したいこと｜大規模契約の比較と注意点";
@@ -77,6 +78,17 @@ const reviewPoints = [
 
 export default function ExtraHighVoltageContractReviewPointsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="特別高圧契約の見直しで確認したいこと｜大規模契約の比較と注意点"
+        description="特別高圧電力契約を見直す際に確認すべき着眼点を解説。大規模需要家特有の料金構造、個別交渉の進め方、見積比較の注意点、切替リスクの管理方法を詳しく説明します。"
+        url="https://simulator.eic-jp.org/extra-high-voltage-contract-review-points"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "特別高圧契約の見直しで確認したいこと" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -252,5 +264,6 @@ export default function ExtraHighVoltageContractReviewPointsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

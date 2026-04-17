@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 const pageTitle =
   "工場は固定と市場連動のどちらが向くか｜稼働パターンと負荷から考える";
 const pageDescription =
@@ -100,6 +101,17 @@ const keyFactors = [
 
 export default function FactoryFixedVsMarketLinkedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="工場は固定と市場連動のどちらが向くか｜稼働パターンと負荷から考える"
+        description="製造業の工場が電力契約を固定プランと市場連動プランで比較する際の視点を整理します。連続稼働と交替勤務の違い、ベースロードの大きさ、生産コストへの影響など、工場特有の判断軸を解説します。"
+        url="https://simulator.eic-jp.org/factory-fixed-vs-market-linked"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "工場は固定と市場連動のどちらが向くか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -293,5 +305,6 @@ export default function FactoryFixedVsMarketLinkedPage() {
         />
       </section>
     </main>
+    </>
   );
 }

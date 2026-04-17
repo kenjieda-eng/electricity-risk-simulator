@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "関西電力エリアの法人電気代事情｜原発比率と料金の特性";
 const pageDescription =
@@ -162,6 +163,17 @@ const newPowerStatus = [
 export default function RegionKansaiBusinessElectricityPage() {
   const weather = getWeatherByRegion("kansai");
   return (
+    <>
+      <ArticleJsonLd
+        headline="関西電力エリアの法人電気代事情｜原発比率と料金の特性"
+        description="関西電力エリア（近畿2府4県＋福井・三重・岐阜の一部）の法人向け電気料金を詳解。原発再稼働による料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-kansai-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "関西電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -605,5 +617,6 @@ export default function RegionKansaiBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

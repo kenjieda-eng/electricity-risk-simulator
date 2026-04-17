@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体の長期継続契約（債務負担行為）と電力契約の関係｜自治体向け";
 const pageDescription =
@@ -104,6 +105,17 @@ const cautions = [
 
 export default function MunicipalityLongTermContractPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体の長期継続契約（債務負担行為）と電力契約の関係｜自治体向け"
+        description="単年度予算の制約下で複数年の電力契約を結ぶための債務負担行為の仕組みと活用上の注意点を整理します。"
+        url="https://simulator.eic-jp.org/municipality-long-term-contract"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体の長期継続契約（債務負担行為）と電力契約の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -338,5 +350,6 @@ export default function MunicipalityLongTermContractPage() {
         />
       </div>
     </main>
+    </>
   );
 }

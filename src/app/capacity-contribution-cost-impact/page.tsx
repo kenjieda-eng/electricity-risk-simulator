@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算";
 const pageDescription =
@@ -42,6 +43,17 @@ export const metadata: Metadata = {
 
 export default function CapacityContributionCostImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算"
+        description="容量拠出金のkWhあたり影響額を契約区分別（特別高圧・高圧・低圧）に試算。再エネ賦課金・燃調費との比較、市場連動と固定プランでの出方の違いも含めて整理します。"
+        url="https://simulator.eic-jp.org/capacity-contribution-cost-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量拠出金で電気代はどのくらい上がるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -353,5 +365,6 @@ export default function CapacityContributionCostImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

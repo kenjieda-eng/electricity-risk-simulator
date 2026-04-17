@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ電気はどう調達しているのか｜FIT・FIP・PPA・相対契約の考え方";
 const pageDescription =
@@ -13,6 +14,7 @@ const pageUrl = "https://simulator.eic-jp.org/renewable-power-procurement";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "再エネ賦課金"],
   alternates: {
     canonical: pageUrl,
   },
@@ -62,6 +64,17 @@ const comparisonRows = [
 
 export default function RenewablePowerProcurementPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ電気はどう調達しているのか｜FIT・FIP・PPA・相対契約の考え方"
+        description="再エネ電気の調達方法は一つではありません。FIT、FIP、PPA、相対契約などの違いを整理しながら、電力会社が再エネをどう調達し、どのような特徴やリスクを持つのかを法人向けに解説します。"
+        url="https://simulator.eic-jp.org/renewable-power-procurement"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ電気はどう調達しているのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -264,5 +277,6 @@ export default function RenewablePowerProcurementPage() {
         <CategoryNextStepCta slug="renewable-power-procurement" />
       </div>
     </main>
+    </>
   );
 }

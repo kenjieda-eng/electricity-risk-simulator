@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体：12施設統合調達で年間3,100万円削減した事例｜地方自治体";
 const pageDescription =
@@ -51,6 +52,17 @@ const beforeAfter = [
 
 export default function CaseStudyMunicipalityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体：12施設統合調達で年間3,100万円削減した事例｜地方自治体"
+        description="地方自治体が庁舎・公共施設12施設の電力調達を統合入札し、年間3,100万円（約21%）の電気代削減を達成した事例。公共施設の統合調達の手順・入札設計・新電力切り替えのリスク管理を解説します。"
+        url="https://simulator.eic-jp.org/case-study-municipality-procurement"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体：12施設統合調達で年間3,100万円削減した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -299,5 +311,6 @@ export default function CaseStudyMunicipalityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

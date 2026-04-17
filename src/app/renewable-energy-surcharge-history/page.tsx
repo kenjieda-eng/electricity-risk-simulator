@@ -6,6 +6,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { RENEWABLE_SURCHARGE_DATA } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ賦課金の推移と変動要因｜2012〜2026年度を完全分析";
 const pageDescription =
@@ -46,6 +47,17 @@ export default function RenewableEnergySurchargeHistoryPage() {
   const values = RENEWABLE_SURCHARGE_DATA.map((row) => row.unitPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ賦課金の推移と変動要因｜2012〜2026年度を完全分析"
+        description="再エネ賦課金の単価推移を2012年度の制度開始から2026年度まで年度ごとに解説。2023年度の大幅減、2024〜2025年度の急増の背景を、FIT認定量と回避可能費用の観点から分析します。"
+        url="https://simulator.eic-jp.org/renewable-energy-surcharge-history"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ賦課金の推移と変動要因" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -243,5 +255,6 @@ export default function RenewableEnergySurchargeHistoryPage() {
         <CategoryNextStepCta slug="renewable-energy-surcharge-history" />
       </div>
     </main>
+    </>
   );
 }

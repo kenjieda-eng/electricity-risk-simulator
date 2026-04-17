@@ -12,6 +12,7 @@ const canonicalUrl = `https://simulator.eic-jp.org${EMERGENCY_SCENARIO_BASE_PATH
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "再エネ賦課金", "電気料金シナリオ", "リスク分析", "補助金", "電力会社比較"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,

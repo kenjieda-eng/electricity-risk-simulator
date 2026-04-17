@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "最終保障供給から通常契約に切り替えた事例｜中小製造業";
 const pageDescription =
@@ -75,6 +76,17 @@ const steps = [
 
 export default function CaseStudyLastResortRecoveryPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="最終保障供給から通常契約に切り替えた事例｜中小製造業"
+        description="新電力の撤退で最終保障供給に移行した中小製造業が、5ヶ月で通常契約への切り替えを完了し、電気代を月額36%削減した事例。最終保障供給の実態・脱出手順・新たな電力調達戦略を解説します。"
+        url="https://simulator.eic-jp.org/case-study-last-resort-recovery"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "最終保障供給から通常契約に切り替えた事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -325,5 +337,6 @@ export default function CaseStudyLastResortRecoveryPage() {
         />
       </div>
     </main>
+    </>
   );
 }

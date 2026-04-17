@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "太陽光と蓄電池を組み合わせる意味｜自家消費率向上とコスト削減の相乗効果";
@@ -99,6 +100,17 @@ const designPoints = [
 
 export default function SolarBatteryCombinationBenefitPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="太陽光と蓄電池を組み合わせる意味｜自家消費率向上とコスト削減の相乗効果"
+        description="自家消費型太陽光に蓄電池を加えると、どのような相乗効果が生まれるかを解説します。自家消費率の向上、夜間対応、デマンド抑制、そして経済効果と投資判断の考え方を整理します。"
+        url="https://simulator.eic-jp.org/solar-battery-combination-benefit"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "太陽光と蓄電池を組み合わせる意味" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -400,5 +412,6 @@ export default function SolarBatteryCombinationBenefitPage() {
         />
       </section>
     </main>
+    </>
   );
 }

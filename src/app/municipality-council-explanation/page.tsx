@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "議会で電気代高騰を説明するための資料作成ガイド";
 const pageDescription =
@@ -112,6 +113,17 @@ const documentStructure = [
 
 export default function MunicipalityCouncilExplanationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="議会で電気代高騰を説明するための資料作成ガイド"
+        description="自治体議会で電気代高騰を説明するための資料構成・記載例・想定Q&Aを財政・総務担当者向けに解説。補正予算説明・決算審査・予算審査それぞれの場面で使える説明資料のフレームワークと図表の作り方をまとめます。"
+        url="https://simulator.eic-jp.org/municipality-council-explanation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "議会で電気代高騰を説明するための資料作成ガイド" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -356,5 +368,6 @@ export default function MunicipalityCouncilExplanationPage() {
         />
       </div>
     </main>
+    </>
   );
 }

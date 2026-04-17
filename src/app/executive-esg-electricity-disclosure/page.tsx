@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "IR・ESG開示における電力リスクの記載ガイド｜TCFD/ISSB/GRI対応";
 const pageDescription =
@@ -126,6 +127,17 @@ const actionItems = [
 
 export default function ExecutiveEsgElectricityDisclosurePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="IR・ESG開示における電力リスクの記載ガイド｜TCFD/ISSB/GRI対応"
+        description="統合報告書・有価証券報告書でエネルギーリスクをどう開示するか。TCFD/ISSB/GRIフレームワークとの対応、Scope2排出量と電力調達戦略の関係、RE100/SBTの進捗報告に必要なデータ、投資家が注目するエネルギー関連KPIを解説する経営層・CFO向け実践ガイド。"
+        url="https://simulator.eic-jp.org/executive-esg-electricity-disclosure"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "IR・ESG開示における電力リスクの記載ガイド" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -434,5 +446,6 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
         />
       </div>
     </main>
+    </>
   );
 }

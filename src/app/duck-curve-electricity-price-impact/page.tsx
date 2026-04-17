@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DuckCurveChart from "../../components/area-supply/DuckCurveChart";
 import { HOURLY_DATA } from "../../data/areaSupplyData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "ダックカーブとは何か｜昼と夕方で電力市場価格が変わる理由";
 const pageDescription =
@@ -48,6 +49,17 @@ const keyNumbers = [
 
 export default function DuckCurveElectricityPriceImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="ダックカーブとは何か｜昼と夕方で電力市場価格が変わる理由"
+        description="昼12時のネット需要7,819MWから夕方18時の11,923MWへ──わずか6時間で4,104MWの急上昇。太陽光の普及が生んだ「ダックカーブ」のメカニズムと、法人の市場連動型プラン・蓄電池投資への影響を30分値データから解説します。"
+        url="https://simulator.eic-jp.org/duck-curve-electricity-price-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "ダックカーブとは何か" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -244,5 +256,6 @@ export default function DuckCurveElectricityPriceImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

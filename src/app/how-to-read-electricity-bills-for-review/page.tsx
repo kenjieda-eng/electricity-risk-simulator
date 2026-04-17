@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "請求書のどこを見れば見直しのヒントが分かるのか｜7つの確認ポイントと次のアクション";
@@ -118,6 +119,17 @@ const reviewSigns = [
 
 export default function HowToReadElectricityBillsForReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="請求書のどこを見れば見直しのヒントが分かるのか｜7つの確認ポイントと次のアクション"
+        description="電力契約見直しの出発点となる請求書の読み方を解説します。契約電力・使用量・基本料金・電力量料金・燃調費・再エネ賦課金・前年同月比の7項目を表で整理し、見直しのヒントと次のアクションをまとめました。"
+        url="https://simulator.eic-jp.org/how-to-read-electricity-bills-for-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "請求書のどこを見れば見直しのヒントが分かるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -317,5 +329,6 @@ export default function HowToReadElectricityBillsForReviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle = "小売チェーンの電気料金見直し事例｜多店舗運営で確認したい比較ポイント";
@@ -70,6 +71,17 @@ const checklist = [
 // --- Page Component ---
 export default function CaseStudyRetailChainPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="小売チェーンの電気料金見直し事例｜多店舗運営で確認したい比較ポイント"
+        description="小売チェーンのような多店舗事業者が、法人向け電気料金・電気代の見直しで確認したいポイントを事例形式で整理。契約条件、拠点差、比較時の注意点を実務目線で解説。"
+        url="https://simulator.eic-jp.org/case-study-retail-chain-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "小売チェーンの電気料金見直し事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -509,5 +521,6 @@ export default function CaseStudyRetailChainPage() {
         />
       </div>
     </main>
+    </>
   );
 }

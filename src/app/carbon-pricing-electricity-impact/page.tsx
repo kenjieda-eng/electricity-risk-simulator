@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "カーボンプライシングが法人電気料金に与える影響｜GX-ETSと炭素税の見通し";
@@ -159,6 +160,17 @@ const prepSteps = [
 
 export default function CarbonPricingElectricityImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="カーボンプライシングが法人電気料金に与える影響｜GX-ETSと炭素税の見通し"
+        description="カーボンプライシング（GX-ETS・炭素税）が法人の電気料金にどう影響するかを解説。導入スケジュール、電力セクターへの転嫁経路、EU先行事例との比較を整理。"
+        url="https://simulator.eic-jp.org/carbon-pricing-electricity-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "カーボンプライシングが法人電気料金に与える影響" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -442,5 +454,6 @@ export default function CarbonPricingElectricityImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { HotDaysBarChart, TropicalNightsLineChart } from "../../components/market-data/ExtremeHeatCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   HEAT_YEARS,
   HOT_DAYS_TOKYO,
@@ -79,6 +80,17 @@ const hotDaysPeriods = [
 
 export default function ExtremeHeatElectricityRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="猛暑日・熱帯夜と電力リスク｜1995年からの極端気象日数の推移"
+        description="東京の猛暑日は1995年13日から2025年29日へ2.2倍に急増。大阪の熱帯夜は81日（2025年）と記録更新が続く。極端気象の増加がJEPXスポット価格・電力需要に与える影響と法人の対策を実データで解説します。"
+        url="https://simulator.eic-jp.org/extreme-heat-electricity-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "猛暑日・熱帯夜と電力リスク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -440,5 +452,6 @@ export default function ExtremeHeatElectricityRiskPage() {
         />
       </div>
     </main>
+    </>
   );
 }

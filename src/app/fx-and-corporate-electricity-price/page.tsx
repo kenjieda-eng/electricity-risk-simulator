@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "為替と法人電気料金の関係｜円安が電気料金に影響する仕組み";
@@ -85,6 +86,17 @@ const scenarioComparison = [
 
 export default function FxAndCorporateElectricityPricePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="為替と法人電気料金の関係｜円安が電気料金に影響する仕組み"
+        description="円安が進むと法人向け電気料金はなぜ上がるのかを解説します。燃料輸入コストへの波及経路、燃料費調整額への反映の仕組み、および為替リスクを踏まえた電力コスト管理の考え方を整理します。"
+        url="https://simulator.eic-jp.org/fx-and-corporate-electricity-price"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "為替と法人電気料金の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -289,5 +301,6 @@ export default function FxAndCorporateElectricityPricePage() {
         />
       </section>
     </main>
+    </>
   );
 }

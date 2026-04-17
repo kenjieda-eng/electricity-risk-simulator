@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性";
 const pageDescription =
@@ -166,6 +167,17 @@ const newPowerStatus = [
 export default function RegionKyushuBusinessElectricityPage() {
   const weather = getWeatherByRegion("kyushu");
   return (
+    <>
+      <ArticleJsonLd
+        headline="九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性"
+        description="九州電力エリア（九州7県）の法人向け電気料金を詳解。全国最多水準の太陽光発電導入による出力制御・料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-kyushu-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "九州電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -604,5 +616,6 @@ export default function RegionKyushuBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

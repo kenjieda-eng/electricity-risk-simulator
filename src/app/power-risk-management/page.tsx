@@ -5,6 +5,7 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方";
 const pageDescription =
@@ -14,6 +15,7 @@ const pageUrl = "https://simulator.eic-jp.org/power-risk-management";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "再エネ賦課金"],
   alternates: {
     canonical: pageUrl,
   },
@@ -71,6 +73,17 @@ export default function PowerRiskManagementPage() {
   ];
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方"
+        description="電力調達では、価格リスク、数量リスク、需給逼迫リスク、燃料リスクなど複数の不確実性に備える必要があります。長期契約、相対契約、先物、再エネ調達などをどう組み合わせるのかを整理します。"
+        url="https://simulator.eic-jp.org/power-risk-management"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力会社はどうリスクを管理しているのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -308,5 +321,6 @@ export default function PowerRiskManagementPage() {
         <CategoryNextStepCta slug="power-risk-management" />
       </div>
     </main>
+    </>
   );
 }

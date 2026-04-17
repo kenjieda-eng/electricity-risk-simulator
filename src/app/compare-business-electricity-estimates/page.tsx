@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人向け電力見積書の比較で見落としやすい項目｜7つの確認ポイントと実例";
@@ -137,6 +138,17 @@ const checklistItems = [
 
 export default function CompareBusinessElectricityEstimatesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電力見積書の比較で見落としやすい項目｜7つの確認ポイントと実例"
+        description="法人向け電力見積書は単価だけでは比較できません。燃調費・市場連動・契約期間・容量拠出金など見落としやすい7項目を実例つきで整理し、チェックリストを提供します。"
+        url="https://simulator.eic-jp.org/compare-business-electricity-estimates"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電力見積書の比較で見落としやすい項目" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
@@ -382,5 +394,6 @@ export default function CompareBusinessElectricityEstimatesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

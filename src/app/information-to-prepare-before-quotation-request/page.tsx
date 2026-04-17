@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "新電力の相見積もり前に整理したい情報｜見積精度を上げるための準備";
@@ -131,6 +132,17 @@ const infoCategories = [
 
 export default function InformationToPrepareBeforeQuotationRequestPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="新電力の相見積もり前に整理したい情報｜見積精度を上げるための準備"
+        description="電力の相見積もりを依頼する前に準備すべき情報を整理。使用量データ・契約詳細・施設情報・供給地点特定番号など、精度の高い見積を取るために事前に揃えておくべき項目を解説します。"
+        url="https://simulator.eic-jp.org/information-to-prepare-before-quotation-request"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "新電力の相見積もり前に整理したい情報" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -301,5 +313,6 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
         />
       </section>
     </main>
+    </>
   );
 }

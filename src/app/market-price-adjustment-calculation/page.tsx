@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "市場価格調整額の計算方法と契約約款の読み方｜法人向けに詳細解説";
 const pageDescription =
@@ -40,6 +41,17 @@ export const metadata: Metadata = {
 
 export default function MarketPriceAdjustmentCalculationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場価格調整額の計算方法と契約約款の読み方｜法人向けに詳細解説"
+        description="市場価格調整額の代表的な計算方法（月平均連動型・JEPX実績連動型・α×β型など）と、契約約款で確認すべき条項、見積比較で注意すべきポイントを法人向けに詳しく解説します。"
+        url="https://simulator.eic-jp.org/market-price-adjustment-calculation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場価格調整額の計算方法と契約約款の読み方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -202,5 +214,6 @@ export default function MarketPriceAdjustmentCalculationPage() {
         <CategoryNextStepCta slug="market-price-adjustment-calculation" />
       </div>
     </main>
+    </>
   );
 }

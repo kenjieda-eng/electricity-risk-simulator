@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人が蓄電池を検討する理由｜電気料金対策とBCPの両面から考える";
@@ -100,6 +101,17 @@ const considerationPoints = [
 
 export default function WhyCorporationsConsiderBatteriesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人が蓄電池を検討する理由｜電気料金対策とBCPの両面から考える"
+        description="近年、法人で蓄電池の導入を検討するケースが増えています。電気料金の高騰対策としての側面と、停電時の事業継続（BCP）対策としての側面の両方を整理し、検討の出発点になる情報をまとめます。"
+        url="https://simulator.eic-jp.org/why-corporations-consider-batteries"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人が蓄電池を検討する理由" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -317,5 +329,6 @@ export default function WhyCorporationsConsiderBatteriesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

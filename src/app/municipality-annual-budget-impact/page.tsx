@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "年度予算と電気代高騰のバランスをどう取るか｜自治体財政担当者向け";
 const pageDescription =
@@ -94,6 +95,17 @@ const steps = [
 
 export default function MunicipalityAnnualBudgetImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="年度予算と電気代高騰のバランスをどう取るか｜自治体財政担当者向け"
+        description="電気代高騰が自治体の年度予算に与える影響と対応策を財政担当者向けに解説。会計年度独立の原則・予算総則・補正予算の判断基準、光熱水費の予算計上方法、節電・調達見直しによるコスト抑制まで実務的にまとめます。"
+        url="https://simulator.eic-jp.org/municipality-annual-budget-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "年度予算と電気代高騰のバランスをどう取るか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -348,5 +360,6 @@ export default function MunicipalityAnnualBudgetImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

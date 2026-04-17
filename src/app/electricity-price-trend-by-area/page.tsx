@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "エリア別（電力会社別）の電気料金推移比較｜法人向けに10エリアの単価差を整理";
@@ -106,6 +107,17 @@ const checkList = [
 
 export default function ElectricityPriceTrendByAreaPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="エリア別（電力会社別）の電気料金推移比較｜法人向けに10エリアの単価差を整理"
+        description="全国10電力エリアの法人向け電気料金水準を横並びで比較。関西が安い理由、北海道・沖縄が高い理由、エリア間の単価差の推移を整理。"
+        url="https://simulator.eic-jp.org/electricity-price-trend-by-area"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "エリア別（電力会社別）の電気料金推移比較" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
@@ -386,5 +398,6 @@ export default function ElectricityPriceTrendByAreaPage() {
         />
       </div>
     </main>
+    </>
   );
 }

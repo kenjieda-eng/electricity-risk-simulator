@@ -5,6 +5,7 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人の電気料金とLNGの関係｜価格推移・影響試算・調達リスクを解説";
 const pageDescription =
@@ -51,6 +52,17 @@ export const metadata: Metadata = {
 
 export default function LngElectricityPricePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金とLNGの関係｜価格推移・影響試算・調達リスクを解説"
+        description="LNG価格と法人向け電気料金の関係を解説。2019〜2024年の輸入価格推移、価格変動が燃調費・月額に与える影響試算、日本の調達先構成とリスク要因を整理。"
+        url="https://simulator.eic-jp.org/lng-electricity-price"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金とLNGの関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
 
       {/* パンくずナビ */}
@@ -442,5 +454,6 @@ export default function LngElectricityPricePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ThermalVsRenewableChart from "../../components/area-supply/ThermalVsRenewableChart";
 import { FY_TREND } from "../../data/areaSupplyData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "火力 vs 再エネ 年度別推移｜法人電気料金への影響を読む";
 const pageDescription =
@@ -41,6 +42,17 @@ export const metadata: Metadata = {
 
 export default function ThermalVsRenewableTrendPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="火力 vs 再エネ 年度別推移｜法人電気料金への影響を読む"
+        description="FY2023→FY2026で火力比率が66.6%→56.4%に低下、再エネは26.1%→27.7%に上昇。9エリア合計の30分値データから年度別の電源構成推移を分析し、法人の中長期的な電力調達戦略への示唆を解説します。"
+        url="https://simulator.eic-jp.org/thermal-vs-renewable-trend"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "火力 vs 再エネ 年度別推移" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -237,5 +249,6 @@ export default function ThermalVsRenewableTrendPage() {
         />
       </div>
     </main>
+    </>
   );
 }

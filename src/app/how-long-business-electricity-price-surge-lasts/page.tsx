@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電気料金が高騰するのはいつまで続くのか｜主要指標別の見通しとシナリオ分析";
@@ -52,6 +53,17 @@ export const metadata: Metadata = {
 
 export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金が高騰するのはいつまで続くのか｜主要指標別の見通しとシナリオ分析"
+        description="法人の電気料金高騰がいつまで続くのかを、LNG輸入価格・為替・JEPX・再エネ賦課金など主要指標別に整理。過去の高騰期との比較、楽観・基本・悲観の3シナリオ、今すぐできる対応策まで解説します。"
+        url="https://simulator.eic-jp.org/how-long-business-electricity-price-surge-lasts"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金が高騰するのはいつまで続くのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -521,5 +533,6 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

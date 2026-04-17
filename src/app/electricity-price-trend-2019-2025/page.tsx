@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人向け電気料金は高止まりしているのか｜2019〜2025年の年次データと構造要因";
@@ -50,6 +51,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityPriceTrend20192025Page() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金は高止まりしているのか｜2019〜2025年の年次データと構造要因"
+        description="2019年から2025年までの年次単価データをもとに、法人向け電気料金が2022年急騰後も元の水準に戻っていない実態を解説します。構造的な高止まり要因と月額影響シミュレーションも掲載。"
+        url="https://simulator.eic-jp.org/electricity-price-trend-2019-2025"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電気料金は高止まりしているのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -469,5 +481,6 @@ export default function ElectricityPriceTrend20192025Page() {
         />
       </section>
     </main>
+    </>
   );
 }

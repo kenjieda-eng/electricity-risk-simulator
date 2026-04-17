@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { SeasonDemandPriceChart, HourlyDemandComparisonChart } from "../../components/market-data/WinterVsSummerCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   SEASON_LABELS,
   SEASON_DEMAND,
@@ -61,6 +62,17 @@ const summerSolarPeak = DUCK_SUMMER_SOLAR.slice(9, 15).reduce((a, b) => a + b, 0
 
 export default function WinterVsSummerElectricityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="冬と夏、どちらが電気料金リスクか｜季節別データで検証する"
+        description="冬の平均JEPX価格13.96円 vs 夏11.67円、標準偏差12.72 vs 6.57──データが示す「冬の方がリスクは高い」という事実。4つの理由と季節別時間帯パターン、太陽光の季節効果、法人の対策を解説します。"
+        url="https://simulator.eic-jp.org/winter-vs-summer-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "冬と夏、どちらが電気料金リスクか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -458,5 +470,6 @@ export default function WinterVsSummerElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

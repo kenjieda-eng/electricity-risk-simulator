@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "容量拠出金の扱いを確認する方法｜見積比較での確認ポイント";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function HowToCheckCapacityContributionTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量拠出金の扱いを確認する方法｜見積比較での確認ポイント"
+        description="電力契約の見積比較で見落としやすい容量拠出金の扱いを解説。見積への含有状況の確認方法、今後のコスト推移の見通し、ベンダーへの確認ポイントを整理します。"
+        url="https://simulator.eic-jp.org/how-to-check-capacity-contribution-terms"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量拠出金の扱いを確認する方法" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -238,5 +250,6 @@ export default function HowToCheckCapacityContributionTermsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

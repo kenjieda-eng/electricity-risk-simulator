@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代高騰が住民サービスに与える影響と対応｜公共施設の運営";
 const pageDescription =
@@ -105,6 +106,17 @@ const steps = [
 
 export default function MunicipalityResidentServiceImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代高騰が住民サービスに与える影響と対応｜公共施設の運営"
+        description="電気代高騰が公共施設の運営・住民サービスに与える影響と、施設管理担当者が取るべき対応策を解説。施設別の節電策、使用料見直し、施設統廃合の判断基準、住民への説明方法まで実務的にまとめます。"
+        url="https://simulator.eic-jp.org/municipality-resident-service-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代高騰が住民サービスに与える影響と対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -357,5 +369,6 @@ export default function MunicipalityResidentServiceImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

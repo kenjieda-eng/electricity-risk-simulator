@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle =
@@ -102,6 +103,17 @@ const timelineSteps = [
 
 export default function WhatToDo3MonthsBeforeRenewalPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電力契約更新の3か月前にやること｜見積比較と社内準備の進め方"
+        description="法人の電力契約更新が3か月後に迫ったとき、何から始めるべきかを時系列で解説。請求書の整理、見積依頼、社内共有、比較判断まで、実務に沿った準備手順を整理します。"
+        url="https://simulator.eic-jp.org/what-to-do-3-months-before-electricity-contract-renewal"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電力契約更新の3か月前にやること" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -277,5 +289,6 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
         />
       </section>
     </main>
+    </>
   );
 }

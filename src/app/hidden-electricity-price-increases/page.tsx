@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金の「見えない値上げ」とは｜単価は変わらなくても負担が増える6つの理由";
@@ -173,6 +174,17 @@ const CHECKLIST_ITEMS = [
 
 export default function HiddenElectricityPriceIncreasesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金の「見えない値上げ」とは｜単価は変わらなくても負担が増える6つの理由"
+        description="契約単価が変わっていないのに電気代が高くなる「見えない値上げ」を解説。燃調費上昇、再エネ賦課金改定、容量拠出金導入、託送料金微増、補助金終了、消費税の6パターンを整理。"
+        url="https://simulator.eic-jp.org/hidden-electricity-price-increases"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金の「見えない値上げ」とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -541,5 +553,6 @@ export default function HiddenElectricityPriceIncreasesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

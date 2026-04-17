@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "店舗チェーンが料金高騰に直面したときのリスク｜多店舗への累積影響";
@@ -67,6 +68,17 @@ const chainRisks = [
 
 export default function RetailChainPriceSurgeRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="店舗チェーンが料金高騰に直面したときのリスク｜多店舗への累積影響"
+        description="スーパー・飲食・小売などの店舗チェーンが電気料金高騰に直面した場合のリスクを解説。多店舗への累積影響、低利益率の構造的脆弱性、チェーンとしての対策方針を説明します。"
+        url="https://simulator.eic-jp.org/retail-chain-price-surge-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "店舗チェーンが料金高騰に直面したときのリスク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -245,5 +257,6 @@ export default function RetailChainPriceSurgeRiskPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -12,6 +12,7 @@ import {
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import { DEMAND_FY_TREND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND, DECADAL_AVG_TEMP } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -49,6 +50,17 @@ export const metadata: Metadata = {
 
 export default function BusinessElectricityPriceTrend10YearsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理"
+        description="法人向け電気料金の推移を、特別高圧・高圧・低圧のデータと図表で整理。急騰局面、高止まり、補助政策、再エネ賦課金、JEPX市場の見え方を10年視点で解説します。"
+        url="https://simulator.eic-jp.org/business-electricity-price-trend-10-years"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電気料金の推移を10年で見る" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -474,5 +486,6 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

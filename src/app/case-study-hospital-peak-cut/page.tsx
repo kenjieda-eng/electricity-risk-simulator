@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "病院：デマンド制御で基本料金を22%圧縮した事例｜中規模総合病院";
 const pageDescription =
@@ -49,6 +50,17 @@ const controlTargets = [
 
 export default function CaseStudyHospitalPeakCutPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="病院：デマンド制御で基本料金を22%圧縮した事例｜中規模総合病院"
+        description="中規模総合病院がデマンド制御システムを導入し、基本料金を年間22%（約840万円）削減した事例。医療施設特有の制約下での施策設計・段階的な実施・Before/After 数値を詳しく解説します。"
+        url="https://simulator.eic-jp.org/case-study-hospital-peak-cut"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "病院：デマンド制御で基本料金を22%圧縮した事例" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -335,5 +347,6 @@ export default function CaseStudyHospitalPeakCutPage() {
         />
       </div>
     </main>
+    </>
   );
 }

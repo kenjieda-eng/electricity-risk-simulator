@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "指定管理施設の電力契約は誰がどう見直すか｜自治体向け";
 const pageDescription =
@@ -107,6 +108,17 @@ const nextDesignationConditions = [
 
 export default function MunicipalityDesignatedManagerElectricityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="指定管理施設の電力契約は誰がどう見直すか｜自治体向け"
+        description="指定管理者制度下の電力契約について、自治体と指定管理者の役割分担と見直しの進め方を整理します。"
+        url="https://simulator.eic-jp.org/municipality-designated-manager-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "指定管理施設の電力契約は誰がどう見直すか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -312,5 +324,6 @@ export default function MunicipalityDesignatedManagerElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

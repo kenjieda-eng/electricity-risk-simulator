@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "取締役会で報告すべき電力リスク5項目｜経営会議の議題として";
 const pageDescription =
@@ -140,6 +141,17 @@ const industryBenchmark = [
 
 export default function ExecutiveBoardReportingItemsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="取締役会で報告すべき電力リスク5項目｜経営会議の議題として"
+        description="電力コストリスクを取締役会・経営会議で議題化するための5つの報告項目を解説。EBITDAへのインパクト、契約リスク、BCP、省エネ投資ROI、中計への反映——経営層がすべきチェックリストと定量データを提供します。"
+        url="https://simulator.eic-jp.org/executive-board-reporting-items"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "取締役会で報告すべき電力リスク5項目" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -431,5 +443,6 @@ export default function ExecutiveBoardReportingItemsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

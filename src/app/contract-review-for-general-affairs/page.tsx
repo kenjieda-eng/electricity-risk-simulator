@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "契約見直し時に総務が見るポイント｜社内調整と手続きの進め方";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function ContractReviewForGeneralAffairsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約見直し時に総務が見るポイント｜社内調整と手続きの進め方"
+        description="電力契約見直しにおける総務部門の役割と確認ポイントを解説。ベンダー管理・書類の取り扱い・社内関係部門との連携・手続き進行など、実務に沿った進め方を整理します。"
+        url="https://simulator.eic-jp.org/contract-review-for-general-affairs"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約見直し時に総務が見るポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -265,5 +277,6 @@ export default function ContractReviewForGeneralAffairsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "LNG高騰で法人の電気料金はどう上がるか｜価格波及の仕組みと備え方";
@@ -90,6 +91,17 @@ const vulnerableCompanies = [
 
 export default function LngPriceSurgeElectricityCostImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="LNG高騰で法人の電気料金はどう上がるか｜価格波及の仕組みと備え方"
+        description="LNG（液化天然ガス）価格の高騰が法人の電気料金にどう波及するかを解説。燃料費調整額への反映メカニズム、影響を受けやすい企業の特徴、シミュレーターを活用した備え方まで詳しく説明します。"
+        url="https://simulator.eic-jp.org/lng-price-surge-electricity-cost-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "LNG高騰で法人の電気料金はどう上がるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -304,5 +316,6 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

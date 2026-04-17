@@ -10,6 +10,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "電気料金シミュレーター"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/simulate",
   },

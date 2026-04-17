@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_MONTHLY_SUMMARY } from "../../data/jepxData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "市場連動プランで電気料金が上がるときの仕組み｜法人向けにわかりやすく解説";
 const pageDescription =
@@ -52,6 +53,17 @@ function formatMonth(yyyyMm: string) {
 
 export default function WhyMarketLinkedElectricityPricesRisePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場連動プランで電気料金が上がるときの仕組み｜法人向けにわかりやすく解説"
+        description="市場連動プランで法人の電気料金が上がる仕組みを、卸電力市場との関係、需給逼迫、燃料高、夏冬の影響などから解説します。固定プランとの違いや、確認したい注意点も整理します。"
+        url="https://simulator.eic-jp.org/why-market-linked-electricity-prices-rise"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場連動プランで電気料金が上がるときの仕組み" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動プランで電気料金が上がるのはなぜか</h1>
@@ -259,5 +271,6 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
         <CategoryNextStepCta slug="why-market-linked-electricity-prices-rise" />
       </div>
     </main>
+    </>
   );
 }

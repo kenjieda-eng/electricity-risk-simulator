@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気料金の二重請求・過請求が発生したときの対応｜法人向け緊急対応ガイド";
 const pageDescription =
@@ -169,6 +170,17 @@ const faqs = [
 
 export default function EmergencyBillingDisputePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金の二重請求・過請求が発生したときの対応｜法人向け緊急対応ガイド"
+        description="電気料金に二重請求・過大請求が発生した場合の確認フローと対処法を解説。切替時の新旧両社からの二重請求、メーター誤差、契約電力の誤設定、調整費計算ミスなど原因別チェックリストと返金交渉のポイントをまとめます。"
+        url="https://simulator.eic-jp.org/emergency-billing-dispute"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金の二重請求・過請求が発生したときの対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -385,5 +397,6 @@ export default function EmergencyBillingDisputePage() {
         />
       </div>
     </main>
+    </>
   );
 }

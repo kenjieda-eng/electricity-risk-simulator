@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電力会社から契約条件変更の通知が来たときの対応｜法人の電力契約トラブル";
 const pageDescription =
@@ -165,6 +166,17 @@ const commonChangePatterns = [
 
 export default function EmergencyContractTermsChangePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力会社から契約条件変更の通知が来たときの対応｜法人の電力契約トラブル"
+        description="電力会社から料金体系・調整項目・契約条件の変更通知を受けた場合の確認手順と対応方法を整理します。"
+        url="https://simulator.eic-jp.org/emergency-contract-terms-change"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力会社から契約条件変更の通知が来たときの対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -418,5 +430,6 @@ export default function EmergencyContractTermsChangePage() {
         />
       </div>
     </main>
+    </>
   );
 }

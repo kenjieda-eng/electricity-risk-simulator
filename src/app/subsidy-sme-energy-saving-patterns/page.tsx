@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "中小企業向け省エネ補助金の活用パターン｜使いやすい制度を整理";
 const pageDescription =
@@ -163,6 +164,17 @@ const applicationTips = [
 
 export default function SubsidySmeEnergySavingPatternsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="中小企業向け省エネ補助金の活用パターン｜使いやすい制度を整理"
+        description="中小企業が使いやすい省エネ補助金の種類と、申請のハードルを下げるための実務ポイントを整理します。"
+        url="https://simulator.eic-jp.org/subsidy-sme-energy-saving-patterns"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "中小企業向け省エネ補助金の活用パターン" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -358,5 +370,6 @@ export default function SubsidySmeEnergySavingPatternsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

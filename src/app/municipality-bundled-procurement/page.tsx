@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "公共施設の電力一括調達（バンドリング）の進め方｜自治体向け";
 const pageDescription =
@@ -120,6 +121,17 @@ const cautions = [
 
 export default function MunicipalityBundledProcurementPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="公共施設の電力一括調達（バンドリング）の進め方｜自治体向け"
+        description="複数の公共施設の電力契約を一括で調達するバンドリング手法について、メリット・手順・注意点を整理します。"
+        url="https://simulator.eic-jp.org/municipality-bundled-procurement"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "公共施設の電力一括調達（バンドリング）の進め方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -314,5 +326,6 @@ export default function MunicipalityBundledProcurementPage() {
         />
       </div>
     </main>
+    </>
   );
 }

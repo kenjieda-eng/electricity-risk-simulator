@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DEMAND_SEASON_HOUR, DEMAND_WEEKDAY_WEEKEND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界";
@@ -116,6 +117,17 @@ const limitations = [
 
 export default function DemandSuppressionEffectivenessPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界"
+        description="法人の電気料金における「デマンド（最大需要電力）」の抑制が、基本料金削減にどこまで効果があるかを解説します。デマンド料金制の仕組み、抑制の実効性と限界、および蓄電池・省エネとの組み合わせについて整理します。"
+        url="https://simulator.eic-jp.org/demand-suppression-effectiveness"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "デマンド抑制はどこまで効果があるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -536,5 +548,6 @@ export default function DemandSuppressionEffectivenessPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "需要家主導型太陽光PPAの補助金活用｜オフサイトPPAで電力コスト削減";
 const pageDescription =
@@ -93,6 +94,17 @@ const pitfalls = [
 
 export default function SubsidyDemandSidePpaPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="需要家主導型太陽光PPAの補助金活用｜オフサイトPPAで電力コスト削減"
+        description="環境省「需要家主導型太陽光発電導入支援事業」を活用したオフサイトPPA・コーポレートPPAの解説。補助対象・補助率・申請スケジュールと、再エネ調達コスト削減のシミュレーション例を紹介します。2026年度版。"
+        url="https://simulator.eic-jp.org/subsidy-demand-side-ppa"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "需要家主導型太陽光PPAの補助金活用" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -338,5 +350,6 @@ export default function SubsidyDemandSidePpaPage() {
         />
       </div>
     </main>
+    </>
   );
 }

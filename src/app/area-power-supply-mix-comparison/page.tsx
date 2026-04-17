@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import AreaSupplyMixChart from "../../components/area-supply/AreaSupplyMixChart";
 import { AREA_SUPPLY_DATA } from "../../data/areaSupplyData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "エリア別電源構成マップ｜9エリアの発電ミックスを比較する";
 const pageDescription =
@@ -116,6 +117,17 @@ const areaProfiles = [
 
 export default function AreaPowerSupplyMixComparisonPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="エリア別電源構成マップ｜9エリアの発電ミックスを比較する"
+        description="東京はLNG55.7%、北陸は石炭53.8%、関西は原子力34.8%──同じ日本でもエリアごとに電源構成は大きく異なります。9エリアの30分値実績データから電源構成比率を可視化し、法人電気料金への影響を解説します。"
+        url="https://simulator.eic-jp.org/area-power-supply-mix-comparison"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "エリア別電源構成マップ" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -319,5 +331,6 @@ export default function AreaPowerSupplyMixComparisonPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代高騰と補正予算の組み方｜議会説明のポイント";
 const pageDescription =
@@ -130,6 +131,17 @@ const explanationPoints = [
 
 export default function MunicipalitySupplementaryBudgetPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代高騰と補正予算の組み方｜議会説明のポイント"
+        description="電気代高騰による予算不足時の補正予算・流用・予備費充当の使い分けを財政担当者向けに解説。補正予算案の積算根拠の作り方、議会委員会での説明骨子、専決処分の適用判断まで実務的にまとめます。"
+        url="https://simulator.eic-jp.org/municipality-supplementary-budget"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代高騰と補正予算の組み方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -346,5 +358,6 @@ export default function MunicipalitySupplementaryBudgetPage() {
         />
       </div>
     </main>
+    </>
   );
 }

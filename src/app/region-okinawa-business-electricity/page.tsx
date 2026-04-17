@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -126,6 +127,17 @@ const newPowerStatus = [
 
 export default function RegionOkinawaBusinessElectricityPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況"
+        description="沖縄電力エリア（沖縄県）の法人向け電気料金を詳解。全国最高水準の電力量料金、孤立系統・離島送電コスト、新電力がほぼ参入しない市場構造、観光業中心の電力需要と契約見直しポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-okinawa-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "沖縄電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -434,5 +446,6 @@ export default function RegionOkinawaBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

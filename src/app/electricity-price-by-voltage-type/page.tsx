@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "特別高圧・高圧・低圧で上がり方はどう違うか｜年次データと区分間の構造差を解説";
@@ -49,6 +50,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityPriceByVoltageTypePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="特別高圧・高圧・低圧で上がり方はどう違うか｜年次データと区分間の構造差を解説"
+        description="特別高圧・高圧・低圧の電気料金推移を2019〜2025年の年次データで比較し、区分間で上がり方が異なる構造的な理由をJEPX連動・燃料費調整・規制料金改定・交渉力の観点から法人向けに解説します。"
+        url="https://simulator.eic-jp.org/electricity-price-by-voltage-type"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "特別高圧・高圧・低圧で上がり方はどう違うか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
@@ -508,5 +520,6 @@ export default function ElectricityPriceByVoltageTypePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "再エネ拡大は法人電気料金を下げるのか上げるのか｜両面の影響を整理";
@@ -145,6 +146,17 @@ const scenarios2030 = [
 
 export default function RenewableEnergyExpansionPriceImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ拡大は法人電気料金を下げるのか上げるのか｜両面の影響を整理"
+        description="再生可能エネルギーの拡大が法人電気料金に与える影響を両面から分析。再エネ賦課金（上昇圧力）とJEPX押し下げ効果のバランス、系統安定化コスト、長期展望を整理。"
+        url="https://simulator.eic-jp.org/renewable-energy-expansion-price-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ拡大は法人電気料金を下げるのか上げるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -505,5 +517,6 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

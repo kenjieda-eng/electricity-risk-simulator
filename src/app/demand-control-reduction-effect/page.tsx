@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { LOAD_FACTOR_FY, DEMAND_FY_TREND } from "../../data/demandData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "デマンドコントロールの削減効果｜基本料金を下げる仕組み";
 const pageDescription =
@@ -88,6 +89,17 @@ const controlMethods = [
 
 export default function DemandControlReductionEffectPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="デマンドコントロールの削減効果｜基本料金を下げる仕組み"
+        description="デマンドコントロールで基本料金をどれだけ削減できるか？仕組みと効果を具体的な数値で解説。デマンドコントローラーの費用対効果・導入事例・よくある疑問もあわせて紹介します。"
+        url="https://simulator.eic-jp.org/demand-control-reduction-effect"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "デマンドコントロールの削減効果" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -397,5 +409,6 @@ export default function DemandControlReductionEffectPage() {
         />
       </div>
     </main>
+    </>
   );
 }

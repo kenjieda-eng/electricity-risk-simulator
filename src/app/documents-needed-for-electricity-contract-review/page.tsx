@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電気料金見直しで集めるべき資料一覧｜8種類の資料と入手先・優先順位";
@@ -148,6 +149,17 @@ const collectionFlow = [
 
 export default function DocumentsNeededForElectricityContractReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金見直しで集めるべき資料一覧｜8種類の資料と入手先・優先順位"
+        description="法人向け電気料金の見直しで必要な資料を8種類に整理しました。直近12ヶ月請求書・現行契約書・供給地点特定番号など、各資料の入手先・必要な理由・なくても進められるかを表で解説します。"
+        url="https://simulator.eic-jp.org/documents-needed-for-electricity-contract-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金見直しで集めるべき資料一覧" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -360,5 +372,6 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

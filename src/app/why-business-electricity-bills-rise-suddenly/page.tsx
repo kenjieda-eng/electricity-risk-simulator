@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電気料金はなぜ急に上がるのか｜6つの急上昇パターンと月額影響を解説";
@@ -49,6 +50,17 @@ export const metadata: Metadata = {
 
 export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金はなぜ急に上がるのか｜6つの急上昇パターンと月額影響を解説"
+        description="法人の電気料金が急に上がる6つのパターンを、月額影響額つきで解説。燃調費・市場連動・補助金終了・契約更新の影響幅と、急上昇時の初動チェックフローを整理。"
+        url="https://simulator.eic-jp.org/why-business-electricity-bills-rise-suddenly"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金はなぜ急に上がるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -652,5 +664,6 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
         />
       </section>
     </main>
+    </>
   );
 }

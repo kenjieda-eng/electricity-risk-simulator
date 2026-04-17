@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の契約見直し実務ガイド一覧｜準備から比較・切替までの進め方";
@@ -158,6 +159,17 @@ const guideSections: GuideSection[] = [
 
 export default function ContractReviewPracticeGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の契約見直し実務ガイド一覧｜準備から比較・切替までの進め方"
+        description="法人が電力契約を見直す際の実務プロセスを、準備・比較・切替の各フェーズに分けて解説する一覧ページ。チェックリスト・タイムライン・見積準備・燃料費調整の確認まで網羅。"
+        url="https://simulator.eic-jp.org/contract-review-practice-guide"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の契約見直し実務ガイド一覧" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -353,5 +365,6 @@ export default function ContractReviewPracticeGuidePage() {
         />
       </section>
     </main>
+    </>
   );
 }

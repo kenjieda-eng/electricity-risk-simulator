@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体別 電力関連補助金の探し方｜都道府県・市区町村の独自制度";
 const pageDescription =
@@ -149,6 +150,17 @@ const pitfalls = [
 
 export default function SubsidyLocalGovernmentListPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体別 電力関連補助金の探し方｜都道府県・市区町村の独自制度"
+        description="都道府県・市区町村が独自に実施する電力・省エネ・再エネ関連補助金の探し方を解説。自治体補助金の特徴・検索方法・国の制度との組み合わせポイントを整理しました。2026年度版。"
+        url="https://simulator.eic-jp.org/subsidy-local-government-list"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体別 電力関連補助金の探し方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -358,5 +370,6 @@ export default function SubsidyLocalGovernmentListPage() {
         />
       </div>
     </main>
+    </>
   );
 }

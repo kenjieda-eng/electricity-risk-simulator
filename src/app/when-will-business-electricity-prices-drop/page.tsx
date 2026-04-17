@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle = "法人の電気料金はいつ下がるのか｜値下がりの条件と今後の見通し";
@@ -288,6 +289,17 @@ function DirectionBadge({
 // --- Page Component ---
 export default function WhenWillBusinessElectricityPricesDropPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金はいつ下がるのか｜値下がりの条件と今後の見通し"
+        description="法人の電気料金が下がる条件を、燃料価格・為替・市場環境・制度要因から整理。過去に下がった時期の分析、構造的に下がりにくい費目と下がる可能性がある費目、今後の見通しを解説。"
+        url="https://simulator.eic-jp.org/when-will-business-electricity-prices-drop"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金はいつ下がるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -677,5 +689,6 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
         />
       </div>
     </main>
+    </>
   );
 }

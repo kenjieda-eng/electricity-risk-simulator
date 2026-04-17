@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電力契約見直しで社内確認したい項目一覧｜部署別の確認分担も整理";
@@ -136,6 +137,17 @@ const departmentDivision = [
 
 export default function InternalChecklistForElectricityContractReviewPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電力契約見直しで社内確認したい項目一覧｜部署別の確認分担も整理"
+        description="法人向け電力契約の見直しで社内確認すべき8項目を一覧化しました。契約更新時期・予算枠・意思決定権者・設備変更予定など、確認先・タイミング・リスクを表で整理し、総務・経理・施設管理・経営企画の部署別分担も解説します。"
+        url="https://simulator.eic-jp.org/internal-checklist-for-electricity-contract-review"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電力契約見直しで社内確認したい項目一覧" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -333,5 +345,6 @@ export default function InternalChecklistForElectricityContractReviewPage() {
         />
       </div>
     </main>
+    </>
   );
 }

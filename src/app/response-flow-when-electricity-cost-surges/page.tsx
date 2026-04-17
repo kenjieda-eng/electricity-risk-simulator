@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電気代が年間100万円以上上がったときの対応フロー｜金額別のアクション整理";
@@ -51,6 +52,17 @@ export const metadata: Metadata = {
 
 export default function ResponseFlowWhenElectricityCostSurgesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気代が年間100万円以上上がったときの対応フロー｜金額別のアクション整理"
+        description="法人の電気代が年間100万円・500万円・1000万円以上上がったときに何を確認し、どう対応するかをフロー形式で整理。社内アラート基準、エスカレーションルール、見直しの優先順位を解説。"
+        url="https://simulator.eic-jp.org/response-flow-when-electricity-cost-surges"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気代が年間100万円以上上がったときの対応フロー" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -446,5 +458,6 @@ export default function ResponseFlowWhenElectricityCostSurgesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

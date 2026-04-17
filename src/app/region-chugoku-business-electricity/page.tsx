@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "中国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -130,6 +131,17 @@ const newPowerStatus = [
 export default function RegionChugokuBusinessElectricityPage() {
   const weather = getWeatherByRegion("chugoku");
   return (
+    <>
+      <ArticleJsonLd
+        headline="中国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況"
+        description="中国電力エリア（広島・岡山・山口・鳥取・島根）の法人向け電気料金を詳解。高圧・特別高圧の単価目安、石炭火力依存リスク、島根原発3号機再稼働の影響、新電力状況と契約見直しポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-chugoku-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "中国電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -547,5 +559,6 @@ export default function RegionChugokuBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

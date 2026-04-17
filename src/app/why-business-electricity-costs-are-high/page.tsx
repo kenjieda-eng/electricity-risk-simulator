@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle = "法人の電気料金が高い会社に共通する特徴｜7つの自己診断ポイントと月額影響";
@@ -93,6 +94,17 @@ const selfCheckItems = [
 
 export default function WhyBusinessElectricityCostsAreHighPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金が高い会社に共通する特徴｜7つの自己診断ポイントと月額影響"
+        description="法人の電気料金が高くなりやすい会社の7つの特徴を整理。月5万kWhでの影響額目安と自己診断チェックリスト付き。契約電力、デマンド、調整項目、比較時の見落としなど、見直し前に確認したいポイントを解説します。"
+        url="https://simulator.eic-jp.org/why-business-electricity-costs-are-high"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金が高い会社に共通する特徴" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -299,5 +311,6 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
         />
       </section>
     </main>
+    </>
   );
 }

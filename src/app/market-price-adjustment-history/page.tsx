@@ -6,6 +6,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "市場価格調整額の推移とJEPX価格の関係｜2016〜2025年度の動きを分析";
 const pageDescription =
@@ -45,6 +46,17 @@ export default function MarketPriceAdjustmentHistoryPage() {
   const values = JEPX_SYSTEM_PRICE_YEARLY.map((r) => r.systemPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場価格調整額の推移とJEPX価格の関係｜2016〜2025年度の動きを分析"
+        description="市場価格調整額の根拠となるJEPXシステムプライスの年度別推移を2016〜2025年まで分析。2021年冬・2022年ウクライナ危機での高騰、その後の正常化、そして最近の再上昇の背景を解説します。"
+        url="https://simulator.eic-jp.org/market-price-adjustment-history"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場価格調整額の推移とJEPX価格の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -205,5 +217,6 @@ export default function MarketPriceAdjustmentHistoryPage() {
         <CategoryNextStepCta slug="market-price-adjustment-history" />
       </div>
     </main>
+    </>
   );
 }

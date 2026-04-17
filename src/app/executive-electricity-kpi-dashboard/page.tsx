@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電力コストのKPI管理と経営ダッシュボードの設計｜経営層向け";
 const pageDescription =
@@ -58,6 +59,17 @@ const dashboardConfig = [
 
 export default function ExecutiveElectricityKpiDashboardPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力コストのKPI管理と経営ダッシュボードの設計｜経営層向け"
+        description="電力コストを経営KPIとして定常的に監視するためのダッシュボード設計と指標の選び方を整理します。"
+        url="https://simulator.eic-jp.org/executive-electricity-kpi-dashboard"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力コストのKPI管理と経営ダッシュボードの設計" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -325,5 +337,6 @@ export default function ExecutiveElectricityKpiDashboardPage() {
         />
       </div>
     </main>
+    </>
   );
 }

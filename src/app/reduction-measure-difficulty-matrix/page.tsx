@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "削減施策の効果・難易度マトリクス｜優先順位の判断軸";
 const pageDescription =
@@ -112,6 +113,17 @@ const industryRecommendations = [
 
 export default function ReductionMeasureDifficultyMatrixPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="削減施策の効果・難易度マトリクス｜優先順位の判断軸"
+        description="電気代削減施策を「効果の大きさ」と「実施の難易度」の2軸でマトリクス化。どの施策から取り組むべきか優先順位の判断軸を解説。業種別・規模別の推奨施策も紹介します。"
+        url="https://simulator.eic-jp.org/reduction-measure-difficulty-matrix"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "削減施策の効果・難易度マトリクス" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -383,5 +395,6 @@ export default function ReductionMeasureDifficultyMatrixPage() {
         />
       </div>
     </main>
+    </>
   );
 }

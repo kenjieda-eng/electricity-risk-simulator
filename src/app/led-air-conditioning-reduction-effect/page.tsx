@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "LED化・空調最適化の削減効果｜設備対策で使用量を下げる";
 const pageDescription =
@@ -69,6 +70,17 @@ const combinedEffectData = [
 
 export default function LedAirConditioningReductionEffectPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="LED化・空調最適化の削減効果｜設備対策で使用量を下げる"
+        description="LED照明への切り替えと空調設備の最適化で電気代はどれだけ下がるか？削減効果を規模別・設備別に数値で解説。初期費用・回収期間・補助金情報もあわせて紹介します。"
+        url="https://simulator.eic-jp.org/led-air-conditioning-reduction-effect"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "LED化・空調最適化の削減効果" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -358,5 +370,6 @@ export default function LedAirConditioningReductionEffectPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DecilePriceBarLineChart } from "../../components/market-data/DecilePriceCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   DECILE_LABELS,
   DECILE_DEMAND,
@@ -77,6 +78,17 @@ function decileZoneLabel(index: number): string {
 
 export default function DemandDecilePriceRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="需要が上位10%に入ると価格は2.6倍｜需要デシル別の価格リスク分析"
+        description="電力需要を10等分（デシル）して分析すると、需要最上位10%（D10）の平均価格20.59円はD1の8.06円の2.6倍。標準偏差も4.6倍に達し、価格リスクは需要水準で指数関数的に増大します。法人のピーク需要管理の重要性を解説。"
+        url="https://simulator.eic-jp.org/demand-decile-price-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "需要が上位10%に入ると価格は2.6倍" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -401,5 +413,6 @@ export default function DemandDecilePriceRiskPage() {
         />
       </div>
     </main>
+    </>
   );
 }

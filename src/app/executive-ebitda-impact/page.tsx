@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代がEBITDAに与える影響の測り方｜CFO向けインパクト分析";
 const pageDescription =
@@ -81,6 +82,17 @@ const actionItems = [
 
 export default function ExecutiveEbitdaImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代がEBITDAに与える影響の測り方｜CFO向けインパクト分析"
+        description="電気代の上昇がEBITDA・営業利益率に与える定量的インパクトを、売上高・原価率・電気代比率から試算する方法を解説。シナリオ別感応度分析と業種別リスク水準の一覧表で、経営層が財務影響を即座に把握できる実践ガイド。"
+        url="https://simulator.eic-jp.org/executive-ebitda-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代がEBITDAに与える影響の測り方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -366,5 +378,6 @@ export default function ExecutiveEbitdaImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

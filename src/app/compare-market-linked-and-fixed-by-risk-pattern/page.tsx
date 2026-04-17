@@ -12,6 +12,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "市場連動", "市場連動プラン", "電力会社比較"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/compare-market-linked-and-fixed-by-risk-pattern",
   },

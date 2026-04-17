@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "補助金申請を前提とした稟議書の書き方｜構成と数値の示し方";
 const pageDescription =
@@ -115,6 +116,17 @@ const returnReasons = [
 
 export default function SubsidyApplicationApprovalDocumentPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="補助金申請を前提とした稟議書の書き方｜構成と数値の示し方"
+        description="省エネ・再エネ補助金の申請を前提とした法人向け稟議書の書き方を解説。補助金込みの投資回収計算、意思決定者が見るポイント、よくある差し戻し理由と対策をまとめました。電力コスト削減投資の社内承認を通すための実践ガイドです。"
+        url="https://simulator.eic-jp.org/subsidy-application-approval-document"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "補助金申請を前提とした稟議書の書き方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -333,5 +345,6 @@ export default function SubsidyApplicationApprovalDocumentPage() {
         />
       </div>
     </main>
+    </>
   );
 }

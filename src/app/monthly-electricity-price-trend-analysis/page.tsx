@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人電気料金の月次推移パターン｜直近12ヶ月の動きを読むフレームワーク";
@@ -176,6 +177,17 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
   const effectiveUnitPrice = (annualTotal / annualUsage).toFixed(2);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人電気料金の月次推移パターン｜直近12ヶ月の動きを読むフレームワーク"
+        description="法人の電気料金を月次で分析するフレームワークを解説。季節性と制度要因の切り分け、前月比と前年同月比の使い分け、月次データの入手方法を整理。"
+        url="https://simulator.eic-jp.org/monthly-electricity-price-trend-analysis"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人電気料金の月次推移パターン" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -502,5 +514,6 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
         />
       </section>
     </main>
+    </>
   );
 }

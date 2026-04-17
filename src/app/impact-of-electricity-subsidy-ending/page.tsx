@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説";
 const pageDescription =
@@ -41,6 +42,17 @@ export const metadata: Metadata = {
 
 export default function ImpactOfElectricitySubsidyEndingPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説"
+        description="法人向け電気料金の補助金終了や縮小で、請求額や見積もりの見え方がどう変わるのかを解説します。単価上昇との違い、確認したい請求項目、今後の見直しポイントも法人向けに整理します。"
+        url="https://simulator.eic-jp.org/impact-of-electricity-subsidy-ending"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人向け電気料金の補助金終了で何が変わるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の補助金終了で何が変わるのか</h1>
@@ -293,5 +305,6 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
         <CategoryNextStepCta slug="impact-of-electricity-subsidy-ending" />
       </div>
     </main>
+    </>
   );
 }

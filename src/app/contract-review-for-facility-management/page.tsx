@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "契約見直し時に施設管理が見るポイント｜設備と供給安定性の確認";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function ContractReviewForFacilityManagementPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約見直し時に施設管理が見るポイント｜設備と供給安定性の確認"
+        description="電力契約見直しにおける施設管理部門の確認ポイントを解説。供給安定性・切替工事・設備への影響・デマンド管理など、現場視点から必要な確認事項を整理します。"
+        url="https://simulator.eic-jp.org/contract-review-for-facility-management"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約見直し時に施設管理が見るポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -266,5 +278,6 @@ export default function ContractReviewForFacilityManagementPage() {
         />
       </section>
     </main>
+    </>
   );
 }

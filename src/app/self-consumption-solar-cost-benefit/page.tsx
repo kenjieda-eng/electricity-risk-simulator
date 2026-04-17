@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DEMAND_HOURLY_AVG } from "../../data/demandData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方";
@@ -108,6 +109,17 @@ const limitationsAndConsiderations = [
 
 export default function SelfConsumptionSolarCostBenefitPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方"
+        description="自家消費型の太陽光発電が、法人の電気料金をどのように削減するかを解説します。購入電力量の削減メカニズム、効果が出やすい条件、および他の対策との組み合わせについて整理します。"
+        url="https://simulator.eic-jp.org/self-consumption-solar-cost-benefit"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自家消費型太陽光は電気料金対策としてどう効くか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -374,5 +386,6 @@ export default function SelfConsumptionSolarCostBenefitPage() {
         />
       </section>
     </main>
+    </>
   );
 }

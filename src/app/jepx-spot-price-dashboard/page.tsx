@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import JepxFyPriceChart from "../../components/market-data/JepxFyPriceChart";
 import JepxHourlyPriceChart from "../../components/market-data/JepxHourlyPriceChart";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   JEPX_FY_LABELS,
   JEPX_FY_AVG,
@@ -60,6 +61,17 @@ const spikeRows = JEPX_FY_LABELS.map((label, i) => ({
 
 export default function JepxSpotPriceDashboardPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="JEPXスポット価格の全体像｜FY2010〜2026の17年間データ"
+        description="日本卸電力取引所（JEPX）スポット価格のFY2010〜FY2026、17年分のデータを徹底解説。年度別平均・中央値・最大値・標準偏差、時間帯別パターン、価格スパイク発生頻度を可視化し、法人向け電気料金への影響を分析します。"
+        url="https://simulator.eic-jp.org/jepx-spot-price-dashboard"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "JEPXスポット価格の全体像" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -458,5 +470,6 @@ export default function JepxSpotPriceDashboardPage() {
         />
       </div>
     </main>
+    </>
   );
 }

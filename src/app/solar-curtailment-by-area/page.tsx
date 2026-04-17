@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import SolarCurtailmentChart from "../../components/area-supply/SolarCurtailmentChart";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "太陽光出力制御の実態｜どのエリアでどれだけ捨てられているか";
 const pageDescription =
@@ -59,6 +60,17 @@ const monthlyPatterns = [
 
 export default function SolarCurtailmentByAreaPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="太陽光出力制御の実態｜どのエリアでどれだけ捨てられているか"
+        description="九州13.8%、四国10.5%、関西10.1%──太陽光発電の出力抑制が常態化しているエリアがあります。30分値実績データから月別・エリア別の抑制量を可視化し、法人の太陽光投資判断やFIT/FIP売電への影響を解説します。"
+        url="https://simulator.eic-jp.org/solar-curtailment-by-area"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "太陽光出力制御の実態" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -238,5 +250,6 @@ export default function SolarCurtailmentByAreaPage() {
         />
       </div>
     </main>
+    </>
   );
 }

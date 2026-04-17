@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "工場の電気代相場｜業種・契約電力・使用量別のベンチマーク";
 const pageDescription =
@@ -68,6 +69,17 @@ const energySourceData = [
 
 export default function FactoryElectricityCostBenchmarkPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="工場の電気代相場｜業種・契約電力・使用量別のベンチマーク"
+        description="工場の電気代を業種・契約電力・月間使用量別にベンチマーク。軽工業から重工業・食品加工・化学まで業種別の相場を一覧化。基本料金・電力量料金の内訳と削減ポイントも解説します。"
+        url="https://simulator.eic-jp.org/factory-electricity-cost-benchmark"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "工場の電気代相場" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -347,5 +359,6 @@ export default function FactoryElectricityCostBenchmarkPage() {
         />
       </div>
     </main>
+    </>
   );
 }

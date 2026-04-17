@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getLatestArticles } from "../lib/articles";
+import { WebSiteJsonLd } from "../components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
   description:
     "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。基礎知識・料金推移・契約メニュー比較・業種別ガイドも充実。",
+  keywords: [
+    "法人電気料金",
+    "電気代",
+    "電気料金シミュレーター",
+    "電力契約見直し",
+    "市場連動プラン",
+    "固定プラン",
+    "電気料金リスク",
+    "法人向け電気料金",
+  ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/",
   },
@@ -41,6 +52,11 @@ export default function Page() {
 
   return (
     <>
+      <WebSiteJsonLd
+        name="法人向け電気料金上昇、高騰リスクシミュレーター"
+        url="https://simulator.eic-jp.org/"
+        description="法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。"
+      />
       <section className="px-4 pb-6 pt-4 text-slate-800 sm:px-6 sm:pt-6 lg:px-8">
         <div className="mx-auto max-w-[1600px]">
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">

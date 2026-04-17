@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電気料金推移データの入手先と確認方法｜法人担当者のための情報源ガイド";
@@ -50,6 +51,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityPriceDataSourcesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金推移データの入手先と確認方法｜法人担当者のための情報源ガイド"
+        description="法人の電気料金推移を確認するためのデータ入手先を一覧で整理。資源エネルギー庁統計、OCCTO、JEPX、各電力会社の燃調費公表、経産省補助金情報の使い方を解説。"
+        url="https://simulator.eic-jp.org/electricity-price-data-sources"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金推移データの入手先と確認方法" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -362,5 +374,6 @@ export default function ElectricityPriceDataSourcesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "四国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -130,6 +131,17 @@ const newPowerStatus = [
 export default function RegionShikokuBusinessElectricityPage() {
   const weather = getWeatherByRegion("shikoku");
   return (
+    <>
+      <ArticleJsonLd
+        headline="四国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況"
+        description="四国電力エリア（香川・徳島・愛媛・高知）の法人向け電気料金を詳解。高圧・特別高圧の単価目安、伊方原発の稼働影響、太陽光出力制御リスク、新電力の参入状況と契約見直しポイントを解説します。"
+        url="https://simulator.eic-jp.org/region-shikoku-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "四国電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -547,5 +559,6 @@ export default function RegionShikokuBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

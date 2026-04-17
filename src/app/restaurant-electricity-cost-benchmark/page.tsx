@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "飲食店の電気代相場｜業態・席数・営業時間別のベンチマーク";
 const pageDescription =
@@ -75,6 +76,17 @@ const breakdownData = [
 
 export default function RestaurantElectricityCostBenchmarkPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="飲食店の電気代相場｜業態・席数・営業時間別のベンチマーク"
+        description="居酒屋・ファミレス・ラーメン店・焼肉店・カフェなど飲食業態別の電気代相場を席数・営業時間別に解説。厨房設備・空調・照明の内訳と、コスト削減に効く施策も紹介します。"
+        url="https://simulator.eic-jp.org/restaurant-electricity-cost-benchmark"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "飲食店の電気代相場" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -309,5 +321,6 @@ export default function RestaurantElectricityCostBenchmarkPage() {
         />
       </div>
     </main>
+    </>
   );
 }

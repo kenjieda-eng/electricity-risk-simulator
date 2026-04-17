@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { RenSharePriceChart, RenHourlyOverlayChart } from "../../components/market-data/ZeroPriceCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   REN_SHARE_LABELS,
   REN_SHARE_PRICE,
@@ -45,6 +46,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function ZeroPriceHoursAnalysisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="JEPX 0円コマの実態｜なぜ電力がタダになる時間帯があるのか"
+        description="JEPXスポット市場で価格が0.01円/kWhや0円になる「0円コマ」が発生する仕組みを解説。再エネ比率40%超で平均6.49円と激安化、太陽光10,000MW超で約6.3%がゼロ価格になる実態と法人への意味を分析します。"
+        url="https://simulator.eic-jp.org/zero-price-hours-analysis"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "JEPX 0円コマの実態" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -371,5 +383,6 @@ export default function ZeroPriceHoursAnalysisPage() {
         />
       </div>
     </main>
+    </>
   );
 }

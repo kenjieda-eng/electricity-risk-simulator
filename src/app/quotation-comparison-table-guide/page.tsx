@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle =
@@ -182,6 +183,17 @@ const comparisonTableItems = [
 
 export default function QuotationComparisonTableGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="見積書比較表の作り方｜法人の電力契約で比較しやすい整理方法"
+        description="法人の電力契約見直しで複数社の見積書を横並び比較するための整理方法を解説。比較項目の選び方・条件の統一・経営層への説明に使いやすい比較表の作り方を整理します。"
+        url="https://simulator.eic-jp.org/quotation-comparison-table-guide"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "見積書比較表の作り方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -378,5 +390,6 @@ export default function QuotationComparisonTableGuidePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "補助金縮小で電気料金の見え方はどう変わったか｜経緯・区分別影響・年間コスト比較";
 const pageDescription =
@@ -47,6 +48,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityPriceSubsidyImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="補助金縮小で電気料金の見え方はどう変わったか｜経緯・区分別影響・年間コスト比較"
+        description="電気料金補助金（激変緩和措置）の経緯と縮小・終了後の影響を法人向けに整理します。契約区分別の月額軽減額、補助金タイムライン、補助ありなし年間コスト比較を数値で解説します。"
+        url="https://simulator.eic-jp.org/electricity-price-subsidy-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "補助金縮小で電気料金の見え方はどう変わったか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくず">
@@ -363,5 +375,6 @@ export default function ElectricityPriceSubsidyImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

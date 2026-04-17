@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "新電力から契約解除通知が届いたときの対応｜初動と切替先選定";
 const pageDescription =
@@ -164,6 +165,17 @@ const faqs = [
 
 export default function EmergencySupplierWithdrawalPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="新電力から契約解除通知が届いたときの対応｜初動と切替先選定"
+        description="新電力会社から契約解除・供給停止の通知が届いたときの緊急対応ガイド。初動チェックリスト・切替先の探し方・最終保障供給への移行手続き・時間軸テーブルを法人向けに解説します。"
+        url="https://simulator.eic-jp.org/emergency-supplier-withdrawal"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "新電力から契約解除通知が届いたときの対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -418,5 +430,6 @@ export default function EmergencySupplierWithdrawalPage() {
         />
       </div>
     </main>
+    </>
   );
 }

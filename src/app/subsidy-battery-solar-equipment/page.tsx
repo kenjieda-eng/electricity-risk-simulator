@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "蓄電池・太陽光の補助金活用ガイド｜法人向け設備投資の支援制度";
 const pageDescription =
@@ -155,6 +156,17 @@ const investmentImpact = [
 
 export default function SubsidyBatterySolarEquipmentPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="蓄電池・太陽光の補助金活用ガイド｜法人向け設備投資の支援制度"
+        description="蓄電池・自家消費型太陽光の導入に使える補助金制度を、対象設備・補助率・併用可否の観点で整理します。"
+        url="https://simulator.eic-jp.org/subsidy-battery-solar-equipment"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "蓄電池・太陽光の補助金活用ガイド" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -393,5 +405,6 @@ export default function SubsidyBatterySolarEquipmentPage() {
         />
       </div>
     </main>
+    </>
   );
 }

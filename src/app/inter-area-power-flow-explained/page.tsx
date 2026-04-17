@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import InterAreaFlowChart from "../../components/area-supply/InterAreaFlowChart";
 import { FLOW_DATA, PUMPED_DATA } from "../../data/areaSupplyData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "エリア間電力融通の実態｜東京は常時4,456MW輸入している";
 const pageDescription =
@@ -50,6 +51,17 @@ const batteryData = [
 
 export default function InterAreaPowerFlowExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="エリア間電力融通の実態｜東京は常時4,456MW輸入している"
+        description="東京は常時+4,456MWを他エリアから輸入し、東北は-4,041MWを常時輸出。9エリアの連系線潮流・揚水発電・蓄電池の30分値データから、エリア間の電力融通の実態と法人電気料金への影響を解説します。"
+        url="https://simulator.eic-jp.org/inter-area-power-flow-explained"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "エリア間電力融通の実態" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -300,5 +312,6 @@ export default function InterAreaPowerFlowExplainedPage() {
         />
       </div>
     </main>
+    </>
   );
 }

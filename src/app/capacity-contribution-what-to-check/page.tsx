@@ -6,6 +6,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import InfoBox from "../../components/simulator/InfoBox";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "容量拠出金を踏まえて法人が確認したいこと｜見積書・契約書・予算策定のポイント";
 const pageDescription =
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function CapacityContributionWhatToCheckPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量拠出金を踏まえて法人が確認したいこと｜見積書・契約書・予算策定のポイント"
+        description="容量拠出金に関して法人が見積書・契約書で確認すべきポイントと、予算策定への織り込み方を実務向けに整理します。固定プランと市場連動プランそれぞれの注意点も解説。"
+        url="https://simulator.eic-jp.org/capacity-contribution-what-to-check"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量拠出金を踏まえて法人が確認したいこと" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -340,5 +352,6 @@ export default function CapacityContributionWhatToCheckPage() {
         <CategoryNextStepCta slug="capacity-contribution-what-to-check" />
       </div>
     </main>
+    </>
   );
 }

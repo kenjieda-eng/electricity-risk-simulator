@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "容量市場と法人料金の関係｜制度の仕組みと今後の負担見通し";
@@ -85,6 +86,17 @@ const burdenOutlook = [
 
 export default function CapacityMarketAndCorporateRatesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="容量市場と法人料金の関係｜制度の仕組みと今後の負担見通し"
+        description="容量市場の仕組みと、法人向け電気料金への「容量拠出金」の転嫁がどのように行われるかを解説します。2024年度以降に本格化するコスト上昇の背景と今後の負担見通しを整理します。"
+        url="https://simulator.eic-jp.org/capacity-market-and-corporate-rates"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "容量市場と法人料金の関係" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -301,5 +313,6 @@ export default function CapacityMarketAndCorporateRatesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

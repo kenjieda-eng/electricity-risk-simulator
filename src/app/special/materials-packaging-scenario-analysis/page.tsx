@@ -18,6 +18,7 @@ const canonicalUrl = `https://simulator.eic-jp.org${MATERIALS_SCENARIO_BASE_PATH
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "電気料金シナリオ", "リスク分析"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,

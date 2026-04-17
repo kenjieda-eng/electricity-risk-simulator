@@ -6,6 +6,7 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "燃料調達と電力調達はどうつながっているのか｜LNG・石炭・原油価格の影響";
 const pageDescription =
@@ -15,6 +16,7 @@ const pageUrl = "https://simulator.eic-jp.org/fuel-procurement-and-electricity-p
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "JEPX"],
   alternates: {
     canonical: pageUrl,
   },
@@ -58,6 +60,17 @@ const fuelRows = [
 
 export default function FuelProcurementAndElectricityPricesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料調達と電力調達はどうつながっているのか｜LNG・石炭・原油価格の影響"
+        description="電気の仕入れを理解するには、その前段にある燃料調達も重要です。LNG、石炭、原油などの価格や調達環境が、火力発電コストやJEPX価格にどう影響しうるのかを整理します。"
+        url="https://simulator.eic-jp.org/fuel-procurement-and-electricity-prices"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料調達と電力調達はどうつながっているのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -217,5 +230,6 @@ export default function FuelProcurementAndElectricityPricesPage() {
         <CategoryNextStepCta slug="fuel-procurement-and-electricity-prices" />
       </div>
     </main>
+    </>
   );
 }

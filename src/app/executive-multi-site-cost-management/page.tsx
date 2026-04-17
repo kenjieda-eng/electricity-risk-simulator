@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "複数拠点の電力コスト一元管理フレームワーク｜5拠点以上の法人向け";
 const pageDescription =
@@ -91,6 +92,17 @@ const actionItems = [
 
 export default function ExecutiveMultiSiteCostManagementPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="複数拠点の電力コスト一元管理フレームワーク｜5拠点以上の法人向け"
+        description="5拠点以上を持つ法人のための電力コスト一元管理フレームワーク。拠点別の契約条件・単価・使用量の可視化、一括調達と個別最適の比較、月次ダッシュボード設計、グループ全体のリスクポートフォリオ管理を経営層・CFO向けに解説。"
+        url="https://simulator.eic-jp.org/executive-multi-site-cost-management"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "複数拠点の電力コスト一元管理フレームワーク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -406,5 +418,6 @@ export default function ExecutiveMultiSiteCostManagementPage() {
         />
       </div>
     </main>
+    </>
   );
 }

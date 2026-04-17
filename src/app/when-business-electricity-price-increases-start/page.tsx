@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電気料金の値上げはいつから反映されるのか｜要因別タイムラグと請求書の見方";
@@ -51,6 +52,17 @@ export const metadata: Metadata = {
 
 export default function WhenBusinessElectricityPriceIncreasesStartPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金の値上げはいつから反映されるのか｜要因別タイムラグと請求書の見方"
+        description="法人の電気料金の値上げがいつ請求に反映されるかを解説。検針月・請求月のずれ、燃調費・市場連動・再エネ賦課金の反映タイムラグ、複数拠点での管理ポイントを整理。"
+        url="https://simulator.eic-jp.org/when-business-electricity-price-increases-start"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金の値上げはいつから反映されるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
@@ -589,5 +601,6 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
         />
       </section>
     </main>
+    </>
   );
 }

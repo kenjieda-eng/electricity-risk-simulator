@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代高騰と事業継続リスク｜BCPと財務リスクの観点から";
 const pageDescription =
@@ -129,6 +130,17 @@ const bcpActions = [
 
 export default function ExecutiveBusinessContinuityRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代高騰と事業継続リスク｜BCPと財務リスクの観点から"
+        description="電力コストの急騰は事業継続計画（BCP）に組み込むべき財務リスクです。電気代高騰が事業継続に与える影響、財務的ストレステスト、BCP対策の優先順位を経営層・CFO向けに解説します。"
+        url="https://simulator.eic-jp.org/executive-business-continuity-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代高騰と事業継続リスク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -411,5 +423,6 @@ export default function ExecutiveBusinessContinuityRiskPage() {
         />
       </div>
     </main>
+    </>
   );
 }

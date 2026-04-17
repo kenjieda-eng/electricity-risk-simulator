@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "オフィスの電気代相場｜従業員数・坪数・ビル規模別のベンチマーク";
 const pageDescription =
@@ -65,6 +66,17 @@ const breakdownData = [
 
 export default function OfficeElectricityCostBenchmarkPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="オフィスの電気代相場｜従業員数・坪数・ビル規模別のベンチマーク"
+        description="オフィスの電気代を従業員数・坪数・ビル規模別に徹底解説。一人あたり月2,000〜5,000円が目安。テナントビル・自社ビル別の内訳構成と、相場より高い場合の確認ポイントも紹介します。"
+        url="https://simulator.eic-jp.org/office-electricity-cost-benchmark"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "オフィスの電気代相場" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -315,5 +327,6 @@ export default function OfficeElectricityCostBenchmarkPage() {
         />
       </div>
     </main>
+    </>
   );
 }

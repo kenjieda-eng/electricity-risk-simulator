@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "日本の法人電気料金は国際的に見て高いのか｜主要国との産業用電力料金比較";
@@ -186,6 +187,17 @@ const keyPoints = [
 
 export default function InternationalElectricityPriceComparisonPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="日本の法人電気料金は国際的に見て高いのか｜主要国との産業用電力料金比較"
+        description="日本の産業用電気料金を米国・ドイツ・フランス・韓国・中国・英国と比較。為替補正後の単価差、日本が高い構造的理由、海外拠点との電力コスト比較の考え方を整理。"
+        url="https://simulator.eic-jp.org/international-electricity-price-comparison"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "日本の法人電気料金は国際的に見て高いのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
@@ -459,5 +471,6 @@ export default function InternationalElectricityPriceComparisonPage() {
         />
       </div>
     </main>
+    </>
   );
 }

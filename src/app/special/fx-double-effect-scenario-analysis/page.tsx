@@ -18,6 +18,7 @@ const canonicalUrl = `https://simulator.eic-jp.org${FX_DOUBLE_EFFECT_BASE_PATH}`
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代"],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: pageTitle,

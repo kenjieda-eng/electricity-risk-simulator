@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import RenewableSurchargeCharts from "./_components/RenewableSurchargeCharts";
 import { RENEWABLE_SURCHARGE_DATA } from "./_lib/renewable-surcharge-data";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理";
 const pageDescription =
@@ -53,6 +54,17 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
   const unitPriceGrowthMultiple = latestYear.unitPriceYenPerKwh / firstYear.unitPriceYenPerKwh;
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理"
+        description="再エネ賦課金を含まないデータでも、法人向け電気料金は2019年から2021年の水準に戻っていません。請求書の一部ではなく、電気料金のベース単価そのものが上がっている可能性を解説します。"
+        url="https://simulator.eic-jp.org/electricity-price-without-renewable-surcharge"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ賦課金を除いても電気料金は高いのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -233,5 +245,6 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
         />
       </section>
     </main>
+    </>
   );
 }

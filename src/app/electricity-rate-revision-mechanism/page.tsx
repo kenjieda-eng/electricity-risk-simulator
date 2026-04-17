@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -200,6 +201,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function ElectricityRateRevisionMechanismPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力会社の料金改定の仕組み｜規制料金と自由料金の値上げプロセスを解説"
+        description="電力会社の料金改定がどのように行われるかを解説。規制料金の経産省認可プロセス、自由料金（法人契約）の改定方式、大手電力の過去の改定履歴、法人が確認すべきポイントを整理。"
+        url="https://simulator.eic-jp.org/electricity-rate-revision-mechanism"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力会社の料金改定の仕組み" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -532,5 +544,6 @@ export default function ElectricityRateRevisionMechanismPage() {
         />
       </div>
     </main>
+    </>
   );
 }

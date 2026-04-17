@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "自治体電力調達の入札実務｜一般競争・指名競争・随意契約の使い分け";
 const pageDescription =
@@ -107,6 +108,17 @@ const steps = [
 
 export default function MunicipalityProcurementMethodsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="自治体電力調達の入札実務｜一般競争・指名競争・随意契約の使い分け"
+        description="自治体が電力を調達する際の入札方式（一般競争・指名競争・随意契約）の適用要件・メリット・デメリットを比較表で解説。地方自治法234条の根拠から仕様書作成・予定価格設定・落札後の手続きまで実務担当者向けにまとめます。"
+        url="https://simulator.eic-jp.org/municipality-procurement-methods"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "自治体電力調達の入札実務" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -344,5 +356,6 @@ export default function MunicipalityProcurementMethodsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

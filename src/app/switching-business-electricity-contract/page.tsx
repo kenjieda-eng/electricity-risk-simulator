@@ -9,6 +9,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "自治体電力契約"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/switching-business-electricity-contract",
   },

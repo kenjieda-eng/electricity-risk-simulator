@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気代削減アクション一覧｜即効・短期・中長期で整理";
 const pageDescription =
@@ -73,6 +74,17 @@ const longTermActions = [
 
 export default function ElectricityCostReductionActionMapPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気代削減アクション一覧｜即効・短期・中長期で整理"
+        description="法人の電気代削減施策を「即効（今すぐ）」「短期（3〜6か月）」「中長期（1年以上）」の3段階で一覧整理。コスト・効果・難易度をあわせて解説。優先順位の決め方も紹介します。"
+        url="https://simulator.eic-jp.org/electricity-cost-reduction-action-map"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気代削減アクション一覧" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -369,5 +381,6 @@ export default function ElectricityCostReductionActionMapPage() {
         />
       </div>
     </main>
+    </>
   );
 }

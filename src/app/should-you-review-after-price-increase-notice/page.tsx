@@ -8,6 +8,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "電力契約見直し"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/should-you-review-after-price-increase-notice",
   },

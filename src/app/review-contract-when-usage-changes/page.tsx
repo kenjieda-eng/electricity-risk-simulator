@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "使用量やデマンドが変わったとき電力契約は見直すべきか｜見直しトリガーと影響試算";
@@ -128,6 +129,17 @@ const impactRows = [
 
 export default function ReviewContractWhenUsageChangesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="使用量やデマンドが変わったとき電力契約は見直すべきか｜見直しトリガーと影響試算"
+        description="使用量やデマンドの変化は法人電力契約見直しの重要なサインです。変動パターン別の見直しトリガーと、月5万kWh→6万kWhに増えた場合の月額影響試算を整理します。"
+        url="https://simulator.eic-jp.org/review-contract-when-usage-changes"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "使用量やデマンドが変わったとき電力契約は見直すべきか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -318,5 +330,6 @@ export default function ReviewContractWhenUsageChangesPage() {
         />
       </div>
     </main>
+    </>
   );
 }

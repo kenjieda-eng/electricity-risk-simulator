@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理";
@@ -127,6 +128,17 @@ const checkSections = [
 
 export default function NonPriceFactorsInElectricityContractPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理"
+        description="電力契約の選択では単価だけでなく、契約条件・リスク配分・サービス品質・請求の明確さ・サポート対応なども重要です。価格以外の確認ポイントを実務的に整理します。"
+        url="https://simulator.eic-jp.org/non-price-factors-in-electricity-contract"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電力契約で単価以外に確認したい項目" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -278,5 +290,6 @@ export default function NonPriceFactorsInElectricityContractPage() {
         />
       </section>
     </main>
+    </>
   );
 }

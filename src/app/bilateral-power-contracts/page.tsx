@@ -5,6 +5,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "相対契約とは何か｜市場に依存しない仕入れの考え方";
 const pageDescription =
@@ -14,6 +15,7 @@ const pageUrl = "https://simulator.eic-jp.org/bilateral-power-contracts";
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "JEPX"],
   alternates: {
     canonical: pageUrl,
   },
@@ -71,6 +73,17 @@ export default function BilateralPowerContractsPage() {
   ];
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="相対契約とは何か｜市場に依存しない仕入れの考え方"
+        description="相対契約は、電力会社や発電事業者が市場を通さず、個別条件で電気を取引する仕組みです。JEPXとの違い、価格安定との関係、契約期間や数量の考え方を法人向けに整理します。"
+        url="https://simulator.eic-jp.org/bilateral-power-contracts"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "相対契約とは何か" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -206,5 +219,6 @@ export default function BilateralPowerContractsPage() {
         <CategoryNextStepCta slug="bilateral-power-contracts" />
       </div>
     </main>
+    </>
   );
 }

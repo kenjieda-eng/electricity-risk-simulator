@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 const pageTitle =
   "市場連動プランのリスクを社内説明するときのポイント｜経営層・上司への伝え方";
 const pageDescription =
@@ -99,6 +100,17 @@ const commonObjections = [
 
 export default function MarketLinkedRiskInternalExplanationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場連動プランのリスクを社内説明するときのポイント｜経営層・上司への伝え方"
+        description="市場連動プランを採用する際に経営層・上司・管理部門に説明する方法を解説します。JEPXの仕組みの説明方法、過去の価格高騰事例、ワーストケースシナリオの提示、意思決定フレームワークの作り方を整理します。"
+        url="https://simulator.eic-jp.org/market-linked-risk-internal-explanation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場連動プランのリスクを社内説明するときのポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -299,5 +311,6 @@ export default function MarketLinkedRiskInternalExplanationPage() {
         />
       </section>
     </main>
+    </>
   );
 }

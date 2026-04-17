@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電力自由化後の法人電気料金はどう変わったか｜2016年からの構造変化を整理";
@@ -276,6 +277,17 @@ const FIVE_PERSPECTIVES = [
 
 export default function ElectricityMarketLiberalizationImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力自由化後の法人電気料金はどう変わったか｜2016年からの構造変化を整理"
+        description="2016年の電力完全自由化以降、法人の電気料金と市場構造がどう変わったかを整理。新電力のシェア推移、価格競争から撤退まで、自由化が法人にもたらしたメリットとリスクを解説。"
+        url="https://simulator.eic-jp.org/electricity-market-liberalization-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力自由化後の法人電気料金はどう変わったか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -684,5 +696,6 @@ export default function ElectricityMarketLiberalizationImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

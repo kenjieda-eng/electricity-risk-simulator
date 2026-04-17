@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "2026年度以降の法人電気料金見通し｜要因別の方向性とシナリオ別予算前提";
@@ -177,6 +178,17 @@ const budgetSteps = [
 
 export default function ElectricityPriceOutlook2026Page() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="2026年度以降の法人電気料金見通し｜要因別の方向性とシナリオ別予算前提"
+        description="2026年度以降の法人電気料金見通しを要因別に整理。燃料/為替/再エネ/容量/託送の方向性、楽観・基本・悲観の3シナリオ別に予算前提の置き方を解説。"
+        url="https://simulator.eic-jp.org/electricity-price-outlook-2026"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "2026年度以降の法人電気料金見通し" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずリスト">
@@ -452,5 +464,6 @@ export default function ElectricityPriceOutlook2026Page() {
         />
       </section>
     </main>
+    </>
   );
 }

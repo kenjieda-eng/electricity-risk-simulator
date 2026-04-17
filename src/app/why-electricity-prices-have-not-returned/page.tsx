@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "急騰後も電気料金が元に戻らないのはなぜか｜一時的要因と構造的要因を整理";
 const pageDescription =
@@ -47,6 +48,17 @@ export const metadata: Metadata = {
 
 export default function WhyElectricityPricesHaveNotReturnedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="急騰後も電気料金が元に戻らないのはなぜか｜一時的要因と構造的要因を整理"
+        description="2022年に急騰した電気料金が、その後も2019年から2021年の水準に戻っていない背景を法人向けに整理します。LNG価格・円安・料金改定・再エネ賦課金・容量拠出金など要因を一時的と構造的に分類して解説します。"
+        url="https://simulator.eic-jp.org/why-electricity-prices-have-not-returned"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "急騰後も電気料金が元に戻らないのはなぜか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくず">
@@ -423,5 +435,6 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
         />
       </section>
     </main>
+    </>
   );
 }

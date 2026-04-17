@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "燃料費調整額の計算式の詳細｜基準燃料価格・換算係数・3ヶ月平均の仕組み";
 const pageDescription =
@@ -40,6 +41,17 @@ export const metadata: Metadata = {
 
 export default function FuelCostAdjustmentCalculationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額の計算式の詳細｜基準燃料価格・換算係数・3ヶ月平均の仕組み"
+        description="燃料費調整額の計算式を基準燃料価格、換算係数、貿易統計3ヶ月平均の考え方から詳しく解説。電力会社ごとに異なる基準値、タイムラグ、契約区分別の違いを整理します。"
+        url="https://simulator.eic-jp.org/fuel-cost-adjustment-calculation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額の計算式の詳細" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -186,5 +198,6 @@ export default function FuelCostAdjustmentCalculationPage() {
         <CategoryNextStepCta slug="fuel-cost-adjustment-calculation" />
       </div>
     </main>
+    </>
   );
 }

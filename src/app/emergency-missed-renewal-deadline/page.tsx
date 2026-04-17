@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "契約更新を忘れて自動更新されたときの対応｜法人の電力契約トラブル";
 const pageDescription =
@@ -122,6 +123,17 @@ const dangerousClauses = [
 
 export default function EmergencyMissedRenewalDeadlinePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="契約更新を忘れて自動更新されたときの対応｜法人の電力契約トラブル"
+        description="電力契約の更新期限を見逃して自動更新されてしまった場合の確認事項と、次にとれる選択肢を整理します。"
+        url="https://simulator.eic-jp.org/emergency-missed-renewal-deadline"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "契約更新を忘れて自動更新されたときの対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -362,5 +374,6 @@ export default function EmergencyMissedRenewalDeadlinePage() {
         />
       </div>
     </main>
+    </>
   );
 }

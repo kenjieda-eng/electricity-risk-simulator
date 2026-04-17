@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DemandHourlyChart from "../../components/market-data/DemandHourlyChart";
 import DemandMonthlyChart from "../../components/market-data/DemandMonthlyChart";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   DEMAND_FY_LABELS,
   DEMAND_FY_TOTAL,
@@ -61,6 +62,17 @@ function formatDate(dateStr: string) {
 
 export default function ElectricityDemandPatternPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="全国電力需要パターン｜時間帯・月・年度で見る需要構造"
+        description="全国の電力需要データを時間帯・月別・年度別に可視化。東京エリア32.4%シェア、ピーク需要164,910MWの背景、平日と週末の12%需要差、業種別需要パターンと法人電気コストへの影響を詳しく解説します。"
+        url="https://simulator.eic-jp.org/electricity-demand-pattern"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "全国電力需要パターン" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -482,5 +494,6 @@ export default function ElectricityDemandPatternPage() {
         />
       </div>
     </main>
+    </>
   );
 }

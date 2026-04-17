@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle = "法人の電気料金はどのくらい上がるのか｜要因別の影響幅と実績データ";
@@ -45,6 +46,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function HowMuchBusinessElectricityPricesIncreasePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金はどのくらい上がるのか｜要因別の影響幅と実績データ"
+        description="法人の電気料金がどのくらい上がるかを、要因別の影響幅テーブルと2022〜2025年の実績データで解説。燃調費・市場連動・再エネ賦課金・補助金終了の月額影響を使用量別に試算。"
+        url="https://simulator.eic-jp.org/how-much-business-electricity-prices-increase"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金はどのくらい上がるのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
 
       {/* パンくずナビ */}
@@ -413,5 +425,6 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
         />
       </section>
     </main>
+    </>
   );
 }

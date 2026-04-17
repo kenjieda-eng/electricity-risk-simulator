@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import TempBinChart from "../../components/market-data/TempBinChart";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   TEMP_BIN_LABELS,
   TEMP_BIN_DEMAND,
@@ -61,6 +62,17 @@ function corrColor(v: number): string {
 
 export default function WeatherElectricityPriceLinkPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="気温と電力価格の因果チェーン｜気温→需要→価格のU字構造"
+        description="気温が15〜20℃のとき電力需要と価格が最低になり、極寒・猛暑で跳ね上がるU字構造をデータで解説。極寒日24.75円・猛暑日12.61円・通常日9.61円の差異、HDD・CDDと価格の相関行列、法人が取るべき気温リスク対策を詳述します。"
+        url="https://simulator.eic-jp.org/weather-electricity-price-link"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "気温と電力価格の因果チェーン" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -615,5 +627,6 @@ export default function WeatherElectricityPriceLinkPage() {
         />
       </div>
     </main>
+    </>
   );
 }

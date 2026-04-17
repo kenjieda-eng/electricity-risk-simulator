@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "燃料費調整額上昇で法人の電気料金はどう上がるか｜請求への影響と確認ポイント";
@@ -67,6 +68,17 @@ const checkPoints = [
 
 export default function FuelAdjustmentSurgeImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額上昇で法人の電気料金はどう上がるか｜請求への影響と確認ポイント"
+        description="燃料費調整額（燃調費）が上昇したとき、法人の電気料金請求にどう影響するかを解説。仕組みの確認方法、上限設定の有無の確認、コスト増加額の計算方法を詳しく説明します。"
+        url="https://simulator.eic-jp.org/fuel-adjustment-surge-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額上昇で法人の電気料金はどう上がるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -278,5 +290,6 @@ export default function FuelAdjustmentSurgeImpactPage() {
         />
       </section>
     </main>
+    </>
   );
 }

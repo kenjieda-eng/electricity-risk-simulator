@@ -9,6 +9,7 @@ import {
   RENEWABLE_SURCHARGE_DATA,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ賦課金の法人別月額試算｜業態・規模ごとの負担額シミュレーション";
 const pageDescription =
@@ -52,6 +53,17 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
   ); // 万円単位
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ賦課金の法人別月額試算｜業態・規模ごとの負担額シミュレーション"
+        description="再エネ賦課金を月間使用量ベースで法人別に試算。小規模オフィスから大規模工場まで、2025年度単価での月額・年額負担を一覧化し、過去13年間の負担推移をグラフで確認できます。"
+        url="https://simulator.eic-jp.org/renewable-energy-surcharge-business-cost"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ賦課金の法人別月額試算" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -228,5 +240,6 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
         <CategoryNextStepCta slug="renewable-energy-surcharge-business-cost" />
       </div>
     </main>
+    </>
   );
 }

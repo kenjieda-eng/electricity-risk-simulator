@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -216,6 +217,17 @@ export const metadata: Metadata = {
 // --- Page Component ---
 export default function HybridElectricityPlanExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="ハイブリッド型電力プランとは｜固定と市場連動を組み合わせた契約の仕組みと選び方"
+        description="固定と市場連動を組み合わせたハイブリッド型電力プランの仕組みを解説。一部固定・一部市場連動の料金構造、メリット・デメリット、向いている法人の特徴を整理。"
+        url="https://simulator.eic-jp.org/hybrid-electricity-plan-explained"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "ハイブリッド型電力プランとは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -527,5 +539,6 @@ export default function HybridElectricityPlanExplainedPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

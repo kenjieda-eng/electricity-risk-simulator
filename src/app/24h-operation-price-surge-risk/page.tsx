@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "24時間稼働企業が料金高騰に直面したときのリスク｜ベースロードと上振れの関係";
@@ -72,6 +73,17 @@ const sectors = [
 
 export default function TwentyFourHourOperationPriceSurgeRiskPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="24時間稼働企業が料金高騰に直面したときのリスク｜ベースロードと上振れの関係"
+        description="24時間365日稼働する法人が電気料金高騰に直面した場合のリスクを解説。ベースロード需要が大きいことで高騰時の影響が増幅される仕組み、対策の方向性を詳しく説明します。"
+        url="https://simulator.eic-jp.org/24h-operation-price-surge-risk"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "24時間稼働企業が料金高騰に直面したときのリスク" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -264,5 +276,6 @@ export default function TwentyFourHourOperationPriceSurgeRiskPage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "SHIFT事業と電力コスト戦略｜SBT認証・脱炭素経営支援の活用";
 const pageDescription =
@@ -100,6 +101,17 @@ const pitfalls = [
 
 export default function SubsidyShiftProjectPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="SHIFT事業と電力コスト戦略｜SBT認証・脱炭素経営支援の活用"
+        description="環境省「脱炭素化支援機構・SHIFT事業」の概要と電力コスト戦略への活用を解説。SBT認証取得やGHG削減計画策定に係る費用への補助と、省エネ・再エネ導入との組み合わせ方法を紹介します。2026年度版。"
+        url="https://simulator.eic-jp.org/subsidy-shift-project"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "SHIFT事業と電力コスト戦略" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -329,5 +341,6 @@ export default function SubsidyShiftProjectPage() {
         />
       </div>
     </main>
+    </>
   );
 }

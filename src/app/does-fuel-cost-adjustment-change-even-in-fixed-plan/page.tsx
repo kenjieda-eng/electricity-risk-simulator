@@ -12,6 +12,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "固定プラン", "燃料費調整額", "電力会社比較"],
   alternates: {
     canonical: "https://simulator.eic-jp.org/does-fuel-cost-adjustment-change-even-in-fixed-plan",
   },

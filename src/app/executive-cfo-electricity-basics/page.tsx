@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "CFOのための電力市場基礎｜燃調費・市場連動・容量拠出金を1ページで";
 const pageDescription =
@@ -152,6 +153,17 @@ const priceDrivers = [
 
 export default function ExecutiveCfoElectricityBasicsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="CFOのための電力市場基礎｜燃調費・市場連動・容量拠出金を1ページで"
+        description="燃料費調整額・市場連動型契約・容量拠出金・再エネ賦課金の仕組みをCFO・経営層向けに解説。法人電気料金の構成要素と価格変動要因を1ページで把握し、財務計画・契約判断に活用できます。"
+        url="https://simulator.eic-jp.org/executive-cfo-electricity-basics"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "CFOのための電力市場基礎" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -463,5 +475,6 @@ export default function ExecutiveCfoElectricityBasicsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

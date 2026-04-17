@@ -17,6 +17,7 @@ const pageUrl = "https://simulator.eic-jp.org/how-electricity-prices-are-determi
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "JEPX"],
   alternates: {
     canonical: pageUrl,
   },

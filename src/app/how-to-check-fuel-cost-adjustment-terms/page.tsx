@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "燃料費調整額の扱いを確認する方法｜契約比較で見落としやすいポイント";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function HowToCheckFuelCostAdjustmentTermsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額の扱いを確認する方法｜契約比較で見落としやすいポイント"
+        description="電力契約比較で見落としやすい燃料費調整額の扱いを解説。計算方式の違い・上限設定の有無・社内確認の手順など、契約選択時に実務で役立つ確認ポイントを整理します。"
+        url="https://simulator.eic-jp.org/how-to-check-fuel-cost-adjustment-terms"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額の扱いを確認する方法" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -261,5 +273,6 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

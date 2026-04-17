@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle = "法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント";
@@ -48,6 +49,17 @@ export const metadata: Metadata = {
 
 export default function WhenToReviewElectricityContractPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント"
+        description="法人が電力契約を見直すべきタイミングを解説。電気料金の上昇、契約更新、使用状況の変化、設備更新などをきっかけに、確認したいポイントと比較時の視点を整理します。"
+        url="https://simulator.eic-jp.org/when-to-review-electricity-contract"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人が電力契約を見直すタイミング" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -244,5 +256,6 @@ export default function WhenToReviewElectricityContractPage() {
         />
       </section>
     </main>
+    </>
   );
 }

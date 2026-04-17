@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "中小企業と大企業で電気料金高騰の影響はどう違うか｜企業規模別の負担分析";
@@ -182,6 +183,17 @@ const ACTION_PATTERNS: ActionRow[] = [
 
 export default function SmeVsLargeCompanyElectricityImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="中小企業と大企業で電気料金高騰の影響はどう違うか｜企業規模別の負担分析"
+        description="中小企業と大企業で電気料金高騰の影響がどう違うかを分析。売上比、契約区分、交渉力、価格転嫁力の差を整理。中小企業が特に厳しい構造的理由を解説。"
+        url="https://simulator.eic-jp.org/sme-vs-large-company-electricity-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "中小企業と大企業で電気料金高騰の影響はどう違うか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -518,5 +530,6 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "電気料金の急騰で予算超過しそうなときの緊急対応｜法人の電力契約トラブル";
 const pageDescription =
@@ -154,6 +155,17 @@ const nextYearBudgetPoints = [
 
 export default function EmergencyBudgetOverrunResponsePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電気料金の急騰で予算超過しそうなときの緊急対応｜法人の電力契約トラブル"
+        description="電気料金の想定外の上昇で年度予算を超過しそうな場合に、担当者がとるべき緊急対応フローを整理します。"
+        url="https://simulator.eic-jp.org/emergency-budget-overrun-response"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電気料金の急騰で予算超過しそうなときの緊急対応" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -410,5 +422,6 @@ export default function EmergencyBudgetOverrunResponsePage() {
         />
       </div>
     </main>
+    </>
   );
 }

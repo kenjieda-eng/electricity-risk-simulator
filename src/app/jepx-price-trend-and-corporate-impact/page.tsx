@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "JEPX卸電力市場価格の推移と法人電気料金への波及｜2016〜2025年の動きを解説";
@@ -96,6 +97,17 @@ const simulationRows = [
 
 export default function JepxPriceTrendAndCorporateImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="JEPX卸電力市場価格の推移と法人電気料金への波及｜2016〜2025年の動きを解説"
+        description="JEPXシステムプライスの2016〜2025年度推移を法人向けに解説。スパイク事例、法人料金への波及経路、市場連動プランへの影響、固定プランとの比較を整理。"
+        url="https://simulator.eic-jp.org/jepx-price-trend-and-corporate-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "JEPX卸電力市場価格の推移と法人電気料金への波及" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
@@ -372,5 +384,6 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }

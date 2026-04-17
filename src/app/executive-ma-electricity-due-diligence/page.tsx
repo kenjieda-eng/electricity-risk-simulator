@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "M&A・拠点統廃合時の電力契約デューデリジェンス｜PMI電力コスト最適化ガイド";
 const pageDescription =
@@ -91,6 +92,17 @@ const actionItems = [
 
 export default function ExecutiveMaElectricityDueDiligencePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="M&A・拠点統廃合時の電力契約デューデリジェンス｜PMI電力コスト最適化ガイド"
+        description="M&Aで引き継ぐ電力契約の確認ポイント、拠点統廃合での契約まとめ替え、違約金・中途解約条件の確認方法、PMIフェーズでの電力コスト最適化、買収後100日計画への電力コスト項目組み込みを経営層・CFO向けに解説。"
+        url="https://simulator.eic-jp.org/executive-ma-electricity-due-diligence"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "M&A・拠点統廃合時の電力契約デューデリジェンス" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -370,5 +382,6 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
         />
       </div>
     </main>
+    </>
   );
 }

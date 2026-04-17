@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { WarmingTrendLineChart, WarmingDecadeBarChart } from "../../components/market-data/WarmingTrendCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   WARMING_YEARS,
   CDD_TOKYO,
@@ -71,6 +72,17 @@ const keyStats = [
 
 export default function WarmingTrend30YearsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="温暖化30年と電力需要｜1995年からの気温上昇が電気料金に与える影響"
+        description="1995年から2025年の30年間、東京・大阪・札幌の年平均気温はどう変化したか。10年ごとの加速傾向、CDD（冷房度日）の増加と夏のJEPX高騰リスク、HDD（暖房度日）低下と冬の構造変化を実データで解説します。"
+        url="https://simulator.eic-jp.org/warming-trend-30-years"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "温暖化30年と電力需要" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -375,5 +387,6 @@ export default function WarmingTrend30YearsPage() {
         />
       </div>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "取締役会向け電力リスク報告テンプレートの作り方｜経営層向け";
 const pageDescription =
@@ -119,6 +120,17 @@ const failurePatterns = [
 
 export default function ExecutiveBoardReportTemplatePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="取締役会向け電力リスク報告テンプレートの作り方｜経営層向け"
+        description="取締役会・経営会議で使える電力コスト・リスク報告のテンプレート構成と記載項目を整理します。"
+        url="https://simulator.eic-jp.org/executive-board-report-template"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "取締役会向け電力リスク報告テンプレートの作り方" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -391,5 +403,6 @@ export default function ExecutiveBoardReportTemplatePage() {
         />
       </div>
     </main>
+    </>
   );
 }

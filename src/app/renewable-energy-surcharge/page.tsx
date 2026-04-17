@@ -8,6 +8,7 @@ import {
   RENEWABLE_SURCHARGE_DATA,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
 const pageDescription =
@@ -52,6 +53,17 @@ export default function RenewableEnergySurchargePage() {
   const chartValues = RENEWABLE_SURCHARGE_DATA.map((row) => row.unitPriceYenPerKwh);
 
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド"
+        description="再エネ賦課金（再生可能エネルギー発電促進賦課金）の仕組み、2012〜2026年度の単価推移、計算方法、法人の月額負担試算、燃料費調整額との違いを、グラフと過去データを交えて解説します。"
+        url="https://simulator.eic-jp.org/renewable-energy-surcharge"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ賦課金とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">再エネ賦課金とは</h1>
@@ -325,5 +337,6 @@ export default function RenewableEnergySurchargePage() {
         <CategoryNextStepCta slug="renewable-energy-surcharge" />
       </div>
     </main>
+    </>
   );
 }

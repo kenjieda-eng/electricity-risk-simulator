@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { RenSharePriceBarChart, RenHourlyDualAxisChart } from "../../components/market-data/RenewablePriceCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   REN_SHARE_LABELS,
   REN_SHARE_PRICE,
@@ -54,6 +55,17 @@ const keyStats = [
 
 export default function RenewableSharePriceCorrelationPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="再エネ比率が上がると価格はどう動くか｜東京エリア35,000コマの実証データ"
+        description="東京エリア35,501コマの30分値データを分析。再エネ比率0〜5%時の平均価格14.16円に対し、40%超では6.49円と54%安。再エネ比率と電力市場価格の明確な逆相関（r=-0.46）を実証データで解説します。"
+        url="https://simulator.eic-jp.org/renewable-share-price-correlation"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "再エネ比率が上がると価格はどう動くか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -376,5 +388,6 @@ export default function RenewableSharePriceCorrelationPage() {
         />
       </div>
     </main>
+    </>
   );
 }

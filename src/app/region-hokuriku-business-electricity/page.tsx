@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { JEPX_AREA_YEARLY_AVG } from "../../data/jepxData";
 import { DEMAND_AREA_FY, LOAD_FACTOR_FY, DEMAND_AREA_SHARE } from "../../data/demandData";
 import { getWeatherByRegion } from "../../data/weatherData";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "北陸電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
@@ -136,6 +137,17 @@ const newPowerStatus = [
 export default function RegionHokurikuBusinessElectricityPage() {
   const weather = getWeatherByRegion("hokuriku");
   return (
+    <>
+      <ArticleJsonLd
+        headline="北陸電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況"
+        description="北陸電力エリア（富山・石川・福井・岐阜一部）の法人向け電気料金を詳解。高圧・特別高圧の単価目安、2023〜2026年の料金改定動向、水力豊富な電源構成と2023年大幅値上げの影響、新電力の参入状況を解説します。"
+        url="https://simulator.eic-jp.org/region-hokuriku-business-electricity"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "北陸電力エリアの法人電気代事情" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -585,5 +597,6 @@ export default function RegionHokurikuBusinessElectricityPage() {
         />
       </div>
     </main>
+    </>
   );
 }

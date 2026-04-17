@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説";
 const pageDescription =
@@ -40,6 +41,17 @@ export const metadata: Metadata = {
 
 export default function FuelCostAdjustmentUpperLimitPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説"
+        description="燃料費調整額には、規制料金では基準燃料価格の1.5倍という上限があり、自由料金では原則上限なし。2022年の上限到達による電力会社の赤字、新電力の撤退、法人への影響を整理します。"
+        url="https://simulator.eic-jp.org/fuel-cost-adjustment-upper-limit"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "燃料費調整額の上限制度" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -191,5 +203,6 @@ export default function FuelCostAdjustmentUpperLimitPage() {
         <CategoryNextStepCta slug="fuel-cost-adjustment-upper-limit" />
       </div>
     </main>
+    </>
   );
 }

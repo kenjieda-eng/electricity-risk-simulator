@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "電力契約の契約期間の見方と注意点｜1年・2年・3年契約の違い";
@@ -44,6 +45,17 @@ export const metadata: Metadata = {
 
 export default function ElectricityContractPeriodGuidePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力契約の契約期間の見方と注意点｜1年・2年・3年契約の違い"
+        description="法人向け電力契約の契約期間（1年・2年・3年）の違いと、自動更新条項・早期解約・料金ロックのメリットと柔軟性のトレードオフを解説。契約期間を選ぶ際の判断基準を整理します。"
+        url="https://simulator.eic-jp.org/electricity-contract-period-guide"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力契約の契約期間の見方と注意点" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -275,5 +287,6 @@ export default function ElectricityContractPeriodGuidePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "なぜ単価が安い提案でも有利とは限らないのか｜落とし穴5パターンと実質コスト比較";
@@ -109,6 +110,17 @@ const checkAxes = [
 
 export default function CheapUnitPriceNotAlwaysBetterPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="なぜ単価が安い提案でも有利とは限らないのか｜落とし穴5パターンと実質コスト比較"
+        description="電力契約で単価が安く見えても有利とは限りません。燃調費上限なし・市場連動・違約金・容量拠出金など5パターンの落とし穴と、固定vs市場連動の月額シミュレーションを解説します。"
+        url="https://simulator.eic-jp.org/cheap-unit-price-not-always-better"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "なぜ単価が安い提案でも有利とは限らないのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
@@ -344,5 +356,6 @@ export default function CheapUnitPriceNotAlwaysBetterPage() {
         />
       </div>
     </main>
+    </>
   );
 }

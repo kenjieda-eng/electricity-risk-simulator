@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "地政学リスクで電気料金・電気代はどう上がるか｜過去5事例と波及経路を整理";
@@ -129,6 +130,17 @@ const checklist = [
 
 export default function ElectricityCostRiskGeopoliticsPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="地政学リスクで電気料金・電気代はどう上がるか｜過去5事例と波及経路を整理"
+        description="中東情勢・ウクライナ侵攻などの地政学リスクが法人・企業・自治体の電気料金にどう影響するか、過去5事例の燃調費変化と5段階の波及経路を解説。備えのチェックリストも掲載。"
+        url="https://simulator.eic-jp.org/electricity-cost-risk-geopolitics"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "地政学リスクで電気料金・電気代はどう上がるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -357,5 +369,6 @@ export default function ElectricityCostRiskGeopoliticsPage() {
         />
       </section>
     </main>
+    </>
   );
 }

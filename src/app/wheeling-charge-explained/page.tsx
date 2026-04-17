@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
 const pageTitle =
@@ -223,6 +224,17 @@ const checklistItems = [
 // --- Page Component ---
 export default function WheelingChargeExplainedPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="託送料金（送配電使用料）とは｜法人の電気料金に含まれる見えにくいコスト構造"
+        description="法人の電気料金に含まれる託送料金の仕組みを解説。電気料金全体の約3〜4割を占める送配電使用料の構成、エリア別の単価差、レベニューキャップ制度、今後の値上げ見通しを整理。"
+        url="https://simulator.eic-jp.org/wheeling-charge-explained"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "託送料金（送配電使用料）とは" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav className="mb-4 text-xs text-slate-500" aria-label="パンくずナビ">
@@ -740,5 +752,6 @@ export default function WheelingChargeExplainedPage() {
         />
       </div>
     </main>
+    </>
   );
 }

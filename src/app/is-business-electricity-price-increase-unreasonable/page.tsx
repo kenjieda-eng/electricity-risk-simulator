@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle = "法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額";
@@ -41,6 +42,17 @@ export const metadata: Metadata = {
 
 export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額"
+        description="法人の電気料金の値上げが急すぎる・おかしいと感じるときに使える6ステップの原因切り分けフローと、パターン別の月額影響額を解説。燃料費調整額、市場価格要因、補助金終了、契約更新の見分け方も整理します。"
+        url="https://simulator.eic-jp.org/is-business-electricity-price-increase-unreasonable"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "法人の電気料金の値上げはおかしいのか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -276,5 +288,6 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
         />
       </section>
     </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "補助金終了・縮小の前後で電力契約は見直すべきか｜タイムラインと影響シミュレーション";
@@ -95,6 +96,17 @@ const simulationRows = [
 
 export default function ShouldYouReviewAroundSubsidyEndPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="補助金終了・縮小の前後で電力契約は見直すべきか｜タイムラインと影響シミュレーション"
+        description="補助金の終了や縮小で電気料金の見え方は変わります。終了6ヶ月前から終了後3ヶ月までのアクションタイムラインと、契約区分別の月額影響シミュレーションを整理します。"
+        url="https://simulator.eic-jp.org/should-you-review-around-subsidy-end"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "補助金終了・縮小の前後で電力契約は見直すべきか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 flex flex-wrap items-center gap-1 text-xs text-slate-500">
@@ -284,5 +296,6 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
         />
       </div>
     </main>
+    </>
   );
 }

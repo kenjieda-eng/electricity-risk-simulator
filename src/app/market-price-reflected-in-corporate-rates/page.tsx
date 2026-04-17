@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "市場価格が法人料金に反映される仕組み｜JEPXから請求書までの流れ";
@@ -97,6 +98,17 @@ const marketLinkageTypes = [
 
 export default function MarketPriceReflectedInCorporateRatesPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="市場価格が法人料金に反映される仕組み｜JEPXから請求書までの流れ"
+        description="日本卸電力取引所（JEPX）の市場価格が、どのような経路で法人向け電気料金に反映されるかを解説します。スポット市場から請求書の各項目まで、価格波及の仕組みを整理します。"
+        url="https://simulator.eic-jp.org/market-price-reflected-in-corporate-rates"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "市場価格が法人料金に反映される仕組み" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -315,5 +327,6 @@ export default function MarketPriceReflectedInCorporateRatesPage() {
         />
       </section>
     </main>
+    </>
   );
 }

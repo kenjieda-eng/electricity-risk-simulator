@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 
 const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
@@ -48,6 +49,17 @@ export const metadata: Metadata = {
 
 export default function HowToCompareElectricitySuppliersPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認"
+        description="新電力を比較するときに法人が確認したいポイントを解説。基本料金、電力量料金、燃料費調整額、市場連動型・固定型の違い、契約条件、リスクの見方まで整理します。"
+        url="https://simulator.eic-jp.org/how-to-compare-electricity-suppliers"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "新電力を比較するときのポイント" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -249,5 +261,6 @@ export default function HowToCompareElectricitySuppliersPage() {
         />
       </section>
     </main>
+    </>
   );
 }

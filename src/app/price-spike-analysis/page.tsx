@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { SpikeHourChart, SpikeMonthChart } from "../../components/market-data/SpikeAnalysisCharts";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   JEPX_FY_LABELS,
   JEPX_SPIKE_FY,
@@ -50,6 +51,17 @@ const fyTableData = JEPX_FY_LABELS.map((label, i) => ({
 // --- Page Component ---
 export default function PriceSpikeAnalysisPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="電力価格スパイクはいつ起きるか｜50円超の発生パターン分析"
+        description="JEPXスポット価格が50円/kWhを超える「スパイク」は年度・月・時間帯によって著しく偏在します。FY2020に749回、1月に777回集中、17〜18時がピークとなるメカニズムを徹底解説。法人電気料金の市場連動型リスクを定量的に把握するためのデータ分析。"
+        url="https://simulator.eic-jp.org/price-spike-analysis"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "電力価格スパイクはいつ起きるか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -386,5 +398,6 @@ export default function PriceSpikeAnalysisPage() {
         />
       </div>
     </main>
+    </>
   );
 }

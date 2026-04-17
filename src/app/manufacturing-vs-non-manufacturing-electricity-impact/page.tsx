@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
   "製造業と非製造業で電気料金推移の影響はどう出るか｜業種構造別の比較分析";
@@ -260,6 +261,17 @@ const SEVERITY_COLOR = {
 
 export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
   return (
+    <>
+      <ArticleJsonLd
+        headline="製造業と非製造業で電気料金推移の影響はどう出るか｜業種構造別の比較分析"
+        description="製造業と非製造業で電気料金高騰の影響がどう異なるかを比較。電力原単位、売上高比率、価格転嫁のしやすさの違いを整理。"
+        url="https://simulator.eic-jp.org/manufacturing-vs-non-manufacturing-electricity-impact"
+        datePublished="2026-04-17"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "製造業と非製造業で電気料金推移の影響はどう出るか" },
+        ]}
+      />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -614,5 +626,6 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
         />
       </div>
     </main>
+    </>
   );
 }
