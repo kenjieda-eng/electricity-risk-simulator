@@ -16,16 +16,20 @@ const primaryPageLinks = [
   { href: "/special/emergency-scenario-analysis", label: "有事シナリオ分析 特集" },
 ] as const;
 
-// --- 解説カテゴリ（学習系 + 業種ハブ） ---
-const categoryLinks = [
+// --- 解説カテゴリ：仕組み・基礎系 ---
+const categoryBasicsLinks = [
   { href: "/articles/basic", label: "基礎から知る" },
   { href: "/articles/price-increase", label: "料金が上がる理由を知る" },
   { href: "/articles/price-trends", label: "電気料金の推移と高止まり" },
   { href: "/articles/plan-types", label: "契約メニューの違いを知る" },
-  { href: "/articles/review-points", label: "見直しポイントを知る" },
+  { href: "/articles/power-procurement", label: "電力調達の仕組みを知る" },
   { href: "/articles/last-resort-supply", label: "最終保障供給を知る" },
   { href: "/articles/risk-scenarios", label: "リスクシナリオ別に知る" },
-  { href: "/articles/power-procurement", label: "電力調達の仕組みを知る" },
+  { href: "/articles/review-points", label: "見直しポイントを知る" },
+] as const;
+
+// --- 解説カテゴリ：実務・属性別 ---
+const categoryPracticeLinks = [
   { href: "/articles/by-industry", label: "業種別に知る" },
   { href: "/articles/industry-guide", label: "業種別の見直しポイント集" },
   { href: "/articles/energy-equipment", label: "蓄電池・太陽光・DRを知る" },
@@ -76,7 +80,7 @@ const retrospectiveDataLinks = [
   { href: "/electricity-price-trend-2019-2025", label: "2019〜2025年の電気料金推移" },
 ] as const;
 
-// --- 特集：有事シナリオ分析 ---
+// --- 特集記事 ---
 const specialFeatureLinks = [
   { href: "/special/emergency-scenario-analysis", label: "法人電気代の3シナリオ比較" },
   { href: "/special/oil-scenario-analysis", label: "原油高・物流コストのシナリオ分析" },
@@ -86,8 +90,9 @@ const specialFeatureLinks = [
   { href: "/special/food-procurement-scenario-analysis", label: "食料品仕入コストのシナリオ分析" },
 ] as const;
 
-// --- 業種別サブカテゴリ ---
+// --- 業種別サブカテゴリ（親リンクを先頭に） ---
 const industrySubLinks = [
+  { href: "/articles/by-industry", label: "業種別ハブ（すべて見る）" },
   { href: "/articles/by-industry/office-public", label: "業務・公共系" },
   { href: "/articles/by-industry/commercial", label: "商業系" },
   { href: "/articles/by-industry/hotel-leisure", label: "宿泊・レジャー系" },
@@ -99,6 +104,7 @@ const industrySubLinks = [
 ] as const;
 
 const blockHeadingClass = "text-sm font-semibold tracking-wide text-sky-950";
+const subHeadingClass = "text-xs font-semibold uppercase tracking-wider text-sky-900/70";
 const linkClass = "text-sm leading-snug text-sky-900/80 transition hover:text-sky-950 hover:underline";
 
 export function Footer() {
@@ -120,7 +126,7 @@ export function Footer() {
           <p className="mt-2 text-sm leading-relaxed text-sky-900/80">{siteDescription}</p>
         </section>
 
-        {/* メインリンクブロック */}
+        {/* メインリンクブロック（8ブロックを xl 4列×2行で均等配置） */}
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6 2xl:gap-8">
           <nav aria-labelledby="footer-primary-pages">
             <h3 id="footer-primary-pages" className={blockHeadingClass}>
@@ -137,12 +143,23 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-labelledby="footer-category-links" className="sm:col-span-2">
+          <nav aria-labelledby="footer-category-links">
             <h3 id="footer-category-links" className={blockHeadingClass}>
               解説カテゴリから探す
             </h3>
-            <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 sm:mt-4 sm:gap-y-2.5">
-              {categoryLinks.map((link) => (
+            <h4 className={`${subHeadingClass} mt-3 sm:mt-4`}>仕組み・基礎</h4>
+            <ul className="mt-2 space-y-2 sm:space-y-2.5">
+              {categoryBasicsLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className={`${subHeadingClass} mt-5`}>実務・属性別</h4>
+            <ul className="mt-2 space-y-2 sm:space-y-2.5">
+              {categoryPracticeLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className={linkClass}>
                     {link.label}
@@ -152,7 +169,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-labelledby="footer-popular-basic" className="sm:col-span-2 lg:col-span-1">
+          <nav aria-labelledby="footer-popular-basic">
             <h3 id="footer-popular-basic" className={blockHeadingClass}>
               よく読まれる基礎記事
             </h3>
@@ -199,7 +216,7 @@ export function Footer() {
 
           <nav aria-labelledby="footer-special-feature">
             <h3 id="footer-special-feature" className={blockHeadingClass}>
-              特集：有事シナリオ分析
+              特集記事
             </h3>
             <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
               {specialFeatureLinks.map((link) => (
@@ -248,11 +265,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/articles" className={linkClass}>
-                  解説ページ一覧
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://eic-jp.org/"
                   target="_blank"
@@ -260,14 +272,6 @@ export function Footer() {
                   className={linkClass}
                 >
                   運営：一般社団法人エネルギー情報センター
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://simulator.eic-jp.org"
-                  className={linkClass}
-                >
-                  https://simulator.eic-jp.org
                 </a>
               </li>
             </ul>
