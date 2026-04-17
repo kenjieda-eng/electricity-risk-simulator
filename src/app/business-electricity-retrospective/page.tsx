@@ -176,26 +176,40 @@ export default function BusinessElectricityRetrospectivePage() {
           2022年のウクライナ危機が法人電気料金に与えた影響を、起点・波及・実務対応の流れで整理した特集です。
           2026年3月のホルムズ海峡封鎖を踏まえ、過去のショックを今どう読み直すかも扱います。
         </p>
-        <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
-          <h3 className="text-sm font-semibold text-slate-900 sm:text-base">検証特集の全ページ</h3>
-          <ul className="mt-2 space-y-2 text-sm leading-7 text-slate-700">
-            {UKRAINE_SHOCK_FEATURE_ITEMS.map((item) => (
-              <li key={`all-ukraine-${item.href}`} className="flex items-center gap-3">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {UKRAINE_SHOCK_FEATURE_ITEMS.map((item) => (
+            <article
+              key={`all-ukraine-${item.href}`}
+              className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4"
+            >
+              <div className="flex items-start gap-3">
                 {item.iconSrc ? (
-                  <Image src={item.iconSrc} alt={item.iconAlt ?? ""} width={36} height={36} className="h-9 w-9 shrink-0" />
-                ) : null}
-                <div className="flex min-w-0 items-baseline gap-2">
-                  <Link href={item.href} className="shrink-0 underline-offset-2 hover:underline">
+                  <Image
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 shrink-0"
+                  />
+                ) : (
+                  <div className="h-10 w-10 shrink-0" aria-hidden="true" />
+                )}
+                <h3 className="text-base font-semibold leading-7 text-slate-900 sm:text-lg">
+                  <Link href={item.href} className="underline-offset-2 hover:underline">
                     {item.title}
                   </Link>
-                  <span className="shrink-0 text-slate-400" aria-hidden="true">
-                    -
-                  </span>
-                  <p className="min-w-0 truncate text-slate-600">{item.description}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </h3>
+              </div>
+              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
+              <Link
+                href={item.href}
+                className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+              >
+                {item.ctaLabel}
+              </Link>
+            </article>
+          ))}
         </div>
       </section>
 
