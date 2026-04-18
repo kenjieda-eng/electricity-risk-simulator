@@ -1,0 +1,109 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const pageTitle = "グローバル企業の再エネ調達戦略｜国別の調達手段マッピング";
+const pageDescription =
+  "多国籍企業が各国拠点で再エネを調達する戦略と、国別制度の違いを整理します。";
+const pageUrl = "https://simulator.eic-jp.org/global-renewable-procurement-strategy";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "再エネ電力"],
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/twitter-default.png"],
+  },
+};
+
+export default function Page() {
+  return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-18"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
+          { name: "海外拠点・グローバルエネルギー", url: "https://simulator.eic-jp.org/articles/global-energy" },
+          { name: "グローバル企業の再エネ調達戦略" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles" className="underline-offset-2 hover:underline">解説ページ一覧</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles/global-energy" className="underline-offset-2 hover:underline">海外拠点・グローバルエネルギー</Link>
+          <span className="px-2">›</span>
+          <span className="text-slate-800">グローバル企業の再エネ調達戦略</span>
+        </nav>
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">グローバル企業の再エネ調達戦略｜国別の調達手段マッピング</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">多国籍企業が各国拠点で再エネを調達する戦略と、国別制度の違いを整理します。</p>
+        </header>
+
+        <section className="mt-6 space-y-6">
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">グローバル再エネ調達の全体像</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">多国籍企業がRE100やSBT目標を達成するには、各国拠点での再エネ調達が必要です。国により利用できる調達手段（再エネメニュー・PPA・証書）と制度的成熟度が大きく異なり、グローバル戦略は国別の調達手段マッピングから始まります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">主要国では米国・欧州がPPA中心、日本は非化石証書とPPAの併用、中国は新興市場の形成中、東南アジアは制度整備の途上です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">国別調達手段の代表例</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">米国：バーチャルPPA・フィジカルPPAが主流、REC（再エネ証書）市場も活発。欧州：PPA・Guarantees of Origin（GO）・電力メニューの組み合わせ。日本：非化石証書・コーポレートPPA・再エネメニュー。中国：Green Energy Certificates（GEC）市場の拡大。東南アジア：国別制度整備の途上、現地PPA・証書を組み合わせ。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">国により価格レベル・契約期間・財務的扱いが異なるため、グループ全体の目標達成では国別にポートフォリオを組むアプローチが主流です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">戦略設計のポイント</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①グローバル目標から各国配分、②各国の調達手段・単価・制度の棚卸し、③コスト最小・リスク分散のポートフォリオ設計、④定期的なレビュー、のサイクルで戦略を運用します。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グローバル調達は、本社サステナビリティチーム主導で進めるのが効果的です。</p>
+          </section>
+        </section>
+
+        <div className="mt-8">
+          <RelatedLinks
+            heading="関連ページ"
+            links={[
+              { href: "/articles/global-energy", title: "海外拠点・グローバルエネルギー", description: "このカテゴリの記事一覧を見る" },
+              { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
+              { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+            ]}
+          />
+        </div>
+
+        <div className="mt-6">
+          <ContentCta
+            heading="次にすること"
+            description="このテーマの理解を深めたら、シミュレーターで自社の電気料金リスクを確認しましょう。"
+            links={[
+              { href: "/", label: "シミュレーターで診断する" },
+              { href: "/articles/global-energy", label: "海外拠点・グローバルエネルギーの他の記事を読む" },
+            ]}
+          />
+        </div>
+      </main>
+    </>
+  );
+}

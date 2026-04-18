@@ -3310,4 +3310,474 @@ export const articleList: ArticleMeta[] = [
     order: 3,
     publishedAt: "2026-04-17",
   },
+  {
+    title: "GX-ETS（排出量取引制度）が法人電気料金に与える影響｜2026年本格稼働の負担試算",
+    slug: "gx-ets-impact-business-electricity",
+    description:
+      "GX-ETSの本格稼働が電力会社と法人の電気料金に波及する仕組みを整理し、負担増の試算と備え方を解説します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "CDP質問書の電力関連回答の書き方｜Scope2と再エネ調達の開示項目",
+    slug: "cdp-questionnaire-electricity-response",
+    description:
+      "CDP質問書で問われる電力関連項目（Scope2排出量・再エネ調達・追加性・トラッキング）の回答設計と推奨エビデンスを整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "SBT（Science Based Targets）認定と電力調達計画｜削減目標と再エネ移行ロードマップ",
+    slug: "sbt-certification-electricity-plan",
+    description:
+      "SBT認定の要件と、電力調達に関わる目標設定・ロードマップ策定の実務を整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "非化石証書の種類と購入方法｜FIT非化石・非FIT非化石・再エネ指定の違い",
+    slug: "non-fossil-certificate-types-purchase",
+    description:
+      "非化石証書の3分類と購入手段を整理し、トラッキング情報の扱いやScope2反映の実務を解説します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "GHGプロトコルとScope2マーケット基準の実務｜算定範囲と再エネ証書の適用ルール",
+    slug: "ghg-protocol-scope2-market-based",
+    description:
+      "GHGプロトコルScope2ガイダンスに基づくマーケット基準算定のルールと、証書・PPA・メニューの反映方法を整理します。",
+    category: "脱炭素・GX対応",
+    categorySlug: "decarbonization",
+    order: 8,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "PPA価格の相場と交渉ポイント｜2026年時点の円/kWh水準",
+    slug: "ppa-price-benchmark-2026",
+    description:
+      "コーポレートPPAの単価相場、固定・市場連動の組み合わせ方、交渉で押さえるべき論点を整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "中小企業でも使えるPPAメニュー｜小規模向けアグリゲーションPPAの仕組み",
+    slug: "sme-accessible-ppa-options",
+    description:
+      "従来は大企業向けだったPPAを、中小企業が使えるようにしたアグリゲーション型や小規模向けメニューを整理します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "PPAと自家消費太陽光の比較｜設置形態・資金調達・所有権の違い",
+    slug: "ppa-vs-self-consumption-solar",
+    description:
+      "自社資金で太陽光を設置する「自家消費」と第三者所有の「オンサイトPPA」の違いを、コスト・税務・責任分担で比較します。",
+    category: "コーポレートPPA",
+    categorySlug: "corporate-ppa",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "デマンド監視装置の選び方｜単機能・クラウド連携・警報システムの比較",
+    slug: "demand-monitoring-device-selection",
+    description:
+      "契約電力の超過防止に使うデマンド監視装置の種類と、規模別の選び方を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電力データAPIとBIツール連携｜エネルギーダッシュボード構築手順",
+    slug: "electricity-data-api-bi-integration",
+    description:
+      "電力使用データをBIツール（Power BI・Tableau・Lookerなど）で可視化し、経営層が使えるダッシュボードを構築する手順を整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "エネルギーマネジメント導入のROI試算｜投資回収年数の目安",
+    slug: "energy-management-roi-calculation",
+    description:
+      "BEMS/FEMS/EMSの導入投資額と年間削減額から、投資回収年数（ROI）を試算する方法を解説します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "省エネ法定期報告の自動化｜システム活用による工数削減",
+    slug: "energy-saving-act-reporting-automation",
+    description:
+      "省エネ法の定期報告書作成を電力データ連携で自動化し、担当者の工数を削減する仕組みを整理します。",
+    category: "エネルギーマネジメント・DX",
+    categorySlug: "energy-dx",
+    order: 8,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "需給ひっ迫警報時の法人の対応手順｜節電要請レベル別アクション",
+    slug: "power-supply-emergency-response-procedure",
+    description:
+      "電力需給ひっ迫注意報・警報の発令時に、法人が取るべき段階的な節電アクションを整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "停電時の損失試算と投資判断｜業種別の時間当たり損失額",
+    slug: "outage-loss-simulation-by-industry",
+    description:
+      "停電が発生した場合の売上損失・追加費用を業種別に試算し、BCP投資の判断材料にする方法を整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "BCP訓練シナリオ（電力編）｜社内演習の進め方",
+    slug: "bcp-drill-scenario-for-electricity",
+    description:
+      "電力停止を想定したBCP訓練シナリオの設計と、演習実施の手順を整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "蓄電池のBCP活用と経済性｜ピークカット兼用のハイブリッド運用",
+    slug: "battery-storage-bcp-peak-cut-hybrid",
+    description:
+      "蓄電池をBCP備蓄と平常時のピークカットで併用するハイブリッド運用と、投資回収の考え方を整理します。",
+    category: "電力BCP・災害対策",
+    categorySlug: "energy-bcp",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "小規模店舗の電気代月別推移の読み方｜季節変動と異常検知",
+    slug: "small-store-monthly-electricity-trend",
+    description:
+      "小規模店舗の電気代を月別・前年同月比で可視化し、異常値・改善余地を見つける方法を整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "テナント契約と電気代の関係｜サブメーター・按分の扱い",
+    slug: "tenant-sub-meter-electricity-billing",
+    description:
+      "複数テナントが入居するビル・商業施設で、電気代をどう按分・請求するかのルールと実務を整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "個人事業主・SOHOの電気代経費計上｜家事按分と税務処理",
+    slug: "soho-sole-proprietor-electricity-tax",
+    description:
+      "自宅兼事務所の個人事業主が、電気代を事業経費として計上する際の家事按分の考え方と根拠資料を整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電気代の部門別・製品別配賦方法｜ABC原価計算の実務",
+    slug: "electricity-cost-abc-allocation",
+    description:
+      "電気代を製造原価・部門別に配賦し、正確な製品原価を把握するためのABC（活動基準原価計算）の考え方を整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "省エネ税制・中小企業経営強化税制｜電力関連設備の優遇一覧",
+    slug: "energy-saving-tax-incentives",
+    description:
+      "省エネ設備・蓄電池・太陽光・EV充電設備などへの税制優遇制度を一覧で整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電気代値上げ時の価格転嫁と下請法｜適正転嫁のための記録方法",
+    slug: "electricity-price-pass-through-legal",
+    description:
+      "電気代などのコスト上昇を取引先に価格転嫁する際の下請法対応と、適正転嫁の記録方法を整理します。",
+    category: "電気代の経理・税務",
+    categorySlug: "accounting-tax",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "再エネ関連用語集｜FIT・FIP・非化石証書・RE100・J-クレジット",
+    slug: "renewable-energy-glossary",
+    description:
+      "再生可能エネルギー関連の主要用語を意味・計算・関連制度とともに整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "需給・計画値関連用語集｜インバランス・計画値同時同量・ゲートクローズ",
+    slug: "supply-demand-planning-glossary",
+    description:
+      "電力需給管理に関わる用語を、小売電気事業者・需要家の視点で整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "料金制度関連用語集｜燃料費調整額・再エネ賦課金・託送料金・容量拠出金",
+    slug: "rate-structure-glossary",
+    description:
+      "法人電気料金の請求書に登場する制度用語を、計算式と推移データと合わせて整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "最終保障供給に関するFAQ｜申込・料金・期間の疑問まとめ",
+    slug: "last-resort-supply-faq",
+    description:
+      "最終保障供給について検索されやすい質問を、結論から先に整理したFAQページです。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電気代の値上げ通知が来たときのFAQ｜確認・交渉・切替の流れ",
+    slug: "electricity-price-increase-notice-faq",
+    description:
+      "電力会社から値上げ通知が届いた際の、確認事項・交渉可否・他社への切替手順をFAQ形式で整理します。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "契約期間中の解約・違約金FAQ｜中途解約条項の読み方",
+    slug: "mid-term-cancellation-penalty-faq",
+    description:
+      "電力契約の契約期間中に解約する場合の違約金・精算金の扱いについて、よくある質問を整理します。",
+    category: "FAQ集（よくある質問）",
+    categorySlug: "faq",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "需給調整市場の制度変遷｜2021年〜2024年の段階的開設",
+    slug: "supply-demand-adjustment-market-timeline",
+    description:
+      "需給調整市場の開設タイムラインと、法人電気料金への波及を時系列で整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "託送料金制度改革タイムライン｜レベニューキャップ導入の影響",
+    slug: "wheeling-charge-revenue-cap-timeline",
+    description:
+      "託送料金制度のレベニューキャップへの移行と、法人電気料金への影響を時系列で整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "省エネ法改正の時系列｜非化石エネルギー転換義務化の流れ",
+    slug: "energy-saving-act-revision-timeline",
+    description:
+      "省エネ法改正のタイムラインと、法人に課される非化石エネルギー転換義務について整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "GX推進法・GX-ETS導入ロードマップ｜2023年成立〜2026年本格稼働",
+    slug: "gx-promotion-act-roadmap",
+    description:
+      "GX推進法・GX-ETS制度の時系列と、法人への影響を段階別に整理します。",
+    category: "制度改正タイムライン",
+    categorySlug: "regulation-timeline",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "V2H・V2B（車両から建物への給電）の仕組み｜BCP兼用のEV活用",
+    slug: "v2h-v2b-explained",
+    description:
+      "電気自動車（EV）を蓄電池として活用するV2H・V2Bの仕組み、法人でのBCP活用と経済性を整理します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "EV充電の深夜電力活用とTOU料金｜時間帯別単価の最適化",
+    slug: "ev-charging-off-peak-tou",
+    description:
+      "EV充電を時間帯別料金（TOU）の安い時間に集中させて電気代を削減する手法と、必要な設備を整理します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "EV充電の従量課金・サブスク比較｜従業員向け課金の方法",
+    slug: "ev-charging-employee-billing",
+    description:
+      "社内EV充電設備を従業員に開放する際の、従量課金・サブスク・無料供与の各選択肢と法務・税務整理を解説します。",
+    category: "EV・充電インフラ",
+    categorySlug: "ev-charging",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "料金改定条項の典型と読み方｜事前通知期間・異議申立の扱い",
+    slug: "price-revision-clause-reading",
+    description:
+      "電力契約の料金改定条項の典型パターンと、需要家側が確認すべき項目を整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "違約金・精算金条項の計算方法｜残存契約期間と違約金の関係",
+    slug: "penalty-clause-calculation",
+    description:
+      "電力契約の違約金条項の典型計算式と、交渉・免除の余地について整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "供給地点特定番号と契約変更時の扱い｜切替時の手続き論点",
+    slug: "supply-point-identification-number",
+    description:
+      "供給地点特定番号の意味と、契約切替・引越時の手続きで注意すべきポイントを整理します。",
+    category: "契約書・約款の読み方",
+    categorySlug: "contract-legal",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "事業譲渡時の電力契約名義変更手順｜譲渡日前後のリスク管理",
+    slug: "business-transfer-name-change-procedure",
+    description:
+      "事業譲渡のタイミングで電力契約をどう引き継ぐか、名義変更の具体的な手続きとリスクを整理します。",
+    category: "M&A・組織再編時の電力契約",
+    categorySlug: "ma-organizational-change",
+    order: 3,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "グループ会社統合時の電力契約最適化｜高圧一括契約化のメリット",
+    slug: "group-electricity-consolidation",
+    description:
+      "グループ会社統合時に、個別契約から一括契約に集約することでの電力コスト削減と運用効率化を整理します。",
+    category: "M&A・組織再編時の電力契約",
+    categorySlug: "ma-organizational-change",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "持株会社化に伴う電力契約の見直し｜デマンド合算の可否",
+    slug: "holding-company-electricity-review",
+    description:
+      "持株会社化（純粋持株会社・事業持株会社）で電力契約をどう再設計するか、契約単位とデマンド合算の論点を整理します。",
+    category: "M&A・組織再編時の電力契約",
+    categorySlug: "ma-organizational-change",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "グローバル企業の再エネ調達戦略｜国別の調達手段マッピング",
+    slug: "global-renewable-procurement-strategy",
+    description:
+      "多国籍企業が各国拠点で再エネを調達する戦略と、国別制度の違いを整理します。",
+    category: "海外拠点・グローバルエネルギー",
+    categorySlug: "global-energy",
+    order: 3,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "中国・東南アジア拠点の電力事情と再エネ調達｜現地PPA・証書制度",
+    slug: "china-southeast-asia-electricity-procurement",
+    description:
+      "中国・東南アジア主要国の電力事情と、現地拠点での再エネ調達手段を整理します。",
+    category: "海外拠点・グローバルエネルギー",
+    categorySlug: "global-energy",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "欧州電力危機の教訓と日本への示唆｜2022年〜の価格変動分析",
+    slug: "europe-energy-crisis-lessons",
+    description:
+      "2022年ロシア・ウクライナ戦争を契機とした欧州電力危機の経緯と、日本企業にとっての教訓を整理します。",
+    category: "海外拠点・グローバルエネルギー",
+    categorySlug: "global-energy",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "AI需要による2030年電力需要予測｜経産省・IEA予測の読み方",
+    slug: "ai-demand-2030-forecast",
+    description:
+      "生成AI・クラウド需要による電力需要の2030年予測と、法人電気料金への波及可能性を整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 4,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "データセンター立地と送電網制約｜系統空き容量の確認方法",
+    slug: "datacenter-location-grid-constraints",
+    description:
+      "データセンター新設時に直面する送電網制約と、系統空き容量の確認プロセスを整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 5,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "ハイパースケーラーの再エネ100%調達の実務｜AWS・GCP・Azureの事例",
+    slug: "hyperscaler-renewable-100-practice",
+    description:
+      "AWS・Google Cloud・Microsoft Azureなどハイパースケーラーの再エネ調達戦略と、法人顧客への示唆を整理します。",
+    category: "データセンター・AI需要",
+    categorySlug: "datacenter-ai-demand",
+    order: 6,
+    publishedAt: "2026-04-18",
+  },
 ];
