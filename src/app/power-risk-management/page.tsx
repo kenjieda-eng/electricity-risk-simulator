@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
@@ -91,6 +92,7 @@ export default function PowerRiskManagementPage() {
         ]}
       faq={__CATEGORY_FAQ__}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">

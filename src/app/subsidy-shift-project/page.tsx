@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -119,6 +121,7 @@ export default function SubsidyShiftProjectPage() {
         ]}
       faq={__CATEGORY_FAQ__}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -127,6 +130,7 @@ export default function SubsidyShiftProjectPage() {
         <span className="px-2">›</span>
         <span className="text-slate-800">SHIFT事業と電力コスト戦略</span>
       </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
       {/* ヘッダー */}
       <header className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-emerald-700">SUBSIDY ／ 補助金・助成金</p>

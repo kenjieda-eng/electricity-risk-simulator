@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 
 // --- 定数 ---
@@ -120,6 +122,7 @@ export default function ContactPage() {
           { name: "お問い合わせ・ご相談受付" },
         ]}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">

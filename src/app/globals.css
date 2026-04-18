@@ -4,3 +4,58 @@ body {
   background: white;
   color: #1e293b;
 }
+
+/* 印刷用CSS - 担当者が記事をPDF化・印刷する想定 */
+@media print {
+  /* ページマージン */
+  @page {
+    margin: 1.5cm 1cm;
+  }
+  /* 配色: モノクロ寄り */
+  body {
+    background: white !important;
+    color: #1e293b !important;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+  /* ナビゲーション・CTA・計算機などは非表示 */
+  nav[aria-label="パンくず"],
+  header.sticky,
+  footer,
+  [data-print="hide"],
+  .calculator-widget,
+  button,
+  details > summary::after,
+  .reading-progress-bar {
+    display: none !important;
+  }
+  /* リンクは下線・URL表示 */
+  a {
+    color: #1e293b !important;
+    text-decoration: underline;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #64748b;
+  }
+  /* 改ページ制御 */
+  h1, h2, h3 { page-break-after: avoid; }
+  section, article { page-break-inside: avoid; }
+  /* 背景色枠は枠線で表現 */
+  .bg-sky-50, .bg-emerald-50, .bg-slate-50, .bg-amber-50, .bg-yellow-50, .bg-red-50, .bg-rose-50, .bg-pink-50, .bg-cyan-50, .bg-violet-50, .bg-purple-50, .bg-blue-50, .bg-orange-50, .bg-teal-50, .bg-lime-50, .bg-indigo-50, .bg-green-50 {
+    background: white !important;
+    border: 1px solid #cbd5e1;
+  }
+}
+
+/* Reading progress bar */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #0284c7, #10b981);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}

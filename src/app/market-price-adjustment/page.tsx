@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -67,6 +69,7 @@ export default function MarketPriceAdjustmentPage() {
         ]}
         faq={faq}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav className="mb-4 text-xs text-slate-500">
         <Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホーム</Link>
@@ -75,6 +78,7 @@ export default function MarketPriceAdjustmentPage() {
         <span className="mx-1">&gt;</span>
         <span>市場価格調整額とは</span>
       </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額とは</h1>
