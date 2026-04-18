@@ -82,6 +82,20 @@ const categoryDescriptions: Record<string, string> = {
   "risk-scenarios": "リスク要因別の上振れパターンと確認順を整理できます。",
   "power-procurement": "電力会社の仕入れ・調達構造を、JEPXから再エネ価値まで段階的に把握できます。",
   "for-executives": "経営層・CFO向けに、電気料金の財務インパクトや取締役会報告、ESG開示の論点を整理できます。",
+  decarbonization: "Scope2算定、RE100、非化石証書、GX-ETSなど脱炭素対応を整理します。",
+  "corporate-ppa": "オンサイト・オフサイト・バーチャルPPAの違いと契約・会計の論点を整理します。",
+  "energy-dx": "BEMS/FEMS/EMS、AI最適化、スマートメーターデータ活用を整理します。",
+  "energy-bcp": "停電・需給ひっ迫・新電力撤退時の電源確保と事業継続を整理します。",
+  "sme-guide": "低圧・小規模事業者向けに、限られた予算で成果を出す手順を整理します。",
+  "accounting-tax": "勘定科目・インボイス・蓄電池の減価償却など経理処理を整理します。",
+  glossary: "契約・市場・設備・制度の専門用語を分野別に整理した用語集です。",
+  faq: "「電気代なぜ高い」「契約見直し何から」など検索されやすい疑問のFAQ集です。",
+  "regulation-timeline": "電力自由化・容量市場・GX-ETSなど制度改正の時系列と影響を整理します。",
+  "ev-charging": "EV充電設備の契約区分、基本料金影響、補助金を整理します。",
+  "contract-legal": "電力契約書の主要条項、不可抗力、自動更新を法務視点で整理します。",
+  "ma-organizational-change": "合併・分社・事業譲渡時の電力契約承継と再契約手続きを整理します。",
+  "global-energy": "海外拠点の電気料金、エネルギー戦略、多国籍企業の脱炭素対応を整理します。",
+  "datacenter-ai-demand": "AI時代のデータセンター電力需要急増、立地、PUE最適化を整理します。",
 };
 
 const categoryIcons: Record<string, { src: string; alt: string }> = {
