@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
+
 
 const pageTitle =
   "ホテルの電気料金見直しポイント｜24時間稼働と客室管理を踏まえた考え方";
@@ -284,7 +290,11 @@ export default function HotelElectricityCostReviewPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <SourcesAndFaq
           faq={[
           { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },

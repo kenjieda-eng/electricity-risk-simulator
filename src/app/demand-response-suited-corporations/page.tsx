@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "DR活用が向く法人の特徴｜柔軟な需要調整ができる条件";
@@ -216,7 +222,11 @@ export default function DemandResponseSuitedCorporationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             業種・施設別の傾向
           </h2>
-          <div className="mt-4 overflow-x-auto">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
               <thead>
                 <tr className="bg-slate-50 text-slate-900">

@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "最終保障供給リスク診断｜自社が最終保障供給になるリスクを確認";
@@ -161,6 +167,10 @@ export default function LastResortSupplyRiskDiagnosisPage() {
             ))}
           </div>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <section className="rounded-xl border border-red-100 bg-red-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">最終保障供給に移行してしまった場合の対応</h2>
@@ -173,8 +183,7 @@ export default function LastResortSupplyRiskDiagnosisPage() {
               { step: 2, text: "供給地点特定番号・使用量データを整理し、見積依頼の準備を行う" },
               { step: 3, text: "複数の電力会社に見積を依頼し、早急に切替先を決定する" },
               { step: 4, text: "切替手続きを開始する（通常1〜2か月程度の手続き期間が必要）" },
-            ].map(({ step, text }) => (
-              <div key={step} className="flex items-start gap-4">
+            ].map(({ step, text }) => (<div key={step} className="flex items-start gap-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-100 text-sm font-bold text-red-700">
                   {step}
                 </span>

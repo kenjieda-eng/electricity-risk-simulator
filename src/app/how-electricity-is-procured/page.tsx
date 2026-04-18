@@ -5,7 +5,14 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import ProcurementMixCalculator from "../../components/market-data/ProcurementMixCalculator";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "電気はどこから来るのか｜電力会社の仕入れの全体像";
 const pageDescription =
@@ -93,6 +100,7 @@ export default function HowElectricityIsProcuredPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "電気はどこから来るのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -168,7 +176,12 @@ export default function HowElectricityIsProcuredPage() {
             需要は日々ずれ、発電設備は止まることもあり、市場価格は短期間で大きく動くことがあります。どれか一つの調達手段に寄せると、
             その手段の弱みがそのまま経営リスクになりやすくなります。だからこそ、調達の現場では手段ごとの役割を分けて組み合わせます。
           </p>
-          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+          
+      <ProcurementMixCalculator />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 grid gap-4 lg:grid-cols-3">
             <InfoBox title="数量確保">
               ベース需要をどこで押さえるか、直前の不足をどう埋めるかを分けて考えると、調達構造が見えやすくなります。
             </InfoBox>

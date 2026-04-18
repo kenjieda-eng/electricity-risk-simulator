@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック";
@@ -148,7 +154,11 @@ export default function SelfDiagnosisContractReviewPage() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="flex items-start gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
                 3
               </span>

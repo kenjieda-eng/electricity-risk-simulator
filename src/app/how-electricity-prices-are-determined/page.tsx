@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JepxYearlySystemPriceChart from "../../components/articles/JepxYearlySystemPriceChart";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
@@ -195,7 +196,10 @@ export default function HowElectricityPricesAreDeterminedPage() {
             下のグラフは、JEPXスポット市場のシステムプライス年度平均の推移です。短期高騰の山谷をそのまま示すものではありませんが、
             2021年以降に価格変動が大きくなったことや、2022年度の高止まりが市場環境に与えた影響を読み取る補助線になります。
           </p>
-          <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
             <JepxYearlySystemPriceChart data={JEPX_SYSTEM_PRICE_YEARLY} />
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500">

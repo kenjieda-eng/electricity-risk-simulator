@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { LAST_RESORT_SUPPLY_MONTHLY } from "../../data/lastResortSupplyHistory";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -169,7 +170,10 @@ export default function LastResortSupplyPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">最終保障供給シリーズの関連ページ</h2>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-3 grid gap-2 md:grid-cols-2">
             <Link href="/last-resort-supply-history" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">
               <span className="font-semibold text-slate-900">最終保障供給の件数推移と2022年急増の詳細</span>
             </Link>

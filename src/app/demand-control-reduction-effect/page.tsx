@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { LOAD_FACTOR_FY, DEMAND_FY_TREND } from "../../data/demandData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["benchmarks"];
+
 
 const pageTitle = "デマンドコントロールの削減効果｜基本料金を下げる仕組み";
 const pageDescription =
@@ -99,6 +105,7 @@ export default function DemandControlReductionEffectPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "デマンドコントロールの削減効果" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -385,7 +392,11 @@ export default function DemandControlReductionEffectPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

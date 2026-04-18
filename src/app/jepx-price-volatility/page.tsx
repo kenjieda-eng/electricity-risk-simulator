@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -253,7 +254,10 @@ export default function JepxPriceVolatilityPage() {
             FY2020は749コマ（全体の4.3%）で50円超のスパイクが発生し、最高値は251円に達しました。
             <strong className="text-red-700">FY2024以降はスパイク発生ゼロ</strong>となっており、市場は安定化傾向が続いています。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
                 <tr>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -308,7 +309,10 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           <div className="mt-4 space-y-3">
             {checklistItems.map((item, index) => (
               <div key={index} className="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
+                
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
                   {index + 1}
                 </div>
                 <div>

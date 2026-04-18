@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "商業施設で蓄電池を検討するときの着眼点｜ピーク負荷と営業への影響";
@@ -95,6 +101,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "商業施設で蓄電池を検討するときの着眼点" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -208,7 +215,11 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
                 <li>両者を合算した年間削減額を確認する</li>
               </ul>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">コストの把握</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                 <li>蓄電池本体・工事費の初期投資額</li>

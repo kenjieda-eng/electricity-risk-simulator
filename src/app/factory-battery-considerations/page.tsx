@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "工場で蓄電池を検討するときの着眼点｜生産ラインとの両立";
@@ -230,7 +236,11 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             工場での蓄電池導入の経済効果は、電気料金削減だけでなく停電損失の回避価値も含めて評価することが重要です。
           </p>
-          <div className="mt-4 space-y-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 space-y-4">
             {economicsForFactory.map((item) => (
               <div
                 key={item.item}

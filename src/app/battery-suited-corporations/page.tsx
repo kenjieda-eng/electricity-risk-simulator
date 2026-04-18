@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "蓄電池導入が向く法人の特徴｜投資対効果が出やすい条件";
@@ -218,7 +224,11 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種・施設の特性によって蓄電池の向き不向きに傾向があります。ただし個々の事業者の電力使用状況が実際の効果を左右するため、あくまで参考として把握することが重要です。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
               <thead>
                 <tr className="bg-slate-50 text-slate-900">

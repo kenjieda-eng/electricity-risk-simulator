@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
+
 
 const pageTitle = "電気代高騰と補正予算の組み方｜議会説明のポイント";
 const pageDescription =
@@ -141,6 +147,7 @@ export default function MunicipalitySupplementaryBudgetPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "電気代高騰と補正予算の組み方" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -313,7 +320,11 @@ export default function MunicipalitySupplementaryBudgetPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

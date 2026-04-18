@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import SolarPpaCalculator from "../../components/market-data/SolarPpaCalculator";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "倉庫で蓄電池を検討するときの着眼点｜屋根面積と太陽光の組み合わせ";
@@ -298,7 +305,12 @@ export default function WarehouseBatteryConsiderationsPage() {
                 既存のキュービクル・受電設備の容量・接続可能な系統側条件を確認します。大規模な太陽光設置は電力会社への系統接続申請（連系申請）が必要です。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <SolarPpaCalculator />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">補助金・税制の確認</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 国・自治体の<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>（省エネ支援・再エネ導入支援等）や中小企業向け税制優遇（即時償却・税額控除）の活用可能性を確認します。

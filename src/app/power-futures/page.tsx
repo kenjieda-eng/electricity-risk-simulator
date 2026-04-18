@@ -5,7 +5,13 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "先物取引とは何か｜将来の価格を先に固定する仕組み";
 const pageDescription =
@@ -75,6 +81,7 @@ export default function PowerFuturesPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "先物取引とは何か" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -139,7 +146,11 @@ export default function PowerFuturesPage() {
             電力市場は、需給逼迫や燃料高騰が重なると価格が急変します。販売先に対して一定の価格設計を持つ小売会社にとっては、
             将来の仕入れコストが読めないこと自体がリスクになります。先物は、この「先の価格の不確実性」を抑える発想です。
           </p>
-          <div className="mt-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4">
             <FlowDiagram
               heading="価格変動に備える考え方"
               steps={[

@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "DRは電気料金対策としてどう考えるか｜需要抑制の仕組みと参加メリット";
@@ -134,6 +140,7 @@ export default function DemandResponseCostBenefitPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "DRは電気料金対策としてどう考えるか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -351,7 +358,11 @@ export default function DemandResponseCostBenefitPage() {
                 自家消費太陽光で昼間の需要を削減しつつ、夕方の高値時間帯にDRで追加削減するという組み合わせが電力コスト最適化に有効です。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンド管理との組み合わせ</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 通常時のデマンド管理（ピーク抑制）と非常時のDR参加を一体的に管理することで、基本料金削減とDRインセンティブを両立できます。

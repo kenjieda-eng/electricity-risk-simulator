@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "契約見直しと設備対策をどう組み合わせるか｜両面からのコスト最適化";
@@ -183,14 +189,17 @@ export default function ContractReviewAndEquipmentCombinationPage() {
             </table>
           </div>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
             組み合わせパターンと考え方
           </h2>
           <div className="mt-4 space-y-4">
-            {combinations.map((item) => (
-              <div key={item.heading}>
+            {combinations.map((item) => (<div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
                   {item.content}

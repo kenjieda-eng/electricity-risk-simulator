@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -193,7 +194,10 @@ export default function LastResortSupplyTermsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             条文を最初から読むより、以下の7項目を絞って確認する方が実務的です。見落とすと予算超過や手続き漏れにつながるリスクがあります。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
                 <tr>

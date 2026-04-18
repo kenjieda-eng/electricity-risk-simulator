@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
+
 
 const pageTitle =
   "契約見直しの社内合意を進める順番｜関係者の巻き込み方と段取り";
@@ -313,7 +319,11 @@ export default function InternalConsensusBuildingOrderPage() {
               <p className="text-sm font-semibold text-slate-900">稟議が差し戻される</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">差し戻し理由を確認し、数値根拠・リスク対処・比較の合理性を追記して再提出する。事前説明で大筋の合意を得ておくことで差し戻しを減らせる。</p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">タイミングを逃す</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">契約更新タイミングを逃した場合は次の更新まで待つか、中途解約の可否と条件を確認する。次回に向けて半年前からスタートするスケジュールを設定する。</p>
             </div>

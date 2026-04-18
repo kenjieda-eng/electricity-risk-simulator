@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PowerProcurementSeriesNav from "../../components/articles/PowerProcurementSeriesNav";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import FlowDiagram from "../../components/simulator/FlowDiagram";
@@ -230,7 +231,10 @@ export default function JepxExplainedPage() {
             FY2010の31万kWh/コマから<strong>50倍超</strong>に成長しており、電力小売自由化以降、JEPXの約定量は急増し、
             市場の流動性と価格発見機能が大幅に向上しました。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
                 <tr>

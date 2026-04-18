@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
+
 
 const pageTitle =
   "経営層向けに電力契約見直しを説明するときのポイント｜コストとリスクの伝え方";
@@ -272,7 +278,11 @@ export default function ExplainingToExecutivesPage() {
               <p className="text-sm font-semibold text-slate-900">「なぜ今なのか？」</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">現行契約の更新時期が○月であり、この時期を逃すと次の見直し機会まで○年待つことになります。また電力コストの上昇傾向が続く中で、対応が遅れるほどコスト増を受け続けることになります。</p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">「見直したら上がることはないか？」</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">固定プランを選択することで価格変動リスクを抑えることができます。また複数の見積を比較して、現行より確実に低い条件のものを選定する方針で進める予定です。</p>
             </div>

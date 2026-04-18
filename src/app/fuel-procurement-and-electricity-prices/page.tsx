@@ -6,7 +6,13 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "燃料調達と電力調達はどうつながっているのか｜LNG・石炭・原油価格の影響";
 const pageDescription =
@@ -70,6 +76,7 @@ export default function FuelProcurementAndElectricityPricesPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "燃料調達と電力調達はどうつながっているのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -140,7 +147,11 @@ export default function FuelProcurementAndElectricityPricesPage() {
             実務では、燃料が高いかどうかだけでなく、必要なタイミングで確保しやすいかも重要です。LNG在庫が低い、輸送が滞る、
             特定地域の供給不安が高まるといった状況では、価格以上に「使える電源が減る」ことが問題になることがあります。
           </p>
-          <div className="mt-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4">
             <FlowDiagram
               heading="燃料高・燃料制約が電力調達へ波及する流れ"
               steps={[

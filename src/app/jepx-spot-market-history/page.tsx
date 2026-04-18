@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -265,7 +266,10 @@ export default function JepxSpotMarketHistoryPage() {
               return (
                 <div key={row.fy} className="flex items-center gap-2 text-xs text-slate-700">
                   <span className="w-16 shrink-0 text-right font-medium">{row.fy}年度</span>
-                  <div className="flex-1 rounded-sm bg-slate-100">
+                  
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="flex-1 rounded-sm bg-slate-100">
                     <div
                       className="h-5 rounded-sm bg-indigo-400 transition-all"
                       style={{ width: `${pct}%` }}

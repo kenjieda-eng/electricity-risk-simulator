@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "見積比較前チェック診断｜電力見積依頼を始める前に確認したいこと";
@@ -100,6 +106,10 @@ export default function QuotationComparisonPreCheckPage() {
             もあわせて確認してください。
           </p>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <DiagnosisClient />
 
@@ -113,8 +123,7 @@ export default function QuotationComparisonPreCheckPage() {
               { step: 4, text: "2〜3社以上の電力会社に同一条件で見積依頼を出す" },
               { step: 5, text: "見積受領後、前提条件が揃っているかを確認してから比較を行う" },
               { step: 6, text: "年間総額・変動リスク・契約条件の3軸で比較し、社内承認を得る" },
-            ].map(({ step, text }) => (
-              <div key={step} className="flex items-start gap-4">
+            ].map(({ step, text }) => (<div key={step} className="flex items-start gap-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
                   {step}
                 </span>

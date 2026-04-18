@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle =
   "原油価格と法人電気料金の関係｜燃料価格の波及経路と影響の見方";
@@ -101,6 +107,7 @@ export default function OilAndCorporateElectricityPricePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "原油価格と法人電気料金の関係" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -218,7 +225,11 @@ export default function OilAndCorporateElectricityPricePage() {
                 <li>円ドル為替レート（円安は燃料輸入コスト増）</li>
               </ul>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">確認のタイミング</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 電力会社は毎月の燃料費調整単価を公表しています。来月以降の調整単価の予測には、直近3か月の燃料輸入CIF価格を確認する方法があります。経済産業省の輸入統計が参考になります。

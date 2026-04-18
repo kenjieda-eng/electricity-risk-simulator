@@ -7,6 +7,7 @@ import {
   LAST_RESORT_SUPPLY_MONTHLY,
   NEW_POWER_EXIT_YEARLY,
 } from "../../data/lastResortSupplyHistory";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -382,7 +383,10 @@ export default function LastResortSupplyHistoryPage() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <h3 className="text-base font-semibold text-slate-900">④ 見直し判断のタイミングを逃さない</h3>
               <p className="mt-2 text-sm leading-7 text-slate-700">
                 2022年の経験が示すように、市場が混乱してからでは「次の契約先を探す」ことが極めて困難になります。

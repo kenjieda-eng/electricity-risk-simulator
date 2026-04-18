@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DEMAND_HOURLY_AVG } from "../../data/demandData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方";
@@ -119,6 +125,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "自家消費型太陽光は電気料金対策としてどう効くか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -317,7 +324,11 @@ export default function SelfConsumptionSolarCostBenefitPage() {
               })}
             </div>
           </div>
-          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">太陽光の導入効果を最大化する複合戦略</p>
             <p className="mt-2 text-sm leading-6 text-slate-700">
               太陽光の導入効果を最大化するには、昼間の自家消費で電力量料金を削減しつつ、蓄電池で夕方ピークの基本料金削減も狙う複合戦略が有効です。

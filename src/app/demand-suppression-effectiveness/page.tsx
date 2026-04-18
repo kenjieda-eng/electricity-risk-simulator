@@ -4,7 +4,13 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DEMAND_SEASON_HOUR, DEMAND_WEEKDAY_WEEKEND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND } from "../../data/weatherData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "デマンド抑制はどこまで効果があるか｜基本料金削減の可能性と限界";
@@ -127,6 +133,7 @@ export default function DemandSuppressionEffectivenessPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "デマンド抑制はどこまで効果があるか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -490,7 +497,11 @@ export default function DemandSuppressionEffectivenessPage() {
               </div>
             </div>
           </div>
-          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-900">冬のデマンド管理も引き続き重要</p>
             <p className="mt-2 text-sm leading-6 text-amber-800">
               ただし冬の18時台ピークは依然として夏の14時台に匹敵する水準（約12.3万MW）であり、冬のデマンド管理を軽視すべきではありません。

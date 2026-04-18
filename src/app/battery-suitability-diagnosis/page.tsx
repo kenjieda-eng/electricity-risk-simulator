@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "蓄電池導入向き不向き診断｜自社に蓄電池が合うかを整理する";
@@ -151,6 +157,10 @@ export default function BatterySuitabilityDiagnosisPage() {
             を優先することを検討してください。
           </p>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">診断結果から次のアクションを考える</h2>
@@ -164,8 +174,7 @@ export default function BatterySuitabilityDiagnosisPage() {
               { step: 3, text: "リース・PPAなど初期投資を抑えた導入スキームの条件も並行して確認する" },
               { step: 4, text: "蓄電池メーカー・EPC事業者に現場調査・見積依頼を行い、投資回収期間を試算する" },
               { step: 5, text: "太陽光との同時導入を検討している場合は合わせて見積を取り、セット導入の費用対効果を比較する" },
-            ].map(({ step, text }) => (
-              <div key={step} className="flex items-start gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            ].map(({ step, text }) => (<div key={step} className="flex items-start gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
                   {step}
                 </span>

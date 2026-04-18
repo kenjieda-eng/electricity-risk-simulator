@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import { DEMAND_PEAK_DAYS, DEMAND_SEASON_HOUR } from "../../data/demandData";
 import { EXTREME_HOT_DAYS, SUMMER_TMAX_TREND, CDD_TREND, TROPICAL_NIGHTS_TOKYO } from "../../data/weatherData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -362,7 +363,10 @@ export default function ElectricityCostRiskHeatwavePage() {
           </div>
         </section>
 
-        <div className="mt-6">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="electricity-cost-risk-heatwave" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "容量拠出金", "市場連動プラン"]} />
         </div>
 

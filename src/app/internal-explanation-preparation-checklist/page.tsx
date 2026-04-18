@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "社内説明準備チェックリスト｜電力契約見直しの稟議・報告前に揃えたい情報";
@@ -161,6 +167,10 @@ export default function InternalExplanationPreparationChecklistPage() {
             ))}
           </div>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">説明資料に使えるシミュレーター活用のポイント</h2>
@@ -171,8 +181,7 @@ export default function InternalExplanationPreparationChecklistPage() {
             {[
               { title: "現状の確認", body: "現行プランの条件を入力し、今後の上振れリスク幅を年間ベースで試算。「なぜ見直すか」の根拠として使用。" },
               { title: "比較検討", body: "候補プランの条件で試算し、固定型・市場連動型の違いや、リスクシナリオ別のコスト差を比較。" },
-            ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-slate-200 bg-white p-4">
+            ].map((item) => (<div key={item.title} className="rounded-xl border border-slate-200 bg-white p-4">
                 <p className="text-sm font-semibold text-slate-900">{item.title}</p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{item.body}</p>
               </div>
