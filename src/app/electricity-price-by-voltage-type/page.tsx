@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle =
   "特別高圧・高圧・低圧で上がり方はどう違うか｜年次データと区分間の構造差を解説";
@@ -60,6 +66,7 @@ export default function ElectricityPriceByVoltageTypePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "特別高圧・高圧・低圧で上がり方はどう違うか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -469,7 +476,12 @@ export default function ElectricityPriceByVoltageTypePage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="electricity-price-by-voltage-type" terms={["高圧電力", "特別高圧", "基本料金", "電力量料金", "契約電力", "再エネ賦課金", "電気料金の内訳"]} />
         </div>
 

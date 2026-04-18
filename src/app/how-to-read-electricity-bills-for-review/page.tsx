@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
+
 
 const pageTitle =
   "請求書のどこを見れば見直しのヒントが分かるのか｜7つの確認ポイントと次のアクション";
@@ -129,6 +135,7 @@ export default function HowToReadElectricityBillsForReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "請求書のどこを見れば見直しのヒントが分かるのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
@@ -277,7 +284,12 @@ export default function HowToReadElectricityBillsForReviewPage() {
       </div>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

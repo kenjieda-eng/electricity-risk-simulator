@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
+
 
 
 const pageTitle =
@@ -113,6 +119,7 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人の電力契約更新の3か月前にやること" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -215,7 +222,12 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
                 現行契約の条件でシミュレーションを行い、年間の上振れリスク幅を確認する。「なぜ見直すのか」の根拠資料になる。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">比較検討の段階（2か月前）</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 受領した見積の条件でシミュレーションを行い、候補プラン間のコスト差やリスク差を数値で確認する。比較表と合わせて社内説明に使える。

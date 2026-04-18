@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -173,7 +174,10 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             </div>
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <div className="text-sm font-semibold text-slate-900">商業施設（高圧・月80,000kWh）</div>
-              <div className="mt-1 text-2xl font-bold text-sky-700">年間 約2,800〜3,600万円</div>
+              
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-1 text-2xl font-bold text-sky-700">年間 約2,800〜3,600万円</div>
               <p className="mt-1 text-xs text-slate-500">空調・照明の割合が高く、夏冬の季節変動が出やすい。</p>
             </div>
           </div>

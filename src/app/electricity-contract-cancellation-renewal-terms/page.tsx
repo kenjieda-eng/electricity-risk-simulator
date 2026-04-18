@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -310,7 +311,10 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
           publishedAt="2026-03-27"
         />
 
-        <div className="mt-8">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             intro="単価比較に加えて契約条件を確認する際に、あわせて見ておきたいページです。"

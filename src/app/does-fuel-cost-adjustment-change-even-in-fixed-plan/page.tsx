@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
@@ -200,7 +201,10 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="does-fuel-cost-adjustment-change-even-in-fixed-plan" terms={["燃料費調整額", "固定プラン", "市場連動プラン", "電力量料金", "基本料金"]} />
         </div>
 

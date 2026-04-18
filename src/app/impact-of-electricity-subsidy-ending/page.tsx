@@ -4,7 +4,13 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "法人向け電気料金の補助金終了で何が変わるか｜請求額への影響を解説";
 const pageDescription =
@@ -52,6 +58,7 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人向け電気料金の補助金終了で何が変わるか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -250,7 +257,12 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="impact-of-electricity-subsidy-ending" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "電力量料金", "電気料金の内訳"]} />
         </div>
 

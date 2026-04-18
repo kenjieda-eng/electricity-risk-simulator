@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle = "急騰後も電気料金が元に戻らないのはなぜか｜一時的要因と構造的要因を整理";
 const pageDescription =
@@ -58,6 +64,7 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "急騰後も電気料金が元に戻らないのはなぜか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -373,7 +380,12 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="why-electricity-prices-have-not-returned" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "託送料金", "JEPX", "市場連動プラン"]} />
         </div>
 

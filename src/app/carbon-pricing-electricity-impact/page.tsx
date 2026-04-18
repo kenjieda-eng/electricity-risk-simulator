@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle =
   "カーボンプライシングが法人電気料金に与える影響｜GX-ETSと炭素税の見通し";
@@ -170,6 +176,7 @@ export default function CarbonPricingElectricityImpactPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "カーボンプライシングが法人電気料金に与える影響" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -410,7 +417,12 @@ export default function CarbonPricingElectricityImpactPage() {
           </ol>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="carbon-pricing-electricity-impact" terms={["再エネ賦課金", "容量拠出金", "燃料費調整額", "非化石証書", "電力量料金"]} />
         </div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -129,7 +130,10 @@ export default function MarketPriceAdjustmentPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額との違い（詳細版）</h2>
-          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
             <table className="w-full min-w-[620px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
                 <tr>

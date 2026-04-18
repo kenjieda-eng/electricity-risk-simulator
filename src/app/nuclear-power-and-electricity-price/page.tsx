@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle =
   "原子力発電所の稼働状況と電気料金の関係｜エリア別の料金差への影響を解説";
@@ -236,6 +242,7 @@ export default function NuclearPowerAndElectricityPricePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "原子力発電所の稼働状況と電気料金の関係" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -514,7 +521,12 @@ export default function NuclearPowerAndElectricityPricePage() {
           </div>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="nuclear-power-and-electricity-price" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "電力量料金"]} />
         </div>
 

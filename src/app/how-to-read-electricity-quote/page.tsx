@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -616,7 +617,10 @@ export default function HowToReadElectricityQuotePage() {
           <p className="mt-2 text-sm leading-7 text-slate-600">
             見積書の見方を押さえたら、比較・確認・切替の各ステップに進むと、見直しの精度を高められます。
           </p>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-3 grid gap-2 md:grid-cols-2">
             <Link
               href="/how-to-compare-electricity-suppliers"
               className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50"

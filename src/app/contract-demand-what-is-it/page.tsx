@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import BasicChargeCalculator from "../../components/market-data/BasicChargeCalculator";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { DEMAND_HOURLY_AVG, DEMAND_WEEKDAY_WEEKEND, LOAD_FACTOR_FY, DEMAND_MONTHLY_AVG, DEMAND_PEAK_DAYS } from "../../data/demandData";
@@ -469,7 +471,11 @@ export default function ContractDemandWhatIsItPage() {
         />
 
         {/* 関連リンク */}
-        <div className="mt-8">
+        
+      <BasicChargeCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             intro="契約電力・デマンドの理解を、請求確認・見積比較・コスト管理の実務に接続するための導線です。"

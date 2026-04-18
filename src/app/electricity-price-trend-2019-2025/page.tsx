@@ -3,7 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import TrendForecastCalculator from "../../components/market-data/TrendForecastCalculator";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle =
   "法人向け電気料金は高止まりしているのか｜2019〜2025年の年次データと構造要因";
@@ -61,6 +68,7 @@ export default function ElectricityPriceTrend20192025Page() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人向け電気料金は高止まりしているのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -426,7 +434,13 @@ export default function ElectricityPriceTrend20192025Page() {
         </div>
 
         {/* ── 関連リンク ── */}
-        <div className="mt-2">
+        
+      <TrendForecastCalculator />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-2">
           <RelatedLinks
             heading="関連ページ"
             intro="データの背景と長期トレンドを確認すると、見直し判断に接続しやすくなります。"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -268,7 +269,10 @@ export default function EnergyChargeExplainedPage() {
                 月別・時間帯別の実使用量データで各プランのコストを算出する。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-white p-4">
+            
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-white p-4">
               <p className="text-sm font-semibold text-slate-900">変動リスクの評価</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 固定型と市場連動型の差を、上振れシナリオで比較しておく。

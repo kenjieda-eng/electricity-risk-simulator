@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -287,7 +288,10 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             料金構造の全体像を把握したうえで、目的に応じた詳細ガイドへ進んでください。
           </p>
-          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             <Link
               href="/extra-high-voltage-electricity-bill-guide"
               className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-300 hover:shadow-md"

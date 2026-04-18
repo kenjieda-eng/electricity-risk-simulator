@@ -7,7 +7,13 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "市場価格調整額の上振れリスクと備え方｜2021年冬・2022年事例で学ぶ";
 const pageDescription =
@@ -72,6 +78,7 @@ export default function MarketPriceAdjustmentRiskPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "市場価格調整額の上振れリスクと備え方" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -232,7 +239,12 @@ export default function MarketPriceAdjustmentRiskPage() {
           <p className="mt-2 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度集計）</p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="market-price-adjustment-risk" terms={["市場価格調整額", "JEPX", "市場連動プラン", "固定プラン", "燃料費調整額", "再エネ賦課金"]} />
         </div>
 

@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["plan-types"];
+
 const pageTitle =
   "商業施設は固定と市場連動のどちらが向くか｜営業時間と設備負荷から考える";
 const pageDescription =
@@ -112,6 +118,7 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "商業施設は固定と市場連動のどちらが向くか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -277,7 +284,12 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="commercial-facility-fixed-vs-market-linked" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "デマンド値", "契約電力"]} />
         </div>
 

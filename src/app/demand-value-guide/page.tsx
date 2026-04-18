@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_SEASON_HOUR } from "../../data/demandData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -308,7 +309,10 @@ export default function DemandValueGuidePage() {
               <span className="font-semibold">夏は13〜14時の冷房ピーク、冬は18時の暖房+照明ピークが最大。</span>デマンド抑制はこの時間帯をターゲットにすると最も効果的です。
               夏14時（123,372MW）・冬18時（123,157MW）が各季節の最大ポイントです。
             </div>
-            <div className="rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm leading-7 text-sky-900">
+            
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm leading-7 text-sky-900">
               春・秋は10万MW以下で安定しており、この時期のデマンド管理は比較的容易です。設備点検やデマンドコントローラーの目標値再設定など、準備作業を行うのに適した時期です。
             </div>
           </div>

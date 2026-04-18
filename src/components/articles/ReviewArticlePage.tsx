@@ -6,6 +6,7 @@ import GlossaryLinks from "../simulator/GlossaryLinks";
 import CategoryNextStepCta from "../simulator/CategoryNextStepCta";
 import SourcesAndFaq, { type SourceItem, type FaqItem } from "../simulator/SourcesAndFaq";
 import { ArticleJsonLd } from "../seo/JsonLd";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../market-data/HistoricalEventTimeline";
 
 type LinkCard = {
   href: string;
@@ -148,6 +149,8 @@ export default function ReviewArticlePage({
         {(faq || sources) && (
           <SourcesAndFaq faq={faq} sources={sources} publishedAt={publishedAt} />
         )}
+
+        <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
         <RelatedLinks heading="関連ページ" intro={relatedIntro} links={relatedLinks} />
 

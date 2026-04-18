@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
+
 
 const pageTitle =
   "電力契約の契約期間の見方と注意点｜1年・2年・3年契約の違い";
@@ -55,6 +61,7 @@ export default function ElectricityContractPeriodGuidePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "電力契約の契約期間の見方と注意点" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -231,7 +238,12 @@ export default function ElectricityContractPeriodGuidePage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="electricity-contract-period-guide" terms={["燃料費調整額", "市場価格調整額", "市場連動プラン", "固定プラン", "最終保障供給", "基本料金"]} />
         </div>
 
