@@ -11,6 +11,12 @@ const primaryPageLinks = [
   { href: "/simulate", label: "電気料金上昇リスクを診断する" },
   { href: "/how-to", label: "シミュレーターの使い方" },
   { href: "/compare", label: "料金メニュー比較・診断" },
+  { href: "/benchmark", label: "業種×規模 ベンチマークツール" },
+  { href: "/journey", label: "一気通貫ジャーニー（読む→行動）" },
+  { href: "/concierge", label: "AI コンシェルジュ（横断検索）" },
+  { href: "/knowledge-graph", label: "ナレッジグラフ" },
+  { href: "/downloads", label: "ダウンロード素材" },
+  { href: "/data-freshness", label: "データ鮮度ダッシュボード" },
   { href: "/articles", label: "解説ページ一覧" },
   { href: "/business-electricity-retrospective", label: "法人電気料金振り返り" },
   { href: "/special/emergency-scenario-analysis", label: "有事シナリオ分析 特集" },
@@ -50,6 +56,7 @@ const categoryPracticeLinks = [
 
 // --- 解説カテゴリ：新領域・特集 ---
 const categoryAdvancedLinks = [
+  { href: "/articles/market-data", label: "データで見る電力市場" },
   { href: "/articles/decarbonization", label: "脱炭素・GX対応" },
   { href: "/articles/corporate-ppa", label: "コーポレートPPA" },
   { href: "/articles/energy-dx", label: "エネルギーマネジメント・DX" },

@@ -39,8 +39,12 @@ export const ARTICLES_THEME_ROWS: ArticlesThemeRow[] = [
     key: "risk-scenarios",
     title: "リスクシナリオ別に知る",
     intro:
-      "要因ごとに上振れの出方が異なります。代表例を読んだうえで、診断・比較で自社条件を試すと判断がしやすくなります。",
-    slugList: ["electricity-cost-risk-heatwave", "business-electricity-price-trend-10-years"],
+      "要因ごとに上振れの出方が異なります。猛暑・円安・地政学の代表シナリオを押さえたうえで、診断・比較で自社条件を試すと判断がしやすくなります。",
+    slugList: [
+      "electricity-cost-risk-heatwave",
+      "electricity-cost-risk-yen-depreciation",
+      "electricity-cost-risk-geopolitics",
+    ],
     categoryHref: "/articles/risk-scenarios",
     extraCards: [
       {
@@ -115,14 +119,17 @@ export const CATEGORY_HUB_SPOTLIGHT: Partial<
       "why-business-electricity-prices-rise",
       "how-much-business-electricity-prices-increase",
       "renewable-energy-surcharge",
-      "business-electricity-price-trend-10-years",
     ],
   },
   "risk-scenarios": {
     heading: "シナリオ理解と診断・比較への導線",
     intro:
-      "個別シナリオのあとで長期推移と比較診断を見ると、予算・契約の次アクションを決めやすくなります。",
-    slugs: ["electricity-cost-risk-heatwave", "business-electricity-price-trend-10-years"],
+      "要因別に上振れリスクの出方は異なります。猛暑・円安・地政学の代表シナリオを押さえたうえで、比較診断で自社条件を試すと判断がしやすくなります。",
+    slugs: [
+      "electricity-cost-risk-heatwave",
+      "electricity-cost-risk-yen-depreciation",
+      "electricity-cost-risk-geopolitics",
+    ],
   },
   "power-procurement": {
     heading: "電力調達の全体像をつかむ代表記事",

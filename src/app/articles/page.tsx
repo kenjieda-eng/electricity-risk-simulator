@@ -15,6 +15,7 @@ import {
 import { ARTICLES_THEME_ROWS, CATEGORY_HUB_SPOTLIGHT } from "../../lib/articleHubFeatured";
 import type { ArticleCategorySlug } from "../../data/articles";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import { CATEGORY_MAJOR_GROUPS } from "../../lib/articleCategoryGroups";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
@@ -107,6 +108,33 @@ const categoryIcons: Record<string, { src: string; alt: string }> = {
   "last-resort-supply": { src: "/icons/articles/shield-safety.svg", alt: "保護を示す盾のアイコン" },
   "risk-scenarios": { src: "/icons/articles/warning-risk.svg", alt: "リスク注意のアイコン" },
   "power-procurement": { src: "/icons/articles/network-procurement.svg", alt: "調達ネットワークのアイコン" },
+  "monthly-review": { src: "/icons/articles/trend-chart.svg", alt: "月次推移のアイコン" },
+  "industry-guide": { src: "/icons/articles/factory-building.svg", alt: "業種別事業所のアイコン" },
+  "energy-equipment": { src: "/icons/articles/battery-solar.svg", alt: "蓄電池・太陽光のアイコン" },
+  "internal-explanation": { src: "/icons/articles/checklist-document.svg", alt: "社内説明・稟議のアイコン" },
+  "diagnostic-tools": { src: "/icons/articles/question-faq.svg", alt: "診断・チェックツールのアイコン" },
+  "case-studies": { src: "/icons/articles/book-guide.svg", alt: "事例集のアイコン" },
+  "emergency-response": { src: "/icons/articles/warning-risk.svg", alt: "緊急対応のアイコン" },
+  municipality: { src: "/icons/articles/map-region.svg", alt: "自治体・公共のアイコン" },
+  benchmarks: { src: "/icons/articles/trend-chart.svg", alt: "相場データのアイコン" },
+  subsidies: { src: "/icons/articles/coin-subsidy.svg", alt: "補助金・助成金のアイコン" },
+  "for-executives": { src: "/icons/articles/briefcase-executive.svg", alt: "経営層向けのアイコン" },
+  "by-region": { src: "/icons/articles/map-region.svg", alt: "地域別のアイコン" },
+  "market-data": { src: "/icons/articles/trend-chart.svg", alt: "市場データのアイコン" },
+  decarbonization: { src: "/icons/articles/leaf-eco.svg", alt: "脱炭素・GXのアイコン" },
+  "corporate-ppa": { src: "/icons/articles/leaf-eco.svg", alt: "コーポレートPPAのアイコン" },
+  "energy-dx": { src: "/icons/articles/circuit-dx.svg", alt: "エネマネ・DXのアイコン" },
+  "energy-bcp": { src: "/icons/articles/shield-safety.svg", alt: "電力BCPのアイコン" },
+  "sme-guide": { src: "/icons/articles/factory-building.svg", alt: "中小企業向けのアイコン" },
+  "accounting-tax": { src: "/icons/articles/calculator.svg", alt: "経理・税務のアイコン" },
+  glossary: { src: "/icons/articles/book-guide.svg", alt: "用語集のアイコン" },
+  faq: { src: "/icons/articles/question-faq.svg", alt: "FAQのアイコン" },
+  "regulation-timeline": { src: "/icons/articles/timeline-scroll.svg", alt: "制度改正タイムラインのアイコン" },
+  "ev-charging": { src: "/icons/articles/ev-charger.svg", alt: "EV充電のアイコン" },
+  "contract-legal": { src: "/icons/articles/contract-legal.svg", alt: "契約書・約款のアイコン" },
+  "ma-organizational-change": { src: "/icons/articles/briefcase-executive.svg", alt: "M&A・組織再編のアイコン" },
+  "global-energy": { src: "/icons/articles/globe-world.svg", alt: "海外拠点のアイコン" },
+  "datacenter-ai-demand": { src: "/icons/articles/server-rack.svg", alt: "データセンター・AIのアイコン" },
 };
 
 const starterArticleSlugs = [
@@ -208,6 +236,42 @@ export default function ArticlesPage() {
         </div>
       </header>
 
+      <section className="mt-8" aria-labelledby="platform-tools">
+        <h2 id="platform-tools" className="text-2xl font-semibold tracking-tight text-slate-900">
+          プラットフォーム機能
+        </h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          読むだけで終わらせず「読む→考える→診断→行動」を一気通貫で進めるためのツール群です。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+          <Link href="/journey" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+            <p className="text-xs font-semibold text-sky-700">JOURNEY</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">一気通貫ジャーニー</p>
+            <p className="mt-1 text-xs leading-5 text-slate-600">読む→考える→診断→行動の4ステップガイド</p>
+          </Link>
+          <Link href="/benchmark" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+            <p className="text-xs font-semibold text-sky-700">BENCHMARK</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">業種×規模 ベンチマーク</p>
+            <p className="mt-1 text-xs leading-5 text-slate-600">月額電気代を業種平均と即座に比較</p>
+          </Link>
+          <Link href="/concierge" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+            <p className="text-xs font-semibold text-sky-700">AI</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">AI コンシェルジュ</p>
+            <p className="mt-1 text-xs leading-5 text-slate-600">35カテゴリを横断検索・意図判定</p>
+          </Link>
+          <Link href="/knowledge-graph" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+            <p className="text-xs font-semibold text-sky-700">GRAPH</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">ナレッジグラフ</p>
+            <p className="mt-1 text-xs leading-5 text-slate-600">カテゴリ・記事の意味関係マップ</p>
+          </Link>
+          <Link href="/downloads" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+            <p className="text-xs font-semibold text-sky-700">DOWNLOADS</p>
+            <p className="mt-1 text-sm font-semibold text-slate-900">実務テンプレ10種</p>
+            <p className="mt-1 text-xs leading-5 text-slate-600">稟議書・比較表・議会スライドなど</p>
+          </Link>
+        </div>
+      </section>
+
       <section className="mt-8" aria-labelledby="theme-hub-heading">
         <h2 id="theme-hub-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
           テーマから読み始める
@@ -241,6 +305,7 @@ export default function ArticlesPage() {
                         </Link>
                       </h4>
                       <p className="mt-2 text-sm leading-6 text-slate-700">{article.description}</p>
+                      <p className="mt-2 text-xs text-slate-500">最終更新日: {article.publishedAt}</p>
                     </article>
                   ))}
                   {row.extraCards?.map((card) => (
@@ -264,59 +329,28 @@ export default function ArticlesPage() {
         <h2 id="categories-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
           カテゴリから探す
         </h2>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {(() => {
-            const renderedCards: React.ReactNode[] = [];
-            let industryHubRendered = false;
-
-            const industryHubCard = (
-              <article key="by-industry-hub" className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
-                <div className="flex items-center gap-2">
-                  <Image
-                    src={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.src}
-                    alt={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.alt}
-                    width={36}
-                    height={36}
-                  />
-                  <p className="text-xs font-semibold tracking-wide text-slate-500">
-                    カテゴリ {INDUSTRY_ARTICLES_CATEGORY_CARD.order}
-                  </p>
-                </div>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
-                <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
-                <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
-                <div className="mt-3 border-t border-slate-100 pt-3">
-                  <p className="text-xs font-semibold text-slate-500">代表カテゴリ</p>
-                  <ul className="mt-2 space-y-1.5 text-sm">
-                    {INDUSTRY_MIDDLE_CATEGORIES.slice(0, 3).map((middle) => (
-                      <li key={middle.slug}>
-                        <Link
-                          href={`/articles/by-industry/${middle.slug}`}
-                          className="text-sky-700 underline-offset-2 hover:underline"
-                        >
-                          {middle.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <Link
-                  href={INDUSTRY_ARTICLES_CATEGORY_CARD.href}
-                  className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
-                >
-                  カテゴリを見る
-                </Link>
-              </article>
-            );
-
-            for (const category of learningCategories) {
-              if (!industryHubRendered && category.order >= INDUSTRY_ARTICLES_CATEGORY_CARD.order) {
-                renderedCards.push(industryHubCard);
-                industryHubRendered = true;
-              }
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          35カテゴリを4つの大分類で束ねました。用途に近いブロックから展開して探せます。
+        </p>
+        <nav aria-label="大分類" className="mt-4 flex flex-wrap gap-2">
+          {CATEGORY_MAJOR_GROUPS.map((group) => (
+            <a
+              key={group.key}
+              href={`#group-${group.key}`}
+              className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 transition hover:bg-sky-50 hover:text-sky-800"
+            >
+              {group.title}
+            </a>
+          ))}
+        </nav>
+        <div className="mt-6 space-y-8">
+          {CATEGORY_MAJOR_GROUPS.map((group) => {
+            const renderCategoryCard = (slug: ArticleCategorySlug) => {
+              const category = learningCategories.find((c) => c.slug === slug);
+              if (!category) return null;
               const icon = categoryIcons[category.slug] ?? categoryIcons.basic;
               const quick = getArticlesBySlugs(quickSlugsForCategoryCard(category.slug));
-              renderedCards.push(
+              return (
                 <article key={category.slug} className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
                   <div className="flex items-center gap-2">
                     <Image src={icon.src} alt={icon.alt} width={36} height={36} />
@@ -347,14 +381,59 @@ export default function ArticlesPage() {
                   </Link>
                 </article>
               );
-            }
+            };
 
-            if (!industryHubRendered) {
-              renderedCards.push(industryHubCard);
-            }
+            const industryHubCardForGroup =
+              group.key === "practice" ? (
+                <article key="by-industry-hub" className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.src}
+                      alt={INDUSTRY_ARTICLES_CATEGORY_CARD.icon.alt}
+                      width={36}
+                      height={36}
+                    />
+                    <p className="text-xs font-semibold tracking-wide text-slate-500">カテゴリ {INDUSTRY_ARTICLES_CATEGORY_CARD.order}</p>
+                  </div>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">{INDUSTRY_ARTICLES_CATEGORY_CARD.name}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-slate-700">{INDUSTRY_ARTICLES_CATEGORY_CARD.description}</p>
+                  <p className="mt-2 text-sm text-slate-600">記事数: {INDUSTRY_ARTICLES_CATEGORY_CARD.articleCount}件</p>
+                  <div className="mt-3 border-t border-slate-100 pt-3">
+                    <p className="text-xs font-semibold text-slate-500">代表カテゴリ</p>
+                    <ul className="mt-2 space-y-1.5 text-sm">
+                      {INDUSTRY_MIDDLE_CATEGORIES.slice(0, 3).map((middle) => (
+                        <li key={middle.slug}>
+                          <Link href={`/articles/by-industry/${middle.slug}`} className="text-sky-700 underline-offset-2 hover:underline">
+                            {middle.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link href={INDUSTRY_ARTICLES_CATEGORY_CARD.href} className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+                    カテゴリを見る
+                  </Link>
+                </article>
+              ) : null;
 
-            return renderedCards;
-          })()}
+            return (
+              <section
+                key={group.key}
+                id={`group-${group.key}`}
+                className="rounded-2xl border border-slate-200 bg-slate-50/60 p-5 scroll-mt-16"
+                aria-labelledby={`group-${group.key}-title`}
+              >
+                <h3 id={`group-${group.key}-title`} className="text-lg font-semibold text-slate-900">
+                  {group.title}
+                </h3>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-700">{group.description}</p>
+                <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {group.categorySlugs.map((slug) => renderCategoryCard(slug))}
+                  {industryHubCardForGroup}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
 
@@ -398,12 +477,15 @@ export default function ArticlesPage() {
                 </Link>
               </h3>
               <p className="mt-1.5 text-sm leading-6 text-slate-700">{article.description}</p>
-              <Link
-                href={`/${article.slug}`}
-                className="mt-3 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
-              >
-                詳しく見る
-              </Link>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <span className="text-xs text-slate-500">最終更新日: {article.publishedAt}</span>
+                <Link
+                  href={`/${article.slug}`}
+                  className="inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+                >
+                  詳しく見る
+                </Link>
+              </div>
             </article>
           ))}
         </div>

@@ -20,6 +20,18 @@ export const metadata: Metadata = {
 };
 
 const DOWNLOADS = [
+  { category: "実務テンプレート集（即利用可 / Markdown・CSV）", items: [
+    { title: "請求書チェックシート（A4 1枚）", href: "/downloads/bill-check-sheet.md", format: "Markdown" },
+    { title: "見直し5項目チェックリスト", href: "/downloads/five-point-review-checklist.md", format: "Markdown" },
+    { title: "見積比較表", href: "/downloads/quotation-comparison.csv", format: "CSV" },
+    { title: "稟議書テンプレート", href: "/downloads/approval-template.md", format: "Markdown" },
+    { title: "事例サマリーカードテンプレート", href: "/downloads/case-study-summary.md", format: "Markdown" },
+    { title: "議会説明スライドテンプレート", href: "/downloads/council-briefing-template.md", format: "Markdown" },
+    { title: "補助金カレンダー", href: "/downloads/subsidy-calendar.csv", format: "CSV" },
+    { title: "取締役会・経営会議 報告テンプレート", href: "/downloads/board-report-template.md", format: "Markdown" },
+    { title: "電力BCPチェックリスト", href: "/downloads/bcp-checklist.md", format: "Markdown" },
+    { title: "M&A電力契約 DDチェックリスト", href: "/downloads/ma-electricity-dd-checklist.md", format: "Markdown" },
+  ]},
   { category: "市場データ（JSON API）", items: [
     { title: "JEPXスポット価格", href: "/api/datasets/jepx", format: "JSON" },
     { title: "電気料金調整単価履歴", href: "/api/datasets/price-adjustment", format: "JSON" },
