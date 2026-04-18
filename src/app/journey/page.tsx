@@ -105,7 +105,7 @@ export default function JourneyPage() {
           { name: "一気通貫ジャーニー" },
         ]}
       />
-      <main className="mx-auto min-h-screen w-full max-w-[1200px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         <nav aria-label="パンくず" className="text-sm text-slate-600">
           <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
           <span className="px-2">›</span>
