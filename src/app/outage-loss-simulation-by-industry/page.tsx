@@ -1,0 +1,109 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const pageTitle = "停電時の損失試算と投資判断｜業種別の時間当たり損失額";
+const pageDescription =
+  "停電が発生した場合の売上損失・追加費用を業種別に試算し、BCP投資の判断材料にする方法を整理します。";
+const pageUrl = "https://simulator.eic-jp.org/outage-loss-simulation-by-industry";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "電力BCP", "停電対応"],
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/twitter-default.png"],
+  },
+};
+
+export default function Page() {
+  return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-18"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
+          { name: "電力BCP・災害対策", url: "https://simulator.eic-jp.org/articles/energy-bcp" },
+          { name: "停電時の損失試算と投資判断" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles" className="underline-offset-2 hover:underline">解説ページ一覧</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles/energy-bcp" className="underline-offset-2 hover:underline">電力BCP・災害対策</Link>
+          <span className="px-2">›</span>
+          <span className="text-slate-800">停電時の損失試算と投資判断</span>
+        </nav>
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">停電時の損失試算と投資判断｜業種別の時間当たり損失額</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">停電が発生した場合の売上損失・追加費用を業種別に試算し、BCP投資の判断材料にする方法を整理します。</p>
+        </header>
+
+        <section className="mt-6 space-y-6">
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">停電損失の構成要素</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">停電による損失は、①機会損失（売上減少）、②復旧費用（再起動・廃棄・修繕）、③人件費（残業・振替）、④信用損失（顧客離脱・契約違反）、の4要素で構成されます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">業種・停電時間により、これらの比重は大きく変わります。短時間停電は②③、長時間停電は①④の比重が大きくなります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">業種別の損失目安</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター：時間当たり数百万〜数千万円（SLA違反含む）。製造業：時間当たり数十万〜数百万円（生産停止）。飲食店：時間当たり数万〜数十万円。小売店：数万〜数十万円。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらはあくまで目安で、自社の事業規模・利益率・復旧体制で変わります。過去の停電事例や計画停電の経験から、自社固有の数字を持つことが重要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">BCP投資のROI判断</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">損失額×発生頻度（期待値）がBCP投資額を上回る場合、投資が正当化されます。停電確率は地域・過去実績で異なり、年0.5〜2回程度の発生を想定することが多いです。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資判断は、純経済性だけでなく、顧客・従業員・サプライチェーンへの責任という観点も含めて総合的に検討します。</p>
+          </section>
+        </section>
+
+        <div className="mt-8">
+          <RelatedLinks
+            heading="関連ページ"
+            links={[
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
+              { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
+              { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+            ]}
+          />
+        </div>
+
+        <div className="mt-6">
+          <ContentCta
+            heading="次にすること"
+            description="このテーマの理解を深めたら、シミュレーターで自社の電気料金リスクを確認しましょう。"
+            links={[
+              { href: "/", label: "シミュレーターで診断する" },
+              { href: "/articles/energy-bcp", label: "電力BCP・災害対策の他の記事を読む" },
+            ]}
+          />
+        </div>
+      </main>
+    </>
+  );
+}

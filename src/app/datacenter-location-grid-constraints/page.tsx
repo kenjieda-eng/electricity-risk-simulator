@@ -1,0 +1,109 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const pageTitle = "データセンター立地と送電網制約｜系統空き容量の確認方法";
+const pageDescription =
+  "データセンター新設時に直面する送電網制約と、系統空き容量の確認プロセスを整理します。";
+const pageUrl = "https://simulator.eic-jp.org/datacenter-location-grid-constraints";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "データセンター電力"],
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    locale: "ja_JP",
+    type: "article",
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/twitter-default.png"],
+  },
+};
+
+export default function Page() {
+  return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-18"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
+          { name: "データセンター・AI需要", url: "https://simulator.eic-jp.org/articles/datacenter-ai-demand" },
+          { name: "データセンター立地と送電網制約" },
+        ]}
+      />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles" className="underline-offset-2 hover:underline">解説ページ一覧</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles/datacenter-ai-demand" className="underline-offset-2 hover:underline">データセンター・AI需要</Link>
+          <span className="px-2">›</span>
+          <span className="text-slate-800">データセンター立地と送電網制約</span>
+        </nav>
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">データセンター立地と送電網制約｜系統空き容量の確認方法</h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">データセンター新設時に直面する送電網制約と、系統空き容量の確認プロセスを整理します。</p>
+        </header>
+
+        <section className="mt-6 space-y-6">
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">送電網制約の現状</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター大規模化に伴い、日本国内でも系統接続が受けられない・長時間待たされる事例が増えています。特に首都圏・関西圏の主要エリアでは系統空き容量が逼迫しており、新設が困難なケースがあります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">制約の背景には、①送電網の老朽化・増強遅延、②再エネ接続の増加、③特定エリアへの需要集中、があります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">空き容量の確認方法</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①一般送配電事業者のWeb公開情報（空き容量マップ）、②事前協議（正式な接続検討申請前の相談）、③本申請（接続検討申込）、の3段階で確認します。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">事前協議でも数ヶ月、本申請から接続承諾まで半年〜2年かかるケースもあり、早期着手が重要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">ノンファーム型接続など新方式</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">近年、系統混雑エリアでの接続を可能にするため、ノンファーム型接続（需給逼迫時に接続制限を受け入れる代わりに接続可能）、容量市場連動型などの新方式が導入されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター事業者は、従来のファーム接続とノンファーム接続のハイブリッド運用を検討することで、立地選択肢を広げています。</p>
+          </section>
+        </section>
+
+        <div className="mt-8">
+          <RelatedLinks
+            heading="関連ページ"
+            links={[
+              { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
+              { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
+              { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+            ]}
+          />
+        </div>
+
+        <div className="mt-6">
+          <ContentCta
+            heading="次にすること"
+            description="このテーマの理解を深めたら、シミュレーターで自社の電気料金リスクを確認しましょう。"
+            links={[
+              { href: "/", label: "シミュレーターで診断する" },
+              { href: "/articles/datacenter-ai-demand", label: "データセンター・AI需要の他の記事を読む" },
+            ]}
+          />
+        </div>
+      </main>
+    </>
+  );
+}
