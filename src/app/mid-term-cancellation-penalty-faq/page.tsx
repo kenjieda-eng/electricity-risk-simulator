@@ -3,11 +3,16 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "契約期間中の解約・違約金FAQ｜中途解約条項の読み方";
 const pageDescription =
   "電力契約の契約期間中に解約する場合の違約金・精算金の扱いについて、よくある質問を整理します。";
 const pageUrl = "https://simulator.eic-jp.org/mid-term-cancellation-penalty-faq";
+
+const FAQ_ITEMS = CATEGORY_FAQ_22_35["contract-legal"] ?? [];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -41,21 +46,12 @@ export default function Page() {
         description={pageDescription}
         url={pageUrl}
         datePublished="2026-04-18"
+        faq={FAQ_ITEMS}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
           { name: "FAQ集（よくある質問）", url: "https://simulator.eic-jp.org/articles/faq" },
           { name: "契約期間中の解約・違約金FAQ" },
-        ]}
-        faq={[
-          { question: "違約金はいくらかかる？", answer: "契約条件により、①定額（数万〜数十万円）、②残存契約期間×月額料金の一定割合、③残存使用量×特定単価、の3パターンが主流です。" },
-          { question: "違約金は交渉で減額できる？", answer: "値上げ通知後の解約、電力会社側の契約違反、不可抗力での解約などでは減額・免除の余地があります。" },
-          { question: "違約金条項がない契約はある？", answer: "一部の短期契約・自治体向け契約には違約金なしもありますが、長期契約（2年以上）では設定されているのが通常。" },
-          { question: "解約の申入期限は？", answer: "契約満了の1〜6ヶ月前までの事前通知が必要な場合が多いです。期限を過ぎると自動更新となり、違約金なし解約のタイミングを失います。" },
-          { question: "新電力が撤退した場合、違約金はどうなる？", answer: "電力会社側の責任による契約終了では、違約金は発生しないのが原則です。" },
-          { question: "契約内容が覚えていない場合は？", answer: "電力会社に契約書・契約条件の再発行を依頼。重要条項は書面で確認を残すことを推奨。" },
-          { question: "違約金を払ってでも切替するべき？", answer: "切替後の年間削減額×残存期間が違約金+切替コストを上回るなら切替が経済的。比較試算は必ず行う。" },
-          { question: "違約金は次の電力会社が負担してくれる？", answer: "一部の新電力は、違約金負担特典を提示するケースがあります。切替見積時に確認すると有利。" },
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -113,6 +109,51 @@ export default function Page() {
           </ul>
           <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
+
+        <section className="mt-6 space-y-6">
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務でよくある落とし穴</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>検討段階で複数社の見積・提案を比較せず、初回提示を採用してしまうケース</li>
+              <li>会計・税務処理の事前確認不足による仕訳修正の発生</li>
+              <li>契約条項（解約・自動更新・違約金）の確認漏れによる後続トラブル</li>
+              <li>関連部門（経理・法務・施設・経営）への早期共有不足</li>
+              <li>データ更新頻度の低さ（年1回以下）による効果測定の困難化</li>
+            </ul>
+          </section>
+
+          <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務チェックリスト</h2>
+            <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>□ 現状コスト・排出量・契約条件の棚卸しが完了している</li>
+              <li>□ 複数の選択肢（3案以上）を比較検討している</li>
+              <li>□ 投資回収期間・TCO・ROIを定量評価している</li>
+              <li>□ 会計・税務・法務面の影響を確認済みである</li>
+              <li>□ 関連部門への情報共有・合意形成ができている</li>
+              <li>□ 効果測定のKPI・計測方法を定義している</li>
+              <li>□ 万一の撤退・変更時の対応策を用意している</li>
+            </ul>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">出典・参考情報</h2>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-slate-700">
+              <li>経済産業省 資源エネルギー庁 公表資料</li>
+              <li>電力・ガス取引監視等委員会 監視報告</li>
+              <li>環境省 温室効果ガス排出量算定・報告・公表制度</li>
+              <li>電力広域的運営推進機関（OCCTO）需給・供給力データ</li>
+              <li>日本卸電力取引所（JEPX）取引データ</li>
+              <li>一般社団法人エネルギー情報センター 独自調査</li>
+            </ul>
+            <p className="mt-3 text-xs text-slate-500">※ 各数値・制度は公表時点の情報。最新情報は各機関公式サイトをご確認ください。</p>
+          </section>
+        </section>
+
+        <MarketDataFaq items={FAQ_ITEMS} />
+
+        <AuthorBadge publishedAt="2026-04-18" updatedAt="2026-04-18" />
+
 
         <div className="mt-8">
           <RelatedLinks
