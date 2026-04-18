@@ -5,8 +5,15 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { CDD_TREND } from "../../data/weatherData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import PriceIncreaseCalculator from "../../components/market-data/PriceIncreaseCalculator";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "法人の電気料金が上がる理由とは？値上がりの主な要因と見直しポイントを解説";
 const pageDescription =
@@ -195,7 +202,15 @@ export default function WhyBusinessElectricityPricesRisePage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataDownload
+        apiPath="/api/datasets/weather"
+        caption="気温・気象データ（CC BY 4.0、商用利用可）"
+      />
+      <PriceIncreaseCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="why-business-electricity-prices-rise" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "託送料金", "市場連動プラン", "固定プラン", "JEPX"]} />
         </div>
 

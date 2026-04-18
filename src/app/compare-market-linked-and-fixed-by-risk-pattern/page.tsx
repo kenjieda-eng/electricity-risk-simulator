@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
@@ -220,7 +221,10 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="compare-market-linked-and-fixed-by-risk-pattern" terms={["市場連動プラン", "固定プラン", "JEPX", "市場価格調整額", "燃料費調整額", "再エネ賦課金"]} />
         </div>
 

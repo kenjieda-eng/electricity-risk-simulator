@@ -5,7 +5,13 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import RenewableSurchargeCharts from "./_components/RenewableSurchargeCharts";
 import { RENEWABLE_SURCHARGE_DATA } from "./_lib/renewable-surcharge-data";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle = "再エネ賦課金を除いても電気料金は高いのか｜法人向けにベース単価の上昇を整理";
 const pageDescription =
@@ -64,6 +70,7 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "再エネ賦課金を除いても電気料金は高いのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -208,7 +215,12 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="electricity-price-without-renewable-surcharge" terms={["再エネ賦課金", "燃料費調整額", "容量拠出金", "電力量料金", "電気料金の内訳"]} />
         </div>
 

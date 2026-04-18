@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -348,7 +349,10 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
                 市場連動プランの高騰シナリオ試算を提示し、「最悪ケースでこれだけ上がる」というリスク幅を数値で見せる。固定プランとの差が一目でわかる。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">第三者的な判断材料</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 シミュレーター結果は客観的な数値であるため、担当者個人の意見ではなく「シミュレーション結果に基づく判断」として提示できる。

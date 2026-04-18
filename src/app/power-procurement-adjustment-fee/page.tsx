@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle = "電源調達調整費とは何か｜燃料費調整額との違いを法人向けに解説";
@@ -192,7 +193,10 @@ export default function PowerProcurementAdjustmentFeePage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="power-procurement-adjustment-fee" terms={["市場価格調整額", "燃料費調整額", "市場連動プラン", "固定プラン", "電力量料金"]} />
         </div>
 

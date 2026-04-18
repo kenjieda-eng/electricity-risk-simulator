@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
+
 
 const pageTitle =
   "契約見直し時に施設管理が見るポイント｜設備と供給安定性の確認";
@@ -55,6 +61,7 @@ export default function ContractReviewForFacilityManagementPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "契約見直し時に施設管理が見るポイント" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -222,7 +229,12 @@ export default function ContractReviewForFacilityManagementPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="contract-review-for-facility-management" terms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "契約電力", "デマンド値", "市場連動プラン"]} />
         </div>
 

@@ -12,7 +12,14 @@ import {
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import { DEMAND_FY_TREND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND, DECADAL_AVG_TEMP } from "../../data/weatherData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle = "法人向け電気料金の推移を10年で見る｜高止まり・急騰・補助政策を整理";
 const pageDescription =
@@ -60,6 +67,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人向け電気料金の推移を10年で見る" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -471,7 +479,16 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           </div>
         </div>
 
-        <div className="mt-6">
+        
+      <MarketDataDownload
+        apiPath="/api/datasets"
+        caption="本記事で参照する全データセットを統合API経由で取得可能（CC BY 4.0、商用利用可）"
+      />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="business-electricity-price-trend-10-years" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "市場連動プラン", "高圧電力", "電気料金の内訳"]} />
         </div>
 

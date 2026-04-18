@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -187,7 +188,10 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
                 契約電力（kW）または最大需要電力（デマンド）に対して課される固定的な費用。電力をほとんど使わなくても発生します。デマンドが高いほど基本料金が増加します。
               </p>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="font-semibold text-slate-900">電力量料金（円/kWh）</p>
               <p className="mt-1 text-sm leading-7 text-slate-700">
                 実際に使用した電力量（kWh）に単価をかけた従量課金。燃料費調整額・再エネ賦課金・容量拠出金相当が加算されます。

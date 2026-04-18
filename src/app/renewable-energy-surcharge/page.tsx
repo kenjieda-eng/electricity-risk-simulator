@@ -8,7 +8,14 @@ import {
   RENEWABLE_SURCHARGE_DATA,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
 const pageDescription =
@@ -63,6 +70,7 @@ export default function RenewableEnergySurchargePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "再エネ賦課金とは" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -221,7 +229,16 @@ export default function RenewableEnergySurchargePage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額との違い</h2>
-          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
+          
+      <MarketDataDownload
+        apiPath="/api/datasets/price-adjustment"
+        caption="燃料費調整・再エネ賦課金履歴（CC BY 4.0、商用利用可）"
+      />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
             <table className="w-full min-w-[600px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
                 <tr>

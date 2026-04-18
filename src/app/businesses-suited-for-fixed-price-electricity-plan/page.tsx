@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 const pageTitle =
@@ -281,7 +282,10 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="businesses-suited-for-fixed-price-electricity-plan" terms={["固定プラン", "市場連動プラン", "燃料費調整額", "JEPX", "基本料金"]} />
         </div>
 

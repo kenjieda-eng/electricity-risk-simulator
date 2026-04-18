@@ -5,7 +5,13 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "法人の電気料金とLNGの関係｜価格推移・影響試算・調達リスクを解説";
 const pageDescription =
@@ -62,6 +68,7 @@ export default function LngElectricityPricePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人の電気料金とLNGの関係" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
 
@@ -398,7 +405,12 @@ export default function LngElectricityPricePage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="lng-electricity-price" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "市場連動プラン"]} />
         </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -315,7 +316,10 @@ export default function FixedPricePlanPage() {
             高圧契約・月間使用量50,000kWh（500kW契約）の法人を想定した月額試算です。
             「固定」の電力量料金以外に、燃調費・再エネ賦課金・容量拠出金が別途加算されることを確認してください。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="bg-slate-100">

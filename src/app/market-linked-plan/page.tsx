@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
@@ -192,8 +194,15 @@ export default function MarketLinkedPlanPage() {
             <div className="space-y-2">
               {FY2016_ONWARDS.map((row) => (
                 <div key={row.fy} className="flex items-center gap-2">
+      <MarketDataDownload
+        apiPath="/api/datasets/jepx"
+        caption="JEPX市場データ（CC BY 4.0、商用利用可）"
+      />
                   <span className="w-14 shrink-0 text-right text-xs text-slate-600">FY{row.fy}</span>
-                  <div className="flex-1 rounded bg-slate-100">
+                  
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="flex-1 rounded bg-slate-100">
                     <div
                       className="rounded bg-sky-500 py-1 text-right pr-2 text-xs font-medium text-white"
                       style={{ width: `${Math.max((row.avg / MAX_AVG) * 100, 8)}%` }}

@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
+
 
 const pageTitle =
   "法人の電力契約で単価以外に確認したい項目｜条件・リスク・運用面の整理";
@@ -138,6 +144,7 @@ export default function NonPriceFactorsInElectricityContractPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "法人の電力契約で単価以外に確認したい項目" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -234,7 +241,12 @@ export default function NonPriceFactorsInElectricityContractPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="non-price-factors-in-electricity-contract" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
         </div>
 

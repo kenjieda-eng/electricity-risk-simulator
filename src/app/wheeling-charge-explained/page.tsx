@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 // --- 定数 ---
 const pageTitle =
@@ -234,6 +240,7 @@ export default function WheelingChargeExplainedPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "託送料金（送配電使用料）とは" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -697,7 +704,12 @@ export default function WheelingChargeExplainedPage() {
       </div>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

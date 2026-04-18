@@ -8,7 +8,14 @@ import {
   FUEL_IMPORT_PRICE_YEARLY,
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+
 
 const pageTitle = "燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説";
 const pageDescription =
@@ -62,6 +69,7 @@ export default function FuelCostAdjustmentPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "燃料費調整額（燃調費）とは" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -167,7 +175,16 @@ export default function FuelCostAdjustmentPage() {
             燃調費の最大の変動要因は LNG 輸入価格です。日本の火力発電はガス火力が中心のため、
             LNG の CIF 価格が動けば、その 3〜5 ヶ月後に燃調単価が動きます。
           </p>
-          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          
+      <MarketDataDownload
+        apiPath="/api/datasets/price-adjustment"
+        caption="燃料費調整・再エネ賦課金履歴（CC BY 4.0、商用利用可）"
+      />
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <PriceAdjustmentLineChart
               labels={lngLabels}
               series={[

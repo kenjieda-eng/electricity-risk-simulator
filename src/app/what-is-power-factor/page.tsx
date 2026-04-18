@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -165,7 +166,10 @@ export default function WhatIsPowerFactorPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             力率が低いと基本料金が割増になります。その影響額は以下の計算で求められます。
           </p>
-          <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
             <p className="font-semibold text-slate-900">影響額の計算例</p>
             <p className="mt-2 text-sm leading-7 text-slate-700">
               基本料金 月額100万円 × 力率75%（割増10%）＝ 割増分 月額10万円、年間120万円の損

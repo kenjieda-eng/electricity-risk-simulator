@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
 
 const pageTitle =
   "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度";
@@ -123,6 +129,7 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくず */}
@@ -385,7 +392,12 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="fuel-mix-price-trend-and-electricity-impact" terms={["燃料費調整額", "市場価格調整額", "JEPX", "再エネ賦課金", "市場連動プラン"]} />
         </div>
 

@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ["plan-types"];
+
 
 const pageTitle =
   "高圧・特別高圧で市場連動を考えるときの注意点｜規模別リスク試算と判断基準";
@@ -110,6 +116,7 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "高圧・特別高圧で市場連動を考えるときの注意点" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
@@ -332,7 +339,12 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           <GlossaryLinks currentSlug="high-voltage-market-linked-considerations" terms={["市場連動プラン", "固定プラン", "高圧電力", "JEPX", "市場価格調整額", "契約電力"]} />
         </div>
 
-        <div className="mt-8">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
