@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">法人がクラウドサービスを利用することで、自社のScope3排出量にクラウド事業者の取組が反映されます。クラウドプロバイダの調達水準（24/7 vs 年間総量、地域マッチング）は、Scope3開示の品質に影響します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">クラウド事業者選定時、電力調達戦略を比較項目に入れる企業が増えており、特にサステナビリティ評価が重要な業種ではクラウド選定の判断軸として定着しつつあります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">3社のサステナビリティ戦略比較</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Amazon（AWS）】2025年までに再エネ100%。2040年ネットゼロ。巨大PPA契約者として世界トップ。取組例：インド・欧州・米国でGW規模PPA締結。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Google（GCP）】2017年から年間総量100%達成。2030年までに24/7カーボンフリー。先進的な時間マッチング調達。SMRへの投資公表。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Microsoft（Azure）】2025年再エネ100%。2030年カーボンネガティブ。炭素除去技術への投資拡大。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">3社とも調達規模・技術投資は圧倒的で、産業全体の再エネ需給を牽引しています。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各社の再エネ調達実績はSustainability Report（年次公開）で開示されており、詳細な契約件数・PPA地域・進捗が確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">24/7カーボンフリー構想はRE100、UN Energy Compacts（国連エネルギー合意）でも取り上げられ、国際標準化が進んでいます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.there100.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">RE100 (The Climate Group)</a></li>
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/datacenter-power-demand-trend", title: "データセンターの電力需要動向", description: "日本・世界の状況" },
+              { href: "/ai-workload-energy-impact", title: "生成AIの電力消費", description: "学習・推論の実態" },
+              { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善と液冷" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

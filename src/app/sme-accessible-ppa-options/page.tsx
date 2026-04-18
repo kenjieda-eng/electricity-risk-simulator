@@ -80,12 +80,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①電力会社の再エネ100%メニュー（トラッキング付き）、②地域エネルギー会社のPPAメニュー、③アグリゲーターのグループPPA、の3つが中小企業の選択肢です。①は手軽、②は地域貢献、③は価格ヘッジと再エネ由来が両立できる特徴があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約期間は5〜15年、契約規模は年間100MWh〜と、従来より参入しやすい条件のメニューが増えています。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">中小企業向けPPAの選定チェックリスト</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 自社の年間電力使用量（MWh）を把握している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 契約期間（5年・10年・15年）のコミット可否を社内で合意している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 価格変動リスク（固定か市場連動か）の方針が定まっている</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 信用力要件（契約保証金・親会社保証）を確認している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 中途解約時のペナルティ条項を理解している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 環境価値（トラッキング情報付き）がScope2報告に使える形式か確認している</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業向けのPPA・再エネ調達支援は、中小企業庁・経産省の補助金事業として展開されており、公募条件は毎年更新されます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">RE100「SME Climate Hub」では、中小企業向けの簡易SBT取得・再エネ調達手段が紹介されており、参考になります。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAとは", description: "3形態の基本と選び方" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPAとオフサイトPPA", description: "設置条件とコスト比較" },
+              { href: "/virtual-ppa-explained", title: "バーチャルPPAとは", description: "仕組みと日本での実施" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

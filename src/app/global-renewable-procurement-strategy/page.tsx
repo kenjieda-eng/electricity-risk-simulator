@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①グローバル目標から各国配分、②各国の調達手段・単価・制度の棚卸し、③コスト最小・リスク分散のポートフォリオ設計、④定期的なレビュー、のサイクルで戦略を運用します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グローバル調達は、本社サステナビリティチーム主導で進めるのが効果的です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">主要国の調達手段と単価（比較表）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【米国】バーチャルPPA 30〜50 USD/MWh｜REC 3〜5 USD/MWh｜電力メニュー 20〜40 USD/MWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【欧州】PPA 40〜70 EUR/MWh｜Guarantees of Origin 1〜5 EUR/MWh｜電力メニュー 60〜120 EUR/MWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【日本】非化石証書 0.3〜3 JPY/kWh｜オフサイトPPA 14〜22 JPY/kWh｜再エネメニュー 22〜28 JPY/kWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【中国】GEC 50〜150 CNY/MWh｜PPA 300〜500 CNY/MWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">為替・税制・制度で実質コストが変動するため、その年の実勢値を継続モニタリングします。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">主要国の再エネ調達制度はIEA Annual Report、RE100 Annual Disclosure Report、各国政府の公表資料で確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">国際的な証書基準（I-REC）は、日本でも対応が進みつつあり、グローバル統一のトラッキング体制構築が進んでいます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.there100.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">RE100 (The Climate Group)</a></li>
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.cdp.net/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CDP (Disclosure Insight Action)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/global-energy-procurement-overview", title: "海外拠点の電力調達", description: "各国制度と価格水準" },
+              { href: "/major-countries-electricity-price-comparison", title: "主要国電気料金比較", description: "日本・米国・欧州・東南アジア" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/global-energy", title: "海外拠点・グローバルエネルギー", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

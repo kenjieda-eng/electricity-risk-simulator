@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">近年、系統混雑エリアでの接続を可能にするため、ノンファーム型接続（需給逼迫時に接続制限を受け入れる代わりに接続可能）、容量市場連動型などの新方式が導入されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター事業者は、従来のファーム接続とノンファーム接続のハイブリッド運用を検討することで、立地選択肢を広げています。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">代替立地としての地方エリア</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【北海道】再エネ豊富、冷涼な気候で冷却コスト低。課題：本州との連系線容量制約。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【東北】再エネ発電量多い、用地広い。課題：需要地（首都圏）への送電制約。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【九州】太陽光出力大きい、ただし出力制御頻発エリアあり。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">地方立地は、再エネ調達の容易さ・用地コスト低減・気候メリットを享受できる一方、サービス遅延（レイテンシ）の影響があるため、用途に応じた設計が必要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">系統空き容量情報は、各一般送配電事業者（例：東京電力パワーグリッド、関西電力送配電）の公式サイトで随時更新されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ノンファーム型接続・容量市場連動型の制度詳細は、電力広域的運営推進機関（OCCTO）および経産省「電力ネットワーク次世代化小委員会」の資料で確認できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/datacenter-power-demand-trend", title: "データセンターの電力需要動向", description: "日本・世界の状況" },
+              { href: "/ai-workload-energy-impact", title: "生成AIの電力消費", description: "学習・推論の実態" },
+              { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善と液冷" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

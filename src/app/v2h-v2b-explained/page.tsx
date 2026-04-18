@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">V2H単独ではROIが難しいですが、①平常時のピークカット、②夜間充電→昼間放電（TOU活用）、③停電時のBCP、の3つを兼用することで投資回収が改善します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">EV導入コスト＋V2H機器＋補助金を考慮すると、投資回収期間は5〜10年程度。補助金を最大限活用することが経済性の鍵です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">補助金と税制優遇の組合せ</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【環境省 再エネ・省エネ設備補助金】V2H機器：補助額上限50万円（機器費用の1/2）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【CEV補助金（電動車購入）】EV購入：車種により40〜85万円。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【中小企業経営強化税制】EV＋V2H設備：即時償却または税額控除7〜10%。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【自治体補助金】東京都・神奈川県等で追加補助あり。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">組合せで初期投資を半減できるケースもあり、申請時の同時並行手続きが重要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">V2H補助金の最新情報は、環境省・経産省および各自治体の補助金公募サイトで確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">V2H規格は「CHAdeMO」準拠が日本の主流で、詳細仕様は（一社）CHAdeMO協議会公式サイトで参照可能です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.env.go.jp/earth/ondanka/supply_chain/gvc/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 脱炭素経営</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ev-charging-facility-contract", title: "EV充電設備の契約区分", description: "社内専用・従業員用・一般開放" },
+              { href: "/corporate-ev-introduction", title: "法人EV導入時の電力コスト", description: "充電設備と契約区分" },
+              { href: "/corporate-ev-roi-calculation", title: "社用車EV化のROI試算", description: "月間電気代と燃料費比較" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

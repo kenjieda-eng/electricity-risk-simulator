@@ -47,6 +47,16 @@ export default function Page() {
           { name: "FAQ集（よくある質問）", url: "https://simulator.eic-jp.org/articles/faq" },
           { name: "契約期間中の解約・違約金FAQ" },
         ]}
+        faq={[
+          { question: "違約金はいくらかかる？", answer: "契約条件により、①定額（数万〜数十万円）、②残存契約期間×月額料金の一定割合、③残存使用量×特定単価、の3パターンが主流です。" },
+          { question: "違約金は交渉で減額できる？", answer: "値上げ通知後の解約、電力会社側の契約違反、不可抗力での解約などでは減額・免除の余地があります。" },
+          { question: "違約金条項がない契約はある？", answer: "一部の短期契約・自治体向け契約には違約金なしもありますが、長期契約（2年以上）では設定されているのが通常。" },
+          { question: "解約の申入期限は？", answer: "契約満了の1〜6ヶ月前までの事前通知が必要な場合が多いです。期限を過ぎると自動更新となり、違約金なし解約のタイミングを失います。" },
+          { question: "新電力が撤退した場合、違約金はどうなる？", answer: "電力会社側の責任による契約終了では、違約金は発生しないのが原則です。" },
+          { question: "契約内容が覚えていない場合は？", answer: "電力会社に契約書・契約条件の再発行を依頼。重要条項は書面で確認を残すことを推奨。" },
+          { question: "違約金を払ってでも切替するべき？", answer: "切替後の年間削減額×残存期間が違約金+切替コストを上回るなら切替が経済的。比較試算は必ず行う。" },
+          { question: "違約金は次の電力会社が負担してくれる？", answer: "一部の新電力は、違約金負担特典を提示するケースがあります。切替見積時に確認すると有利。" },
+        ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -82,12 +92,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q7：違約金を払ってでも切替するべき？ A：切替後の年間削減額×残存期間が違約金+切替コストを上回るなら切替が経済的。比較試算は必ず行う。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q8：違約金は次の電力会社が負担してくれる？ A：一部の新電力は、違約金負担特典を提示するケースがあります。切替見積時に確認すると有利。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">紛争時のFAQ</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q9：違約金額が契約書と違う場合は？ A：契約書を根拠に異議申立。経産省「電力・ガス取引監視等委員会」にも相談可能。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q10：違約金支払いを拒絶するとどうなる？ A：電力会社からの訴訟、信用情報への影響の可能性。まず法律相談を検討。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q11：消費者契約法で違約金が無効になることはある？ A：法人契約は原則対象外。ただし個人事業主・小規模事業者は一部救済可能なケースあり。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力契約の違約金に関する監督は、経産省「電力・ガス取引監視等委員会」で行われています。不公正な条項は公正取引委員会にも相談可能です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">下請法・独占禁止法の観点から、明らかに過大な違約金設定は「買いたたき」や「優越的地位濫用」に該当する可能性があります。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">消費者庁</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/why-business-electricity-expensive-faq", title: "法人電気代なぜ高いFAQ", description: "3軸で原因と対処法" },
+              { href: "/contract-review-flow-faq", title: "契約見直しフローFAQ", description: "着手から切替完了まで" },
+              { href: "/market-linked-plan-faq", title: "市場連動プランFAQ", description: "向く企業・向かない企業" },
+              { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

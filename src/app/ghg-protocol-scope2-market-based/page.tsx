@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">証書購入の日付・年度が算定対象年度と一致する必要があります。また、地理的・時間的一致（同じ電力系統内で、同じ年度内に発電・消費されたもの）が望ましいとされ、将来的には時間一致（Time-matched）が標準化される可能性があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">第三者保証を取得する場合、証書・契約書・使用電力量データの三点セットを証跡として提出できるように整備しておきます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">24/7 Carbon-Free Energy への進化</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Googleが提唱する「24/7 Carbon-Free Energy」は、年間総量ベースの再エネ達成から、時間単位で再エネ発電と消費を一致させる概念への進化です。2030年までの完全実現を掲げる企業が増えています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本では時間単位の証書トラッキング制度はまだ未整備ですが、海外ではGoogle・Microsoft・Iron Mountainなどが先行実証を進めています。将来の開示基準となる可能性が高い領域です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GHGプロトコルScope2ガイダンス（2015年版）が現行の国際標準です。EUのCSRD（企業サステナビリティ報告指令）や米SECの気候開示規則も、GHGプロトコルに準拠した算定を要求しています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本では環境省「温室効果ガス算定・報告・公表制度」がGHGプロトコルをベースに設計されており、国内ルールと国際ルールの差分は小さくなっています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://ghgprotocol.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GHGプロトコル</a></li>
+            <li><a href="https://ghg-santeikohyo.env.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 温室効果ガス算定報告公表制度</a></li>
+            <li><a href="https://www.cdp.net/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CDP (Disclosure Insight Action)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
+              { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
+              { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

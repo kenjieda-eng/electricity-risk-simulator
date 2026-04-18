@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①GX-ETS：電力会社が排出枠購入コストを料金に転嫁。②化石燃料賦課金：火力発電の燃料コストが上昇し、燃料費調整額に反映。③有償オークション：電力会社の排出枠購入コストが本格的に料金に波及。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年までにkWhあたり1〜3円程度の上昇要因が段階的に積み上がる可能性があり、中長期の電力コスト計画に織り込む必要があります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">GX-ETSの義務対象者と除外条件</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【対象】直接排出量10万t-CO2/年以上の企業（鉄鋼・化学・セメント・電力等の大規模排出事業者）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【除外条件】一定の削減努力義務・技術的制約を持つ事業者は特例適用の可能性。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【参加メリット】先行参加企業はベンチマーク設定・排出枠割当でやや有利な条件。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ペナルティ】排出枠不足時は市場購入または課徴金（金額は制度詳細設計で決定）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">試行運用で先行参加した約700社は、本格稼働時の制度設計に影響力を持つ立場にあります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX推進法・GX-ETSの詳細は、経産省「GX推進」サイトおよびGX推進機構公式サイトで確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連する開示制度（TCFD・SBT・ISSB基準）との連携強化が進められており、統合的な対応が求められます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.meti.go.jp/policy/energy_environment/global_warming/gx/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 GX推進法・GX-ETS</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-liberalization-timeline", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
+              { href: "/capacity-market-timeline", title: "容量市場タイムライン", description: "2020年〜本格稼働" },
+              { href: "/renewable-surcharge-revision-history", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

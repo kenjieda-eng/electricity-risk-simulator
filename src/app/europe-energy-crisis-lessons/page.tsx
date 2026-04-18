@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①エネルギー調達先・調達形態の分散化、②長期契約（PPA）による価格ヘッジ、③需要抑制・自家発電での自立性確保、④地政学リスクの経営課題化、が欧州危機の教訓として挙げられます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年代に向けて、エネルギー安全保障と脱炭素の両立が企業戦略の中心課題になる可能性が高いです。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">欧州主要国の危機対応策（学ぶべき点）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ドイツ】産業向け電気代補助金（Strompreisbremse）、原発稼働延長、LNG端末急造。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【フランス】原発比率維持、家庭・企業向け価格凍結措置（Bouclier Tarifaire）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【英国】Energy Bill Relief Scheme、事業者向け6ヶ月支援。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【北欧諸国】再エネ・水力の豊富さで危機の影響を相対的に抑制。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本も2022〜2023年に電気・ガス価格激変緩和対策事業を実施。予算規模は累計3兆円超。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">欧州電力危機の詳細分析は、IEA「Electricity Market Report」、ENTSO-E（欧州送電系統運用者ネットワーク）公表資料で時系列で確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本の激変緩和対策事業の詳細は、資源エネルギー庁公式サイトで公表されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/global-energy-procurement-overview", title: "海外拠点の電力調達", description: "各国制度と価格水準" },
+              { href: "/major-countries-electricity-price-comparison", title: "主要国電気料金比較", description: "日本・米国・欧州・東南アジア" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/global-energy", title: "海外拠点・グローバルエネルギー", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

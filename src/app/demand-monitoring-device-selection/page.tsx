@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①予測精度（何分前に警報が出るか）、②外部制御連携（空調・生産設備の自動制御可否）、③複数拠点統合可否、④オープンデータ形式（CSV・API）の4点を確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">工場の場合は生産ライン制御との連携が可否が重要で、オフィスビルの場合は空調制御との連携が優先度高い傾向があります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">機能別比較表</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ベーシック型（10〜30万円）】：30分デマンド計測、予測警報、パルス出力。単体運用、複数拠点統合不可。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【クラウド連携型（50〜150万円＋月額1〜3万円）】：複数拠点統合、AI需要予測、メール・LINE通知、API連携。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【フルBEMS統合型（300万円〜）】：空調・照明の自動制御、需給調整市場連携、AIピーク最適化、詳細レポート。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自社の契約規模・拠点数・運用担当者の人数で選定範囲が決まります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">デマンド監視装置の導入には、省エネ補助金（資源エネルギー庁）や中小企業向けのIT導入補助金が活用可能です。補助率は1/2〜2/3が一般的です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法定期報告では、デマンド管理の実績（契約電力推移）も記載事項となるため、装置導入と社内報告体制を一体で整備します。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/category/saving_and_new/saving/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 省エネ法</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/bems-fems-ems-overview", title: "BEMS/FEMS/EMSの違い", description: "目的と選定基準" },
+              { href: "/ai-electricity-optimization", title: "AIによる電力最適化の実務", description: "需要予測と自動制御" },
+              { href: "/smart-meter-data-utilization", title: "スマートメーターデータの業務活用", description: "30分値データの分析" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

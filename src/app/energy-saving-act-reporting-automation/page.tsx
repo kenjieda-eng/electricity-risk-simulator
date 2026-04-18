@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①複数拠点のデータ統合可否、②単位変換（kWh→原油換算GJ）の自動化、③対象設備・業種フォーマットの網羅性、④申請様式（エネ庁フォーマット）への出力可否、を確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自社の事業所が特定事業者・第二種エネルギー管理指定工場に該当するかを、エネルギー使用量から事前確認しておきます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">工数削減効果の目安</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【手作業の場合】中堅製造業（拠点5・事業所20）で、年間報告業務工数：約40〜60人日。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【半自動化（エネマネSaaS導入）】同規模で、年間工数：約10〜20人日。▲70%削減。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【完全自動化（エネマネ＋RPA連携）】同規模で、年間工数：約5人日以下。▲90%削減。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">工数削減のほか、報告ミス削減・監査対応の迅速化というベネフィットもあります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法定期報告の様式・記入要領は資源エネルギー庁公式サイトで公開されています。2023年の改正で非化石エネルギーへの転換・電気需要最適化の報告項目が追加されました。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">環境省・経産省が共同で運営する「温室効果ガス排出量算定・報告・公表制度」と併用することで、ESG開示データも一体管理できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/category/saving_and_new/saving/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 省エネ法</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/bems-fems-ems-overview", title: "BEMS/FEMS/EMSの違い", description: "目的と選定基準" },
+              { href: "/ai-electricity-optimization", title: "AIによる電力最適化の実務", description: "需要予測と自動制御" },
+              { href: "/smart-meter-data-utilization", title: "スマートメーターデータの業務活用", description: "30分値データの分析" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

@@ -80,12 +80,41 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①自社のScope2排出量を把握し、GX-ETS対象となる規模か確認、②電力会社別の排出係数と電気料金の比較、③再エネ電源への切替検討、④長期契約（PPA）による価格ヘッジ、の順で備えを進めます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特に製造業・物流業など電力多消費業種では、GX-ETS対応が中長期の競争力に直結するため、経営層を巻き込んだロードマップ策定が重要です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務チェックリスト</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 自社のCO2排出量（Scope1・Scope2）を直近3年分把握している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 主要電力供給事業者の年間排出係数を把握している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ GX-ETS対象となる「直接排出量10万t-CO2/年」閾値との距離を確認している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 排出削減ロードマップ（2030年・2035年）の数値目標を社内で合意済み</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 再エネ調達手段（非化石証書・PPA・自家発電）のコスト試算を行っている</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 電力契約の長期化（3〜5年）による価格ヘッジを検討している</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX-ETSはGX推進法（2023年5月成立、7月施行）を根拠法令とし、GX推進機構が運用主体となっています。並行して、2028年の化石燃料賦課金・2033年の有償オークション導入が段階的に進められる予定です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連制度としては、GHGプロトコル（国際標準の排出量算定ルール）、SBT（科学的根拠に基づく削減目標）、TCFD（気候関連財務情報開示）が企業の対応上の基盤になります。これらと組み合わせて、社内体制を整えることが推奨されます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.meti.go.jp/policy/energy_environment/global_warming/gx/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 GX推進法・GX-ETS</a></li>
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
+              { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
+              { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

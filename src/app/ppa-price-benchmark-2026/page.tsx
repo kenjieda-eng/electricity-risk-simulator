@@ -80,12 +80,36 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①完全固定価格：20年間一定、シンプルだが市場下落時に割高。②市場連動＋ヘッジ：市場価格連動をベースに上下限を設定、変動ある程度受容する企業向け。③バーチャル（価格差精算）：物理調達と分離、会計処理が複雑だが柔軟性最大。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自社のリスク許容度・会計方針・調達規模で選定します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">PPA価格比較の実例</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【比較例（想定値・環境価値込み）】オンサイト屋根太陽光（1MW、20年契約）：14円/kWh｜オフサイト太陽光（10MW、20年契約、託送含）：17円/kWh｜バーチャルPPA（10MW、15年契約）：13円/kWh（市場価格連動、精算あり）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">同条件で小売電気料金（法人高圧、再エネメニュー）は22〜26円/kWh程度。PPAの方がkWhあたり5〜10円安い結果となるケースが多いですが、長期コミットメントを前提とする点に留意が必要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">PPAの価格動向は経産省「コーポレートPPA推進ガイドブック」、RE100の「RE100 Annual Disclosure Report」でトレンドが確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">制度面では、2022年に非化石証書の需要家直接取引が解禁され、バーチャルPPAの実施環境が整備されました。託送料金（レベニューキャップ制度）の動向もPPA価格に影響します。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAとは", description: "3形態の基本と選び方" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPAとオフサイトPPA", description: "設置条件とコスト比較" },
+              { href: "/virtual-ppa-explained", title: "バーチャルPPAとは", description: "仕組みと日本での実施" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

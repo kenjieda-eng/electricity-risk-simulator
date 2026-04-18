@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">資金・借入余力があり、長期コストを最小化したいなら自家消費。初期投資を避けたい、メンテナンス負担を減らしたい、減価償却の財務影響を避けたいならPPA、が大まかな判断基準です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">税制優遇（中小企業経営強化税制・生産性向上投資促進税制）が使える場合、自家消費が優位になることがあります。契約前に税理士と確認することが重要です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">コスト比較表（1MW規模・20年）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【自家消費】初期投資：1.5〜2.5億円。年間メンテ：50〜100万円。税制優遇：中小企業経営強化税制で即時償却可。想定LCOE：8〜12円/kWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【オンサイトPPA】初期投資：0円。月額支払い：発電量×12〜18円/kWh。メンテナンス：PPA事業者負担。税制優遇：なし（サービス費用として損金処理）。想定LCOE：12〜18円/kWh。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">20年トータルコスト：自家消費の方が2〜4割低くなるのが一般的ですが、初期投資・減損リスクの扱いで判断が分かれます。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自家消費太陽光の税制優遇（中小企業経営強化税制・カーボンニュートラル投資促進税制）は、中小企業庁・経産省の制度で、毎年改正があります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">PPA契約の会計処理は、新リース会計基準（IFRS16・日本基準2027年適用予定）の影響を受け、オンバランス化される場合もあるため、会計士との事前確認が必要です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.env.go.jp/earth/ondanka/supply_chain/gvc/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 脱炭素経営</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAとは", description: "3形態の基本と選び方" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPAとオフサイトPPA", description: "設置条件とコスト比較" },
+              { href: "/virtual-ppa-explained", title: "バーチャルPPAとは", description: "仕組みと日本での実施" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ROIは、①導入時のコミッショニング（初期チューニング）の品質、②運用担当者の育成、③定期的な効果検証、で大きく変わります。装置導入だけで終わると効果が出ず、運用改善と一体で進めることが重要です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">補助金（省エネ補助金・GX関連補助金）で初期投資を抑える選択肢も活用します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">ROI試算テンプレート</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【試算例：中規模工場（年間電気代1億円、契約電力1,000kW）】</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">初期投資：BEMS＋センサー＋制御機器＝2,000万円。補助金（省エネ補助金1/2）＝▲1,000万円。実質投資＝1,000万円。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">年間削減：電力量10%削減＝1,000万円／年。ピークカット10%で契約電力減＝240万円／年。合計：1,240万円／年。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資回収：1,000万円÷1,240万円＝約0.8年。5年累計削減額：5,200万円。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">実際の効果はチューニングと運用で変わるため、導入後1年間は検証期間として設けるのが標準です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">BEMS・FEMS導入補助金は、資源エネルギー庁の「省エネルギー投資促進支援事業費補助金」が代表的です。公募は毎年4月〜8月が中心。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">補助金活用後のエビデンス管理（削減実績報告）は、省エネ法定期報告と一体化させることで運用効率化できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/category/saving_and_new/saving/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 省エネ法</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/bems-fems-ems-overview", title: "BEMS/FEMS/EMSの違い", description: "目的と選定基準" },
+              { href: "/ai-electricity-optimization", title: "AIによる電力最適化の実務", description: "需要予測と自動制御" },
+              { href: "/smart-meter-data-utilization", title: "スマートメーターデータの業務活用", description: "30分値データの分析" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

@@ -83,12 +83,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">調整力：需要変動・発電変動に対応する電源・需要抑制能力。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">予備率：需要に対する供給余力の比率。7%以下で需給逼迫注意報、3%以下で警報発令の目安。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">市場・取引の用語</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">JEPX（日本卸電力取引所）：電力卸市場の運営機関。スポット市場・時間前市場・先渡市場・非化石価値取引市場を運営。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">スポット市場：翌日の30分単位の電力を当日取引する市場。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">時間前市場：実需給1時間前まで取引可能な市場。直前の需給調整に活用。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">VPP（仮想発電所）：複数の分散電源・需要家リソースを束ねて1つの発電所のように運用。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR（デマンドレスポンス）：需要家が電力消費を調整することで系統に貢献する仕組み。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場の制度・運用ルールは、電力広域的運営推進機関（OCCTO）の公式サイトに詳細資料があります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">JEPXの取引ルール・市場価格データは、JEPX公式サイトで日次・週次で公表されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-contract-glossary", title: "契約関連用語集", description: "契約電力・基本料金・デマンド" },
+              { href: "/electricity-market-glossary", title: "市場関連用語集", description: "JEPX・スポット・先物" },
+              { href: "/electricity-facility-glossary", title: "設備関連用語集", description: "高圧・低圧・キュービクル" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/glossary", title: "用語集", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

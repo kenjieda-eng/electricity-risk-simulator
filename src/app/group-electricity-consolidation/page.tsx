@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①各社の契約現状（電力会社・単価・契約期間）を一覧化、②本社一括契約の設計、③電力会社との交渉、④契約切替（既存契約の解約・新規契約）、⑤グループ各社への請求・配賦ルール策定、の5ステップで実施。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">既存契約の違約金が発生する場合は、切替タイミングを調整することで違約金を回避するのが得策。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">集約効果の試算テンプレート</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【例：グループ会社10社、年間電気代合計5億円の場合】</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">単価削減：5〜10%の交渉成功で、年間2,500〜5,000万円の削減。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約管理工数：各社担当者の工数▲50%相当。本社1名での集中管理が実務的。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データ活用：Scope2排出量の一元把握で、グループ全体のサステナビリティ開示を効率化。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">追加投資（エネマネシステム・契約管理）：初期500〜2,000万円。1〜3年で回収。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グループ会社の電力調達最適化は、経産省「電力システム改革」資料および中小企業庁「グループ内取引適正化ガイドライン」などで関連情報が提供されます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">税務面では、グループ内取引価格設定（移転価格）の観点からも、適正な価格での電力配賦が求められます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ma-electricity-contract-succession", title: "M&A時の電力契約承継", description: "スキーム別の手続き" },
+              { href: "/company-split-electricity-contract", title: "会社分割時の電力契約", description: "分割・新規契約設定" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ma-organizational-change", title: "M&A・組織再編時の電力契約", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

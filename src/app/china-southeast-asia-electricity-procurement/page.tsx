@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グローバル企業がRE100を達成する場合、各国で利用できる制度を組み合わせることが必要です。特に中国・東南アジアは制度が変わりやすく、現地パートナー・コンサルとの連携が不可欠です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グローバル本社のScope2算定では、各国の証書・PPA由来のクレジットを正しく集約・トラッキングする仕組みが重要になります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">各国制度の概要（比較表）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【中国】再エネ調達：GEC制度あり、一部省でPPA可能。電力市場：部分自由化。為替・制度リスク：高。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【タイ】再エネ調達：REC（I-REC準拠）あり、自家太陽光普及。電力市場：部分自由化。リスク：中。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ベトナム】再エネ調達：制度整備中、DPPA（Direct PPA）導入議論中。電力市場：EVN独占。リスク：高。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【マレーシア】再エネ調達：Corporate PPA制度あり、Green Electricity Tariff（GET）あり。リスク：中。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【インドネシア】再エネ調達：制度整備中、自家太陽光が現実的。リスク：高。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各国のルール変更頻度が高く、調達戦略は年次でレビューが必要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">東南アジア各国の再エネ調達動向は、IEA Annual Report、アジア開発銀行（ADB）エネルギー報告書で継続的に公表されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">I-REC（International REC）の国別対応状況は、International Tracking Standard Foundation公式サイトで確認できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.there100.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">RE100 (The Climate Group)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/global-energy-procurement-overview", title: "海外拠点の電力調達", description: "各国制度と価格水準" },
+              { href: "/major-countries-electricity-price-comparison", title: "主要国電気料金比較", description: "日本・米国・欧州・東南アジア" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/global-energy", title: "海外拠点・グローバルエネルギー", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

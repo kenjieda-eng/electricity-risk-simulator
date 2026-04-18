@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①各社ごとの個別契約を継続、②持株会社主導の電力調達で同条件・単価一括取得（契約名義は各社のまま）、③エネルギーマネジメント会社を設立してグループ需要を集約、の3パターンが実務上の選択肢です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">持株会社化のタイミングで、エネルギーマネジメント戦略を再設計することを推奨します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">エネルギー管理会社（ESP）設立の検討</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ESP（Energy Service Provider）】：グループ内に設立し、各社への電力再販・エネルギーサービスを提供する会社。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【メリット】グループ全体の調達集約、スケールメリット、エネマネ投資の集中化。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【デメリット】設立コスト・ランニングコスト、税務面での配慮（移転価格）が必要。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">年間グループ電気代10億円以上、かつ脱炭素戦略の重要度が高い企業で検討価値があります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">持株会社の制度は会社法で規定されており、電力契約の帰属は各事業会社になります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ESP設立の実務は、税理士・会計士との連携が不可欠で、移転価格対応・税務リスクの評価が重要です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.mof.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">財務省</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ma-electricity-contract-succession", title: "M&A時の電力契約承継", description: "スキーム別の手続き" },
+              { href: "/company-split-electricity-contract", title: "会社分割時の電力契約", description: "分割・新規契約設定" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ma-organizational-change", title: "M&A・組織再編時の電力契約", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

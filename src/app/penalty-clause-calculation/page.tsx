@@ -81,12 +81,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①電力会社側の契約違反（供給義務不履行）、②値上げ通知後の解約、③不可抗力事由、④相互合意による早期終了、などのケースでは違約金の免除・減額が認められる可能性があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">交渉時は、契約書の違約金条項の法的有効性（消費者契約法・独禁法の観点）を論点にすることで、実態的に減額できる場合もあります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">違約金計算シート（実務テンプレート）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Step1】契約書の違約金条項を確認（定額/月額連動/使用量連動）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Step2】残存契約期間と月額/使用量を特定。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Step3】計算式に当てはめて違約金総額を算出。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Step4】切替後の年間削減額×残存期間と比較。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Step5】差額（切替メリット）がマイナスなら維持、プラスなら切替が経済的。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">交渉により違約金を▲30〜50%圧縮できるケースもあり、複数社見積と並行して検討します。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">不公正な違約金は、公正取引委員会「優越的地位濫用ガイドライン」や消費者契約法10条（不当条項）に該当する可能性があります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力契約の違約金紛争は、経産省「電力・ガス取引監視等委員会」の相談窓口でも対応しています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">消費者庁</a></li>
+            <li><a href="https://www.jftc.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">公正取引委員会</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-contract-main-clauses", title: "電力契約書の主要条項", description: "法人担当者向けの読み方" },
+              { href: "/force-majeure-clause", title: "不可抗力条項の典型例", description: "災害・需給ひっ迫時の責任分担" },
+              { href: "/auto-renewal-clause", title: "自動更新条項と更新拒絶", description: "通知期限管理と解除" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
