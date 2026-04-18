@@ -80,12 +80,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Excelで月別データを管理するのが最小限のアプローチ、Google Sheetsとスマートメーターデータ連携で半自動化、クラウド型エネマネサービスで完全自動化、の3段階があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業は初期はExcel運用、軌道に乗ったらSaaS型への移行、というステップが現実的です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">月別確認の実務チェックリスト</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 毎月、前年同月比と予算比を確認している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ ピーク月（夏冬）と底の月の使用量差が2倍以内に収まっている</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 基本料金と電力量料金の比率が前月と大きく変わっていない</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 単価（円/kWh）の月次推移を把握している（燃料費調整額の影響）</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 複数店舗の場合、店舗間の使用量／面積比率を比較している</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 異常値検知時のアラート運用ルールが定まっている</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業庁「中小企業のエネルギーコスト対策ガイド」は、小規模事業者向けの削減手法を網羅的にまとめています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">経産省「省エネポータルサイト」では、業種別の削減事例・診断ツールが無料で提供されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/sme-electricity-basics", title: "中小企業の電気料金の基礎", description: "低圧契約を理解する" },
+              { href: "/low-voltage-review-essentials", title: "低圧契約の見直し要点", description: "チェックリスト" },
+              { href: "/sme-cost-reduction-ideas", title: "中小企業向けの電気代削減アイデア", description: "低予算で即効性のある打ち手" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

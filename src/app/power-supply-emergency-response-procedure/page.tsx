@@ -81,12 +81,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">事前に節電レベル別のアクションプランを策定し、経営層・現場・設備管理者で役割分担を明確化しておきます。通知経路（メール・社内放送・掲示）と連絡体制を平常時に整備することが、迅速な対応につながります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需要家側DRプログラムに参加していれば、節電実施により電力会社から対価を受け取ることもできます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">過去の発令事例とその教訓</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2022年3月】東京・東北エリアに初の警報。福島県沖地震による発電所停止と寒波が重なり、最大需要時の予備率3%以下。企業の急な節電要請で業務影響が発生。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2022年6月】猛暑による注意報。想定以上の早期発令で、節電ガイダンスの準備不足が露呈。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2023年・2024年】冬季の注意報レベルに留まる。供給力確保の施策（容量市場・非常用電源確保）が効果。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらの事例から、「事前準備された企業は業務影響を最小化できた」という教訓が得られています。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給ひっ迫警報・注意報の発令判断は、電力広域的運営推進機関（OCCTO）が運用する需給調整機能と、経産省の需給監視に基づきます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR（デマンドレスポンス）参加については、需給調整市場（2021年開設）への参加契約をアグリゲーター経由で結ぶことで、対価を得ることが可能です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/energy-bcp-overview", title: "法人の電力BCP概論", description: "停電・需給ひっ迫への備え" },
+              { href: "/emergency-power-source-options", title: "非常用電源の選び方", description: "ディーゼル・ガス・蓄電池の比較" },
+              { href: "/microgrid-for-business", title: "マイクログリッドとは", description: "自立運転可能な電力システム" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

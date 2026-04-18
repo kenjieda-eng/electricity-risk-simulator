@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">証書はマーケット基準のScope2算定で使えますが、トラッキング情報付きである必要があります。FIT非化石証書は2021年度からトラッキング対応され、発電所・電源種別が明記されます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">購入コストは、FIT非化石（再エネ指定）で0.3〜1.3円/kWh、非FIT再エネ指定でそれ以上の水準で推移しており、制度改正や需給で変動します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">購入手順と価格推移</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">法人需要家が非化石証書を購入する主な経路は、①小売電気事業者経由（再エネメニュー契約）、②需要家公募枠での直接購入（JEPX開催の年4回入札）、の2つです。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">価格推移：FIT非化石（再エネ指定）は2021年度0.3円/kWhの下限設定、2022年度以降も同水準。非FIT非化石は入札結果で変動、最近は1〜3円/kWhのレンジで取引されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">追加性（Additionality）を重視する企業はFIT非化石より非FIT非化石を選好する傾向があります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">非化石価値取引市場の運営はJEPX、制度設計は経済産業省（資源エネルギー庁）が担当しています。毎年度のオークション結果・取引量は経産省・JEPXの公式サイトで確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">CDP回答やRE100報告では、証書購入根拠として「トラッキング情報付きの証書」であることが要求されるため、購入時に必ず確認します。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.jepx.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">日本卸電力取引所（JEPX）</a></li>
+            <li><a href="https://ghg-santeikohyo.env.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 温室効果ガス算定報告公表制度</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
+              { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
+              { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

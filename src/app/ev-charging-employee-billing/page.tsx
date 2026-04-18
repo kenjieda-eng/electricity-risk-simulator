@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従業員別の充電量データ・請求・決済を自動化するには、充電管理クラウドサービスが便利です。OCPP対応の充電器なら、複数メーカー混在でも統合管理できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">給与天引き・経費精算との連携、個人識別（RFIDカード・アプリ）、の2点が運用効率化の鍵です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">課金方式別の比較</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【無料供与】運用コスト：低。福利厚生として訴求。税務リスク：要注意（個人利用の場合）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【従量課金】運用コスト：中（システム必要）。公平性：高。税務リスク：低（実費徴収）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【サブスク】運用コスト：中。管理簡便。税務リスク：低（月額固定）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【割引券・ポイント】運用コスト：高。インセンティブ設計自由。税務リスク：設計による。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">企業規模・EV普及率・運用担当者数で選定方針が変わります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従業員向け充電の税務整理は、国税庁「法人税法基本通達」および「所得税法基本通達」で扱い方の指針が示されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">充電管理プラットフォームの標準規格（OCPP）は、Open Charge Alliance（OCA）公式サイトで詳細仕様が公開されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.nta.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">国税庁</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ev-charging-facility-contract", title: "EV充電設備の契約区分", description: "社内専用・従業員用・一般開放" },
+              { href: "/corporate-ev-introduction", title: "法人EV導入時の電力コスト", description: "充電設備と契約区分" },
+              { href: "/corporate-ev-roi-calculation", title: "社用車EV化のROI試算", description: "月間電気代と燃料費比較" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

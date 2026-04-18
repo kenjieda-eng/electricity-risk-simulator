@@ -80,12 +80,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①空白期間の回避：譲渡日と電力契約切替日のずれを最小化。②最終保障供給への落ち込み防止：手続き遅延で最終保障供給に移行するリスクあり、料金が割高に。③デマンド・契約電力の精算：移行前後の使用実績に基づく精算漏れを確認。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">譲受側・譲渡側・電力会社の3者間で、事前にタイムラインを合意することが重要です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務タイムライン（譲渡日基準）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-90日】譲渡合意、電力契約の取扱い基本方針決定。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-60日】電力会社への正式通知、承継/解約/新規の確定。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-30日】書類提出、新旧名義の同意書取得。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-14日】最終確認、引継ぎ当日の立会い手配。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【譲渡日】名義変更実行、メーター確認。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【+30日】初回請求の検算、精算完了。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">手続きが遅延すると最終保障供給に移行し、割高料金が発生するため、バッファを持った計画が重要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">事業譲渡の会社法上の手続きは、法務省の会社法関連資料で確認可能です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力契約の承継手続きは、各小売電気事業者および一般送配電事業者の約款で規定されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.mof.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">財務省</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ma-electricity-contract-succession", title: "M&A時の電力契約承継", description: "スキーム別の手続き" },
+              { href: "/company-split-electricity-contract", title: "会社分割時の電力契約", description: "分割・新規契約設定" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ma-organizational-change", title: "M&A・組織再編時の電力契約", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

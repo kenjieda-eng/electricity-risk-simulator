@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">合意書・議事録・メールなど、転嫁交渉のプロセスを記録しておくことが重要です。税務調査・下請法調査で提出を求められる場合があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業庁の「価格交渉支援ツール」や、商工会議所の無料相談を活用することで、適切な交渉プロセスを設計できます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">交渉文書の実務テンプレート</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【価格改定申入書に含めるべき項目】</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①改定理由：電気代上昇率の根拠データ（経産省・電力会社公表値）。②改定対象範囲：影響する品目・サービス。③改定率：コスト上昇に対する反映率。④実施時期：改定日・猶予期間。⑤協議期間：回答期限（通常30〜60日）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">書類保管は、交渉開始から合意・実施後5年間が目安（下請法上の時効考慮）。取引先ごとのファイル管理を推奨。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">公正取引委員会・中小企業庁は、価格転嫁促進のための「パートナーシップ構築宣言」や「下請取引適正化推進月間」を運営しています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">適正転嫁状況は、下請Gメン・公取委の立入検査対象となり、違反企業には指導・勧告が行われます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.jftc.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">公正取引委員会</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-cost-account-classification", title: "電気代の勘定科目", description: "部門配賦と月次処理" },
+              { href: "/invoice-system-electricity", title: "インボイス制度と電気代", description: "仕入税額控除の扱い" },
+              { href: "/battery-solar-depreciation", title: "蓄電池・太陽光の減価償却", description: "耐用年数と税制優遇" },
+              { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

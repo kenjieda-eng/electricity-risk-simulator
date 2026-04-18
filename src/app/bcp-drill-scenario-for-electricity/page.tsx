@@ -81,12 +81,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①停電通知から業務停止までのタイムラグ計測、②非常用電源の起動時間と維持時間、③データ保全の成否、④顧客・取引先への連絡手順、⑤復旧後の業務再開手順、を確認項目に含めます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">訓練後は振り返り（KPT：Keep/Problem/Try）を実施し、BCP計画を継続的に改善します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">訓練実施の具体的な手順</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【準備フェーズ（訓練2週間前）】：対象部門の周知、訓練時間の調整、評価シートの準備、ファシリテーター任命。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【実施フェーズ（訓練当日）】：開始宣言、シナリオ投入、各部門のアクション実行、観察・記録、タイムライン追跡。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【振り返りフェーズ（訓練1週間後まで）】：評価シート集約、改善項目リスト化、BCP文書への反映、次回訓練への申送り。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">訓練の効果は、1回目より2回目、2回目より3回目と、実施回数を重ねるごとに向上します。継続的な実施が鍵です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">内閣府「事業継続ガイドライン」と中小企業庁「中小企業BCP策定運用指針」が、訓練シナリオ設計の参考になります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">業界団体（電機工業会・日本BCP協会）が提供するBCP訓練プログラムも、実施ノウハウを得るのに有用です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/energy-bcp-overview", title: "法人の電力BCP概論", description: "停電・需給ひっ迫への備え" },
+              { href: "/emergency-power-source-options", title: "非常用電源の選び方", description: "ディーゼル・ガス・蓄電池の比較" },
+              { href: "/microgrid-for-business", title: "マイクログリッドとは", description: "自立運転可能な電力システム" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

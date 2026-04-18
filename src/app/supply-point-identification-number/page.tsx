@@ -80,12 +80,41 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①供給地点特定番号の照会・確認、②新電力との契約申込、③切替日の指定、④最終請求の確認、⑤移行後初回請求の検算、を流れで実施します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">引越し（拠点移転）時は、旧拠点の解約と新拠点の契約を並行実施。空白期間を避けるための「重複契約期間の設定」を事前に計画します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">拠点移転時のタイムライン例</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-60日】移転計画確定、新拠点の供給地点特定番号取得（一般送配電事業者に依頼）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-45日】新電力との新規契約見積・比較。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-30日】旧拠点の解約通知、新拠点の契約申込。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【-14日】最終確認、立会い日程調整。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【移転日】メーター確認、電力引継ぎ。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【+14日】移転後初回請求の検算、精算確認。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中〜大規模契約（高圧以上）では、手続きに2〜3ヶ月かかるケースもあるため、早期着手が重要です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">供給地点特定番号の管理・照会は、各一般送配電事業者（例：東京電力パワーグリッド、関西電力送配電）のWebサイトで対応しています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">切替手続きの全体像は、資源エネルギー庁「電力小売全面自由化」ポータルで解説されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-contract-main-clauses", title: "電力契約書の主要条項", description: "法人担当者向けの読み方" },
+              { href: "/force-majeure-clause", title: "不可抗力条項の典型例", description: "災害・需給ひっ迫時の責任分担" },
+              { href: "/auto-renewal-clause", title: "自動更新条項と更新拒絶", description: "通知期限管理と解除" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

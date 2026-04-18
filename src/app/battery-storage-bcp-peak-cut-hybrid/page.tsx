@@ -80,12 +80,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">初期投資：100kWh規模で500〜1,000万円、500kWh規模で2,000〜5,000万円。年間効果：100〜500万円/100kWh規模。投資回収：5〜10年が一般的。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">補助金（BCP関連・省エネ関連）で初期投資を圧縮できる場合、投資回収が3〜5年に短縮することもあります。脱炭素・再エネ連携（太陽光＋蓄電池）の相乗効果も検討価値が高いです。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">蓄電池選定の比較軸</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【容量（kWh）】：BCPの必要時間×必要電力で決定。典型は4時間分のバックアップ。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【出力（kW）】：同時に給電可能な電力。最大負荷と同等以上が必要。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【充放電サイクル寿命】：年間サイクル数×寿命年数。一般的なリチウムイオンで6,000〜10,000サイクル。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【SCR（短絡容量比）】：瞬時出力対応力。工場のモーター起動など瞬間的な高負荷対応に重要。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【設置条件】：屋外設置可否、温度範囲、防火基準、耐震性能。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">用途（BCP専用/ピークカット兼用/太陽光連携）で重視ポイントが変わります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">蓄電池導入補助金は、環境省「レジリエンス強化型蓄電池導入支援事業」、経産省「系統用蓄電池・再エネ関連補助金」が代表的です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">税制優遇では、中小企業経営強化税制（即時償却）、カーボンニュートラル投資促進税制（税額控除）が活用可能です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.env.go.jp/earth/ondanka/supply_chain/gvc/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 脱炭素経営</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/energy-bcp-overview", title: "法人の電力BCP概論", description: "停電・需給ひっ迫への備え" },
+              { href: "/emergency-power-source-options", title: "非常用電源の選び方", description: "ディーゼル・ガス・蓄電池の比較" },
+              { href: "/microgrid-for-business", title: "マイクログリッドとは", description: "自立運転可能な電力システム" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

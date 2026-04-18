@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①TOU料金プランがエリア・電力会社にあるか、②充電器のスマート充電対応可否、③複数車両の充電スケジューリング、④充電量のデータ可視化、を確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">大規模なEVフリートを持つ物流業・運送業では、TOU＋スマート充電の組み合わせで年間数百万〜数千万円の節約事例もあります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">TOU料金プラン比較（主要エリア）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【東京電力】業務用TOUプラン：昼間22〜26時間×20円差。年間EV10台なら40〜60万円節約。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【関西電力】エレサル法人プラン：昼間単価と夜間単価で約15円差。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【中部電力】法人TOU：夜間23時〜7時は通常単価から30%安。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【新電力】TOU＋市場連動ハイブリッドプランで、さらに柔軟な運用も可能。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">プラン選定時は、自社の充電スケジュール（夜間集中可能か・昼間必須か）を考慮します。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">EV充電の時間帯最適化は、経産省「EV・PHV関連ガイドライン」および主要電力会社の料金プラン詳細で情報提供されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場への参加はアグリゲーター経由で、OCCTOとアグリゲーター各社の資料で手続き方法を確認できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/ev-charging-facility-contract", title: "EV充電設備の契約区分", description: "社内専用・従業員用・一般開放" },
+              { href: "/corporate-ev-introduction", title: "法人EV導入時の電力コスト", description: "充電設備と契約区分" },
+              { href: "/corporate-ev-roi-calculation", title: "社用車EV化のROI試算", description: "月間電気代と燃料費比較" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

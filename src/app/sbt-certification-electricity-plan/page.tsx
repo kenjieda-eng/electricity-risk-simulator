@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT申請費は規模により数百万円、認定取得後の進捗管理・開示コストも毎年発生します。一方で、取引先からのサステナビリティ評価、ESG投資流入、採用ブランディングなど、経営的ベネフィットは定量化が難しいものの大きいと言われます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業向けに簡易なSBT（SME Route）も用意されており、大企業に比べて申請要件が緩和されています。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">SBT達成ロードマップの設計パターン</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">典型的なロードマップ：年度0（基準年）→年度3（Scope2の20%削減、非化石証書活用）→年度5（50%再エネ化、PPA契約で長期ヘッジ）→年度10（80%再エネ化、自家発電20%）→年度15（100%再エネ）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Scope3（サプライチェーン排出量）の削減は、サプライヤーとの協議が必要で、Scope2より時間がかかります。バリューチェーン全体のSBT目標設定（FLAG Guidance適用）も段階的に広がっています。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT認定の審査基準はSBTi公式の「SBTi Corporate Net-Zero Standard」で定められており、削減率・対象範囲・再エネ調達要件が詳細に規定されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">環境省「脱炭素経営ガイドブック」や、経産省のGXリーグ参加企業向けガイドラインも、SBT取得時の実務指針として参照されることが多いです。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://sciencebasedtargets.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">Science Based Targets initiative</a></li>
+            <li><a href="https://www.env.go.jp/earth/ondanka/supply_chain/gvc/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 脱炭素経営</a></li>
+            <li><a href="https://www.cdp.net/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CDP (Disclosure Insight Action)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
+              { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
+              { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">値上げ通知を受けて解約を選択する場合、①通知受領の記録、②解約意思の書面通知、③移行先との契約手続き、の3段階を早期に進めます。解約申入れ期限を過ぎると自動的に値上げ受け入れとみなされる条項もあるため要注意。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約書原本を保管し、改定条項の記述を契約締結時・更新時に確認する習慣が、有事の備えになります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">良い契約条項と注意すべき条項（対比）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【良い条項】改定通知期間90日以上、理由の詳細説明義務、違約金なし解約権、異議申立窓口明示。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【注意すべき条項】改定通知期間30日未満、事由が「諸般の事情により」など曖昧、解約時違約金発生、異議申立手続き不明。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約時・更新時に条項を比較し、需要家に不利な条項は修正交渉を試みる余地があります。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力契約の条項設計は、経産省「電力・ガス取引監視等委員会」が業界向けガイドラインを公表しており、需要家保護の観点から継続的に見直されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">不公平な条項には、消費者契約法・独占禁止法（優越的地位濫用）の観点から異議申立が可能なケースもあります。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">消費者庁</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-contract-main-clauses", title: "電力契約書の主要条項", description: "法人担当者向けの読み方" },
+              { href: "/force-majeure-clause", title: "不可抗力条項の典型例", description: "災害・需給ひっ迫時の責任分担" },
+              { href: "/auto-renewal-clause", title: "自動更新条項と更新拒絶", description: "通知期限管理と解除" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

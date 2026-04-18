@@ -80,12 +80,37 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①データ取得経路を決定、②クラウドストレージ（BigQuery・Snowflake・Azure SQLなど）にデータ集約、③BIツールで可視化、④関係者にレポート配信、の4ステップで構築します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">初期構築は1〜3ヶ月、費用は規模により数十万〜数百万円。社内にデータエンジニアがいれば内製も可能、いない場合はSaaS型エネマネサービスを使うのが現実的です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">推奨ダッシュボード指標</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">経営層向け：①月次電気代（前年比・予算比）、②CO2排出量（Scope2）、③契約電力使用率、④拠点別コスト比較、⑤主要リスク指標（市場価格変動・ピーク超過アラート）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">現場担当者向け：①30分デマンド実績、②設備別使用量、③時間帯別負荷、④異常検知アラート、⑤月次目標達成率。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">異なる指標を異なるダッシュボードで提供し、権限管理で閲覧範囲を制御するのが運用効率化の鍵です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Bルート利用には電力会社への申込みが必要で、運用は一般社団法人スマートメーターBルート運営管理機構で管理されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力データの外部活用では、経産省「電力データ活用に関するガイドライン」（2021年策定）に沿った個人情報保護・データガバナンスが求められます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/bems-fems-ems-overview", title: "BEMS/FEMS/EMSの違い", description: "目的と選定基準" },
+              { href: "/ai-electricity-optimization", title: "AIによる電力最適化の実務", description: "需要予測と自動制御" },
+              { href: "/smart-meter-data-utilization", title: "スマートメーターデータの業務活用", description: "30分値データの分析" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

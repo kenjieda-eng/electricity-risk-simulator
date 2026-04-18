@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力需要の急増は、①発電設備の逼迫、②系統の増強コスト、③再エネ調達の競争激化、を通じて、法人電気料金への上昇圧力になります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年までのkWhあたり数%〜10%程度の上昇要因となる可能性があり、長期の電力コスト計画に織り込む必要があります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">主要予測の数字比較</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【IEA Electricity 2024】世界データセンター電力消費量：2022年 460 TWh → 2026年 1,000 TWh超（+117%）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【経産省】日本のデータセンター電力需要：2022年約150億kWh → 2030年約250億kWh（+67%）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【NEDO】日本のAI関連電力消費量：2030年には現在の3〜5倍の可能性。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Goldman Sachs予測】米国データセンター電力：2030年までに電力総需要の8%に到達（現在は3%）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">予測には不確実性がありますが、いずれも「急増」という方向性は共通です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">世界の電力需要動向は、IEA「World Energy Outlook」「Electricity Report」で継続的に分析されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本国内のデータセンター・AI関連電力需要は、経産省「総合エネルギー調査会」の電力需給小委員会で議論されており、議事録が公開されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/datacenter-power-demand-trend", title: "データセンターの電力需要動向", description: "日本・世界の状況" },
+              { href: "/ai-workload-energy-impact", title: "生成AIの電力消費", description: "学習・推論の実態" },
+              { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善と液冷" },
+              { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

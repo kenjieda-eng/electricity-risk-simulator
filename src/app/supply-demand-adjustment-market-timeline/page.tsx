@@ -80,12 +80,40 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場で調達された調整力のコストは、一般送配電事業者の託送料金に反映されます。需給ひっ迫時の調整力価格高騰が、翌年度の託送料金改定に波及する経路です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR参加可能な法人は、需給調整市場への間接参加で対価を得る収益機会も得られます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">調整力の種類と応動時間（比較表）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【一次調整力】応動時間10秒以内。周波数維持が目的。主に発電所の自動制御で対応。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【二次調整力①】応動時間5分以内。エリア間周波数調整。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【二次調整力②】応動時間5分以内。需給バランス調整。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【三次調整力①】応動時間15分以内。予測誤差・発電所トラブル対応。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【三次調整力②】応動時間45分以内。需給調整の最終手段。蓄電池・DRの主戦場。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">応動時間が短いほど要求される技術水準が高く、価格も高くなります。DR参加では三次調整力②から入門するのが一般的です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場の制度詳細は、電力広域的運営推進機関（OCCTO）公式サイトで公開されています。年次の運用報告書で市場規模・価格推移も確認可能です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR参加の実務は、資源エネルギー庁「ディマンドリスポンス関連情報」および主要アグリゲーター各社の資料で参照できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-liberalization-timeline", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
+              { href: "/capacity-market-timeline", title: "容量市場タイムライン", description: "2020年〜本格稼働" },
+              { href: "/renewable-surcharge-revision-history", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

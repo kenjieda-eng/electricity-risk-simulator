@@ -80,12 +80,41 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特定事業者（年間エネルギー使用量1,500kL原油換算以上）・第一種エネルギー管理指定工場は、再エネ調達計画の具体化が必要。非化石比率が低い場合は説明責任が発生します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連手続きとして、非化石エネルギー活用計画の策定、定期報告書への記載、中期計画書への盛り込み、などが必要です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">省エネ法改正の重要マイルストン（年表）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【1979年】省エネ法制定。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2008年】改正で「エネルギー管理指定工場制度」強化。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2014年】改正で「電気の需要の平準化」項目追加（ピーク抑制）。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2022年】改正で「非化石エネルギーへの転換」「電気需要最適化」を追加、法律名変更。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2023年4月】改正法施行。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2024年】定期報告様式変更、非化石比率開示義務化。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【2026年〜】GX-ETS本格稼働との連携、開示情報の一層の透明化。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法の公式解説は、資源エネルギー庁「省エネルギー政策」ポータルに掲載されており、最新の改正動向・Q&Aが確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">非化石エネルギー活用計画の策定支援は、経産省補助金・商工会議所相談窓口で提供されています。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/category/saving_and_new/saving/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 省エネ法</a></li>
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-liberalization-timeline", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
+              { href: "/capacity-market-timeline", title: "容量市場タイムライン", description: "2020年〜本格稼働" },
+              { href: "/renewable-surcharge-revision-history", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

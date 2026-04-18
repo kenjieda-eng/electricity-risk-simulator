@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">レベニューキャップ導入により、短期的には送配電事業者の設備投資・人件費の抑制が期待される一方、長期的には設備更新・系統強化の費用が織り込まれるため、託送料金の大幅な低下は期待しにくい構造です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">法人電気料金では、託送料金は全体の約30〜40%を占める重要項目。今後5〜10年の料金予測には、レベニューキャップ期間ごとの改定を織り込む必要があります。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">第1規制期間（2023-2027）の論点</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【効率化目標】各一般送配電事業者に数値目標が設定され、達成度により収益上限が変動。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【投資計画】再エネ連携強化・系統増強・BCP対策のための投資が織り込み。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【レビュー】2026年度に中間レビューが実施される予定。規制期間中の制度見直しの可能性も。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">第2規制期間（2028-2032）に向けた議論も、2027年度には開始される見込みです。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">レベニューキャップ制度の詳細は、経産省「電力・ガス取引監視等委員会」の公表資料で確認できます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各一般送配電事業者の託送料金改定情報は、各社公式サイトおよび経産省公示で発表されます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-liberalization-timeline", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
+              { href: "/capacity-market-timeline", title: "容量市場タイムライン", description: "2020年〜本格稼働" },
+              { href: "/renewable-surcharge-revision-history", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
+              { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

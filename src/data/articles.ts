@@ -3780,4 +3780,104 @@ export const articleList: ArticleMeta[] = [
     order: 6,
     publishedAt: "2026-04-18",
   },
+  {
+    title: "高圧・特別高圧電気契約の用語集｜キュービクル・PAS・受変電設備",
+    slug: "high-voltage-glossary",
+    description:
+      "高圧・特別高圧の電気契約・受変電設備に関する専門用語を一覧で整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 7,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "低圧電気契約の用語集｜従量電灯・低圧電力・契約アンペア",
+    slug: "low-voltage-glossary",
+    description:
+      "低圧電気契約に関する用語と、料金プラン・契約条件の基本概念を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 8,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "デマンド・契約電力関連用語集｜30分値・力率・最大需要",
+    slug: "demand-power-glossary",
+    description:
+      "デマンド管理・契約電力の決定方式に関する専門用語を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 9,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "再エネ調達詳細用語集｜FIT・FIP・PPA・GO・I-REC",
+    slug: "renewable-detail-glossary",
+    description:
+      "再エネ調達の手段・国際証書・追加性に関する詳細用語を整理した発展編用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 10,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "脱炭素・GX用語集｜カーボンプライシング・SBT・TCFD・ISSB",
+    slug: "decarbonization-glossary",
+    description:
+      "脱炭素・GX関連の制度・指標・国際基準を網羅的に整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 11,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電力BCP・非常用電源用語集｜UPS・コジェネ・マイクログリッド",
+    slug: "energy-bcp-glossary",
+    description:
+      "電力BCP・非常用電源・自立運転に関する設備・運用用語を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 12,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "EV充電インフラ用語集｜CHAdeMO・OCPP・V2H・急速充電",
+    slug: "ev-charging-glossary",
+    description:
+      "EV充電設備・規格・運用に関する用語を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 13,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "エネマネ・DX用語集｜BEMS・FEMS・SCADA・EnOcean",
+    slug: "energy-management-glossary",
+    description:
+      "エネルギーマネジメント・電力DXに関する設備・通信プロトコル用語を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 14,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "電力制度・政策用語集｜電力自由化・容量市場・需給調整市場",
+    slug: "regulation-policy-glossary",
+    description:
+      "電力制度改革・政策に関する制度名・機関名を網羅的に整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 15,
+    publishedAt: "2026-04-18",
+  },
+  {
+    title: "国際エネルギー用語集｜LNG・OPEC・Brent・Henry Hub",
+    slug: "international-energy-glossary",
+    description:
+      "国際エネルギー市場・燃料指標・主要機関の用語を整理した用語集です。",
+    category: "用語集",
+    categorySlug: "glossary",
+    order: 16,
+    publishedAt: "2026-04-18",
+  },
 ];

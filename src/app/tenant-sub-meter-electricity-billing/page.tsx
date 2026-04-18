@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2023年のインボイス制度導入により、ビルオーナーからテナントへの電気代請求もインボイス発行が必要です。ビルオーナーが適格請求書発行事業者でなければ、テナント側で仕入税額控除できなくなります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約見直し時は、ビルオーナーの登録状況と請求書フォーマットを確認しておくことが重要です。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">テナント契約形態別の比較</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ビル一括契約＋実費按分】：ビル全体の電気代を、サブメーター実測値で按分。テナントには自由度なし。単価が低めに設定されるケース多。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ビル一括契約＋面積按分】：サブメーターなし、床面積比で按分。実使用量と乖離するリスクあり。不公平感の原因。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【個別契約】：テナントが電力会社と直接契約。自由度・価格交渉権あり。ただし、小規模テナントは単価が高めに。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">規模の大きいテナント（年間数百万円以上）は個別契約が有利なケースが多く、小規模は一括契約が簡便。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">インボイス制度の詳細は、国税庁「インボイス制度特設サイト」で公開されています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">テナント電気代の按分は、中小企業庁「賃貸借契約の公正化ガイドライン」などに配慮して設計する必要があります。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.nta.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">国税庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/sme-electricity-basics", title: "中小企業の電気料金の基礎", description: "低圧契約を理解する" },
+              { href: "/low-voltage-review-essentials", title: "低圧契約の見直し要点", description: "チェックリスト" },
+              { href: "/sme-cost-reduction-ideas", title: "中小企業向けの電気代削減アイデア", description: "低予算で即効性のある打ち手" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

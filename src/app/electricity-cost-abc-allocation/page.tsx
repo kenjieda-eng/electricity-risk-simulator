@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ABC（Activity-Based Costing）は、活動（設備運転・空調・照明など）を基準に電気代を配賦する方法です。各活動の電力消費量を計測し、製品・部門が使う活動量に応じて配賦します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">精度は最も高いですが、計測機器の設置・データ集計コストが発生します。高コスト製品群・差別化が必要な業種ほどABCの効果が大きく現れます。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">ABC導入の実務ステップ</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Step1：主要活動（コストプール）の特定。例：生産ラインA・B、空調、照明、倉庫冷蔵。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Step2：活動別の電力消費量計測。サブメーター設置、またはインバータ・機器別電力計の設置。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Step3：活動ドライバ（配賦基準）の決定。例：ラインAは稼働時間、空調は面積×時間。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Step4：製品・部門別に活動使用量を集計し、電気代を按分。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">初期投資：メーター設置費用、BEMS／原価計算システムで数百万円〜。効果：製品別採算の精度向上、無駄のある製品の特定。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">原価計算基準（企業会計原則）は管理会計の基本ルールですが、ABCは公式ルールではなく実務の選択肢です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業庁「原価管理ガイド」や、日本管理会計学会の実務事例集が導入時の参考になります。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.mof.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">財務省</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-cost-account-classification", title: "電気代の勘定科目", description: "部門配賦と月次処理" },
+              { href: "/invoice-system-electricity", title: "インボイス制度と電気代", description: "仕入税額控除の扱い" },
+              { href: "/battery-solar-depreciation", title: "蓄電池・太陽光の減価償却", description: "耐用年数と税制優遇" },
+              { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

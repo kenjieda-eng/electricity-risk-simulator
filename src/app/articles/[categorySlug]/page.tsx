@@ -171,6 +171,112 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         ]
       : [];
 
+  const ppaComparisonRows =
+    category.slug === "corporate-ppa"
+      ? [
+          {
+            type: "オンサイトPPA",
+            size: "数百kW〜数MW",
+            price: "12〜18円/kWh",
+            term: "15〜20年",
+            note: "敷地内に設置、初期投資ゼロ、託送料不要",
+          },
+          {
+            type: "オフサイトPPA",
+            size: "数MW〜数十MW",
+            price: "14〜22円/kWh",
+            term: "15〜20年",
+            note: "遠隔地から送電、規模の自由度大、託送料あり",
+          },
+          {
+            type: "バーチャルPPA",
+            size: "数MW〜",
+            price: "10〜16円/kWh相当",
+            term: "10〜15年",
+            note: "物理調達と分離、環境価値のみ取得、会計処理複雑",
+          },
+          {
+            type: "自家消費太陽光",
+            size: "数百kW〜",
+            price: "LCOE 8〜12円/kWh",
+            term: "設備寿命20〜25年",
+            note: "設備所有、減価償却対象、メンテナンス自社",
+          },
+        ]
+      : [];
+
+  const energyDxComparisonRows =
+    category.slug === "energy-dx"
+      ? [
+          {
+            system: "デマンド監視装置（単機能型）",
+            cost: "10〜30万円",
+            target: "中小工場・店舗",
+            feature: "予測警報のみ、単一拠点",
+          },
+          {
+            system: "クラウド連携型",
+            cost: "50〜150万円＋月額1〜3万円",
+            target: "複数拠点事業者",
+            feature: "統合管理、API連携、AI需要予測",
+          },
+          {
+            system: "BEMS（ビル向け）",
+            cost: "数百万〜1,500万円",
+            target: "オフィスビル・商業施設",
+            feature: "空調・照明の自動制御、省エネ5〜15%",
+          },
+          {
+            system: "FEMS（工場向け）",
+            cost: "1,000万〜3,000万円",
+            target: "中規模工場",
+            feature: "生産連動・受変電統合制御、ピークカット効果大",
+          },
+          {
+            system: "統合EMS＋AI最適化",
+            cost: "数千万〜1億円",
+            target: "大規模工場・複数拠点",
+            feature: "AI需要予測、需給調整市場参加、複数拠点統合",
+          },
+        ]
+      : [];
+
+  const energyBcpComparisonRows =
+    category.slug === "energy-bcp"
+      ? [
+          {
+            source: "UPS（無停電電源装置）",
+            duration: "数分〜1時間",
+            cost: "数十万〜数百万円",
+            note: "サーバ・通信機器の瞬断対策、長時間対応不可",
+          },
+          {
+            source: "ディーゼル発電機",
+            duration: "数時間〜数日",
+            cost: "数百万〜数千万円",
+            note: "燃料確保必要、排気・騒音考慮、最も普及",
+          },
+          {
+            source: "ガス発電機",
+            duration: "長時間可能",
+            cost: "1,000万〜数千万円",
+            note: "ガス供給維持時は燃料補給不要、コジェネ併用可",
+          },
+          {
+            source: "リチウム蓄電池",
+            duration: "数時間",
+            cost: "500万〜5,000万円",
+            note: "瞬断対策＋平常時ピークカット兼用でROI改善",
+          },
+          {
+            source: "マイクログリッド",
+            duration: "長時間・継続",
+            cost: "数千万〜数億円",
+            note: "自家発電＋蓄電池＋制御を統合、自立運転可",
+          },
+        ]
+      : [];
+
   return (
     <>
     <BreadcrumbJsonLd
@@ -324,6 +430,92 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
             </p>
           </section>
         </>
+      ) : null}
+
+      {category.slug === "corporate-ppa" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">PPA・自家消費の調達手段比較</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">3形態のPPA契約と自家消費太陽光を、規模・価格・契約期間で横並び比較した早見表です。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">調達手段</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">規模</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">単価目安</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">契約期間</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ppaComparisonRows.map((row) => (
+                <tr key={row.type} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.type}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.size}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.price}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.term}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs leading-6 text-slate-500">単価は2026年時点の目安。立地・規模・契約条件で変動します。契約前に税制・会計処理を税理士・会計士と確認することを推奨。</p>
+        </section>
+      ) : null}
+
+      {category.slug === "energy-dx" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">エネマネシステム導入の比較</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">デマンド監視装置からBEMS/FEMS/統合EMSまで、導入規模と機能水準で選択肢を整理した早見表です。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">システム</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">導入コスト</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">適用先</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              {energyDxComparisonRows.map((row) => (
+                <tr key={row.system} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.system}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.cost}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.target}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.feature}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs leading-6 text-slate-500">コストは目安（補助金適用前）。省エネ補助金・GX補助金で初期投資を1/2〜2/3圧縮できるケースがあります。</p>
+        </section>
+      ) : null}
+
+      {category.slug === "energy-bcp" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">非常用電源の比較早見表</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">UPS・非常用発電機・蓄電池・マイクログリッドを、稼働時間・コスト・特徴で横並び比較。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">電源種別</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">稼働時間</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">導入コスト</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              {energyBcpComparisonRows.map((row) => (
+                <tr key={row.source} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.source}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.duration}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.cost}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs leading-6 text-slate-500">複数電源の組み合わせ（UPS＋発電機＋蓄電池）が実務上の標準。レジリエンス強化型蓄電池導入支援事業などの補助金活用を推奨。</p>
+        </section>
       ) : null}
 
       <section className="mt-6" aria-labelledby="article-list-heading">

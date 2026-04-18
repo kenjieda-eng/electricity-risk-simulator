@@ -83,12 +83,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT（Science Based Targets）：科学的根拠に基づく排出削減目標の認定制度。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">CDP：気候変動・森林・水に関する企業開示を評価する国際NGO。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">追加性・トラッキングの用語</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">追加性（Additionality）：再エネ調達行為が「その調達がなければ生まれなかった再エネ発電」をもたらしたか、という概念。追加性の高い調達（新設PPA）が評価される。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">トラッキング情報：証書・電力の発電源特定情報。発電所名・電源種・発電日時など。Scope2マーケット基準算定の前提。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">24/7 Carbon-Free Energy：年間総量ではなく、時間単位で再エネ調達と消費を一致させる概念。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">LCA（ライフサイクルアセスメント）：発電・運搬・廃棄までのCO2排出を包括評価。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">再エネ制度の最新情報は、資源エネルギー庁「なっとく！再生可能エネルギー」ポータルが網羅的です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">国際動向は、RE100公式、IEA公式、IRENA（国際再生可能エネルギー機関）公式で確認できます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.enecho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">経産省 資源エネルギー庁</a></li>
+            <li><a href="https://www.env.go.jp/earth/ondanka/supply_chain/gvc/index.html" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">環境省 脱炭素経営</a></li>
+            <li><a href="https://www.there100.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">RE100 (The Climate Group)</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/electricity-contract-glossary", title: "契約関連用語集", description: "契約電力・基本料金・デマンド" },
+              { href: "/electricity-market-glossary", title: "市場関連用語集", description: "JEPX・スポット・先物" },
+              { href: "/electricity-facility-glossary", title: "設備関連用語集", description: "高圧・低圧・キュービクル" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/glossary", title: "用語集", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

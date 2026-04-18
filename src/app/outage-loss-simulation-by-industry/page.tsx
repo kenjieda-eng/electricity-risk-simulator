@@ -80,12 +80,38 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">損失額×発生頻度（期待値）がBCP投資額を上回る場合、投資が正当化されます。停電確率は地域・過去実績で異なり、年0.5〜2回程度の発生を想定することが多いです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資判断は、純経済性だけでなく、顧客・従業員・サプライチェーンへの責任という観点も含めて総合的に検討します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">停電損失試算の業種別テンプレート</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【データセンター（月間売上1億円）】時間損失：50〜500万円（SLA違反補償含む）。6時間停電で総損失：数千万円。UPS＋非常用電源＋マイクログリッドへの投資は短期回収可能。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【食品製造業（月間売上5,000万円）】時間損失：10〜100万円。原料廃棄・生産停止含む。6時間停電で総損失：数百万円〜1,000万円規模。非常用電源投資が妥当。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【物流倉庫（月間売上3,000万円）】時間損失：5〜30万円。冷凍設備は追加リスク。冷凍倉庫は数時間の停電でも数千万円の商品廃棄発生の可能性。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">試算時は、売上損失と復旧費用の両方を含めた「直接損失」と、顧客離脱・評判毀損の「間接損失」を分けて考えるのが実務的です。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">内閣府「事業継続ガイドライン」、経産省「企業BCP策定運用指針」が、BCP策定時の標準的なガイドラインです。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">停電損失の業界統計データは、BCPコンサル会社の調査レポート、電気新聞・日経新聞などで定期的に公表されます。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IEA (国際エネルギー機関)</a></li>
+            <li><a href="https://www.occto.or.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力広域的運営推進機関（OCCTO）</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/energy-bcp-overview", title: "法人の電力BCP概論", description: "停電・需給ひっ迫への備え" },
+              { href: "/emergency-power-source-options", title: "非常用電源の選び方", description: "ディーゼル・ガス・蓄電池の比較" },
+              { href: "/microgrid-for-business", title: "マイクログリッドとは", description: "自立運転可能な電力システム" },
+              { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

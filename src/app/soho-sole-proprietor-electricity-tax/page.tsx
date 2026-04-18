@@ -80,12 +80,39 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">事業を法人化した場合、電気代の扱いは、①事業所を分離（法人として独立契約）、②自宅の一部を法人に賃貸、③役員が個人として支払い法人に請求、などのパターンがあります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">法人化前後で税負担・社保・手続きコストが大きく変わるため、個人事業主→法人化の判断は税理士と相談することを推奨します。</p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">家事按分の計算テンプレート</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【計算例：Webエンジニア（自宅1室を事務所として使用）】</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">月間電気代：15,000円。全床面積：60㎡。事業専用スペース：10㎡（16.7%）。事業時間：平日9時間×22日＝198時間/月。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">按分方法①：面積比16.7% → 月2,500円、年30,000円を事業経費。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">按分方法②：時間比 198時間÷(24時間×30日)＝27.5% → 月4,125円、年49,500円を事業経費。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">実務では、いずれか合理的な方法を選び、一貫して運用。税務調査での説明のため、根拠書類（記録表）を保管しておきます。</p>
+          </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">家事按分の考え方は、国税庁「所得税基本通達」や「所得税の確定申告の手引き」に詳細な指針があります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">青色申告決算書の記載方法は、国税庁「青色申告の手引き」と連動させて運用します。電子帳簿保存法対応も併せて必要です。</p>
+          </section>
+        </section>
+
+        <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">参考資料・出典</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><a href="https://www.nta.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">国税庁</a></li>
+            <li><a href="https://www.chusho.meti.go.jp/" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業庁</a></li>
+          </ul>
+          <p className="mt-3 text-xs text-slate-500">本記事は上記の公的資料・公式サイトを参考に編集しています。最新の制度・数値は各出典元で必ずご確認ください。</p>
         </section>
 
         <div className="mt-8">
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/sme-electricity-basics", title: "中小企業の電気料金の基礎", description: "低圧契約を理解する" },
+              { href: "/low-voltage-review-essentials", title: "低圧契約の見直し要点", description: "チェックリスト" },
+              { href: "/sme-cost-reduction-ideas", title: "中小企業向けの電気代削減アイデア", description: "低予算で即効性のある打ち手" },
+              { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
+              { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
