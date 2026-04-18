@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import BasicChargeCalculator from "../../components/market-data/BasicChargeCalculator";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
@@ -260,6 +261,13 @@ export default function ContractDemandWhatIsItPage() {
             <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-yellow-400" />90,000〜105,000MW</span>
             <span className="flex items-center gap-1"><span className="inline-block h-3 w-6 rounded bg-red-500" />105,000MW超</span>
           </div>
+          <MarketDataDownload
+            filename="national-demand-hourly-pattern.csv"
+            headers={["hour", "avg_mw"]}
+            rows={DEMAND_HOURLY_AVG.map((d) => ({ hour: d.hour, avg_mw: d.avgMW }))}
+            apiPath="/api/datasets/demand"
+            caption="全国24時間需要パターン（OCCTO公表）"
+          />
         </section>
 
         {/* 月別需要パターンとピーク日 */}

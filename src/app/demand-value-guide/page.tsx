@@ -5,6 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { DEMAND_SEASON_HOUR } from "../../data/demandData";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -308,6 +309,10 @@ export default function DemandValueGuidePage() {
             <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm leading-7 text-red-900">
               <span className="font-semibold">夏は13〜14時の冷房ピーク、冬は18時の暖房+照明ピークが最大。</span>デマンド抑制はこの時間帯をターゲットにすると最も効果的です。
               夏14時（123,372MW）・冬18時（123,157MW）が各季節の最大ポイントです。
+      <MarketDataDownload
+        apiPath="/api/datasets/demand"
+        caption="全国電力需要データ（CC BY 4.0、商用利用可）"
+      />
             </div>
             
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />

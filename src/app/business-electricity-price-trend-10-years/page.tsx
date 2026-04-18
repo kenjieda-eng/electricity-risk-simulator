@@ -13,6 +13,7 @@ import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import { DEMAND_FY_TREND } from "../../data/demandData";
 import { CDD_TREND, HDD_TREND, DECADAL_AVG_TEMP } from "../../data/weatherData";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -479,6 +480,10 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         </div>
 
         
+      <MarketDataDownload
+        apiPath="/api/datasets"
+        caption="本記事で参照する全データセットを統合API経由で取得可能（CC BY 4.0、商用利用可）"
+      />
       <MarketDataFaq items={__CATEGORY_FAQ__} />
 
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />

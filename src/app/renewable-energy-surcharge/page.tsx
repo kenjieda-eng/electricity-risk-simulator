@@ -9,6 +9,7 @@ import {
 } from "../../data/priceAdjustmentHistory";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -229,6 +230,10 @@ export default function RenewableEnergySurchargePage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額との違い</h2>
           
+      <MarketDataDownload
+        apiPath="/api/datasets/price-adjustment"
+        caption="燃料費調整・再エネ賦課金履歴（CC BY 4.0、商用利用可）"
+      />
       <MarketDataFaq items={__CATEGORY_FAQ__} />
 
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />

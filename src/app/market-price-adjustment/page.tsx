@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -129,6 +130,10 @@ export default function MarketPriceAdjustmentPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
+      <MarketDataDownload
+        apiPath="/api/datasets/price-adjustment"
+        caption="燃料費調整・再エネ賦課金履歴（CC BY 4.0、商用利用可）"
+      />
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額との違い（詳細版）</h2>
           
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />

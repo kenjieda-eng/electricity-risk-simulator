@@ -6,6 +6,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { JEPX_MONTHLY_SUMMARY } from "../../data/jepxData";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -234,6 +235,10 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
         </section>
 
         
+      <MarketDataDownload
+        apiPath="/api/datasets/jepx"
+        caption="JEPX市場データ（CC BY 4.0、商用利用可）"
+      />
       <MarketDataFaq items={__CATEGORY_FAQ__} />
 
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />

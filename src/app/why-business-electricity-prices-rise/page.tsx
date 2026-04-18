@@ -6,6 +6,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { CDD_TREND } from "../../data/weatherData";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import PriceIncreaseCalculator from "../../components/market-data/PriceIncreaseCalculator";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -202,6 +203,10 @@ export default function WhyBusinessElectricityPricesRisePage() {
         </section>
 
         
+      <MarketDataDownload
+        apiPath="/api/datasets/weather"
+        caption="気温・気象データ（CC BY 4.0、商用利用可）"
+      />
       <PriceIncreaseCalculator />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
