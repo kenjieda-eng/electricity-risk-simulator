@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -118,6 +120,7 @@ export default function SolarBatteryCombinationBenefitPage() {
         ]}
       faq={__CATEGORY_FAQ__}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -126,6 +129,7 @@ export default function SolarBatteryCombinationBenefitPage() {
         <span className="px-2">›</span>
         <span className="text-slate-800">太陽光と蓄電池の組み合わせ</span>
       </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           太陽光と蓄電池を組み合わせる意味

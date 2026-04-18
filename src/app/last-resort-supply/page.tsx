@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
@@ -82,6 +84,7 @@ export default function LastResortSupplyPage() {
         ]}
         faq={faqItems}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="mb-4 text-sm text-slate-600">
         <Link href="/" className="underline underline-offset-2 hover:text-slate-900">トップ</Link>
@@ -90,6 +93,7 @@ export default function LastResortSupplyPage() {
         <span className="mx-2">/</span>
         <span className="text-slate-900">最終保障供給とは</span>
       </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">最終保障供給とは</h1>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -58,6 +60,7 @@ export default function Page() {
           { question: "最終保障供給中に契約電力が変わった場合は？", answer: "一般送配電事業者に連絡し、契約電力の見直しを依頼。契約電力の変更は料金に大きく影響するため、早期対応が重要。" },
         ]}
       />
+      <ReadingProgressBar />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         <nav aria-label="パンくず" className="text-sm text-slate-600">
           <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
@@ -68,6 +71,7 @@ export default function Page() {
           <span className="px-2">›</span>
           <span className="text-slate-800">最終保障供給に関するFAQ</span>
         </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">最終保障供給に関するFAQ｜申込・料金・期間の疑問まとめ</h1>

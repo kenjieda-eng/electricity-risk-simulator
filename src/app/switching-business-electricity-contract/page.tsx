@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
 
 const pageTitle = "法人が電力契約を切り替えるときの注意点";

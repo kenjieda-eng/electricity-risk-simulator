@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
@@ -70,6 +72,7 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
         ]}
       faq={__CATEGORY_FAQ__}
       />
+    <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* パンくずナビ */}
       <nav aria-label="パンくずナビ" className="mb-4 text-xs text-slate-500">
@@ -92,6 +95,7 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
           <li className="text-slate-700">値上げはいつから反映されるか</li>
         </ol>
       </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">

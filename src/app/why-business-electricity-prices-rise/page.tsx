@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
@@ -58,7 +60,9 @@ export const metadata: Metadata = {
 
 export default function WhyBusinessElectricityPricesRisePage() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+    <>
+      <ReadingProgressBar />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           法人の電気料金が上がる理由とは？主な値上がり要因を整理
@@ -300,5 +304,6 @@ export default function WhyBusinessElectricityPricesRisePage() {
         <CategoryNextStepCta slug="why-business-electricity-prices-rise" />
       </div>
     </main>
+      </>
   );
 }
