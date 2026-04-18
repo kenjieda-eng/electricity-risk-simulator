@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { RenSharePriceChart, RenHourlyOverlayChart } from "../../components/market-data/ZeroPriceCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -9,6 +13,9 @@ import {
   REN_SHARE_PRICE,
   REN_SHARE_COUNT,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["zero-price-hours-analysis"];
 
 // --- 定数 ---
 const pageTitle = "JEPX 0円コマの実態｜なぜ電力がタダになる時間帯があるのか";
@@ -56,6 +63,7 @@ export default function ZeroPriceHoursAnalysisPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "JEPX 0円コマの実態" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -144,6 +152,16 @@ export default function ZeroPriceHoursAnalysisPage() {
           </p>
           <div className="mt-4">
             <RenSharePriceChart />
+        <MarketDataDownload
+          filename="renewable-share-price.csv"
+          headers={["share_bucket", "avg_price_jpy_kwh"]}
+          rows={REN_SHARE_LABELS.map((label, i) => ({
+            share_bucket: label,
+            avg_price_jpy_kwh: REN_SHARE_PRICE[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="再エネ比率別の平均価格"
+        />
           </div>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -343,7 +361,11 @@ export default function ZeroPriceHoursAnalysisPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

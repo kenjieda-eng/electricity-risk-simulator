@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { AreaSpreadGroupedChart, AreaFyPriceLineChart } from "../../components/market-data/AreaSpreadCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -12,6 +16,9 @@ import {
   JEPX_FY_LABELS,
   AREA_FY_PRICE,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["area-price-spread"];
 
 // --- 定数 ---
 const pageTitle = "エリア間価格スプレッドの読み方｜東京プレミアムと地域格差";
@@ -65,6 +72,7 @@ export default function AreaPriceSpreadPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "エリア間価格スプレッドの読み方" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -154,6 +162,18 @@ export default function AreaPriceSpreadPage() {
           </p>
           <div className="mt-4">
             <AreaSpreadGroupedChart />
+        <MarketDataDownload
+          filename="area-spread-monthly.csv"
+          headers={["month", "tk_kyushu", "tk_hokkaido", "tk_kansai"]}
+          rows={SPREAD_MONTHS.map((month, i) => ({
+            month,
+            tk_kyushu: SPREAD_TK_KYUSHU[i],
+            tk_hokkaido: SPREAD_TK_HOKKAIDO[i],
+            tk_kansai: SPREAD_TK_KANSAI[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="東京エリア基準の月別スプレッド"
+        />
           </div>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -416,7 +436,11 @@ export default function AreaPriceSpreadPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[
