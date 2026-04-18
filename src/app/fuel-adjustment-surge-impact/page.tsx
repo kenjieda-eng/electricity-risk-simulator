@@ -3,7 +3,13 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["risk-scenarios"];
+
 
 const pageTitle =
   "燃料費調整額上昇で法人の電気料金はどう上がるか｜請求への影響と確認ポイント";
@@ -78,6 +84,7 @@ export default function FuelAdjustmentSurgeImpactPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "燃料費調整額上昇で法人の電気料金はどう上がるか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -239,7 +246,11 @@ export default function FuelAdjustmentSurgeImpactPage() {
           </ul>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <GlossaryLinks currentSlug="fuel-adjustment-surge-impact" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "JEPX", "市場連動プラン", "固定プラン"]} />
         </div>
 

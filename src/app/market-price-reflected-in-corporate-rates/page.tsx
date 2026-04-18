@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle =
   "市場価格が法人料金に反映される仕組み｜JEPXから請求書までの流れ";
@@ -108,6 +114,7 @@ export default function MarketPriceReflectedInCorporateRatesPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "市場価格が法人料金に反映される仕組み" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -237,7 +244,11 @@ export default function MarketPriceReflectedInCorporateRatesPage() {
                 大規模発電所のトラブルや定期検査が重なると、供給力が一時的に不足し価格が跳ね上がることがあります。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">太陽光発電の出力変動</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 曇天や日没後に太陽光発電の出力が急落すると、夕方の需要ピーク時に市場価格が急上昇するケースがあります。

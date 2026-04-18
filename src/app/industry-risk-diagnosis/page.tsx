@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DiagnosisClient from "./DiagnosisClient";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
+
 
 const pageTitle =
   "業種別リスク診断｜自社の業種から見た電気料金リスクと対策";
@@ -97,6 +103,10 @@ export default function IndustryRiskDiagnosisPage() {
             <DiagnosisClient />
           </div>
         </section>
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">業種別リスク診断を終えたら</h2>
@@ -109,8 +119,7 @@ export default function IndustryRiskDiagnosisPage() {
               { step: 2, text: "固定型・市場連動型のどちらが業種特性に合っているかを確認する" },
               { step: 3, text: "業種に応じた設備投資（太陽光・蓄電池等）のコスト試算を行う" },
               { step: 4, text: "見積比較を実施し、業種特性に応じた条件で複数社を比較する" },
-            ].map(({ step, text }) => (
-              <div key={step} className="flex items-start gap-4">
+            ].map(({ step, text }) => (<div key={step} className="flex items-start gap-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
                   {step}
                 </span>

@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle =
   "調達構成の違いが法人料金にどう影響するか｜電力会社の仕入れと料金の関係";
@@ -109,6 +115,7 @@ export default function HowProcurementAffectsCorporateRatesPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "調達構成の違いが法人料金にどう影響するか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -243,7 +250,11 @@ export default function HowProcurementAffectsCorporateRatesPage() {
                 LNGや石炭など化石燃料を主体とする発電への依存度が高いほど、国際燃料価格・為替変動の影響を受けやすくなる。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">再エネ調達の増加</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 太陽光・風力の比率が上がると天候依存のリスクが生じる一方、燃料費変動の影響を受けにくくなる。ただし容量確保コストが別途発生する場合がある。

@@ -5,7 +5,13 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "電力会社はどうリスクを管理しているのか｜分散調達とヘッジの考え方";
 const pageDescription =
@@ -83,6 +89,7 @@ export default function PowerRiskManagementPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "電力会社はどうリスクを管理しているのか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -246,7 +253,11 @@ export default function PowerRiskManagementPage() {
                 <li>結果: <span className="font-semibold text-slate-900">経営破綻・事業撤退</span></li>
               </ul>
             </div>
-            <div className="rounded-xl border border-green-200 bg-green-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-xl border border-green-200 bg-green-50 p-4">
               <h3 className="text-lg font-semibold text-slate-900">相対60%+先物20%+JEPX20%のB社</h3>
               <ul className="mt-2 space-y-1 text-sm leading-7 text-slate-700">
                 <li>年間調達コスト: 前年比<span className="font-semibold text-slate-900">+30%</span></li>

@@ -3,8 +3,14 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
+
 
 const pageTitle =
   "問い合わせ前に社内で揃えたい情報｜見積依頼・相談の質を上げる準備";
@@ -321,7 +327,11 @@ export default function InformationToPrepareBeforeInquiryPage() {
           </p>
         </section>
 
-        <div className="mt-6">
+        
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-6">
           <SourcesAndFaq
           faq={[
           { question: "電力契約見直しを社内で提案するときのコツは？", answer: "現状の電気代と見直し後の削減見込みを数値で示し、リスク（市場変動・違約金等）も併記すると経営層の判断が得やすくなります。" },

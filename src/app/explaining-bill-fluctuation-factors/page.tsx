@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
+
 
 const pageTitle =
   "請求書の変動要因を社内で説明するときのポイント｜なぜ金額が変わるのかの伝え方";
@@ -220,7 +226,11 @@ export default function ExplainingBillFluctuationFactorsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             社内報告時に活用できる要因分解の表テンプレートです。各費目について当月・前月・前年同月を並べ、前月比・前年比と主な要因を記載することで、変動の全体像をひと目で伝えられます。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
               <thead>
                 <tr className="bg-slate-50 text-slate-900">

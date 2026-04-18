@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
+
 
 const pageTitle =
   "固定と市場連動の比較を経営層に説明するときのポイント｜判断材料の整理";
@@ -208,7 +214,11 @@ export default function ExplainingFixedVsMarketToManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             経営層への説明に適した比較軸で、固定プランと市場連動プランを整理します。「どちらが安いか」ではなく「どちらのリスクをとるか」という経営判断の観点で示すことが重要です。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700">
               <thead>
                 <tr className="bg-slate-50 text-slate-900">

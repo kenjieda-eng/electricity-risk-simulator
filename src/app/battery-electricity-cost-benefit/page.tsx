@@ -4,7 +4,13 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { DEMAND_HOURLY_AVG } from "../../data/demandData";
 import { CDD_TREND } from "../../data/weatherData";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "蓄電池は電気料金対策としてどう効くか｜デマンド抑制とピークカットの仕組み";
@@ -127,6 +133,7 @@ export default function BatteryElectricityCostBenefitPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "蓄電池は電気料金対策としてどう効くか" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -389,7 +396,11 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2020年代の猛暑日（35℃超）は東京で10年間に101日、名古屋で179日。蓄電池の投資回収を10〜15年で見積もる場合、この温暖化トレンドは投資判断にプラスに働く要素です。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
                 <tr>

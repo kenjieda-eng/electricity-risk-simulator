@@ -5,7 +5,13 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "相対契約とは何か｜市場に依存しない仕入れの考え方";
 const pageDescription =
@@ -83,6 +89,7 @@ export default function BilateralPowerContractsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "相対契約とは何か" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -159,7 +166,11 @@ export default function BilateralPowerContractsPage() {
             相対契約のメリットは、価格安定性を持たせやすいこと、市場急騰の影響を一部和らげやすいこと、調達条件を見通しやすいことです。
             一方で、需要変動への追随力は市場より低く、契約条件が固定化すると相場下落時の見直しはしにくくなります。
           </p>
-          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 grid gap-4 lg:grid-cols-2">
             <InfoBox title="安定性の面">
               市場が荒れた局面でも、契約で押さえた数量分については急激なコスト上振れを抑えやすくなります。
             </InfoBox>

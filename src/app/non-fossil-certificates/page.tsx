@@ -6,7 +6,13 @@ import FlowDiagram from "../../components/simulator/FlowDiagram";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "非化石証書とは何か｜再エネ価値をどう確保するのか";
 const pageDescription =
@@ -70,6 +76,7 @@ export default function NonFossilCertificatesPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "非化石証書とは何か" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -134,7 +141,11 @@ export default function NonFossilCertificatesPage() {
             小売会社の観点では、非化石証書は再エネメニューや環境配慮型メニューを設計するときの裏付けとして使われます。また、
             非化石価値をどのように調達するかは、高度化法対応や商品設計の一部としても重要です。
           </p>
-          <div className="mt-4">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4">
             <FlowDiagram
               heading="電気と非化石価値を組み合わせるイメージ"
               steps={[

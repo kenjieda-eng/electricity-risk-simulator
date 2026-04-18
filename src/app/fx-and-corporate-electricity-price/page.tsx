@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle =
   "為替と法人電気料金の関係｜円安が電気料金に影響する仕組み";
@@ -96,6 +102,7 @@ export default function FxAndCorporateElectricityPricePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "為替と法人電気料金の関係" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -201,7 +208,11 @@ export default function FxAndCorporateElectricityPricePage() {
                 電力量単価は固定されているが、燃料費調整額は別途変動する契約が多い。円安・燃料高が長引けば、燃料費調整額の上昇として影響を受ける。また、次回の契約更新時に単価改定が行われる可能性がある。
               </p>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">市場連動プランの場合</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 JEPX市場価格に即時連動するため、円安による燃料コスト上昇が市場価格に反映されると、速やかに料金に影響が現れる。影響のスピードが速い点が固定プランとの違い。

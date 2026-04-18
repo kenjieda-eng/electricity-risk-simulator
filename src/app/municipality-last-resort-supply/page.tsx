@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -163,7 +164,10 @@ export default function MunicipalityLastResortSupplyPage() {
             施設種別によって受電区分と規模が異なり、最終保障供給に移行した際の月額負担増加も大きく異なります。
             庁舎・学校は影響が小さく見えますが施設数が多く、総額では無視できない水準になることがあります。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[620px] border-collapse text-sm">
               <thead>
                 <tr className="bg-slate-100 text-slate-700">

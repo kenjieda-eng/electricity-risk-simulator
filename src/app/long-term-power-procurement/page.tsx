@@ -4,7 +4,13 @@ import ContentCta from "../../components/simulator/ContentCta";
 import InfoBox from "../../components/simulator/InfoBox";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
+
 
 const pageTitle = "長期契約とは何か｜安定調達のために期間を長く取る考え方";
 const pageDescription =
@@ -78,6 +84,7 @@ export default function LongTermPowerProcurementPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "長期契約とは何か" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
@@ -121,7 +128,11 @@ export default function LongTermPowerProcurementPage() {
             電力会社は、販売先の需要をおおまかに見通しながら、基礎需要の一部をあらかじめ押さえる必要があります。長期契約を入れると、
             将来の仕入れ条件が読みやすくなり、料金設計やリスク管理の前提を置きやすくなります。
           </p>
-          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 grid gap-4 lg:grid-cols-3">
             <InfoBox title="数量確保">
               将来必要になる基礎量を、完全ではなくても先に押さえやすくなります。
             </InfoBox>

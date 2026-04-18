@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
+
 
 const pageTitle =
   "太陽光と蓄電池を組み合わせる意味｜自家消費率向上とコスト削減の相乗効果";
@@ -110,6 +116,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "太陽光と蓄電池を組み合わせる意味" },
         ]}
+      faq={__CATEGORY_FAQ__}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -291,7 +298,11 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             太陽光と蓄電池を組み合わせるシステムを設計・発注する際に確認すべき主要ポイントを整理します。
           </p>
-          <div className="mt-4 space-y-3">
+          
+      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 space-y-3">
             {designPoints.map((item) => (
               <div
                 key={item.point}

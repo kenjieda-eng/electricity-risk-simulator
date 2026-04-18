@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { TightSupplyAlertCalculator } from "../../components/market-data/AdditionalCalculators";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 
@@ -206,7 +208,11 @@ export default function LastResortSupplySwitchPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             切替の方向によって手続き内容と所要期間が異なります。どのパターンに該当するかを確認してから準備を進めます。
           </p>
-          <div className="mt-4 overflow-x-auto">
+          
+      <TightSupplyAlertCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
                 <tr>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -285,7 +286,10 @@ export default function JepxBusinessImpactPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+          
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+<div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm leading-7 text-slate-800">
               <strong>太陽光が多い九州・四国では昼間にマイナス差が拡大。</strong>
               再エネ出力が集中する時間帯は卸価格がシステムプライスを大幅に下回ることがあります。
