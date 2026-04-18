@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "市場連動プランと固定プランの違いを、料金の動き方、予算管理、リスク、向いている法人の観点から比較し、選び方の考え方を整理します。",
     url: "https://simulator.eic-jp.org/market-linked-vs-fixed",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [

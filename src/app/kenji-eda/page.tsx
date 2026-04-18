@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/kenji-eda",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "profile",
     images: [

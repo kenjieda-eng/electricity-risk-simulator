@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: canonicalUrl,
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "website",
     images: [

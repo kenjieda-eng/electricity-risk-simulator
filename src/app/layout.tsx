@@ -5,12 +5,13 @@ import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
 import BackToTop from "../components/BackToTop";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../lib/siteConfig";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://simulator.eic-jp.org"),
-  title: "法人向け電気料金上昇、高騰リスクシミュレーター",
-  description: "法人向けの電気代・電気料金の上昇、高騰リスクを試算するシミュレーションツール",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   alternates: {
     canonical: "/",
     types: {
@@ -31,9 +32,9 @@ export default function RootLayout({
     <html lang="ja">
       <body id="page-top" className="bg-violet-50/30">
         <WebSiteJsonLd
-          name="法人向け電気料金上昇、高騰リスクシミュレーター"
-          url="https://simulator.eic-jp.org"
-          description="法人向けの電気代・電気料金の上昇、高騰リスクを試算するシミュレーションツール"
+          name={SITE_NAME}
+          url={SITE_URL}
+          description={SITE_DESCRIPTION}
         />
         <PublicHeader />
         <main className="bg-violet-50/30">{children}</main>

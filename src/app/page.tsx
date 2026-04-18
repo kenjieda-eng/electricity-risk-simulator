@@ -5,7 +5,7 @@ import { getLatestArticles } from "../lib/articles";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
+  title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
   description:
     "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。基礎知識・料金推移・契約メニュー比較・業種別ガイドも充実。",
   keywords: [
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     canonical: "https://simulator.eic-jp.org/",
   },
   openGraph: {
-    title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
+    title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
     description:
       "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
     url: "https://simulator.eic-jp.org/",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "website",
     images: [
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/ogp-default.png",
         width: 1200,
         height: 630,
-        alt: "法人向け電気料金上昇、高騰リスクシミュレーター",
+        alt: "法人電気料金ナビ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "法人向け電気料金上昇、高騰リスクシミュレーター | 電気代・電気料金の上昇リスクを試算",
+    title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
     description:
       "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
     images: ["/twitter-default.png"],
@@ -53,7 +53,7 @@ export default function Page() {
   return (
     <>
       <WebSiteJsonLd
-        name="法人向け電気料金上昇、高騰リスクシミュレーター"
+        name="法人電気料金ナビ"
         url="https://simulator.eic-jp.org/"
         description="法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。"
       />
@@ -61,7 +61,7 @@ export default function Page() {
         <div className="mx-auto max-w-[1600px]">
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-              法人向け電気料金上昇、高騰リスクシミュレーター
+              法人電気料金ナビ
             </h1>
             <p className="mt-2.5 text-sm leading-7 text-slate-700 sm:mt-3 sm:text-base sm:leading-7">
               市場価格や燃料費の変動を踏まえて、企業や自治体を含む法人組織の電気料金上昇・高騰リスクを簡易に確認できる電気料金シミュレーターです。
@@ -389,7 +389,7 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: "法人向け電気料金上昇、高騰リスクシミュレーター",
+            name: "法人電気料金ナビ",
             url: "https://simulator.eic-jp.org/",
             description:
               "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",

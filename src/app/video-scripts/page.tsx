@@ -8,7 +8,7 @@ const pageUrl = "https://simulator.eic-jp.org/video-scripts";
 
 export const metadata: Metadata = {
   title: pageTitle, description: pageDescription, alternates: { canonical: pageUrl },
-  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人向け電気料金上昇、高騰リスクシミュレーター", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
+  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人電気料金ナビ", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/twitter-default.png"] },
 };
 

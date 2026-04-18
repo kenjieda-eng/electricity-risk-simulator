@@ -91,10 +91,10 @@ export function PublicHeader() {
     >
       <div className="relative mx-auto max-w-[1600px] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-4">
-          <Link href="/" aria-label="法人向け電気料金上昇、高騰リスクシミュレーターへ戻る">
+          <Link href="/" aria-label="法人電気料金ナビへ戻る">
             <Image
               src="/logo.png"
-              alt="法人向け電気料金上昇、高騰リスクシミュレーターのロゴ"
+              alt="法人電気料金ナビのロゴ"
               width={300}
               height={57}
               className="h-auto w-[220px] sm:w-[300px] lg:w-[343px]"
@@ -115,7 +115,7 @@ export function PublicHeader() {
             </div>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
               <p className="text-sm font-medium leading-tight text-slate-700 sm:text-lg">
-                法人向け電気料金上昇、高騰リスクシミュレーター
+                法人電気料金ナビ
               </p>
               <p className="text-sm font-semibold leading-tight text-blue-600 sm:text-lg">
                 電気代の値上がりリスクを30秒で診断

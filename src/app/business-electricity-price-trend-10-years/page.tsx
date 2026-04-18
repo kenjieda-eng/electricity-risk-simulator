@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/business-electricity-price-trend-10-years",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "法人向け電気料金の推移を10年で見る" }],

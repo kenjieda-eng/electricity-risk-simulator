@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: INDUSTRY_CATEGORY_TOP.metadataTitle,
     description: INDUSTRY_CATEGORY_TOP.metadataDescription,
     url: canonicalPath,
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: INDUSTRY_CATEGORY_TOP.metadataTitle }],

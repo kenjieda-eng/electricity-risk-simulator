@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { SITE_NAME } from "../lib/siteConfig";
 
-const siteTitle = "法人向け電気料金上昇・高騰リスクシミュレーター";
+const siteTitle = SITE_NAME;
 
 const siteDescription =
   "法人・企業・自治体向けに、電気料金の上昇リスク診断、契約メニュー比較、料金プラン見直し、業種別の対策、月次動向の振り返りまで、実務で使える情報を公開しています。運営は一般社団法人エネルギー情報センターです。";

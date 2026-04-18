@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/who-should-choose-market-linked-plan",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "市場連動プランが向いている法人・向いていない法人" }],

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/high-voltage-electricity-bill-guide",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
