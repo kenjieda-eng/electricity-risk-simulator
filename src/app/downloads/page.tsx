@@ -53,6 +53,26 @@ const DOWNLOADS = [
     { title: "主要20カ国 産業用電気料金", href: "/api/datasets/global-electricity-price", format: "JSON" },
     { title: "中小企業向けエネルギー補助金", href: "/api/datasets/sme-subsidy", format: "JSON" },
   ]},
+  { category: "Excel テンプレート (XLSX)", items: [
+    { title: "排出係数2024 + Scope2計算式付き", href: "/api/downloads/emission-factor-xlsx", format: "XLSX" },
+    { title: "部門別電気代配賦テンプレート", href: "/api/downloads/cost-allocation-template-xlsx", format: "XLSX" },
+  ]},
+  { category: "Word 文書（DOCX）", items: [
+    { title: "電力契約レビューチェックリスト", href: "/api/downloads/contract-checklist-docx", format: "DOCX" },
+  ]},
+  { category: "PowerPoint テンプレ（PPTX）", items: [
+    { title: "経営層報告6枚テンプレート", href: "/api/downloads/executive-brief-pptx", format: "PPTX" },
+  ]},
+  { category: "PDF 白書", items: [
+    { title: "Corporate Decarbonization White Paper 2026", href: "/api/downloads/whitepaper-decarbon-pdf", format: "PDF" },
+  ]},
+  { category: "現場用コンテンツ", items: [
+    { title: "現場掲示用ポスター集（停電・節電・需給ひっ迫）", href: "/posters", format: "HTML→印刷" },
+    { title: "マンガで分かる電気代見直し", href: "/manga", format: "HTML" },
+    { title: "解説動画スクリプト集 5本", href: "/video-scripts", format: "HTML" },
+    { title: "インフォグラフィック集", href: "/infographics", format: "HTML/SVG" },
+    { title: "データビジュアル集", href: "/data-visualizations", format: "HTML/SVG" },
+  ]},
 ];
 
 export default function DownloadsPage() {
