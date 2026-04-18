@@ -243,31 +243,31 @@ export default function ArticlesPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           読むだけで終わらせず「読む→考える→診断→行動」を一気通貫で進めるためのツール群です。
         </p>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
-          <Link href="/journey" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/journey" className="rounded-xl border border-sky-200 bg-sky-50/60 p-5 transition hover:bg-sky-100">
             <p className="text-xs font-semibold text-sky-700">JOURNEY</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">一気通貫ジャーニー</p>
-            <p className="mt-1 text-xs leading-5 text-slate-600">読む→考える→診断→行動の4ステップガイド</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">一気通貫ジャーニー</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">読む→考える→診断→行動の4ステップガイド</p>
           </Link>
-          <Link href="/benchmark" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+          <Link href="/benchmark" className="rounded-xl border border-sky-200 bg-sky-50/60 p-5 transition hover:bg-sky-100">
             <p className="text-xs font-semibold text-sky-700">BENCHMARK</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">業種×規模 ベンチマーク</p>
-            <p className="mt-1 text-xs leading-5 text-slate-600">月額電気代を業種平均と即座に比較</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">業種×規模 ベンチマーク</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">月額電気代を業種平均と即座に比較</p>
           </Link>
-          <Link href="/concierge" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+          <Link href="/concierge" className="rounded-xl border border-sky-200 bg-sky-50/60 p-5 transition hover:bg-sky-100">
             <p className="text-xs font-semibold text-sky-700">AI</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">AI コンシェルジュ</p>
-            <p className="mt-1 text-xs leading-5 text-slate-600">35カテゴリを横断検索・意図判定</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">AI コンシェルジュ</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">35カテゴリを横断検索・意図判定</p>
           </Link>
-          <Link href="/knowledge-graph" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+          <Link href="/knowledge-graph" className="rounded-xl border border-sky-200 bg-sky-50/60 p-5 transition hover:bg-sky-100">
             <p className="text-xs font-semibold text-sky-700">GRAPH</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">ナレッジグラフ</p>
-            <p className="mt-1 text-xs leading-5 text-slate-600">カテゴリ・記事の意味関係マップ</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">ナレッジグラフ</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">カテゴリ・記事の意味関係マップ</p>
           </Link>
-          <Link href="/downloads" className="rounded-xl border border-sky-200 bg-sky-50/60 p-4 transition hover:bg-sky-100">
+          <Link href="/downloads" className="rounded-xl border border-sky-200 bg-sky-50/60 p-5 transition hover:bg-sky-100">
             <p className="text-xs font-semibold text-sky-700">DOWNLOADS</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">実務テンプレ10種</p>
-            <p className="mt-1 text-xs leading-5 text-slate-600">稟議書・比較表・議会スライドなど</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">実務テンプレ10種</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">稟議書・比較表・議会スライドなど</p>
           </Link>
         </div>
       </section>
