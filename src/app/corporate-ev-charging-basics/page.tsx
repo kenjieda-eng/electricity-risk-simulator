@@ -3,11 +3,17 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import EvChargingDemandSim from "../../components/market-data/EvChargingDemandSim";
+import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "法人EV充電の基礎｜充電設備の種類と必要な電力契約";
 const pageDescription =
   "法人が社用車EVを導入する際の、充電設備の種類（普通・急速）、必要な電力契約区分、費用構造を整理します。";
 const pageUrl = "https://simulator.eic-jp.org/corporate-ev-charging-basics";
+
+const FAQ_ITEMS = CATEGORY_FAQ_22_35["ev-charging"] ?? [];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -41,6 +47,7 @@ export default function Page() {
         description={pageDescription}
         url={pageUrl}
         datePublished="2026-04-17"
+        faq={FAQ_ITEMS}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "解説ページ一覧", url: "https://simulator.eic-jp.org/articles" },
@@ -80,6 +87,53 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">充電器本体（普通型50万〜100万円、急速型300万〜600万円）、工事費、高圧受電設備改修費、補助金申請代行費用、保守料金が主な項目です。</p>
           </section>
         </section>
+
+        <EvChargingDemandSim />
+
+        <section className="mt-6 space-y-6">
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務でよくある落とし穴</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>検討段階で複数社の見積・提案を比較せず、初回提示を採用してしまうケース</li>
+              <li>会計・税務処理の事前確認不足による仕訳修正の発生</li>
+              <li>契約条項（解約・自動更新・違約金）の確認漏れによる後続トラブル</li>
+              <li>関連部門（経理・法務・施設・経営）への早期共有不足</li>
+              <li>データ更新頻度の低さ（年1回以下）による効果測定の困難化</li>
+            </ul>
+          </section>
+
+          <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">実務チェックリスト</h2>
+            <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>□ 現状コスト・排出量・契約条件の棚卸しが完了している</li>
+              <li>□ 複数の選択肢（3案以上）を比較検討している</li>
+              <li>□ 投資回収期間・TCO・ROIを定量評価している</li>
+              <li>□ 会計・税務・法務面の影響を確認済みである</li>
+              <li>□ 関連部門への情報共有・合意形成ができている</li>
+              <li>□ 効果測定のKPI・計測方法を定義している</li>
+              <li>□ 万一の撤退・変更時の対応策を用意している</li>
+            </ul>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">出典・参考情報</h2>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-slate-700">
+              <li>経済産業省 資源エネルギー庁 公表資料</li>
+              <li>電力・ガス取引監視等委員会 監視報告</li>
+              <li>環境省 温室効果ガス排出量算定・報告・公表制度</li>
+              <li>電力広域的運営推進機関（OCCTO）需給・供給力データ</li>
+              <li>日本卸電力取引所（JEPX）取引データ</li>
+              <li>一般社団法人エネルギー情報センター 独自調査</li>
+            </ul>
+            <p className="mt-3 text-xs text-slate-500">※ 各数値・制度は公表時点の情報。最新情報は各機関公式サイトをご確認ください。</p>
+          </section>
+        </section>
+
+        <MarketDataFaq items={FAQ_ITEMS} />
+
+        <AuthorBadge publishedAt="2026-04-18" updatedAt="2026-04-18" />
+
 
         <div className="mt-8">
           <RelatedLinks
