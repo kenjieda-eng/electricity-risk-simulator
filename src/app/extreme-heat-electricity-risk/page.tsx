@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import HeatRiskCalculator from "../../components/market-data/HeatRiskCalculator";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { HotDaysBarChart, TropicalNightsLineChart } from "../../components/market-data/ExtremeHeatCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -14,6 +19,9 @@ import {
   PEAK_DATES,
   PEAK_VALUES,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["extreme-heat-electricity-risk"];
 
 const pageTitle = "猛暑日・熱帯夜と電力リスク｜1995年からの極端気象日数の推移";
 const pageDescription =
@@ -90,6 +98,7 @@ export default function ExtremeHeatElectricityRiskPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "猛暑日・熱帯夜と電力リスク" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -159,6 +168,18 @@ export default function ExtremeHeatElectricityRiskPage() {
         </p>
         <div className="mt-4">
           <HotDaysBarChart />
+        <MarketDataDownload
+          filename="hot-days-tropical-nights.csv"
+          headers={["year", "hot_days_tokyo", "hot_days_osaka", "hot_days_nagoya"]}
+          rows={HEAT_YEARS.map((year, i) => ({
+            year,
+            hot_days_tokyo: HOT_DAYS_TOKYO[i],
+            hot_days_osaka: HOT_DAYS_OSAKA[i],
+            hot_days_nagoya: HOT_DAYS_NAGOYA[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="主要3都市の猛暑日数推移"
+        />
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: 気象庁 各観測地点の日別気温データを年次集計（1995〜2025年）
@@ -426,7 +447,12 @@ export default function ExtremeHeatElectricityRiskPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HeatRiskCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

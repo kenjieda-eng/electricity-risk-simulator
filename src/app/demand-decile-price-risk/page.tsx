@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import DecileSavingCalculator from "../../components/market-data/DecileSavingCalculator";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { DecilePriceBarLineChart } from "../../components/market-data/DecilePriceCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -10,6 +15,9 @@ import {
   DECILE_PRICE,
   DECILE_STD,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["demand-decile-price-risk"];
 
 // --- 定数 ---
 const pageTitle = "需要が上位10%に入ると価格は2.6倍｜需要デシル別の価格リスク分析";
@@ -88,6 +96,7 @@ export default function DemandDecilePriceRiskPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "需要が上位10%に入ると価格は2.6倍" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -150,6 +159,17 @@ export default function DemandDecilePriceRiskPage() {
         </p>
         <div className="mt-4">
           <DecilePriceBarLineChart />
+        <MarketDataDownload
+          filename="demand-decile-price.csv"
+          headers={["decile", "price_jpy_kwh", "std"]}
+          rows={DECILE_LABELS.map((label, i) => ({
+            decile: label,
+            price_jpy_kwh: DECILE_PRICE[i],
+            std: DECILE_STD[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="需要デシル別の価格と標準偏差"
+        />
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: JEPXスポット価格・OCCTO需要実績データより集計
@@ -363,7 +383,12 @@ export default function DemandDecilePriceRiskPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <DecileSavingCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

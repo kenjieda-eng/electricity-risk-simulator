@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import SpikeRiskCalculator from "../../components/market-data/SpikeRiskCalculator";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { SpikeHourChart, SpikeMonthChart } from "../../components/market-data/SpikeAnalysisCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   JEPX_FY_LABELS,
   JEPX_SPIKE_FY,
+  SPIKE_HOURS,
+  SPIKE_MONTHS,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["price-spike-analysis"];
 
 // --- 定数 ---
 const pageTitle = "電力価格スパイクはいつ起きるか｜50円超の発生パターン分析";
@@ -61,6 +71,7 @@ export default function PriceSpikeAnalysisPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "電力価格スパイクはいつ起きるか" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -146,6 +157,16 @@ export default function PriceSpikeAnalysisPage() {
           </p>
           <div className="mt-4">
             <SpikeHourChart />
+        <MarketDataDownload
+          filename="spike-hours-and-months.csv"
+          headers={["bucket", "value"]}
+          rows={[
+            ...SPIKE_HOURS.map((v, i) => ({ bucket: `hour_${i}`, value: v })),
+            ...SPIKE_MONTHS.map((v, i) => ({ bucket: `month_${i + 1}`, value: v })),
+          ]}
+          apiPath="/api/market-data"
+          caption="価格スパイクの時間帯・月別発生件数"
+        />
           </div>
           <h3 className="mt-5 text-lg font-semibold text-slate-900">なぜ夕方にスパイクが集中するのか</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -358,7 +379,12 @@ export default function PriceSpikeAnalysisPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <SpikeRiskCalculator />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

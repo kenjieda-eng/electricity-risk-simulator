@@ -2,13 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import Warming2040Forecast from "../../components/market-data/Warming2040Forecast";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { WarmingTrendLineChart, WarmingDecadeBarChart } from "../../components/market-data/WarmingTrendCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   WARMING_YEARS,
+  WARMING_TOKYO,
+  WARMING_OSAKA,
+  WARMING_SAPPORO,
   CDD_TOKYO,
   HDD_TOKYO,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["warming-trend-30-years"];
 
 const pageTitle = "温暖化30年と電力需要｜1995年からの気温上昇が電気料金に与える影響";
 const pageDescription =
@@ -82,6 +93,7 @@ export default function WarmingTrend30YearsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "温暖化30年と電力需要" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -127,6 +139,18 @@ export default function WarmingTrend30YearsPage() {
         </p>
         <div className="mt-4">
           <WarmingTrendLineChart />
+        <MarketDataDownload
+          filename="warming-trend-30-years.csv"
+          headers={["year", "tokyo", "osaka", "sapporo"]}
+          rows={WARMING_YEARS.map((year, i) => ({
+            year,
+            tokyo: WARMING_TOKYO[i],
+            osaka: WARMING_OSAKA[i],
+            sapporo: WARMING_SAPPORO[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="主要3都市の年平均気温推移（1995-2025）"
+        />
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: 気象庁 各観測地点の月別平均気温データを年次集計（1995〜2025年）
@@ -361,7 +385,12 @@ export default function WarmingTrend30YearsPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <Warming2040Forecast />
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

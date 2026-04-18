@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { RenSharePriceBarChart, RenHourlyDualAxisChart } from "../../components/market-data/RenewablePriceCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -9,6 +13,9 @@ import {
   REN_SHARE_PRICE,
   REN_SHARE_COUNT,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["renewable-share-price-correlation"];
 
 // --- 定数 ---
 const pageTitle = "再エネ比率が上がると価格はどう動くか｜東京エリア35,000コマの実証データ";
@@ -65,6 +72,7 @@ export default function RenewableSharePriceCorrelationPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "再エネ比率が上がると価格はどう動くか" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -126,6 +134,17 @@ export default function RenewableSharePriceCorrelationPage() {
         </p>
         <div className="mt-4">
           <RenSharePriceBarChart />
+        <MarketDataDownload
+          filename="renewable-share-price-correlation.csv"
+          headers={["share_bucket", "avg_price_jpy_kwh", "count"]}
+          rows={REN_SHARE_LABELS.map((label, i) => ({
+            share_bucket: label,
+            avg_price_jpy_kwh: REN_SHARE_PRICE[i],
+            count: REN_SHARE_COUNT[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="再エネ比率ビン別の価格・サンプル数"
+        />
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: 東京エリア30分値データ 35,501コマ（JEPX・OCCTOデータより集計）
@@ -338,7 +357,11 @@ export default function RenewableSharePriceCorrelationPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

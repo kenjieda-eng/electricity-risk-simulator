@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { SeasonDemandPriceChart, HourlyDemandComparisonChart } from "../../components/market-data/WinterVsSummerCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
@@ -13,6 +17,9 @@ import {
   DUCK_WINTER_SOLAR,
   DUCK_SUMMER_SOLAR,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["winter-vs-summer-electricity"];
 
 const pageTitle = "冬と夏、どちらが電気料金リスクか｜季節別データで検証する";
 const pageDescription =
@@ -72,6 +79,7 @@ export default function WinterVsSummerElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "冬と夏、どちらが電気料金リスクか" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -134,6 +142,18 @@ export default function WinterVsSummerElectricityPage() {
         </p>
         <div className="mt-4">
           <SeasonDemandPriceChart />
+        <MarketDataDownload
+          filename="season-price-demand.csv"
+          headers={["season", "demand_mw", "price_avg", "price_std"]}
+          rows={SEASON_LABELS.map((season, i) => ({
+            season,
+            demand_mw: SEASON_DEMAND[i],
+            price_avg: SEASON_PRICE_AVG[i],
+            price_std: SEASON_PRICE_STD[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="季節別の平均需要・価格・ボラティリティ"
+        />
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: JEPX公表の30分値スポット価格・各一般送配電事業者の需要実績（FY2019〜FY2025集計）
@@ -444,7 +464,11 @@ export default function WinterVsSummerElectricityPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連ページ"
           links={[

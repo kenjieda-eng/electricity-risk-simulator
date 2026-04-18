@@ -4,6 +4,10 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import JepxFyPriceChart from "../../components/market-data/JepxFyPriceChart";
 import JepxHourlyPriceChart from "../../components/market-data/JepxHourlyPriceChart";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   JEPX_FY_LABELS,
@@ -12,7 +16,11 @@ import {
   JEPX_FY_MAX,
   JEPX_FY_STD,
   JEPX_SPIKE_FY,
+  JEPX_FY_MIN,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["jepx-spot-price-dashboard"];
 
 // --- 定数 ---
 const pageTitle = "JEPXスポット価格の全体像｜FY2010〜2026の17年間データ";
@@ -71,6 +79,7 @@ export default function JepxSpotPriceDashboardPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "JEPXスポット価格の全体像" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -136,6 +145,21 @@ export default function JepxSpotPriceDashboardPage() {
         </p>
         <div className="mt-4">
           <JepxFyPriceChart />
+        <MarketDataDownload
+          filename="jepx-spot-price-fy.csv"
+          headers={["fy", "avg", "median", "max", "min", "std", "spike_count"]}
+          rows={JEPX_FY_LABELS.map((label, i) => ({
+            fy: label,
+            avg: JEPX_FY_AVG[i],
+            median: JEPX_FY_MEDIAN[i],
+            max: JEPX_FY_MAX[i],
+            min: JEPX_FY_MIN?.[i] ?? 0,
+            std: JEPX_FY_STD[i],
+            spike_count: JEPX_SPIKE_FY[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="FY2010〜2026の17年分JEPX価格統計"
+        />
         </div>
         <p className="mt-3 text-xs text-slate-500">
           ※ 出典: JEPX公表データをもとにエネルギー情報センターが集計。FY2026は期中データを含む暫定値。
@@ -430,7 +454,11 @@ export default function JepxSpotPriceDashboardPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連データ・解説"
           links={[

@@ -3,6 +3,10 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import TempBinChart from "../../components/market-data/TempBinChart";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   TEMP_BIN_LABELS,
@@ -12,6 +16,9 @@ import {
   CORR_MATRIX,
   EXTREME_WEATHER,
 } from "../../data/marketData";
+
+
+const FAQ = MARKET_DATA_FAQ["weather-electricity-price-link"];
 
 // --- 定数 ---
 const pageTitle = "気温と電力価格の因果チェーン｜気温→需要→価格のU字構造";
@@ -72,6 +79,7 @@ export default function WeatherElectricityPriceLinkPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "気温と電力価格の因果チェーン" },
         ]}
+      faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -135,6 +143,17 @@ export default function WeatherElectricityPriceLinkPage() {
         </p>
         <div className="mt-4">
           <TempBinChart />
+        <MarketDataDownload
+          filename="temp-bin-demand-price.csv"
+          headers={["temp_range", "demand_mw", "price_jpy_kwh"]}
+          rows={TEMP_BIN_LABELS.map((label, i) => ({
+            temp_range: label,
+            demand_mw: TEMP_BIN_DEMAND[i],
+            price_jpy_kwh: TEMP_BIN_PRICE[i],
+          }))}
+          apiPath="/api/market-data"
+          caption="気温帯別の平均需要と価格（U字構造）"
+        />
         </div>
         <p className="mt-3 text-xs text-slate-500">
           ※ 全国9エリア合計需要と東京エリアJEPXスポット価格の日平均値を気温帯別に集計。気温は東京の日平均気温。
@@ -587,7 +606,11 @@ export default function WeatherElectricityPriceLinkPage() {
       </section>
 
       {/* 関連リンク */}
-      <div className="mt-8">
+      
+      <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+      <MarketDataFaq items={FAQ} />
+
+<div className="mt-8">
         <RelatedLinks
           heading="関連データ・解説"
           links={[

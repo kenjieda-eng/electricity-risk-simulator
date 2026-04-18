@@ -4,13 +4,22 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import DemandHourlyChart from "../../components/market-data/DemandHourlyChart";
 import DemandMonthlyChart from "../../components/market-data/DemandMonthlyChart";
+import MarketDataDownload from "../../components/market-data/MarketDataDownload";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import Demand2030Forecast from "../../components/market-data/Demand2030Forecast";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import {
   DEMAND_FY_LABELS,
   DEMAND_FY_TOTAL,
+  DEMAND_HOURLY,
+  DEMAND_MONTHLY,
   PEAK_DATES,
   PEAK_VALUES,
 } from "../../data/marketData";
+import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
+
+const FAQ = MARKET_DATA_FAQ["electricity-demand-pattern"];
 
 // --- 定数 ---
 const pageTitle = "全国電力需要パターン｜時間帯・月・年度で見る需要構造";
@@ -72,6 +81,7 @@ export default function ElectricityDemandPatternPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "全国電力需要パターン" },
         ]}
+        faq={FAQ}
       />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
@@ -140,6 +150,13 @@ export default function ElectricityDemandPatternPage() {
         <p className="mt-3 text-xs text-slate-500">
           ※ FY2016〜FY2023の全国9エリア合計値（30分値の時間帯集計）。単位はMW（メガワット）。
         </p>
+        <MarketDataDownload
+          filename="national-demand-hourly.csv"
+          headers={["hour", "demand_mw"]}
+          rows={DEMAND_HOURLY.map((d, i) => ({ hour: i, demand_mw: d }))}
+          apiPath="/api/market-data"
+          caption="時間帯別平均需要データ（全国9エリア）"
+        />
       </section>
 
       {/* 時間帯別解説 */}
@@ -196,7 +213,22 @@ export default function ElectricityDemandPatternPage() {
         <p className="mt-3 text-xs text-slate-500">
           ※ FY2016〜FY2023の月別平均需要（全国9エリア合計の30分値集計）。単位はMW。
         </p>
+        <MarketDataDownload
+          filename="national-demand-monthly.csv"
+          headers={["month", "demand_mw"]}
+          rows={DEMAND_MONTHLY.map((d, i) => ({ month: i + 1, demand_mw: d }))}
+          apiPath="/api/market-data"
+          caption="月別平均需要データ"
+        />
       </section>
+
+      <Demand2030Forecast />
+
+      <HistoricalEventTimeline
+        heading="需要構造に影響した主要イベント"
+        intro="需要パターンは制度改正・災害・パンデミック・技術革新などの外部要因で大きく変化します。2010年以降の主要イベントと需要インパクトを整理しました。"
+        events={MAJOR_ENERGY_EVENTS}
+      />
 
       {/* エリア別シェア */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
@@ -452,6 +484,8 @@ export default function ElectricityDemandPatternPage() {
           照らし合わせることで、改善ポテンシャルを定量的に把握できます。
         </p>
       </section>
+
+      <MarketDataFaq items={FAQ} />
 
       {/* 関連リンク */}
       <div className="mt-8">
