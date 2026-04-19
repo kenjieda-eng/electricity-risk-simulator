@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import ContentCta from "../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
 import {
   CATEGORY_KEYS,
@@ -548,6 +549,17 @@ export default async function BusinessElectricityRetrospectiveYearCategoryPage({
           </div>
         </section>
       </section>
+
+      <div className="mt-8">
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="月次データを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
       </main>
     </>
   );
