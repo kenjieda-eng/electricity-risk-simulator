@@ -16,6 +16,7 @@
     "docx": "^9.6.1",
     "exceljs": "^4.4.0",
     "fuse.js": "^7.3.0",
+    "googleapis": "^171.4.0",
     "next": "^16.1.6",
     "pdf-lib": "^1.17.1",
     "pptxgenjs": "^4.0.1",
@@ -35,5 +36,14 @@
     "tailwindcss": "^4.0.0",
     "typescript": "^5.0.0",
     "vitest": "^4.1.4"
-  }
+  },
+  "browserslist": [
+    "chrome >= 90",
+    "edge >= 90",
+    "firefox >= 90",
+    "safari >= 15",
+    "ios >= 15",
+    "not dead",
+    "not op_mini all"
+  ]
 }

@@ -1,23 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import {
-  BarElement,
-  CategoryScale,
-  Chart as ChartJS,
-  Filler,
-  Legend,
-  LineElement,
-  LinearScale,
-  PointElement,
-  Title,
-  Tooltip,
-  type ChartData,
-  type ChartOptions,
-} from "chart.js";
-import { Bar, Line } from "react-chartjs-2";
+import type { ChartData, ChartOptions } from "chart.js";
 import { calculateRiskScore } from "../../lib/riskScore";
 import { trackEvent } from "../../lib/analytics/ga";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
@@ -34,16 +21,18 @@ import {
   type UsagePattern,
 } from "../../lib/simulator";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
+const chartLoading = () => (
+  <div className="h-full w-full animate-pulse rounded-md bg-slate-100" aria-hidden="true" />
+);
+
+const LineChart = dynamic(
+  () => import("../../components/charts/SimulatorCharts").then((m) => m.SimulatorLineChart),
+  { ssr: false, loading: chartLoading }
+);
+
+const BarChart = dynamic(
+  () => import("../../components/charts/SimulatorCharts").then((m) => m.SimulatorBarChart),
+  { ssr: false, loading: chartLoading }
 );
 
 const INPUT_STATE_SESSION_KEY = "ana-simulation-input-state";
@@ -839,7 +828,7 @@ export default function HomePageClient() {
               </label>
             </div>
             <div className="mt-3 h-[160px] w-full sm:h-[200px] lg:h-[220px] xl:h-[260px]">
-              <Line data={lineData} options={lineOptions} />
+              <LineChart data={lineData} options={lineOptions} />
             </div>
             <div className="mt-4">
               <h3 className="text-base font-semibold text-slate-900 sm:text-lg">毎月の電気代比較</h3>
@@ -847,7 +836,7 @@ export default function HomePageClient() {
                 同じ条件で見た、各月の固定プランと市場連動プランの月額比較です。
               </p>
               <div className="mt-2 h-[110px] w-full sm:h-[130px]">
-                <Bar data={barData} options={barOptions} />
+                <BarChart data={barData} options={barOptions} />
               </div>
             </div>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
