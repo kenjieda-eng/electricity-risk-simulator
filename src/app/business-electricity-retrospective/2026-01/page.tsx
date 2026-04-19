@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getMonthlyPageData } from "../_lib/monthly-page-data";
 import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpactChart } from "../_components/MonthlyVisuals";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import ContentCta from "../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 
 const pageTitle = "【2026年1月】法人の電気料金はどう動いた？補助政策とデータで読む年明けの変化";
 const pageDescription =
@@ -392,6 +394,24 @@ export default function BusinessElectricityRetrospective202601Page() {
             </Link>
           </div>
         </section>
+
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-retrospective/2026-02", title: "2026年2月の振り返り", description: "補助縮小前夜の単価動向を翌月視点で確認できます。" },
+            { href: "/business-electricity-retrospective/2025-12", title: "2025年12月の振り返り", description: "年末ピーク局面の推移を前月視点で確認できます。" },
+            { href: "/business-electricity-retrospective", title: "法人電気料金振り返りハブ", description: "月次・年次の全ラインナップから他月に移動できます。" },
+          ]}
+        />
+
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
       </section>
     </main>
     </>

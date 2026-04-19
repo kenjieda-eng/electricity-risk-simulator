@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import ContentCta from "../../../components/simulator/ContentCta";
+import SimulatorRelatedLinks from "../../../components/simulator/RelatedLinks";
 import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
@@ -274,6 +276,24 @@ export default function UkraineShockOverviewPage() {
             { href: "https://www.iea.org/topics/energy-security", label: "IEA Energy Security" },
             { href: "https://www.jepx.jp/", label: "日本卸電力取引所（JEPX）" },
             { href: "https://simulator.eic-jp.org/business-electricity-retrospective", label: "法人電気料金振り返り（新電力ネット由来データ）" },
+          ]}
+        />
+
+        <SimulatorRelatedLinks
+          heading="関連ページ（振り返りシリーズ）"
+          links={[
+            { href: "/business-electricity-retrospective/ukraine-shock-timeline-2021-2023", title: "ウクライナショックのタイムライン（2021〜2023年）", description: "主要局面と単価推移を時系列で確認できます。" },
+            { href: "/business-electricity-retrospective/ukraine-shock-by-voltage-class", title: "電圧区分別のウクライナショック影響", description: "区分別に波及度合いを比較できます。" },
+            { href: "/business-electricity-retrospective/ukraine-shock-and-contract-practice", title: "契約実務への波及", description: "ショックが契約条件にどう波及したかを整理できます。" },
+          ]}
+        />
+
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
           ]}
         />
       </section>

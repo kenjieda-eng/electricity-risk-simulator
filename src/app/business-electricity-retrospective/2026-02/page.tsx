@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpactChart } from "../_components/MonthlyVisuals";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import ContentCta from "../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 
 const pageTitle = "【2026年2月】法人の電気料金はどう動いた？補助終了前の最終確認";
 const pageDescription =
@@ -410,6 +412,24 @@ export default function BusinessElectricityRetrospective202602Page() {
             </Link>
           </div>
         </section>
+
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-retrospective/2026-01", title: "2026年1月の振り返り", description: "前月との比較で補助効果の見え方を確認できます。" },
+            { href: "/business-electricity-retrospective/2025-12", title: "2025年12月の振り返り", description: "冬季ピーク時の単価傾向を確認できます。" },
+            { href: "/business-electricity-retrospective", title: "法人電気料金振り返りハブ", description: "月次・年次の全ラインナップから他月に移動できます。" },
+          ]}
+        />
+
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
       </section>
     </main>
     </>

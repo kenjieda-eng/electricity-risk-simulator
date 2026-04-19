@@ -112,7 +112,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/datacenter-power-demand-trend", title: "データセンターの電力需要動向", description: "日本・世界の状況" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "高ベースロード・冷却設備の特性と見直しの着眼点" },
               { href: "/ai-workload-energy-impact", title: "生成AIの電力消費", description: "学習・推論の実態" },
               { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善と液冷" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },

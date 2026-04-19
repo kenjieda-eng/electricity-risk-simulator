@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../../components/seo/JsonLd";
 import { YEARLY_ARCHIVE_ITEMS } from "../_lib/hub-data";
+import ContentCta from "../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 
 const pageTitle = "法人電気料金振り返り 年次アーカイブ｜2019年〜2025年の推移一覧";
 const pageDescription =
@@ -129,6 +131,29 @@ export default function BusinessElectricityRetrospectiveArchivePage() {
           法人電気料金振り返りトップへ戻る
         </Link>
       </section>
+
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-retrospective/high-voltage-2019-2025", title: "高圧の電気料金推移（2019〜2025年）", description: "7年間の高圧単価トレンドを年次で確認できます。" },
+            { href: "/business-electricity-retrospective/special-high-voltage-2019-2025", title: "特別高圧の電気料金推移（2019〜2025年）", description: "大口需要家の長期単価動向を確認できます。" },
+            { href: "/business-electricity-retrospective/ukraine-shock-overview", title: "ウクライナショック全体整理", description: "2022年急騰局面の背景を通史的に把握できます。" },
+            { href: "/business-electricity-retrospective/2026-02", title: "2026年2月の振り返り", description: "直近の月次動向を確認できます。" },
+          ]}
+        />
+      </div>
+
+      <div className="mt-6">
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
     </main>
     </>
   );

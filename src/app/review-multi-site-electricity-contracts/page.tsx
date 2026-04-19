@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "複数拠点の電力契約を見直すときの進め方";
 const pageDescription =
@@ -40,6 +42,7 @@ export default function ReviewMultiSiteElectricityContractsPage() {
     { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場・新電力動向データ" },
   ];
   return (
+    <>
     <ReviewArticlePage
       breadcrumbLabel="複数拠点の見直し"
       slug="review-multi-site-electricity-contracts"
@@ -173,5 +176,28 @@ export default function ReviewMultiSiteElectricityContractsPage() {
       ctaDescription="多拠点情報を整えたら、使い方ページで入力手順を確認し、比較ページで拠点単位の条件差を可視化して優先拠点から進めるのが実務的です。"
       glossaryTerms={["基本料金", "電力量料金", "契約電力", "燃料費調整額", "市場連動プラン", "固定プラン"]}
     />
+    <div className="mx-auto w-full max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="mt-6">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/which-companies-benefit-most-from-review", title: "どんな会社ほど電力契約の見直し効果が出やすいのか", description: "多拠点法人の見直し優先度を考える参考になります。" },
+            { href: "/who-should-handle-electricity-contract-review", title: "どの部署が法人の電力契約見直しを担当するべきか", description: "拠点横断の主導部署と役割分担を整理できます。" },
+            { href: "/how-to-start-electricity-contract-review", title: "法人の電力契約見直しは何から始めるべきか", description: "複数拠点を含む見直しの着手順序を整理できます。" },
+          ]}
+        />
+      </div>
+      <div className="mt-6">
+        <ContentCta
+          heading="契約見直しの次のステップ"
+          description="見直しのポイントを確認したら、シミュレーターで自社のリスクを診断してみましょう。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
+    </div>
+    </>
   );
 }
