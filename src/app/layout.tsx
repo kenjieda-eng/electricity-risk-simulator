@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { GoogleAnalytics } from "../components/analytics/GoogleAnalytics";
+import ArticleScrollTracker from "../components/analytics/ArticleScrollTracker";
 import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
+        <ArticleScrollTracker />
       </body>
     </html>
   );

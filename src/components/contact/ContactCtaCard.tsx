@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { trackEvent } from "../../lib/analytics/ga";
 
 /**
@@ -68,6 +68,36 @@ export default function ContactCtaCard({
   note = "中立的な立場で、特定の電力会社への勧誘は一切行いません。",
 }: ContactCtaCardProps) {
   const href = useMemo(() => buildContactHref(source, context), [source, context]);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const viewFiredRef = useRef(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || viewFiredRef.current) return;
+    if (typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !viewFiredRef.current) {
+            viewFiredRef.current = true;
+            trackEvent("contact_cta_view", {
+              source,
+              variant,
+              page_path:
+                typeof window !== "undefined" ? window.location.pathname : null,
+            });
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [source, variant]);
 
   const handleClick = () => {
     trackEvent("contact_cta_click", {
@@ -91,7 +121,7 @@ export default function ContactCtaCard({
     : "inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-300 sm:text-base";
 
   return (
-    <section className={containerClass} aria-labelledby={`contact-cta-${source}`}>
+    <section ref={sectionRef} className={containerClass} aria-labelledby={`contact-cta-${source}`}>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex-1">
           {isPrimary ? (
