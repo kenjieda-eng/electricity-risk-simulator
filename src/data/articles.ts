@@ -294,6 +294,8 @@ export const articleCategories: ArticleCategory[] = [
       "high-voltage-contract-review-points",
       "extra-high-voltage-contract-review-points",
       "contract-review-practice-guide",
+      "how-to-switch-electricity-provider",
+      "reduce-high-voltage-basic-charge",
     ],
     order: 5,
     group: "learning",
@@ -518,6 +520,7 @@ export const articleCategories: ArticleCategory[] = [
       "solar-suited-corporations",
       "demand-response-suited-corporations",
       "contract-review-and-equipment-combination",
+      "demand-control-guide",
     ],
     order: 11,
     group: "learning",
@@ -923,6 +926,8 @@ export const articleCategories: ArticleCategory[] = [
       "small-store-monthly-electricity-trend",
       "tenant-sub-meter-electricity-billing",
       "soho-sole-proprietor-electricity-tax",
+      "sme-electricity-cost-reduction-steps",
+      "small-business-electricity-review-timing",
     ],
     order: 26,
     group: "learning",
@@ -4119,6 +4124,57 @@ export const articleList: ArticleMeta[] = [
     category: "業種別の見直しポイント集",
     categorySlug: "industry-guide",
     order: 34,
+    publishedAt: "2026-04-19",
+  },
+  // --- S2-06 batch2（review + equipment + sme 5本）2026-04-19 ---
+  {
+    title: "電力会社の切り替え手順｜法人向け完全ガイド",
+    slug: "how-to-switch-electricity-provider",
+    description:
+      "法人の電力会社切り替えを、契約情報の整理から相見積もり・プラン比較・契約締結・切替日設定・初月検針確認までの6ステップで解説します。解約金や通知期限などの落とし穴、所要期間の目安も整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 38,
+    publishedAt: "2026-04-19",
+  },
+  {
+    title: "高圧電力の基本料金を下げる5つの方法",
+    slug: "reduce-high-voltage-basic-charge",
+    description:
+      "高圧電力の基本料金を下げる5つの方法（デマンドコントロール・契約電力見直し・力率改善・時間分散・建物統合）を、効果目安・投資回収期間・適用条件とセットで整理します。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    order: 39,
+    publishedAt: "2026-04-19",
+  },
+  {
+    title: "デマンドコントロールとは？導入効果と費用の目安",
+    slug: "demand-control-guide",
+    description:
+      "デマンドコントロールの仕組み・装置の種類・費用相場（5〜150万円）・導入効果（基本料金▲5〜15%）・投資回収期間・導入判断の基準を実務向けに整理します。",
+    category: "蓄電池・太陽光・DRを知る",
+    categorySlug: "energy-equipment",
+    order: 16,
+    publishedAt: "2026-04-19",
+  },
+  {
+    title: "中小企業の電力コスト削減｜月5万円から始める3ステップ",
+    slug: "sme-electricity-cost-reduction-steps",
+    description:
+      "月間電気代5〜30万円クラスの中小企業向けに、請求書の内訳把握・運用改善・契約見直しの3ステップを整理。所要時間・期待削減額・担当者の目安をセットで解説します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 7,
+    publishedAt: "2026-04-19",
+  },
+  {
+    title: "小規模事業者の電気代｜見直すべきタイミングと判断基準",
+    slug: "small-business-electricity-review-timing",
+    description:
+      "小規模事業者が電気代を見直すべき6つのトリガー（契約更新3か月前・値上げ通知・移転・設備入替・使用量変動・前年比+15%）と、それぞれの優先行動とチェックリストを整理します。",
+    category: "中小企業・小規模事業者向け",
+    categorySlug: "sme-guide",
+    order: 8,
     publishedAt: "2026-04-19",
   },
 ];
