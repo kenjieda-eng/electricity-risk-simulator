@@ -77,10 +77,13 @@ export const usageFactorMap: Record<UsagePattern, number> = {
   "seasonal-heavy": 1.09,
 };
 
+// Stress multipliers calibrated against JEPX history and 2022 fuel-cost crisis.
+// Update 2026-04-19: fuelPrice fixed/market and coldWave market raised per audit
+// (.ai-team/STRESS_MULTIPLIER_AUDIT_RESULT.md) to reflect 2022-23 reality.
 export const stressMultipliers = {
   heatwave: { fixed: 1.06, market: 1.35, seasonalHeavyExtra: 1.06 },
-  coldWave: { fixed: 1.07, market: 1.4, seasonalHeavyExtra: 1.06 },
-  fuelPrice: { fixed: 1.12, market: 1.22 },
+  coldWave: { fixed: 1.07, market: 1.55, seasonalHeavyExtra: 1.06 },
+  fuelPrice: { fixed: 1.18, market: 1.35 },
   geopolitical: { fixed: 1.18, market: 1.52 },
   outage: {
     impactMonth: { fixed: 1.08, market: 1.3, nightOr24hExtra: 1.06 },

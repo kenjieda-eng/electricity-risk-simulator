@@ -314,8 +314,33 @@ export function Footer() {
           </section>
         </div>
 
-        {/* 下部の運営情報・著作権 */}
+        {/* 関連サイト（エネルギー情報センター運営サイト群） */}
         <div className="mt-10 border-t border-sky-200 pt-6 sm:mt-12">
+          <p className="text-xs font-semibold tracking-wide text-sky-900/80">
+            一般社団法人エネルギー情報センター 運営サイト
+          </p>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs">
+            <a
+              href="https://eic-jp.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-900/80 transition hover:text-sky-950 hover:underline"
+            >
+              エネルギー情報センター（公式）
+            </a>
+            <a
+              href="https://pps-net.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-900/80 transition hover:text-sky-950 hover:underline"
+            >
+              新電力ネット（pps-net.org）— 452社の電力会社データベース
+            </a>
+          </div>
+        </div>
+
+        {/* 下部の運営情報・著作権 */}
+        <div className="mt-8 border-t border-sky-200 pt-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <a href="#page-top" className="text-sm text-sky-900/80 transition hover:text-sky-950 hover:underline">
               ページ上部へ戻る
