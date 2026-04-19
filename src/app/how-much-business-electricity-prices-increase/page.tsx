@@ -15,17 +15,19 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
 // --- 定数 ---
-const pageTitle = "法人の電気料金はどのくらい上がるのか｜要因別の影響幅と実績データ";
+const pageTitle = "法人の電気料金の値上げはどのくらい？要因別の影響幅と実績データで解説";
 const pageDescription =
-  "法人の電気料金がどのくらい上がるかを、要因別の影響幅テーブルと2022〜2025年の実績データで解説。燃調費・市場連動・再エネ賦課金・補助金終了の月額影響を使用量別に試算。";
+  "法人の電気料金の値上げ幅を、要因別の影響幅テーブルと2022〜2025年の実績データで解説。単価改定・燃料費調整額・市場価格調整額・再エネ賦課金・補助金終了の月額影響を使用量別に試算し、法人電気代の値上げを社内説明・予算編成できる形で整理します。";
 
 // --- Metadata ---
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
-    "電気代 値上げ どのくらい",
+    "法人 電気料金 値上げ",
+    "法人 電気代 値上げ",
     "電気料金 値上げ 比較",
+    "電気 料金 値上げ 比較",
     "法人向け電気料金 値上げ幅",
     "燃料費調整額 市場価格調整額",
     "請求額 増え方 見方",
@@ -57,13 +59,13 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
   return (
     <>
       <ArticleJsonLd
-        headline="法人の電気料金はどのくらい上がるのか｜要因別の影響幅と実績データ"
-        description="法人の電気料金がどのくらい上がるかを、要因別の影響幅テーブルと2022〜2025年の実績データで解説。燃調費・市場連動・再エネ賦課金・補助金終了の月額影響を使用量別に試算。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/how-much-business-electricity-prices-increase"
         datePublished="2026-04-17"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-          { name: "法人の電気料金はどのくらい上がるのか" },
+          { name: "法人の電気料金の値上げはどのくらい" },
         ]}
       faq={__CATEGORY_FAQ__}
       />
@@ -82,10 +84,10 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
 
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人の電気料金はどのくらい上がるのか</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人の電気料金の値上げはどのくらい？要因別の影響幅と実績データ</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人向け電気料金の値上げ幅は一律ではなく、契約条件・使用量・調整項目・補助政策の状況で大きく変わります。
-          「なぜ上がるか」だけでなく、<strong>「どの項目がどれだけ上がるか」</strong>を分けて把握することが、コスト管理と社内説明の前提になります。
+          法人の電気料金の値上げは一律ではなく、契約条件・使用量・調整項目・補助政策の状況によって値上げ幅が大きく変わります。
+          「なぜ上がるか」だけでなく、<strong>「どの項目がどれだけ値上げされるか」</strong>を分けて把握することが、法人の電気代コスト管理と社内説明の前提になります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、要因別の影響幅テーブルと2022〜2025年の実績データ、使用量規模別のシミュレーションを示し、値上げ幅の確認方法を解説します。

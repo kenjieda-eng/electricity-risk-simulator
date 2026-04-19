@@ -15,17 +15,21 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "容量拠出金とは｜法人の電気料金にどう影響するか";
+const pageTitle = "容量拠出金とは？仕組み・負担額・電気料金への影響を法人向けにわかりやすく解説";
 const pageDescription =
-  "容量拠出金の仕組みと法人電気料金への影響を解説。容量市場の目的、小売電気事業者から法人への転嫁構造、2024年度からの導入経緯、請求書での見え方を整理します。";
+  "容量拠出金とは何かを法人向けにわかりやすく解説。2024年4月に始まった容量市場の仕組み、kWh単価への上乗せ構造、負担額の試算例、契約書・請求書での確認ポイントまで、法人の電気料金への影響を整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "容量拠出金",
+    "容量拠出金とは",
     "容量拠出金 とは",
+    "容量拠出金 電気代",
     "容量市場 法人 電気料金",
     "容量拠出金 仕組み",
+    "容量拠出金 kWh 単価",
     "電気料金 上昇 制度要因",
     "容量拠出金 請求書",
     "小売電気事業者 容量市場",
@@ -54,12 +58,14 @@ export default function CapacityContributionExplainedPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="容量拠出金とは｜法人の電気料金にどう影響するか"
-        description="容量拠出金の仕組みと法人電気料金への影響を解説。容量市場の目的、小売電気事業者から法人への転嫁構造、2024年度からの導入経緯、請求書での見え方を整理します。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/capacity-contribution-explained"
         datePublished="2026-04-17"
+        dateModified="2026-04-19"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "料金が上がる理由を知る", url: "https://simulator.eic-jp.org/articles/price-increase" },
           { name: "容量拠出金とは" },
         ]}
       faq={__CATEGORY_FAQ__}

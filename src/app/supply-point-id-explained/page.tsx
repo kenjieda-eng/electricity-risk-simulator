@@ -106,6 +106,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: [
     "供給地点特定番号",
+    "受電地点特定番号",
     "電力切り替え",
     "見積依頼",
     "22桁",
@@ -465,14 +466,24 @@ export default function SupplyPointIdExplainedPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/supply-point-identification-number",
+              title: "供給地点特定番号（受電地点特定番号）の詳細ガイド",
+              description: "受電地点特定番号とも呼ばれる22桁番号の構成と実務での使い方を、さらに詳しく解説します。",
+            },
+            {
               href: "/how-to-read-electricity-bill",
               title: "電気料金の請求書の読み方",
-              description: "請求書の各項目の意味と確認ポイントを解説します。",
+              description: "請求書の各項目の意味と、供給地点特定番号の記載位置を解説します。",
             },
             {
               href: "/how-to-read-electricity-quote",
               title: "電気料金の見積書の読み方",
               description: "見積書の構成と比較時のチェックポイントを解説します。",
+            },
+            {
+              href: "/electricity-contract-terms",
+              title: "電力契約でよく使う用語集",
+              description: "供給地点特定番号・契約電力・託送料金など、契約関連用語をまとめて確認できます。",
             },
             {
               href: "/documents-needed-for-electricity-contract-review",
