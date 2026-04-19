@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/ogp-default.png",
+        url: "/api/og/risk-scenarios",
         width: 1200,
         height: 630,
         alt: "厳冬リスクの解説",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/risk-scenarios"],
   },
 };
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/ogp-default.png",
+        url: "/api/og/monthly-review",
         width: 1200,
         height: 630,
         alt: "2025年10月の法人向け電気料金動向",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/monthly-review"],
   },
 };
 

@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "契約実務への波及" }],
+    images: [{ url: "/api/og/monthly-review", width: 1200, height: 630, alt: "契約実務への波及" }],
   },
-  twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/twitter-default.png"] },
+  twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/api/og/monthly-review"] },
 };
 
 const planComparisonRows = [

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "電気料金のリスクシナリオの使い分け" }],
+    images: [{ url: "/api/og/risk-scenarios", width: 1200, height: 630, alt: "電気料金のリスクシナリオの使い分け" }],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/risk-scenarios"],
   },
 };
 

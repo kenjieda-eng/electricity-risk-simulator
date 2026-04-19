@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "市場連動と固定は安さではなく変動の受け方で比べる" }],
+    images: [{ url: "/api/og/plan-types", width: 1200, height: 630, alt: "市場連動と固定は安さではなく変動の受け方で比べる" }],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/plan-types"],
   },
 };
 

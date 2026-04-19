@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/ogp-default.png",
+        url: "/api/og/price-trends",
         width: 1200,
         height: 630,
         alt: "再エネ賦課金を除いた電気料金",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/price-trends"],
   },
 };
 
