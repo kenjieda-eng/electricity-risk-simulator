@@ -1,26 +1,26 @@
 "use client";
 
 import { Suspense, useEffect, useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  BarElement,
-  CategoryScale,
-  Chart as ChartJS,
-  Legend,
-  LineElement,
-  LinearScale,
-  PointElement,
-  Title,
-  Tooltip,
-  type ChartData,
-  type ChartOptions,
-} from "chart.js";
-import { Bar, Line } from "react-chartjs-2";
+import type { ChartData, ChartOptions } from "chart.js";
 import { getRiskLabel } from "../../lib/riskScore";
 import { trackEvent } from "../../lib/analytics/ga";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
+const chartLoading = () => (
+  <div className="h-full w-full animate-pulse rounded-md bg-slate-100" aria-hidden="true" />
+);
+
+const LineChart = dynamic(
+  () => import("../../components/charts/SimulatorCharts").then((m) => m.SimulatorLineChart),
+  { ssr: false, loading: chartLoading }
+);
+
+const BarChart = dynamic(
+  () => import("../../components/charts/SimulatorCharts").then((m) => m.SimulatorBarChart),
+  { ssr: false, loading: chartLoading }
+);
 
 type CompareApiData = {
   id: string;
@@ -1085,10 +1085,10 @@ function ComparePageContent() {
               </label>
             </div>
             <div className="mt-3 h-[260px] w-full sm:h-[320px]">
-              <Line data={lineData} options={lineOptions} />
+              <LineChart data={lineData} options={lineOptions} />
             </div>
             <div className="mt-4 h-[220px] w-full sm:h-[280px]">
-              <Bar data={barData} options={barOptions} />
+              <BarChart data={barData} options={barOptions} />
             </div>
           </>
         ) : (

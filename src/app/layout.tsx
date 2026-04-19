@@ -23,6 +23,16 @@ export const metadata: Metadata = {
   },
 };
 
+const SUPABASE_ORIGIN = (() => {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  if (!url) return null;
+  try {
+    return new URL(url).origin;
+  } catch {
+    return null;
+  }
+})();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +40,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
+        {SUPABASE_ORIGIN && (
+          <link rel="preconnect" href={SUPABASE_ORIGIN} crossOrigin="" />
+        )}
+      </head>
       <body id="page-top" className="bg-violet-50/30">
         <WebSiteJsonLd
           name={SITE_NAME}
