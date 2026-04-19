@@ -10,9 +10,9 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
-  "法人向け電気料金の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金の構成を解説";
+  "法人の電気代の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金を解説";
 const pageDescription =
-  "法人向け電気料金の内訳を基本料金・電力量料金・燃料費調整額・再エネ賦課金の4項目で解説。構成比の目安、契約区分別の料金水準、業種別の構成比の違いも整理。請求書確認や見積比較の基礎になります。";
+  "法人の電気代の内訳を基本料金・電力量料金・燃料費調整額・再エネ賦課金・容量拠出金の5項目で解説。構成比の目安、契約区分別（低圧・高圧・特別高圧）の料金水準、業種別の内訳差まで整理。法人電気代の請求書確認や見積比較、社内説明の基礎になります。";
 
 const linkClass = "text-sky-700 underline underline-offset-2 hover:text-sky-900";
 
@@ -300,6 +300,8 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "法人 電気代 内訳",
+    "法人 電気料金 内訳",
     "法人向け 電気料金 内訳",
     "電気料金 内訳 企業",
     "高圧 電気料金 内訳",
@@ -325,7 +327,7 @@ export const metadata: Metadata = {
         url: "/ogp-default.png",
         width: 1200,
         height: 630,
-        alt: "法人向け電気料金の内訳とは",
+        alt: "法人の電気代の内訳とは",
       },
     ],
   },
@@ -347,14 +349,14 @@ export default function BusinessElectricityBillBreakdownPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="法人向け電気料金の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金の構成を解説"
-        description="法人向け電気料金の内訳を基本料金・電力量料金・燃料費調整額・再エネ賦課金の4項目で解説。構成比の目安、契約区分別の料金水準、業種別の構成比の違いも整理。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/business-electricity-bill-breakdown"
         datePublished="2025-08-03"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
-          { name: "法人向け電気料金の内訳とは" },
+          { name: "法人の電気代の内訳とは" },
         ]}
         faq={faq}
       />
@@ -381,10 +383,10 @@ export default function BusinessElectricityBillBreakdownPage() {
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人向け電気料金の内訳とは</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人の電気代の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金を解説</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          法人の電気料金は使用量だけで決まるわけではなく、請求書には性質の異なる費用が並びます。全体像を先に整理しておくと、
-          請求確認や見積比較で何を見ればよいかが分かりやすくなります。
+          法人の電気代の内訳は使用量だけで決まるわけではなく、請求書には基本料金・電力量料金・燃料費調整額・再エネ賦課金・容量拠出金など性質の異なる費用が並びます。
+          まず内訳の全体像を整理しておくと、請求確認や見積比較、社内説明で何を見ればよいかが一気に分かりやすくなります。
         </p>
       </header>
 

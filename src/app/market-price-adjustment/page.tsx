@@ -12,9 +12,9 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "市場価格調整額とは｜仕組み・計算方法・JEPX連動とのつながりを徹底解説";
+const pageTitle = "市場価格調整額とは｜仕組み・計算方法・JEPX連動と燃料費調整額との違いを徹底解説";
 const pageDescription =
-  "市場価格調整額の仕組み、JEPXシステムプライスとの関係、燃料費調整額との違い、2020〜2025年度の推移、法人契約で注意すべきポイントを、実データとグラフで詳しく解説します。";
+  "市場価格調整額とは、JEPX卸電力市場の価格動向を電気料金に反映する調整項目です。仕組み・計算方法、燃料費調整額との違い、2020〜2025年度のJEPXシステムプライス推移、法人契約で注意すべきポイントを実データとグラフで徹底解説します。";
 const pageUrl = "https://simulator.eic-jp.org/market-price-adjustment";
 
 export const metadata: Metadata = {
@@ -23,8 +23,11 @@ export const metadata: Metadata = {
   keywords: [
     "市場価格調整額",
     "市場価格調整額 とは",
+    "市場価格調整額とは",
     "市場価格調整額 JEPX",
     "市場価格調整額 計算",
+    "市場価格調整額 燃料費調整額 違い",
+    "燃料費調整額 市場価格調整額 違い",
     "市場連動 調整額",
     "電気料金 調整項目",
   ],
@@ -82,14 +85,15 @@ export default function MarketPriceAdjustmentPage() {
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
 
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額とは</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場価格調整額とは｜仕組み・計算方法・燃料費調整額との違い</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          市場価格調整額は、卸電力市場（JEPX）の価格動向を電気料金に反映する調整項目です。
-          燃料費調整額と似た役割を持ちますが、参照している価格が「燃料CIF価格」ではなく「JEPX市場価格」である点が決定的に異なります。
+          市場価格調整額とは、卸電力市場（JEPX）の価格動向を電気料金に反映する調整項目です。
+          燃料費調整額と似た役割を持ちますが、参照する価格が「燃料CIF価格」ではなく「JEPX市場価格」である点が決定的に異なり、変動幅・反映タイミング・上限ルールも大きく違います。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、市場価格調整額の仕組み、JEPX 推移との関係、燃調との違い、法人契約で注意すべき点を、
-          実データとグラフで整理します。
+          このページでは、市場価格調整額の仕組み、計算方法、JEPXシステムプライス推移との関係、
+          <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額（燃調費）</Link>
+          との違い、法人契約で注意すべきポイントを、実データとグラフで整理します。
         </p>
       </header>
 

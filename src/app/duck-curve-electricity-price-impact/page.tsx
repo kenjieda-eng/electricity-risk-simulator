@@ -15,9 +15,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
 
 
-const pageTitle = "ダックカーブとは何か｜昼と夕方で電力市場価格が変わる理由";
+const pageTitle = "ダックカーブとは｜太陽光が生む電力市場価格の昼低下・夕方急騰の仕組み";
 const pageDescription =
-  "昼12時のネット需要7,819MWから夕方18時の11,923MWへ──わずか6時間で4,104MWの急上昇。太陽光の普及が生んだ「ダックカーブ」のメカニズムと、法人の市場連動型プラン・蓄電池投資への影響を30分値データから解説します。";
+  "ダックカーブとは、太陽光発電の普及で昼間のネット需要が大きく沈み夕方に急上昇する需要曲線のこと。昼12時7,819MWから夕方18時11,923MWへわずか6時間で4,104MWのランプアップが発生し、JEPX市場価格の昼間低下・夕方高騰として法人の電気料金に直結します。仕組みと影響、対策を解説。";
 const pageUrl = "https://simulator.eic-jp.org/duck-curve-electricity-price-impact";
 
 export const metadata: Metadata = {
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: [
     "ダックカーブ",
+    "ダックカーブとは",
+    "ダックカーブ 電力",
     "ネット需要",
     "太陽光 市場価格",
     "JEPX 昼間 低下",
@@ -60,13 +62,13 @@ export default function DuckCurveElectricityPriceImpactPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="ダックカーブとは何か｜昼と夕方で電力市場価格が変わる理由"
-        description="昼12時のネット需要7,819MWから夕方18時の11,923MWへ──わずか6時間で4,104MWの急上昇。太陽光の普及が生んだ「ダックカーブ」のメカニズムと、法人の市場連動型プラン・蓄電池投資への影響を30分値データから解説します。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/duck-curve-electricity-price-impact"
         datePublished="2026-04-17"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-          { name: "ダックカーブとは何か" },
+          { name: "ダックカーブとは" },
         ]}
       faq={__CATEGORY_FAQ__}
       />
@@ -84,13 +86,12 @@ export default function DuckCurveElectricityPriceImpactPage() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">POWER SUPPLY ／ 電力調達の仕組みを知る</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-          ダックカーブとは何か
+          ダックカーブとは｜太陽光が生む電力市場価格の昼低下・夕方急騰の仕組み
         </h1>
         <p className="mt-1 text-base font-medium text-sky-800">昼と夕方で電力市場価格が変わる理由</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          太陽光発電の普及により、昼間の「ネット需要」（総需要から太陽光・風力を差し引いた残余需要）が
-          大きく落ち込み、夕方に太陽光が沈むと急激に跳ね上がる──このグラフの形がアヒルに似ていることから
-          「ダックカーブ」と呼ばれます。この現象は JEPX 市場価格の昼間低下・夕方高騰として法人の電気料金に直接影響しています。
+          ダックカーブとは、太陽光発電の普及により昼間の「ネット需要」（総需要から太陽光・風力を差し引いた残余需要）が大きく落ち込み、夕方に太陽光が沈むと急激に跳ね上がる現象のこと。
+          グラフの形がアヒル（ダック）の背中と首に似ていることから名付けられました。JEPX 市場価格の昼間低下・夕方急騰として法人の電気料金に直接影響する、電力調達の最重要キーワードです。
         </p>
       </header>
 

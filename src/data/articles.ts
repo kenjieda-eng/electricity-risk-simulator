@@ -138,6 +138,7 @@ export const articleCategories: ArticleCategory[] = [
       "renewable-energy-surcharge-reduction-system",
       "capacity-contribution-explained",
       "capacity-contribution-cost-impact",
+      "capacity-contribution-impact-on-business",
       "capacity-contribution-what-to-check",
       "capacity-contribution-history",
       "impact-of-electricity-subsidy-ending",
@@ -1327,14 +1328,15 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-03-27",
   },
   {
-    title: "容量拠出金とは｜法人の電気料金にどう影響するか",
+    title: "容量拠出金とは？仕組み・負担額・電気料金への影響を法人向けにわかりやすく解説",
     slug: "capacity-contribution-explained",
     description:
-      "容量拠出金の仕組みと法人電気料金への影響を解説。容量市場の目的、拠出金の転嫁構造、請求書での見え方を整理します。",
+      "容量拠出金とは何かを法人向けにわかりやすく解説。2024年4月に始まった容量市場の仕組み、kWh単価への上乗せ構造、負担額の試算例、契約書・請求書での確認ポイントまで整理します。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 11,
     publishedAt: "2026-04-09",
+    lastVerifiedAt: "2026-04-19",
   },
   {
     title: "容量拠出金で電気代はどのくらい上がるのか",
@@ -1345,6 +1347,17 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "price-increase",
     order: 12,
     publishedAt: "2026-04-09",
+  },
+  {
+    title: "容量拠出金で法人の電気代はいくら上がる？使用量別の影響額と対策",
+    slug: "capacity-contribution-impact-on-business",
+    description:
+      "容量拠出金で法人の電気代はいくら上がるのかを、月1万kWh・5万kWh・10万kWhの使用量別に試算。固定プランと市場連動プランでの扱いの違い、見積比較のチェックポイント、対策までをまとめて解説します。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 20,
+    publishedAt: "2026-04-19",
+    lastVerifiedAt: "2026-04-19",
   },
   {
     title: "容量拠出金を踏まえて法人が確認したいこと",
