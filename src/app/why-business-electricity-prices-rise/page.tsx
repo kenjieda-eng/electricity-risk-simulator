@@ -11,7 +11,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import PriceIncreaseCalculator from "../../components/market-data/PriceIncreaseCalculator";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -62,6 +62,14 @@ export const metadata: Metadata = {
 export default function WhyBusinessElectricityPricesRisePage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org/" },
+          { name: "料金が上がる理由を知る", url: "https://simulator.eic-jp.org/articles/price-increase" },
+          { name: "法人の電気料金が上がる理由" },
+        ]}
+      />
+
       <ReadingProgressBar />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
