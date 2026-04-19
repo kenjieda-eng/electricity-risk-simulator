@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   OIL_SCENARIO_SERIES,
   getOilScenarioNeighbors,
@@ -101,6 +102,13 @@ export default function OilScenarioLayout({ slug, lead, children }: OilScenarioL
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-oil"
+        variant="primary"
+        heading="原油高が電気料金に波及するシナリオ、契約方針を相談する"
+        description="原油価格の上昇が電気料金に波及するリスクを、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }

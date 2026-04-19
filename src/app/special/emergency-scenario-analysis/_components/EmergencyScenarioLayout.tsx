@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   EMERGENCY_SCENARIO_SERIES,
   getEmergencyScenarioNeighbors,
@@ -94,6 +95,13 @@ export default function EmergencyScenarioLayout({ slug, lead, children }: Emerge
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-emergency"
+        variant="primary"
+        heading="有事シナリオを踏まえた契約方針、専門家と整理しませんか？"
+        description="このシナリオで想定される電気料金上昇リスクを、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }

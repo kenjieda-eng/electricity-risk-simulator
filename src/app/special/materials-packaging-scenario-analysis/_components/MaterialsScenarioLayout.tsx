@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   MATERIALS_SCENARIO_SERIES,
   getMaterialsScenarioNeighbors,
@@ -102,6 +103,13 @@ export default function MaterialsScenarioLayout({ slug, lead, children }: Materi
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-materials"
+        variant="primary"
+        heading="原材料・包装コストと電気料金の複合リスクを整理する"
+        description="原材料・包装資材のコスト上昇と電気料金の同時上昇を、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }
