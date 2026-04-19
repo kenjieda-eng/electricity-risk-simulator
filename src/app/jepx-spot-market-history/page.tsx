@@ -11,6 +11,7 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "JEPXスポット市場の価格推移｜2016〜2025年度の年度別詳細";
 const pageDescription =
@@ -319,6 +320,15 @@ export default function JepxSpotMarketHistoryPage() {
       <div className="mt-6">
         <CategoryNextStepCta slug="jepx-spot-market-history" />
       </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

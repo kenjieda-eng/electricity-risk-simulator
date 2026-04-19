@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "インフォグラフィック集｜電気料金・脱炭素 1枚で理解する図解";
 const pageDescription = "電気料金構造、Scope2算定フロー、PPA形態比較、容量市場、需給ひっ迫対応など、複雑なテーマを1枚の図解で整理したインフォグラフィック集。社内資料・SNS用にダウンロード可能。";
@@ -122,6 +123,15 @@ export default function Page() {
           </ul>
           <p className="mt-3 text-xs text-slate-500">※ 高解像度PDF/SVGダウンロードは順次公開予定。本ページのSVGはブラウザで右クリック→「画像を保存」で取得可能。</p>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

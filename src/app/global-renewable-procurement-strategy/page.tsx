@@ -8,6 +8,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "グローバル企業の再エネ調達戦略｜国別の調達手段マッピング";
 const pageDescription =
@@ -269,6 +270,15 @@ export default function Page() {
             ]}
           />
         </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

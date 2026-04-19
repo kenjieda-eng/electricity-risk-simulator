@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import { BenchmarkTool } from "../../components/benchmark/BenchmarkTool";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "業種×規模 電気代ベンチマークツール｜自社と業種平均の即時比較";
 const pageDescription =
@@ -53,6 +54,13 @@ export default function BenchmarkPage() {
         <section className="mt-6">
           <BenchmarkTool />
         </section>
+
+        <ContactCtaCard
+          source="benchmark"
+          variant="primary"
+          heading="ベンチマーク結果を踏まえて相談しませんか？"
+          description="業種平均との乖離が気になる、削減余地があるか専門家の目で確認したい——エネルギー情報センターの専門スタッフが、契約見直しや交渉の進め方まで伴走します。初回相談は無料です。"
+        />
 
         <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-lg font-semibold text-slate-900">関連コンテンツ</h2>

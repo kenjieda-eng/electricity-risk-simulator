@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["plan-types"];
 
@@ -266,7 +267,7 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             商業施設が市場連動プランを検討する場合は、自社の時間帯別使用量データとJEPXの過去価格データを組み合わせて、高騰時のコストシミュレーションを行うことが重要です。JEPXの価格動向については{" "}
             <Link
-              href="/jepx-price-trends"
+              href="/jepx-price-trend-and-corporate-impact"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               JEPXスポット価格の推移
@@ -343,6 +344,15 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

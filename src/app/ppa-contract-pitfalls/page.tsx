@@ -5,6 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "コーポレートPPA契約の落とし穴｜10年以上の長期契約で失敗しないために";
 const pageDescription =
@@ -106,6 +107,15 @@ export default function Page() {
             ]}
           />
         </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

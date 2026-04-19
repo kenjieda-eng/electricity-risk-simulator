@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
@@ -266,7 +267,7 @@ export default function ContractReviewForFacilityManagementPage() {
               description: "供給安定性などリスク面の確認ポイント。",
             },
             {
-              href: "/last-resort-supply-what-it-is",
+              href: "/articles/last-resort-supply",
               title: "最終保障供給とは",
               description: "新電力撤退時のリスクと供給継続の仕組み。",
             },
@@ -293,6 +294,15 @@ export default function ContractReviewForFacilityManagementPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

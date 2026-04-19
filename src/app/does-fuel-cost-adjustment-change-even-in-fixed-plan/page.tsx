@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "燃料費調整額は固定プランでも変わるのか｜法人向け電気料金の見方";
 const pageDescription =
   "固定プランでも燃料費調整額によって請求額が変わることがあります。法人向け電力契約における固定単価と燃料費調整額の違い、見積比較や社内説明で押さえたいポイントを解説します。";
@@ -258,6 +259,15 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

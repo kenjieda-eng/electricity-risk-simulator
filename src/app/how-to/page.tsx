@@ -80,6 +80,146 @@ export default function HowToPage() {
         </div>
       </header>
 
+      <section className="mb-8" aria-labelledby="tool-overview-heading">
+        <h2 id="tool-overview-heading" className="flex items-center gap-2.5 text-xl font-semibold text-slate-900">
+          <Image
+            src="/icons/section-tools.png"
+            alt=""
+            aria-hidden="true"
+            width={36}
+            height={36}
+            className="h-9 w-9 shrink-0"
+          />
+          このツールでわかること
+        </h2>
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+            <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+              <Image
+                src="/icons/item-impact.png"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={28}
+                className="h-7 w-7 shrink-0"
+              />
+              電気料金上昇時の影響イメージ
+            </p>
+            <p className="mt-0.5 text-sm leading-5 text-slate-600">
+              季節変動やリスク要因を重ねたときに、年間の電気料金がどの程度上振れしうるかを確認できます。
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+            <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+              <Image
+                src="/icons/item-compare.png"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={28}
+                className="h-7 w-7 shrink-0"
+              />
+              固定プランと市場連動の比較
+            </p>
+            <p className="mt-0.5 text-sm leading-5 text-slate-600">
+              固定プランと市場連動型プランの差分を同じ条件で見比べ、価格変動への強さを把握できます。
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+            <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+              <Image
+                src="/icons/item-review.png"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={28}
+                className="h-7 w-7 shrink-0"
+              />
+              電力契約の見直しポイント
+            </p>
+            <p className="mt-0.5 text-sm leading-5 text-slate-600">
+              契約更新時に確認したい条件を整理し、新電力を含む候補プラン比較のたたき台として使えます。
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+            <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+              <Image
+                src="/icons/item-material.png"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={28}
+                className="h-7 w-7 shrink-0"
+              />
+              社内検討の説明材料
+            </p>
+            <p className="mt-0.5 text-sm leading-5 text-slate-600">
+              想定条件ごとの数値差を可視化できるため、担当者間での比較や稟議前の整理に活用できます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-8" aria-labelledby="tool-audience-heading">
+        <h2 id="tool-audience-heading" className="flex items-center gap-2.5 text-xl font-semibold text-slate-900">
+          <Image
+            src="/icons/section-users.png"
+            alt=""
+            aria-hidden="true"
+            width={36}
+            height={36}
+            className="h-9 w-9 shrink-0"
+          />
+          どんな利用者に向いているか
+        </h2>
+        <ul className="mt-3 grid gap-2 text-sm leading-5 text-slate-700 sm:grid-cols-2">
+          <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
+            <Image
+              src="/icons/list-check.png"
+              alt=""
+              aria-hidden="true"
+              width={22}
+              height={22}
+              className="mt-0.5 h-[22px] w-[22px] shrink-0"
+            />
+            高圧・特別高圧の電力契約を見直したい企業・自治体・各種法人
+          </li>
+          <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
+            <Image
+              src="/icons/list-check.png"
+              alt=""
+              aria-hidden="true"
+              width={22}
+              height={22}
+              className="mt-0.5 h-[22px] w-[22px] shrink-0"
+            />
+            市場連動型プランのリスクを整理し、固定プランとの比較を進めたい担当者
+          </li>
+          <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
+            <Image
+              src="/icons/list-check.png"
+              alt=""
+              aria-hidden="true"
+              width={22}
+              height={22}
+              className="mt-0.5 h-[22px] w-[22px] shrink-0"
+            />
+            電気料金の変動幅を確認し、新電力を含む選択肢を検討したい企業や法人
+          </li>
+          <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
+            <Image
+              src="/icons/list-check.png"
+              alt=""
+              aria-hidden="true"
+              width={22}
+              height={22}
+              className="mt-0.5 h-[22px] w-[22px] shrink-0"
+            />
+            電気料金上昇リスクを社内・庁内で説明するための下準備をしたい担当者
+          </li>
+        </ul>
+      </section>
+
       <section className="space-y-6 text-base leading-7 text-slate-700">
         <div>
           <SectionHeading iconSrc="/icons/howto-overview.png" text="1. このツールで何がわかるか" />

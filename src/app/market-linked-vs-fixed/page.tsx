@@ -11,6 +11,7 @@ import FixedVsMarketCalculator from "../../components/market-data/FixedVsMarketC
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const faqItems = [
   { question: "市場連動プランと固定プランの最大の違いは何ですか？", answer: "市場連動プランは電力量料金の単価が市場価格に連動して毎月変動します。固定プランは契約単価が固定されるため予算管理がしやすいです。どちらが有利かは市場動向と自社のリスク許容度によって変わります。" },
@@ -310,6 +311,15 @@ export default function MarketLinkedVsFixedPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

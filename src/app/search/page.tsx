@@ -3,6 +3,7 @@ import Link from "next/link";
 import { articleList, articleCategories } from "../../data/articles";
 import ArticleSearchTool from "../../components/market-data/ArticleSearchTool";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "全記事検索｜法人向け電気料金・脱炭素・契約見直し200本超を横断検索";
 const pageDescription = "電気料金・市場価格・脱炭素・PPA・BEMS・補助金など、200本超の解説記事をキーワード・カテゴリで横断検索できます。";
@@ -81,6 +82,15 @@ export default function SearchPage() {
             ))}
           </div>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

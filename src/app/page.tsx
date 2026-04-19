@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { getLatestArticles } from "../lib/articles";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
 
+const pageTitle = "法人電気料金ナビ｜見直し・比較・リスク診断";
+const pageDescription =
+  "法人・自治体の電力コスト見直しに必要な情報をワンストップで提供。基礎知識・料金シミュレーション・契約メニュー比較・業種別ガイド・専門家への相談まで。一般社団法人エネルギー情報センター運営。";
+
 export const metadata: Metadata = {
-  title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
-  description:
-    "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。基礎知識・料金推移・契約メニュー比較・業種別ガイドも充実。",
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     "法人電気料金",
     "電気代",
@@ -17,14 +19,15 @@ export const metadata: Metadata = {
     "固定プラン",
     "電気料金リスク",
     "法人向け電気料金",
+    "電力コスト 相談",
+    "エネルギー情報センター",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/",
   },
   openGraph: {
-    title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
-    description:
-      "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
+    title: pageTitle,
+    description: pageDescription,
     url: "https://simulator.eic-jp.org/",
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
@@ -40,9 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "法人電気料金ナビ | 電気代・電気料金の上昇リスクを試算",
-    description:
-      "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
+    title: pageTitle,
+    description: pageDescription,
     images: ["/twitter-default.png"],
   },
 };
@@ -55,7 +57,7 @@ export default function Page() {
       <WebSiteJsonLd
         name="法人電気料金ナビ"
         url="https://simulator.eic-jp.org/"
-        description="法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。"
+        description={pageDescription}
       />
       <section className="px-4 pb-6 pt-4 text-slate-800 sm:px-6 sm:pt-6 lg:px-8">
         <div className="mx-auto max-w-[1600px]">
@@ -63,151 +65,78 @@ export default function Page() {
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
               法人電気料金ナビ
             </h1>
-            <p className="mt-2.5 text-sm leading-7 text-slate-700 sm:mt-3 sm:text-base sm:leading-7">
-              市場価格や燃料費の変動を踏まえて、企業や自治体を含む法人組織の電気料金上昇・高騰リスクを簡易に確認できる電気料金シミュレーターです。
-              月次・年間の電気代と電気料金の両面で、どれだけ負担が増えるかを試算できます。
-              固定プランと市場連動型プランの比較を通じて、電力契約の更新や見直し時の検討材料を整理できます。
+            <p className="mt-1 text-xs font-semibold text-sky-700 sm:text-sm">
+              見直し・比較・リスク診断
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base sm:leading-7">
+              法人・自治体の電力コスト見直しに必要な情報を、基礎知識から診断・比較・相談までワンストップで提供します。
+              一般社団法人エネルギー情報センターが運営する、電力契約の担当者のための専門情報サイトです。
             </p>
           </div>
 
-          <section className="mt-6">
-            <h2 className="flex items-center gap-2.5 text-xl font-semibold text-slate-900">
-              <Image
-                src="/icons/section-tools.png"
-                alt=""
-                aria-hidden="true"
-                width={36}
-                height={36}
-                className="h-9 w-9 shrink-0"
-              />
-              このツールでわかること
+          {/* ペルソナ別ナビカード（ヒーロー直下） */}
+          <section className="mt-6" aria-labelledby="persona-nav">
+            <h2 id="persona-nav" className="sr-only">
+              目的から選ぶ
             </h2>
-            <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <Image
-                    src="/icons/item-impact.png"
-                    alt=""
-                    aria-hidden="true"
-                    width={28}
-                    height={28}
-                    className="h-7 w-7 shrink-0"
-                  />
-                  電気料金上昇時の影響イメージ
+            <p className="mb-3 text-sm font-semibold text-slate-700 sm:text-base">
+              目的から選ぶ：
+            </p>
+            <div className="grid gap-3 md:grid-cols-3">
+              <Link
+                href="/articles/basic"
+                className="group flex flex-col rounded-2xl border-2 border-sky-200 bg-sky-50 p-5 transition hover:border-sky-400 hover:bg-sky-100"
+              >
+                <span className="inline-flex w-fit rounded-full bg-sky-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+                  STEP 1 ／ 学ぶ
+                </span>
+                <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
+                  まずは基礎知識を学びたい
                 </p>
-                <p className="mt-0.5 text-sm leading-5 text-slate-600">
-                  季節変動やリスク要因を重ねたときに、年間の電気料金がどの程度上振れしうるかを確認できます。
+                <p className="mt-1.5 text-sm leading-6 text-slate-700">
+                  電気料金の仕組み・値上げの理由・契約の種類をゼロから解説します。
                 </p>
-              </div>
-              <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <Image
-                    src="/icons/item-compare.png"
-                    alt=""
-                    aria-hidden="true"
-                    width={28}
-                    height={28}
-                    className="h-7 w-7 shrink-0"
-                  />
-                  固定プランと市場連動の比較
-                </p>
-                <p className="mt-0.5 text-sm leading-5 text-slate-600">
-                  固定プランと市場連動型プランの差分を同じ条件で見比べ、価格変動への強さを把握できます。
-                </p>
-              </div>
-              <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <Image
-                    src="/icons/item-review.png"
-                    alt=""
-                    aria-hidden="true"
-                    width={28}
-                    height={28}
-                    className="h-7 w-7 shrink-0"
-                  />
-                  電力契約の見直しポイント
-                </p>
-                <p className="mt-0.5 text-sm leading-5 text-slate-600">
-                  契約更新時に確認したい条件を整理し、新電力を含む候補プラン比較のたたき台として使えます。
-                </p>
-              </div>
-              <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                <p className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <Image
-                    src="/icons/item-material.png"
-                    alt=""
-                    aria-hidden="true"
-                    width={28}
-                    height={28}
-                    className="h-7 w-7 shrink-0"
-                  />
-                  社内検討の説明材料
-                </p>
-                <p className="mt-0.5 text-sm leading-5 text-slate-600">
-                  想定条件ごとの数値差を可視化できるため、担当者間での比較や稟議前の整理に活用できます。
-                </p>
-              </div>
-            </div>
-          </section>
+                <span className="mt-auto pt-3 text-sm font-semibold text-sky-700 group-hover:text-sky-900">
+                  基礎記事へ →
+                </span>
+              </Link>
 
-          <section className="mt-6">
-            <h2 className="flex items-center gap-2.5 text-xl font-semibold text-slate-900">
-              <Image
-                src="/icons/section-users.png"
-                alt=""
-                aria-hidden="true"
-                width={36}
-                height={36}
-                className="h-9 w-9 shrink-0"
-              />
-              どんな利用者に向いているか
-            </h2>
-            <ul className="mt-3 grid gap-2 text-sm leading-5 text-slate-700 sm:grid-cols-2">
-              <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
-                <Image
-                  src="/icons/list-check.png"
-                  alt=""
-                  aria-hidden="true"
-                  width={22}
-                  height={22}
-                  className="mt-0.5 h-[22px] w-[22px] shrink-0"
-                />
-                高圧・特別高圧の電力契約を見直したい企業・自治体・各種法人
-              </li>
-              <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
-                <Image
-                  src="/icons/list-check.png"
-                  alt=""
-                  aria-hidden="true"
-                  width={22}
-                  height={22}
-                  className="mt-0.5 h-[22px] w-[22px] shrink-0"
-                />
-                市場連動型プランのリスクを整理し、固定プランとの比較を進めたい担当者
-              </li>
-              <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
-                <Image
-                  src="/icons/list-check.png"
-                  alt=""
-                  aria-hidden="true"
-                  width={22}
-                  height={22}
-                  className="mt-0.5 h-[22px] w-[22px] shrink-0"
-                />
-                電気料金の変動幅を確認し、新電力を含む選択肢を検討したい企業や法人
-              </li>
-              <li className="flex items-start gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 shadow-sm">
-                <Image
-                  src="/icons/list-check.png"
-                  alt=""
-                  aria-hidden="true"
-                  width={22}
-                  height={22}
-                  className="mt-0.5 h-[22px] w-[22px] shrink-0"
-                />
-                電気料金上昇リスクを社内・庁内で説明するための下準備をしたい担当者
-              </li>
-            </ul>
+              <Link
+                href="/simulate"
+                className="group flex flex-col rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-5 transition hover:border-emerald-400 hover:bg-emerald-100"
+              >
+                <span className="inline-flex w-fit rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+                  STEP 2 ／ 診断
+                </span>
+                <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
+                  自社の料金リスクを診断したい
+                </p>
+                <p className="mt-1.5 text-sm leading-6 text-slate-700">
+                  条件を入力するだけで、年間コストの上振れリスクと契約メニュー比較を30秒で試算できます。
+                </p>
+                <span className="mt-auto pt-3 text-sm font-semibold text-emerald-700 group-hover:text-emerald-900">
+                  シミュレーターへ →
+                </span>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="group flex flex-col rounded-2xl border-2 border-amber-200 bg-amber-50 p-5 transition hover:border-amber-400 hover:bg-amber-100"
+              >
+                <span className="inline-flex w-fit rounded-full bg-amber-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+                  STEP 3 ／ 相談
+                </span>
+                <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
+                  専門家に相談したい
+                </p>
+                <p className="mt-1.5 text-sm leading-6 text-slate-700">
+                  契約見直し・入札準備・社内説明の進め方まで、エネルギー情報センターのスタッフが対応します。
+                </p>
+                <span className="mt-auto pt-3 text-sm font-semibold text-amber-700 group-hover:text-amber-900">
+                  相談窓口へ →
+                </span>
+              </Link>
+            </div>
           </section>
 
           <section className="mt-6">
@@ -354,31 +283,30 @@ export default function Page() {
         </div>
       </section>
 
+      {/* 最終CTA：2ボタン並列（シミュレーター / 相談） */}
       <section className="mx-auto max-w-[1600px] px-4 pb-10 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border-2 border-sky-400 bg-gradient-to-br from-sky-50 to-white p-6 text-center shadow-md sm:p-8">
+        <div className="rounded-2xl border-2 border-sky-400 bg-gradient-to-br from-sky-50 via-white to-amber-50 p-6 text-center shadow-md sm:p-8">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            電気料金の上昇リスクを30秒で診断
+            次の一歩を選ぶ
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
-            契約条件やリスク要因を入力するだけで、年間の電気代がどれだけ上振れしうるかを試算できます。固定プランと市場連動型プランの比較も可能です。
+            まず自社の料金リスクを定量化したい方はシミュレーターへ、課題がすでに見えている方は専門家への相談へ。どちらも無料でご利用いただけます。
           </p>
-          <div className="mt-5">
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link
               href="/simulate"
-              className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-8 py-3.5 text-base font-bold text-white shadow-sm transition hover:bg-sky-700 sm:text-lg"
+              className="inline-flex w-full items-center justify-center rounded-xl bg-sky-600 px-6 py-4 text-base font-bold text-white shadow-sm transition hover:bg-sky-700 sm:w-auto sm:text-lg"
             >
-              <Image
-                src="/icons/nav-risk-check.png"
-                alt=""
-                aria-hidden="true"
-                width={28}
-                height={28}
-                className="h-7 w-7"
-              />
-              シミュレーターで診断する
+              シミュレーターで診断する →
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex w-full items-center justify-center rounded-xl bg-amber-600 px-6 py-4 text-base font-bold text-white shadow-sm transition hover:bg-amber-700 sm:w-auto sm:text-lg"
+            >
+              専門家に相談する →
             </Link>
           </div>
-          <p className="mt-3 text-xs text-slate-500">無料・登録不要でご利用いただけます</p>
+          <p className="mt-4 text-xs text-slate-500">無料・登録不要でご利用いただけます</p>
         </div>
       </section>
 
@@ -391,8 +319,7 @@ export default function Page() {
             "@type": "WebSite",
             name: "法人電気料金ナビ",
             url: "https://simulator.eic-jp.org/",
-            description:
-              "法人向けに、契約条件や価格上昇・高騰リスク要因をもとに、年間の電気代と電気料金の変動や上昇リスクを試算できるシミュレーターです。",
+            description: pageDescription,
             publisher: {
               "@type": "Organization",
               name: "一般社団法人エネルギー情報センター",

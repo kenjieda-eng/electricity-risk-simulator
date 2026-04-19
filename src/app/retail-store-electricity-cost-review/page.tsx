@@ -10,6 +10,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -295,7 +296,7 @@ export default function RetailStoreElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光（独立店舗）</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                独立した建物の小売店舗で屋根面積がある場合、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電の設置が検討できます。昼間の電力購入量を削減し、長期的なコスト削減に寄与します。
+                独立した建物の小売店舗で屋根面積がある場合、<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光</Link>発電の設置が検討できます。昼間の電力購入量を削減し、長期的なコスト削減に寄与します。
               </p>
             </div>
           </div>
@@ -388,6 +389,15 @@ export default function RetailStoreElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

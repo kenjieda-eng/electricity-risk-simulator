@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "固定プランが向いている法人・向いていない法人｜予算管理しやすい電力契約の考え方";
 const pageDescription =
   "固定プランが向いている法人と向いていない法人の違いを、電気料金の安定性、予算管理、社内説明、契約条件の確認ポイントから整理します。法人向けの電力契約見直しに役立つ解説ページです。";
@@ -280,6 +281,15 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

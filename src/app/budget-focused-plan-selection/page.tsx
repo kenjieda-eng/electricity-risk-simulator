@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle =
   "予算管理を重視する法人はどちらを選ぶべきか｜固定と市場連動の判断軸";
 const pageDescription =
@@ -246,7 +247,7 @@ export default function BudgetFocusedPlanSelectionPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場価格の過去の高騰事例は{" "}
             <Link
-              href="/jepx-price-trends"
+              href="/jepx-price-trend-and-corporate-impact"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               JEPXスポット価格の推移
@@ -330,6 +331,15 @@ export default function BudgetFocusedPlanSelectionPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

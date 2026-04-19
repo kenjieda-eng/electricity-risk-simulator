@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
 
@@ -401,8 +402,8 @@ export default function SubsidyBatterySolarEquipmentPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
-            { href: "/battery-consideration-for-business", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
-            { href: "/solar-self-consumption-for-business", title: "自家消費型太陽光の活用ガイド", description: "法人が自家消費太陽光を活用する際の要点" },
+            { href: "/battery-suited-corporations", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
+            { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の活用ガイド", description: "法人が自家消費太陽光を活用する際の要点" },
             { href: "/subsidy-demand-side-ppa", title: "需要家主導型太陽光PPAの補助金活用", description: "オフサイトPPAで電力コストを削減する仕組みと補助制度" },
             { href: "/subsidy-schedule-and-approval-rate", title: "補助金申請のスケジュールと採択率の目安", description: "年間カレンダーと採択率から逆算する準備術" },
           ]}
@@ -419,6 +420,15 @@ export default function SubsidyBatterySolarEquipmentPage() {
           ]}
         />
       </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

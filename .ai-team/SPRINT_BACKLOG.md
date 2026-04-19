@@ -3,7 +3,7 @@
 > 現在のスプリントのタスク一覧。各セッション開始時に PM-Lead（リン）が確認し、状態を更新する。
 > ステータス: 🔲 未着手 / 🔄 進行中 / ✅ 完了 / ⏸️ 保留 / ❌ 却下
 
-**最終更新**: 2026-04-18 (Sprint 1 S1-09 完了・本番デプロイ後)
+**最終更新**: 2026-04-19 (Sprint 1 S1-02/S1-04/S1-08/S1-10 + TOP刷新 完了・本番デプロイ後)
 
 ---
 
@@ -12,7 +12,7 @@
 | スプリント | ステータス | 完了タスク | 総タスク | 完了率 |
 |---|---|---|---|---|
 | Sprint 0 | ✅ 完了 | 5 | 5 | 100% |
-| Sprint 1 | 🔄 進行中 | 1 | 11 | 9% |
+| Sprint 1 | 🔄 進行中 | 7 | 11 | 64% |
 | Sprint 2 | ⏸️ 計画中 | 0 | — | — |
 
 ---
@@ -22,23 +22,23 @@
 - **期間**: 2026-04-18 〜 2026-05-02（2週間）
 - **ゴール**: サイトの最終ゴール「問い合わせ」への導線整備と、シミュレーターの品質保証
 - **North Star Metric**: 月間問い合わせ数（新設）
-- **ステータス**: 🔄 進行中（1/11完了、9%）
+- **ステータス**: 🔄 進行中（7/11完了、64%）
 
 ### 最優先タスク（EDA 再定義「問い合わせがゴール」を反映）
 
 | ID | タスク | 担当 | ステータス | 備考 |
 |----|--------|------|-----------|------|
 | S1-09 | シミュレーター結果→問い合わせ導線追加 | Frontend-Dev + Backend-Dev | ✅ **完了 2026-04-18** | `/compare` に ContactCtaCard を 2 箇所（primary/secondary）挿入、`/contact` で searchParams を受け取りコンテクストバナー実装、GA4 `contact_cta_click` イベント送信。commit `98bf2cc`、本番デプロイ `electricity-risk-simulator-jtwyz6gc0` |
-| S1-10 | 他ページへの ContactCtaCard 展開 | Frontend-Dev | 🔲 未着手 | `/simulate` 結果・`/benchmark`・`/journey` 末尾・記事詳細ページに展開。`source` パラメータを変えて配置別CTRを計測できるよう設計 |
-| S1-11 | サイト名リブランディング実装 | Frontend-Dev + Backend-Dev | 🔲 未着手 | 新サイト名「法人電気料金ナビ」への変更。metadata・OGP・JSON-LD・ヘッダー（PublicHeader）・フッター・sitemap タイトル・ホームページ H1 等を一括更新。旧タイトルからの 301 設定は不要（ドメイン変更なし） |
+| S1-10 | 他ページへの ContactCtaCard 展開 | Frontend-Dev | ✅ **完了 2026-04-19** | `/simulate`（HomePageClient.tsx 内、primary + 診断結果context付き）、`/benchmark`・`/journey`（primary）、記事詳細 455ページ（secondary、`scripts/add_contact_cta_to_articles.py` で一括投入）。`/contact` の sourceLabels に `simulate-result` / `article` 追加。commit: このセッション |
+| S1-11 | サイト名リブランディング実装 | Frontend-Dev + Backend-Dev | ✅ **完了 2026-04-18** | siteConfig.ts新設＋全ページ一括置換、旧名称残存ゼロ確認済み。package.json構文エラーも解消確認済み（2026-04-19） |
 
 ### シミュレーターの品質保証
 
 | ID | タスク | 担当 | ステータス | 備考 |
 |----|--------|------|-----------|------|
-| S1-02 | 計算ロジックを HomePageClient から分離 | Backend-Dev | 🔲 未着手 | 1,300行の HomePageClient から計算部分を `lib/simulator/` に切り出し。S1-03 の前提作業 |
+| S1-02 | 計算ロジックを HomePageClient から分離 | Backend-Dev | ✅ **完了 2026-04-19** | `src/lib/simulator/{types,constants,calculateScenario,index}.ts` に抽出。HomePageClient は 1,300行 → 840行に短縮。挙動変更なし（`next build` 成功、全12か月の計算パス一致）|
 | S1-03 | 計算ロジックのユニットテスト作成 | QA-Engineer | 🔲 未着手 | 改善提案 A-2。契約区分・地域・ストレスシナリオ別のケースを網羅。Vitest 採用想定 |
-| S1-04 | ストレスシナリオ倍率の検証 | Energy-Expert | 🔲 未着手 | 改善提案 A-3。猛暑・寒波・燃料高騰・地政学リスク倍率のハードコード値の妥当性を最新データで検証 |
+| S1-04 | ストレスシナリオ倍率の検証 | Energy-Expert | ✅ **完了 2026-04-19** | `.ai-team/STRESS_MULTIPLIER_AUDIT_RESULT.md` に監査結果。15組中12組は妥当、3組（燃料×market、燃料×fixed、寒波×market）が要更新。別タスクで倍率更新＋"tail scenario" UIスイッチ追加を検討 |
 
 ### 計測・分析基盤
 
@@ -46,7 +46,7 @@
 |----|--------|------|-----------|------|
 | S1-05 | GA4ベースラインレポート（詳細版） | Growth-Analyst | 🔲 未着手 | 30日分の詳細データ。記事→シミュレーター遷移率、`contact_cta_click` の配置別CTR を含む |
 | S1-07 | Lighthouse スコア計測 | Frontend-Dev | 🔲 未着手 | 主要ページ（`/`, `/compare`, `/articles`, `/journey`）の現状パフォーマンスベースライン |
-| S1-08 | リンク切れチェック（全ページ） | QA-Engineer | 🔲 未着手 | 特にプラットフォーム機能リンク、`/api/datasets/*`、ダウンロード素材。自動化スクリプト化を検討 |
+| S1-08 | リンク切れチェック（全ページ） | QA-Engineer | ✅ **完了 2026-04-19** | `scripts/check-links.mjs` 作成。動的ルートを正しく解決するよう実装。初回21件のうち10件が真の切れリンクで、`scripts/fix_broken_links.py` で既存ページへのリダイレクトに一括修正（35ファイル変更）。再実行でブロークンゼロ |
 
 ### コンテンツ強化
 
@@ -58,7 +58,7 @@
 
 | ID | タスク | 担当 | ステータス | 備考 |
 |----|--------|------|-----------|------|
-| S1-01 | TOP ページ ファーストビュー CTA 追加 | Frontend-Dev | ⏸️ 保留 | EDA「TOP から来る人ばかりではないよね」の指摘を受け、優先度 B に降格（旧 A-1）。Sprint 2 以降で検討 |
+| S1-01 | TOP ページ ファーストビュー CTA 追加 | Frontend-Dev | ✅ **完了 2026-04-19** | TOPリニューアルに統合。ペルソナ別3択ナビ（学ぶ/診断/相談）＋最終CTA2ボタン化（シミュレーター/専門家相談）で、ファーストビューCTAを実装。旧「このツールでわかること」「どんな利用者に向いているか」は /how-to に移動 |
 
 ---
 

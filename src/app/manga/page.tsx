@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "マンガで分かる電気代見直し｜中小企業向け入門";
 const pageDescription = "「電気代、なぜ高い？」「契約、どう見直す？」を4コマ形式で分かりやすく解説。中小企業の経営者・事務担当者向けの入門コンテンツ。";
@@ -78,6 +79,15 @@ export default function Page() {
         <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs text-slate-500">原案: 一般社団法人エネルギー情報センター。CC BY 4.0で社内勉強会・社員研修に流用可能です。イラスト版・印刷用PDFは順次公開予定。</p>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "法人電気料金 一気通貫ジャーニー｜読む→考える→診断→行動";
 const pageDescription =
@@ -181,6 +182,13 @@ export default function JourneyPage() {
             ))}
           </ol>
         </section>
+
+        <ContactCtaCard
+          source="journey"
+          variant="primary"
+          heading="④ 行動する——社内合意と契約切替を専門家と一緒に進めませんか？"
+          description="社内説明資料の作成、値上げ通知への対応、複数見積の比較まで、電力担当者が実務で直面する判断をエネルギー情報センターの専門スタッフが伴走します。初回相談は無料です。"
+        />
 
         <section className="mt-10 rounded-xl border-2 border-sky-400 bg-sky-50 p-6">
           <h2 className="text-xl font-bold text-slate-900">次のアクションを選ぶ</h2>

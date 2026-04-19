@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import RiskScenarioStressTest from "../../components/market-data/RiskScenarioStressTest";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "電気料金のリスクシナリオとは｜法人が上振れリスクを把握するための基本的な考え方";
 const pageDescription =
@@ -298,6 +299,15 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

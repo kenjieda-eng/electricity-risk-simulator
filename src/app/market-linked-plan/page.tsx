@@ -9,6 +9,7 @@ import MarketDataDownload from "../../components/market-data/MarketDataDownload"
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 export const metadata: Metadata = {
   title: "市場連動プランとは？法人の電気料金が変動する仕組みと注意点",
@@ -278,6 +279,15 @@ export default function MarketLinkedPlanPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

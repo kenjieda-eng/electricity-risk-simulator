@@ -10,6 +10,7 @@ import { WINTER_TMIN_TREND, HDD_TREND, SAPPORO_EXTREME_COLD } from "../../data/w
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
   "厳冬で法人・企業・自治体の電気料金・電気代はどう上がる？冬の上振れリスクを解説";
@@ -397,6 +398,15 @@ export default function ElectricityCostRiskSevereWinterPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

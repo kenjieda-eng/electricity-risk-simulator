@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "市場連動と固定は安さではなく変動の受け方で比べる｜法人向け電力契約の比較軸";
 const pageDescription =
   "市場連動と固定の違いを、単純な安さではなく、電気料金の変動の受け方、予算管理、社内説明、契約条件の違いから整理します。法人向け電力契約の比較軸を分かりやすく解説します。";
@@ -293,6 +294,15 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

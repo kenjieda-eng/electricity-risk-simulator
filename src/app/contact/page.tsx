@@ -113,9 +113,11 @@ const sourceLabels: Record<string, string> = {
   "compare-result-primary": "シミュレーター結果ページ（/compare）",
   "compare-result-footer": "シミュレーター結果ページ（/compare）",
   compare: "シミュレーター結果ページ（/compare）",
+  "simulate-result": "シミュレーター結果ページ（/simulate）",
   benchmark: "業種×規模 ベンチマーク（/benchmark）",
   journey: "一気通貫ジャーニー（/journey）",
   concierge: "AIコンシェルジュ（/concierge）",
+  article: "解説記事ページ",
 };
 
 // --- 契約区分・地域の日本語化（query params 受け渡し用） ---

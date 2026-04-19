@@ -20,6 +20,19 @@ import {
 import { Bar, Line } from "react-chartjs-2";
 import { calculateRiskScore } from "../../lib/riskScore";
 import { trackEvent } from "../../lib/analytics/ga";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import {
+  buildResultCommentary,
+  calculateScenario,
+  getOrderedMonths,
+  monthNames,
+  type BuildingType,
+  type ContractType,
+  type Region,
+  type SimulationInput,
+  type StressFlags,
+  type UsagePattern,
+} from "../../lib/simulator";
 
 ChartJS.register(
   CategoryScale,
@@ -33,346 +46,15 @@ ChartJS.register(
   Filler
 );
 
-const monthNames = [
-  "1月",
-  "2月",
-  "3月",
-  "4月",
-  "5月",
-  "6月",
-  "7月",
-  "8月",
-  "9月",
-  "10月",
-  "11月",
-  "12月",
-];
-
 const INPUT_STATE_SESSION_KEY = "ana-simulation-input-state";
 
-type ContractType = "low" | "high" | "special";
-type Region =
-  | "hokkaido"
-  | "tohoku"
-  | "kita-kanto"
-  | "shutoken"
-  | "hokuriku"
-  | "chubu"
-  | "kansai"
-  | "chugoku"
-  | "shikoku"
-  | "kyushu"
-  | "okinawa";
-type BuildingType =
-  | "office"
-  | "retail"
-  | "restaurant"
-  | "factory"
-  | "welfare"
-  | "hotel"
-  | "warehouse"
-  | "school"
-  | "datacenter"
-  | "public";
-type UsagePattern =
-  | "balanced"
-  | "daytime"
-  | "night"
-  | "24h"
-  | "weekend-busy"
-  | "seasonal-heavy";
-type SeasonType = "spring" | "summer" | "autumn" | "winter";
-
-type StressFlags = {
-  heatwave: boolean;
-  coldWave: boolean;
-  fuelPrice: boolean;
-  geopolitical: boolean;
-  outage: boolean;
-};
-
-type InputState = {
-  contractType: ContractType | "";
-  region: Region | "";
-  springCost: number | "";
-  summerCost: number | "";
-  autumnCost: number | "";
-  winterCost: number | "";
-  startMonth: number | "";
-  buildingType: BuildingType | "";
-  usagePattern: UsagePattern | "";
-  floorArea: number | "";
-  stress: StressFlags;
-};
-
-type ScenarioResult = {
-  lineA: number[];
-  lineB: number[];
-  monthlyAValues: number[];
-  monthlyBValues: number[];
-  totalA: number;
-  totalB: number;
-};
+type InputState = SimulationInput;
 
 type ChartSeriesKey =
   | "baselineFixed"
   | "baselineMarket"
   | "currentFixed"
   | "currentMarket";
-
-const contractFactorMap: Record<ContractType, number> = {
-  low: 1.03,
-  high: 1.0,
-  special: 0.96,
-};
-
-const regionFactorMap: Record<Region, number> = {
-  hokkaido: 1.04,
-  tohoku: 1.02,
-  "kita-kanto": 1.01,
-  shutoken: 1.0,
-  hokuriku: 1.01,
-  chubu: 1.0,
-  kansai: 0.99,
-  chugoku: 0.99,
-  shikoku: 0.98,
-  kyushu: 0.98,
-  okinawa: 1.03,
-};
-
-const regionSeasonMap: Record<Region, Record<SeasonType, number>> = {
-  hokkaido: { spring: 1.0, summer: 0.96, autumn: 1.0, winter: 1.18 },
-  tohoku: { spring: 1.0, summer: 0.98, autumn: 1.0, winter: 1.12 },
-  "kita-kanto": { spring: 1.0, summer: 1.03, autumn: 1.0, winter: 1.04 },
-  shutoken: { spring: 1.0, summer: 1.06, autumn: 1.0, winter: 1.02 },
-  hokuriku: { spring: 1.0, summer: 0.99, autumn: 1.0, winter: 1.08 },
-  chubu: { spring: 1.0, summer: 1.02, autumn: 1.0, winter: 1.03 },
-  kansai: { spring: 1.0, summer: 1.04, autumn: 1.0, winter: 0.99 },
-  chugoku: { spring: 1.0, summer: 1.02, autumn: 1.0, winter: 0.99 },
-  shikoku: { spring: 1.0, summer: 1.04, autumn: 1.0, winter: 0.97 },
-  kyushu: { spring: 1.0, summer: 1.05, autumn: 1.0, winter: 0.97 },
-  okinawa: { spring: 1.03, summer: 1.14, autumn: 1.03, winter: 0.9 },
-};
-
-const buildingFactorMap: Record<BuildingType, number> = {
-  office: 1.0,
-  retail: 1.07,
-  restaurant: 1.1,
-  factory: 1.12,
-  welfare: 1.09,
-  hotel: 1.11,
-  warehouse: 0.96,
-  school: 0.94,
-  datacenter: 1.2,
-  public: 1.02,
-};
-
-const usageFactorMap: Record<UsagePattern, number> = {
-  balanced: 1.03,
-  daytime: 1.0,
-  night: 1.07,
-  "24h": 1.1,
-  "weekend-busy": 1.04,
-  "seasonal-heavy": 1.09,
-};
-
-const getSeasonType = (monthNumber: number): SeasonType => {
-  if ([7, 8, 9].includes(monthNumber)) return "summer";
-  if ([12, 1, 2].includes(monthNumber)) return "winter";
-  if ([10, 11].includes(monthNumber)) return "autumn";
-  return "spring";
-};
-
-const getOrderedMonths = (startMonth: number): number[] =>
-  Array.from({ length: 12 }, (_, index) => ((startMonth - 1 + index) % 12) + 1);
-
-const calcMonthlyBase = (
-  monthNumber: number,
-  springCost: number,
-  summerCost: number,
-  autumnCost: number,
-  winterCost: number
-): number => {
-  const type = getSeasonType(monthNumber);
-  if (type === "summer") return summerCost;
-  if (type === "winter") return winterCost;
-  if (type === "autumn") return autumnCost;
-  return springCost;
-};
-
-const buildResultCommentary = (
-  currentScenario: ScenarioResult,
-  baselineScenario: ScenarioResult,
-  selectedFactors: string[]
-): string[] => {
-  const marketGap = currentScenario.totalB - currentScenario.totalA;
-  const fixedDiff = currentScenario.totalA - baselineScenario.totalA;
-  const marketDiff = currentScenario.totalB - baselineScenario.totalB;
-  const commentary: string[] = [];
-
-  if (selectedFactors.length === 0) {
-    commentary.push("リスク要因が未選択のため、平時を前提にした比較結果です。");
-    commentary.push(
-      "現在の条件では、市場連動プランは固定プランより低い累計で推移しています。"
-    );
-    commentary.push(
-      "気候リスク要因や供給不安を追加すると、市場連動プランの上振れ幅が大きくなります。"
-    );
-    return commentary;
-  }
-
-  commentary.push(`現在は ${selectedFactors.join("、")} を反映したシナリオです。`);
-
-  if (marketGap > 0) {
-    commentary.push(
-      `市場連動プランは固定プランより ${Math.abs(marketGap).toLocaleString(
-        "ja-JP"
-      )} 万円高く、変動影響を強く受けています。`
-    );
-  } else {
-    commentary.push(
-      `市場連動プランは固定プランより ${Math.abs(marketGap).toLocaleString(
-        "ja-JP"
-      )} 万円低く、まだ価格優位性を維持しています。`
-    );
-  }
-
-  if (marketDiff > fixedDiff) {
-    commentary.push(
-      `当初想定からの増加幅は、市場連動のほうが ${Math.abs(
-        marketDiff - fixedDiff
-      ).toLocaleString("ja-JP")} 万円大きく出ています。`
-    );
-  } else if (fixedDiff > marketDiff) {
-    commentary.push(
-      `当初想定からの増加幅は、固定プランのほうが ${Math.abs(
-        fixedDiff - marketDiff
-      ).toLocaleString("ja-JP")} 万円大きく出ています。`
-    );
-  } else {
-    commentary.push("当初想定からの増加幅は、両プランでほぼ同水準です。");
-  }
-
-  commentary.push(
-    "特に地政学リスクや発電所停止を重ねると、市場連動プランの上振れが目立ちやすくなります。"
-  );
-  return commentary;
-};
-
-const calculateScenario = (
-  orderedMonths: number[],
-  state: InputState,
-  stressFlags: StressFlags
-): ScenarioResult => {
-  const lineA: number[] = [];
-  const lineB: number[] = [];
-  const monthlyAValues: number[] = [];
-  const monthlyBValues: number[] = [];
-  let cumulativeA = 0;
-  let cumulativeB = 0;
-
-  const safeSpring = Math.max(0, Number(state.springCost) || 0);
-  const safeSummer = Math.max(0, Number(state.summerCost) || 0);
-  const safeAutumn = Math.max(0, Number(state.autumnCost) || 0);
-  const safeWinter = Math.max(0, Number(state.winterCost) || 0);
-  const floorArea = Math.max(1, Number(state.floorArea) || 1);
-  const contractType = state.contractType || "high";
-  const region = state.region || "shutoken";
-  const buildingType = state.buildingType || "office";
-  const usagePattern = state.usagePattern || "balanced";
-  const areaFactor = Math.max(
-    0.85,
-    Math.min(1.25, 1 + ((floorArea - 5000) / 5000) * 0.08)
-  );
-
-  for (const [monthIndex, monthNumber] of orderedMonths.entries()) {
-    const seasonType = getSeasonType(monthNumber);
-    const baseMonthly =
-      calcMonthlyBase(
-        monthNumber,
-        safeSpring,
-        safeSummer,
-        safeAutumn,
-        safeWinter
-      ) *
-      contractFactorMap[contractType] *
-      regionFactorMap[region] *
-      regionSeasonMap[region][seasonType] *
-      buildingFactorMap[buildingType] *
-      usageFactorMap[usagePattern] *
-      areaFactor;
-
-    const shoulderAdjustment = monthNumber === 6 || monthNumber === 11 ? 1.02 : 1;
-    const seasonalWaveB =
-      seasonType === "summer"
-        ? 0.98
-        : seasonType === "winter"
-        ? 1.02
-        : 0.88 * shoulderAdjustment;
-
-    let monthlyA = baseMonthly * 1.08;
-    let monthlyB = baseMonthly * seasonalWaveB;
-
-    const isSummer = seasonType === "summer";
-    const isWinter = seasonType === "winter";
-
-    if (stressFlags.heatwave && isSummer) {
-      monthlyA *= 1.06;
-      monthlyB *= 1.35;
-      if (usagePattern === "seasonal-heavy") monthlyB *= 1.06;
-    }
-
-    if (stressFlags.coldWave && isWinter) {
-      monthlyA *= 1.07;
-      monthlyB *= 1.4;
-      if (usagePattern === "seasonal-heavy") monthlyB *= 1.06;
-    }
-
-    if (stressFlags.fuelPrice) {
-      monthlyA *= 1.12;
-      monthlyB *= 1.22;
-    }
-
-    if (stressFlags.geopolitical) {
-      monthlyA *= 1.18;
-      monthlyB *= 1.52;
-    }
-
-    if (stressFlags.outage) {
-      // 発電所停止は短期ショックとして、発生月と翌月だけ反映する
-      const isOutageMonth = monthIndex === 0;
-      const isAftershockMonth = monthIndex === 1;
-
-      if (isOutageMonth) {
-        monthlyA *= 1.08;
-        monthlyB *= 1.3;
-        if (usagePattern === "24h" || usagePattern === "night") {
-          monthlyB *= 1.06;
-        }
-      } else if (isAftershockMonth) {
-        monthlyA *= 1.03;
-        monthlyB *= 1.1;
-      }
-    }
-
-    monthlyAValues.push(Math.round(monthlyA));
-    monthlyBValues.push(Math.round(monthlyB));
-    cumulativeA += monthlyA;
-    cumulativeB += monthlyB;
-
-    lineA.push(Math.round(cumulativeA));
-    lineB.push(Math.round(cumulativeB));
-  }
-
-  return {
-    lineA,
-    lineB,
-    monthlyAValues,
-    monthlyBValues,
-    totalA: Math.round(cumulativeA),
-    totalB: Math.round(cumulativeB),
-  };
-};
 
 export default function HomePageClient() {
   const router = useRouter();
@@ -1151,6 +833,29 @@ export default function HomePageClient() {
                 <p className="mt-2 text-base text-rose-700">{saveError}</p>
               )}
             </div>
+
+            <ContactCtaCard
+              source="simulate-result"
+              variant="primary"
+              heading="この条件での判断、専門家と一緒に整理しませんか？"
+              description="入力中のシナリオと診断結果を踏まえて、契約見直し・値上げ通知対応・社内説明の進め方まで、エネルギー情報センターの専門スタッフが無料でご相談に応じます。"
+              context={{
+                riskLabel: riskScoreResult.label,
+                riskScore: riskScoreResult.score,
+                contractType: state.contractType || null,
+                region: state.region || null,
+                diffRate:
+                  currentScenario.totalA > 0
+                    ? Number(
+                        (
+                          ((currentScenario.totalB - currentScenario.totalA) /
+                            currentScenario.totalA) *
+                          100
+                        ).toFixed(1)
+                      )
+                    : null,
+              }}
+            />
           </section>
 
           <section className="order-1 rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">

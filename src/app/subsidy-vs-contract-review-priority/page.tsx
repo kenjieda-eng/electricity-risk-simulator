@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
 
@@ -358,7 +359,7 @@ export default function SubsidyVsContractReviewPriorityPage() {
             { href: "/subsidies-overview", title: "法人向け電力・省エネ補助金まとめ", description: "2026年度に使える主要制度を横断比較" },
             { href: "/what-to-start-with-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "契約見直しの進め方と優先順位" },
             { href: "/contract-review-reduction-effect", title: "電力契約見直しで電気代はどれだけ下がるか", description: "削減幅の目安と試算方法" },
-            { href: "/battery-consideration-for-business", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
+            { href: "/battery-suited-corporations", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
           ]}
         />
       </div>
@@ -373,6 +374,15 @@ export default function SubsidyVsContractReviewPriorityPage() {
           ]}
         />
       </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );
