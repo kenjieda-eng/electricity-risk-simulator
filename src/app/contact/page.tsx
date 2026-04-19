@@ -321,7 +321,7 @@ export default async function ContactPage({
       </section>
 
       {/* 私たちの立場 */}
-      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+      <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">
           私たちの立場と、ご相談の姿勢について
         </h2>
@@ -334,6 +334,38 @@ export default async function ContactPage({
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           「まだ検討段階で、何をどう聞いたらよいかわからない」という状態でもまったく構いません。ご担当者さまの置かれた状況を丁寧に伺い、判断に必要な論点を一緒に整理していくところから伴走させていただきます。
         </p>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          担当者のプロフィールは
+          <Link href="/kenji-eda" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+            こちら
+          </Link>
+          からご確認いただけます。
+        </p>
+      </section>
+
+      {/* 選ばれる3つの理由 */}
+      <section className="mt-8 space-y-4">
+        <h2 className="text-xl font-semibold text-slate-900">選ばれる3つの理由</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h3 className="text-lg font-semibold text-slate-900">2,000社以上の支援実績</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              一般社団法人エネルギー情報センターでは、これまで2,000社以上の企業様に対し、エネルギーに関する情報提供や調達のアドバイスを行ってまいりました。ウクライナショック時も多くのご相談に対応させていただきました。
+            </p>
+          </div>
+          <div className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h3 className="text-lg font-semibold text-slate-900">最新のマーケット情報と各電力会社の動向</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場の最新データはもちろん、各電力会社から日々集まる一次情報を網羅し、市場のリアルな現状をお伝えします。
+            </p>
+          </div>
+          <div className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h3 className="text-lg font-semibold text-slate-900">独自ノウハウによるアドバイス</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              情勢悪化時に「自社の電気代が最大いくらまで跳ね上がるリスクがあるのか」を数字とロジックでわかりやすくご説明します。
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ご相談の流れ */}
@@ -355,9 +387,9 @@ export default async function ContactPage({
             <p className="text-sm font-semibold text-sky-800">STEP 2</p>
             <p className="mt-1 text-sm leading-7 text-slate-700 sm:text-base">
               <strong className="font-semibold text-slate-900">
-                担当者から折り返しご連絡
+                担当者から折り返しご連絡（3営業日以内）
               </strong>
-              ：内容を確認のうえ、担当者よりメールにて折り返しご連絡いたします。必要に応じてオンライン打ち合わせの日程をご調整します。
+              ：内容を確認のうえ、3営業日以内に担当者よりメールにて折り返しご連絡いたします。必要に応じてオンライン打ち合わせの日程をご調整します。
             </p>
           </li>
           <li className="relative">

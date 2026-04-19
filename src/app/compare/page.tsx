@@ -90,6 +90,11 @@ export default function ComparePage() {
             intro="診断結果を、見積の読み方・上昇要因・リスクシナリオ・長期推移の理解に接続すると説明がしやすくなります。"
             links={[
               {
+                href: "/simulate",
+                title: "リスク診断シミュレーター",
+                description: "契約条件をもとに、電気料金の上昇リスクを30秒で診断",
+              },
+              {
                 href: "/how-to-read-electricity-quote",
                 title: "法人向け電気料金見積書の見方",
                 description: "比較結果を実際の見積条件に落とし込むときの確認軸です。",
