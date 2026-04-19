@@ -3,42 +3,47 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import HeaderSearch from "./search/HeaderSearch";
 
 type HeaderLink = {
   href: string;
   label: string;
-  iconSrc: string;
-  highlight?: boolean;
+  iconSrc?: string;
 };
+
+// Files present under /public/icons/. Links referencing missing icons render
+// the label without an icon (see render logic below).
+const AVAILABLE_ICONS = new Set<string>([
+  "/icons/nav-risk-check.png",
+  "/icons/nav-knowledge.png",
+  "/icons/nav-how-to.png",
+  "/icons/nav-retrospective.png",
+  "/icons/nav-top.png",
+]);
 
 const headerLinks: HeaderLink[] = [
-  { href: "/", label: "TOP", iconSrc: "/icons/nav-top.png" },
-  { href: "/simulate", label: "電気料金上昇リスクを診断する", iconSrc: "/icons/nav-risk-check.png" },
-  { href: "/articles", label: "電気料金の基礎知識", iconSrc: "/icons/nav-knowledge.png" },
-  { href: "/articles/by-industry", label: "業種別・実務ガイド", iconSrc: "/icons/nav-how-to.png" },
-  {
-    href: "/business-electricity-retrospective",
-    label: "法人電気料金振り返り",
-    iconSrc: "/icons/nav-retrospective.png",
-  },
+  { href: "/simulate", label: "リスク診断", iconSrc: "/icons/nav-risk-check.png" },
+  { href: "/compare", label: "料金比較", iconSrc: "/icons/nav-compare.png" },
+  { href: "/articles", label: "解説記事", iconSrc: "/icons/nav-knowledge.png" },
+  { href: "/articles/by-industry", label: "業種別ガイド", iconSrc: "/icons/nav-how-to.png" },
+  { href: "/special", label: "特集", iconSrc: "/icons/nav-special.png" },
+  { href: "/contact", label: "相談する", iconSrc: "/icons/nav-contact.png" },
 ];
 
-const specialFeatureLink = {
-  href: "/special",
-  label: "特集：有事シナリオ分析：26年4月",
-};
-
 const isActivePath = (pathname: string, href: string): boolean => {
-  if (href === "/") {
-    return pathname === "/";
+  // Exact-match routes.
+  if (href === "/contact") {
+    return pathname === href;
   }
 
-  // /articles/by-industry が /articles より優先されるよう、
-  // /articles は by-industry 配下を除外する
+  // /articles/by-industry must outrank /articles when pathname is under by-industry.
   if (href === "/articles") {
     if (pathname.startsWith("/articles/by-industry")) return false;
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
+  // /special and subroutes.
+  if (href === "/special") {
     return pathname === href || pathname.startsWith(`${href}/`);
   }
 
@@ -47,42 +52,6 @@ const isActivePath = (pathname: string, href: string): boolean => {
 
 export function PublicHeader() {
   const pathname = usePathname();
-  const [simulationCount, setSimulationCount] = useState<number | null>(null);
-  const [averageRiskScore, setAverageRiskScore] = useState<number | null>(null);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadHeaderStats = async () => {
-      try {
-        const response = await fetch("/api/simulation-results/average", {
-          method: "GET",
-          cache: "no-store",
-          signal: controller.signal,
-        });
-        const json = (await response.json()) as {
-          ok?: boolean;
-          averageRiskScore?: number | null;
-          count?: number;
-        };
-        if (!response.ok || !json.ok) return;
-
-        setSimulationCount(
-          typeof json.count === "number" && Number.isFinite(json.count) ? json.count : null
-        );
-        setAverageRiskScore(
-          typeof json.averageRiskScore === "number" && Number.isFinite(json.averageRiskScore)
-            ? json.averageRiskScore
-            : null
-        );
-      } catch {
-        if (controller.signal.aborted) return;
-      }
-    };
-
-    void loadHeaderStats();
-    return () => controller.abort();
-  }, []);
 
   return (
     <header
@@ -113,74 +82,47 @@ export function PublicHeader() {
               </Link>
               <HeaderSearch />
             </div>
-            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-              <p className="text-sm font-medium leading-tight text-slate-700 sm:text-lg">
-                法人電気料金ナビ
-              </p>
-              <p className="text-sm font-semibold leading-tight text-blue-600 sm:text-lg">
-                電気代の値上がりリスクを30秒で診断
-              </p>
-            </div>
-            <div className="mt-3 flex flex-col gap-2 sm:mt-4 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex">
-                <Link
-                  href={specialFeatureLink.href}
-                  className="inline-flex items-center rounded-md border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-semibold leading-snug text-violet-900 transition hover:bg-violet-100 sm:py-2 sm:text-xl"
-                  aria-label="特集：有事シナリオ分析：26年4月 特集一覧ページへ移動"
-                >
-                  {specialFeatureLink.label}
-                </Link>
-              </div>
-              <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[380px]">
-                <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
-                  <p className="text-sm font-semibold text-slate-700 sm:text-xl">
-                    診断実施回数:{" "}
-                    <span className="text-base font-bold text-slate-900 sm:text-2xl">
-                      {simulationCount !== null ? `${simulationCount.toLocaleString("ja-JP")} 回` : "-"}
-                    </span>
-                  </p>
-                </div>
-                <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
-                  <p className="text-sm font-semibold text-slate-700 sm:text-xl">
-                    リスク平均スコア:{" "}
-                    <span className="text-base font-bold text-slate-900 sm:text-2xl">
-                      {averageRiskScore !== null ? `${averageRiskScore.toFixed(1)} / 100` : "-"}
-                    </span>
-                  </p>
-                </div>
-              </section>
-            </div>
+            <p className="text-sm font-medium leading-tight text-slate-700 sm:text-lg">
+              法人電気料金ナビ
+            </p>
           </div>
         </div>
 
-        <nav aria-label="主要導線" className="mt-4">
-          <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-3">
+        <nav aria-label="主要導線" className="mt-3 sm:mt-4">
+          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:flex lg:flex-wrap lg:items-center lg:gap-2">
             {headerLinks.map((link) => {
               const active = isActivePath(pathname, link.href);
+              const isContactLink = link.href === "/contact";
+              const hasIcon = Boolean(link.iconSrc && AVAILABLE_ICONS.has(link.iconSrc));
+
               const baseClass =
-                "flex items-center gap-2 border-b-2 border-transparent px-2.5 py-1.5 text-sm leading-tight transition-colors duration-150 sm:px-3 sm:text-[17px]";
-              const highlightedClass = active
-                ? "bg-sky-700 text-white border-sky-700"
-                : "bg-sky-50 text-sky-800 hover:bg-sky-200 hover:border-sky-400";
+                "flex items-center justify-center gap-2 border-b-2 px-2.5 py-1.5 text-sm leading-tight transition-colors duration-150 sm:px-3 sm:text-[17px]";
+
+              const contactClass = active
+                ? "bg-amber-100 text-amber-900 border-amber-600 font-semibold"
+                : "bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100 hover:border-amber-500 font-semibold";
+
               const normalClass = active
-                ? "text-sky-700 border-sky-600 font-semibold"
-                : "text-sky-900 hover:bg-sky-100 hover:text-sky-950 hover:border-sky-400";
+                ? "text-sky-700 border-sky-600 font-semibold bg-sky-50/60"
+                : "text-sky-900 border-transparent hover:bg-sky-100 hover:text-sky-950 hover:border-sky-400";
 
               return (
-                <li key={link.href} className={`min-w-0 ${link.href === "/" ? "lg:flex-[0.5]" : "lg:flex-1"}`}>
+                <li key={link.href} className="min-w-0 lg:flex-1">
                   <Link
                     href={link.href}
-                    className={`${baseClass} ${link.highlight ? highlightedClass : normalClass}`}
+                    className={`${baseClass} ${isContactLink ? contactClass : normalClass}`}
                     aria-current={active ? "page" : undefined}
                   >
-                    <Image
-                      src={link.iconSrc}
-                      alt=""
-                      aria-hidden="true"
-                      width={26}
-                      height={26}
-                      className="h-6 w-6 shrink-0 sm:h-[26px] sm:w-[26px]"
-                    />
+                    {hasIcon && link.iconSrc ? (
+                      <Image
+                        src={link.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        width={26}
+                        height={26}
+                        className="h-6 w-6 shrink-0 sm:h-[26px] sm:w-[26px]"
+                      />
+                    ) : null}
                     {link.label}
                   </Link>
                 </li>
