@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Fuse, { type IFuseOptions } from "fuse.js";
 
 type ArticleEntry = {
   slug: string;
@@ -14,6 +15,17 @@ type Props = {
   articles: ArticleEntry[];
 };
 
+const FUSE_OPTIONS: IFuseOptions<ArticleEntry> = {
+  keys: [
+    { name: "title", weight: 0.5 },
+    { name: "description", weight: 0.3 },
+    { name: "category", weight: 0.2 },
+  ],
+  threshold: 0.35,
+  minMatchCharLength: 2,
+  ignoreLocation: true,
+};
+
 export default function ArticleSearchTool({ articles }: Props) {
   const [query, setQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
@@ -24,18 +36,23 @@ export default function ArticleSearchTool({ articles }: Props) {
     return Array.from(set.entries()).map(([slug, name]) => ({ slug, name }));
   }, [articles]);
 
+  const fuse = useMemo(() => new Fuse(articles, FUSE_OPTIONS), [articles]);
+
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return articles.filter((a) => {
-      if (categoryFilter !== "all" && a.categorySlug !== categoryFilter) return false;
-      if (!q) return true;
-      return (
-        a.title.toLowerCase().includes(q) ||
-        a.description.toLowerCase().includes(q) ||
-        a.slug.toLowerCase().includes(q)
-      );
-    });
-  }, [articles, query, categoryFilter]);
+    const scopedArticles =
+      categoryFilter === "all"
+        ? articles
+        : articles.filter((a) => a.categorySlug === categoryFilter);
+
+    const trimmed = query.trim();
+    if (trimmed.length < 2) return scopedArticles;
+
+    const hits = fuse.search(trimmed);
+    const scoped = new Set(scopedArticles.map((a) => a.slug));
+    return hits
+      .filter((hit) => scoped.has(hit.item.slug))
+      .map((hit) => hit.item);
+  }, [articles, fuse, query, categoryFilter]);
 
   return (
     <section className="mt-6 rounded-xl border-2 border-sky-300 bg-sky-50 p-5">
