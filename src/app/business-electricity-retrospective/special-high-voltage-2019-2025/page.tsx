@@ -6,6 +6,8 @@ import {
   EXTRA_HIGH_VOLTAGE_MONTHLY_PRICES,
   getYearlySummary,
 } from "../_lib/extra-high-voltage-price-data";
+import ContentCta from "../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 
 const pageTitle =
   "特別高圧の電気料金推移（2019年～2025年）｜コロナ・ウクライナ危機・補助金の影響を年別に解説";
@@ -281,6 +283,28 @@ export default function SpecialHighVoltageRetrospectivePage() {
           </p>
         </div>
       </section>
+
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-retrospective/high-voltage-2019-2025", title: "高圧の電気料金推移（2019〜2025年）", description: "高圧契約の単価推移を比較できます。" },
+            { href: "/business-electricity-retrospective/low-voltage-power-2019-2025", title: "低圧電力の電気料金推移（2019〜2025年）", description: "動力契約の単価推移を比較できます。" },
+            { href: "/business-electricity-retrospective/low-voltage-lighting-2019-2025", title: "低圧電灯の電気料金推移（2019〜2025年）", description: "低圧電灯の単価推移を比較できます。" },
+          ]}
+        />
+      </div>
+
+      <div className="mt-6">
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
       </main>
     </>
   );

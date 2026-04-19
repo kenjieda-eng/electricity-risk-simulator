@@ -3,6 +3,8 @@ import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "法人が電力契約を切り替えるときの注意点";
 const pageDescription =
@@ -43,6 +45,7 @@ export default function SwitchingBusinessElectricityContractPage() {
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・スイッチングに関する情報" },
   ];
   return (
+    <>
     <ReviewArticlePage
       breadcrumbLabel="切り替えの注意点"
       slug="switching-business-electricity-contract"
@@ -228,5 +231,28 @@ export default function SwitchingBusinessElectricityContractPage() {
       ctaDescription="切替前後の確認項目を整理したら、使い方ページで入力準備を確認し、比較ページで現契約と候補を同条件で並べて最終判断へ進めます。"
       glossaryTerms={["燃料費調整額", "市場価格調整額", "最終保障供給", "市場連動プラン", "固定プラン", "基本料金"]}
     />
+    <div className="mx-auto w-full max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="mt-6">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/review-contract-renewal-deadlines", title: "法人の電力契約を更新前に確認したい期限とは", description: "切替直前のスケジュール設計の参考になります。" },
+            { href: "/where-to-check-in-electricity-contract", title: "契約書のどこに見直し時の注意点が書かれているのか", description: "解約条件・違約金など切替前に確認したい箇所を整理。" },
+            { href: "/should-you-review-after-price-increase-notice", title: "値上げ通知が来たとき、法人の電力契約はすぐ見直すべきか", description: "切替判断の前提となる通知確認の手順。" },
+          ]}
+        />
+      </div>
+      <div className="mt-6">
+        <ContentCta
+          heading="契約見直しの次のステップ"
+          description="見直しのポイントを確認したら、シミュレーターで自社のリスクを診断してみましょう。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
+    </div>
+    </>
   );
 }

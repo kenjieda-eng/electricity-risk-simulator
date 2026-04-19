@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "どの部署が法人の電力契約見直しを担当するべきか";
 const pageDescription =
@@ -40,6 +42,7 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
   ];
   return (
+    <>
     <ReviewArticlePage
       breadcrumbLabel="担当部署"
       slug="who-should-handle-electricity-contract-review"
@@ -167,5 +170,28 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
       ctaDescription="主導部署と役割分担を決めたら、使い方ページで準備手順を確認し、比較ページで共通前提をそろえて検討を進めます。"
       glossaryTerms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "市場連動プラン", "固定プラン", "電気料金の内訳"]}
     />
+    <div className="mx-auto w-full max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="mt-6">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/review-multi-site-electricity-contracts", title: "複数拠点の電力契約を見直すときの進め方", description: "拠点横断で役割分担が必要な場面で参考になります。" },
+            { href: "/which-companies-benefit-most-from-review", title: "どんな会社ほど電力契約の見直し効果が出やすいのか", description: "担当部署を決める前提として見直し優先度を確認。" },
+            { href: "/how-to-start-electricity-contract-review", title: "法人の電力契約見直しは何から始めるべきか", description: "担当体制が決まったあとの実務手順を整理できます。" },
+          ]}
+        />
+      </div>
+      <div className="mt-6">
+        <ContentCta
+          heading="契約見直しの次のステップ"
+          description="見直しのポイントを確認したら、シミュレーターで自社のリスクを診断してみましょう。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
+    </div>
+    </>
   );
 }

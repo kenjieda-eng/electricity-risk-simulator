@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
+import ContentCta from "../../../components/simulator/ContentCta";
+import SimulatorRelatedLinks from "../../../components/simulator/RelatedLinks";
 import UkraineShockSeriesNav, { UkraineShockPrevNext } from "../_components/UkraineShockSeriesNav";
 import { MultiBarChartCard, MultiLineChartCard } from "../_components/FeatureCharts";
 import {
@@ -231,6 +233,24 @@ export default function UkraineShockTimeline20212023Page() {
             { href: "https://www.iea.org/reports/global-energy-crisis", label: "IEA Global Energy Crisis" },
             { href: "https://www.enecho.meti.go.jp/category/electricity_and_gas/electric/summary/", label: "資源エネルギー庁 電力政策ページ" },
             { href: "https://simulator.eic-jp.org/business-electricity-retrospective", label: "法人電気料金振り返り（新電力ネット由来データ）" },
+          ]}
+        />
+
+        <SimulatorRelatedLinks
+          heading="関連ページ（振り返りシリーズ）"
+          links={[
+            { href: "/business-electricity-retrospective/ukraine-shock-overview", title: "ウクライナショック全体整理", description: "急騰局面の全体像を通史的に確認できます。" },
+            { href: "/business-electricity-retrospective/why-business-electricity-prices-rose-after-ukraine", title: "なぜ上昇したのか（要因分解）", description: "燃料・為替・制度の3要因で整理できます。" },
+            { href: "/business-electricity-retrospective/ukraine-shock-by-voltage-class", title: "電圧区分別のウクライナショック影響", description: "区分別に波及度合いを比較できます。" },
+          ]}
+        />
+
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
           ]}
         />
       </section>

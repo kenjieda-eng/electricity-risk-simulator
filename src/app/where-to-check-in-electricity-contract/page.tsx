@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "契約書のどこに見直し時の注意点が書かれているのか";
 const pageDescription =
@@ -40,6 +42,7 @@ export default function WhereToCheckInElectricityContractPage() {
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約に関する情報" },
   ];
   return (
+    <>
     <ReviewArticlePage
       breadcrumbLabel="契約書の注意点"
       slug="where-to-check-in-electricity-contract"
@@ -173,5 +176,28 @@ export default function WhereToCheckInElectricityContractPage() {
       ctaDescription="契約書の確認箇所を整理したら、使い方ページで必要情報を整え、比較ページで見積条件と契約条項の整合を確認して進めます。"
       glossaryTerms={["燃料費調整額", "市場価格調整額", "基本料金", "電力量料金", "市場連動プラン", "固定プラン"]}
     />
+    <div className="mx-auto w-full max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="mt-6">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/review-contract-renewal-deadlines", title: "法人の電力契約を更新前に確認したい期限とは", description: "契約書に記載される期限項目を実務目線で確認できます。" },
+            { href: "/switching-business-electricity-contract", title: "法人が電力契約を切り替えるときの注意点", description: "解約条項を踏まえた切替時の実務ポイント。" },
+            { href: "/should-you-review-after-price-increase-notice", title: "値上げ通知が来たとき、法人の電力契約はすぐ見直すべきか", description: "通知と契約条項の整合を判断する視点を整理します。" },
+          ]}
+        />
+      </div>
+      <div className="mt-6">
+        <ContentCta
+          heading="契約見直しの次のステップ"
+          description="見直しのポイントを確認したら、シミュレーターで自社のリスクを診断してみましょう。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
+    </div>
+    </>
   );
 }

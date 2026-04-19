@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "法人の電力契約を更新前に確認したい期限とは";
 const pageDescription =
@@ -40,6 +42,7 @@ export default function ReviewContractRenewalDeadlinesPage() {
     { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
   ];
   return (
+    <>
     <ReviewArticlePage
       breadcrumbLabel="更新前の確認期限"
       slug="review-contract-renewal-deadlines"
@@ -169,5 +172,28 @@ export default function ReviewContractRenewalDeadlinesPage() {
       ctaDescription="更新前に期限を整理したら、比較ページで候補条件を並べて、社内確認に使える判断材料を準備しておくと実行段階で混乱しにくくなります。"
       glossaryTerms={["市場連動プラン", "固定プラン", "燃料費調整額", "最終保障供給", "基本料金"]}
     />
+    <div className="mx-auto w-full max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="mt-6">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "期限確認と見直し時期を結び付けて判断する実務視点を整理します。" },
+            { href: "/where-to-check-in-electricity-contract", title: "契約書のどこに見直し時の注意点が書かれているのか", description: "更新条項・違約金など契約書の確認ポイントを整理します。" },
+            { href: "/switching-business-electricity-contract", title: "法人が電力契約を切り替えるときの注意点", description: "更新前準備を切替実行に接続する実務ポイント。" },
+          ]}
+        />
+      </div>
+      <div className="mt-6">
+        <ContentCta
+          heading="契約見直しの次のステップ"
+          description="見直しのポイントを確認したら、シミュレーターで自社のリスクを診断してみましょう。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
+    </div>
+    </>
   );
 }

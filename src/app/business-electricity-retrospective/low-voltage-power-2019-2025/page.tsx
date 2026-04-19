@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import LowVoltagePowerRetrospectiveCharts from "../_components/LowVoltagePowerRetrospectiveCharts";
 import { LOW_VOLTAGE_POWER_MONTHLY_PRICES, getYearlySummary } from "../_lib/low-voltage-power-price-data";
+import ContentCta from "../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../components/simulator/RelatedLinks";
 
 const pageTitle =
   "低圧電力の電気料金推移（2019年～2025年）｜コロナ・燃料高・補助金の影響を年別に解説";
@@ -259,6 +261,28 @@ export default function LowVoltagePowerRetrospectivePage() {
           </p>
         </div>
       </section>
+
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-retrospective/special-high-voltage-2019-2025", title: "特別高圧の電気料金推移（2019〜2025年）", description: "大口需要家の長期単価動向を確認できます。" },
+            { href: "/business-electricity-retrospective/high-voltage-2019-2025", title: "高圧の電気料金推移（2019〜2025年）", description: "高圧契約の単価推移を比較できます。" },
+            { href: "/business-electricity-retrospective/low-voltage-lighting-2019-2025", title: "低圧電灯の電気料金推移（2019〜2025年）", description: "低圧電灯の単価推移を比較できます。" },
+          ]}
+        />
+      </div>
+
+      <div className="mt-6">
+        <ContentCta
+          heading="電気料金の見直しを検討中ですか？"
+          description="振り返りデータを踏まえて、自社の契約条件やリスクを専門家と一緒に確認しませんか。"
+          links={[
+            { href: "/simulate", label: "リスク診断シミュレーター" },
+            { href: "/contact", label: "専門家に相談する" },
+          ]}
+        />
+      </div>
       </main>
     </>
   );
