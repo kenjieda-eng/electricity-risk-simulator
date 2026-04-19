@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "法人の電気料金の値上げはおかしいのか" }],
+    images: [{ url: "/api/og/review-points", width: 1200, height: 630, alt: "法人の電気料金の値上げはおかしいのか" }],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/review-points"],
   },
 };
 

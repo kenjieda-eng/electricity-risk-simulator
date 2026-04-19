@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/ogp-default.png",
+        url: "/api/og/plan-types",
         width: 1200,
         height: 630,
         alt: "市場連動プランと固定プランの違い",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "市場連動プランと固定プランの違いを比較｜法人は何を基準に選ぶべきか",
     description:
       "市場連動プランと固定プランの違いを、料金の動き方、予算管理、リスク、向いている法人の観点から比較し、選び方の考え方を整理します。",
-    images: ["/twitter-default.png"],
+    images: ["/api/og/plan-types"],
   },
 };
 

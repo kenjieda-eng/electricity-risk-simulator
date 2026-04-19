@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "市場連動プランで電気料金が上がるときの仕組み" }],
+    images: [{ url: "/api/og/price-increase", width: 1200, height: 630, alt: "市場連動プランで電気料金が上がるときの仕組み" }],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/price-increase"],
   },
 };
 

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/ogp-default.png",
+        url: "/api/og/plan-types",
         width: 1200,
         height: 630,
         alt: "市場連動プランとは",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "市場連動プランのリスクとは｜法人が知るべき仕組み・固定プラン比較",
     description:
       "市場連動プランの料金変動リスクを、JEPX実績データと固定プラン比較で可視化。向いている法人・向かない法人、見直し時の注意点、2020-21年冬と2022年夏の実例まで法人向けに整理。",
-    images: ["/twitter-default.png"],
+    images: ["/api/og/plan-types"],
   },
 };
 

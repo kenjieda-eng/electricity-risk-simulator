@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "法人の電気料金推移（10年）｜電気代の10年推移を特別高圧・高圧・低圧で見る" }],
+    images: [{ url: "/api/og/price-trends", width: 1200, height: 630, alt: "法人の電気料金推移（10年）｜電気代の10年推移を特別高圧・高圧・低圧で見る" }],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/price-trends"],
   },
 };
 

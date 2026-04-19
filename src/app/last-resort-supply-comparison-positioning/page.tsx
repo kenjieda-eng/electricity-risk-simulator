@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     type: "article",
     images: [
-      { url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle },
+      { url: "/api/og/last-resort-supply", width: 1200, height: 630, alt: pageTitle },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/twitter-default.png"],
+    images: ["/api/og/last-resort-supply"],
   },
 };
 
