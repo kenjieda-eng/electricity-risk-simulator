@@ -8,31 +8,22 @@ import HeaderSearch from "./search/HeaderSearch";
 type HeaderLink = {
   href: string;
   label: string;
-  iconSrc?: string;
 };
 
-// Files present under /public/icons/. Links referencing missing icons render
-// the label without an icon (see render logic below).
-const AVAILABLE_ICONS = new Set<string>([
-  "/icons/nav-risk-check.png",
-  "/icons/nav-knowledge.png",
-  "/icons/nav-how-to.png",
-  "/icons/nav-retrospective.png",
-  "/icons/nav-top.png",
-]);
-
 const headerLinks: HeaderLink[] = [
-  { href: "/simulate", label: "リスク診断", iconSrc: "/icons/nav-risk-check.png" },
-  { href: "/compare", label: "料金比較", iconSrc: "/icons/nav-compare.png" },
-  { href: "/articles", label: "解説記事", iconSrc: "/icons/nav-knowledge.png" },
-  { href: "/articles/by-industry", label: "業種別ガイド", iconSrc: "/icons/nav-how-to.png" },
-  { href: "/special", label: "特集", iconSrc: "/icons/nav-special.png" },
-  { href: "/contact", label: "相談する", iconSrc: "/icons/nav-contact.png" },
+  { href: "/", label: "TOP" },
+  { href: "/simulate", label: "リスク診断" },
+  { href: "/compare", label: "料金比較" },
+  { href: "/articles", label: "解説記事" },
+  { href: "/articles/by-industry", label: "業種別ガイド" },
+  { href: "/special", label: "特集" },
+  { href: "/business-electricity-retrospective", label: "振り返り" },
+  { href: "/contact", label: "相談する" },
 ];
 
 const isActivePath = (pathname: string, href: string): boolean => {
   // Exact-match routes.
-  if (href === "/contact") {
+  if (href === "/" || href === "/contact") {
     return pathname === href;
   }
 
@@ -89,14 +80,13 @@ export function PublicHeader() {
         </div>
 
         <nav aria-label="主要導線" className="mt-3 sm:mt-4">
-          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:flex lg:flex-wrap lg:items-center lg:gap-2">
+          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-4 lg:flex lg:flex-wrap lg:items-center lg:gap-2">
             {headerLinks.map((link) => {
               const active = isActivePath(pathname, link.href);
               const isContactLink = link.href === "/contact";
-              const hasIcon = Boolean(link.iconSrc && AVAILABLE_ICONS.has(link.iconSrc));
 
               const baseClass =
-                "flex items-center justify-center gap-2 border-b-2 px-2.5 py-1.5 text-sm leading-tight transition-colors duration-150 sm:px-3 sm:text-[17px]";
+                "flex items-center justify-center border-b-2 px-2.5 py-1.5 text-sm leading-tight transition-colors duration-150 sm:px-3 sm:text-[17px]";
 
               const contactClass = active
                 ? "bg-amber-100 text-amber-900 border-amber-600 font-semibold"
@@ -113,16 +103,6 @@ export function PublicHeader() {
                     className={`${baseClass} ${isContactLink ? contactClass : normalClass}`}
                     aria-current={active ? "page" : undefined}
                   >
-                    {hasIcon && link.iconSrc ? (
-                      <Image
-                        src={link.iconSrc}
-                        alt=""
-                        aria-hidden="true"
-                        width={26}
-                        height={26}
-                        className="h-6 w-6 shrink-0 sm:h-[26px] sm:w-[26px]"
-                      />
-                    ) : null}
                     {link.label}
                   </Link>
                 </li>
