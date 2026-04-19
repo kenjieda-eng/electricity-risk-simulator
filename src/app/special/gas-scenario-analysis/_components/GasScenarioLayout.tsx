@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   GAS_SCENARIO_SERIES,
   getGasScenarioNeighbors,
@@ -102,6 +103,13 @@ export default function GasScenarioLayout({ slug, lead, children }: GasScenarioL
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-gas"
+        variant="primary"
+        heading="ガス価格と電気料金の連動、契約メニューと合わせて相談する"
+        description="ガス価格の変動と電気料金上昇リスクを、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }

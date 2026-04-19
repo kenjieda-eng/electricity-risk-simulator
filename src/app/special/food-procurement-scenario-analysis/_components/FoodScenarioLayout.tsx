@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   FOOD_SCENARIO_SERIES,
   getFoodScenarioNeighbors,
@@ -106,6 +107,13 @@ export default function FoodScenarioLayout({ slug, lead, children }: FoodScenari
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-food"
+        variant="primary"
+        heading="食材調達コストと電気料金の連動リスク、専門家と整理しませんか？"
+        description="食材仕入コストと電気料金の同時上昇を、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }

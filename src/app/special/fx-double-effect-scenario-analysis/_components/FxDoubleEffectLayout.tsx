@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactCtaCard from "../../../../components/contact/ContactCtaCard";
 import {
   FX_DOUBLE_EFFECT_SERIES,
   getFxDoubleEffectNeighbors,
@@ -102,6 +103,13 @@ export default function FxDoubleEffectLayout({ slug, lead, children }: FxDoubleE
           )}
         </div>
       </section>
+
+      <ContactCtaCard
+        source="special-fx"
+        variant="primary"
+        heading="為替ダブルパンチのリスク、自社の契約でどう備えるか相談する"
+        description="円安と原油高が掛け合わさる局面の電気料金上昇リスクを、自社の契約条件に当てはめて検討したい方へ。エネルギー情報センターの専門スタッフが、見積比較・契約見直しの論点整理まで伴走します。"
+      />
     </main>
   );
 }
