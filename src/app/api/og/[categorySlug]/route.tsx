@@ -85,6 +85,22 @@ const FALLBACK: CategoryTheme = {
   accentColor: "#0284c7",
 };
 
+const HEADLINE = "電気料金リスクを、数値と図表で読み解く";
+const BRAND = "法人電気料金ナビ";
+const ORG = "一般社団法人エネルギー情報センター";
+const DOMAIN = "simulator.eic-jp.org";
+
+async function loadGoogleFont(family: string, weight: number, text: string) {
+  const url =
+    `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:wght@${weight}` +
+    `&text=${encodeURIComponent(text)}&display=swap`;
+  const css = await (await fetch(url)).text();
+  const match = css.match(/src: url\(([^)]+)\) format\('(truetype|opentype)'\)/);
+  if (!match) throw new Error(`font face not found in css for ${family}@${weight}`);
+  const buf = await fetch(match[1]).then((r) => r.arrayBuffer());
+  return buf;
+}
+
 type RouteContext = {
   params: Promise<{ categorySlug: string }>;
 };
@@ -94,6 +110,25 @@ export async function GET(_req: Request, { params }: RouteContext) {
   const theme = THEMES[categorySlug] ?? FALLBACK;
   const category = articleCategories.find((c) => c.slug === categorySlug);
   const categoryLabel = category?.name ?? theme.label;
+
+  const allText = `${BRAND}${categoryLabel}${HEADLINE}${DOMAIN}${ORG}`;
+
+  let bold: ArrayBuffer | null = null;
+  let medium: ArrayBuffer | null = null;
+  try {
+    [bold, medium] = await Promise.all([
+      loadGoogleFont("Noto Sans JP", 700, allText),
+      loadGoogleFont("Noto Sans JP", 500, allText),
+    ]);
+  } catch {
+    // fall through to system fallback; better to ship a PNG without JP glyphs
+    // than a 0-byte response.
+  }
+
+  const fonts = [
+    bold ? { name: "Noto Sans JP", data: bold, style: "normal" as const, weight: 700 as const } : null,
+    medium ? { name: "Noto Sans JP", data: medium, style: "normal" as const, weight: 500 as const } : null,
+  ].filter((f): f is NonNullable<typeof f> => f !== null);
 
   return new ImageResponse(
     (
@@ -106,8 +141,7 @@ export async function GET(_req: Request, { params }: RouteContext) {
           justifyContent: "space-between",
           padding: "72px 80px",
           backgroundColor: theme.backgroundColor,
-          fontFamily:
-            'system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif',
+          fontFamily: "Noto Sans JP, sans-serif",
         }}
       >
         <div
@@ -128,7 +162,7 @@ export async function GET(_req: Request, { params }: RouteContext) {
               backgroundColor: theme.accentColor,
             }}
           />
-          法人電気料金ナビ
+          {BRAND}
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
@@ -149,12 +183,12 @@ export async function GET(_req: Request, { params }: RouteContext) {
           <div
             style={{
               fontSize: 56,
-              fontWeight: 800,
+              fontWeight: 700,
               color: theme.textColor,
               lineHeight: 1.3,
             }}
           >
-            電気料金リスクを、数値と図表で読み解く
+            {HEADLINE}
           </div>
         </div>
 
@@ -170,14 +204,15 @@ export async function GET(_req: Request, { params }: RouteContext) {
             paddingTop: "20px",
           }}
         >
-          <span>simulator.eic-jp.org</span>
-          <span>一般社団法人エネルギー情報センター</span>
+          <span>{DOMAIN}</span>
+          <span>{ORG}</span>
         </div>
       </div>
     ),
     {
       width: 1200,
       height: 630,
+      fonts: fonts.length > 0 ? fonts : undefined,
     }
   );
 }
