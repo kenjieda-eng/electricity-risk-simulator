@@ -1148,7 +1148,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 1,
-    publishedAt: "2025-08-01",
+    publishedAt: "2026-03-01",
   },
   // demand-charge → merged into contract-demand-what-is-it (301 redirect)
   {
@@ -1159,7 +1159,7 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "basic",
     order: 3,
     featured: true,
-    publishedAt: "2025-08-03",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人向け電気料金の相場はどう見るか",
@@ -1168,7 +1168,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 4,
-    publishedAt: "2025-08-04",
+    publishedAt: "2026-03-01",
   },
   {
     title: "高圧電力の料金の見方",
@@ -1177,7 +1177,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 5,
-    publishedAt: "2025-08-05",
+    publishedAt: "2026-03-01",
   },
   {
     title: "特別高圧電力の料金の見方",
@@ -1186,7 +1186,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 6,
-    publishedAt: "2025-08-06",
+    publishedAt: "2026-03-01",
   },
   {
     title: "電気料金の請求書で確認したいポイント",
@@ -1195,7 +1195,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 7,
-    publishedAt: "2025-08-07",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人向け電気料金見積書の見方",
@@ -1204,7 +1204,7 @@ export const articleList: ArticleMeta[] = [
     category: "基礎から知る",
     categorySlug: "basic",
     order: 8,
-    publishedAt: "2025-08-08",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人の電気料金が上がる理由",
@@ -1214,7 +1214,7 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "price-increase",
     order: 1,
     featured: true,
-    publishedAt: "2025-08-09",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人の電気料金はなぜ急に上がるのか",
@@ -1232,7 +1232,7 @@ export const articleList: ArticleMeta[] = [
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 3,
-    publishedAt: "2025-08-10",
+    publishedAt: "2026-03-01",
   },
   {
     title: "市場価格調整額とは",
@@ -1241,7 +1241,7 @@ export const articleList: ArticleMeta[] = [
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 4,
-    publishedAt: "2025-08-11",
+    publishedAt: "2026-03-01",
   },
   {
     title: "市場連動プランで電気料金が上がるときの仕組み",
@@ -1259,7 +1259,7 @@ export const articleList: ArticleMeta[] = [
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 6,
-    publishedAt: "2025-08-12",
+    publishedAt: "2026-03-01",
   },
   {
     title: "再エネ賦課金の推移と変動要因",
@@ -1358,7 +1358,7 @@ export const articleList: ArticleMeta[] = [
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 8,
-    publishedAt: "2025-08-13",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人の電気料金はどのくらい上がるのか",
@@ -1482,7 +1482,7 @@ export const articleList: ArticleMeta[] = [
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 1,
-    publishedAt: "2025-08-14",
+    publishedAt: "2026-03-01",
   },
   {
     title: "再エネ賦課金を除いても電気料金は高いのか",
@@ -1491,7 +1491,7 @@ export const articleList: ArticleMeta[] = [
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 2,
-    publishedAt: "2025-08-15",
+    publishedAt: "2026-03-01",
   },
   {
     title: "特別高圧・高圧・低圧で上がり方はどう違うか",
@@ -1500,7 +1500,7 @@ export const articleList: ArticleMeta[] = [
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 3,
-    publishedAt: "2025-08-16",
+    publishedAt: "2026-03-01",
   },
   {
     title: "急騰後も元に戻らないのはなぜか",
@@ -1509,7 +1509,7 @@ export const articleList: ArticleMeta[] = [
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 4,
-    publishedAt: "2025-08-17",
+    publishedAt: "2026-03-01",
   },
   {
     title: "補助金縮小で見え方はどう変わったか",
@@ -1518,7 +1518,7 @@ export const articleList: ArticleMeta[] = [
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 5,
-    publishedAt: "2025-08-18",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人向け電気料金の推移を10年で見る",
@@ -1624,7 +1624,7 @@ export const articleList: ArticleMeta[] = [
     category: "契約メニューの違いを知る",
     categorySlug: "plan-types",
     order: 1,
-    publishedAt: "2025-08-19",
+    publishedAt: "2026-03-01",
   },
   {
     title: "固定プランとは",
@@ -1633,7 +1633,7 @@ export const articleList: ArticleMeta[] = [
     category: "契約メニューの違いを知る",
     categorySlug: "plan-types",
     order: 2,
-    publishedAt: "2025-08-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "市場連動プランと固定プランの違い",
@@ -1643,7 +1643,7 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "plan-types",
     order: 3,
     featured: true,
-    publishedAt: "2025-08-21",
+    publishedAt: "2026-03-01",
   },
   {
     title: "市場連動と固定は安さではなく変動の受け方で比べる",
@@ -1781,7 +1781,7 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "review-points",
     order: 8,
     featured: true,
-    publishedAt: "2025-08-22",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人の電力契約を更新前に確認したい期限とは",
@@ -1853,7 +1853,7 @@ export const articleList: ArticleMeta[] = [
     category: "見直しポイントを知る",
     categorySlug: "review-points",
     order: 16,
-    publishedAt: "2025-08-23",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人向け電力契約で確認したい契約条件",
@@ -1862,7 +1862,7 @@ export const articleList: ArticleMeta[] = [
     category: "見直しポイントを知る",
     categorySlug: "review-points",
     order: 17,
-    publishedAt: "2025-08-24",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人が電力契約を切り替えるときの注意点",
@@ -1889,7 +1889,7 @@ export const articleList: ArticleMeta[] = [
     category: "見直しポイントを知る",
     categorySlug: "review-points",
     order: 20,
-    publishedAt: "2025-08-25",
+    publishedAt: "2026-03-01",
   },
   {
     title: "法人の電気料金の値上げはおかしいのか",
@@ -1908,7 +1908,7 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "last-resort-supply",
     order: 1,
     featured: true,
-    publishedAt: "2025-08-26",
+    publishedAt: "2026-03-01",
   },
   {
     title: "最終保障供給の件数推移と2022年急増の詳細",
@@ -1926,7 +1926,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 2,
-    publishedAt: "2025-08-27",
+    publishedAt: "2026-03-01",
   },
   {
     title: "最終保障供給の対象は誰か",
@@ -1935,7 +1935,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 3,
-    publishedAt: "2025-08-28",
+    publishedAt: "2026-03-01",
   },
   {
     title: "最終保障供給から切り替えるには",
@@ -1944,7 +1944,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 4,
-    publishedAt: "2025-08-29",
+    publishedAt: "2026-03-01",
   },
   {
     title: "自治体が最終保障供給になったとき",
@@ -1953,7 +1953,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 5,
-    publishedAt: "2025-08-30",
+    publishedAt: "2026-03-01",
   },
   {
     title: "最終保障供給と通常の電力契約の違い",
@@ -1962,7 +1962,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 6,
-    publishedAt: "2025-08-31",
+    publishedAt: "2026-03-01",
   },
   {
     title: "高圧・特別高圧の法人が最終保障供給で確認したいポイント",
@@ -1971,7 +1971,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 7,
-    publishedAt: "2025-09-01",
+    publishedAt: "2026-03-01",
   },
   {
     title: "最終保障供給の約款はどう読むか",
@@ -1980,7 +1980,7 @@ export const articleList: ArticleMeta[] = [
     category: "最終保障供給を知る",
     categorySlug: "last-resort-supply",
     order: 8,
-    publishedAt: "2025-09-02",
+    publishedAt: "2026-03-01",
   },
   {
     title: "電気料金のリスクシナリオとは",
@@ -2034,7 +2034,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 6,
-    publishedAt: "2025-09-03",
+    publishedAt: "2026-03-01",
   },
   {
     title: "猛暑で電気料金・電気代はどう上がるか",
@@ -2043,7 +2043,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 7,
-    publishedAt: "2025-09-04",
+    publishedAt: "2026-03-01",
   },
   {
     title: "厳冬で電気料金・電気代はどう上がるか",
@@ -2052,7 +2052,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 8,
-    publishedAt: "2025-09-05",
+    publishedAt: "2026-03-01",
   },
   {
     title: "円安で電気料金・電気代はどう上がるか",
@@ -2061,7 +2061,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 9,
-    publishedAt: "2025-09-06",
+    publishedAt: "2026-03-01",
   },
   {
     title: "地政学リスクで電気料金・電気代はどう上がるか",
@@ -2070,7 +2070,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 10,
-    publishedAt: "2025-09-07",
+    publishedAt: "2026-03-01",
   },
   {
     title: "災害で電気料金・電気代はどう上がるか",
@@ -2079,7 +2079,7 @@ export const articleList: ArticleMeta[] = [
     category: "リスクシナリオ別に知る",
     categorySlug: "risk-scenarios",
     order: 11,
-    publishedAt: "2025-09-08",
+    publishedAt: "2026-03-01",
   },
   {
     title: "電気はどこから来るのか｜電力会社の仕入れの全体像",
@@ -2258,7 +2258,7 @@ export const articleList: ArticleMeta[] = [
     category: "法人電気料金振り返り",
     categorySlug: "monthly-review",
     order: 1,
-    publishedAt: "2026-02-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "【2026年1月】法人の電気料金はどう動いた？",
@@ -2268,7 +2268,7 @@ export const articleList: ArticleMeta[] = [
     category: "法人電気料金振り返り",
     categorySlug: "monthly-review",
     order: 2,
-    publishedAt: "2026-01-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "【2025年12月】法人の電気料金はどう動いた？補助終了後の年末着地と2026年への見通し",
@@ -2278,7 +2278,7 @@ export const articleList: ArticleMeta[] = [
     category: "法人電気料金振り返り",
     categorySlug: "monthly-review",
     order: 7,
-    publishedAt: "2025-12-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "【2025年11月】法人の電気料金はどう動いた？補助終了後の最初の本格上昇月",
@@ -2288,7 +2288,7 @@ export const articleList: ArticleMeta[] = [
     category: "法人電気料金振り返り",
     categorySlug: "monthly-review",
     order: 8,
-    publishedAt: "2025-11-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "【2025年10月】法人の電気料金はどう動いた？激変緩和補助金の正式終了月",
@@ -2298,7 +2298,7 @@ export const articleList: ArticleMeta[] = [
     category: "法人電気料金振り返り",
     categorySlug: "monthly-review",
     order: 9,
-    publishedAt: "2025-10-20",
+    publishedAt: "2026-03-01",
   },
   {
     title: "ウクライナショックとは何だったのか｜法人電気料金に起きた変化を全体整理",
