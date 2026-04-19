@@ -90,15 +90,25 @@ const BRAND = "法人電気料金ナビ";
 const ORG = "一般社団法人エネルギー情報センター";
 const DOMAIN = "simulator.eic-jp.org";
 
+// Google Fonts' CSS API returns different src URLs depending on User-Agent.
+// With no UA (default for Vercel Edge fetch), you get TTF with a
+// `format('truetype')` annotation, which is what satori wants. Sending an
+// "ancient" UA like IE6 actually triggers the EOT path and returns zero
+// bytes — don't do that.
 async function loadGoogleFont(family: string, weight: number, text: string) {
   const url =
     `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:wght@${weight}` +
     `&text=${encodeURIComponent(text)}&display=swap`;
-  const css = await (await fetch(url)).text();
-  const match = css.match(/src: url\(([^)]+)\) format\('(truetype|opentype)'\)/);
-  if (!match) throw new Error(`font face not found in css for ${family}@${weight}`);
-  const buf = await fetch(match[1]).then((r) => r.arrayBuffer());
-  return buf;
+  const cssRes = await fetch(url);
+  if (!cssRes.ok) throw new Error(`css fetch failed: ${cssRes.status}`);
+  const css = await cssRes.text();
+  // Accept src: url(...) with or without a trailing format() annotation —
+  // Google's response shape has changed in the past.
+  const match = css.match(/src:\s*url\(([^)]+)\)/);
+  if (!match) throw new Error(`font face url not found in css for ${family}@${weight}: ${css.slice(0, 160)}`);
+  const fontRes = await fetch(match[1]);
+  if (!fontRes.ok) throw new Error(`font fetch failed: ${fontRes.status}`);
+  return await fontRes.arrayBuffer();
 }
 
 type RouteContext = {
@@ -120,9 +130,11 @@ export async function GET(_req: Request, { params }: RouteContext) {
       loadGoogleFont("Noto Sans JP", 700, allText),
       loadGoogleFont("Noto Sans JP", 500, allText),
     ]);
-  } catch {
-    // fall through to system fallback; better to ship a PNG without JP glyphs
-    // than a 0-byte response.
+  } catch (err) {
+    // Log so the root cause is visible in Vercel function logs on regression.
+    // We still render without fonts — satori will emit a PNG with missing
+    // glyphs rather than a 0-byte response.
+    console.error("[/api/og] failed to load Noto Sans JP:", err);
   }
 
   const fonts = [
