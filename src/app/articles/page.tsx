@@ -16,6 +16,7 @@ import { ARTICLES_THEME_ROWS, CATEGORY_HUB_SPOTLIGHT } from "../../lib/articleHu
 import type { ArticleCategorySlug } from "../../data/articles";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import { CATEGORY_MAJOR_GROUPS } from "../../lib/articleCategoryGroups";
+import { ARTICLE_PERSONA_ENTRANCES } from "../../lib/articlePersonaEntrances";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
@@ -217,12 +218,58 @@ export default function ArticlesPage() {
           </Link>
         </nav>
 
-        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      </header>
+
+      <section className="mt-8" aria-labelledby="persona-entrances-heading">
+        <h2 id="persona-entrances-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
+          役割から読み始める
+        </h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          担当業務や立場に合わせて「どこから読めば最短か」を3ペルソナで整理しました。該当するカードから、推奨順に読み進められます。
+        </p>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {ARTICLE_PERSONA_ENTRANCES.map((persona) => (
+            <article
+              key={persona.key}
+              className="flex h-full flex-col rounded-xl border-2 border-sky-300 bg-gradient-to-br from-sky-50 to-white p-5"
+            >
+              <h3 className="text-lg font-semibold text-slate-900">{persona.title}</h3>
+              <p className="mt-1 text-xs font-semibold text-sky-700">{persona.subtitle}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-700">{persona.description}</p>
+              <div className="mt-4 border-t border-sky-200/70 pt-3">
+                <p className="text-xs font-semibold text-slate-500">このペルソナに最適な読み順</p>
+                <ul className="mt-2 space-y-2 text-sm">
+                  {persona.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="font-semibold text-sky-700 underline-offset-2 hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                      <p className="mt-0.5 text-xs leading-5 text-slate-600">{link.note}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8" aria-labelledby="quick-guide-heading">
+        <h2 id="quick-guide-heading" className="text-2xl font-semibold tracking-tight text-slate-900">
+          目的から読み始める
+        </h2>
+        <p className="mt-2 text-sm leading-7 text-slate-600">
+          読み始めやすい4つの入口です。ペルソナに当てはまらない場合も、この中から最も近い目的を選んでください。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {quickGuideCards.map((card) => (
             <article key={card.title} className="rounded-xl border border-slate-200 bg-white p-4">
               <div className="flex items-center gap-3">
                 <Image src={card.icon} alt={card.alt} width={39} height={39} />
-                <h2 className="text-base font-semibold text-slate-900">{card.title}</h2>
+                <h3 className="text-base font-semibold text-slate-900">{card.title}</h3>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-700">{card.description}</p>
               <Link
@@ -234,7 +281,7 @@ export default function ArticlesPage() {
             </article>
           ))}
         </div>
-      </header>
+      </section>
 
       <section className="mt-8" aria-labelledby="platform-tools">
         <h2 id="platform-tools" className="text-2xl font-semibold tracking-tight text-slate-900">
@@ -330,7 +377,7 @@ export default function ArticlesPage() {
           カテゴリから探す
         </h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
-          35カテゴリを4つの大分類で束ねました。用途に近いブロックから展開して探せます。
+          全カテゴリを4つの大分類にまとめました。初期状態はすべて開いており、閉じたブロックもタイトルをクリックで再展開できます。
         </p>
         <nav aria-label="大分類" className="mt-4 flex flex-wrap gap-2">
           {CATEGORY_MAJOR_GROUPS.map((group) => (
@@ -416,22 +463,42 @@ export default function ArticlesPage() {
                 </article>
               ) : null;
 
+            const groupCategoryCount =
+              group.categorySlugs.filter((slug) => learningCategories.some((c) => c.slug === slug)).length +
+              (industryHubCardForGroup ? 1 : 0);
+
             return (
-              <section
+              <details
                 key={group.key}
                 id={`group-${group.key}`}
-                className="rounded-2xl border border-slate-200 bg-slate-50/60 p-5 scroll-mt-16"
-                aria-labelledby={`group-${group.key}-title`}
+                open
+                className="group/details rounded-2xl border border-slate-200 bg-slate-50/60 p-5 scroll-mt-16 [&_summary::-webkit-details-marker]:hidden"
               >
-                <h3 id={`group-${group.key}-title`} className="text-lg font-semibold text-slate-900">
-                  {group.title}
-                </h3>
-                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-700">{group.description}</p>
+                <summary
+                  id={`group-${group.key}-title`}
+                  className="flex cursor-pointer list-none items-start justify-between gap-4"
+                >
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex items-center rounded-full bg-sky-100 px-2.5 py-0.5 text-xs font-semibold text-sky-800">
+                        {groupCategoryCount}カテゴリ
+                      </span>
+                      <h3 className="text-lg font-semibold text-slate-900">{group.title}</h3>
+                    </div>
+                    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-700">{group.description}</p>
+                  </div>
+                  <span
+                    aria-hidden
+                    className="mt-1 shrink-0 select-none text-xs font-semibold text-slate-500 transition group-open/details:rotate-180"
+                  >
+                    &#x25BC;
+                  </span>
+                </summary>
                 <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {group.categorySlugs.map((slug) => renderCategoryCard(slug))}
                   {industryHubCardForGroup}
                 </div>
-              </section>
+              </details>
             );
           })}
         </div>
