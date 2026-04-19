@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
   "オフィスビルの電気料金見直しポイント｜空調・照明負荷を踏まえた考え方";
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/office-building-electricity-cost-review",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -298,7 +299,7 @@ export default function OfficeBuildingElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">屋上・壁面太陽光</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋上面積がある自社ビルでは、<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>発電で昼間の購入電力を削減できる。PPAモデルを活用することで初期投資を抑えて導入できる場合もある。
+                屋上面積がある自社ビルでは、<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>発電で昼間の購入電力を削減できる。PPAモデルを活用することで初期投資を抑えて導入できる場合もある。
               </p>
             </div>
           </div>
@@ -384,6 +385,15 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

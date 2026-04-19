@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "ダウンロードセンター｜電気料金・脱炭素データ・テンプレート集";
 const pageDescription = "CSV・JSON・iCalで電力市場データ、制度改正カレンダー、補助金一覧、契約チェックリストなどを一括ダウンロードできます。法人での実務利用は無料・自由（CC BY 4.0）です。";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle, description: pageDescription, url: pageUrl,
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP", type: "website",
     images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
   },
@@ -20,6 +21,18 @@ export const metadata: Metadata = {
 };
 
 const DOWNLOADS = [
+  { category: "実務テンプレート集（即利用可 / Markdown・CSV）", items: [
+    { title: "請求書チェックシート（A4 1枚）", href: "/downloads/bill-check-sheet.md", format: "Markdown" },
+    { title: "見直し5項目チェックリスト", href: "/downloads/five-point-review-checklist.md", format: "Markdown" },
+    { title: "見積比較表", href: "/downloads/quotation-comparison.csv", format: "CSV" },
+    { title: "稟議書テンプレート", href: "/downloads/approval-template.md", format: "Markdown" },
+    { title: "事例サマリーカードテンプレート", href: "/downloads/case-study-summary.md", format: "Markdown" },
+    { title: "議会説明スライドテンプレート", href: "/downloads/council-briefing-template.md", format: "Markdown" },
+    { title: "補助金カレンダー", href: "/downloads/subsidy-calendar.csv", format: "CSV" },
+    { title: "取締役会・経営会議 報告テンプレート", href: "/downloads/board-report-template.md", format: "Markdown" },
+    { title: "電力BCPチェックリスト", href: "/downloads/bcp-checklist.md", format: "Markdown" },
+    { title: "M&A電力契約 DDチェックリスト", href: "/downloads/ma-electricity-dd-checklist.md", format: "Markdown" },
+  ]},
   { category: "市場データ（JSON API）", items: [
     { title: "JEPXスポット価格", href: "/api/datasets/jepx", format: "JSON" },
     { title: "電気料金調整単価履歴", href: "/api/datasets/price-adjustment", format: "JSON" },
@@ -132,6 +145,15 @@ export default function DownloadsPage() {
 {`curl https://simulator.eic-jp.org/api/datasets/emission-factor | jq '.data.byArea'`}
           </pre>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

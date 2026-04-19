@@ -11,6 +11,7 @@ import SpikeRiskCalculator from "../../components/market-data/SpikeRiskCalculato
 import { MARKET_DATA_FAQ } from "../../data/marketDataFaq";
 import { SpikeHourChart, SpikeMonthChart } from "../../components/market-data/SpikeAnalysisCharts";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import {
   JEPX_FY_LABELS,
   JEPX_SPIKE_FY,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/price-spike-analysis",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }],
@@ -427,6 +428,15 @@ export default function PriceSpikeAnalysisPage() {
           ]}
         />
       </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

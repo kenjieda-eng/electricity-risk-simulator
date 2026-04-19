@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/hospital-electricity-cost-review",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -275,13 +276,13 @@ export default function HospitalElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                <Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>によるデマンドピークの抑制に加え、停電時のバックアップ電源として機能する。BCP対策としての投資対効果を評価する際に、電気料金削減効果を組み合わせて検討できる。
+                <Link href="/battery-suited-corporations" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>によるデマンドピークの抑制に加え、停電時のバックアップ電源として機能する。BCP対策としての投資対効果を評価する際に、電気料金削減効果を組み合わせて検討できる。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                屋上に設置スペースがある病院では検討対象になる。<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい病院では自家消費率が高く、投資回収の見通しが立てやすい。
+                屋上に設置スペースがある病院では検討対象になる。<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい病院では自家消費率が高く、投資回収の見通しが立てやすい。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -362,7 +363,7 @@ export default function HospitalElectricityCostReviewPage() {
               description: "病院・医療機関向けの停電リスク対応の考え方。",
             },
             {
-              href: "/battery-consideration-for-business",
+              href: "/battery-suited-corporations",
               title: "法人向け蓄電池導入の検討ポイント",
               description: "病院・医療施設が蓄電池導入を検討する際の費用対効果と注意点。",
             },
@@ -379,6 +380,15 @@ export default function HospitalElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

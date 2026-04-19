@@ -10,6 +10,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/warehouse-electricity-cost-review",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -284,13 +285,13 @@ export default function WarehouseElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費型太陽光発電</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                倉庫の広い屋根面積を活用できる。<Link href="/solar-self-consumption-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい倉庫では自家消費率が高くなりやすく、投資回収の見通しが立てやすい。
+                倉庫の広い屋根面積を活用できる。<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>は昼間のベースロードが大きい倉庫では自家消費率が高くなりやすく、投資回収の見通しが立てやすい。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">蓄電池</p>
               <p className="mt-1 text-sm leading-6 text-slate-600">
-                デマンドピーク時に放電してピークカット。<Link href="/battery-consideration-for-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>と太陽光を組み合わせると自家消費率の向上と基本料金削減の両方が期待できる。
+                デマンドピーク時に放電してピークカット。<Link href="/battery-suited-corporations" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>と太陽光を組み合わせると自家消費率の向上と基本料金削減の両方が期待できる。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -378,7 +379,7 @@ export default function WarehouseElectricityCostReviewPage() {
               description: "料金の動き方とリスクの差を比較。",
             },
             {
-              href: "/battery-consideration-for-business",
+              href: "/battery-suited-corporations",
               title: "法人向け蓄電池導入の検討ポイント",
               description: "物流倉庫における蓄電池活用でピーク電力削減とBCP強化を実現する方法。",
             },
@@ -400,6 +401,15 @@ export default function WarehouseElectricityCostReviewPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

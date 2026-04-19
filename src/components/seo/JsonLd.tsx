@@ -119,6 +119,33 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
   );
 }
 
+type FaqPageJsonLdProps = {
+  faqs: { question: string; answer: string }[];
+};
+
+export function FaqPageJsonLd({ faqs }: FaqPageJsonLdProps) {
+  if (!faqs.length) return null;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export function WebSiteJsonLd({ name, url, description }: WebSiteJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",

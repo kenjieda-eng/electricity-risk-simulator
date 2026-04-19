@@ -3,10 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticlesByCategory, getArticlesBySlugs, getCategoryBySlug, getSortedCategories } from "../../../lib/articles";
 import { POWER_PROCUREMENT_SERIES } from "../../../lib/powerProcurementSeries";
+import { REVIEW_POINTS_STEP_GROUPS, REVIEW_POINTS_STEP_BY_SLUG } from "../../../lib/reviewPointsSteps";
+import { INDUSTRY_MIDDLE_CATEGORIES } from "../../../lib/articleIndustryCategories";
+import { GLOSSARY_TOPIC_GROUPS } from "../../../lib/glossaryTopics";
+import { CATEGORY_DIAGNOSTICS } from "../../../lib/diagnosticConfigs";
+import { MiniDiagnostic } from "../../../components/diagnostics/MiniDiagnostic";
+import { RegulationTimeline } from "../../../components/diagnostics/RegulationTimeline";
 import { CATEGORY_HUB_SPOTLIGHT } from "../../../lib/articleHubFeatured";
 import type { ArticleCategorySlug } from "../../../data/articles";
 import { CATEGORY_CTA } from "../../../lib/categoryCta";
-import { BreadcrumbJsonLd } from "../../../components/seo/JsonLd";
+import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../../components/seo/JsonLd";
 
 
 type PageParams = {
@@ -60,6 +66,73 @@ const categoryDescriptionOverrides: Record<string, string> = {
     "エリア別の電力事情と料金傾向を解説。東京・関西・中部など電力会社管内ごとの料金水準・競争環境・地域特有の事情を整理し、エリアに応じた見直し判断を支援します。",
   "market-data":
     "JEPX（日本卸電力取引所）のスポット価格や市場データを解説。法人の電気料金に影響する市場価格の読み方・推移・季節変動パターンを整理しています。",
+  decarbonization:
+    "法人の脱炭素・GX対応を解説。Scope2算定、非化石証書、RE100、SBT、TCFD、GX-ETSまで、電力調達と情報開示をつなぐ実務ポイントを整理しています。",
+  "corporate-ppa":
+    "コーポレートPPAの契約形態と選び方を解説。オンサイト・オフサイト・バーチャルPPAの違い、価格相場、契約期間、会計処理、Scope2対応の論点をまとめています。",
+  "energy-dx":
+    "法人向けエネルギーマネジメントとDXを解説。BEMS/FEMS/EMS、AI需要予測、スマートメーター活用、BIダッシュボード、省エネ法報告自動化の実務を整理しています。",
+  "energy-bcp":
+    "法人の電力BCP・災害対策を解説。停電・需給ひっ迫・新電力撤退に備える非常用電源、蓄電池、マイクログリッドの選び方と事業継続設計を整理しています。",
+  "sme-guide":
+    "中小企業・小規模事業者向けの電気代見直しを解説。低圧契約の基本、削減の即効策、テナント按分、個人事業主の家事按分まで限られた予算で成果を出す実務を整理しています。",
+  "accounting-tax":
+    "電気代の経理・税務処理を解説。勘定科目・部門配賦・インボイス制度・蓄電池減価償却・省エネ税制・価格転嫁まで、経理担当者がつまずきやすい論点を整理しています。",
+  glossary:
+    "法人電力契約・市場・設備・制度の専門用語を分野別に整理した用語集。契約電力、JEPX、キュービクル、FIT/FIP、GX-ETSなど、繰り返し登場する用語を横断的に解説しています。",
+  faq:
+    "法人電気料金のよくある質問を結論ベースで整理したFAQ集。「なぜ高い」「何から始める」「市場連動は怖い」など検索されやすい疑問に、実務視点で回答しています。",
+  "regulation-timeline":
+    "電力自由化・容量市場・需給調整市場・託送料金・省エネ法・GX推進法など、法人電気料金に影響する制度改正を時系列で整理。料金影響と対象法人の観点で解説しています。",
+  "ev-charging":
+    "法人EV・充電インフラと電力契約を解説。普通充電・急速充電・V2H、事業用・従業員用・一般開放の契約区分、TOU料金活用、補助金、費用試算までを整理しています。",
+  "contract-legal":
+    "電力契約書・供給約款の読み方を法務視点で解説。主要条項、不可抗力、自動更新、料金改定、違約金、供給地点特定番号の確認ポイントを整理しています。",
+  "ma-organizational-change":
+    "合併・分社・事業譲渡・持株会社化・グループ統合時の電力契約承継と再契約手続きを解説。名義変更・空白期間対策・デューデリジェンスの論点を整理しています。",
+  "global-energy":
+    "海外拠点・多国籍企業向けのグローバル電力調達を解説。主要国の電気料金水準、国別再エネ調達制度、中国・東南アジア・欧州の最新動向と日本本社の判断軸を整理しています。",
+  "datacenter-ai-demand":
+    "AI時代のデータセンター電力需要急増を解説。需要動向、立地と系統制約、PUE最適化・液冷、ハイパースケーラーの再エネ100%調達、2030年需要予測を整理しています。",
+};
+
+/** 鮮度管理が特に重要なカテゴリ向けの確認日バナー */
+const CATEGORY_FRESHNESS_NOTICE: Partial<Record<string, { lastVerifiedAt: string; frequency: string; note: string }>> = {
+  subsidies: {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "月次更新",
+    note: "公募期限・補助率は制度の改定頻度が高いため、個別制度の最新情報は各公式サイトで必ず再確認してください。",
+  },
+  "accounting-tax": {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "年次＋随時更新",
+    note: "2026年度税制改正に準拠した記述です。インボイス・電子帳簿保存法の最新運用は国税庁サイトで確認してください。",
+  },
+  "regulation-timeline": {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "四半期更新",
+    note: "今後12〜24か月の制度改正予定はインタラクティブ年表下部の「今後の予定」バッジを参照。正式情報は各省公式サイトで確認してください。",
+  },
+  benchmarks: {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "四半期更新",
+    note: "業種別・規模別の相場は、四半期ごとに直近データを反映して更新します。",
+  },
+  "market-data": {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "月次更新",
+    note: "30分値・JEPXスポット価格・気象データ等は月次で更新。CC BY 4.0 でCSV/JSON配布可能です。",
+  },
+  "monthly-review": {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "月次更新",
+    note: "毎月の料金動向を継続的に追記しています。",
+  },
+  "case-studies": {
+    lastVerifiedAt: "2026-04-18",
+    frequency: "月1本追加",
+    note: "新規事例は月1本ペースで追加予定です。",
+  },
 };
 
 const categoryTitleOverrides: Record<string, string> = {
@@ -83,6 +156,20 @@ const categoryTitleOverrides: Record<string, string> = {
   subsidies: "電力関連の補助金・助成金｜法人向け設備導入支援制度まとめ",
   "by-region": "エリア別の電力事情｜地域ごとの料金傾向と見直しポイント",
   "market-data": "JEPX市場データ・電力卸価格｜法人向け市場価格の読み方",
+  decarbonization: "脱炭素・GX対応｜Scope2・RE100・非化石証書・GX-ETSの実務",
+  "corporate-ppa": "コーポレートPPAとは｜オンサイト・オフサイト・バーチャルの比較",
+  "energy-dx": "エネルギーマネジメント・電力DX｜BEMS・FEMS・AI最適化の選び方",
+  "energy-bcp": "電力BCP・災害対策｜非常用電源・蓄電池・マイクログリッドの設計",
+  "sme-guide": "中小企業・小規模事業者の電気代見直し｜低圧契約の実務ガイド",
+  "accounting-tax": "電気代の経理・税務｜勘定科目・インボイス・減価償却の実務",
+  glossary: "電力契約・市場・設備の用語集｜法人向け電気料金の専門用語解説",
+  faq: "法人電気料金FAQ集｜「なぜ高い」「何から始める」のよくある質問",
+  "regulation-timeline": "電力制度改正タイムライン｜自由化・容量市場・GX-ETSの時系列",
+  "ev-charging": "法人EV・充電インフラ｜電力契約・基本料金・補助金の実務解説",
+  "contract-legal": "電力契約書・供給約款の読み方｜主要条項と法務視点の確認ポイント",
+  "ma-organizational-change": "M&A・組織再編時の電力契約｜承継・名義変更・DDの実務",
+  "global-energy": "海外拠点・グローバルエネルギー｜主要国の電気料金と調達戦略",
+  "datacenter-ai-demand": "データセンター・AI電力需要｜需要増・立地・冷却最適化の動向",
 };
 
 export function generateStaticParams() {
@@ -113,7 +200,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: canonicalPath,
-      siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+      siteName: "法人電気料金ナビ",
       locale: "ja_JP",
       type: "article",
       images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: title }],
@@ -286,6 +373,14 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         { name: category.name },
       ]}
     />
+    {category.slug === "faq" ? (
+      <FaqPageJsonLd
+        faqs={categoryArticles.map((article) => ({
+          question: article.title.replace(/^【FAQ】/, "").split("｜")[0].trim(),
+          answer: article.description,
+        }))}
+      />
+    ) : null}
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">
@@ -303,6 +398,17 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         <p className="text-sm text-slate-600">カテゴリ {category.order}</p>
         <h1 className="mt-1 text-3xl font-bold tracking-tight text-slate-900">{category.name}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">{category.intro}</p>
+        {CATEGORY_FRESHNESS_NOTICE[category.slug] ? (
+          <div className="mt-4 rounded-lg border border-emerald-200 bg-white/60 p-3 text-xs leading-5 text-slate-700">
+            <span className="mr-2 inline-flex rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-800">
+              鮮度管理
+            </span>
+            <span className="font-semibold">最終確認日: {CATEGORY_FRESHNESS_NOTICE[category.slug]!.lastVerifiedAt}</span>
+            <span className="mx-2 text-slate-400">/</span>
+            <span>{CATEGORY_FRESHNESS_NOTICE[category.slug]!.frequency}</span>
+            <p className="mt-1 text-slate-600">{CATEGORY_FRESHNESS_NOTICE[category.slug]!.note}</p>
+          </div>
+        ) : null}
       </header>
 
       {(() => {
@@ -322,6 +428,7 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
                     </Link>
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-700">{article.description}</p>
+                  <p className="mt-2 text-xs text-slate-500">最終更新日: {article.publishedAt}</p>
                 </article>
               ))}
             </div>
@@ -376,6 +483,380 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
           ))}
         </ol>
       </section>
+
+      {category.slug === "regulation-timeline" ? (
+        <div className="mt-6">
+          <RegulationTimeline />
+        </div>
+      ) : null}
+
+      {CATEGORY_DIAGNOSTICS[category.slug] ? (
+        <div className="mt-6">
+          <MiniDiagnostic {...CATEGORY_DIAGNOSTICS[category.slug]!} />
+        </div>
+      ) : null}
+
+      {category.slug === "glossary" ? (
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">トピック別索引</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            用語集は12のトピックに分かれています。気になる分野から該当の用語集記事を開き、関連する詳細解説に辿り着けます。
+          </p>
+          <nav aria-label="用語集トピック" className="mt-4 flex flex-wrap gap-2">
+            {GLOSSARY_TOPIC_GROUPS.map((group) => (
+              <a
+                key={group.topic}
+                href={`#topic-${group.topic}`}
+                className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-sky-50 hover:text-sky-800"
+              >
+                {group.label}
+              </a>
+            ))}
+          </nav>
+          <div className="mt-5 space-y-4">
+            {GLOSSARY_TOPIC_GROUPS.map((group) => {
+              const items = getArticlesBySlugs(group.slugs);
+              if (items.length === 0) return null;
+              return (
+                <section key={group.topic} id={`topic-${group.topic}`} className="rounded-lg border border-slate-200 bg-slate-50 p-4 scroll-mt-16">
+                  <h3 className="text-base font-semibold text-slate-900">{group.label}</h3>
+                  <p className="mt-1 text-xs leading-5 text-slate-600">{group.description}</p>
+                  <ul className="mt-2 space-y-1.5 text-sm leading-6 text-slate-700">
+                    {items.map((item) => (
+                      <li key={item.slug}>
+                        <Link href={`/${item.slug}`} className="text-sky-700 underline-offset-2 hover:underline">
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
+
+      {category.slug === "last-resort-supply" || category.slug === "emergency-response" ? (
+        <section className="mt-6 rounded-xl border border-rose-200 bg-rose-50/60 p-5">
+          <h2 className="text-base font-semibold text-slate-900">関連：緊急系カテゴリの使い分け</h2>
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            <div className={`rounded-lg border p-3 ${category.slug === "last-resort-supply" ? "border-rose-400 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-rose-700">最終保障供給を知る</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">制度理解（仕組み・料金・切替）</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">最終保障供給の制度、対象、料金水準、通常契約への復帰など、制度側の理解に重点。</p>
+              {category.slug !== "last-resort-supply" ? (
+                <Link href="/articles/last-resort-supply" className="mt-2 inline-flex text-xs font-semibold text-rose-700 underline-offset-2 hover:underline">
+                  最終保障供給カテゴリへ →
+                </Link>
+              ) : null}
+            </div>
+            <div className={`rounded-lg border p-3 ${category.slug === "emergency-response" ? "border-rose-400 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-rose-700">緊急対応・トラブル解決</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">発生時の初動（24時間以内〜1週間）</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">値上げ通知・契約解除通知・新電力撤退など、今すぐ対応が必要な場面の初動手順に重点。</p>
+              {category.slug !== "emergency-response" ? (
+                <Link href="/articles/emergency-response" className="mt-2 inline-flex text-xs font-semibold text-rose-700 underline-offset-2 hover:underline">
+                  緊急対応カテゴリへ →
+                </Link>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {category.slug === "emergency-response" || category.slug === "energy-bcp" ? (
+        <section className="mt-6 rounded-xl border border-amber-200 bg-amber-50/60 p-5">
+          <h2 className="text-base font-semibold text-slate-900">関連：発生時対応と平時の備えの使い分け</h2>
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            <div className={`rounded-lg border p-3 ${category.slug === "emergency-response" ? "border-amber-500 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-amber-700">緊急対応・トラブル解決</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">発生時の初動</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">値上げ通知・契約解除・電気代急増など、突発事象への初動フローと意思決定を整理。</p>
+              {category.slug !== "emergency-response" ? (
+                <Link href="/articles/emergency-response" className="mt-2 inline-flex text-xs font-semibold text-amber-700 underline-offset-2 hover:underline">
+                  緊急対応カテゴリへ →
+                </Link>
+              ) : null}
+            </div>
+            <div className={`rounded-lg border p-3 ${category.slug === "energy-bcp" ? "border-amber-500 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-amber-700">電力BCP・災害対策</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">平時の備え（事前設計）</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">停電・需給ひっ迫・新電力撤退に備えた非常用電源・蓄電池・マイクログリッドなど、事前の設計に重点。</p>
+              {category.slug !== "energy-bcp" ? (
+                <Link href="/articles/energy-bcp" className="mt-2 inline-flex text-xs font-semibold text-amber-700 underline-offset-2 hover:underline">
+                  電力BCPカテゴリへ →
+                </Link>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {category.slug === "price-increase" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">4費目×上昇要因 早見表</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">法人電気料金に上乗せされる主要4費目を、計算方式・変動要因・対策観点で比較した1枚表です。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">費目</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">計算単位</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主な変動要因</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">反映タイミング</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">対策観点</th>
+              </tr>
+            </thead>
+            <tbody>
+              {([
+                { item: "燃料費調整額", unit: "円/kWh", factor: "LNG・石炭・原油の3か月平均", timing: "2か月遅れで請求反映", counter: "上限付き固定プラン選択" },
+                { item: "市場価格調整額", unit: "円/kWh", factor: "JEPXスポット価格", timing: "当月〜翌月反映", counter: "市場連動回避 / ヘッジ" },
+                { item: "再エネ賦課金", unit: "円/kWh", factor: "FIT買取費用と回避可能費用の差", timing: "年1回改定（5月〜）", counter: "減免制度確認 / 自家消費" },
+                { item: "容量拠出金", unit: "円/kW or kWh", factor: "容量市場オークション約定価格", timing: "2024年度から反映開始", counter: "契約電力見直し / 需要抑制" },
+              ] as const).map((row) => (
+                <tr key={row.item} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.item}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.unit}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.factor}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.timing}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.counter}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ) : null}
+
+      {category.slug === "plan-types" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">契約メニュー×判断軸 マトリクス</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">代表的な4つの契約メニューを、単価変動・予算管理・向く業種・解約条件で横並び比較した早見表です。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">メニュー</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">単価変動</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">予算管理</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">向く業種</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">解約・更新</th>
+              </tr>
+            </thead>
+            <tbody>
+              {([
+                { plan: "固定プラン（燃調上限あり）", volatility: "小", budget: "◎", industry: "病院・公共・利益率低", cancel: "違約金あり / 期間中は固定" },
+                { plan: "固定プラン（燃調あり）", volatility: "中", budget: "○", industry: "多拠点・オフィス中心", cancel: "違約金あり" },
+                { plan: "ハイブリッド", volatility: "中", budget: "○", industry: "製造・物流（部分最適化）", cancel: "条件により異なる" },
+                { plan: "市場連動プラン", volatility: "大", budget: "△", industry: "高マージン・柔軟対応可", cancel: "比較的柔軟 / 月次変動" },
+              ] as const).map((row) => (
+                <tr key={row.plan} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.plan}</th>
+                  <td className="border border-slate-200 px-3 py-2 text-center">{row.volatility}</td>
+                  <td className="border border-slate-200 px-3 py-2 text-center">{row.budget}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.industry}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.cancel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">◎=特に向いている / ○=条件により向く / △=慎重に検討。最終判断は自社の使用実態・リスク耐性に基づいて行ってください。</p>
+        </section>
+      ) : null}
+
+      {category.slug === "benchmarks" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種×規模 相場マトリクス（目安）</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">業種別・規模別の月額電気代の目安を整理した早見表です。自社の請求書と照らし合わせて、相場からの乖離を確認できます。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">業種</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">小規模（月）</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">中規模（月）</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">大規模（月）</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主な上振れ要因</th>
+              </tr>
+            </thead>
+            <tbody>
+              {([
+                { industry: "オフィスビル", small: "10〜30万円", mid: "30〜150万円", large: "150〜800万円", factor: "空調・照明・サーバ" },
+                { industry: "小売・外食", small: "15〜50万円", mid: "50〜200万円", large: "200〜1,000万円", factor: "冷蔵・冷凍・照明" },
+                { industry: "ホテル", small: "30〜100万円", mid: "100〜500万円", large: "500〜2,000万円", factor: "空調・給湯・厨房" },
+                { industry: "病院", small: "50〜150万円", mid: "150〜800万円", large: "800〜3,000万円", factor: "医療機器・空調・24時間稼働" },
+                { industry: "食品工場", small: "50〜200万円", mid: "200〜1,500万円", large: "1,500〜8,000万円", factor: "冷蔵冷凍・生産設備" },
+                { industry: "物流倉庫", small: "30〜100万円", mid: "100〜500万円", large: "500〜3,000万円", factor: "冷凍冷蔵・照明・マテハン" },
+                { industry: "データセンター", small: "—", mid: "500〜3,000万円", large: "3,000万円〜数億円", factor: "サーバ・冷却（PUE）" },
+              ] as const).map((row) => (
+                <tr key={row.industry} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.industry}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.small}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.mid}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.large}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.factor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">※ 2026年4月時点の目安。契約区分（高圧/特別高圧/低圧）・稼働時間・地域で変動します。</p>
+        </section>
+      ) : null}
+
+      {category.slug === "subsidies" ? (
+        <section className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">対象設備×補助金 マトリクス</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">設備カテゴリごとに、活用できる主要補助金を一覧化。公募時期は年度により変動するため、各公式サイトで最新情報を確認してください。</p>
+          <table className="mt-4 min-w-[760px] w-full border-collapse text-sm leading-6 text-slate-700">
+            <thead>
+              <tr className="bg-slate-50 text-slate-900">
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">対象設備</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主要補助金</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">補助率目安</th>
+                <th className="border border-slate-200 px-3 py-2 text-left font-semibold">公募時期（目安）</th>
+              </tr>
+            </thead>
+            <tbody>
+              {([
+                { target: "省エネ設備更新", subsidy: "SII省エネ補助金 / 中小企業経営強化税制", rate: "1/2〜 / 税制", period: "春・秋" },
+                { target: "太陽光（自家消費）", subsidy: "需要家主導型PPA / ストレージパリティ", rate: "1/3〜1/2", period: "春" },
+                { target: "蓄電池", subsidy: "レジリエンス強化型蓄電池 / ストレージパリティ", rate: "1/3〜", period: "春" },
+                { target: "EV充電", subsidy: "CEV補助金 / 自治体別", rate: "1/2〜", period: "通年（枠がなくなり次第終了）" },
+                { target: "BEMS/FEMS/EMS", subsidy: "SII省エネ補助金 / GXサプライチェーン", rate: "1/2〜2/3", period: "春・秋" },
+                { target: "脱炭素経営（計画〜設備）", subsidy: "SHIFT事業", rate: "1/2〜2/3", period: "春〜夏" },
+                { target: "DR・VPP", subsidy: "DR補助金 / VPP補助金", rate: "1/2", period: "随時" },
+              ] as const).map((row) => (
+                <tr key={row.target} className="align-top">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.target}</th>
+                  <td className="border border-slate-200 px-3 py-2">{row.subsidy}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.rate}</td>
+                  <td className="border border-slate-200 px-3 py-2">{row.period}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-3 text-xs text-slate-500">最終確認日: 2026-04-18 / 最新情報は<a href="/downloads" className="text-sky-700 underline-offset-2 hover:underline">補助金カレンダー（CSV）</a>と各公式サイトで確認してください。</p>
+        </section>
+      ) : null}
+
+      {category.slug === "industry-guide" ? (
+        <section className="mt-6 rounded-xl border border-sky-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別ハブ｜中分類から読み始める</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            本カテゴリは業種別の見直しポイントを横串で並べたランディングです。まずは自社に近い業種の中分類ハブを開き、そこから個別業種記事に進むと見通しがよくなります。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {INDUSTRY_MIDDLE_CATEGORIES.map((middle) => (
+              <Link
+                key={middle.slug}
+                href={`/articles/by-industry/${middle.slug}`}
+                className="rounded-lg border border-slate-200 bg-slate-50 p-3 transition hover:bg-sky-50"
+              >
+                <p className="text-sm font-semibold text-slate-900">{middle.name}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-600">{middle.shortDescription}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-5">
+            <h3 className="text-base font-semibold text-slate-900">業種×契約プラン適性マトリクス（目安）</h3>
+            <p className="mt-1 text-xs leading-5 text-slate-600">負荷パターンと料金感度から、業種別の向き不向きをまとめた早見表です。最終判断は自社の使用実態・予算方針に基づいて行ってください。</p>
+            <div className="mt-3 overflow-x-auto">
+              <table className="min-w-[680px] w-full border-collapse text-sm leading-6 text-slate-700">
+                <thead>
+                  <tr className="bg-slate-50 text-slate-900">
+                    <th className="border border-slate-200 px-3 py-2 text-left font-semibold">業種分類</th>
+                    <th className="border border-slate-200 px-3 py-2 text-left font-semibold">固定プラン</th>
+                    <th className="border border-slate-200 px-3 py-2 text-left font-semibold">市場連動</th>
+                    <th className="border border-slate-200 px-3 py-2 text-left font-semibold">主な設備対策</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {([
+                    { name: "オフィス・公共系", fixed: "◎", market: "△", equipment: "LED・空調最適化" },
+                    { name: "商業系（小売・外食）", fixed: "◎", market: "△", equipment: "冷凍冷蔵・照明・蓄電池" },
+                    { name: "宿泊・レジャー系", fixed: "○", market: "△", equipment: "空調・給湯・蓄電池" },
+                    { name: "医療・福祉系", fixed: "◎", market: "×", equipment: "BCP蓄電池・非常用電源" },
+                    { name: "製造業", fixed: "○", market: "○", equipment: "デマンド制御・FEMS・自家消費太陽光" },
+                    { name: "物流・インフラ系", fixed: "○", market: "○", equipment: "冷凍冷蔵・EV充電・蓄電池" },
+                    { name: "IT・テクノロジー系", fixed: "○", market: "○", equipment: "冷却最適化・PUE改善" },
+                    { name: "農業・一次産業系", fixed: "○", market: "△", equipment: "太陽光・揚水制御・蓄熱" },
+                  ] as const).map((row) => (
+                    <tr key={row.name} className="align-top">
+                      <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">{row.name}</th>
+                      <td className="border border-slate-200 px-3 py-2 text-center">{row.fixed}</td>
+                      <td className="border border-slate-200 px-3 py-2 text-center">{row.market}</td>
+                      <td className="border border-slate-200 px-3 py-2">{row.equipment}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-slate-500">◎=特に向いている / ○=条件により向く / △=慎重に検討 / ×=原則非推奨</p>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {category.slug === "price-trends" || category.slug === "market-data" ? (
+        <section className="mt-6 rounded-xl border border-amber-200 bg-amber-50/60 p-5">
+          <h2 className="text-base font-semibold text-slate-900">2つのデータ系カテゴリの使い分け</h2>
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            <div className={`rounded-lg border p-3 ${category.slug === "price-trends" ? "border-sky-400 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-sky-700">本カテゴリ：電気料金の推移と高止まり</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">年次・定性解説（マクロ）</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">年度別・契約区分別の単価推移、補助金要因を除いた見方、制度変化の背景など、長期・制度視点での定性的な解説。</p>
+              {category.slug !== "price-trends" ? (
+                <Link href="/articles/price-trends" className="mt-2 inline-flex text-xs font-semibold text-sky-700 underline-offset-2 hover:underline">
+                  推移と高止まりのカテゴリを見る →
+                </Link>
+              ) : null}
+            </div>
+            <div className={`rounded-lg border p-3 ${category.slug === "market-data" ? "border-sky-400 bg-white" : "border-slate-200 bg-white/60"}`}>
+              <p className="text-xs font-semibold text-sky-700">本カテゴリ：データで見る電力市場</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">30分値・定量分析（ミクロ）</p>
+              <p className="mt-1 text-xs leading-5 text-slate-700">JEPX30分値・気象データ・需給・スプレッドなど、日内変動や因果チェーンをデータで可視化する定量分析。</p>
+              {category.slug !== "market-data" ? (
+                <Link href="/articles/market-data" className="mt-2 inline-flex text-xs font-semibold text-sky-700 underline-offset-2 hover:underline">
+                  市場データのカテゴリを見る →
+                </Link>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {category.slug === "review-points" ? (
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">見直し実務の4ステップ</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700">
+            40本近い記事を、実務の流れ順に4ステップで整理しました。着手段階に応じて該当ステップから読み進めると、抜け漏れを防げます。
+          </p>
+          <div className="mt-4 grid gap-3 lg:grid-cols-2">
+            {REVIEW_POINTS_STEP_GROUPS.map((group) => {
+              const groupArticles = getArticlesBySlugs(group.slugs);
+              return (
+                <section key={group.step} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-base font-semibold text-slate-900">{group.label}</h3>
+                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-sky-700">
+                      {groupArticles.length}本
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">{group.description}</p>
+                  <ol className="mt-3 space-y-1.5 text-sm leading-6 text-slate-700">
+                    {groupArticles.slice(0, 6).map((article) => (
+                      <li key={article.slug}>
+                        <Link href={`/${article.slug}`} className="text-sky-700 underline-offset-2 hover:underline">
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                  {groupArticles.length > 6 ? (
+                    <p className="mt-2 text-xs text-slate-500">ほか{groupArticles.length - 6}本（下部の記事一覧で確認できます）</p>
+                  ) : null}
+                </section>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
 
       {category.slug === "power-procurement" ? (
         <>
@@ -539,18 +1020,48 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
                   </span>
                 </div>
               ) : null}
+              {category.slug === "review-points" && REVIEW_POINTS_STEP_BY_SLUG[article.slug] ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
+                    {REVIEW_POINTS_STEP_BY_SLUG[article.slug]}
+                  </span>
+                </div>
+              ) : null}
               <h3 className="text-lg font-semibold text-slate-900">
                 <Link href={`/${article.slug}`} className="underline-offset-2 hover:underline">
                   {article.title}
                 </Link>
               </h3>
               <p className="mt-2 text-sm leading-7 text-slate-700">{article.description}</p>
-              <Link
-                href={`/${article.slug}`}
-                className="mt-4 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
-              >
-                詳しく見る
-              </Link>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="text-xs text-slate-500">最終更新日: {article.publishedAt}</span>
+                {article.lastVerifiedAt ? (
+                  <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">
+                    最終確認: {article.lastVerifiedAt}
+                  </span>
+                ) : null}
+                {article.applicationDeadline ? (
+                  <span className="rounded-full bg-amber-50 px-2 py-0.5 text-xs font-semibold text-amber-800">
+                    公募期限: {article.applicationDeadline}
+                  </span>
+                ) : null}
+                {article.taxYear ? (
+                  <span className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-semibold text-indigo-700">
+                    {article.taxYear}対応
+                  </span>
+                ) : null}
+                {article.dataCoverage ? (
+                  <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700">
+                    データ: {article.dataCoverage}
+                  </span>
+                ) : null}
+                <Link
+                  href={`/${article.slug}`}
+                  className="inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline"
+                >
+                  詳しく見る
+                </Link>
+              </div>
             </article>
           ))}
         </div>
@@ -661,6 +1172,62 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
           "monthly-review": [
             { slug: "price-trends", name: "電気料金の推移と高止まり", reason: "毎月の動向と合わせて、中長期の価格推移も確認しましょう" },
             { slug: "risk-scenarios", name: "リスクシナリオ別に知る", reason: "月次データから浮かび上がるリスクシナリオも想定しましょう" },
+          ],
+          decarbonization: [
+            { slug: "corporate-ppa", name: "コーポレートPPA", reason: "再エネ電力の長期調達手段として、3形態のPPAを比較しましょう" },
+            { slug: "for-executives", name: "経営層・CFO向け", reason: "Scope2・ESG開示は経営層の意思決定と直結します" },
+          ],
+          "corporate-ppa": [
+            { slug: "decarbonization", name: "脱炭素・GX対応", reason: "PPAの環境価値をScope2・GX-ETS対応につなげましょう" },
+            { slug: "contract-legal", name: "契約書・約款の読み方", reason: "10〜20年の長期契約は契約条項の確認が重要です" },
+          ],
+          "energy-dx": [
+            { slug: "energy-equipment", name: "蓄電池・太陽光・DRを知る", reason: "EMS・AI最適化と設備対策を組み合わせた削減効果を確認しましょう" },
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "エネマネ・DX投資で活用できる補助金を確認しましょう" },
+          ],
+          "energy-bcp": [
+            { slug: "emergency-response", name: "緊急対応・トラブル解決", reason: "平時の備えに加え、発生時の初動手順も押さえましょう" },
+            { slug: "energy-equipment", name: "蓄電池・太陽光・DRを知る", reason: "BCP兼用の蓄電池活用で平時の電気代削減にもつながります" },
+          ],
+          "sme-guide": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "低圧契約でも使える見直し手順を確認しましょう" },
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "中小企業向けの省エネ補助金を活用しましょう" },
+          ],
+          "accounting-tax": [
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "税制優遇と補助金の併用で投資負担を圧縮できます" },
+            { slug: "ma-organizational-change", name: "M&A・組織再編時の電力契約", reason: "事業譲渡時の按分処理・名義変更と連動する論点です" },
+          ],
+          glossary: [
+            { slug: "basic", name: "基礎から知る", reason: "用語を押さえたら、料金構造の基礎にも戻って確認しましょう" },
+            { slug: "faq", name: "FAQ集（よくある質問）", reason: "用語と合わせてよくある質問も確認すると理解が深まります" },
+          ],
+          faq: [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "FAQで疑問を解消したら、実際の見直し手順に進みましょう" },
+            { slug: "glossary", name: "用語集", reason: "回答で登場する専門用語の意味を用語集で確認しましょう" },
+          ],
+          "regulation-timeline": [
+            { slug: "price-increase", name: "料金が上がる理由を知る", reason: "制度改正と料金上昇要因を合わせて理解しましょう" },
+            { slug: "power-procurement", name: "電力調達の仕組みを知る", reason: "制度の背景にある調達構造も確認すると理解が深まります" },
+          ],
+          "ev-charging": [
+            { slug: "energy-equipment", name: "蓄電池・太陽光・DRを知る", reason: "EV充電設備と蓄電池・V2Hの組み合わせを検討しましょう" },
+            { slug: "subsidies", name: "補助金・助成金を知る", reason: "EV・充電インフラ向けの補助金を活用しましょう" },
+          ],
+          "contract-legal": [
+            { slug: "review-points", name: "見直しポイントを知る", reason: "契約条項を押さえたら、実際の見直し手順に進みましょう" },
+            { slug: "emergency-response", name: "緊急対応・トラブル解決", reason: "契約トラブル発生時の初動も確認しておきましょう" },
+          ],
+          "ma-organizational-change": [
+            { slug: "for-executives", name: "経営層・CFO向け", reason: "M&A電力DDは経営判断と直結します" },
+            { slug: "contract-legal", name: "契約書・約款の読み方", reason: "契約承継・名義変更では約款条項の確認が重要です" },
+          ],
+          "global-energy": [
+            { slug: "decarbonization", name: "脱炭素・GX対応", reason: "グローバル拠点の再エネ調達と脱炭素開示を合わせて整理しましょう" },
+            { slug: "datacenter-ai-demand", name: "データセンター・AI需要", reason: "グローバル電力需要とAI需要の動向を合わせて確認しましょう" },
+          ],
+          "datacenter-ai-demand": [
+            { slug: "corporate-ppa", name: "コーポレートPPA", reason: "ハイパースケーラーのRE100調達は長期PPAが中心です" },
+            { slug: "market-data", name: "データで見る電力市場", reason: "AI需要の影響をJEPX価格・エリア需要で確認しましょう" },
           ],
         };
         const nextCategories = nextCategoryMap[category.slug];

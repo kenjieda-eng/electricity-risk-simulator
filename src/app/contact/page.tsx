@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/contact",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -108,8 +108,70 @@ export const metadata: Metadata = {
   },
 };
 
+// --- 来訪元ラベル（searchParams.from の値→表示名） ---
+const sourceLabels: Record<string, string> = {
+  "compare-result-primary": "シミュレーター結果ページ（/compare）",
+  "compare-result-footer": "シミュレーター結果ページ（/compare）",
+  compare: "シミュレーター結果ページ（/compare）",
+  "simulate-result": "シミュレーター結果ページ（/simulate）",
+  benchmark: "業種×規模 ベンチマーク（/benchmark）",
+  journey: "一気通貫ジャーニー（/journey）",
+  concierge: "AIコンシェルジュ（/concierge）",
+  article: "解説記事ページ",
+};
+
+// --- 契約区分・地域の日本語化（query params 受け渡し用） ---
+const contractTypeLabels: Record<string, string> = {
+  low: "低圧",
+  high: "高圧",
+  special: "特別高圧",
+};
+
+const regionLabels: Record<string, string> = {
+  hokkaido: "北海道",
+  tohoku: "東北",
+  "kita-kanto": "北関東",
+  shutoken: "首都圏",
+  tokyo: "東京",
+  hokuriku: "北陸",
+  chubu: "中部",
+  kansai: "関西",
+  chugoku: "中国",
+  shikoku: "四国",
+  kyushu: "九州",
+  okinawa: "沖縄",
+};
+
+type ContactSearchParams = Promise<{
+  from?: string;
+  risk_label?: string;
+  risk_score?: string;
+  contract_type?: string;
+  region?: string;
+  diff_rate?: string;
+  result_id?: string;
+}>;
+
 // --- Page Component ---
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams?: ContactSearchParams;
+}) {
+  const params = (await searchParams) ?? {};
+  const fromSource = params.from ?? null;
+  const hasContext = Boolean(
+    fromSource || params.risk_label || params.risk_score || params.contract_type,
+  );
+  const fromLabel = fromSource ? sourceLabels[fromSource] ?? fromSource : null;
+  const contractTypeLabel = params.contract_type
+    ? contractTypeLabels[params.contract_type] ?? params.contract_type
+    : null;
+  const regionLabel = params.region
+    ? regionLabels[params.region] ?? params.region
+    : null;
+  const riskScoreNum = params.risk_score ? Number(params.risk_score) : null;
+
   return (
     <>
       <ArticleJsonLd
@@ -124,6 +186,71 @@ export default function ContactPage() {
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+      {/* シミュレーター結果からの遷移時の文脈バナー */}
+      {hasContext ? (
+        <aside
+          className="mb-5 rounded-xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-white p-5"
+          aria-label="診断結果の引き継ぎ情報"
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex rounded-full bg-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+              シミュレーター結果を引き継ぎ中
+            </span>
+            {fromLabel ? (
+              <span className="text-xs text-slate-600">来訪元: {fromLabel}</span>
+            ) : null}
+          </div>
+          <h2 className="mt-3 text-lg font-semibold text-slate-900">
+            診断結果を踏まえて、専門スタッフがご相談に対応します
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-slate-700">
+            下記の入力・診断結果を前提として、お問い合わせフォームでの補足は最低限で構いません。
+            担当者が内容を確認のうえ、折り返しご連絡いたします。
+          </p>
+          <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            {params.risk_label ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">リスクラベル</dt>
+                <dd className="mt-0.5 font-semibold text-slate-900">{params.risk_label}</dd>
+              </div>
+            ) : null}
+            {riskScoreNum !== null && !Number.isNaN(riskScoreNum) ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">リスクスコア</dt>
+                <dd className="mt-0.5 font-semibold text-slate-900">{Math.round(riskScoreNum)} / 100</dd>
+              </div>
+            ) : null}
+            {contractTypeLabel ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">契約区分</dt>
+                <dd className="mt-0.5 font-semibold text-slate-900">{contractTypeLabel}</dd>
+              </div>
+            ) : null}
+            {regionLabel ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">地域</dt>
+                <dd className="mt-0.5 font-semibold text-slate-900">{regionLabel}</dd>
+              </div>
+            ) : null}
+            {params.diff_rate ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">プラン差分率</dt>
+                <dd className="mt-0.5 font-semibold text-slate-900">{params.diff_rate}%</dd>
+              </div>
+            ) : null}
+            {params.result_id ? (
+              <div className="rounded-lg border border-slate-200 bg-white px-3 py-2">
+                <dt className="text-xs font-semibold text-slate-500">結果ID</dt>
+                <dd className="mt-0.5 break-all font-mono text-xs text-slate-700">{params.result_id}</dd>
+              </div>
+            ) : null}
+          </dl>
+          <p className="mt-4 text-xs text-slate-600">
+            ※ 結果IDをお問い合わせ時にお伝えいただくと、担当者がより迅速にシミュレーション条件を確認できます。
+          </p>
+        </aside>
+      ) : null}
+
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">

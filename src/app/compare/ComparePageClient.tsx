@@ -18,6 +18,7 @@ import {
 import { Bar, Line } from "react-chartjs-2";
 import { getRiskLabel } from "../../lib/riskScore";
 import { trackEvent } from "../../lib/analytics/ga";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
 
@@ -1019,6 +1020,23 @@ function ComparePageContent() {
         </div>
       </section>
 
+      {/* 問い合わせ導線：結果直下の主要CTA（Sprint 1 S1-09 / DECISIONS.md 2026-04-18） */}
+      <ContactCtaCard
+        source="compare-result-primary"
+        variant="primary"
+        heading="この結果をもとに専門家に相談する"
+        description="上の診断結果に基づいた契約見直しの論点整理や、社内説明・稟議資料の作成支援までお手伝いします。シミュレーション結果は相談窓口にそのまま引き継がれます。"
+        ctaLabel="専門家に相談する（無料）"
+        context={{
+          riskLabel: compareData?.output.risk_label ?? null,
+          riskScore: compareData?.output.risk_score ?? null,
+          contractType: compareData?.input.contract_type ?? null,
+          region: compareData?.input.region ?? null,
+          diffRate: compareData?.output.diff_rate ?? null,
+          resultId: compareData?.id ?? null,
+        }}
+      />
+
       <section className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
         <h2 className="text-base font-semibold uppercase tracking-[0.08em] text-slate-500">
           年間シミュレーショングラフ
@@ -1094,6 +1112,15 @@ function ComparePageContent() {
           </button>
         </div>
       </section>
+
+      {/* 問い合わせ導線：ページ下部のセカンダリCTA（読了後の最終接点） */}
+      <ContactCtaCard
+        source="compare-result-footer"
+        variant="secondary"
+        heading="専門家への相談で、次の一歩を明確に"
+        description="結果の読み解き、社内説明、契約切替までを一緒に整理します。初回相談は無料です。"
+        ctaLabel="相談する"
+      />
 
     </main>
   );

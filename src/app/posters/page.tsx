@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import PrintButton from "../../components/market-data/PrintButton";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "現場掲示用ポスター集｜停電時対応・節電・BCP";
 const pageDescription = "従業員の現場掲示用ポスターを集約。停電30分行動・節電チェック・BCP連絡網など、印刷してすぐ使えるA4サイズ。";
@@ -9,7 +10,7 @@ const pageUrl = "https://simulator.eic-jp.org/posters";
 
 export const metadata: Metadata = {
   title: pageTitle, description: pageDescription, alternates: { canonical: pageUrl },
-  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人向け電気料金上昇、高騰リスクシミュレーター", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
+  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人電気料金ナビ", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/twitter-default.png"] },
 };
 
@@ -79,6 +80,15 @@ export default function Page() {
             <li>PDFとして保存後、社内共有ドライブに配布も可</li>
           </ol>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

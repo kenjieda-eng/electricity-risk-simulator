@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "インフォグラフィック集｜電気料金・脱炭素 1枚で理解する図解";
 const pageDescription = "電気料金構造、Scope2算定フロー、PPA形態比較、容量市場、需給ひっ迫対応など、複雑なテーマを1枚の図解で整理したインフォグラフィック集。社内資料・SNS用にダウンロード可能。";
@@ -8,7 +9,7 @@ const pageUrl = "https://simulator.eic-jp.org/infographics";
 
 export const metadata: Metadata = {
   title: pageTitle, description: pageDescription, alternates: { canonical: pageUrl },
-  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人向け電気料金上昇、高騰リスクシミュレーター", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
+  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人電気料金ナビ", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/twitter-default.png"] },
 };
 
@@ -122,6 +123,15 @@ export default function Page() {
           </ul>
           <p className="mt-3 text-xs text-slate-500">※ 高解像度PDF/SVGダウンロードは順次公開予定。本ページのSVGはブラウザで右クリック→「画像を保存」で取得可能。</p>
         </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

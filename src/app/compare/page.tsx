@@ -4,18 +4,18 @@ import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import ComparePageClient from "./ComparePageClient";
 
 export const metadata: Metadata = {
-  title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+  title: "固定プランと市場連動プランの比較 | 法人電気料金ナビ",
   description:
     "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
   alternates: {
     canonical: "https://simulator.eic-jp.org/compare",
   },
   openGraph: {
-    title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "固定プランと市場連動プランの比較 | 法人電気料金ナビ",
     description:
       "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
     url: "https://simulator.eic-jp.org/compare",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
         url: "/ogp-default.png",
         width: 1200,
         height: 630,
-        alt: "法人向け電気料金上昇、高騰リスクシミュレーター",
+        alt: "法人電気料金ナビ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "固定プランと市場連動プランの比較 | 法人向け電気料金上昇、高騰リスクシミュレーター",
+    title: "固定プランと市場連動プランの比較 | 法人電気料金ナビ",
     description:
       "法人向けに、固定プランと市場連動プランの特徴や、電気料金上昇・高騰リスクの違い、電気代と電気料金への影響を比較できるページです。",
     images: ["/twitter-default.png"],

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { SITE_NAME } from "../lib/siteConfig";
 
-const siteTitle = "法人向け電気料金上昇・高騰リスクシミュレーター";
+const siteTitle = SITE_NAME;
 
 const siteDescription =
   "法人・企業・自治体向けに、電気料金の上昇リスク診断、契約メニュー比較、料金プラン見直し、業種別の対策、月次動向の振り返りまで、実務で使える情報を公開しています。運営は一般社団法人エネルギー情報センターです。";
@@ -11,6 +12,12 @@ const primaryPageLinks = [
   { href: "/simulate", label: "電気料金上昇リスクを診断する" },
   { href: "/how-to", label: "シミュレーターの使い方" },
   { href: "/compare", label: "料金メニュー比較・診断" },
+  { href: "/benchmark", label: "業種×規模 ベンチマークツール" },
+  { href: "/journey", label: "一気通貫ジャーニー（読む→行動）" },
+  { href: "/concierge", label: "AI コンシェルジュ（横断検索）" },
+  { href: "/knowledge-graph", label: "ナレッジグラフ" },
+  { href: "/downloads", label: "ダウンロード素材" },
+  { href: "/data-freshness", label: "データ鮮度ダッシュボード" },
   { href: "/articles", label: "解説ページ一覧" },
   { href: "/business-electricity-retrospective", label: "法人電気料金振り返り" },
   { href: "/special/emergency-scenario-analysis", label: "有事シナリオ分析 特集" },
@@ -50,6 +57,7 @@ const categoryPracticeLinks = [
 
 // --- 解説カテゴリ：新領域・特集 ---
 const categoryAdvancedLinks = [
+  { href: "/articles/market-data", label: "データで見る電力市場" },
   { href: "/articles/decarbonization", label: "脱炭素・GX対応" },
   { href: "/articles/corporate-ppa", label: "コーポレートPPA" },
   { href: "/articles/energy-dx", label: "エネルギーマネジメント・DX" },

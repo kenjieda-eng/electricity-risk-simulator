@@ -10,6 +10,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/businessElectricityTrendHubData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "電気の価格はどう決まるのか｜JEPX価格の決まり方";
 const pageDescription =
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: pageUrl,
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -271,6 +272,15 @@ export default function HowElectricityPricesAreDeterminedPage() {
       <div className="mt-6">
         <CategoryNextStepCta slug="how-electricity-prices-are-determined" />
       </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );

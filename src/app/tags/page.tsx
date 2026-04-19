@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "タグ一覧｜法人向け電気料金・脱炭素・契約 横串タグハブ";
 const pageDescription = "電気料金・脱炭素・PPA・BEMS・補助金などのタグから、関連記事を横串で発見できます。";
@@ -8,7 +9,7 @@ const pageUrl = "https://simulator.eic-jp.org/tags";
 
 export const metadata: Metadata = {
   title: pageTitle, description: pageDescription, alternates: { canonical: pageUrl },
-  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人向け電気料金上昇、高騰リスクシミュレーター", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
+  openGraph: { title: pageTitle, description: pageDescription, url: pageUrl, siteName: "法人電気料金ナビ", locale: "ja_JP", type: "website", images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: pageTitle }] },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: ["/twitter-default.png"] },
 };
 
@@ -72,6 +73,15 @@ export default function TagsPage() {
             </section>
           ))}
         </div>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
       </main>
     </>
   );

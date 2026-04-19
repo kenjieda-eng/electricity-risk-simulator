@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: data.pageTitle,
       description: data.pageDescription,
       url,
-      siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+      siteName: "法人電気料金ナビ",
       locale: "ja_JP",
       type: "article",
       images: [

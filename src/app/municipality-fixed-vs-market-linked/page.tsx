@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["plan-types"];
 
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://simulator.eic-jp.org/municipality-fixed-vs-market-linked",
-    siteName: "法人向け電気料金上昇、高騰リスクシミュレーター",
+    siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
     images: [
@@ -283,7 +284,7 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2022年以降の電力価格の動きについては{" "}
             <Link
-              href="/electricity-price-history-2022"
+              href="/electricity-price-trend-2019-2025"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               電気料金の推移と高止まり
@@ -360,6 +361,15 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
           ]}
         />
       </section>
+      <div className="mt-8">
+        <ContactCtaCard
+          source="article"
+          variant="secondary"
+          heading="電力コストの見直し、専門家に相談しませんか？"
+          description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+        />
+      </div>
+
     </main>
     </>
   );
