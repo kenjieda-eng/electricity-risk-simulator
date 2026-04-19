@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HeaderSearch from "./search/HeaderSearch";
+import { trackEvent } from "../lib/analytics/ga";
 
 type HeaderLink = {
   href: string;
@@ -112,6 +113,13 @@ export function PublicHeader() {
                     href={link.href}
                     className={`${baseClass} ${isContactLink ? contactClass : normalClass}`}
                     aria-current={active ? "page" : undefined}
+                    onClick={() =>
+                      trackEvent("nav_click", {
+                        link_href: link.href,
+                        link_label: link.label,
+                        from_page: pathname,
+                      })
+                    }
                   >
                     {hasIcon && link.iconSrc ? (
                       <Image

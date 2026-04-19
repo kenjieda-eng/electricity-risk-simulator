@@ -506,6 +506,12 @@ export default function HomePageClient() {
       }
       const riskScore = data.riskScore ?? riskScoreResult.score;
       const riskLabel = data.riskLabel ?? riskScoreResult.label;
+      trackEvent("simulation_complete", {
+        contract_type: state.contractType,
+        region: state.region,
+        risk_score: riskScore,
+        risk_label: riskLabel,
+      });
       const selectedStressKeys = Object.entries(state.stress)
         .filter(([, isSelected]) => isSelected)
         .map(([key]) => key)
