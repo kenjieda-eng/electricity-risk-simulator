@@ -20,9 +20,9 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "燃料費調整額（燃調費）とは｜仕組み・計算式・2018〜2026年度の推移を徹底解説";
+const pageTitle = "燃料費調整額と市場価格調整額の違い｜仕組み・計算式・2018〜2026年度の推移";
 const pageDescription =
-  "燃料費調整額（燃調費）の仕組み、LNG・原油・石炭CIF価格との関係、計算式、2018〜2026年度の推移、2022年の急騰、激変緩和措置（補助金）の影響まで、実データとグラフで解説します。";
+  "燃料費調整額と市場価格調整額の違いを実務者向けに整理。仕組み・計算式・2018〜2026年度の推移・2022年の急騰・激変緩和措置の影響まで、実データとグラフで比較解説します。";
 const pageUrl = "https://simulator.eic-jp.org/fuel-cost-adjustment";
 
 export const metadata: Metadata = {
@@ -77,14 +77,13 @@ export default function FuelCostAdjustmentPage() {
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">燃料費調整額（燃調費）とは</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">燃料費調整額と市場価格調整額の違い</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          燃料費調整額（燃調費）は、発電用燃料である LNG・原油・石炭の価格変動を電気料金に反映する仕組みです。
-          月ごとに単価が変わるため、同じ使用量でも請求額が毎月変動する主な原因になります。
+          <strong>結論：燃料費調整額は「LNG・原油・石炭のCIF価格に自動連動する公式単価」、市場価格調整額は「JEPXスポット市場価格に連動する小売事業者ごとの独自単価」です。</strong>
+          両者は似て見えますが、連動する指標も改定ルールも法的位置づけも異なります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、燃調費の計算式、貿易統計 CIF 価格との関係、2018〜2026 年度の推移、
-          2022 年ウクライナ危機時の急騰、激変緩和措置（電気料金値引き補助金）の影響までを、実データとグラフで整理します。
+          このページでは、燃料費調整額（燃調費）の計算式、貿易統計 CIF 価格との関係、2018〜2026 年度の推移、2022 年ウクライナ危機時の急騰、激変緩和措置（電気料金値引き補助金）の影響を実データで解説し、後半で <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額（市場連動プラン）との違い</Link> を比較表で整理します。
         </p>
       </header>
 

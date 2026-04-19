@@ -16,9 +16,9 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
 
 const pageTitle =
-  "法人の電力契約見直しは何から始めるべきか｜5ステップと優先度判断の考え方";
+  "高圧電力の見直しはどこから始める？｜法人向け5ステップと優先度判断";
 const pageDescription =
-  "法人向け電力契約の見直し手順を5ステップで解説。請求書収集から見積比較・切替判断まで所要時間と担当部署を整理し、優先度判断マトリクスで着手タイミングを明確にします。";
+  "高圧・特別高圧の法人電力契約の見直しを、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで解説。所要時間・担当部署・優先度マトリクスで、何から着手すべきかが明確になります。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -205,13 +205,18 @@ export default function HowToStartElectricityContractReviewPage() {
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          法人の電力契約見直しは何から始めるべきか
+          高圧電力の見直しはどこから始める？法人向け5ステップ
         </h1>
         <p className="mt-1 text-sm text-slate-500">
-          5ステップと優先度判断の考え方
+          請求書収集 → 契約条件確認 → 使用量整理 → 複数社見積 → 切替判断
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          見直し担当者に最初に必要なのは、完璧な比較資料ではなく全体の進め方です。順序を誤ると、資料不足や社内調整不足で途中停止しやすくなります。このページでは請求書確認から切替判断まで5ステップで整理し、着手優先度の判断基準と最初にやってはいけないことも解説します。
+          <strong>結論から言うと、高圧・特別高圧の電力契約見直しは「請求書3か月分の収集」から始めます。</strong>
+          比較作業を先に進めたくなりますが、請求書・契約書・使用量のデータがそろわない状態では見積依頼の前提条件が不揃いになり、判断が誤りやすくなります。
+        </p>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          このページでは、高圧電力の見直しを5ステップで整理し、各ステップの所要時間・担当部署・優先度判断マトリクスまで網羅します。
+          「何から手をつけていいかわからない」状態から抜け出すための最短ルートです。
         </p>
       </header>
 
