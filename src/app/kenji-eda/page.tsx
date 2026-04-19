@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
@@ -148,12 +148,52 @@ export const metadata: Metadata = {
 export default function KenjiEdaProfilePage() {
   return (
     <>
-      <ArticleJsonLd
-        headline="江田健二 プロフィール｜一般社団法人エネルギー情報センター 理事"
-        description="一般社団法人エネルギー情報センター理事・江田健二のプロフィール。エネルギー・デジタル化・脱炭素化分野での執筆・講演活動、経歴、所属団体、著書、受賞歴などを紹介します。"
-        url="https://simulator.eic-jp.org/kenji-eda"
-        datePublished="2026-04-17"
-        breadcrumbItems={[
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "江田健二",
+            alternateName: "Kenji Eda",
+            url: "https://simulator.eic-jp.org/kenji-eda",
+            image: "https://simulator.eic-jp.org/kenji-eda.png",
+            jobTitle: "理事",
+            worksFor: [
+              {
+                "@type": "Organization",
+                name: "一般社団法人エネルギー情報センター",
+                url: "https://eic-jp.org/",
+              },
+              {
+                "@type": "Organization",
+                name: "RAUL株式会社",
+                url: "https://www.ra-ul.com/",
+              },
+            ],
+            alumniOf: {
+              "@type": "CollegeOrUniversity",
+              name: "慶應義塾大学",
+            },
+            award: "第39回 エネルギーフォーラム賞 普及啓発賞（2019年）",
+            knowsAbout: [
+              "電力・エネルギー市場",
+              "法人向け電気料金",
+              "脱炭素・GX",
+              "エネルギーDX",
+              "ブロックチェーン",
+            ],
+            sameAs: [
+              "https://news.yahoo.co.jp/users/expert/edakenjiex/articles?page=1",
+              "https://ja.wikipedia.org/wiki/%E6%B1%9F%E7%94%B0%E5%81%A5%E4%BA%8C",
+              "https://www.ra-ul.com/corporate/executive",
+              "https://eic-jp.org/",
+            ],
+          }),
+        }}
+      />
+      <BreadcrumbJsonLd
+        items={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "江田健二 プロフィール" },
         ]}
@@ -339,6 +379,17 @@ export default function KenjiEdaProfilePage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">出典・関連リンク</h2>
         <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>
+            ・
+            <a
+              href="https://news.yahoo.co.jp/users/expert/edakenjiex/articles?page=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              Yahoo!ニュース エキスパートコメンテーター
+            </a>
+          </li>
           <li>
             ・
             <a
