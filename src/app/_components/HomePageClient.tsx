@@ -58,6 +58,8 @@ type ChartSeriesKey =
 
 export default function HomePageClient() {
   const router = useRouter();
+  const [simulationCount, setSimulationCount] = useState<number | null>(null);
+  const [averageRiskScore, setAverageRiskScore] = useState<number | null>(null);
   const [state, setState] = useState<InputState>({
     contractType: "",
     region: "",
@@ -87,6 +89,36 @@ export default function HomePageClient() {
   });
 
   const worstCaseRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    (async () => {
+      try {
+        const response = await fetch("/api/simulation-results/average", {
+          method: "GET",
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        const json = (await response.json()) as {
+          ok?: boolean;
+          averageRiskScore?: number | null;
+          count?: number;
+        };
+        if (!response.ok || !json.ok) return;
+        setSimulationCount(
+          typeof json.count === "number" && Number.isFinite(json.count) ? json.count : null
+        );
+        setAverageRiskScore(
+          typeof json.averageRiskScore === "number" && Number.isFinite(json.averageRiskScore)
+            ? json.averageRiskScore
+            : null
+        );
+      } catch {
+        // aborted or offline — silently skip
+      }
+    })();
+    return () => controller.abort();
+  }, []);
 
   useEffect(() => {
     try {
@@ -513,6 +545,32 @@ export default function HomePageClient() {
           使い方
         </Link>
       </header>
+
+      <section
+        aria-label="これまでの診断実施実績"
+        className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2"
+      >
+        <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
+          <p className="text-sm font-semibold text-slate-700 sm:text-base">
+            診断実施回数:{" "}
+            <span className="text-base font-bold text-slate-900 sm:text-xl">
+              {simulationCount !== null
+                ? `${simulationCount.toLocaleString("ja-JP")} 回`
+                : "-"}
+            </span>
+          </p>
+        </div>
+        <div className="rounded-lg border border-sky-200 bg-sky-50/70 px-3 py-2">
+          <p className="text-sm font-semibold text-slate-700 sm:text-base">
+            リスク平均スコア:{" "}
+            <span className="text-base font-bold text-slate-900 sm:text-xl">
+              {averageRiskScore !== null
+                ? `${averageRiskScore.toFixed(1)} / 100`
+                : "-"}
+            </span>
+          </p>
+        </div>
+      </section>
 
       <section className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
