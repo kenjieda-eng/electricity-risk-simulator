@@ -256,7 +256,8 @@ export default function CapacityContributionImpactOnBusinessPage() {
                 </div>
               </div>
               <p className="mt-3 text-xs text-slate-500">
-                ※ 容量市場の約定価格と販売電力量をもとにした概算値。実際の転嫁額は小売電気事業者の方針により異なります。
+                ※ 影響額は容量市場の約定結果（OCCTO公表）および各送配電事業者の公表データに基づく試算値です。
+                実際の影響額は契約条件・使用パターン・小売電気事業者の転嫁方針により異なります。
               </p>
             </div>
           </section>

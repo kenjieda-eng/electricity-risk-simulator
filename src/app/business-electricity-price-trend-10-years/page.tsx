@@ -24,7 +24,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
 
-const pageTitle = "電気料金 推移 10年｜法人の電気代10年推移(2016→2025)を実データで解説";
+const pageTitle = "法人の電気料金推移（10年）｜電気代の10年推移（2016→2025）を実データで解説";
 const pageDescription =
   "電気料金の推移を10年スパン（2016→2025年）で、特別高圧・高圧・低圧の実データと図表で解説。法人の電気代10年推移、2021年以降の値上がり、高止まり、2022年急騰、補助政策、再エネ賦課金、JEPX市場の影響まで整理し、契約見直しの判断材料として使える形にまとめています。";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "法人電気料金ナビ",
     locale: "ja_JP",
     type: "article",
-    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "電気料金 推移 10年｜法人の電気代の10年推移を特別高圧・高圧・低圧で見る" }],
+    images: [{ url: "/ogp-default.png", width: 1200, height: 630, alt: "法人の電気料金推移（10年）｜電気代の10年推移を特別高圧・高圧・低圧で見る" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -73,7 +73,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         datePublished="2026-04-17"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-          { name: "電気料金 推移 10年｜法人電気代の10年推移" },
+          { name: "法人の電気料金推移（10年）" },
         ]}
       faq={__CATEGORY_FAQ__}
       />
@@ -88,7 +88,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">電気料金 推移 10年｜法人の電気代の10年推移（2016→2025）</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">法人の電気料金推移（10年）｜電気代の10年推移（2016→2025）</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           <strong>結論：法人の電気料金は2016〜2020年は安定、2021年から段階的な値上げ、2022年に急騰（ウクライナ侵攻・LNG高騰）、2023年以降は激変緩和措置で見かけ上低下、2024年以降の措置縮小で再び高止まりへ——の5局面で推移しています。電気代の10年推移を通期で捉えるのがポイントです。</strong>
         </p>
@@ -132,7 +132,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         <BusinessElectricityTrendHubCharts />
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電気料金推移 10年で見える転換点（2016年以降）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">電気料金の10年推移で見える転換点（2016年以降）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             グラフだけでは要因が見えにくいため、制度・市場・国際要因を年表で重ねます。各イベントで「何が起きたか」と
             「料金を見るうえで何に効いたか」を分けて確認すると、社内説明で論点を整理しやすくなります。
@@ -292,7 +292,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">電気料金 推移 10年を読むときに注意したいこと（法人向け）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">電気料金の10年推移を読むときに注意したいこと（法人向け）</h2>
           <div className="mt-3 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
             <p>
               <span className="font-semibold text-slate-900">1) 粒度をそろえる:</span> 月次と年度を混在させる場合は、どの図がどの粒度かを分けて読みます。
