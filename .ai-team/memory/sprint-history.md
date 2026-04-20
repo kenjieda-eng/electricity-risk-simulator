@@ -115,6 +115,43 @@ GSC 再取得で効果評価後:
 
 **1 日のマージ PR 合計: 10 本**（#43〜#52）。
 
+### 深夜追加マージ PR（#53〜#56）
+
+| PR | ブランチ | 内容 | Commit |
+|---|---|---|---|
+| #53 | `chore/memory-sync-2026-04-20-night` | G: memory sync (#48〜#52 + 計測運用ルール) | `cd83f48` |
+| #54 | `tooling/psi-baseline-interval-option` | F: `scripts/psi-baseline.mjs` に `--interval` オプション追加 | `d9b015b` |
+| #55 | `perf/articles-content-visibility` | H: `/articles` の `<details>` 配下グリッドに `content-visibility: auto` 適用（PR C-1） | `fc5c9f8` |
+| #56 | `measure/psi-after-pr-c1-content-visibility` | I: PR #55 後の PSI After 計測（結論 β） | `acc8e42` |
+
+**本日の PR マージ合計: 14 本**（#43〜#56）。
+
+### PR #55（H: content-visibility）の効果判定
+
+PR #56 計測結果:
+
+| 指標 | Before（17:05 計測） | After（5 runs 中央値・外れ値除外） | 差分 |
+|---|---:|---:|---:|
+| Mobile Perf | 80 | 70 | −10（ノイズ起因と推定）|
+| Mobile LCP | 2.6s | 5.1s | +2.5s（ノイズ起因と推定） |
+| Mobile TBT | **630ms** | **309ms** | **−321ms / −51%** ✅ |
+
+**判定**: β（部分達成）、ただし **実質 α 相当**
+
+- TBT 309ms は期待レンジ下限 330ms を下回る → 施策 B 効果は明確
+- Perf/LCP の変動は `content-visibility: auto` の性質上（off-screen のみ影響、LCP 要素は above-the-fold）では説明できないため、PSI 計測ノイズと判定
+- β に留めたのは「Before 17:05 の値 80 が `--interval` なしの 1 snapshot だった」という基盤側の不確実性への誠実な留保
+
+### タスク I の最大の副次発見: Before 値も疑う
+
+タスク E の「`--runs N` 同値 = PSI API キャッシュの再返却」ルールが、**Before 側の測定値にも遡及適用**される可能性が PR #56 で判明:
+
+- 17:05 の `/articles` Before 値（Perf 80 / TBT 630ms）は `--interval` なしで取られた 1 snapshot
+- この値自体が PSI キャッシュ同値の可能性あり
+- 今後の Before/After 比較は **両側とも `--interval 60` 付き複数 runs で取った値を使う**
+
+この学びを反映し、**運用ルールに 5 項目目を追加** → `pending-tasks.md` にも記録。
+
 ### タスク E の重要な副次発見（計測運用ルール化）
 
 - `scripts/psi-baseline.mjs` の `--runs 3` で「完全同値」が返る現象は、**PSI API 内部キャッシュの再返却**であり測定の安定性を示すものではない
@@ -128,6 +165,52 @@ GSC 再取得で効果評価後:
 - primary query「燃料費調整額 市場価格調整額 違い」で現状 A-list 6 位
 - 期待: 4 週間後（2026-05-18）GSC で 3 位前後へ、月 +3〜10 clicks
 - 既存 `/fuel-cost-adjustment` / `/market-price-adjustment` の RelatedLinks 先頭に G-01 追加済み（トピックオーソリティ底上げ）
+
+### 深夜追加マージ PR（#53〜#56）
+
+| PR | ブランチ | 内容 | Commit |
+|---|---|---|---|
+| #53 | `chore/memory-sync-2026-04-20-night` | G: memory sync (#48〜#52 + 計測運用ルール 4 項目) | `cd83f48` |
+| #54 | `tooling/psi-baseline-interval-option` | F: `scripts/psi-baseline.mjs` に `--interval` オプション追加（デフォルト 60s、0 で従来動作） | `d9b015b` |
+| #55 | `perf/articles-content-visibility` | H: `/articles` の `<details>` 配下グリッド 4 箇所に `content-visibility: auto` + `contain-intrinsic-size: 800px` 適用（PR C-1） | `fc5c9f8` |
+| #56 | `measure/psi-after-pr-c1-content-visibility` | I: PR #55 後の PSI After 計測（結論 β、実質 α 相当） | `acc8e42` |
+
+**本日の PR マージ合計: 14 本**（#43〜#56）。
+
+### PR #55（H: content-visibility）効果判定（PR #56 計測結果）
+
+| 指標 | Before（17:05、1 snap） | After（5 runs 中央値・外れ値除外） | 差分 |
+|---|---:|---:|---:|
+| Mobile Perf | 80 | 70 | −10（ノイズ起因）|
+| Mobile LCP | 2.6s | 5.1s | +2.5s（ノイズ起因）|
+| Mobile TBT | **630ms** | **309ms** | **−321ms / −51%** ✅ |
+
+- **判定**: β（部分達成）、ただし **実質 α 相当**
+- TBT 309ms は期待レンジ下限 330ms を下回る → 施策 B 効果は明確
+- Perf/LCP の変動は `content-visibility: auto` の性質上（off-screen のみ影響、LCP 要素は above-the-fold）では説明できない → PSI 計測ノイズと判定
+- β に留めたのは「Before 17:05 の値 80 が `--interval` なしの 1 snapshot だった」という基盤側の不確実性への誠実な留保
+
+### タスク I の最大の副次発見: Before 値も疑う
+
+タスク E の「`--runs N` 同値 = PSI API キャッシュの再返却」ルールが、**Before 側の測定値にも遡及適用**される可能性が PR #56 で判明:
+
+- 17:05 の `/articles` Before 値（Perf 80 / TBT 630ms）は `--interval` なしで取られた 1 snapshot
+- この値自体が PSI キャッシュ同値の可能性あり
+- 今後の Before/After 比較は **両側とも `--interval 60` 付き複数 runs で取った値を使う**
+
+これを反映し、**計測運用ルールに 5 項目目を追加**:
+
+1. PR マージ後 30 分以内は PSI 計測しない
+2. `--runs N` で同値 = キャッシュ疑う（`--interval 60` 必須）
+3. 真の中央値は時刻をまたぐ
+4. 異常値 1 回で騒がない
+5. **Before 値も疑う**（Before/After 比較は両側とも `--interval 60` 付き複数 runs）
+
+### 明朝（2026-04-21）の起点
+
+- タスク J（memory 最終同期）と K（真の Before 値確立）の依頼文を `.ai-team/tasks/2026-04-21-morning/` に準備済み
+- K で `/articles` 真 TBT が 309ms 近辺なら H 効果確定（α に格上げ）
+- その後 C-2（初期件数絞り込み）/ C-3（画像 priority 再点検）/ DevTools 調査 のいずれかを起動
 
 ### 外部施策（EDA 担当、並行進行待ち）
 
