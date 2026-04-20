@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ChartData, ChartOptions } from "chart.js";
 import { monthNames, type ScenarioResult } from "../../../lib/simulator";
 import type {
@@ -46,6 +46,22 @@ export function SimulatorChart({
   seriesVisibility,
   toggleSeriesVisibility,
 }: SimulatorChartProps) {
+  // Defer chart.js chunk fetch + mount to browser idle time so it runs after
+  // hydration and first paint. Keeps LCP / TBT lower on mobile; desktop sees no
+  // perceivable change (idle fires within ~1 frame).
+  const [chartReady, setChartReady] = useState(false);
+  useEffect(() => {
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    };
+    if (typeof w.requestIdleCallback === "function") {
+      w.requestIdleCallback(() => setChartReady(true), { timeout: 800 });
+    } else {
+      const id = setTimeout(() => setChartReady(true), 200);
+      return () => clearTimeout(id);
+    }
+  }, []);
+
   const lineData = useMemo<ChartData<"line">>(
     () => ({
       labels: orderedMonths.map((month) => monthNames[month - 1]),
@@ -288,7 +304,7 @@ export function SimulatorChart({
         </label>
       </div>
       <div className="mt-3 h-[160px] w-full sm:h-[200px] lg:h-[220px] xl:h-[260px]">
-        <LineChart data={lineData} options={lineOptions} />
+        {chartReady ? <LineChart data={lineData} options={lineOptions} /> : chartLoading()}
       </div>
       <div className="mt-4">
         <h3 className="text-base font-semibold text-slate-900 sm:text-lg">毎月の電気代比較</h3>
@@ -296,7 +312,7 @@ export function SimulatorChart({
           同じ条件で見た、各月の固定プランと市場連動プランの月額比較です。
         </p>
         <div className="mt-2 h-[110px] w-full sm:h-[130px]">
-          <BarChart data={barData} options={barOptions} />
+          {chartReady ? <BarChart data={barData} options={barOptions} /> : chartLoading()}
         </div>
       </div>
     </>
