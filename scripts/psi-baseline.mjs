@@ -15,10 +15,17 @@
  *   --urls <csv>           デフォルト: "/,/compare,/articles,/how-to,/business-electricity-retrospective"
  *                          先頭スラッシュ付きパス or 完全 URL 可。
  *   --runs <n>             デフォルト 5。
+ *   --interval <秒>        runs 間の sleep 秒数（デフォルト 60）。PSI API 内部キャッシュ回避用。
+ *                          0 を指定すると従来動作（連続実行、キャッシュ返却リスクあり）。
  *   --strategy <m|d|both>  デフォルト both。
  *   --category <csv>       デフォルト "performance,accessibility,best-practices,seo"。
  *   --base <url>           デフォルト "https://simulator.eic-jp.org"。
  *   --key <string>         PSI API キー。省略時は .env.local の PSI_API_KEY、それも無ければキーなしで実行。
+ *
+ * 注: --interval 0 は PSI API 内部キャッシュによって runs が「完全同値」で返る可能性が
+ *   あります。これは測定の安定性ではなくキャッシュ起因のため、退行判定には使えません。
+ *   デフォルト 60 秒以上を推奨します（タスク E 副次発見、
+ *   .ai-team/HOME_LCP_REGRESSION_INVESTIGATION_2026-04-20.md 参照）。
  *
  * .env.local（任意）:
  *   PSI_API_KEY=xxxxxxxxxxxxxxxxx
@@ -86,6 +93,7 @@ if (!args.label) {
 const LABEL = String(args.label);
 const BASE = String(args.base || "https://simulator.eic-jp.org").replace(/\/$/, "");
 const RUNS = Math.max(1, parseInt(args.runs ?? "5", 10));
+const INTERVAL = Math.max(0, parseInt(args.interval ?? "60", 10));
 const STRATEGY_ARG = String(args.strategy || "both").toLowerCase();
 const STRATEGIES =
   STRATEGY_ARG === "mobile" ? ["mobile"] :
@@ -102,8 +110,11 @@ const PSI_API_KEY = String(args.key || env.PSI_API_KEY || "");
 const URLS = URLS_RAW.map((u) => (u.startsWith("http") ? u : BASE + u));
 const PATHS = URLS_RAW.map((u) => (u.startsWith("http") ? new URL(u).pathname : u));
 
-console.log(`[psi] label=${LABEL} runs=${RUNS} strategies=${STRATEGIES.join(",")} urls=${URLS.length}`);
+console.log(`[psi] label=${LABEL} runs=${RUNS} interval=${INTERVAL}s strategies=${STRATEGIES.join(",")} urls=${URLS.length}`);
 if (!PSI_API_KEY) console.log("[psi] no API key — running unauthenticated (rate-limited)");
+if (INTERVAL === 0) {
+  console.log("[psi] WARNING: --interval 0 may cause PSI to return cached identical results across runs. Use only for regression re-tests.");
+}
 
 // ---------------------------------------------------------------------------
 // PSI API 呼び出し（retry 付き）
@@ -192,8 +203,15 @@ async function main() {
           console.log(`FAILED: ${err.message}`);
           results[strategy][path].push(null);
         }
-        // 軽いレート制御: key ありは 1 req/s、なしは 1.5 req/s
-        await sleep(PSI_API_KEY ? 1000 : 1500);
+        const isLastRunForUrl = run === RUNS;
+        if (!isLastRunForUrl && INTERVAL > 0) {
+          // PSI 内部キャッシュを避けるため、runs 間に明示的な待機を挟む
+          console.log(`  [wait ${INTERVAL}s for cache freshness]`);
+          await sleep(INTERVAL * 1000);
+        } else {
+          // URL 間の軽いレート制御: key ありは 1 req/s、なしは 1.5 req/s
+          await sleep(PSI_API_KEY ? 1000 : 1500);
+        }
       }
     }
   }
@@ -214,6 +232,7 @@ async function main() {
   lines.push("");
   lines.push(`**API**: PageSpeed Insights v5`);
   lines.push(`**Runs per URL**: ${RUNS}（中央値採用）`);
+  lines.push(`**Interval**: ${INTERVAL}s${INTERVAL === 0 ? "（⚠️ PSI キャッシュで同値が返る可能性あり）" : ""}`);
   lines.push(`**計測対象**: \`${BASE}\``);
   lines.push(`**Categories**: ${CATEGORIES.join(", ")}`);
   lines.push("");
