@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle = "電力の入札・相見積の進め方｜自治体・公共機関向けの実務ガイド";
@@ -296,6 +297,15 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="自治体の電力入札設計、専門家に相談しませんか？"
+            description="仕様書の策定から評価基準の設計、不調時の対応策まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

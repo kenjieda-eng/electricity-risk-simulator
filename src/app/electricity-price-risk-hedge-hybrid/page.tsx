@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle = "電気料金のリスクヘッジ｜固定×市場のハイブリッド契約とは";
@@ -315,6 +316,15 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="ハイブリッド契約によるリスクヘッジ、専門家に相談しませんか？"
+            description="固定・市場連動の最適配分シミュレーションから契約設計、リスク許容度に応じたポートフォリオ構築まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

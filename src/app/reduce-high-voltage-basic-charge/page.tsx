@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "高圧電力の基本料金を下げる5つの方法｜削減効果と投資回収期間の目安";
 const pageDescription =
@@ -231,6 +232,15 @@ export default function ReduceHighVoltageBasicChargePage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="高圧電力の基本料金削減、専門家に相談しませんか？"
+            description="デマンド抑制策の優先順位づけから投資回収シミュレーション、契約電力の見直し交渉まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

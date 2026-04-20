@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle = "再エネ賦課金はいくら？2026年度の単価と法人負担の計算";
@@ -298,6 +299,15 @@ export default function RenewableEnergySurcharge2026Page() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="再エネ賦課金の影響試算、専門家に相談しませんか？"
+            description="2026年度の賦課金単価を踏まえた年間コスト増の試算から、減免制度の適用可否確認まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

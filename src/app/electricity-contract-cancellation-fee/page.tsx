@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle = "電力契約の違約金・解約金｜確認すべきポイントと相場";
@@ -299,6 +300,15 @@ export default function ElectricityContractCancellationFeePage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="解約金・違約金の条件確認、専門家に相談しませんか？"
+            description="契約書の違約金条項の読み解きから切り替え時の費用試算、交渉の進め方まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

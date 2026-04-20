@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "電力会社の切り替え手順｜法人向け完全ガイド";
 const pageDescription =
@@ -265,6 +266,15 @@ export default function HowToSwitchElectricityProviderPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電力会社の切り替え手続き、専門家に相談しませんか？"
+            description="見積もり比較から契約条件の精査、最適な切り替えタイミングの判断まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );
