@@ -12,10 +12,9 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle =
-  "猛暑で法人・企業・自治体の電気料金・電気代はどう上がる？夏の上振れリスクを解説";
+const pageTitle = "猛暑で法人の電気代はどう上がる｜夏の上振れリスクと対策";
 const pageDescription =
-  "猛暑によって法人・企業・自治体の電気料金・電気代が上がる仕組みを解説。7月〜9月の需給逼迫、市場連動プランと固定プランの違い、夏の電気代対策を整理します。";
+  "猛暑による法人の電気料金・電気代の上振れ要因を、需給逼迫・市場価格スパイク・冷房起因の kWh 増加の 3 軸で解説。市場連動プランと固定プランでの被露出度の違いまで整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,

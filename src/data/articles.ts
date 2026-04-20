@@ -46,6 +46,10 @@ export type ArticleCategory = {
   recommendedReadingOrder: string[];
   order: number;
   group: CategoryGroup;
+  /** カテゴリハブの SERP title を上書き（未指定時は name から組み立て） */
+  seoTitle?: string;
+  /** カテゴリハブの SERP description を上書き（未指定時は description を使用） */
+  seoDescription?: string;
 };
 
 export type ArticleMeta = {
@@ -157,6 +161,9 @@ export const articleCategories: ArticleCategory[] = [
     ],
     order: 2,
     group: "learning",
+    seoTitle: "電気料金が上がる理由｜4つの要因を法人向けに整理 - 法人電気料金ナビ",
+    seoDescription:
+      "電気料金が上がる4要因（燃料費調整額・市場価格調整額・再エネ賦課金・容量拠出金）を、法人向けに整理したカテゴリ一覧。各要因の解説記事・順序立てた学習導線を用意しています。",
   },
   {
     name: "電気料金の推移と高止まり",
