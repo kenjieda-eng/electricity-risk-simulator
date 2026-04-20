@@ -20,7 +20,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 const pageTitle = "市場価格調整額の推移とJEPX価格の関係｜2016〜2025年度の動きを分析";
 const pageDescription =
-  "市場価格調整額の根拠となるJEPXシステムプライスの年度別推移を2016〜2025年まで分析。2021年冬・2022年ウクライナ危機での高騰、その後の正常化、そして最近の再上昇の背景を解説します。";
+  "市場価格調整額の2016〜2025年度の推移を、JEPX スポット価格と対応させて可視化。2022年の市場高騰期にどう動いたか、法人契約者が次の市場連動リスクに備えるための読み方を解説します。";
 const pageUrl = "https://simulator.eic-jp.org/market-price-adjustment-history";
 
 export const metadata: Metadata = {
@@ -29,9 +29,11 @@ export const metadata: Metadata = {
   keywords: [
     "市場価格調整額 推移",
     "JEPX 推移",
+    "JEPX 価格 推移",
     "JEPX 急騰 2021",
     "JEPX 2022",
     "市場連動 履歴",
+    "電気代 市場価格調整額",
   ],
   alternates: { canonical: pageUrl },
   openGraph: {

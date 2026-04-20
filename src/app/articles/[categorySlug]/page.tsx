@@ -186,8 +186,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
-  const title = categoryTitleOverrides[category.slug] ?? `${category.name}｜法人向け電気料金の基礎知識`;
-  const description = categoryDescriptionOverrides[category.slug] ?? category.description ?? defaultDescription;
+  const title =
+    category.seoTitle ??
+    categoryTitleOverrides[category.slug] ??
+    `${category.name}｜法人向け電気料金の基礎知識`;
+  const description =
+    category.seoDescription ??
+    categoryDescriptionOverrides[category.slug] ??
+    category.description ??
+    defaultDescription;
   const canonicalPath = `https://simulator.eic-jp.org/articles/${category.slug}`;
 
   return {

@@ -24,15 +24,16 @@ import {
 
 const FAQ = MARKET_DATA_FAQ["winter-vs-summer-electricity"];
 
-const pageTitle = "冬と夏、どちらが電気料金リスクか｜季節別データで検証する";
+const pageTitle = "冬と夏 どちらが電気代リスクか｜法人向け季節別データ比較";
 const pageDescription =
-  "冬の平均JEPX価格13.96円 vs 夏11.67円、標準偏差12.72 vs 6.57──データが示す「冬の方がリスクは高い」という事実。4つの理由と季節別時間帯パターン、太陽光の季節効果、法人の対策を解説します。";
+  "法人の電気代は冬と夏、どちらがリスクが大きいのか。需給逼迫、市場価格のスパイク、燃調費の動きを季節別データで比較し、契約メニュー別の影響度と対策を整理します。";
 const pageUrl = "https://simulator.eic-jp.org/winter-vs-summer-electricity";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "冬と夏 電気代",
     "冬 夏 電気料金 比較",
     "冬 JEPX 価格 高い",
     "夏 冬 電力需要 違い",
