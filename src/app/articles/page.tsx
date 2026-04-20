@@ -494,7 +494,7 @@ export default function ArticlesPage() {
                     &#x25BC;
                   </span>
                 </summary>
-                <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-4 grid gap-3 [content-visibility:auto] [contain-intrinsic-size:800px] md:grid-cols-2 xl:grid-cols-3">
                   {group.categorySlugs.map((slug) => renderCategoryCard(slug))}
                   {industryHubCardForGroup}
                 </div>
