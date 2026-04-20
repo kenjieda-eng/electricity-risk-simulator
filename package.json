@@ -38,11 +38,11 @@
     "vitest": "^4.1.4"
   },
   "browserslist": [
-    "chrome >= 90",
-    "edge >= 90",
-    "firefox >= 90",
-    "safari >= 15",
-    "ios >= 15",
+    "chrome >= 105",
+    "edge >= 105",
+    "firefox >= 105",
+    "safari >= 16",
+    "ios >= 16",
     "not dead",
     "not op_mini all"
   ]

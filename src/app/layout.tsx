@@ -43,9 +43,14 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {SUPABASE_ORIGIN && (
-          <link rel="preconnect" href={SUPABASE_ORIGIN} crossOrigin="" />
+          <>
+            <link rel="preconnect" href={SUPABASE_ORIGIN} crossOrigin="" />
+            <link rel="dns-prefetch" href={SUPABASE_ORIGIN} />
+          </>
         )}
       </head>
       <body id="page-top" className="bg-violet-50/30">
