@@ -158,6 +158,7 @@ export const articleCategories: ArticleCategory[] = [
       "business-electricity-price-hike-reasons-2026",
       "capacity-contribution-simulation",
       "renewable-energy-surcharge-2026",
+      "fuel-vs-market-adjustment-comparison",
     ],
     order: 2,
     group: "learning",
@@ -4125,6 +4126,17 @@ export const articleList: ArticleMeta[] = [
     order: 71,
     publishedAt: "2026-04-19",
     lastVerifiedAt: "2026-04-19",
+  },
+  {
+    title: "燃料費調整額と市場価格調整額の違いを完全比較｜法人向け仕組み・計算式・影響度",
+    slug: "fuel-vs-market-adjustment-comparison",
+    description:
+      "燃料費調整額（燃調費）と市場価格調整額（市場調整額）の違いを、仕組み・計算式・影響の大きさ・見直しタイミングまで比較表で整理。法人の料金見直し時に「どちらのリスクが大きいか」を判断できるようにする完全ガイド。",
+    category: "料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 72,
+    publishedAt: "2026-04-27",
+    featured: false,
   },
   {
     title: "市場連動型プランのおすすめは？法人が選ぶ判断基準",

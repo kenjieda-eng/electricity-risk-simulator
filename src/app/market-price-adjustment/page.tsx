@@ -307,6 +307,7 @@ export default function MarketPriceAdjustmentPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整額と市場価格調整額の違いを完全比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "燃調費の仕組みと請求影響。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "市場価格連動型契約の特徴。" },
             { href: "/jepx-explained", title: "JEPXとは", description: "卸電力市場の基本。" },
