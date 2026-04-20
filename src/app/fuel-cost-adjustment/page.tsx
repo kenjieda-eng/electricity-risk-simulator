@@ -243,6 +243,7 @@ export default function FuelCostAdjustmentPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整額と市場価格調整額の違いを完全比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
             { href: "/lng-electricity-price", title: "法人の電気料金とLNGの関係", description: "LNG市況が料金に波及する流れを整理。" },
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調と混同しやすい別の調整項目。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "燃調ではなくJEPX連動で請求される契約。" },
