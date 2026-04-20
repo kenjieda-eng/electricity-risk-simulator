@@ -145,7 +145,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額や制度要因の影響</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            法人の電気料金には、使用量や契約単価以外にも制度的な項目が上乗せされます。代表的なのが<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>です。
+            法人の電気料金には、使用量や契約単価以外にも制度的な項目が上乗せされます。代表的なのが<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>、そして2024年度から転嫁が始まった<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>です。
             これらは総額に直接影響するため、請求額が増えた際は単価以外の変化も確認する必要があります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">

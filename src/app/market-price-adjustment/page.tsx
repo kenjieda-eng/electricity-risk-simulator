@@ -175,6 +175,13 @@ export default function MarketPriceAdjustmentPage() {
             <li>電気料金値引き（激変緩和措置）は燃調には適用されたが、市場連動項目には適用されなかった例がある</li>
             <li>契約書の末尾にある小さな条項に算定ルールが書かれていることが多い</li>
           </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            なお、料金上昇の制度要因としては市場価格調整・燃料費調整額に加え、2024 年度から転嫁が始まった
+            <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金
+            </Link>
+            も見落とせません。固定プランでは単価に内包されて見えにくいため、契約更新時の単価差の説明根拠として必ず確認してください。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

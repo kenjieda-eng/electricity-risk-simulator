@@ -7,17 +7,38 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
+// 容量拠出金ページ専用 FAQ（FAQPage JSON-LD と可視 FAQ セクションの両方で使う）
+const CAPACITY_FAQ: { question: string; answer: string }[] = [
+  {
+    question: "容量拠出金は電気料金のどこに反映されますか？",
+    answer:
+      "固定プランでは電力量料金（kWh 単価）に含まれて見えにくい形で、市場連動プランでは「容量拠出金」「容量市場費用」等の独立項目として請求書に明記されるケースがあります。契約タイプによって見え方が異なるため、契約書・請求書・見積書のいずれかでの確認が必要です。",
+  },
+  {
+    question: "容量拠出金はいくらですか？",
+    answer:
+      "2024 年度は kWh あたり約 0.5 円、2025 年度は約 0.8 円、2026 年度は約 1.1 円を超える水準と試算されています。年間使用量 10 万 kWh の法人で 2026 年度は概算 11 万円前後の負担増となり、使用量が大きいほど影響額も比例して大きくなります。",
+  },
+  {
+    question: "容量拠出金の負担は今後どう変わりますか？",
+    answer:
+      "容量市場の約定価格は、老朽火力の退出や供給力不足懸念を背景に上昇傾向にあります。2024〜2026 年度までは段階的な上昇が見込まれ、2027 年度以降も現時点では下降要因が乏しいため、予算策定では横ばい〜上昇を前提に織り込むのが安全です。",
+  },
+  {
+    question: "容量拠出金は契約書や請求書で確認できますか？",
+    answer:
+      "市場連動プランでは独立項目として記載されることが多く、固定プランでは単価に内包され明示されにくい傾向があります。見積書の段階で「容量拠出金（または容量市場費用）が含まれているか / 別建てか」を小売電気事業者に確認し、契約更新時の単価差の説明根拠として使うのが実務的です。",
+  },
+];
 
 
-const pageTitle = "容量拠出金とは？仕組み・負担額・電気料金への影響を法人向けにわかりやすく解説";
+const pageTitle = "容量拠出金とは｜法人電気料金への影響と2024-2026年の負担額を解説";
 const pageDescription =
-  "容量拠出金とは何かを法人向けにわかりやすく解説。2024年4月に始まった容量市場の仕組み、kWh単価への上乗せ構造、負担額の試算例、契約書・請求書での確認ポイントまで、法人の電気料金への影響を整理します。";
+  "容量拠出金とは、2024年度開始の容量市場制度に基づき小売電気事業者が支払う負担金。法人の電気料金にkWh単価として転嫁される仕組み、2024〜2026年の負担水準、請求書での確認ポイントまで、法人向けに整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -68,7 +89,7 @@ export default function CapacityContributionExplainedPage() {
           { name: "料金が上がる理由を知る", url: "https://simulator.eic-jp.org/articles/price-increase" },
           { name: "容量拠出金とは" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={CAPACITY_FAQ}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -77,11 +98,10 @@ export default function CapacityContributionExplainedPage() {
         <p className="text-xs font-semibold tracking-wide text-sky-700">料金が上がる理由を知る</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">容量拠出金とは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          2024年度から、電力の安定供給を維持するための「容量市場」制度に基づき、小売電気事業者に容量拠出金の支払いが始まりました。
-          この費用は電気料金に転嫁されるため、法人の電気代に影響する新たな制度要因です。
+          <strong className="font-semibold text-slate-900">容量拠出金</strong>とは、電力の安定供給を維持するための「容量市場」制度に基づき、小売電気事業者が支払う負担金のことです。本記事では法人の電気料金への影響を中心に、仕組み・負担額・請求書での確認方法まで整理します。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          このページでは、容量市場の目的、拠出金の仕組み、法人の請求書への反映のされ方を整理します。
+          2024 年度から支払いが始まり、kWh あたり単価として電気料金に転嫁されるため、法人の電気代に影響する新たな制度要因となっています。
         </p>
       </header>
 
@@ -274,7 +294,7 @@ export default function CapacityContributionExplainedPage() {
 
       {/* 関連リンク */}
       
-      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <MarketDataFaq items={CAPACITY_FAQ} />
 
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 

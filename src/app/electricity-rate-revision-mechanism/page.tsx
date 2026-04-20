@@ -441,6 +441,13 @@ export default function ElectricityRateRevisionMechanismPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             新電力（大手電力以外の小売電気事業者）は規制料金メニューを持たず、すべての料金が自由料金です。そのため、大手電力が行うような経産省への申請や公聴会プロセスは一切ありません。
           </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            加えて、2024 年度からは容量市場制度に基づく
+            <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金
+            </Link>
+            の転嫁が始まり、規制料金・自由料金の両方で実質的な単価上昇要因となっています。料金改定の背景を確認するときは、約款改定だけでなく制度要因の寄与度も合わせて把握してください。
+          </p>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <h3 className="text-lg font-semibold text-slate-900">約款に基づく改定</h3>
