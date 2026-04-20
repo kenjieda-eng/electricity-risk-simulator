@@ -12,11 +12,13 @@ import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 export const metadata: Metadata = {
-  title: "市場連動プランのリスクとは｜法人が知るべき仕組み・固定プラン比較",
+  title: "市場連動プランとは｜法人向けリスクと固定プラン比較を解説",
   description:
-    "市場連動プランの料金変動リスクを、JEPX実績データと固定プラン比較で可視化。向いている法人・向かない法人、見直し時の注意点、2020-21年冬と2022年夏の実例まで法人向けに整理。",
+    "市場連動プランとは、JEPX スポット市場価格に連動する電力契約。料金変動リスクを JEPX 実績データと固定プラン比較で可視化。向いている法人・注意点・2020-21冬と2022夏の実例まで法人向けに整理。",
   keywords: [
     "市場連動プラン",
+    "市場連動プラン とは",
+    "JEPX 連動プラン",
     "法人 電気料金",
     "電力契約 見直し",
     "電気代 変動 リスク",
@@ -45,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "市場連動プランのリスクとは｜法人が知るべき仕組み・固定プラン比較",
+    title: "市場連動プランとは｜法人向けリスクと固定プラン比較を解説",
     description:
-      "市場連動プランの料金変動リスクを、JEPX実績データと固定プラン比較で可視化。向いている法人・向かない法人、見直し時の注意点、2020-21年冬と2022年夏の実例まで法人向けに整理。",
+      "市場連動プランとは、JEPX スポット市場価格に連動する電力契約。料金変動リスクを JEPX 実績データと固定プラン比較で可視化。向いている法人・注意点・2020-21冬と2022夏の実例まで法人向けに整理。",
     images: ["/api/og/plan-types"],
   },
 };
@@ -65,8 +67,8 @@ export default function MarketLinkedPlanPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="市場連動プランのリスクとは｜法人が知るべき仕組み・固定プラン比較"
-        description="市場連動プランの料金変動リスクを、JEPX実績データと固定プラン比較で可視化。向いている法人・向かない法人、見直し時の注意点、2020-21年冬と2022年夏の実例まで法人向けに整理。"
+        headline="市場連動プランとは｜法人向けリスクと固定プラン比較を解説"
+        description="市場連動プランとは、JEPX スポット市場価格に連動する電力契約。料金変動リスクを JEPX 実績データと固定プラン比較で可視化。向いている法人・注意点・2020-21冬と2022夏の実例まで法人向けに整理。"
         url="https://simulator.eic-jp.org/market-linked-plan"
         datePublished="2025-08-19"
         breadcrumbItems={[
@@ -87,10 +89,9 @@ export default function MarketLinkedPlanPage() {
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動プランのリスクとは｜仕組み・固定プラン比較</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">市場連動プランとは</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          <strong>結論：市場連動プランのリスクは「JEPXスポット価格の急騰時に単価が青天井で上がる」こと。</strong>
-          2020-21年冬には250円/kWh超（平時の10倍以上）、2022年度の年平均も約20円/kWh（2019年度の2.5倍以上）に跳ね上がった実績があります。
+          <strong className="font-semibold text-slate-900">市場連動プラン</strong>とは、JEPX スポット市場の価格に連動して電力量料金の単価が変動する電力契約です。本記事では法人向けに、仕組み・向いている法人・固定プランとの比較・2020-21冬／2022夏の実例までリスクを整理します。
         </p>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           市場価格が落ち着いている局面ではコストを抑えやすい一方、急騰局面では固定プランより負担が大きく増える可能性があります。

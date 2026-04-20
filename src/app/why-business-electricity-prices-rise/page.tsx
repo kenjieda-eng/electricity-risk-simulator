@@ -18,7 +18,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "法人の電気料金はなぜ上がる？主要4要因と見直しポイントを整理";
+const pageTitle = "電気料金が上がる理由｜法人向けに主要4要因と見直しポイントを整理";
 const pageDescription =
   "法人の電気料金が上がる理由は「燃料価格」「市場価格（JEPX）」「制度負担（再エネ賦課金・容量拠出金）」「契約条件」の4要因に整理できます。実データと見直し観点で徹底解説。";
 
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "電気料金 上がる 理由",
+    "法人 電気料金 値上げ",
+    "法人 電気代 値上がり",
     "法人 電気料金 上がる理由",
     "電気代 値上がり 要因",
     "燃料費調整額 再エネ賦課金",
@@ -74,11 +77,10 @@ export default function WhyBusinessElectricityPricesRisePage() {
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          法人の電気料金はなぜ上がる？主要4要因で整理
+          電気料金が上がる理由｜法人向け主要4要因
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          <strong>結論：法人の電気料金が上がる理由は①燃料価格（LNG・原油・石炭）②市場価格（JEPX）③制度負担（再エネ賦課金・容量拠出金）④契約条件（使用量・契約電力）の4要因に分解できます。</strong>
-          単に「電気代が高くなった」と捉えず、この4要因のうちどれが効いているかを切り分けることが、正しい見直し判断の出発点です。
+          <strong className="font-semibold text-slate-900">法人の電気料金が上がる理由</strong>は、①燃料価格（LNG・原油・石炭）②市場価格（JEPX）③制度負担（再エネ賦課金・容量拠出金）④契約条件（使用量・契約電力）の4要因に分解できます。値上げ通知や請求増に直面したときは、この4要因のどれが効いているかを切り分けることが、正しい見直し判断の出発点です。
         </p>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、法人の電気料金が上がる4要因をそれぞれ実データで整理し、各要因が「いつ・どの程度」請求額に反映されるか、

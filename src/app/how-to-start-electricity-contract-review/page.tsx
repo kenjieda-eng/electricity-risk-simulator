@@ -15,15 +15,17 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
 
-const pageTitle =
-  "高圧電力の見直しはどこから始める？｜法人向け5ステップと優先度判断";
+const pageTitle = "法人電気料金の見直しはどこから始める｜5ステップと優先度判断";
 const pageDescription =
-  "高圧・特別高圧の法人電力契約の見直しを、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで解説。所要時間・担当部署・優先度マトリクスで、何から着手すべきかが明確になります。";
+  "法人の電気料金の見直しを、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで解説。高圧・特別高圧の法人契約向けに、所要時間・担当部署・優先度マトリクスで、何から着手すべきかが明確になります。";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "法人 電気料金 見直し",
+    "電気代 見直し 法人",
+    "電力契約 見直し 手順",
     "電力契約 見直し 始め方",
     "法人 電気料金 見直し 手順",
     "電力契約 優先度",
@@ -167,8 +169,8 @@ export default function HowToStartElectricityContractReviewPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="法人の電力契約見直しは何から始めるべきか｜5ステップと優先度判断の考え方"
-        description="法人向け電力契約の見直し手順を5ステップで解説。請求書収集から見積比較・切替判断まで所要時間と担当部署を整理し、優先度判断マトリクスで着手タイミングを明確にします。"
+        headline="法人電気料金の見直しはどこから始める｜5ステップと優先度判断"
+        description="法人の電気料金の見直しを、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで解説。高圧・特別高圧の法人契約向けに、所要時間・担当部署・優先度マトリクスで、何から着手すべきかが明確になります。"
         url="https://simulator.eic-jp.org/how-to-start-electricity-contract-review"
         datePublished="2026-04-17"
         breadcrumbItems={[
@@ -205,14 +207,13 @@ export default function HowToStartElectricityContractReviewPage() {
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          高圧電力の見直しはどこから始める？法人向け5ステップ
+          法人電気料金の見直しはどこから始める
         </h1>
         <p className="mt-1 text-sm text-slate-500">
           請求書収集 → 契約条件確認 → 使用量整理 → 複数社見積 → 切替判断
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          <strong>結論から言うと、高圧・特別高圧の電力契約見直しは「請求書3か月分の収集」から始めます。</strong>
-          比較作業を先に進めたくなりますが、請求書・契約書・使用量のデータがそろわない状態では見積依頼の前提条件が不揃いになり、判断が誤りやすくなります。
+          <strong className="font-semibold text-slate-900">法人の電気料金の見直し</strong>は、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで進めます。本記事では高圧・特別高圧契約の法人向けに、所要時間・担当部署・優先度判断まで整理します。
         </p>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、高圧電力の見直しを5ステップで整理し、各ステップの所要時間・担当部署・優先度判断マトリクスまで網羅します。
