@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -466,6 +467,15 @@ export default function ContractRenewalChecklistPage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門スタッフに相談する" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="契約更新前の条件整理、専門家に相談しませんか？"
+            description="現行契約の課題整理から相見積もりの取得支援、更新条件の交渉ポイント整理まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

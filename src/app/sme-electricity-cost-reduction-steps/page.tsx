@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "中小企業の電力コスト削減｜月5万円から始める3ステップ";
 const pageDescription =
@@ -209,6 +210,15 @@ export default function SmeElectricityCostReductionStepsPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="中小企業の電力コスト削減、専門家に相談しませんか？"
+            description="現状の電気代診断から削減施策の優先順位づけ、補助金活用の検討まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

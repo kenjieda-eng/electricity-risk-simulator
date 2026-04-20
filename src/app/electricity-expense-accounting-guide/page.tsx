@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -472,6 +473,15 @@ export default function ElectricityExpenseAccountingGuidePage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門スタッフに相談する" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電気代の経理処理や税務対応、専門家に相談しませんか？"
+            description="電気料金の勘定科目整理から省エネ投資の税制優遇活用、コスト配賦の設計まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -538,6 +539,15 @@ export default function EnergySavingTaxIncentive2026Page() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門スタッフに相談する" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="省エネ税制の活用判断、専門家に相談しませんか？"
+            description="対象設備の確認から申請手続き、投資回収シミュレーションまで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

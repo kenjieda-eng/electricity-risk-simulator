@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -513,6 +514,15 @@ export default function ElectricityQuoteEvaluationChecklistPage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門スタッフに相談する" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電力見積もりの比較評価、専門家に相談しませんか？"
+            description="見積もり条件の統一から隠れコストの洗い出し、総合評価の判断基準づくりまで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

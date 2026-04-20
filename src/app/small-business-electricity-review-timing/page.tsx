@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "小規模事業者の電気代｜見直すべきタイミングと判断基準";
 const pageDescription =
@@ -241,6 +242,15 @@ export default function SmallBusinessElectricityReviewTimingPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電気代の見直しタイミング、専門家に相談しませんか？"
+            description="契約更新時期の確認から見積もり取得、最適な見直しスケジュールの策定まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

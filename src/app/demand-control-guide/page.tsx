@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "デマンドコントロールとは？導入効果と費用の目安";
 const pageDescription =
@@ -233,6 +234,15 @@ export default function DemandControlGuidePage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="デマンドコントロールの導入判断、専門家に相談しませんか？"
+            description="最適なデマンド監視装置の選定から目標デマンド値の設定、運用ルール策定まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -465,6 +466,15 @@ export default function ElectricityCostReductionCaseStudiesPage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門スタッフに相談する" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="自社に合った電気代削減策、専門家に相談しませんか？"
+            description="業種・規模に合った削減事例の紹介から具体的な実行プランの策定まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

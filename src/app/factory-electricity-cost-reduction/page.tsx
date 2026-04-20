@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle = "工場の電気代削減｜生産ラインを止めずにできる5つの施策";
@@ -304,6 +305,15 @@ export default function FactoryElectricityCostReductionPage() {
             ]}
           />
         </section>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="工場の電気代削減、専門家に相談しませんか？"
+            description="生産ラインの電力使用パターン分析からデマンド抑制策、契約メニューの最適化まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
+          />
+        </div>
       </main>
     </>
   );

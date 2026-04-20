@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -492,6 +493,15 @@ export default function EvChargingElectricityCostBusinessPage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "導入相談（無料）" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="EV充電設備の電気代への影響、専門家に相談しませんか？"
+            description="充電設備導入によるデマンド増の試算から最適な契約メニュー選定、補助金活用まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>

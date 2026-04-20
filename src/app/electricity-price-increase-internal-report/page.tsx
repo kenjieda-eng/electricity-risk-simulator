@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
@@ -436,6 +437,15 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "資料作成のご相談" },
             ]}
+          />
+        </div>
+
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電気料金値上げの社内報告、専門家に相談しませんか？"
+            description="値上げ要因の分析資料作成から対策オプションの整理、経営層向け説明のポイントまで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
       </main>
