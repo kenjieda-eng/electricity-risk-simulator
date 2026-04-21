@@ -8,7 +8,15 @@ import { trackEvent } from "../lib/analytics/ga";
 
 const HeaderSearch = dynamic(() => import("./search/HeaderSearch"), {
   ssr: false,
-  loading: () => <div className="w-10 h-10" aria-hidden />,
+  loading: () => (
+    <div
+      aria-hidden
+      className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-2.5 py-1.5"
+    >
+      <div className="h-4 w-4 shrink-0" />
+      <div className="h-5 w-28 sm:w-40 lg:w-52" />
+    </div>
+  ),
 });
 
 type HeaderLink = {
