@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import HeaderSearch from "./search/HeaderSearch";
 import { trackEvent } from "../lib/analytics/ga";
+
+const HeaderSearch = dynamic(() => import("./search/HeaderSearch"), {
+  ssr: false,
+  loading: () => <div className="w-10 h-10" aria-hidden />,
+});
 
 type HeaderLink = {
   href: string;
