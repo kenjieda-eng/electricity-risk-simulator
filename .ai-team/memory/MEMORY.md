@@ -4,6 +4,7 @@
 |---------|------|
 | pending-tasks.md | 次のチャットで最初にやること |
 | task-roadmap.md | **タスク命名規則（旧K/L → 新 01/02）と時系列フロー** |
+| ops-notes.md | **運用知見（サンドボックス git 制約 / ネットワーク許可 / PR #59 パターン / 計測ルール / ロール分担）** |
 | sprint-history.md | Sprint 0〜2の完了記録 |
 | project-overview.md | サイト全体像・技術スタック・KPI・ペルソナ |
 | seo-keywords.md | キーワード分析結果と対応状況 |

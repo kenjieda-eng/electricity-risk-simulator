@@ -1,6 +1,30 @@
 # 未完了・次にやるべきタスク（2026-04-21 朝 01 結果反映版・15 PR + 1 PR 本番公開）
 
-## 2026-04-21 朝セッション状況
+## 2026-04-21 朝セッション完了（10:20 確定版）
+
+### 完了事項
+
+- **PR #58**: 01-朝イチ基準計測 マージ済
+- **PR #59**: 朝の 3 メモリコミット（task-roadmap / pending-tasks 更新 / LCP 仮説レポート）を PR 化
+  - ブランチ: `chore/memory-morning-lin-2026-04-21`
+  - 3 コミット: b637fc1 / 5cdec55 / 36f00b0
+  - rebase-merge 推奨（3 コミットの時系列意味を残す）
+- **新規ドキュメント**: `.ai-team/LCP_HYPOTHESIS_2026-04-21_MORNING.md`（LCP 悪化仮説レポート、夕方判定用）
+- **新規メモリ**: `.ai-team/memory/task-roadmap.md`（タスク命名体系 K/L→01/02）
+- **新規メモリ**: `.ai-team/memory/ops-notes.md`（サンドボックス git 運用知見、PR #59 パターン）
+
+### Parking（優先度低、次回 memory sync で検討）
+
+- **tsconfig.tsbuildinfo を .gitignore に追加**
+  - TypeScript 増分ビルドキャッシュで PC ごとに内容が変わる
+  - 本来バージョン管理から外すべき、現在は tracked 状態
+  - 影響: 複数 PC 開発時に不要な差分が出る
+- **`01-発注文-9時用.md` の扱い**
+  - リン作業の作業ディレクトリ直下にあるメモファイル
+  - git に入れず削除 or `.gitignore` で除外が妥当
+  - Claude Code が次回 commit 時に警告するはず
+
+### 01 計測の主要結果
 
 - **01-朝イチ基準計測（旧 K）= PR #58 マージ済**
 - `/articles` 真 TBT = **140ms（生 159/140/134ms）→ α格上げ確定**（昨夜 β→α）
@@ -15,7 +39,15 @@
 - **02 即発注は見送り**（LCP 4.5〜4.9s がノイズかどうかを 1 回の計測で決めない）
 - **04-3日安定性観測を先行**（04-21 夕方 + 04-22 朝夕 + 04-23 朝夕で LCP 中央値取得）
 - 夕方 LCP < 3.0s なら朝の値はノイズ確定、02 群すべて不要（04 観測継続）
-- 夕方 LCP ≧ 4.0s なら真の悪化、**02B（画像優先読込）＋ LCP 要素見直し**を発注
+- 夕方 LCP ≧ 3.0s なら **02E（検索機能の遅延化、HeaderSearch dynamic import）** を第 1 候補に発注検討
+- 夕方 LCP ≧ 4.0s なら **02E + 02F（記事データ軽量 import）+ 02B（画像 priority）** を複合発注検討
+
+### LCP 悪化仮説（09:40 特定）
+
+- **第 1 候補**: `PublicHeader` (client) → `HeaderSearch` (client) → `searchIndex.ts` が `articles.ts` 270KB / 534 件 + 全 scenario series + fuse.js 24KB を全ページの client bundle に含めている
+- **第 2 候補**: `ArticleScrollTracker` が `articleList` 全件を記事ページ以外でも import
+- **無罪**: フォント（系統フォントのみ）、ロゴ画像（8KB・priority 済）、Footer（Server Component）
+- **詳細**: `.ai-team/LCP_HYPOTHESIS_2026-04-21_MORNING.md`
 
 ### 夕方再計測コマンド（04-21 18:00 予定、EDA 実行）
 

@@ -15,6 +15,9 @@
 | **L-B** | **02B-画像優先読込** | `tasks/2026-04-21-morning/L-B-draft.md` | 🟡 01 結果次第で採用 |
 | **L-C** | **02C-原因深掘り調査** | `tasks/2026-04-21-morning/L-C-draft.md` | 🟡 01 結果次第で採用 |
 | **L-D** | **02D-比較ページ高速化** | `tasks/2026-04-21-morning/L-D-draft.md` | 🟡 01 結果次第で採用 |
+| （新規） | **02E-検索機能の遅延化** | 未作成（夕方 LCP シナリオ B/C で起草） | 🟡 夕方 LCP ≧ 3.0s で採用 |
+| （新規） | **02F-記事データの軽量 import** | 未作成（夕方 LCP シナリオ C で起草） | 🟡 夕方 LCP ≧ 4.0s で採用 |
+| （新規） | **02G-ヘッダーの server/client 分割** | 未作成（夕方 LCP シナリオ C で起草） | 🟡 夕方 LCP ≧ 4.0s + 02E/F 効果不足で採用 |
 | （新規） | **03-改善後再計測** | 未作成（02 採用後にリンが作成） | ⬜ 02 マージ後 |
 | （新規） | **04-3日安定性観測** | 軽量、依頼ファイル不要（簡易コマンド運用） | ⬜ 04-21〜23 朝・夕 |
 | （新規） | **05-SEO中間評価** | 未作成 | ⬜ 2026-05-05 |
@@ -90,11 +93,49 @@
 | 02B-画像優先読込 | LCP 要素に `priority` 付与、非 LCP 画像は lazy 最適化 |
 | 02C-原因深掘り調査 | Chrome DevTools Performance で実 JS タスクを観察・根本原因特定 |
 | 02D-比較ページ高速化 | `/compare` に content-visibility 横展開（`/articles` の成功パターン） |
+| 02E-検索機能の遅延化 | HeaderSearch を `dynamic({ ssr: false })` に変更、全ページ bundle から 270KB + fuse.js を分離 |
+| 02F-記事データの軽量 import | ArticleScrollTracker の articleList 全件 import を SLUG_SET 軽量化に置換（または build-time json 化） |
+| 02G-ヘッダーの server/client 分割 | PublicHeader を server nav + client interactive に分割（02E とセット運用） |
 | 03-改善後再計測 | 02 の After 計測で α/β/γ 判定を確定 |
 | 04-3日安定性観測 | 04-21〜23 朝夕で `/` を計測、Perf 90〜97 維持確認 |
 | 05-SEO中間評価 | GSC で T-15/16/17 + G-01 の早期シグナル確認、弱ければ追加施策前倒し |
 | 06-SEO本評価 | GSC 本計測、Batch A の成果を数値で最終評価 |
 | 07-次バッチ起動 | 06 結果で Batch A 残り / Batch B / A/B リライトから選択 |
+
+---
+
+## 02E/02F/02G の詳細（夕方シナリオ C 向け事前策定、LCP_HYPOTHESIS_2026-04-21_MORNING.md 参照）
+
+### 02E-検索機能の遅延化（最優先、シナリオ B/C 共通）
+
+- **変更**: `src/components/PublicHeader.tsx` で `HeaderSearch` を `dynamic(() => import("./search/HeaderSearch"), { ssr: false })` に変更
+- **効果**: 270KB の articles.ts + 57 sub-imports + 24KB fuse.js を全ページ bundle から分離、検索アイコンクリック時に初めて読み込む
+- **期待**: モバイル LCP −500ms〜−1.5s
+- **PR サイズ**: S（1 ファイル、~10 行）
+- **リスク**: 検索ボックスの表示が一瞬遅れる（Suspense fallback で制御）
+
+### 02F-記事データの軽量 import（シナリオ C）
+
+- **変更**: `src/components/analytics/ArticleScrollTracker.tsx` から `articleList` 全件 import を除去
+- **代替案 A**: pathname 正規表現で「記事ページっぽい形式」を判定（`/^\/[a-z][a-z0-9-]+$/`）、精度より bundle 削減を優先
+- **代替案 B**: build-time で `public/static/article-slugs.json` を生成、fetch で取得
+- **期待**: LCP −200〜−400ms
+- **PR サイズ**: S（1〜2 ファイル、~30 行）
+- **リスク**: 正規表現案だと article-slug 外の 1 階層ページ（例: `/about-this-site`）も記事扱いになる → 無駄な event 発火程度、害は限定的
+
+### 02G-ヘッダーの server/client 分割（シナリオ C、02E/F でも LCP 不足時）
+
+- **変更**: `src/components/PublicHeader.tsx` を以下に分割
+  - `PublicHeader.tsx` (Server): ロゴ、nav リスト、静的リンク
+  - `HeaderInteractive.tsx` (Client): usePathname に依存する active 判定、trackEvent
+- **効果**: 初期 HTML に nav 構造が入り、hydrate 前でも視覚的に完成
+- **期待**: LCP −500ms〜−1.5s（02E/F との重複効果あり、合算時は二重カウント注意）
+- **PR サイズ**: M（2〜3 ファイル、~80 行）
+- **リスク**: active 状態のハイライトが hydrate 後に一瞬遅れる
+
+### 複合シナリオ C の見込み
+
+02E + 02F + 02G で LCP 4.5s → 2.5〜3.5s レンジに到達の可能性。Good 基準（2.5s 未満）到達には 02B（画像 priority）も加えた**4 本同時投入**が必要な可能性あり。
 
 ---
 

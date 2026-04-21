@@ -216,3 +216,64 @@ PR #56 計測結果:
 
 - pps-net.org 執筆者リンク施策（月 50 万 PV の強力リンク源）
 - eic-jp.org フッター simulator.eic-jp.org リンク追加
+
+---
+
+## 2026-04-21 朝セッション（PR #57〜#59、リン + Claude Code 協働）
+
+### 実施事項
+
+| PR | 種別 | 概要 |
+|---|---|---|
+| #57 | memory sync | J（memory 最終同期）、#53〜#56 反映、commit 23c4e5d |
+| #58 | 計測 | **01-朝イチ基準計測**（旧 K）、4 ページ × Mobile × `--interval 60 --runs 3` |
+| #59 | docs + memory | 朝セッションのリン成果 3 コミット（task-roadmap / pending-tasks 朝結果 / LCP 仮説） |
+
+### 01-朝イチ基準計測（PR #58）の結果
+
+| ページ | Mobile Perf | Mobile LCP | Mobile TBT | 判定 |
+|---|---:|---:|---:|---|
+| `/` | 79 | 4.7s | 208ms | TBT 健全、LCP 要検証 |
+| `/articles` | 80 近辺 | 4.7s | **140ms** | **TBT α 確定（昨夜 β→α 格上げ）** |
+| `/compare` | 77 | 4.9s | 135ms | TBT 健全、LCP 要検証 |
+| `/capacity-contribution-explained` | 80 | 4.6s | 73ms | TBT 優秀、LCP 要検証 |
+
+**共通パターン**: TBT は全ページ健全（73〜208ms）、LCP が 4 ページ揃って 4.5〜4.9s・run 間変動 2〜5s = 計測ノイズ疑い濃厚。
+
+### 朝の重要判断（計測運用ルール 4「異常値 1 回で騒がない」準拠）
+
+- **02 即発注は見送り**（LCP 4.5〜4.9s がノイズかどうかを 1 回の計測で判断しない）
+- **04-3日安定性観測を先行**し、夕方 18:00 再計測で LCP 真偽判定
+- 夕方結果次第で 02B / 02E / 02F / 02G の採用判断
+
+### LCP 悪化仮説の特定（`.ai-team/LCP_HYPOTHESIS_2026-04-21_MORNING.md`）
+
+**第 1 候補（最有力）**: `PublicHeader` → `HeaderSearch` → `searchIndex.ts` 経由で以下が全ページの client bundle に入る
+- `articles.ts`（270KB、4,426 行、534 記事エントリ）
+- 全 scenario series（emergency / oil / gas / materials / food / fx）
+- `fuse.js`（24KB min）
+- モバイル 3G 相当の PSI 計測環境で JS parse/execute 時間が LCP を押し下げる
+
+**第 2 候補**: `ArticleScrollTracker`（root layout で全ページ展開）が `articleList` 全件を SLUG_SET 作成のためだけに import
+
+**無罪確定**: フォント（next/font・@font-face・Google Fonts すべて未使用、系統フォントのみ）、ロゴ画像（8KB・priority 済）、Footer（Server Component）、CSS（軽量）
+
+### タスク命名体系リニューアル（`.ai-team/memory/task-roadmap.md`）
+
+- K / L-A 等の記号 ID → 01-朝イチ基準計測 / 02A-記事リンク絞り込み 等の業務内容が見える新名称
+- 旧 ID は廃止せず対応表で保持（既存コミットメッセージ・PR タイトルとの照合用）
+- 夕方シナリオ C 向けに 02E（検索機能の遅延化）/ 02F（記事データ軽量 import）/ 02G（ヘッダー分割）を新候補として追記
+
+### 運用知見
+
+- **サンドボックス git 不安定**: Cowork の Linux サンドボックスから `git log` / `git push` が `your current branch appears to be broken` で失敗するケースあり。回避策として **EDA のローカル Git Bash または Claude Code 経由でコミット**する運用を確立
+- **PR #59 のパターン**: 「Cowork サンドボックス内でローカル main に commit → Claude Code が新ブランチに 3 コミット保持 + main を origin/main まで reset → PR 化」の流れが成功、今後の memory 系作業のテンプレートとして使える
+
+### 朝セッションの到達点
+
+- ✅ `/articles` TBT 140ms で**昨日の β → α 格上げ確定**（H 効果は確定的）
+- ✅ LCP 悪化の根本原因候補を特定（第 1・第 2 候補 + 無罪グループ）
+- ✅ 夕方シナリオ別の即応施策を事前策定（A/B/C 3 パターン、各々の期待効果と PR サイズ）
+- ✅ タスク命名体系の恒久化（task-roadmap.md、MEMORY.md 索引追加）
+- ✅ 運用知見の文書化（ops-notes.md）
+- 🔵 次アクション: **2026-04-21 18:00 JST 夕方再計測**で LCP 真偽判定
