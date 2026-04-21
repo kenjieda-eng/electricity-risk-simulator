@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { articleList } from "../../data/articles";
+import { ARTICLE_SLUGS } from "../../data/articleSlugs";
 import { trackEvent } from "../../lib/analytics/ga";
 
-const SLUG_SET = new Set(articleList.map((a) => a.slug));
+const SLUG_SET = new Set(ARTICLE_SLUGS);
 const DEPTH_TIERS = [25, 50, 75, 100] as const;
 
 export default function ArticleScrollTracker() {
