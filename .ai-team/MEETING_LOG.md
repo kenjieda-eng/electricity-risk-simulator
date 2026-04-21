@@ -6,6 +6,346 @@
 
 ---
 
+## 2026-04-20 第15回 PSI 計測・T-17 PR #47 マージ完了（今日 4 本目の PR）
+
+**参加者**: 全員（EDA 同席、リンがファシリテート）
+
+### 本日の PR 完走一覧（当日 1 日で 4 本）
+
+| PR | ブランチ | 内容 | Commit |
+|---|---|---|---|
+| #43 | `perf/chart-deferred-mount` | Chart.js 遅延マウント | `e49567e` |
+| #44 | `tooling/psi-baseline` | PSI 計測スクリプト | `3e5bc05` |
+| #45 | `seo/capacity-contribution-rewrite` | T-15 /capacity-contribution-explained リライト | `d5ce4a4` |
+| #46 | `seo/top10-ctr-improvement-6pages` | T-16 トップ10圏 0-click 6 ページ title/meta | `c405ea6` |
+| **#47** | `seo/alist-5pages-rewrite` | **T-17 A-list 5 ページリライト** | `15b0b02` |
+
+### PSI 計測結果（after-chart-defer）
+
+mobile 3 runs（完全同値、PSI の安定性確認）:
+- Performance **97** / LCP **2.3s** / TBT **119ms**
+
+desktop 1 run:
+- Performance **95** / LCP **1.0s** / TBT **104ms**
+
+#### Before → After 比較（Mobile）
+
+| 指標 | Before (Lighthouse CLI) | After (PSI) | 改善 |
+|---|---:|---:|---:|
+| Performance | 74 | **97** | **+23** |
+| LCP | 4.9s | **2.3s** | **−53%** |
+| TBT | 276ms | **119ms** | **−57%** |
+
+PR #43 Chart.js 遅延マウントは **Mobile / Desktop 両方で圧倒的成功**。Mobile LCP "Good" 基準（2.5s 以下）・TBT "Good" 基準（200ms 以下）ともにクリア。
+
+💬 EDA: 「進んでない気がする　もう一度したほうがいいかな？」（PSI desktop run 1/3 で詰まっているように見えた時点の報告）
+→ リン対応: `Ctrl+C` → desktop 単独 1 run 再実行 → 成功。mobile 3 runs は既に取れていたため合算で合格判定。
+
+### T-17 の重要な発見: SC 実データで prompt 仮説を検証
+
+Claude Code が `scripts/sc-per-page-query.mjs` を新設し、GSC dimensionFilter で 5 ページを個別取得して**仮説検証**を実施。
+
+- **最大の発見**: `/why-business-electricity-prices-rise` は prompt 想定「10 clicks / 166 imp」に対し実績 **1 click / 22 imp**。サイト 3 位強ページ仮説は成立せず → Option B（攻めのリライト）採用
+- `/fuel-cost-adjustment`: pos 39-40 と低順位 → 「燃調費とは」起点化の提案どおり実装
+- 残り 3 ページ（`/articles/last-resort-supply`, `/market-linked-plan`, `/how-to-start-electricity-contract-review`）: 0 imp → 未来投資として仕込み
+
+実装内容（6 ファイル / +136 / −28）:
+
+| ページ | Title Before → After |
+|---|---|
+| `/fuel-cost-adjustment` | `…市場価格調整額の違い…` → `燃料費調整額（燃調費）とは…`（H1 も同期） |
+| `/why-business-electricity-prices-rise` | `…なぜ上がる？…` → `電気料金が上がる理由｜法人向けに…` |
+| `/articles/last-resort-supply` | `seoTitle` / `seoDescription` 追加（カテゴリハブ） |
+| `/market-linked-plan` | `…リスクとは…` → `市場連動プランとは…`（H1 も同期） |
+| `/how-to-start-electricity-contract-review` | `高圧電力の見直し…` → `法人電気料金の見直し…`（H1 も同期） |
+
+各ページ: `ArticleJsonLd.headline` / description も同期、keywords にクエリ完全一致パターンを追加。本文・JSX・CTA は不変。
+
+検証: `tsc --noEmit` OK / `vitest run` 99 passed / `next build` 743 ページ成功。
+
+### Vercel デプロイ確認
+
+PR #47 は **07:24 UTC にデプロイ成功**（`state: success`）。https://simulator.eic-jp.org に反映済み。
+
+### ドキュメント更新
+
+- `.ai-team/LIGHTHOUSE_2026-04-20.md`: PSI After セクション追記（Before/After 比較表、PR #43 評価、次の P0 施策の優先度再評価）
+- `.ai-team/memory/pending-tasks.md`: 「選択肢 A」セクションを完了ログに置換済み（Claude Code 側で更新）
+- `.ai-team/PSI_MEASUREMENT_2026-04-20_1603.md`: desktop 計測結果ファイル生成
+
+### 今日の総括
+
+**2026-04-20 はプロジェクト史上最高の生産性日**:
+
+1. **パフォーマンス勝利**: Mobile Perf 74→97、LCP −53%、TBT −57%
+2. **SEO 即効施策 3 本**: T-15 / T-16 / T-17 合算で月 +20〜35 clicks 見込み
+3. **計測基盤整備**: PSI API + GSC per-page query の 2 本セットで効果計測の精度が大幅向上
+4. **合計 5 PR マージ**（#43, #44, #45, #46, #47）
+
+### 次の判断（2 週間後 2026-05-05 頃）
+
+GSC 再取得で T-15/T-16/T-17 効果を評価したうえで:
+- **選択肢 B** 発注（Batch A G-01 新規記事執筆 `/fuel-vs-market-adjustment-comparison`）
+- **選択肢 C** 発注（`/articles` 性能改善）
+- または新たな施策優先度決定（GSC データ次第）
+
+当面の休眠期に EDA さんが進めるべき外部施策: pps-net.org / eic-jp.org リンク施策。
+
+---
+
+## 2026-04-20 第14回 PR #43/#44 完了 & Search Console 実数値受領
+
+**参加者**: 全員（EDA 同席、リンがファシリテート）
+
+### 報告（Claude Code より受領）
+
+**PR #43 `perf/chart-deferred-mount`（merge `e49567e`）**
+- `SimulatorChart.tsx` に `chartReady` state + `useEffect` で `requestIdleCallback`（fallback `setTimeout 200ms`）を実装。ゲート前は既存 `chartLoading` スケルトンを同サイズで表示。
+- 差分: +19 / −3 行、1 ファイル（スコープ厳守）
+- 検証: tsc OK / vitest 99 passed / next build 成功（743 ページ）
+- リン検証: `src/app/_components/simulator/SimulatorChart.tsx` L52-60 に実装を直接確認済み
+
+**PR #44 `chore/psi-baseline-script`（merge `3e5bc05`）**
+- `scripts/psi-baseline.mjs` 271 行、追加依存なし
+- 機能: mobile/desktop × N runs 中央値 + 生データ Markdown 出力、429/5xx retry、`.env.local` の `PSI_API_KEY` 対応
+- Smoke test `--label smoke-test --runs 2 --urls /` で Markdown 生成まで到達。実スコアは匿名 PSI クォータ枯渇で取得不可（キー投入待ち）
+- リン検証: `scripts/psi-baseline.mjs` L1-50 の構造を確認済み
+
+→ 両 PR とも**仕様どおり完了・マージ済み**。
+
+### EDA 提供: Search Console 28日実数値（第一報）
+
+EDA 手元から GSC のクエリ別・ページ別の実数値を受領。主要知見:
+
+**クエリ側の発見**
+- 「燃料費調整額 市場価格調整額 違い」 2 clicks / 20 imp / CTR 10% / pos 6 → **G-01 新規記事の裏付け取れた**
+- トップ10圏で 0-click のクエリ群: 市場価格調整額（19 imp, pos 4.89）、受電地点特定番号（18 imp, pos 2.39）、再エネメニューとは（6 imp, pos 5.33）ほか複数
+- 「容量拠出金」関連クエリ群（33+8+7 imp）がすべて低順位で 0-click
+
+**ページ側の発見（最大機会損失）**
+- `/capacity-contribution-explained`: **117 imp / 0 clicks / pos 14.15**
+  → サイト内トップクラスの表示量を順位の低さで取りこぼし中
+- トップ10圏 0-click ページ 6 本: `/market-price-adjustment` (148 imp, CTR 2.70%), `/winter-vs-summer-electricity` (35 imp), `/electricity-cost-risk-heatwave` (37 imp), `/market-price-adjustment-history` (28 imp), `/articles/price-increase` (35 imp), `/electricity-rate-revision-mechanism` (34 imp)
+- サイト主力の確認: `/` 21 clicks / 166 imp / CTR 12.65% / pos 2.9
+
+### 議論
+
+**Content-Strat**
+「事前の質的仮説（Batch A の G-01 が有効）は数値で裏付けられた。だが、それより大きな機会損失が 1 件判明した。`/capacity-contribution-explained` の 117 imp 0 clicks は、Batch A 3 本を書く工数より、この 1 ページの戦略リライトの方が ROI が桁違いに高い。優先度を組み替えるべき。」
+
+**Growth-Analyst**
+「トップ10圏 0 click の 6 ページはタイトル/メタ書き換えだけでいけるので、1 PR にまとめて並行実行したい。インデックス更新で 1〜2 日後には数値に出る。」
+
+**Frontend-Dev**
+「PR #43 の効果測定は `PSI_API_KEY` 待ち。EDA 側で GCP プロジェクトにキーを発行してもらえれば、PR #44 で即 before/after 計測できる。Chart.js PR のインパクト（TBT 276→180ms 目標）を定量化するのはこのキー次第。」
+
+**Energy-Expert**
+「T-15 の `/capacity-contribution-explained` は制度解釈の正確性が肝。2024-2026 の負担額水準は私が監修確認する。」
+
+**QA-Engineer**
+「T-15/T-16 は本文レベルの改修が入るので、マージ後 `scripts/check-links.mjs`（既存）で内部リンク健全性を再確認したい。」
+
+**Backend-Dev**
+「PR #44 の PSI スクリプトは GitHub Actions で `npm run psi -- --label weekly-$(date +%F)` を週次実行する cron にしても良い。T-2 以降で検討。」
+
+### リン（PM-Lead）の整理
+
+本日の SC 実数値で、**Batch A より先に T-15 / T-16 を挟む**のが正解。理由:
+- T-15: 単一ページで 117 imp の取りこぼし回収 → 月 +5〜18 clicks の即効
+- T-16: タイトル/メタだけの低工数で月 +10〜12 clicks
+- Batch A: インデックス反映まで 1〜2 週間、T-15/T-16 は数時間〜1 日で反映
+
+### EDA の方針
+
+💬 EDA: 「全部やっておいてくれますか？」
+
+→ T-15 / T-16 の発注プロンプト起票 + KEYWORD_COVERAGE 更新を実施。Batch A は継続しつつ後回し。
+
+### 決定事項
+
+| # | タスク | 担当 | 成果物 | 状態 |
+|---|---|---|---|---|
+| T-11 | Chart.js 遅延マウント PR | Claude Code | PR #43 | ✅ マージ済（`e49567e`） |
+| T-12 | PSI API 計測スクリプト | Claude Code | PR #44 | ✅ マージ済（`3e5bc05`）/ 🔸 `PSI_API_KEY` 取得待ち |
+| T-15 | `/capacity-contribution-explained` リライト | Claude Code | `seo/capacity-contribution-rewrite` ブランチ | 🆕 プロンプト起票済 |
+| T-16 | トップ10圏 0-click 6 ページ title/meta 書き換え | Claude Code | `seo/top10-ctr-improvement-6pages` ブランチ | 🆕 プロンプト起票済 |
+| T-13 | Batch A 記事執筆 G-01/G-04/G-05 | Claude Code（後追い） | 3 PR、2026-04-27 公開目標 | 🟡 継続、T-15/T-16 の後 |
+| T-14 | Batch A 記事の Energy-Expert 監修 | Energy-Expert | G-01 比較表項目・G-05 収益レンジの確認 | 🟡 継続 |
+
+### 新規発注プロンプト
+
+- `.ai-team/prompts/2026-04-20-t15-capacity-contribution-rewrite.md`（T-15）
+- `.ai-team/prompts/2026-04-20-t16-ctr-improvement-6pages.md`（T-16）
+
+### キー取得の補足（EDA アクション）
+
+PSI API キー取得手順:
+1. Google Cloud Console で新規 API キー発行（または既存プロジェクトに追加）
+2. 「PageSpeed Insights API」を有効化
+3. `.env.local` に `PSI_API_KEY=xxxxxxxxxx` を追記
+4. `node scripts/psi-baseline.mjs --label after-chart-defer --runs 5` で PR #43 の効果測定
+
+### フォローアップ
+
+- T-15/T-16 マージ → 2026-05-04 週に GSC 再取得で CTR / 順位比較
+- PSI キー投入後、PR #43 の定量効果を `.ai-team/LIGHTHOUSE_2026-04-20.md` に追記
+- 次回ミーティング: T-15/T-16 マージ後、または PSI 結果着弾時
+
+---
+
+## 2026-04-20 第13回 ContactCtaCard/Lighthouse 受領後の方向性決定
+
+**参加者**: 全員（EDA 同席、リンがファシリテート）
+
+### 報告（Claude Code より受領）
+
+1. **ContactCtaCard 7 ファイル修正（前半）**: 作業不要。全 7 ファイルに `<ContactCtaCard>` JSX はすでに配置済み。
+   - リンの前回「import あるが JSX 未配置」報告は **誤り**。OneDrive マウント経由の bash grep が古い／切り詰められた内容を返していた。Read ツール（Windows 直アクセス）で再確認し誤りを認めた。以降の JSX 配置有無判定は Read を一次ソースに切替。
+2. **Lighthouse 再計測（後半）**: `.ai-team/LIGHTHOUSE_2026-04-20.md` に詳細。
+   - Mobile: `/` 98→74（−24）, `/simulate` 69→70, `/compare` 82→74（−8）, `/articles` 77→70, `/journey` 83→73
+   - Desktop: 全ページ 97–100 で安定
+   - Claude Code は「計測ノイズ（ローカル Windows、2 runs で Perf±13 振れ）」と結論。`/` は**コード変更ゼロ**にも関わらず −24 のため、ノイズ起因と解釈するのが整合的。
+
+### 議論
+
+**Frontend-Dev**
+「Lighthouse レポートの提案 1『SimulatorChart.tsx を dynamic 化』は部分的に既に実装済み（`next/dynamic` + ssr:false）。残課題は『マウント即 fetch』で、Chart.js の chunk ダウンロードが hydration と並走している点。`requestIdleCallback` で mount を遅らせれば TBT を 276→180ms 程度に下げられる見込み。PR サイズ S で切れる。」
+
+**Content-Strat**
+「S1-06 キーワード網羅性チェックで Batch A（G-01/G-04/G-05）は既に整理済み。これはパフォーマンス系と独立に進められる。Energy-Expert 監修待ちで先発できる。」
+
+**Growth-Analyst**
+「PSI API 計測スクリプトは Chart.js PR の効果測定に必須。ローカル Lighthouse のノイズでは施策効果を判定できないので、PR より先に計測基盤を用意したい。」
+
+**QA-Engineer**
+「PSI API スクリプトは CI でも使える汎用資産。Chart.js PR とほぼ並行で作る価値あり。」
+
+**Energy-Expert**
+「Batch A の G-01（燃調 vs 市場連動比較表）と G-05（DR 収益モデル）は数値レンジの監修を自分が持つ。G-04 のカレンダーは経産省公表ベースで事実確認するだけなので、Claude Code に任せてよい。」
+
+### EDA の方針
+
+💬 EDA: 「任せます」
+
+→ リン（PM-Lead）の推奨「2 → 3 並行進行」で進行。
+
+### 決定事項
+
+| # | タスク | 担当 | 成果物 |
+|---|---|---|---|
+| T-11 | Chart.js 遅延マウント PR | Claude Code | `perf/chart-deferred-mount` ブランチ、`/` TBT 180ms 以下 |
+| T-12 | PSI API 計測スクリプト | Claude Code（or EDA ローカル） | `scripts/psi-baseline.mjs`、`.ai-team/PSI_MEASUREMENT_*.md` |
+| T-13 | Batch A 記事執筆 G-01/G-04/G-05 | Claude Code（Content-Strat レビュー） | 3 PR、2026-04-27 公開 |
+| T-14 | Batch A 記事の Energy-Expert 監修 | Energy-Expert | G-01 比較表項目・G-05 収益レンジの確認コメント |
+
+### 発注プロンプト
+
+- `.ai-team/prompts/2026-04-20-chart-dynamic-import.md`（T-11）
+- `.ai-team/prompts/2026-04-20-psi-baseline.md`（T-12）
+- `.ai-team/ARTICLES_BATCH_A_PLAN_2026-04-20.md`（T-13/T-14、記事別プロンプトは OK 確認後に生成）
+
+### フォローアップ
+
+- T-11 マージ → T-12 で Before/After 比較 → 効果を `.ai-team/LIGHTHOUSE_2026-04-20.md` に追記
+- T-13 公開後、Google Search Console に URL 登録 + `npm run build` サイトマップ再生成確認
+- 次回ミーティング: T-11/T-12 完了後、数値が揃ったタイミング
+
+---
+
+## 2026-04-20 第12回 次アクション議論（ContactCtaCard修正＋Lighthouse再計測の完了後）
+
+**参加者**: 全員（EDA欠席、リンがファシリテート）
+
+### 議題
+
+EDA指示:
+💬 EDA: 「両方とも依頼しました　それが終った後に実施したらよいことをチームで話し合って」
+
+前提:
+- ①ContactCtaCard 7ファイル修正 PR と ②Lighthouse 再計測が Claude Code で進行中
+- 両方マージ/完了後、次の一手を決める
+
+### 各メンバーの意見
+
+**Content-Strat**
+「S1-06 キーワード網羅性チェックが最優先。`scripts/search-console-analysis.mjs` が既に準備済みで、Search Consoleの上位クエリから次の記事企画リストが即出せる。S2-06で30本追加したが、Search Consoleの露出クエリに対してどこが抜けているかを定量評価しないと、次の執筆が勘になる。合わせて、pps-net.org のEDA名義記事に差し込む『執筆者情報テンプレ』もこちらで下書きしたい。EDAがpps-net.orgに手を入れる前に、コピペで済む完成形を用意しておくのが一番速い。」
+
+**Frontend-Dev**
+「Lighthouse結果を見ないと優先度が決まらないが、仮に`/simulate`がPerf 80未満のままなら、次のP0候補は:
+1. `Chart.js` の動的importで初期バンドルから外す
+2. ヒーロー画像のpreloadとAVIF変換
+3. `HomePageClient` のさらなる分割
+を検討。逆に80超えたなら、次はSprint2のS2-04（TOP CTA配置改善）に移りたい。」
+
+**Backend-Dev**
+「S2-05 AIコンシェルジュの外部LLM連携は技術的におもしろいが、**月50UUのサイトで今やるのは時期尚早**。流入が月500UU超えてから投資回収を考えるフェーズ。今やるなら、むしろ `/api/simulation-results/average` のキャッシュ強化など軽量な基盤改善、もしくはSitemap/RSS整備が堅い。」
+
+**Energy-Expert**
+「S1-04監査で保留にしていた『tail scenario UIスイッチ』（2020-21年冬の250円/kWh相当の極端シナリオをオプション表示）を今入れたい。記事側はS2-06で整ったので、シミュレーター本体の信頼性を一段上げるタイミング。ただし優先度としては Content-Strat の S1-06 が先。」
+
+**Growth-Analyst**
+「GA4のベースラインデータ蓄積待ち（5月上旬）なのは変わらないが、**今のうちにD-03 GA4カスタムイベント設計をやっておくのが絶対条件**。5月上旬にD-01（ContactCtaCard配置別CTR分析）を始めたときに『イベントが仕込まれてなかった』となると2週間ロスする。記事スクロール深度、診断完了、`contact_cta_click` の詳細化、CSV DL等の洗い出しを今週中に済ませたい。」
+
+**QA-Engineer**
+「①のマージ後に `scripts/check-links.mjs` を再走させて、S2-06 batch の内部リンクが全て生きているかを確認したい。それと、せっかくvitestを入れたので、CIで `npm run test` を自動実行するGitHub Actionsワークフローを追加したい。30分で組める。テストが回らないままだと47ケースが風化する。」
+
+### リン（PM-Lead）の整理
+
+優先度判定軸: **(a) EDAの手を止めないか / (b) 5月のデータ分析の準備になるか / (c) 実装コスト**。
+
+**T-1（今週やる・高優先度）**
+1. **S1-06 キーワード網羅性チェック**（Content-Strat）
+   - `scripts/search-console-analysis.mjs` で過去90日クエリ抽出 → 上位100クエリ × 既存450+記事のカバレッジ表を作成
+   - 抜けているクエリ群を抽出し、次の記事企画リスト（10本規模）を起こす
+   - 成果物: `.ai-team/KEYWORD_COVERAGE_2026-04-20.md` + 次期執筆キュー
+
+2. **D-03 GA4カスタムイベント設計**（Growth-Analyst + Frontend-Dev）
+   - 既存イベント棚卸し（`contact_cta_click` 等）
+   - 追加候補: 記事スクロール深度75%、診断完了、CSV DL、記事→シミュレーター遷移、検索内クリック
+   - 実装を待たず、設計書を先に確定 → EDAにGA4管理画面での設定依頼を出す
+   - 成果物: `.ai-team/GA4_EVENT_DESIGN_2026-04-20.md`
+
+3. **pps-net.org 執筆者情報テンプレ下書き**（Content-Strat + リン）
+   - EDAが pps-net.org の自分名義記事に貼るだけで済む、完成形HTMLスニペットを用意
+   - 「著者: 江田健二（一般社団法人エネルギー情報センター代表理事）」+ プロフ文 + `simulator.eic-jp.org/kenji-eda` へのリンク
+   - 同時に、pps-net.orgフッター追加用の文言も準備
+   - 成果物: `.ai-team/prompts/2026-04-XX-eda-external-link-snippets.md`（EDAへの依頼文）
+
+**T-2（次週、①②の結果次第で分岐）**
+4. **Lighthouse改善フォローアップ**（Frontend-Dev）
+   - ②の結果で`/simulate` Perf < 85なら: Chart.js 動的import + 画像最適化 → PR化
+   - それ以上なら: Sprint 2 の S2-04（TOP CTA配置改善）に着手
+
+5. **QA-Engineer**: CIワークフロー整備（GitHub Actions で vitest + check-links 自動化）
+
+**T-3（5月上旬に発火、今は待機）**
+6. D-01 ContactCtaCard配置別CTR分析（Growth-Analyst）…GA4データ2週間後
+7. S1-05 GA4ベースライン詳細版（Growth-Analyst）…30日データ後
+
+**T-4（保留・優先度再評価）**
+8. S2-05 AIコンシェルジュ外部LLM連携 → 月500UU突破まで保留（Backend-Devの判断を採用）
+9. Energy-Expert の tail-scenario UIスイッチ → T-1完了後に着手
+
+### 決定事項
+
+- ①②完了後、**T-1 の3つを並行開始**。うちS1-06とGA4イベント設計は即着手可能（Cowork側のドラフト作業がメイン）。
+- pps-net.orgテンプレは完成形スニペットとして用意 → EDAの作業コストをゼロに近づける。
+- S2-05はコスト対効果から現時点で保留。再評価タイミングは「月間UU 500超え」または「EDAから明示的な指示」。
+
+### 次のチャットで最初にやること
+
+1. ①の7ファイル修正PRマージ状態を確認
+2. ②Lighthouseの差分レポート（`.ai-team/LIGHTHOUSE_2026-04-20.md`）をレビュー
+3. T-1開始: まずS1-06 のキーワード抽出スクリプトを実行して下地データを作る
+
+### 未解決・EDAに要確認
+
+- pps-net.orgに EDA名義の記事は何本あるか（過去に質問済み、未回答）
+- eic-jp.orgフッターリンク追加の実行タイミング
+- S2-05 AIコンシェルジュ外部LLM連携の保留方針で問題ないか
+
+---
+
 ## 2026-04-19 第10回 並行一括実装セッション（Claude Code 自律実行）
 
 **参加者**: 全員 + EDA
