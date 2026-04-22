@@ -10,37 +10,47 @@
 | 旧 ID | 新タスク名 | 依頼ファイル | 状態 |
 |---|---|---|---|
 | J | （対応外・完了） | `tasks/2026-04-21-morning/J-memory-final-sync.md` | ✅ マージ済（commit 23c4e5d） |
-| **K** | **01-朝イチ基準計測** | `tasks/2026-04-21-morning/K-psi-morning-baseline.md` | 🔵 2026-04-21 朝 9:00 JST 発注予定 |
-| **L-A** | **02A-記事リンク絞り込み** | `tasks/2026-04-21-morning/L-A-draft.md` | 🟡 01 結果次第で採用 |
-| **L-B** | **02B-画像優先読込** | `tasks/2026-04-21-morning/L-B-draft.md` | 🟡 01 結果次第で採用 |
-| **L-C** | **02C-原因深掘り調査** | `tasks/2026-04-21-morning/L-C-draft.md` | 🟡 01 結果次第で採用 |
-| **L-D** | **02D-比較ページ高速化** | `tasks/2026-04-21-morning/L-D-draft.md` | 🟡 01 結果次第で採用 |
-| （新規） | **02E-検索機能の遅延化** | 未作成（夕方 LCP シナリオ B/C で起草） | 🟡 夕方 LCP ≧ 3.0s で採用 |
-| （新規） | **02F-記事データの軽量 import** | 未作成（夕方 LCP シナリオ C で起草） | 🟡 夕方 LCP ≧ 4.0s で採用 |
-| （新規） | **02G-ヘッダーの server/client 分割** | 未作成（夕方 LCP シナリオ C で起草） | 🟡 夕方 LCP ≧ 4.0s + 02E/F 効果不足で採用 |
-| （新規） | **03-改善後再計測** | 未作成（02 採用後にリンが作成） | ⬜ 02 マージ後 |
-| （新規） | **04-3日安定性観測** | 軽量、依頼ファイル不要（簡易コマンド運用） | ⬜ 04-21〜23 朝・夕 |
+| **K** | **01-朝イチ基準計測** | `tasks/2026-04-21-morning/K-psi-morning-baseline.md` | ✅ マージ済（PR #58） |
+| **L-A** | **02A-記事リンク絞り込み** | `tasks/2026-04-21-morning/L-A-draft.md` | 🟡 夕方結果次第で採用 |
+| **L-B** | **02B-画像優先読込** | `tasks/2026-04-21-morning/L-B-draft.md` | 🟡 夕方 LCP ≧ 4.0s で採用 |
+| **L-C** | **02C-原因深掘り調査** | `tasks/2026-04-21-morning/L-C-draft.md` | 🟡 夕方結果次第で採用 |
+| **L-D** | **02D-比較ページ高速化** | `tasks/2026-04-21-morning/L-D-draft.md` | 🟡 `/compare` TBT > 400ms で採用 |
+| （新規） | **02E-検索機能の遅延化** | PR #62 | ✅ マージ済（squash `7e7d744`、2026-04-21 18:46 JST）、bundle -91% 実証 / CLS 退行後 02E-fix で解消 |
+| （新規） | **02E-fix-HeaderSearch skeleton 実寸合わせ** | PR #66 | ✅ マージ済（squash `fa28f60`、2026-04-22 09:00 JST）、CLS 0.125 → 0.000 完全復帰 |
+| （新規） | **02F-ScrollTracker 分離** | PR #65（案 A' 採用） | ✅ マージ済（squash `9e9e19a`、2026-04-21 18:46 JST）、Vercel deploy 成功 |
+| （新規） | **02G-ヘッダーの server/client 分割** | 未作成（08 調査で Phase 2 として昇格） | 🟡 09 (Phase 1 GA lazyOnload) 効果次第で採用判断 |
+| （新規） | **03-改善後再計測** | 実施済（2026-04-22 08:31 + 11:11 JST） | ✅ 完了、`/` LCP 4.3s で δ 判定 → **08 発注トリガー** |
+| （新規） | **04-3日安定性観測** | 軽量、依頼ファイル不要（簡易コマンド運用） | ⬜ 04-22〜24 継続 |
+| （新規） | **08-サイト横断 LCP 構造調査** | 2026-04-22 11:30 JST 実施完了 | ✅ 完了（`.ai-team/LCP_INVESTIGATION_08_2026-04-22.md`）、主因特定・Phase 1/2 実装案策定 |
+| （新規） | **09-GoogleAnalytics lazyOnload 化**（Phase 1） | 未作成（08 調査からの第一候補） | 🔵 次発注候補、XS PR、LCP -200〜-500ms 期待 |
+| （新規） | **10-PublicHeader server/client 分割**（Phase 2） | 未作成（08 調査からの第二候補、02G を吸収） | 🟡 09 実施後の 03-v2 計測結果次第、M PR、LCP -500ms〜-1.5s 期待 |
 | （新規） | **05-SEO中間評価** | 未作成 | ⬜ 2026-05-05 |
 | （新規） | **06-SEO本評価** | 未作成 | ⬜ 2026-05-18 |
 | （新規） | **07-次バッチ起動** | 未作成 | ⬜ 06 結果で選択肢 I/II/III を決定 |
 
 ---
 
-## 時系列フロー
+## 時系列フロー（2026-04-22 朝更新版）
 
 ```
-【2026-04-21（火）今日】
-  朝 09:00  │ 01-朝イチ基準計測（XS、所要 15 分）
-           │   ↓ /articles, /, /compare, /capacity-contribution-explained の真 Before 取得
-  朝 09:30  │ 01 結果で 02A〜02D から 1〜2 本採用（リン判断）
-           │   ↓
-  午前〜午後 │ 02A / 02B / 02C / 02D（採用分を並行または順次）
-           │   ↓
-  30 分待機 │ PR マージ後 Edge cache 安定待ち
-  夕方     │ 03-改善後再計測 → α/β/γ 判定確定
+【2026-04-21（火）】完了
+  朝 09:00  │ 01-朝イチ基準計測 ✅（PR #58）
+  午前〜夕方 │ 02E（PR #62）/ 02F（PR #65）セットマージ ✅ 18:46 JST
+  夕方 18:30│ PSI Before 計測（02E+02F 投入前）✅
 
-【2026-04-21〜04-23（火〜木）】
-  朝・夕   │ 04-3日安定性観測（/ を毎日 2 回計測、Perf 90〜97 維持確認）
+【2026-04-22（水）今日】★朝セッション完了
+  朝 08:31  │ 03-改善後再計測 ✅
+           │   → 02E+02F 効果部分確認、CLS 0.125 退行検出
+  朝 09:00  │ 02E-fix（PR #66）HeaderSearch skeleton 実寸合わせ ✅
+  朝 11:11  │ 再計測（edge cache 2h 後）✅
+           │   → CLS 0.000 完全復帰、/ LCP 4.3s 残存で δ 判定
+  朝 11:30  │ 08-サイト横断 LCP 構造調査 ✅
+           │   → LCP 要素特定、新主因仮説、Phase 1/2 策定
+  昼以降    │ 【次発注候補】09-GA lazyOnload（Phase 1、XS）
+           │   → Phase 2 (10-PublicHeader 分割、M) は 09 効果判定後
+
+【2026-04-22〜04-24（水〜金）】
+  朝・夕   │ 04-3日安定性観測（/ を毎日 2 回計測、LCP 改善幅観測）
 
 【2026-05-05（約 2 週間後）】
            │ 05-SEO中間評価（T-15/16/17 + G-01 の検索流入早期シグナル）
@@ -56,21 +66,34 @@
 
 ---
 
-## 02 採用判断マトリクス（01 結果 → 採用する 02）
+## 02 採用判断マトリクス（夕方再計測 → 採用する 02、2026-04-21 昼更新）
 
-| `/articles` 真 TBT | `/articles` 真 LCP | 採用する 02 |
-|---|---|---|
-| < 400ms | < 2.5s | 02 はすべて不要（04 観測へ） |
-| < 400ms | ≧ 2.5s | **02B（画像優先読込）** |
-| 400〜550ms | -  | **02A（記事リンク絞り込み）** |
-| > 550ms | - | **02C（原因深掘り調査、DevTools 実地）** |
+### PR #61 bundle 解析後の判断フレーム
+
+bundle 解析（PR #61）で判明: articleList (287 KB / 71 KB gzip) が layout chunk に 2 経路で常駐。**02E + 02F は セット運用必須**、単独では layout chunk 削減効果ほぼ 0。
+
+| 夕方 `/` LCP | 採用する 02 |
+|---|---|
+| < 3.0s | ノイズ確定。02E+02F は **後日マージ候補**（bundle 健全化の観点で有益、緊急性低） |
+| 3.0〜4.0s | **02E（PR #62）+ 02F（発注中）を同時マージ** |
+| ≧ 4.0s | **02E + 02F + 02B（画像 priority）複合発注** |
+
+### 旧判断基準（01 結果時点、`/articles` TBT 軸、参考用）
+
+| `/articles` 真 TBT | 採用する 02 |
+|---|---|
+| < 400ms | 02 はすべて不要（04 観測へ） |
+| 400〜550ms | **02A（記事リンク絞り込み）** |
+| > 550ms | **02C（原因深掘り調査、DevTools 実地）** |
+
+朝計測で `/articles` 真 TBT = 140ms（α 判定）のため **02A/02C は採用見送り**。
 
 並行判定:
 
 | `/compare` 真 TBT | 追加採用 |
 |---|---|
-| ≤ 400ms | なし |
-| > 400ms | **02D（比較ページ高速化）**（上の 02 と並行 OK） |
+| ≤ 400ms | なし（朝計測 135ms で採用見送り） |
+| > 400ms | **02D（比較ページ高速化）** |
 
 ---
 
@@ -93,11 +116,15 @@
 | 02B-画像優先読込 | LCP 要素に `priority` 付与、非 LCP 画像は lazy 最適化 |
 | 02C-原因深掘り調査 | Chrome DevTools Performance で実 JS タスクを観察・根本原因特定 |
 | 02D-比較ページ高速化 | `/compare` に content-visibility 横展開（`/articles` の成功パターン） |
-| 02E-検索機能の遅延化 | HeaderSearch を `dynamic({ ssr: false })` に変更、全ページ bundle から 270KB + fuse.js を分離 |
-| 02F-記事データの軽量 import | ArticleScrollTracker の articleList 全件 import を SLUG_SET 軽量化に置換（または build-time json 化） |
-| 02G-ヘッダーの server/client 分割 | PublicHeader を server nav + client interactive に分割（02E とセット運用） |
-| 03-改善後再計測 | 02 の After 計測で α/β/γ 判定を確定 |
-| 04-3日安定性観測 | 04-21〜23 朝夕で `/` を計測、Perf 90〜97 維持確認 |
+| 02E-検索機能の遅延化 | HeaderSearch を `dynamic({ ssr: false })` 化（PR #62）。02F と同時マージ完了、bundle -91% 実証済 |
+| 02E-fix-skeleton 実寸合わせ | PR #62 merge 後 08:31 計測で CLS 0.125 退行検出 → loading fallback skeleton を実 HeaderSearch とピクセル一致 → CLS 完全復帰（PR #66） |
+| 02F-ScrollTracker 分離 | ArticleScrollTracker から articleList 全件 import を除去（案 A' TS module 生成、PR #65）。02E と同時マージ済 |
+| 02G-ヘッダーの server/client 分割 | 08 調査で **10-PublicHeader 分割（Phase 2）に昇格・統合**。02G として独立計画は廃止 |
+| 03-改善後再計測 | ✅ 完了（2026-04-22 08:31 + 11:11 JST）、`/` LCP 4.3s で δ 判定 → 08 発注トリガー |
+| 04-3日安定性観測 | 04-22〜24 朝夕で `/` を計測、Perf 維持確認 |
+| 08-サイト横断 LCP 構造調査 | ✅ 完了、LCP 要素特定（3 URL 全て hero p テキスト）、新主因仮説策定（hydration re-pinning + gtag） |
+| 09-GA lazyOnload 化（Phase 1） | Script strategy を `afterInteractive` → `lazyOnload`、gtag.js の FCP→LCP 窓内競合解消 |
+| 10-PublicHeader server/client 分割（Phase 2） | Server Component 化（nav 静的）+ 軽量 Client（active link のみ）、hydration 範囲縮小 |
 | 05-SEO中間評価 | GSC で T-15/16/17 + G-01 の早期シグナル確認、弱ければ追加施策前倒し |
 | 06-SEO本評価 | GSC 本計測、Batch A の成果を数値で最終評価 |
 | 07-次バッチ起動 | 06 結果で Batch A 残り / Batch B / A/B リライトから選択 |

@@ -1,0 +1,258 @@
+{
+  "https://simulator.eic-jp.org/": {
+    "perf": 82,
+    "lcpMs": 4413.815462166067,
+    "fcpMs": 2189.0762507485506,
+    "tbtMs": 37,
+    "cls": 0.009637,
+    "ttfbMs": 4,
+    "ttfbDisplay": "Root document took 0 ms",
+    "totalByteWeightKb": 536,
+    "lcpElement": null,
+    "lcpPhases": null,
+    "renderBlocking": [],
+    "unusedJavascript": [
+      {
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-VCCJXB8WGP",
+        "totalBytes": 151860,
+        "wastedBytes": 62468,
+        "wastedPercent": 41.13512532587383
+      },
+      {
+        "url": "https://simulator.eic-jp.org/_next/static/chunks/679657e5ff34110c.js",
+        "totalBytes": 71143,
+        "wastedBytes": 24628,
+        "wastedPercent": 34.617190539434674
+      }
+    ],
+    "unusedCss": [],
+    "thirdParty": [],
+    "mainThreadWork": [
+      {
+        "groupLabel": "Script Evaluation",
+        "duration": 395.31959999999907
+      },
+      {
+        "groupLabel": "Style & Layout",
+        "duration": 346.584
+      },
+      {
+        "groupLabel": "Script Parsing & Compilation",
+        "duration": 143.84280000000004
+      },
+      {
+        "groupLabel": "Other",
+        "duration": 119.86200000000014
+      },
+      {
+        "groupLabel": "Parse HTML & CSS",
+        "duration": 11.176799999999998
+      },
+      {
+        "groupLabel": "Rendering",
+        "duration": 9.925199999999998
+      }
+    ],
+    "longTasksTotal": 4,
+    "longTasksTopDurations": [
+      {
+        "duration": 177,
+        "startTime": 942.0469235375695
+      },
+      {
+        "duration": 94,
+        "startTime": 4400.140770612708
+      },
+      {
+        "duration": 66,
+        "startTime": 4494.140770612708
+      },
+      {
+        "duration": 64,
+        "startTime": 1847.1173088439236
+      }
+    ],
+    "bootupTimeMs": 477.83520000000016,
+    "bootupDisplay": "0.5 s",
+    "networkRttMs": 0.8999999999999999,
+    "networkServerLatencyMs": 7
+  },
+  "https://simulator.eic-jp.org/articles": {
+    "perf": 82,
+    "lcpMs": 4331.709401678968,
+    "fcpMs": 2227.0088319854476,
+    "tbtMs": 62.5,
+    "cls": 0.000637,
+    "ttfbMs": 8,
+    "ttfbDisplay": "Root document took 10 ms",
+    "totalByteWeightKb": 595,
+    "lcpElement": null,
+    "lcpPhases": null,
+    "renderBlocking": [],
+    "unusedJavascript": [
+      {
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-VCCJXB8WGP",
+        "totalBytes": 151860,
+        "wastedBytes": 62468,
+        "wastedPercent": 41.13512532587383
+      },
+      {
+        "url": "https://simulator.eic-jp.org/_next/static/chunks/679657e5ff34110c.js",
+        "totalBytes": 71154,
+        "wastedBytes": 24369,
+        "wastedPercent": 34.24781887372944
+      }
+    ],
+    "unusedCss": [],
+    "thirdParty": [],
+    "mainThreadWork": [
+      {
+        "groupLabel": "Script Evaluation",
+        "duration": 449.36999999999756
+      },
+      {
+        "groupLabel": "Style & Layout",
+        "duration": 432.40080000000006
+      },
+      {
+        "groupLabel": "Other",
+        "duration": 145.87680000000077
+      },
+      {
+        "groupLabel": "Script Parsing & Compilation",
+        "duration": 134.22720000000007
+      },
+      {
+        "groupLabel": "Parse HTML & CSS",
+        "duration": 20.730000000000008
+      },
+      {
+        "groupLabel": "Garbage Collection",
+        "duration": 20.447999999999993
+      },
+      {
+        "groupLabel": "Rendering",
+        "duration": 15.739199999999995
+      }
+    ],
+    "longTasksTotal": 5,
+    "longTasksTopDurations": [
+      {
+        "duration": 126,
+        "startTime": 1062.0047103922388
+      },
+      {
+        "duration": 98,
+        "startTime": 926.0047103922388
+      },
+      {
+        "duration": 80,
+        "startTime": 4523.015308774777
+      },
+      {
+        "duration": 60,
+        "startTime": 4603.015308774777
+      },
+      {
+        "duration": 59,
+        "startTime": 1972.0129535786568
+      }
+    ],
+    "bootupTimeMs": 531.2556000000003,
+    "bootupDisplay": "0.5 s",
+    "networkRttMs": 0.8999999999999999,
+    "networkServerLatencyMs": 6
+  },
+  "https://simulator.eic-jp.org/capacity-contribution-explained": {
+    "perf": 28,
+    "lcpMs": 6947.01304335452,
+    "fcpMs": 5641.013043354519,
+    "tbtMs": 3332.500000000001,
+    "cls": 0,
+    "ttfbMs": 6,
+    "ttfbDisplay": "Root document took 10 ms",
+    "totalByteWeightKb": 599,
+    "lcpElement": null,
+    "lcpPhases": null,
+    "renderBlocking": [],
+    "unusedJavascript": [
+      {
+        "url": "https://www.googletagmanager.com/gtag/js?id=G-VCCJXB8WGP",
+        "totalBytes": 151860,
+        "wastedBytes": 62468,
+        "wastedPercent": 41.13512532587383
+      },
+      {
+        "url": "https://simulator.eic-jp.org/_next/static/chunks/36e36cdd03b5807f.js",
+        "totalBytes": 70191,
+        "wastedBytes": 31005,
+        "wastedPercent": 44.171846416875596
+      },
+      {
+        "url": "https://simulator.eic-jp.org/_next/static/chunks/679657e5ff34110c.js",
+        "totalBytes": 71154,
+        "wastedBytes": 24749,
+        "wastedPercent": 34.78220039977999
+      }
+    ],
+    "unusedCss": [],
+    "thirdParty": [],
+    "mainThreadWork": [
+      {
+        "groupLabel": "Style & Layout",
+        "duration": 11658.5772
+      },
+      {
+        "groupLabel": "Script Evaluation",
+        "duration": 3631.6775999999936
+      },
+      {
+        "groupLabel": "Other",
+        "duration": 1176.8399999999945
+      },
+      {
+        "groupLabel": "Script Parsing & Compilation",
+        "duration": 873.2939999999995
+      },
+      {
+        "groupLabel": "Garbage Collection",
+        "duration": 375.4799999999997
+      },
+      {
+        "groupLabel": "Rendering",
+        "duration": 114.66719999999998
+      },
+      {
+        "groupLabel": "Parse HTML & CSS",
+        "duration": 70.5912
+      }
+    ],
+    "longTasksTotal": 20,
+    "longTasksTopDurations": [
+      {
+        "duration": 4714,
+        "startTime": 1077.0130433545196
+      },
+      {
+        "duration": 1122,
+        "startTime": 6560.01304335452
+      },
+      {
+        "duration": 428,
+        "startTime": 10059.01304335452
+      },
+      {
+        "duration": 427,
+        "startTime": 8951.01304335452
+      },
+      {
+        "duration": 383,
+        "startTime": 10487.01304335452
+      }
+    ],
+    "bootupTimeMs": 4325.503199999995,
+    "bootupDisplay": "4.3 s",
+    "networkRttMs": 0.8999999999999999,
+    "networkServerLatencyMs": 7
+  }
+}

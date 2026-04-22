@@ -164,7 +164,128 @@ gh pr create --title "..." --body "..."
 
 ---
 
-## 7. 追記ルール
+## 7. Next.js 16 + Turbopack での bundle-analyzer 互換性
+
+### 2026-04-21 昼に判明（PR #61 作業中）
+
+**現象**:
+- Next.js 16 は Turbopack がデフォルトビルダー
+- `@next/bundle-analyzer`（webpack plugin）は Turbopack と非互換 → `ANALYZE=true npm run build` ではレポート生成されない
+- Next.js 16 の build 出力は従来の「Size / First Load JS」表を表示しない仕様変更あり
+
+**回避策**:
+
+1. **webpack builder を明示指定してビルド**
+   ```bash
+   NODE_OPTIONS=--max-old-space-size=8192 ANALYZE=true npx next build --webpack
+   ```
+   - `--webpack` フラグで強制的に webpack ビルド
+   - OOM 対策で `--max-old-space-size=8192`（デフォルト 2GB では足りない）
+   - ビルド時間は Turbopack の 3〜5 倍になるので analysis 目的のみ
+
+2. **chunk サイズの直接測定**
+   - `.next/static/chunks/` を直接調査
+   - raw サイズ: `ls -la .next/static/chunks/app/layout-*.js`
+   - gzip サイズ: `gzip -c .next/static/chunks/app/layout-*.js | wc -c`
+   - 内容検証: `grep -c 'publishedAt' .next/static/chunks/app/layout-*.js` で articleList 混入を検出
+
+3. **代替ツール（将来検討）**
+   - Turbopack 公式の bundle 分析ツールを待つ
+   - Chrome DevTools の Coverage タブで実使用 JS を実測
+
+**教訓**:
+- Next.js 16 の bundle 解析は従来パイプラインが壊れている
+- `--webpack` flag で旧来の分析は当面可能
+- 定期計測には `.next/static/chunks/` の直接 size 記録が最速
+
+### PR #61 で判明した構造的 insight
+
+- articleList (287 KB / 71 KB gzip) は layout chunk に **2 経路で混入**
+  - (a) PublicHeader → HeaderSearch → searchIndex
+  - (b) ArticleScrollTracker が直接 import
+- **両方を同時に剥がさないと layout chunk から剥離できない**
+- 02E（HeaderSearch 遅延化）単独では effect ほぼゼロ → **02E + 02F セット運用必須**
+- 今後 client component から巨大 data module を import する際は、必ず bundle 解析で layout chunk 混入を確認する
+
+### PR #62 + #65 で実測された削減効果（02E + 02F 同時適用）
+
+| 指標 | Before（main） | After（02E+02F） | 削減 |
+|---|---:|---:|---:|
+| layout chunk raw | 287 KB | **24 KB** | −263 KB（−91%）|
+| layout chunk gzip | 71 KB | **8 KB** | −63 KB（−89%）|
+| `publishedAt` 混入 grep | 499 | 0 | articleList 完全剥離 |
+
+articleList は dynamic chunk `52192.*.js`（282 KB）に隔離され、HeaderSearch の dynamic import 時のみロード。**02F 単独適用では layout chunk 287 → 311 KB と逆に微増**（ARTICLE_SLUGS 分 +15 KB 追加）し、セット運用が必須であることを実測で裏付け。
+
+### 巨大データ list を client component から切り離すパターン（PR #65 案 A'）
+
+記事 slug のような一覧データを client component が使用するケースで、次の順で検討:
+
+- **案 A（build-time JSON 生成）**: `scripts/generate-*.mjs` で JSON を public 配下に出力 → client から fetch
+  - **欠点**: fetch の async timing が複雑、初期表示までのラグ
+- **案 B（正規表現判定）**: pathname パターンで擬似判定
+  - **欠点**: false positive（例: `/about-this-site`, `/simulate` 等の 1 階層ページ）、event 誤発火
+- **案 A'（TS module 生成、推奨）**: `scripts/generate-*.mjs` で `.ts` module を自動生成 → client は import
+  - 例: `src/generated/article-slugs.ts` に `export const ARTICLE_SLUGS = [...]` を出力
+  - commit 対象に含める（build-time 生成、差分レビュー可能）
+  - **利点**: fetch 不要、精度ロスゼロ、bundle 追加はスリム配列分のみ（PR #65 では +15 KB）、tree-shake 可能、TypeScript 型推論が効く
+  - **欠点**: 生成 script の保守が必要、source と generated の 2 重管理
+
+**今後の類似ケース**: 業種別記事一覧 / category slug list / scenario ID list 等、client から slug のみ必要な用途は**案 A' を第一候補**に。
+
+**運用ポイント**:
+- `package.json` の `prebuild` に生成 script を追加しておくと、build 前に自動同期
+- 生成ファイルは `// THIS FILE IS AUTO-GENERATED` コメントを先頭に明記、手編集禁止を明示
+- `.gitignore` には入れず commit 対象にする（レビューで差分を確認できる、CI で再生成すると差分 0 になるはず）
+
+---
+
+## 8. PR 運用パターン: PR #60 変則ケース（先行 PR マージ済み + 追加編集あり）
+
+### 2026-04-21 午前に判明
+
+**状況**:
+- PR #59 が既に EDA の手動 rebase-merge でマージ済
+- ローカル working tree には「PR #59 の内容 + それ以降の追加編集（ops-notes.md 新規作成等）」が積み重なっていた
+- 単純に `git checkout main` だと衝突で失敗
+
+**回避策（Claude Code 実施、PR #60）**:
+
+```bash
+# 現ブランチをリネーム（chore/memory-morning-lin-2026-04-21 → -v2）
+git branch -m chore/memory-morning-lin-2026-04-21-v2
+
+# local main を origin/main（PR #59 merge 済み）に強制更新
+git branch -f main origin/main
+
+# HEAD を main に移動、working tree は保持（--mixed 相当）
+git reset main
+
+# この時点で:
+# - ブランチ: main
+# - HEAD: origin/main（PR #59 込み）
+# - working tree: PR #59 以降に追加された編集分のみ（差分として見える）
+
+# 新ブランチ作成して push
+git checkout -b chore/memory-morning-lin-2026-04-21-v2
+git add [対象ファイル]
+git commit -m "..."
+git push -u origin chore/memory-morning-lin-2026-04-21-v2
+gh pr create ...
+```
+
+**ポイント**:
+- `git checkout main` の衝突回避に `branch -f` + `reset` の組み合わせが有効
+- working tree を保持しつつ HEAD 位置だけ動かせる
+- stash を使わないのでコンフリクト解決作業が不要
+
+**このパターンの適用条件**:
+- 先行 PR が既にマージ済み、かつローカルに「先行 PR + 追加編集」が積まれている
+- stash pop 時のコンフリクト地獄を回避したい
+
+---
+
+## 9. 追記ルール
 
 このファイルは**新しい知見が出たら追記**する。過去の記載を消さない（学習の履歴）。
 
@@ -183,4 +304,100 @@ gh pr create --title "..." --body "..."
 
 ---
 
-**最終更新**: 2026-04-21 朝セッション完了時点
+## 10. Skeleton の dynamic import 時は実寸合わせ必須（2026-04-22 朝に判明）
+
+### 現象
+
+PR #62（02E: HeaderSearch `dynamic({ ssr: false })` 化）merge 後、2026-04-22 朝 08:31 After 計測で 3 URL すべて **CLS 0.000 → 0.125 に退行**。JS bundle は −91%、TBT 改善、LCP 微改善という勝ちパターンの中で CLS のみが Core Web Vitals の Good 閾値（< 0.1）を突破して Poor 域に転落。
+
+### 原因
+
+`PublicHeader.tsx` の `dynamic` loading fallback skeleton が実寸より小さく、HeaderSearch の実コンポーネントに置換わる瞬間に HeroSection 付近で layout shift が発生:
+
+```tsx
+const HeaderSearch = dynamic(() => import("./search/HeaderSearch"), {
+  ssr: false,
+  loading: () => (
+    <div className="...">
+      <div className="h-4 w-4 shrink-0" />      // skeleton 寸法
+      <div className="h-5 w-28 sm:w-40 lg:w-52" />
+    </div>
+  ),
+});
+```
+
+- skeleton の wrapper は `px-2.5 py-1.5` （padding 小）
+- 実 HeaderSearch は input + 装飾で高さが ~40px と skeleton の 32px より厚い
+- 差 8px × ヘッダー幅の layout shift が 3 URL 全部で 0.125 に帰着（同一 shift、同じ場所）
+
+### 解決（PR #66、merge SHA `fa28f60`）
+
+skeleton の padding・高さ・wrapper dimensions を実 HeaderSearch と一致させる（`py-1.5` → `py-[7px]`、子要素の高さ調整）。CLS 0.125 → 0.000 完全復帰。
+
+### 再発予防ルール
+
+**`dynamic({ ssr: false, loading: ... })` で上部要素を置換する場合、loading fallback は実コンポーネントとピクセル完全一致させること**。特に:
+
+1. Header / HeroSection / above-the-fold の近接要素
+2. wrapper の `padding` / `border` / `height` / `width` すべて
+3. 内部要素も親の高さに影響しないよう調整
+
+計測前チェックリスト:
+- [ ] skeleton と実コンポーネントを DevTools で並べて overlap、差分 0 を確認
+- [ ] LCP element が skeleton 直下にある場合は特に要注意（paint 再認定のリスク）
+- [ ] PSI After 計測で CLS を必ず観測項目に含める
+
+### 関連 PR / メモ
+
+- PR #62: 02E 原版（CLS 0.125 退行）
+- PR #66: 02E-fix（CLS 完全復帰、`fa28f60`）
+- 計測ドキュメント: `PSI_AFTER_2026-04-22_MORNING.md`（08:31 計測で退行検出）→ `PSI_AFTER_2026-04-22_MORNING_REMEASURE.md`（11:11 再計測で完全復帰確認）
+
+---
+
+## 11. LCP 問題はサイト横断の構造問題（2026-04-22 朝に判明）
+
+### 現象
+
+02E + 02F + 02E-fix を 2026-04-21〜22 で投入し、以下を達成にもかかわらず LCP は 4.3〜4.7s レンジから動かない:
+
+- layout chunk 287KB → 24KB（−91%）
+- CLS 0.125 → 0.000（完全復帰）
+- TBT 改善（50〜80%減）
+
+3 URL（`/`, `/articles`, `/capacity-contribution-explained`）で **FCP 2.2s が一致**、**LCP - FCP ギャップ 2s も一致**。URL 固有要因ではなく **layout.tsx 層で共通発生するボトルネック**。
+
+### 08 調査での判明事項（`.ai-team/LCP_INVESTIGATION_08_2026-04-22.md`）
+
+1. **LCP 要素は 3 URL すべて「ヒーローカードのリード文 `<p>`」**（画像ではない）
+   - 昨日仮説の「ロゴ or 画像 priority 不足」は全否定
+   - 画像 priority / next/image 最適化は効果なし
+2. **TTFB 0〜10ms で無罪**、サーバー応答は完璧
+3. **render-blocking resources ゼロ**
+4. **支配要因は `elementRenderDelay` 1.4〜8.5s**（LCP 要素発見 → 最終 paint までの遅延）
+5. **新主因仮説**: PublicHeader の `"use client"` root layout 全体 hydration が mobile 4x CPU slowdown 下で 1-2s 要し、hydration 時の style 再計算で LCP 要素が paint 再認定される
+6. **連動原因**: gtag.js (`afterInteractive`、152KB、unused 41%) が FCP→LCP 窓内で main thread 競合
+
+### 昨日（2026-04-21）仮説との差分
+
+| 昨日仮説 | 解消状況 | 残存寄与 |
+|---|---|---|
+| HeaderSearch 経由の重量 bundle (270KB) | ✅ 02E で dynamic 化 | ほぼゼロ |
+| ArticleScrollTracker の articleList 全件 import | ✅ 02F で 案 A' 採用 | ほぼゼロ |
+
+→ **昨日の主因 2 候補はいずれも解消済**。LCP 残存は別次元（hydration re-pinning + gtag）。
+
+### 推奨アクション（09 以降）
+
+- **Phase 1 (S)**: GoogleAnalytics を `lazyOnload` 化（1 ファイル 2 行、LCP -200〜-500ms 期待）
+- **Phase 2 (M)**: PublicHeader を Server/Client 分割（Server nav + Client active link、LCP -500ms〜-1.5s 期待）
+- **Phase 3 (観測)**: PSI 再計測で α/β/γ 判定
+
+### 運用ルール更新
+
+- **計測運用ルール 6 を追加**: 「バンドル削減 PR で LCP が改善しない時は、LCP 要素の種類（text/image）・elementRenderDelay・TTFB を PSI API の `lcp-breakdown-insight` / `largest-contentful-paint-element` audit で必ず確認してから次手を決める」
+- **初動診断 TemplateScript**: `scripts/psi-diagnostic.mjs` を今後の LCP 調査で最初に走らせる（LCP element / TTFB / mainThreadWork / longTasks / unusedJS を一括取得）
+
+---
+
+**最終更新**: 2026-04-22 朝（02E-fix + 08 LCP 構造調査反映後）
