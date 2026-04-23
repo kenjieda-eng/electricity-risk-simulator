@@ -204,6 +204,7 @@ export const articleCategories: ArticleCategory[] = [
       "response-flow-when-electricity-cost-surges",
       "hidden-electricity-price-increases",
       "electricity-market-liberalization-impact",
+      "tariff-revision-calendar-2026",
     ],
     order: 3,
     group: "learning",
@@ -419,6 +420,7 @@ export const articleCategories: ArticleCategory[] = [
       "oil-and-corporate-electricity-price",
       "fx-and-corporate-electricity-price",
       "capacity-market-and-corporate-rates",
+      "demand-response-revenue-model",
     ],
     order: 8,
     group: "learning",
@@ -1658,6 +1660,17 @@ export const articleList: ArticleMeta[] = [
   { title: "法人の電気代が年間100万円以上上がったときの対応フロー", slug: "response-flow-when-electricity-cost-surges", description: "金額別のアラート基準、初動チェック、エスカレーションルールを整理。", category: "電気料金の推移と高止まり", categorySlug: "price-trends", order: 23, publishedAt: "2026-04-13" },
   { title: "電気料金の「見えない値上げ」とは", slug: "hidden-electricity-price-increases", description: "契約単価が変わらなくても負担が増える6つの理由を整理。累積効果の試算も掲載。", category: "電気料金の推移と高止まり", categorySlug: "price-trends", order: 24, publishedAt: "2026-04-13" },
   { title: "電力自由化後の法人電気料金はどう変わったか", slug: "electricity-market-liberalization-impact", description: "2016年の完全自由化以降の市場構造変化を整理。新電力シェア推移・撤退の経緯を解説。", category: "電気料金の推移と高止まり", categorySlug: "price-trends", order: 25, publishedAt: "2026-04-13" },
+  {
+    title: "2026〜2028年 法人電気料金 制度改定カレンダー｜容量拠出金・再エネ賦課金・託送料金の時系列一覧",
+    slug: "tariff-revision-calendar-2026",
+    description:
+      "2026年度から2028年度にかけての法人電気料金に影響する制度改定（容量拠出金の段階的増額、再エネ賦課金新単価、託送料金 第2次規制期間、特別高圧小売競争促進）を時系列カレンダー形式で整理。確定事項と見通しを区別し、予算策定と契約見直しに使える形でまとめます。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    featured: true,
+    order: 26,
+    publishedAt: "2026-04-27",
+  },
   {
     title: "市場連動プランとは",
     slug: "market-linked-plan",
@@ -3101,6 +3114,16 @@ export const articleList: ArticleMeta[] = [
   { title: "ダックカーブとは何か", slug: "duck-curve-electricity-price-impact", description: "昼12時のネット需要7,819MWから夕方18時の11,923MWへの急上昇。太陽光が生むダックカーブと市場価格への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 22, publishedAt: "2026-04-12" },
   { title: "火力 vs 再エネ 年度別推移", slug: "thermal-vs-renewable-trend", description: "FY2023→FY2026で火力66.6%→56.4%、再エネ26.1%→27.7%。年度別の電源構成推移と法人の中長期戦略への示唆を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 23, publishedAt: "2026-04-12" },
   { title: "エリア間電力融通の実態", slug: "inter-area-power-flow-explained", description: "東京は常時+4,456MW輸入、東北は-4,041MW輸出。連系線・揚水発電・蓄電池のデータから法人電気料金への影響を解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 24, publishedAt: "2026-04-12" },
+  {
+    title: "デマンドレスポンス（DR）で収益を得る方法｜法人向けネガワット・アグリゲーター活用ガイド",
+    slug: "demand-response-revenue-model",
+    description:
+      "電力のデマンドレスポンス（DR）を「コスト削減」ではなく「収益源」として扱う法人向けガイド。ネガワット取引の仕組み、アグリゲーターとの契約パターン、収益規模とROI、参入時の注意点を実務レベルで解説。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 25,
+    publishedAt: "2026-04-27",
+  },
 
   // --- M. データで見る電力市場 11本 ---
   { title: "JEPXスポット価格の全体像", slug: "jepx-spot-price-dashboard", description: "FY2010〜2026の17年間のJEPXスポット価格を集計。年度別・時間帯別の変動パターンとスパイク発生条件をデータで解説します。", category: "データで見る電力市場", categorySlug: "market-data", featured: true, order: 1, publishedAt: "2026-04-12" },
