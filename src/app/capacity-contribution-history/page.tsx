@@ -411,9 +411,8 @@ export default function CapacityContributionHistoryPage() {
             },
             {
               href: "/tariff-revision-calendar-2026",
-              title: "2026〜2028年 制度改定カレンダー",
-              description:
-                "容量拠出金 2027年度 +50%、2028年度エリア別 1.7〜2.8倍の段階的増額を時系列で整理。",
+              title: "2026〜2028年 法人電気料金 制度改定カレンダー",
+              description: "2027→2028 年度の容量拠出金単価の最大 2.8 倍化を時系列で整理。",
             },
           ]}
         />

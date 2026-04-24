@@ -5,6 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
@@ -333,6 +334,7 @@ export default function MarketPriceAdjustmentPage() {
         />
       </div>
 
+      <AuthorBadge publishedAt="2025-08-11" updatedAt="2026-04-24" />
     </main>
     </>
   );

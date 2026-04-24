@@ -418,9 +418,8 @@ export default function DemandResponseCostBenefitPage() {
             },
             {
               href: "/demand-response-revenue-model",
-              title: "DRで収益を得る方法（収益化ガイド）",
-              description:
-                "DRを「コスト削減」ではなく「収益源」として扱う法人向けガイド。業種別 kW あたり年間収益レンジ掲載。",
+              title: "デマンドレスポンス（DR）で収益を得る方法",
+              description: "コスト削減だけでなく、DR で収益を得る法人向けガイド（業種別収益レンジ付き）。",
             },
           ]}
         />

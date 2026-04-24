@@ -330,8 +330,7 @@ export default function CapacityContributionExplainedPage() {
             {
               href: "/tariff-revision-calendar-2026",
               title: "2026〜2028年 法人電気料金 制度改定カレンダー",
-              description:
-                "容量拠出金2027年度7,847円/kW、2028年度首都圏14,812円/kWの段階的増額を含む制度改定を時系列で整理。",
+              description: "容量拠出金・再エネ賦課金・託送料金の時系列改定スケジュールを整理。",
             },
           ]}
         />

@@ -310,9 +310,8 @@ export default function PowerRiskManagementPage() {
             },
             {
               href: "/demand-response-revenue-model",
-              title: "DRで収益を得る方法",
-              description:
-                "需要側リソースを調達戦略に組み込む観点。リスク管理と収益化を同時に図る法人向けガイド。",
+              title: "デマンドレスポンス（DR）で収益を得る方法",
+              description: "需要側で価格変動リスクをヘッジし、さらに収益源とする法人向けガイド。",
             },
           ]}
         />

@@ -8,6 +8,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -714,6 +715,7 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
         />
       </div>
 
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-24" />
     </main>
     </>
   );

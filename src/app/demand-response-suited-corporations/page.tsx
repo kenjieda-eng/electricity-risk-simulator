@@ -346,9 +346,8 @@ export default function DemandResponseSuitedCorporationsPage() {
             },
             {
               href: "/demand-response-revenue-model",
-              title: "DRで収益を得る方法",
-              description:
-                "DR 適性のある企業が実際に収益化するための実務ガイド。業種別 kW あたり年間収益レンジと契約パターンを解説。",
+              title: "デマンドレスポンス（DR）で収益を得る方法",
+              description: "DR を収益源として扱う具体的な業種別レンジとアグリゲーター選定ガイド。",
             },
           ]}
         />

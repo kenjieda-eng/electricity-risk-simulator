@@ -317,15 +317,13 @@ export default function CapacityMarketAndCorporateRatesPage() {
             },
             {
               href: "/tariff-revision-calendar-2026",
-              title: "2026〜2028年 制度改定カレンダー",
-              description:
-                "容量拠出金2027年度 +50%、2028年度首都圏 +180% の時系列改定をまとめました。",
+              title: "2026〜2028年 法人電気料金 制度改定カレンダー",
+              description: "容量拠出金の 2026→2028 年度 最大 2.8 倍化を時系列で確認。",
             },
             {
               href: "/demand-response-revenue-model",
-              title: "DRで収益を得る方法",
-              description:
-                "容量市場・需給調整市場を活用した法人向けDR収益化ガイド。",
+              title: "デマンドレスポンス（DR）で収益を得る方法",
+              description: "容量市場の供出側となって収益を得る法人向けガイド。",
             },
           ]}
         />

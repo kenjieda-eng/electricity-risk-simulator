@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
@@ -484,6 +485,8 @@ export default function ElectricityExpenseAccountingGuidePage() {
             description="電気料金の勘定科目整理から省エネ投資の税制優遇活用、コスト配賦の設計まで、エネルギー情報センターが中立的にサポートします。初回相談は無料です。"
           />
         </div>
+
+        <AuthorBadge publishedAt="2026-04-19" updatedAt="2026-04-24" />
       </main>
     </>
   );
