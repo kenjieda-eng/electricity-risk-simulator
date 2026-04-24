@@ -416,6 +416,12 @@ export default function DemandResponseCostBenefitPage() {
               title: "自家消費型太陽光は電気料金対策としてどう効くか",
               description: "DRと太陽光の組み合わせの考え方。",
             },
+            {
+              href: "/demand-response-revenue-model",
+              title: "DRで収益を得る方法（収益化ガイド）",
+              description:
+                "DRを「コスト削減」ではなく「収益源」として扱う法人向けガイド。業種別 kW あたり年間収益レンジ掲載。",
+            },
           ]}
         />
 
