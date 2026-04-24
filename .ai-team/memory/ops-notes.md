@@ -49,11 +49,12 @@
 - playwright.download.prss.microsoft.com
 - *.anthropic.com, claude.com, *.claude.com
 - business.enechange.jp（競合サイト、競合分析用に許可されている）
+- **www.googleapis.com**（2026-04-23 判明、PSI API 呼び出しが Cowork 直接で動作）
 
 **運用上の回避策**:
 
 1. **本番 HTML の目視確認が必要な場合**: EDA の Windows 環境から curl / ブラウザで確認、結果を Cowork に共有
-2. **PSI API 呼び出しが必要な場合**: Claude Code 側で実行（EDA のローカル環境から）
+2. **PSI API 呼び出し**: **Cowork 直接で可能**（2026-04-23 Day 2 朝計測で確認済）。ただし chunked 実行が必要（§9 参照）
 3. **競合サイト調査**: business.enechange.jp は許可されているので Cowork 直接 fetch 可能
 
 ### 例外対応
@@ -105,17 +106,45 @@ gh pr create --title "..." --body "..."
 
 ---
 
-## 4. 計測運用ルール（2026-04-20〜21 で確立、5 項目）
+## 4. 計測運用ルール（2026-04-20〜22 で確立、6 項目）
 
-夜セッションで確定、朝セッションでも堅く守られた:
+夜セッションで確定、朝セッションでも堅く守られた。ルール 6 は 2026-04-22 夕 Day 1 計測で判明し追加:
 
 1. **PR マージ後 30 分以内は PSI 計測しない**（Edge cache-bust 直後の cold hit 回避）
 2. **`--runs N` で同値 = キャッシュ疑う**（`scripts/psi-baseline.mjs --interval 60` 必須）
 3. **真の中央値は時刻をまたぐ**（朝 / 夕 / 翌朝で比較）
 4. **異常値 1 回で騒がない**（2〜3 時間後に再計測してから判断）
 5. **Before 値も疑う**（Before/After 比較は両側とも `--interval 60` 付き複数 runs で取った値を使う。過去の 1 snapshot 値は参考程度）
+6. **3 run サマリは中央値ベースで読む**（2026-04-22 夕に判明）。`/articles` 朝 TBT 376ms は 3 run のうち run3=559ms が外れ値だったことが夕計測で発覚、真値は 176ms。平均値は外れ値に引きずられるので、今後のサマリは **median (中央値)** を既定にする。外れ値の原因として考えられるのは: run 間のネットワーク変動、gtag.js の非決定的な実行タイミング、PSI サーバ側の負荷変動。
+7. **r1 は PSI 側 cold-run バイアスの可能性があるため単独で信頼しない**（2026-04-23 Day 2 朝に判明）。Day 2 朝計測で 3 URL 中 2 URL の r1 LCP が r2/r3 より 1.4〜1.7s 高い現象が発生（`/` r1=3.7s / r2=2.2s / r3=2.2s、`/articles` r1=3.9s / r2=2.5s / r3=2.4s）。平均値 2717ms に対し median 2228ms が真値を捕捉。完全に一律パターンではなく、`/capacity` では r1 がむしろ最良値だったケースもあるため「r1 を自動除外」はしない。**r1 が突出している場合は median で救われるので、run 数は 3 以上必須**。
 
 これらのルールを朝セッションで適用し、**LCP 4.5〜4.9s が 1 回計測で出た段階で 02B を即発注する**という早計判断を回避できた。夕方再計測で真偽判定する運用に切り替え。
+
+---
+
+## 8. 時間帯差の読み方（2026-04-22 Day 1 計測で判明）
+
+### 2026-04-22 夕に判明
+
+**現象**:
+- Phase 1 After 計測（16:03）: `/` LCP 2.2s, `/capacity` LCP 2.9s
+- Day 1 夕計測（20:18）: `/` LCP 2.4s（+0.2s）, `/capacity` LCP 3.3s（+0.4s）
+- 同一日内、4 時間差で URL により +0.2〜+0.4s の時間帯差
+
+**原因仮説**:
+- **夕方はトラフィックピーク**で Vercel Edge / PSI サーバの混雑が増す
+- **朝は CDN キャッシュが fresh**、夕方は staleness が混在
+- PSI サーバ側の同時計測負荷が時間帯で変動
+
+**解釈の原則**:
+
+1. **朝計測は best-case、夕計測は real-world に近い**と仮定して両方取る
+2. 「Phase X 直後の計測」だけで判定せず、**翌朝で定常化確認**してから確定
+3. Good 基準（LCP < 2.5s）に対して朝 2.2s / 夕 2.4s なら「朝は確実 Good、夕は境界」の両論併記で評価
+
+**再発予防**: Phase 判定は必ず **朝 + 夕 + 翌朝の 3 点以上**で中央値を取ってから確定する。単発の勝利宣言は禁物（リン自身が 16:03 で「大勝利」と言いかけ、20:18 で冷静化された事例あり）。
+
+---
 
 ---
 
@@ -400,4 +429,62 @@ skeleton の padding・高さ・wrapper dimensions を実 HeaderSearch と一致
 
 ---
 
-**最終更新**: 2026-04-22 朝（02E-fix + 08 LCP 構造調査反映後）
+---
+
+## 12. Cowork サンドボックスでの PSI chunked 実行
+
+### 2026-04-23 Day 2 朝計測で確立
+
+**現象**:
+- Cowork の bash ツールは 45s タイムアウト上限。`scripts/psi-baseline.mjs --runs 3 --interval 60 --strategy mobile --urls "/, /articles, /capacity"` は合計約 15 分かかり、単一 bash 呼び出しでは完走不可
+- `nohup node scripts/... &` で backgrounded プロセスに切り替えても、bwrap の `--unshare-pid` により bash 呼び出し境界でプロセスが kill される（確認済）
+
+**解決策: chunked 実行パターン**
+
+1 URL × 1 run を 1 つの bash 呼び出しで実行し、出力を共通 JSONL ファイルに append していく。自然な tool-call turnaround が同一 URL の run 間 60 秒以上の間隔を確保する（script 既定 `--interval 60` と同等以上）。
+
+最小実装（psi-one.mjs 相当）:
+
+```js
+// 1 PSI API call per invocation, append to JSONL
+// Usage: node psi-one.mjs <url> <run_label> <state_file>
+// 詳細は .ai-team/（outputs）参照
+```
+
+実行順序（Day 2 朝実績）:
+
+| 開始時刻 | URL | run | elapsed |
+|---|---|---|---|
+| 09:42:52 | `/` | r1 | 14.5s |
+| 09:43:12 | `/articles` | r1 | 26.1s |
+| 09:43:41 | `/capacity` | r1 | 24.2s |
+| 09:44:16 | `/` | r2 | 15.8s（r1 から +84s）|
+| 09:44:35 | `/articles` | r2 | 24.3s（r1 から +83s）|
+| 09:45:02 | `/capacity` | r2 | 34.9s（r1 から +81s）|
+| 09:45:44 | `/` | r3 | 16.1s（r2 から +88s）|
+| 09:46:03 | `/articles` | r3 | 25.6s（r2 から +88s）|
+| 09:46:31 | `/capacity` | r3 | 16.1s（r2 から +89s）|
+
+9 bash 呼び出し、合計 ~4 分で完走。同一 URL の run 間隔は 80〜90 秒で、script 既定 `--interval 60` を超える。
+
+**出力形式**:
+
+- chunked 実行では `PSI_MEASUREMENT_YYYY-MM-DD_HHMM.md`（script 自動生成）が作られない代わりに、aggregator で median 計算して直接 `PSI_04_*.md` を書く
+- raw data は `/tmp/day2-results.jsonl` に JSONL 形式で保存、再計算・再出力が容易
+
+**適用条件**:
+
+- Cowork から直接 PSI API 呼び出しが必要
+- Claude Code が使えない / 応答待ちが許容できない
+- EDA のローカル環境が別作業中
+
+**非適用条件**:
+
+- 標準の `PSI_MEASUREMENT_*.md` フォーマットを厳密に維持したい場合 → Claude Code に投げる
+- `--strategy both`（mobile + desktop 両方）が必要な場合 → 実行回数が 2 倍になりコスト高
+
+**ops-notes §2 との関係**: §2 で「PSI API は Claude Code 側で」と書かれていたが、2026-04-23 時点で Cowork から `www.googleapis.com` へのアクセスが動作することが確認された。**今後の計測はどちらでも可、ただし記録フォーマット重視なら Claude Code**。
+
+---
+
+**最終更新**: 2026-04-24 朝セッション（§12 Cowork chunked 実行 追加、計測ルール 6/7 追加、§2 allowlist 更新、§8 時間帯差反映）

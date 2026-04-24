@@ -126,3 +126,59 @@
 - **C-1** 検索キーワード強化記事の企画・制作（5〜10本）→ Content-Strat + Energy-Expert
 - **C-2** 診断ツール10種への導線強化 → Frontend-Dev + Content-Strat
 - **C-3** GA4カスタムイベントの設計・実装 → Growth-Analyst + Frontend-Dev
+
+---
+
+## 2026-04-23/24 スプリント 確定事項
+
+### SEO 大型リリース（3 PR マージ + 1 PR 作業中）
+
+#### PR #69（2026-04-23）: Batch A G-04/G-05 公開
+- **G-04** `/tariff-revision-calendar-2026`（price-trends, featured:true, order:26）
+  - タイトル: 「2026〜2028年 法人電気料金 制度改定カレンダー｜容量拠出金・再エネ賦課金・託送料金の時系列一覧」
+  - 実数字: 再エネ賦課金 2026年度 4.18円/kWh、容量拠出金 2027年度 7,847円/kW、2028年度 首都圏 14,812円/kW
+- **G-05** `/demand-response-revenue-model`（power-procurement, order:25）
+  - 業種別 kW あたり年間収益レンジ 5 業種、分配比率 60-70% 需要家
+- **Energy-Expert 外部監修は不要判断**（EDAさん確定、実質的存在しないロール）
+
+#### PR #70（2026-04-24）: CTR リライト 7 記事
+- 対象: /jepx-price-trend-and-corporate-impact, /market-price-adjustment, /business-transfer-name-change-procedure, /electricity-expense-accounting-guide, /capacity-contribution-explained, /when-will-business-electricity-prices-drop, /electricity-rate-revision-mechanism
+- 根拠データ: GSC 過去 3 か月、4/13 以降 表示 16.4倍、CTR 7.77% → 2.46% 低下（一般ユーザー流入が本格化しクリック取れていない記事を特定）
+- 特に高 ROI: /jepx-price-trend-and-corporate-impact（表示 577 / CTR 0.5%）→ リライト効果を 5/5 GSC で検証
+
+#### PR 作業中: /kenji-eda プロフィール強化
+- 著書 8 冊 × Amazon リンク
+- 講演テーマ 6、講演実績 23 団体（政府/商工会議所/公益財団/企業教育機関）
+- 最新の登壇: 福井商工会議所 4/28、東京商工会議所 4/10 アーカイブ
+- サイト内おすすめコンテンツ 9 記事への内部リンク
+- JSON-LD 強化（Book 型 8 件、sameAs 拡充）
+
+### SEO バックリンク戦略（確定）
+
+**1 リンク戦略**: セミナー主催者への依頼は **`/kenji-eda` の URL 1 本のみ**。2 本以上の依頼はビジネスマナー上差し出がましいため NG。
+
+- 理由: 商工会議所等の主催者は EDAさん の講師略歴欄に自然に URL を掲載してくれる（福井・東京商工会議所で確認済）
+- 各セミナーごとに質の高いバックリンクが 1 本蓄積
+- 着地ページ（/kenji-eda）で 9 本の内部リンクに分岐させ、サイト内回遊を最大化 → リンクジュース還流
+
+### Phase 2（02G: PublicHeader Server/Client 分割）判定
+
+**発注見送り、5/5 GSC 中間計測まで wait-and-see** 確定。
+
+- Day 1-3 朝夕の観測で TBT は 3 URL すべて改善（Phase 1 効果の定常化）
+- `/` の LCP run 分散は構造問題ではなく run 分散 or CDN キャッシュ状態の影響
+- 3 URL とも Perf 90+ 維持
+- 実装コスト vs 改善余地が見合わないと判定
+
+### GSC 観測基準線（2026-04-24 時点）
+
+- 合計クリック 262 / 表示 7,925 / CTR 3.31% / 平均順位 9.0（過去 3 か月）
+- 勝ちクエリ TOP: 「電気料金推移 10年 法人」CTR 25.8%、「高圧 電力 見直し」15.4%
+- Batch B キーワード候補 8 件（ダックカーブ、容量拠出金とは、電力 BCP、蓄電池減価償却、電気料金 推移 グラフ、法人 電気料金 値上げ、電気代 勘定科目、電気料金 推移 10年 法人）
+
+### EDAさんの重要指摘（2026-04-23/24）
+
+1. 「3月は関係者のアクセスがほとんど」「一般の人のアクセスは 4月2週目くらいから」 → GA4 のユーザー平均ビューが高いページは除外して分析
+2. 「先方サイトなので、1 リンクのみ・プロフィールのみが健全」 → バックリンク戦略の方針確定
+3. 「外部監修は不要」 → Energy-Expert ロール不要確定
+4. 「全部 OK、公開して修正なし」 → リン自律実装への信頼度向上、同等の大型変更もリン主導で可
