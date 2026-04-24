@@ -28,11 +28,20 @@ export function ArticleJsonLd({
       author: {
         "@type": "Person",
         name: "江田健二",
-        jobTitle: "代表理事",
+        jobTitle: "理事",
+        url: "https://simulator.eic-jp.org/kenji-eda",
+        sameAs: [
+          "https://simulator.eic-jp.org/kenji-eda",
+          "https://eic-jp.org",
+        ],
         worksFor: {
           "@type": "Organization",
           name: "一般社団法人エネルギー情報センター",
           url: "https://eic-jp.org",
+        },
+        alumniOf: {
+          "@type": "CollegeOrUniversity",
+          name: "慶應義塾大学 経済学部",
         },
       },
       publisher: {
