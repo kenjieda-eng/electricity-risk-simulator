@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -13,6 +15,35 @@ const pageDescription =
 const pageUrl =
   "https://simulator.eic-jp.org/demand-response-revenue-model";
 const publishedDate = "2026-04-27";
+
+// FAQ（FAQPage 構造化データ対応）
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "デマンドレスポンス（DR）とは何ですか？",
+    answer:
+      "デマンドレスポンス（Demand Response, DR）は、電力需要のピーク時などに電力会社・アグリゲーターからの指令に応じて需要家が電力使用を抑制・シフトし、その対価として報酬を受け取る仕組みです。抑制した電力量は「ネガワット」と呼ばれ、容量市場・需給調整市場で売買されます。従来の省エネと異なり、能動的に収益を得るビジネスモデルです。",
+  },
+  {
+    question: "DRで得られる収益はどれくらいですか？業種別の相場は？",
+    answer:
+      "2026〜2027年度水準のベースケース（容量市場発動指令電源 + 三次調整力② の組み合わせ）では、業種別に以下のレンジが目安です。データセンター：5,000〜12,000円/kW/年、製造業（連続稼働）：2,500〜6,000円/kW/年、製造業（日中稼働）：3,000〜8,000円/kW/年、商業施設・小売：2,500〜5,000円/kW/年、倉庫・物流：3,000〜7,000円/kW/年。2028年度以降は容量市場単価の最大2.8倍化で上振れ可能性があります。",
+  },
+  {
+    question: "アグリゲーターとはどのような事業者ですか？",
+    answer:
+      "アグリゲーターは複数の需要家の分散した需要抑制ポテンシャルを束ねて、電力会社や市場に供給する事業者です。需要家は単独で容量市場や需給調整市場に参加するのが困難なため、アグリゲーター経由で参加するのが一般的です。主要アグリゲーターには、東京電力エナジーパートナー、関西電力、エナリス、京セラコミュニケーションシステム、JEPXアグリゲーターなどがあります。",
+  },
+  {
+    question: "DR参入のハードルや注意点は何ですか？",
+    answer:
+      "主な注意点は以下の通りです。(1) BEMS・計測器の設置が必要（初期投資 50〜300万円規模）、(2) 30分〜数時間の負荷抑制が可能な運用体制、(3) 契約違反時のペナルティリスク、(4) アグリゲーターとの収益配分（一般に需要家60〜80% / アグリゲーター20〜40%）、(5) 容量市場の年度オークション参加スケジュールに従うため、参入タイミングは年1回が基本です。",
+  },
+  {
+    question: "DRの収益ポテンシャルを自社で試算できますか？",
+    answer:
+      "当サイトの法人向け電気料金シミュレーターおよび DR コスト・ベネフィット計算を組み合わせることで、契約電力・稼働時間帯・停止可能負荷から DR 収益の年間ポテンシャルを可視化できます。容量市場単価や業種別応動性能を反映した収益試算が可能です。",
+  },
+];
 
 // 業種別収益レンジ
 const revenueRows: {
@@ -105,6 +136,7 @@ export default function DemandResponseRevenueModelPage() {
         description={pageDescription}
         url={pageUrl}
         datePublished={publishedDate}
+        faq={FAQ_ITEMS}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           {
@@ -492,6 +524,9 @@ export default function DemandResponseRevenueModelPage() {
           />
         </div>
 
+        {/* FAQ */}
+        <MarketDataFaq heading="よくある質問（デマンドレスポンスと収益モデル）" items={FAQ_ITEMS} />
+
         {/* CTA */}
         <div className="mt-6">
           <ContentCta
@@ -516,6 +551,9 @@ export default function DemandResponseRevenueModelPage() {
             description="業種特性に合わせたDR参入可否診断と収益モデル設計を、当社エネルギー専門家がサポートします。"
           />
         </div>
+
+        {/* Author Badge */}
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
       </main>
     </>
   );
