@@ -12,9 +12,9 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "市場価格調整額とは｜計算方法と燃料費調整額との違いを法人向けに解説";
+const pageTitle = "市場価格調整額とは｜計算式・燃料費調整額との違い・法人電気代への影響を完全解説【2026年版】";
 const pageDescription =
-  "市場価格調整額（市場調整額）とは、JEPX スポット市場価格と基準価格の差額を電気料金に反映する仕組みです。計算方法、燃料費調整額との違い、法人電気料金への影響、契約メニューごとの注意点を整理します。";
+  "市場価格調整額（市場調整額）は、JEPXスポット価格と基準価格の差額を月次で電気料金に反映する仕組み。計算式、燃料費調整額との違い、上限なしで青天井になるリスク、法人の契約メニューごとの注意点を実例入りで解説します。";
 const pageUrl = "https://simulator.eic-jp.org/market-price-adjustment";
 
 export const metadata: Metadata = {

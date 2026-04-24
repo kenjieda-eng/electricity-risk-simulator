@@ -15,9 +15,9 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
 // --- 定数 ---
-const pageTitle = "法人の電気料金はいつ下がるのか｜値下がりの条件と今後の見通し";
+const pageTitle = "法人の電気料金はいつ下がる？2026-2028年の値下がり条件と構造的に下がらない3つの理由";
 const pageDescription =
-  "法人の電気料金が下がる条件を、燃料価格・為替・市場環境・制度要因から整理。過去に下がった時期の分析、構造的に下がりにくい費目と下がる可能性がある費目、今後の見通しを解説。";
+  "法人電気料金が下がる条件を燃料価格・為替・制度要因で分析。2026-2028年は容量拠出金が1.5-2.8倍増で上昇要因優勢、構造的に下がりにくい費目3つ、下がる可能性がある費目、実務で使える予算策定の考え方を解説。";
 const pageUrl =
   "https://simulator.eic-jp.org/when-will-business-electricity-prices-drop";
 

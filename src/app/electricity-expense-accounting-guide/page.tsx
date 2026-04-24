@@ -7,9 +7,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
-  "電気代の仕訳と勘定科目｜法人の経理担当者向けガイド";
+  "電気代の勘定科目｜水道光熱費・製造経費・販管費の使い分けと仕訳処理の完全ガイド【法人経理】";
 const pageDescription =
-  "電気代の仕訳・勘定科目（水道光熱費 / 製造経費 / 販売管理費）の使い分け、事業用と家事用の按分、インボイス制度対応、年度末処理、複数事業所の集計、自家消費太陽光の仕訳までを経理担当者向けに整理したガイドです。";
+  "電気代の勘定科目は「水道光熱費」「製造経費」「販売管理費」のどれ？事業用・家事按分、インボイス制度対応、自家消費太陽光の仕訳まで、法人経理担当者が実務で迷わない判断基準を事例付きで解説。";
 const pageUrl =
   "https://simulator.eic-jp.org/electricity-expense-accounting-guide";
 
