@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -13,6 +15,35 @@ const pageDescription =
 const pageUrl =
   "https://simulator.eic-jp.org/tariff-revision-calendar-2026";
 const publishedDate = "2026-04-27";
+
+// FAQ（FAQPage 構造化データ対応）
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "2026年度の再エネ賦課金の単価はいくらですか？",
+    answer:
+      "2026年度の再生可能エネルギー発電促進賦課金は 4.18 円/kWh です。2025年度の 3.98 円/kWh から 0.20 円（+5.0%）の上昇となり、METIが2026年3月19日付で告示しました。契約電力 500kW・年間使用量 3,000MWh の事業所なら年間約60万円の増額となります。",
+  },
+  {
+    question: "容量拠出金は2026〜2028年度でどのくらい上がりますか？",
+    answer:
+      "容量拠出金（容量市場拠出金）は2026年度の全国平均 5,226 円/kW から、2027年度は 7,847 円/kW（+50%）、2028年度はエリア別に 8,785〜14,812 円/kW（最大 2.8 倍）となります。首都圏・東北・北海道が最高値で、2028年度は首都圏事業所では容量拠出金関連だけで年間1,000万円規模の増加になる可能性があります。",
+  },
+  {
+    question: "2026年4月に託送料金は改定されますか？",
+    answer:
+      "2026年4月に託送料金の本体改定はありません。現在はレベニューキャップ制度の第1次規制期間（2023〜2027年度）の途中で、本体改定は2028年4月の第2次規制期間入り時に予定されています。ただし期中の年次微調整が行われる可能性はあります。",
+  },
+  {
+    question: "予算・契約更新でどの改定を織り込むべきですか？",
+    answer:
+      "2026年度予算には「再エネ賦課金 +0.20円/kWh」と「容量拠出金の現行単価」を確実に織り込んでください。2027年度以降の契約更新を検討する場合は、2027年度の容量拠出金 +50%、2028年度のエリア別大幅上昇、2028年4月の託送料金本体改定を前提としたシナリオ試算が必要です。",
+  },
+  {
+    question: "制度改定の影響を自社の条件で試算できますか？",
+    answer:
+      "当サイトの法人向け電気料金シミュレーターで、契約電力・契約区分・エリアを入力することで、2026〜2028年度の制度改定を反映した年間電気料金の見通しを試算できます。容量拠出金のエリア別単価や再エネ賦課金の新単価が自動で織り込まれます。",
+  },
+];
 
 // カレンダー表のデータ
 const calendarRows: {
@@ -152,6 +183,7 @@ export default function TariffRevisionCalendar2026Page() {
         description={pageDescription}
         url={pageUrl}
         datePublished={publishedDate}
+        faq={FAQ_ITEMS}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           {
@@ -584,6 +616,9 @@ export default function TariffRevisionCalendar2026Page() {
           />
         </div>
 
+        {/* FAQ */}
+        <MarketDataFaq heading="よくある質問（2026〜2028年 制度改定カレンダー）" items={FAQ_ITEMS} />
+
         {/* CTA */}
         <div className="mt-6">
           <ContentCta
@@ -605,6 +640,9 @@ export default function TariffRevisionCalendar2026Page() {
             description="制度改定を織り込んだ年間予算、取締役会用資料、契約見直し戦略を当社がご支援します。"
           />
         </div>
+
+        {/* Author Badge */}
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
       </main>
     </>
   );
