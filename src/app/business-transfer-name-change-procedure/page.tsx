@@ -10,9 +10,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "事業譲渡時の電力契約名義変更手順｜譲渡日前後のリスク管理";
+const pageTitle = "【法人】電気契約の名義変更手順｜事業譲渡・M&A時の手続きと譲渡日前後のリスク";
 const pageDescription =
-  "事業譲渡のタイミングで電力契約をどう引き継ぐか、名義変更の具体的な手続きとリスクを整理します。";
+  "事業譲渡・M&A・組織再編に伴う電気契約の名義変更手続きを、譲渡日前後のタイムライン、必要書類、旧契約の解約処理、供給停止リスクの回避策まで、法人担当者向けに完全ガイド。";
 const pageUrl = "https://simulator.eic-jp.org/business-transfer-name-change-procedure";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["ma-organizational-change"] ?? [];
