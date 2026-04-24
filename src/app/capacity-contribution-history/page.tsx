@@ -409,6 +409,12 @@ export default function CapacityContributionHistoryPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "容量拠出金上昇が料金全体に与えた影響を推移データで確認できます。",
             },
+            {
+              href: "/tariff-revision-calendar-2026",
+              title: "2026〜2028年 制度改定カレンダー",
+              description:
+                "容量拠出金 2027年度 +50%、2028年度エリア別 1.7〜2.8倍の段階的増額を時系列で整理。",
+            },
           ]}
         />
 

@@ -345,6 +345,12 @@ export default function HowProcurementAffectsCorporateRatesPage() {
               title: "法人電気料金の明細の見方",
               description: "請求書の各項目と見方のポイント。",
             },
+            {
+              href: "/demand-response-revenue-model",
+              title: "DRで収益を得る方法",
+              description:
+                "電力調達の延長で、需要側リソース（DR）を収益源化する最新のモデル。",
+            },
           ]}
         />
 

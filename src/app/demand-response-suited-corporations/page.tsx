@@ -344,6 +344,12 @@ export default function DemandResponseSuitedCorporationsPage() {
               title: "電力の調達の仕組み",
               description: "電力がどのように調達・供給されるかの基礎。",
             },
+            {
+              href: "/demand-response-revenue-model",
+              title: "DRで収益を得る方法",
+              description:
+                "DR 適性のある企業が実際に収益化するための実務ガイド。業種別 kW あたり年間収益レンジと契約パターンを解説。",
+            },
           ]}
         />
 

@@ -468,6 +468,12 @@ export default function ElectricityPriceOutlook2026Page() {
               title: "法人の電気料金が上がる理由",
               description: "2026年以降も上昇を続ける構造的な要因を費目別に解説します。",
             },
+            {
+              href: "/tariff-revision-calendar-2026",
+              title: "2026〜2028年 制度改定カレンダー",
+              description:
+                "容量拠出金・再エネ賦課金・託送料金の時系列改定を実数字でまとめた完全ガイド。",
+            },
           ]}
         />
 

@@ -308,6 +308,12 @@ export default function PowerRiskManagementPage() {
               title: "地政学リスクで電気料金はどう上がるか",
               description: "リスク管理の背景にある燃料・地政学リスクの実例を確認できます。",
             },
+            {
+              href: "/demand-response-revenue-model",
+              title: "DRで収益を得る方法",
+              description:
+                "需要側リソースを調達戦略に組み込む観点。リスク管理と収益化を同時に図る法人向けガイド。",
+            },
           ]}
         />
 
