@@ -470,9 +470,8 @@ export default function ElectricityPriceOutlook2026Page() {
             },
             {
               href: "/tariff-revision-calendar-2026",
-              title: "2026〜2028年 制度改定カレンダー",
-              description:
-                "容量拠出金・再エネ賦課金・託送料金の時系列改定を実数字でまとめた完全ガイド。",
+              title: "2026〜2028年 法人電気料金 制度改定カレンダー",
+              description: "容量拠出金・再エネ賦課金・託送料金の時系列改定スケジュールで 2026 年度以降の見通しを裏付け。",
             },
           ]}
         />

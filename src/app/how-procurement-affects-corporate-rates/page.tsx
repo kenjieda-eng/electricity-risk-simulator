@@ -347,9 +347,8 @@ export default function HowProcurementAffectsCorporateRatesPage() {
             },
             {
               href: "/demand-response-revenue-model",
-              title: "DRで収益を得る方法",
-              description:
-                "電力調達の延長で、需要側リソース（DR）を収益源化する最新のモデル。",
+              title: "デマンドレスポンス（DR）で収益を得る方法",
+              description: "調達コスト削減の次は、DR 参入で電気代を「収益源」に変える法人向けガイド。",
             },
           ]}
         />
