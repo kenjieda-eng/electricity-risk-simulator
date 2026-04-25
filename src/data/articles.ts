@@ -4466,4 +4466,24 @@ export const articleList: ArticleMeta[] = [
     order: 99,
     publishedAt: "2026-05-09",
   },
+  {
+    title: "電力 BCP とは｜法人の停電対策・事業継続計画における電力確保の実務ガイド",
+    slug: "electricity-bcp-for-corporates",
+    description:
+      "電力 BCP（電力に絞った事業継続計画）の策定方法を法人実務目線で解説。停電・最終保障供給・市場連動高騰の 3 大リスクと、自家発電・蓄電池・契約多重化の対策を 3,200 字で網羅。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 99,
+    publishedAt: "2026-04-25",
+  },
+  {
+    title: "ネガワット取引とは｜法人向け仕組み・収益モデル・アグリゲーター活用ガイド",
+    slug: "negawatt-trading-explained",
+    description:
+      "ネガワット取引（節電量を電力市場で取引する仕組み）の基本から法人の収益モデル、アグリゲーター活用、デマンドレスポンスとの違いまで実務目線で 3,200 字で解説。",
+    category: "電力調達の仕組みを知る",
+    categorySlug: "power-procurement",
+    order: 99,
+    publishedAt: "2026-04-25",
+  },
 ];
