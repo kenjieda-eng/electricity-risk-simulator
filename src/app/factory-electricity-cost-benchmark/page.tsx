@@ -359,6 +359,10 @@ export default function FactoryElectricityCostBenchmarkPage() {
             { href: "/contract-demand-what-is-it", title: "デマンドとは", description: "工場コスト削減の核心・デマンド管理の仕組みを解説" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金をどれだけ下げられるかをシミュレーション" },
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "契約電力の設定と基本料金の関係" },
+            { href: "/assembly-factory-electricity-cost-review", title: "組立工場の電気代", description: "連続稼働ではない組立工場特有のピーク管理と契約電力設定を確認し、業態別に異なる工場の電気代対策の差を把握できます。" },
+            { href: "/continuous-operation-factory-electricity-cost-review", title: "24h 稼働工場の電気代", description: "24時間稼働工場ならではの夜間負荷率の高さと契約最適化を整理し、ベンチマークから外れる業態の特殊事情を理解できます。" },
+            { href: "/cold-storage-electricity-cost-review", title: "冷蔵倉庫の電気代", description: "工場併設の冷蔵倉庫は別のピークパターンを示すため、倉庫部分の電力構造を分けて把握すると合算契約の効率化に役立ちます。" },
+            { href: "/telecom-facility-electricity-cost-review", title: "通信施設の電気代", description: "工場のラインを支える通信・サーバ設備は別の負荷特性を持つため、通信施設の電気代知見を踏まえると一括契約の妥当性を判断できます。" },
           ]}
         />
       </div>

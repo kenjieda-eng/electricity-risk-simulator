@@ -327,6 +327,10 @@ export default function OfficeElectricityCostBenchmarkPage() {
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "デマンド値の決まり方と基本料金への影響" },
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策でどれだけ使用量を下げられるか" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
+            { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気代", description: "テナントとして入居するオフィスビル全体の電気代構造を把握すると、本体と専有部のコスト関係から削減可能領域を特定できます。" },
+            { href: "/small-office-electricity-cost-review", title: "小規模オフィスの電気代", description: "数十坪の小規模オフィスの電気代パターンを比較し、自社オフィスの規模区分でベンチマークを正しく当てはめられるかを点検できます。" },
+            { href: "/retail-store-electricity-cost-benchmark", title: "小売店電気代ベンチマーク", description: "営業時間が長く照明・空調の負荷が大きい小売店舗の電気代水準と比較し、オフィス事業との支出パターンの違いを整理できます。" },
+            { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "製造・生産系の電気代水準と比較すると、自社オフィスの電力コストが業界全体でどの相対位置にあるかを多角的に把握できます。" },
           ]}
         />
       </div>

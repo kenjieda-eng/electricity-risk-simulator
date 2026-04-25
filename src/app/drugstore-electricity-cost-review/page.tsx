@@ -376,6 +376,26 @@ export default function DrugstoreElectricityCostReviewPage() {
               title: "小売チェーンの電気料金高騰リスク",
               description: "ドラッグストアチェーンが複数店舗で直面する電気料金高騰リスクを解説。",
             },
+            {
+              href: "/retail-store-electricity-cost-benchmark",
+              title: "小売店電気代ベンチマーク",
+              description: "一般小売店舗の電気代相場と比較し、ドラッグストアの店舗運営コストが小売業界平均からどれだけ乖離しているかを確認できます。",
+            },
+            {
+              href: "/cold-storage-electricity-cost-review",
+              title: "冷蔵倉庫の電気代",
+              description: "医薬品や要冷蔵品を保管するバックヤード設備は冷蔵倉庫と原理が共通しており、保冷負荷の電力管理手法を体系的に学べます。",
+            },
+            {
+              href: "/case-study-retail-chain-review",
+              title: "小売チェーン電気代見直し事例",
+              description: "多店舗展開の小売チェーンが実際に電気代を見直した事例を踏まえ、ドラッグストアでも適用しうる削減アプローチの参考になります。",
+            },
+            {
+              href: "/convenience-store-electricity-cost-review",
+              title: "コンビニの電気代見直し",
+              description: "24時間営業や冷蔵・冷凍ケースを抱える点でドラッグストアと類似するコンビニの電気代対策を参照し、夜間営業店舗の最適化に応用できます。",
+            },
           ]}
         />
 

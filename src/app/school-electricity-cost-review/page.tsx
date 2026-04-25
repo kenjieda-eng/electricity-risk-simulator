@@ -374,6 +374,26 @@ export default function SchoolElectricityCostReviewPage() {
               title: "電気料金関連の補助金・助成金一覧",
               description: "学校施設が活用できる省エネ・電気料金関連の補助金制度を整理。",
             },
+            {
+              href: "/municipality-electricity-cost-review",
+              title: "自治体の電気代",
+              description: "学校設置者である自治体本体の電気代構造を把握すると、教育委員会だけでなく自治体全体の調達戦略との整合がとりやすくなります。",
+            },
+            {
+              href: "/cultural-facility-electricity-cost-review",
+              title: "文化施設の電気代",
+              description: "図書館・公民館・体育館を含む文化施設も学校と同じ公共施設群で、空調・照明負荷の管理ノウハウを相互に活用できます。",
+            },
+            {
+              href: "/electricity-bidding-guide-municipality",
+              title: "公共入札ガイド",
+              description: "学校施設の電力調達も公共入札のルールに従う必要があり、仕様書設計と業者選定の実務手順を体系的に確認できます。",
+            },
+            {
+              href: "/university-electricity-cost-review",
+              title: "大学の電気代見直し",
+              description: "大学キャンパスは小中学校より大規模で研究機器負荷も加わりますが、教育機関としての契約論点には共通点が多く、進学先のヒントになります。",
+            },
           ]}
         />
 

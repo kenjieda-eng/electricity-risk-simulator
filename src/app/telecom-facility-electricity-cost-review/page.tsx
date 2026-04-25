@@ -359,6 +359,26 @@ export default function TelecomFacilityElectricityCostReviewPage() {
               title: "停電・電力不足時の対応と事前準備",
               description: "通信施設の停電リスク対応と無停電電源・非常用発電の準備について。",
             },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気代",
+              description: "通信機器やサーバを大量に持つデータセンターの電気代見直しは、無停電や空調の構造が共通する通信施設の運用にも転用可能です。",
+            },
+            {
+              href: "/cold-storage-electricity-cost-review",
+              title: "冷蔵倉庫の電気代",
+              description: "24時間稼働、空調冷却、冷凍負荷など通信施設と冷蔵倉庫はピーク特性が似ており、デマンド管理ノウハウの相互参照が有効です。",
+            },
+            {
+              href: "/factory-electricity-cost-benchmark",
+              title: "工場電気代ベンチマーク",
+              description: "大電力を消費する工場の電気代水準と比較し、通信施設の電力単価や基本料金水準が業界比でどの位置にあるかを把握できます。",
+            },
+            {
+              href: "/datacenter-electricity-contract-guide",
+              title: "データセンター電力契約ガイド",
+              description: "高負荷・高可用性が求められるデータセンター契約の留意点を整理しており、信頼性重視の通信施設の契約交渉にも活かせます。",
+            },
           ]}
         />
 

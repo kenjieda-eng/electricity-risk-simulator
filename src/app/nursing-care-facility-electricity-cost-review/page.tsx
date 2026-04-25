@@ -370,6 +370,26 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
               title: "業種別・電気料金の相場と目安",
               description: "介護施設の電気料金水準を業界平均と比較し、コストの見直し根拠を把握する。",
             },
+            {
+              href: "/cold-storage-electricity-cost-review",
+              title: "冷蔵倉庫の電気代",
+              description: "厨房や食材冷蔵の電力負荷が大きい介護施設にとって、冷蔵倉庫の契約見直し事例は厨房系コスト改善の有力なヒントです。",
+            },
+            {
+              href: "/municipality-electricity-cost-review",
+              title: "自治体の電気代",
+              description: "公的・準公的な介護施設は、自治体本体と同じく予算制約下で電力コストを管理する必要があり、調達手法の知見が活きます。",
+            },
+            {
+              href: "/office-building-electricity-cost-review",
+              title: "オフィスビルの電気代",
+              description: "介護施設も建物全体での電力契約を組む点でオフィスビルと共通項があり、共用部・専有部の按分や中央管理の考え方が役立ちます。",
+            },
+            {
+              href: "/retail-store-electricity-cost-benchmark",
+              title: "小売店電気代ベンチマーク",
+              description: "業種横断の電気代相場を把握する起点として小売店ベンチマークは有効で、介護施設の支出水準の妥当性確認にも転用できます。",
+            },
           ]}
         />
 

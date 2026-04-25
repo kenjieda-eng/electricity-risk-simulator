@@ -350,6 +350,26 @@ export default function MunicipalityElectricityCostReviewPage() {
               title: "自治体の電力一括調達のメリットと注意点",
               description: "複数施設をまとめて調達するバンドル調達で自治体がコストを削減する方法。",
             },
+            {
+              href: "/school-electricity-cost-review",
+              title: "学校の電気代見直し",
+              description: "自治体管理下にある学校施設も同じ公共セクターとして契約見直しの土俵が共通しており、入札や調達戦略の参考になります。",
+            },
+            {
+              href: "/nursing-care-facility-electricity-cost-review",
+              title: "介護施設の電気代",
+              description: "公的な介護施設も自治体と同様に予算制約と高負荷の両立が課題で、福祉系公共施設の電気代見直しの考え方が応用できます。",
+            },
+            {
+              href: "/electricity-bidding-guide-municipality",
+              title: "自治体電力入札ガイド",
+              description: "庁舎・公共施設の電力契約で必須となる入札手続きを、競争性確保と仕様書設計の観点から自治体実務向けに整理します。",
+            },
+            {
+              href: "/office-electricity-cost-benchmark",
+              title: "オフィス電気代ベンチマーク",
+              description: "民間オフィスの電気代水準を比較対象に置くと、自治体庁舎の支出が業界平均と比べて妥当な水準にあるかを多角的に評価できます。",
+            },
           ]}
         />
 

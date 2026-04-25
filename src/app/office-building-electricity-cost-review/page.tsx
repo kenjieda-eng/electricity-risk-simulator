@@ -372,6 +372,26 @@ export default function OfficeBuildingElectricityCostReviewPage() {
               title: "デマンドコントロールによる電気料金削減効果",
               description: "オフィスビルでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
             },
+            {
+              href: "/small-office-electricity-cost-review",
+              title: "小規模オフィスの電気代",
+              description: "ビル内テナントとなる小規模オフィスの電気代構造を把握し、ビル側がテナントのコスト感を理解した上で共用部設計を最適化できます。",
+            },
+            {
+              href: "/factory-electricity-cost-benchmark",
+              title: "工場電気代ベンチマーク",
+              description: "中央管理、大型空調、大電力契約という点でオフィスビルと工場は共通点が多く、設備運用の最適化手法が相互に参考になります。",
+            },
+            {
+              href: "/holding-company-electricity-review",
+              title: "ホールディングス電気代見直し",
+              description: "複数物件を保有する企業の全社視点の電気代見直しを参照し、保有ビルの一括契約・共同調達による交渉力強化のヒントを得られます。",
+            },
+            {
+              href: "/retail-store-electricity-cost-benchmark",
+              title: "小売店電気代ベンチマーク",
+              description: "商業テナントが入るオフィスビルでは、テナント側の小売店舗ベンチマークを把握すると、共用部料金や転貸電気の妥当性を判断しやすくなります。",
+            },
           ]}
         />
 

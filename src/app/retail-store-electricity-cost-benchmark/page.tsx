@@ -331,6 +331,10 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },
             { href: "/restaurant-electricity-cost-benchmark", title: "飲食店の電気代相場", description: "業態・席数・営業時間別の飲食店ベンチマーク" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "毎月変動する燃調費の仕組みと影響を解説" },
+            { href: "/drugstore-electricity-cost-review", title: "ドラッグストアの電気代", description: "食品や医薬品を扱う点で小売店舗と類似するドラッグストアの電気代を比較し、店舗ネットワーク運営の電力対策ヒントを得られます。" },
+            { href: "/office-electricity-cost-benchmark", title: "オフィス電気代ベンチマーク", description: "店舗運営の本部機能となるオフィスの電気代水準を把握すると、店舗と本部の合算で全社見直しの効果を試算できます。" },
+            { href: "/retail-chain-price-surge-risk", title: "小売チェーンの電気料金高騰リスク", description: "多店舗展開の小売事業者特有の高騰リスクを整理し、ベンチマーク水準を超えるリスクシナリオへの備えを点検できます。" },
+            { href: "/supermarket-electricity-cost-review", title: "スーパーの電気代見直し", description: "冷蔵・冷凍ケースを多数抱えるスーパーの電気代対策は、生鮮を扱う小売店舗での原単位改善にも直接活かせる知見です。" },
           ]}
         />
       </div>
