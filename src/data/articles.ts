@@ -4446,4 +4446,24 @@ export const articleList: ArticleMeta[] = [
     order: 26,
     publishedAt: "2026-04-19",
   },
+  {
+    title: "ダックカーブとは｜法人電気料金への影響と太陽光急増時代の料金変動リスク",
+    slug: "duck-curve-corporate-impact",
+    description:
+      "ダックカーブ（昼の電力余剰・夜の急上昇）が法人の電気料金にもたらす影響を徹底解説。市場連動型プランのリスク、出力制御、蓄電池活用までを 3,500 字で網羅。",
+    category: "電気料金が上がる理由を知る",
+    categorySlug: "price-increase",
+    order: 99,
+    publishedAt: "2026-05-09",
+  },
+  {
+    title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策を完全解説",
+    slug: "what-is-capacity-contribution",
+    description:
+      "容量拠出金とは何か、なぜ電気料金に上乗せされるのか、2026年度の単価と法人への影響額、月額試算と対策をわかりやすく解説。既存「仕組み」記事との差別化版。",
+    category: "電気料金の推移と高止まり",
+    categorySlug: "price-trends",
+    order: 99,
+    publishedAt: "2026-05-09",
+  },
 ];
