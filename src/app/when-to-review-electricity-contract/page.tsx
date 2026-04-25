@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
@@ -18,6 +19,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 const pageTitle = "法人が電力契約を見直すタイミング｜料金上昇・更新時期・使用状況変化で確認したいポイント";
 const pageDescription =
   "法人が電力契約を見直すべきタイミングを解説。電気料金の上昇、契約更新、使用状況の変化、設備更新などをきっかけに、確認したいポイントと比較時の視点を整理します。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -262,6 +264,8 @@ export default function WhenToReviewElectricityContractPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際に比較して判断する"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HomePageClient from "../_components/HomePageClient";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle =
@@ -74,6 +75,7 @@ export default function SimulatePage() {
               },
             ]}
           />
+          <AuthorBadge />
         </div>
       </section>
     </>

@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import SwitchSavingCalculator from "../../components/market-data/SwitchSavingCalculator";
@@ -18,6 +19,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 const pageTitle = "法人電気料金の見直しはどこから始める｜5ステップと優先度判断";
 const pageDescription =
   "法人の電気料金の見直しを、請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の5ステップで解説。高圧・特別高圧の法人契約向けに、所要時間・担当部署・優先度マトリクスで、何から着手すべきかが明確になります。";
+const publishedDate = "2026-03-29";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -439,6 +441,8 @@ export default function HowToStartElectricityContractReviewPage() {
 
       {/* CTA */}
       <div className="mt-6">
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="全体手順を確認したら次のステップへ"
           description="請求書と契約書の確認が済んだら、比較ページとシミュレーターで見直し判断を実行段階へ進めます。"

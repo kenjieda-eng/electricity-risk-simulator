@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -16,6 +17,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
 const pageTitle = "法人向け電力・省エネ補助金まとめ｜2026年度に使える主要制度一覧";
 const pageDescription =
   "2026年度に法人が活用できる電力・省エネ関連の補助金・助成金を一覧で解説。SII省エネ補助金、需要家主導型太陽光PPA支援、SHIFT事業など主要制度の概要・補助率・申請時期を比較し、自社に合った制度選択をサポートします。";
+const publishedDate = "2026-04-11";
 const pageUrl = "https://simulator.eic-jp.org/subsidies-overview";
 
 export const metadata: Metadata = {
@@ -312,6 +314,8 @@ export default function SubsidiesOverviewPage() {
 
       {/* CTA */}
       <div className="mt-6">
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="まず自社の電気料金リスクを把握しましょう"
           description="補助金活用を検討する前に、現状の電気料金負担とリスクを数値で確認。シミュレーターで診断すれば、どの制度が最も効果的かを判断する材料になります。"

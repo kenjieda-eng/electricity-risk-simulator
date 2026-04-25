@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
@@ -13,6 +14,7 @@ const pageTitle =
   "法人向け電気料金請求書の見方｜項目別の確認ポイントと見直しへのつなげ方";
 const pageDescription =
   "法人向け電気料金の請求書で確認すべき項目を解説。契約電力・基本料金・電力量料金・燃調費・再エネ賦課金の見方、総額上昇時の切り分け方、見積比較への活かし方を整理します。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -669,6 +671,8 @@ export default function HowToReadElectricityBillPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="請求書の情報をもとにシミュレーションする"

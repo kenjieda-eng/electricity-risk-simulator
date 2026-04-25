@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -14,6 +15,7 @@ const pageTitle =
   "基本料金の見方｜契約電力と単価の関係を理解する";
 const pageDescription =
   "電気料金の基本料金がどのように計算されるかを解説。契約電力（kW）・基本料金単価・力率割引の仕組みと、基本料金を下げるための考え方を整理します。";
+const publishedDate = "2026-04-10";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -388,6 +390,8 @@ export default function BasicChargeExplainedPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="基本料金のリスクをシミュレーションする"

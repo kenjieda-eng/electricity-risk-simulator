@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import {
@@ -23,6 +24,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
 const pageDescription =
   "再エネ賦課金（再生可能エネルギー発電促進賦課金）の仕組み、2012〜2026年度の単価推移、計算方法、法人の月額負担試算、燃料費調整額との違いを、グラフと過去データを交えて解説します。";
+const publishedDate = "2026-03-01";
 const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge";
 
 export const metadata: Metadata = {
@@ -344,6 +346,8 @@ export default function RenewableEnergySurchargePage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際に比較して確認する"

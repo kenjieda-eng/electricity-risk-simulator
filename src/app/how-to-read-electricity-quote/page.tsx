@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
@@ -12,6 +13,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "法人向け電気料金見積書の見方｜比較時に確認したい項目と注意点";
 const pageDescription =
   "法人向け電気料金見積書の見方を解説。基本料金・電力量料金・燃調費・市場連動の確認ポイントから、3社比較テンプレート、契約条件の見落とし防止まで、見積比較の実務を網羅的に整理します。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -726,6 +728,8 @@ export default function HowToReadElectricityQuotePage() {
         />
 
         {/* ContentCta */}
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="同じ前提で見積を比較する"
           description="見積書の読み方を押さえたら、比較ページで条件差を整理し、総額と契約条件の両面で判断できます。シミュレーターで固定型・市場連動型の年間コスト差も確認してください。"

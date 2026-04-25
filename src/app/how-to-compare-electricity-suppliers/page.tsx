@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
@@ -18,6 +19,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 const pageTitle = "新電力を比較するときのポイント｜単価だけでなく燃調費・契約条件・リスクまで確認";
 const pageDescription =
   "新電力を比較するときに法人が確認したいポイントを解説。基本料金、電力量料金、燃料費調整額、市場連動型・固定型の違い、契約条件、リスクの見方まで整理します。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -267,6 +269,8 @@ export default function HowToCompareElectricitySuppliersPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際に比較して確かめる"
