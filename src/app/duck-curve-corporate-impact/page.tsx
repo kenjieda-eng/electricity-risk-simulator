@@ -180,8 +180,12 @@ export default function DuckCurveCorporateImpactPage() {
             <h3 className="text-lg font-semibold text-slate-900">3-3. 容量市場・需給調整市場のコスト転嫁</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               夕方ピーク時の供給力確保のため、蓄電池・調整力電源の確保コストが小売料金に上乗せされます。詳しくは{" "}
+              <Link href="/what-is-capacity-contribution" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                容量拠出金とは（単価表・月額試算）
+              </Link>
+              と{" "}
               <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                容量拠出金の解説
+                制度の深掘り解説
               </Link>
               を参照してください。
             </p>
@@ -287,7 +291,8 @@ export default function DuckCurveCorporateImpactPage() {
             { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "請求書に直接効く燃料費調整の仕組みを確認できます。" },
             { href: "/market-linked-vs-fixed", title: "市場連動プランと固定プランの違い", description: "ダックカーブ環境下での選定軸を比較整理。" },
             { href: "/jepx-explained", title: "JEPX とは｜卸電力市場の仕組み", description: "昼夜価格乖離の発生メカニズムをデータで確認。" },
-            { href: "/capacity-contribution-explained", title: "容量拠出金とは", description: "夕方ピーク確保コストの転嫁構造を整理。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価", description: "夕方ピーク確保コストの転嫁構造と単価表・月額試算を整理。" },
+            { href: "/capacity-contribution-explained", title: "容量拠出金の仕組み（深掘り版）", description: "制度の歴史と詳細解説。" },
             { href: "/demand-response-revenue-model", title: "DR の収益モデル", description: "夕方の使用抑制で奨励金を得る仕組み。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池の電気料金対策効果", description: "ピークシフトの試算と回収期間。" },
           ]}
