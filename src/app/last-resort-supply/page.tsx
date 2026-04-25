@@ -10,6 +10,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "最終保障供給とは｜仕組み・料金・契約件数推移・切替実務を徹底解説";
 const pageDescription =
@@ -229,6 +230,8 @@ export default function LastResortSupplyPage() {
             { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "橋渡しから本契約への整理。" },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-03-01" updatedAt="2026-03-01" />
 
         <ContentCta
           heading="通常契約への見直しを進める"

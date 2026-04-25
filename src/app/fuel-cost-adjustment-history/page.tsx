@@ -17,6 +17,7 @@ import MarketDataDownload from "../../components/market-data/MarketDataDownload"
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -253,6 +254,8 @@ export default function FuelCostAdjustmentHistoryPage() {
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移をデータで確認できます。" },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
 
         <ContentCta
           heading="自社への影響を試算する"

@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle =
   "法人の電気代の内訳とは｜基本料金・電力量料金・燃調費・再エネ賦課金を解説";
@@ -935,6 +936,8 @@ export default function BusinessElectricityBillBreakdownPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-03-01" updatedAt="2026-03-01" />
 
         <ContentCta
           heading="請求確認から比較判断へつなげる"

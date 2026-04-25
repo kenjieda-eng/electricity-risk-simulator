@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "法人向け電力契約で確認したい違約金・契約期間・更新条件｜金額パターンとチェックリスト";
 const pageDescription =
@@ -347,6 +348,8 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             ]}
           />
         </div>
+
+        <AuthorBadge publishedAt="2026-03-27" updatedAt="2026-03-27" />
 
         <div className="mt-6">
           <ContentCta

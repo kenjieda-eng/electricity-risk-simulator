@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -369,6 +370,8 @@ export default function HospitalElectricityCostReviewPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="現行契約のリスクを確認する"

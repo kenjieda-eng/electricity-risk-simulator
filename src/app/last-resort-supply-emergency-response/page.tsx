@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle =
   "最終保障供給に入りそうなときの対応手順｜タイムラインと警告サイン一覧";
@@ -408,6 +409,8 @@ export default function LastResortSupplyEmergencyResponsePage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="代替供給先の候補をシミュレーターで試算する"

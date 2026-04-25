@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説";
 const pageDescription =
@@ -445,6 +446,8 @@ export default function HighVoltageElectricityPricingPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-03-01" updatedAt="2026-03-01" />
 
         <ContentCta
           heading="実際の条件で比較する"

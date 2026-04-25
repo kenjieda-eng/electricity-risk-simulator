@@ -9,6 +9,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
 
@@ -383,6 +384,8 @@ export default function ExecutiveEbitdaImpactPage() {
       </div>
 
       {/* ContentCta */}
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+
       <div className="mt-6">
         <ContentCta
           heading="電気代の財務インパクトを今すぐ試算する"

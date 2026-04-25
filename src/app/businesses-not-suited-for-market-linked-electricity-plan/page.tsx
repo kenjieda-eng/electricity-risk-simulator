@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 const pageTitle =
   "市場連動プランが向かない法人の特徴｜価格変動リスクを踏まえた判断ポイント";
 const pageDescription =
@@ -321,6 +322,8 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="市場連動リスクをシミュレーターで確認する"

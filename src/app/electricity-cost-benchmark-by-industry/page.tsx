@@ -9,6 +9,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["benchmarks"];
 
@@ -359,6 +360,8 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
       </div>
 
       {/* CTA */}
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+
       <div className="mt-6">
         <ContentCta
           heading="自社の電気代リスクを診断する"

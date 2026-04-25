@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "ダウンロードセンター｜電気料金・脱炭素データ・テンプレート集";
 const pageDescription = "CSV・JSON・iCalで電力市場データ、制度改正カレンダー、補助金一覧、契約チェックリストなどを一括ダウンロードできます。法人での実務利用は無料・自由（CC BY 4.0）です。";
@@ -145,6 +146,8 @@ export default function DownloadsPage() {
 {`curl https://simulator.eic-jp.org/api/datasets/emission-factor | jq '.data.byArea'`}
           </pre>
         </section>
+      <AuthorBadge publishedAt="2026-04-18" updatedAt="2026-04-18" />
+
       <div className="mt-8">
         <ContactCtaCard
           source="article"

@@ -15,6 +15,7 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -269,6 +270,8 @@ export default function MarketPriceAdjustmentRiskPage() {
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "市場価格調整額の影響を含む料金水準の推移を確認できます。" },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
 
         <ContentCta
           heading="上振れシナリオで自社への影響を確認"
