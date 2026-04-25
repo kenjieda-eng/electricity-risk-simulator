@@ -362,6 +362,26 @@ export default function SmallOfficeElectricityCostReviewPage() {
               title: "業種別・電気料金の相場と目安",
               description: "中小オフィスの電気料金水準を業界平均と比較し、コスト見直しの根拠を把握する。",
             },
+            {
+              href: "/office-building-electricity-cost-review",
+              title: "オフィスビルの電気代",
+              description: "入居先となるオフィスビル全体の電気代構造を理解すると、共用部と専有部の費用按分や交渉余地を見極めやすくなります。",
+            },
+            {
+              href: "/office-electricity-cost-benchmark",
+              title: "オフィス電気代ベンチマーク",
+              description: "規模・面積別のオフィス電気代相場と比較し、自社の小規模オフィスの電力支出が業界平均と乖離していないかを点検できます。",
+            },
+            {
+              href: "/soho-sole-proprietor-electricity-tax",
+              title: "SOHO・個人事業主の電気代",
+              description: "在宅勤務やシェアオフィスを併用する小規模事業者の電気代取扱いを整理し、家庭と事業の按分や経費計上の論点も把握できます。",
+            },
+            {
+              href: "/sme-electricity-cost-reduction-steps",
+              title: "中小企業電気代削減ステップ",
+              description: "中小企業向けの段階別削減ステップを示しており、社内体制が小さい小規模オフィスでも実行可能な対策の優先順位が分かります。",
+            },
           ]}
         />
 

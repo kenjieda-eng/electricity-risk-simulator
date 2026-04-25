@@ -413,6 +413,26 @@ export default function ColdStorageElectricityCostReviewPage() {
               title: "法人向け蓄電池導入の検討ポイント",
               description: "冷蔵倉庫における蓄電池活用でピーク電力削減とBCP強化を実現する方法。",
             },
+            {
+              href: "/factory-electricity-cost-benchmark",
+              title: "工場電気代ベンチマーク",
+              description: "24時間稼働や冷凍機の高負荷など、冷蔵倉庫と工場で共通する大型設備の電力構造を、製造業ベンチマーク視点から把握できます。",
+            },
+            {
+              href: "/telecom-facility-electricity-cost-review",
+              title: "通信施設の電気代",
+              description: "常時稼働・空調冷却が中核となる通信施設の電力構造を確認し、24時間運用設備の契約見直しに活かせるヒントを得られます。",
+            },
+            {
+              href: "/drugstore-electricity-cost-review",
+              title: "ドラッグストアの電気代",
+              description: "医薬品や要冷蔵食品を保管する点で共通するドラッグストアの電気代見直しを比較し、保冷を伴う業態の契約最適化策を学べます。",
+            },
+            {
+              href: "/nursing-care-facility-electricity-cost-review",
+              title: "介護施設の電気代",
+              description: "厨房や冷蔵庫を抱える介護施設も食品保管で電力消費が大きく、冷蔵倉庫と共通する基本料金管理の考え方が応用できます。",
+            },
           ]}
         />
 
