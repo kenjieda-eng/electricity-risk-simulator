@@ -10,6 +10,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["internal-explanation"];
 
@@ -363,6 +364,8 @@ export default function ExplainingToExecutivesPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="説明材料となる数値を準備する"

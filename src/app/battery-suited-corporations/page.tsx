@@ -10,6 +10,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
 
@@ -352,6 +353,8 @@ export default function BatterySuitedCorporationsPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="自社の条件でリスクを確認する"

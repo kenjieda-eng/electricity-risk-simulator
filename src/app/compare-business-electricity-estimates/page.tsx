@@ -10,6 +10,7 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
@@ -400,6 +401,8 @@ export default function CompareBusinessElectricityEstimatesPage() {
       </div>
 
       {/* CTA */}
+      <AuthorBadge publishedAt="2026-03-29" updatedAt="2026-03-29" />
+
       <div className="mt-6">
         <ContentCta
           heading="見積条件を整理したら比較へ"

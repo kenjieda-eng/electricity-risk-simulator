@@ -5,6 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "法人が電力契約を切り替えるときの注意点";
 const pageDescription =
@@ -242,6 +243,8 @@ export default function SwitchingBusinessElectricityContractPage() {
           ]}
         />
       </div>
+      <AuthorBadge publishedAt="2026-03-29" updatedAt="2026-03-29" />
+
       <div className="mt-6">
         <ContentCta
           heading="契約見直しの次のステップ"

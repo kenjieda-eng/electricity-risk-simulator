@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import {
   HISTORICAL_EXPLANATION_ALL_LINKS,
   HISTORICAL_EXPLANATION_ITEMS,
@@ -317,6 +318,8 @@ export default function BusinessElectricityRetrospectivePage() {
           </Link>
         </div>
       </section>
+      <AuthorBadge publishedAt="2026-04-15" updatedAt="2026-04-15" />
+
       </main>
     </>
   );

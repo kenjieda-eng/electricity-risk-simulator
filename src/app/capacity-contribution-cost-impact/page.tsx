@@ -11,6 +11,7 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -371,6 +372,8 @@ export default function CapacityContributionCostImpactPage() {
       </div>
 
       {/* CTA */}
+      <AuthorBadge publishedAt="2026-04-09" updatedAt="2026-04-09" />
+
       <div className="mt-6">
         <ContentCta
           heading="容量拠出金を含めた電気料金リスクを把握する"

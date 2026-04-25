@@ -11,6 +11,7 @@ import MarketDataDownload from "../../components/market-data/MarketDataDownload"
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle =
   "デマンド値の見方｜契約電力と基本料金への影響を理解する";
@@ -389,6 +390,8 @@ export default function DemandValueGuidePage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
 
         <ContentCta
           heading="デマンド・基本料金のリスクをシミュレーションする"

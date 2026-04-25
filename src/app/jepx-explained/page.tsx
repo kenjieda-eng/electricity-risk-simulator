@@ -15,6 +15,7 @@ import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "JEPXとは｜卸電力市場の仕組み・価格推移・法人料金への影響を徹底解説";
 const pageDescription =
@@ -337,6 +338,8 @@ export default function JepxExplainedPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-03-11" updatedAt="2026-03-11" />
 
         <ContentCta
           heading="次のステップ"

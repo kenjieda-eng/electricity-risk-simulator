@@ -8,6 +8,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "特別高圧電力の料金の見方｜高圧との違い・負荷率・個別交渉のポイントを解説";
 const pageDescription =
@@ -362,6 +363,8 @@ export default function ExtraHighVoltageElectricityPricingPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt="2026-03-01" updatedAt="2026-03-01" />
 
         <ContentCta
           heading="比較で条件差を確認する"
