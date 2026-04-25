@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import CapacityContributionChartCard from "../../components/capacity-contribution/CapacityContributionCharts";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -39,6 +40,7 @@ const CAPACITY_FAQ: { question: string; answer: string }[] = [
 const pageTitle = "容量拠出金とは｜2026年度5,226円/kW、2027年度7,847円/kW の法人電気代への影響を解説";
 const pageDescription =
   "容量拠出金は2024年度開始の容量市場に基づく小売事業者の支払い。全国平均で2026年度5,226円/kW、2027年度7,847円/kW（+50%）、2028年度は首都圏で14,812円/kWに。法人電気料金にどう転嫁され、年間コストがいくら増えるかを実データで解説します。";
+const publishedDate = "2026-04-09";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -338,6 +340,8 @@ export default function CapacityContributionExplainedPage() {
 
       {/* CTA */}
       <div className="mt-6">
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="容量拠出金も含めた電気料金リスクを確認する"
           description="制度要因を含む電気料金の上昇リスクを、30秒でシミュレーションできます。"

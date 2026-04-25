@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
@@ -59,6 +60,8 @@ export const metadata: Metadata = {
     images: ["/api/og/plan-types"],
   },
 };
+
+const publishedDate = "2026-03-01";
 
 const jepxRiskRows = [
   {
@@ -298,6 +301,8 @@ export default function MarketLinkedVsFixedPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際の判断は比較・試算とセットで"

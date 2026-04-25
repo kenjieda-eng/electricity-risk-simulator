@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import CategoryNextStepCta from "../../components/simulator/CategoryNextStepCta";
 import { CDD_TREND } from "../../data/weatherData";
@@ -21,6 +22,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 const pageTitle = "電気料金が上がる理由｜法人向けに主要4要因と見直しポイントを整理";
 const pageDescription =
   "法人の電気料金が上がる理由は「燃料価格」「市場価格（JEPX）」「制度負担（再エネ賦課金・容量拠出金）」「契約条件」の4要因に整理できます。実データと見直し観点で徹底解説。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -260,6 +262,8 @@ export default function WhyBusinessElectricityPricesRisePage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際に比較して確認する"

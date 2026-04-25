@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -13,6 +14,7 @@ const pageTitle =
   "固定プランが向く法人の特徴｜予算管理と安定性を重視する場合の考え方";
 const pageDescription =
   "法人の電力契約で固定プランが向くのはどのような企業か。予算管理重視、利益率が低い業種、価格転嫁が難しい法人など、固定プランとの相性がよいケースを整理します。";
+const publishedDate = "2026-04-10";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -338,6 +340,8 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="固定プランと市場連動プランを比較する"

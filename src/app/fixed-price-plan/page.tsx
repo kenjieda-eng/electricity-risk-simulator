@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
@@ -13,6 +14,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "固定プランとは｜法人向け電力契約の料金構造・メリット・注意点を解説";
 const pageDescription =
   "固定プランの料金構成（基本料金・電力量料金・燃調費など）、メリット・デメリット比較表、月額シミュレーション（高圧50,000kWh）、契約前の5つの注意点を法人向けに解説します。";
+const publishedDate = "2026-03-01";
 
 // --- Metadata ---
 export const metadata: Metadata = {
@@ -461,6 +463,8 @@ export default function FixedPricePlanPage() {
         />
 
         {/* CTA */}
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="自社の条件で固定プランの料金を確認する"
           description="固定プランの仕組みを理解した後は、実際の使用量・契約条件をもとに試算することで判断精度が上がります。比較診断ツールやシミュレーターをご活用ください。"

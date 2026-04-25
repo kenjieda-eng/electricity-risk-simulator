@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -18,6 +19,7 @@ const pageTitle =
   "法人の電力契約見直しチェックリスト｜見積依頼前に確認したいポイント";
 const pageDescription =
   "法人の電力契約見直しを始めるとき、何から整理すべきかをチェックリスト形式で解説。契約情報の整理、請求書の確認項目、見積依頼前に揃えたい資料、社内で確認すべきポイントまで、実務に沿って一覧できます。";
+const publishedDate = "2026-04-10";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -372,6 +374,8 @@ export default function BusinessElectricityContractChecklistPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="まず現状のリスクを確認する"

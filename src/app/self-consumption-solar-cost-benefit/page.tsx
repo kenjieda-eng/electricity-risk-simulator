@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import { DEMAND_HOURLY_AVG } from "../../data/demandData";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
@@ -18,6 +19,7 @@ const pageTitle =
   "自家消費型太陽光は電気料金対策としてどう効くか｜購入電力削減の考え方";
 const pageDescription =
   "自家消費型の太陽光発電が、法人の電気料金をどのように削減するかを解説します。購入電力量の削減メカニズム、効果が出やすい条件、および他の対策との組み合わせについて整理します。";
+const publishedDate = "2026-04-10";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -390,6 +392,8 @@ export default function SelfConsumptionSolarCostBenefitPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="電気料金の削減余地を確認する"

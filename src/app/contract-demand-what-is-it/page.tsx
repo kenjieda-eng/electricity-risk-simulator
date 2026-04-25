@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import BasicChargeCalculator from "../../components/market-data/BasicChargeCalculator";
@@ -15,6 +16,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle = "契約電力とデマンドとは｜法人の電気料金・基本料金との関係を解説";
 const pageDescription =
   "契約電力とデマンドの意味を法人向けに解説。基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -554,6 +556,8 @@ export default function ContractDemandWhatIsItPage() {
 
         {/* CTA */}
         <div className="mt-6">
+          <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
           <ContentCta
             heading="前提をそろえて比較・シミュレーションへ進む"
             description="契約電力とデマンドの関係を整理したら、現行契約と候補条件を同一前提で比較して見直し余地を確認できます。"

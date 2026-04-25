@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -53,6 +54,8 @@ export const metadata: Metadata = {
     images: ["/api/og/plan-types"],
   },
 };
+
+const publishedDate = "2026-03-01";
 
 const faqItems = [
   { question: "市場連動プランとはどのような契約ですか？", answer: "JEPX（日本卸電力取引所）のスポット市場価格に連動して電力量料金の単価が変動する電力契約です。相場が低い局面ではコストを抑えられる可能性がある一方、相場急騰時は負担が増えるリスクがあります。" },
@@ -273,6 +276,8 @@ export default function MarketLinkedPlanPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="シミュレーターで確認したい方へ"

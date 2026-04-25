@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import TrendForecastCalculator from "../../components/market-data/TrendForecastCalculator";
@@ -19,6 +20,7 @@ const pageTitle =
   "法人向け電気料金は高止まりしているのか｜2019〜2025年の年次データと構造要因";
 const pageDescription =
   "2019年から2025年までの年次単価データをもとに、法人向け電気料金が2022年急騰後も元の水準に戻っていない実態を解説します。構造的な高止まり要因と月額影響シミュレーションも掲載。";
+const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -490,6 +492,8 @@ export default function ElectricityPriceTrend20192025Page() {
         </div>
 
         {/* ── CTA ── */}
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
         <ContentCta
           heading="高止まりを前提に、現行契約を比較する"
           description="2025年水準での電気料金が今後も続くと仮定したうえで、現行契約と候補プランを同条件で比較すると、次の打ち手を具体化しやすくなります。"

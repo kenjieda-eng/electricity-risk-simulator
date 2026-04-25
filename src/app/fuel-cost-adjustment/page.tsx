@@ -4,6 +4,7 @@ import ReadingProgressBar from "../../components/market-data/ReadingProgressBar"
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import {
@@ -23,6 +24,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 const pageTitle = "燃料費調整額（燃調費）とは｜計算式と2018〜2026年度の推移を解説";
 const pageDescription =
   "燃料費調整額（燃調費）とは、LNG・原油・石炭の輸入価格を電気料金に反映する仕組み。計算式、2018〜2026年度の推移、2022年の急騰、激変緩和措置の影響、市場価格調整額との違いまで、法人向けに実データで解説します。";
+const publishedDate = "2026-03-01";
 const pageUrl = "https://simulator.eic-jp.org/fuel-cost-adjustment";
 
 export const metadata: Metadata = {
@@ -251,6 +253,8 @@ export default function FuelCostAdjustmentPage() {
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移実態をデータで確認できます。" },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
 
         <ContentCta
           heading="実際に比較して判断する"
