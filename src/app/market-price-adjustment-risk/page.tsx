@@ -16,6 +16,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -104,6 +105,7 @@ export default function MarketPriceAdjustmentRiskPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">上振れリスクの実体</h2>

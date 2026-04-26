@@ -10,6 +10,7 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
@@ -226,6 +227,7 @@ export default function HiddenElectricityPriceIncreasesPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         {/* 6パターン一覧テーブル */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">

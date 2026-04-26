@@ -16,6 +16,7 @@ import { ArticleJsonLd, BreadcrumbJsonLd, FaqPageJsonLd } from "../../components
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -121,6 +122,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人の電気料金はなぜ変動するのか</h2>

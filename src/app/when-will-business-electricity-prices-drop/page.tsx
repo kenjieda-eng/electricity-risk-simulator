@@ -11,6 +11,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -346,6 +347,7 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <div className="mt-8 space-y-10">
         {/* H2: 電気料金が下がる条件とは */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
