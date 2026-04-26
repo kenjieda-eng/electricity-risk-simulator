@@ -22,6 +22,8 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
@@ -104,6 +106,13 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           グラフは月次データがそろう2019年以降を軸にしつつ、年表では2016年の電力全面自由化以降の制度・市場の転換点もあわせて確認できます。
         </p>
+        <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
+          ⚡ 2026 年の値上げ理由（最新性軸）は{" "}
+          <Link href="/business-electricity-price-hike-reasons-2026" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+            2026年法人電気料金の値上げ理由
+          </Link>
+          （Pillar A）を参照してください。本記事は過去 10 年の推移データ軸の Pillar B です。
+        </div>
       </header>
 
       <TableOfContents />
@@ -491,6 +500,12 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             <Link href="/capacity-contribution-cost-impact" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
               <span className="font-semibold text-slate-900">容量拠出金で電気代はどのくらい上がるのか</span>
             </Link>
+            <Link href="/why-business-electricity-prices-rise" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電気料金が上がる根本理由（Pillar A 配下）</span>
+            </Link>
+            <Link href="/when-will-business-electricity-prices-drop" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">電気料金はいつ下がるか（Pillar B 配下）</span>
+            </Link>
           </div>
         </div>
 
@@ -506,6 +521,29 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
 <div className="mt-6">
           <GlossaryLinks currentSlug="business-electricity-price-trend-10-years" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "JEPX", "市場連動プラン", "高圧電力", "電気料金の内訳"]} />
         </div>
+
+        <SisterSiteLink
+          variant="data-source"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移"
+          description="新電力ネットによる電気料金推移統計データ。本記事の一次情報源。"
+        />
+
+        <RelatedLinks
+          heading="値上げ・推移クラスターの全体像（Pillar B 視点）"
+          intro="本記事（Pillar B = 10 年推移データ軸）から、Pillar A（最新性軸）と 6 本のクラスター記事へのナビゲーションです。"
+          links={[
+            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
+            { href: "/why-business-electricity-prices-rise", title: "電気料金が上がる根本理由", description: "Pillar A 配下クラスター。4 要因でシンプルに整理した入口。" },
+            { href: "/why-electricity-prices-have-not-returned", title: "電気料金が戻らない理由", description: "Pillar A 配下クラスター。ピーク後も水準が下がりきらない構造要因を解説。" },
+            { href: "/how-much-business-electricity-prices-increase", title: "電気料金が何パーセント上がるか", description: "Pillar A 配下クラスター。業種・契約区分別の値上げ幅を実数試算。" },
+            { href: "/hidden-electricity-price-increases", title: "ステルス値上げ・隠れ値上げ", description: "Pillar A 配下クラスター。請求書では気づきにくい単価上昇の見落とし。" },
+            { href: "/electricity-price-trend-2019-2025", title: "電気料金 2019〜2025 年推移", description: "Pillar B 配下クラスター。近年の単価推移を年度別に確認。" },
+            { href: "/when-will-business-electricity-prices-drop", title: "電気料金はいつ下がるか", description: "Pillar B 配下クラスター。料金下降タイミングの予測整理。" },
+            { href: "/business-electricity-bill-breakdown", title: "法人電気料金の内訳", description: "請求書の項目構成と上昇要因の対応関係。" },
+            { href: "/articles/price-trends", title: "電気料金の推移と高止まり（カテゴリ）", description: "本クラスターを含む価格動向カテゴリ。" },
+          ]}
+        />
 
         <AuthorBadge publishedAt="2026-03-27" updatedAt="2026-03-27" />
 
@@ -528,6 +566,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         />
       </div>
 
+      <FloatingCta />
     </main>
     </>
   );
