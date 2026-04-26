@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { GoogleAnalytics } from "../components/analytics/GoogleAnalytics";
+import ClarityScript from "../components/analytics/ClarityScript";
 import ArticleScrollTracker from "../components/analytics/ArticleScrollTracker";
 import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
@@ -66,6 +67,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
+        <ClarityScript />
         <ArticleScrollTracker />
       </body>
     </html>
