@@ -13,6 +13,9 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import Breadcrumb from "../../components/simulator/Breadcrumb";
+import FloatingCta from "../../components/simulator/FloatingCta";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
 
@@ -101,13 +104,13 @@ export default function SelfDiagnosisContractReviewPage() {
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
-      <nav aria-label="パンくず" className="text-sm text-slate-600">
-        <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
-        <span className="px-2">›</span>
-        <Link href="/articles/diagnostic-tools" className="underline-offset-2 hover:underline">自己診断・簡易チェック</Link>
-        <span className="px-2">›</span>
-        <span className="text-slate-800">電力契約見直し自己診断</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { href: "/", label: "ホーム" },
+          { href: "/articles/diagnostic-tools", label: "診断ツール・チェックリスト" },
+          { label: "電力契約見直し自己診断" },
+        ]}
+      />
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
@@ -295,6 +298,13 @@ export default function SelfDiagnosisContractReviewPage() {
           </table>
         </section>
 
+        <SisterSiteLink
+          variant="data-source"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移（特高・高圧・低圧別）"
+          description="本診断でリスク評価の根拠としている電気料金推移データの一次情報源です。"
+        />
+
         <SourcesAndFaq
           faq={FAQ_ITEMS}
           sources={[
@@ -362,6 +372,7 @@ export default function SelfDiagnosisContractReviewPage() {
         />
       </div>
 
+      <FloatingCta />
     </main>
     </>
   );
