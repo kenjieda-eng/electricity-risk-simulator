@@ -496,6 +496,43 @@ export default function KenjiEdaProfilePage() {
         </div>
       </header>
 
+      {/* 詳細ページへの導線（lectures / books / media） */}
+      <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">関連ページ（詳細）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          講演実績・著書・メディア掲載は専用の詳細ページにまとめています。それぞれの活動を深く確認したい方はこちらから。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <Link
+            href="/kenji-eda/lectures"
+            className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-sky-300 hover:shadow"
+          >
+            <p className="text-base font-semibold text-slate-900">講演実績</p>
+            <p className="mt-1.5 text-xs leading-5 text-slate-600">
+              政府・自治体・経済団体・企業向け 24 団体超への登壇実績、最新の登壇予定、主な講演テーマを整理。
+            </p>
+          </Link>
+          <Link
+            href="/kenji-eda/books"
+            className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-sky-300 hover:shadow"
+          >
+            <p className="text-base font-semibold text-slate-900">書籍一覧</p>
+            <p className="mt-1.5 text-xs leading-5 text-slate-600">
+              脱炭素・電力・蓄電池・エネルギーDX・ブロックチェーンをテーマとする代表的な著書 8 冊を紹介。
+            </p>
+          </Link>
+          <Link
+            href="/kenji-eda/media"
+            className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-sky-300 hover:shadow"
+          >
+            <p className="text-base font-semibold text-slate-900">メディア掲載</p>
+            <p className="mt-1.5 text-xs leading-5 text-slate-600">
+              Yahoo!ニュース エキスパート、Wikipedia、業界専門メディア、公式 SNS など主要メディアでの活動。
+            </p>
+          </Link>
+        </div>
+      </section>
+
       {/* 基本情報 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">基本情報</h2>
