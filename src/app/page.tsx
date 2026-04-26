@@ -346,6 +346,37 @@ export default function Page() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "法人向け電気料金上昇・高騰リスクシミュレーター",
+            url: "https://simulator.eic-jp.org/",
+            description:
+              "法人・自治体向けに、契約条件と価格上昇リスク要因をもとに 12 か月間の累計電気代と上昇リスクを比較・可視化できる無料シミュレーター。",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            inLanguage: "ja",
+            isAccessibleForFree: true,
+            offers: {
+              "@type": "Offer",
+              price: 0,
+              priceCurrency: "JPY",
+            },
+            provider: {
+              "@type": "Organization",
+              name: "一般社団法人エネルギー情報センター",
+              url: "https://eic-jp.org/",
+            },
+            potentialAction: {
+              "@type": "UseAction",
+              target: "https://simulator.eic-jp.org/simulate",
+            },
+          }),
+        }}
+      />
     </>
   );
 }
