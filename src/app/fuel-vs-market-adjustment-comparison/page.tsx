@@ -5,6 +5,8 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 // --- 定数 ---
 const pageTitle =
@@ -152,6 +154,44 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
           </p>
         </header>
 
+        {/* サブピラー2本への誘導カード */}
+        <section aria-label="サブピラー記事への誘導" className="mt-6 grid gap-3 md:grid-cols-2">
+          <Link
+            href="/fuel-cost-adjustment"
+            className="group flex flex-col rounded-xl border-2 border-amber-200 bg-amber-50 p-5 transition hover:border-amber-400 hover:bg-amber-100"
+          >
+            <span className="inline-flex w-fit rounded-full bg-amber-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+              サブピラー A ／ 燃料軸
+            </span>
+            <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
+              燃料費調整制度の総合解説
+            </p>
+            <p className="mt-1.5 text-sm leading-6 text-slate-700">
+              燃料費調整額（燃調費）の仕組み・計算式・上限撤廃の背景・法人への影響を 1 本で網羅。
+            </p>
+            <span className="mt-auto pt-3 text-sm font-semibold text-amber-700 group-hover:text-amber-900">
+              燃料費調整額とは を読む →
+            </span>
+          </Link>
+          <Link
+            href="/market-price-adjustment"
+            className="group flex flex-col rounded-xl border-2 border-sky-200 bg-sky-50 p-5 transition hover:border-sky-400 hover:bg-sky-100"
+          >
+            <span className="inline-flex w-fit rounded-full bg-sky-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+              サブピラー B ／ 市場軸
+            </span>
+            <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
+              市場価格調整の総合解説
+            </p>
+            <p className="mt-1.5 text-sm leading-6 text-slate-700">
+              市場価格調整額（市場調整額）の仕組み・JEPX 連動の挙動・市場連動プラン採用法人のリスクを整理。
+            </p>
+            <span className="mt-auto pt-3 text-sm font-semibold text-sky-700 group-hover:text-sky-900">
+              市場価格調整とは を読む →
+            </span>
+          </Link>
+        </section>
+
         <TableOfContents />
         {/* 本文セクション群 */}
         <section className="mt-6 space-y-6">
@@ -215,7 +255,15 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
               が発生します。このラグがあることで、単価予測は 2 ヶ月先まで公表されるケースが多く、予算策定は比較的しやすい一方、急騰局面では「まだ請求に乗っていないが数ヶ月後に必ず乗る値上げ」が確定している状況が生まれます。
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              規制料金メニューには上限（基準燃料価格の 1.5 倍を超えた分は需要家負担なし）がありますが、自由化メニューは 2022 年以降に上限を撤廃するケースが相次ぎ、2023〜2025 年には +10〜15 円/kWh 規模の燃調単価が珍しくなくなりました。
+              規制料金メニューには上限（基準燃料価格の 1.5 倍を超えた分は需要家負担なし）がありますが、自由化メニューは 2022 年以降に上限を撤廃するケースが相次ぎ、2023〜2025 年には +10〜15 円/kWh 規模の燃調単価が珍しくなくなりました。過去の単価推移は{" "}
+              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                燃料費調整額の過去推移
+              </Link>
+              、自社契約の約款で具体的にどう書かれているかは{" "}
+              <Link href="/how-to-check-fuel-cost-adjustment-terms" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                約款での燃料費調整確認
+              </Link>
+              で詳述しています。
             </p>
           </section>
 
@@ -243,7 +291,15 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               参照する指標が 30 分単位の JEPX である以上、予算策定時点で確定できるのは
               <strong>前日のスポット結果まで</strong>
-              。月次平均で見ても翌月に入らないと確定せず、1 年先の予算管理は困難です。
+              。月次平均で見ても翌月に入らないと確定せず、1 年先の予算管理は困難です。市場連動プランで顕在化したリスク事例は{" "}
+              <Link href="/market-price-adjustment-risk" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                市場価格調整のリスク
+              </Link>
+              、自社契約の約款で実際にどう書かれているかは{" "}
+              <Link href="/how-to-check-market-price-adjustment-terms" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                約款での市場価格調整確認
+              </Link>
+              にまとめています。
             </p>
           </section>
 
@@ -415,40 +471,58 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
           </section>
         </section>
 
+        <SisterSiteLink
+          variant="data-source"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移"
+          description="燃料費調整・市場価格調整の影響を含む電気料金推移の一次情報源。"
+        />
+
         {/* 関連リンク */}
         <div className="mt-8">
           <RelatedLinks
-            heading="関連ページ"
+            heading="単価調整クラスターの全体像"
+            intro="本メタピラーから、サブピラー 2 本（燃料軸／市場軸）と 4 本のクラスター記事へのナビゲーションです。"
             links={[
               {
                 href: "/fuel-cost-adjustment",
-                title: "燃料費調整額の詳細",
-                description:
-                  "燃調費の計算根拠と上限撤廃後の実態を整理します。",
+                title: "燃料費調整制度の総合解説（サブピラー A）",
+                description: "燃調費の計算根拠と上限撤廃後の実態を整理します。",
               },
               {
                 href: "/market-price-adjustment",
-                title: "市場価格調整額の詳細",
-                description:
-                  "JEPX 市場連動の仕組みと 2025 年冬の挙動を整理します。",
+                title: "市場価格調整の総合解説（サブピラー B）",
+                description: "JEPX 市場連動の仕組みと 2025 年冬の挙動を整理します。",
               },
               {
                 href: "/fuel-cost-adjustment-history",
-                title: "燃調費の推移",
-                description:
-                  "過去 5 年の燃調費推移と最大振れ幅を確認できます。",
+                title: "燃料費調整額の過去推移",
+                description: "過去 5 年の燃調費推移と最大振れ幅を確認できます。",
+              },
+              {
+                href: "/how-to-check-fuel-cost-adjustment-terms",
+                title: "約款での燃料費調整確認",
+                description: "自社契約の約款で燃調費の表記・上限有無を見分ける手順。",
+              },
+              {
+                href: "/market-price-adjustment-risk",
+                title: "市場価格調整のリスク",
+                description: "市場連動プラン採用法人が直面する具体的リスク事例。",
+              },
+              {
+                href: "/how-to-check-market-price-adjustment-terms",
+                title: "約款での市場価格調整確認",
+                description: "自社契約での市場連動条項の確認方法。",
               },
               {
                 href: "/market-linked-vs-fixed",
                 title: "市場連動 vs 固定プラン比較",
-                description:
-                  "契約プラン選択が燃調費・市場調整額露出度にどう効くかを整理します。",
+                description: "契約プラン選択が燃調費・市場調整額露出度にどう効くかを整理します。",
               },
               {
                 href: "/why-business-electricity-prices-rise",
                 title: "電気料金上昇の 4 要因",
-                description:
-                  "調整額以外の値上がり要因も含めて全体像を俯瞰します。",
+                description: "調整額以外の値上がり要因も含めて全体像を俯瞰します。",
               },
             ]}
           />
@@ -478,6 +552,8 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             description="契約メニューごとの影響度算定から、調達戦略の再設計までエネルギー情報センターの専門家がご支援します。"
           />
         </div>
+
+        <FloatingCta />
       </main>
     </>
   );
