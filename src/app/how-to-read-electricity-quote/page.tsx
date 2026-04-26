@@ -724,6 +724,11 @@ export default function HowToReadElectricityQuotePage() {
               title: "電力会社の比較の進め方",
               description: "比較判断で見落としやすい観点を整理しています。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

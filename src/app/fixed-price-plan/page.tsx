@@ -459,6 +459,11 @@ export default function FixedPricePlanPage() {
               title: "燃料費調整額（燃調費）とは",
               description: "固定プランでも変動する燃調費の仕組みと請求への影響を確認できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

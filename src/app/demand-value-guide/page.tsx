@@ -388,6 +388,11 @@ export default function DemandValueGuidePage() {
               title: "市場連動プランと固定プランの違い",
               description: "デマンド・基本料金を把握したうえで、プラン選択の軸を整理できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

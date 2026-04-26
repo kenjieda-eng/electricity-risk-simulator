@@ -934,6 +934,11 @@ export default function BusinessElectricityBillBreakdownPage() {
               title: "特別高圧電力の料金と仕組み",
               description: "大規模需要家向けの特別高圧の料金体系を整理できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

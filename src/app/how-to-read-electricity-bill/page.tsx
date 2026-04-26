@@ -669,6 +669,11 @@ export default function HowToReadElectricityBillPage() {
               title: "特別高圧電気料金の請求書ガイド",
               description: "特別高圧契約の請求構造と確認ポイント。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

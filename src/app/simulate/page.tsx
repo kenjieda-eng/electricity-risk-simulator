@@ -73,6 +73,11 @@ export default function SimulatePage() {
                 title: "解説記事一覧",
                 description: "料金の仕組み・上昇要因・契約見直しのポイントをテーマ別に整理。",
               },
+              {
+                href: "/concierge",
+                title: "AI コンシェルジュで関連情報を探す",
+                description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+              },
             ]}
           />
           <AuthorBadge />

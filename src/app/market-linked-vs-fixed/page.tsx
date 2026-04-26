@@ -299,6 +299,11 @@ export default function MarketLinkedVsFixedPage() {
               title: "市場価格調整額とは",
               description: "市場連動プランで発生する調整項目の仕組みと変動幅を確認できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

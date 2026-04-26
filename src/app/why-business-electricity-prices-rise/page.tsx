@@ -260,6 +260,11 @@ export default function WhyBusinessElectricityPricesRisePage() {
               title: "燃料費調整額の仕組み",
               description: "燃調費が請求に反映される流れを個別に深掘りできます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 
