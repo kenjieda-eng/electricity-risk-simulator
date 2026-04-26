@@ -10,6 +10,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 const pageTitle =
   "固定プランが向く法人の特徴｜予算管理と安定性を重視する場合の考え方";
 const pageDescription =
@@ -48,6 +49,35 @@ export const metadata: Metadata = {
     images: ["/api/og/plan-types"],
   },
 };
+
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "固定価格型プランに向いている業種は具体的にどんな業種ですか？",
+    answer:
+      "①夕方ピーク操業の製造業（17-19 時に電力使用が集中）、②24 時間稼働のデータセンター・冷凍倉庫、③医療機関・介護施設のような電力供給安定性が必須の業種、④経営予算上、料金変動を許容できない中堅・中小企業が代表例です。共通点は「電力使用パターンが固定的」で「価格変動による経営影響が大きい」ことです。",
+  },
+  {
+    question: "固定価格型プランの典型的な単価はいくらくらいですか？",
+    answer:
+      "2026 年初頭時点で、高圧（500 kW）の場合 22-28 円/kWh、低圧の場合 28-35 円/kWh が目安です。市場連動型と比較すると 2-5 円/kWh 高い水準ですが、JEPX 価格急騰時のリスク（瞬間的に 100 円/kWh 超）を回避できる安心料込みの単価と捉えるのが妥当です。",
+  },
+  {
+    question: "固定価格型でも燃料費調整額の影響は受けますか？",
+    answer:
+      "受けます。固定価格型は基本料金と電力量料金の単価が固定されるだけで、燃料費調整額は LNG・原油の輸入価格に連動して毎月変動します。「上限あり固定価格型」を選択すれば、燃料費調整額にも上限が設定され、急騰時のリスクを限定できます。完全固定を求める場合は「上限あり」を必ず選択してください。",
+  },
+  {
+    question: "固定価格型と再エネ 100% プランは併用できますか？",
+    answer:
+      "可能です。一部小売で「固定価格型 × 非化石証書付き」のオプション提供があります。CSR 報告書や Scope2 排出量削減を求められる企業は、固定価格型のコスト安定性 + 再エネ 100% の環境価値を両立できます。ただし通常の固定価格型より 0.5〜2 円/kWh の上乗せがあります。",
+  },
+  {
+    question: "固定価格型の契約期間は通常何年ですか？",
+    answer:
+      "標準は 1〜3 年契約です。1 年契約は柔軟性が高い反面、毎年の更新交渉で単価変更リスクがあります。3 年契約は単価が固定される安心感がありますが、市場価格が下落した場合に解約違約金（基本料金の 1〜3 か月分）が発生する可能性があります。経営計画期間と整合させた選択を推奨します。",
+  },
+];
+
 
 const suitedCharacteristics = [
   {
@@ -112,7 +142,7 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
           { name: "固定プランが向く法人の特徴" },
         ]}
-        faq={faqItems}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -297,7 +327,7 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
         </div>
 
         <SourcesAndFaq
-          faq={faqItems}
+          faq={FAQ_ITEMS}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
             { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力取引監視に関する情報" },
@@ -305,6 +335,12 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           publishedAt="2026-04-10"
         />
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="関連ページ"
           links={[

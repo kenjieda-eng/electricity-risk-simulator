@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../components/seo/JsonLd";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 export const metadata: Metadata = {
   title: "電力料金上昇リスク診断の使い方 | 法人電気料金ナビ",
@@ -36,6 +37,35 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "シミュレーターを初めて使う場合、何から始めればよいですか？",
+    answer:
+      "まず「契約区分の選択」（低圧 / 高圧 / 特別高圧）から始めてください。次に直近の電気料金請求書を手元に用意し、基本料金・電力量料金・契約電力・年間使用量の 4 項目を順に入力します。各入力欄に「請求書のどこを見ればよいか」のヒント画像が表示されるので、初心者でも 5 分程度で完了します。",
+  },
+  {
+    question: "請求書が手元にない場合、どうすればよいですか？",
+    answer:
+      "電力会社の Web マイページで PDF 請求書を確認できます。東京電力エナジーパートナー / 関西電力 / 中部電力ミライズなど主要小売はすべて Web 明細を提供しています。Web マイページのログイン情報がない場合は、電気料金請求書（紙）を保管している経理担当者に確認するのが最短です。",
+  },
+  {
+    question: "複数事業所がある場合、どう診断すればよいですか？",
+    answer:
+      "事業所単位で個別に診断するのが推奨です。本社・支社・工場・倉庫はそれぞれ電力使用パターンが異なるため、まとめて診断すると平均化されて適合プランの判定精度が下がります。診断後、各事業所の結果を Excel に統合する手順は「グループ電気料金統合分析」記事を参照してください。",
+  },
+  {
+    question: "入力内容を保存して後で続きから再開できますか？",
+    answer:
+      "現状は保存機能はありませんが、入力内容を JSON でローカル保存→再読み込みできる機能を 2026 年 6 月にリリース予定です。それまでは入力内容を Excel やメモ帳に控えていただくか、入力途中で「比較結果を URL 共有」を実行することで実質的に保存できます（24 時間有効）。",
+  },
+  {
+    question: "シミュレーション結果の見方がよく分かりません。",
+    answer:
+      "結果画面は 3 セクションで構成されています。①「現契約コスト試算」（年間・月間）、②「適合プラン上位 3〜5 件」（推奨度スコア付き）、③「シナリオ別リスク試算」（JEPX 急騰時・燃料費高騰時等）。それぞれの数字の読み方は結果画面下部の「結果の解説」セクションで詳説しています。",
+  },
+];
+
+
 type SectionHeadingProps = {
   iconSrc: string;
   text: string;
@@ -59,6 +89,7 @@ export default function HowToPage() {
           { name: "電力料金上昇リスク診断の使い方" },
         ]}
       />
+      <FaqPageJsonLd faqs={FAQ_ITEMS} />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-6 py-8 text-slate-800">
       <header className="mb-8 border-b border-slate-200 pb-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">電力料金上昇リスク診断の使い方</h1>
@@ -408,6 +439,12 @@ export default function HowToPage() {
           請求条件、運用状況などによって変動します。シミュレーション結果は、法人向けの比較検討やリスク把握の参考情報としてご活用ください。
         </p>
       </footer>
+    <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+      <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+      <div className="mt-4">
+        <MarketDataFaq items={FAQ_ITEMS} />
+      </div>
+    </section>
     </main>
     </>
   );

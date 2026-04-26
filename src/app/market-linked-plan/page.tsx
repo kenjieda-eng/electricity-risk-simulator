@@ -11,6 +11,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 export const metadata: Metadata = {
   title: "市場連動プランとは｜法人向けリスクと固定プラン比較を解説",
@@ -55,6 +56,35 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "市場連動型プランの仕組みを簡単に教えてください。",
+    answer:
+      "JEPX（卸電力取引所）のスポット価格に連動して、電力量料金単価が 30 分ごとに変動するプランです。通常は固定価格より 5〜15% 安い水準で推移しますが、寒波・猛暑時に JEPX 価格が急騰すると単価も上昇します。基本料金は通常通り固定で、電力量料金部分のみが変動するのが一般的です。",
+  },
+  {
+    question: "市場連動型を選ぶと毎月の電気代はどう変動しますか？",
+    answer:
+      "通常月は固定価格型と比較して 5〜15% 安く、年平均で 8-12% のコスト削減が期待できます。一方、急騰時は通常の 2〜5 倍の請求が来る月もあります。年平均では削減できるが、月次のキャッシュフロー予測が立てにくいのが特徴です。経理上は月次予算に「市場価格変動引当金」を計上する企業もあります。",
+  },
+  {
+    question: "市場連動型のリスクヘッジ方法はありますか？",
+    answer:
+      "3 つあります。①「上限価格付き市場連動型」を選択(一部小売が提供、上限 50-80 円/kWh 程度)、②蓄電池導入(高騰時間帯は蓄電池放電で需要削減)、③ハイブリッド型プラン(70% 固定 + 30% 市場連動など比率指定)。完全な市場価格リスク回避を求める場合は固定価格型への切替が確実です。",
+  },
+  {
+    question: "市場連動型は 2026 年現在、どのくらいの法人が採用していますか？",
+    answer:
+      "高圧契約全体の約 15-20% 程度と推測されています(業界統計より)。2022 年 1 月の電力危機以降、新規採用は減少傾向ですが、JEPX 価格が比較的安定している業種(昼間操業の事務所など)では引き続き選択されています。市場連動型から固定価格型への切替が増える一方、ハイブリッド型への移行も進んでいます。",
+  },
+  {
+    question: "市場連動型プランの契約期間中に JEPX 価格が暴落したら得しますか？",
+    answer:
+      "得します。例えば 2024 年春の九州エリアでは JEPX 平均価格が 0.01 円/kWh まで下がる時間帯があり、市場連動型契約者は実質的に基本料金のみで電力を使えました。再エネ普及で昼間の余剰電力が発生する状況では、市場連動型のメリットが顕在化する可能性があります。一方、夕方ピーク時間帯の高騰リスクは別途存在します。",
+  },
+];
+
+
 const publishedDate = "2026-03-01";
 
 const faqItems = [
@@ -79,7 +109,7 @@ export default function MarketLinkedPlanPage() {
           { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
           { name: "市場連動プランとは" },
         ]}
-        faq={faqItems}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -241,7 +271,7 @@ export default function MarketLinkedPlanPage() {
         </section>
 
         <SourcesAndFaq
-          faq={faqItems}
+          faq={FAQ_ITEMS}
           sources={[
             { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場システムプライス公表データ" },
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
@@ -250,6 +280,12 @@ export default function MarketLinkedPlanPage() {
           publishedAt="2025-08-19"
         />
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="固定プランとの違いを知りたい方へ"
           intro="市場連動プラン単体の理解に加えて、固定プランの考え方や比較軸も押さえると、契約方針を整理しやすくなります。"

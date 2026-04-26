@@ -13,6 +13,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { JEPX_YEARLY_SUMMARY } from "../../data/jepxData";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 const faqItems = [
   { question: "市場連動プランと固定プランの最大の違いは何ですか？", answer: "市場連動プランは電力量料金の単価が市場価格に連動して毎月変動します。固定プランは契約単価が固定されるため予算管理がしやすいです。どちらが有利かは市場動向と自社のリスク許容度によって変わります。" },
@@ -60,6 +61,35 @@ export const metadata: Metadata = {
     images: ["/api/og/plan-types"],
   },
 };
+
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "市場連動型プランは中小企業でも安心して使えますか？",
+    answer:
+      "業種により判断が分かれます。事務所・小売・サービス業のように昼間中心の操業で電力消費パターンが平均的な事業者は、市場連動型でコスト削減できる可能性があります。一方、製造業の夕方ピーク操業や 24 時間稼働の業種は JEPX 価格高騰時の影響が大きく、固定価格型のほうが経営予算が立てやすいです。",
+  },
+  {
+    question: "固定価格型でも実は燃料費調整額で値上がりするのではないですか？",
+    answer:
+      "その通りで、完全固定ではありません。固定価格型でも燃料費調整額（LNG・原油・石炭の輸入価格に連動）は毎月変動します。ただし「上限あり固定価格型」を選べば、燃料費調整額の上限が設定され、急騰時のリスクを限定できます。本サイトの燃料費調整額解説ページで詳細を確認できます。",
+  },
+  {
+    question: "途中で市場連動型から固定価格型に切り替えることは可能ですか？",
+    answer:
+      "可能ですが、契約期間中の解約は違約金が発生する場合があります。標準的な小売契約は 1〜3 年契約で、契約期間中の解約は基本料金の 1〜3 か月分の違約金が請求されることがあります。切替時は新規小売との契約締結 → 旧小売へ解約通知の順序が標準で、ブランクなく切り替えできます。",
+  },
+  {
+    question: "市場連動型の月額単価はどう変動しますか？最大いくらになる可能性がありますか？",
+    answer:
+      "通常時は固定価格型より 5〜15% 安い水準で推移しますが、寒波・猛暑時の JEPX 価格高騰により、瞬間的に 50〜100 円/kWh まで跳ねるケースがあります。2022 年 1 月の電力危機では一部新電力で月額請求が想定の 5〜10 倍に達した事例がありました。本サイトのリスクシナリオ別記事で具体例を確認できます。",
+  },
+  {
+    question: "市場連動型と固定価格型を併用することはできますか？",
+    answer:
+      "「ハイブリッド型プラン」として一部小売で提供されています。例えば「使用量の 70% を固定価格、30% を市場連動」のように比率指定できます。完全固定よりコスト削減余地があり、完全市場連動よりリスクを抑えられる中間解です。本サイトのハイブリッド型プラン解説記事で詳細を確認できます。",
+  },
+];
+
 
 const publishedDate = "2026-03-01";
 
@@ -125,7 +155,7 @@ export default function MarketLinkedVsFixedPage() {
           { name: "契約メニューの違いを知る", url: "https://simulator.eic-jp.org/articles/plan-types" },
           { name: "市場連動プランと固定プランの違い" },
         ]}
-        faq={faqItems}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -266,7 +296,7 @@ export default function MarketLinkedVsFixedPage() {
         </div>
 
         <SourcesAndFaq
-          faq={faqItems}
+          faq={FAQ_ITEMS}
           sources={[
             { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場価格データ" },
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
@@ -275,6 +305,12 @@ export default function MarketLinkedVsFixedPage() {
           publishedAt="2025-08-21"
         />
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="詳しく知りたい方・比較したい方へ"
           intro="個別解説ページを読むと、比較表で示した違いの背景をより具体的に確認できます。"

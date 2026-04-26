@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, FaqPageJsonLd } from "../../components/seo/JsonLd";
 import InquiryTypeSelector from "./_components/InquiryTypeSelector";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 // --- 定数 ---
 const pageTitle =
@@ -107,6 +108,35 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "問い合わせから回答までどれくらい時間がかかりますか？",
+    answer:
+      "通常 2 営業日以内に回答いたします。技術的な内容や複数事業所の試算依頼など回答に時間を要する場合は、最大 5 営業日いただくことがあります。緊急性の高いお問い合わせ（電力供給停止のリスクなど）は件名に「緊急」と記載いただければ、可能な限り当日対応します。",
+  },
+  {
+    question: "電力料金の見直し相談は無料ですか？",
+    answer:
+      "本サイト経由の初回相談は無料です。一般社団法人エネルギー情報センターは非営利法人として、中立的な情報提供を使命としています。詳細な個別コンサルティング（社内会議への参加・カスタムレポート作成等）は別途有償オプションとなりますが、まずはお気軽に無料相談からお問い合わせください。",
+  },
+  {
+    question: "問い合わせ時に必要な情報は何ですか？",
+    answer:
+      "お問い合わせ内容により異なりますが、料金見直し相談の場合は: ①事業所所在地（都道府県）、②契約区分（低圧/高圧/特別高圧）、③契約電力（kW、高圧の場合）、④年間電力使用量（kWh）、⑤直近の月額電気料金、の 5 項目があれば初期相談がスムーズです。詳細は問い合わせフォームでご案内しています。",
+  },
+  {
+    question: "セミナー・講演の依頼はどこから問い合わせればよいですか？",
+    answer:
+      "本ページのお問い合わせフォームの「お問い合わせ種別」で「講演・セミナー依頼」を選択してください。理事の江田健二（プロフィールはこちら）が登壇可能なテーマは、電力市場の最新動向 / 法人の脱炭素対応 / エネルギーリスク管理など多岐にわたります。日程調整は通常 1〜2 か月前までのご相談を推奨します。",
+  },
+  {
+    question: "個人事業主や家庭からの問い合わせも対応していますか？",
+    answer:
+      "本サイトは法人向けに特化しているため、個人事業主の方は対応可能ですが、一般家庭の電気料金相談は対応範囲外です。一般家庭の電気料金については、経済産業省の「電気料金比較サイト」や各電力会社のお客様窓口をご利用ください。SOHO・個人事業主の方向けの解説記事もご用意しています。",
+  },
+];
+
+
 // --- 来訪元ラベル（searchParams.from の値→表示名） ---
 const sourceLabels: Record<string, string> = {
   "compare-result-primary": "シミュレーター結果ページ（/compare）",
@@ -184,6 +214,7 @@ export default async function ContactPage({
         ]}
       />
     <ReadingProgressBar />
+    <FaqPageJsonLd faqs={FAQ_ITEMS} />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       {/* シミュレーター結果からの遷移時の文脈バナー */}
       {hasContext ? (
@@ -496,6 +527,12 @@ export default async function ContactPage({
           ← トップページに戻る
         </Link>
       </div>
+    <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+      <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+      <div className="mt-4">
+        <MarketDataFaq items={FAQ_ITEMS} />
+      </div>
+    </section>
     </main>
     </>
   );
