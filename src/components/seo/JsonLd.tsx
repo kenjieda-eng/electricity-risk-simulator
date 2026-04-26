@@ -155,6 +155,41 @@ export function FaqPageJsonLd({ faqs }: FaqPageJsonLdProps) {
   );
 }
 
+type OrganizationJsonLdProps = {
+  /** Defaults to the EIC organization when omitted. */
+  name?: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+};
+
+export function OrganizationJsonLd({
+  name = "一般社団法人エネルギー情報センター",
+  url = "https://eic-jp.org",
+  logo = "https://simulator.eic-jp.org/ogp-default.png",
+  sameAs = [
+    "https://eic-jp.org",
+    "https://pps-net.org",
+    "https://simulator.eic-jp.org",
+  ],
+}: OrganizationJsonLdProps = {}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name,
+    url,
+    logo,
+    sameAs,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export function WebSiteJsonLd({ name, url, description }: WebSiteJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",

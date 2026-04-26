@@ -286,6 +286,11 @@ export function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
               <li>
+                <Link href="/about" className={linkClass}>
+                  サイトについて
+                </Link>
+              </li>
+              <li>
                 <Link href="/about-this-site" className={linkClass}>
                   このサイトの思い
                 </Link>
