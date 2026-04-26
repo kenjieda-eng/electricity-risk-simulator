@@ -10,8 +10,40 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
+
+const publishedDate = "2026-04-17";
+const updatedDate = "2026-04-26";
+
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "LNG・石炭・原油の価格指標はどこで確認できますか？",
+    answer:
+      "LNG は財務省貿易統計の日本 CIF 価格、JKM（アジアスポット）、Henry Hub などが代表的です。石炭は豪州ニューカッスル一般炭スポット、原油は WTI・北海ブレント・ドバイ価格を使い分けます。多くの指標は経済産業省・資源エネルギー庁の月報や IEA レポートで月次更新されており、無料で参照可能です。",
+  },
+  {
+    question: "燃料価格が上昇してから電気料金に反映されるまでどれくらい遅れますか？",
+    answer:
+      "一般的に 1〜3 か月の遅れが生じます。日本の燃料費調整制度は「3 か月平均の貿易統計価格」を翌々月の電気料金に反映する仕組みのため、原油や LNG が高騰しても最短で 2 か月後、長くて 4 か月後に法人電気料金へ波及します。期初予算策定時に直近 3 か月の燃料動向を盛り込むことが重要です。",
+  },
+  {
+    question: "燃料費調整額の上限有プランと上限なしプランの違いは何ですか？",
+    answer:
+      "上限有プランは燃料費調整額の単価に上限値が設定されており、燃料急騰時の請求額の上振れリスクが限定されます。一方、上限なしプランは燃料価格の変動をそのまま受けるため、平時は安価でも危機時に大きな負担増となります。長期的なコスト見通しを重視する法人は上限有プランを優先する判断が増えています。",
+  },
+  {
+    question: "原油は発電シェアが小さいのに電気料金への影響があるのはなぜですか？",
+    answer:
+      "原油の発電シェアは 3% 程度ですが、燃料費調整額の計算式には原油 CIF 価格が組み込まれており、3 燃料すべての加重平均で単価が決まる仕組みです。原油が動くと、たとえ自社の供給電源が LNG 中心であっても、燃調費を通じて間接的に請求額に影響します。",
+  },
+  {
+    question: "燃料価格リスクから自社を守るにはどんな対策がありますか？",
+    answer:
+      "（1）燃料費調整額上限有プランの選択、（2）蓄電池・自家消費 PPA の導入で系統依存度を下げる、（3）DR・ネガワット取引参加で節電を収益化する、（4）固定価格プランへの切替で予算ブレを抑制する、の 4 軸が代表的です。業種・契約規模に応じて組み合わせることで、燃料リスクへの耐性が大きく改善します。",
+  },
+];
 
 
 const pageTitle =
@@ -127,12 +159,13 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
         headline="燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度"
         description="LNG・石炭・原油の3燃料の国際価格推移を比較し、日本の電気料金への影響度の違いを解説。燃料構成の変化、燃調費への反映メカニズムを整理。"
         url="https://simulator.eic-jp.org/fuel-mix-price-trend-and-electricity-impact"
-        datePublished="2026-04-17"
+        datePublished={publishedDate}
+        dateModified={updatedDate}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -358,6 +391,113 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           </p>
         </section>
 
+        {/* 燃料別価格動向の読み方 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            燃料別価格動向の読み方｜指標・更新頻度・波及スピード
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            3 燃料はそれぞれ参照すべき指標が異なります。LNG は財務省「貿易統計」の日本 CIF 価格、JKM（アジア LNG スポット）、米 Henry Hub の 3 系統。石炭は豪州ニューカッスル一般炭スポット指標と長期契約価格。原油は WTI・北海ブレント・ドバイの 3 銘柄を用途で使い分けます。これらの指標は経済産業省と資源エネルギー庁が月次で公表しており、無料で取得可能です。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            燃料価格が動いてから日本の法人電気料金に反映されるまでには、{" "}
+            <Link
+              href="/fuel-cost-adjustment"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              燃料費調整額
+            </Link>{" "}
+            の制度上、概ね 1〜3 か月の遅れが発生します。直近 3 か月の貿易統計平均価格が翌々月の請求に乗る仕組みを理解しておけば、突発的な高騰時の請求インパクトと到来時期を事前に試算できます。
+          </p>
+        </section>
+
+        {/* なぜ燃料別の動向を法人が知るべきか */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            なぜ燃料別の動向を法人が知るべきか
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            燃料別の動向把握には実務上 3 つの意義があります。第一に、{" "}
+            <Link
+              href="/fuel-cost-adjustment"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              燃料費調整額
+            </Link>{" "}
+            の計算式に直結するため、月次の請求変動を予測する精度が高まります。LNG が円建てで 10 円/kg 上昇すれば燃調費が 0.3〜0.5 円/kWh 押し上がるなど、燃料指標から請求額を逆算できます。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            第二に、上限ありプランと上限なしプランの選択判断材料になります。燃料が長期的に高止まりする局面では上限ありプラン、安定局面では上限なしプランの方が経済合理性が高くなる可能性があり、燃料動向の見通しなしでは契約タイプを決められません。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            第三に、リスクシナリオ策定の前提条件として不可欠です。{" "}
+            <Link
+              href="/fuel-cost-adjustment-history"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              燃料費調整額の推移詳細
+            </Link>{" "}
+            を踏まえ、燃料価格が 2022 年水準まで戻った場合の影響額を年度予算に組み込んでおくと、危機時の社内意思決定が大幅に早まります。
+          </p>
+        </section>
+
+        {/* 各燃料の特徴と日本のエネルギー安全保障 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            各燃料の特徴と日本のエネルギー安全保障
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong className="font-semibold text-slate-900">LNG</strong>: 日本は LNG の輸入比率がほぼ 100% で、世界最大級の輸入国です。長期契約と spot 調達の比率は概ね 7：3 で、長期契約は石油リンク価格、spot は JKM に連動します。長期契約比率の維持が価格安定の鍵で、{" "}
+            <Link
+              href="/jepx-explained"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              JEPX
+            </Link>{" "}
+            のスポット価格にも直接影響します。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong className="font-semibold text-slate-900">石炭</strong>: 国内炭はほぼゼロで、輸入は豪州・インドネシア・ロシアに依存します。豪州一般炭スポット指標が代表的で、輸送コストや為替の影響も加わります。脱炭素の潮流で発電比率は段階的に縮小する見通しですが、需給逼迫時の調整電源として一定割合は維持される見込みです。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <strong className="font-semibold text-slate-900">原油</strong>: 中東依存度が約 95% で、エネルギー安全保障上の最大リスク要因です。WTI（米国指標）、北海ブレント（欧州指標）、ドバイ（中東指標）を業種・契約形態で使い分けます。発電シェアは下がっていますが、燃調費計算式には残っており影響が続きます。
+          </p>
+        </section>
+
+        {/* 2024-2026 年の動向解説 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            2024〜2026 年の燃料動向と地政学リスク
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2024 年以降は中東情勢（ホルムズ海峡の緊張・紅海航路の混乱）、ロシア-ウクライナ戦争の長期化、中国の景気回復に伴う LNG 需要増の 3 要素が燃料価格に同時並行で影響しています。これらの地政学リスクは予測困難で、急騰時に法人の電気料金が一気に押し上げられる可能性があります。{" "}
+            <Link
+              href="/duck-curve-corporate-impact"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              ダックカーブ
+            </Link>{" "}
+            の進展による夕方単価高騰と重なると、市場連動プラン契約の法人は二重のリスクに晒されることになります。
+          </p>
+        </section>
+
+        {/* 法人がとるべき対策 */}
+        <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            法人がとるべき燃料リスク対策
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            燃料リスクへの実務対策は 3 軸で整理できます。第一に、燃料費調整額上限ありプランへの切替。第二に、蓄電池・自家消費 PPA の導入で系統電力依存度を下げる。第三に、DR 参加で需給ひっ迫時に節電を収益化する。{" "}
+            <Link
+              href="/what-is-capacity-contribution"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              容量拠出金
+            </Link>{" "}
+            の負担増も同時並行で進むため、燃料リスクと容量コストを総合した対策設計が求められます。
+          </p>
+        </section>
+
         {/* 法人担当者が見るべきポイント */}
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">
@@ -398,7 +538,7 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
         </section>
 
         
-      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <MarketDataFaq items={FAQ_ITEMS} />
 
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
@@ -431,6 +571,8 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
             },
           ]}
         />
+
+        <AuthorBadge publishedAt={publishedDate} updatedAt={updatedDate} />
 
         <ContentCta
           heading="燃料価格上昇シナリオを試算する"
