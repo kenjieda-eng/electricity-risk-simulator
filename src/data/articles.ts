@@ -4486,4 +4486,14 @@ export const articleList: ArticleMeta[] = [
     order: 99,
     publishedAt: "2026-04-25",
   },
+  {
+    title: "【2026年版】原材料コスト上昇シリーズ｜法人の調達リスク完全マップ",
+    slug: "raw-material-cost-impact-2026",
+    description:
+      "2026 年の法人調達担当者向けに、原材料・包装資材・プラスチック樹脂・非鉄金属・化学品の価格動向と調達戦略を集約した完全マップ。業界別影響度マトリクスと 3 つの調達戦略を網羅。",
+    category: "リスクシナリオ別に知る",
+    categorySlug: "risk-scenarios",
+    order: 99,
+    publishedAt: "2026-04-25",
+  },
 ];
