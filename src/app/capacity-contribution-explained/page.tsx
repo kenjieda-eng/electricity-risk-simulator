@@ -11,6 +11,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 // 容量拠出金ページ専用 FAQ（FAQPage JSON-LD と可視 FAQ セクションの両方で使う）
 const CAPACITY_FAQ: { question: string; answer: string }[] = [
@@ -107,6 +108,19 @@ export default function CapacityContributionExplainedPage() {
         </p>
       </header>
 
+
+      <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-700 sm:text-base">
+        📌 容量拠出金の全体像（仕組み・影響額・対策）は{" "}
+        <Link href="/what-is-capacity-contribution" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策
+        </Link>
+        （Pillar A）、制度全体の沿革は{" "}
+        <Link href="/capacity-market-timeline" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          容量市場の制度変遷と電気料金への影響
+        </Link>
+        （Pillar B）を参照してください。
+      </div>
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         {/* 容量市場とは */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -304,6 +318,8 @@ export default function CapacityContributionExplainedPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策（Pillar A）", description: "拠出金の定義・単価表・法人月額試算・4 つの対策をまとめた起点記事。" },
+            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響（Pillar B）", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
             {
               href: "/capacity-contribution-cost-impact",
               title: "容量拠出金で電気代はどのくらい上がるのか",
