@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { SimulatorInputs, StressFactorChecks } from "./simulator/SimulatorForm";
 import { SimulatorChart } from "./simulator/SimulatorChart";
 import { SimulatorResult } from "./simulator/SimulatorResult";
@@ -26,6 +27,20 @@ export default function HomePageClient() {
     toggleSeriesVisibility,
     handleAnonymousShare,
   } = useSimulatorState();
+
+  const simulatorCompletedFiredRef = useRef(false);
+
+  useEffect(() => {
+    if (simulatorCompletedFiredRef.current) return;
+    if (!riskScoreResult) return;
+    simulatorCompletedFiredRef.current = true;
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "simulator_completed", {
+        event_category: "engagement",
+        event_label: "診断結果ページ到達",
+      });
+    }
+  }, [riskScoreResult]);
 
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-5 text-slate-800 antialiased sm:px-6 lg:px-8">

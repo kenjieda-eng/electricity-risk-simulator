@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { SearchEntry } from "../../lib/searchIndex";
 
 type Props = {
@@ -101,6 +101,20 @@ export function ConciergeSearch({ entries }: Props) {
   }, [query, entries]);
 
   const suggestions = useMemo(() => getIntentSuggestion(intentInfo.intent), [intentInfo.intent]);
+
+  const conciergeUsedFiredRef = useRef(false);
+
+  useEffect(() => {
+    if (conciergeUsedFiredRef.current) return;
+    if (query.trim().length < 2) return;
+    conciergeUsedFiredRef.current = true;
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "concierge_used", {
+        event_category: "engagement",
+        event_label: intentInfo.intent,
+      });
+    }
+  }, [query, intentInfo.intent]);
 
   return (
     <div>

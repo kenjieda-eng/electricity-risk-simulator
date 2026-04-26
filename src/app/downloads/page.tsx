@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import DownloadLink from "../../components/analytics/DownloadLink";
 
 const pageTitle = "ダウンロードセンター｜電気料金・脱炭素データ・テンプレート集";
 const pageDescription = "CSV・JSON・iCalで電力市場データ、制度改正カレンダー、補助金一覧、契約チェックリストなどを一括ダウンロードできます。法人での実務利用は無料・自由（CC BY 4.0）です。";
@@ -115,9 +116,14 @@ export default function DownloadsPage() {
             <ul className="mt-3 grid gap-2 md:grid-cols-2">
               {group.items.map((it) => (
                 <li key={it.href} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
-                  <a href={it.href} className="text-sm font-semibold text-sky-700 hover:underline">
+                  <DownloadLink
+                    href={it.href}
+                    format={it.format}
+                    category={group.category}
+                    className="text-sm font-semibold text-sky-700 hover:underline"
+                  >
                     {it.title} <span className="ml-2 rounded bg-sky-100 px-2 py-0.5 text-xs text-sky-800">{it.format}</span>
-                  </a>
+                  </DownloadLink>
                   <p className="mt-1 text-xs text-slate-500 break-all">{it.href}</p>
                 </li>
               ))}
