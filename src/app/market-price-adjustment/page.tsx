@@ -13,6 +13,8 @@ import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentL
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 const pageTitle = "市場価格調整額とは｜計算式・燃料費調整額との違い・法人電気代への影響を完全解説【2026年版】";
 const pageDescription =
@@ -99,6 +101,17 @@ export default function MarketPriceAdjustmentPage() {
           <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額（燃調費）</Link>
           との違い、法人契約で注意すべきポイントを、実データとグラフで整理します。
         </p>
+        <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
+          📊 燃料費調整 vs 市場価格調整 の総合比較は{" "}
+          <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+            メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+          </Link>
+          、対をなす燃料軸は{" "}
+          <Link href="/fuel-cost-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+            燃料費調整制度の総合解説（サブピラーA）
+          </Link>
+          を参照してください。本記事は市場軸の総合解説（サブピラーB）です。
+        </div>
       </header>
 
       <TableOfContents />
@@ -277,8 +290,18 @@ export default function MarketPriceAdjustmentPage() {
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
-          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ</h2>
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ（サブピラー B 配下のクラスター記事）</h2>
           <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link href="/market-price-adjustment-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                市場価格調整のリスク｜市場連動プラン採用法人が直面する具体事例
+              </Link>
+            </li>
+            <li>
+              <Link href="/how-to-check-market-price-adjustment-terms" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                約款での市場価格調整確認｜契約書での見分け方
+              </Link>
+            </li>
             <li>
               <Link href="/market-price-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
                 市場価格調整額の推移とJEPX価格の関係
@@ -287,11 +310,6 @@ export default function MarketPriceAdjustmentPage() {
             <li>
               <Link href="/market-price-adjustment-calculation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
                 市場価格調整額の計算方法と契約約款の読み方
-              </Link>
-            </li>
-            <li>
-              <Link href="/market-price-adjustment-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                市場価格調整額の上振れリスクと備え方
               </Link>
             </li>
           </ul>
@@ -307,11 +325,21 @@ export default function MarketPriceAdjustmentPage() {
           publishedAt="2025-08-11"
         />
 
+        <SisterSiteLink
+          variant="related-stat"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移"
+          description="市場価格調整の影響を含む電気料金推移の一次情報源。"
+        />
+
         <RelatedLinks
-          heading="関連ページ"
+          heading="市場価格調整サブピラー（B）の全体像"
+          intro="本記事（サブピラー B = 市場軸）から、メタピラー・対をなす燃料軸サブピラー・自身配下のクラスター 2 本へのナビゲーションです。"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整額と市場価格調整額の違いを完全比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
-            { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "燃調費の仕組みと請求影響。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/fuel-cost-adjustment", title: "燃料費調整制度の総合解説（サブピラー A）", description: "対をなす燃料軸の総合解説。燃調費の仕組みと請求影響。" },
+            { href: "/market-price-adjustment-risk", title: "市場価格調整のリスク", description: "市場連動プラン採用法人が直面する具体的リスク事例。" },
+            { href: "/how-to-check-market-price-adjustment-terms", title: "約款での市場価格調整確認", description: "自社契約での市場連動条項の確認方法。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "市場価格連動型契約の特徴。" },
             { href: "/jepx-explained", title: "JEPXとは", description: "卸電力市場の基本。" },
             { href: "/how-to-read-electricity-quote", title: "電気料金見積書の見方", description: "契約条件の読み方。" },
@@ -337,6 +365,8 @@ export default function MarketPriceAdjustmentPage() {
       </div>
 
       <AuthorBadge publishedAt="2025-08-11" updatedAt="2026-04-24" />
+
+      <FloatingCta />
     </main>
     </>
   );
