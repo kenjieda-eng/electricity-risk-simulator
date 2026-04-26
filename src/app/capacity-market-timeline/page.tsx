@@ -10,6 +10,8 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 const pageTitle = "容量市場の制度変遷と電気料金への影響";
 const pageDescription =
@@ -74,6 +76,13 @@ export default function Page() {
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">容量市場の制度変遷と電気料金への影響</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">2020年メインオークション開始から2024年本格稼働、2025年以降の価格動向まで、容量市場のタイムラインと法人料金への影響を整理します。</p>
+          <p className="mt-3 rounded-lg border border-sky-300 bg-white p-3 text-sm leading-7 text-slate-700 sm:text-base">
+            📜 拠出金そのものの詳細（仕組み・計算・影響額・対策）は{" "}
+            <Link href="/what-is-capacity-contribution" className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策
+            </Link>
+            （Pillar A）を参照してください。本記事は制度沿革・市場の動きを軸に整理した Pillar B です。
+          </p>
         </header>
 
         <TableOfContents />
@@ -86,11 +95,29 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">主要年度の動き</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2020年度：初回メインオークション実施、約定価格14,137円/kW。2021〜2023年度：段階的な運用調整期間。2024年度：本格受渡し開始で容量拠出金が電気料金に反映開始。</p>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2024年度以降、高圧・特別高圧の電気料金に「容量拠出金相当額」として年間数百万〜数千万円のコストが上乗せされる法人も出ています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2024年度以降、高圧・特別高圧の電気料金に「容量拠出金相当額」として年間数百万〜数千万円のコストが上乗せされる法人も出ています。年度別の{" "}
+              <Link href="/capacity-contribution-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                容量拠出金の単価推移
+              </Link>
+              、業種別の{" "}
+              <Link href="/capacity-contribution-impact-on-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                業種別ビジネスインパクト
+              </Link>
+              、月額影響の{" "}
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                容量拠出金のコスト影響詳細
+              </Link>
+              を併せて確認すると、自社の年間影響額が実数で把握できます。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">今後の見通し</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年代に向けて火力発電所の老朽化・脱炭素化が進むなか、容量市場の約定価格は上昇傾向と予想されています。再エネ中心の電源構成への移行期間中は、容量拠出金の負担は継続するとみられます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年代に向けて火力発電所の老朽化・脱炭素化が進むなか、容量市場の約定価格は上昇傾向と予想されています。再エネ中心の電源構成への移行期間中は、容量拠出金の負担は継続するとみられます。市場制度と小売料金の接続は{" "}
+              <Link href="/capacity-market-and-corporate-rates" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                容量市場と法人料金の関係
+              </Link>
+              で整理しています。
+            </p>
           </section>
         </section>
 
@@ -220,13 +247,30 @@ export default function Page() {
 
         <MarketDataFaq items={FAQ_ITEMS} />
 
+        <SisterSiteLink
+          variant="related-stat"
+          href="https://pps-net.org/column/115037"
+          title="容量市場の影響と容量拠出金とは"
+          description="新電力ネットによる容量市場・拠出金の解説と推移データ。"
+        />
+
         <AuthorBadge publishedAt="2026-04-18" updatedAt="2026-04-18" />
 
 
         <div className="mt-8">
           <RelatedLinks
-            heading="関連ページ"
+            heading="容量拠出金クラスターの全体像（Pillar B 視点）"
+            intro="本記事（Pillar B = 制度沿革）から、Pillar A（拠出金そのもの）と 8 本のクラスター記事へのナビゲーションです。"
             links={[
+              { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策（Pillar A）", description: "拠出金の定義・単価表・法人月額試算・4 つの対策をまとめた起点記事。" },
+              { href: "/capacity-contribution-explained", title: "容量拠出金の仕組み・計算方法", description: "拠出金の詳細メカニズムと計算式。" },
+              { href: "/capacity-contribution-cost-impact", title: "容量拠出金のコスト影響詳細", description: "高圧/低圧別の影響額比較と費目別シミュレーション。" },
+              { href: "/capacity-contribution-impact-on-business", title: "容量拠出金の法人ビジネスへの影響", description: "業種別の経営インパクトと利益率への波及。" },
+              { href: "/capacity-contribution-history", title: "容量拠出金の推移と単価表", description: "2024〜2028 年度の単価推移と過去オークション結果。" },
+              { href: "/capacity-contribution-simulation", title: "容量拠出金 1000kW シミュレーション", description: "契約電力別の年間影響額を実数で試算。" },
+              { href: "/capacity-contribution-what-to-check", title: "容量拠出金の確認ポイント", description: "実務で確認すべきチェックリスト。" },
+              { href: "/how-to-check-capacity-contribution-terms", title: "約款での容量拠出金の確認方法", description: "自社契約の約款で容量拠出金の表記を見分ける手順。" },
+              { href: "/capacity-market-and-corporate-rates", title: "容量市場と法人料金の関係", description: "市場制度と小売料金転嫁の接続を整理。" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
@@ -253,6 +297,7 @@ export default function Page() {
         />
       </div>
 
+      <FloatingCta />
       </main>
     </>
   );
