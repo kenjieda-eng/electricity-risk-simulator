@@ -18,6 +18,8 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -90,6 +92,17 @@ export default function FuelCostAdjustmentPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、燃料費調整額（燃調費）の計算式、貿易統計 CIF 価格との関係、2018〜2026 年度の推移、2022 年ウクライナ危機時の急騰、激変緩和措置（電気料金値引き補助金）の影響を実データで解説し、後半で <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額（市場連動プラン）との違い</Link> を比較表で整理します。
         </p>
+        <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
+          📊 燃料費調整 vs 市場価格調整 の総合比較は{" "}
+          <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+            メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+          </Link>
+          、対をなす市場軸は{" "}
+          <Link href="/market-price-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+            市場価格調整の総合解説（サブピラーB）
+          </Link>
+          を参照してください。本記事は燃料軸の総合解説（サブピラーA）です。
+        </div>
       </header>
 
       <TableOfContents />
@@ -224,11 +237,16 @@ export default function FuelCostAdjustmentPage() {
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
-          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ</h2>
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ（サブピラー A 配下のクラスター記事）</h2>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                燃料費調整額の推移詳細｜ウクライナ危機と激変緩和措置
+                燃料費調整額の過去推移｜ウクライナ危機と激変緩和措置
+              </Link>
+            </li>
+            <li>
+              <Link href="/how-to-check-fuel-cost-adjustment-terms" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                約款での燃料費調整確認｜上限有無・換算係数の見分け方
               </Link>
             </li>
             <li>
@@ -244,12 +262,22 @@ export default function FuelCostAdjustmentPage() {
           </ul>
         </section>
 
+        <SisterSiteLink
+          variant="data-source"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移"
+          description="燃料費調整の影響を含む電気料金推移の一次情報源。"
+        />
+
         <RelatedLinks
-          heading="関連ページ"
+          heading="燃料費調整サブピラー（A）の全体像"
+          intro="本記事（サブピラー A = 燃料軸）から、メタピラー・対をなす市場軸サブピラー・自身配下のクラスター 2 本へのナビゲーションです。"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整額と市場価格調整額の違いを完全比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/market-price-adjustment", title: "市場価格調整の総合解説（サブピラー B）", description: "燃調と混同しやすい別の調整項目。市場連動プラン中心。" },
+            { href: "/fuel-cost-adjustment-history", title: "燃料費調整額の過去推移", description: "2018〜2026 年度の燃調単価推移と最大振れ幅を実データで整理。" },
+            { href: "/how-to-check-fuel-cost-adjustment-terms", title: "約款での燃料費調整確認", description: "自社契約の約款で燃調の表記・上限有無を見分ける手順。" },
             { href: "/lng-electricity-price", title: "法人の電気料金とLNGの関係", description: "LNG市況が料金に波及する流れを整理。" },
-            { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調と混同しやすい別の調整項目。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "燃調ではなくJEPX連動で請求される契約。" },
             { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "燃調と並ぶ請求書の変動要因。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移実態をデータで確認できます。" },
@@ -281,6 +309,7 @@ export default function FuelCostAdjustmentPage() {
         />
       </div>
 
+      <FloatingCta />
     </main>
     </>
   );
