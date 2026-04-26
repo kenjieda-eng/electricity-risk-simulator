@@ -6,6 +6,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import ContentCta from "../../components/simulator/ContentCta";
+import GA4EventTracker from "../../components/analytics/GA4EventTracker";
 
 // --- 定数 ---
 const pageTitle =
@@ -448,6 +449,11 @@ export default function KenjiEdaProfilePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "江田健二 プロフィール" },
         ]}
+      />
+      <GA4EventTracker
+        eventName="kenji_eda_viewed"
+        eventLabel="30秒以上閲覧"
+        delayMs={30000}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

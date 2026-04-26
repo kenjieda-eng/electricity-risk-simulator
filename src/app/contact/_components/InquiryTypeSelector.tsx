@@ -145,6 +145,14 @@ export default function InquiryTypeSelector() {
             href={externalUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag("event", "contact_form_submitted", {
+                  event_category: "engagement",
+                  event_label: selected?.externalFormParam ?? "no-category",
+                });
+              }
+            }}
             className={`inline-flex items-center justify-center rounded-xl px-6 py-4 text-base font-bold shadow-sm transition sm:text-lg ${
               selected
                 ? "bg-sky-600 text-white hover:bg-sky-700"

@@ -479,6 +479,15 @@ function ComparePageContent() {
   }, [savedResultId]);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "compare_result_viewed", {
+        event_category: "engagement",
+        event_label: "比較診断結果ページ表示",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     const controller = new AbortController();
 
     const loadAverageRisk = async () => {
