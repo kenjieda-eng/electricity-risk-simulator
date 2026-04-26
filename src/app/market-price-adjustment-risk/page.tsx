@@ -105,6 +105,18 @@ export default function MarketPriceAdjustmentRiskPage() {
         </p>
       </header>
 
+
+      <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-700 sm:text-base">
+        📌 市場価格調整の全体像は{" "}
+        <Link href="/market-price-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          サブピラーB｜市場価格調整の総合解説
+        </Link>
+        、3 階層全体（燃料 vs 市場の総合比較）は{" "}
+        <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+        </Link>
+        を参照してください。
+      </div>
       <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -264,6 +276,7 @@ export default function MarketPriceAdjustmentRiskPage() {
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、両者の違いを整理します。" },
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "制度の基本まとめ。" },
             { href: "/market-price-adjustment-history", title: "市場価格調整額の推移", description: "JEPX連動の実績を数値で把握。" },
             { href: "/market-price-adjustment-calculation", title: "市場価格調整額の計算方法", description: "契約約款の読み方。" },
