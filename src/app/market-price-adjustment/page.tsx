@@ -12,6 +12,7 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import PriceAdjustmentLineChart from "../../components/articles/PriceAdjustmentLineChart";
 import { JEPX_SYSTEM_PRICE_YEARLY } from "../../data/priceAdjustmentHistory";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle = "市場価格調整額とは｜計算式・燃料費調整額との違い・法人電気代への影響を完全解説【2026年版】";
 const pageDescription =
@@ -100,6 +101,7 @@ export default function MarketPriceAdjustmentPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場価格調整額の基本</h2>

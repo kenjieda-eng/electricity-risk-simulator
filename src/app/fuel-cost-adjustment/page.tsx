@@ -17,6 +17,7 @@ import MarketDataDownload from "../../components/market-data/MarketDataDownload"
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -91,6 +92,7 @@ export default function FuelCostAdjustmentPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">燃料費調整額の仕組み</h2>
