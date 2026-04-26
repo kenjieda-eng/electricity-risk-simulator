@@ -4,6 +4,8 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import SisterSiteLink from "../../components/simulator/SisterSiteLink";
+import FloatingCta from "../../components/simulator/FloatingCta";
 
 // --- 定数 ---
 const pageTitle =
@@ -180,6 +182,13 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
             </Link>
             と読み合わせると、2026年固有の論点を把握しやすくなります。
           </p>
+          <p className="mt-3 rounded-lg border border-sky-300 bg-white p-3 text-sm leading-7 text-slate-700 sm:text-base">
+            📈 過去 10 年の推移データは{" "}
+            <Link href="/business-electricity-price-trend-10-years" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+              法人電気料金の10年推移
+            </Link>
+            （Pillar B）を参照してください。本記事は最新性軸（2026 年要因）の Pillar A です。
+          </p>
         </header>
 
         <TableOfContents />
@@ -345,43 +354,95 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
                 </span>
               </li>
             </ul>
+            <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+              さらに掘り下げる場合は、{" "}
+              <Link href="/why-business-electricity-prices-rise" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                電気料金が上がる根本理由
+              </Link>
+              、{" "}
+              <Link href="/why-electricity-prices-have-not-returned" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                電気料金が戻らない理由
+              </Link>
+              、定量的には{" "}
+              <Link href="/how-much-business-electricity-prices-increase" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                電気料金が何パーセント上がるか
+              </Link>
+              、見落とされがちな単価増は{" "}
+              <Link href="/hidden-electricity-price-increases" className="text-sky-700 underline-offset-2 hover:text-sky-900">
+                ステルス値上げ・隠れ値上げ
+              </Link>
+              を併読すると、5 軸それぞれの背景と数値感がさらに深く理解できます。
+            </p>
           </section>
         </section>
+
+        <SisterSiteLink
+          variant="related-stat"
+          href="https://pps-net.org/unit"
+          title="法人・家庭の電気料金の平均単価の推移"
+          description="新電力ネットによる電気料金推移統計データ。"
+        />
 
         {/* 関連リンク */}
         <div className="mt-8">
           <RelatedLinks
-            heading="関連ページ"
+            heading="値上げ・推移クラスターの全体像"
+            intro="本記事（Pillar A = 最新性軸）から、Pillar B（10 年推移軸）と 4 本のクラスター記事 + Pillar B 配下の 2 記事へのナビゲーションです。"
             links={[
               {
+                href: "/business-electricity-price-trend-10-years",
+                title: "法人電気料金の10年推移（Pillar B）",
+                description: "過去 10 年の年度別データで高止まりの構造的背景を確認できます。",
+              },
+              {
                 href: "/why-business-electricity-prices-rise",
-                title: "法人の電気料金が上がる理由（基本編）",
-                description:
-                  "4要因でシンプルに整理した入口記事。まず全体像を押さえたいときに。",
+                title: "電気料金が上がる根本理由",
+                description: "4要因でシンプルに整理した入口記事。まず全体像を押さえたいときに。",
+              },
+              {
+                href: "/why-electricity-prices-have-not-returned",
+                title: "電気料金が戻らない理由",
+                description: "ピーク後も水準が下がりきらない構造要因を解説。",
+              },
+              {
+                href: "/how-much-business-electricity-prices-increase",
+                title: "電気料金が何パーセント上がるか",
+                description: "業種・契約区分別に値上げ幅を定量試算した実数記事。",
+              },
+              {
+                href: "/hidden-electricity-price-increases",
+                title: "ステルス値上げ・隠れ値上げ",
+                description: "請求書では気づきにくい単価上昇の見落としポイント。",
+              },
+              {
+                href: "/electricity-price-trend-2019-2025",
+                title: "電気料金 2019〜2025 年推移",
+                description: "Pillar B 配下、近年の単価推移を年度別に確認。",
+              },
+              {
+                href: "/when-will-business-electricity-prices-drop",
+                title: "電気料金はいつ下がるか",
+                description: "Pillar B 配下、料金下降タイミングの予測整理。",
               },
               {
                 href: "/capacity-contribution-explained",
                 title: "容量拠出金とは｜仕組み・負担額・電気料金への影響",
-                description:
-                  "2024年度から始まった制度上の値上げ要因を構造から解説。",
+                description: "2024年度から始まった制度上の値上げ要因を構造から解説。",
               },
               {
                 href: "/fuel-cost-adjustment",
                 title: "燃料費調整額と市場価格調整額の違い",
-                description:
-                  "燃調の仕組み・計算式・2018〜2026年度の推移を実データで整理。",
+                description: "燃調の仕組み・計算式・2018〜2026年度の推移を実データで整理。",
               },
               {
                 href: "/renewable-energy-surcharge",
                 title: "再エネ賦課金とは",
-                description:
-                  "2024年度の大幅上昇を含む、制度起因の主要コスト項目を解説。",
+                description: "2024年度の大幅上昇を含む、制度起因の主要コスト項目を解説。",
               },
               {
                 href: "/electricity-price-outlook-2026",
                 title: "2026年の電気料金見通し",
-                description:
-                  "年度単位の推移見通しとリスクシナリオを整理しています。",
+                description: "年度単位の推移見通しとリスクシナリオを整理しています。",
               },
             ]}
           />
@@ -398,6 +459,8 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
             ]}
           />
         </div>
+
+        <FloatingCta />
       </main>
     </>
   );
