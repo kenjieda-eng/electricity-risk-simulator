@@ -228,6 +228,7 @@ export default function LastResortSupplyPage() {
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "2022年の新電力撤退の背景。" },
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX急騰の請求影響。" },
             { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "橋渡しから本契約への整理。" },
+            { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
           ]}
         />
 

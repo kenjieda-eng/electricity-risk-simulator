@@ -262,6 +262,11 @@ export default function WhenToReviewElectricityContractPage() {
               title: "固定プランが向く法人の特徴",
               description: "見直しタイミングに合わせてプラン選択の判断軸を確認。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

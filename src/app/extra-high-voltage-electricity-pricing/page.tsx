@@ -361,6 +361,11 @@ export default function ExtraHighVoltageElectricityPricingPage() {
               title: "高圧・特別高圧の最終保障供給",
               description: "最終保障供給時に特別高圧需要家が確認したい論点を整理できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

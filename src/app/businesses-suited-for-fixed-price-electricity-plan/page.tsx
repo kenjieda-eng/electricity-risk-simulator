@@ -338,6 +338,11 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
               title: "法人向け電気料金見積書の見方",
               description: "見積書で固定プランの条件を正しく比較する方法。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

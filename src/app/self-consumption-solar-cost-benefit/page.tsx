@@ -390,6 +390,11 @@ export default function SelfConsumptionSolarCostBenefitPage() {
               title: "電力契約見直しの始め方",
               description: "太陽光導入と合わせて契約条件を最適化する考え方。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

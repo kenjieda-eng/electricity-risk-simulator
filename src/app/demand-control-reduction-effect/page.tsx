@@ -410,6 +410,7 @@ export default function DemandControlReductionEffectPage() {
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "契約電力の設定方法と見直しのポイント" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した施策マップ" },
+            { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
           ]}
         />
       </div>

@@ -388,6 +388,11 @@ export default function BasicChargeExplainedPage() {
               title: "市場連動プランと固定プランの違い",
               description: "基本料金の構造を理解したうえで、プランの選択軸を整理できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

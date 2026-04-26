@@ -267,6 +267,11 @@ export default function HowToCompareElectricitySuppliersPage() {
               title: "最終保障供給から切り替えるには",
               description: "最終保障供給から通常契約へ移るときの実務整理に使えます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

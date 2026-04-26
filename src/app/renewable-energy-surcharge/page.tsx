@@ -344,6 +344,11 @@ export default function RenewableEnergySurchargePage() {
               title: "容量拠出金とは",
               description: "再エネ賦課金と並ぶ制度要因として、容量拠出金の仕組みと影響を確認できます。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

@@ -334,6 +334,11 @@ export default function CapacityContributionExplainedPage() {
               title: "2026〜2028年 法人電気料金 制度改定カレンダー",
               description: "容量拠出金・再エネ賦課金・託送料金の時系列改定スケジュールを整理。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
       </div>

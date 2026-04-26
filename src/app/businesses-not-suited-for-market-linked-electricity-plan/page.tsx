@@ -320,6 +320,11 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
               title: "電気料金見直しを社内で説明するときのポイント",
               description: "市場連動リスクを社内でどう伝えるか。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

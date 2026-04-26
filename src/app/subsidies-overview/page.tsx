@@ -308,6 +308,7 @@ export default function SubsidiesOverviewPage() {
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "補助金と並行して検討したい契約見直しの進め方と優先順位。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果。" },
+            { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
           ]}
         />
       </div>

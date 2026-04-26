@@ -372,6 +372,11 @@ export default function BusinessElectricityContractChecklistPage() {
               title: "市場連動プランと固定プランの違い",
               description: "見積比較の際のプラン選択判断に役立てる。",
             },
+            {
+              href: "/concierge",
+              title: "AI コンシェルジュで関連情報を探す",
+              description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+            },
           ]}
         />
 

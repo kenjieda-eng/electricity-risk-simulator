@@ -487,6 +487,11 @@ export default function ElectricityPriceTrend20192025Page() {
                 title: "市場連動プランとは",
                 description: "高止まり局面でのプラン選択リスクを確認できます。",
               },
+              {
+                href: "/concierge",
+                title: "AI コンシェルジュで関連情報を探す",
+                description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
+              },
             ]}
           />
         </div>
