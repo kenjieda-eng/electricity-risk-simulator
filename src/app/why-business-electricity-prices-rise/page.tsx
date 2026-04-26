@@ -122,6 +122,18 @@ export default function WhyBusinessElectricityPricesRisePage() {
         </p>
       </header>
 
+
+      <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-700 sm:text-base">
+        📌 値上げ・推移クラスターの全体像は{" "}
+        <Link href="/business-electricity-price-hike-reasons-2026" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          2026年法人電気料金の値上げ理由
+        </Link>
+        （Pillar A = 最新性軸）と{" "}
+        <Link href="/business-electricity-price-trend-10-years" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
+          法人電気料金の10年推移
+        </Link>
+        （Pillar B = データ系軸）を参照してください。
+      </div>
       <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -274,6 +286,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
           heading="次に確認したいページ"
           intro="「なぜ上がるか」を押さえたら、上がり幅・制度費目・長期推移・年次データへ進むと説明が具体化しやすくなります。"
           links={[
+            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
             {
               href: "/how-much-business-electricity-prices-increase",
               title: "法人の電気料金はどの程度上がるのか",
