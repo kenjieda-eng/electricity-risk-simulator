@@ -14,6 +14,94 @@ import type { ArticleCategorySlug } from "../../../data/articles";
 import { CATEGORY_CTA } from "../../../lib/categoryCta";
 import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../../components/seo/JsonLd";
 
+const BASIC_HUB_LEARN_STEPS: { step: number; heading: string; description: string; href: string }[] = [
+  {
+    step: 1,
+    heading: "電気料金の構成要素を理解する",
+    description: "請求書の基本料金・電力量料金・燃調費・再エネ賦課金の 4 階層を分解し、自社の請求書がどの費目で重くなっているかを把握します。",
+    href: "/business-electricity-bill-breakdown",
+  },
+  {
+    step: 2,
+    heading: "法人契約の種類を知る（高圧・低圧・特別高圧）",
+    description: "電圧区分による単価構造の違い、デマンド契約と従量契約の選択軸、契約電力の決まり方を理解します。",
+    href: "/high-voltage-electricity-pricing",
+  },
+  {
+    step: 3,
+    heading: "値上がりの 4 大要因を把握する",
+    description: "燃料価格・容量拠出金・再エネ賦課金・市場連動性の 4 要因が、近年の電気料金上昇をどう構成しているかを学びます。",
+    href: "/why-business-electricity-prices-rise",
+  },
+  {
+    step: 4,
+    heading: "自社の見直しタイミングを判断する",
+    description: "契約更新時期、市場相場の節目、社内予算サイクルを踏まえ、見直しを開始すべき適切なタイミングを判断します。",
+    href: "/when-to-review-electricity-contract",
+  },
+  {
+    step: 5,
+    heading: "比較・診断ツールで実践する",
+    description: "シミュレーターで現契約のリスクスコアを試算し、料金メニュー比較で最適プランを選定する実践フェーズです。",
+    href: "/",
+  },
+];
+
+const BASIC_HUB_INDUSTRY_GUIDES: { audience: string; description: string; href: string }[] = [
+  {
+    audience: "製造業の方へ",
+    description: "工場のデマンド管理・連続操業のベース負荷削減・自家消費 PPA の導入適性を業界平均と比較できます。",
+    href: "/factory-electricity-cost-benchmark",
+  },
+  {
+    audience: "オフィスの方へ",
+    description: "規模別オフィス電気代相場と、空調・照明・OA 機器の負荷構造から見た見直し優先順位を把握できます。",
+    href: "/office-electricity-cost-benchmark",
+  },
+  {
+    audience: "小売店の方へ",
+    description: "業種横断の小売店ベンチマークと、冷蔵冷凍負荷・夕方ピーク対策の典型的な改善策を確認できます。",
+    href: "/retail-store-electricity-cost-benchmark",
+  },
+  {
+    audience: "病院・介護の方へ",
+    description: "24 時間稼働設備のベース負荷管理、医療機器停電リスク、公定価格下のコスト転嫁制約を解説します。",
+    href: "/hospital-electricity-cost-review",
+  },
+  {
+    audience: "自治体の方へ",
+    description: "庁舎・学校・公共施設の年度予算制と入札制約、共同調達による交渉力強化の進め方を整理します。",
+    href: "/municipality-electricity-cost-review",
+  },
+];
+
+const BASIC_HUB_FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "法人の電気料金はどこから学び始めれば良いですか？",
+    answer:
+      "まず請求書の構成要素（基本料金・電力量料金・燃料費調整額・再エネ賦課金）を分解して理解し、その後に契約電圧区分（高圧・低圧・特別高圧）と契約電力の決まり方を学ぶ順序が効率的です。本ページの 5 ステップ学習ガイドが想定する標準ルートです。",
+  },
+  {
+    question: "個人向けと法人向けで電気料金の仕組みは何が違いますか？",
+    answer:
+      "法人向けは「基本料金 = 契約電力 × 単価」の固定費比率が大きく、デマンド管理が削減のテコになります。また、契約電力 50 kW 以上の高圧契約では単価が大幅に下がる代わりに、責任分界点以降の保安・受変電設備の自己責任が発生します。個人向けの従量電灯と仕組みが大きく異なります。",
+  },
+  {
+    question: "電気料金の見直しで最初に確認すべきポイントは何ですか？",
+    answer:
+      "（1）直近 12 か月の請求書から月別使用量と最大デマンド値を整理、（2）現契約の単価と燃調費反映ルールを確認、（3）業界平均ベンチマークと自社の使用量原単位を比較、の 3 点です。これだけで見直し余地の有無が概ね判断できます。",
+  },
+  {
+    question: "市場連動プランと固定価格プランはどちらが向いていますか？",
+    answer:
+      "業種・契約規模・モニタリング体制によります。大企業で予算管理の説明責任が大きい法人は固定価格、中小規模で価格変動リスクをモニタリングできる法人は市場連動が向きやすい傾向があります。詳しくは値上がり要因記事と契約見直し手順記事を併読してください。",
+  },
+  {
+    question: "電気料金の値上がりに対して何から手を打てば良いですか？",
+    answer:
+      "短期的には（1）契約電力の妥当性確認、（2）燃調費上限ありプランへの切替、（3）デマンドコントローラー導入の 3 点が効果的です。中長期では太陽光自家消費 PPA、蓄電池導入、DR・ネガワット取引参加で構造的に燃料リスクを下げられます。本ハブから個別記事へ進んで詳細を確認してください。",
+  },
+];
 
 type PageParams = {
   categorySlug: string;
@@ -388,6 +476,9 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         }))}
       />
     ) : null}
+    {category.slug === "basic" ? (
+      <FaqPageJsonLd faqs={BASIC_HUB_FAQ_ITEMS} />
+    ) : null}
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">
@@ -416,7 +507,136 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
             <p className="mt-1 text-slate-600">{CATEGORY_FRESHNESS_NOTICE[category.slug]!.note}</p>
           </div>
         ) : null}
+        {category.slug === "basic" ? (
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/"
+              className="inline-flex items-center rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700"
+            >
+              シミュレーターで診断する
+            </Link>
+            <Link
+              href="/compare"
+              className="inline-flex items-center rounded-md border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-50"
+            >
+              料金メニューを比較する
+            </Link>
+            <Link
+              href="/how-to"
+              className="inline-flex items-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100"
+            >
+              シミュレーターの使い方を見る
+            </Link>
+          </div>
+        ) : null}
       </header>
+
+      {category.slug === "basic" ? (
+        <>
+          <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">法人電気料金の基礎を学ぶ 5 つのステップ</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              基礎知識ハブの 30+ 記事を読み始める前に、以下の 5 ステップで全体像を掴むと迷子になりません。各ステップに代表記事を 1 本割り当てています。
+            </p>
+            <ol className="mt-4 space-y-3">
+              {BASIC_HUB_LEARN_STEPS.map((item) => (
+                <li
+                  key={item.step}
+                  className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
+                      {item.step}
+                    </span>
+                    <div>
+                      <Link
+                        href={item.href}
+                        className="text-base font-semibold text-sky-700 underline-offset-2 hover:underline"
+                      >
+                        {item.heading}
+                      </Link>
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{item.description}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">業種別の電気料金ガイド</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              基礎知識を踏まえたうえで、自社の業種に近い業界別ガイドに進むと、固有の負荷特性と削減策をピンポイントで把握できます。
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {BASIC_HUB_INDUSTRY_GUIDES.map((item) => (
+                <article
+                  key={item.href}
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-4"
+                >
+                  <h3 className="text-base font-semibold text-slate-900">
+                    <Link href={item.href} className="text-sky-700 underline-offset-2 hover:underline">
+                      {item.audience}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {(() => {
+            const recentBasic = [...categoryArticles]
+              .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+              .slice(0, 3);
+            if (recentBasic.length === 0) return null;
+            return (
+              <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+                <h2 className="text-xl font-semibold text-slate-900">最近更新された基礎記事 3 本</h2>
+                <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                  基礎カテゴリで最近更新された記事をピックアップしています（公開日降順）。
+                </p>
+                <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {recentBasic.map((article) => (
+                    <article
+                      key={article.slug}
+                      className="rounded-lg border border-slate-200 bg-white p-4"
+                    >
+                      <h3 className="text-base font-semibold text-slate-900">
+                        <Link
+                          href={`/${article.slug}`}
+                          className="text-sky-700 underline-offset-2 hover:underline"
+                        >
+                          {article.title}
+                        </Link>
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{article.description}</p>
+                      <p className="mt-2 text-xs text-slate-500">公開日: {article.publishedAt}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
+
+          <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+            <div className="mt-4 space-y-3">
+              {BASIC_HUB_FAQ_ITEMS.map((item) => (
+                <details
+                  key={item.question}
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-4"
+                >
+                  <summary className="cursor-pointer text-sm font-semibold text-slate-900">
+                    {item.question}
+                  </summary>
+                  <p className="mt-3 text-sm leading-7 text-slate-700">{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        </>
+      ) : null}
 
       {(() => {
         const spotlight = CATEGORY_HUB_SPOTLIGHT[category.slug];
