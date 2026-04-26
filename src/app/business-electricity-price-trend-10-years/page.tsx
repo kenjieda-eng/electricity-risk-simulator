@@ -21,6 +21,7 @@ import { CATEGORY_FAQ } from "../../data/categoryFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
@@ -105,6 +106,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {[

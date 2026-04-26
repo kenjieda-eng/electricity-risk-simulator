@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 // --- 定数 ---
 const pageTitle =
@@ -181,6 +182,7 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
           </p>
         </header>
 
+        <TableOfContents />
         <section className="mt-6 space-y-6">
           {/* 2026年特有の背景 */}
           <section className="rounded-xl border border-slate-200 bg-white p-5">

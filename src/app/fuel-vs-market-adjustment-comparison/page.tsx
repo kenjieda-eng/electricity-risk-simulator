@@ -4,6 +4,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 // --- 定数 ---
 const pageTitle =
@@ -151,6 +152,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
           </p>
         </header>
 
+        <TableOfContents />
         {/* 本文セクション群 */}
         <section className="mt-6 space-y-6">
           {/* H2-1: そもそも調整額とは */}

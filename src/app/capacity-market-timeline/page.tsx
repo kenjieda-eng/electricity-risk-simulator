@@ -9,6 +9,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle = "容量市場の制度変遷と電気料金への影響";
 const pageDescription =
@@ -75,6 +76,7 @@ export default function Page() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">2020年メインオークション開始から2024年本格稼働、2025年以降の価格動向まで、容量市場のタイムラインと法人料金への影響を整理します。</p>
         </header>
 
+        <TableOfContents />
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">容量市場導入の背景</h2>

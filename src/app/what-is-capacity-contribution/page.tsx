@@ -5,6 +5,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle = "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策を完全解説";
 const pageDescription =
@@ -108,6 +109,7 @@ export default function WhatIsCapacityContributionPage() {
         </p>
       </header>
 
+      <TableOfContents />
       <section className="mt-6 space-y-6">
         {/* 1. 要点 3 行 */}
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
