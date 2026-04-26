@@ -12,9 +12,10 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
 import PriceIncreaseCalculator from "../../components/market-data/PriceIncreaseCalculator";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd, BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, BreadcrumbJsonLd, FaqPageJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
@@ -64,6 +65,35 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "2026 年現在、なぜ法人の電気料金は高止まりしているのですか？",
+    answer:
+      "主因は 4 つです。①LNG・原油の国際価格高騰（地政学リスク継続）、②再エネ賦課金の上昇（2026 年度 4.06 円/kWh）、③容量拠出金の本格化（2026 年度から月数十万円増）、④老朽火力廃止に伴う供給力タイト化です。これらは構造的要因のため、2030 年代まで高止まりが続く見込みです。",
+  },
+  {
+    question: "電気料金が下がる可能性はありますか？",
+    answer:
+      "短期的には限定的ですが、長期的には 2030 年以降の蓄電池普及・再エネコスト低下で部分的な下落余地があります。ただし日本特有の容量市場コスト・送配電コスト・脱炭素コストは構造的に上乗せされるため、2020 年代前半の水準には戻らないと予想されます。「下がるのを待つ」のではなく「上がる前提での対策」が現実的です。",
+  },
+  {
+    question: "燃料費調整額と容量拠出金の違いは何ですか？",
+    answer:
+      "燃料費調整額は LNG・原油・石炭の輸入価格に連動して毎月変動する項目で、燃料の上下で増減します。容量拠出金は将来の供給力（kW）を確保するための費用で、2024 年度から徴収開始、2026 年度から本格化します。両者は別々に電気料金に上乗せされ、合計で月数万〜数十万円の影響額となります。",
+  },
+  {
+    question: "業界平均と比べて自社の電気料金が高いか確認する方法はありますか？",
+    answer:
+      "本サイトの「業界別電気代ベンチマーク」記事で業種別の平均単価が確認できます。例: 製造業（高圧）は 22-28 円/kWh、オフィスビルは 25-30 円/kWh、データセンターは 18-22 円/kWh が 2026 年初頭の目安です。自社単価が業界平均を 10% 以上上回る場合、契約見直しで削減余地がある可能性が高いです。",
+  },
+  {
+    question: "再生可能エネルギー賦課金は今後さらに上がりますか？",
+    answer:
+      "上昇トレンドは続くと予想されます。2024 年度 3.49 円/kWh → 2025 年度 3.98 円/kWh → 2026 年度 4.06 円/kWh と上昇しており、2030 年度頃に 4.5〜5.0 円/kWh のピークを迎える見込みです。FIT 買取期間終了後は段階的に低下しますが、2030 年代後半までは高水準で推移します。",
+  },
+];
+
+
 export default function WhyBusinessElectricityPricesRisePage() {
   return (
     <>
@@ -74,6 +104,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
           { name: "法人の電気料金が上がる理由" },
         ]}
       />
+      <FaqPageJsonLd faqs={FAQ_ITEMS} />
 
       <ReadingProgressBar />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -231,6 +262,12 @@ export default function WhyBusinessElectricityPricesRisePage() {
           <GlossaryLinks currentSlug="why-business-electricity-prices-rise" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "託送料金", "市場連動プラン", "固定プラン", "JEPX"]} />
         </div>
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="次に確認したいページ"
           intro="「なぜ上がるか」を押さえたら、上がり幅・制度費目・長期推移・年次データへ進むと説明が具体化しやすくなります。"

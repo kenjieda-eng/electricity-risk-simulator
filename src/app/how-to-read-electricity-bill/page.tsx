@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 const pageTitle =
   "法人向け電気料金請求書の見方｜項目別の確認ポイントと見直しへのつなげ方";
@@ -52,6 +53,35 @@ export const metadata: Metadata = {
     images: ["/api/og/basic"],
   },
 };
+
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "電気料金請求書のどこを最初に見るべきですか？",
+    answer:
+      "最初に確認すべきは「kWh あたりの実質単価」です。請求総額を使用量(kWh)で割ると算出できます。例えば月額 100 万円・使用量 4 万 kWh なら実質単価 25 円/kWh。この数字を業界ベンチマーク(製造業: 22-28 円/kWh、オフィス: 25-30 円/kWh)と比較し、明らかに高い場合は契約見直しの優先度が高いと判断できます。",
+  },
+  {
+    question: "請求書の「燃料費調整額」が毎月変わるのはなぜですか？",
+    answer:
+      "燃料費調整額は LNG・原油・石炭の輸入価格(過去 3 か月の平均値)に基づき毎月変動するためです。輸入価格が上昇すると単価がプラスに、下落するとマイナスになります。2026 年初頭は地政学リスクで高水準が続いており、月により 5-10 円/kWh の範囲で変動します。年間予算の策定時は変動幅を見込んでおく必要があります。",
+  },
+  {
+    question: "請求書に「再エネ賦課金」とありますが、これは何ですか？",
+    answer:
+      "再生可能エネルギー普及のための賦課金で、全消費者が均等に負担する仕組みです。2026 年度は 4.06 円/kWh で、月額 4 万 kWh 使用の事業者は約 16 万円/月の負担となります。経済産業省が毎年度公表する単価で、小売各社共通です。請求書では「再エネ発電促進賦課金」「賦課金等」などの名称で記載されています。",
+  },
+  {
+    question: "請求書に書かれている「力率」とは何ですか？無視して問題ありませんか？",
+    answer:
+      "力率は電力の利用効率を示す指標(%)で、高圧契約の場合は基本料金の割引・割増に直結します。標準力率 85% を上回ると基本料金が割引(最大 15%)、下回ると割増(最大 15%)となります。製造業など電動機が多い業種は力率が低下しやすく、進相コンデンサ設置で改善できます。年間数十万円の差額になるため無視できません。",
+  },
+  {
+    question: "請求書を見て「契約電力」を下げたいのですが可能ですか？",
+    answer:
+      "可能ですが、過去 12 か月の最大デマンド値が新契約電力を下回っている必要があります。例えば現契約 500 kW で過去 12 か月の最大が 420 kW なら、500 → 450 kW へ引き下げ可能です。引き下げ後 12 か月間は新契約電力を超えると違約金が発生するため、安全マージンを 10-15% 取るのが推奨です。本サイトのデマンド削減記事も参照ください。",
+  },
+];
+
 
 const billSections = [
   {
@@ -189,7 +219,7 @@ export default function HowToReadElectricityBillPage() {
           { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
           { name: "電気料金の請求書で確認したいポイント" },
         ]}
-        faq={faq}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -616,7 +646,7 @@ export default function HowToReadElectricityBillPage() {
         </section>
 
         <SourcesAndFaq
-          faq={faq}
+          faq={FAQ_ITEMS}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・請求項目に関する情報" },
             { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
@@ -625,6 +655,12 @@ export default function HowToReadElectricityBillPage() {
           publishedAt="2025-08-07"
         />
 
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="関連ページ"
           intro="請求書確認を、要因分析と比較判断につなげるための関連ページです。"

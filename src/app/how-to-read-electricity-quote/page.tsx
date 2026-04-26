@@ -9,6 +9,7 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 
 const pageTitle = "法人向け電気料金見積書の見方｜比較時に確認したい項目と注意点";
 const pageDescription =
@@ -51,6 +52,35 @@ export const metadata: Metadata = {
     images: ["/api/og/basic"],
   },
 };
+
+const FAQ_ITEMS: { question: string; answer: string }[] = [
+  {
+    question: "電気料金の見積書はどこに注目して比較すべきですか？",
+    answer:
+      "5 項目を必ず比較してください: ①基本料金(円/kW・月)、②電力量料金単価(円/kWh、時間帯別の場合は加重平均)、③燃料費調整額の単価と上限有無、④再エネ賦課金(全社共通)、⑤契約期間と解約違約金。これらを Excel に並べて単価比較すると、各社の本質的な違いが見えます。",
+  },
+  {
+    question: "見積書の単価が安く見えても実際の請求が高くなることはありますか？",
+    answer:
+      "あります。よくあるケースは: ①燃料費調整額に上限がない(急騰時に大きく上乗せ)、②深夜・休日割引が自社の操業パターンと合わない、③契約電力(kW)が高めに設定されており基本料金が割高、④付帯サービス料金(請求書送付料・支払手数料)が別途請求される、などです。年間総額試算で必ず確認してください。",
+  },
+  {
+    question: "見積書に書かれている「契約電力」とは何ですか？どう決まりますか？",
+    answer:
+      "契約電力は最大需要 kW を指し、基本料金算出の基準となります。高圧契約の場合、過去 12 か月の最大デマンド値(30 分平均)から自動計算されます。一度上昇すると 12 か月間は下がらないため、特定月の冷暖房ピークで急上昇すると基本料金が高止まりするリスクがあります。デマンド管理機器の導入で抑制可能です。",
+  },
+  {
+    question: "見積書を依頼する際、複数社に同条件で依頼するコツはありますか？",
+    answer:
+      "「電気料金見積依頼書」テンプレを統一して使うのがおすすめです。記載項目: ①供給開始希望日、②契約期間、③契約電力 kW、④過去 12 か月の使用量 kWh(月別)、⑤希望する付帯サービス(CO2 ゼロ等)、⑥燃料費調整額の上限有無、です。本サイトのダウンロードページに無料テンプレを用意しています。",
+  },
+  {
+    question: "見積書をもらってから契約まで、通常どれくらいの期間がかかりますか？",
+    answer:
+      "標準は 1〜2 か月です。①見積依頼〜受領(2〜3 週間)、②社内決裁(2〜4 週間)、③契約締結〜供給開始(1〜2 か月)の合計です。年度切替期(4 月開始)を狙う場合、前年 12 月までに動き始めるのが安全です。緊急切替の場合は最短 1 か月で可能ですが、選択肢が限定されコスト削減幅が小さくなる傾向です。",
+  },
+];
+
 
 const quotationItems = [
   {
@@ -149,7 +179,7 @@ export default function HowToReadElectricityQuotePage() {
           { name: "基礎から知る", url: "https://simulator.eic-jp.org/articles/basic" },
           { name: "法人向け電気料金見積書の見方" },
         ]}
-        faq={faq}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -680,7 +710,7 @@ export default function HowToReadElectricityQuotePage() {
         </section>
 
         <SourcesAndFaq
-          faq={faq}
+          faq={FAQ_ITEMS}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・見積書の規制情報" },
             { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
@@ -690,6 +720,12 @@ export default function HowToReadElectricityQuotePage() {
         />
 
         {/* RelatedLinks */}
+        <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ）</h2>
+          <div className="mt-4">
+            <MarketDataFaq items={FAQ_ITEMS} />
+          </div>
+        </section>
         <RelatedLinks
           heading="関連ページ"
           intro="見積の前提を、内訳・相場・見直し実務までつなげると比較判断が安定しやすくなります。"
