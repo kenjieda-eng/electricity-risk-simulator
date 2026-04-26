@@ -229,6 +229,7 @@ export default function LastResortSupplyPage() {
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX急騰の請求影響。" },
             { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "橋渡しから本契約への整理。" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
+            { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
           ]}
         />
 
