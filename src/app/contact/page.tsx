@@ -3,14 +3,13 @@ import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import InquiryTypeSelector from "./_components/InquiryTypeSelector";
 
 // --- 定数 ---
 const pageTitle =
   "お問い合わせ・ご相談受付｜法人・自治体向け電気料金のご相談窓口";
 const pageDescription =
   "一般社団法人エネルギー情報センターでは、法人・企業・自治体の皆さまからの電気料金に関するご相談を受け付けています。契約見直し、料金比較、値上げ通知の妥当性、リスク診断、社内説明の進め方など、電力担当者が抱える実務課題に専門的な視点でお応えします。";
-
-const contactUrl = "https://eic-jp.org/contact";
 
 // 想定される相談内容
 const consultationTopics = [
@@ -251,6 +250,27 @@ export default async function ContactPage({
         </aside>
       ) : null}
 
+      {/* 信頼バナー */}
+      <aside
+        aria-label="お問い合わせの信頼情報"
+        className="mb-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4"
+      >
+        <ul className="grid gap-2 text-sm leading-6 text-slate-800 sm:grid-cols-3">
+          <li className="flex items-start gap-2">
+            <span className="text-emerald-700" aria-hidden="true">✅</span>
+            <span><strong className="font-semibold">2 営業日以内</strong>にご返信いたします</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-emerald-700" aria-hidden="true">✅</span>
+            <span>個人情報は厳格に管理し、<strong className="font-semibold">第三者への提供は一切ありません</strong></span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-emerald-700" aria-hidden="true">✅</span>
+            <span><strong className="font-semibold">営業電話は一切いたしません</strong></span>
+          </li>
+        </ul>
+      </aside>
+
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">
@@ -415,30 +435,40 @@ export default async function ContactPage({
         </ol>
       </section>
 
-      {/* メインCTA：問い合わせボタン */}
-      <section className="mt-8 rounded-xl border-2 border-sky-300 bg-gradient-to-br from-sky-50 to-white p-6 sm:p-8">
-        <h2 className="text-2xl font-bold text-slate-900">
-          お問い合わせフォームへ
+      {/* Step 0: 無料診断誘導 */}
+      <section className="mt-8 rounded-xl border-2 border-amber-300 bg-amber-50 p-5 sm:p-6">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="inline-flex rounded-full bg-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+            Step 0 ／ おすすめ
+          </span>
+          <span className="text-xs text-slate-600">所要時間 5 分</span>
+        </div>
+        <h2 className="mt-3 text-xl font-semibold text-slate-900">
+          まず無料診断を試すと、より具体的な相談ができます
         </h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          ご相談・お問い合わせは、運営団体である一般社団法人エネルギー情報センターの公式お問い合わせフォームよりお送りください。担当者が内容を確認のうえ、後日ご連絡させていただきます。
+          いきなりお問い合わせフォームに進む前に、シミュレーターで自社の電気料金リスクスコアを 5 分で診断できます。診断結果をもとに相談内容を整理しておくと、担当者がより具体的なアドバイスを提供できます。
         </p>
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a
-            href={contactUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-sky-600 px-6 py-4 text-base font-bold text-white shadow-sm transition hover:bg-sky-700 sm:text-lg"
+        <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-xl bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-amber-700"
           >
-            お問い合わせフォームを開く →
+            診断を始める（無料・5 分） →
+          </Link>
+          <a
+            href="#inquiry-type-selector"
+            className="inline-flex items-center justify-center rounded-xl border-2 border-sky-300 bg-white px-6 py-3 text-base font-bold text-sky-700 transition hover:bg-sky-50"
+          >
+            すぐに相談する
           </a>
-          <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
-            ※ 一般社団法人エネルギー情報センター公式サイト
-            <br />
-            （eic-jp.org）の問い合わせページに遷移します
-          </p>
         </div>
       </section>
+
+      {/* メインCTA：3 ステップお問い合わせヘルパー */}
+      <div id="inquiry-type-selector" className="mt-8">
+        <InquiryTypeSelector />
+      </div>
 
       {/* 補足：個人のお客様への案内 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
