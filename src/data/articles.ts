@@ -3006,7 +3006,7 @@ export const articleList: ArticleMeta[] = [
   { title: "契約見直しの社内合意を進める順番", slug: "internal-consensus-building-order", description: "関係者の巻き込み方と段取りを整理します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 9, publishedAt: "2026-04-10" },
   { title: "固定と市場連動の比較を経営層に説明するときのポイント", slug: "explaining-fixed-vs-market-to-management", description: "判断材料の整理と経営層向けの伝え方を解説します。", category: "社内説明・稟議を知る", categorySlug: "internal-explanation", order: 10, publishedAt: "2026-04-10" },
   // --- 準ツール型・診断型 10本 ---
-  { title: "法人向け電力契約見直し自己診断", slug: "self-diagnosis-contract-review", description: "見直しが必要かを簡易チェックで確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 1, publishedAt: "2026-04-10" },
+  { title: "法人向け電力契約見直し自己診断", slug: "self-diagnosis-contract-review", description: "見直しが必要かを簡易チェックで確認できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 1, publishedAt: "2026-04-10", lastVerifiedAt: "2026-04-26" },
   { title: "固定プラン向き・市場連動向き簡易診断", slug: "fixed-vs-market-quick-diagnosis", description: "自社に合うプランタイプを簡易的に整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 2, publishedAt: "2026-04-10" },
   { title: "請求書確認ポイント診断", slug: "bill-check-diagnosis", description: "請求書の見落としがないかをチェックできます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 3, publishedAt: "2026-04-10" },
   { title: "見積比較前チェック診断", slug: "quotation-comparison-pre-check", description: "見積比較を始める前に確認したいことを整理できます。", category: "診断・チェックツール", categorySlug: "diagnostic-tools", order: 4, publishedAt: "2026-04-10" },

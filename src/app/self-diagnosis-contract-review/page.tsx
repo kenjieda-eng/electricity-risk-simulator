@@ -11,14 +11,47 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["diagnostic-tools"];
 
+const PUBLISHED_AT = "2026-04-11";
+const UPDATED_AT = "2026-04-26";
+
+const FAQ_ITEMS = [
+  {
+    question: "診断結果はどの程度正確ですか？",
+    answer:
+      "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。本ページの 10 項目は「見直し検討の優先度」を素早く可視化するためのもので、確定的なコスト削減幅を示すものではありません。詳細な数値は、シミュレーター（電気料金リスク アセスメント）と複数社見積もりを併用して確認してください。",
+  },
+  {
+    question: "「中立な第三者によるリスク診断」とはどういう意味ですか？",
+    answer:
+      "本サイトは一般社団法人エネルギー情報センターが運営する非営利の情報発信メディアで、特定の小売電気事業者と契約紹介の業務提携を結んでいません。診断結果に基づく業者紹介や成果報酬モデルを採用していないため、利益相反のない立場でリスク評価を提供できます。節約コンサルや代理店ではなく、業界全体のリスク構造を踏まえた中立評価をお届けします。",
+  },
+  {
+    question: "10 項目の診断はどの順番で確認すれば良いですか？",
+    answer:
+      "重要度「高」とラベリングされた項目（契約満了日が近い・大幅値上げ通知が届いた・最終保障供給に切り替わった等）から優先確認してください。1 つでも該当する場合は早急な見直しが必要です。重要度「中」が複数該当する場合は、まずシミュレーターで現契約の上振れリスクを定量化し、社内共有用の根拠資料を作成するフェーズに進むのが推奨です。",
+  },
+  {
+    question: "燃料費調整・容量拠出金・市場連動の 3 つのリスクはどう違いますか？",
+    answer:
+      "燃料費調整は LNG・石炭・原油の輸入価格変動を毎月反映する制度コストで、月次で 5〜10 円/kWh の変動幅があります。容量拠出金は将来の供給力確保のための新コストで、2024 年度から 2028 年度にかけて段階的に増額（首都圏は最大 14,812 円/kW・年）されます。市場連動はプラン契約者のみが受ける単価変動で、JEPX 急騰時は瞬間的に 100 円/kWh 超になる可能性があります。3 リスクは相互に関連しますが計算式が異なるため、別々に試算する必要があります。",
+  },
+  {
+    question: "他社の見積もり比較サービスとどう併用すれば良いですか？",
+    answer:
+      "本診断は「見直し着手の判断」のための前段階ツールです。診断で見直しが必要と判定された後に、複数の見積比較サービス（一括見積もりサイトや個別見積もり依頼）を併用するのが効率的な流れです。本サイトの「見積比較前チェック診断」記事で必要な事前情報を整理してから、外部の比較サービスへ進むと、得られる見積もりの精度が大幅に向上します。",
+  },
+];
+
 
 const pageTitle =
-  "法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック";
+  "法人向け電力契約見直し自己診断｜中立な第三者による電気料金リスク アセスメント";
 const pageDescription =
-  "現在の電力契約を見直す必要があるかを10項目の簡易チェックで確認。契約内容・料金推移・満足度など、法人担当者が自社の状況を素早く棚卸しできる診断ページです。";
+  "電気代 リスク アセスメント を 10 項目の簡易チェックで実施。一般社団法人エネルギー情報センターが運営する中立な第三者評価ツールで、契約見直しの優先度・燃料費調整/容量拠出金/市場連動の 3 リスクを法人担当者が素早く棚卸しできます。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -54,17 +87,17 @@ export default function SelfDiagnosisContractReviewPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="法人向け電力契約見直し自己診断｜見直しが必要かを簡易チェック"
-        description="現在の電力契約を見直す必要があるかを10項目の簡易チェックで確認。契約内容・料金推移・満足度など、法人担当者が自社の状況を素早く棚卸しできる診断ページです。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/self-diagnosis-contract-review"
-        datePublished="2026-04-11"
+        datePublished={PUBLISHED_AT}
+        dateModified={UPDATED_AT}
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "診断ツール・チェックリスト", url: "https://simulator.eic-jp.org/articles/diagnostic-tools" },
+          { name: "電力契約見直し自己診断" },
         ]}
-        faq={[
-    { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
-        ]}
+        faq={FAQ_ITEMS}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -95,13 +128,20 @@ export default function SelfDiagnosisContractReviewPage() {
             <li>見直しを始めるうえで次にとるべきアクション</li>
           </ul>
         </div>
+        <AuthorBadge publishedAt={PUBLISHED_AT} updatedAt={UPDATED_AT} />
       </header>
+
+      <TableOfContents />
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">診断の使い方</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            以下の10項目について、自社の現状と照らし合わせてください。「当てはまる」と感じた項目が多いほど、今すぐ見直しを検討する価値が高い状況といえます。
+            以下の10項目について、自社の現状と照らし合わせてください。「当てはまる」と感じた項目が多いほど、今すぐ見直しを検討する価値が高い状況といえます。診断後、より具体的な金額試算が必要な場合は{" "}
+            <Link href="/" className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline">
+              法人電気料金リスク アセスメント（30秒で診断）
+            </Link>{" "}
+            に進んで定量化することをおすすめします。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-red-100 bg-red-50 p-4">
@@ -155,7 +195,11 @@ export default function SelfDiagnosisContractReviewPage() {
                   重要度「中」に複数該当する場合
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-600">
-                  見直しの準備段階として、まずシミュレーターで現行契約の上振れリスクを試算しましょう。リスクの数値を社内共有することで、見直し着手の判断を得やすくなります。
+                  見直しの準備段階として、まず{" "}
+                  <Link href="/" className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline">
+                    30秒でリスク診断（電気料金リスク アセスメント）
+                  </Link>{" "}
+                  で現行契約の上振れリスクを試算しましょう。リスクの数値を社内共有することで、見直し着手の判断を得やすくなります。
                 </p>
               </div>
             </div>
@@ -187,7 +231,12 @@ export default function SelfDiagnosisContractReviewPage() {
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約書から「プラン名・契約期間・満了日・中途解約条件」を確認する</li>
             <li>直近12か月分の請求書から「基本料金・変動費用項目・月間使用量」を抽出する</li>
-            <li>シミュレーターで現行プランの上振れリスクを試算する</li>
+            <li>
+              <Link href="/" className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline">
+                電気料金リスク アセスメント（30秒でリスク診断）
+              </Link>
+              で現行プランの上振れリスクを試算する
+            </li>
             <li>社内での見直し目的・比較軸を事前に共有する</li>
             <li>複数の電力会社から見積を取り、条件・リスク・総額で比較する</li>
           </ol>
@@ -247,14 +296,12 @@ export default function SelfDiagnosisContractReviewPage() {
         </section>
 
         <SourcesAndFaq
-          faq={[
-          { question: "診断結果はどの程度正確ですか？", answer: "簡易診断は方向性の把握を目的としており、正確な試算には実際の請求書データや見積もりが必要です。" },
-          ]}
+          faq={FAQ_ITEMS}
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（pps-net.org）", url: "https://pps-net.org" },
           ]}
-          publishedAt="2026-04-11"
+          publishedAt={PUBLISHED_AT}
         />
 
 
