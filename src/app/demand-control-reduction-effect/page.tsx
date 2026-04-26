@@ -411,6 +411,7 @@ export default function DemandControlReductionEffectPage() {
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した施策マップ" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
+            { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
           ]}
         />
       </div>

@@ -252,6 +252,7 @@ export default function FuelCostAdjustmentPage() {
             { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "燃調と並ぶ請求書の変動要因。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移実態をデータで確認できます。" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
+            { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
           ]}
         />
 

@@ -309,6 +309,7 @@ export default function SubsidiesOverviewPage() {
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "補助金と並行して検討したい契約見直しの進め方と優先順位。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果。" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
+            { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
           ]}
         />
       </div>
