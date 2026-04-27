@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -74,6 +75,8 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">【FAQ】市場連動プランは怖い？｜向いている企業・避けるべき企業</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">市場連動プランに関するよくある質問。価格変動の大きさ、向く企業・向かない企業の判断軸をFAQ形式で整理します。</p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">

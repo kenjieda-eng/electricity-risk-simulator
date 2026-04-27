@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -149,6 +150,8 @@ export default function SubsidiesOverviewPage() {
           自社の状況に合った制度を選ぶための比較情報を提供します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* 制度の全体像 */}
       <section className="mt-6 space-y-4">
