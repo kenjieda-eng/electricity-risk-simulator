@@ -631,6 +631,144 @@ export default function ArticlesPage() {
           ]}
         />
       </section>
+
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">すべてのカテゴリ（テーマ別）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          法人電気料金に関するすべてのテーマカテゴリへの入口です。気になるテーマからお選びください。
+        </p>
+        <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/articles/basic" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">基礎から知る</p>
+            <p className="mt-1 text-xs text-slate-600">電気料金の構造と基本</p>
+          </Link>
+          <Link href="/articles/price-increase" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">料金が上がる理由を知る</p>
+            <p className="mt-1 text-xs text-slate-600">値上げ要因の解説</p>
+          </Link>
+          <Link href="/articles/price-trends" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">電気料金の推移と高止まり</p>
+            <p className="mt-1 text-xs text-slate-600">過去〜現在の推移</p>
+          </Link>
+          <Link href="/articles/plan-types" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">契約メニューの違いを知る</p>
+            <p className="mt-1 text-xs text-slate-600">市場連動・固定の比較</p>
+          </Link>
+          <Link href="/articles/review-points" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">見直しポイントを知る</p>
+            <p className="mt-1 text-xs text-slate-600">契約見直しの判断軸</p>
+          </Link>
+          <Link href="/articles/last-resort-supply" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">最終保障供給を知る</p>
+            <p className="mt-1 text-xs text-slate-600">緊急時の制度</p>
+          </Link>
+          <Link href="/articles/risk-scenarios" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">リスクシナリオ別に知る</p>
+            <p className="mt-1 text-xs text-slate-600">事業継続リスク</p>
+          </Link>
+          <Link href="/articles/power-procurement" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">電力調達の仕組みを知る</p>
+            <p className="mt-1 text-xs text-slate-600">市場・取引の構造</p>
+          </Link>
+          <Link href="/articles/monthly-review" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">法人電気料金振り返り</p>
+            <p className="mt-1 text-xs text-slate-600">月次データ</p>
+          </Link>
+          <Link href="/articles/accounting-tax" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">経理・税務</p>
+            <p className="mt-1 text-xs text-slate-600">仕訳・経費・減価償却</p>
+          </Link>
+          <Link href="/articles/contract-legal" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">契約・法務</p>
+            <p className="mt-1 text-xs text-slate-600">契約条項・違約金</p>
+          </Link>
+          <Link href="/articles/decarbonization" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">脱炭素・ESG</p>
+            <p className="mt-1 text-xs text-slate-600">Scope2・RE100・PPA</p>
+          </Link>
+          <Link href="/articles/energy-bcp" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">エネルギーBCP</p>
+            <p className="mt-1 text-xs text-slate-600">停電対策・自家発電</p>
+          </Link>
+          <Link href="/articles/energy-dx" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">エネルギーDX</p>
+            <p className="mt-1 text-xs text-slate-600">BEMS・スマートメーター</p>
+          </Link>
+          <Link href="/articles/ev-charging" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">EV充電</p>
+            <p className="mt-1 text-xs text-slate-600">EV・V2H・V2B</p>
+          </Link>
+          <Link href="/articles/faq" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">よくある質問</p>
+            <p className="mt-1 text-xs text-slate-600">FAQ集</p>
+          </Link>
+          <Link href="/articles/global-energy" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">グローバルエネルギー</p>
+            <p className="mt-1 text-xs text-slate-600">海外動向・国際比較</p>
+          </Link>
+          <Link href="/articles/glossary" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">用語集</p>
+            <p className="mt-1 text-xs text-slate-600">専門用語の解説</p>
+          </Link>
+          <Link href="/articles/ma-organizational-change" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">M&amp;A・組織変更</p>
+            <p className="mt-1 text-xs text-slate-600">事業承継時の電力契約</p>
+          </Link>
+          <Link href="/articles/regulation-timeline" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">制度改定タイムライン</p>
+            <p className="mt-1 text-xs text-slate-600">法令・制度の変遷</p>
+          </Link>
+          <Link href="/articles/sme-guide" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">中小企業向けガイド</p>
+            <p className="mt-1 text-xs text-slate-600">中小企業特化の解説</p>
+          </Link>
+          <Link href="/articles/industry-guide" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">業種別ガイド</p>
+            <p className="mt-1 text-xs text-slate-600">業種特性別の対策</p>
+          </Link>
+          <Link href="/articles/energy-equipment" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">エネルギー設備</p>
+            <p className="mt-1 text-xs text-slate-600">蓄電池・太陽光等</p>
+          </Link>
+          <Link href="/articles/internal-explanation" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">社内説明資料</p>
+            <p className="mt-1 text-xs text-slate-600">経営層・上司への説明</p>
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">業種別カテゴリ</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700">
+          業種・業態別の電気料金特性と見直しポイントを整理しています。
+        </p>
+        <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <Link href="/articles/by-industry/office-public" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">業務・公共系</p>
+          </Link>
+          <Link href="/articles/by-industry/commercial" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">商業施設</p>
+          </Link>
+          <Link href="/articles/by-industry/hotel-leisure" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">ホテル・レジャー</p>
+          </Link>
+          <Link href="/articles/by-industry/medical-welfare" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">医療・福祉</p>
+          </Link>
+          <Link href="/articles/by-industry/manufacturing" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">製造業</p>
+          </Link>
+          <Link href="/articles/by-industry/logistics-infrastructure" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">物流・インフラ</p>
+          </Link>
+          <Link href="/articles/by-industry/it-technology" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">IT・テクノロジー</p>
+          </Link>
+          <Link href="/articles/by-industry/agriculture-primary" className="rounded-xl border border-slate-200 bg-white p-4 hover:bg-sky-50">
+            <p className="font-semibold text-slate-900">農業・一次産業</p>
+          </Link>
+        </div>
+      </section>
     </main>
     </>
   );
