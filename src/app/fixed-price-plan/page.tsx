@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
@@ -225,6 +226,8 @@ export default function FixedPricePlanPage() {
           月額シミュレーション・注意点を整理します。
         </p>
       </header>
+
+      <TableOfContents />
 
       <section className="mt-6 space-y-6">
 
