@@ -9,6 +9,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
 
@@ -136,6 +137,8 @@ export default function ExecutiveMidTermPlanElectricityPage() {
           フレームワーク」と、継続モニタリングに必要なKPI体系を解説します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* エグゼクティブサマリー */}
       <section className="mt-6 border-l-4 border-amber-400 bg-amber-50 p-5 rounded-r-xl">
