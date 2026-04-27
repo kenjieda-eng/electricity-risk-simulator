@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -545,6 +545,12 @@ export default function CaseStudyRetailChainPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "小売チェーン多店舗の電気料金見直しチェックポイント", type: "Service" }}
+        reviewBody="小売チェーンの多店舗事業者向けに、法人電気料金見直しで確認したいポイントを事例形式で整理。契約条件・拠点差・比較時の注意点を実務目線で解説し、複数店舗を横並び比較するための観点抽出に活用できる。"
+        ratingValue={4.3}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );

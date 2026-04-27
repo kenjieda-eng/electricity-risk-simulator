@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -352,6 +352,12 @@ export default function CaseStudyHotelMarketLinkedPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "ホテル業の市場連動から固定プランへの切替判断手順", type: "Service" }}
+        reviewBody="首都圏ビジネスホテルが市場連動型から固定型へ切り替え、電気代の予測不能な変動リスクを解消した事例。判断基準・コスト比較・リスク管理の考え方を整理し、夜間稼働中心の宿泊業に向けた切替判断の手順として活用できる。"
+        ratingValue={4.5}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );
