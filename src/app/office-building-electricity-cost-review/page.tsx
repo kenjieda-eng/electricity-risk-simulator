@@ -11,6 +11,10 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
 const pageTitle =
   "オフィスビルの電気料金見直しポイント｜空調・照明負荷を踏まえた考え方";
@@ -331,6 +335,8 @@ export default function OfficeBuildingElectricityCostReviewPage() {
 <div className="mt-6">
           <GlossaryLinks currentSlug="office-building-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "デマンド値"]} />
         </div>
+
+        <MarketDataFaq items={__CATEGORY_FAQ__} />
 
         <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-10" />
 
