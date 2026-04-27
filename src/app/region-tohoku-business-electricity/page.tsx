@@ -12,6 +12,7 @@ import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
@@ -196,6 +197,8 @@ export default function RegionTohokuBusinessElectricityPage() {
           ))}
         </div>
       </header>
+
+      <TableOfContents />
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
