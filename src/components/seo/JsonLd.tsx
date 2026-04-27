@@ -212,3 +212,39 @@ export function WebSiteJsonLd({ name, url, description }: WebSiteJsonLdProps) {
     />
   );
 }
+
+// ===== HowTo schema =====
+type HowToStepInput = {
+  name: string;
+  text: string;
+};
+
+type HowToJsonLdProps = {
+  name: string;
+  description: string;
+  steps: HowToStepInput[];
+  totalTime?: string; // ISO 8601 duration, e.g., "PT15M"
+};
+
+export function HowToJsonLd({ name, description, steps, totalTime }: HowToJsonLdProps) {
+  const data: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  };
+  if (totalTime) data.totalTime = totalTime;
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

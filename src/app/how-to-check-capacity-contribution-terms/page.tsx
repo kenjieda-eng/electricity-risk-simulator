@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
@@ -66,6 +66,17 @@ export default function HowToCheckCapacityContributionTermsPage() {
           { name: "容量拠出金の扱いを確認する方法" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name="容量拠出金の扱いを見積比較で確認する手順"
+        description="電力契約の見積比較で見落としやすい容量拠出金の扱いを、制度理解から見積への含有確認、ベンダーへの質問例まで実務的に整理します。"
+        steps={[
+          { name: "容量拠出金とは何かを理解する", text: "将来の電力供給力確保のために発電事業者が受け取る容量収入の原資が容量拠出金。需要家には契約電力や使用量に応じて転嫁され、使用量が多い法人ほど負担が大きくなります。" },
+          { name: "見積に含まれているかの確認方法を押さえる", text: "①電力量料金に内包、②別途記載、③見積外で契約後請求の3パターンがあります。どのパターンかを電力会社に明示的に確認します。" },
+          { name: "今後のコスト水準の推移見通しを把握する", text: "容量拠出金の単価は毎年の容量市場オークション結果で変動し、2026年度以降はさらに高水準で推移する見通し。長期契約では単価変動の負担者を確認します。" },
+          { name: "ベンダーへの確認時の質問例を用意する", text: "「見積書に含まれているか」「単価は固定か変動か、誰が変動を負担するか」「現時点と来年度以降の予想単価」など、契約前に必ず確認します。" },
+          { name: "見積比較での容量拠出金の取り扱い原則を適用する", text: "含有状況がそろっていない見積は別途見込み額を加算して比較。含まれていない見積が実際に安いわけではない点に注意し、3年固定で単価を固定する選択肢も検討します。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

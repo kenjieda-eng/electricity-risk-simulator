@@ -8,7 +8,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -71,6 +71,18 @@ export default function HowToCompareElectricitySuppliersPage() {
           { name: "新電力を比較するときのポイント" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name="新電力を法人視点で比較する手順"
+        description="単価だけでなく燃料費調整額・契約条件・リスクまで含めて新電力を比較する手順を、確認項目と判断軸ごとに整理します。"
+        steps={[
+          { name: "単価だけで比較しないほうがよい理由を理解する", text: "見積書の単価が安く見えても、燃料費調整額や市場連動の影響で実際の請求額は変わります。基本料金や契約条件で総額差が逆転することもあるため、「請求額の決まり方」で比較します。" },
+          { name: "比較時に確認したい主な項目を洗い出す", text: "基本料金・電力量料金・燃料費調整額・市場連動か固定か・契約期間/更新/解約条件・請求書/サポート体制を比較項目として揃えます。" },
+          { name: "法人が比較で見落としやすいポイントを把握する", text: "単価のみを見る、燃料費調整額を確認しない、契約条件を後回しにする、市場連動リスクを軽く見るなど、よくある見落としを事前に確認します。" },
+          { name: "比較しやすくするために情報を準備する", text: "直近の請求書・使用量推移・契約電力・現在の契約種別・更新時期・複数拠点なら拠点別データを事前に揃えると比較精度が上がります。" },
+          { name: "自社に合う比較の考え方を選ぶ", text: "予算の安定を重視するなら固定型、相場変動を許容できるなら市場連動型。まず現状把握を優先する場合は比較軸の整理から始めます。" },
+          { name: "総額・条件・リスクで最終判断する", text: "料金表の一部だけでなく、総額感と契約条件、変動リスク、運用しやすさ、契約柔軟性を合わせて確認し、導入後のギャップを減らします。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

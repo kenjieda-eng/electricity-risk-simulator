@@ -6,7 +6,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -180,6 +180,18 @@ export default function HowToReadElectricityQuotePage() {
           { name: "法人向け電気料金見積書の見方" },
         ]}
         faq={FAQ_ITEMS}
+      />
+      <HowToJsonLd
+        name="法人電気料金見積書の確認手順"
+        description="複数電力会社の見積書を法人視点で比較する手順を、前提条件のそろえ方から契約条件の見落とし防止まで実務的に整理します。"
+        steps={[
+          { name: "見積書を比較するときに最初に確認したいこと", text: "前提条件（契約電力・使用量）が揃っているか、含まれる項目の範囲、契約タイプ（固定/市場連動）の3点を最初に確認します。前提が異なると比較になりません。" },
+          { name: "見積書の主要項目の見方を押さえる", text: "基本料金・電力量料金・燃料費調整額・再エネ賦課金・市場価格調整額・容量拠出金などの項目について、どの単価が含まれているか・別途かを確認します。" },
+          { name: "契約条件で確認したいことを整理する", text: "契約期間・更新条件・解約条件・違約金など、料金以外の条件も比較判断に大きく影響するため、見積段階でリストアップします。" },
+          { name: "見積比較で特に注意したい条件差を確認する", text: "現在契約と提案見積を並べ、契約電力・基本料金・電力量料金・調整項目が同じ前提で並んでいるかを項目別に検証します。" },
+          { name: "見積書を見る前に用意したい資料を揃える", text: "直近数か月の請求書、契約電力（kW）、月別使用量推移（kWh）、現契約条件、更新/切替希望時期、供給地点特定番号を比較依頼前に整えます。" },
+          { name: "見積書の次に確認したい実務ステップへ進む", text: "見積書の見方を押さえたら、複数社比較・契約タイプの再確認・切替手続きの実務ステップに進み、見直し精度を高めます。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
