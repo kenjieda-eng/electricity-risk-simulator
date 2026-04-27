@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "インフォグラフィック集｜電気料金・脱炭素 1枚で理解する図解";
 const pageDescription = "電気料金構造、Scope2算定フロー、PPA形態比較、容量市場、需給ひっ迫対応など、複雑なテーマを1枚の図解で整理したインフォグラフィック集。社内資料・SNS用にダウンロード可能。";
@@ -123,6 +124,18 @@ export default function Page() {
           </ul>
           <p className="mt-3 text-xs text-slate-500">※ 高解像度PDF/SVGダウンロードは順次公開予定。本ページのSVGはブラウザで右クリック→「画像を保存」で取得可能。</p>
         </section>
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/business-electricity-price-trend-10-years", title: "法人電気料金 10年推移", description: "インフォグラフィックの元データ解説。" },
+            { href: "/business-electricity-bill-breakdown", title: "電気料金の内訳", description: "請求書を読み解く詳細ピラー記事。" },
+            { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "毎月の最新データ。" },
+            { href: "/articles", title: "記事ハブ", description: "テーマ別解説記事。" },
+            { href: "/", title: "シミュレーター", description: "リスク診断を30秒で。" },
+          ]}
+        />
+      </div>
       <div className="mt-8">
         <ContactCtaCard
           source="article"

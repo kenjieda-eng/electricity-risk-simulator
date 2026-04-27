@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "タグ一覧｜法人向け電気料金・脱炭素・契約 横串タグハブ";
 const pageDescription = "電気料金・脱炭素・PPA・BEMS・補助金などのタグから、関連記事を横串で発見できます。";
@@ -73,6 +74,18 @@ export default function TagsPage() {
             </section>
           ))}
         </div>
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/articles", title: "記事ハブ（カテゴリ別）", description: "タグではなくテーマで探す。" },
+            { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "毎月の電気代データ。" },
+            { href: "/", title: "シミュレーター", description: "リスクを30秒で診断。" },
+            { href: "/articles/basic", title: "基礎カテゴリ", description: "電気料金の基礎から学ぶ。" },
+            { href: "/articles/risk-scenarios", title: "リスクシナリオ", description: "シナリオ別の解説。" },
+          ]}
+        />
+      </div>
       <div className="mt-8">
         <ContactCtaCard
           source="article"

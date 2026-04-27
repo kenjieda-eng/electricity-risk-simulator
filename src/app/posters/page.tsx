@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import PrintButton from "../../components/market-data/PrintButton";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "現場掲示用ポスター集｜停電時対応・節電・BCP";
 const pageDescription = "従業員の現場掲示用ポスターを集約。停電30分行動・節電チェック・BCP連絡網など、印刷してすぐ使えるA4サイズ。";
@@ -80,6 +81,18 @@ export default function Page() {
             <li>PDFとして保存後、社内共有ドライブに配布も可</li>
           </ol>
         </section>
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/electricity-bcp-for-corporates", title: "法人のための電力BCP", description: "停電・需給逼迫時の事業継続計画を整理。" },
+            { href: "/bcp-drill-scenario-for-electricity", title: "電力BCP 訓練シナリオ", description: "ポスターと組み合わせて社内訓練に活用できます。" },
+            { href: "/bcp-private-power-generation", title: "BCPと自家発電", description: "現場で役立つ平時の備え。" },
+            { href: "/articles", title: "記事ハブ", description: "テーマ別の解説記事一覧。" },
+            { href: "/", title: "シミュレーターTOP", description: "電気料金リスクを30秒で診断。" },
+          ]}
+        />
+      </div>
       <div className="mt-8">
         <ContactCtaCard
           source="article"
