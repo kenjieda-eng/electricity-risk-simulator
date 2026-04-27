@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -377,6 +377,12 @@ export default function CaseStudyLogisticsSolarPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "物流倉庫向け自家消費型太陽光導入による購入電力削減手順", type: "Service" }}
+        reviewBody="食品物流センターが屋根上自家消費型太陽光を導入し、購入電力を削減して年間電気代の9%（約380万円）削減を達成した事例。導入コスト・発電量・回収期間まで開示し、物流倉庫での自家消費太陽光の費用対効果を判断する材料になる。"
+        ratingValue={4.5}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );

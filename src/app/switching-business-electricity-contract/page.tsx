@@ -6,6 +6,7 @@ import ReviewArticlePage from "../../components/articles/ReviewArticlePage";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import { ReviewJsonLd } from "../../components/seo/JsonLd";
 
 const pageTitle = "法人が電力契約を切り替えるときの注意点";
 const pageDescription =
@@ -256,6 +257,12 @@ export default function SwitchingBusinessElectricityContractPage() {
         />
       </div>
     </div>
+    <ReviewJsonLd
+      itemReviewed={{ name: "法人電力契約の切替実務における注意点ガイド", type: "Service" }}
+      reviewBody="法人の電力契約切替で実務担当者が陥りやすい注意点を整理。現契約の解約条件・新契約の開始日・請求タイミングのズレなど、見積比較で契約先を決めた後の実行フェーズで確認すべきポイントを段階的に解説し、移行ミスの予防に役立つ。"
+      ratingValue={4.5}
+      datePublished="2026-03-29"
+    />
     </>
   );
 }

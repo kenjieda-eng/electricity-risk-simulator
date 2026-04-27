@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -335,6 +335,12 @@ export default function CaseStudyMunicipalityPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "自治体12施設の統合入札による電力調達コスト削減手順", type: "Service" }}
+        reviewBody="地方自治体が庁舎・公共施設12施設の電力調達を統合入札し、年間3,100万円（約21%）削減を達成した事例。公共施設の統合調達手順・入札設計・新電力切替のリスク管理まで網羅し、自治体の調達担当者が実務として再現できる。"
+        ratingValue={4.8}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );

@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -345,6 +345,12 @@ export default function CaseStudyRestaurantChainPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "飲食チェーン40店舗の一括見直しによる電気代削減手順", type: "Service" }}
+        reviewBody="居酒屋チェーン40店舗が電力契約を一括見直しし、年間2,800万円（約17%）の電気代削減を達成した事例。夜間営業特有の需要パターンへの対応・多拠点一括交渉の進め方を整理し、多店舗運営の飲食業に再現可能な手順として活用できる。"
+        ratingValue={4.6}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );
