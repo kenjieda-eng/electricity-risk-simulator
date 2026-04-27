@@ -12,6 +12,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -148,6 +149,8 @@ export default function SupermarketElectricityCostReviewPage() {
           </ul>
         </div>
       </header>
+
+      <TableOfContents />
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">

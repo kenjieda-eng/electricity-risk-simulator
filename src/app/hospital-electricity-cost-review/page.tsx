@@ -10,6 +10,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
   "病院の電気料金見直しポイント｜安定性を重視した契約見直しの考え方";
@@ -135,6 +136,8 @@ export default function HospitalElectricityCostReviewPage() {
           </ul>
         </div>
       </header>
+
+      <TableOfContents />
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
