@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "マンガで分かる電気代見直し｜中小企業向け入門";
 const pageDescription = "「電気代、なぜ高い？」「契約、どう見直す？」を4コマ形式で分かりやすく解説。中小企業の経営者・事務担当者向けの入門コンテンツ。";
@@ -79,6 +80,17 @@ export default function Page() {
         <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs text-slate-500">原案: 一般社団法人エネルギー情報センター。CC BY 4.0で社内勉強会・社員研修に流用可能です。イラスト版・印刷用PDFは順次公開予定。</p>
         </section>
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/articles", title: "記事ハブ", description: "マンガで興味を持ったテーマの本格解説。" },
+            { href: "/how-to", title: "シミュレーターの使い方", description: "次は実際に診断してみる。" },
+            { href: "/self-diagnosis-contract-review", title: "契約見直しセルフ診断", description: "マンガから一歩進んだ実務。" },
+            { href: "/business-electricity-retrospective", title: "月次振り返り", description: "電気代の最新動向。" },
+          ]}
+        />
+      </div>
       <div className="mt-8">
         <ContactCtaCard
           source="article"

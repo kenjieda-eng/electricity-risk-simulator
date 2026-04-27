@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "動画スクリプト集｜法人向け電気料金・脱炭素 解説動画台本";
 const pageDescription = "電気料金・脱炭素・契約見直しなどの解説動画スクリプト集。社内勉強会・YouTube動画・ウェビナー用の台本としてご活用ください。CC BY 4.0で改変・再利用可。";
@@ -86,6 +87,18 @@ export default function Page() {
             </section>
           ))}
         </div>
+      <div className="mt-8">
+        <RelatedLinks
+          heading="関連ページ"
+          links={[
+            { href: "/articles", title: "記事ハブ", description: "動画台本の元になった解説記事一覧。" },
+            { href: "/how-to", title: "シミュレーターの使い方", description: "動画と合わせて視聴。" },
+            { href: "/manga", title: "マンガで分かる電気代", description: "動画とは別の入門コンテンツ。" },
+            { href: "/business-electricity-retrospective", title: "月次振り返り", description: "動画の最新ネタ元。" },
+            { href: "/", title: "シミュレーター", description: "リスクを30秒で診断。" },
+          ]}
+        />
+      </div>
       <div className="mt-8">
         <ContactCtaCard
           source="article"
