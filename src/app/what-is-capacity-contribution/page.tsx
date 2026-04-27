@@ -368,6 +368,7 @@ export default function WhatIsCapacityContributionPage() {
           links={[
             { href: "/", label: "シミュレーターで診断する" },
             { href: "/articles", label: "他の解説記事を読む" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </div>

@@ -456,6 +456,7 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
             links={[
               { href: "/", label: "シミュレーターで診断する" },
               { href: "/contact", label: "専門家に相談する" },
+              { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
             ]}
           />
         </div>

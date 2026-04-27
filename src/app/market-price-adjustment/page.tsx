@@ -352,6 +352,7 @@ export default function MarketPriceAdjustmentPage() {
           links={[
             { href: "/compare", label: "比較ページを見る" },
             { href: "/simulate", label: "シミュレーションを始める" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </section>

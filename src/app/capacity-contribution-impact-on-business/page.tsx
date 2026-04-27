@@ -544,6 +544,7 @@ export default function CapacityContributionImpactOnBusinessPage() {
                 href: "/articles/price-increase",
                 label: "料金が上がる理由をもっと読む",
               },
+              { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
             ]}
           />
         </div>

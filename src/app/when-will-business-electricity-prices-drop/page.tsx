@@ -719,6 +719,7 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
           links={[
             { href: "/", label: "シミュレーターで診断する" },
             { href: "/compare", label: "料金メニューを比較する" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </div>

@@ -456,6 +456,7 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
             { href: "/", label: "シミュレーターで試算する" },
             { href: "/compare", label: "料金メニューを比較する" },
             { href: "/articles/price-increase", label: "料金上昇カテゴリを見る" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </section>
