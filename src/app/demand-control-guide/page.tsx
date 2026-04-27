@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -106,6 +107,8 @@ export default function DemandControlGuidePage() {
             本記事では、装置の種類・費用相場・削減効果の目安・投資回収期間・導入判断の軸を整理します。
           </p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
