@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -363,6 +363,12 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
         />
       </div>
 
+      <ReviewJsonLd
+        itemReviewed={{ name: "値上げ通知交渉による法人電気料金圧縮の実務手順", type: "Service" }}
+        reviewBody="製造業B社が新電力から28%値上げ・燃調費上限撤廃の通知を受けて22日間で対応した事例。交渉と代替調達の同時並行で値上げ幅を13%まで圧縮、燃調費上限の一部継続も実現。短期で再現可能な交渉手順として参考になる。"
+        ratingValue={4.5}
+        datePublished="2026-04-17"
+      />
     </main>
     </>
   );

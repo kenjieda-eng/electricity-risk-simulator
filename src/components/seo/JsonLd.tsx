@@ -248,3 +248,54 @@ export function HowToJsonLd({ name, description, steps, totalTime }: HowToJsonLd
     />
   );
 }
+
+// ===== Review schema =====
+type ReviewJsonLdProps = {
+  itemReviewed: {
+    name: string;
+    type?: "Service" | "Product" | "Organization" | "Article";
+  };
+  reviewBody: string;
+  author?: string;
+  ratingValue?: number;
+  bestRating?: number;
+  worstRating?: number;
+  datePublished?: string;
+};
+
+export function ReviewJsonLd({
+  itemReviewed,
+  reviewBody,
+  author = "一般社団法人エネルギー情報センター",
+  ratingValue,
+  bestRating = 5,
+  worstRating = 1,
+  datePublished,
+}: ReviewJsonLdProps) {
+  const data: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": itemReviewed.type ?? "Service",
+      name: itemReviewed.name,
+    },
+    reviewBody,
+    author: { "@type": "Organization", name: author },
+  };
+  if (ratingValue !== undefined) {
+    data.reviewRating = {
+      "@type": "Rating",
+      ratingValue,
+      bestRating,
+      worstRating,
+    };
+  }
+  if (datePublished) data.datePublished = datePublished;
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
