@@ -10,6 +10,7 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle =
   "オフィスビルの電気料金見直しポイント｜空調・照明負荷を踏まえた考え方";
@@ -159,6 +160,7 @@ export default function OfficeBuildingElectricityCostReviewPage() {
         </div>
       </header>
 
+      <AuthorBadge publishedAt="2026-04-10" updatedAt="2026-04-10" />
       <TableOfContents />
 
       <section className="mt-6 space-y-6">

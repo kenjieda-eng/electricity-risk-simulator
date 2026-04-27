@@ -13,6 +13,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
@@ -221,6 +222,7 @@ export default function RegionChubuBusinessElectricityPage() {
         </div>
       </header>
 
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
       <TableOfContents />
 
       {/* エリア基本情報テーブル */}
