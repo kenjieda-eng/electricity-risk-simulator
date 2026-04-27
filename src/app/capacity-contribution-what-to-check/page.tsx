@@ -377,6 +377,7 @@ export default function CapacityContributionWhatToCheckPage() {
           links={[
             { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/articles/review-points", label: "見直しポイントを確認する" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </div>

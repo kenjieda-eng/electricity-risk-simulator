@@ -463,6 +463,7 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
             { href: "/compare", label: "比較ページを見る" },
             { href: "/why-business-electricity-prices-rise", label: "上昇要因の解説を見る" },
             { href: "/market-linked-vs-fixed", label: "契約タイプ比較を見る" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </section>

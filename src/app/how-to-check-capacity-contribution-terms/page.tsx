@@ -279,6 +279,7 @@ export default function HowToCheckCapacityContributionTermsPage() {
             { href: "/simulate", label: "シミュレーターで診断する" },
             { href: "/how-to", label: "使い方を見る" },
             { href: "/compare", label: "料金メニューを比較する" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </section>

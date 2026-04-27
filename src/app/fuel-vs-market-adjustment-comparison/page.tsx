@@ -539,6 +539,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
                 href: "/articles/price-increase",
                 label: "料金上昇の他の要因を学ぶ",
               },
+              { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
             ]}
           />
         </div>

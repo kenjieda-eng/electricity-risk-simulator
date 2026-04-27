@@ -554,6 +554,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             { href: "/compare", label: "比較ページを見る" },
             { href: "/articles/price-trends", label: "推移と高止まりカテゴリへ" },
             { href: "/business-electricity-bill-breakdown", label: "内訳の確認に進む" },
+            { href: "/concierge", label: "他の質問もコンシェルジュ検索で探す" },
           ]}
         />
       </section>
