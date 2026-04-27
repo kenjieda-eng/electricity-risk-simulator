@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
@@ -66,6 +66,18 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           { name: "市場価格調整額の有無を確認する方法" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name="市場価格調整額の有無を確認する手順"
+        description="電力契約の見積書・約款で市場連動の有無を見抜くための確認手順を、仕組み理解から名称の揺れ・ベンダーへの質問例まで実務目線で整理します。"
+        steps={[
+          { name: "市場価格調整額の基本的な仕組みを理解する", text: "JEPX スポット価格に連動して電力量料金が変動する仕組み。需給逼迫時には通常の数十倍に急騰した過去事例もあるため、リスクを把握します。" },
+          { name: "固定型と市場連動型の違いを把握する", text: "完全固定は予算予測しやすい反面、市場下落時に割高になる可能性があります。市場連動は平時は安価でも逼迫時に急騰します。「固定」の意味の範囲を必ず確認します。" },
+          { name: "市場連動を示す名称のバリエーションを確認する", text: "「市場価格調整額」「JEPX 連動」「需給調整費」「変動型電力量料金」など多様な名称があります。これらが見積書・約款に含まれていないか確認します。" },
+          { name: "見積書・約款での確認箇所を点検する", text: "電力量料金欄の「変動」「市場」「JEPX」の有無、注記の表現、料金メニュー説明書の決定方法、改定/変動条項を一つずつ確認します。" },
+          { name: "ベンダーへの確認時の質問を用意する", text: "「電力量料金は固定か市場連動か」「燃料費・市場価格調整額は別途変動するか」「過去12か月の調整額推移」など、見積書だけで判断できない点を質問します。" },
+          { name: "市場連動型プランを選ぶ場合の注意点を整理する", text: "需給逼迫時の急騰リスク、シミュレーターで上振れ幅を試算、デマンド管理の有無、固定型との価格差とリスクのトレードオフを組織判断します。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

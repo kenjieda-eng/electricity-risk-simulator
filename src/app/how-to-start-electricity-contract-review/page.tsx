@@ -9,7 +9,7 @@ import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import SwitchSavingCalculator from "../../components/market-data/SwitchSavingCalculator";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -180,6 +180,16 @@ export default function HowToStartElectricityContractReviewPage() {
           { name: "法人の電力契約見直しは何から始めるべきか" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name="法人電気契約の見直しを始める手順"
+        description="法人の電気料金見直しを、請求書収集から切替判断までの一連のステップで進めるための実務ガイド。所要時間と優先度の目安を含めて整理します。"
+        steps={[
+          { name: "見直しの5ステップ", text: "請求書収集→契約条件確認→使用量整理→複数社見積→切替判断の順で進めます。比較作業だけが先行すると前提条件がそろわず判断を誤りやすいため、Step 1〜3 の現状把握を先に完了させます。" },
+          { name: "ステップ別の所要時間と担当部署", text: "各ステップの所要目安と必要資料を整理します。複数部署が関わるステップでは早期に役割分担を共有することで停滞を防げます。" },
+          { name: "見直しの優先度判断マトリクス", text: "「年間電気代の規模」と「前年比の変動幅」の2軸で見直し着手の優先度を判断します。更新時期が6ヶ月以内に迫っている場合は優先度を1段階上げます。" },
+          { name: "最初にやってはいけないこと（3項目）", text: "見直し初期によくある判断ミスを把握します。いずれも後から手戻りが発生しやすいパターンのため、着手前に確認します。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

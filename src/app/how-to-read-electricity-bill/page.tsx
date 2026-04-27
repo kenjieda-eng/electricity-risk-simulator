@@ -6,7 +6,7 @@ import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -220,6 +220,18 @@ export default function HowToReadElectricityBillPage() {
           { name: "電気料金の請求書で確認したいポイント" },
         ]}
         faq={FAQ_ITEMS}
+      />
+      <HowToJsonLd
+        name="法人電気料金請求書の確認手順"
+        description="法人の電気料金請求書を、固定費と変動費の構造把握から総額上昇時の原因切り分けまで、実務で迷わない順番で読み解く手順を整理します。"
+        steps={[
+          { name: "請求書の全体構造（固定費と変動費）を把握する", text: "請求書は「固定費（基本料金）」と「変動費（電力量料金＋調整項目）」で構成されます。この構造を先に押さえると、請求額の変動要因を切り分けやすくなります。" },
+          { name: "請求書をこの順番で確認する", text: "契約電力 → 基本料金 → 電力量料金と使用量 → 燃料費調整額 → 再エネ賦課金 → 市場価格調整額・容量拠出金 → 総額と前月/前年同月差の順で確認します。" },
+          { name: "項目別の確認ポイントを整理する", text: "各項目の意味と、見積比較や見直し判断に活用するためのポイントを項目ごとに整理し、自社契約と照らし合わせます。" },
+          { name: "総額が上がったときの確認フローをたどる", text: "使用量増加 → 燃料費調整額 → 再エネ賦課金 → 市場価格調整額・容量拠出金 → 基本料金 → 契約条件の順に切り分けると、上昇要因を社内に説明しやすくなります。" },
+          { name: "前月・前年同月と比べて差分を見る", text: "使用量・基本料金・燃料費調整額・再エネ賦課金を前月比/前年同月比で確認し、季節要因と構造要因を分離します。" },
+          { name: "月ごとの変動を時系列で把握する", text: "直近12か月を並べると、季節パターン・調整額の振れ幅・契約電力の変化・前年同月差が見えるので、見積依頼時の前提条件として活用します。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

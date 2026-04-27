@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ } from "../../data/categoryFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
@@ -66,6 +66,17 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
           { name: "燃料費調整額の扱いを確認する方法" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name="燃料費調整額の扱いを契約比較で確認する手順"
+        description="電力契約比較で燃料費調整額の扱い差を見落とさないため、仕組み理解から見積書の表記確認、上昇シナリオ比較までを実務手順で整理します。"
+        steps={[
+          { name: "燃料費調整額の基本的な仕組みを理解する", text: "燃料費調整額は LNG・石炭・石油の市場価格変動を電気料金に反映する仕組み。新電力は各社が独自に計算式・上限・基準価格を設定できる点を押さえます。" },
+          { name: "上限ありと上限なしの違いを把握する", text: "上限ありは料金上振れを抑えられる一方、上限なしは平時の単価が安く見えても燃料急騰局面で大きな上振れリスクがあります。" },
+          { name: "各社の計算方式の確認ポイントを洗い出す", text: "基準燃料価格・参照する燃料指標・反映タイミング・上限/下限の4点を、約款や料金メニュー説明書で必ず確認します。" },
+          { name: "見積書で確認すべき表記をチェックする", text: "「燃料費調整額込み/別」、見積時点の調整額表示、上限水準の明記、変動の仕組みの注記など、見積書の文言を一つずつ照合します。" },
+          { name: "燃料費調整額を含めた総額比較を行う", text: "現時点条件での総額比較、上昇シナリオ比較、リスクとコストのトレードオフを揃えて判断し、組織として受け入れるリスク水準を決めます。" },
+        ]}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
