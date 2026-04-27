@@ -10,6 +10,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
 
@@ -178,6 +179,8 @@ export default function ExecutiveBusinessContinuityRiskPage() {
           経営層が取るべきアクションを提示します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* エグゼクティブサマリー */}
       <section className="mt-6 border-l-4 border-amber-400 bg-amber-50 p-5 rounded-r-xl">
