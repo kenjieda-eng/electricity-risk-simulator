@@ -49,6 +49,27 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/market-price-adjustment`,
         permanent: true,
       },
+      // GSC 404 fixes (B-17)
+      {
+        source: "/sme-subsidy-funding-guide",
+        destination: `${CANONICAL_BASE_URL}/subsidy-sme-energy-saving-patterns`,
+        permanent: true,
+      },
+      {
+        source: "/gx-ets-regulation-timeline",
+        destination: `${CANONICAL_BASE_URL}/gx-ets-impact-business-electricity`,
+        permanent: true,
+      },
+      {
+        source: "/solar-self-consumption-for-business",
+        destination: `${CANONICAL_BASE_URL}/self-consumption-solar-cost-benefit`,
+        permanent: true,
+      },
+      {
+        source: "/logistics-warehouse-electricity-cost-review",
+        destination: `${CANONICAL_BASE_URL}/case-study-logistics-solar-integration`,
+        permanent: true,
+      },
     ];
   },
 };
