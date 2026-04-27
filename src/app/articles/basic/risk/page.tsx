@@ -4,6 +4,7 @@ import { ArticleJsonLd, BreadcrumbJsonLd, FaqPageJsonLd } from "../../../../comp
 import AuthorBadge from "../../../../components/market-data/AuthorBadge";
 import MarketDataFaq from "../../../../components/market-data/MarketDataFaq";
 import ContentCta from "../../../../components/simulator/ContentCta";
+import RelatedLinks from "../../../../components/simulator/RelatedLinks";
 import { getArticlesByCategory } from "../../../../lib/articles";
 
 const pageTitle = "リスク理解の基礎知識｜法人電気料金のリスクシナリオと緊急対応";
@@ -169,6 +170,19 @@ export default function BasicRiskHubPage() {
       </section>
 
       <AuthorBadge publishedAt={publishedDate} updatedAt={publishedDate} />
+
+      <div className="mt-6">
+        <RelatedLinks
+          heading="必読記事"
+          links={[
+            {
+              href: "/what-is-capacity-contribution",
+              title: "容量拠出金とは（必読）",
+              description: "リスク評価で必ず把握すべき制度",
+            },
+          ]}
+        />
+      </div>
 
       <div className="mt-6">
         <ContentCta

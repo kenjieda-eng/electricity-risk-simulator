@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { OrganizationJsonLd } from "../../components/seo/JsonLd";
 import Breadcrumb from "../../components/simulator/Breadcrumb";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "サイトについて｜一般社団法人エネルギー情報センター";
 const pageDescription =
@@ -126,6 +127,19 @@ export default function AboutHubPage() {
             本サイトの編集は、公的データ（経済産業省・資源エネルギー庁・OCCTO・JEPX・環境省等）と業界一次情報を主な情報源とし、<Link href="/about/editorial-policy" className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline">公開済みの編集ポリシー</Link> に沿って事実確認・更新サイクルを運用しています。読者からのご指摘・修正提案は <Link href="/contact" className="text-sky-700 underline-offset-2 hover:text-sky-900 hover:underline">お問い合わせ窓口</Link> から随時受け付けています。
           </p>
         </section>
+
+        <div className="mt-6">
+          <RelatedLinks
+            heading="運営者・監修者"
+            links={[
+              {
+                href: "/kenji-eda",
+                title: "監修者プロフィール｜江田健二（理事）",
+                description: "電力・エネルギー業界20年以上、書籍20冊以上、政府・商工会議所登壇多数",
+              },
+            ]}
+          />
+        </div>
 
         <section className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
           <h2 className="text-xl font-semibold text-slate-900">運営者情報・関連リンク</h2>

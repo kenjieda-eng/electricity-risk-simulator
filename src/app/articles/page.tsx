@@ -17,6 +17,7 @@ import type { ArticleCategorySlug } from "../../data/articles";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import { CATEGORY_MAJOR_GROUPS } from "../../lib/articleCategoryGroups";
 import { ARTICLE_PERSONA_ENTRANCES } from "../../lib/articlePersonaEntrances";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
 
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
@@ -611,6 +612,24 @@ export default function ArticlesPage() {
             <p className="mt-1 text-sm leading-6 text-slate-700">鉄鋼・化学・自動車・半導体など製造業の電力リスク</p>
           </Link>
         </div>
+      </section>
+
+      <section className="mt-8">
+        <RelatedLinks
+          heading="最重要記事"
+          links={[
+            {
+              href: "/what-is-capacity-contribution",
+              title: "容量拠出金とは｜2026〜2028年度の単価と法人への影響",
+              description: "2027年度7,847円/kW、2028年度首都圏14,812円/kW の本格徴収影響を解説",
+            },
+            {
+              href: "/kenji-eda",
+              title: "監修者プロフィール｜江田健二（理事）",
+              description: "電力・エネルギー業界20年以上、書籍20冊以上、政府・商工会議所登壇多数",
+            },
+          ]}
+        />
       </section>
     </main>
     </>
