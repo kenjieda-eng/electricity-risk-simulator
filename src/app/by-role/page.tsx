@@ -64,7 +64,7 @@ const ROLES = [
     { href: "/sme-electricity-basics", title: "中小企業の電気代基礎" },
     { href: "/low-voltage-review-essentials", title: "低圧契約見直し" },
     { href: "/sme-cost-reduction-quick-wins", title: "クイックウィン削減策" },
-    { href: "/sme-subsidy-funding-guide", title: "補助金活用ガイド" },
+    { href: "/subsidy-sme-energy-saving-patterns", title: "中小企業の省エネ・補助金活用パターン" },
   ]},
 ];
 
