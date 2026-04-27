@@ -106,6 +106,15 @@ const retrospectiveDataLinks = [
   { href: "/electricity-price-trend-2019-2025", label: "2019〜2025年の電気料金推移" },
 ] as const;
 
+// --- 資料・コンテンツ ---
+const contentResourceLinks = [
+  { href: "/data-visualizations", label: "データ可視化" },
+  { href: "/infographics", label: "インフォグラフィック" },
+  { href: "/posters", label: "BCPポスター" },
+  { href: "/video-scripts", label: "動画台本" },
+  { href: "/manga", label: "マンガで分かる" },
+] as const;
+
 // --- 特集記事 ---
 const specialFeatureLinks = [
   { href: "/special/emergency-scenario-analysis", label: "法人電気代の3シナリオ比較" },
@@ -152,8 +161,8 @@ export function Footer() {
           <p className="mt-2 text-sm leading-relaxed text-sky-900/80">{siteDescription}</p>
         </section>
 
-        {/* メインリンクブロック（8ブロックを xl 4列×2行で均等配置） */}
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6 2xl:gap-8">
+        {/* メインリンクブロック（9ブロックを xl 5列で配置） */}
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-6 2xl:gap-8">
           <nav aria-labelledby="footer-primary-pages">
             <h3 id="footer-primary-pages" className={blockHeadingClass}>
               主要ページ
@@ -271,6 +280,21 @@ export function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
               {industrySubLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-content-resources">
+            <h3 id="footer-content-resources" className={blockHeadingClass}>
+              資料・コンテンツ
+            </h3>
+            <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
+              {contentResourceLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className={linkClass}>
                     {link.label}
