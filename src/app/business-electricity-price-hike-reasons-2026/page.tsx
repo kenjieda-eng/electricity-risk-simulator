@@ -444,6 +444,11 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
                 title: "2026年の電気料金見通し",
                 description: "年度単位の推移見通しとリスクシナリオを整理しています。",
               },
+              {
+                href: "/what-is-capacity-contribution",
+                title: "容量拠出金の本格徴収（要因①の詳細）",
+                description: "値上げ要因の中核、2027年度7,847円/kW",
+              },
             ]}
           />
         </div>

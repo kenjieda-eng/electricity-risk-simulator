@@ -257,6 +257,14 @@ export default function Page() {
                 <p className="text-sm font-semibold text-slate-900">法人電気料金の国際比較</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">主要7カ国の産業用電気料金と日本が高い構造的理由</p>
               </Link>
+              <Link href="/what-is-capacity-contribution" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">容量拠出金とは｜2026〜2028年度の単価と法人への影響</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">2027年度7,847円/kW、2028年度首都圏14,812円/kW の本格徴収影響を解説</p>
+              </Link>
+              <Link href="/kenji-eda" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">監修者プロフィール｜江田健二（理事）</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">電力・エネルギー業界20年以上、書籍20冊以上、政府・商工会議所登壇多数</p>
+              </Link>
             </div>
           </div>
 

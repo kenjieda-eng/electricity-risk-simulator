@@ -405,6 +405,11 @@ export default function ElectricityCostRiskHeatwavePage() {
               title: "市場連動プランと固定プランの違い",
               description: "夏場の変動を受け止め方ごとに比較軸を整理できます。",
             },
+            {
+              href: "/what-is-capacity-contribution",
+              title: "容量拠出金とは｜2026〜2028年度の単価と法人への影響",
+              description: "夏の電力需給逼迫と容量市場の本格徴収を関連して把握",
+            },
           ]}
         />
 
