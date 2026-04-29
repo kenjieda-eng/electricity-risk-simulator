@@ -47,6 +47,8 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "容量拠出金 推移",
+    "容量拠出金 単価",
     "容量拠出金",
     "容量拠出金とは",
     "容量拠出金 とは",

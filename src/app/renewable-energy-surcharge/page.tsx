@@ -22,9 +22,9 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド";
+const pageTitle = "再エネ賦課金とは｜2026年度4.18円/kWh、法人負担額の試算・計算方法を完全ガイド";
 const pageDescription =
-  "再エネ賦課金（再生可能エネルギー発電促進賦課金）の仕組み、2012〜2026年度の単価推移、計算方法、法人の月額負担試算、燃料費調整額との違いを、グラフと過去データを交えて解説します。";
+  "再エネ賦課金（再生可能エネルギー発電促進賦課金）は2026年度4.18円/kWh（2025年度3.98円から+0.20円）。法人月額負担額の試算・計算方法を、2012〜2026年度の推移グラフと共に中立社団が解説。燃料費調整額との違いも整理。";
 const publishedDate = "2026-03-01";
 const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge";
 
@@ -32,10 +32,14 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "再エネ賦課金 2026",
+    "再エネ賦課金 2026年度 単価",
+    "再エネ賦課金 2026年度 単価 負担額",
+    "日本 再エネ賦課金 2026年度 単価 負担額",
+    "再エネ賦課金 4.18",
     "再エネ賦課金",
     "再エネ賦課金 とは",
     "再エネ賦課金 推移",
-    "再エネ賦課金 2025",
     "再エネ賦課金 計算方法",
     "法人 電気料金 制度負担",
     "再エネ賦課金 燃料費調整額 違い",
