@@ -113,6 +113,7 @@ const contentResourceLinks = [
   { href: "/posters", label: "BCPポスター" },
   { href: "/video-scripts", label: "動画台本" },
   { href: "/manga", label: "マンガで分かる" },
+  { href: "/tags", label: "タグから探す" },
 ] as const;
 
 // --- 特集記事 ---
