@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const TAGS = [
-  { tag: "脱炭素", count: 25, articles: ["scope2-electricity-accounting", "re100-overview-for-business", "carbon-pricing-impact"] },
+  { tag: "脱炭素", count: 25, articles: ["scope2-electricity-accounting", "re100-overview-for-business", "carbon-pricing-electricity-impact"] },
   { tag: "PPA", count: 12, articles: ["corporate-ppa-overview", "virtual-ppa-explained", "onsite-vs-offsite-ppa"] },
   { tag: "BEMS", count: 10, articles: ["bems-fems-ems-overview", "ai-electricity-optimization"] },
   { tag: "補助金", count: 17, articles: ["subsidies-overview"] },
@@ -25,20 +25,20 @@ const TAGS = [
   { tag: "JEPX", count: 16, articles: ["jepx-spot-price-dashboard", "jepx-price-trend-and-corporate-impact"] },
   { tag: "市場連動", count: 18, articles: ["market-price-adjustment", "who-should-choose-market-linked-plan"] },
   { tag: "蓄電池", count: 14, articles: ["why-corporations-consider-batteries", "battery-suitability-diagnosis"] },
-  { tag: "太陽光", count: 12, articles: ["solar-suitability-diagnosis", "non-fossil-certificate-guide"] },
+  { tag: "太陽光", count: 12, articles: ["solar-suitability-diagnosis", "non-fossil-certificates"] },
   { tag: "EV", count: 8, articles: ["corporate-ev-charging-basics", "ev-fleet-cost-calculation"] },
   { tag: "中小企業", count: 12, articles: ["sme-electricity-basics", "low-voltage-review-essentials"] },
   { tag: "法務", count: 10, articles: ["electricity-contract-clauses", "auto-renewal-clause-risks"] },
   { tag: "経理", count: 8, articles: ["electricity-expense-accounting", "invoice-system-electricity"] },
-  { tag: "需給ひっ迫", count: 9, articles: ["tight-supply-corporate-response", "what-is-tight-supply-warning"] },
-  { tag: "最終保障", count: 10, articles: ["last-resort-supply-overview", "last-resort-supply-risk-diagnosis"] },
+  { tag: "需給ひっ迫", count: 9, articles: ["supply-demand-tightness-impact", "supply-demand-planning-glossary"] },
+  { tag: "最終保障", count: 10, articles: ["last-resort-supply-explained", "last-resort-supply-risk-diagnosis"] },
   { tag: "容量市場", count: 7, articles: ["capacity-contribution-explained", "capacity-market-timeline"] },
   { tag: "託送料金", count: 5, articles: ["wheeling-charge-explained", "wheeling-charge-revenue-cap-timeline"] },
   { tag: "海外", count: 5, articles: ["overseas-energy-strategy", "global-electricity-price-benchmark"] },
   { tag: "DC・AI", count: 6, articles: ["datacenter-electricity-demand-surge", "ai-workload-energy-impact"] },
   { tag: "業種別", count: 35, articles: ["factory-electricity-cost-reduction", "warehouse-electricity-cost-review"] },
-  { tag: "東日本", count: 12, articles: ["east-japan-electricity-trends"] },
-  { tag: "西日本", count: 12, articles: ["west-japan-electricity-trends"] },
+  { tag: "東日本", count: 12, articles: ["region-tokyo-business-electricity"] },
+  { tag: "西日本", count: 12, articles: ["region-kansai-business-electricity"] },
   { tag: "GX-ETS", count: 6, articles: ["gx-ets-impact-business-electricity", "gx-promotion-act-roadmap"] },
 ];
 
