@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "電気料金 推移 グラフ",
+    "電気料金推移 グラフ",
+    "電気料金推移 10年 グラフ",
+    "電気料金 推移 10年 グラフ",
     "電気料金 推移 10年",
     "電気料金推移 10年",
     "電気料金推移 10 年 法人",
