@@ -80,6 +80,41 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/factory-electricity-cost-reduction`,
         permanent: true,
       },
+      {
+        source: "/carbon-pricing-impact",
+        destination: `${CANONICAL_BASE_URL}/carbon-pricing-electricity-impact`,
+        permanent: true,
+      },
+      {
+        source: "/non-fossil-certificate-guide",
+        destination: `${CANONICAL_BASE_URL}/non-fossil-certificates`,
+        permanent: true,
+      },
+      {
+        source: "/tight-supply-corporate-response",
+        destination: `${CANONICAL_BASE_URL}/supply-demand-tightness-impact`,
+        permanent: true,
+      },
+      {
+        source: "/what-is-tight-supply-warning",
+        destination: `${CANONICAL_BASE_URL}/supply-demand-planning-glossary`,
+        permanent: true,
+      },
+      {
+        source: "/last-resort-supply-overview",
+        destination: `${CANONICAL_BASE_URL}/last-resort-supply-explained`,
+        permanent: true,
+      },
+      {
+        source: "/east-japan-electricity-trends",
+        destination: `${CANONICAL_BASE_URL}/region-tokyo-business-electricity`,
+        permanent: true,
+      },
+      {
+        source: "/west-japan-electricity-trends",
+        destination: `${CANONICAL_BASE_URL}/region-kansai-business-electricity`,
+        permanent: true,
+      },
     ];
   },
 };
