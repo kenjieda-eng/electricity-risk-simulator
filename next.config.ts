@@ -70,6 +70,16 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/case-study-logistics-solar-integration`,
         permanent: true,
       },
+      {
+        source: "/ev-charging-subsidies",
+        destination: `${CANONICAL_BASE_URL}/subsidies-overview`,
+        permanent: true,
+      },
+      {
+        source: "/factory-electricity-cost-review",
+        destination: `${CANONICAL_BASE_URL}/factory-electricity-cost-reduction`,
+        permanent: true,
+      },
     ];
   },
 };
