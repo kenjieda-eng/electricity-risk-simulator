@@ -5,6 +5,79 @@
 
 ---
 
+## 2026-04-30 B-22: GSC 7日データに基づく 5記事 CTR 最適化 (PR #135)
+
+- (1) bilateral-power-contracts, (5) renewable-energy-surcharge: title/description 全更新
+- (2) capacity, (3) accounting-guide, (4) price-trend-10-years: keywords のみ追加（title/desc は既に最適化済のため変更せず）
+- 期待効果: 月 10〜20 クリック増（即反映）
+- リン検証: PR #135 全項目 PASS、マージ判定 GO
+- ブランチ: `claude/B-22-title-description-optimization-20260430`、SHA `9dc9079`、diff stat 5 files +27/-6
+
+---
+
+## 2026-04-28（リン整備セッション + B-19 マージ）
+
+### 2026-04-28-D1: 4/27 INTERNAL_LINK_DENSITY_AUDIT は方法論欠陥
+
+旧監査の grep `grep -c 'href="/'` は JSX 属性形式のみ計測し、`RelatedLinks` の
+`{ href: "/..." }` 形式（オブジェクトプロパティ）を見逃していた。25本中23本が誤検出。
+
+→ 修正版（`INTERNAL_LINK_DENSITY_AUDIT_2026-04-28_CORRECTED.md`）で上書き、
+旧 B-9 / B-10 発注は廃棄、新 B-19（真に低密度な6本）に置換。
+
+### 2026-04-28-D2: B-19（PR #127 / SHA `12e8544`）マージ完了
+
+- Branch: `claude/B-19-low-density-hubs-20260428-1340`
+- 6 files changed, +77 -0
+- Build: 176秒、エラーなし
+- 全6ファイル outgoing ≥5（manga は ≥8）達成
+
+### 2026-04-28-D3: ContactCtaCard ≠ ContentCta の発見
+
+B-19 実装時に判明:
+- `posters` `manga` などのハブ系記事は `ContactCtaCard`（src/components/contact/）を使用
+- 通常記事ページは `ContentCta`（src/components/simulator/）を使用
+- `data-visualizations` は ContactCtaCard すら無く、`ComparisonRadar` 直後に挿入
+
+→ 今後の発注プロンプトでは「ContentCta or ContactCtaCard の **直前**」と両形式に対応する文言にすべき。
+→ data-visualizations のような特殊レイアウト記事は「`</main>` 直前」を fallback として明示。
+
+### 2026-04-28-D4: リン側準備完了の確認
+
+PART3（B-19/B-20/B-21/C-1/T1-#11/T1-#13/B-14）+ 月次振り返り 2026-05号完成形 +
+GSC 流し込みヘルパー + 薄い記事補強プラン + Lesson-09 すべて準備済。
+
+### 2026-04-28-D5: 本日 7 PR を main に投入（圧巻のスループット）
+
+朝 wait-and-see モード予定だったが、PART3 完成後に KENJI さんから即発注の判断があり、
+1日で 7 PR がすべてマージされた。本日 main HEAD = `6256bc0`。
+
+| PR | ID | 内容 | 効果 |
+|---|---|---|---|
+| #128 | B-1d-1 | TOC を how-to 系4記事に追加 | TOC 47→51 |
+| #127 | B-19 | 低密度ハブ6本に RelatedLinks 追加 | 6資源ハブの outgoing 強化 |
+| #129 | B-21 | Footer に資料・コンテンツハブ5本リンク追加 | 全549頁から資源ハブへ incoming 強化 |
+| #130 | B-1d-2 | TOC を基礎・FAQ系9記事に追加 | TOC 51→60 |
+| #131 | B-1d-3 | TOC を契約・プラン系9記事に追加 | TOC 60→69 |
+| #132 | B-6b | ReviewJsonLd 追加 + 1記事適用 | Review schema 0→1 + 共通基盤完成 |
+| #133 | B-6b-2 | 残り case-study 9 + switching に Review schema | Review schema 1→11 |
+
+最終達成: TOC **47→69**（+22）/ Review schema **0→11**（+11）/ 6資源ハブの中央駅化完成。
+5/5 計測まで残 7 日、施策は出し尽くした状態で wait-and-see モード本格突入。
+
+### 2026-04-28-D6: B-6b の slug spec ミスと Lesson-11 確立
+
+リン側の発注プロンプトで case-study 系 7 slug のうち 6 slug が空想（実在しない）だった。
+ClaudeCode は強引に新規作成せず、実在 1 slug のみ正しく適用 + 残りは差分発注に回す形で報告
+（Lesson-07 を正しく実行）。
+
+→ 教訓 Lesson-11: **発注プロンプトの slug は必ず repo を `ls src/app/` で実地確認してから書く**。
+  特に case-study / switching / case のような事例系記事は命名規則がブレやすい。
+
+差分発注 B-6b-2 で 10 件追加し、最終的に当初目標 7 件を超えて **11 件適用達成**。
+
+---
+
 ## 2026-04-18（キックオフ）
 
 ### ターゲット定義（全員合意）
