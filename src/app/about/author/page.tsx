@@ -67,7 +67,13 @@ export default function Page() {
           <section className="rounded-xl border border-emerald-200 bg-emerald-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連</h2>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm">
+              <li><Link href="/about" className="text-sky-700 underline">運営者情報・運営目的</Link></li>
               <li><Link href="/about/editorial-policy" className="text-sky-700 underline">編集ポリシー</Link></li>
+              <li><Link href="/kenji-eda" className="text-sky-700 underline">江田健二の著者プロフィール</Link></li>
+              <li><Link href="/journey" className="text-sky-700 underline">運営チームの歩み</Link></li>
+              <li><Link href="/knowledge-graph" className="text-sky-700 underline">扱うテーマの知識グラフ</Link></li>
+              <li><Link href="/concierge" className="text-sky-700 underline">中立社団 AI コンシェルジュ</Link></li>
+              <li><Link href="/how-to" className="text-sky-700 underline">シミュレーターの使い方</Link></li>
               <li><Link href="/downloads" className="text-sky-700 underline">データセット・ダウンロードセンター</Link></li>
             </ul>
           </section>
