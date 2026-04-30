@@ -1955,6 +1955,16 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-03-27",
   },
   {
+    title: "電気代の二重請求・二重契約とは｜原因と対処法・予防策の完全FAQ",
+    slug: "electricity-double-billing-faq",
+    description: "電気代の二重請求・二重契約・二重支払いが発生する5つの典型パターンと対処法、予防策を中立社団がFAQ形式で完全解説。電力会社切替時のトラブル予防に。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    featured: false,
+    order: 99,
+    publishedAt: "2026-04-30",
+  },
+  {
     title: "最終保障供給とは",
     slug: "last-resort-supply",
     description: "最終保障供給の仕組み、料金、契約件数の推移（2021〜2025年、グラフ付き）、2022年急増の背景、切替実務まで徹底解説。",
