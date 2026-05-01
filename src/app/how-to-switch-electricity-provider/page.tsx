@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "電力会社の切り替え手順｜法人向け完全ガイド";
@@ -114,6 +114,8 @@ const steps = [
   },
 ];
 
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.points.join(" / ") }));
+
 const commonPitfalls = [
   {
     title: "解約通知期限の見落とし",
@@ -151,6 +153,11 @@ export default function HowToSwitchElectricityProviderPage() {
           { name: "見直しポイントを知る", url: "https://simulator.eic-jp.org/articles/review-points" },
           { name: "電力会社の切り替え手順" },
         ]}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">

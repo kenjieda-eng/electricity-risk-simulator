@@ -5,7 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -81,6 +81,8 @@ const steps = [
     desc: "交渉後に合意が得られた場合は書面で確認して支払いを実行。合意できない場合は法的措置を含めた対応を検討する。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "当日", action: "請求書内容確認・根拠条項の特定・支払期限の把握", priority: "★★★" },
@@ -206,6 +208,11 @@ export default function EmergencyCancellationFeePage() {
           { name: "違約金請求の対応" },
         ]}
         faq={faqForSchema}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

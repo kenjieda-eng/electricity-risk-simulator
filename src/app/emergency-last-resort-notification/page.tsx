@@ -5,7 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -81,6 +81,8 @@ const steps = [
     desc: "新供給会社との契約完了を確認。今後の供給会社の経営状況モニタリング体制と、緊急時の代替先リストを整備する。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "当日", action: "通知内容確認・経営層への速報・使用量データ取得依頼", priority: "★★★" },
@@ -191,6 +193,11 @@ export default function EmergencyLastResortNotificationPage() {
           { name: "最終保障供給通知の対応" },
         ]}
         faq={faqForSchema}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
