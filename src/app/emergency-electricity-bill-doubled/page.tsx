@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["emergency-response"];
@@ -85,6 +85,8 @@ const steps = [
     desc: "原因が特定できたら対応策を実施し、再発防止の仕組みを整備する。請求誤りであれば電力会社に修正を要求し、設備起因であれば保守・更新計画を策定。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "当日", action: "請求書内訳の前月・前年比較・使用量確認", priority: "★★★" },
@@ -199,6 +201,11 @@ export default function EmergencyElectricityBillDoubledPage() {
           { name: "電気代が急に2倍になったときの対応手順" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

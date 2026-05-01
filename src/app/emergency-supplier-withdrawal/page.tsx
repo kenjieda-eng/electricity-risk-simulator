@@ -7,7 +7,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
@@ -86,6 +86,8 @@ const steps = [
     desc: "契約解除に伴う違約金・精算金の請求が来る可能性がある。契約書の解除条件を確認し、不当な請求については法律的な観点から対応を検討する。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "当日", action: "通知内容確認・供給停止日の把握・スケジュール逆算", priority: "★★★" },
@@ -186,6 +188,11 @@ export default function EmergencySupplierWithdrawalPage() {
           { name: "新電力から契約解除通知が届いたときの対応" },
         ]}
       faq={__CATEGORY_FAQ__}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

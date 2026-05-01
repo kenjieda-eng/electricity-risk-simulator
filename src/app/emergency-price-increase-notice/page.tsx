@@ -5,7 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -81,6 +81,8 @@ const steps = [
     desc: "異議申立期限・解約通告期限を逆算し、最終意思決定を行う。期限超過は自動継続の可能性があるため厳守する。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "当日", action: "通知内容の精読・インパクト試算開始", priority: "★★★" },
@@ -189,6 +191,11 @@ export default function EmergencyPriceIncreaseNoticePage() {
           { name: "値上げ通知への対応" },
         ]}
         faq={faqForSchema}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">

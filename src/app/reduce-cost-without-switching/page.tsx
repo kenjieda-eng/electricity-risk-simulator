@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
@@ -128,6 +128,8 @@ const steps: { step: string; title: string; body: string }[] = [
   },
 ];
 
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.body }));
+
 // --- Metadata ---
 export const metadata: Metadata = {
   title: pageTitle,
@@ -184,6 +186,11 @@ export default function ReduceCostWithoutSwitchingPage() {
           },
           { name: "電力会社を変えずに電気代を下げる方法" },
         ]}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         {/* パンくずナビ */}

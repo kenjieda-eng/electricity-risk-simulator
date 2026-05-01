@@ -5,7 +5,7 @@ import PrintButton from "../../components/market-data/PrintButton";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
-import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
@@ -81,6 +81,8 @@ const steps = [
     desc: "次の契約の満了日・解約通告期限を社内システム・カレンダーに登録し、半年前・3カ月前・1カ月前にアラートが届く仕組みを整える。",
   },
 ];
+
+const howToSteps = steps.map((s) => ({ name: s.title, text: s.desc }));
 
 const timelineRows = [
   { timing: "契約満了の6カ月前", action: "契約書の確認・解約通告期限の把握・切替検討開始", priority: "★★★" },
@@ -190,6 +192,11 @@ export default function EmergencyAutoRenewalRefusalPage() {
           { name: "自動更新の停止手続き" },
         ]}
         faq={faqForSchema}
+      />
+      <HowToJsonLd
+        name={pageTitle}
+        description={pageDescription}
+        steps={howToSteps}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
