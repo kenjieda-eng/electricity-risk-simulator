@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 
+const DEFAULT_SELECTORS = ["main h2", "main h3"];
+
 type Props = {
   selectors?: string[];
 };
 
-export default function TableOfContents({ selectors = ["main h2", "main h3"] }: Props) {
+export default function TableOfContents({ selectors = DEFAULT_SELECTORS }: Props) {
   const [items, setItems] = useState<{ id: string; text: string; level: number }[]>([]);
   const [activeId, setActiveId] = useState<string>("");
 
