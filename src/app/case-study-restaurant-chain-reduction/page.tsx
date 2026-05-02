@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -110,6 +111,8 @@ export default function CaseStudyRestaurantChainPage() {
           飲食業特有の「夜間・深夜帯の電力需要」に特化した見直し手法を解説します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* プロフィール */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">

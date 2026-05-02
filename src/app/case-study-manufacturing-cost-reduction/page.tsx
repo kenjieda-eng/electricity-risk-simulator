@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -116,6 +117,8 @@ export default function CaseStudyManufacturingPage() {
           本ページでは施策の詳細と数値を公開します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* 企業プロフィール */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
