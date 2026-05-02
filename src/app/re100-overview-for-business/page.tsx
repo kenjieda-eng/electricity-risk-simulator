@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -74,6 +75,8 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">RE100とは｜法人が参加する意義と実務フロー</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">RE100は事業用電力を100%再エネで賄うことを宣言する国際イニシアチブです。加盟要件、参加コスト、実務上の進め方を整理します。</p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">

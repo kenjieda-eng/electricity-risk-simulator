@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import MarketDataDownload from "../../components/market-data/MarketDataDownload";
@@ -111,6 +112,8 @@ export default function WinterVsSummerElectricityPage() {
           データは「冬の方がリスクが高い」ことを明確に示しています。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* 結論を最初に */}
       <section className="mt-6 rounded-xl border border-blue-300 bg-blue-50 p-5">
