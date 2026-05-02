@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
@@ -97,6 +98,8 @@ export default function CaseStudyMunicipalityPage() {
           公共施設特有の制約（議会承認・入札手続き・安定供給要件）を乗り越えた手順を詳しく解説します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* 施設プロフィール */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">

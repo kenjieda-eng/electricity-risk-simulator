@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -74,6 +75,8 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">停電時の損失試算と投資判断｜業種別の時間当たり損失額</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">停電が発生した場合の売上損失・追加費用を業種別に試算し、BCP投資の判断材料にする方法を整理します。</p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">

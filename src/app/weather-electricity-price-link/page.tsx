@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import TempBinChart from "../../components/market-data/TempBinChart";
@@ -110,6 +111,8 @@ export default function WeatherElectricityPriceLinkPage() {
           法人が気温リスクにどう備えるべきかを解説します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* キーファクト */}
       <section className="mt-6">

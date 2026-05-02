@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -74,6 +75,8 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">契約期間中の解約・違約金FAQ｜中途解約条項の読み方</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">電力契約の契約期間中に解約する場合の違約金・精算金の扱いについて、よくある質問を整理します。</p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">

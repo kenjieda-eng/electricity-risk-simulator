@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import JepxFyPriceChart from "../../components/market-data/JepxFyPriceChart";
@@ -110,6 +111,8 @@ export default function JepxSpotPriceDashboardPage() {
           スポット価格の構造・季節性・極端事象をわかりやすく解説します。
         </p>
       </header>
+
+      <TableOfContents />
 
       {/* キーファクト */}
       <section className="mt-6">
