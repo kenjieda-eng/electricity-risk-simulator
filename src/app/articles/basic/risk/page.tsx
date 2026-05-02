@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArticleJsonLd, BreadcrumbJsonLd, FaqPageJsonLd } from "../../../../components/seo/JsonLd";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../../components/seo/JsonLd";
 import AuthorBadge from "../../../../components/market-data/AuthorBadge";
 import MarketDataFaq from "../../../../components/market-data/MarketDataFaq";
 import ContentCta from "../../../../components/simulator/ContentCta";
@@ -96,7 +96,6 @@ export default function BasicRiskHubPage() {
         ]}
         faq={FAQ_ITEMS}
       />
-      <FaqPageJsonLd faqs={FAQ_ITEMS} />
 
       <nav aria-label="パンくず" className="text-sm text-slate-600">
         <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
