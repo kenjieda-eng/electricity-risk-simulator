@@ -5,6 +5,7 @@ import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpact
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import ContentCta from "../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
+import TableOfContents from "../../../components/market-data/TableOfContents";
 
 const pageTitle = "【2026年1月】法人の電気料金はどう動いた？補助政策とデータで読む年明けの変化";
 const pageDescription =
@@ -117,6 +118,8 @@ export default function BusinessElectricityRetrospective202601Page() {
           2026年1月使用分の電気料金動向を、低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
+
+      <TableOfContents />
 
       <MonthlyDataCards data={JAN_2026_DATA} />
 

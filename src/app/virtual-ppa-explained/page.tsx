@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
 import PrintButton from "../../components/market-data/PrintButton";
+import TableOfContents from "../../components/market-data/TableOfContents";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
@@ -75,6 +76,8 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">バーチャルPPAとは｜仕組みと日本での実施可能性</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">バーチャルPPAは物理的な電力ではなく、価格差と環境価値のみをやり取りする金融スキームです。欧米の普及状況と日本での実施条件を整理します。</p>
         </header>
+
+        <TableOfContents />
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">

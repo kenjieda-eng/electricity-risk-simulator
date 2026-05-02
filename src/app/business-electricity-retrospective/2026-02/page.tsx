@@ -4,6 +4,7 @@ import { MonthlyDataCards, MonthlyTrendChart, YearComparisonTable, SubsidyImpact
 import { ArticleJsonLd } from "../../../components/seo/JsonLd";
 import ContentCta from "../../../components/simulator/ContentCta";
 import RelatedLinks from "../../../components/simulator/RelatedLinks";
+import TableOfContents from "../../../components/market-data/TableOfContents";
 
 const pageTitle = "【2026年2月】法人の電気料金はどう動いた？補助終了前の最終確認";
 const pageDescription =
@@ -118,6 +119,8 @@ export default function BusinessElectricityRetrospective202602Page() {
           低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
+
+      <TableOfContents />
 
       <MonthlyDataCards data={FEB_2026_DATA} />
 
