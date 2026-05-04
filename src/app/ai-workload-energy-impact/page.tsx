@@ -11,9 +11,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "AIワークロードのエネルギー影響｜学習・推論の電力消費";
+const pageTitle = "AIの電力消費量｜学習・推論ワークロードの実態と2026年最新データ";
 const pageDescription =
-  "生成AI・機械学習の学習・推論プロセスが消費する電力の実態と、電力効率化の技術動向を整理します。";
+  "ChatGPT 1回の応答は約2.9Wh（Google検索の約10倍）、画像生成は1枚あたり2.9kWh（テキスト生成の約100倍）。GPT-3学習時のCO2排出502トン、消費電力1,287MWhなど、生成AI・機械学習の学習・推論プロセスが消費する電力の実態と効率化技術動向（NTT「tsuzumi」など）を、IEA・MIT Tech Reviewの最新データで法人向けに整理。";
 const pageUrl = "https://simulator.eic-jp.org/ai-workload-energy-impact";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["datacenter-ai-demand"] ?? [];
@@ -21,7 +21,20 @@ const FAQ_ITEMS = CATEGORY_FAQ_22_35["datacenter-ai-demand"] ?? [];
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "AI最適化", "AI電力需要"],
+  keywords: [
+    "ai 電力消費",
+    "ai 消費電力",
+    "aiの電力消費量",
+    "ai消費電力",
+    "ai 電気使用量",
+    "aiの消費電力",
+    "AI電力需要",
+    "生成AI 電力消費",
+    "ChatGPT 電力消費",
+    "AIワークロード 電力",
+    "法人電気料金",
+    "AI最適化",
+  ],
   alternates: {
     canonical: pageUrl,
   },
