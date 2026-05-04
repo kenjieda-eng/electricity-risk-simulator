@@ -45,6 +45,58 @@ const CHANGE_FREQUENCY_BY_PATH: Partial<Record<string, MetadataRoute.Sitemap[num
   "/articles": "weekly",
 };
 
+// B-38a: GSC「クロール済み - インデックス未登録」滞留 25 ページに優先度シグナルを送信
+const NOT_INDEXED_URLS_TO_PROMOTE = new Set<string>([
+  "/non-price-factors-in-electricity-contract",
+  "/special/oil-scenario-analysis/subsidy-outlook",
+  "/solar-suited-corporations",
+  "/how-procurement-affects-corporate-rates",
+  "/low-margin-company-price-surge-risk",
+  "/how-to-explain-electricity-cost-review-internally",
+  "/about-this-site",
+  "/special/emergency-scenario-analysis/industry-impact",
+  "/special/emergency-scenario-analysis/scenario-2",
+  "/electricity-cost-reduction-case-studies",
+  "/reduce-cost-without-switching",
+  "/electricity-quote-evaluation-checklist",
+  "/downloads",
+  "/low-voltage-review-essentials",
+  "/municipality-re100-decarbonization",
+  "/spin-off-energy-contracts",
+  "/articles/energy-equipment",
+  "/winter-vs-summer-electricity",
+  "/why-corporations-consider-batteries",
+  "/telecom-facility-electricity-cost-review",
+  "/last-resort-supply-terms",
+  "/special/materials-packaging-scenario-analysis/industry-impact",
+  "/special/emergency-scenario-analysis",
+  "/articles/by-industry/commercial/restaurant-izakaya",
+  "/how-electricity-prices-are-determined",
+]);
+
+const PROMOTED_PRIORITY = 0.9;
+const PROMOTED_CHANGE_FREQUENCY: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly";
+
+function resolvePriority(route: string): number {
+  if (PRIORITY_BY_PATH[route] !== undefined) {
+    return PRIORITY_BY_PATH[route];
+  }
+  if (NOT_INDEXED_URLS_TO_PROMOTE.has(route)) {
+    return PROMOTED_PRIORITY;
+  }
+  return 0.8;
+}
+
+function resolveChangeFrequency(route: string): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  if (CHANGE_FREQUENCY_BY_PATH[route] !== undefined) {
+    return CHANGE_FREQUENCY_BY_PATH[route];
+  }
+  if (NOT_INDEXED_URLS_TO_PROMOTE.has(route)) {
+    return PROMOTED_CHANGE_FREQUENCY;
+  }
+  return "monthly";
+}
+
 type PageRoute = {
   route: string;
   lastModified: Date;
@@ -225,8 +277,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return allRoutes.map((route) => ({
       url: `${SITE_URL}${route}`,
       lastModified: routeDateMap.get(route),
-      changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
-      priority: PRIORITY_BY_PATH[route] ?? 0.8,
+      changeFrequency: resolveChangeFrequency(route),
+      priority: resolvePriority(route),
     }));
   } catch {
     const fallbackPaths = [
@@ -262,8 +314,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return uniquePaths.map((route) => ({
       url: `${SITE_URL}${route}`,
       lastModified: now,
-      changeFrequency: CHANGE_FREQUENCY_BY_PATH[route] ?? "monthly",
-      priority: PRIORITY_BY_PATH[route] ?? 0.8,
+      changeFrequency: resolveChangeFrequency(route),
+      priority: resolvePriority(route),
     }));
   }
 }
