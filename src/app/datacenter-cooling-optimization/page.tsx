@@ -11,9 +11,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "データセンター冷却最適化｜PUE改善と液冷の実務";
+const pageTitle = "PUE改善｜データセンター冷却最適化の実務｜空冷・液冷比較と電力削減アプローチ";
 const pageDescription =
-  "データセンターのPUE（電力使用効率）改善の取り組み、空冷と液冷の比較、冷却関連電力の削減アプローチを整理します。";
+  "PUE（Power Usage Effectiveness、電力使用効率）はデータセンターの省エネ指標。AI高性能GPUサーバー普及で空冷から液冷への切替が進む中、空冷・液冷の比較、PUE改善で最大30%の冷却電力削減を実現する実務手順、ハイパースケーラーの最新事例を法人向けに整理します。";
 const pageUrl = "https://simulator.eic-jp.org/datacenter-cooling-optimization";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["datacenter-ai-demand"] ?? [];
@@ -21,7 +21,20 @@ const FAQ_ITEMS = CATEGORY_FAQ_22_35["datacenter-ai-demand"] ?? [];
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "データセンター電力"],
+  keywords: [
+    "pue データセンター",
+    "PUE 改善",
+    "pue改善",
+    "PUE 計算",
+    "データセンター 冷却",
+    "データセンター 液冷",
+    "データセンター 空冷",
+    "データセンター 高電力",
+    "データセンター電力",
+    "AI高性能GPU 冷却",
+    "ハイパースケーラー PUE",
+    "法人電気料金",
+  ],
   alternates: {
     canonical: pageUrl,
   },
