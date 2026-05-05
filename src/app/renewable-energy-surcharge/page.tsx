@@ -366,6 +366,11 @@ export default function RenewableEnergySurchargePage() {
               title: "法人の電気料金を削減する見直しポイント7選",
               description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
             },
+            {
+              href: "/articles/industry-guide",
+              title: "業種別の見直しポイント集（33 業種）",
+              description: "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。",
+            },
           ]}
         />
 
