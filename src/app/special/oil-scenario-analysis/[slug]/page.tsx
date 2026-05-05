@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: page.title,
     description: page.description,
+    ...(page.keywords?.length ? { keywords: page.keywords } : {}),
     alternates: { canonical: url },
     openGraph: {
       title: page.title,

@@ -7,6 +7,7 @@ export type EmergencyScenarioPage = {
   description: string;
   heroKicker: string;
   heroAccentClass: string;
+  keywords?: string[];
 };
 
 export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
@@ -58,11 +59,24 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
   {
     slug: "scenario-2",
     label: "シナリオ2",
-    title: "シナリオ2｜夏まで長期化した場合の電気代リスク",
+    title: "シナリオ2｜夏まで長期化した場合の電気代リスク｜需要ピーク重複の月次試算",
     description:
-      "夏の需要ピークと価格高騰が重なるケースで、法人の月次コストにどの程度の上振れが出るかを試算します。",
+      "中東情勢が夏まで長期化した場合、夏季の需要ピークと原油価格高騰が重なるケースで、法人の月次電気コストにどの程度の上振れが発生するかを契約区分別（特高・高圧・低圧）に試算。製造業・冷凍冷蔵・データセンターなど電力多消費業種への影響を重点解説。",
     heroKicker: "SCENARIO 2",
     heroAccentClass: "from-amber-900 to-amber-700",
+    keywords: [
+      "電気代 シナリオ 夏 長期化",
+      "夏 電気料金 リスク 法人",
+      "原油高 夏 電気代",
+      "需要ピーク 電気代 高騰",
+      "中東情勢 長期化 電気代",
+      "夏季 電力市場 高騰",
+      "法人 電気代 月次試算 夏",
+      "製造業 夏 電気代 リスク",
+      "冷凍冷蔵 夏 電気代",
+      "データセンター 夏 電気代",
+      "法人電気料金",
+    ],
   },
   {
     slug: "scenario-3",
@@ -85,11 +99,24 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
   {
     slug: "industry-impact",
     label: "業種別",
-    title: "業種別インパクト｜電力多消費業種の影響度ランキング",
+    title: "業種別インパクト｜電力多消費業種の有事影響度ランキング【製造・冷凍冷蔵・DC】",
     description:
-      "製造業・冷凍冷蔵・データセンターなど業種別に、シナリオごとの電気代インパクトを比較します。",
+      "中東情勢有事局面での電気代影響度を、製造業・冷凍冷蔵・データセンター・通信・小売・医療など 10 業種別に比較ランキング。各業種の電力多消費度、固定費比率、価格転嫁難易度の 3 軸で評価し、影響度上位業種への対策を整理。",
     heroKicker: "INDUSTRY IMPACT",
     heroAccentClass: "from-blue-900 to-blue-700",
+    keywords: [
+      "業種別 電気代 影響度",
+      "電力多消費業種 ランキング",
+      "製造業 電気代 影響",
+      "冷凍冷蔵 電気代 リスク",
+      "データセンター 電気代 影響",
+      "業種別 電力 リスク 比較",
+      "電気代 価格転嫁 業種別",
+      "有事 業種別 電気代",
+      "法人 業種別 電気代 リスク",
+      "電気代 影響度ランキング",
+      "法人電気料金",
+    ],
   },
   {
     slug: "action-roadmap",

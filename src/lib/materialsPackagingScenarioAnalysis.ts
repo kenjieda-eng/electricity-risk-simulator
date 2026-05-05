@@ -6,6 +6,7 @@ export type MaterialsScenarioPage = {
   title: string;
   description: string;
   heroKicker: string;
+  keywords?: string[];
 };
 
 export const MATERIALS_SCENARIO_SERIES: MaterialsScenarioPage[] = [
@@ -60,10 +61,23 @@ export const MATERIALS_SCENARIO_SERIES: MaterialsScenarioPage[] = [
   {
     slug: "industry-impact",
     label: "業種別影響",
-    title: "製造業・EC・食品メーカー・建設の調達コスト影響",
+    title: "資材・包装コスト上昇の業種別影響｜製造・EC・食品・建設の調達コスト試算",
     description:
-      "食品、EC、製造、建設など主要業種ごとに、年間コスト増と利益圧迫リスクを試算します。",
+      "ナフサ・原油価格上昇による資材・包装コスト高騰の影響を、食品メーカー（容器・包装）・EC（梱包資材）・製造業（樹脂部品）・建設（断熱材）など主要業種別に年間コスト増と利益圧迫リスクを試算。電気代と並ぶ調達コストリスクを業種横断で比較。",
     heroKicker: "INDUSTRY IMPACT",
+    keywords: [
+      "資材 価格高騰 業種別 影響",
+      "ナフサ 業種別 影響",
+      "包装コスト 業種別 上昇",
+      "食品メーカー 包装コスト",
+      "EC 梱包資材 コスト上昇",
+      "製造業 樹脂 価格高騰",
+      "建設 断熱材 コスト",
+      "資材高騰 利益圧迫 業種",
+      "原油 業種別 影響",
+      "調達コスト 業種別 試算",
+      "法人電気料金",
+    ],
   },
   {
     slug: "action-roadmap",
