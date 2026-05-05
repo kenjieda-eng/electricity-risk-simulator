@@ -435,6 +435,12 @@ export default function ReduceCostWithoutSwitchingPage() {
                 description:
                   "プラン変更時の違約金の有無を確認するための条項の読み方。",
               },
+              {
+                href: "/business-electricity-cost-reduction-review-points",
+                title: "法人の電気料金を削減する見直しポイント7選",
+                description:
+                  "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+              },
             ]}
           />
         </div>

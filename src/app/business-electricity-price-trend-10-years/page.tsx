@@ -546,6 +546,11 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             { href: "/when-will-business-electricity-prices-drop", title: "電気料金はいつ下がるか", description: "Pillar B 配下クラスター。料金下降タイミングの予測整理。" },
             { href: "/business-electricity-bill-breakdown", title: "法人電気料金の内訳", description: "請求書の項目構成と上昇要因の対応関係。" },
             { href: "/articles/price-trends", title: "電気料金の推移と高止まり（カテゴリ）", description: "本クラスターを含む価格動向カテゴリ。" },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人の電気料金を削減する見直しポイント7選",
+              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+            },
           ]}
         />
 
