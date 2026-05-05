@@ -38,11 +38,13 @@ const PRIORITY_BY_PATH: Record<string, number> = {
   "/how-to": 0.95,
   "/compare": 0.95,
   "/articles": 0.95,
+  "/business-electricity-cost-reduction-review-points": 0.95,
 };
 
 const CHANGE_FREQUENCY_BY_PATH: Partial<Record<string, MetadataRoute.Sitemap[number]["changeFrequency"]>> = {
   "/": "weekly",
   "/articles": "weekly",
+  "/business-electricity-cost-reduction-review-points": "weekly",
 };
 
 // B-38a: GSC「クロール済み - インデックス未登録」滞留 25 ページに優先度シグナルを送信
