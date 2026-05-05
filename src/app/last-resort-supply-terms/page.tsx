@@ -9,9 +9,9 @@ import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "最終保障供給の約款はどう読むか｜確認すべき7項目と見落としリスク";
+const pageTitle = "最終保障供給の約款はどう読むか｜法人担当者向け7項目チェックリストと見落としリスク";
 const pageDescription =
-  "最終保障供給の約款や料金表を見るときに、法人担当者がどこを確認すればよいかを、難しい条文をそのまま並べずに整理します。";
+  "最終保障供給の約款や料金表を法人担当者が確認する際の7項目チェックリスト（料金単価、契約期間、解約条件、適用対象、市場価格調整、適用エリア、申込手続き）を整理。難しい条文を読み解くポイントと、見落とすと損する重要リスクを、新電力倒産時の緊急対応事例を交えて一般社団法人エネルギー情報センターが中立解説。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -22,6 +22,13 @@ export const metadata: Metadata = {
     "最終保障供給 法人 担当者",
     "最終保障供給 高圧 特別高圧 約款",
     "最終保障供給 供給条件",
+    "最終保障供給 7項目 確認",
+    "最終保障供給 解約条件",
+    "最終保障供給 市場価格調整",
+    "新電力 倒産 最終保障",
+    "最終保障供給 申込 手続き",
+    "最終保障供給 約款 読み方",
+    "法人電気料金",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/last-resort-supply-terms",
