@@ -10,9 +10,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "分社化・会社分割時の電力契約｜空白期間を避けるための設計";
+const pageTitle = "会社分割・分社化時の電力契約引継ぎ手順｜空白期間ゼロ設計の実務ガイド";
 const pageDescription =
-  "会社分割・分社化時の電力契約の分割・新規契約設定と、実行日前後の空白期間リスクを回避する手順を整理します。";
+  "会社分割・分社化（M&A・グループ再編）時の電力契約の引継ぎ・新規契約設定の手順、実行日前後の供給空白期間を回避する設計、解約金・名義変更の注意点をスケジュール表付きで中立社団が解説。法務・経理・総務向け実務ガイド。";
 const pageUrl = "https://simulator.eic-jp.org/spin-off-energy-contracts";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["ma-organizational-change"] ?? [];
@@ -20,7 +20,19 @@ const FAQ_ITEMS = CATEGORY_FAQ_22_35["ma-organizational-change"] ?? [];
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "分社化"],
+  keywords: [
+    "会社分割 電力契約",
+    "分社化 電力契約 引継ぎ",
+    "M&A 電力契約 名義変更",
+    "電力契約 空白期間 回避",
+    "会社分割 電気代 手続き",
+    "組織再編 電力契約",
+    "電力 解約 名義変更",
+    "電力契約 引継ぎ スケジュール",
+    "M&A エネルギー契約",
+    "分社化 電気契約 注意点",
+    "法人電気料金",
+  ],
   alternates: {
     canonical: pageUrl,
   },

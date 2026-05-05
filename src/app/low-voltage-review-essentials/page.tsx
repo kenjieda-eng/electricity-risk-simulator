@@ -11,9 +11,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "低圧契約の見直し要点｜小規模事業者向けチェックリスト";
+const pageTitle = "低圧電力契約の見直し要点｜小規模事業者・店舗・SOHO向け9項目チェックリスト";
 const pageDescription =
-  "低圧契約の見直しで確認すべき項目を、料金プラン・契約アンペア・電力使用実態から整理したチェックリストです。";
+  "契約電力50kW未満の低圧電力契約見直しで確認すべき9項目を、小規模事業者・店舗・SOHO向けに整理。契約アンペア、料金プラン、デマンド管理、アンペアブレーカ容量、スマートメーター活用、新電力切替注意点まで実例付きで中立社団が解説。";
 const pageUrl = "https://simulator.eic-jp.org/low-voltage-review-essentials";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["sme-guide"] ?? [];
@@ -21,7 +21,19 @@ const FAQ_ITEMS = CATEGORY_FAQ_22_35["sme-guide"] ?? [];
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
-  keywords: ["法人電気料金", "電気代", "法人向け電気料金", "低圧契約"],
+  keywords: [
+    "低圧 電力契約 見直し",
+    "低圧電力 小規模事業者",
+    "低圧契約 店舗 見直し",
+    "SOHO 電気契約 見直し",
+    "契約アンペア 法人 最適化",
+    "低圧 電気料金 削減",
+    "小規模事業者 電気代 見直し",
+    "低圧 新電力 切替",
+    "店舗 電気契約 見直し",
+    "低圧 電力 50kW未満",
+    "法人電気料金",
+  ],
   alternates: {
     canonical: pageUrl,
   },

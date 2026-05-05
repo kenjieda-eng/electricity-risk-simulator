@@ -7,9 +7,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
-  "電気料金の見積書が届いたら｜比較・評価の実践チェックリスト";
+  "電力見積書比較の実践チェックリスト｜8領域30項目で抜け漏れゼロに";
 const pageDescription =
-  "法人の電力見積書を複数社で比較するときに抜け漏れを防ぐための実践チェックリスト。単価の種類・契約期間・燃調費・再エネ賦課金・容量拠出金・付帯サービス・支払条件・担当者対応まで8領域で整理し、比較表の項目例も掲載します。";
+  "複数電力会社の見積書を比較するときに抜け漏れを防ぐ8領域30項目の実践チェックリスト。単価種類、契約期間、燃調費、再エネ賦課金、容量拠出金、付帯サービス、支払条件、担当者対応まで完全網羅。比較表テンプレート付き、中立社団の解説です。";
 const pageUrl =
   "https://simulator.eic-jp.org/electricity-quote-evaluation-checklist";
 
@@ -191,12 +191,17 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
-    "電気料金 見積書 比較",
-    "電力 相見積もり チェックリスト",
-    "法人 電気 見積 評価",
-    "電力契約 見積書 見方",
-    "電気代 見積 比較表",
-    "電力 見積 チェック項目",
+    "電力 見積書 比較",
+    "電気料金 見積 チェックリスト",
+    "電力 見積評価 法人",
+    "電力会社 比較 項目",
+    "電力 見積 確認事項",
+    "電力 見積 比較表",
+    "新電力 見積 比較",
+    "電気代 見積 抜け漏れ",
+    "電力 見積取得 注意点",
+    "電力 見積 8領域",
+    "法人電気料金",
   ],
   alternates: {
     canonical: pageUrl,
