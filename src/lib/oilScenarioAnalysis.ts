@@ -6,6 +6,7 @@ export type OilScenarioPage = {
   title: string;
   description: string;
   heroKicker: string;
+  keywords?: string[];
 };
 
 export const OIL_SCENARIO_SERIES: OilScenarioPage[] = [
@@ -28,10 +29,23 @@ export const OIL_SCENARIO_SERIES: OilScenarioPage[] = [
   {
     slug: "subsidy-outlook",
     label: "補助金の行方",
-    title: "170円抑制の補助金はいつまで続くか",
+    title: "ガソリン170円抑制補助金はいつまで続くか｜縮小・終了時の電気代インパクト試算",
     description:
-      "支給単価48.1円/Lと財源1兆800億円を前提に、補助金の持続性と縮小・終了時の価格インパクトをシナリオ別に検証します。",
+      "ガソリン170円抑制の補助金（支給単価48.1円/L、財源1兆800億円）の持続性を、財源消化ペース・政府見通し・過去事例から分析。縮小・終了時に法人電気代へどう波及するか、燃料費調整額のタイムラグも含めてシナリオ別に検証。",
     heroKicker: "SUBSIDY ANALYSIS",
+    keywords: [
+      "ガソリン 補助金 いつまで",
+      "170円抑制 補助金 持続性",
+      "燃料補助金 終了 電気代",
+      "ガソリン 補助 縮小 影響",
+      "補助金終了 電気代 インパクト",
+      "燃料補助金 財源 消化",
+      "電気代 補助金 終了 法人",
+      "ガソリン 補助 シナリオ",
+      "燃料費調整額 補助金 関係",
+      "法人 電気代 補助金影響",
+      "法人電気料金",
+    ],
   },
   {
     slug: "diesel-and-heavy-oil",
