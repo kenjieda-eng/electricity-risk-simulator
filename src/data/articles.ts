@@ -1764,6 +1764,16 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-03-27",
   },
   {
+    title: "法人の電気料金を削減する見直しポイント7選｜契約区分別の削減効果と進め方を中立社団が完全ガイド【2026年5月版】",
+    slug: "business-electricity-cost-reduction-review-points",
+    description: "法人の電気料金削減に効く見直しポイント7項目を一般社団法人エネルギー情報センターが中立解説。契約電力・燃調・容量拠出金・市場連動 vs 固定・デマンド制御・PPA・自家消費太陽光まで、契約区分別・業種別の削減効果と進め方を完全ガイド。再エネ賦課金 4.18 円/kWh・容量拠出金 409 円/kW など 2026 年度最新数値反映。",
+    category: "見直しポイントを知る",
+    categorySlug: "review-points",
+    featured: true,
+    order: 1,
+    publishedAt: "2026-05-05",
+  },
+  {
     title: "法人の電力契約見直しは何から始めるべきか",
     slug: "how-to-start-electricity-contract-review",
     description: "見直しの着手順序を、資料確認から比較・切替後確認まで実務の流れで整理します。",
