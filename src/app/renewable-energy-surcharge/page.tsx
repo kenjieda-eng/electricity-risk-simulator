@@ -361,6 +361,11 @@ export default function RenewableEnergySurchargePage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人の電気料金を削減する見直しポイント7選",
+              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+            },
           ]}
         />
 
