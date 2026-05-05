@@ -700,6 +700,12 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
                 description:
                   "複数社見積もりの抜け漏れを防ぐ8領域30項目の実践チェックリスト。",
               },
+              {
+                href: "/articles/industry-guide",
+                title: "業種別の見直しポイント集（33 業種）",
+                description:
+                  "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。",
+              },
             ]}
           />
         </div>

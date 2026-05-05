@@ -268,6 +268,64 @@ export default function Page() {
             </div>
           </div>
 
+          {/* B-40: 業種別・エリア別の見直しポイント（被リンク強化） */}
+          <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">業種・エリア別の見直しポイント</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              自社の業種・エリアに近い解説ページから、契約見直しのポイントを確認できます。
+            </p>
+
+            <div className="mt-4">
+              <h3 className="text-base font-semibold text-slate-900">業種別の見直しポイント（主要 25 業種）</h3>
+              <p className="mt-1 text-xs text-slate-600">
+                負荷特性・電力使用パターン別の契約見直し着眼点を業種ごとに整理。<Link href="/articles/industry-guide" className="text-sky-700 underline-offset-2 hover:underline">業種別ハブで全 33 業種を見る →</Link>
+              </p>
+              <ul className="mt-3 grid gap-1 text-sm text-slate-700 sm:grid-cols-2 xl:grid-cols-3">
+                <li><Link href="/hospital-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">病院</Link></li>
+                <li><Link href="/clinic-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">クリニック</Link></li>
+                <li><Link href="/hotel-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">ホテル</Link></li>
+                <li><Link href="/business-hotel-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">ビジネスホテル</Link></li>
+                <li><Link href="/hot-spring-facility-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">温泉施設</Link></li>
+                <li><Link href="/restaurant-chain-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">飲食チェーン</Link></li>
+                <li><Link href="/supermarket-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">スーパー</Link></li>
+                <li><Link href="/drugstore-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">ドラッグストア</Link></li>
+                <li><Link href="/department-store-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">百貨店</Link></li>
+                <li><Link href="/retail-store-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">小売店</Link></li>
+                <li><Link href="/office-building-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">オフィスビル</Link></li>
+                <li><Link href="/food-factory-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">食品工場</Link></li>
+                <li><Link href="/semiconductor-facility-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">半導体工場</Link></li>
+                <li><Link href="/continuous-operation-factory-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">24時間稼働工場</Link></li>
+                <li><Link href="/distribution-center-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">物流センター</Link></li>
+                <li><Link href="/data-center-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">データセンター</Link></li>
+                <li><Link href="/telecom-facility-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">通信設備</Link></li>
+                <li><Link href="/research-facility-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">研究施設</Link></li>
+                <li><Link href="/cultural-facility-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">文化施設</Link></li>
+                <li><Link href="/public-gym-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">公共体育館</Link></li>
+                <li><Link href="/water-sewage-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">上下水道</Link></li>
+                <li><Link href="/school-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">学校</Link></li>
+                <li><Link href="/university-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">大学</Link></li>
+                <li><Link href="/municipality-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">自治体施設</Link></li>
+                <li><Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline-offset-2 hover:underline">工場ベンチマーク</Link></li>
+              </ul>
+            </div>
+
+            <div className="mt-5">
+              <h3 className="text-base font-semibold text-slate-900">エリア別の電力事情（10 エリア）</h3>
+              <p className="mt-1 text-xs text-slate-600">
+                各エリアの料金水準・JEPX 推移・新電力動向・契約見直しのポイントを整理。
+              </p>
+              <ul className="mt-3 grid gap-1 text-sm text-slate-700 sm:grid-cols-2 xl:grid-cols-4">
+                <li><Link href="/region-tokyo-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">東京電力エリア</Link></li>
+                <li><Link href="/region-tohoku-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">東北電力エリア</Link></li>
+                <li><Link href="/region-hokuriku-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">北陸電力エリア</Link></li>
+                <li><Link href="/region-chugoku-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">中国電力エリア</Link></li>
+                <li><Link href="/region-shikoku-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">四国電力エリア</Link></li>
+                <li><Link href="/region-kansai-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">関西電力エリア</Link></li>
+                <li><Link href="/region-okinawa-business-electricity" className="text-sky-700 underline-offset-2 hover:underline">沖縄電力エリア</Link></li>
+              </ul>
+            </div>
+          </div>
+
           {/* 最近追加されたページ */}
           <section className="mt-6">
             <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">最近追加されたページ</h2>
