@@ -5,13 +5,27 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import DownloadLink from "../../components/analytics/DownloadLink";
 
-const pageTitle = "ダウンロードセンター｜電気料金・脱炭素データ・テンプレート集";
-const pageDescription = "CSV・JSON・iCalで電力市場データ、制度改正カレンダー、補助金一覧、契約チェックリストなどを一括ダウンロードできます。法人での実務利用は無料・自由（CC BY 4.0）です。";
+const pageTitle = "ダウンロードセンター｜法人電気代見直しテンプレート・補助金カレンダー・市場データ無料配布【CC BY 4.0】";
+const pageDescription = "法人電気代の見直し実務に使える即利用可能なテンプレート集（請求書チェックシート、見直し5項目チェック、見積比較表、稟議書、議会説明スライド、BCP チェック等）と、市場データ（JEPX 価格、補助金カレンダー、制度改正カレンダー）を CSV・Markdown・iCal で一括配布。法人実務利用は無料・自由（CC BY 4.0）。";
 const pageUrl = "https://simulator.eic-jp.org/downloads";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    "電気代 テンプレート 無料",
+    "法人 電気代 チェックシート",
+    "電力契約 稟議書 テンプレート",
+    "電気代 比較表 ダウンロード",
+    "JEPX 価格 CSV ダウンロード",
+    "補助金 カレンダー 電力",
+    "電力BCP チェックリスト",
+    "電気代 見直し テンプレート",
+    "電力 見積比較 ダウンロード",
+    "電気代 経営層 報告 テンプレート",
+    "法人 電気代 ツール 無料",
+    "法人電気料金",
+  ],
   alternates: { canonical: pageUrl },
   openGraph: {
     title: pageTitle, description: pageDescription, url: pageUrl,

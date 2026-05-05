@@ -13,9 +13,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
 
 
-const pageTitle = "自治体のRE100・脱炭素調達と電力コストの両立｜自治体向け";
+const pageTitle = "自治体のRE100・脱炭素調達と電力コストの両立｜ゼロカーボンシティ向け実務ガイド";
 const pageDescription =
-  "自治体の脱炭素目標と電力コスト管理を両立させるための調達戦略と実務上の選択肢を整理します。";
+  "ゼロカーボンシティ宣言した自治体が、RE100・脱炭素目標と電力コスト管理を両立させるための調達戦略を完全整理。再エネ電力メニュー比較、PPA活用、入札方式選定、議会説明、住民影響への配慮まで、実務上の選択肢を一般社団法人エネルギー情報センターが中立解説。自治体担当者・議員向け。";
 const pageUrl = "https://simulator.eic-jp.org/municipality-re100-decarbonization";
 
 export const metadata: Metadata = {
@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     "自治体 脱炭素 電力調達",
     "自治体 再エネ調達 コスト",
     "ゼロカーボンシティ 電力",
+    "公共施設 RE100",
+    "自治体 PPA 導入",
+    "自治体 再エネ 入札",
+    "自治体 電力契約 議会",
+    "脱炭素 電力 自治体",
+    "公共施設 再エネ メニュー",
+    "自治体 電気代 両立",
+    "法人電気料金",
   ],
   alternates: { canonical: pageUrl },
   openGraph: {

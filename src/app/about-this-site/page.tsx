@@ -9,8 +9,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
   "このサイトの思い｜法人向け電気料金の情報格差をなくすために";
-const pageDescription =
-  "法人向け電気料金の情報格差をなくし、企業や自治体の電力担当者が適切な判断をできる環境をつくりたい。一般社団法人エネルギー情報センターが運営する本サイトの理念と背景をお伝えします。";
+const pageDescription = "法人向け電気料金の情報格差をなくし、企業や自治体の電力担当者が中立的判断をできる環境を作ることを目的に、一般社団法人エネルギー情報センターが運営。電力契約の見直し・市場連動 vs 固定の比較・有事シナリオ分析・業種別ガイドなど、特定の電力会社推薦や契約仲介を一切行わない中立的情報基盤として、企業総務・自治体施設管理者の意思決定を支援します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -21,6 +20,12 @@ export const metadata: Metadata = {
     "エネルギー情報センター",
     "電気料金 シミュレーター",
     "企業 自治体 電力担当",
+    "電力契約 中立 情報",
+    "法人 電気料金 ナビ",
+    "電力 比較 中立社団",
+    "電気料金 中立 解説",
+    "一般社団法人 電力",
+    "法人電気料金",
   ],
   alternates: {
     canonical: "https://simulator.eic-jp.org/about-this-site",

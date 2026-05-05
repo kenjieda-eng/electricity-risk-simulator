@@ -25,9 +25,9 @@ import {
 
 const FAQ = MARKET_DATA_FAQ["winter-vs-summer-electricity"];
 
-const pageTitle = "冬と夏 どちらが電気代リスクか｜法人向け季節別データ比較";
+const pageTitle = "冬と夏 どちらが電気代リスクか｜法人向け季節別データ比較【需給逼迫・JEPX 価格・燃調費】";
 const pageDescription =
-  "法人の電気代は冬と夏、どちらがリスクが大きいのか。需給逼迫、市場価格のスパイク、燃調費の動きを季節別データで比較し、契約メニュー別の影響度と対策を整理します。";
+  "法人の電気代は冬と夏でどちらがリスクが大きいか？需給逼迫の頻度、JEPX市場価格のスパイク発生率、燃料費調整額の動きを季節別データで完全比較。固定単価プラン vs 市場連動プランの影響度差、業種別（製造・物流・医療）の季節リスク、契約戦略の判断軸まで一般社団法人エネルギー情報センターが中立解説。";
 const pageUrl = "https://simulator.eic-jp.org/winter-vs-summer-electricity";
 
 export const metadata: Metadata = {
@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "季節別 電気代 リスク",
     "法人 季節 電力調達",
     "冬季 電気料金 上昇",
+    "夏季 電気代 ピーク",
+    "市場連動 季節 リスク",
+    "法人 季節別 契約戦略",
+    "法人電気料金",
   ],
   alternates: { canonical: pageUrl },
   openGraph: {
