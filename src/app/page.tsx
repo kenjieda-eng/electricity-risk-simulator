@@ -265,6 +265,10 @@ export default function Page() {
                 <p className="text-sm font-semibold text-slate-900">監修者プロフィール｜江田健二（理事）</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">電力・エネルギー業界20年以上、書籍20冊以上、政府・商工会議所登壇多数</p>
               </Link>
+              <Link href="/by-role" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+                <p className="text-sm font-semibold text-slate-900">役割別ガイド（経営者/担当者）</p>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">経営者・電力担当者・経理担当者の役割別に最適化された読み方ガイド</p>
+              </Link>
             </div>
           </div>
 

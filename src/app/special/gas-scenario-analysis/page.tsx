@@ -193,6 +193,21 @@ export default function GasScenarioAnalysisTopPage() {
         </p>
       </section>
 
+      {/* B-41: シリーズ全ページ網羅ナビ（被リンク強化）*/}
+      <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">ガスシナリオ分析シリーズ全ページ</h2>
+        <p className="mt-2 text-sm text-slate-700">本シリーズの全ページを順番に読むことで、都市ガス・LPガスのコスト上昇リスクを体系的に把握できます。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/special/gas-scenario-analysis/price-mechanism" className="text-sky-700 underline-offset-2 hover:underline">価格の仕組み</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/subsidy-outlook" className="text-sky-700 underline-offset-2 hover:underline">補助金の行方</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/lpg-trend" className="text-sky-700 underline-offset-2 hover:underline">LPガス</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/industry-impact" className="text-sky-700 underline-offset-2 hover:underline">業種別影響</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/cost-simulation" className="text-sky-700 underline-offset-2 hover:underline">コスト試算</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/electrification-comparison" className="text-sky-700 underline-offset-2 hover:underline">電化比較</Link></li>
+          <li><Link href="/special/gas-scenario-analysis/action-roadmap" className="text-sky-700 underline-offset-2 hover:underline">対策ロードマップ</Link></li>
+        </ul>
+      </section>
+
       <RelatedLinks
         heading="下層ページから詳細を見る"
         intro="仕組み・補助金・LPガス・業種別・試算・電化比較・対策を順に確認すると、意思決定に繋げやすくなります。"

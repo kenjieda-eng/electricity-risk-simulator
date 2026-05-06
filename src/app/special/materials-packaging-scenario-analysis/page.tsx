@@ -200,6 +200,21 @@ export default function MaterialsScenarioTopPage() {
         </p>
       </section>
 
+      {/* B-41: シリーズ全ページ網羅ナビ（被リンク強化）*/}
+      <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">原材料・包装資材シナリオ分析シリーズ全ページ</h2>
+        <p className="mt-2 text-sm text-slate-700">本シリーズの全ページを順番に読むことで、原材料・包装資材のコスト上昇リスクを体系的に把握できます。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/special/materials-packaging-scenario-analysis/naphtha-petrochemical" className="text-sky-700 underline-offset-2 hover:underline">ナフサ・石化</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/plastic-resin" className="text-sky-700 underline-offset-2 hover:underline">プラスチック樹脂</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/packaging" className="text-sky-700 underline-offset-2 hover:underline">包装資材</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/chemicals" className="text-sky-700 underline-offset-2 hover:underline">化学品</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/non-ferrous-metals" className="text-sky-700 underline-offset-2 hover:underline">非鉄金属</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/industry-impact" className="text-sky-700 underline-offset-2 hover:underline">業種別影響</Link></li>
+          <li><Link href="/special/materials-packaging-scenario-analysis/action-roadmap" className="text-sky-700 underline-offset-2 hover:underline">対策ロードマップ</Link></li>
+        </ul>
+      </section>
+
       <RelatedLinks
         heading="下層ページから詳細を見る"
         intro="添付原稿の表・グラフ・注記・FAQを維持しつつ、テーマ別に詳細を確認できます。"
