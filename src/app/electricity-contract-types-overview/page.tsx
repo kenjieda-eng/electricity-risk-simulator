@@ -555,6 +555,11 @@ export default function ElectricityContractTypesOverviewPage() {
               title: "電力契約の見直しを始めるには",
               description: "契約区分の整理を踏まえた見直し手順を確認できます。",
             },
+            {
+              href: "/electricity-contract-cancellation-fee",
+              title: "電気契約の解約金",
+              description: "中途解約時の違約金構造と算定方法。",
+            },
           ]}
         />
       </div>

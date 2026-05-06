@@ -480,6 +480,11 @@ export default function ExecutiveCfoElectricityBasicsPage() {
               title: "固定と市場連動の比較を経営層に説明するとき",
               description: "固定・市場連動の違いを経営層向けに説明するフレームワーク。",
             },
+            {
+              href: "/executive-risk-planning-approaches",
+              title: "経営層向けリスク策定アプローチ",
+              description: "電気料金リスクの経営判断フレーム。",
+            },
           ]}
         />
       </div>

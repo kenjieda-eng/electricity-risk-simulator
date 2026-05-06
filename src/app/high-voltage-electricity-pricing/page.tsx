@@ -454,6 +454,11 @@ export default function HighVoltageElectricityPricingPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            {
+              href: "/kw-kwh-kva-difference",
+              title: "kW・kWh・kVA の違い",
+              description: "電力単位の基本概念を法人契約の文脈で整理。",
+            },
           ]}
         />
 

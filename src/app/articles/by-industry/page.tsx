@@ -102,6 +102,25 @@ export default function ArticlesByIndustryPage() {
         </div>
       </section>
 
+      {/* B-47: 主要詳細業種ページ（被リンク強化） */}
+      <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">主要 9 業種の詳細解説ページ</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">
+          各分類の中で頻繁に検索される代表的な業種について、特化した解説記事を用意しています。
+        </p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/articles/by-industry/commercial/apparel-zakka" className="text-sky-700 underline-offset-2 hover:underline">アパレル・雑貨店舗</Link></li>
+          <li><Link href="/articles/by-industry/commercial/restaurant-izakaya" className="text-sky-700 underline-offset-2 hover:underline">レストラン・居酒屋</Link></li>
+          <li><Link href="/articles/by-industry/hotel-leisure/cinema-theater" className="text-sky-700 underline-offset-2 hover:underline">映画館・劇場</Link></li>
+          <li><Link href="/articles/by-industry/it-technology/hyperscale-data-center" className="text-sky-700 underline-offset-2 hover:underline">ハイパースケール DC</Link></li>
+          <li><Link href="/articles/by-industry/logistics-infrastructure/water-infrastructure" className="text-sky-700 underline-offset-2 hover:underline">水道インフラ</Link></li>
+          <li><Link href="/articles/by-industry/manufacturing/food-beverage-factory" className="text-sky-700 underline-offset-2 hover:underline">食品・飲料工場</Link></li>
+          <li><Link href="/articles/by-industry/medical-welfare/small-hospital-under-200" className="text-sky-700 underline-offset-2 hover:underline">200 床未満病院</Link></li>
+          <li><Link href="/articles/by-industry/office-public/office-small-tenant" className="text-sky-700 underline-offset-2 hover:underline">オフィス（小規模・テナント）</Link></li>
+          <li><Link href="/articles/by-industry/office-public/public-hall-cultural-facility" className="text-sky-700 underline-offset-2 hover:underline">公共ホール・文化施設</Link></li>
+        </ul>
+      </section>
+
       <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">どこから読むとよいか</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{INDUSTRY_CATEGORY_TOP.readingGuide}</p>
