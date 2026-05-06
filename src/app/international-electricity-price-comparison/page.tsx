@@ -472,6 +472,11 @@ export default function InternationalElectricityPriceComparisonPage() {
               title: "料金メニュー比較診断",
               description: "現在の契約プランが自社にとって最適かどうかを診断できます。",
             },
+            {
+              href: "/asia-electricity-cost-comparison",
+              title: "アジア各国の法人電気料金比較",
+              description: "東アジア・東南アジア主要国の産業用電気料金水準比較。",
+            },
           ]}
         />
       </div>

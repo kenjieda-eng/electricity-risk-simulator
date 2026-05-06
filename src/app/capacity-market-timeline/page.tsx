@@ -274,6 +274,7 @@ export default function Page() {
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/supply-demand-adjustment-market-timeline", title: "需給調整市場のタイムライン", description: "需給調整市場の制度展開スケジュール。" },
             ]}
           />
         </div>

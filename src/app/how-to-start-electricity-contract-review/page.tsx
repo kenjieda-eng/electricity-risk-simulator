@@ -463,6 +463,16 @@ export default function HowToStartElectricityContractReviewPage() {
               title: "法人の電気料金を削減する見直しポイント7選",
               description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
             },
+            {
+              href: "/electricity-contract-types-overview",
+              title: "電気料金契約類型の総覧",
+              description: "高圧 / 低圧 / 特別高圧の契約形態を整理。",
+            },
+            {
+              href: "/sme-electricity-provider-comparison",
+              title: "中小企業向け電力会社比較",
+              description: "中小企業ターゲットの新電力比較ガイド。",
+            },
           ]}
         />
       </div>

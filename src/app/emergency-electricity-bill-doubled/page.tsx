@@ -456,6 +456,11 @@ export default function EmergencyElectricityBillDoubledPage() {
               title: "有事における契約条項の変更",
               description: "有事局面で電気料金契約条項に発生する可能性のある変更パターン。",
             },
+            {
+              href: "/power-supply-emergency-response-procedure",
+              title: "電源供給の緊急対応手順",
+              description: "電源停止 / 大規模停電時の手順書。",
+            },
           ]}
         />
       </div>

@@ -228,6 +228,8 @@ export default function Page() {
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/mid-term-cancellation-penalty-faq", title: "中途解約違約金 FAQ", description: "中途解約時の違約金に関する典型的質問集。" },
+              { href: "/price-revision-clause-reading", title: "価格改定条項の読み方", description: "電気料金契約の価格改定条項を読み解く。" },
             ]}
           />
         </div>

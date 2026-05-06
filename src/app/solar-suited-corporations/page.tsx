@@ -345,6 +345,11 @@ export default function SolarSuitedCorporationsPage() {
               title: "再生可能エネルギー由来の電力調達",
               description: "再エネ電力の調達手段と選択肢の整理。",
             },
+            {
+              href: "/ppa-price-benchmark-2026",
+              title: "PPA 価格ベンチマーク 2026",
+              description: "2026 年の法人向け PPA 単価相場。",
+            },
           ]}
         />
 

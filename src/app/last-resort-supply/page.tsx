@@ -233,6 +233,7 @@ export default function LastResortSupplyPage() {
             { href: "/when-to-review-electricity-contract", title: "法人が電力契約を見直すタイミング", description: "橋渡しから本契約への整理。" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
             { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
+            { href: "/case-study-last-resort-recovery", title: "最終保障供給からの復旧事例", description: "最終保障供給から通常契約に戻した事例。" },
           ]}
         />
 

@@ -341,6 +341,7 @@ export default function SubsidyShiftProjectPage() {
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光は電気料金対策としてどう効くか", description: "導入効果と費用対効果の考え方" },
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
             { href: "/executive-esg-electricity-disclosure", title: "IR・ESG開示における電力リスクの記載ガイド", description: "SHIFT事業と連動するESG開示・脱炭素報告の実務を解説。" },
+            { href: "/energy-saving-tax-incentive-2026", title: "2026 年度省エネ税制", description: "2026 年度の省エネ投資税制優遇措置。" },
           ]}
         />
       </div>

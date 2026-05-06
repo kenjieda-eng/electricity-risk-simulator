@@ -706,6 +706,11 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
                 description:
                   "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。",
               },
+              {
+                href: "/electricity-cost-reduction-case-studies",
+                title: "電気料金削減の事例集",
+                description: "業種別の実際の削減成功事例。",
+              },
             ]}
           />
         </div>

@@ -119,6 +119,7 @@ export default function Page() {
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/electricity-price-pass-through-legal", title: "電気料金の価格転嫁と法務", description: "電気料金の値上げ転嫁における法的論点。" },
             ]}
           />
         </div>
