@@ -217,6 +217,23 @@ export default function EmergencyScenarioAnalysisTopPage() {
           </Link>
         </div>
       </section>
+
+      {/* B-41: シリーズ全ページ網羅ナビ（被リンク強化）*/}
+      <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">有事シナリオ分析シリーズ全ページ</h2>
+        <p className="mt-2 text-sm text-slate-700">本シリーズの全ページを順番に読むことで、有事局面の電気料金リスクを体系的に把握できます。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/special/emergency-scenario-analysis/background" className="text-sky-700 underline-offset-2 hover:underline">背景</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/mechanism" className="text-sky-700 underline-offset-2 hover:underline">メカニズム</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/quadruple-pressure" className="text-sky-700 underline-offset-2 hover:underline">四重圧力</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/scenario-1" className="text-sky-700 underline-offset-2 hover:underline">シナリオ 1</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/scenario-2" className="text-sky-700 underline-offset-2 hover:underline">シナリオ 2</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/scenario-3" className="text-sky-700 underline-offset-2 hover:underline">シナリオ 3</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/contract-risk" className="text-sky-700 underline-offset-2 hover:underline">契約リスク</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/industry-impact" className="text-sky-700 underline-offset-2 hover:underline">業種別影響</Link></li>
+          <li><Link href="/special/emergency-scenario-analysis/action-roadmap" className="text-sky-700 underline-offset-2 hover:underline">アクションロードマップ</Link></li>
+        </ul>
+      </section>
     </EmergencyScenarioLayout>
   );
 }

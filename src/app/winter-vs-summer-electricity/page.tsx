@@ -491,6 +491,7 @@ export default function WinterVsSummerElectricityPage() {
             { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "2010年以降のJEPX年次・季節別価格トレンド。" },
             { href: "/compare", title: "料金メニュー比較診断", description: "市場連動型と固定価格型、自社に最適なプランを診断。" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "冬夏のピーク管理でデマンド値を下げる方法。" },
+            { href: "/electricity-cost-seasonal-pattern", title: "電気料金の季節パターンを読む", description: "月別の負荷変動と料金変動の関係を業種別に整理。" },
           ]}
         />
       </div>

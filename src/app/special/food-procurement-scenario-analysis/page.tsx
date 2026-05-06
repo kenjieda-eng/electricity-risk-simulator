@@ -206,6 +206,21 @@ export default function FoodScenarioTopPage() {
         </div>
       </section>
 
+      {/* B-41: シリーズ全ページ網羅ナビ（被リンク強化）*/}
+      <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">食料品仕入シナリオ分析シリーズ全ページ</h2>
+        <p className="mt-2 text-sm text-slate-700">本シリーズの全ページを順番に読むことで、飲食業・食品製造業の仕入コスト上昇リスクを体系的に把握できます。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/special/food-procurement-scenario-analysis/cost-structure" className="text-sky-700 underline-offset-2 hover:underline">原価構造</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/grain-and-oil" className="text-sky-700 underline-offset-2 hover:underline">穀物・油脂</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/protein" className="text-sky-700 underline-offset-2 hover:underline">畜産・水産</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/produce-and-dairy" className="text-sky-700 underline-offset-2 hover:underline">青果・乳製品</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/restaurant-impact" className="text-sky-700 underline-offset-2 hover:underline">飲食業</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/food-manufacturer" className="text-sky-700 underline-offset-2 hover:underline">食品製造</Link></li>
+          <li><Link href="/special/food-procurement-scenario-analysis/action-roadmap" className="text-sky-700 underline-offset-2 hover:underline">対策ロードマップ</Link></li>
+        </ul>
+      </section>
+
       <RelatedLinks
         heading="下層ページから詳細を見る"
         links={[

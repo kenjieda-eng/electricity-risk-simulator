@@ -155,6 +155,21 @@ export default function OilScenarioAnalysisTopPage() {
         </div>
       </section>
 
+      {/* B-41: シリーズ全ページ網羅ナビ（被リンク強化）*/}
+      <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">原油・物流シナリオ分析シリーズ全ページ</h2>
+        <p className="mt-2 text-sm text-slate-700">本シリーズの全ページを順番に読むことで、原油・物流コスト上昇リスクを体系的に把握できます。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/special/oil-scenario-analysis/price-mechanism" className="text-sky-700 underline-offset-2 hover:underline">価格の仕組み</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/subsidy-outlook" className="text-sky-700 underline-offset-2 hover:underline">補助金の行方</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/diesel-and-heavy-oil" className="text-sky-700 underline-offset-2 hover:underline">軽油・重油</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/logistics-cost" className="text-sky-700 underline-offset-2 hover:underline">配送・物流コスト</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/fleet-cost" className="text-sky-700 underline-offset-2 hover:underline">社用車・営業車</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/travel-and-commute" className="text-sky-700 underline-offset-2 hover:underline">出張旅費・通勤費</Link></li>
+          <li><Link href="/special/oil-scenario-analysis/action-roadmap" className="text-sky-700 underline-offset-2 hover:underline">対策ロードマップ</Link></li>
+        </ul>
+      </section>
+
       <RelatedLinks
         heading="下層ページから詳細を見る"
         intro="各テーマで表・グラフ・FAQを含めて、数値ベースで確認できます。"

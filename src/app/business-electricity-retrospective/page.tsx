@@ -132,6 +132,36 @@ export default function BusinessElectricityRetrospectivePage() {
               急変期前後の大口需要家区分を、年平均・高値安値の観点で確認できます。
             </p>
           </article>
+          <article className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/2019-high-voltage" className="underline-offset-2 hover:underline">
+                【2019年】高圧の電気料金を振り返る
+              </Link>
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              2019 年度の高圧電力料金推移と契約見直しの観点を確認できます。
+            </p>
+          </article>
+          <article className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/2021-high-voltage" className="underline-offset-2 hover:underline">
+                【2021年】高圧の電気料金を振り返る
+              </Link>
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              JEPX 価格高騰直前の 2021 年度の高圧電力料金推移を確認できます。
+            </p>
+          </article>
+          <article className="flex h-full flex-col rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/2024-extra-high-voltage" className="underline-offset-2 hover:underline">
+                【2024年】特別高圧の電気料金を振り返る
+              </Link>
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              2024 年度の特別高圧契約の改定動向と大口需要家への影響を確認できます。
+            </p>
+          </article>
         </div>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link

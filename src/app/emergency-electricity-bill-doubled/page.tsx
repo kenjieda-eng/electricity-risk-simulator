@@ -451,6 +451,11 @@ export default function EmergencyElectricityBillDoubledPage() {
               title: "電気代がEBITDAに与える影響の測り方",
               description: "倍増した電気代が経営指標に与える財務インパクトの試算方法。",
             },
+            {
+              href: "/emergency-contract-terms-change",
+              title: "有事における契約条項の変更",
+              description: "有事局面で電気料金契約条項に発生する可能性のある変更パターン。",
+            },
           ]}
         />
       </div>
