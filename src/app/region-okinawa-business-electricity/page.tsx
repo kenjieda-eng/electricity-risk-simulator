@@ -8,11 +8,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "沖縄電力の料金が全国最高水準なのはなぜですか？", answer: "本土との連系線がない孤立系統であること、本島と石垣・宮古・久米島など多数の有人離島への送電コスト、LNG・石炭・石油の複合燃料調達コストが構造的に高い水準にあるためです。沖縄電力の高圧電力量料金は他エリアより2〜5円/kWh高く、年間電気代に換算すると数十%の差になります。これらは構造的要因のため短期的な解消は困難です。" },
+  { question: "離島送電コストは法人料金にどれくらい上乗せされますか？", answer: "離島送電コストは託送料金に含まれており、本島・離島問わず沖縄電力エリア全体の電気料金に分散転嫁されています。具体的金額は公表されていませんが、業界推計では電力量料金の3〜5円/kWh程度が離島系統由来コストと見られています。これは需要家規模では年間数百万〜数千万円規模の追加負担に相当します。" },
+  { question: "沖縄独立系統で新電力を選ぶ余地はありますか？", answer: "新電力の参入数は数社程度と全国最少で、価格競争による値下げ余地はほぼありません。事実上、沖縄電力との契約が唯一の選択肢となるケースが大半です。法人需要家としては、新電力切替よりも『使用量自体を減らす』省エネ投資・自家消費型太陽光・蓄電池の導入が、コスト削減の主戦場となります。" },
+  { question: "沖縄の通年冷房・台風時系統リスクへの対応は？", answer: "沖縄は通年で冷房需要が発生し、夏冬のメリハリが他エリアと異なります。さらに台風時は系統が孤立しているため、本土からの応援送電が不可能で大規模停電リスクが他エリアより高い構造があります。法人需要家としては、BCP電源として蓄電池・自家消費型太陽光・非常用発電の組み合わせを、平時のピークカット用途と兼ねて導入する経営判断が広がっています。" },
+  { question: "沖縄観光業の電気代見直しの典型例は？", answer: "中規模リゾートホテル（高圧、年間500万kWh級）で、客室稼働率連動のデマンド管理＋高効率空調更新＋自家消費型太陽光（屋根30〜50kW）＋蓄電池の組み合わせにより、年間電気代の8〜15%削減事例（金額にして約150〜500万円）が報告されています。日射量が全国最高クラスのため自家消費太陽光の投資回収期間が他エリアより短くなります。" },
+  { question: "沖縄 DC・ホテル業界の削減事例の典型値は？", answer: "業界平均レンジとして、リゾートホテル（高圧、年間500万kWh）で年間150〜500万円（8〜15%）、商業施設（高圧、年間300万kWh）で年間100〜300万円（8〜12%）、商用DC（特高、年間2,000万kWh）で年間2,000〜4,000万円（8〜12%）の削減事例が報告されています。日射量・気候を活かした自家消費型太陽光と蓄電池BCPが沖縄特有の有効施策です。" },
+];
+
+const sourcesItems = [
+  { name: "沖縄電力", url: "https://www.okiden.co.jp/", description: "沖縄電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・沖縄電力の規制情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "離島系統に関する制度・統計情報" },
+];
 
 
 const pageTitle = "沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -148,7 +164,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "沖縄電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -191,7 +207,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ沖縄電力エリアの法人電気料金見直しが重要なのか — 離島系統と全国最高水準料金</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           沖縄電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -223,7 +239,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄電力の独自料金体系（全国最高水準の電力量料金）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は沖縄電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -290,7 +306,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">沖縄電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">観光業中心の電力需要と通年空調・台風時系統リスク</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">全国最高水準の電力量料金</h3>
@@ -329,7 +345,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄の通年冷房需要と料金改定パターン（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -344,7 +360,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄独立系統での新電力可否と現実的選択肢</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -355,41 +371,56 @@ export default function RegionOkinawaBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">沖縄電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">省エネ投資でコスト削減を図る</span>
-            — 新電力への切り替えが困難なエリアのため、高効率空調・LED照明・インバータ制御など
-            省エネ設備投資による使用量削減が最も直接的かつ確実なコスト低減策です。
-          </li>
-          <li>
-            <span className="font-semibold">太陽光＋蓄電池の自家発電を検討する</span>
-            — 日射量が多い沖縄は太陽光発電の発電効率が高く、屋根置き太陽光や
-            自家消費型PPAの導入効果が大きいエリアです。蓄電池との組み合わせで
-            夜間・曇天時のカバーも検討できます。
-          </li>
-          <li>
-            <span className="font-semibold">デマンドコントロールを徹底する</span>
-            — 観光業では夏季の冷房需要ピーク時のデマンド超過が基本料金を押し上げます。
-            BEMS（ビルエネルギー管理システム）やデマンドコントローラーの導入で
-            契約電力の最適化を図ってください。
-          </li>
-          <li>
-            <span className="font-semibold">燃料費調整額の上限設定を確認する</span>
-            — 沖縄電力の標準メニューにおける燃調費の上限設定を把握しておくことで、
-            最悪シナリオでの請求額を予測できます。
-            LNG・石炭・石油の価格動向をウォッチし、コスト予算に反映させてください。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金の影響を試算する</span>
-            — 2024年度以降、電力調達コストに容量市場落札価格が加算されています。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄エリアのホテル / DC 削減事例</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          沖縄エリアは新電力切替の選択肢がほぼないため、自家消費型太陽光＋蓄電池＋省エネ設備投資の三位一体施策が他エリアより有効です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">中規模リゾートホテル（高圧 500 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>客室稼働率連動デマンド管理: 約3〜5%</li>
+              <li>高効率空調更新（VRV系）: 約3〜5%</li>
+              <li>自家消費型太陽光（屋根 50kW）+蓄電池: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約150〜500万円（8〜15%）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">大型商業施設（高圧 300 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>BEMS導入＋デマンド制御: 約3〜4%</li>
+              <li>LED完全化＋人感センサー: 約2〜3%</li>
+              <li>蓄電池BCP（食品ロス防止兼用）: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約100〜300万円（8〜12%）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">商用 DC（特高 2,000 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>特別高圧長期固定単価交渉: 約3〜5%</li>
+              <li>液冷・コールドアイル分離: 約3〜5%</li>
+              <li>自家消費型太陽光（メガソーラー級）: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約2,000〜4,000万円（8〜12%）</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">沖縄電力エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>省エネ投資でコスト削減（新電力切替が困難なため使用量削減が主戦場）</li>
+            <li>太陽光＋蓄電池の自家発電を検討（日射量全国最高クラス）</li>
+            <li>デマンドコントロールを徹底（観光業の夏季冷房ピーク抑制）</li>
+            <li>燃料費調整額の上限設定を確認（LNG・石炭・石油の3燃料動向ウォッチ）</li>
+            <li>
+              容量拠出金の影響を試算（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、沖縄県内法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 注記 */}
@@ -400,20 +431,78 @@ export default function RegionOkinawaBusinessElectricityPage() {
         </p>
       </div>
 
-      {/* JEPX卸市場との関係 */}
+      {/* 離島系統 H2-4'（JEPX 代替） */}
       <section className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場との関係</h2>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄電力独立系統と本土系統の電気代差（離島送電コスト構造）</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           沖縄電力エリアは本土との送電線（連系線）がなく、JEPX（日本卸電力取引所）のエリアプライスが設定されていません。
           このため、市場連動型プランの概念が他エリアとは異なり、電力調達は沖縄電力の自社電源に大きく依存しています。
           JEPXの価格変動が直接影響しないことは、市場リスク面ではメリットですが、競争環境が限定的なため
-          新電力による値下げ余地も小さい構造です。
+          新電力による値下げ余地も小さい構造です。本土系統との電気代差は概ね電力量料金で2〜5円/kWhあり、年間電気代換算では数十%の差になります。
         </p>
+        <div className="mt-4 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">離島送電コストの構造</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-700">
+            <li>沖縄本島の主要発電所（具志川火力・吉の浦火力など）から、本島内・周辺離島へ送電するインフラ</li>
+            <li>石垣島・宮古島・久米島など多数の有人離島には独自のディーゼル発電設備＋小規模送電網が必要</li>
+            <li>これらの設備投資・維持コストが託送料金経由で電気料金全体に分散転嫁</li>
+            <li>業界推計で電力量料金の3〜5円/kWh程度が離島系統由来コストとされる</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 電源構成 H2-5（新設） */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">沖縄電力エリアの電源構成（火力依存と再エネ展望）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          沖縄電力エリアは本土との連系線がない孤立系統のため、エリア内で完結する電源構成を維持する必要があります。これが料金水準に与える影響は他エリアより大きく、構造的な高コスト要因の一つです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
+            <p className="text-xs font-semibold text-orange-700">LNG火力</p>
+            <p className="mt-1 text-2xl font-bold text-orange-900">約 50%</p>
+            <p className="text-xs text-orange-600">主力ベース電源</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-xs font-semibold text-slate-600">石炭火力</p>
+            <p className="mt-1 text-2xl font-bold text-slate-800">約 30%</p>
+            <p className="text-xs text-slate-500">石川石炭火力等</p>
+          </div>
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">石油火力</p>
+            <p className="mt-1 text-2xl font-bold text-amber-900">約 10%</p>
+            <p className="text-xs text-amber-600">離島系統で重要</p>
+          </div>
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+            <p className="text-xs font-semibold text-emerald-700">再エネ（太陽光主体）</p>
+            <p className="mt-1 text-2xl font-bold text-emerald-900">約 10%</p>
+            <p className="text-xs text-emerald-600">日射量全国最高</p>
+          </div>
+        </div>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+          石油火力10%は他エリアと比べ突出して高く、これは離島での燃料供給性・小規模発電の効率の制約から維持されています。一方、日射量は全国最高水準で再エネ太陽光のポテンシャルは大きく、自家消費型太陽光・PPAモデルの導入で電源構成の脱火力化が進む見込みです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">出典: 沖縄電力公式公表資料、経産省「沖縄電力に関する規制」関連資料、業界平均レンジで作成。</p>
+      </section>
+
+      {/* H2-Z シミュレーター */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          沖縄電力エリアの法人需要家として、自社の上振れリスクと省エネ投資効果を定量化するには以下の観点でシミュレーターを活用してください。
+        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>LNG・石炭・石油の3燃料高騰シナリオでの年間上振れリスク額を確認する</li>
+          <li>自家消費型太陽光＋蓄電池導入時の投資回収期間と年間削減額を試算する</li>
+          <li>夏季冷房ピーク時のデマンド削減で基本料金がどれだけ下がるかを把握する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -449,6 +538,31 @@ export default function RegionOkinawaBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-kansai-business-electricity",
+              title: "関西電力エリアの法人電気代事情",
+              description: "離島系統の沖縄に対し、本土の中で原発を活用する関西エリアの電源構成を比較できる。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "日射量全国最高クラスの沖縄では、自家消費型太陽光が最も効果的なコスト削減策。",
+            },
+            {
+              href: "/articles/by-industry/hotel-leisure",
+              title: "ホテル・観光業種ハブ：観光業向け電気料金関連記事",
+              description: "沖縄観光業の主力業種であるホテル・リゾートの電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/battery-suited-corporations",
+              title: "法人向け蓄電池導入の検討ポイント",
+              description: "台風時系統リスクが高い沖縄では、蓄電池BCPと平時ピークカットの兼用が経営判断として重要。",
             },
           ]}
         />

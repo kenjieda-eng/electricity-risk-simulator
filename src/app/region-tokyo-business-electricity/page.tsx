@@ -11,11 +11,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "東京電力エリアの法人電気料金は他エリアと比べて高いですか？", answer: "高圧電力量料金の業界標準メニューベースで、東京電力エリアは全国10エリア中で中位（15〜16円/kWh前後）に位置します。北海道・沖縄・四国・中国エリアより安く、関西・九州・北陸エリアより高い水準です。ただしLNG火力依存のため燃調費プラス幅は全国上位で、燃料価格高騰局面では実質単価が上振れしやすい特徴があります。" },
+  { question: "関東圏で容量拠出金の影響が大きい業種は何ですか？", answer: "ベース負荷が大きく契約電力（kW）が大きい業種ほど影響が大きく、データセンター・大型物流倉庫・冷蔵冷凍倉庫・大規模オフィスビル・病院などが代表例です。容量拠出金は契約電力に比例して請求されるため、契約kWの見直しと、デマンド管理による契約電力低減が他エリアより収益貢献が大きくなります。" },
+  { question: "データセンター集積による東電エリア電気代上昇の見通しは？", answer: "印西・千葉ベイエリアを中心とした関東圏のDC需要急増により、2030年に向けて関東圏の電力需要は年率2〜3%増加見通しが各種シンクタンクから示されています。需要増は容量拠出金・送電線増強コストを通じて法人需要家の託送料金にも波及するため、中長期で東電エリアは料金上昇圧力が他エリアより高く出る構造です。" },
+  { question: "東京エリアで法人向けに有利な新電力はどう選びますか？", answer: "競争最激戦エリアのため100社超の選択肢がある一方、2022〜2023年の撤退・解約通知ラッシュも全国最多が起きたエリアです。選定時は『提示単価の安さ』だけでなく『財務安定性・調達手段の多様性・供給責任条項』を必ず確認してください。地場系・親会社の信用力が高い事業者を優先するのが、撤退リスクを抑える定石です。" },
+  { question: "東京電力との契約見直しで成功確率を上げるには？", answer: "30分値デマンドデータの取得（電力会社マイページから過去24か月分が取得可能）と、最低3社以上の相見積もりが基本です。さらに容量拠出金・燃調費キャップ・契約期間中途解約条項の3点を契約条件比較表で並べると、表面単価では見えない年間コスト差が定量化できます。" },
+  { question: "東電エリアでLNG依存リスクは契約にどう反映すべきですか？", answer: "LNG価格は地政学リスクで急騰し得るため、固定単価プランか、燃調費キャップ付き市場連動プランで上振れ上限を設定するのが基本です。さらに自家消費型太陽光・蓄電池・コーポレートPPAでLNG由来電力への依存を構造的に下げる中長期施策と組み合わせるのが、関東圏の大手法人で増えています。" },
+];
+
+const sourcesItems = [
+  { name: "東京電力エナジーパートナー", url: "https://www.tepco.co.jp/ep/", description: "東京電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・関東圏需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "東京エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "東京電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -169,7 +185,7 @@ export default function RegionTokyoBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "東京電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -211,9 +227,9 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ東京電力エリアの法人電気料金見直しが重要なのか — 関東圏業務集積と LNG 依存</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
-          東京電力エリアの規模感・事業者構成を確認してください。
+          東京電力エリアの規模感・事業者構成を確認したうえで、関東圏業務集積と LNG 火力依存という二つの構造から、なぜいま見直しが他エリアより重要なのかを整理します。日本最大の業務需要集積地であり、LNG火力55%超の電源構成は燃料価格の上振れリスクを直接的に法人請求に反映する構造です。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -243,7 +259,7 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東京電力の法人向け料金体系（特高 / 高圧 / 業務用の単価目安）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は TEPCO EP の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -310,7 +326,7 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">東京電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関東圏業務集積と LNG 火力依存が形成する東電エリアの電力需要構造</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">LNG火力への高依存</h3>
@@ -349,7 +365,7 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東電エリアの料金改定タイミングと年度予算サイクルの整合（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -364,7 +380,7 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関東圏新電力の勢力図と切替動向（2026 年版）</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -375,39 +391,64 @@ export default function RegionTokyoBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">東京電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">燃料費調整額の仕組みを確認する</span>
-            — 新電力との契約時にキャップ（上限）の有無を必ず確認。上限なしのプランは LNG 高騰時に大きなリスクとなります。
-          </li>
-          <li>
-            <span className="font-semibold">複数の新電力から見積もりを取る</span>
-            — 最大規模エリアのため競合が多く、比較によるコスト削減余地が大きい。最低3社以上の比較を推奨します。
-          </li>
-          <li>
-            <span className="font-semibold">契約先の財務安定性を確認する</span>
-            — 2022〜2023年に同エリアで最も多くの新電力撤退が発生。事業者の信用情報・規模・調達手段を確認してください。
-          </li>
-          <li>
-            <span className="font-semibold">デマンドコントロールの余地を検討する</span>
-            — 高圧・特別高圧の基本料金はデマンド（最大需要電力）で決まります。ピーク抑制施策で基本料金を削減できる場合があります。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金の影響を試算する</span>
-            — 2024年度以降、電力調達コストに容量市場落札価格が加算されています。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">東京エリアの業種別削減事例（オフィスビル / DC / 製造業）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          東電エリアの法人需要家は、業種ごとに有効な削減アプローチが異なります。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">中規模オフィスビル（延床 5,000m²）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し: 約3〜5%</li>
+              <li>BEMS導入＋運用改善: 約5〜8%</li>
+              <li>LED完全化＋人感センサー: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約360〜600万円（18〜30%）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">商用データセンター（IT 10MW）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>外気冷却比率拡大（PUE 1.7→1.5）: 約12%</li>
+              <li>高効率UPS更新（92→96%）: 約2〜3%</li>
+              <li>特別高圧入札型単価交渉: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約5.0〜7.6億円（20〜30%）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">関東圏製造業（高圧・年間 500 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり（3社以上）: 約5〜8%</li>
+              <li>デマンドコントローラー: 約3〜5%</li>
+              <li>燃調費キャップ条項追加: 上振れ抑制効果</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約650〜1,300万円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">東電エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>燃料費調整額キャップの有無を全プランで確認（LNG高騰耐性）</li>
+            <li>最低 3 社以上の新電力から相見積もり（最激戦エリアの優位を活用）</li>
+            <li>契約先の財務安定性確認（2022〜2023 年撤退最多エリアのため必須）</li>
+            <li>デマンドコントロールで基本料金圧縮（高圧・特高はデマンド連動）</li>
+            <li>
+              容量拠出金の影響額を試算（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、関東圏法人事例ヒアリング、業界平均レンジで作成。</p>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          特に東電エリアでは、契約見直しによる即効型の削減から着手し、その回収原資を BEMS や高効率空調・LED 化に投資する『自走モデル』を 2〜3 年かけて構築するパターンが、上場企業・中堅企業ともに増えています。1 年目は契約見直しと運用改善で 5〜10% 削減、2 年目以降に設備投資で追加 5〜15% を狙う段階展開が、関東圏での主流アプローチになりつつあります。
+        </p>
       </section>
 
       {/* 電源構成の実績データ */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東電エリア電源構成と需要バランスの 30 分値分析</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2024〜2026年の30分値データ（35,501レコード）を集計した東京エリアの電源構成実績です。
         </p>
@@ -451,7 +492,7 @@ export default function RegionTokyoBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 東京エリアプライス推移と直近相場</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -488,91 +529,25 @@ export default function RegionTokyoBusinessElectricityPage() {
         </p>
       </section>
 
-      {/* エリア需要の特徴 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          東京電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "tokyo")?.share}%を占めます。全国最大の需要エリア。負荷率はFY2016の{LOAD_FACTOR_FY.find(r => r.fy === 2016)?.tokyo}%→FY2022の{LOAD_FACTOR_FY.find(r => r.fy === 2022)?.tokyo}%と全国最低水準まで低下し、ピーク尖鋭化が顕著。
+          東電エリアの法人需要家として自社の上振れリスクを定量化するには、以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="bg-sky-50">
-                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[2016, 2023].map((fy, i) => {
-                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
-                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
-                return (
-                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.tokyo.toLocaleString()}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.tokyo}%</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
-      </section>
-
-      {/* 気候データと電力需要の関係 */}
-      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          東京の気象データから、当エリアの電力需要に影響する気候特性を整理します。
-        </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          東京は2023年に年平均気温18.14℃で観測史上1位を記録。猛暑日は1990年代の5倍に増加し、冷房需要（CDD）も+24%拡大。夏場のピーク電力とJEPX高騰リスクが構造的に増大しています。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>現行契約条件での年間上振れリスク額を確認する（LNG 高騰シナリオ）</li>
+          <li>固定プランと市場連動プランの年間コスト差を試算する</li>
+          <li>関東圏 DC 集積による中長期の託送料金上昇影響を把握する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で比較する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 東京の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ / 冷房需要 +{weather.cdd?.changePercent ?? 0}% など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "tokyo")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.tokyo}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -608,6 +583,31 @@ export default function RegionTokyoBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-tohoku-business-electricity",
+              title: "東北電力エリアの法人電気代事情",
+              description: "東京エリアと連系線で接続される隣接エリア。連系線輸入で東電エリアと密接な需給関係。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "東電エリアの大規模法人で適用される特別高圧契約の料金体系を解説。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "東電エリア集積が進む DC の負荷特性と契約見直しの考え方。",
+            },
+            {
+              href: "/office-building-electricity-cost-review",
+              title: "オフィスビルの電気料金見直しポイント",
+              description: "東電エリアの主力業務用需要であるオフィスビルの負荷特性と契約見直し。",
             },
           ]}
         />

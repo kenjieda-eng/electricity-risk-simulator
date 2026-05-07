@@ -11,11 +11,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "関西電力エリアの料金は原発稼働でどう変わりますか？", answer: "原子力は燃料費が安定しているため、原発稼働比率が上がるほど燃料費調整額の上振れ幅が抑制されます。関西電力は2023〜2025年にかけて大飯3・4号機、高浜1〜4号機、美浜3号機を稼働継続しており、同期間の電力量料金上昇幅は全国比で相対的に緩やかでした。一方で定期検査での停止や予期せぬトラブル時はLNG火力の代替稼働で燃調費が急増するリスクがあります。" },
+  { question: "大飯・高浜・美浜原発の稼働状況と関電料金の関係は？", answer: "2026年4月時点で大飯3・4（各118万kW）、高浜1〜4（各82.6・87万kW）、美浜3（82.6万kW）の合計約675万kWが稼働中で、関電エリア需要のベースロード約30〜35%を原子力で賄っています。高浜1・2号機と美浜3号機は60年超稼働認可済で、2030年代半ばまでの稼働継続が見込まれており、料金安定要素として機能しています。" },
+  { question: "関西経済圏で固定プラン vs 市場連動どちらが向きますか？", answer: "関電エリアの旧一電単価は全国比で割安なため、市場連動プランを選ぶ価格メリットが他エリアより小さい構造があります。製造業大手・大型ビルなど予算管理の説明責任がある法人は固定プラン親和性が高く、中小規模で電力モニタリング体制があれば市場連動も選択肢に入ります。原発停止リスクへのヘッジとして固定プランを軸にする経営判断が一般的です。" },
+  { question: "関電エリアの新電力選択で気をつけるべきことは？", answer: "東京エリアより撤退数は少ないものの、中小新電力の撤退事例は2022〜2023年に複数あったエリアです。大阪ガス系（Daigasエナジー）・エネオス系・伊藤忠エネクス系など、親会社の信用力が高い地場系・大手系を優先するのが定石です。価格だけでなく財務安定性・調達手段の多様性を比較軸に含めてください。" },
+  { question: "関西の夏季ピーク対策はどうすればよいですか？", answer: "関電エリアは原子力・揚水発電（充電率全国最高47.7%）でピーク対応する構造ですが、太陽光抑制率10.1%という余剰問題が昼間に発生しています。法人需要家としては、デマンドコントローラーによる夏季ピーク日の基本料金圧縮、自家消費型太陽光と蓄電池の組み合わせによる高単価時間帯の購入電力削減が有効な施策となります。" },
+  { question: "関西エリアの業種別削減事例の典型値は？", answer: "業界平均レンジとして、中規模オフィスビル（延床5,000m²）で年間180〜600万円（約9〜30%）、製造業（高圧500万kWh/年）で年間400〜1,000万円（5〜10%）、商業施設（中規模スーパー）で年間180〜450万円（10〜18%）の削減事例が報告されています。原発稼働の安定性を背景に固定プラン×省エネ設備の組み合わせが主流です。" },
+];
+
+const sourcesItems = [
+  { name: "関西電力", url: "https://www.kepco.co.jp/", description: "関西電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・関西圏需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "関西エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "関西電力エリアの法人電気代事情｜原発比率と料金の特性";
@@ -184,7 +200,7 @@ export default function RegionKansaiBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "関西電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -227,9 +243,9 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ関西電力エリアの法人電気料金見直しが重要なのか — 原発再稼働と関西経済圏</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
-          関西電力エリアの規模感・事業者構成・電源特性を確認してください。
+          関西電力エリアの規模感・事業者構成・電源特性をベースに、原発再稼働で抑制される料金優位性と関西経済圏の業種構成を踏まえた契約見直しの意義を整理します。原子力34.8%という全国最高水準のベースロードが燃調費上振れの緩衝材となる一方、原発停止リスクと容量拠出金・再エネ賦課金の負担増は経営課題として残ります。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -253,7 +269,7 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関西電力の法人向け料金体系（業務用メニュー詳細）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は関西電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -320,7 +336,7 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* 原発再稼働の影響 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">原発再稼働と電気料金の関係</h2>
+        <h2 className="text-xl font-semibold text-slate-900">大飯・高浜・美浜原発の再稼働と関電料金体系への影響</h2>
         <div className="mt-4 space-y-4">
           {nuclearImpact.map((item, i) => (
             <div key={i} className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
@@ -362,7 +378,7 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関電エリアの夏季ピーク対策と料金改定パターン（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -377,7 +393,7 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関西の新電力切替動向 — 全国 2 番目の市場規模</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -388,39 +404,61 @@ export default function RegionKansaiBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-indigo-200 bg-indigo-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">関西電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">原発の稼働状況をウォッチする</span>
-            — 稼働機数の増減が燃料費調整額に直結します。定期検査スケジュールを把握し、燃調費の変動を予測してください。
-          </li>
-          <li>
-            <span className="font-semibold">旧一電の料金が全国比で割安なことを念頭に比較する</span>
-            — 新電力の提示価格が割安かどうかは、関西電力の現行単価との比較で判断してください。他エリアと同じ感覚で判断すると乗り換えメリットを誤評価する可能性があります。
-          </li>
-          <li>
-            <span className="font-semibold">地場系・大手系の安定事業者を優先する</span>
-            — 大阪ガス系（Daigasエナジー）など財務基盤の安定した事業者は撤退リスクが低い。複数社比較時に事業者の安定性を評価軸の一つにしてください。
-          </li>
-          <li>
-            <span className="font-semibold">デマンド管理で基本料金を削減する</span>
-            — 高圧・特別高圧の基本料金はデマンド（最大需要電力）で決まります。ピーク抑制施策の費用対効果を試算してみてください。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金・再エネ賦課金の増加を織り込む</span>
-            — 旧一電比で割安であっても、これらのコストは全国共通で増加しています。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-indigo-700 underline underline-offset-2 hover:text-indigo-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">関西エリアの業種別削減事例（製造業 / 商業 / DC）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          関電エリアでは原発稼働を背景にした料金安定性を活かしながら、固定プラン×省エネ設備の組み合わせで段階的な削減を進めるパターンが主流です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">関西製造業（高圧 500 万kWh/年）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり（地場系優先）: 約3〜5%</li>
+              <li>デマンドコントローラー: 約3〜5%</li>
+              <li>自家消費型太陽光: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約400〜1,000万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">商業施設（中規模スーパー 500m²）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し: 約3〜5%</li>
+              <li>扉付ショーケース順次更新: 約4〜6%</li>
+              <li>LED完全化＋デマンド管理: 約4〜6%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約180〜450万円（10〜18%）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">商用 DC（IT 5MW 中規模）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>外気冷却比率拡大: 約8〜12%</li>
+              <li>高効率UPS更新: 約2〜3%</li>
+              <li>原発稼働メリットを織り込んだ固定単価交渉: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約2.0〜4.0億円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">関電エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>原発の稼働状況をウォッチする（定期検査スケジュール把握で燃調費変動予測）</li>
+            <li>旧一電の料金が全国比で割安なことを念頭に提示価格を比較</li>
+            <li>地場系・大手系の安定事業者を優先（Daigas エナジー / エネオス系など）</li>
+            <li>デマンド管理で基本料金を削減（夏季ピーク日の制御）</li>
+            <li>
+              容量拠出金・再エネ賦課金の増加を織り込む（
+              <Link href="/capacity-contribution-cost-impact" className="text-indigo-700 underline underline-offset-2 hover:text-indigo-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、関西圏法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 電源構成の実績データ */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">関電エリアの電源構成（原子力比率と再エネ）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2024〜2026年の30分値データ（36,960レコード）を集計した関西エリアの電源構成実績です。
         </p>
@@ -464,7 +502,7 @@ export default function RegionKansaiBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 関西エリアプライス推移と原発稼働連動性</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -501,91 +539,25 @@ export default function RegionKansaiBusinessElectricityPage() {
         </p>
       </section>
 
-      {/* エリア需要の特徴 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          関西電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "kansai")?.share}%を占めます。東京に次ぐ需要規模。原発稼働でベースロードが安定し負荷率は{LOAD_FACTOR_FY.find(r => r.fy === 2023)?.kansai}%と中位。
+          関電エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="bg-indigo-50">
-                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[2016, 2023].map((fy, i) => {
-                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
-                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
-                return (
-                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.kansai.toLocaleString()}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.kansai}%</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
-      </section>
-
-      {/* 気候データと電力需要の関係 */}
-      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          大阪の気象データから、当エリアの電力需要に影響する気候特性を整理します。
-        </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          大阪の熱帯夜は2025年に81日で過去最多を更新中。冷房需要（CDD）は+24%増加する一方、暖房需要（HDD）は-19%と全国最大の減少率。冷房偏重の需要構造への移行が進んでいます。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>原発稼働メリットを織り込んだ現行単価と、原発停止シナリオでの上振れ幅を比較する</li>
+          <li>固定プランと市場連動プランの年間コスト差を試算する</li>
+          <li>夏季ピーク日のデマンド削減で基本料金がどれだけ下がるかを把握する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 大阪の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ / 冷房需要 +{weather.cdd?.changePercent ?? 0}% など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "kansai")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.kansai}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -621,6 +593,31 @@ export default function RegionKansaiBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-chugoku-business-electricity",
+              title: "中国電力エリアの法人電気代事情",
+              description: "山陽工業地帯の隣接エリア。関西と連系線で結ばれる重工業集積地の電気代特性を比較。",
+            },
+            {
+              href: "/region-shikoku-business-electricity",
+              title: "四国電力エリアの法人電気代事情",
+              description: "瀬戸内海を挟む隣接エリア。原発・離島電源の特殊性を関西エリアと比較できる。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "関電エリアの製造業大手で活用される特別高圧契約の料金体系を解説。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "関西の DC 需要家向け：原発稼働メリットを活かした特高契約の考え方。",
             },
           ]}
         />

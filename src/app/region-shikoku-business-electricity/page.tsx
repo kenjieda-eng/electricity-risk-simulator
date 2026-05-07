@@ -11,11 +11,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "四国電力エリアの法人料金は規模が小さいゆえに高いですか？", answer: "高圧電力量料金の業界標準メニューベースで、四国電力エリアは全国10エリア中で割高グループ（17円/kWh前後）に位置します。需要規模が他エリアより小さく、固定費の単価への乗せ方が相対的に高くなる構造があります。一方、伊方原発の稼働により燃調費プラス幅は中位に抑えられており、燃料価格高騰局面では他エリアより上振れ耐性があります。" },
+  { question: "伊方原発の稼働状況と四電料金の関係は？", answer: "伊方3号機（出力89万kW）は2025年現在稼働中で、四国電力エリアのベースロード電源として重要な位置を占めています。原子力比率の上昇は燃料費調整額を抑制する効果がある一方、定期検査・規制対応による停止時はLNG・石炭火力の代替稼働で燃調費が急増するリスクがあります。稼働状況のモニタリングが法人需要家の年次予算精度に直結します。" },
+  { question: "四国の太陽光出力制御リスクは契約にどう反映しますか？", answer: "四国エリアは太陽光発電の出力制御（再エネ抑制）が全国でも頻繁に発動されるエリアです。これは小規模需要に対して再エネ導入量が大きく、昼間に余剰が発生しやすい構造によります。市場連動プランでは抑制発動時間帯のJEPXスポット価格が異常な低価格（時に0円付近）になる場合があり、市場連動の昼間メリットが他エリアより享受しやすい特性があります。" },
+  { question: "四国 4 県の業種別電気代特性に違いは？", answer: "愛媛県は化学・パルプ・造船など重工業が集積し、契約電力規模が大きい需要家が多い傾向です。香川県はうどん製造などの食品工場・観光業、徳島県は化学・電子部品、高知県は林業・農業・観光業と、4県で産業構造に違いがあります。県単位で主要業種を踏まえた契約形態の選択（特別高圧/高圧）と削減施策の優先順位設定が重要です。" },
+  { question: "四国新電力で中小企業向けの選択肢は？", answer: "新電力数は20〜30社程度と限定的で、地場系（四国ガス・各県の地域新電力）と全国対応の大手新電力が中心です。中小企業（年間電力使用量100万kWh以下）向けにはシンプルな固定単価プランを提供する全国系が現実的な選択肢で、本部一括契約のスケールメリットを得られる可能性があります。撤退リスクの低い親会社系を優先する選定基準が定石です。" },
+  { question: "四国エリアの中小企業削減事例の典型値は？", answer: "業界平均レンジとして、製造業（高圧、年間500万kWh級）で年間150〜400万円（5〜8%）、食品工場（高圧、年間100万kWh級）で年間40〜100万円（5〜10%）、観光業ホテル（高圧、年間300万kWh級）で年間80〜200万円（5〜8%）の削減事例が報告されています。太陽光出力制御時間帯の活用（市場連動部分採用＋自家消費太陽光）が四国特有の有効施策です。" },
+];
+
+const sourcesItems = [
+  { name: "四国電力", url: "https://www.yonden.co.jp/", description: "四国電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・四国地方需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "四国エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "四国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -152,7 +168,7 @@ export default function RegionShikokuBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "四国電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -194,7 +210,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ四国電力エリアの法人電気料金見直しが重要なのか — 小規模エリア特有の課題</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           四国電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -226,7 +242,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">四国電力の法人向け料金体系（中小規模事業者向けメニュー）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は四国電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -293,7 +309,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">四国電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">四国 4 県別の電力需要特性と伊方原発の影響</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">伊方原発の安定稼働が料金安定の鍵</h3>
@@ -335,7 +351,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">四国電力エリアの四季別需要パターンと料金改定（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -350,7 +366,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">四国新電力の特徴と離島電源を含む市場特殊性</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -361,38 +377,56 @@ export default function RegionShikokuBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">四国電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">伊方原発の稼働スケジュールを確認する</span>
-            — 定期検査や規制対応のスケジュールが燃調費の変動と連動します。
-            停止期間が見込まれる時期は燃調費上昇リスクを考慮した契約設計を検討してください。
-          </li>
-          <li>
-            <span className="font-semibold">参入可能な新電力を幅広く調査する</span>
-            — 需要規模の小さいエリアのため選択肢が限られますが、全国展開型の大手新電力は
-            四国でも営業していることが多い。公式サイトや代理店経由での見積もり依頼を推奨します。
-          </li>
-          <li>
-            <span className="font-semibold">燃料費調整額の仕組みと上限設定を確認する</span>
-            — 新電力との契約時にキャップ（上限）の有無を必ず確認。
-            原発停止時の燃調費急増リスクに対してキャップ付きプランは有効な保険となります。
-          </li>
-          <li>
-            <span className="font-semibold">デマンドコントロールの余地を検討する</span>
-            — 高圧・特別高圧の基本料金はデマンド（最大需要電力）で決まります。
-            製造ラインや設備運用の調整でピークを抑制し、基本料金を削減できる場合があります。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金の影響を試算する</span>
-            — 2024年度以降、電力調達コストに容量市場落札価格が加算されています。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">四国エリアの中小企業削減事例（食品 / 観光 / 製造業）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          四国エリアは中小企業の比率が高く、太陽光出力制御による昼間スポット価格低下を活用した契約形態が他エリアより有効です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">愛媛・化学／パルプ工場（特高 5,000 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>特別高圧個別交渉: 約3〜4%</li>
+              <li>廃熱回収＋コージェネ: 約4〜6%</li>
+              <li>燃調キャップ条項追加: 上振れ抑制効果</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約350〜700万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">食品工場・観光ホテル（高圧 300 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり: 約3〜5%</li>
+              <li>市場連動部分採用＋自家消費太陽光: 約3〜5%</li>
+              <li>夏季デマンド管理: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約80〜200万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">中小企業・小売（高圧 100 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し（全国系新電力）: 約3〜5%</li>
+              <li>LED完全化＋人感センサー: 約2〜3%</li>
+              <li>自家消費太陽光（屋根 30kW）: 約3〜5%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約40〜100万円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">四国電力エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>伊方原発の稼働スケジュールを確認（燃調費連動の予測）</li>
+            <li>参入可能な新電力を幅広く調査（全国展開型の大手新電力含む）</li>
+            <li>燃調費キャップの有無を必ず確認（原発停止時のリスク保険）</li>
+            <li>デマンドコントロールで基本料金を削減（製造ラインのピーク抑制）</li>
+            <li>
+              容量拠出金の影響を試算（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、四国圏法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 注記 */}
@@ -405,7 +439,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 四国エリアプライス推移と太陽光出力制御リスク</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -444,7 +478,7 @@ export default function RegionShikokuBusinessElectricityPage() {
 
       {/* エリア需要の特徴 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">四国電力エリア需要と原発・再エネの電源構成</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           四国電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "shikoku")?.share}%を占めます。全国最小規模の需要エリア。西日本クラスターとの高い連動性(0.95)。
         </p>
@@ -475,58 +509,25 @@ export default function RegionShikokuBusinessElectricityPage() {
         <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
-      {/* 気候データと電力需要の関係 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          松山の気象データから、当エリアの電力需要に影響する気候特性を整理します。
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          四国電力エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          松山の猛暑日は8日→83日（約10倍）。広島との気温相関0.992と極めて高く、中国・四国・九州は気温面でほぼ一体的に動きます。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>伊方原発稼働シナリオ別の燃調費影響を比較する</li>
+          <li>太陽光出力制御による昼間スポット価格低下の市場連動メリットを試算する</li>
+          <li>固定プランと市場連動プランの年間コスト差を確認する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 松山の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "shikoku")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.shikoku}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -562,6 +563,31 @@ export default function RegionShikokuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-kansai-business-electricity",
+              title: "関西電力エリアの法人電気代事情",
+              description: "瀬戸内海を挟む隣接エリア。原発比率の高さで料金安定性に共通点あり。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "太陽光出力制御リスクが高い四国エリアで、自家消費型太陽光は契約電力削減の有効策。",
+            },
+            {
+              href: "/food-factory-electricity-cost-review",
+              title: "食品工場の電気料金見直しポイント",
+              description: "四国の主要業種である食品製造業の負荷特性と契約見直しの考え方。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "愛媛の化学・パルプなど特別高圧需要家向け料金体系を解説。",
             },
           ]}
         />

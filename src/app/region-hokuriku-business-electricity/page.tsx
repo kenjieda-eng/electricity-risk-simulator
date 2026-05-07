@@ -11,11 +11,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "北陸電力の高水力比率は法人料金にどう影響しますか？", answer: "北陸電力エリアは黒部・神通川・庄川など豊富な水力資源を持ち、水力比率が全国最高水準です。水力は燃料費がほぼかからず、燃料費調整額のプラス幅が他エリアより小さい構造的優位があります。結果、北陸電力の高圧電力量料金は全国比で割安グループ（14〜15円/kWh前後）に位置します。ただし渇水年は出水率低下で火力代替が増え、料金優位が縮小するリスクがあります。" },
+  { question: "富山・石川・福井で業種別の電気代特性に違いは？", answer: "富山県は薬品・アルミ精錬・電子部品など重電力消費業種が集積し、石川県は繊維・機械、福井県は繊維・原発関連と機械加工が中心。アルミ精錬は電力消費が極めて大きく、電気代の事業コスト比率が30%を超える場合もあります。県ごとの主要業種に応じて、契約電力規模・契約形態（特別高圧/高圧）の最適解は異なります。" },
+  { question: "北陸の融雪需要と冬季ピーク対策はどうすればよいですか？", answer: "北陸地方は積雪が多く、商業施設や公共施設の融雪・ロードヒーティング需要が冬季のピーク需要を形成します。融雪は12〜3月に集中するため、契約電力（kW）も冬季最大需要で決まりがちです。融雪をガス・灯油代替に切り替える、あるいは蓄熱式融雪に置換することで、契約電力ピークを冬季から夏季に分散させ基本料金を引き下げる事例があります。" },
+  { question: "北陸新電力の少なさは契約交渉でメリットですか？", answer: "新電力数が30〜40社程度と他エリアより少ないため、価格競争による単価引き下げ余地は他エリアより小さい構造です。一方、長期安定供給契約の交渉余地、地場系（北陸電力グループ・北陸ガスグループ）との関係構築のメリットは相対的に大きいです。短期の単価最安より、中長期の供給安定性を重視する経営判断が定石です。" },
+  { question: "北陸電力の出水率連動料金リスクは？", answer: "水力比率が高いゆえに、雪解け水・梅雨・台風による出水率（水力発電可能量）が燃料費調整額に影響します。渇水年は火力代替で燃調費プラス幅が拡大、豊水年はマイナス側に振れることもあります。法人需要家としては、渇水シナリオでの上振れリスクを年次予算の保守的バッファとして組み込むのが定石です。" },
+  { question: "北陸エリアの製造業削減事例の典型値は？", answer: "業界平均レンジとして、アルミ精錬・電解工場（特別高圧、年間1億kWh級）で年間500〜1,500万円（5〜10%）、薬品・電子部品工場（高圧、年間500万kWh級）で年間200〜500万円（5〜8%）、繊維・機械工場（高圧、年間100万kWh級）で年間40〜120万円（5〜10%）の削減事例が報告されています。冬季融雪需要のピークシフトが特に効きやすい地域特性です。" },
+  { question: "北陸電力の特別高圧契約はどんな業種が対象ですか？", answer: "契約電力2,000kW以上の需要家が対象で、富山県のアルミ精錬・電解業界、福井県の原発関連・機械加工大手、石川県の大型工場が代表例です。特別高圧契約では電力会社との相対契約・個別交渉が中心となり、託送料金・インバランス料金・容量拠出金の扱いを精緻に詰める必要があります。" },
+];
+
+const sourcesItems = [
+  { name: "北陸電力", url: "https://www.rikuden.co.jp/", description: "北陸電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・北陸地方需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "北陸エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "北陸電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -158,7 +175,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "北陸電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -201,7 +218,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ北陸電力エリアの法人電気料金見直しが重要なのか — 高水力比率と地場産業</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           北陸電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -233,7 +250,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">北陸電力の法人向け料金体系（水力比率を活かした料金構造）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は北陸電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -300,7 +317,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">北陸電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">富山・石川・福井の地場産業構造（薬品 / 繊維 / 機械）</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">全国最安水準の電力量料金（2023年値上げで変動）</h3>
@@ -341,7 +358,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">北陸の融雪需要と冬季ピーク対策の料金改定（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -356,7 +373,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">北陸新電力の少なさと交渉余地（地方ならではの選択肢）</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -367,39 +384,61 @@ export default function RegionHokurikuBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">北陸電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">2023年値上げ後の料金水準を改めて試算する</span>
-            — 「北陸は安い」という従来の前提を見直し、現在の実際の請求単価を確認した上で削減目標を設定してください。
-          </li>
-          <li>
-            <span className="font-semibold">全国対応の新電力に相見積もりを依頼する</span>
-            — 地元の新電力選択肢が少ないため、全国展開の大手新電力・エネルギーコンサルへの問い合わせが有効です。
-          </li>
-          <li>
-            <span className="font-semibold">省エネ投資で使用量自体を削減する</span>
-            — 新電力への乗り換えだけでなく、高効率設備・インバーター・LED 照明などへの投資が料金削減に直結します。
-          </li>
-          <li>
-            <span className="font-semibold">志賀原発の再稼働動向を注視する</span>
-            — 再稼働が実現すれば燃料費の低い電源比率が上昇し、中長期的な料金安定化が期待されます。長期契約の交渉タイミングの見極めに活用してください。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金・再エネ賦課金の上昇を織り込む</span>
-            — システム費用の追加転嫁が続いています。3〜5 年の電気代予測を行い、省エネ・自家消費設備の投資判断に役立ててください。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">北陸エリアの製造業削減事例（薬品 / 繊維 / 機械）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          北陸エリアでは水力比率の高さによる燃調費安定性を背景に、省エネ設備投資と冬季融雪需要のピークシフトが特に効きやすい構造です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">アルミ精錬・電解工場（特高 1 億kWh級）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>特別高圧個別交渉: 約3〜4%</li>
+              <li>夜間操業シフトによる需給平準化: 約2〜3%</li>
+              <li>渇水年バッファ条項追加: 上振れ抑制効果</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約500〜1,500万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">薬品・電子部品工場（高圧 500 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり（全国系含む）: 約3〜5%</li>
+              <li>クリーンルーム空調インバーター化: 約2〜3%</li>
+              <li>冬季融雪のガス化転換: 契約電力ピークシフト</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約200〜500万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">繊維・機械工場（高圧 100 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し: 約3〜5%</li>
+              <li>蓄熱式融雪への置換: 約3〜5%</li>
+              <li>LED完全化＋運用改善: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約40〜120万円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">北陸電力エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>2023 年値上げ後の現行請求単価を改めて試算（旧前提のリセット）</li>
+            <li>全国対応の新電力に相見積もりを依頼（地元選択肢が少ないため）</li>
+            <li>省エネ投資で使用量自体を削減（高効率設備・LED・インバーター）</li>
+            <li>志賀原発の再稼働動向を注視（中長期料金安定化のシグナル）</li>
+            <li>
+              容量拠出金・再エネ賦課金の上昇を織り込む（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、北陸圏法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 電源構成の実績データ */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">電源構成の実績データ（30分値集計）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">北陸電力の高水力比率（全国最高水準）の電源構成</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2024〜2026年の30分値データ（36,960レコード）を集計した北陸エリアの電源構成実績です。
         </p>
@@ -443,7 +482,7 @@ export default function RegionHokurikuBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 北陸エリアプライス推移と水力出水率連動</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -480,91 +519,25 @@ export default function RegionHokurikuBusinessElectricityPage() {
         </p>
       </section>
 
-      {/* エリア需要の特徴 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          北陸電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "hokuriku")?.share}%を占めます。電力多消費産業(アルミ・化学)の集積で、産業用需要比率が高い。
+          北陸電力エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="bg-sky-50">
-                <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-700">年度</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">平均需要（MW）</th>
-                <th className="border border-slate-200 px-3 py-2 text-right font-semibold text-slate-700">負荷率（%）</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[2016, 2023].map((fy, i) => {
-                const d = DEMAND_AREA_FY.find(r => r.fy === fy);
-                const lf = LOAD_FACTOR_FY.find(r => r.fy === fy);
-                return (
-                  <tr key={fy} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                    <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">FY{fy}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{d?.hokuriku.toLocaleString()}</td>
-                    <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">{lf?.hokuriku}%</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
-      </section>
-
-      {/* 気候データと電力需要の関係 */}
-      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          金沢の気象データから、当エリアの電力需要に影響する気候特性を整理します。
-        </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          金沢の猛暑日は18日→62日に増加。冬の最低気温も+1.0℃上昇し、暖房需要（HDD）は-16%減少。日本海側特有の冬の電力需要構造が緩やかに変化しています。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>渇水年の出水率低下シナリオでの年間上振れリスク額を確認する</li>
+          <li>志賀原発再稼働シナリオでの中長期料金安定化効果を試算する</li>
+          <li>冬季融雪需要の契約電力ピークシフトで基本料金がどれだけ下がるかを把握する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 金沢の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "hokuriku")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.hokuriku}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -600,6 +573,31 @@ export default function RegionHokurikuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-tohoku-business-electricity",
+              title: "東北電力エリアの法人電気代事情",
+              description: "北陸と並ぶ豪雪地域。冬季暖房需要・再エネ拡大の特性を北陸エリアと比較できる。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "アルミ精錬・電解工場など北陸の特高需要家で活用される料金体系を解説。",
+            },
+            {
+              href: "/food-factory-electricity-cost-review",
+              title: "食品工場の電気料金見直しポイント",
+              description: "北陸で集積する食品・薬品工場の負荷特性と契約見直しの考え方。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "北陸の工場屋根を活用した自家消費型太陽光の投資回収期間を解説。",
             },
           ]}
         />
