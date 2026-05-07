@@ -83,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "データセンターで固定プランと市場連動どちらが向いていますか？", answer: "大規模データセンターは電力使用量が極めて大きく、市場価格変動の絶対影響額が巨大になるため、固定プランが基本選択肢になります。テナント企業への電気代転嫁が固定単価ベースで設計される契約形態が多いことも、固定プラン親和性を高める要因です。専門の電力調達チームと需要応答（DR）対応設備があれば、市場連動の部分採用＋ヘッジ商品の組み合わせが選択肢に入ります。" },
+  { question: "PUEが0.1改善すると年間電気代はどれくらい変わりますか？", answer: "PUE 1.5のデータセンターでIT機器消費電力が10MWの場合、PUEが1.4に改善（0.1改善）すれば施設総消費電力は15MW→14MWに減少し、年間で約8,760万kWh（電気代単価17円/kWhで約14.9億円）の削減効果が試算できます。PUE改善の経済価値はDC規模に比例して大きくなり、特別高圧契約の単価交渉と並行する重要レバーです。" },
+  { question: "特別高圧契約の交渉でアドバイザーは必須ですか？", answer: "必須ではありませんが、託送料金・インバランス料金・容量拠出金・卸電力市場連動など制度が複雑なため、相場感を持つアドバイザーの起用は実務的にメリットが大きい領域です。特に契約電力2,000kWを大幅に超える施設では、相対契約・入札・先物ヘッジの組み合わせで年間数千万円〜数億円の差が出ることがあり、アドバイザー報酬を上回る効果が得られるケースが多いです。" },
+  { question: "RE100対応で再エネ証書とオンサイト太陽光どちらが現実的ですか？", answer: "短期的には非化石証書（特に再エネ指定）の調達が手軽で、追加投資が不要なため最初の一歩として現実的です。中長期では追加性（Additionality）要求が強まる方向にあり、オンサイト太陽光・コーポレートPPAなど『新規再エネ電源』への切り替えが評価されやすくなります。RE100コミットメント時期と合わせて段階的に再エネ調達ポートフォリオを組むのが定石です。" },
+  { question: "AI/GPU増設で契約電力をどう増やしますか？", answer: "AI/GPUクラスターは1ラックあたり30〜50kW（従来の3〜5倍）の電力密度になるため、既存契約電力の余裕枠を超える増設では電力会社への契約電力増加申請（場合によっては新たな送電線引き込み）が必要になります。リードタイムは半年〜1年以上に及ぶケースもあるため、AI需要の事業計画と並行して『電力工事側のリードタイム』を組み込んだ段階拡張設計が重要です。" },
+  { question: "寒冷地立地と外気冷却で年間どれくらい削減できますか？", answer: "北海道・東北など年間の平均外気温が低い地域では、外気冷却（フリークーリング）の活用時間が年間4,000〜6,000時間に達し、機械式冷却中心の本州都市部DCと比較してPUEで0.2〜0.3、電気代換算で15〜25%程度の削減事例があります。寒冷地立地はDC新設時の戦略的選択肢として、近年大手クラウド事業者の進出が相次いでいます。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・データセンター省エネ政策に関する情報" },
+  { name: "JDCC（日本データセンター協会）", url: "https://www.jdcc.or.jp", description: "PUE業界平均・DC省エネ実態調査" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+];
+
 const reviewPoints = [
   {
     heading: "特別高圧契約の特性を理解する",
@@ -118,10 +133,7 @@ export default function DataCenterElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -161,10 +173,10 @@ export default function DataCenterElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            データセンターの電気料金が上がりやすい理由
+            なぜデータセンターの電気料金見直しが重要なのか — 高密度負荷と RE100 要請
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            データセンターの電気料金には、以下の構造的な上昇要因があります。
+            データセンター（DC）の電気料金見直しは、AI・GPUクラスターの普及によるラック単位の電力密度上昇（従来5〜10kWから30〜50kWへ）と、利用テナント企業からのRE100対応要請という2つの追い風で、その重要性が他業種より急速に高まっています。電気代がDC事業の総コストの50〜70%を占める収益構造下では、契約条件・PUE改善・再エネ調達の三位一体での最適化が経営課題になります。以下に、構造的な上昇要因を整理します。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>IT機器と冷却設備が24時間365日稼働し、ベースロードが極めて大きい</li>
@@ -187,8 +199,11 @@ export default function DataCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            負荷特性から見た着眼点
+            IT 機器・冷却・UPS の三層構造とサーバー密度別の負荷プロファイル
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            DCの消費電力は「IT機器層 → UPS変換層 → 冷却排熱層」の三層構造を上から下へ流れる電力ロスの累積として構成されます。一般的な内訳は IT機器 40〜60%、空調・冷却 30〜40%、UPS変換ロス・受変電 10〜15%、照明・管理 数%。サーバー密度（kW/ラック）が上がるほど発熱密度も上がり、冷却層の比重が重くなる関係にあります。
+          </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
               <div
@@ -204,7 +219,7 @@ export default function DataCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            PUEとは何か：電力コスト最適化の核心
+            PUE 別の電気代差分ベンチマーク（PUE 1.1 / 1.3 / 1.5 / 2.0）
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             PUE（Power Usage Effectiveness）はデータセンターのエネルギー効率を示す指標で、以下の式で計算されます。
@@ -233,14 +248,37 @@ export default function DataCenterElectricityCostReviewPage() {
               </div>
             ))}
           </div>
+          <div className="mt-6 overflow-x-auto">
+            <p className="text-sm font-semibold text-slate-900">PUE値別の年間電気代試算（IT機器10MW・電気代単価17円/kWh想定）</p>
+            <table className="mt-2 w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">PUE</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">施設総消費電力</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間消費電力</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間電気代目安</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr><td className="border border-slate-200 px-3 py-2">PUE 1.1（最先端ハイパースケール）</td><td className="border border-slate-200 px-3 py-2">11 MW</td><td className="border border-slate-200 px-3 py-2">約9,640万kWh</td><td className="border border-slate-200 px-3 py-2">約16.4億円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 px-3 py-2">PUE 1.3（高効率DC）</td><td className="border border-slate-200 px-3 py-2">13 MW</td><td className="border border-slate-200 px-3 py-2">約1.14億kWh</td><td className="border border-slate-200 px-3 py-2">約19.4億円</td></tr>
+                <tr><td className="border border-slate-200 px-3 py-2">PUE 1.5（業界平均水準）</td><td className="border border-slate-200 px-3 py-2">15 MW</td><td className="border border-slate-200 px-3 py-2">約1.31億kWh</td><td className="border border-slate-200 px-3 py-2">約22.3億円</td></tr>
+                <tr className="bg-slate-50"><td className="border border-slate-200 px-3 py-2">PUE 2.0（旧世代DC）</td><td className="border border-slate-200 px-3 py-2">20 MW</td><td className="border border-slate-200 px-3 py-2">約1.75億kWh</td><td className="border border-slate-200 px-3 py-2">約29.8億円</td></tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: JDCC（日本データセンター協会）「データセンター省エネ実態調査」、経産省「データセンター市場動向調査」をもとに業界平均レンジで作成。</p>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            PUE 2.0からPUE 1.3への改善は、年間電気代で約10億円の差をつける規模感です。電力契約の単価交渉で得られる削減幅（数%レベル）を桁違いに上回るため、PUE改善は経営層が直接関与すべき経営課題として扱うのが定石となります。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            特別高圧契約と電力会社個別交渉 — DC 特有の調達体制
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            データセンターは電力使用量が非常に多く、プラン選択の影響が大きい業種です。
+            大規模DCの電力調達は、メニュー化された料金表から選ぶ高圧契約とは様相が大きく異なります。契約電力2,000kWを大きく超えるDCでは特別高圧契約での個別交渉が中心となり、託送料金の精算方法、燃調・市場連動の組み込み比率、容量拠出金の実費通し方、契約期間と最低使用電力量の取り決めなど、論点が多岐にわたります。データセンターは電力使用量が非常に多く、プラン選択の影響額が極めて大きいため、調達体制の整備自体が経営課題になります。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
@@ -266,9 +304,44 @@ export default function DataCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            契約見直しで確認したいこと
+            RE100 / クラウド事業者の再エネ要件と非化石証書の選択肢
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            DCを利用するハイパースケーラー（クラウド事業者）・大手企業は、自社のRE100コミットメント達成のために、利用するDCに対して再エネ100%電源での運用を要求するケースが急増しています。DC事業者の再エネ調達手段は、コストとAdditionality（追加性、新規再エネ電源を生み出す貢献度）の観点から大きく3層に分かれます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">第1層：非化石証書</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                既存の電源を再エネ電源として表示する権利の調達。最も手軽で初期投資不要だが、追加性は低い。RE100では一定条件下で認められる。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">第2層：再エネプラン</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                電力会社の再エネ100%プランへの切り替え。プレミアム単価が発生するが、トラッキング付きの証書が紐付き、レポーティングが容易。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">第3層：コーポレートPPA</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                <Link href="/corporate-ppa-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">コーポレートPPA</Link>での新規再エネ電源確保。長期固定単価で価格ヘッジ効果も得られ、追加性が最も高く評価される。
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            実務上は、RE100コミットメント時期から逆算して「短期：非化石証書 → 中期：再エネプラン → 長期：コーポレートPPA」と段階的に切り替える調達ポートフォリオ設計が、コストと評価の両立に有効です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            AI / GPU 需要急増を前提とした契約電力の段階拡張設計
           </h2>
           <div className="mt-4 space-y-4">
+            <p className="text-sm leading-7 text-slate-700 sm:text-base">
+              AI推論・学習ワークロードの増加で、DC内のGPUクラスター比率は年々上昇しています。GPUサーバーは1ラックあたり30〜50kW（従来サーバーの3〜5倍）の電力密度を要求するため、既存DCで段階的にGPUラックを増やすと、想定より早く契約電力の上限に到達します。電力会社への契約電力増加申請は、変電設備増強・送電線引き込み工事を伴う場合があり、リードタイムが半年〜1年以上に及ぶことも珍しくありません。
+            </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -282,7 +355,7 @@ export default function DataCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            外気冷却 / 液冷 / 高効率 UPS — DC 立地別の最適冷却方式
           </h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -299,7 +372,7 @@ export default function DataCenterElectricityCostReviewPage() {
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">高効率UPS</p>
-              <p className="mt-1 text-sm leading-6 30 text-slate-600">
+              <p className="mt-1 text-sm leading-6 text-slate-600">
                 変換効率94〜96%の高効率UPSへの更新で、電力ロスを削減。大規模DCでは消費電力の数%の改善が年間コストに大きく効いてくる。
               </p>
             </div>
@@ -314,7 +387,40 @@ export default function DataCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーターで確認したいこと
+            大規模 DC の冷却効率化による年間電気代 20-30% 削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            複合施策での削減効果を具体的にイメージするため、大規模DCを想定した試算ベンチマークを示します。立地・既設設備の状態で削減幅は変動しますが、初期検討の参考値として活用できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業種：商用DC（コロケーション）</li>
+                <li>IT負荷 約10MW、PUE 1.7</li>
+                <li>年間消費電力 約1.49億kWh</li>
+                <li>現行契約：特別高圧、固定単価＋一部市場連動、年間電気代 約25.3億円</li>
+                <li>築12年、機械式冷却中心、UPS変換効率92%</li>
+              </ul>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>外気冷却比率拡大（PUE 1.7→1.5）: 約12%（約3.0億円）</li>
+                <li>高効率UPS更新（92→96%）: 約2〜3%（約5,000〜7,500万円）</li>
+                <li>コールドアイル/ホットアイル分離徹底: 約3〜5%（約7,500万〜1.3億円）</li>
+                <li>特別高圧契約の単価交渉（年次入札型）: 約3〜5%（約7,500万〜1.3億円）</li>
+                <li>サーバー仮想化集約（旧型廃棄）: 約2〜4%（約5,000万〜1.0億円）</li>
+                <li className="font-semibold text-slate-800 mt-1">合計削減幅目安: 年間 約5.0〜7.6億円（20〜30%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: JDCC省エネ実態調査、経産省データセンター市場動向、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社 DC の状況を確認する
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスク額を確認する（大規模DCは金額が非常に大きくなる）</li>
@@ -330,14 +436,8 @@ export default function DataCenterElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -382,6 +482,21 @@ export default function DataCenterElectricityCostReviewPage() {
               href: "/emergency-power-outage-response",
               title: "停電・電力不足時の対応と事前準備",
               description: "データセンターの停電リスク対応と無停電電源・非常用発電の準備について。",
+            },
+            {
+              href: "/corporate-ppa-overview",
+              title: "コーポレートPPAの概要と選び方",
+              description: "DCのRE100対応で選択肢となるコーポレートPPAの仕組みと、オンサイト/オフサイトの違いを解説。",
+            },
+            {
+              href: "/non-fossil-certificates",
+              title: "非化石証書の仕組みと活用法",
+              description: "DC事業者の再エネ調達手段として最も手軽な非化石証書の購入方法・コスト・トラッキング条件。",
+            },
+            {
+              href: "/articles/by-industry/it-technology",
+              title: "IT・通信業種ハブ：IT・テクノロジー業種の電気料金関連記事",
+              description: "DC・SaaS・通信キャリア・IT受託など、IT/通信系業種の電気料金関連記事を一覧で確認。",
             },
           ]}
         />

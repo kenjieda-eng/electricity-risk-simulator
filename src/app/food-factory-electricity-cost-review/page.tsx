@@ -83,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "食品工場で固定プランと市場連動プランどちらが向いていますか？", answer: "食品工場は連続操業による高ベースロードと、夏場の生産繁忙期と需給逼迫が重なるリスクから、価格変動を排除できる固定プランが向きやすい業種です。市場連動を選ぶ場合は、製品単価への転嫁タイムラグと電気代変動のミスマッチが収益に与える影響を、上振れシナリオで事前試算する必要があります。" },
+  { question: "弁当工場と冷凍食品工場で電力原単位はどれくらい違いますか？", answer: "業界の典型値として、弁当・惣菜工場は加熱工程が中心で約300〜500 kWh/t、冷凍食品工場は冷凍・冷蔵保管が長期にわたるため約600〜1,200 kWh/tと2倍前後の差が出ることが珍しくありません。同じ食品工場でも品種によって電力消費構造は大きく異なるため、類似業態のベンチマークと比較して自社水準を確認することが見直しの出発点になります。" },
+  { question: "食品衛生法の温度管理を維持しながら省エネはどこまで可能ですか？", answer: "温度設定そのものは食品衛生法・HACCPの要求から下げにくいものの、冷蔵冷凍庫の扉開閉時間の管理、エアカーテン・ストリップカーテンの活用、コンプレッサーのインバーター化、外気温との温度差を活かしたフリークーリング併用などで5〜15%程度の削減事例が報告されています。設定温度を変えずに「ロスを減らす」アプローチが基本です。" },
+  { question: "食品事業者向けの補助金で活用しやすいのは何ですか？", answer: "経済産業省のSII（省エネルギー投資促進支援事業）が冷凍機・コンプレッサー・空調更新で活用しやすく、農林水産省「食品産業の脱炭素・環境対応支援」「みどりの食料システム戦略」関連の補助金は工場の省エネ・再エネ転換に対応します。環境省の「ストップ温暖化」関連事業は太陽光・蓄電池の導入で活用できます。" },
+  { question: "蒸気ボイラーの電化はいつ検討すべきですか？", answer: "重油・LPGボイラーの法定耐用年数（15〜25年）を迎えるタイミングで、ヒートポンプ式蒸気ボイラーやインダクションヒーターへの転換を検討するのが定石です。電化はランニングコストでガス比較になりますが、燃料費上昇局面・GHG削減目標がある場合は早期検討の合理性が高まります。" },
+  { question: "冷凍倉庫併設工場の電気代削減事例の典型値は？", answer: "業界平均レンジとして、冷凍倉庫併設の中規模食品工場で、契約見直し＋コンプレッサーインバーター化＋扉管理徹底＋自家消費型太陽光の組み合わせにより年間電気代の12〜18%削減という事例が複数報告されています。冷凍倉庫単体ではより高い削減幅（最大25%程度）の事例もあります。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "環境省・SII（省エネ補助金事業実績）", url: "https://sii.or.jp", description: "食品工場の省エネ補助金事業実績" },
+];
+
 const reviewPoints = [
   {
     heading: "停電リスクへの対応が最優先",
@@ -118,10 +133,7 @@ export default function FoodFactoryElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -161,10 +173,10 @@ export default function FoodFactoryElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            食品工場の電気料金が上がりやすい理由
+            なぜ食品工場の電気料金見直しが重要なのか — 連続操業と衛生管理の二重制約
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            食品工場の電気料金には、以下の構造的な上昇要因があります。
+            食品工場の電気料金見直しは、連続操業による高ベースロードと、食品衛生法に基づく温度管理義務という「使用量を下げにくい」二重制約のなかで進める必要があります。電気代を理由に冷蔵温度を緩めることは法令違反・製品ロスに直結するため、見直しの主軸はあくまで契約条件と省エネ設備の組み合わせに置かれます。以下に、食品工場の電気料金が上がりやすい構造的要因を整理します。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>24時間連続稼働のベースロードが高く、電力使用量の絶対量が多い</li>
@@ -187,8 +199,11 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            負荷特性から見た着眼点
+            食品加工特有の加熱・冷凍同時稼働がつくる重ね合わせ負荷
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            食品工場の負荷特性で他業種と最も異なる点は、「加熱（蒸気・電気ヒーター）」と「冷凍冷蔵」が同じ建屋内で同時稼働する点です。揚げ物ライン直後にチルド冷却→冷蔵保管→出荷という工程では、わずか数十メートルの動線の中で巨大な温度勾配を維持するためにエネルギーが投入され、結果として時間帯を問わず重ね合わせ負荷が常時積み上がります。これが、夜間も含めて高ベースロードが続く食品工場の電力プロファイルの根本原因です。
+          </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
               <div
@@ -204,10 +219,58 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            加工品種別の電力原単位ベンチマーク（弁当 / 冷凍食品 / 飲料 / 菓子 kWh/t）
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            食品工場は固定プランとの相性が高い業種といえます。その理由を整理します。
+            自社工場の電力使用量が業界水準と比べて多いのか少ないのかを判断する基本指標が「電力原単位（kWh/t、製品1t製造あたりの消費電力量）」です。同じ食品工場でも、加工品種によって2〜4倍程度の幅があるため、自社が属する加工分類のベンチマークと比較するのが出発点になります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">加工品種</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">電力原単位レンジ目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主なエネルギー集中工程</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">弁当・惣菜</td>
+                  <td className="border border-slate-200 px-3 py-2">約300〜500 kWh/t</td>
+                  <td className="border border-slate-200 px-3 py-2">加熱調理、急速冷却、チルド保管</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">冷凍食品</td>
+                  <td className="border border-slate-200 px-3 py-2">約600〜1,200 kWh/t</td>
+                  <td className="border border-slate-200 px-3 py-2">急速冷凍、長期冷凍保管</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">飲料（清涼飲料・ビール等）</td>
+                  <td className="border border-slate-200 px-3 py-2">約100〜250 kWh/t</td>
+                  <td className="border border-slate-200 px-3 py-2">加熱殺菌、CIP洗浄、冷却充填</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">製菓・スナック</td>
+                  <td className="border border-slate-200 px-3 py-2">約400〜700 kWh/t</td>
+                  <td className="border border-slate-200 px-3 py-2">焼成・フライ、包装空調管理</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">食肉加工</td>
+                  <td className="border border-slate-200 px-3 py-2">約350〜700 kWh/t</td>
+                  <td className="border border-slate-200 px-3 py-2">冷蔵保管、加熱殺菌、コンプレッサー</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 経済産業省「製造業における電力消費構造調査」、食品産業センター「食品製造業のエネルギー消費実態」をもとに業界平均レンジで作成。実数値は工場規模・冷凍倉庫併設の有無・自動化度合いで変動。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            食品衛生法の温度管理義務と省エネ両立の制約下でのプラン選択
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            食品工場のプラン選択で最大の制約となるのは食品衛生法・HACCPに基づく温度管理義務です。冷蔵庫の設定温度を緩める節電は法令違反・品質事故に直結するため、市場連動プランの「市場高騰時に節電する」という前提が成立しにくく、固定プランとの相性が他業種より高い業種といえます。一方で温度設定を変えずに「ロスを減らす」省エネ余地は大きく、契約プラン×省エネ設備の二段構えが基本戦略になります。理由を整理します。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
@@ -244,9 +307,44 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            契約見直しで確認したいこと
+            食品事業者向け補助金活用（経産省 SII・農水省グリーン化補助金）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            食品工場の電気代削減で、契約プラン見直しの次に効果が大きいのが省エネ設備投資です。初期投資を圧縮するために、目的別に補助金の窓口を使い分けるのが実務の定石になります。食品事業者が活用しうる主な補助メニューは以下のとおりです。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                省エネルギー投資促進支援事業。冷凍機・コンプレッサー・空調・LEDの汎用設備更新で活用しやすく、食品工場の活用実績が最も多い。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">農水省グリーン化</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                みどりの食料システム戦略・食品産業の脱炭素化支援関連。蒸気ボイラー電化や、食品工場のエネルギー転換施策に対応。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">環境省（再エネ）</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                自家消費型太陽光・蓄電池・PPAモデルの導入補助。食品工場の屋根面積を活用した自家消費発電と相性が良い。
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            同一設備に複数補助金を重複受給することは原則できないため、設備の主目的（省エネ更新か再エネ導入か）に応じて最適な窓口を選定します。詳細は<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金制度の概要</Link>を参照してください。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            製造ライン更新サイクル（7-10 年）と契約電力見直しの同期化
           </h2>
           <div className="mt-4 space-y-4">
+            <p className="text-sm leading-7 text-slate-700 sm:text-base">
+              食品工場の主要設備は7〜10年の更新サイクルで動くことが多く、契約電力（kW）の見直しタイミングをこのライン更新に同期させると、過大契約・過小契約のミスマッチを防げます。新ライン稼働後3〜6か月の30分値デマンドを取得してから契約電力を再設定する「実績ベース調整」が、基本料金の最適化に直結します。
+            </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -260,7 +358,7 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            蒸気ボイラー電化と蓄電池併用 — 食品工場の脱炭素設備投資パターン
           </h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -292,7 +390,39 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーターで確認したいこと
+            冷凍倉庫併設工場の年間電気代 12-18% 削減の典型事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            複合施策での削減効果を具体的に把握するため、冷凍倉庫併設の中規模食品工場を想定した試算ベンチマークを示します。実数値は工場規模・既設設備の状態で大きく変動しますが、初期検討の参考値として活用できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業種：冷凍食品製造（中規模、冷凍倉庫併設）</li>
+                <li>年間電力使用量 約2,500万kWh</li>
+                <li>現行契約：高圧、固定単価ベース、年間電気料金 約6.0億円</li>
+                <li>築15年、コンプレッサー定速型、扉管理ルール未整備</li>
+              </ul>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>契約見直し（複数社相見積）: 約3〜5%（約1,800〜3,000万円）</li>
+                <li>コンプレッサーインバーター化: 約4〜6%（約2,400〜3,600万円）</li>
+                <li>冷凍倉庫扉管理・エアカーテン: 約2〜3%（約1,200〜1,800万円）</li>
+                <li>LED+人感センサー（包装・出荷エリア）: 約1〜2%（約600〜1,200万円）</li>
+                <li>自家消費型PPA太陽光（屋根）: 約2〜3%（約1,200〜1,800万円）</li>
+                <li className="font-semibold text-slate-800 mt-1">合計削減幅目安: 年間 12〜18%（約7,200〜1.1億円）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: SII省エネ補助金事業実績、食品産業センター事例集、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社工場の状況を確認する
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスク額を確認する</li>
@@ -308,14 +438,8 @@ export default function FoodFactoryElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -360,6 +484,21 @@ export default function FoodFactoryElectricityCostReviewPage() {
               href: "/factory-fixed-vs-market-linked",
               title: "工場向け：固定プランと市場連動プランの選び方",
               description: "食品工場の操業特性に合った料金プランの選択基準を整理。",
+            },
+            {
+              href: "/warehouse-electricity-cost-review",
+              title: "物流倉庫の電気料金見直しポイント",
+              description: "冷凍倉庫併設工場と類似する負荷構造。冷蔵物流業の契約見直しの考え方を比較できます。",
+            },
+            {
+              href: "/articles/by-industry/manufacturing",
+              title: "製造業ハブ：製造業の電気料金関連記事一覧",
+              description: "食品・化学・金属・機械など製造業全般の電気料金関連記事を一覧で確認できる業種ハブページ。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "工場屋根を活用した自家消費型太陽光の投資回収期間とPPAモデルの比較を解説。",
             },
           ]}
         />
