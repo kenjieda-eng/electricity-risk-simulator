@@ -78,6 +78,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "自治体施設の電気代見直しは予算サイクルのどのタイミングで行えばよいですか？", answer: "自治体は4月始まり3月締めの会計年度で動くため、新年度予算固めの12月〜1月に方針決定し、2月までに入札・契約締結、4月から新契約適用というサイクルが現実的です。長期継続契約（債務負担行為）を組む場合は、議会の3月補正予算または6月議会承認のタイミングを逆算した提出スケジュール設計が必須です。" },
+  { question: "公会計と電気代計上の特殊性は？", answer: "自治体は単年度予算主義のため、複数年契約は債務負担行為の議会議決が必要です。月次の燃調費変動は『役務費』または『需用費』として執行され、市場連動型契約での想定超過分は補正予算対応となります。固定単価契約のほうが当初予算精度が高く、議会・監査委員への説明負荷も小さいため、自治体で固定が選ばれやすい構造の根拠です。" },
+  { question: "議会・住民への説明では何をポイントにすればよいですか？", answer: "①入札不調や随契移行の客観的事実、②市場環境（JEPX 推移・燃料価格）、③法的根拠（地方自治法第234条・施行令第167条の2）、④価格妥当性（近隣自治体比較・見積合わせ結果）、⑤再発防止策の 5 点を骨子に資料化するのが標準です。グラフ・表で視覚化し、住民負担の合理性を定量で示すのが鍵です。" },
+  { question: "公共施設の電気使用量ベンチマーク（庁舎 / 学校等）の目安は？", answer: "業界標準として、本庁舎（延床1万m²級）で年間約 100〜150 万kWh、小中学校で年間約 10〜30 万kWh／校、公民館・図書館で年間約 5〜15 万kWh、屋内体育館で年間約 10〜20 万kWh が目安レンジです。施設の築年数・空調方式で2〜3倍の幅があり、kWh/m² で業界平均と比較するのが実務的です。" },
+  { question: "自治体カーボンニュートラル宣言と電気代調達の整合は？", answer: "ゼロカーボンシティ表明後の電力調達では、まず短期的に非化石証書（トラッキング付き）で環境価値を低コスト調達し、中期的に主要施設の再エネメニュー切替、長期的にオンサイトPPA・自家消費太陽光で構造的な脱炭素＋コスト安定を目指す段階アプローチが定石です。一度に再エネ100%にすると財政負担が一気に上がるため、段階移行で議会・住民理解を得るパターンが多数派です。" },
+  { question: "自治体向けの電気代補助金にはどのようなものがありますか？", answer: "環境省「脱炭素先行地域・地方公共団体実行計画支援事業」、経産省「省エネルギー投資促進支援事業（SII）」、総務省「グリーン社会の実現に向けた地方財政措置」が代表格です。庁舎・学校への ZEB 改修、自家消費型太陽光・蓄電池、PPA モデルなど目的別に窓口が分かれており、複数併用は原則不可なので最も補助率の高いメニューを選定するのがポイントです。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自治体向け公表情報" },
+  { name: "環境省（脱炭素先行地域・自治体支援）", url: "https://www.env.go.jp", description: "ゼロカーボンシティ・脱炭素関連補助金情報" },
+  { name: "総務省（地方財政・公会計）", url: "https://www.soumu.go.jp", description: "公会計制度・債務負担行為など制度関連情報" },
+];
+
 const reviewPoints = [
   {
     heading: "年度予算制への対応",
@@ -113,10 +128,7 @@ export default function MunicipalityElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -156,7 +168,7 @@ export default function MunicipalityElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            自治体庁舎で電気料金が課題になりやすい背景
+            なぜ自治体施設の電気料金見直しが重要なのか — 公会計と入札制度の二重制約
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             近年の電気料金上昇は、自治体の財政に直接影響しています。特に以下の要因が課題を大きくしています。
@@ -181,7 +193,7 @@ export default function MunicipalityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            負荷特性から見た着眼点
+            庁舎 / 学校 / 公民館 / 体育館 別の電力使用パターン
           </h2>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -198,7 +210,7 @@ export default function MunicipalityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            自治体に固定プランが向きやすい理由
+            公会計の年度予算と固定プランの相性
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体庁舎では、民間と異なる制約から固定プランが選ばれる傾向が強くあります。
@@ -228,7 +240,7 @@ export default function MunicipalityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            契約見直しで確認したいこと
+            自治体予算サイクル（4-3 月）と電気代見直しタイミング
           </h2>
           <div className="mt-4 space-y-4">
             {reviewPoints.map((item) => (
@@ -283,7 +295,97 @@ export default function MunicipalityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーターで確認したいこと
+            自治体カーボンニュートラル宣言と電気代調達の整合
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            2026 年時点で 1,000 自治体超がゼロカーボンシティ表明をしており、地方公共団体実行計画と電力調達は整合させて運用する必要があります。脱炭素を進めながら住民・議会への財政説明責任を果たすには、段階移行で財政負担を平準化するのが現実解です。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4">
+              <p className="text-sm font-semibold text-emerald-800">短期：非化石証書</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                トラッキング付き非化石証書で環境価値を低コスト調達。1〜3 円/kWh のプレミアムで CO₂ ゼロ表示が可能。
+              </p>
+            </div>
+            <div className="rounded-lg border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-sky-800">中期：再エネメニュー</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                主要施設（庁舎・学校）から電力会社の再エネ100%プランへ切替。5〜15% のプレミアムが発生するが、調達手続きは標準的。
+              </p>
+            </div>
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
+              <p className="text-sm font-semibold text-amber-800">長期：オンサイト PPA</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                屋根置き太陽光の第三者所有型 PPA で長期コスト安定化。10〜20 年契約のため債務負担行為と議会議決が必須。
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            詳細な調達手段比較は<Link href="/municipality-re100-decarbonization" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体のRE100・脱炭素調達と電力コストの両立</Link>で整理しています。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            議会・住民への電気代見直しの説明資料の作り方
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電力契約見直しを議会・住民に説明する際は、税金で負担する正当性を客観事実とデータで裏付けるのが原則です。下記 5 項目を骨子に、A3 一枚で完結する資料化が理想です。
+          </p>
+          <ol className="mt-3 list-decimal list-inside space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
+            <li><span className="font-semibold">背景：</span>電力市況の推移グラフ（JEPX スポット価格・燃調費）と上昇の構造的要因</li>
+            <li><span className="font-semibold">客観的事実：</span>入札不調・参加者数・予定価格超過の数値、または相見積もり結果</li>
+            <li><span className="font-semibold">法的根拠：</span>地方自治法第234条、施行令第167条の2 該当号、調達規則の引用</li>
+            <li><span className="font-semibold">価格妥当性：</span>近隣自治体の契約単価ベンチマーク・kWh 単価の中央値との比較</li>
+            <li><span className="font-semibold">再発防止策：</span>次回入札の仕様改善計画（分割発注・複数年契約・変動条件緩和等）</li>
+          </ol>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            グラフ化のソースとしては、JEPX スポット推移は当サイトの<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX スポット市場の仕組み</Link>解説、燃調費は<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>解説の図表が議会用資料にそのまま転用可能です。
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            自治体の電気代削減事例（公開可能なもの）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自治体での削減事例は規模により金額レンジが大きく異なります。下記は業界平均レンジの試算ベンチマークで、議会説明資料の前提値として活用できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl border border-sky-100 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">政令市・中核市（年間電力費 5 億円超）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>共同調達・バンドリング: 約3〜5%</li>
+                <li>主要庁舎の総合評価方式入札: 約2〜4%</li>
+                <li>BEMS・空調主機更新: 約4〜8%</li>
+                <li className="font-semibold text-slate-800">合計年間削減: 約 4,500〜8,500 万円</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-sky-100 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">中規模市（年間電力費 1〜3 億円）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>高圧施設の一括入札: 約3〜5%</li>
+                <li>LED 完全化＋デマンド管理: 約3〜5%</li>
+                <li>非化石証書活用: コスト中立〜微増</li>
+                <li className="font-semibold text-slate-800">合計年間削減: 約 600〜1,800 万円</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-sky-100 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">町村（年間電力費 5,000 万円以下）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>都道府県広域連携の共同入札参加: 約3〜5%</li>
+                <li>庁舎屋根 PPA 太陽光: 約5〜8%</li>
+                <li>包括外部監査での契約適正化指摘対応</li>
+                <li className="font-semibold text-slate-800">合計年間削減: 約 200〜500 万円</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、公開自治体事例（環境省・総務省事例集）をもとに業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自治体施設の状況を確認する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体の電力契約見直しでは、以下の観点でシミュレーターを活用すると議会説明・稟議資料の根拠となる数値を整理できます。
@@ -302,14 +404,8 @@ export default function MunicipalityElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 

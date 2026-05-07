@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
+
+const faqItems = [
+  { question: "自治体の脱炭素要請の現状は？", answer: "国の 2050 年カーボンニュートラル宣言を受け、2026 年時点で 1,000 自治体以上がゼロカーボンシティを表明しています。地球温暖化対策推進法第 21 条に基づく地方公共団体実行計画の策定が義務化され、庁舎・公共施設の電力消費に起因する CO₂ 削減が主要な取り組み項目になっています。脱炭素先行地域の選定や補助金活用も急速に広がっています。" },
+  { question: "再エネ電力調達の選択肢の比較は？", answer: "①再エネメニュー（電力会社の標準プラン、5〜15% プレミアム）、②非化石証書（1〜3 円/kWh、最低コスト）、③オンサイト PPA（10〜20 年契約、屋根貸し）、④オフサイト・コーポレート PPA（大規模向け）、⑤自家消費型太陽光（自治体所有、補助金活用前提）の 5 つが主な選択肢です。コスト・初期投資・契約期間・手続きの複雑さで選択します。" },
+  { question: "コストと脱炭素の両立のための戦略パターンは？", answer: "①段階導入型（非化石証書 → 再エネメニュー → PPA で財政負担を分散）、②施設優先順位型（庁舎・学校など象徴的施設から先行）、③ポートフォリオ型（複数手段の組み合わせでリスク分散）の 3 パターンが代表的です。自治体規模・財政状況・既存施設特性に応じて、まず段階導入型から始めるのが多数派です。" },
+  { question: "入札仕様書に環境要件を入れる際の注意点は？", answer: "①必須要件として設定（不調リスク高）、②加点評価方式（総合評価落札、リスク低・手続き複雑）、③努力義務として記載（参加者制限なし、効果保証なし）の 3 通りがあります。小規模自治体・単独入札では加点評価か努力義務、大規模自治体では総合評価落札方式が現実的です。CO₂ 排出係数上限値・環境価値の種類・証書提出義務を仕様書に明記してください。" },
+  { question: "先進自治体の事例を学ぶには？", answer: "環境省の脱炭素先行地域選定自治体の公開資料、政令市・中核市の地球温暖化対策実行計画書、自治体国際協力機構（CLAIR）等の事例集が参考になります。具体的には、政令市 A 市の段階移行（非化石証書 → PPA 導入）、中規模市 B 市の総合評価落札方式導入、脱炭素先行地域での 10 施設オンサイト PPA で年間 30% を自家消費型太陽光で賄う事例などが報告されています。" },
+  { question: "脱炭素調達のよくある落とし穴は？", answer: "①グリーンウォッシュ（環境価値が実際に附属していない）、②非化石証書の二重カウント（自治体と電力会社の使用が重複）、③ PPA 長期契約と単年度予算主義の矛盾（債務負担行為議決必須）、④環境要件を仕様書に必須要件として入れて参加事業者が減り入札不調になる、の 4 つが代表的な落とし穴です。トラッキング付き証書の選定と、債務負担行為手続きの事前確認が必須です。" },
+];
+
+const sourcesItems = [
+  { name: "環境省（脱炭素先行地域・自治体支援）", url: "https://www.env.go.jp", description: "ゼロカーボンシティ・脱炭素先行地域・補助金情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "再エネ・非化石証書制度に関する情報" },
+  { name: "総務省（地方公共団体実行計画）", url: "https://www.soumu.go.jp", description: "地球温暖化対策推進法・自治体支援制度情報" },
+];
 
 
 const pageTitle = "自治体のRE100・脱炭素調達と電力コストの両立｜ゼロカーボンシティ向け実務ガイド";
@@ -145,7 +164,7 @@ export default function MunicipalityRe100DecarbonizationPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "自治体のRE100・脱炭素調達と電力コストの両立" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -157,6 +176,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
         <span className="text-slate-800">RE100・脱炭素調達と電力コストの両立</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
 
       <header className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-indigo-700">MUNICIPALITY ／ 自治体・公共向け</p>
@@ -349,8 +371,66 @@ export default function MunicipalityRe100DecarbonizationPage() {
         </section>
       </section>
 
-      
+      {/* 補助金 H2（新設） */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">自治体向け脱炭素補助金（環境省・経産省・総務省）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          再エネ調達でコスト増加を抑制するためには、補助金活用が不可欠です。自治体が活用できる主要な補助メニューを 3 省別に整理します。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+            <p className="text-sm font-semibold text-emerald-900">環境省</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-700">
+              <li>脱炭素先行地域選定事業（最も補助率が高い）</li>
+              <li>地域脱炭素移行・再エネ推進交付金</li>
+              <li>地方公共団体実行計画策定・実施支援</li>
+              <li>ZEB 化推進事業（既存庁舎・学校改修対応）</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
+            <p className="text-sm font-semibold text-sky-900">経済産業省</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-700">
+              <li>省エネルギー投資促進支援事業（SII）</li>
+              <li>需要家主導太陽光発電導入支援事業</li>
+              <li>蓄電池導入支援事業</li>
+              <li>需要家主導 PPA・オフサイト PPA 支援</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-amber-100 bg-amber-50 p-4">
+            <p className="text-sm font-semibold text-amber-900">総務省</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-700">
+              <li>グリーン社会の実現に向けた地方財政措置</li>
+              <li>地方公共団体実行計画策定経費の地方交付税措置</li>
+              <li>公共施設等適正管理推進事業債（脱炭素化分）</li>
+              <li>過疎・離島地域の再エネ導入支援</li>
+            </ul>
+          </div>
+        </div>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          同一設備に複数補助金を重複受給することは原則できないため、設備の主目的（再エネ導入か省エネ更新か脱炭素地域形成か）に応じて、最も補助率の高い窓口を選定します。詳細は<Link href="/subsidy-municipality-energy-examples" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体向けエネルギー補助金・交付金の活用事例</Link>を参照してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">出典: 環境省・経産省・総務省 各省公開情報、自治体公開事例集をもとに作成。</p>
+      </section>
+
+      {/* H2-Z シミュレーター */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自治体 RE100 調達のコストを試算する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          脱炭素調達のコスト増分を議会・住民に説明するには、定量的な試算が不可欠です。シミュレーターを以下の観点で活用してください。
+        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>現行契約での年間電気代と、再エネ100%プラン切替後の年間コスト差を試算</li>
+          <li>非化石証書（1〜3 円/kWh）併用時のコストプレミアムを定量化</li>
+          <li>オンサイト PPA 導入後の長期コスト安定化効果を試算</li>
+          <li>補助金適用後の実質投資負担額を試算</li>
+        </ul>
+      </section>
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="municipality-re100-decarbonization" terms={["再エネ賦課金", "非化石証書", "市場連動プラン", "固定プラン", "燃料費調整額", "容量拠出金"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -381,6 +461,36 @@ export default function MunicipalityRe100DecarbonizationPage() {
               href: "/when-to-review-electricity-contract",
               title: "法人が電力契約を見直すタイミング",
               description: "脱炭素調達と並行して電力コスト管理の見直し開始タイミングを確認。",
+            },
+            {
+              href: "/municipality-electricity-cost-review",
+              title: "自治体庁舎の電気料金見直しポイント",
+              description: "公共施設の負荷特性と契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/municipality-bundled-procurement",
+              title: "公共施設の電力一括調達（バンドリング）の進め方",
+              description: "脱炭素調達と組み合わせる場合の共同調達の設計。",
+            },
+            {
+              href: "/non-fossil-certificates",
+              title: "非化石証書の仕組みと活用法",
+              description: "RE100 対応で最も低コストな環境価値調達手段の詳細。",
+            },
+            {
+              href: "/corporate-ppa-overview",
+              title: "コーポレートPPAの概要と選び方",
+              description: "オンサイト・オフサイト PPA の比較と、自治体での導入手順。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "自治体施設の屋根を活用した太陽光導入の投資回収期間。",
+            },
+            {
+              href: "/municipality-procurement-bidding-failure",
+              title: "自治体電力入札が不調になったときの対応ガイド",
+              description: "環境要件を入札仕様書に入れた際の不調リスクと対応。",
             },
           ]}
         />

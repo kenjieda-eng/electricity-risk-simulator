@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
+
+const faqItems = [
+  { question: "多拠点企業の電気代統括管理が難しい理由は？", answer: "①管理主体の分散（本社・工場・営業所で担当者が異なる）、②契約更新の個別対応（一括交渉の機会逸失）、③拠点別単価差の不可視化（地域・規模で 2〜8 円/kWh 差）、④省エネ効果の孤立、⑤市場リスクの集中（同一 PPS への依存）、⑥ ESG 開示用データ収集の複雑化、の 6 つが代表的な構造的課題です。データ集約と管理体制の再設計が出発点になります。" },
+  { question: "拠点別コスト管理シートのテンプレートは？", answer: "拠点名／契約種別／供給者／年間消費量（kWh）／平均単価（円/kWh）／年間電力費（万円）／契約満了日／備考の 8 列で構成するのが標準です。これだけで①割高拠点、②近く更新を迎える拠点、③供給者集中拠点が即座に可視化できます。Excel/Google スプレッドシートで月次更新する形式から始め、規模が拡大した段階で BI ツールへ移行するのが定石です。" },
+  { question: "一括調達 vs 個別最適調達の判断基準は？", answer: "①調達単価（一括有利）、②契約管理コスト（一括有利）、③地域・需要特性対応（個別有利）、④リスク分散（個別有利）、⑤RE100対応（一括有利）、⑥市場変化対応（個別有利）、⑦管理透明性（一括有利）の 7 軸で判断します。実務的には大規模拠点（工場・物流センター）は個別、中小規模拠点群は一括という『ハイブリッド型』が最適化と管理効率のバランスが良くなります。" },
+  { question: "月次モニタリングダッシュボードの項目は？", answer: "①拠点別月次電力費（万円）と予算比、②全社電力費合計と予算対比、③拠点別 kWh 単価、④拠点別電力消費量、⑤電力原単位（kWh/生産量等）、⑥契約更新期限リスト、⑦市場連動比率（%）、⑧最高リスク拠点の特定、の 8 KPI が標準項目です。アラート閾値（例：予算比 ±10%）と管理責任者を明示し、月次レビューで異常検知できる体制を作ります。" },
+  { question: "グループ全体のリスクポートフォリオの考え方は？", answer: "①契約形態リスク分散（固定 60〜70%／市場連動 30〜40% を目安）、②供給者分散（拠点 10 以上は 3 社以上に分散）、③更新時期分散（同一時期集中で『高値づかみ』を避ける）、④省エネポートフォリオ（投資対効果で優先順位付け）の 4 軸で管理するのが定石です。グループ全体での電力リスクをマクロで把握し、個別拠点の最適化では達成できない全社最適を目指します。" },
+  { question: "電力コスト管理ツールの選択指針は？", answer: "拠点数・年間電力費規模に応じて 3 フェーズで段階導入します。フェーズ 1（5〜10 拠点／1 億円未満）は Excel/スプレッドシート、フェーズ 2（10〜30 拠点／1〜5 億円）は BI ツール（Power BI/Tableau）、フェーズ 3（30 拠点以上／5 億円超）は EMS 専用ツール（SaaS）の順で投資します。ROI を必ず計算し、管理工数削減効果が投資額を上回るタイミングで切替が定石です。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場・容量市場・燃調費に関する公表資料" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給情報・系統運用情報" },
+  { name: "JEPX（日本卸電力取引所）", url: "https://www.jepx.org", description: "卸電力市場価格の推移データ" },
+];
 
 
 const pageTitle = "複数拠点の電力コスト一元管理フレームワーク｜5拠点以上の法人向け";
@@ -111,7 +130,7 @@ export default function ExecutiveMultiSiteCostManagementPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "複数拠点の電力コスト一元管理フレームワーク" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -123,6 +142,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
         <span className="text-slate-800">複数拠点コスト管理</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
 
       {/* ヘッダー */}
       <header className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-6 text-white">
@@ -384,8 +406,26 @@ export default function ExecutiveMultiSiteCostManagementPage() {
       </section>
 
       {/* 関連リンク */}
-      
+      {/* H2-Z シミュレーター（新設） */}
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">8. シミュレーターでグループ電気代を統括試算する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          多拠点法人の電力統括管理では、シミュレーションで以下の観点を定量化することが、経営層・取締役会への説明に直結します。
+        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>各拠点の現行契約条件を入力し、グループ全体の年間電力費合計と上振れリスクを試算</li>
+          <li>一括調達（5〜15% 削減）と個別最適（拠点別最適化）の年間効果額を比較</li>
+          <li>市場連動比率を変えた複数ポートフォリオでのリスクシナリオ別影響額を比較</li>
+          <li>省エネ投資（BEMS / LED / PPA）の投資対効果をグループ全体で集計</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">グループ全体の年間電力費が 5 億円規模になる多拠点法人では、ポートフォリオ最適化による年間数千万円〜億円規模の削減余地が一般的に存在します。</p>
+      </section>
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="executive-multi-site-cost-management" terms={["燃料費調整額", "市場連動プラン", "固定プラン", "容量拠出金", "再エネ賦課金", "デマンド値"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -416,6 +456,36 @@ export default function ExecutiveMultiSiteCostManagementPage() {
               href: "/articles/review-points",
               title: "見直しポイントカテゴリ",
               description: "電力契約の見直しポイントを解説した記事一覧。",
+            },
+            {
+              href: "/executive-cfo-electricity-basics",
+              title: "CFOのための電力市場基礎",
+              description: "CFO・経営層が知っておくべき電力市場・契約形態の基礎知識。",
+            },
+            {
+              href: "/businesses-suited-for-fixed-price-electricity-plan",
+              title: "固定プランが向く法人の特徴",
+              description: "多拠点企業のリスク分散ポートフォリオで固定契約を選ぶ判断基準。",
+            },
+            {
+              href: "/holding-company-electricity-review",
+              title: "ホールディングス電気代見直し",
+              description: "持株会社・グループ経営における電気代統括管理の実務。",
+            },
+            {
+              href: "/factory-electricity-cost-benchmark",
+              title: "工場電気代ベンチマーク",
+              description: "重点管理拠点となりやすい工場の電気代ベンチマーク。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "多拠点 DC の電力統括管理における重点管理対象業種。",
             },
           ]}
         />
