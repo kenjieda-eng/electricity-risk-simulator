@@ -11,11 +11,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "中国電力エリアの料金水準は他エリアと比べてどうですか？", answer: "高圧電力量料金の業界標準メニューベースで、中国電力エリアは全国10エリア中で割高グループ（16〜17円/kWh前後）に位置します。北海道・沖縄・四国に次ぐ水準で、関西・九州エリアより1〜3円/kWh高い構造です。これは石炭・LNG火力依存度の高さと、原子力比率が低いことに由来します。" },
+  { question: "山陽工業地帯の鉄鋼・化学業界で電気代削減の余地は？", answer: "鉄鋼・化学・自動車製造業はベース負荷の絶対量が大きく、契約電力（kW）と使用量（kWh）の両方で年間電気代が数億円〜数十億円規模になる場合があります。デマンド管理・廃熱回収・コージェネ導入・特別高圧契約での個別交渉により、数%の削減でも金額インパクトが大きくなります。生産ライン更新サイクルと電力契約見直しを同期させる経営判断が定石です。" },
+  { question: "中国電力エリアの燃料調達依存リスクは？", answer: "中国電力は石炭火力比率が全国でも高い水準にあり、国際石炭価格や為替変動による燃料費調整額の上振れリスクが構造的に大きいエリアです。一方で島根原発2号機の再稼働（2024年）と3号機の運転開始（2030年代見込み）が進めば、原子力比率上昇による燃調費安定化が中長期で期待できます。" },
+  { question: "中国地方の新電力勢力図はどうなっていますか？", answer: "東京・関西エリアと比べると新電力数は限定的（30〜50社程度）で、地場系・大手系がメイン。中国電力自身も小売自由化後にエリア外進出を進めており、エリア内競争は限定的な構造です。法人需要家としては、相見積もりで提示される単価差が他エリアより小さい傾向があるものの、3社以上の比較で確実なベンチマーキングを行うことが重要です。" },
+  { question: "中国電力との契約交渉で重要なポイントは？", answer: "石炭火力依存を背景に、燃料費調整額のキャップ（上限）設定の交渉余地が他エリアより大きい場合があります。また、特別高圧契約では年次入札型の単価交渉に応じる事例も増加しています。山陽工業地帯の重工業需要家は契約電力規模が大きいため、相対契約・先物ヘッジを組み合わせた調達ポートフォリオ設計が経営課題となります。" },
+  { question: "中国エリアの工場削減事例の典型値は？", answer: "業界平均レンジとして、鉄鋼・化学プラント（特別高圧、年間2億kWh級）で年間1.0〜2.5億円（5〜12%）、自動車部品工場（高圧、年間1,000万kWh級）で年間500〜1,200万円（5〜10%）の削減事例が報告されています。コージェネ＋廃熱回収の組み合わせで燃料費由来コストを構造的に下げる中長期施策が重要です。" },
+];
+
+const sourcesItems = [
+  { name: "中国電力", url: "https://www.energia.co.jp/", description: "中国電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・中国地方需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "中国エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "中国電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -152,7 +168,7 @@ export default function RegionChugokuBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "中国電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -195,7 +211,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ中国電力エリアの法人電気料金見直しが重要なのか — 山陽工業地帯の重工業負荷</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           中国電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -227,7 +243,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">中国電力の法人向け料金体系（業種別単価目安）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は中国電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -294,7 +310,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">中国電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">山陽工業地帯の鉄鋼・化学・自動車製造の電力需要構造</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">石炭火力への高依存とCO2コストリスク</h3>
@@ -335,7 +351,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">中国電力エリアの工業需要時期と料金改定（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -350,7 +366,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">中国地方の新電力選定基準と地方都市の市場</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -361,38 +377,56 @@ export default function RegionChugokuBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">中国電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">石炭・GX賦課金リスクを把握する</span>
-            — 石炭火力由来の電力は将来的なCO2コスト増加リスクが高い。GX推進政策の動向を定期的に確認し、
-            再エネ比率の高い電源構成の新電力も候補に含めることを検討してください。
-          </li>
-          <li>
-            <span className="font-semibold">特別高圧需要家は個別交渉を検討する</span>
-            — 製造業などの大口需要家は電力会社との個別交渉余地が比較的大きい。
-            複数事業者から見積もりを取り、標準メニューに縛られない条件交渉を進めましょう。
-          </li>
-          <li>
-            <span className="font-semibold">島根原発の稼働状況を継続的にウォッチする</span>
-            — 原発稼働は燃調費の変動に直結します。定期検査スケジュールや規制対応の情報をもとに、
-            燃調費の変動リスクを先読みした契約設計を検討してください。
-          </li>
-          <li>
-            <span className="font-semibold">デマンドコントロールの余地を検討する</span>
-            — 高圧・特別高圧の基本料金はデマンド（最大需要電力）で決まります。生産ライン調整などにより
-            ピーク抑制施策を講じることで基本料金を削減できる場合があります。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金の影響を試算する</span>
-            — 2024年度以降、電力調達コストに容量市場落札価格が加算されています。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">中国エリアの工場削減事例（鉄鋼 / 化学 / 製造業）</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          中国電力エリアは山陽工業地帯に重工業需要家が集積し、契約電力規模が大きいゆえの削減金額インパクトが他エリアより大きい構造です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">鉄鋼・化学プラント（特高 2 億kWh級）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>特別高圧個別交渉: 約3〜5%</li>
+              <li>廃熱回収＋コージェネ更新: 約5〜10%</li>
+              <li>燃調キャップ条項追加: 上振れ抑制効果</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約1.0〜2.5億円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">自動車部品工場（高圧 1,000 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり（3社以上）: 約3〜5%</li>
+              <li>デマンドコントローラー: 約3〜5%</li>
+              <li>LED＋高効率空調: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約500〜1,200万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">中規模製造業（高圧 300 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し: 約3〜4%</li>
+              <li>自家消費型太陽光（屋根 100kW）: 約3〜5%</li>
+              <li>デマンドコントローラー導入: 約3〜4%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約180〜400万円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">中国電力エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>石炭・GX賦課金リスクを把握する（CO2コスト増加リスクの先読み）</li>
+            <li>特別高圧需要家は個別交渉を検討（標準メニューに縛られない条件交渉）</li>
+            <li>島根原発の稼働状況を継続ウォッチ（燃調費変動の予測）</li>
+            <li>デマンドコントロールで基本料金を削減（ピーク抑制施策）</li>
+            <li>
+              容量拠出金の影響を試算（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、山陽工業地帯法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 注記 */}
@@ -405,7 +439,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 中国エリアプライス推移と燃料調達依存</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -444,7 +478,7 @@ export default function RegionChugokuBusinessElectricityPage() {
 
       {/* エリア需要の特徴 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">中国電力エリア需要と火力依存の電源構成</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           中国電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "chugoku")?.share}%を占めます。西日本の高連動クラスター(0.93〜0.97)の一角。
         </p>
@@ -475,58 +509,25 @@ export default function RegionChugokuBusinessElectricityPage() {
         <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
-      {/* 気候データと電力需要の関係 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          広島の気象データから、当エリアの電力需要に影響する気候特性を整理します。
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          中国電力エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          広島の猛暑日は25日→109日に急増。冷房度日は+27%増加。西日本の気温相関が非常に高く（名古屋-大阪: 0.992）、広域的な猛暑時には西日本全体で同時にピーク需要が発生しやすい構造です。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>石炭・LNG価格高騰シナリオでの年間上振れリスク額を確認する</li>
+          <li>島根原発稼働シナリオ別の燃調費影響を比較する</li>
+          <li>特別高圧の個別交渉で得られる単価優位を試算する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 広島の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "chugoku")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.chugoku}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -562,6 +563,31 @@ export default function RegionChugokuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "山陽工業地帯の重工業需要家で活用される特別高圧契約の料金体系と個別交渉の考え方。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/food-factory-electricity-cost-review",
+              title: "食品工場の電気料金見直しポイント",
+              description: "中国エリアに集積する食品製造業の負荷特性と契約見直しの考え方。",
+            },
+            {
+              href: "/region-hokuriku-business-electricity",
+              title: "北陸電力エリアの法人電気代事情",
+              description: "中国エリアと並ぶ製造業集積地域。北陸の地場産業と中国地方の重工業を比較できる。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "中国エリア大規模需要家向け：特別高圧契約と PUE 改善の考え方。",
             },
           ]}
         />

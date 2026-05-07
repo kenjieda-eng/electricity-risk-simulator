@@ -11,11 +11,27 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
+
+const faqItems = [
+  { question: "東北電力エリアの料金は震災後どう変わりましたか？", answer: "東日本大震災（2011年）後、女川・東通の原発停止により火力依存度が大きく上昇し、燃料費調整額のプラス幅が拡大しました。2023年の規制料金値上げで実質的な単価が上昇した一方、太平洋沿岸部の風力・洋上風力を中心とした再エネ拡大が進み、長期的には電源構成多様化による料金安定化が見込まれます。" },
+  { question: "東北 6 県の冬季暖房需要対策はどうすればよいですか？", answer: "東北・新潟の冬季は暖房負荷が極めて大きく、契約電力（kW）が冬季最大需要で決まる需要家が多数存在します。寒冷地仕様ヒートポンプの活用、産業用熱源のガス・灯油代替、コージェネによる熱電併給などで電力ピークを下げる事例が増えています。冬季ピークの15〜30%圧縮で基本料金を顕著に下げられる場合があります。" },
+  { question: "東北の再エネ比率拡大は法人料金にどう影響？", answer: "東北電力エリアは陸上・洋上風力、地熱、太陽光の導入が全国でも積極的なエリアで、再エネ比率は20%超の水準まで上昇しています。再エネ拡大は中長期で燃料費調整額の安定化に寄与する一方、再エネ賦課金は全国一律のため直接的な電気代低減効果は限定的です。法人としてはRE100対応・GHG削減目標の達成に活用しやすい立地メリットがあります。" },
+  { question: "東北新電力選択で気をつけるべきポイントは？", answer: "東北電力エリアは冬季の需給逼迫リスクが他エリアより高く、新電力の調達能力が試される構造があります。特に2022年冬の需給逼迫局面では複数の新電力が撤退・解約通知を出した経緯があり、選定時は『冬季の調達手段の多様性』『財務安定性』『緊急時のバックアップ供給契約の有無』を重視するのが定石です。" },
+  { question: "東北電力との契約交渉で重要なポイントは？", answer: "震災後の電源構成変化により、燃料費調整額のプラス幅が他エリアより大きい構造があるため、燃調費キャップの交渉余地が他エリアより大きく出る傾向があります。また、特別高圧では年次入札型の単価交渉や、再エネ証書とのバンドル契約など、新しい契約形態への対応が広がっています。" },
+  { question: "東北エリアの工場・観光業の削減事例の典型値は？", answer: "業界平均レンジとして、自動車関連工場（高圧、年間1,000万kWh級）で年間500〜1,200万円（5〜10%）、観光ホテル（高圧、年間500万kWh級）で年間150〜400万円（5〜8%）の削減事例が報告されています。冬季暖房需要のピークシフトと、夏季JEPXスポット価格低下を活用した市場連動部分採用が東北特有の有効施策です。" },
+];
+
+const sourcesItems = [
+  { name: "東北電力", url: "https://www.tohoku-epco.co.jp/", description: "東北電力エリアの法人向け料金プラン情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・東北地方需給情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "東北エリアの需給・系統情報" },
+];
 
 
 const pageTitle = "東北電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
@@ -161,7 +177,7 @@ export default function RegionTohokuBusinessElectricityPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "東北電力エリアの法人電気代事情" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -204,7 +220,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア基本情報</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ東北電力エリアの法人電気料金見直しが重要なのか — 大震災後の電源構成変化</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           東北電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -236,7 +252,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">料金水準（法人向け標準メニュー目安）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東北電力の法人向け料金体系（業種別料金）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は東北電力フロンティアの標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -303,7 +319,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* エリア特有の事情 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">東北電力エリア特有の事情</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東北 6 県の冬季暖房需要と業種構成</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">再エネ比率の高さと出力制御</h3>
@@ -343,7 +359,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* 最近の改定動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">最近の料金改定動向（2023〜2026年）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東北の冬季暖房需要対策と料金改定（2023〜2026 年）</h2>
         <div className="mt-4 space-y-3">
           {revisionHistory.map((item, i) => (
             <div key={i} className="flex gap-4">
@@ -358,7 +374,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* 新電力動向 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">新電力動向</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東北新電力と再エネ比率の高さによる切替動向</h2>
         <div className="mt-4 space-y-3">
           {newPowerStatus.map((item, i) => (
             <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -369,34 +385,56 @@ export default function RegionTohokuBusinessElectricityPage() {
         </div>
       </section>
 
-      {/* 契約見直しポイント */}
+      {/* 業種別削減事例 H2-7 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">東北電力エリアで契約見直しを進める際のポイント</h2>
-        <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
-          <li>
-            <span className="font-semibold">再エネ比率を活かした調達プランを検討する</span>
-            — グリーン電力証書・非化石証書・東北産再エネ PPA など、東北の豊富な再エネを活用したプランを比較検討してください。
-          </li>
-          <li>
-            <span className="font-semibold">製造業ならばデマンド管理を徹底する</span>
-            — 工場ラインの稼働スケジュール最適化やインバーター導入でデマンド値を抑制し、基本料金を削減できます。
-          </li>
-          <li>
-            <span className="font-semibold">出力制御リスクを考慮した調達計画を立てる</span>
-            — 再エネ電源のみに依存する契約では出力制御時に不足インバランスが生じる可能性があります。バックアップ電源・バランシンググループの設計を確認してください。
-          </li>
-          <li>
-            <span className="font-semibold">原発再稼働の影響を料金予測に組み込む</span>
-            — 女川原発の本格運転が進むと燃料費コストが低減し、長期契約の単価改定交渉に有利に働く可能性があります。
-          </li>
-          <li>
-            <span className="font-semibold">容量拠出金・再エネ賦課金の動向を把握する</span>
-            — 系統費用の追加転嫁が続いています。中長期の電気料金予測を行い、固定費削減策を並行して推進してください。
-            <Link href="/capacity-contribution-cost-impact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金の詳細はこちら
-            </Link>
-          </li>
-        </ol>
+        <h2 className="text-xl font-semibold text-slate-900">東北エリアの工場 / 観光業削減事例</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-700">
+          東北エリアでは冬季暖房需要のピークシフトと、再エネ比率の高さを活かした調達ポートフォリオが他エリアより有効です。下記は当エリアでの典型的な削減事例ベンチマークです。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">自動車関連工場（高圧 1,000 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり: 約3〜5%</li>
+              <li>冬季暖房ヒートポンプ化＋ピークシフト: 約3〜4%</li>
+              <li>再エネ証書バンドル契約: GHG削減＋実費中立</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約500〜1,200万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">温泉観光ホテル（高圧 500 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>契約プラン見直し: 約3〜5%</li>
+              <li>給湯・暖房コージェネ更新: 約3〜5%</li>
+              <li>夏季 JEPX 安値時間帯活用: 約1〜2%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約150〜400万円</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-sky-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">食品工場（高圧 300 万kWh）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>新電力相見積もり（再エネプラン併用）: 約3〜4%</li>
+              <li>冷凍冷蔵インバーター化: 約3〜5%</li>
+              <li>自家消費太陽光（屋根 50kW）: 約2〜3%</li>
+              <li className="font-semibold text-slate-800">合計年間削減: 約120〜300万円</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <p className="text-sm font-semibold text-slate-900">東北電力エリア共通の見直しチェックリスト</p>
+          <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
+            <li>再エネ比率を活かした調達プラン（グリーン証書・東北産PPAなど）</li>
+            <li>製造業はデマンド管理を徹底（冬季ピーク抑制）</li>
+            <li>出力制御リスクを考慮した調達計画（バックアップ電源・バランシンググループ）</li>
+            <li>女川原発の再稼働影響を料金予測に織り込む</li>
+            <li>
+              容量拠出金・再エネ賦課金の動向を把握（
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の詳細</Link>
+              ）
+            </li>
+          </ol>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、東北圏法人事例ヒアリング、業界平均レンジで作成。</p>
       </section>
 
       {/* 注記 */}
@@ -409,7 +447,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* JEPXエリアプライスの推移 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
+        <h2 className="text-xl font-semibold text-slate-900">JEPX 東北エリアプライス推移と冬季需給逼迫</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
         </p>
@@ -448,7 +486,7 @@ export default function RegionTohokuBusinessElectricityPage() {
 
       {/* エリア需要の特徴 */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東北電力エリアの再エネ拡大と電源構成</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           東北電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "tohoku")?.share}%を占めます。再エネ比率高く、西日本との需要相関は中程度(0.83)。
         </p>
@@ -479,58 +517,25 @@ export default function RegionTohokuBusinessElectricityPage() {
         <p className="mt-2 text-xs text-slate-500">出典: OCCTO公表データを集計（FY2016〜FY2023）</p>
       </section>
 
-      {/* 気候データと電力需要の関係 */}
+      {/* H2-Z シミュレーター */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
-        <p className="mt-2 text-sm leading-7 text-slate-600">
-          仙台の気象データから、当エリアの電力需要に影響する気候特性を整理します。
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          東北電力エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
         </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {weather.summerTmax && (
-            <div className="rounded-lg border border-red-100 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-800">夏の最高気温（7-8月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-red-900">{weather.summerTmax.tmax2020_25}℃</p>
-              <p className="mt-1 text-sm text-red-700">1990年代後半比 +{weather.summerTmax.change}℃</p>
-            </div>
-          )}
-          {weather.winterTmin && (
-            <div className="rounded-lg border border-blue-100 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-blue-800">冬の最低気温（1-2月平均）</p>
-              <p className="mt-1 text-2xl font-bold text-blue-900">{weather.winterTmin.tmin2020_25}℃</p>
-              <p className="mt-1 text-sm text-blue-700">1990年代後半比 {weather.winterTmin.change > 0 ? "+" : ""}{weather.winterTmin.change}℃</p>
-            </div>
-          )}
-          {weather.hotDays && (
-            <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-800">猛暑日（35℃超）の10年合計</p>
-              <p className="mt-1 text-sm text-amber-700">1990年代: {weather.hotDays.d1990s}日 → 2020年代: {weather.hotDays.d2020s}日</p>
-              <p className="mt-1 text-sm font-semibold text-amber-900">
-                {weather.hotDays.d2020s > weather.hotDays.d1990s * 2 ? `約${Math.round(weather.hotDays.d2020s / Math.max(weather.hotDays.d1990s, 1))}倍に増加` : "増加傾向"}
-              </p>
-            </div>
-          )}
-          {weather.cdd ? (
-            <div className="rounded-lg border border-orange-100 bg-orange-50 p-4">
-              <p className="text-sm font-semibold text-orange-800">冷房度日（CDD）の変化</p>
-              <p className="mt-1 text-sm text-orange-700">{weather.cdd.cdd1995_99} → {weather.cdd.cdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-orange-900">+{weather.cdd.changePercent}%増加</p>
-            </div>
-          ) : weather.hdd ? (
-            <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
-              <p className="text-sm font-semibold text-sky-800">暖房度日（HDD）の変化</p>
-              <p className="mt-1 text-sm text-sky-700">{weather.hdd.hdd1995_99} → {weather.hdd.hdd2020_24}</p>
-              <p className="mt-1 text-sm font-semibold text-sky-900">{weather.hdd.changePercent}%減少</p>
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          仙台の夏の最高気温上昇は+2.7℃で全都市最大。猛暑日も1日→32日に急増。暖房需要（HDD）は-16%減少し、夏冬の電力需要バランスが変化しています。
-        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>女川原発再稼働シナリオ別の燃調費影響を比較する</li>
+          <li>冬季暖房需要のピークシフトで基本料金がどれだけ下がるかを把握する</li>
+          <li>再エネプラン・グリーン証書バンドル契約の追加コスト/便益を試算する</li>
+          <li>容量拠出金・再エネ賦課金の追加コストを織り込んだトータル単価で評価する</li>
+        </ul>
+        <p className="mt-4 text-xs text-slate-500">参考: 仙台の気象データ（夏最高 {weather.summerTmax?.tmax2020_25}℃ など）と需要規模（全国 {DEMAND_AREA_SHARE.find(a => a.area === "tohoku")?.share}%、負荷率 FY2023 {LOAD_FACTOR_FY.find(r => r.fy === 2023)?.tohoku}%）を踏まえた診断条件設計が有効です。</p>
       </section>
 
       {/* 関連リンク */}
-      
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -566,6 +571,31 @@ export default function RegionTohokuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/region-hokuriku-business-electricity",
+              title: "北陸電力エリアの法人電気代事情",
+              description: "東北と並ぶ豪雪・冬季暖房需要地域。日本海側の冬季ピーク対策を比較できる。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる、法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/non-fossil-certificates",
+              title: "非化石証書の仕組みと活用法",
+              description: "東北エリアの再エネ比率の高さを RE100 対応に活用する具体的手段。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "東北の自動車関連大手など特別高圧需要家向け料金体系を解説。",
+            },
+            {
+              href: "/corporate-ppa-overview",
+              title: "コーポレートPPAの概要と選び方",
+              description: "東北の風力・太陽光ポテンシャルを活かしたコーポレートPPAの調達設計。",
             },
           ]}
         />
