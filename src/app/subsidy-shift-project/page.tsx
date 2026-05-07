@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
+
+const faqItems = [
+  { question: "SHIFT 事業の補助対象となる活動は？", answer: "①GHG 排出量算定・SBT 等認証取得に係る費用（コンサルティング・第三者検証費用等）、②脱炭素削減計画策定費用、③設備導入支援（高効率設備・燃料転換設備）の 3 系統が対象です。計画策定支援は最大 2,000 万円、設備導入支援は中小企業で最大 1 億円・大企業で最大 5,000 万円が上限の目安です。" },
+  { question: "対象業種と転換パターンは？", answer: "業種制限は基本的になく、製造業・商業・サービス業・物流業など幅広い業種が対象です。代表的な転換パターンは①ガス → 電気（高効率ヒートポンプ・電気ボイラー）、②石油 → 電気（電化設備・蓄熱式）、③化石燃料 → バイオマス・水素、の 3 系統で、CO2 排出削減量と経済性のバランスで選択します。" },
+  { question: "補助率の実績推移は？", answer: "業界平均レンジとして、過去 3 年（2024〜2026 年度）の補助率は対象費用の 1/2〜2/3 以内が目安です。中小企業ほど補助率が高く設定される傾向があり、SBT 認証取得済み・取得申請中の企業は加点評価される事例があります。年度・区分で変動するため、最新の公募要領で要確認です。" },
+  { question: "申請の前提条件は？", answer: "①GHG 排出量の算定実績（Scope 1・2 必須、Scope 3 推奨）、②脱炭素削減計画の策定（中長期目標含む）、③SBT 等の第三者認証取得（または取得意思）、④設備投資計画の妥当性、⑤財務健全性の 5 点が標準的な前提条件です。GHG 算定が初めての企業は、計画策定支援を先行で受けてから設備導入支援に進むのが定石です。" },
+  { question: "採択事例の傾向は？", answer: "過去採択事例の傾向として、製造業（電化転換）・物流業（電動車両・冷蔵倉庫電化）・商業施設（高効率空調・冷凍機）・ホテル業（ヒートポンプ給湯・電化厨房）が多く見られます。CO2 削減量と費用対効果のバランスが良い事業が高採択率となる傾向があり、業界平均で概ね 50〜60% 程度の採択率と言われています。" },
+  { question: "申請プロセスのフローは？", answer: "①公募要領確認（環境省公式サイト）、②申請書類準備（事業計画書・GHG 算定資料・設備仕様書等）、③SII 等の窓口へ電子申請、④審査・採択発表（公募から 2〜3 か月）、⑤交付決定・事業実施、⑥実績報告・補助金支払い、の 6 ステップが標準フローです。設備発注は交付決定後でないと補助対象外となる点に注意が必要です。" },
+];
+
+const sourcesItems = [
+  { name: "環境省（脱炭素化支援機構・SHIFT 事業）", url: "https://www.env.go.jp", description: "SHIFT 事業の公式情報" },
+  { name: "SII（一般社団法人環境共創イニシアチブ）", url: "https://sii.or.jp", description: "補助金申請窓口・実施機関情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "省エネ・脱炭素政策情報" },
+];
 
 
 const pageTitle = "SHIFT事業と電力コスト戦略｜SBT認証・脱炭素経営支援の活用";
@@ -120,7 +139,7 @@ export default function SubsidyShiftProjectPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "SHIFT事業と電力コスト戦略" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -132,6 +151,8 @@ export default function SubsidyShiftProjectPage() {
         <span className="text-slate-800">SHIFT事業と電力コスト戦略</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
       {/* ヘッダー */}
       <header className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-emerald-700">SUBSIDY ／ 補助金・助成金</p>
@@ -149,7 +170,7 @@ export default function SubsidyShiftProjectPage() {
       <section className="mt-6 space-y-4">
         {/* SHIFT事業の背景 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">なぜSHIFT事業が注目されるか</h2>
+          <h2 className="text-xl font-semibold text-slate-900">SHIFT 事業が注目される背景 — 経産省主導の脱炭素推進</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2025年以降、上場企業へのTCFD開示義務化や欧州CSRDの適用拡大により、
             日本企業はサプライチェーン全体のGHG排出量（Scope1〜3）の把握と削減計画の開示を求められています。
@@ -164,7 +185,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 制度概要テーブル */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">SHIFT事業 制度概要（目安）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">SHIFT 事業の制度概要と対象範囲（2026 年度版）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額・公募時期は年度により変更されます。必ず環境省の最新公募要領をご確認ください。
           </p>
@@ -190,7 +211,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 補助上限額 詳細 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">補助上限額の詳細（目安）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">事業区分別の補助上限額と補助率の目安</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下は2026年4月時点の概算です。正式な上限額・補助率は公募要領でご確認ください。年度途中の変更・追加公募の可能性があります。
           </p>
@@ -227,7 +248,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 主な補助対象 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">主な補助対象費用</h2>
+          <h2 className="text-xl font-semibold text-slate-900">補助対象費用の内訳（GHG 算定 / 計画策定 / 設備導入）</h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {subsidyTargets.map((t, i) => (
               <div key={i} className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
@@ -243,7 +264,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 補助金活用シミュレーション */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">活用シミュレーション（想定例）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">想定パターン別の補助額活用シミュレーション</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまで想定例です。実際の補助額・効果は事業規模・区分・申請内容により異なります。
           </p>
@@ -264,7 +285,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 省エネ・再エネ補助金との組み合わせ */}
         <section className="rounded-xl border border-emerald-300 bg-emerald-50 p-5">
-          <h2 className="text-xl font-semibold text-slate-900">省エネ・再エネ補助金との組み合わせ戦略</h2>
+          <h2 className="text-xl font-semibold text-slate-900">SII / 環境省補助金との組み合わせ戦略</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             SHIFT事業で「脱炭素削減計画」を策定した後、その計画に沿って省エネ設備投資（SII補助金）や
             再エネ調達（需要家主導型PPA補助金）を実施すると、電力コスト削減と脱炭素化が同時に進みます。
@@ -283,7 +304,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 申請の流れ */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">申請の流れ</h2>
+          <h2 className="text-xl font-semibold text-slate-900">申請から交付決定までの 6 ステップ実務フロー</h2>
           <div className="mt-4 space-y-3">
             {steps.map((s, i) => (
               <div key={i} className="flex gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -297,9 +318,56 @@ export default function SubsidyShiftProjectPage() {
           </div>
         </section>
 
+        {/* 業種別補助金活用パターン（追加） */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">業種別の SHIFT 事業活用パターン</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            SHIFT 事業の活用パターンは、業種ごとの脱炭素施策の優先度で変わります。下記は業界の典型値レンジで、自社の業種・規模・既存設備状況に応じて選定するのが実務的です。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">製造業（電化転換型）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>ガスボイラー → ヒートポンプ電化（補助率 1/2 想定）</li>
+                <li>SBT 認証取得＋電力購入の再エネシフト</li>
+                <li>SII 補助金との組み合わせで設備投資負担を圧縮</li>
+                <li>典型例：年間 GHG 削減 100〜500 tCO2、補助額 1,000 万〜5,000 万円</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">物流業（電動化＋冷蔵電化型）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>電動フォークリフト・電動トラック導入</li>
+                <li>冷蔵倉庫の高効率冷凍機更新</li>
+                <li>自家消費型太陽光と組み合わせた充電インフラ整備</li>
+                <li>典型例：年間 GHG 削減 50〜200 tCO2、補助額 500 万〜2,000 万円</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">商業施設（高効率設備型）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>高効率空調・冷凍機の更新</li>
+                <li>LED 完全化＋ BEMS 導入</li>
+                <li>環境省 ZEB 化推進事業との併用検討</li>
+                <li>典型例：年間 GHG 削減 30〜150 tCO2、補助額 300 万〜1,500 万円</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">ホテル業（給湯電化型）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>ヒートポンプ給湯器導入</li>
+                <li>厨房機器電化（IH・電気フライヤー）</li>
+                <li>観光庁省エネ補助金との組み合わせ</li>
+                <li>典型例：年間 GHG 削減 50〜200 tCO2、補助額 500 万〜2,500 万円</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">出典: 環境省 SHIFT 事業公開資料、業界平均レンジで作成。実数値は事業区分・規模で変動します。</p>
+        </section>
+
         {/* 注意点・よくある失敗 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">申請時の注意点・よくある失敗</h2>
+          <h2 className="text-xl font-semibold text-slate-900">申請時の注意点と過去の失敗事例</h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {pitfalls.map((p, i) => (
               <div key={i} className="rounded-xl border border-amber-200 bg-amber-50 p-4">
@@ -312,7 +380,7 @@ export default function SubsidyShiftProjectPage() {
 
         {/* 情報の鮮度注記 */}
         <section className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-          <h2 className="text-base font-semibold text-amber-800">情報の鮮度についての注記</h2>
+          <h2 className="text-base font-semibold text-amber-800">制度情報の更新サイクルと最新情報の確認方法</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700">
             本ページの情報は2026年4月時点の公開情報をもとにしています。補助金制度は年度ごとに内容・補助率・上限額が変更される場合があります。
             申請前に必ず各実施機関の最新公募要領をご確認ください。
@@ -328,6 +396,10 @@ export default function SubsidyShiftProjectPage() {
       {/* 関連リンク */}
       
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="subsidy-shift-project" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "非化石証書"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -342,6 +414,9 @@ export default function SubsidyShiftProjectPage() {
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
             { href: "/executive-esg-electricity-disclosure", title: "IR・ESG開示における電力リスクの記載ガイド", description: "SHIFT事業と連動するESG開示・脱炭素報告の実務を解説。" },
             { href: "/energy-saving-tax-incentive-2026", title: "2026 年度省エネ税制", description: "2026 年度の省エネ投資税制優遇措置。" },
+            { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代見直しの基本ポイント", description: "補助金活用と並行して取り組む契約見直しの基本フレーム。" },
+            { href: "/non-fossil-certificates", title: "非化石証書の仕組みと活用法", description: "SBT 認証取得時の再エネ調達手段として最も手軽な選択肢。" },
+            { href: "/corporate-ppa-overview", title: "コーポレート PPA の概要と選び方", description: "脱炭素経営の中長期施策として活用するコーポレート PPA。" },
           ]}
         />
       </div>

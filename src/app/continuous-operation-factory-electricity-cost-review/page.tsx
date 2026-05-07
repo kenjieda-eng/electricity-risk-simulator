@@ -11,6 +11,8 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -81,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "24 時間連続操業工場の電気代対売上比率はどれくらい？", answer: "業界平均レンジとして、鉄鋼で 5〜15%、化学プラントで 4〜12%、紙パルプで 6〜10%、セメントで 8〜15%、ガラス・自動車部品で 3〜7% と、製造業の中でも電気代依存度が極めて高い業種が並びます。電気代 1% の上昇が営業利益を 5〜20% 圧迫する規模感のため、CFO 直接関与での契約管理が経営課題になります。" },
+  { question: "シフト休日と電力契約の最適化は？", answer: "完全 24 時間連続稼働（鉄鋼・化学）はベース率 70〜90% で契約電力（kW）の最適化余地が小さい一方、3 シフト稼働＋日曜休止型（自動車部品・食品）はベース率 60〜70% でデマンド管理の余地があります。シフト体制の見直しと契約電力の見直しを連動させると、基本料金で年間数%の削減が可能です。" },
+  { question: "業種別の連続操業特性に違いは？", answer: "化学・石油精製は完全 24 時間（停止に数日かかるため）、鉄鋼は熱間圧延ラインの間欠操業（24 時間 + 定検停止）、半導体は 24 時間連続（クリーン度維持）、ガラスは溶解炉が完全 24 時間、自動車部品は 3 シフト操業（日曜休止可）、と業種で連続操業の度合いが異なります。負荷プロファイルに合わせた契約設計が重要です。" },
+  { question: "容量拠出金は連続操業工場にどう影響しますか？", answer: "容量拠出金は契約電力（kW）に比例して請求されるため、ベース負荷が大きい連続操業工場では絶対金額が大きくなる構造です。年間電力費の 3〜5% 程度を占めるケースが多く、契約電力の見直し（デマンド管理）による圧縮効果が他業種より大きくなります。3 年分の予算組み込みが必須です。" },
+  { question: "連続操業 BCP 電源の組み合わせは？", answer: "停電による生産ライン停止は鉄鋼・半導体で数億円〜数十億円の損失に直結するため、UPS（瞬断対応）＋自家発電（数時間〜数日対応）＋蓄電池＋自家消費太陽光の組み合わせ設計が定石です。BCP コストと平時のピークカット効果を兼用設計することで、投資回収期間を短縮できます。" },
+  { question: "24 時間鉄鋼工場の年間削減事例の典型値は？", answer: "業界平均レンジとして、24 時間鉄鋼工場（特高、年間 2 億 kWh 級、年間電気代 約 30 億円）で、特別高圧個別交渉＋廃熱回収＋コンプレッサー高効率化＋夜間電力活用＋ピークカット蓄電池の組み合わせにより年間 5〜10%（約 1.5〜3.0 億円）の削減事例が報告されています。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・製造業エネルギー政策に関する情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
+  { name: "経産省 SII（省エネ補助金事業実績）", url: "https://sii.or.jp", description: "製造業向け省エネ補助金事業実績" },
+];
+
 export default function ContinuousOperationFactoryElectricityCostReviewPage() {
   return (
     <>
@@ -93,10 +110,7 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -108,6 +122,8 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
         <span className="text-slate-800">連続操業工場の電気料金</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+      <TableOfContents />
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           連続操業工場の電気料金リスク
@@ -133,7 +149,7 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            連続操業工場で電気料金リスクが大きい理由
+            なぜ 24 時間操業工場の電気料金見直しが重要なのか — シフト制連続稼働
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場の電気料金リスクが特に大きい背景には、以下の要因があります。
@@ -169,10 +185,10 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            連続操業工場の負荷特性
+            24 時間連続稼働とベース負荷の高さ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            連続操業工場の電力使用は、以下の設備カテゴリに大きく分かれます。各カテゴリの特性を把握することで、コスト削減の優先順位と契約見直しの方向性が見えてきます。
+            連続操業工場の電力プロファイルで他業種と最も異なる点は、夜間・休日にも需要が大きく落ちないベース負荷の厚さです。一般工場のベース率（最低需要÷最大需要）が 30〜50% であるのに対し、連続操業工場は 70〜90% に達し、契約電力（kW）の最適化余地が小さい代わりに、kWh 単価の改善効果が金額として大きく現れる構造があります。各設備カテゴリの特性は以下のとおりです。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -189,7 +205,61 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            自動車部品 / 化学 / 鉄鋼 等 業種別の連続操業特性
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            連続操業の度合いは業種によって大きく異なり、契約電力・プラン選択の最適解も変わります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">業種</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">操業形態</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">ベース率目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主な特徴</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">化学・石油精製</td>
+                  <td className="border border-slate-200 px-3 py-2">完全 24h 連続</td>
+                  <td className="border border-slate-200 px-3 py-2">85〜95%</td>
+                  <td className="border border-slate-200 px-3 py-2">停止に数日要、需要調整不可</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">鉄鋼</td>
+                  <td className="border border-slate-200 px-3 py-2">24h + 定検停止</td>
+                  <td className="border border-slate-200 px-3 py-2">75〜85%</td>
+                  <td className="border border-slate-200 px-3 py-2">熱間圧延ラインの間欠操業あり</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">半導体</td>
+                  <td className="border border-slate-200 px-3 py-2">完全 24h 連続</td>
+                  <td className="border border-slate-200 px-3 py-2">85〜90%</td>
+                  <td className="border border-slate-200 px-3 py-2">クリーンルーム維持が必須</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">ガラス</td>
+                  <td className="border border-slate-200 px-3 py-2">完全 24h 連続</td>
+                  <td className="border border-slate-200 px-3 py-2">90%超</td>
+                  <td className="border border-slate-200 px-3 py-2">溶解炉が完全 24h 稼働</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">自動車部品</td>
+                  <td className="border border-slate-200 px-3 py-2">3 シフト + 日曜休止</td>
+                  <td className="border border-slate-200 px-3 py-2">60〜70%</td>
+                  <td className="border border-slate-200 px-3 py-2">デマンド管理余地あり</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 経済産業省「製造業エネルギー消費構造」、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            24 時間ベース負荷下の市場連動リスク
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場は、電力使用量の大きさゆえに、プラン選択が財務に与える影響が特に大きくなります。
@@ -224,7 +294,36 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            見積比較で確認したいこと
+            製造業向け省エネ補助金（経産省 / SII）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            連続操業工場の省エネ設備投資で活用しやすい補助金スキームを整理します。電気代規模が大きいため、補助金活用での投資回収期間短縮効果が他業種より大きくなります。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                省エネルギー投資促進支援事業。コンプレッサー・空調・廃熱回収・コージェネ更新で活用しやすい。製造業の活用実績が最多。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 GX 補助金</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                GX 推進機構経由の補助金。鉄鋼・化学・セメントなど CO2 多排出業種の脱炭素化投資に対応。補助率が手厚い。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">環境省（再エネ）</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                自家消費型太陽光・蓄電池・PPA モデル導入。工場屋根を活用した自家消費発電で活用しやすい。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            連続操業工場の見積比較ポイント
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大口契約の場合、見積比較は細部まで丁寧に確認する必要があります。
@@ -254,7 +353,7 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            コージェネ・廃熱回収・夜間電力活用
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場では、契約見直しと並行して以下の設備対策を実施することで、電力コストの構造的な削減が可能になります。
@@ -289,7 +388,38 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーター活用の考え方
+            自動車部品工場の年間削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            3 シフト + 日曜休止型の自動車部品工場を想定した試算ベンチマークを示します。連続操業ながらデマンド管理余地のある業態として代表的なケースです。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業態：自動車部品工場（3 シフト + 日曜休止）</li>
+                <li>年間電力使用量 約 5,000 万 kWh</li>
+                <li>現行契約：特別高圧、固定単価ベース、年間電気代 約 8 億円</li>
+                <li>築 15 年、コンプレッサー定速型、廃熱未回収</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>特別高圧個別交渉（年次入札）: 約 3〜5%</li>
+                <li>コンプレッサーインバーター化: 約 3〜5%</li>
+                <li>廃熱回収＋給湯転用: 約 2〜3%</li>
+                <li>デマンドコントローラー（生産ライン制御）: 約 2〜3%</li>
+                <li className="font-semibold text-slate-800 mt-1">合計年間削減目安: 約 8,000 万〜1.3 億円（10〜16%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、製造業法人事例ヒアリング、業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社工場の状況を確認する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場では、電力使用量が大きいためシミュレーターによるリスク定量化の意味が特に大きくなります。
@@ -308,14 +438,8 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -365,6 +489,21 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
               href: "/demand-control-reduction-effect",
               title: "デマンドコントロールによる電気料金削減効果",
               description: "連続操業工場でのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
+            {
+              href: "/articles/by-industry/manufacturing",
+              title: "製造業ハブ：製造業の電気料金関連記事一覧",
+              description: "鉄鋼・化学・自動車・半導体など製造業全般の電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "連続操業大型工場で活用される特別高圧契約の料金体系を解説。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
             },
           ]}
         />

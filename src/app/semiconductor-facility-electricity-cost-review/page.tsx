@@ -11,6 +11,8 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -81,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "半導体工場の電気代対売上比率はどれくらい？", answer: "業界の典型値として、半導体製造で 5〜15%、半導体パッケージング・テスト工程で 3〜8%、ファブレス・設計企業で 1〜3% と、製造工程に近いほど電気代依存度が極めて高くなります。先端ロジック FAB（3〜7nm 世代）では電気代が製造原価の 10〜20% に達するケースもあり、CFO 直接関与での契約管理が必須レベルの経営課題です。" },
+  { question: "クリーンルームの電力消費構造は？", answer: "クリーンルームの電力消費は、空調・換気・FFU（ファンフィルターユニット）が全体の 30〜40%、超純水製造が 10〜15%、化学薬品供給が 5〜10%、製造装置本体が 30〜40%、UPS・受変電が 5〜10% という典型構造です。クラス（ISO クラス 3〜7 等）が厳しいほど空調比重が上がり、ISO クラス 3〜4 のクリーンルームは ISO クラス 7 の 5〜10 倍の単位面積当たり電力消費になります。" },
+  { question: "プロセス世代別の電力消費の違いは？", answer: "業界平均レンジとして、28nm 世代 FAB で月間電力消費約 50〜80GWh、14〜10nm 世代で 80〜120GWh、7〜5nm 世代で 120〜180GWh、3〜2nm 世代で 180〜250GWh と、先端世代ほどより精密なプロセス装置・厳しいクリーンルーム要件で電力消費が逓増します。" },
+  { question: "半導体製造装置の特殊負荷は？", answer: "ステッパー（露光装置）・エッチング装置・CVD（化学気相成長）・PVD（物理気相成長）・CMP（化学機械研磨）・イオン注入など、各製造装置が専用の電源系統を持ち、瞬断・電圧変動への感度が極めて高い特殊負荷です。電力品質維持のため大容量 UPS が常時稼働し、その変換ロスも電力消費の一部として継続発生します。" },
+  { question: "半導体補助金にはどのようなものがありますか？", answer: "経産省「特定半導体生産施設整備等計画」の認定で TSMC・ラピダス等の先端 FAB 投資に最大数千億円規模の補助金が支給されています。中堅 FAB 向けでは経産省「半導体製造装置・部素材等の国内生産基盤強化支援」、半導体関連設備の省エネ更新では SII 省エネ補助金が活用しやすい状況です。" },
+  { question: "FAB 規模別の年間削減事例の典型値は？", answer: "業界平均レンジとして、中規模 FAB（特高、年間 5 億 kWh 級、年間電気代 約 80 億円）で、特別高圧個別交渉＋FFU インバーター化＋外気冷却比率拡大＋廃熱回収＋自家消費型太陽光の組み合わせにより年間 5〜10%（約 4〜8 億円）の削減事例が報告されています。先端 FAB では削減金額がさらに大きくなります。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・半導体産業政策に関する情報" },
+  { name: "経済産業省（半導体・デジタル産業戦略）", url: "https://www.meti.go.jp", description: "半導体補助金・産業政策情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
+];
+
 export default function SemiconductorFacilityElectricityCostReviewPage() {
   return (
     <>
@@ -93,10 +110,7 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -108,6 +122,8 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
         <span className="text-slate-800">半導体施設の電気料金</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+      <TableOfContents />
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           半導体関連施設の電気料金リスク
@@ -133,7 +149,7 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            半導体施設で電気料金リスクが特に大きい理由
+            なぜ半導体工場の電気料金見直しが重要なのか — クリーンルーム空調と地政学リスク
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設の電気料金リスクが他業種に比べて格段に大きい背景には、以下の要因があります。
@@ -169,10 +185,10 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            半導体施設の負荷特性
+            クリーンルーム超精密温湿度管理と高度純粋水製造
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            半導体施設の電力使用は、以下の設備カテゴリに大きく分かれます。
+            半導体施設の電力使用は、以下の設備カテゴリに大きく分かれます。クリーンルームの ISO クラス（数値が小さいほど厳しい）と超純水の純度要件が電力消費を大きく左右し、ISO クラス 3〜4 のクリーンルームは ISO クラス 7 の 5〜10 倍の単位面積当たり電力消費になります。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -189,7 +205,50 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            プロセス世代別電力消費（28nm / 7nm / 3nm）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            半導体プロセス世代が微細化するほど、より精密なプロセス装置と厳しいクリーンルーム要件が必要となり、電力消費は世代を追うごとに逓増します。先端世代ほど電気代が経営課題として重大化する構造です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">プロセス世代</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">月間電力消費目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主な特徴</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">28nm 世代</td>
+                  <td className="border border-slate-200 px-3 py-2">約 50〜80 GWh/月</td>
+                  <td className="border border-slate-200 px-3 py-2">中堅 FAB、ロジック・パワー半導体</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">14〜10nm 世代</td>
+                  <td className="border border-slate-200 px-3 py-2">約 80〜120 GWh/月</td>
+                  <td className="border border-slate-200 px-3 py-2">先端ロジック前期、EUV 未使用</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">7〜5nm 世代</td>
+                  <td className="border border-slate-200 px-3 py-2">約 120〜180 GWh/月</td>
+                  <td className="border border-slate-200 px-3 py-2">先端ロジック、EUV 露光導入</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">3〜2nm 世代</td>
+                  <td className="border border-slate-200 px-3 py-2">約 180〜250 GWh/月</td>
+                  <td className="border border-slate-200 px-3 py-2">最先端、High-NA EUV、複雑プロセス</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 経済産業省「半導体産業政策」、業界団体公開資料、エネルギー情報センター内部試算をもとに業界平均レンジで作成。実数値は工場規模・プロダクト構成で変動。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            半導体投資の長期回収サイクルと電気代固定の親和性
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設のプラン選択は、電力使用量の大きさと供給安定性への要求から慎重な検討が必要です。
@@ -224,7 +283,30 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            見積比較・交渉で確認したいこと
+            半導体製造装置・FAB 投資の補助金（経産省 GAFA 補助金）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            半導体産業は経産省の戦略物資として位置付けられ、世界最大規模の補助金スキームが整備されています。先端 FAB 新設には数千億円規模、中堅 FAB の設備更新にも数十億〜数百億円規模の補助が活用可能です。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省（先端半導体）</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                「特定半導体生産施設整備等計画」の認定で、TSMC（熊本）・ラピダス（北海道）・Micron（広島）等の先端 FAB 新設に数千億円規模の補助。電力インフラ整備も支援対象。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">SII 省エネ補助金</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                既設 FAB の省エネ設備更新（FFU インバーター化・コンプレッサー高効率化・LED 化等）に活用しやすい。中堅・パッケージング工場での採択実績多。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            半導体 FAB の特別高圧契約と料金交渉
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧以上の大口契約では、標準メニューに加えた交渉余地が生まれることがあります。
@@ -253,7 +335,7 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            省エネ設備対策の方向性
+            クリーンルーム空調・冷却水・排ガス処理の省エネ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設では、クリーンルームのエネルギー効率改善が省エネの主軸になります。
@@ -288,7 +370,39 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーター活用の考え方
+            FAB 規模別の年間電気代削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            中規模 FAB（28〜10nm 世代）を想定した試算ベンチマークを示します。先端 FAB ではより大きな金額規模になります。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業態：中規模半導体 FAB（28〜14nm 世代）</li>
+                <li>年間電力使用量 約 5 億 kWh</li>
+                <li>現行契約：特別高圧、固定単価＋一部市場連動、年間電気代 約 80 億円</li>
+                <li>築 12 年、FFU 定速型、機械式冷却中心</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>特別高圧個別交渉（複数年契約）: 約 2〜3%</li>
+                <li>FFU インバーター化: 約 3〜5%</li>
+                <li>外気冷却比率拡大（PUE 改善）: 約 2〜3%</li>
+                <li>排ガス処理装置高効率化: 約 1〜2%</li>
+                <li>自家消費型太陽光（敷地内）: 約 1〜2%</li>
+                <li className="font-semibold text-slate-800 mt-1">合計年間削減目安: 約 4〜8 億円（5〜10%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、半導体業界事例ヒアリング、業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社 FAB の状況を確認する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設では、電力使用量の規模が大きいためシミュレーターによるリスク定量化の価値が特に高くなります。
@@ -307,14 +421,8 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -364,6 +472,21 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
               href: "/emergency-power-outage-response",
               title: "停電・電力不足時の対応と事前準備",
               description: "半導体施設の停電リスク対応と非常用電源の準備について。",
+            },
+            {
+              href: "/articles/by-industry/it-technology",
+              title: "IT・通信業種ハブ：IT・テクノロジー業種の電気料金関連記事",
+              description: "半導体・IT・データセンターなどテクノロジー業種の電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "FAB で活用される特別高圧契約の料金体系と個別交渉の考え方。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "高負荷・冗長性要求が共通する DC の負荷特性と契約見直し。",
             },
           ]}
         />
