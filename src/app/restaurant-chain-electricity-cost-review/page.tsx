@@ -11,6 +11,8 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -81,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "飲食チェーンの本部一括契約はどの規模から効果が出ますか？", answer: "10 店舗以上、年間電力使用量合計 100 万 kWh 以上のチェーンで本部一括契約のスケールメリットが顕在化します。50 店舗以上では年間数百万円〜千万円規模の単価優位を交渉可能です。ただし店舗ごとに電圧区分・需要パターンが異なるため、完全一律ではなく『本部一括交渉＋店舗特性別単価』のハイブリッド契約が実務的です。" },
+  { question: "業態別電力消費の特徴は？", answer: "ファストフード（高回転・短時間調理）は調理設備のピーク負荷が短時間に集中、ファミリーレストラン（長時間営業・大型空調）はベースロード型、居酒屋（夜営業中心）は 17-23 時の集中型、ラーメン・カフェチェーンは厨房比重が高く、と業態で電力プロファイルが大きく異なります。業態に合わせたプラン選択が重要です。" },
+  { question: "厨房機器の電化進展は電気代にどう影響しますか？", answer: "ガス→電気への厨房機器電化（IH・電気フライヤー・電子レンジ・電気スチコン等）は、ランニングコストの面ではガス料金との比較になります。CO2 排出削減・店舗内空気質改善・換気量削減のメリットがある一方、契約電力（kW）が増加するため、電化前後の契約電力見直しが必須です。" },
+  { question: "営業時間帯と JEPX ピークの関係は？", answer: "飲食チェーンの売上ピーク（17-19 時のディナータイム集客時間）が JEPX スポット価格の高騰時間帯（夕方の太陽光出力低下と需要立ち上がり）と重なるため、市場連動プランでは『売上ピーク＝電気代上振れピーク』の構造的不利が発生します。固定プランとの相性が業界として高く評価される理由です。" },
+  { question: "多店舗本部の統括管理のフローは？", answer: "①店舗別月次電力費を本部 BI ダッシュボードに集約（クラウド BEMS 経由か手動 CSV 取込）、②店舗間ベンチマークで突出店舗を特定、③本部担当が一括交渉・契約見直し、④店舗運用改善（厨房ピークタイミング分散等）、⑤月次レビュー、の 5 ステップが標準フローです。年間電力費 1 億円超のチェーンでは本部に電力調達専任を置く事例も増えています。" },
+  { question: "50 店舗チェーンの年間削減事例の典型値は？", answer: "業界平均レンジとして、50 店舗規模ファミリーレストランチェーン（年間電力使用量合計 800 万 kWh 級、年間電気代約 1.5 億円）で、本部一括契約見直し＋店舗 LED 化＋デマンドコントローラー＋自家消費型太陽光（一部郊外店）の組み合わせにより年間 8〜12%（約 1,200〜1,800 万円）の削減事例が報告されています。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
+  { name: "農林水産省（食品事業者向け省エネ支援）", url: "https://www.maff.go.jp", description: "食品流通事業者向け補助金情報" },
+  { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+];
+
 const reviewPoints = [
   {
     heading: "デマンドピークのタイミングを把握する",
@@ -116,10 +133,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -131,6 +145,8 @@ export default function RestaurantChainElectricityCostReviewPage() {
         <span className="text-slate-800">飲食チェーンの見直しポイント</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+      <TableOfContents />
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           飲食店チェーンの電気料金見直しポイント
@@ -156,7 +172,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            飲食店の電気料金が上がりやすい理由
+            なぜ飲食チェーンの電気料金見直しが重要なのか — 多店舗一括契約の難しさ
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             飲食店の電気料金は、以下の構造的な要因から上がりやすくなっています。
@@ -182,7 +198,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            負荷特性から見た着眼点
+            厨房ピーク需要とランチ・ディナー帯の二山型負荷
           </h2>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -199,7 +215,50 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            業態別電力消費ベンチマーク（ファミレス / ファストフード / 居酒屋）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            飲食業態によって電力消費プロファイルが大きく異なるため、自社業態のベンチマークと比較して契約条件を最適化することが重要です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">業態</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">店舗あたり年間目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主な負荷特性</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">ファミリーレストラン</td>
+                  <td className="border border-slate-200 px-3 py-2">約 18〜30 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">長時間営業、大型空調、多種類厨房機器</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">ファストフード</td>
+                  <td className="border border-slate-200 px-3 py-2">約 10〜20 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">短時間調理ピーク、フライヤー比率高、回転率重視</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">居酒屋・ダイニング</td>
+                  <td className="border border-slate-200 px-3 py-2">約 8〜15 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">17-23 時集中、間接照明・音響負荷</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">ラーメン・カフェ</td>
+                  <td className="border border-slate-200 px-3 py-2">約 6〜15 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">厨房比重高、エスプレッソ機器、長時間営業（カフェ）</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 経済産業省「商業動態統計」、エネルギー情報センター内部試算をもとに業界平均レンジで作成。立地・規模・営業時間で変動。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            チェーン本部一括契約と各店舗運用の責任分担
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             飲食業は利益率の低さから、固定プランとの相性が高い業種といえます。
@@ -238,9 +297,41 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            契約見直しで確認したいこと
+            飲食業向け省エネ補助金
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            飲食チェーンの設備投資で活用しやすい補助金を整理します。チェーン本部が一括申請することで、複数店舗分のスケールメリットを得られる場合があります。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                省エネルギー投資促進支援事業。高効率厨房機器・空調・LED 化に対応。中小チェーンの活用実績多。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">農水省（食品事業者向け）</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                食品流通脱炭素化支援、HACCP 関連支援。冷蔵設備更新・厨房省エネ機器更新に対応。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">環境省</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                ZEB 化推進事業・地域脱炭素移行・再エネ推進交付金。郊外型チェーンの自家消費型太陽光導入で活用しやすい。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            多店舗の契約電力一括見直し手順
           </h2>
           <div className="mt-4 space-y-4">
+            <p className="text-sm leading-7 text-slate-700 sm:text-base">
+              50 店舗以上のチェーンでは、本部主導の電力契約一括見直しで年間数百万円〜千万円規模の単価優位を獲得可能です。実務手順は ①店舗別電力契約条件の本部集約（電圧区分・契約電力・現行単価・契約満了日）、②店舗グルーピング（電圧区分・供給エリア・需要パターン）、③相見積もり依頼（3〜5 社）、④評価（単価・財務安定性・供給責任条項）、⑤段階移行の 5 ステップが標準です。
+            </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -254,7 +345,7 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            厨房高効率化・店舗 LED 化の費用対効果
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと並行して、設備面での対策を組み合わせることで電気料金の削減効果を高められます。
@@ -289,7 +380,40 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーターで確認したいこと
+            50 店舗チェーンの年間削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            50 店舗規模ファミリーレストランチェーンを想定した試算ベンチマークを示します。立地・店舗形態で削減幅は変動しますが、初期検討の参考値として活用できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業態：ファミリーレストランチェーン</li>
+                <li>店舗数 50（本部一括契約済み）</li>
+                <li>合計年間電力使用量 約 800 万 kWh</li>
+                <li>現行契約：高圧、固定単価ベース、合計年間電気代 約 1.5 億円</li>
+                <li>築 10〜15 年の店舗が中心、LED 未更新エリアあり</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>本部一括契約見直し（複数社相見積）: 約 3〜5%</li>
+                <li>店舗 LED 完全化＋外部サイン制御: 約 2〜3%</li>
+                <li>厨房機器インバーター化（換気・空調）: 約 2〜3%</li>
+                <li>デマンドコントローラー（高需要店舗）: 約 1〜2%</li>
+                <li>自家消費型太陽光（一部郊外店）: 約 0.5〜1%</li>
+                <li className="font-semibold text-slate-800 mt-1">合計年間削減目安: 約 1,200〜1,800 万円（8〜12%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、チェーン飲食法人事例ヒアリング、業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社チェーンの状況を確認する
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスク額を確認する</li>
@@ -305,14 +429,8 @@ export default function RestaurantChainElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -357,6 +475,26 @@ export default function RestaurantChainElectricityCostReviewPage() {
               href: "/led-air-conditioning-reduction-effect",
               title: "LED・空調更新による電気料金削減効果",
               description: "飲食チェーンの照明・空調設備の更新で期待できる電気料金削減効果を解説。",
+            },
+            {
+              href: "/articles/by-industry/commercial",
+              title: "商業・小売業種ハブ：商業施設向け電気料金関連記事",
+              description: "飲食・小売・スーパーなど商業施設の電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/jepx-explained",
+              title: "JEPX スポット市場の仕組みと法人への影響",
+              description: "夕方ピーク時間帯に JEPX が高騰する仕組み。市場連動プラン検討時に必読。",
+            },
+            {
+              href: "/articles/by-industry/hotel-leisure",
+              title: "ホテル・観光業種ハブ：観光業向け電気料金関連記事",
+              description: "観光業全般の電気料金関連記事を一覧で確認。ホテル併設レストランの参考に。",
             },
           ]}
         />

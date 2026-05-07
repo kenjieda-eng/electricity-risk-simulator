@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
+
+const faqItems = [
+  { question: "SII 省エネ補助金の申請から交付までの期間目安は？", answer: "公募開始から交付決定まで概ね 3〜5 か月、交付決定から事業実施・実績報告完了まで 6〜12 か月、補助金支払いまで合計 12〜18 か月程度が目安レンジです。設備発注は交付決定後でないと補助対象外となるため、設備導入計画は申請から逆算した長期スケジュールでの設計が必須となります。" },
+  { question: "補助率の類型別の特徴は？", answer: "業界の典型値として、A 類型（先進設備、SII カタログ登録製品）は中小 1/2 以内・大企業 1/3 以内で手続きシンプル、B 類型（オーダーメイド型、個別審査）は 1/3〜1/2 以内で上限なしだが審査が厳しめ、C 類型（指定設備、汎用設備）は 1/3 以内で最大 1 億円の上限という構成が定例です。導入設備の特性で類型を選定します。" },
+  { question: "対象設備の範囲は？", answer: "高効率空調、LED 照明、高効率変圧器、コンプレッサー、ボイラー、冷凍冷蔵設備、工業炉、産業ヒートポンプなど、製造業・商業・物流業で活用される汎用省エネ設備が幅広く対象です。再エネ設備（太陽光・蓄電池）は別の補助金スキームが優先されることが多く、SII 補助金とは目的が異なります。" },
+  { question: "申請時の必要書類の主要項目は？", answer: "①申請書本体（事業計画書）、②省エネ計算書（エネルギー消費量・省エネ率の根拠）、③設備仕様書・見積書、④設置場所図面、⑤直近 3 期分の決算書、⑥税務関連書類（納税証明書等）、⑦既存設備の資料（型式・能力・運用実績）、の 7 種類が標準です。書類量が多いため、専門家・コンサルタントの活用が一般的です。" },
+  { question: "採択ポイントと加点項目は？", answer: "採択審査では①省エネ率（高いほど加点）、②費用対効果（補助金額あたりのエネルギー削減量）、③事業計画の妥当性、④財務健全性、⑤過去の補助金活用実績、⑥地域貢献度・脱炭素先行地域等での加点が見られます。過去の採択率は類型・年度で変動しますが、業界平均で概ね 50〜70% 程度の採択率と言われています。" },
+  { question: "申請失敗事例にはどのようなものがありますか？", answer: "代表的な失敗パターンは①省エネ計算書のエネルギー削減量過大評価、②既存設備の運用実績データ不足、③設備仕様と省エネ要件の不整合、④交付決定前の発注（補助対象外となる）、⑤実績報告期限の見落とし、の 5 類型です。事前準備の精緻さが採択率と支払い完了率に直結します。" },
+];
+
+const sourcesItems = [
+  { name: "SII（一般社団法人環境共創イニシアチブ）", url: "https://sii.or.jp", description: "省エネルギー投資促進支援事業の公式情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "省エネ政策・補助金制度の所管省庁情報" },
+  { name: "経済産業省（補助金等政策ガイド）", url: "https://www.meti.go.jp", description: "補助金制度全般の最新情報" },
+];
 
 
 const pageTitle = "省エネ補助金（SII）の申請ガイド｜対象・補助率・スケジュール";
@@ -140,7 +159,7 @@ export default function SubsidySiiEnergySavingPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "省エネ補助金（SII）の申請ガイド" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -152,6 +171,8 @@ export default function SubsidySiiEnergySavingPage() {
         <span className="text-slate-800">省エネ補助金（SII）の申請ガイド</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
       {/* ヘッダー */}
       <header className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-emerald-700">SUBSIDY ／ 補助金・助成金</p>
@@ -170,7 +191,7 @@ export default function SubsidySiiEnergySavingPage() {
       <section className="mt-6 space-y-4">
         {/* 制度概要テーブル */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">制度概要（2026年度・目安）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">SII 省エネ補助金の制度概要（2026 年度版）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額・公募時期は年度・区分により異なります。必ず最新公募要領を確認してください。
           </p>
@@ -196,7 +217,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 類型別補助率・上限額 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">類型別 補助率・上限額（目安）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">類型別の補助率と上限額（先進・標準・ASIST 別）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額は年度・区分により変更されます。正式な数値は最新公募要領をご確認ください。
           </p>
@@ -233,7 +254,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 対象事業者・対象設備 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">対象事業者と対象設備</h2>
+          <h2 className="text-xl font-semibold text-slate-900">対象事業者（中小企業）と補助対象設備の範囲</h2>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
               <h3 className="text-base font-semibold text-slate-800">対象事業者</h3>
@@ -266,7 +287,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 補助額シミュレーション */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">補助額シミュレーション（想定例）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">想定パターン別の補助額シミュレーション</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまで想定例です。実際の補助額は設備種別・省エネ率・事業者区分等により異なります。
           </p>
@@ -303,7 +324,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 着工前申請 重要注意 */}
         <section className="rounded-xl border border-red-300 bg-red-50 p-5">
-          <h2 className="text-base font-semibold text-red-800">重要：交付決定前の着工は補助対象外</h2>
+          <h2 className="text-base font-semibold text-red-800">交付決定前着工で補助対象外になる理由</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700">
             SII省エネ補助金では、<strong className="text-red-700">交付決定通知を受け取る前に設備を発注・着工した場合、補助対象外になります。</strong>
             申請書の提出中・審査中の段階で工事を開始することも同様にNGです。
@@ -316,7 +337,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 申請の流れ */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">申請の流れ</h2>
+          <h2 className="text-xl font-semibold text-slate-900">申請から交付決定までの実務フロー</h2>
           <div className="mt-4 space-y-3">
             {steps.map((s, i) => (
               <div key={i} className="flex gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -332,7 +353,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* よくある失敗 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">申請時の注意点・よくある失敗</h2>
+          <h2 className="text-xl font-semibold text-slate-900">申請時の注意点と過去の失敗事例</h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {pitfalls.map((p, i) => (
               <div key={i} className="rounded-xl border border-amber-200 bg-amber-50 p-4">
@@ -345,7 +366,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 他の制度との併用 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">他の制度との併用可否</h2>
+          <h2 className="text-xl font-semibold text-slate-900">経産省 SHIFT / 環境省 / 自治体補助金との併用</h2>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -383,7 +404,7 @@ export default function SubsidySiiEnergySavingPage() {
 
         {/* 情報の鮮度注記 */}
         <section className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-          <h2 className="text-base font-semibold text-amber-800">情報の鮮度についての注記</h2>
+          <h2 className="text-base font-semibold text-amber-800">制度情報の更新サイクルと最新情報の確認方法</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700">
             本ページの情報は2026年4月時点の公開情報をもとにしています。補助金制度は年度ごとに内容・補助率・上限額が変更される場合があります。
             申請前に必ず各実施機関の最新公募要領をご確認ください。
@@ -399,6 +420,10 @@ export default function SubsidySiiEnergySavingPage() {
       {/* 関連リンク */}
       
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="subsidy-sii-energy-saving" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "デマンド値"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -412,6 +437,10 @@ export default function SubsidySiiEnergySavingPage() {
             { href: "/solar-suitability-diagnosis", title: "太陽光導入向き不向き診断", description: "自社に太陽光導入が適しているかを確認" },
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光は電気料金対策としてどう効くか", description: "導入効果と費用対効果の考え方" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "省エネ補助金と組み合わせた蓄電池投資の費用対効果を把握。" },
+            { href: "/subsidy-shift-project", title: "燃料転換補助金（SHIFT 事業）の活用ガイド", description: "ガス・石油から電気への燃料転換に対応する補助金の活用手順。" },
+            { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代見直しの基本ポイント", description: "補助金活用と並行して取り組む契約見直しの基本フレーム。" },
+            { href: "/extra-high-voltage-electricity-pricing", title: "特別高圧の電気料金の仕組み", description: "大型補助金活用が見込める特別高圧需要家向け料金体系を解説。" },
+            { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直しポイント", description: "省エネ補助金活用が見込める高負荷業種の代表例。" },
           ]}
         />
       </div>

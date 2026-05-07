@@ -11,6 +11,8 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
@@ -81,6 +83,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "物流センターの電気代対売上比率はどれくらい？", answer: "業界平均レンジとして、常温物流センターで売上対比 1〜3%、温度管理（冷蔵冷凍）DC で 3〜8%、自動化倉庫（AGV・自動仕分け）で 2〜5% が目安です。物流業界の営業利益率（3〜7% 程度）に対して電気代インパクトは無視できないサイズで、特に冷凍冷蔵 DC では電気代が損益分岐に直接影響する規模になります。" },
+  { question: "床面積別の電力消費の目安は？", answer: "業界の典型値として、5,000m² 規模 DC で年間約 100〜250 万 kWh、10,000m² 規模で年間約 200〜500 万 kWh、30,000m² 規模で年間約 600〜1,500 万 kWh が目安レンジです。温度帯（常温/冷蔵/冷凍）と自動化レベルで 2〜3 倍の幅があり、kWh/m²・年で業界平均と比較するのが実務的です。" },
+  { question: "多温度帯倉庫の電力比率は？", answer: "業界平均レンジとして、常温倉庫 50〜70%、冷蔵（5〜10℃）20〜30%、冷凍（-25〜-18℃）10〜20% という構成が典型的です。冷凍倉庫の単位面積当たり電力消費は常温の 5〜10 倍、冷蔵で 2〜3 倍に達するため、温度帯比率が DC の総電力費を大きく左右します。冷凍庫の扉管理・断熱改善の費用対効果が他業態より大きい構造です。" },
+  { question: "AGV・自動倉庫の電力影響は？", answer: "AGV（無人搬送車）・自動倉庫（AS/RS）導入で、人件費は減る一方で電力消費は 20〜40% 増加するのが典型パターンです。充電設備の集中稼働がデマンドピークを押し上げるため、AGV 導入と契約電力の見直しは必ずセットで実施します。充電タイミングの分散制御で基本料金圧縮可能です。" },
+  { question: "EC 物流ピーク時期の電気代影響は？", answer: "11 月（ブラックフライデー・年末商戦）と 3 月（年度末駆け込み）が EC 物流のピーク時期で、月次電気代が通常月の 1.3〜1.8 倍に達する DC が多数あります。市場連動プランではこの時期と JEPX 高騰局面が重なると上振れリスクが拡大するため、年間需要のピーク月を織り込んだプラン選択が重要です。" },
+  { question: "大型物流センターの年間削減事例の典型値は？", answer: "業界平均レンジとして、大型物流センター（30,000m² 級、年間電力使用量 1,000 万 kWh 級、年間電気代 約 1.8 億円）で、契約見直し＋AGV 充電タイミング分散＋冷凍庫扉管理＋LED 完全化＋自家消費型太陽光（屋根 500kW 級）の組み合わせにより年間 10〜15%（約 1,800〜2,700 万円）の削減事例が報告されています。" },
+];
+
+const sourcesItems = [
+  { name: "国土交通省（物流政策）", url: "https://www.mlit.go.jp", description: "物流業界の効率化・脱炭素化政策に関する情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・物流業向け省エネ支援情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
+];
+
 export default function DistributionCenterElectricityCostReviewPage() {
   return (
     <>
@@ -93,10 +110,7 @@ export default function DistributionCenterElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -108,6 +122,8 @@ export default function DistributionCenterElectricityCostReviewPage() {
         <span className="text-slate-800">DCの見直しポイント</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-11" updatedAt="2026-04-11" />
+      <TableOfContents />
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           ディストリビューションセンターの電気料金見直しポイント
@@ -133,7 +149,7 @@ export default function DistributionCenterElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            DCで電気料金が上がりやすい理由
+            なぜ物流センターの電気料金見直しが重要なのか — 大型空調と冷蔵
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DCの電気料金が上昇しやすい背景には、以下の構造的な要因があります。
@@ -169,10 +185,10 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            DCの負荷特性
+            自動倉庫・搬送装置・冷蔵設備の三層負荷
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            DCの電力使用は、以下の設備カテゴリに大きく分かれます。
+            物流センターの電力使用は、自動倉庫・搬送装置層、冷蔵冷凍倉庫層、空調・照明・事務層の三層構造を持ちます。常温物流センターでは空調・照明・搬送装置が中心、温度管理 DC では冷蔵冷凍が単位面積当たり電力消費を大きく押し上げる構造です。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -189,7 +205,49 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            床面積別電力消費（5,000 / 10,000 / 30,000 m²）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自社物流センターの電気代水準が業界相場と比べて妥当かを判断するには、床面積あたりの年間使用量・電気代を業界平均と比較するのが基本です。温度帯（常温/冷蔵/冷凍）と自動化レベルで 2〜3 倍の幅があります。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">規模</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間電力使用量目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間電気料金目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主な特徴</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">5,000 m²（中規模）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 100〜250 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 1,800〜4,500 万円</td>
+                  <td className="border border-slate-200 px-3 py-2">高圧、地方拠点 DC</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">10,000 m²（大規模）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 200〜500 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 3,500〜9,000 万円</td>
+                  <td className="border border-slate-200 px-3 py-2">高圧上位、自動化導入進む</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">30,000 m²（超大規模）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 600〜1,500 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 1.0〜2.7 億円</td>
+                  <td className="border border-slate-200 px-3 py-2">特高、AGV・自動倉庫フル稼働</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 国土交通省「物流統計」、エネルギー情報センター内部試算をもとに業界平均レンジで作成。温度帯・自動化レベルで変動。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            物流業界の利益率制約とプラン選択
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DCのプラン選択は、稼働パターンと取扱商品の性質によって方向性が決まります。
@@ -215,7 +273,36 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            見積比較で確認したいこと
+            物流業向け補助金（国交省 / 経産省）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            物流業の電気代削減に活用できる主要補助金を整理します。物流効率化と脱炭素化が同時要請される中で、補助金活用は投資回収期間の短縮に直結します。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">国土交通省</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                物流効率化補助金、グリーン物流パートナーシップ。AGV・自動倉庫導入で物流効率化＋省エネを両立する設備投資に対応。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                省エネルギー投資促進支援事業。LED 化・空調更新・冷凍機高効率化など汎用設備で活用しやすい。物流業の活用実績多。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">環境省</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                自家消費型太陽光・蓄電池・PPA モデル導入支援。物流センターの広い屋根を活かした自家消費太陽光で活用しやすい。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            物流センター契約電力の妥当性確認
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DCの電力見積比較では、以下の点を確認します。
@@ -244,7 +331,7 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            自動倉庫高効率化・冷蔵設備更新・LED 化
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DCでは以下の設備対策が電気料金削減に有効です。
@@ -279,7 +366,39 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーター活用の考え方
+            大型物流センターの年間削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            30,000m² 級大型物流センターを想定した試算ベンチマークを示します。温度管理 DC ではより削減幅が大きくなる傾向です。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>業態：大型物流センター（30,000m²、常温＋冷蔵併設）</li>
+                <li>年間電力使用量 約 1,000 万 kWh</li>
+                <li>現行契約：高圧上位帯、固定単価ベース、年間電気代 約 1.8 億円</li>
+                <li>築 10 年、AGV・自動倉庫導入済、LED 一部未更新</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>契約見直し（複数社相見積）: 約 3〜5%</li>
+                <li>AGV 充電タイミング分散制御: 約 2〜3%</li>
+                <li>冷凍庫扉管理＋エアカーテン: 約 2〜3%</li>
+                <li>LED 完全化＋人感センサー: 約 2〜3%</li>
+                <li>自家消費型太陽光（屋根 500kW 級）: 約 2〜3%</li>
+                <li className="font-semibold text-slate-800 mt-1">合計年間削減目安: 約 1,800〜2,700 万円（10〜15%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、物流業法人事例ヒアリング、業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社物流センターの状況を確認する
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DCの電気料金見直しにあたって、シミュレーターを活用することで以下の情報を数値で整理できます。
@@ -298,14 +417,8 @@ export default function DistributionCenterElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -350,6 +463,26 @@ export default function DistributionCenterElectricityCostReviewPage() {
               href: "/demand-control-reduction-effect",
               title: "デマンドコントロールによる電気料金削減効果",
               description: "物流センターでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
+            },
+            {
+              href: "/articles/by-industry/logistics-infrastructure",
+              title: "物流・インフラ業種ハブ：物流業向け電気料金関連記事",
+              description: "物流センター・倉庫・運輸業の電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "物流センターの広い屋根を活用した太陽光導入の投資回収期間。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "大型物流センターで活用される特別高圧契約の料金体系を解説。",
             },
           ]}
         />

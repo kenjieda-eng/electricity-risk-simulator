@@ -82,6 +82,21 @@ const loadCharacteristics = [
   },
 ];
 
+const faqItems = [
+  { question: "ホテルの電気料金見直しはどのタイミングで進めるのが効果的ですか？", answer: "繁忙期（夏・年末年始）の前 3〜6 か月、つまり春先と秋口が見直しの仕込みタイミングとして最適です。新契約は閑散期（4〜5 月、9〜10 月）に切り替えるとシステム移行・運用テストの負荷が小さく、繁忙期の運用安定性も確保しやすくなります。複数年契約を組む場合は中期計画策定タイミング（通常 4 月）から逆算します。" },
+  { question: "客室規模別の年間電気代の目安は？", answer: "業界の典型値として、50 客室規模で年間約 1,500〜2,500 万円、100 客室規模で年間約 3,000〜5,500 万円、300 客室規模で年間約 9,000 万〜1.6 億円が目安レンジです。フルサービス・宴会場併設・温泉施設の有無で 1.5〜2 倍の幅があり、kWh/客室・年で業界平均と比較するのが実務的です。" },
+  { question: "ホテル業界の電気代対売上比率はどれくらい？", answer: "ホテル業界の電気代対売上比率は、ビジネスホテル（朝食付き宿泊主体）で 2〜4%、シティホテル（フルサービス）で 3〜6%、リゾートホテル（温泉・大浴場併設）で 4〜8% が業界平均です。営業利益率が低めの業界（5〜15% 程度）では、電気代 1% の上昇が営業利益を 5〜15% 圧迫する規模感になります。" },
+  { question: "客室稼働率と電力単価の関係は？", answer: "稼働率が低い時期は使用量が下がる一方、共用部・厨房・セキュリティのベースロードは変わらないため、kWh あたり単価で見ると稼働率の低い時期ほど割高になる構造があります。年間の総電気代を年間の延宿泊客数で割った『1 客あたり電気代』で管理するのが実務的な KPI です。" },
+  { question: "ホテル特化の補助金にはどのようなものがありますか？", answer: "観光庁「観光関連事業者向け省エネルギー設備導入支援」、経産省「省エネルギー投資促進支援事業（SII）」、環境省「ZEB 化推進事業」が代表格です。観光業特化補助金は新型コロナ後のサステナビリティ要請を背景に、ZEB 化・自家消費型太陽光・蓄電池導入に対する補助率が手厚く設定されている傾向があります。" },
+  { question: "200 室規模ホテルの年間削減事例の典型値は？", answer: "業界平均レンジとして、200 室規模シティホテル（年間 700 万 kWh 級）で、契約見直し＋ヒートポンプ給湯器更新＋客室キーカード連動空調＋共用部 LED 化＋デマンドコントローラーの組み合わせにより年間 8〜15%（約 600〜1,500 万円）の削減事例が複数報告されています。投資回収期間は省エネ補助金活用で 3〜5 年が典型値です。" },
+];
+
+const sourcesItems = [
+  { name: "観光庁", url: "https://www.mlit.go.jp/kankocho/", description: "観光関連事業者向け省エネ・脱炭素関連支援情報" },
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
+  { name: "環境省（ZEB 化推進事業）", url: "https://www.env.go.jp", description: "ホテル・宿泊施設の脱炭素化補助金情報" },
+];
+
 const reviewPoints = [
   {
     heading: "稼働率の季節変動と電力使用量の関係",
@@ -117,10 +132,7 @@ export default function HotelElectricityCostReviewPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
         ]}
-        faq={[
-    { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-    { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-        ]}
+        faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -160,7 +172,7 @@ export default function HotelElectricityCostReviewPage() {
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            ホテルの電気料金が上がりやすい理由
+            なぜホテルの電気料金見直しが重要なのか — 観光業の繁閑差と全室稼働
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ホテルの電気料金は、以下の構造的な要因から上がりやすくなっています。
@@ -186,8 +198,11 @@ export default function HotelElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            負荷特性から見た着眼点
+            客室・厨房・空調・宴会場の四層構造とホテル固有負荷
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ホテルの電力プロファイルは、客室稼働連動層・厨房ピーク層・共用部空調ベース層・宴会場イベント層の四層構造を持ちます。一般オフィスと異なり 24 時間稼働のベースロードが厚く、繁忙日は宴会需要のピークが客室需要と重なってデマンド最大値を押し上げる構造です。各層の負荷特性は以下のとおりです。
+          </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
               <div
@@ -203,7 +218,49 @@ export default function HotelElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            固定プランと市場連動プランの考え方
+            客室規模別電力消費ベンチマーク（50 / 100 / 300 室）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自社ホテルの電気代水準が業界相場と比べて妥当かを判断するには、客室数あたりの年間使用量・電気代を業界平均と比較するのが基本です。客室タイプ・施設形態（ビジネス/シティ/リゾート）で 1.5〜2 倍の幅があるため、自社が属するカテゴリのレンジで照合してください。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 text-slate-900">
+                  <th className="border border-slate-200 px-3 py-2 text-left">規模</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間電力使用量目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">年間電気料金目安</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left">主な施設形態</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">50 客室（小型）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 80〜140 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 1,500〜2,500 万円</td>
+                  <td className="border border-slate-200 px-3 py-2">ビジネスホテル、駅前小規模</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">100 客室（中規模）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 170〜300 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 3,000〜5,500 万円</td>
+                  <td className="border border-slate-200 px-3 py-2">シティホテル、宴会場併設</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">300 客室（大型）</td>
+                  <td className="border border-slate-200 px-3 py-2">約 500〜900 万 kWh</td>
+                  <td className="border border-slate-200 px-3 py-2">約 9,000 万〜1.6 億円</td>
+                  <td className="border border-slate-200 px-3 py-2">フルサービス、リゾート、特高契約</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-slate-500">出典: 観光庁「宿泊業のエネルギー消費実態」、エネルギー情報センター内部試算をもとに業界平均レンジで作成。施設形態・温泉設備の有無で変動。</p>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            観光繁閑差を踏まえたプラン選択 — 夏ピークと年末年始
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ホテルは電力使用量が多く、プラン選択の影響額も大きくなりやすい業種です。
@@ -242,9 +299,41 @@ export default function HotelElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            契約見直しで確認したいこと
+            観光業向け補助金活用（観光庁 / 経産省）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            ホテルの電気代削減で、契約プラン見直しの次に効果が大きいのが省エネ設備投資です。観光業特化の補助金スキームを活用することで、初期投資を圧縮しランニングコストの改善を加速できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">観光庁</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                観光関連事業者向け省エネルギー設備導入支援。客室空調・LED 化・ヒートポンプ給湯器など宿泊施設特有設備への補助率が手厚い。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                省エネルギー投資促進支援事業。汎用設備（高効率空調・LED・コンプレッサー）の更新で活用しやすく、ホテル業界での採択実績が多い。
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">環境省</p>
+              <p className="mt-1 text-xs leading-6 text-slate-600">
+                ZEB 化推進事業・地域脱炭素移行・再エネ推進交付金。<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光</Link>・蓄電池・PPA モデル導入の補助率が高い。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            ホテル運営サイクルと契約見直しタイミング
           </h2>
           <div className="mt-4 space-y-4">
+            <p className="text-sm leading-7 text-slate-700 sm:text-base">
+              ホテルの電力契約見直しは、繁忙期（夏・年末年始）の前 3〜6 か月を仕込みタイミングとし、閑散期（4〜5 月、9〜10 月）に新契約を切り替えるのが運用安定性とコスト最適化の両立に有効です。複数年契約や設備投資を組み合わせる場合は、中期計画策定タイミング（通常 4 月）から逆算したスケジューリングを行います。
+            </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -258,7 +347,7 @@ export default function HotelElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            設備対策との組み合わせ
+            客室空調・厨房省エネ・温泉施設の電気代対策
           </h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -290,7 +379,39 @@ export default function HotelElectricityCostReviewPage() {
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
-            シミュレーターで確認したいこと
+            中規模ホテル（100 室）の年間電気代削減事例
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            複合施策の効果を具体的にイメージするため、100 室規模の中規模シティホテルを想定した試算ベンチマークを示します。施設形態・既設設備で削減幅は変動しますが、初期検討の参考値として活用できます。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">想定モデル</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>客室数 100、宴会場・レストラン併設</li>
+                <li>年間電力使用量 約 250 万 kWh</li>
+                <li>現行契約：高圧、固定単価ベース、年間電気代 約 4,500 万円</li>
+                <li>築 15 年、客室空調個別運転、LED 未更新エリアあり</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">削減施策と効果目安（年間）</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+                <li>契約プラン見直し（複数社相見積）: 約 3〜5%</li>
+                <li>客室キーカード連動空調: 約 3〜5%</li>
+                <li>共用部 LED 完全化＋人感センサー: 約 2〜3%</li>
+                <li>ヒートポンプ給湯器更新: 約 4〜6%</li>
+                <li>デマンドコントローラー導入: 約 2〜3%</li>
+                <li className="font-semibold text-slate-800 mt-1">合計年間削減目安: 約 600〜1,500 万円（13〜33%）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、観光業法人事例ヒアリング、業界平均レンジで作成。</p>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            シミュレーターで自社ホテルの状況を確認する
           </h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスク額を確認する</li>
@@ -306,14 +427,8 @@ export default function HotelElectricityCostReviewPage() {
 
 <div className="mt-6">
           <SourcesAndFaq
-          faq={[
-          { question: "業種ごとに電力契約の見直しポイントは違いますか？", answer: "はい、使用パターン・ピーク時間帯・契約区分が業種ごとに異なるため、見直しの着眼点も変わります。" },
-          { question: "電気代の相場はどこで確認できますか？", answer: "経済産業省の電力取引報や新電力ネットの統計データで業種別の目安を確認できます。" },
-          ]}
-          sources={[
-          { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
-          { name: "新電力ネット", url: "https://pps-net.org" },
-          ]}
+          faq={faqItems}
+          sources={sourcesItems}
           publishedAt="2026-04-11"
         />
 
@@ -353,6 +468,31 @@ export default function HotelElectricityCostReviewPage() {
               href: "/case-study-hotel-market-linked-switch",
               title: "事例：ホテルの市場連動プラン切替",
               description: "ホテルが市場連動プランから固定プランへ切り替えた際のコスト変化と判断プロセス。",
+            },
+            {
+              href: "/articles/by-industry/hotel-leisure",
+              title: "ホテル・観光業種ハブ：観光業向け電気料金関連記事",
+              description: "ホテル・リゾート・温泉旅館など観光業種の電気料金関連記事を一覧で確認。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる法人契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/self-consumption-solar-cost-benefit",
+              title: "自家消費型太陽光の費用対効果",
+              description: "ホテル屋根を活用した太陽光導入の投資回収期間と PPA モデル比較。",
+            },
+            {
+              href: "/supermarket-electricity-cost-review",
+              title: "スーパーマーケットの電気料金見直しポイント",
+              description: "ホテルと同様に冷蔵冷凍ベースロードを抱える商業業態との比較。",
+            },
+            {
+              href: "/restaurant-chain-electricity-cost-review",
+              title: "飲食店チェーンの電気料金見直しポイント",
+              description: "ホテル併設レストランと共通する厨房・空調負荷の契約見直しの考え方。",
             },
           ]}
         />
