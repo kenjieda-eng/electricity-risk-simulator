@@ -115,6 +115,52 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/region-kansai-business-electricity`,
         permanent: true,
       },
+      // B-44a: Glossary 9-page consolidation → /electricity-glossary#anchor
+      {
+        source: "/high-voltage-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#high-voltage`,
+        permanent: true,
+      },
+      {
+        source: "/demand-power-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#demand-power`,
+        permanent: true,
+      },
+      {
+        source: "/energy-bcp-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#energy-bcp`,
+        permanent: true,
+      },
+      {
+        source: "/international-energy-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#international-energy`,
+        permanent: true,
+      },
+      {
+        source: "/regulation-policy-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#regulation-policy`,
+        permanent: true,
+      },
+      {
+        source: "/energy-management-glossary",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#energy-management`,
+        permanent: true,
+      },
+      {
+        source: "/glossary-contract-terms",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#contract-terms`,
+        permanent: true,
+      },
+      {
+        source: "/glossary-market-terms",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#market-terms`,
+        permanent: true,
+      },
+      {
+        source: "/glossary-equipment-terms",
+        destination: `${CANONICAL_BASE_URL}/electricity-glossary#equipment-terms`,
+        permanent: true,
+      },
     ];
   },
 };
