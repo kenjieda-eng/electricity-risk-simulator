@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "法人電気料金",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle, description: pageDescription, url: pageUrl,
     siteName: "法人電気料金ナビ",

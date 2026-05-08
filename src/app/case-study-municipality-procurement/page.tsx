@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["自治体 電力調達", "公共施設 電気代削減", "統合入札 電力", "地方自治体 新電力", "公共 電力コスト削減", "自治体 省エネ"],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

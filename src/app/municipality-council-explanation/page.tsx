@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "自治体 電力コスト 説明",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
