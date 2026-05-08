@@ -20,6 +20,13 @@ export const HUB_SERIES_POINTS = [
 
 export const MONTHLY_RETROSPECTIVE_ITEMS: RetrospectiveCardItem[] = [
   {
+    title: "【2026年5月】法人の電気料金はどう動いた？再エネ賦課金改定後の本格運用",
+    description:
+      "5/1施行の再エネ賦課金改定（速報値 +0.49円/kWh）、GW明けの需要急増、冷房シーズン入りの3要因を整理。低圧・高圧・特別高圧と業種別の影響度マトリックス、夏季ピーク前の確認3視点まで解説します。",
+    href: "/business-electricity-retrospective/2026-05",
+    ctaLabel: "記事を読む",
+  },
+  {
     title: "【2026年2月】法人の電気料金はどう動いた？",
     description:
       "補助政策と当社団が運営している「新電力ネット」のデータから、補助の恩恵を最終確認し、補助終了前後への備えを契約区分別に整理します。",

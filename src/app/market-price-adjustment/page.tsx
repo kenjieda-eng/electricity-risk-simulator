@@ -344,6 +344,7 @@ export default function MarketPriceAdjustmentPage() {
             { href: "/jepx-explained", title: "JEPXとは", description: "卸電力市場の基本。" },
             { href: "/how-to-read-electricity-quote", title: "電気料金見積書の見方", description: "契約条件の読み方。" },
             { href: "/articles/industry-guide", title: "業種別の見直しポイント集（33 業種）", description: "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。" },
+            { href: "/business-electricity-retrospective/2026-05", title: "【2026年5月】法人の電気料金はどう動いた？", description: "再エネ賦課金改定後の本格運用月における JEPX スポットの動きと、市場連動プランの夏季リスクシナリオを整理。" },
           ]}
         />
 
