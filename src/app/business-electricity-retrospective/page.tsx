@@ -81,7 +81,7 @@ export default function BusinessElectricityRetrospectivePage() {
           <div className="rounded-lg border border-slate-200 bg-white p-4">
             <p className="text-sm font-semibold text-sky-800">直近の動向を知りたい</p>
             <p className="mt-1 text-sm leading-6 text-slate-600">最新の月次レポートから確認できます</p>
-            <Link href="/business-electricity-retrospective/2026-02" className="mt-2 inline-block text-sm font-medium text-sky-700 underline">2026年2月の振り返り →</Link>
+            <Link href="/business-electricity-retrospective/2026-05" className="mt-2 inline-block text-sm font-medium text-sky-700 underline">2026年5月の振り返り →</Link>
           </div>
           <div className="rounded-lg border border-slate-200 bg-white p-4">
             <p className="text-sm font-semibold text-sky-800">長期トレンドを把握したい</p>
@@ -317,8 +317,8 @@ export default function BusinessElectricityRetrospectivePage() {
             <p className="text-sm font-semibold text-slate-900">低圧電灯の長期推移（2019〜2025）</p>
             <p className="mt-1 text-xs leading-6 text-slate-600">店舗・小規模拠点の代表区分の推移</p>
           </Link>
-          <Link href="/business-electricity-retrospective/2026-02" className="rounded-lg border border-sky-200 bg-sky-50 p-4 transition hover:bg-sky-100">
-            <p className="text-sm font-semibold text-sky-900">【2026年2月】法人の電気料金はどう動いた？</p>
+          <Link href="/business-electricity-retrospective/2026-05" className="rounded-lg border border-sky-200 bg-sky-50 p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-sky-900">【2026年5月】法人の電気料金はどう動いた？</p>
             <p className="mt-1 text-xs leading-6 text-sky-700">最新の月次データで直近の動向を確認</p>
           </Link>
         </div>

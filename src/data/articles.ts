@@ -438,6 +438,7 @@ export const articleCategories: ArticleCategory[] = [
       "翌月以降の予算検討に使える確認ポイント",
     ],
     recommendedReadingOrder: [
+      "business-electricity-retrospective/2026-05",
       "business-electricity-retrospective/2026-02",
       "business-electricity-retrospective/2026-01",
       "business-electricity-retrospective/2025-12",
@@ -2327,6 +2328,16 @@ export const articleList: ArticleMeta[] = [
     categorySlug: "monthly-review",
     order: 6,
     publishedAt: "2026-03-29",
+  },
+  {
+    title: "【2026年5月】法人の電気料金はどう動いた？再エネ賦課金改定後の本格運用",
+    slug: "business-electricity-retrospective/2026-05",
+    description:
+      "2026年5月使用分の法人向け電気料金動向を、5/1施行の再エネ賦課金改定・GW明けの需要急増・冷房シーズン開始の3観点で解説。低圧・高圧・特別高圧と業種別の影響度を整理。",
+    category: "法人電気料金振り返り",
+    categorySlug: "monthly-review",
+    order: 0,
+    publishedAt: "2026-05-15",
   },
   {
     title: "【2026年2月】法人の電気料金はどう動いた？",
