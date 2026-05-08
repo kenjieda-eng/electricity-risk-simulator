@@ -10,6 +10,10 @@ import {
   MONTHLY_RETROSPECTIVE_ITEMS,
   UKRAINE_SHOCK_FEATURE_ITEMS,
 } from "./_lib/hub-data";
+import { getYearlySummary as getExtraHighVoltageYearly } from "./_lib/extra-high-voltage-price-data";
+import { getYearlySummary as getHighVoltageYearly } from "./_lib/high-voltage-price-data";
+import { getYearlySummary as getLowVoltageLightingYearly } from "./_lib/low-voltage-lighting-price-data";
+import { getYearlySummary as getLowVoltagePowerYearly } from "./_lib/low-voltage-power-price-data";
 
 const pageTitle = "法人電気料金振り返り｜月次動向・年次推移を実務視点で確認";
 const pageDescription =
@@ -49,6 +53,25 @@ export const metadata: Metadata = {
 
 export default function BusinessElectricityRetrospectivePage() {
   const historicalExplanationItemsForHub = HISTORICAL_EXPLANATION_ITEMS.slice(0, 2);
+
+  const extraHighVoltageYearly = getExtraHighVoltageYearly();
+  const highVoltageYearly = getHighVoltageYearly();
+  const lowVoltageLightingYearly = getLowVoltageLightingYearly();
+  const lowVoltagePowerYearly = getLowVoltagePowerYearly();
+  const summaryYears = highVoltageYearly.map((row) => row.year);
+
+  const sevenYearSummaryRows = summaryYears.map((year) => {
+    const find = (arr: { year: number; averagePrice: number }[]) => arr.find((r) => r.year === year)?.averagePrice ?? null;
+    return {
+      year,
+      extraHighVoltage: find(extraHighVoltageYearly),
+      highVoltage: find(highVoltageYearly),
+      lowVoltageLighting: find(lowVoltageLightingYearly),
+      lowVoltagePower: find(lowVoltagePowerYearly),
+    };
+  });
+
+  const formatPrice = (value: number | null) => (value === null ? "—" : `${value.toFixed(1)}円`);
 
   return (
     <>
@@ -296,6 +319,105 @@ export default function BusinessElectricityRetrospectivePage() {
           >
             年次アーカイブ一覧を見る
           </Link>
+        </div>
+      </section>
+
+      <section id="yearly-summary" className="mt-8 scroll-mt-24 rounded-xl border border-sky-200 bg-sky-50 p-5 sm:p-6">
+        <h2 className="text-xl font-semibold text-slate-900">過去 7 年サマリーテーブル（2019〜2025年）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          特別高圧・高圧・低圧電灯・低圧電力の 4 区分について、2019 年から 2025 年までの年間平均単価（円/kWh）を一表に集約しました。
+          コロナ前の 2019 年水準を基準に、ウクライナ危機（2022）・補助政策期（2023〜2024）・補助終了後（2025）の構造変化を一目で確認できます。
+          各列ヘッダーから、その契約区分の月次推移・年別ハイライトを記した詳細ページに移動できます。
+        </p>
+        <div className="mt-4 overflow-x-auto rounded-lg border border-sky-200 bg-white">
+          <table className="min-w-full border-collapse text-sm sm:text-base">
+            <thead className="bg-sky-100">
+              <tr>
+                <th className="border-b border-sky-200 px-3 py-2.5 text-left font-semibold text-slate-900">年</th>
+                <th className="border-b border-sky-200 px-3 py-2.5 text-right font-semibold text-slate-900">
+                  <Link href="/business-electricity-retrospective/special-high-voltage-2019-2025" className="text-sky-800 underline-offset-2 hover:underline">特別高圧</Link>
+                </th>
+                <th className="border-b border-sky-200 px-3 py-2.5 text-right font-semibold text-slate-900">
+                  <Link href="/business-electricity-retrospective/high-voltage-2019-2025" className="text-sky-800 underline-offset-2 hover:underline">高圧</Link>
+                </th>
+                <th className="border-b border-sky-200 px-3 py-2.5 text-right font-semibold text-slate-900">
+                  <Link href="/business-electricity-retrospective/low-voltage-lighting-2019-2025" className="text-sky-800 underline-offset-2 hover:underline">低圧電灯</Link>
+                </th>
+                <th className="border-b border-sky-200 px-3 py-2.5 text-right font-semibold text-slate-900">
+                  <Link href="/business-electricity-retrospective/low-voltage-power-2019-2025" className="text-sky-800 underline-offset-2 hover:underline">低圧電力</Link>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {sevenYearSummaryRows.map((row) => (
+                <tr key={row.year} className="odd:bg-white even:bg-sky-50/40">
+                  <td className="border-b border-sky-200 px-3 py-2.5 font-medium text-slate-800">{row.year}年</td>
+                  <td className="border-b border-sky-200 px-3 py-2.5 text-right tabular-nums text-slate-700">{formatPrice(row.extraHighVoltage)}</td>
+                  <td className="border-b border-sky-200 px-3 py-2.5 text-right tabular-nums text-slate-700">{formatPrice(row.highVoltage)}</td>
+                  <td className="border-b border-sky-200 px-3 py-2.5 text-right tabular-nums text-slate-700">{formatPrice(row.lowVoltageLighting)}</td>
+                  <td className="border-b border-sky-200 px-3 py-2.5 text-right tabular-nums text-slate-700">{formatPrice(row.lowVoltagePower)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-xs text-slate-500">
+          ※単位は円/kWh。当社団が運営している「新電力ネット」の月次データから年間平均を算出。消費税・再エネ賦課金を含まない参考値で、各電力会社・契約条件で実値は異なります。
+        </p>
+
+        <div className="mt-5 grid gap-3 md:grid-cols-2">
+          <article className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/special-high-voltage-2019-2025" className="text-sky-700 underline-offset-2 hover:underline">
+                特別高圧の 7 年推移（2019〜2025）
+              </Link>
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-slate-700">
+              大規模工場・データセンター・大型公共施設の区分。補助対象外で、燃料市況と容量拠出金の影響が直接反映される。月次データと年別の値動きを詳細ページで確認できます。
+            </p>
+            <Link href="/business-electricity-retrospective/special-high-voltage-2019-2025" className="mt-2 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+              特別高圧の詳細ページを見る →
+            </Link>
+          </article>
+          <article className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/high-voltage-2019-2025" className="text-sky-700 underline-offset-2 hover:underline">
+                高圧の 7 年推移（2019〜2025）
+              </Link>
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-slate-700">
+              工場・商業施設・病院・物流・オフィスビルの主力区分。補助の影響を最も受けやすく、2023〜2024 年の見かけ低下と補助終了後の反動が顕著。詳細ページで年別の背景要因まで確認できます。
+            </p>
+            <Link href="/business-electricity-retrospective/high-voltage-2019-2025" className="mt-2 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+              高圧の詳細ページを見る →
+            </Link>
+          </article>
+          <article className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/low-voltage-lighting-2019-2025" className="text-sky-700 underline-offset-2 hover:underline">
+                低圧電灯の 7 年推移（2019〜2025）
+              </Link>
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-slate-700">
+              小規模店舗・サービス拠点で広く使われる区分。多店舗展開企業では拠点合算で大きな影響に。コロナ禍と補助政策の影響を年別に整理しています。
+            </p>
+            <Link href="/business-electricity-retrospective/low-voltage-lighting-2019-2025" className="mt-2 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+              低圧電灯の詳細ページを見る →
+            </Link>
+          </article>
+          <article className="rounded-lg border border-slate-200 bg-white p-4">
+            <h3 className="text-base font-semibold text-slate-900">
+              <Link href="/business-electricity-retrospective/low-voltage-power-2019-2025" className="text-sky-700 underline-offset-2 hover:underline">
+                低圧電力の 7 年推移（2019〜2025）
+              </Link>
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-slate-700">
+              動力用途（業務用エアコン・冷蔵設備・小型機械）の区分。季節変動と燃料市況の影響を強く受け、2022 年以降の最高値水準が定着しています。年別解説で背景を確認できます。
+            </p>
+            <Link href="/business-electricity-retrospective/low-voltage-power-2019-2025" className="mt-2 inline-flex text-sm font-semibold text-sky-700 underline-offset-2 hover:underline">
+              低圧電力の詳細ページを見る →
+            </Link>
+          </article>
         </div>
       </section>
 
