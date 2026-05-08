@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "公共施設 統廃合",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["飲食チェーン 電気代削減", "居酒屋 電力コスト", "飲食店 電力契約 見直し", "チェーン店 電気代 一括", "夜間営業 電力", "飲食業 省エネ"],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

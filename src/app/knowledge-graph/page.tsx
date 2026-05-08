@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   alternates: { canonical: "https://simulator.eic-jp.org/knowledge-graph" },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

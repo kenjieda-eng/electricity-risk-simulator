@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     canonical:
       "https://simulator.eic-jp.org/water-sewage-electricity-cost-review",
   },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
