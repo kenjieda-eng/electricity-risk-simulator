@@ -161,6 +161,22 @@ const nextConfig: NextConfig = {
         destination: `${CANONICAL_BASE_URL}/electricity-glossary#equipment-terms`,
         permanent: true,
       },
+      // B-44c: last-resort-supply 子 3 件 → 親ピラー /last-resort-supply#anchor へ統合
+      {
+        source: "/last-resort-supply-emergency-response",
+        destination: `${CANONICAL_BASE_URL}/last-resort-supply#emergency-response`,
+        permanent: true,
+      },
+      {
+        source: "/last-resort-supply-internal-explanation",
+        destination: `${CANONICAL_BASE_URL}/last-resort-supply#internal-explanation`,
+        permanent: true,
+      },
+      {
+        source: "/last-resort-supply-comparison-positioning",
+        destination: `${CANONICAL_BASE_URL}/last-resort-supply#comparison-positioning`,
+        permanent: true,
+      },
     ];
   },
 };
