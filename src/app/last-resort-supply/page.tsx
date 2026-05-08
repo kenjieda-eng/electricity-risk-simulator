@@ -61,6 +61,18 @@ const faqItems = [
     question: "最終保障供給に入った場合、どう対応すれば良いですか？",
     answer: "早期に通常の小売契約へ切り替えることが優先です。複数の電力会社に見積もりを依頼し、料金比較とシミュレーターで条件を確認した上で契約を進めてください。長期間にわたる最終保障供給は追加コストが蓄積するため、早期解消が重要です。",
   },
+  {
+    question: "最終保障供給に移行しそうだと気づいたら最初に何をすべきですか？",
+    answer: "現在の電力会社または一般送配電事業者に連絡し、供給継続の可否と最終保障供給移行の見通しを確認します。次に使用量データ（月間・30分コマ別）を取得し、複数の代替電力会社への見積依頼を即時に開始することが優先です。",
+  },
+  {
+    question: "経営層への社内説明はどう構成すべきですか？",
+    answer: "①現状説明（なぜ最終保障供給に入ったか）②コスト影響（通常契約との月額・年額差）③対応策（切替先候補と見積取得状況、早期離脱スケジュール）の 3 ステップ構成が伝わりやすいです。担当者の管理不足ではなく電力自由化制度上のリスクである点を明確にします。",
+  },
+  {
+    question: "最終保障供給を長期利用してはいけない理由は？",
+    answer: "通常契約より 20〜60% 高い料金が毎月発生し続けます。供給期間には上限（通常 9 ヶ月程度）があり、期限切れで供給停止リスクがあります。プランの選択肢が制約され、コスト予測も難しくなります。原則として移行から 3 ヶ月以内に通常契約への切替を完了させることが目標です。",
+  },
 ];
 
 const sources = [
@@ -175,6 +187,214 @@ export default function LastResortSupplyPage() {
               法人の請求額は急増。自治体でも補正予算で数千万〜数億円規模の追加計上が相次ぎました。
             </p>
           </div>
+        </section>
+
+        <section id="emergency-response" className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給に入りそうなときの緊急対応</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            最終保障供給に移行すると、電気料金が通常より大幅に高くなります。できる限り短期間で通常の小売契約に戻ることが重要で、そのためには早期発見と迅速な行動が不可欠です。発覚から切替完了までの 5 ステップで動きます。
+          </p>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">緊急対応タイムライン</h3>
+          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">時期</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">アクション</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">ゴール</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">発覚直後（1〜3日）</td>
+                  <td className="border border-slate-200 px-3 py-2">状況把握・社内報告</td>
+                  <td className="border border-slate-200 px-3 py-2">経営層への第一報</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-orange-700">1 週間以内</td>
+                  <td className="border border-slate-200 px-3 py-2">見積依頼開始</td>
+                  <td className="border border-slate-200 px-3 py-2">3 社以上に見積依頼</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">2〜4 週間</td>
+                  <td className="border border-slate-200 px-3 py-2">見積比較・候補選定</td>
+                  <td className="border border-slate-200 px-3 py-2">切替先の決定</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-700">1〜2 ヶ月</td>
+                  <td className="border border-slate-200 px-3 py-2">切替手続き完了</td>
+                  <td className="border border-slate-200 px-3 py-2">最終保障からの離脱</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">最終保障供給に近づく警告サイン</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li><span className="font-semibold text-red-700">最高緊急度</span>：契約先の電力会社から「供給継続困難」「契約解除予告」「事業撤退」通知</li>
+            <li><span className="font-semibold text-red-700">最高緊急度</span>：契約満了日の見落とし・更新手続き期限切れ</li>
+            <li><span className="font-semibold text-orange-700">高緊急度</span>：候補先電力会社が新規受付停止を発表</li>
+            <li><span className="font-semibold text-orange-700">高緊急度</span>：複数社から見積拒否、または通常の 2 倍以上の異常な単価提示</li>
+          </ul>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">対応 5 ステップ</h3>
+          <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li><span className="font-semibold text-slate-900">STEP 1：現状確認と初期対応</span>（電力会社・送配電事業者へ連絡、使用量データ準備）</li>
+            <li><span className="font-semibold text-slate-900">STEP 2：社内報告と意思決定体制の確立</span>（経営層報告、予算枠確保、担当者・権限の明確化）</li>
+            <li><span className="font-semibold text-slate-900">STEP 3：代替供給先の打診・見積依頼</span>（複数社に使用量データ提供、見積回答期限を明確に）</li>
+            <li><span className="font-semibold text-slate-900">STEP 4：見積比較と候補選定</span>（年間総コスト比較、供給安定性・財務健全性も評価）</li>
+            <li><span className="font-semibold text-slate-900">STEP 5：契約締結と切替手続き</span>（送配電事業者への切替手続き、最終保障供給からの脱出日確認）</li>
+          </ol>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">緊急時のチェックリスト（6 項目）</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li>現行の電力契約書と直近 12 ヶ月分の請求書を手元に用意している</li>
+            <li>供給地点特定番号（22 桁）を把握している（見積依頼に必須）</li>
+            <li>月間使用量と最大需要電力（kW）のデータを準備している</li>
+            <li>最終保障供給の適用開始日と上限期間（通常 9 ヶ月）を確認している</li>
+            <li>3 社以上の電力会社・新電力に見積依頼を送付済みである</li>
+            <li>経営層への第一報を完了し、切替完了の目標期日を合意している</li>
+          </ul>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            供給期間の上限（通常 9 ヶ月程度）が来ても代替先が見つからない場合は、電力供給が停止するリスクがあります。
+            発覚後できる限り早く複数社への相談を開始し、必要であれば電力コンサルタントに支援を依頼することも選択肢です。
+          </p>
+        </section>
+
+        <section id="internal-explanation" className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給を社内説明するときのポイント</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            最終保障供給は一般的にはなじみの薄い制度であり、なぜ料金が高いのか、いつまで続くのか、どう対処するのかを分かりやすく伝えることが求められます。
+          </p>
+          <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <p className="font-semibold text-slate-900">社内説明例（一言要約）</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              「最終保障供給とは、電力会社との通常契約が何らかの理由で失効した際に、電力の供給を一定期間継続するための制度です。電力自由化後のセーフティネットとして法律で定められており、一般送配電事業者（旧来の地域電力会社）が担当します。料金は通常契約より高く設定されており、あくまでも緊急避難的な利用が前提です。」
+            </p>
+          </div>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">通常契約 vs 最終保障供給 比較表（社内説明用）</h3>
+          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">比較項目</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">通常契約</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">最終保障供給</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">説明のポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">料金水準</td>
+                  <td className="border border-slate-200 px-3 py-2">契約ベース</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-red-700">通常比 +20〜60% 高い</td>
+                  <td className="border border-slate-200 px-3 py-2">「割高だが供給は継続」</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">契約期間</td>
+                  <td className="border border-slate-200 px-3 py-2">1〜3 年</td>
+                  <td className="border border-slate-200 px-3 py-2">原則 1 年以内の切替前提</td>
+                  <td className="border border-slate-200 px-3 py-2">「一時的な措置」</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">選択の自由度</td>
+                  <td className="border border-slate-200 px-3 py-2">複数社から選択</td>
+                  <td className="border border-slate-200 px-3 py-2">送配電事業者が指定</td>
+                  <td className="border border-slate-200 px-3 py-2">「選べない」</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">料金の予見性</td>
+                  <td className="border border-slate-200 px-3 py-2">契約条件で見通せる</td>
+                  <td className="border border-slate-200 px-3 py-2">市場環境で変動しやすい</td>
+                  <td className="border border-slate-200 px-3 py-2">「予算超過リスク」</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">経営層への報告 3 ステップ</h3>
+          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700">
+            <li>
+              <span className="font-semibold text-slate-900">Step 1：現状説明</span> — 最終保障供給に入った／入りそうな状況。なぜこうなったか（新電力撤退／契約切れ）を端的に。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">Step 2：コスト影響</span> — 月額・年額の増加額。通常契約との差額を具体的な数値で。
+            </li>
+            <li>
+              <span className="font-semibold text-slate-900">Step 3：対応策</span> — 切替先の候補と見積取得状況、早期離脱のスケジュール（○月までに完了）を提示。
+            </li>
+          </ol>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">「なぜこうなったのか」への回答準備</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li><span className="font-semibold">電力自由化制度上のリスクであること</span>：電力会社の倒産・撤退は制度上起こりうるリスクとして認識されています。</li>
+            <li><span className="font-semibold">事前察知が難しい場合があること</span>：突然の事業停止発表ケースでは事前察知に限界があります。</li>
+            <li><span className="font-semibold">今後の再発防止策</span>：契約先の定期モニタリング、代替候補リスト作成、更新タイミングでの複数社見積など、管理強化策を提示します。</li>
+          </ul>
+        </section>
+
+        <section id="comparison-positioning" className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">最終保障供給を比較検討の中でどう位置づけるか</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            最終保障供給は電力自由化後のセーフティネット制度ですが、法人の電気料金管理の観点からは「使い続けるべき選択肢」ではなく「一時的な緊急避難手段」として位置づけられます。医療における救急医療に近い位置づけで、緊急の際には頼れるが、日常的に使い続けることを前提とした制度ではありません。
+          </p>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">長期利用すべきでない 4 つの理由</h3>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+            <li><span className="font-semibold text-slate-900">コストが高止まりし続ける</span>：通常契約に比べて高い料金が毎月発生。使用量の大きい法人では月額数百万円規模の余分なコストが積み上がります。</li>
+            <li><span className="font-semibold text-slate-900">供給期間の上限がある</span>：通常 9 ヶ月程度の上限。期限が切れると電力供給が停止するリスク。</li>
+            <li><span className="font-semibold text-slate-900">プランの選択肢が制約される</span>：地域の一般送配電事業者からしか電力を受けられず、コストや条件を最適化する余地がない。</li>
+            <li><span className="font-semibold text-slate-900">コスト予測がしにくい</span>：通常契約の固定プランと違い、料金改定があり得るため予算策定が難しい。</li>
+          </ul>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">契約選択の判断基準マトリクス（5 パターン）</h3>
+          <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">状況</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">最終保障供給を選ぶべきか</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">優先アクション</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">新電力が撤退し代替先が見つからない</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-amber-700">やむを得ず利用</td>
+                  <td className="border border-slate-200 px-3 py-2">即座に 3 社以上に見積依頼</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">契約切れが迫り準備が間に合わない</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-amber-700">一時的に利用</td>
+                  <td className="border border-slate-200 px-3 py-2">並行して見積取得を進める</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">他社の見積単価が最終保障より高い</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-amber-700">最終保障を短期利用</td>
+                  <td className="border border-slate-200 px-3 py-2">市場安定後に再見積</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="border border-slate-200 px-3 py-2">通常契約の候補がある</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-emerald-700">利用不要</td>
+                  <td className="border border-slate-200 px-3 py-2">通常切替手続きを進める</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">最終保障に入っている期間が長期化</td>
+                  <td className="border border-slate-200 px-3 py-2 font-bold text-red-700">早急に離脱</td>
+                  <td className="border border-slate-200 px-3 py-2">条件を緩めて切替先を確保</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※「最終保障を短期利用」の場合も、原則として移行から 3 ヶ月以内に通常契約への切替を完了させることを目標にします。
+          </p>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">通常契約への切替タイミングの判断基準</h3>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+            <li><span className="font-semibold text-slate-900">供給期間の上限から逆算する</span>：残余期間が 3 ヶ月を切ったら、遅くとも切替手続きを開始（通常数週間〜1 ヶ月かかる）。</li>
+            <li><span className="font-semibold text-slate-900">通常契約の年間コストが確定したら速やかに切り替える</span>：見積比較完了で合理的な選択肢が確定したら即決定、コスト差の累積を防ぐ。</li>
+            <li><span className="font-semibold text-slate-900">「もっとよい条件が出るかもしれない」と先延ばしにしない</span>：先延ばしの間も高い料金が積み上がるため、合理的な範囲で早期判断。</li>
+          </ul>
+          <h3 className="mt-5 text-lg font-semibold text-slate-900">脱出を特に急ぐべき状況</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+            <li>月間電力使用量が大きく、毎月の余分なコストが大きい場合</li>
+            <li>供給期間の残余が半分を切っている場合</li>
+            <li>利益率が低く、高いコストが直接的に損益に影響する業種の場合</li>
+            <li>複数拠点が最終保障供給に移行しており、累積コストが増大している場合</li>
+          </ul>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
