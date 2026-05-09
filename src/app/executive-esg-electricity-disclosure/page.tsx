@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "統合報告書 エネルギーリスク",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

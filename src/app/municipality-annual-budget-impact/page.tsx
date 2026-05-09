@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "年度予算 電気代高騰",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

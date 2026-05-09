@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "最終保障供給 自治体",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

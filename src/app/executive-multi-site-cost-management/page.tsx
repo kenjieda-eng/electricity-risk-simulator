@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "法人電力 ポートフォリオ管理",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "電気代高騰 自治体 対応",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
