@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     "法人電気料金 財務",
   ],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

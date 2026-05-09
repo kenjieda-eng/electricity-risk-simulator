@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["電気料金 リスク管理", "電力コスト 事業計画", "電力 ヘッジ", "電気代 固定費化"],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

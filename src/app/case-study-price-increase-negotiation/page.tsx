@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["電力 値上げ通知 対応", "電気代 値上げ交渉", "新電力 値上げ", "電力契約 交渉", "製造業 電気代 値上げ対策", "電力 単価交渉"],
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
