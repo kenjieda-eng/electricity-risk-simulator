@@ -8,7 +8,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -391,13 +391,6 @@ export default function CaseStudyOfficeBuildingPage() {
           description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
         />
       </div>
-
-      <ReviewJsonLd
-        itemReviewed={{ name: "オフィスビルの契約電力適正化による電気代削減手順", type: "Service" }}
-        reviewBody="築18年のオフィスビルが電力需要の実態調査と契約電力適正化で年間580万円（16%）削減を達成した事例。テナント変動に伴う過大契約の発見から見直し実施までを段階的に解説し、ビル管理者の見直しチェック手順として活用しやすい。"
-        ratingValue={4.5}
-        datePublished="2026-04-17"
-      />
     </main>
     </>
   );
