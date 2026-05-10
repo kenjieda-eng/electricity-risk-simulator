@@ -8,7 +8,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -360,13 +360,6 @@ export default function CaseStudyManufacturingPage() {
           description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
         />
       </div>
-
-      <ReviewJsonLd
-        itemReviewed={{ name: "製造業の電力契約見直しによる年18%電気代削減手順", type: "Service" }}
-        reviewBody="関東の金属加工工場が契約見直しで年間約430万円（18%）の電気代削減を達成した事例。デマンド制御・契約電力適正化・新電力切替の複合施策と Before/After 数値を整理し、製造業の典型的な見直し手順として参考になる。"
-        ratingValue={4.7}
-        datePublished="2026-04-17"
-      />
     </main>
     </>
   );

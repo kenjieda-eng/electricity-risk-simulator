@@ -8,7 +8,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
-import { ArticleJsonLd, ReviewJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["case-studies"];
@@ -373,13 +373,6 @@ export default function CaseStudyHospitalPeakCutPage() {
           description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
         />
       </div>
-
-      <ReviewJsonLd
-        itemReviewed={{ name: "病院でのデマンド制御による基本料金圧縮の実務手順", type: "Service" }}
-        reviewBody="中規模総合病院がデマンド制御システムを導入し基本料金を年間22%（約840万円）削減した事例。医療施設特有の停止不可設備への配慮を踏まえた段階的施策と Before/After 数値で、医療系のデマンド管理に再現可能な手順として参考になる。"
-        ratingValue={4.7}
-        datePublished="2026-04-17"
-      />
     </main>
     </>
   );
