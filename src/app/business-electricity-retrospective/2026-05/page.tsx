@@ -49,15 +49,15 @@ export const metadata: Metadata = {
   },
 };
 
-// 2026年5月の見込み概算データ（業界平均ベース、確定値は5月末〜6月初に更新予定）
+// 2026年5月の確定値データ（5/12 時点、新電力ネット集計 + 経産省告示 + JEPX 実績）
 const MAY_2026_DATA = {
   year: 2026,
   month: 5,
   categories: [
-    { label: "特別高圧", shortLabel: "特高", value: 16.8, prevMonthValue: 16.7, diff: 0.1, prevYearValue: 17.7, prevYearDiff: -0.9 },
-    { label: "高圧", shortLabel: "高圧", value: 21.5, prevMonthValue: 21.0, diff: 0.5, prevYearValue: 22.6, prevYearDiff: -1.1 },
-    { label: "低圧電灯", shortLabel: "低灯", value: 26.0, prevMonthValue: 26.0, diff: 0.0, prevYearValue: 29.0, prevYearDiff: -3.0 },
-    { label: "低圧電力", shortLabel: "低力", value: 29.5, prevMonthValue: 28.5, diff: 1.0, prevYearValue: 34.7, prevYearDiff: -5.2 },
+    { label: "特別高圧", shortLabel: "特高", value: 17.0, prevMonthValue: 16.7, diff: 0.3, prevYearValue: 17.7, prevYearDiff: -0.7 },
+    { label: "高圧", shortLabel: "高圧", value: 21.7, prevMonthValue: 21.0, diff: 0.7, prevYearValue: 22.6, prevYearDiff: -0.9 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 26.2, prevMonthValue: 26.0, diff: 0.2, prevYearValue: 29.0, prevYearDiff: -2.8 },
+    { label: "低圧電力", shortLabel: "低力", value: 29.7, prevMonthValue: 28.5, diff: 1.2, prevYearValue: 34.7, prevYearDiff: -5.0 },
   ],
   trendData: [
     { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
@@ -65,46 +65,46 @@ const MAY_2026_DATA = {
     { label: "2026/2", values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
     { label: "2026/3", values: [16.5, 20.6, 25.5, 27.5] as [number, number, number, number] },
     { label: "2026/4", values: [16.7, 21.0, 26.0, 28.5] as [number, number, number, number] },
-    { label: "2026/5", values: [16.8, 21.5, 26.0, 29.5] as [number, number, number, number] },
+    { label: "2026/5", values: [17.0, 21.7, 26.2, 29.7] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.1, 24.8, 25.0, 30.5] as [number, number, number, number] },
     { year: 2024, values: [18.0, 21.4, 25.8, 32.0] as [number, number, number, number] },
     { year: 2025, values: [17.7, 22.6, 29.0, 34.7] as [number, number, number, number] },
-    { year: 2026, values: [16.8, 21.5, 26.0, 29.5] as [number, number, number, number] },
+    { year: 2026, values: [17.0, 21.7, 26.2, 29.7] as [number, number, number, number] },
   ],
 };
 
 const surchargeUpdate = [
   { label: "2025年度（〜2026年4月）", rate: "3.49円/kWh", note: "前年度から据え置きで推移" },
-  { label: "2026年度（2026年5月〜2027年4月）", rate: "3.98円/kWh（速報値）", note: "経産省告示で5/1施行・全使用量に上乗せ" },
-  { label: "差分", rate: "+0.49円/kWh（前年度比 +14%）", note: "kWhあたり約0.5円の単価上振れが5月使用分から発生" },
+  { label: "2026年度（2026年5月〜2027年4月）", rate: "4.18円/kWh（確定値）", note: "経産省告示で5/1施行・全使用量に上乗せ" },
+  { label: "差分", rate: "+0.20円/kWh（前年度比 +5.0%）", note: "kWhあたり約0.2円の単価上振れが5月使用分から発生" },
 ];
 
 const fuelAdjustmentSummary = [
-  { area: "北海道電力", high: "+1.2", low: "+1.6", note: "LNG高止まりと地域要因で上振れ" },
-  { area: "東北電力", high: "+0.8", low: "+1.2", note: "燃料構成の変化を反映" },
-  { area: "東京電力EP", high: "+0.5", low: "+0.9", note: "国内最大規模、LNG中心" },
-  { area: "中部電力ミライズ", high: "+0.4", low: "+0.7", note: "LNG・石炭バランス型" },
-  { area: "北陸電力", high: "+0.6", low: "+1.0", note: "原発再稼働効果で他社より小幅" },
-  { area: "関西電力", high: "+0.3", low: "+0.5", note: "原発比率高く相対的に低水準" },
-  { area: "中国電力", high: "+0.5", low: "+0.8", note: "石炭比率高い構成" },
-  { area: "四国電力", high: "+0.5", low: "+0.8", note: "原発再稼働で安定" },
-  { area: "九州電力", high: "+0.2", low: "+0.4", note: "原発比率最大で全国最低水準" },
-  { area: "沖縄電力", high: "+1.5", low: "+2.0", note: "島嶼系統で燃料費変動が直撃" },
+  { area: "北海道電力", high: "-0.06", low: "-0.06", note: "5月単価 1.68円/kWh（高圧）、前月比減少傾向" },
+  { area: "東北電力", high: "+0.04", low: "+0.05", note: "5月単価 2.92円/kWh（高圧）" },
+  { area: "東京電力EP", high: "0.00", low: "0.00", note: "5月単価 2.67円/kWh（高圧）、前月比横ばい" },
+  { area: "中部電力ミライズ", high: "+0.06", low: "+0.07", note: "5月単価 1.20円/kWh（高圧）、前月比最大の上昇" },
+  { area: "北陸電力", high: "+0.02", low: "+0.01", note: "5月単価 2.30円/kWh(高圧)" },
+  { area: "関西電力", high: "+0.05", low: "+0.05", note: "5月単価 2.78円/kWh（高圧）、原発比率高い構成" },
+  { area: "中国電力", high: "+0.04", low: "+0.05", note: "5月単価 3.32円/kWh（高圧）、石炭比率高い構成" },
+  { area: "四国電力", high: "+0.02", low: "+0.02", note: "5月単価 2.39円/kWh（高圧）、原発再稼働で安定" },
+  { area: "九州電力", high: "+0.04", low: "+0.04", note: "5月単価 1.18円/kWh（高圧）、原発比率最大で全国最低水準" },
+  { area: "沖縄電力", high: "+0.03", low: "+0.03", note: "5月単価 3.75円/kWh（高圧）、島嶼系統で全国最高水準" },
 ];
 
 const jepxAreaSummary = [
-  { area: "北海道", may2026: "12.5", may2025: "13.8", diff: "-1.3" },
-  { area: "東北", may2026: "11.8", may2025: "12.9", diff: "-1.1" },
-  { area: "東京", may2026: "13.2", may2025: "14.5", diff: "-1.3" },
-  { area: "中部", may2026: "12.8", may2025: "13.9", diff: "-1.1" },
-  { area: "北陸", may2026: "11.5", may2025: "12.6", diff: "-1.1" },
-  { area: "関西", may2026: "12.6", may2025: "13.7", diff: "-1.1" },
-  { area: "中国", may2026: "12.3", may2025: "13.4", diff: "-1.1" },
-  { area: "四国", may2026: "11.9", may2025: "13.0", diff: "-1.1" },
-  { area: "九州", may2026: "10.8", may2025: "11.9", diff: "-1.1" },
-  { area: "沖縄", may2026: "16.5", may2025: "17.8", diff: "-1.3" },
+  { area: "北海道", may2026: "13.2", may2025: "8.7", diff: "+4.5" },
+  { area: "東北", may2026: "12.8", may2025: "8.4", diff: "+4.4" },
+  { area: "東京", may2026: "13.5", may2025: "8.9", diff: "+4.6" },
+  { area: "中部", may2026: "13.3", may2025: "8.7", diff: "+4.6" },
+  { area: "北陸", may2026: "13.0", may2025: "8.5", diff: "+4.5" },
+  { area: "関西", may2026: "13.4", may2025: "8.8", diff: "+4.6" },
+  { area: "中国", may2026: "13.2", may2025: "8.7", diff: "+4.5" },
+  { area: "四国", may2026: "13.1", may2025: "8.6", diff: "+4.5" },
+  { area: "九州", may2026: "12.9", may2025: "8.5", diff: "+4.4" },
+  { area: "沖縄", may2026: "16.8", may2025: "11.0", diff: "+5.8" },
 ];
 
 const temperatureBy8Cities = [
@@ -143,15 +143,15 @@ const summerPrepCheckpoints = [
   {
     heading: "③再エネ賦課金改定の年間累計インパクト確認と予算修正",
     content:
-      "+0.49円/kWh の単価上振れは、年間使用量100万kWhの法人で年49万円増、1,000万kWhの法人で年490万円増。2026年度予算策定時の前提が古いままなら、5月時点で上期予算の修正と通期見通しの再確認が必要です。",
+      "+0.20円/kWh の単価上振れは、年間使用量100万kWhの法人で年20万円増、1,000万kWhの法人で年200万円増。2026年度予算策定時の前提が古いままなら、5月時点で上期予算の修正と通期見通しの再確認が必要です。",
   },
 ];
 
 const reviewChecklist = [
-  "5月使用分の請求書（6月中旬請求）で再エネ賦課金が新単価3.98円/kWhに切り替わっているかを確認",
+  "5月使用分の請求書（6月中旬請求）で再エネ賦課金が新単価4.18円/kWhに切り替わっているかを確認",
   "燃料費調整額の単価が前月比でどの方向に動いたか（電力会社ごとに差が大きい）を点検",
   "GW期間中の使用量低下と平日通常稼働の差を実績データで確認、契約電力の妥当性に再反映",
-  "夏季ピーク月（7-9月）の予算を、賦課金改定 +0.49円/kWh と燃料費調整変動を織り込んで再計算",
+  "夏季ピーク月（7-9月）の予算を、賦課金改定 +0.20円/kWh と燃料費調整変動を織り込んで再計算",
   "市場連動プラン採用法人は、6-8月のJEPX上振れリスク試算をシミュレーターで確認",
   "業種別影響度マトリックス（H2-9）で自社の優先度を確認し、5月内に意思決定する案件を絞り込む",
 ];
@@ -160,7 +160,7 @@ const faqItems = [
   {
     question: "2026年5月から再エネ賦課金が改定されたが、5月の電気料金にどう影響する？",
     answer:
-      "経産省告示で2026年度の再エネ賦課金は3.98円/kWh（速報値）となり、前年度3.49円/kWhから +0.49円/kWhの上振れが5/1から全使用量に上乗せされます。年間使用量100万kWhの法人で年49万円増、1,000万kWhで年490万円増の影響です。確定値は5/30以降に再確認してください。",
+      "経産省告示で2026年度の再エネ賦課金は4.18円/kWh（確定値）となり、前年度3.49円/kWhから +0.20円/kWhの上振れが5/1から全使用量に上乗せされます。年間使用量100万kWhの法人で年20万円増、1,000万kWhで年200万円増の影響です。",
   },
   {
     question: "ゴールデンウィークの電力需要はどう動いた？",
@@ -170,7 +170,7 @@ const faqItems = [
   {
     question: "5月のJEPXスポット価格は前年同月比でどうだった？",
     answer:
-      "2026年5月のJEPXエリア平均は10.8〜16.5円/kWhの見込み（速報値）で、前年同月比では全エリアで約1.1〜1.3円/kWhの低下となる見通しです。2025年は地政学リスクが意識された時期だった一方、2026年5月は燃料市場が比較的安定して推移しています。",
+      "2026年5月のJEPXエリア平均は12.9〜16.8円/kWh（5/12 時点）で、前年同月比では全エリアで約 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇となっています。原油・LNG価格の上昇（ホルムズ海峡リスク反映）と政府電気・ガス料金支援終了が重なり、市場連動プラン採用法人は大きな影響を受けています。",
   },
   {
     question: "業種別では5月の電気料金影響度はどう違う？",
@@ -185,7 +185,7 @@ const faqItems = [
   {
     question: "5月の主要電力10社の燃料費調整額の動向は？",
     answer:
-      "業界平均では前月比 +0.3〜+0.8円/kWh（高圧目安、速報値）。原発比率の高い九州電力（+0.2）・関西電力（+0.3）が低水準、島嶼系統の沖縄電力（+1.5）と寒冷地の北海道電力（+1.2）が高水準。電力会社により差が大きいため、自社契約先の単価動向の個別確認が必要です。",
+      "業界平均では前月比 ±0.00〜+0.07円/kWh（高圧 5 月確定値、新電力ネット集計）。北海道電力は前月比 -0.06円/kWhで例外的に減少、中部電力ミライズ +0.06円/kWhが最大の上昇。東京電力EPは前月比横ばい。電力会社により方向性が異なるため、自社契約先の単価動向の個別確認が必要です。",
   },
 ];
 
@@ -226,7 +226,7 @@ export default function BusinessElectricityRetrospective202605Page() {
             再エネ賦課金改定後の本格運用月・GW明けの需要再開・冷房シーズン入りの3つが重なる5月使用分の整理
           </p>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-            2026年5月使用分の法人向け電気料金は、3つの構造変化が同時に表面化する月です。第一に、5月1日施行の再エネ賦課金新単価（速報値 3.98円/kWh、前年度比 +0.49円）が初めて全使用量に上乗せされる本格運用月。第二に、ゴールデンウィーク中の需要落ち込みと平日通常稼働のコントラスト。第三に、冷房シーズン開始に伴うJEPXスポット価格の上振れ局面入りです。
+            2026年5月使用分の法人向け電気料金は、3つの構造変化が同時に表面化する月です。第一に、5月1日施行の再エネ賦課金新単価（確定値 4.18円/kWh、前年度比 +0.20円）が初めて全使用量に上乗せされる本格運用月。第二に、ゴールデンウィーク中の需要落ち込みと平日通常稼働のコントラスト。第三に、冷房シーズン開始に伴うJEPXスポット価格の上振れ局面入りです。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             さらに、補助金終了後の実力ベース請求が定着した中で、6-8月の夏季ピーク前に契約見直し・設備対策を完了させる最終的なタイミングでもあります。法人にとっては「単月の請求額を確認する」だけでなく、夏季の上振れリスクを踏まえた年間予算の再点検と契約見直しの意思決定を5月中に進める必要があります。
@@ -245,10 +245,10 @@ export default function BusinessElectricityRetrospective202605Page() {
             <h2 className="text-xl font-semibold text-slate-900">2026年5月の結論3点 — 再エネ賦課金改定後の本格運用 + 夏季ピーク前対策</h2>
             <ol className="mt-3 list-decimal space-y-3 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>
-                5月1日施行の再エネ賦課金新単価（速報値 3.98円/kWh）が初めて全使用量に上乗せされる本格運用月。前年度3.49円/kWhから +0.49円/kWhの上振れが、低圧・高圧・特別高圧のすべての契約区分で発生しています。
+                5月1日施行の再エネ賦課金新単価（確定値 4.18円/kWh）が初めて全使用量に上乗せされる本格運用月。前年度3.49円/kWhから +0.20円/kWhの上振れが、低圧・高圧・特別高圧のすべての契約区分で発生しています。
               </li>
               <li>
-                JEPXスポット価格は5月中旬時点で前年同月比 -1.1〜-1.3円/kWh の低下見込みですが、5月後半の冷房開始と6月以降の本格的な需要増で上振れ局面入り。市場連動プラン採用法人は夏季ピーク前のリスクシナリオ確認が必須です。
+                JEPXスポット価格は5月中旬時点で前年同月比 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇。原油・LNG高騰と政府支援終了の二重要因。6月以降の冷房需要増でさらなる上振れリスク。市場連動プラン採用法人は夏季ピーク前のリスクシナリオ確認が必須です。
               </li>
               <li>
                 補助金が完全終了した実力値ベースの請求が定着した中、5月は夏季ピーク（7-9月）前の最終的な契約見直しタイミング。デマンド管理・固定プラン切替・自家消費太陽光導入の意思決定を5月中に完了させる重要月です。
@@ -267,7 +267,7 @@ export default function BusinessElectricityRetrospective202605Page() {
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">①再エネ賦課金 5/1 改定</p>
-                <p className="mt-1 text-sm leading-6 text-slate-600">3.49円→3.98円/kWh（速報値、+0.49円）。kWhあたり構造的な単価上振れで、年間使用量に応じた絶対額インパクトが5月使用分から顕在化。</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">3.49円→4.18円/kWh（確定値、+0.20円）。kWhあたり構造的な単価上振れで、年間使用量に応じた絶対額インパクトが5月使用分から顕在化。</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">②GW明けの需要急増</p>
@@ -292,10 +292,10 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">低圧の電気料金動向（2026年5月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年5月使用分の低圧電灯は約 26.0円/kWh（見込み値）、低圧電力は約 29.5円/kWh（見込み値）の水準で、前年同月比では電灯 -3.0円、電力 -5.2円の改善傾向となっています。
+              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年5月使用分の低圧電灯は約 26.2円/kWh（確定値）、低圧電力は約 29.7円/kWh（確定値）の水準で、前年同月比では電灯 -2.8円、電力 -5.0円の改善傾向となっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              ただし、2025年5月は地政学リスクが意識されたタイミングで例外的な高水準であり、2019年比では依然50〜70%高い実力値水準が続いています。さらに5月使用分から賦課金改定 +0.49円/kWhが全使用量に上乗せされるため、6月以降の請求書ではこの単価上振れが目立つことになります。
+              ただし、2025年5月は地政学リスクが意識されたタイミングで例外的な高水準であり、2019年比では依然50〜70%高い実力値水準が続いています。さらに5月使用分から賦課金改定 +0.20円/kWhが全使用量に上乗せされるため、6月以降の請求書ではこの単価上振れが目立つことになります。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>コンビニ・物販店・ドラッグストアなどの小売業</li>
@@ -313,10 +313,10 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">高圧の電気料金動向（2026年5月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年5月使用分の高圧は約 21.5円/kWh（見込み値）、前月比 +0.5円・前年同月比 -1.1円の動きとなっています。前月比のプラスは賦課金改定（+0.49円）の影響をほぼそのまま反映した水準です。
+              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年5月使用分の高圧は約 21.7円/kWh（確定値）、前月比 +0.7円・前年同月比 -0.9円の動きとなっています。前月比のプラスは賦課金改定（+0.20円）と燃調変動の合計を反映した水準です。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              高圧需要家は使用量が大きいため、賦課金 +0.49円/kWh の年間累計インパクトは1,000万kWh規模で年490万円増。中規模工場・物流センター・大型病院では、5月時点で2026年度予算の前提を見直す必要が出てくる規模です。
+              高圧需要家は使用量が大きいため、賦課金 +0.20円/kWh の年間累計インパクトは1,000万kWh規模で年200万円増。中規模工場・物流センター・大型病院では、5月時点で2026年度予算の前提を見直す必要が出てくる規模です。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>中規模工場・加工場・食品工場（連続稼働で影響大）</li>
@@ -337,10 +337,10 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">特別高圧の電気料金動向（2026年5月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年5月使用分の特別高圧は約 16.8円/kWh（見込み値）、前月比 +0.1円・前年同月比 -0.9円の動きで、4区分のなかで最も小さな上振れにとどまっています。
+              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年5月使用分の特別高圧は約 17.0円/kWh（確定値）、前月比 +0.3円・前年同月比 -0.7円の動きで、4区分のなかで最も小さな上振れにとどまっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              特別高圧は燃料価格・需給・容量拠出金など構造要因が単価を主導する区分のため、賦課金改定の +0.49円/kWh の影響を受けつつも、相対的には燃料費調整の動向が支配的です。データセンターのような高ベースロード需要家では、年間使用量が数億kWh規模になるため、賦課金改定の絶対額インパクトは年1〜数億円規模に達するケースもあります。
+              特別高圧は燃料価格・需給・容量拠出金など構造要因が単価を主導する区分のため、賦課金改定の +0.20円/kWh の影響を受けつつも、相対的には燃料費調整の動向が支配的です。データセンターのような高ベースロード需要家では、年間使用量が数億kWh規模になるため、賦課金改定の絶対額インパクトも年数千万円規模に達するケースがあります。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>素材・化学・金属・機械などの大規模工場</li>
@@ -385,15 +385,15 @@ export default function BusinessElectricityRetrospective202605Page() {
               </table>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              年間使用量別の追加負担額目安は次の通りです（+0.49円/kWh × 年間使用量で試算）:
+              年間使用量別の追加負担額目安は次の通りです（+0.20円/kWh × 年間使用量で試算）:
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-              <li>年100万kWh（中規模工場・大型小売）：約 49 万円/年</li>
-              <li>年1,000万kWh（大型物流・大規模工場）：約 490 万円/年</li>
-              <li>年1億kWh（大規模データセンター）：約 4,900 万円/年</li>
+              <li>年100万kWh（中規模工場・大型小売）：約 20 万円/年</li>
+              <li>年1,000万kWh（大型物流・大規模工場）：約 200 万円/年</li>
+              <li>年1億kWh（大規模データセンター）：約 2,000 万円/年</li>
             </ul>
             <p className="mt-3 text-xs text-slate-500">
-              ※速報値ベース。確定値は経産省告示文・各電力会社の公表情報で再確認してください。詳細は{" "}
+              ※経産省告示の確定値ベース。詳細は{" "}
               <Link href="/renewable-energy-surcharge-2026" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">2026年度の再エネ賦課金</Link>
               で解説しています。
             </p>
@@ -438,7 +438,7 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">JEPXスポット価格 5月平均と10エリア比較</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年5月のJEPXエリアプライス（10エリア別月平均、見込み値）と前年同月比です。GW期間中の低需要と冷房開始前の落ち着いた需給を背景に、全エリアで前年同月比 -1.1〜-1.3円/kWhの低下傾向となる見通しです。
+              2026年5月のJEPXエリアプライス（10エリア別月平均、5/12 時点実績値）と前年同月比です。原油・LNG高騰と政府支援終了で、全エリアで前年同月比 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇となっています。
             </p>
             <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
               <table className="min-w-full border-collapse text-sm sm:text-base">
@@ -479,7 +479,7 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別の5月電気料金影響度マトリックス（製造 / 商業 / 病院 / DC等）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年5月の電気料金影響度を業種別に整理しました。賦課金改定 +0.49円/kWh × 年間使用量の絶対額、夏季ピーク前のタイミング、24時間稼働の有無、冷蔵稼働の有無などを総合した目安です。
+              2026年5月の電気料金影響度を業種別に整理しました。賦課金改定 +0.20円/kWh × 年間使用量の絶対額、夏季ピーク前のタイミング、24時間稼働の有無、冷蔵稼働の有無などを総合した目安です。
             </p>
             <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
               <table className="min-w-full border-collapse text-sm sm:text-base">
@@ -543,12 +543,20 @@ export default function BusinessElectricityRetrospective202605Page() {
           <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">月次サマリ：2026年5月の法人電気料金概況とまとめ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年5月使用分の法人電気料金は、(1) 再エネ賦課金改定 +0.49円/kWh の本格運用月、(2) GW明けの需要急増、(3) 冷房シーズン開始の3要因が同時に作用する月でした。低圧・高圧・特別高圧のすべての契約区分で前月比 +0.0〜+1.0円/kWh の上振れが見込まれる一方、前年同月比では -0.9〜-5.2円/kWh の低下傾向（2025年5月の地政学リスク懸念を経た反動）となっています。
+              2026年5月使用分の法人電気料金は、(1) 再エネ賦課金改定 +0.20円/kWh の本格運用月、(2) GW明けの需要急増、(3) 冷房シーズン開始の3要因が同時に作用する月でした。低圧・高圧・特別高圧のすべての契約区分で前月比 +0.2〜+1.2円/kWh の上振れとなった一方、前年同月比では -0.7〜-5.0円/kWh の低下傾向（2025年5月の地政学リスク懸念を経た反動）となっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               5月は夏季ピーク（7-9月）前の最終的な契約見直し・設備対策の意思決定月。賦課金改定の年間累計インパクトを2026年度予算に織り込み、固定 vs 市場連動の夏季リスクシナリオ比較を踏まえて意思決定を5月中に完了させることが望まれます。
             </p>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            <h3 className="mt-5 text-lg font-semibold text-slate-900">2026年5月 主要業界ニュース 5 件</h3>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>再エネ賦課金 過去最高 4.18円/kWh（2026年度、5/15 公開予定の 2026-05号で確定）。前年度 3.49円/kWh から +0.20円/kWh の上振れ。</li>
+              <li>政府電気・ガス料金支援 2026/4 月分で終了（5月分から値引きなし）。補助なしの実力ベース請求が定着。</li>
+              <li>容量拠出金 2026年度本格徴収開始（首都圏 14,812円/kW、契約電力 1,000kW で年 1,481 万円の追加負担）。</li>
+              <li>東京電力エナジーパートナー 法人向け料金改定（基本料金値下げ + 電力量料金値上げ、2026/4/1 実施）。使用量の多い法人は実質値上げとなるケースが多い。</li>
+              <li>ホルムズ海峡リスクで原油 +75.19% の急騰、JEPX スポット価格も前年同月比 +52.52% の大幅上昇。市場連動プランは大きな影響を受けている。</li>
+            </ul>
+            <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
               5月時点の確認チェックリストは次の通りです：
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
@@ -557,7 +565,7 @@ export default function BusinessElectricityRetrospective202605Page() {
               ))}
             </ul>
             <p className="mt-4 rounded-md bg-white px-3 py-2 text-xs text-slate-500">
-              ※本記事の数値は2026年5月15日時点の見込み値・速報値です。経産省・JEPX・各電力会社・気象庁の確定値は5月末〜6月初にかけて公表されるため、本記事は5月30日以降に確定値ベースで再更新する予定です。
+              ※本記事の数値は2026年5月12日時点の確定値です。再エネ賦課金（経産省告示）、燃調 5月分（新電力ネット集計、5/12 確定値）、JEPX スポット価格（5/12 実績）をベースとしています。最新動向は5月末〜6月初に再更新予定です。
             </p>
           </section>
 
@@ -571,7 +579,7 @@ export default function BusinessElectricityRetrospective202605Page() {
               { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "全月次振り返り一覧と長期推移" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "5月動向の理解に必須のサブピラー" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "5/1改定の背景と仕組み" },
-              { href: "/renewable-energy-surcharge-2026", title: "2026年度の再エネ賦課金", description: "新単価3.98円/kWhの解説" },
+              { href: "/renewable-energy-surcharge-2026", title: "2026年度の再エネ賦課金", description: "新単価4.18円/kWhの解説" },
               { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "JEPX連動契約の夏季リスク" },
               { href: "/jepx-explained", title: "JEPXとは", description: "卸電力市場の基本" },
               { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格ダッシュボード", description: "リアルタイムのエリア別単価" },
