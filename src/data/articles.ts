@@ -2340,6 +2340,26 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-05-15",
   },
   {
+    title: "【2026年4月】法人の電気料金はどう動いた？政府補助最終月・容量拠出金本格化",
+    slug: "business-electricity-retrospective/2026-04",
+    description:
+      "2026 年 4 月使用分の法人電気料金動向を整理。政府補助最終月と容量拠出金本格化の局面を契約区分別に解説。",
+    category: "月次振り返り",
+    categorySlug: "monthly-review",
+    order: 99,
+    publishedAt: "2026-05-15",
+  },
+  {
+    title: "【2026年3月】法人の電気料金はどう動いた？政府補助縮小・JEPX安定の月",
+    slug: "business-electricity-retrospective/2026-03",
+    description:
+      "2026 年 3 月使用分の法人電気料金動向を整理。政府補助縮小と JEPX 安定の局面を契約区分別に解説。",
+    category: "月次振り返り",
+    categorySlug: "monthly-review",
+    order: 99,
+    publishedAt: "2026-04-15",
+  },
+  {
     title: "【2026年2月】法人の電気料金はどう動いた？",
     slug: "business-electricity-retrospective/2026-02",
     description:
