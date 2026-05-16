@@ -1,4 +1,5 @@
 export const GA_MEASUREMENT_ID = "G-VCCJXB8WGP";
+export const SIMULATOR_GA_ID = process.env.NEXT_PUBLIC_GA_ID_SIMULATOR || "G-WGXXZN9G7Y";
 
 const PRODUCTION_HOSTNAME = "simulator.eic-jp.org";
 
