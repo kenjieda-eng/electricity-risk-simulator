@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
+
+const faqItems = [
+  { question: "なぜ最近自治体電気入札の不調が増えているのですか？", answer: "2022 年以降のロシア・ウクライナ情勢、LNG 調達難、円安の同時発生で電力市況が構造的高コスト時代に突入し、多くの自治体の予定価格が市場実勢と大きく乖離したことが主因です。さらに新電力各社が固定価格入札から相次いで撤退（スポット連動型のみ提示）したことで、参加者ゼロの不成立も急増しました。離島・過疎地域では参加可能事業者が 1 社以下のケースもあります。" },
+  { question: "入札不調後の法的根拠と実務フローは？", answer: "地方自治法第234条と施行令第167条の2第1項第2号（競争入札に適しない場合）または第5号（緊急の必要）が随意契約の根拠となります。実務は STEP1 不調確認 → STEP2 現行供給事業者打診 → STEP3 随契検討 → STEP4 見積合わせ → STEP5 契約・議会報告 → STEP6 次回改善策の 6 ステップで、開札調書・参加者ゼロの記録の保存が後の議会・監査対応で必須になります。" },
+  { question: "最終保障供給に入る前に何をすべきですか？", answer: "契約満了の 90 日前には不調リスクを財政担当に共有し、現行供給事業者への暫定継続供給打診と、随契候補先 1〜2 社への見積依頼を並行で進めるのが鉄則です。最終保障供給の単価は標準契約の 1.2〜1.4 倍程度になるため、移行を回避するだけで自治体財政の負担を大きく軽減できます。詳細手順は『最終保障供給に入りそうなときの対応』を参照してください。" },
+  { question: "議会・住民への説明はどうすればよいですか？", answer: "①入札不調の客観的事実（参加者数・予定価格超過の数値）、②市場環境変化（JEPX 推移グラフ等）、③随意契約の法的根拠（自治法施行令167条の2 該当号）、④価格妥当性（近隣自治体ベンチマーク）、⑤再発防止策の 5 項目を骨子に資料化します。グラフ・表で視覚化し、競争回避ではなく構造的要因による不可避の選択であることを定量的に示します。" },
+  { question: "規模別の対応チェックポイントは？", answer: "政令市・中核市は専任の入札契約担当を活用し、複数年・分割発注の設計変更を内部完結。一般市（人口 5 万人以上）は契約課と施設担当の役割分担調整役を明確化。一般市・町村（小規模）は都道府県や近隣市の前例参照と、広域連合経由の共同調達への参加が現実的な選択肢になります。" },
+  { question: "他自治体の参考事例は？", answer: "中規模市（10 万人規模）では、不調後に随意契約で旧契約事業者と単年契約 → 翌年仕様を 3 エリアに分割し再入札 → 2 社応札で契約成立、という事例があります。町村（2 万人規模）では、供給可能事業者が実質 1 社の地域で毎年度特命随意契約を実施し、包括外部監査で適正性を確認した事例があります。見積書取得と理由書の充実が共通成功要因です。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・最終保障供給制度に関する情報" },
+  { name: "総務省（地方公共団体の調達制度）", url: "https://www.soumu.go.jp", description: "地方自治法・公共契約に関する制度情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・供給能力情報" },
+];
 
 
 const pageTitle = "自治体電力入札が不調になったときの対応ガイド｜近年増える不落への実務";
@@ -120,7 +139,7 @@ export default function MunicipalityProcurementBiddingFailurePage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "自治体電力入札が不調になったときの対応ガイド" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -132,6 +151,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
         <span className="text-slate-800">入札不調の対応</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
+
       {/* ヘッダー */}
       <header className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-indigo-700">MUNICIPALITY ／ 自治体・公共向け</p>
@@ -337,8 +359,11 @@ export default function MunicipalityProcurementBiddingFailurePage() {
       </section>
 
       {/* 関連リンク */}
-      
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="municipality-procurement-bidding-failure" terms={["最終保障供給", "燃料費調整額", "市場連動プラン", "固定プラン", "容量拠出金", "再エネ賦課金"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -374,6 +399,31 @@ export default function MunicipalityProcurementBiddingFailurePage() {
               href: "/executive-business-continuity-risk",
               title: "電気代高騰と事業継続リスク",
               description: "電力調達リスクをBCPと財務リスク管理の視点で整理します。",
+            },
+            {
+              href: "/municipality-bundled-procurement",
+              title: "公共施設の電力一括調達（バンドリング）の進め方",
+              description: "不調を回避するもう一つの解として、複数施設まとめての調達手法を解説。",
+            },
+            {
+              href: "/municipality-electricity-cost-review",
+              title: "自治体庁舎の電気料金見直しポイント",
+              description: "庁舎・学校など公共施設の負荷特性と契約見直しの基本フレーム。",
+            },
+            {
+              href: "/municipality-re100-decarbonization",
+              title: "自治体のRE100・脱炭素調達と電力コストの両立",
+              description: "総合評価方式・加点評価で環境要件を組み込みながら不調を避ける手法。",
+            },
+            {
+              href: "/last-resort-supply",
+              title: "最終保障供給とは",
+              description: "不調後に自動移行する最終保障供給の仕組みと回避手順を解説。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
             },
           ]}
         />

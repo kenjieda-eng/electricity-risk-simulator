@@ -8,9 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import TableOfContents from "../../components/market-data/TableOfContents";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
+
+const faqItems = [
+  { question: "共同調達は単独調達と比べてどれくらい費用削減になりますか？", answer: "業界の典型値として、単独調達からバンドリングに移行することで kWh 単価で 5〜15% の削減が見込めます。年間電力費 1 億円規模の自治体なら年間 500〜1,500 万円の削減効果に相当します。スケールメリットの大きさは調達総量に比例するため、高圧以上の主要施設を先行してまとめると効果が顕著です。" },
+  { question: "対象施設をどう選定すればよいですか？", answer: "①使用量規模（高圧・特別高圧を優先）、②契約満了日の近接性、③電圧区分・供給エリアの統一性、④指定管理・直営の区分の 4 軸でグルーピングします。最初から全施設を一括にする必要はなく、効果の出やすい高圧施設（庁舎・学校・体育館）から段階導入するのが定石です。" },
+  { question: "共同調達のスキームの選択基準は？（広域連携 vs 組合方式）", answer: "広域連携方式は事務取り扱い自治体（リード自治体）が他自治体分も一括処理する形で、手続きは比較的シンプルです。組合方式（一部事務組合）は法人格を持つ組合が契約主体となり、複数自治体の利害調整に向いています。年間調達総額・参加自治体数・規約整備の難易度で選択するのが実務的判断です。" },
+  { question: "共同調達の進め方の標準フローは？", answer: "STEP1 施設リスト・使用実績の整備 → STEP2 対象施設の選定とグルーピング → STEP3 入札仕様書の作成（施設明細書付き）→ STEP4 入札の実施（事業者説明会含む）→ STEP5 契約締結と施設別管理の 5 ステップが標準です。最低でも入札公告 90 日前から逆算した進行管理が必要で、4 月始まりの新契約に向けては前年 9 月〜10 月から準備開始が安全圏です。" },
+  { question: "共同調達の注意点・失敗例は？", answer: "病院・福祉施設・指定管理施設などの特殊条件施設を一括仕様書に無理に組み込むと不調リスクが高まります。これらは別契約に切り出すのが鉄則です。また、一部施設だけ応札なし・条件合致なしになるケースに備えて、随意契約への切り出し手続きを事前に契約書に盛り込んでおくのが重要です。" },
+  { question: "共同調達と単独調達のどちらがよい場合がありますか？", answer: "施設数 5 件未満・調達総量 500 万 kWh/年未満の場合は、共同調達の手続き負荷に対して削減効果が小さく、単独調達のほうが合理的な場合があります。また、特殊な供給条件（24時間対応・離島・自家発電併設等）を持つ施設は単独調達のほうが柔軟な条件設計が可能です。規模・特殊性で判断します。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自治体公共調達情報" },
+  { name: "総務省（地方財政・公共調達）", url: "https://www.soumu.go.jp", description: "地方自治法・公共契約に関する制度情報" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
+];
 
 
 const pageTitle = "公共施設の電力一括調達（バンドリング）の進め方｜自治体向け";
@@ -140,7 +159,7 @@ export default function MunicipalityBundledProcurementPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "公共施設の電力一括調達（バンドリング）の進め方" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -152,6 +171,9 @@ export default function MunicipalityBundledProcurementPage() {
         <span className="text-slate-800">電力一括調達（バンドリング）</span>
       </nav>
         <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+
+      <AuthorBadge publishedAt="2026-04-17" updatedAt="2026-04-17" />
+      <TableOfContents />
 
       <header className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-indigo-700">MUNICIPALITY ／ 自治体・公共向け</p>
@@ -168,11 +190,14 @@ export default function MunicipalityBundledProcurementPage() {
       <section className="mt-6 space-y-4">
         {/* バンドリングとは */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="text-xl font-semibold text-slate-900">バンドリング（一括調達）とは何か</h2>
+          <h2 className="text-xl font-semibold text-slate-900">なぜ自治体共同調達が今求められるのか — 単独調達の限界</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            バンドリングとは、複数の公共施設（庁舎・学校・体育館・公民館・図書館等）の電力契約をまとめて一つの入札・契約として調達する手法です。
+            バンドリング（共同調達・一括調達）とは、複数の公共施設（庁舎・学校・体育館・公民館・図書館等）の電力契約をまとめて一つの入札・契約として調達する手法です。
             従来は施設ごと・担当課ごとに個別に電力契約を締結していた自治体が多く、
             それぞれの施設で毎年度入札を行う必要がありました。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            しかし、2022 年以降の電力市況高騰と新電力撤退ラッシュで「単独調達では応札者ゼロ・予定価格超過不落」が頻発し、自治体単独での入札成立が困難な構造的局面に突入しました。共同調達は単なる効率化ではなく、調達リスク自体を回避する手段として位置付けが変わってきています。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             バンドリングを導入することで、調達量の増加によるスケールメリットと手続きの効率化が同時に期待できます。
@@ -294,8 +319,63 @@ export default function MunicipalityBundledProcurementPage() {
         </section>
       </section>
 
-      
+      {/* 共同調達の先進事例 */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">共同調達の先進事例（広域連携・組合方式）</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          共同調達は実施スキームによって参加自治体間の役割分担が大きく変わります。代表的な 3 パターンを整理します。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">広域連携方式（リード自治体型）</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>事務取扱いの中心となるリード自治体が他自治体分も一括処理</li>
+              <li>協定書ベースで実施、規約整備が比較的シンプル</li>
+              <li>都道府県内の広域連携・近隣市町村連携で多く採用</li>
+              <li>典型規模：5〜20 自治体／調達総量 1〜10 億 kWh／年</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">一部事務組合方式</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>法人格を持つ組合が契約主体となる</li>
+              <li>規約・予算が組合議会で別途審議される</li>
+              <li>大規模・長期での共同調達に向く</li>
+              <li>典型規模：10 自治体超／調達総量 5 億 kWh 超／年</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-indigo-100 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">広域連合・地方公共団体組合</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-600">
+              <li>複数の業務を包括的に処理する広域組織を活用</li>
+              <li>消防・廃棄物処理など他業務と並行して電力共同調達</li>
+              <li>政令市・中核市レベルでの実施事例が増加</li>
+              <li>典型規模：県内全域／調達総量 10 億 kWh 超／年</li>
+            </ul>
+          </div>
+        </div>
+        <p className="mt-2 text-xs text-slate-500">出典: 総務省「地方公共団体間の連携・補完」資料、自治体公開事例集をもとに業界平均レンジで作成。</p>
+      </section>
+
+      {/* H2-Z シミュレーター */}
+      <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">シミュレーターで一括調達の効果を試算する</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          共同調達導入の意思決定では、単独調達と一括調達のコスト差を定量的に示すことが議会・首長への説明の決め手になります。シミュレーターを以下の観点で活用してください。
+        </p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+          <li>現行の施設別契約条件をベースに年間電力費合計を集計する</li>
+          <li>共同調達後の単価想定（5〜15% 削減）で年間効果額を試算する</li>
+          <li>調達リスクシナリオ（不調時の最終保障供給移行）での上振れ額を比較する</li>
+          <li>債務負担行為で複数年契約した場合の議会承認スケジュールを逆算する</li>
+        </ul>
+      </section>
+
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="municipality-bundled-procurement" terms={["燃料費調整額", "再エネ賦課金", "容量拠出金", "市場連動プラン", "固定プラン", "最終保障供給"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -326,6 +406,36 @@ export default function MunicipalityBundledProcurementPage() {
               href: "/executive-multi-site-cost-management",
               title: "複数拠点の電力コスト一元管理フレームワーク",
               description: "多施設の電力費を効率的に管理するための体制と手順を解説。",
+            },
+            {
+              href: "/municipality-electricity-cost-review",
+              title: "自治体庁舎の電気料金見直しポイント",
+              description: "庁舎・学校・体育館など公共施設の負荷特性と契約見直しの考え方を整理。",
+            },
+            {
+              href: "/municipality-procurement-bidding-failure",
+              title: "自治体電力入札が不調になったときの対応ガイド",
+              description: "共同調達でも不調となった場合の随意契約移行・最終保障供給回避の実務手順。",
+            },
+            {
+              href: "/municipality-re100-decarbonization",
+              title: "自治体のRE100・脱炭素調達と電力コストの両立",
+              description: "共同調達と脱炭素要件を組み合わせる場合の戦略パターン。",
+            },
+            {
+              href: "/last-resort-supply",
+              title: "最終保障供給とは",
+              description: "共同調達不調時の最終保障供給移行リスクと、自治体側で備えるべき手順を解説。",
+            },
+            {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気代見直しの基本ポイント",
+              description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
+            },
+            {
+              href: "/extra-high-voltage-electricity-pricing",
+              title: "特別高圧の電気料金の仕組み",
+              description: "大規模公共施設で活用される特別高圧契約の料金体系を解説。",
             },
           ]}
         />

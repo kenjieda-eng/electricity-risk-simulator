@@ -8,11 +8,28 @@ import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/m
 import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
+
+const faqItems = [
+  { question: "CFO が電気代を直接見るべき理由は？", answer: "電気代は売上に対するコスト比率が業種により 1〜10% に達し、製造業・データセンター・冷蔵冷凍業では EBITDA を直接圧迫する規模になっています。さらに 2024 年度から本格導入の容量拠出金、変動性の高い燃調費、市場連動契約の上振れリスクなど、財務リスクとしての性質が強まっており、CFO 関与なしの判断では会社の財務体力を見誤る規模になっています。" },
+  { question: "電気代の財務インパクトを売上 / EBITDA で計算する方法は？", answer: "①現行年間電気代を売上で割って『売上比率』を算出（製造業 2〜5% / 商業 1〜3%）、② EBITDA に対する電気代比率を算出（10〜30% が一般）、③上振れシナリオ（燃調 +5 円/kWh など）での年間影響額を売上・EBITDA に当てる『感応度分析』を実施するのが定石です。シミュレーターで各シナリオを定量化できます。" },
+  { question: "燃料費調整額の仕組みと CFO の確認ポイントは？", answer: "燃調費は 3 か月前の平均燃料価格（LNG・石炭・石油）を基に翌月単価を決定する月次変動コストで、上限撤廃後は青天井のリスクがあります。CFO の確認ポイントは①現行契約の燃調費上限の有無、②過去 24 か月の燃調費変動幅、③ LNG 価格・為替の感応度です。固定燃調・上限付き契約への切替で月次予測精度が大幅に向上します。" },
+  { question: "固定 vs 市場連動を CFO 視点で選ぶ基準は？", answer: "①財務リスク許容度（市場連動の上振れに対して BS / PL が耐えられるか）、②電力コストの売上比率（5% 超なら市場連動は危険）、③予算管理の説明責任（上場企業・公会計は固定が無難）、④電力モニタリング体制の有無（市場連動には専任体制が必要）の 4 軸で判断します。一般的には固定 60〜70% / 市場連動 30〜40% のポートフォリオが定石です。" },
+  { question: "容量拠出金の財務影響は？", answer: "2024 年度から本格算入された容量拠出金は、契約電力（kW）に比例して請求され、4 年前の容量市場オークション結果に連動します。法人需要家の請求額に占める割合は 2〜5% 程度で増加傾向にあり、契約電力の見直し（デマンド管理）が直接的な削減策です。今後の単価予測は経産省・OCCTO の公開資料で追えるため、3 年分の予算組み込みが必要です。" },
+  { question: "取締役会報告の標準フォーマットは？", answer: "①現行年間電気代と前年比、②燃調費・容量拠出金・再エネ賦課金の推移グラフ、③上振れシナリオ年間影響額（楽観・中央・悲観の 3 ケース）、④契約見直し検討状況、⑤省エネ投資 ROI の 5 項目を A3 一枚で完結させるのが標準フォーマットです。月次推移とリスクシナリオを 1 枚で見られる形式が、取締役会の意思決定に直結します。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場・容量市場・燃調費に関する公表資料" },
+  { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "容量市場オークション結果・需給情報" },
+  { name: "JEPX（日本卸電力取引所）", url: "https://www.jepx.org", description: "卸電力市場価格の推移データ" },
+];
 
 
 const pageTitle = "CFOのための電力市場基礎｜燃調費・市場連動・容量拠出金を1ページで";
@@ -175,7 +192,7 @@ export default function ExecutiveCfoElectricityBasicsPage() {
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
           { name: "CFOのための電力市場基礎" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -448,8 +465,11 @@ export default function ExecutiveCfoElectricityBasicsPage() {
       </section>
 
       {/* 関連リンク */}
-      
       <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <SourcesAndFaq sources={sourcesItems} faq={faqItems} publishedAt="2026-04-17" />
+      <div className="mt-6">
+        <GlossaryLinks currentSlug="executive-cfo-electricity-basics" terms={["燃料費調整額", "市場連動プラン", "固定プラン", "容量拠出金", "再エネ賦課金", "デマンド値", "市場価格調整額"]} />
+      </div>
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
@@ -485,6 +505,31 @@ export default function ExecutiveCfoElectricityBasicsPage() {
               href: "/executive-risk-planning-approaches",
               title: "経営層向けリスク策定アプローチ",
               description: "電気料金リスクの経営判断フレーム。",
+            },
+            {
+              href: "/executive-multi-site-cost-management",
+              title: "複数拠点の電力コスト一元管理フレームワーク",
+              description: "多拠点企業の CFO が取り組むグループ電力コスト統括管理。",
+            },
+            {
+              href: "/businesses-suited-for-fixed-price-electricity-plan",
+              title: "固定プランが向く法人の特徴",
+              description: "CFO 視点で固定プランの財務メリットを判断する基準。",
+            },
+            {
+              href: "/businesses-not-suited-for-market-linked-electricity-plan",
+              title: "市場連動プランが向かない法人の特徴",
+              description: "市場連動の上振れリスクが財務体力を超える業種パターン。",
+            },
+            {
+              href: "/business-electricity-contract-checklist",
+              title: "法人の電力契約見直しチェックリスト",
+              description: "CFO が担当者に指示すべき契約見直しの基本項目。",
+            },
+            {
+              href: "/data-center-electricity-cost-review",
+              title: "データセンターの電気料金見直しポイント",
+              description: "電気代が EBITDA に直結する高負荷業種での CFO 視点の見直し。",
             },
           ]}
         />
