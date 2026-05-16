@@ -27,6 +27,20 @@ export const MONTHLY_RETROSPECTIVE_ITEMS: RetrospectiveCardItem[] = [
     ctaLabel: "記事を読む",
   },
   {
+    title: "【2026年4月】法人の電気料金はどう動いた？政府補助最終月・容量拠出金本格化",
+    description:
+      "政府電気・ガス料金支援最終月、容量拠出金 2026 年度本格徴収開始、東京電力法人向け料金改定初月の局面を整理。5 月以降の構造変化前夜の確認ポイントを契約区分別に解説します。",
+    href: "/business-electricity-retrospective/2026-04",
+    ctaLabel: "記事を読む",
+  },
+  {
+    title: "【2026年3月】法人の電気料金はどう動いた？政府補助縮小・JEPX安定の月",
+    description:
+      "政府電気・ガス料金支援縮小、JEPX スポット安定、4 月以降の構造変化前夜の局面を整理。補助あり最終局面での安心材料と注意点を契約区分別に解説します。",
+    href: "/business-electricity-retrospective/2026-03",
+    ctaLabel: "記事を読む",
+  },
+  {
     title: "【2026年2月】法人の電気料金はどう動いた？",
     description:
       "補助政策と当社団が運営している「新電力ネット」のデータから、補助の恩恵を最終確認し、補助終了前後への備えを契約区分別に整理します。",
