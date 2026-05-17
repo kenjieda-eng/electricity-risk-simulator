@@ -505,6 +505,10 @@ export const articleCategories: ArticleCategory[] = [
       "research-facility-electricity-cost-review",
       "semiconductor-facility-electricity-cost-review",
       "cultural-facility-electricity-cost-review",
+      "transportation-electricity-cost-review",
+      "construction-electricity-cost-review",
+      "printing-electricity-cost-review",
+      "pulp-paper-electricity-cost-review",
       "drugstore-electricity-cost-reduction",
       "factory-electricity-cost-reduction",
     ],
@@ -2996,6 +3000,11 @@ export const articleList: ArticleMeta[] = [
   { title: "研究施設の電気料金見直しポイント", slug: "research-facility-electricity-cost-review", description: "精密機器と環境管理を踏まえた研究施設の見直しの考え方。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 31, publishedAt: "2026-04-10" },
   { title: "半導体関連施設の電気料金リスク", slug: "semiconductor-facility-electricity-cost-review", description: "クリーンルームと大規模電力を踏まえた半導体施設の見直しの考え方。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 32, publishedAt: "2026-04-10" },
   { title: "文化施設・ホールの電気料金見直しポイント", slug: "cultural-facility-electricity-cost-review", description: "照明・空調・イベント負荷を踏まえた文化施設の見直しの考え方。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 33, publishedAt: "2026-04-10" },
+  // --- B-51a 業種別ニッチ第2弾 5件（2026-05-17 アグレッシブ戦略第1弾） ---
+  { title: "運輸業の電気料金見直しポイント", slug: "transportation-electricity-cost-review", description: "陸運・物流センターの仕分け設備・EV充電・冷凍車両プレクールを踏まえた契約最適化と省エネ施策・補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 34, publishedAt: "2026-05-17" },
+  { title: "建設業の電気料金見直しポイント", slug: "construction-electricity-cost-review", description: "ゼネコン本社・支店・PC工場・現場仮設電源の3層構造、電動建機・BIM/CIMの新規負荷、ZEB化と契約見直しを整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 35, publishedAt: "2026-05-17" },
+  { title: "印刷業の電気料金見直しポイント", slug: "printing-electricity-cost-review", description: "オフセット輪転機・枚葉機・デジタル機の24h稼働、製本・乾燥工程の電力構造、固定プランの相性と補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 36, publishedAt: "2026-05-17" },
+  { title: "紙パルプ業の電気料金見直しポイント", slug: "pulp-paper-electricity-cost-review", description: "製紙工程の大規模電力消費、バイオマス自家発電と系統電力の最適配分、特別高圧契約の長期固定戦略と補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 37, publishedAt: "2026-05-17" },
   // --- リスクシナリオ 10本 ---
   { title: "LNG高騰で法人の電気料金はどう上がるか", slug: "lng-price-surge-electricity-cost-impact", description: "LNG価格の上昇が法人電気料金に波及する仕組みと備え方を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 12, publishedAt: "2026-04-10" },
   { title: "JEPX急騰で法人の電気料金はどう上がるか", slug: "jepx-spike-electricity-cost-impact", description: "JEPX市場価格の急騰が市場連動プランの法人に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 13, publishedAt: "2026-04-10" },
