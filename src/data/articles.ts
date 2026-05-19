@@ -3165,6 +3165,18 @@ export const articleList: ArticleMeta[] = [
   { title: "四国電力エリアの法人電気代事情", slug: "region-shikoku-business-electricity", description: "四国電力管内の法人電気代水準、伊方原発の安定稼働、太陽光出力制御の影響を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 10, publishedAt: "2026-04-12" },
   { title: "沖縄電力エリアの法人電気代事情", slug: "region-okinawa-business-electricity", description: "沖縄電力管内の法人電気代水準、離島・孤立系統特性、全国最高水準の料金を整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 11, publishedAt: "2026-04-12" },
 
+  // --- I-2. 県別電気料金 第1弾 北海道・東北・関東 10本（B-52） ---
+  { title: "北海道の法人電気料金完全ガイド", slug: "hokkaido-business-electricity-cost", description: "北海道の法人電気料金を地域特化で解説。寒冷地暖房・離島供給・水産加工業の電力負荷、補助金、契約見直しまで整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 20, publishedAt: "2026-05-19" },
+  { title: "青森県の法人電気料金完全ガイド", slug: "aomori-business-electricity-cost", description: "青森県の法人電気料金を地域特化で解説。風力発電全国2位・原子力立地・りんご冷蔵倉庫の電力負荷、補助金、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 21, publishedAt: "2026-05-19" },
+  { title: "岩手県の法人電気料金完全ガイド", slug: "iwate-business-electricity-cost", description: "岩手県の法人電気料金を地域特化で解説。震災復興・北上市の自動車部品集積・林業・水産業の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 22, publishedAt: "2026-05-19" },
+  { title: "宮城県の法人電気料金完全ガイド", slug: "miyagi-business-electricity-cost", description: "宮城県の法人電気料金を地域特化で解説。仙台都市圏・半導体集積・仙台港物流拠点の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 23, publishedAt: "2026-05-19" },
+  { title: "秋田県の法人電気料金完全ガイド", slug: "akita-business-electricity-cost", description: "秋田県の法人電気料金を地域特化で解説。風力発電全国1位・豪雪・製紙木材加工の電力負荷、洋上風力PPA活用、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 24, publishedAt: "2026-05-19" },
+  { title: "茨城県の法人電気料金完全ガイド", slug: "ibaraki-business-electricity-cost", description: "茨城県の法人電気料金を地域特化で解説。鹿島臨海工業地帯・つくば研究機関・日立電機の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 25, publishedAt: "2026-05-19" },
+  { title: "栃木県の法人電気料金完全ガイド", slug: "tochigi-business-electricity-cost", description: "栃木県の法人電気料金を地域特化で解説。宇都宮・小山の自動車工業・日光那須の観光業の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 26, publishedAt: "2026-05-19" },
+  { title: "群馬県の法人電気料金完全ガイド", slug: "gunma-business-electricity-cost", description: "群馬県の法人電気料金を地域特化で解説。太田の自動車工業・高崎前橋物流・草津伊香保の観光業の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 27, publishedAt: "2026-05-19" },
+  { title: "埼玉県の法人電気料金完全ガイド", slug: "saitama-business-electricity-cost", description: "埼玉県の法人電気料金を地域特化で解説。首都圏物流拠点・住宅商業密集・熊谷猛暑日対策、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 28, publishedAt: "2026-05-19" },
+  { title: "千葉県の法人電気料金完全ガイド", slug: "chiba-business-electricity-cost", description: "千葉県の法人電気料金を地域特化で解説。京葉工業地帯コンビナート・成田千葉港物流・舞浜観光業の電力負荷、洋上風力PPA、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 29, publishedAt: "2026-05-19" },
+
   // --- J. 経営層・CFO向け 追加4本 ---
   { title: "中期経営計画への電力コスト織り込み方", slug: "executive-mid-term-plan-electricity", description: "中計でシナリオ別に電力コストをどう織り込むか。経営企画部が押さえるべきKPIと前提の置き方を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 5, publishedAt: "2026-04-12" },
   { title: "IR・ESG開示における電力リスクの記載ガイド", slug: "executive-esg-electricity-disclosure", description: "統合報告書・有価証券報告書でのエネルギーリスク開示、TCFD/ISSB対応、Scope2算定のポイントを整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 6, publishedAt: "2026-04-12" },
