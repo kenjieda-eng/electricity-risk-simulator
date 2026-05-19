@@ -33,7 +33,8 @@ export type ArticleCategorySlug =
   | "ma-organizational-change"
   | "global-energy"
   | "datacenter-ai-demand"
-  | "market-data";
+  | "market-data"
+  | "cfo-executive";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -1193,6 +1194,33 @@ export const articleCategories: ArticleCategory[] = [
       "ai-demand-electricity-price-outlook",
     ],
     order: 35,
+    group: "learning",
+  },
+  {
+    name: "CFO・経営層向け電気代戦略",
+    slug: "cfo-executive",
+    description:
+      "CFO・財務責任者が経営判断のために知るべき電気代の構造、損益計算書での位置付け、Scope2排出量、IR開示、業種別戦略を体系化したカテゴリです。",
+    intro:
+      "電気代は単なる固定費ではなく、CFO・財務責任者が経営判断の中核に据えるべき戦略コストです。本カテゴリでは、CFOが知っておくべき電気代の構造、P/L上の位置付け（製造原価／販管費）、業界平均ベンチマーク、Scope2排出量算出と削減戦略、IR開示・統合報告書での電気代リスク表現、TCFD/ISSB対応、業種別の経営戦略（製造業／流通・小売業／サービス業）まで、意思決定フレームワーク3件（短期1年／中期3年／長期5年）と感度分析・シナリオ分析を実務的に整理します。取締役会・株主総会での説明責任、M&A時のデューデリジェンス、ESG経営との接続点まで、経営層が直接活用できる情報を体系化しました。",
+    learnPoints: [
+      "P/L上の電気代の位置付けと売上高電気代比率の業界平均",
+      "Scope2排出量算出方法と削減目標の経営判断",
+      "IR開示・統合報告書・有価証券報告書での電気代リスク表現",
+      "業種別CFO戦略（製造業／流通・小売業／サービス業）",
+      "意思決定フレームワーク3件（短期1年／中期3年／長期5年）",
+      "感度分析・シナリオ分析と取締役会報告フォーマット",
+      "M&A・新規事業展開時の電気代評価と監査・内部統制",
+    ],
+    recommendedReadingOrder: [
+      "cfo-electricity-cost-basics",
+      "scope2-reduction-cfo-responsibility",
+      "ir-disclosure-electricity-risk",
+      "manufacturing-cfo-electricity-strategy",
+      "retail-cfo-electricity-strategy",
+      "service-industry-cfo-electricity-strategy",
+    ],
+    order: 36,
     group: "learning",
   },
 ];
@@ -4583,4 +4611,12 @@ export const articleList: ArticleMeta[] = [
     order: 99,
     publishedAt: "2026-04-25",
   },
+
+  // --- M. CFO・経営層向け電気代戦略 第1弾 6本（B-63） ---
+  { title: "CFOのための電気代基礎｜P/L構造・売上高電気代比率・経営判断フレームワーク", slug: "cfo-electricity-cost-basics", description: "CFO向けに電気代のP/L上の位置付け、業界平均ベンチマーク、感度分析、取締役会報告、ESG連携、M&A評価まで経営判断フレームワークを体系的に整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 1, featured: true, publishedAt: "2026-05-19" },
+  { title: "Scope2削減とCFOの責任｜TCFD算出方法・再エネ調達戦略・経営判断", slug: "scope2-reduction-cfo-responsibility", description: "CFO向けにScope2排出量算出方法、TCFD/ISSB対応、再エネ電力調達戦略、J-クレジット活用、コストとブランド価値のトレードオフ判断を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 2, publishedAt: "2026-05-19" },
+  { title: "IR開示における電気代リスク｜有価証券報告書・統合報告書・株主総会対応", slug: "ir-disclosure-electricity-risk", description: "CFO向けに有価証券報告書・統合報告書での電気代リスク開示、感度分析説明、株主総会対応、TCFD/ISSB対応の記載例まで実務的に整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 3, publishedAt: "2026-05-19" },
+  { title: "製造業CFO 電気代戦略｜製造原価への影響・業種別ベンチマーク・Scope2削減と価格転嫁", slug: "manufacturing-cfo-electricity-strategy", description: "製造業CFO向けに製造原価における電気代、業種別ベンチマーク、Scope2削減と製品価格転嫁、生産計画と需要応答（DR）連動、長期PPA活用を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 4, publishedAt: "2026-05-19" },
+  { title: "流通・小売業CFO 電気代戦略｜販管費構造・店舗vs DC・季節変動・FC集中購買", slug: "retail-cfo-electricity-strategy", description: "流通・小売業CFO向けに販管費における電気代、店舗とDCのコスト構造比較、夏冬ピーク季節変動、フランチャイズ集中購買、コールドチェーン管理を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 5, publishedAt: "2026-05-19" },
+  { title: "サービス業CFO 電気代戦略｜オフィス電気代・テレワーク効果・IT/データセンター・多拠点経営", slug: "service-industry-cfo-electricity-strategy", description: "サービス業CFO向けにオフィス電気代、テレワーク削減効果、IT・データセンター業特有のサーバー・空調コスト、多拠点経営の集中契約を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 6, publishedAt: "2026-05-19" },
 ];
