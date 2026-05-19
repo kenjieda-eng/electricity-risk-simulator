@@ -347,4 +347,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/articles/datacenter-ai-demand", label: "DC・AI需要記事一覧" },
     ],
   },
+  "cfo-executive": {
+    heading: "電気代を経営判断の中核に据えて、自社の経営インパクトを定量化する",
+    description:
+      "CFO・経営層が押さえるべき電気代のP/L構造・Scope2排出量・IR開示・業種別戦略を踏まえ、シミュレーターで自社の経営インパクトを定量化しましょう。判断材料の整理が必要な場合は、中立の専門家へご相談いただけます。",
+    links: [
+      { href: "/", label: "シミュレーターで経営インパクトを試算する", primary: true },
+      { href: "/contact", label: "CFO向けに専門家に相談する" },
+      { href: "/cfo-electricity-cost-basics", label: "CFOのための電気代基礎を読む" },
+    ],
+  },
 };
