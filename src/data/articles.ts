@@ -3205,6 +3205,18 @@ export const articleList: ArticleMeta[] = [
   { title: "埼玉県の法人電気料金完全ガイド", slug: "saitama-business-electricity-cost", description: "埼玉県の法人電気料金を地域特化で解説。首都圏物流拠点・住宅商業密集・熊谷猛暑日対策、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 28, publishedAt: "2026-05-19" },
   { title: "千葉県の法人電気料金完全ガイド", slug: "chiba-business-electricity-cost", description: "千葉県の法人電気料金を地域特化で解説。京葉工業地帯コンビナート・成田千葉港物流・舞浜観光業の電力負荷、洋上風力PPA、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 29, publishedAt: "2026-05-19" },
 
+  // --- I-3. 県別電気料金 第2弾 南東北・関東・中部 10本（B-55a） ---
+  { title: "山形県の法人電気料金完全ガイド", slug: "yamagata-business-electricity-cost", description: "山形県の法人電気料金を地域特化で解説。米沢機械工業・果樹冷蔵倉庫・蔵王観光業の電力負荷、補助金、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 30, publishedAt: "2026-05-20" },
+  { title: "福島県の法人電気料金完全ガイド", slug: "fukushima-business-electricity-cost", description: "福島県の法人電気料金を地域特化で解説。浜通り工業・廃炉作業・いわき港物流・再エネ復興拠点の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 31, publishedAt: "2026-05-20" },
+  { title: "東京都の法人電気料金完全ガイド", slug: "tokyo-business-electricity-cost", description: "東京都の法人電気料金を地域特化で解説。首都経済集積・データセンター・大型商業施設の電力負荷、キャップ&トレード制度、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 32, publishedAt: "2026-05-20" },
+  { title: "神奈川県の法人電気料金完全ガイド", slug: "kanagawa-business-electricity-cost", description: "神奈川県の法人電気料金を地域特化で解説。京浜工業地帯・横浜港川崎港物流・半導体工場の電力負荷、特別高圧競争入札、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 33, publishedAt: "2026-05-20" },
+  { title: "新潟県の法人電気料金完全ガイド", slug: "niigata-business-electricity-cost", description: "新潟県の法人電気料金を地域特化で解説。燕三条金属加工・コシヒカリ米倉庫・湯沢スキーリゾート・雪国対策の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 34, publishedAt: "2026-05-20" },
+  { title: "富山県の法人電気料金完全ガイド", slug: "toyama-business-electricity-cost", description: "富山県の法人電気料金を地域特化で解説。アルミ産業全国1位・医薬品工業・黒部水力発電・2023年大幅値上げの影響、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 35, publishedAt: "2026-05-20" },
+  { title: "石川県の法人電気料金完全ガイド", slug: "ishikawa-business-electricity-cost", description: "石川県の法人電気料金を地域特化で解説。コマツ系機械工業・金沢観光業・加賀温泉郷・能登復興の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 36, publishedAt: "2026-05-20" },
+  { title: "福井県の法人電気料金完全ガイド", slug: "fukui-business-electricity-cost", description: "福井県の法人電気料金を地域特化で解説。鯖江眼鏡工業・福井繊維・嶺南原発立地・越前ガニ漁業の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 37, publishedAt: "2026-05-20" },
+  { title: "山梨県の法人電気料金完全ガイド", slug: "yamanashi-business-electricity-cost", description: "山梨県の法人電気料金を地域特化で解説。甲府精密機械・富士五湖観光業・勝沼ワイン産業・桃ぶどう冷蔵の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 38, publishedAt: "2026-05-20" },
+  { title: "長野県の法人電気料金完全ガイド", slug: "nagano-business-electricity-cost", description: "長野県の法人電気料金を地域特化で解説。諏訪精密機械・軽井沢観光業・りんごワイン産業・2エリア混在・山岳地域の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 39, publishedAt: "2026-05-20" },
+
   // --- J. 経営層・CFO向け 追加4本 ---
   { title: "中期経営計画への電力コスト織り込み方", slug: "executive-mid-term-plan-electricity", description: "中計でシナリオ別に電力コストをどう織り込むか。経営企画部が押さえるべきKPIと前提の置き方を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 5, publishedAt: "2026-04-12" },
   { title: "IR・ESG開示における電力リスクの記載ガイド", slug: "executive-esg-electricity-disclosure", description: "統合報告書・有価証券報告書でのエネルギーリスク開示、TCFD/ISSB対応、Scope2算定のポイントを整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 6, publishedAt: "2026-04-12" },
