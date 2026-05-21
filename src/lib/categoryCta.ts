@@ -357,4 +357,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/cfo-electricity-cost-basics", label: "CFOのための電気代基礎を読む" },
     ],
   },
+  "seasonal-strategy": {
+    heading: "夏季ピーク・季節別の電気代対策で、自社の経営インパクトを最小化する",
+    description:
+      "夏季ピーク電気代の構造、デマンドレスポンス（DR）の経済性、業種別ピークカット戦略を踏まえ、シミュレーターで自社の夏季上振れリスクと対策効果を試算しましょう。設備投資・契約見直し・運用改善の最適な組合せを判断材料として整理します。",
+    links: [
+      { href: "/", label: "シミュレーターで夏季リスクを試算する", primary: true },
+      { href: "/contact", label: "夏季対策を専門家に相談する" },
+      { href: "/summer-peak-electricity-cost-cfo", label: "夏季ピーク電気代の基礎を読む" },
+    ],
+  },
 };
