@@ -34,7 +34,8 @@ export type ArticleCategorySlug =
   | "global-energy"
   | "datacenter-ai-demand"
   | "market-data"
-  | "cfo-executive";
+  | "cfo-executive"
+  | "seasonal-strategy";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -1222,6 +1223,36 @@ export const articleCategories: ArticleCategory[] = [
     ],
     order: 36,
     group: "learning",
+  },
+  {
+    name: "季節別の電気代対策",
+    slug: "seasonal-strategy",
+    description:
+      "夏季ピーク・冬季ピーク・中間期を含む季節別の電気代対策、デマンドレスポンス（DR）活用、業種別ピークカット戦略、CFO視点の経営判断を体系化したカテゴリです。",
+    intro:
+      "電気代は季節で大きく変動し、特に夏季ピーク（7〜9月）と冬季ピーク（12〜2月）に集中します。本カテゴリでは、夏季ピーク対策の経営層向け基礎知識、デマンドレスポンス（DR）の経済性、業種横断のピークカット5戦略、製造業・オフィスビル・データセンターの業種別冷却戦略、月次タイムライン管理、補助金活用までを体系的に整理します。6月の準備フェーズから8月のピーク対応、9月の総括まで実務に直結する観点を提示し、CFO向けレポーティングや投資家説明、夏季電気代織り込みの予算策定にも活用できます。",
+    learnPoints: [
+      "夏季ピーク電気代の構造（JEPX・燃調・デマンド）と対通年比較",
+      "デマンドレスポンス（DR）の経済性と主要プログラム比較",
+      "業種横断のピークカット5戦略とROI分析",
+      "製造業・オフィスビル・データセンターの業種別冷却戦略",
+      "月次タイムライン（6月準備→8月ピーク→9月総括）と運用フロー",
+      "CFO向け夏季電気代レポーティングと投資家説明",
+      "夏季ピーク前確認チェックリストと補助金活用",
+    ],
+    recommendedReadingOrder: [
+      "summer-peak-electricity-cost-cfo",
+      "demand-response-summer-strategy",
+      "peak-cut-5-strategies",
+      "manufacturing-cooling-strategy",
+      "office-building-peak-cut",
+      "datacenter-summer-cooling-strategy",
+    ],
+    order: 37,
+    group: "learning",
+    seoTitle: "季節別の電気代対策｜夏ピーク・DR・業種別冷却戦略 - 法人電気料金ナビ",
+    seoDescription:
+      "夏季ピーク対策・デマンドレスポンス・業種別ピークカット戦略を体系化。CFO向け経営判断、製造業・オフィス・データセンターの実務対応を整理したカテゴリ一覧。",
   },
 ];
 
@@ -3073,6 +3104,14 @@ export const articleList: ArticleMeta[] = [
   { title: "精密機器業の電気料金見直しポイント", slug: "precision-instruments-electricity-cost-review", description: "計測機器・光学機器・医療機器の恒温恒湿精密加工環境・微細加工・測定室・クリーン環境、規模別事例と補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 75, publishedAt: "2026-05-21" },
   { title: "金属加工業の電気料金見直しポイント", slug: "metal-processing-electricity-cost-review", description: "プレス・切削・熱処理・表面処理・溶接の動力設備・熱処理炉・メッキ電解槽・廃液処理、規模別事例と補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 76, publishedAt: "2026-05-21" },
   { title: "プラスチック・樹脂業の電気料金見直しポイント", slug: "plastic-electricity-cost-review", description: "射出成形・押出成形・ブロー成形の加熱冷却サイクル・金型温調・電動式成形機・プラ循環経済対応、規模別事例と補助金活用を整理。", category: "業種別の見直しポイント集", categorySlug: "industry-guide", order: 77, publishedAt: "2026-05-21" },
+
+  // --- O. 季節別の電気代対策 新カテゴリ 6本（B-65a） ---
+  { title: "夏季ピーク電気代の基礎とCFO視点", slug: "summer-peak-electricity-cost-cfo", description: "夏季ピーク電気代の構造（JEPX・燃調・デマンド・賦課金）、業界別比率、CFO向け感度分析・投資家説明・予算織り込み・ピーク前確認チェックリストを整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 1, featured: true, publishedAt: "2026-05-21" },
+  { title: "DR入門・夏のピークシフト", slug: "demand-response-summer-strategy", description: "デマンドレスポンス（DR）の基礎、容量市場・需給調整市場の概要、法人企業の参加メリット（年100-500万円）、主要DRプログラム比較、規模別事例を整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 2, publishedAt: "2026-05-21" },
+  { title: "業種横断 ピークカット5戦略", slug: "peak-cut-5-strategies", description: "高効率空調・LED・蓄電池・運用改善・契約見直しの5戦略をROI比較。フェーズドアプローチによる段階的導入と▲15〜25%削減事例を整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 3, publishedAt: "2026-05-21" },
+  { title: "製造業の冷房戦略", slug: "manufacturing-cooling-strategy", description: "工場の冷房vs換気戦略、倉庫の温度管理、業種別ピーク時間帯、高効率設備への投資判断、規模別事例（食品・電子部品・物流倉庫）と補助金活用を整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 4, publishedAt: "2026-05-21" },
+  { title: "オフィスビルのピークカット", slug: "office-building-peak-cut", description: "ZEB化（Zero Energy Building）、BEMS活用、テナント企業との連動、共用部電力管理、規模別事例（中規模／大手本社ZEB／REIT保有）と補助金活用を整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 5, publishedAt: "2026-05-21" },
+  { title: "データセンターの夏季冷却戦略", slug: "datacenter-summer-cooling-strategy", description: "PUE改善、外気冷房・水冷・液浸冷却、AIワークロード対応、顧客SLAと冷却バックアップ設計、規模別事例（中規模／大規模AI／ハイパースケール）と補助金活用を整理。", category: "季節別の電気代対策", categorySlug: "seasonal-strategy", order: 6, publishedAt: "2026-05-21" },
   // --- リスクシナリオ 10本 ---
   { title: "LNG高騰で法人の電気料金はどう上がるか", slug: "lng-price-surge-electricity-cost-impact", description: "LNG価格の上昇が法人電気料金に波及する仕組みと備え方を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 12, publishedAt: "2026-04-10" },
   { title: "JEPX急騰で法人の電気料金はどう上がるか", slug: "jepx-spike-electricity-cost-impact", description: "JEPX市場価格の急騰が市場連動プランの法人に与える影響を解説します。", category: "リスクシナリオ別に知る", categorySlug: "risk-scenarios", order: 13, publishedAt: "2026-04-10" },
