@@ -1,0 +1,672 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ReadingProgressBar from "../../components/market-data/ReadingProgressBar";
+import PrintButton from "../../components/market-data/PrintButton";
+import ContentCta from "../../components/simulator/ContentCta";
+import RelatedLinks from "../../components/simulator/RelatedLinks";
+import GlossaryLinks from "../../components/simulator/GlossaryLinks";
+import HistoricalEventTimeline, { MAJOR_ENERGY_EVENTS } from "../../components/market-data/HistoricalEventTimeline";
+import { CATEGORY_FAQ_6_20 } from "../../data/categoryFaq6to20";
+import MarketDataFaq from "../../components/market-data/MarketDataFaq";
+import { ArticleJsonLd } from "../../components/seo/JsonLd";
+import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
+import ContactCtaCard from "../../components/contact/ContactCtaCard";
+import AuthorBadge from "../../components/market-data/AuthorBadge";
+import TableOfContents from "../../components/market-data/TableOfContents";
+
+const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
+
+const pageTitle =
+  "鉄鋼業の電気料金見直しポイント｜高炉・電炉・水素還元製鉄の契約最適化";
+const pageDescription =
+  "鉄鋼業（高炉メーカー・電炉メーカー・特殊鋼）の電気料金見直しを解説。高炉vs電炉、電炉メーカーの電気代依存度、スクラップ価格との関係、水素還元製鉄の将来、規模別事例、補助金活用まで実務的に整理します。";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    "鉄鋼業 電気料金 見直し",
+    "電炉メーカー 電気代",
+    "高炉 電力契約",
+    "水素還元製鉄 電気代",
+    "特殊鋼 電力コスト",
+  ],
+  alternates: {
+    canonical: "https://simulator.eic-jp.org/steel-electricity-cost-review",
+  },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "https://simulator.eic-jp.org/steel-electricity-cost-review",
+    siteName: "法人電気料金ナビ",
+    locale: "ja_JP",
+    type: "article",
+    images: [{ url: "/api/og/industry-guide", width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: ["/api/og/industry-guide"],
+  },
+};
+
+const usageProfile = [
+  {
+    label: "電炉（アーク炉・誘導炉）",
+    detail:
+      "電炉メーカーの中核設備。アーク炉1基で5,000〜100,000kWの瞬時消費電力。1tの粗鋼製造あたり350〜500kWhの電力が必要。中規模電炉メーカー1工場で年間2億〜10億kWhを消費し、製造コストの50〜70%が電気代という典型的な電力多消費業種。",
+  },
+  {
+    label: "圧延工程・線材・棒鋼・型鋼",
+    detail:
+      "粗鋼を製品形状に加工する圧延ライン。熱間圧延機・冷間圧延機・線材ミル・棒鋼ミルが組み合わさる。1ラインで500〜5,000kWの動力負荷、複数ラインの合算で工場全体の電力消費の20〜30%を占める。",
+  },
+  {
+    label: "高炉（コークス・微粉炭・電力少）",
+    detail:
+      "高炉メーカーの基幹設備。鉄鉱石・コークスから銑鉄を製造する。基本的に石炭主体で電力消費は相対的に少ない（粗鋼1tあたり50〜100kWh）が、付帯設備（送風機・冷却ポンプ・コークス炉電力）で年間使用量は大きい。",
+  },
+  {
+    label: "連続鋳造・熱処理炉",
+    detail:
+      "粗鋼を鋼板・スラブ・ビレットに連続鋳造する設備、鋼材の熱処理炉（焼鈍・焼入れ・焼戻し）。誘導加熱・電気抵抗加熱が主体で、電力消費の10〜15%を占める。",
+  },
+  {
+    label: "水素還元製鉄（将来技術）",
+    detail:
+      "コークス→水素還元への転換が業界の長期戦略。水素還元製鉄では1tの粗鋼製造に1,500〜2,500kWhの電力（水素製造の電気分解を含む）が必要となり、電力使用量が高炉時代の3〜5倍に増加する見込み。",
+  },
+];
+
+const industryBenchmark = [
+  {
+    label: "業界全体の電気代水準",
+    detail:
+      "経産省工業統計・日本鉄鋼連盟の統計から、鉄鋼業の電気料金は売上高比3〜15%（電炉メーカーで8〜18%）、製造原価比5〜25%。中規模電炉メーカーで年20〜80億円、大手高炉メーカーで年100〜500億円規模の電気代に達する。",
+  },
+  {
+    label: "製品単位あたりの電力使用量",
+    detail:
+      "電炉粗鋼1tで350〜500kWh、高炉粗鋼1tで50〜100kWh、特殊鋼1tで500〜800kWh、ステンレス1tで800〜1,500kWh。電炉メーカーが圧倒的に電力集約的で、鉄鋼業全体の電力消費の中核。",
+  },
+  {
+    label: "工場規模別の年間使用量",
+    detail:
+      "小規模電炉・特殊鋼工場（200〜500名）で年間5,000万〜2億kWh、中規模電炉メーカー（500〜2,000名）で年間2〜10億kWh、大手高炉メーカー（2,000名超）で年間10〜100億kWh。特別高圧・大規模コージェネが標準。",
+  },
+];
+
+const costFactors = [
+  {
+    label: "燃料費調整額の電炉連続稼働への影響",
+    detail:
+      "電炉メーカーは24時間連続稼働で月間使用量が桁違いに大きく、燃料費調整額1円/kWhの変動でも中規模工場（年5億kWh）で年5億円の差。大手では年数十億円のインパクト。2022年以降4〜5円/kWhレンジで推移し、鉄鋼業の電気代上振れの最大要因。",
+  },
+  {
+    label: "再エネ賦課金の負担増",
+    detail:
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間5億kWh使用の中規模電炉メーカーで年22.5億円の負担、5年で112億円超。減免制度（年間1,000万kWh以上等）対象は必須。",
+  },
+  {
+    label: "スクラップ価格と電気代の連動",
+    detail:
+      "電炉メーカーは原料スクラップ価格に加え電気代が製造コストの大半を占める。スクラップ高騰時に電力単価上昇が重なると採算性が直撃。電気代固定化＋スクラップ価格ヘッジの両立が経営課題。",
+  },
+  {
+    label: "水素還元製鉄シフトと電力使用量増",
+    detail:
+      "業界長期戦略の水素還元製鉄シフトで、粗鋼1tあたりの電力使用量が3〜5倍に増加する見込み。現状の電炉メーカーでも将来の電力供給確保が経営の生死を分ける論点に。",
+  },
+  {
+    label: "国際競争（中国・韓国・インド）",
+    detail:
+      "海外（中国・韓国・インド）の電力単価が安価な国の鉄鋼メーカーとの価格競争。日本の電気代上昇は国際競争力を直撃し、輸出競争力低下の主因に。",
+  },
+];
+
+const sizeBenchmarks = [
+  {
+    size: "小規模電炉・特殊鋼工場（従業員200〜500名）",
+    profile: "特殊鋼・建築用形鋼メーカー／特別高圧 5,000〜15,000kW／年間 5,000万〜2億kWh",
+    annualCost: "年間電気代 15〜60 億円",
+    note: "新電力切替・固定3年契約・電炉アーク制御最適化・LED化で年7〜10%削減事例。再エネ賦課金減免制度の申請必須。",
+  },
+  {
+    size: "中規模電炉メーカー（従業員500〜2,000名）",
+    profile: "国内中堅電炉メーカー／特別高圧 20,000〜100,000kW／年間 2〜10億kWh",
+    annualCost: "年間電気代 60〜300 億円",
+    note: "固定5年契約＋自家消費太陽光（10〜30MW）＋電炉アーク制御AI＋廃熱回収＋熱処理炉最適化で年8〜12%削減事例。",
+  },
+  {
+    size: "大手高炉メーカー（従業員2,000名超）",
+    profile: "日本製鉄・JFE級／特別高圧 100,000〜500,000kW／年間 10〜100億kWh",
+    annualCost: "年間電気代 300〜3,000 億円",
+    note: "1%の単価改善でも年3〜30億円のインパクト。長期固定（10〜20年）契約＋大規模太陽光（50〜200MW）＋コージェネ＋オフサイトPPA＋水素還元実証＋CCUSが標準。",
+  },
+];
+
+const caseStudies = [
+  {
+    title: "事例1：中堅特殊鋼メーカーの年間9%削減（Before/After）",
+    before: "中部地区の特殊鋼メーカーA社の主力工場（特別高圧 10,000kW、年間 8,000万kWh、年間電気代 24億円）。市場連動プラン継続、電炉アーク制御未最適化、廃熱回収なし、LED未更新。",
+    after: "新電力切替（固定3年）／電炉アーク制御AI導入（投資 1.5億円）／圧延ライン廃熱回収／全照明LED化／コンプレッサー台数制御。",
+    result: "年間電気代 24億円 → 21.8億円（▲9%、▲2.2億円）／契約 kW 10,000→9,200／投資回収 1年（SII補助 1/2 活用＋再エネ賦課金減免）",
+  },
+  {
+    title: "事例2：中堅電炉メーカー本社工場の年間11%削減",
+    before: "西日本の中堅電炉メーカーB社の基幹工場（特別高圧 50,000kW、年間 5億kWh、年間電気代 150億円）。市場連動プランで2022〜2023年に月最大15億円の追加負担を経験。",
+    after: "固定5年プラン切替／自家消費太陽光 20MW（敷地内）／電炉アーク制御AI＋スクラップ予熱／熱処理炉廃熱回収／DR契約／需要家主導型PPA補助金活用／グリーン電力15%調達／再エネ賦課金減免申請。",
+    result: "年間電気代 150億円 → 133億円（▲11.3%、▲17億円）／契約 kW 50,000→44,000／投資回収 7年（補助金後 5年）",
+  },
+  {
+    title: "事例3：大手高炉メーカー基幹工場年間80億円削減",
+    before: "大手高炉メーカーC社の基幹製鉄所（特別高圧 300,000kW、年間 50億kWh、年間電気代 1,500億円）。長期固定契約継続も水素還元製鉄シフトで電力使用量増加見込み。",
+    after: "電力契約の20年長期固定締結／自家消費太陽光 100MW＋オフサイトPPA 200MW（再エネ100%対応）／水素還元製鉄実証ライン（電気分解）／コージェネ拡張／DR契約／GX補助・CCUS実証／グリーン水素利用。",
+    result: "年間電気代 1,500億円 → 1,420億円（▲5.3%、▲80億円）／契約 kW 300,000→285,000／投資回収 15年（補助金後 10年）／CO₂削減 約500,000 t/年",
+  },
+];
+
+const demandManagement = [
+  {
+    label: "電炉アーク制御の最適化（AI制御）",
+    detail:
+      "電炉のアーク放電制御をAI化することで瞬時消費電力▲10〜15%削減。スクラップ予熱と組み合わせると更に効果的。中規模電炉で年間数億円規模の削減。",
+  },
+  {
+    label: "電炉稼働タイミング分散",
+    detail:
+      "複数電炉の起動タイミングを30分〜1時間ずらすことでデマンドピーク抑制。3〜5基並列稼働の電炉メーカーで契約電力5〜10%削減事例。",
+  },
+  {
+    label: "圧延・熱処理炉のスケジュール最適化",
+    detail:
+      "圧延ラインの稼働時間帯と熱処理炉の運転を電力単価安価な深夜時間帯にシフト。DR契約と組合せで年数千万〜億円規模の削減効果。",
+  },
+  {
+    label: "計画停止と需給逼迫期DR連動",
+    detail:
+      "夏冬の電力需給逼迫期に計画的なメンテナンス停止を行うDRプログラム参加。電力会社からインセンティブ収入も得られ、年数億〜数十億円の収益化が可能。",
+  },
+];
+
+const subsidyPrograms = [
+  {
+    name: "省エネ補助金（経産省 SII / 工場・事業場型）",
+    target: "電炉アーク制御・圧延機・熱処理炉・廃熱回収",
+    rate: "中小1/2、大企業1/3、上限15億円",
+    note: "鉄鋼業のような大量電力消費業種で採択率が高い主力補助金。電炉制御・廃熱回収で大規模採択事例多数。",
+  },
+  {
+    name: "需要家主導型 PPA / 蓄電池併設補助金",
+    target: "自家消費型太陽光・蓄電池の同時導入",
+    rate: "1/2以内、kWh定額補助型もあり",
+    note: "工場敷地が広大、24h稼働の鉄鋼業と相性極良好。20〜100MW級も対象。",
+  },
+  {
+    name: "脱炭素先行地域・GX補助（環境省・経産省）",
+    target: "水素還元製鉄・CCUS・電化・コージェネ",
+    rate: "1/2、上限数十億円",
+    note: "CN対応のための大型補助。鉄鋼業のGX投資の主力財源。",
+  },
+  {
+    name: "再エネ賦課金減免制度",
+    target: "年間1,000万kWh以上の電気多消費事業者",
+    rate: "減免率による（最大80%）",
+    note: "鉄鋼業のほぼ全社が対象。年数億〜数百億円の負担軽減効果。原単位改善計画提出が必要。",
+  },
+];
+
+const checklistItems = [
+  "契約電力（kW）が直近12ヶ月の最大デマンド実績に対して過剰でないか",
+  "特別高圧契約で長期固定（5〜20年）への切替の検討余地があるか",
+  "燃料費調整額の上限有無（あり／なし／一部）を契約書で確認したか",
+  "電炉アーク制御AI導入による瞬時電力削減を試算したか",
+  "工場敷地を活用した自家消費太陽光（10〜100MW）導入の試算を実施したか",
+  "圧延・熱処理炉の運転スケジュール最適化を実施したか",
+  "電炉複数台の起動タイミング分散を検討したか",
+  "廃熱回収・蒸気タービン拡張の費用対効果を評価したか",
+  "新電力5〜10社からの相見積を取得し、固定／市場連動を比較したか",
+  "再エネ賦課金減免制度の対象に該当し、申請を実施したか",
+  "水素還元製鉄シフト後の電力需要増を経営計画に織り込んだか",
+  "GX補助・需要家主導型PPA補助金の組合せ申請を検討したか",
+];
+
+const faqItems = [
+  { question: "鉄鋼業の電気代水準はどれくらいですか？", answer: "売上高比3〜15%（電炉メーカーで8〜18%）、製造原価比5〜25%が業界平均です。中規模電炉メーカーで年60〜300億円、大手高炉メーカーで年300〜3,000億円規模の電気代になります。" },
+  { question: "電炉メーカーと高炉メーカーで電気代依存度はどう違いますか？", answer: "電炉メーカーは粗鋼1tあたり350〜500kWh、高炉メーカーは50〜100kWh。電炉メーカーの電気代依存度は高炉メーカーの5〜7倍。電炉メーカーで製造コストの50〜70%が電気代という業界特性です。" },
+  { question: "水素還元製鉄シフトで電気代はどれくらい増えますか？", answer: "現状の高炉・電炉と比べて粗鋼1tあたり電力使用量が3〜5倍（1,500〜2,500kWh）に増加する見込み。業界全体で2050年までに年数十億kWh規模の電力需要増が見込まれます。" },
+  { question: "鉄鋼業に向く電力プランは固定ですか、市場連動ですか？", answer: "24時間連続稼働・電力多消費の鉄鋼業は固定プラン（10〜20年長期）推奨。市場高騰時の影響額が桁違いに大きく、海外メーカーとの国際価格競争で即時転嫁が困難なためです。" },
+  { question: "電炉アーク制御AIでどれだけ電気代を下げられますか？", answer: "瞬時消費電力▲10〜15%削減事例多数。中規模電炉メーカーで年間1〜5億円規模の削減、SII補助1/2活用で投資回収1〜2年。スクラップ予熱と組合せると更に効果的。" },
+  { question: "自家消費型太陽光は鉄鋼工場で投資回収できますか？", answer: "工場敷地が広大、24h連続稼働の鉄鋼業は業種別で最上位の相性。20MWで年2,200〜2,600万kWh発電、年22〜26億円削減、投資回収6〜8年（補助金後4〜6年）が目安。100MW級でも検討余地。" },
+  { question: "再エネ賦課金減免制度の対象になりますか？", answer: "年間1,000万kWh以上の電気多消費事業者であれば対象。鉄鋼業のほぼ全社が該当。減免率は原単位改善計画の達成度で決まり、最大80%減免（年数億〜数百億円規模の負担軽減）。" },
+  { question: "鉄鋼業向けの省エネ補助金は何が活用しやすいですか？", answer: "経産省SII省エネ補助金（電炉制御・廃熱回収）、需要家主導型PPA補助金（大規模太陽光）、脱炭素先行地域・GX補助（水素還元・CCUS）、再エネ賦課金減免の4本柱です。" },
+];
+
+const sourcesItems = [
+  { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
+  { name: "一般社団法人 日本鉄鋼連盟", url: "https://www.jisf.or.jp/" },
+  { name: "日本鉄鋼協会", url: "https://www.isij.or.jp/" },
+  { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
+  { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+];
+
+export default function SteelElectricityCostReviewPage() {
+  return (
+    <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url="https://simulator.eic-jp.org/steel-electricity-cost-review"
+        datePublished="2026-05-21"
+        breadcrumbItems={[
+          { name: "ホーム", url: "https://simulator.eic-jp.org" },
+          { name: "業種別の見直しポイント集", url: "https://simulator.eic-jp.org/articles/industry-guide" },
+        ]}
+        faq={faqItems}
+      />
+      <ReadingProgressBar />
+      <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
+        <nav aria-label="パンくず" className="text-sm text-slate-600">
+          <Link href="/" className="underline-offset-2 hover:underline">ホーム</Link>
+          <span className="px-2">›</span>
+          <Link href="/articles/industry-guide" className="underline-offset-2 hover:underline">業種別の見直しポイント集</Link>
+          <span className="px-2">›</span>
+          <span className="text-slate-800">鉄鋼業の見直しポイント</span>
+        </nav>
+        <div className="mt-2 flex justify-end" data-print="hide"><PrintButton /></div>
+
+        <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            鉄鋼業の電気料金見直しポイント
+          </h1>
+          <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+            鉄鋼業（高炉メーカー・電炉メーカー・特殊鋼）は、電炉アーク炉の極大電力消費、24時間連続稼働、水素還元製鉄シフトに伴う将来電力需要倍増という典型的エネルギー多消費業種です。電炉メーカーでは製造コストの50〜70%が電気代という業界特性で、燃料費調整額・再エネ賦課金・スクラップ価格との連動が直接的に経営インパクトとして現れます。本ページでは鉄鋼業特有の電力負荷特性、業界平均水準、規模別事例、電炉制御最適化、補助金活用、契約見直しチェックリストまで実務に直結する観点を整理します。
+          </p>
+          <AuthorBadge publishedAt="2026-05-21" updatedAt="2026-05-21" />
+          <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
+            <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
+              <li>鉄鋼業の電力使用プロファイル（電炉／圧延／高炉／熱処理／水素還元）</li>
+              <li>業界平均の電気代水準（売上高比3〜18%）と単位粗鋼単価</li>
+              <li>燃料費調整額・再エネ賦課金・容量拠出金・水素還元シフトの影響</li>
+              <li>規模別（特殊鋼／中堅電炉／高炉メーカー）の電気代と削減事例3件（Before/After）</li>
+              <li>電炉アーク制御AI・スクラップ予熱・廃熱回収の費用対効果</li>
+              <li>SII・需要家主導型PPA・GX補助・再エネ賦課金減免の組合せ活用</li>
+              <li>鉄鋼業向け契約見直し12項目チェックリスト</li>
+            </ul>
+          </div>
+        </header>
+
+        <TableOfContents />
+
+        <section className="mt-6 space-y-6">
+          <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              鉄鋼業の電力使用特性 — 電炉・圧延・高炉・水素還元
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業の電力使用は『電炉（アーク炉・誘導炉）／圧延・線材・棒鋼／高炉（石炭主体）／連続鋳造・熱処理炉／水素還元製鉄（将来）』の5層構造です。電炉メーカーと高炉メーカーで電力使用プロファイルが大きく異なり、自社設備構成の把握が見直しの起点となります。
+            </p>
+            <div className="mt-4 space-y-3">
+              {usageProfile.map((item) => (
+                <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              電気料金の上昇要因の全体像は{" "}
+              <Link href="/why-business-electricity-prices-rise" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                法人の電気料金が上がる理由
+              </Link>
+              、削減打ち手の全体像は{" "}
+              <Link href="/business-electricity-cost-reduction-review-points" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                法人電気代の削減ポイント
+              </Link>
+              で確認できます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              業界平均の電気代水準 — 売上高比3〜18%、電炉メーカーで更に高い
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業の電気代水準は事業形態（高炉・電炉・特殊鋼）で大きく異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
+            </p>
+            <div className="mt-4 space-y-3">
+              {industryBenchmark.map((item) => (
+                <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 出典: 日本鉄鋼連盟・日本鉄鋼協会・経産省工業統計から整理。実値は電炉/高炉比率・特殊鋼比率で2〜5倍ぶれます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              鉄鋼業の主要な電気代上昇要因 — 燃料費・賦課金・スクラップ・水素還元・国際競争
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業の電気代上昇は、複数の制度的・構造的要因が同時進行で重なります。スクラップ価格との連動、水素還元製鉄シフト、国際競争は業界固有の構造要因です。
+            </p>
+            <div className="mt-4 space-y-3">
+              {costFactors.map((item) => (
+                <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              個別要因の詳細は{" "}
+              <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の仕組み</Link>
+              、{" "}
+              <Link href="/renewable-surcharge-increase-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金上昇の影響</Link>
+              、{" "}
+              <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の事業影響</Link>
+              で深掘りできます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              規模別の削減事例3件 — 特殊鋼／中堅電炉／大手高炉
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <div className="mt-4 space-y-4">
+              {caseStudies.map((cs) => (
+                <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{cs.title}</p>
+                  <div className="mt-3 space-y-2 text-sm leading-6 text-slate-700">
+                    <p><span className="font-semibold text-slate-700">Before（見直し前）：</span>{cs.before}</p>
+                    <p><span className="font-semibold text-slate-700">After（実施施策）：</span>{cs.after}</p>
+                    <p><span className="font-semibold text-emerald-700">Result（削減効果）：</span>{cs.result}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              関連業種の事例は{" "}
+              <Link href="/non-ferrous-metal-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">非鉄金属業の電気料金見直し</Link>
+              、{" "}
+              <Link href="/chemical-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">化学業の電気料金見直し</Link>
+              、{" "}
+              <Link href="/continuous-operation-factory-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">24時間連続稼働工場の見直し</Link>
+              。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              水素還元製鉄シフトと将来の電力需要倍増対応
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業界長期戦略の水素還元製鉄シフトで、粗鋼1tあたりの電力使用量が3〜5倍に増加する見込み。現状の電炉メーカー・高炉メーカーともに、2050年までの電力供給確保が経営戦略の中核論点となります。
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">水素還元製鉄の電力影響</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>粗鋼1tで1,500〜2,500kWh（高炉の15〜25倍）</li>
+                  <li>水素製造の電気分解が主因</li>
+                  <li>業界全体で年数十億kWh需要増</li>
+                  <li>2030年代半ば〜実装本格化</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">将来電力確保戦略</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>20年長期固定契約締結</li>
+                  <li>大規模PPA（50〜200MW級）</li>
+                  <li>自家消費太陽光大型化</li>
+                  <li>原子力電源との直接契約検討</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              連続稼働工場の関連論点は{" "}
+              <Link href="/continuous-operation-factory-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">24時間連続稼働工場の見直し</Link>
+              で確認できます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              鉄鋼業のデマンド管理 — 電炉AI制御・分散稼働・DR連動
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業のデマンド管理は『電炉アーク制御AI』『電炉稼働タイミング分散』『圧延・熱処理スケジュール最適化』『計画停止DR連動』の4論点を組合せて最適化します。
+            </p>
+            <div className="mt-4 space-y-3">
+              {demandManagement.map((item) => (
+                <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              デマンド管理の削減効果試算は{" "}
+              <Link href="/demand-control-reduction-effect" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドコントロール削減効果</Link>
+              で確認できます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              燃料費調整・市場連動プランの影響 — 電炉メーカーの極端な感応度
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              電炉メーカーは製造コストの50〜70%が電気代という極端な構造のため、市場価格高騰局面で経営インパクトが直撃します。20年級の超長期固定契約も標準的に検討される業種です。
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">固定プラン（長期）が向く理由</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>製造コストの50〜70%が電気代</li>
+                  <li>国際価格競争で即時転嫁が困難</li>
+                  <li>水素還元シフトで電力使用量増加トレンド</li>
+                  <li>スクラップ価格との連動リスク管理</li>
+                  <li>20年級超長期契約と相性良好</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">市場連動を選んだ場合のリスク</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>夏冬高値期に最も電力を使う特性がリスクを増幅</li>
+                  <li>使用量が大きいため高騰時の追加コストが甚大</li>
+                  <li>国際価格競争で原価競争力低下</li>
+                  <li>スクラップ価格高騰と電力高騰の二重直撃</li>
+                  <li>JEPX 80円/kWh級高騰時に年数十億円の追加負担</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              プラン選択論点は{" "}
+              <Link href="/businesses-not-suited-for-market-linked-electricity-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プランが向かない法人</Link>
+              、固定プラン適性は{" "}
+              <Link href="/businesses-suited-for-fixed-price-electricity-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プランが向く法人</Link>
+              、比較は{" "}
+              <Link href="/market-linked-vs-fixed" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動と固定プランの違い</Link>
+              。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              業種特有の節電・省エネ施策 — 電炉AI制御・廃熱回収・大規模太陽光
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業向けの省エネ施策は『電炉アーク制御AI』『スクラップ予熱』『廃熱回収システム』『大規模太陽光（10〜100MW）』が4本柱。
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">電炉アーク制御AI</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>瞬時電力▲10〜15%</li>
+                  <li>スクラップ予熱併用で更に▲5%</li>
+                  <li>SII補助1/2、投資回収1〜2年</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">廃熱回収システム</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>電炉・圧延・熱処理炉の廃熱再利用</li>
+                  <li>蒸気使用量▲40〜60%</li>
+                  <li>SII補助1/2、投資回収3〜5年</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">大規模太陽光（20〜100MW）</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>20MWで年2,200〜2,600万kWh発電</li>
+                  <li>連続稼働で自家消費率95%超</li>
+                  <li>投資回収 6〜8年（補助金後 4〜6年）</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p className="text-sm font-semibold text-slate-900">水素還元実証＋CCUS</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
+                  <li>将来のCN対応の主力技術</li>
+                  <li>GX補助1/2、上限数十億円</li>
+                  <li>実証段階、2030年代本格化</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              補助金活用（業種別） — SII・PPA・GX補助・再エネ賦課金減免
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を2〜5年短縮できます。再エネ賦課金減免制度は年数億〜数百億円規模の負担軽減効果。
+            </p>
+            <div className="mt-4 space-y-3">
+              {subsidyPrograms.map((item) => (
+                <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.name}</p>
+                  <div className="mt-1 grid gap-1 text-xs text-slate-600 sm:grid-cols-2">
+                    <p><span className="font-semibold text-slate-700">対象：</span>{item.target}</p>
+                    <p><span className="font-semibold text-slate-700">補助率：</span>{item.rate}</p>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              個別制度の詳細は{" "}
+              <Link href="/subsidy-sii-energy-saving" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">SII省エネ補助金</Link>
+              、{" "}
+              <Link href="/subsidy-battery-solar-equipment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池・自家消費太陽光の補助金</Link>
+              、{" "}
+              <Link href="/renewable-energy-surcharge-reduction-system" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金減免制度</Link>
+              。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              鉄鋼業に合った契約見直しチェックリスト（12項目）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              {checklistItems.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              見直し全体手順は{" "}
+              <Link href="/business-electricity-contract-checklist" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">法人電力契約見直しチェックリスト</Link>
+              、契約更新3か月前の準備は{" "}
+              <Link href="/what-to-do-3-months-before-electricity-contract-renewal" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約更新3か月前にやること</Link>
+              で確認できます。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              シミュレーターで自社鉄鋼工場の状況を確認する
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              鉄鋼業は電力多消費・国際競争・水素還元シフト・国際価格競争の4重課題に直面します。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替のメリットを定量化できます。
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>現行契約条件での年間上振れリスクを確認する</li>
+              <li>夏冬のピーク月を前提にした影響額を試算する</li>
+              <li>固定プランと市場連動プランの年間コスト差を把握する</li>
+              <li>水素還元シフト後の電力需要増シナリオを比較する</li>
+              <li>事例で示した9〜11%の削減レンジの自社適用可能性を見立てる</li>
+            </ul>
+          </section>
+
+          <MarketDataFaq items={__CATEGORY_FAQ__} />
+          <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
+
+          <div className="mt-6">
+            <SourcesAndFaq
+              faq={faqItems}
+              sources={sourcesItems}
+              publishedAt="2026-05-21"
+            />
+            <GlossaryLinks currentSlug="steel-electricity-cost-review" terms={["燃料費調整額", "市場価格調整額", "再エネ賦課金", "容量拠出金", "固定プラン", "市場連動プラン", "契約電力"]} />
+          </div>
+
+          <RelatedLinks
+            heading="関連ページ"
+            links={[
+              { href: "/articles/industry-guide", title: "業種別の見直しポイント集（一覧）", description: "業種別の電気料金見直しポイントをハブから探す。" },
+              { href: "/non-ferrous-metal-electricity-cost-review", title: "非鉄金属業の電気料金見直し", description: "電力多消費業種としての類似事例。" },
+              { href: "/chemical-electricity-cost-review", title: "化学業の電気料金見直し", description: "コンビナート連続稼働の類似事例。" },
+              { href: "/metal-processing-electricity-cost-review", title: "金属加工業の電気料金見直し", description: "金属加工の関連事例。" },
+              { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働ベースロード業種の関連事例。" },
+              { href: "/factory-electricity-cost-reduction", title: "工場の電気代削減", description: "工場向けの電気代削減アクションの全体像。" },
+              { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種横断のコスト構造比較。" },
+              { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "予算管理と安定性を重視する法人の選択肢。" },
+              { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "電力多消費業種が市場連動を避ける理由。" },
+              { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
+              { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
+              { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "料金の動き方とリスクの差を比較。" },
+              { href: "/demand-control-reduction-effect", title: "デマンドコントロール削減効果", description: "デマンド管理による基本料金削減効果。" },
+              { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "敷地大の連続稼働工場の投資回収試算。" },
+              { href: "/solar-suited-corporations", title: "太陽光が向く法人の特徴", description: "昼間使用量が大きい工場の太陽光適性。" },
+              { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "電炉制御・廃熱回収で活用できる主力補助金。" },
+              { href: "/renewable-energy-surcharge-reduction-system", title: "再エネ賦課金減免制度", description: "電気多消費業種の主力負担軽減制度。" },
+              { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "ベースロード大の鉄鋼業に直結するリスク。" },
+            ]}
+          />
+
+          <ContentCta
+            heading="自社鉄鋼工場条件でリスクを確認する"
+            description="電炉・圧延・熱処理・将来の水素還元シフトの電力使用パターンをもとに、電気料金の上振れ幅をシミュレーターで試算できます。長期固定契約や、固定プラン・市場連動プランの年間コスト比較にもご活用ください。"
+            links={[
+              { href: "/simulate", label: "シミュレーターで診断する" },
+              { href: "/how-to", label: "使い方を見る" },
+              { href: "/compare", label: "料金メニューを比較する" },
+            ]}
+          />
+        </section>
+        <div className="mt-8">
+          <ContactCtaCard
+            source="article"
+            variant="secondary"
+            heading="電力コストの見直し、専門家に相談しませんか？"
+            description="記事を読んで気になった点があれば、エネルギー情報センターにお気軽にご相談ください。法人・自治体の電力契約に精通したスタッフが、中立的な立場で判断材料を整理します。初回相談は無料です。"
+          />
+        </div>
+      </main>
+    </>
+  );
+}
