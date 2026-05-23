@@ -513,7 +513,33 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           </div>
         </div>
 
-        
+        <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-lg font-semibold text-slate-900">周辺領域へ広げる — 賦課金・エリア・容量拠出金・地域別</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            10年推移の理解を、賦課金単価・エリア間スプレッド・容量拠出金・地域別の実勢へ接続して、契約見直しの解像度を高めます。
+          </p>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <Link href="/renewable-energy-surcharge-2026" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">再エネ賦課金の2026年度単価（推移10年と並行で読む）</span>
+            </Link>
+            <Link href="/area-price-spread" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">エリア別電力単価スプレッドの構造</span>
+            </Link>
+            <Link href="/capacity-contribution-explained" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">容量拠出金の仕組みと電気代への影響</span>
+            </Link>
+            <Link href="/tokyo-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">東京都の法人電気料金（東電エリア 首都圏）</span>
+            </Link>
+            <Link href="/aichi-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">愛知県の法人電気料金（中部エリア 中京工業地帯）</span>
+            </Link>
+            <Link href="/hiroshima-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+              <span className="font-semibold text-slate-900">広島県の法人電気料金（中国電力 自動車・造船・データセンター）</span>
+            </Link>
+          </div>
+        </div>
+
       <MarketDataDownload
         apiPath="/api/datasets"
         caption="本記事で参照する全データセットを統合API経由で取得可能（CC BY 4.0、商用利用可）"

@@ -156,6 +156,26 @@ export default function ComparePage() {
                 title: "電力料金上昇リスク診断の使い方",
                 description: "入力とリスク要因の読み方をあらためて確認できます。",
               },
+              {
+                href: "/reduce-cost-without-switching",
+                title: "切替えずに電気代を下げる方法",
+                description: "新電力切替が難しい場合の、契約電力見直し・燃調・省エネで効くアプローチを整理します。",
+              },
+              {
+                href: "/factory-electricity-cost-reduction",
+                title: "工場の電気代削減ポイント",
+                description: "製造業の高圧・特別高圧契約に焦点を当てた、コージェネ・需要平準化・PPA等の打ち手を整理します。",
+              },
+              {
+                href: "/area-price-spread",
+                title: "エリア別電力単価スプレッドの構造",
+                description: "全国9エリアの単価差と、原発稼働・燃料構成・送電制約による恒常的なスプレッドを比較材料に。",
+              },
+              {
+                href: "/tokyo-business-electricity-cost",
+                title: "東京都の法人電気料金（首都圏動向）",
+                description: "比較診断の前提として、自社が立地する地域の単価水準と特性を確認できます。",
+              },
             ]}
           />
         </div>
