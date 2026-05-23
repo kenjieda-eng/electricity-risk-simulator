@@ -470,6 +470,40 @@ export default function BusinessElectricityRetrospectivePage() {
           </Link>
         </div>
       </section>
+
+      <section className="mt-8 rounded-xl border border-sky-200 bg-sky-50 p-5 sm:p-6">
+        <h2 className="text-xl font-semibold text-slate-900">月次振り返りと並行で押さえたい関連トピック・地域別</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          月次・年次の動向を、賦課金単価・燃料調整・容量拠出金・主要都道府県の実勢と接続して、契約見直しに直結させます。
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <Link href="/renewable-energy-surcharge-2026" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">再エネ賦課金 2026年度単価</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">月次の請求書の前提となる賦課金単価の最新動向</p>
+          </Link>
+          <Link href="/fuel-cost-adjustment" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">燃料費調整額の仕組み</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">月次の変動要因の中核となる燃調額を分解</p>
+          </Link>
+          <Link href="/capacity-contribution-explained" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">容量拠出金の仕組みと影響</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">2024年度から本格化した新項目の月次インパクト</p>
+          </Link>
+          <Link href="/tokyo-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">東京都の法人電気料金</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">首都圏の月次動向を地域特性付きで確認</p>
+          </Link>
+          <Link href="/aichi-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">愛知県の法人電気料金</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">中京工業地帯・トヨタ系の月次需要パターン</p>
+          </Link>
+          <Link href="/osaka-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">大阪府の法人電気料金</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">関西電力・原発再稼働メリットを踏まえた月次動向</p>
+          </Link>
+        </div>
+      </section>
+
       <AuthorBadge publishedAt="2026-04-15" updatedAt="2026-04-15" />
 
       </main>

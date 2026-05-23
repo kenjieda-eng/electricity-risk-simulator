@@ -638,6 +638,35 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         </>
       ) : null}
 
+      {category.slug === "price-trends" ? (
+        <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">推移の理解を実務へ — 関連トピック・地域別</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            10年推移・年次トレンドを把握したら、賦課金単価・エリアスプレッド・容量拠出金・主要都道府県の実勢へ接続して、契約見直しの解像度を高めます。
+          </p>
+          <div className="mt-4 grid gap-2 md:grid-cols-2">
+            <Link href="/renewable-energy-surcharge-2026" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">再エネ賦課金の2026年度単価と影響</span>
+            </Link>
+            <Link href="/area-price-spread" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">エリア別電力単価スプレッドの構造</span>
+            </Link>
+            <Link href="/capacity-contribution-explained" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">容量拠出金の仕組みと電気代への影響</span>
+            </Link>
+            <Link href="/tokyo-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">東京都の法人電気料金（首都圏動向）</span>
+            </Link>
+            <Link href="/osaka-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">大阪府の法人電気料金（関西電力・原発再稼働メリット）</span>
+            </Link>
+            <Link href="/hiroshima-business-electricity-cost" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-100">
+              <span className="font-semibold text-slate-900">広島県の法人電気料金（中国電力・島根原発再稼働）</span>
+            </Link>
+          </div>
+        </section>
+      ) : null}
+
       {(() => {
         const spotlight = CATEGORY_HUB_SPOTLIGHT[category.slug];
         if (!spotlight) return null;
