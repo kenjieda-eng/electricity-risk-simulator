@@ -41,12 +41,28 @@ export function ensureGtag() {
   }
 }
 
+let gaInitialized = false;
+
+export function initGa() {
+  if (typeof window === "undefined" || gaInitialized) {
+    return;
+  }
+
+  ensureGtag();
+
+  window.gtag?.("js", new Date());
+  window.gtag?.("config", GA_MEASUREMENT_ID, { send_page_view: false });
+  window.gtag?.("config", SIMULATOR_GA_ID, { send_page_view: false });
+
+  gaInitialized = true;
+}
+
 export function pageview(path: string) {
   if (!isGaEnabled()) {
     return;
   }
 
-  ensureGtag();
+  initGa();
 
   window.gtag?.("event", "page_view", {
     page_path: path,
