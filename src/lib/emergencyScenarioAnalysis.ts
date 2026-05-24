@@ -32,9 +32,9 @@ export const EMERGENCY_SCENARIO_SERIES: EmergencyScenarioPage[] = [
   {
     slug: "mechanism",
     label: "仕組み",
-    title: "仕組み｜原油高が法人電気代へ反映されるメカニズム",
+    title: "原油高で電気代はなぜ上がる？燃料費調整の仕組みを解説",
     description:
-      "燃料費調整額と市場連動の仕組み、算定タイムラグ、料金改定で反応が速くなる理由を整理します。",
+      "原油・LNG価格が法人電気代へ反映される燃料費調整額と市場連動の仕組み、算定タイムラグ、料金改定で反応が速くなる理由を整理します。",
     heroKicker: "MECHANISM",
     heroAccentClass: "from-emerald-900 to-teal-700",
   },
