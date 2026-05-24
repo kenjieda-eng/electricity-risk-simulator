@@ -3,7 +3,7 @@
 import { useEffect, useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import { GA_MEASUREMENT_ID, SIMULATOR_GA_ID, ensureGtag, isGaEnabled, pageview } from "../../lib/analytics/ga";
+import { GA_MEASUREMENT_ID, initGa, isGaEnabled, pageview } from "../../lib/analytics/ga";
 
 export function GoogleAnalytics() {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ export function GoogleAnalytics() {
       return;
     }
 
-    ensureGtag();
+    initGa();
   }, [enabled]);
 
   useEffect(() => {
@@ -40,21 +40,9 @@ export function GoogleAnalytics() {
   }
 
   return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="lazyOnload"
-      />
-      <Script id="ga4-init" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = window.gtag || gtag;
-          gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
-          gtag('config', '${SIMULATOR_GA_ID}', { send_page_view: false });
-        `}
-      </Script>
-    </>
+    <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      strategy="afterInteractive"
+    />
   );
 }
