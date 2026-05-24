@@ -8,7 +8,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 // --- 定数 ---
 const pageTitle = "再エネ賦課金はいくら？2026年度の単価と法人負担の計算";
 const pageDescription =
-  "2026年度の再エネ賦課金単価と計算方法を解説。2025年度との比較、低圧・高圧・特別高圧の規模別年間負担、電気多消費事業者向け減免制度、2030年までの単価見通しを法人担当者向けに整理します。";
+  "2026年度の再エネ賦課金は4.15円/kWh(2025年度3.98円→+0.17円)。法人担当者向けに、低圧・高圧・特別高圧の規模別年間負担、電気多消費事業者の減免制度、2030年までの単価見通しを整理します。";
 const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge-2026";
 
 // 過去単価推移

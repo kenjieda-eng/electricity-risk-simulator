@@ -13,9 +13,9 @@ export const MATERIALS_SCENARIO_SERIES: MaterialsScenarioPage[] = [
   {
     slug: "index",
     label: "総論トップ",
-    title: "原材料・包装資材の有事シナリオ分析",
+    title: "原材料・包装資材高騰は電気代にどう響く？ナフサ・樹脂価格と法人コストへの影響",
     description:
-      "ナフサ不足・エチレン減産を起点に、プラスチック・包装資材・化学品・非鉄金属までの価格上昇と供給制約を3シナリオで比較する総論ページです。",
+      "ナフサ不足・エチレン減産による樹脂・包装資材・化学品・非鉄金属の価格上昇を3シナリオで整理。電気代と並ぶ法人調達コストリスクを業種横断で比較する総論ページです。",
     heroKicker: "MATERIALS SCENARIO ANALYSIS",
   },
   {
