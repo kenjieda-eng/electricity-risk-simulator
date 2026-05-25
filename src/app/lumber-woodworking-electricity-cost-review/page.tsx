@@ -633,6 +633,7 @@ export default function LumberWoodworkingElectricityCostReviewPage() {
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "乾燥機24h稼働事業者のリスク。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働工場の負荷特性。" },
               { href: "/real-estate-electricity-cost-review", title: "不動産業の電気料金見直し", description: "建材としての関連業種。" },
+              { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
             ]}
           />
 

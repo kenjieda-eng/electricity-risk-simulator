@@ -634,6 +634,7 @@ export default function GlassManufacturingElectricityCostReviewPage() {
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働工場の負荷特性。" },
               { href: "/auto-parts-electricity-cost-review", title: "自動車部品業の電気料金見直し", description: "自動車ガラスの取引先業種。" },
               { href: "/construction-electricity-cost-review", title: "建設業の電気料金見直し", description: "板ガラスの取引先業種。" },
+              { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
             ]}
           />
 

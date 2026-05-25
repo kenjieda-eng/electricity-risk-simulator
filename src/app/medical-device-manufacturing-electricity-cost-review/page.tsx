@@ -634,6 +634,7 @@ export default function MedicalDeviceManufacturingElectricityCostReviewPage() {
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "24h稼働法人の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "クリーンルーム空調更新の主力補助金。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "クリーンルーム24h稼働事業者のリスク。" },
+              { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
             ]}
           />
 
