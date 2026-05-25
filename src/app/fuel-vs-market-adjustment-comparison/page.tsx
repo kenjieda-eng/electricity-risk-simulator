@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
-import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import TableOfContents from "../../components/market-data/TableOfContents";
 import SisterSiteLink from "../../components/simulator/SisterSiteLink";
 import FloatingCta from "../../components/simulator/FloatingCta";
@@ -120,6 +120,12 @@ export const metadata: Metadata = {
 export default function FuelVsMarketAdjustmentComparisonPage() {
   return (
     <>
+      <ArticleJsonLd
+        headline={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        datePublished="2026-04-27"
+      />
       <BreadcrumbJsonLd
         items={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
