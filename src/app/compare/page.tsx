@@ -176,6 +176,26 @@ export default function ComparePage() {
                 title: "東京都の法人電気料金（首都圏動向）",
                 description: "比較診断の前提として、自社が立地する地域の単価水準と特性を確認できます。",
               },
+              {
+                href: "/renewable-energy-surcharge-2026",
+                title: "再エネ賦課金 2026年度の単価と法人負担",
+                description: "比較診断の前提となる賦課金の最新単価。年間使用量×単価で負担額を試算できます。",
+              },
+              {
+                href: "/capacity-contribution-explained",
+                title: "容量拠出金の仕組み（2026年度5,226円/kW）",
+                description: "2024年度から本格化した新項目。契約電力ベースで効く負担増の構造を把握できます。",
+              },
+              {
+                href: "/special/materials-packaging-scenario-analysis",
+                title: "原材料・包装資材の有事シナリオ分析",
+                description: "燃料以外のリスク要因として、樹脂・段ボール・金属の価格連動が電気代経由で経営に効くケースを整理。",
+              },
+              {
+                href: "/how-to-explain-electricity-cost-review-internally",
+                title: "電気代見直しを社内で説明する伝え方",
+                description: "比較結果を稟議・経営説明に落とし込むための定型表現と数値の見せ方を整理しています。",
+              },
             ]}
           />
         </div>

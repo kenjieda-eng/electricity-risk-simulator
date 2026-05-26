@@ -293,6 +293,31 @@ export default function FactoryElectricityCostReductionPage() {
                 title: "自家消費型太陽光の費用対効果",
                 description: "屋根・遊休地を活用した太陽光自家消費の導入判断。",
               },
+              {
+                href: "/articles/by-industry",
+                title: "業種別の見直しポイント集（ハブ）",
+                description: "製造業の細分業種（食品・化学・金属・電子部品など100業種）の見直しポイントへ。",
+              },
+              {
+                href: "/articles/industry-guide",
+                title: "業種別カテゴリ（電気代見直しガイド）",
+                description: "業種別101件の見直しポイントから自社業種に合う事例を絞り込めます。",
+              },
+              {
+                href: "/reduce-cost-without-switching",
+                title: "電力会社を変えずに電気代を下げる方法",
+                description: "新電力切替が難しい工場でも取り組める、契約電力・燃調・省エネ・力率改善の打ち手。",
+              },
+              {
+                href: "/how-to-explain-electricity-cost-review-internally",
+                title: "電気代見直しを社内で説明する伝え方",
+                description: "工場長・経営層への稟議資料に落とし込むときの定型表現と数値の見せ方。",
+              },
+              {
+                href: "/business-electricity-price-trend-10-years",
+                title: "法人向け電気料金の10年推移",
+                description: "削減施策の効果を、長期推移上の単価上昇トレンドと突き合わせて評価できます。",
+              },
             ]}
           />
 
