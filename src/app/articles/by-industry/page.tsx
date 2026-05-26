@@ -121,6 +121,43 @@ export default function ArticlesByIndustryPage() {
         </ul>
       </section>
 
+      {/* B-58f: 業種別100+達成 新規追加18業種ハイライト */}
+      <section className="mt-8 rounded-xl border border-sky-200 bg-sky-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">最近追加した業種別解説（2026年5月・サービス/ニッチ業種）</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">
+          製造業細分（B-58e）に続き、サービス・ニッチ業種18件を新規追加しました。業種別記事は101件・カテゴリ網羅性国内最高水準です。
+        </p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
+          <li><Link href="/hair-salon-barber-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">理容室・美容室の電気料金見直し</Link></li>
+          <li><Link href="/dry-cleaning-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">クリーニング店の電気料金見直し</Link></li>
+          <li><Link href="/coin-laundry-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">コインランドリーの電気料金見直し</Link></li>
+          <li><Link href="/gas-station-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">ガソリンスタンドの電気料金見直し</Link></li>
+          <li><Link href="/aquarium-zoo-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">水族館・動物園の電気料金見直し</Link></li>
+          <li><Link href="/call-center-bpo-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">コールセンター・BPOの電気料金見直し</Link></li>
+          <li><Link href="/dispensing-pharmacy-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">調剤薬局の電気料金見直し</Link></li>
+          <li><Link href="/central-kitchen-catering-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">給食センター・セントラルキッチンの電気料金見直し</Link></li>
+        </ul>
+        <p className="mt-3 text-xs leading-6 text-slate-600">
+          他10件: ネイル/結婚式場/葬儀場/自動車整備/カーディーラー/カラオケ/撮影スタジオ/動物病院/ネットカフェ/駐車場施設は{" "}
+          <Link href="/articles/industry-guide" className="text-sky-700 underline-offset-2 hover:underline">業種別の見直しポイント集</Link>
+          {" "}から全件確認できます。
+        </p>
+      </section>
+
+      {/* インデックス促進: 強い文脈で接続するトピック */}
+      <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
+        <h2 className="text-xl font-semibold text-slate-900">業種を越えて確認したい関連トピック</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">業種別の見直しに入る前に、料金の構造要因も並行で確認すると判断材料が揃います。</p>
+        <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+          <li><Link href="/renewable-energy-surcharge-2026" className="text-sky-700 underline-offset-2 hover:underline">再エネ賦課金 2026年度単価と法人負担</Link></li>
+          <li><Link href="/capacity-contribution-explained" className="text-sky-700 underline-offset-2 hover:underline">容量拠出金の仕組み（2026年度5,226円/kW）</Link></li>
+          <li><Link href="/area-price-spread" className="text-sky-700 underline-offset-2 hover:underline">エリア別電力単価スプレッドの構造</Link></li>
+          <li><Link href="/factory-electricity-cost-reduction" className="text-sky-700 underline-offset-2 hover:underline">工場の電気代削減 5施策（製造業向け）</Link></li>
+          <li><Link href="/business-electricity-price-trend-10-years" className="text-sky-700 underline-offset-2 hover:underline">法人向け電気料金の10年推移</Link></li>
+          <li><Link href="/business-electricity-retrospective" className="text-sky-700 underline-offset-2 hover:underline">法人電気料金 月次振り返り（ハブ）</Link></li>
+        </ul>
+      </section>
+
       <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">どこから読むとよいか</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">{INDUSTRY_CATEGORY_TOP.readingGuide}</p>

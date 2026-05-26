@@ -577,6 +577,31 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               title: "法人の電気料金を削減する見直しポイント7選",
               description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
             },
+            {
+              href: "/renewable-energy-surcharge-2026",
+              title: "再エネ賦課金 2026年度の単価と法人負担",
+              description: "推移軸で必ず確認すべき固定賦課項目。kWh×単価で年負担を再確認できます。",
+            },
+            {
+              href: "/area-price-spread",
+              title: "エリア別電力単価スプレッドの構造",
+              description: "10年推移と並行して、原発稼働・燃料構成・送電制約による恒常的なスプレッドを地域軸で整理。",
+            },
+            {
+              href: "/capacity-contribution-explained",
+              title: "容量拠出金の仕組み（2024年度導入の新項目）",
+              description: "推移上の段差を生んでいる新項目。2026〜27年度の上昇カーブを契約電力ベースで把握。",
+            },
+            {
+              href: "/factory-electricity-cost-reduction",
+              title: "工場の電気代削減｜5施策の優先順位",
+              description: "推移から見える単価上昇に対し、生産ラインを止めずに取り組める削減施策を整理。",
+            },
+            {
+              href: "/articles/by-industry",
+              title: "業種別の見直しポイント集（ハブ）",
+              description: "推移の理解を、製造・流通・医療・サービスなど業種別の電力使用特性に接続できます。",
+            },
           ]}
         />
 

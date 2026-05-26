@@ -501,6 +501,18 @@ export default function BusinessElectricityRetrospectivePage() {
             <p className="text-sm font-semibold text-slate-900">大阪府の法人電気料金</p>
             <p className="mt-1 text-xs leading-6 text-slate-600">関西電力・原発再稼働メリットを踏まえた月次動向</p>
           </Link>
+          <Link href="/area-price-spread" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">エリア別電力単価スプレッドの構造</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">全国9エリアの単価差を構造的に整理。月次の地域差の理解に。</p>
+          </Link>
+          <Link href="/factory-electricity-cost-reduction" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">工場の電気代削減 5施策</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">月次推移を踏まえ、生産ラインを止めずに取り組める削減施策に接続。</p>
+          </Link>
+          <Link href="/articles/by-industry" className="rounded-lg border border-slate-200 bg-white p-4 transition hover:bg-sky-100">
+            <p className="text-sm font-semibold text-slate-900">業種別の見直しポイント集（ハブ）</p>
+            <p className="mt-1 text-xs leading-6 text-slate-600">月次の理解を、製造・流通・医療・サービスなど業種別の負荷特性に接続。</p>
+          </Link>
         </div>
       </section>
 
