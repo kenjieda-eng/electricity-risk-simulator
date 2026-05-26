@@ -367,4 +367,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/summer-peak-electricity-cost-cfo", label: "夏季ピーク電気代の基礎を読む" },
     ],
   },
+  "by-municipality": {
+    heading: "区固有の事業者プロファイルを踏まえ、自社の電気代を診断する",
+    description:
+      "市区町村単位の産業集積・大型施設・補助金体系は区によって大きく異なります。自社の所在区の特性を踏まえつつ、シミュレーターで現状診断、必要に応じて専門家へご相談ください。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "区固有の事情を専門家に相談する" },
+      { href: "/tokyo-business-electricity-cost", label: "東京都全体の電気料金ガイドへ" },
+    ],
+  },
 };

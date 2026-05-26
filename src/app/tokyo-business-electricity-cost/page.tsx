@@ -663,6 +663,10 @@ export default function TokyoBusinessElectricityCostPage() {
             heading="関連ページ"
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
+              { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "東京23区など市区町村単位の電気代事情をハブから探す。" },
+              { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金完全ガイド", description: "大手町・丸の内・霞が関の大企業本社・官公庁の契約最適化。" },
+              { href: "/koto-ku-business-electricity-cost", title: "江東区の法人電気料金完全ガイド", description: "湾岸物流・データセンター集積地・豊洲再開発の電力事情。" },
+              { href: "/ota-ku-business-electricity-cost", title: "大田区の法人電気料金完全ガイド", description: "町工場集積・羽田空港物流・京浜工業地帯の契約最適化。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電管内の料金体系・改定動向の詳細。" },
               { href: "/kanagawa-business-electricity-cost", title: "神奈川県の法人電気料金", description: "隣接県・京浜工業地帯の神奈川県の事情。" },
               { href: "/saitama-business-electricity-cost", title: "埼玉県の法人電気料金", description: "隣接県・首都圏物流拠点の埼玉県の事情。" },

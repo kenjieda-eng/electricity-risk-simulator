@@ -35,7 +35,8 @@ export type ArticleCategorySlug =
   | "datacenter-ai-demand"
   | "market-data"
   | "cfo-executive"
-  | "seasonal-strategy";
+  | "seasonal-strategy"
+  | "by-municipality";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -1253,6 +1254,41 @@ export const articleCategories: ArticleCategory[] = [
     seoTitle: "季節別の電気代対策｜夏ピーク・DR・業種別冷却戦略 - 法人電気料金ナビ",
     seoDescription:
       "夏季ピーク対策・デマンドレスポンス・業種別ピークカット戦略を体系化。CFO向け経営判断、製造業・オフィス・データセンターの実務対応を整理したカテゴリ一覧。",
+  },
+  {
+    name: "市区町村別電気料金事情",
+    slug: "by-municipality",
+    description:
+      "東京23区を中心に、市区町村単位での法人電気代事情・産業集積・補助金・契約最適化を整理したカテゴリです。県別（地域別）よりも粒度の細かい区固有の論点を扱います。",
+    intro:
+      "県別（地域別）ガイドより細かい粒度で、市区町村単位の法人電気代事情を解説します。東京23区はそれぞれビジネス集積の性格が大きく異なり、千代田=大企業本社・官公庁、中央=銀座商業・日本橋金融、港=外資IT・データセンター、新宿=超高層オフィス、渋谷=IT・スタートアップ、品川・江東=湾岸物流・DC、大田=町工場、世田谷・豊島・中野=住商混在、文京=大学病院、台東=観光小売、墨田・板橋=中小製造など、区ごとに必要な契約戦略・補助金活用も変わります。区固有の主要エリア・大型施設・再開発計画を踏まえて整理します。",
+    learnPoints: [
+      "区単位の産業集積・大型施設・再開発が電力需要に与える影響",
+      "区固有の補助金（東京都＋区独自＋SII等）の組合せ活用",
+      "区別のオフィス・商業施設・データセンター・町工場の契約最適化",
+    ],
+    recommendedReadingOrder: [
+      "chiyoda-ku-business-electricity-cost",
+      "chuo-ku-business-electricity-cost",
+      "minato-ku-business-electricity-cost",
+      "shinjuku-ku-business-electricity-cost",
+      "shibuya-ku-business-electricity-cost",
+      "shinagawa-ku-business-electricity-cost",
+      "koto-ku-business-electricity-cost",
+      "ota-ku-business-electricity-cost",
+      "setagaya-ku-business-electricity-cost",
+      "toshima-ku-business-electricity-cost",
+      "bunkyo-ku-business-electricity-cost",
+      "taito-ku-business-electricity-cost",
+      "sumida-ku-business-electricity-cost",
+      "nakano-ku-business-electricity-cost",
+      "itabashi-ku-business-electricity-cost",
+    ],
+    order: 38,
+    group: "learning",
+    seoTitle: "市区町村別の法人電気料金｜東京23区・市町村ガイド - 法人電気料金ナビ",
+    seoDescription:
+      "東京23区を中心に市区町村単位の法人電気代事情・補助金・契約最適化を解説。区固有の産業集積（大企業本社／DC／町工場／商業／観光等）を踏まえた実務ガイド。",
   },
 ];
 
@@ -4763,4 +4799,21 @@ export const articleList: ArticleMeta[] = [
   { title: "製造業CFO 電気代戦略｜製造原価への影響・業種別ベンチマーク・Scope2削減と価格転嫁", slug: "manufacturing-cfo-electricity-strategy", description: "製造業CFO向けに製造原価における電気代、業種別ベンチマーク、Scope2削減と製品価格転嫁、生産計画と需要応答（DR）連動、長期PPA活用を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 4, publishedAt: "2026-05-19" },
   { title: "流通・小売業CFO 電気代戦略｜販管費構造・店舗vs DC・季節変動・FC集中購買", slug: "retail-cfo-electricity-strategy", description: "流通・小売業CFO向けに販管費における電気代、店舗とDCのコスト構造比較、夏冬ピーク季節変動、フランチャイズ集中購買、コールドチェーン管理を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 5, publishedAt: "2026-05-19" },
   { title: "サービス業CFO 電気代戦略｜オフィス電気代・テレワーク効果・IT/データセンター・多拠点経営", slug: "service-industry-cfo-electricity-strategy", description: "サービス業CFO向けにオフィス電気代、テレワーク削減効果、IT・データセンター業特有のサーバー・空調コスト、多拠点経営の集中契約を整理します。", category: "CFO・経営層向け電気代戦略", categorySlug: "cfo-executive", order: 6, publishedAt: "2026-05-19" },
+
+  // --- N. 市区町村別 第1弾 東京23区 主要15区（B-75） ---
+  { title: "千代田区の法人電気料金完全ガイド｜大企業本社・官公庁・特別高圧の契約最適化", slug: "chiyoda-ku-business-electricity-cost", description: "千代田区の法人電気料金を区固有の産業集積（大手町・丸の内の大企業本社、霞が関の官公庁、神田・秋葉原のIT商業、特別高圧需要）から実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 1, featured: true, publishedAt: "2026-05-27" },
+  { title: "中央区の法人電気料金完全ガイド｜銀座商業・日本橋金融街・大型商業施設の契約最適化", slug: "chuo-ku-business-electricity-cost", description: "中央区の法人電気料金を銀座の大型商業施設、日本橋の金融街、八重洲・月島・晴海再開発、築地・湾岸エリアの電力需要を踏まえ実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 2, publishedAt: "2026-05-27" },
+  { title: "港区の法人電気料金完全ガイド｜外資系企業・ITサービス・データセンター集積の契約最適化", slug: "minato-ku-business-electricity-cost", description: "港区の法人電気料金を六本木・赤坂・虎ノ門の外資系・IT企業、台場のデータセンター、品川駅周辺再開発、麻布・白金の高級住宅地の電力需要から解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 3, publishedAt: "2026-05-27" },
+  { title: "新宿区の法人電気料金完全ガイド｜超高層オフィス・歓楽街・ターミナル駅商業の契約最適化", slug: "shinjuku-ku-business-electricity-cost", description: "新宿区の法人電気料金を西新宿の超高層オフィス、歌舞伎町の歓楽街、新宿三丁目・新大久保の商業エリア、地域冷暖房など固有の電力需要から整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 4, publishedAt: "2026-05-27" },
+  { title: "渋谷区の法人電気料金完全ガイド｜IT・スタートアップ・クリエイティブ産業の契約最適化", slug: "shibuya-ku-business-electricity-cost", description: "渋谷区の法人電気料金をIT・スタートアップ集積、原宿・表参道のクリエイティブ産業、恵比寿・代官山のオフィス＋商業エリアの電力需要から実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 5, publishedAt: "2026-05-27" },
+  { title: "品川区の法人電気料金完全ガイド｜大崎・五反田オフィス・湾岸物流・データセンターの契約最適化", slug: "shinagawa-ku-business-electricity-cost", description: "品川区の法人電気料金を大崎・五反田のオフィス集積、品川駅周辺再開発、天王洲・東品川の湾岸物流・データセンター需要から実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 6, publishedAt: "2026-05-27" },
+  { title: "江東区の法人電気料金完全ガイド｜湾岸物流・データセンター・豊洲再開発の契約最適化", slug: "koto-ku-business-electricity-cost", description: "江東区の法人電気料金を豊洲・有明・東雲の湾岸再開発、辰巳・新木場の物流拠点、東陽町・木場のデータセンター集積、深川・亀戸の中小製造業の電力需要から整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 7, featured: true, publishedAt: "2026-05-27" },
+  { title: "大田区の法人電気料金完全ガイド｜町工場・羽田空港物流・京浜工業地帯の契約最適化", slug: "ota-ku-business-electricity-cost", description: "大田区の法人電気料金を蒲田・大森の町工場集積、羽田空港周辺物流、京浜工業地帯の中小製造業、田園調布の商業エリアの電力需要を踏まえ実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 8, publishedAt: "2026-05-27" },
+  { title: "世田谷区の法人電気料金完全ガイド｜住商混在・医療施設・教育機関の契約最適化", slug: "setagaya-ku-business-electricity-cost", description: "世田谷区の法人電気料金を三軒茶屋・二子玉川の商業、自由が丘・成城の住商混在エリア、医療施設・教育機関の電力需要から実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 9, publishedAt: "2026-05-27" },
+  { title: "豊島区の法人電気料金完全ガイド｜池袋商業・サンシャインシティ・ターミナル駅再開発の契約最適化", slug: "toshima-ku-business-electricity-cost", description: "豊島区の法人電気料金を池袋の大型商業施設、サンシャインシティ、駒込・巣鴨の中小事業者、東池袋再開発の電力需要から実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 10, publishedAt: "2026-05-27" },
+  { title: "文京区の法人電気料金完全ガイド｜大学・大型病院・研究機関集積の契約最適化", slug: "bunkyo-ku-business-electricity-cost", description: "文京区の法人電気料金を本郷・湯島の大学・研究機関集積、お茶の水・白山の大型病院、後楽・春日の商業施設の電力需要から実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 11, publishedAt: "2026-05-27" },
+  { title: "台東区の法人電気料金完全ガイド｜上野・浅草の観光・小売・宿泊業の契約最適化", slug: "taito-ku-business-electricity-cost", description: "台東区の法人電気料金を上野・浅草の観光・宿泊業、御徒町の小売・卸売、合羽橋の業務用問屋街、入谷・三ノ輪の中小事業者の電力需要を踏まえ実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 12, publishedAt: "2026-05-27" },
+  { title: "墨田区の法人電気料金完全ガイド｜中小製造業・東京スカイツリー観光・両国の契約最適化", slug: "sumida-ku-business-electricity-cost", description: "墨田区の法人電気料金を錦糸町・押上の商業＋観光、両国の伝統産業、東向島・本所の中小製造業（金属加工・印刷）の電力需要を踏まえ実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 13, publishedAt: "2026-05-27" },
+  { title: "中野区の法人電気料金完全ガイド｜中野駅再開発・商業・中小オフィスの契約最適化", slug: "nakano-ku-business-electricity-cost", description: "中野区の法人電気料金を中野駅周辺再開発、中野サンプラザ、新中野・中野坂上の中小オフィス、東中野の商業エリアの電力需要から実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 14, publishedAt: "2026-05-27" },
+  { title: "板橋区の法人電気料金完全ガイド｜製造業・印刷業・物流拠点集積の契約最適化", slug: "itabashi-ku-business-electricity-cost", description: "板橋区の法人電気料金を板橋・高島平の製造業（光学・精密機器）、成増・志村の印刷業、東武練馬周辺の物流拠点、中小工場の電力需要を踏まえ実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 15, publishedAt: "2026-05-27" },
 ];
