@@ -1313,12 +1313,18 @@ export const articleCategories: ArticleCategory[] = [
       "mie-semiconductor-electricity-cost",
       "kanagawa-logistics-warehouse-electricity-cost",
       "ibaraki-logistics-electricity-cost",
+      "hokkaido-food-processing-electricity-cost",
+      "okinawa-hotel-electricity-cost",
+      "hiroshima-automotive-electricity-cost",
+      "niigata-food-electricity-cost",
+      "fukuoka-retail-commerce-electricity-cost",
+      "shizuoka-manufacturing-electricity-cost",
     ],
     order: 39,
     group: "learning",
     seoTitle: "業種×地域クロス｜地域集積×業種特化の法人電気料金ガイド - 法人電気料金ナビ",
     seoDescription:
-      "愛知×自動車、千葉×データセンター、熊本×半導体、大阪×中小製造、兵庫×鉄鋼、京都×旅館など、特定地域に集積する特定業種の電力事情・契約最適化を整理。",
+      "愛知×自動車、千葉×データセンター、熊本×半導体、大阪×中小製造、兵庫×鉄鋼、京都×旅館、北海道×食品、沖縄×ホテル、広島×自動車造船など、特定地域に集積する特定業種の電力事情・契約最適化を整理。",
   },
 ];
 
@@ -4859,4 +4865,12 @@ export const articleList: ArticleMeta[] = [
   { title: "三重県の半導体・電子部品工場の電気料金完全ガイド｜四日市キオクシア／亀山シャープのメモリ・液晶クリーンルーム", slug: "mie-semiconductor-electricity-cost", description: "三重県の半導体・電子部品製造業に特化。四日市キオクシアNANDフラッシュメモリ・亀山シャープ液晶の集積、中部電力エリアの燃調感応度の高さ、クリーンルーム24時間稼働、特別高圧の契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 7, publishedAt: "2026-05-28" },
   { title: "神奈川県の物流倉庫の電気料金完全ガイド｜横浜・川崎・京浜港湾の冷凍冷蔵倉庫／自動倉庫と特別高圧契約", slug: "kanagawa-logistics-warehouse-electricity-cost", description: "神奈川県の物流倉庫業に特化。横浜港・川崎港の京浜港湾物流ハブ、冷凍冷蔵倉庫24時間稼働・自動倉庫の最新技術、東京電力エリアの単価事情、特別高圧／高圧契約の最適化とPPA調達を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 8, publishedAt: "2026-05-28" },
   { title: "茨城県の物流倉庫の電気料金完全ガイド｜圏央道つくば／古河／坂東の大型物流施設・自動倉庫", slug: "ibaraki-logistics-electricity-cost", description: "茨城県の物流業に特化。圏央道沿線（つくば・常総・坂東・古河）の新興物流ハブ、EC配送24時間体制・自動倉庫の電力プロファイル、東京電力エリアの単価事情、特別高圧／高圧契約の最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 9, publishedAt: "2026-05-28" },
+
+  // --- O.3 業種×地域クロス Batch B 6本（B-76 batch B・第1弾15本完結） ---
+  { title: "北海道の食品加工業の電気料金完全ガイド｜酪農・乳製品／水産加工／冷凍冷蔵の寒冷地24h稼働", slug: "hokkaido-food-processing-electricity-cost", description: "北海道の食品加工業に特化。十勝の酪農・乳製品、釧路の水産加工、石狩の冷凍冷蔵の電力プロファイル、北海道電力エリアの単価事情、寒冷地の外気冷熱活用と通年冷却の両立、酪農バイオガス連携を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 10, publishedAt: "2026-05-28" },
+  { title: "沖縄県のホテル・宿泊業の電気料金完全ガイド｜恩納・名護・那覇・離島のリゾート／通年冷房・離島系統", slug: "okinawa-hotel-electricity-cost", description: "沖縄県のホテル・宿泊業に特化。恩納・名護のリゾート、那覇のビジネスホテル、宮古・石垣の離島リゾートの電力プロファイル、沖縄電力の独立系統・離島系統の単価事情、通年冷房の省エネ、台風対策の自家消費太陽光を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 11, publishedAt: "2026-05-28" },
+  { title: "広島県の自動車・造船業の電気料金完全ガイド｜マツダ城下町／呉・江田島の造船と中国電力", slug: "hiroshima-automotive-electricity-cost", description: "広島県の自動車・造船業に特化。マツダ本社・府中のサプライヤー、呉・江田島の造船、福山鉄鋼を含む重工業集積の電力プロファイル、中国電力エリアの単価事情（島根原発再稼働の影響）、プレス／塗装／大型溶接の特別高圧契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 12, publishedAt: "2026-05-28" },
+  { title: "新潟県の食品（米菓・清酒）の電気料金完全ガイド｜米菓焼成乾燥／清酒低温醸造／包装米飯と東北電力", slug: "niigata-food-electricity-cost", description: "新潟県の食品（米菓・清酒・米加工）に特化。亀田の米菓、県内90蔵の清酒、包装米飯の集積、米菓焼成乾燥・清酒低温醸造・冷蔵の電力プロファイル、東北電力エリアの単価事情（水力資源で燃調感応度低め）、水力地産地消を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 13, publishedAt: "2026-05-28" },
+  { title: "福岡県の商業・小売業の電気料金完全ガイド｜天神・博多の百貨店／商業施設／地下街と九州電力", slug: "fukuoka-retail-commerce-electricity-cost", description: "福岡県の商業・小売業に特化。天神・博多の百貨店・大型商業施設・地下街・専門店の集積、照明空調冷蔵の電力プロファイル、九州電力エリアの単価事情（原子力＋太陽光で燃調感応度低め）、天神ビッグバン再開発、多店舗一括契約を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 14, publishedAt: "2026-05-28" },
+  { title: "静岡県の製造業の電気料金完全ガイド｜浜松の輸送機器・楽器／富士の製紙と中部・東京2エリア", slug: "shizuoka-manufacturing-electricity-cost", description: "静岡県の製造業に特化。浜松の輸送機器（スズキ・ヤマハ）・楽器、富士の製紙の集積、富士川を境とした中部電力・東京電力の2エリア構造、抄紙機/プレス/塗装の電力プロファイル、製紙の自家発電、特別高圧契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 15, publishedAt: "2026-05-28" },
 ];
