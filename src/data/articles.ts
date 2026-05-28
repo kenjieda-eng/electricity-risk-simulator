@@ -1307,12 +1307,18 @@ export const articleCategories: ArticleCategory[] = [
       "aichi-automotive-electricity-cost",
       "chiba-datacenter-electricity-cost",
       "kumamoto-semiconductor-electricity-cost",
+      "osaka-sme-factory-electricity-cost",
+      "hyogo-steel-electricity-cost",
+      "kyoto-hotel-ryokan-electricity-cost",
+      "mie-semiconductor-electricity-cost",
+      "kanagawa-logistics-warehouse-electricity-cost",
+      "ibaraki-logistics-electricity-cost",
     ],
     order: 39,
     group: "learning",
     seoTitle: "業種×地域クロス｜地域集積×業種特化の法人電気料金ガイド - 法人電気料金ナビ",
     seoDescription:
-      "愛知×自動車、千葉×データセンター、熊本×半導体など、特定地域に集積する特定業種の電力事情・契約最適化を整理。地域一般・業種一般を補完するクロス領域ガイド。",
+      "愛知×自動車、千葉×データセンター、熊本×半導体、大阪×中小製造、兵庫×鉄鋼、京都×旅館など、特定地域に集積する特定業種の電力事情・契約最適化を整理。",
   },
 ];
 
@@ -4845,4 +4851,12 @@ export const articleList: ArticleMeta[] = [
   { title: "愛知県の自動車・輸送機器工場の電気料金完全ガイド｜豊田・刈谷・田原のプレス／塗装／溶接ラインと特別高圧", slug: "aichi-automotive-electricity-cost", description: "愛知県の自動車・輸送機器製造業に特化。豊田・刈谷・田原・みよしのトヨタ系完成車・Tier1・Tier2のプレス／塗装／溶接／組立ラインの電力プロファイル、中部電力エリアの単価、CN対応、補助金活用までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 1, featured: true, publishedAt: "2026-05-28" },
   { title: "千葉県のデータセンターの電気料金完全ガイド｜印西・白井・佐倉のハイパースケール／AI需要・PUE改善・RE100調達", slug: "chiba-datacenter-electricity-cost", description: "千葉県のデータセンター事業者に特化。印西・白井・佐倉のハイパースケール／コロケーションDC集積、AI/HPC需要急増・24h高負荷率、東京電力エリアの単価、PUE改善、オフサイトPPA調達までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 2, featured: true, publishedAt: "2026-05-28" },
   { title: "熊本県の半導体・電子部品工場の電気料金完全ガイド｜JASM/TSMC・菊陽町クリーンルーム24hと九州電力", slug: "kumamoto-semiconductor-electricity-cost", description: "熊本県の半導体・電子部品製造業に特化。TSMC/JASM・ソニーセミ・東京エレクトロン九州の集積、クリーンルーム24時間稼働、九州電力エリアの単価事情、TSMC RE100要請への対応、補助金活用までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 3, featured: true, publishedAt: "2026-05-28" },
+
+  // --- O.2 業種×地域クロス バッチA 6本（B-76 batch A） ---
+  { title: "大阪府の中小製造業・町工場の電気料金完全ガイド｜東大阪・八尾の金属加工／プレス／樹脂成形と高圧契約", slug: "osaka-sme-factory-electricity-cost", description: "大阪府の中小製造業・町工場に特化。東大阪・八尾・大東・門真の金属加工・プレス・切削・樹脂成形・電子部品集積、関西電力エリアの単価事情、商工会議所共同購入、補助金活用までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 4, publishedAt: "2026-05-28" },
+  { title: "兵庫県の鉄鋼・重工業の電気料金完全ガイド｜神戸製鋼・姫路の電炉アーク／高炉と特別高圧契約", slug: "hyogo-steel-electricity-cost", description: "兵庫県の鉄鋼・重工業に特化。神戸製鋼・日本製鉄広畑の高炉一貫、川崎重工・三菱重工・IHIの重機械工業、播磨臨海工業地帯の電炉アーク・高炉プロセスの電力プロファイル、特別高圧契約と水素還元製鉄CN対応を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 5, publishedAt: "2026-05-28" },
+  { title: "京都府の旅館・ホテルの電気料金完全ガイド｜祇園・嵐山・東山の宿泊業／インバウンド観光・通年空調給湯", slug: "kyoto-hotel-ryokan-electricity-cost", description: "京都府の旅館・ホテル業に特化。祇園・嵐山・東山・四条河原町の老舗旅館・観光ホテルの集積、インバウンド観光復活と稼働率変動、空調・給湯・温泉ろ過の電力プロファイル、関西電力エリアの契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 6, publishedAt: "2026-05-28" },
+  { title: "三重県の半導体・電子部品工場の電気料金完全ガイド｜四日市キオクシア／亀山シャープのメモリ・液晶クリーンルーム", slug: "mie-semiconductor-electricity-cost", description: "三重県の半導体・電子部品製造業に特化。四日市キオクシアNANDフラッシュメモリ・亀山シャープ液晶の集積、中部電力エリアの燃調感応度の高さ、クリーンルーム24時間稼働、特別高圧の契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 7, publishedAt: "2026-05-28" },
+  { title: "神奈川県の物流倉庫の電気料金完全ガイド｜横浜・川崎・京浜港湾の冷凍冷蔵倉庫／自動倉庫と特別高圧契約", slug: "kanagawa-logistics-warehouse-electricity-cost", description: "神奈川県の物流倉庫業に特化。横浜港・川崎港の京浜港湾物流ハブ、冷凍冷蔵倉庫24時間稼働・自動倉庫の最新技術、東京電力エリアの単価事情、特別高圧／高圧契約の最適化とPPA調達を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 8, publishedAt: "2026-05-28" },
+  { title: "茨城県の物流倉庫の電気料金完全ガイド｜圏央道つくば／古河／坂東の大型物流施設・自動倉庫", slug: "ibaraki-logistics-electricity-cost", description: "茨城県の物流業に特化。圏央道沿線（つくば・常総・坂東・古河）の新興物流ハブ、EC配送24時間体制・自動倉庫の電力プロファイル、東京電力エリアの単価事情、特別高圧／高圧契約の最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 9, publishedAt: "2026-05-28" },
 ];
