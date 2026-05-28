@@ -708,7 +708,7 @@ export default function OsakaSmeFactoryElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "関西エリアでの感応度を理解。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "親会社CN要請対応の追加性ある再エネ調達。" },
-              { href: "/sme-cfo-electricity-strategy", title: "中小企業CFO 電気代戦略", description: "中小経営者向けの電気代見直し論点整理。" },
+              { href: "/cfo-electricity-cost-basics", title: "中小企業CFO 電気代戦略", description: "中小経営者向けの電気代見直し論点整理。" },
             ]}
           />
 

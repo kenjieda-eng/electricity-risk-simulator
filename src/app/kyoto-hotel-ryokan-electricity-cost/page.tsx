@@ -695,7 +695,6 @@ export default function KyotoHotelRyokanElectricityCostPage() {
               { href: "/articles/industry-region", title: "業種×地域クロス（カテゴリ一覧）", description: "地域×業種の固有論点を扱うクロスカテゴリ。" },
               { href: "/osaka-sme-factory-electricity-cost", title: "大阪府の中小製造業・町工場の電気料金", description: "関西電力エリアの中小製造業クロス（兄弟ページ）。" },
               { href: "/hyogo-steel-electricity-cost", title: "兵庫県の鉄鋼・重工業の電気料金", description: "関西電力エリアの神戸・姫路鉄鋼クロス（兄弟ページ）。" },
-              { href: "/okinawa-hotel-electricity-cost", title: "沖縄県のホテル・宿泊の電気料金", description: "沖縄電力エリアの宿泊業クロス（兄弟ページ）。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業態別の比較ベンチマーク。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "国の主力補助金活用ガイド。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率", description: "公募タイミングと採択率動向。" },
