@@ -708,7 +708,7 @@ export default function ChibaDatacenterElectricityCostPage() {
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "DCで市場連動を避けるべき理由。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "東京エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "DCの単価変動の主因。" },
-              { href: "/corporate-ppa-introduction-guide", title: "コーポレートPPA導入ガイド", description: "DCのRE100対応の追加性ある再エネ調達。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "DCのRE100対応の追加性ある再エネ調達。" },
             ]}
           />
 

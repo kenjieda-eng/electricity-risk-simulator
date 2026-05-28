@@ -707,8 +707,8 @@ export default function AichiAutomotiveElectricityCostPage() {
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "中部エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "中部エリアでも影響大の項目。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
-              { href: "/corporate-ppa-introduction-guide", title: "コーポレートPPA導入ガイド", description: "トヨタCN対応の追加性ある再エネ調達。" },
-              { href: "/onsite-rooftop-solar-ppa", title: "オンサイト屋根PPA活用", description: "豊田・田原の大型屋根面積活用例。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "トヨタCN対応の追加性ある再エネ調達。" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイト屋根PPA活用", description: "豊田・田原の大型屋根面積活用例。" },
             ]}
           />
 

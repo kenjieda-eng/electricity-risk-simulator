@@ -708,7 +708,7 @@ export default function KumamotoSemiconductorElectricityCostPage() {
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "九州エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州エリアでの感応度を理解。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
-              { href: "/corporate-ppa-introduction-guide", title: "コーポレートPPA導入ガイド", description: "TSMC等のRE100対応の追加性ある再エネ調達。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "TSMC等のRE100対応の追加性ある再エネ調達。" },
             ]}
           />
 
