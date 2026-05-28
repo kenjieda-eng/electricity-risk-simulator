@@ -19,6 +19,9 @@ import { CATEGORY_MAJOR_GROUPS } from "../../lib/articleCategoryGroups";
 import { ARTICLE_PERSONA_ENTRANCES } from "../../lib/articlePersonaEntrances";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
+// ISR: 1時間ごとに再生成（記事追加時の自動反映用）
+export const revalidate = 3600;
+
 const pageTitle = "法人向け電気料金の基礎知識";
 const pageDescription =
   "法人向け電気料金の見直しや比較の前に押さえたい基礎知識を、テーマ別に整理した解説ページ一覧です。料金の仕組み、上昇要因、契約メニューの違い、見直し時の確認ポイントを、必要なテーマから確認できます。";
