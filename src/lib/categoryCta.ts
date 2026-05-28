@@ -377,4 +377,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/tokyo-business-electricity-cost", label: "東京都全体の電気料金ガイドへ" },
     ],
   },
+  "industry-region": {
+    heading: "地域 × 業種のクロス領域で、自社条件の電気代リスクを試算する",
+    description:
+      "特定地域に集積する特定業種は、電力エリアの単価事情・産業特性・補助金が地域一般／業種一般のいずれとも異なる固有論点を持ちます。シミュレーターで自社条件の上振れリスクと削減余地を試算してから、専門家相談に進むのがおすすめです。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "クロス領域固有の事情を専門家に相談する" },
+      { href: "/articles/by-region", label: "地域一般カテゴリも見る" },
+    ],
+  },
 };
