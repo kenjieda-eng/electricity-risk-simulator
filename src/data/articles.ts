@@ -36,7 +36,8 @@ export type ArticleCategorySlug =
   | "market-data"
   | "cfo-executive"
   | "seasonal-strategy"
-  | "by-municipality";
+  | "by-municipality"
+  | "industry-region";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -1289,6 +1290,29 @@ export const articleCategories: ArticleCategory[] = [
     seoTitle: "市区町村別の法人電気料金｜東京23区・市町村ガイド - 法人電気料金ナビ",
     seoDescription:
       "東京23区を中心に市区町村単位の法人電気代事情・補助金・契約最適化を解説。区固有の産業集積（大企業本社／DC／町工場／商業／観光等）を踏まえた実務ガイド。",
+  },
+  {
+    name: "業種×地域クロス",
+    slug: "industry-region",
+    description:
+      "特定地域に集積する特定業種に絞った長尾ガイド。県別・業種別の交差点として、地域一般・業種一般では拾いきれない「その地域 × その業種」固有の電力事情・契約最適化を整理したカテゴリです。",
+    intro:
+      "県別47ガイド・業種別100+ガイドを補完する『業種×地域クロス』カテゴリです。愛知×自動車、千葉×データセンター、熊本×半導体のように、特定地域に集積する特定業種を取り上げ、電力エリアの単価事情・産業集積の電力プロファイル・規模別事例・補助金活用・カーボンニュートラル対応までをクロス領域固有の論点で整理します。地域一般・業種一般のページとは検索意図を意識的に分け、両方への相互リンクで読み分けやすくしています。",
+    learnPoints: [
+      "特定地域 × 特定業種に固有の電力プロファイルと契約最適化",
+      "電力エリア（中部・東京・関西・九州等）の単価事情とその業種への影響",
+      "クロス領域固有の補助金・PPA・脱炭素対応の組合せ",
+    ],
+    recommendedReadingOrder: [
+      "aichi-automotive-electricity-cost",
+      "chiba-datacenter-electricity-cost",
+      "kumamoto-semiconductor-electricity-cost",
+    ],
+    order: 39,
+    group: "learning",
+    seoTitle: "業種×地域クロス｜地域集積×業種特化の法人電気料金ガイド - 法人電気料金ナビ",
+    seoDescription:
+      "愛知×自動車、千葉×データセンター、熊本×半導体など、特定地域に集積する特定業種の電力事情・契約最適化を整理。地域一般・業種一般を補完するクロス領域ガイド。",
   },
 ];
 
@@ -4816,4 +4840,9 @@ export const articleList: ArticleMeta[] = [
   { title: "墨田区の法人電気料金完全ガイド｜中小製造業・東京スカイツリー観光・両国の契約最適化", slug: "sumida-ku-business-electricity-cost", description: "墨田区の法人電気料金を錦糸町・押上の商業＋観光、両国の伝統産業、東向島・本所の中小製造業（金属加工・印刷）の電力需要を踏まえ実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 13, publishedAt: "2026-05-27" },
   { title: "中野区の法人電気料金完全ガイド｜中野駅再開発・商業・中小オフィスの契約最適化", slug: "nakano-ku-business-electricity-cost", description: "中野区の法人電気料金を中野駅周辺再開発、中野サンプラザ、新中野・中野坂上の中小オフィス、東中野の商業エリアの電力需要から実務的に解説します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 14, publishedAt: "2026-05-27" },
   { title: "板橋区の法人電気料金完全ガイド｜製造業・印刷業・物流拠点集積の契約最適化", slug: "itabashi-ku-business-electricity-cost", description: "板橋区の法人電気料金を板橋・高島平の製造業（光学・精密機器）、成増・志村の印刷業、東武練馬周辺の物流拠点、中小工場の電力需要を踏まえ実務的に整理します。", category: "市区町村別電気料金事情", categorySlug: "by-municipality", order: 15, publishedAt: "2026-05-27" },
+
+  // --- O. 業種×地域クロス 第1弾 パイロット3本（B-76 pilot） ---
+  { title: "愛知県の自動車・輸送機器工場の電気料金完全ガイド｜豊田・刈谷・田原のプレス／塗装／溶接ラインと特別高圧", slug: "aichi-automotive-electricity-cost", description: "愛知県の自動車・輸送機器製造業に特化。豊田・刈谷・田原・みよしのトヨタ系完成車・Tier1・Tier2のプレス／塗装／溶接／組立ラインの電力プロファイル、中部電力エリアの単価、CN対応、補助金活用までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 1, featured: true, publishedAt: "2026-05-28" },
+  { title: "千葉県のデータセンターの電気料金完全ガイド｜印西・白井・佐倉のハイパースケール／AI需要・PUE改善・RE100調達", slug: "chiba-datacenter-electricity-cost", description: "千葉県のデータセンター事業者に特化。印西・白井・佐倉のハイパースケール／コロケーションDC集積、AI/HPC需要急増・24h高負荷率、東京電力エリアの単価、PUE改善、オフサイトPPA調達までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 2, featured: true, publishedAt: "2026-05-28" },
+  { title: "熊本県の半導体・電子部品工場の電気料金完全ガイド｜JASM/TSMC・菊陽町クリーンルーム24hと九州電力", slug: "kumamoto-semiconductor-electricity-cost", description: "熊本県の半導体・電子部品製造業に特化。TSMC/JASM・ソニーセミ・東京エレクトロン九州の集積、クリーンルーム24時間稼働、九州電力エリアの単価事情、TSMC RE100要請への対応、補助金活用までを整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 3, featured: true, publishedAt: "2026-05-28" },
 ];
