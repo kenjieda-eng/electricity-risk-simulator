@@ -144,6 +144,39 @@ export default function ArticlesByIndustryPage() {
         </p>
       </section>
 
+      {/* 索引改善#4: 業種×地域クロス・業種別補助金戦略への導線（2026年5月新設カテゴリ） */}
+      <section className="mt-8 rounded-xl border border-sky-200 bg-sky-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">業種×地域クロス・業種別の補助金活用戦略（2026年5月新設）</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">
+          業種別の見直しに加えて、特定地域に集積する業種固有の電力事情（業種×地域クロス）と、業種別の補助金活用戦略を新設しました。自社の業種・立地・投資計画に近いガイドから確認できます。
+        </p>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div>
+            <p className="text-sm font-semibold text-slate-900">業種×地域クロス（地域集積×業種特化）</p>
+            <ul className="mt-2 grid gap-2 text-sm">
+              <li><Link href="/aichi-automotive-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">愛知県の自動車・輸送機器工場の電気料金</Link></li>
+              <li><Link href="/hiroshima-automotive-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">広島県の自動車・造船業の電気料金</Link></li>
+              <li><Link href="/hokkaido-food-processing-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">北海道の食品加工業の電気料金</Link></li>
+              <li><Link href="/niigata-food-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">新潟県の食品（米菓・清酒）の電気料金</Link></li>
+              <li><Link href="/okinawa-hotel-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">沖縄県のホテル・宿泊業の電気料金</Link></li>
+              <li><Link href="/fukuoka-retail-commerce-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">福岡県の商業・小売業の電気料金</Link></li>
+              <li><Link href="/shizuoka-manufacturing-electricity-cost" className="text-sky-700 underline-offset-2 hover:underline">静岡県の製造業の電気料金</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-slate-900">業種別の補助金活用戦略</p>
+            <ul className="mt-2 grid gap-2 text-sm">
+              <li><Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline-offset-2 hover:underline">製造業の補助金活用戦略</Link></li>
+              <li><Link href="/subsidy-logistics-strategy" className="text-sky-700 underline-offset-2 hover:underline">物流業の補助金活用戦略</Link></li>
+              <li><Link href="/subsidy-retail-commerce-strategy" className="text-sky-700 underline-offset-2 hover:underline">小売・商業の補助金活用戦略</Link></li>
+              <li><Link href="/subsidy-hotel-leisure-strategy" className="text-sky-700 underline-offset-2 hover:underline">ホテル・宿泊業の補助金活用戦略</Link></li>
+              <li><Link href="/subsidy-medical-welfare-strategy" className="text-sky-700 underline-offset-2 hover:underline">医療・福祉の補助金活用戦略</Link></li>
+              <li><Link href="/subsidy-datacenter-it-strategy" className="text-sky-700 underline-offset-2 hover:underline">データセンター・IT業の補助金活用戦略</Link></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* インデックス促進: 強い文脈で接続するトピック */}
       <section className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">業種を越えて確認したい関連トピック</h2>

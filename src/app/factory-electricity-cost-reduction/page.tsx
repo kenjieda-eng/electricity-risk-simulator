@@ -318,6 +318,16 @@ export default function FactoryElectricityCostReductionPage() {
                 title: "法人向け電気料金の10年推移",
                 description: "削減施策の効果を、長期推移上の単価上昇トレンドと突き合わせて評価できます。",
               },
+              {
+                href: "/subsidy-manufacturing-strategy",
+                title: "製造業の補助金活用戦略",
+                description: "SII省エネ・ものづくり・GX税制で高効率設備を導入し削減施策の投資回収を短縮。",
+              },
+              {
+                href: "/osaka-sme-factory-electricity-cost",
+                title: "大阪府の中小製造業・町工場の電気料金",
+                description: "東大阪・八尾の町工場固有の電力事情と削減アプローチ（業種×地域クロス）。",
+              },
             ]}
           />
 

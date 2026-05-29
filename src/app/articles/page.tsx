@@ -614,6 +614,16 @@ export default function ArticlesPage() {
             <p className="text-base font-semibold text-slate-900">業種別ガイド：製造業</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">鉄鋼・化学・自動車・半導体など製造業の電力リスク</p>
           </Link>
+          <Link href="/articles/industry-region" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-xs font-semibold text-amber-700">NEW</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">業種×地域クロス</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">愛知×自動車・千葉×DC・熊本×半導体など地域集積×業種特化の電力事情（15本）</p>
+          </Link>
+          <Link href="/articles/subsidies" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-xs font-semibold text-amber-700">NEW</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">補助金・助成金を知る（深耕）</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">業種別の補助金活用戦略・GX税制・PPA・事業計画書の書き方など実務深掘り（26本）</p>
+          </Link>
         </div>
       </section>
 

@@ -469,6 +469,16 @@ export default function AreaPriceSpreadPage() {
               title: "JEPXスポット価格ダッシュボード",
               description: "年度別・時間帯別・統計値をチャートで一覧できる総合ダッシュボード。",
             },
+            {
+              href: "/aichi-automotive-electricity-cost",
+              title: "愛知県の自動車・輸送機器工場の電気料金",
+              description: "中部電力エリアの単価事情を自動車工場の視点で深掘り（業種×地域クロス）。",
+            },
+            {
+              href: "/hokkaido-food-processing-electricity-cost",
+              title: "北海道の食品加工業の電気料金",
+              description: "北海道電力エリアの単価・燃調感応度を食品加工の視点で深掘り（業種×地域クロス）。",
+            },
           ]}
         />
       </div>
