@@ -1358,6 +1358,12 @@ export const articleCategories: ArticleCategory[] = [
       "tepco-ep-corporate-electricity-guide",
       "kepco-corporate-electricity-guide",
       "chuden-miraiz-corporate-electricity-guide",
+      "hepco-corporate-electricity-guide",
+      "tohoku-epco-corporate-electricity-guide",
+      "rikuden-corporate-electricity-guide",
+      "energia-corporate-electricity-guide",
+      "yonden-corporate-electricity-guide",
+      "kyuden-corporate-electricity-guide",
     ],
     order: 40,
     group: "learning",
@@ -4934,4 +4940,12 @@ export const articleList: ArticleMeta[] = [
   { title: "東京電力エナジーパートナー（東電EP）の法人向けプラン完全ガイド｜特別高圧/高圧メニュー・燃調算定・サポート体制", slug: "tepco-ep-corporate-electricity-guide", description: "東京電力エナジーパートナーの法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、燃料費調整額の算定方式、関東エリアの電源構成、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 1, featured: true, publishedAt: "2026-05-29" },
   { title: "関西電力 法人向けプラン完全ガイド｜業務用電力・高圧電力・燃調感応度（原子力比率含む）と契約手続き", slug: "kepco-corporate-electricity-guide", description: "関西電力の法人向けサービスを公開情報で中立的に整理。業務用電力・高圧電力の契約メニュー、原子力稼働を含む関西エリアの電源構成と燃料費調整額の感応度、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 2, publishedAt: "2026-05-29" },
   { title: "中部電力ミライズ 法人向けプラン完全ガイド｜特別高圧/高圧メニュー・LNG依存と燃調・サプライチェーン対応", slug: "chuden-miraiz-corporate-electricity-guide", description: "中部電力ミライズの法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、LNG火力依存を背景とした燃料費調整額の感応度、自動車サプライチェーンのCN対応、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 3, publishedAt: "2026-05-29" },
+
+  // --- 電力会社別解説 Batch A 旧一電残り6社（B-79・中立解説） ---
+  { title: "北海道電力（ほくでん）の法人向けプラン完全ガイド｜特高/高圧契約・寒冷地需要と泊原発停止後の燃調感応度", slug: "hepco-corporate-electricity-guide", description: "北海道電力の法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、泊原発停止後の火力依存と燃調感応度、寒冷地の通年冷暖房需要、北本連系線制約・ブラックアウトBCPを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 4, publishedAt: "2026-05-29" },
+  { title: "東北電力 法人向けプラン完全ガイド｜東北6県＋新潟の特高/高圧契約・女川原発再稼働進行と水力資源", slug: "tohoku-epco-corporate-electricity-guide", description: "東北電力の法人向けサービスを公開情報で中立的に整理。東北6県＋新潟の特別高圧・高圧の契約メニュー、女川/東通原発の再稼働進行、水力資源を背景とした燃調感応度、東日本大震災BCPを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 5, publishedAt: "2026-05-29" },
+  { title: "北陸電力の法人向けプラン完全ガイド｜北陸3県の特高/高圧契約・志賀原発停止と水力比率の高さ", slug: "rikuden-corporate-electricity-guide", description: "北陸電力の法人向けサービスを公開情報で中立的に整理。北陸3県（富山・石川・福井）の特別高圧・高圧の契約メニュー、志賀原発停止と水力比率の高い電源構成、能登半島地震BCPを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 6, publishedAt: "2026-05-29" },
+  { title: "中国電力（エネルギア）の法人向けプラン完全ガイド｜特高/高圧契約・島根原発2号機再稼働進行とマツダ等大需要家対応", slug: "energia-corporate-electricity-guide", description: "中国電力の法人向けサービスを公開情報で中立的に整理。中国5県の特別高圧・高圧の契約メニュー、島根原発2号機の再稼働進行と燃調感応度、マツダ完成車・福山JFE等の大需要家対応を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 7, publishedAt: "2026-05-29" },
+  { title: "四国電力（よんでん）の法人向けプラン完全ガイド｜四国4県の特高/高圧契約・伊方原発稼働と四電みらいエナジー", slug: "yonden-corporate-electricity-guide", description: "四国電力の法人向けサービスを公開情報で中立的に整理。四国4県の特別高圧・高圧の契約メニュー、伊方原発3号機稼働を背景とした電源構成、四電みらいエナジー・四電グループの法人向けサービスを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 8, publishedAt: "2026-05-29" },
+  { title: "九州電力（きゅうでん）の法人向けプラン完全ガイド｜九州7県の特高/高圧契約・玄海/川内原発4基稼働と太陽光導入量国内最大級", slug: "kyuden-corporate-electricity-guide", description: "九州電力の法人向けサービスを公開情報で中立的に整理。九州7県の特別高圧・高圧の契約メニュー、玄海/川内の原発4基稼働と太陽光導入量国内最大級を背景とした燃調感応度、九電みらいエナジー・半導体/商業の大需要家対応を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 9, publishedAt: "2026-05-29" },
 ];
