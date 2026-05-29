@@ -592,6 +592,11 @@ export default function RegionKyushuBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/kyuden-corporate-electricity-guide",
+              title: "九州電力（きゅうでん）の法人向けプラン解説",
+              description: "エリア全体の市況に対し、九州電力という特定企業のプラン体系・原発4基稼働と太陽光導入量国内最大級・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/business-electricity-retrospective/high-voltage-2019-2025",
               title: "高圧電力 2019〜2025年料金推移",
               description: "全国高圧電力の料金推移データを年次グラフで確認できます。",

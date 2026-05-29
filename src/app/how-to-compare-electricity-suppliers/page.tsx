@@ -245,8 +245,13 @@ export default function HowToCompareElectricitySuppliersPage() {
 
         <RelatedLinks
           heading="関連ページ"
-          intro="比較基準を整理した後は、契約タイプの理解と見直しタイミングをあわせて確認すると意思決定しやすくなります。"
+          intro="比較基準を整理した後は、契約タイプの理解と見直しタイミングをあわせて確認すると意思決定しやすくなります。主要電力会社の個別解説もあわせてご覧ください。"
           links={[
+            {
+              href: "/articles/power-utility-guide",
+              title: "電力会社別解説（主要電力会社の個別解説）",
+              description: "東電EP・関電・中部ミライズ・旧一電各社の法人向けプラン体系・燃調算定・サポートを中立的に整理したカテゴリ。",
+            },
             {
               href: "/when-to-review-electricity-contract",
               title: "法人が電力契約を見直すタイミング",

@@ -563,6 +563,11 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/hepco-corporate-electricity-guide",
+              title: "北海道電力（ほくでん）の法人向けプラン解説",
+              description: "エリア全体の市況に対し、北海道電力という特定企業のプラン体系・泊原発停止後の燃調感応度・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/region-tohoku-business-electricity",
               title: "東北電力エリアの法人電気代事情",
               description: "東北エリアの料金水準・再エネ動向・新電力状況を解説。",

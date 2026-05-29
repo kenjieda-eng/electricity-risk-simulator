@@ -624,6 +624,11 @@ export default function ArticlesPage() {
             <p className="mt-1 text-base font-semibold text-slate-900">補助金・助成金を知る（深耕）</p>
             <p className="mt-1 text-sm leading-6 text-slate-700">業種別の補助金活用戦略・GX税制・PPA・事業計画書の書き方など実務深掘り（26本）</p>
           </Link>
+          <Link href="/articles/power-utility-guide" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
+            <p className="text-xs font-semibold text-amber-700">NEW</p>
+            <p className="mt-1 text-base font-semibold text-slate-900">電力会社別解説</p>
+            <p className="mt-1 text-sm leading-6 text-slate-700">東電EP・関電・中部ミライズ・旧一電各社の法人向けプラン体系・燃調算定を中立的に整理（9本）</p>
+          </Link>
         </div>
       </section>
 
