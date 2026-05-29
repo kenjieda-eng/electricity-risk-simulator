@@ -535,6 +535,11 @@ export default function RegionChugokuBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/energia-corporate-electricity-guide",
+              title: "中国電力（エネルギア）の法人向けプラン解説",
+              description: "エリア全体の市況に対し、中国電力という特定企業のプラン体系・島根原発2号機再稼働進行・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/business-electricity-retrospective/high-voltage-2019-2025",
               title: "高圧電力 2019〜2025年料金推移",
               description: "全国高圧電力の料金推移データを年次グラフで確認できます。",

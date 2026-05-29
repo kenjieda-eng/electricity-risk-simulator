@@ -565,6 +565,11 @@ export default function RegionKansaiBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/kepco-corporate-electricity-guide",
+              title: "関西電力の法人向けプラン解説",
+              description: "エリア全体の市況に対し、関西電力という特定企業のプラン体系・原子力比率と燃調感応度・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/business-electricity-retrospective/high-voltage-2019-2025",
               title: "高圧電力 2019〜2025年料金推移",
               description: "全国高圧電力の料金推移データを年次グラフで確認できます。",

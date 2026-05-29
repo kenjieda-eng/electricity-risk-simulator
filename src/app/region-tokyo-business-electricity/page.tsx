@@ -555,6 +555,11 @@ export default function RegionTokyoBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/tepco-ep-corporate-electricity-guide",
+              title: "東京電力エナジーパートナーの法人向けプラン解説",
+              description: "エリア全体の市況に対し、東電EPという特定企業のプラン体系・燃調算定・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/business-electricity-retrospective/high-voltage-2019-2025",
               title: "高圧電力 2019〜2025年料金推移",
               description: "全国高圧電力の料金推移データを年次グラフで確認できます。",

@@ -543,6 +543,11 @@ export default function RegionTohokuBusinessElectricityPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/tohoku-epco-corporate-electricity-guide",
+              title: "東北電力の法人向けプラン解説",
+              description: "エリア全体の市況に対し、東北電力という特定企業のプラン体系・女川原発再稼働進行と水力資源・サポートを中立的に解説（電力会社別解説）。",
+            },
+            {
               href: "/region-hokkaido-business-electricity",
               title: "北海道電力エリアの法人電気代事情",
               description: "石炭火力依存と全国最高水準の料金特性を解説。",
