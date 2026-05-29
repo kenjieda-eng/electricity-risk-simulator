@@ -387,4 +387,14 @@ export const CATEGORY_CTA: Record<ArticleCategorySlug, CategoryCta> = {
       { href: "/articles/by-region", label: "地域一般カテゴリも見る" },
     ],
   },
+  "power-utility-guide": {
+    heading: "電力会社のプランを中立的に比較し、自社条件で電気代を試算する",
+    description:
+      "電力会社の選択は、単価だけでなく燃調条件・契約期間・サポート・再エネメニューを総合して判断すべきものです。当センターは特定社の優劣評価や推奨を行わず、中立的に判断材料を整理します。シミュレーターで自社条件の上振れリスクと削減余地を試算してから、相見積・専門家相談に進むのがおすすめです。",
+    links: [
+      { href: "/", label: "シミュレーターで現状診断する", primary: true },
+      { href: "/contact", label: "中立的な立場の専門家に相談する" },
+      { href: "/articles/by-region", label: "エリア全体の市況も見る" },
+    ],
+  },
 };

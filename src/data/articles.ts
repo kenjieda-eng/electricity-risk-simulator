@@ -37,7 +37,8 @@ export type ArticleCategorySlug =
   | "cfo-executive"
   | "seasonal-strategy"
   | "by-municipality"
-  | "industry-region";
+  | "industry-region"
+  | "power-utility-guide";
 
 export type CategoryGroup = "learning" | "monthly";
 
@@ -1340,6 +1341,29 @@ export const articleCategories: ArticleCategory[] = [
     seoTitle: "業種×地域クロス｜地域集積×業種特化の法人電気料金ガイド - 法人電気料金ナビ",
     seoDescription:
       "愛知×自動車、千葉×データセンター、熊本×半導体、大阪×中小製造、兵庫×鉄鋼、京都×旅館、北海道×食品、沖縄×ホテル、広島×自動車造船など、特定地域に集積する特定業種の電力事情・契約最適化を整理。",
+  },
+  {
+    name: "電力会社別解説",
+    slug: "power-utility-guide",
+    description:
+      "旧一電・新電力など主要電力会社の法人向けサービス・料金プラン・契約手続きを中立的に整理したカテゴリ。",
+    intro:
+      "電力エリア(region-*)が市況・新電力動向を扱うのに対し、本カテゴリは特定企業の法人向けプラン体系・燃調算定方式・契約手続き・サポート体制を客観的に解説します。第三者・社団法人視点で、特定社の優劣評価や推奨は行わず、契約者が自社条件に照らして判断するための材料を中立的に整理しています。各記事はエリア全体の市況を扱う地域一般記事(region-*)と相互リンクし、「エリアの面」と「企業のサービス詳細」を読み分けられるようにしています。",
+    learnPoints: [
+      "旧一電大手各社の法人向け料金プラン体系の違い",
+      "燃調算定方式・電源構成と単価感応度の関係",
+      "契約手続き・サポート体制・BCP対応の比較観点",
+    ],
+    recommendedReadingOrder: [
+      "tepco-ep-corporate-electricity-guide",
+      "kepco-corporate-electricity-guide",
+      "chuden-miraiz-corporate-electricity-guide",
+    ],
+    order: 40,
+    group: "learning",
+    seoTitle: "電力会社別解説｜旧一電・新電力の法人向けプランを中立的に整理 - 法人電気料金ナビ",
+    seoDescription:
+      "東京電力エナジーパートナー・関西電力・中部電力ミライズなど主要電力会社の法人向けプラン体系・燃調算定・契約手続きを、第三者・社団法人視点で中立的に整理。特定社の優劣評価は行いません。",
   },
 ];
 
@@ -4905,4 +4929,9 @@ export const articleList: ArticleMeta[] = [
   { title: "新潟県の食品（米菓・清酒）の電気料金完全ガイド｜米菓焼成乾燥／清酒低温醸造／包装米飯と東北電力", slug: "niigata-food-electricity-cost", description: "新潟県の食品（米菓・清酒・米加工）に特化。亀田の米菓、県内90蔵の清酒、包装米飯の集積、米菓焼成乾燥・清酒低温醸造・冷蔵の電力プロファイル、東北電力エリアの単価事情（水力資源で燃調感応度低め）、水力地産地消を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 13, publishedAt: "2026-05-28" },
   { title: "福岡県の商業・小売業の電気料金完全ガイド｜天神・博多の百貨店／商業施設／地下街と九州電力", slug: "fukuoka-retail-commerce-electricity-cost", description: "福岡県の商業・小売業に特化。天神・博多の百貨店・大型商業施設・地下街・専門店の集積、照明空調冷蔵の電力プロファイル、九州電力エリアの単価事情（原子力＋太陽光で燃調感応度低め）、天神ビッグバン再開発、多店舗一括契約を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 14, publishedAt: "2026-05-28" },
   { title: "静岡県の製造業の電気料金完全ガイド｜浜松の輸送機器・楽器／富士の製紙と中部・東京2エリア", slug: "shizuoka-manufacturing-electricity-cost", description: "静岡県の製造業に特化。浜松の輸送機器（スズキ・ヤマハ）・楽器、富士の製紙の集積、富士川を境とした中部電力・東京電力の2エリア構造、抄紙機/プレス/塗装の電力プロファイル、製紙の自家発電、特別高圧契約最適化を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 15, publishedAt: "2026-05-28" },
+
+  // --- 電力会社別解説 第1弾パイロット3本（B-79：旧一電大手・中立解説） ---
+  { title: "東京電力エナジーパートナー（東電EP）の法人向けプラン完全ガイド｜特別高圧/高圧メニュー・燃調算定・サポート体制", slug: "tepco-ep-corporate-electricity-guide", description: "東京電力エナジーパートナーの法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、燃料費調整額の算定方式、関東エリアの電源構成、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 1, featured: true, publishedAt: "2026-05-29" },
+  { title: "関西電力 法人向けプラン完全ガイド｜業務用電力・高圧電力・燃調感応度（原子力比率含む）と契約手続き", slug: "kepco-corporate-electricity-guide", description: "関西電力の法人向けサービスを公開情報で中立的に整理。業務用電力・高圧電力の契約メニュー、原子力稼働を含む関西エリアの電源構成と燃料費調整額の感応度、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 2, publishedAt: "2026-05-29" },
+  { title: "中部電力ミライズ 法人向けプラン完全ガイド｜特別高圧/高圧メニュー・LNG依存と燃調・サプライチェーン対応", slug: "chuden-miraiz-corporate-electricity-guide", description: "中部電力ミライズの法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、LNG火力依存を背景とした燃料費調整額の感応度、自動車サプライチェーンのCN対応、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 3, publishedAt: "2026-05-29" },
 ];
