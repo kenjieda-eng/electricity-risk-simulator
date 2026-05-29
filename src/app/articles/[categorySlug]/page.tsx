@@ -14,6 +14,9 @@ import type { ArticleCategorySlug } from "../../../data/articles";
 import { CATEGORY_CTA } from "../../../lib/categoryCta";
 import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../../components/seo/JsonLd";
 
+// ISR: 1時間ごとに再生成（記事追加時の自動反映用）
+export const revalidate = 3600;
+
 const BASIC_HUB_LEARN_STEPS: { step: number; heading: string; description: string; href: string }[] = [
   {
     step: 1,
