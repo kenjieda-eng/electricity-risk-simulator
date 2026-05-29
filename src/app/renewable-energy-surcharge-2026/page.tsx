@@ -287,6 +287,16 @@ export default function RenewableEnergySurcharge2026Page() {
                 title: "燃料費調整額とは",
                 description: "再エネ賦課金と並ぶ請求書の変動要因。",
               },
+              {
+                href: "/subsidy-gx-cn-investment-tax",
+                title: "GX・CN投資促進税制 完全ガイド",
+                description: "賦課金負担増の対策として、省エネ・脱炭素設備投資に使える税額控除・特別償却。",
+              },
+              {
+                href: "/subsidy-manufacturing-strategy",
+                title: "製造業の補助金活用戦略",
+                description: "賦課金を含む電気代上昇に対し、補助金で省エネ設備を導入する実務。",
+              },
             ]}
           />
 
