@@ -1364,6 +1364,12 @@ export const articleCategories: ArticleCategory[] = [
       "energia-corporate-electricity-guide",
       "yonden-corporate-electricity-guide",
       "kyuden-corporate-electricity-guide",
+      "okiden-corporate-electricity-guide",
+      "eneos-denki-corporate-electricity-guide",
+      "tokyo-gas-corporate-electricity-guide",
+      "summit-energy-corporate-electricity-guide",
+      "local-utility-corporate-electricity-guide",
+      "major-utility-comparison-corporate-electricity-guide",
     ],
     order: 40,
     group: "learning",
@@ -4948,4 +4954,12 @@ export const articleList: ArticleMeta[] = [
   { title: "中国電力（エネルギア）の法人向けプラン完全ガイド｜特高/高圧契約・島根原発2号機再稼働進行とマツダ等大需要家対応", slug: "energia-corporate-electricity-guide", description: "中国電力の法人向けサービスを公開情報で中立的に整理。中国5県の特別高圧・高圧の契約メニュー、島根原発2号機の再稼働進行と燃調感応度、マツダ完成車・福山JFE等の大需要家対応を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 7, publishedAt: "2026-05-29" },
   { title: "四国電力（よんでん）の法人向けプラン完全ガイド｜四国4県の特高/高圧契約・伊方原発稼働と四電みらいエナジー", slug: "yonden-corporate-electricity-guide", description: "四国電力の法人向けサービスを公開情報で中立的に整理。四国4県の特別高圧・高圧の契約メニュー、伊方原発3号機稼働を背景とした電源構成、四電みらいエナジー・四電グループの法人向けサービスを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 8, publishedAt: "2026-05-29" },
   { title: "九州電力（きゅうでん）の法人向けプラン完全ガイド｜九州7県の特高/高圧契約・玄海/川内原発4基稼働と太陽光導入量国内最大級", slug: "kyuden-corporate-electricity-guide", description: "九州電力の法人向けサービスを公開情報で中立的に整理。九州7県の特別高圧・高圧の契約メニュー、玄海/川内の原発4基稼働と太陽光導入量国内最大級を背景とした燃調感応度、九電みらいエナジー・半導体/商業の大需要家対応を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 9, publishedAt: "2026-05-29" },
+
+  // --- 電力会社別解説 Batch B（B-79：沖縄電・新電力系統別4類型・旧一電横断比較・B-79第1弾15本完結） ---
+  { title: "沖縄電力（おきでん）の法人向けプラン完全ガイド｜独立系統・離島ユニバーサルサービスと通年冷房需要への対応", slug: "okiden-corporate-electricity-guide", description: "沖縄電力の法人向けサービスを公開情報で中立的に整理。本土非連系の独立系統、離島ユニバーサルサービス、台風常襲地BCP、通年冷房需要が大きい観光・ホテル業の電力プロファイル、特別高圧・高圧の契約メニュー、燃料費調整額の感応度を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 10, publishedAt: "2026-05-30" },
+  { title: "ENEOSでんき 法人向けプラン完全ガイド｜全国系新電力としてのプラン体系・燃調連動条件と相見積活用", slug: "eneos-denki-corporate-electricity-guide", description: "ENEOSでんき（ENEOSホールディングスグループ）の法人向けサービスを公開情報で中立的に整理。石油系大手として全国で電力小売を展開する事業特性、特別高圧・高圧の契約メニュー、燃料費調整額の連動条件、グループの石油・LNG調達知見と発電所運営、相見積活用のポイントを第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 11, publishedAt: "2026-05-30" },
+  { title: "東京ガスのでんき（法人向け）完全ガイド｜都市ガス×電気の一括最適化・コージェネ併用工場対応", slug: "tokyo-gas-corporate-electricity-guide", description: "東京ガスの『東京ガスのでんき』法人向けサービスを公開情報で中立的に整理。都市ガス事業を母体とする新電力の位置づけ、ガス・電気の一括最適化・バンドル割引、コージェネ併用工場の総合最適化、関東エリアを中心とした特別高圧・高圧の契約メニュー、燃料費調整額の感応度を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 12, publishedAt: "2026-05-30" },
+  { title: "サミットエナジー 法人向けプラン完全ガイド｜商社系新電力の特高大口対応・グローバル電力調達知見", slug: "summit-energy-corporate-electricity-guide", description: "サミットエナジー（住友商事グループ）の法人向けサービスを公開情報で中立的に整理。総合商社系新電力としての位置づけ、特別高圧大口需要家への対応、住友商事グループのグローバル電力調達・海外発電事業の知見、コーポレートPPA仲介・再エネ調達支援を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 13, publishedAt: "2026-05-30" },
+  { title: "地域新電力（自治体系・地産地消）の法人活用ガイド｜地産地消電源・自治体連携・市民協同型の選択軸", slug: "local-utility-corporate-electricity-guide", description: "地域新電力（自治体出資型・地産地消型・市民協同型）の類型を公開情報で中立的に整理。本ページは特定企業ではなくカテゴリ解説。自治体出資・地産地消の電源、市民協同・コミュニティ電力、地域脱炭素・SDGs連携、法人需要家としての利用観点、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 14, publishedAt: "2026-05-30" },
+  { title: "旧一電10社 法人向けプラン横断比較ガイド｜電源構成・燃調感応度・サービス特徴の中立的整理", slug: "major-utility-comparison-corporate-electricity-guide", description: "旧一般電気事業者10社（北海道電力・東北電力・東電EP・中部電力ミライズ・北陸電力・関西電力・中国電力・四国電力・九州電力・沖縄電力）の法人向けサービスを公開情報で横断的・中立的に整理。優劣評価ではなく、電源構成・燃調感応度・サービス特徴の客観的並列記述で『自社条件に合う選定軸』を見出す判断材料を提供します。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 15, publishedAt: "2026-05-30" },
 ];
