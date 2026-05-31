@@ -271,7 +271,7 @@ export default function BusinessElectricityRetrospective202603Page() {
               を確認し、4月以降の補助終了に備えた契約見直しを進めることが望ましいです。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は3月使用分まで旧単価3.49円/kWh が継続。5月使用分から4.18円/kWh の新単価へ切り替わるため、3月時点で4-5月の予算前提を見直す最終タイミングといえます。
+              再エネ賦課金は3月使用分まで旧単価3.98円/kWh が継続。5月使用分から4.18円/kWh の新単価へ切り替わるため、3月時点で4-5月の予算前提を見直す最終タイミングといえます。
             </p>
           </section>
 
@@ -411,7 +411,7 @@ export default function BusinessElectricityRetrospective202603Page() {
               <div>
                 <h3 className="text-lg font-semibold text-slate-900">②5月施行の再エネ賦課金 +0.20円/kWh の年間累計試算</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-                  3/19 経産省告示で2026年度の再エネ賦課金は4.18円/kWh（過去最高）と確定。前年度3.49円/kWh から +0.20円/kWh の上振れが5月使用分から全使用量に上乗せされます。年間使用量100万kWh の法人で年20万円増、1,000万kWh で年200万円増の影響です。
+                  3/19 経産省告示で2026年度の再エネ賦課金は4.18円/kWh（過去最高）と確定。前年度（2025年度）3.98円/kWh から +0.20円/kWh の上振れが5月使用分から全使用量に上乗せされます。年間使用量100万kWh の法人で年20万円増、1,000万kWh で年200万円増の影響です。
                 </p>
               </div>
               <div>

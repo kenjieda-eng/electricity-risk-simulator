@@ -421,7 +421,7 @@ export const YEAR_CONTEXTS: Record<RetrospectiveYear, YearContext> = {
     backgroundFactors: [
       "電気・ガス料金支援が1月使用分から再開（低圧2.5円/kWh、高圧1.3円/kWh）",
       "3月にホルムズ海峡での緊張が高まり、LNG輸送リスクが顕在化",
-      "再エネ賦課金が3.49円/kWhで据え置き",
+      "再エネ賦課金が3.98円/kWhに上昇（前年度3.49円から+0.49円）",
       "LNG価格は年前半10〜12ドル/MMBtu、後半は地政学リスクでやや上昇",
       "円安は1ドル=148〜155円で推移",
     ],

@@ -8,7 +8,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 // --- 定数 ---
 const pageTitle = "再エネ賦課金はいくら？2026年度の単価と法人負担の計算";
 const pageDescription =
-  "2026年度の再エネ賦課金は4.15円/kWh(2025年度3.98円→+0.17円)。法人担当者向けに、低圧・高圧・特別高圧の規模別年間負担、電気多消費事業者の減免制度、2030年までの単価見通しを整理します。";
+  "2026年度の再エネ賦課金は4.18円/kWh(2025年度3.98円→+0.20円)。法人担当者向けに、低圧・高圧・特別高圧の規模別年間負担、電気多消費事業者の減免制度、2030年までの単価見通しを整理します。";
 const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge-2026";
 
 // 過去単価推移
@@ -19,40 +19,40 @@ const rateHistory = [
   { year: "2023年度", rate: 1.40 },
   { year: "2024年度", rate: 3.49 },
   { year: "2025年度", rate: 3.98 },
-  { year: "2026年度", rate: 4.15 },
+  { year: "2026年度", rate: 4.18 },
 ];
 
 // 規模別試算
 const scaleRows = [
   {
     type: "小規模オフィス（低圧・月2,000kWh）",
-    monthly: "約8,300円",
-    annual: "約9.96万円",
-    note: "年間使用量24,000kWh × 4.15円",
+    monthly: "約8,360円",
+    annual: "約10.03万円",
+    note: "年間使用量24,000kWh × 4.18円",
   },
   {
     type: "中規模店舗（低圧・月8,000kWh）",
-    monthly: "約3.32万円",
-    annual: "約39.84万円",
-    note: "年間使用量96,000kWh × 4.15円",
+    monthly: "約3.34万円",
+    annual: "約40.13万円",
+    note: "年間使用量96,000kWh × 4.18円",
   },
   {
     type: "中規模工場（高圧・月15万kWh）",
-    monthly: "約62.25万円",
-    annual: "約747万円",
-    note: "年間使用量180万kWh × 4.15円",
+    monthly: "約62.7万円",
+    annual: "約752.4万円",
+    note: "年間使用量180万kWh × 4.18円",
   },
   {
     type: "大規模工場（高圧・月50万kWh）",
-    monthly: "約207.5万円",
-    annual: "約2,490万円",
-    note: "年間使用量600万kWh × 4.15円",
+    monthly: "約209万円",
+    annual: "約2,508万円",
+    note: "年間使用量600万kWh × 4.18円",
   },
   {
     type: "大規模施設（特別高圧・月200万kWh）",
-    monthly: "約830万円",
-    annual: "約9,960万円",
-    note: "年間使用量2,400万kWh × 4.15円（減免制度対象可）",
+    monthly: "約836万円",
+    annual: "約1億32万円",
+    note: "年間使用量2,400万kWh × 4.18円（減免制度対象可）",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function RenewableEnergySurcharge2026Page() {
             再エネ賦課金はいくら？2026年度の単価と法人負担の計算
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-            <strong>結論：2026年度の再エネ賦課金は4.15円/kWh。2025年度の3.98円/kWhから+0.17円/kWhの上昇となり、過去最高水準を更新しました。</strong>
+            <strong>結論：2026年度の再エネ賦課金は4.18円/kWh。2025年度の3.98円/kWhから+0.20円/kWhの上昇となり、過去最高水準を更新しました。</strong>
             使用量の多い法人にとっては、燃料費調整額や託送料金の変動と並ぶ、電気料金の固定的な値上げ要因になります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -168,7 +168,7 @@ export default function RenewableEnergySurcharge2026Page() {
             <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-900">
               <p className="font-semibold">再エネ賦課金 = 電力使用量（kWh）× 単価（円/kWh）</p>
               <p className="mt-2 text-xs text-slate-600">
-                例：高圧で月15万kWh使う工場 → 150,000 × 4.15 = 622,500円/月
+                例：高圧で月15万kWh使う工場 → 150,000 × 4.18 = 627,000円/月
               </p>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -180,7 +180,7 @@ export default function RenewableEnergySurcharge2026Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">事業所規模別の年間負担例（2026年度単価）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年度の単価4.15円/kWhで、代表的な規模別に負担額を試算します。
+              2026年度の単価4.18円/kWhで、代表的な規模別に負担額を試算します。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
@@ -251,7 +251,7 @@ export default function RenewableEnergySurcharge2026Page() {
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">まとめ：2026年度の再エネ賦課金のポイント</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-              <li>2026年度単価は4.15円/kWhで過去最高を更新。前年度比+0.17円/kWh</li>
+              <li>2026年度単価は4.18円/kWhで過去最高を更新。前年度比+0.20円/kWh</li>
               <li>計算式は「使用量 × 単価」。全国一律で、電力会社選定では下げられない</li>
               <li>大規模工場では年数百万〜数千万円単位の負担となり、電気料金全体の10%前後を占めるケースもある</li>
               <li>年100万kWh以上かつ電気使用原単位の条件を満たせば、8割減免の対象となる可能性がある</li>
