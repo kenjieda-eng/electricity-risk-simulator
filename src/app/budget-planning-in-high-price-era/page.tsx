@@ -148,10 +148,10 @@ export default function BudgetPlanningInHighPriceEraPage() {
               </tr>
               <tr className="even:bg-slate-50">
                 <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">再エネ賦課金</td>
-                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1.40円/kWh<br /><span className="text-xs text-slate-500">（2021年度）</span></td>
-                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">3.49円/kWh<br /><span className="text-xs text-slate-500">（2023年度）</span></td>
-                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">2.64円/kWh</td>
-                <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-rose-700">2.09円/kWh<br /><span className="text-xs font-normal">(+149%)</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">1.40円/kWh<br /><span className="text-xs text-slate-500">（2023年度）</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">3.98円/kWh<br /><span className="text-xs text-slate-500">（2025年度）</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-right text-slate-700">3.10円/kWh</td>
+                <td className="border border-slate-200 px-3 py-2 text-right font-semibold text-rose-700">2.58円/kWh<br /><span className="text-xs font-normal">(+184%)</span></td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">年1回改定。増加基調が続く見通し</td>
               </tr>
               <tr className="even:bg-slate-50">

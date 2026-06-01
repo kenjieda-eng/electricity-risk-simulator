@@ -109,8 +109,8 @@ describe("unitPriceMatrix — 定数値の整合性", () => {
     }
   });
 
-  it("RENEWABLE_SURCHARGE_PER_KWH は仕様書通り 3.98 円/kWh", () => {
-    expect(RENEWABLE_SURCHARGE_PER_KWH).toBe(3.98);
+  it("RENEWABLE_SURCHARGE_PER_KWH は 4.18 円/kWh（2026年度確定値）", () => {
+    expect(RENEWABLE_SURCHARGE_PER_KWH).toBe(4.18);
   });
 
   it("scaleDefaultMonthlyKwhMap: small < medium < large", () => {
