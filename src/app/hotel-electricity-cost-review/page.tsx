@@ -494,6 +494,16 @@ export default function HotelElectricityCostReviewPage() {
               title: "飲食店チェーンの電気料金見直しポイント",
               description: "ホテル併設レストランと共通する厨房・空調負荷の契約見直しの考え方。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-hotel-resort-cogeneration",
+              title: "導入事例：リゾートホテルのコージェネ導入",
+              description: "熱電併給で電力購入量と熱コストを最適化した代表シナリオ。",
+            },
           ]}
         />
 

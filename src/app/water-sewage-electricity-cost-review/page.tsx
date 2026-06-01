@@ -380,6 +380,11 @@ export default function WaterSewageElectricityCostReviewPage() {
               title: "自治体の電力調達方式の比較",
               description: "上下水道施設を含む自治体向け調達手段（入札・随意契約・共同調達）の整理。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

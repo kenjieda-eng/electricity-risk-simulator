@@ -370,6 +370,11 @@ export default function PublicGymElectricityCostReviewPage() {
               title: "電気料金高騰が自治体予算に与える影響",
               description: "公共体育館を含む公共施設の電気料金上昇が自治体の年間予算に与える影響を試算。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

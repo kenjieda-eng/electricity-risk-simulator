@@ -396,6 +396,11 @@ export default function DrugstoreElectricityCostReviewPage() {
               title: "コンビニの電気代見直し",
               description: "24時間営業や冷蔵・冷凍ケースを抱える点でドラッグストアと類似するコンビニの電気代対策を参照し、夜間営業店舗の最適化に応用できます。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

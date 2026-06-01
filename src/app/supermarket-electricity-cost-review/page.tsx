@@ -516,6 +516,16 @@ export default function SupermarketElectricityCostReviewPage() {
               title: "JEPXスポット市場の仕組みと法人への影響",
               description: "夕方ピーク時間帯にJEPXが高騰する仕組みを解説。市場連動プラン検討時に必読の前提知識。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-retail-multistore-bulk-contract",
+              title: "導入事例：小売多店舗の一括契約最適化",
+              description: "本部一括見直しで電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

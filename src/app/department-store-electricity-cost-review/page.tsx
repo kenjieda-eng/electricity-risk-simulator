@@ -369,6 +369,16 @@ export default function DepartmentStoreElectricityCostReviewPage() {
               title: "デマンドコントロールによる電気料金削減効果",
               description: "百貨店でのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-retail-multistore-bulk-contract",
+              title: "導入事例：小売多店舗の一括契約最適化",
+              description: "本部一括見直しで電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

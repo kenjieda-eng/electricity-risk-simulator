@@ -381,6 +381,16 @@ export default function UniversityElectricityCostReviewPage() {
               title: "法人向け太陽光自家消費の導入ポイント",
               description: "大学キャンパスで太陽光発電の自家消費を活用して電気料金を削減する方法。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-university-large-campus-management",
+              title: "導入事例：大学キャンパスのエネマネ統合",
+              description: "複数棟のBEMS統合と一括契約の代表シナリオ。",
+            },
           ]}
         />
 

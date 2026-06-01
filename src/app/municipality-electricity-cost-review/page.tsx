@@ -471,6 +471,16 @@ export default function MunicipalityElectricityCostReviewPage() {
               title: "オフィス電気代ベンチマーク",
               description: "民間オフィスの電気代水準を比較対象に置くと、自治体庁舎の支出が業界平均と比べて妥当な水準にあるかを多角的に評価できます。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-municipality-public-facility-bulk",
+              title: "導入事例：自治体公共施設の一括契約",
+              description: "複数施設の統合入札で電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

@@ -505,6 +505,11 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
               title: "法人電気代見直しの基本ポイント",
               description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

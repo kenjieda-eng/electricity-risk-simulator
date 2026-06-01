@@ -390,6 +390,16 @@ export default function NursingCareFacilityElectricityCostReviewPage() {
               title: "小売店電気代ベンチマーク",
               description: "業種横断の電気代相場を把握する起点として小売店ベンチマークは有効で、介護施設の支出水準の妥当性確認にも転用できます。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-welfare-elderly-energy-saving",
+              title: "導入事例：高齢者施設の省エネ投資",
+              description: "給湯ヒートポンプ・LED・空調更新で電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

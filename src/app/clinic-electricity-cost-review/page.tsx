@@ -411,6 +411,11 @@ export default function ClinicElectricityCostReviewPage() {
               title: "業種別・電気料金の相場と目安",
               description: "クリニックを含む業種別の電気料金水準と、自社コストの位置づけを把握する。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

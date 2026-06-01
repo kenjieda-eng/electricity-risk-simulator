@@ -634,6 +634,7 @@ export default function FuneralHallElectricityCostReviewPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "安置冷蔵・空調更新の主力補助金。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "24h稼働事業者のリスク。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気代計算機（自社条件で年間電気代を試算）", description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。" },
             ]}
           />
 

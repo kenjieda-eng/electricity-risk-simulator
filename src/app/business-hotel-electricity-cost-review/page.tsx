@@ -379,6 +379,11 @@ export default function BusinessHotelElectricityCostReviewPage() {
               title: "デマンドコントロールによる電気料金削減効果",
               description: "ビジネスホテルでのデマンド管理が基本料金削減にどれだけ効果があるかを解説。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 
