@@ -201,7 +201,7 @@ export default function BusinessElectricityRetrospective202604Page() {
             2026年4月使用分の法人向け電気料金は、3つの構造変化が同時に進行する重要な転換月です。第一に、資源エネルギー庁の電気・ガス料金支援が4月使用分（5月検針）で終了予定となり、5月使用分以降は値引きなしの実力値ベース請求に移行します。第二に、容量市場の容量拠出金が2026年度から本格徴収開始（首都圏 14,812円/kW、契約電力 1,000kW で年間 約 1,481 万円の追加負担）。第三に、東京電力エナジーパートナーの法人向け料金改定が4/1 から実施され、基本料金値下げ + 電力量料金値上げの構造で省エネ努力企業と高ベースロード企業で影響が大きく分かれる初月でもあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            再エネ賦課金は4月使用分まで旧単価3.49円/kWh が継続しますが、3/19 経産省告示で5月使用分以降は4.18円/kWh（過去最高、+0.20円/kWh 上振れ）の新単価に切り替わることがすでに告示済み。4月は旧単価の最終月でもあります。JEPXスポット価格は前半は安定推移したものの、後半からは原油・LNG価格上昇（ホルムズ海峡リスク台頭）で上昇予兆が顕在化してきました。
+            再エネ賦課金は4月使用分まで旧単価3.98円/kWh が継続しますが、3/19 経産省告示で5月使用分以降は4.18円/kWh（過去最高、+0.20円/kWh 上振れ）の新単価に切り替わることがすでに告示済み。4月は旧単価の最終月でもあります。JEPXスポット価格は前半は安定推移したものの、後半からは原油・LNG価格上昇（ホルムズ海峡リスク台頭）で上昇予兆が顕在化してきました。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             そのため、2026年4月使用分は「構造変化の前夜」というよりも「構造変化の初月」として捉える必要があります。5月以降の補助完全終了 + 再エネ賦課金上振れ + 容量拠出金完全反映 + JEPX上昇局面が複合的に作用するため、4月は2026年度の予算修正と契約見直しの最終判断を進める月となりました。
@@ -275,7 +275,7 @@ export default function BusinessElectricityRetrospective202604Page() {
               を確認し、5月以降の本格的な負担増に備えた契約見直しを進めることが望ましいです。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は4月使用分まで旧単価3.49円/kWh が継続。5月使用分から4.18円/kWh の新単価へ切り替わるため、4月は旧単価の最終月でもあります。
+              再エネ賦課金は4月使用分まで旧単価3.98円/kWh が継続。5月使用分から4.18円/kWh の新単価へ切り替わるため、4月は旧単価の最終月でもあります。
             </p>
           </section>
 
@@ -496,7 +496,7 @@ export default function BusinessElectricityRetrospective202604Page() {
             </div>
             <p className="mt-3 text-xs text-slate-500">※速報値・新電力ネット集計ベース。実際の単価は各電力会社の公表値で再確認してください。{" "}
               <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
-              。再エネ賦課金は4月使用分まで旧単価3.49円/kWh、5月使用分から4.18円/kWh の新単価に切り替わります。
+              。再エネ賦課金は4月使用分まで旧単価3.98円/kWh、5月使用分から4.18円/kWh の新単価に切り替わります。
             </p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">2026年4月 主要業界ニュース 5 件</h3>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">

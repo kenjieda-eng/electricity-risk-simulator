@@ -444,6 +444,8 @@ export const articleCategories: ArticleCategory[] = [
     ],
     recommendedReadingOrder: [
       "business-electricity-retrospective/2026-05",
+      "business-electricity-retrospective/2026-04",
+      "business-electricity-retrospective/2026-03",
       "business-electricity-retrospective/2026-02",
       "business-electricity-retrospective/2026-01",
       "business-electricity-retrospective/2025-12",

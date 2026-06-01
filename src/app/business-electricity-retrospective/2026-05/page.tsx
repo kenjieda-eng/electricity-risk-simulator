@@ -76,7 +76,7 @@ const MAY_2026_DATA = {
 };
 
 const surchargeUpdate = [
-  { label: "2025年度（〜2026年4月）", rate: "3.49円/kWh", note: "前年度から据え置きで推移" },
+  { label: "2025年度（〜2026年4月）", rate: "3.98円/kWh", note: "前年度（2024年度3.49円）から +0.49円/kWh 上昇" },
   { label: "2026年度（2026年5月〜2027年4月）", rate: "4.18円/kWh（確定値）", note: "経産省告示で5/1施行・全使用量に上乗せ" },
   { label: "差分", rate: "+0.20円/kWh（前年度比 +5.0%）", note: "kWhあたり約0.2円の単価上振れが5月使用分から発生" },
 ];
@@ -160,7 +160,7 @@ const faqItems = [
   {
     question: "2026年5月から再エネ賦課金が改定されたが、5月の電気料金にどう影響する？",
     answer:
-      "経産省告示で2026年度の再エネ賦課金は4.18円/kWh（確定値）となり、前年度3.49円/kWhから +0.20円/kWhの上振れが5/1から全使用量に上乗せされます。年間使用量100万kWhの法人で年20万円増、1,000万kWhで年200万円増の影響です。",
+      "経産省告示で2026年度の再エネ賦課金は4.18円/kWh（確定値）となり、前年度（2025年度）3.98円/kWhから +0.20円/kWhの上振れが5/1から全使用量に上乗せされます。年間使用量100万kWhの法人で年20万円増、1,000万kWhで年200万円増の影響です。",
   },
   {
     question: "ゴールデンウィークの電力需要はどう動いた？",
@@ -245,7 +245,7 @@ export default function BusinessElectricityRetrospective202605Page() {
             <h2 className="text-xl font-semibold text-slate-900">2026年5月の結論3点 — 再エネ賦課金改定後の本格運用 + 夏季ピーク前対策</h2>
             <ol className="mt-3 list-decimal space-y-3 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>
-                5月1日施行の再エネ賦課金新単価（確定値 4.18円/kWh）が初めて全使用量に上乗せされる本格運用月。前年度3.49円/kWhから +0.20円/kWhの上振れが、低圧・高圧・特別高圧のすべての契約区分で発生しています。
+                5月1日施行の再エネ賦課金新単価（確定値 4.18円/kWh）が初めて全使用量に上乗せされる本格運用月。前年度（2025年度）3.98円/kWhから +0.20円/kWhの上振れが、低圧・高圧・特別高圧のすべての契約区分で発生しています。
               </li>
               <li>
                 JEPXスポット価格は5月中旬時点で前年同月比 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇。原油・LNG高騰と政府支援終了の二重要因。6月以降の冷房需要増でさらなる上振れリスク。市場連動プラン採用法人は夏季ピーク前のリスクシナリオ確認が必須です。
@@ -267,7 +267,7 @@ export default function BusinessElectricityRetrospective202605Page() {
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">①再エネ賦課金 5/1 改定</p>
-                <p className="mt-1 text-sm leading-6 text-slate-600">3.49円→4.18円/kWh（確定値、+0.20円）。kWhあたり構造的な単価上振れで、年間使用量に応じた絶対額インパクトが5月使用分から顕在化。</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">3.98円→4.18円/kWh（確定値、+0.20円）。kWhあたり構造的な単価上振れで、年間使用量に応じた絶対額インパクトが5月使用分から顕在化。</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">②GW明けの需要急増</p>
@@ -550,7 +550,7 @@ export default function BusinessElectricityRetrospective202605Page() {
             </p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">2026年5月 主要業界ニュース 5 件</h3>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-              <li>再エネ賦課金 過去最高 4.18円/kWh（2026年度、5/15 公開予定の 2026-05号で確定）。前年度 3.49円/kWh から +0.20円/kWh の上振れ。</li>
+              <li>再エネ賦課金 過去最高 4.18円/kWh（2026年度、5/15 公開予定の 2026-05号で確定）。前年度（2025年度）3.98円/kWh から +0.20円/kWh の上振れ。</li>
               <li>政府電気・ガス料金支援 2026/4 月分で終了（5月分から値引きなし）。補助なしの実力ベース請求が定着。</li>
               <li>容量拠出金 2026年度本格徴収開始（首都圏 14,812円/kW、契約電力 1,000kW で年 1,481 万円の追加負担）。</li>
               <li>東京電力エナジーパートナー 法人向け料金改定（基本料金値下げ + 電力量料金値上げ、2026/4/1 実施）。使用量の多い法人は実質値上げとなるケースが多い。</li>
