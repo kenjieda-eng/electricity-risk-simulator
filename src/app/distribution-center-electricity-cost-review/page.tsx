@@ -484,6 +484,16 @@ export default function DistributionCenterElectricityCostReviewPage() {
               title: "特別高圧の電気料金の仕組み",
               description: "大型物流センターで活用される特別高圧契約の料金体系を解説。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-warehouse-auto-rooftop-pv",
+              title: "導入事例：自動倉庫の屋根太陽光・自家消費",
+              description: "自動倉庫負荷に合わせた自家消費最適化の代表シナリオ。",
+            },
           ]}
         />
 

@@ -510,6 +510,16 @@ export default function HospitalElectricityCostReviewPage() {
               title: "医療・福祉業種ハブ：医療機関向け電気料金の関連記事",
               description: "病院・クリニック・介護施設・薬局など医療・福祉系業種の電気料金関連記事を一覧で確認。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-hospital-24h-bcp-backup",
+              title: "導入事例：病院のBCP非常用電源（24時間稼働）",
+              description: "24時間稼働の電源確保とデマンド管理の代表シナリオ。",
+            },
           ]}
         />
 

@@ -374,6 +374,11 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
               title: "LED・空調更新による電気料金削減効果",
               description: "コンビニの照明・空調設備の更新で期待できる電気料金削減効果を解説。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

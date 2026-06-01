@@ -394,6 +394,11 @@ export default function SchoolElectricityCostReviewPage() {
               title: "大学の電気代見直し",
               description: "大学キャンパスは小中学校より大規模で研究機器負荷も加わりますが、教育機関としての契約論点には共通点が多く、進学先のヒントになります。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

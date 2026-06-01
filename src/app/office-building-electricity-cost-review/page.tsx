@@ -519,6 +519,16 @@ export default function OfficeBuildingElectricityCostReviewPage() {
               title: "小売店電気代ベンチマーク",
               description: "商業テナントが入るオフィスビルでは、テナント側の小売店舗ベンチマークを把握すると、共用部料金や転貸電気の妥当性を判断しやすくなります。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-manufacturer-medium-contract-review",
+              title: "導入事例：中堅製造業の契約見直し",
+              description: "高圧のデマンド適正化・相見積で電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

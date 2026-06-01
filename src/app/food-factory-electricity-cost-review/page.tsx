@@ -500,6 +500,16 @@ export default function FoodFactoryElectricityCostReviewPage() {
               title: "自家消費型太陽光の費用対効果",
               description: "工場屋根を活用した自家消費型太陽光の投資回収期間とPPAモデルの比較を解説。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-factory-large-energy-saving-investment",
+              title: "導入事例：大規模工場の省エネ投資",
+              description: "特別高圧工場のSII補助金・FEMS活用で電気代を削減した代表シナリオ。",
+            },
           ]}
         />
 

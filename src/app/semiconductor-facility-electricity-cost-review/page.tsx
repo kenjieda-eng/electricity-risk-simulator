@@ -488,6 +488,16 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
               title: "データセンターの電気料金見直しポイント",
               description: "高負荷・冗長性要求が共通する DC の負荷特性と契約見直し。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
+            {
+              href: "/case-study-semiconductor-re100-procurement",
+              title: "導入事例：半導体工場のRE100調達",
+              description: "クリーンルーム24時間稼働の再エネ100%調達の代表シナリオ。",
+            },
           ]}
         />
 

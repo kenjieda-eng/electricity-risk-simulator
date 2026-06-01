@@ -382,6 +382,11 @@ export default function SmallOfficeElectricityCostReviewPage() {
               title: "中小企業電気代削減ステップ",
               description: "中小企業向けの段階別削減ステップを示しており、社内体制が小さい小規模オフィスでも実行可能な対策の優先順位が分かります。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 

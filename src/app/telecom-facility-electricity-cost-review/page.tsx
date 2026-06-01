@@ -387,6 +387,11 @@ export default function TelecomFacilityElectricityCostReviewPage() {
               title: "データセンター電力契約ガイド",
               description: "高負荷・高可用性が求められるデータセンター契約の留意点を整理しており、信頼性重視の通信施設の契約交渉にも活かせます。",
             },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気代計算機（自社条件で年間電気代を試算）",
+              description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。",
+            },
           ]}
         />
 
