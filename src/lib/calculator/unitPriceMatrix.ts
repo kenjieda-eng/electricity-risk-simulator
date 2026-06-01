@@ -103,10 +103,10 @@ export const fuelAdjustmentByRegion: Record<Region, number> = {
 };
 
 /**
- * 再生可能エネルギー発電促進賦課金（円/kWh、2025年度）。
+ * 再生可能エネルギー発電促進賦課金（円/kWh、2026年度）。
  * 全国一律。出典: 経済産業省告示。
  */
-export const RENEWABLE_SURCHARGE_PER_KWH = 3.98;
+export const RENEWABLE_SURCHARGE_PER_KWH = 4.18; // 2026年度（経産省2026/3/19告示）
 
 /**
  * 基本料金の電力量単価換算（円/kWh）。
