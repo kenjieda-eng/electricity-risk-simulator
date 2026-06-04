@@ -1,4 +1,5 @@
 import type { BuildingType, ContractType, Region, ScaleType } from "./types";
+import { getLatestSurcharge } from "../data/renewableSurcharge";
 
 /**
  * D-1 業種別電気代計算機 単価マトリクス
@@ -106,7 +107,7 @@ export const fuelAdjustmentByRegion: Record<Region, number> = {
  * 再生可能エネルギー発電促進賦課金（円/kWh、2026年度）。
  * 全国一律。出典: 経済産業省告示。
  */
-export const RENEWABLE_SURCHARGE_PER_KWH = 4.18; // 2026年度（経産省2026/3/19告示）
+export const RENEWABLE_SURCHARGE_PER_KWH = getLatestSurcharge().unitPriceYenPerKwh; // 2026年度=4.18（SSOT: src/lib/data/renewableSurcharge 由来）
 
 /**
  * 基本料金の電力量単価換算（円/kWh）。
