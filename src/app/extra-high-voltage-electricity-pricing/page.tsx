@@ -255,13 +255,13 @@ export default function ExtraHighVoltageElectricityPricingPage() {
               </tr>
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約524万円</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.98円/kWh（2025年度）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-slate-900">約597万円</span></td>
               </tr>
               <tr className="bg-sky-50">
                 <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">月額合計</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
-                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約2,400〜4,400万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約2,400〜4,500万円</td>
               </tr>
             </tbody>
           </table>
