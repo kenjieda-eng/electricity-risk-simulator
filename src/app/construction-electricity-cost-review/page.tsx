@@ -115,7 +115,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇。本社（年200万kWh）で年700〜900万円、ゼネコン全社（事業所合計）で年5,000万円〜2億円の負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇。本社（年200万kWh）で年700〜900万円、ゼネコン全社（事業所合計）で年5,000万円〜2億円の負担。",
   },
   {
     label: "重機電動化による契約電力上振れ",
@@ -478,7 +478,7 @@ export default function ConstructionElectricityCostReviewPage() {
               再エネ賦課金の影響 — 全社合計で年5,000万〜2億円の負担
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間使用量が大きいゼネコンでは、全社合計の負担額が経営に直撃する規模になります。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間使用量が大きいゼネコンでは、全社合計の負担額が経営に直撃する規模になります。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

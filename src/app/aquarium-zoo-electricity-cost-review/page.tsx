@@ -110,7 +110,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間2,000万kWh使用の中規模水族館で年9,000万円超の負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間2,000万kWh使用の中規模水族館で年8,360万円超の負担。",
   },
   {
     label: "水温管理の季節変動",
@@ -477,7 +477,7 @@ export default function AquariumZooElectricityCostReviewPage() {
               再エネ賦課金の影響 — 24h生命維持業種の負担増
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。水族館・動物園の中規模施設では負担額が請求総額の10〜15%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。水族館・動物園の中規模施設では負担額が請求総額の10〜15%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

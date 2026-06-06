@@ -4858,7 +4858,7 @@ export const articleList: ArticleMeta[] = [
     title: "再エネ賦課金はいくら？2026年度の単価と法人負担の計算",
     slug: "renewable-energy-surcharge-2026",
     description:
-      "2026年度の再エネ賦課金単価4.15円/kWhと計算方法、低圧・高圧・特別高圧の規模別年間負担、減免制度、2030年までの見通しを整理します。",
+      "2026年度の再エネ賦課金単価4.18円/kWhと計算方法、低圧・高圧・特別高圧の規模別年間負担、減免制度、2030年までの見通しを整理します。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 20,

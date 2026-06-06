@@ -179,15 +179,15 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">再エネ賦課金</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-amber-700">年度変動</span></td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.49円/kWh（2025年度）</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700">約17.5万円</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">3.98円/kWh（2025年度）</td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700">約19.9万円</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">年度改定あり</td>
               </tr>
               <tr className="bg-slate-50">
                 <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">合計</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">―</td>
-                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約105〜140万円</td>
+                <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">約108〜143万円</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">固定項目98万円+変動項目</td>
               </tr>
             </tbody>

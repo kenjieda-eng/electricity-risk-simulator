@@ -120,7 +120,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。中規模ディーラー（年100万kWh）で年450万円超の負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。中規模ディーラー（年100万kWh）で年418万円超の負担。",
   },
   {
     label: "容量拠出金（2024年度導入）",
@@ -477,7 +477,7 @@ export default function CarDealershipElectricityCostReviewPage() {
               再エネ賦課金の影響 — 多店舗ディーラー業種の負担増
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。ディーラーの中規模5〜20店舗では負担額が請求総額の10〜15%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。ディーラーの中規模5〜20店舗では負担額が請求総額の10〜15%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

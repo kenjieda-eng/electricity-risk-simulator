@@ -110,7 +110,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間2,500万kWh使用の中規模工場で年1.125億円超の負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間2,500万kWh使用の中規模工場で年1.045億円超の負担。",
   },
   {
     label: "焼成炉の連続稼働と市場連動リスク",
@@ -477,7 +477,7 @@ export default function CeramicsPotteryElectricityCostReviewPage() {
               再エネ賦課金の影響 — 24h電気窯業種の負担増
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。窯業の中規模工場では負担額が請求総額の10〜15%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。窯業の中規模工場では負担額が請求総額の10〜15%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
