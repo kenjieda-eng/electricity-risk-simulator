@@ -110,7 +110,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間1.5億kWh使用の大規模工場で年6.7億円の負担、5年で30億円超。減免制度（年間1,000万kWh以上・電気使用密度要件）の対象になりやすいが申請要件は厳格。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間1.5億kWh使用の大規模工場で年6.3億円の負担、5年で30億円超。減免制度（年間1,000万kWh以上・電気使用密度要件）の対象になりやすいが申請要件は厳格。",
   },
   {
     label: "容量拠出金（2024年度導入）",
@@ -526,7 +526,7 @@ export default function GlassCeramicsElectricityCostReviewPage() {
               再エネ賦課金の影響 — 大量使用業種ゆえの負担増と減免制度
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。ガラス・窯業の大規模工場では、負担額が請求総額の15〜25%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。ガラス・窯業の大規模工場では、負担額が請求総額の15〜25%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -534,8 +534,8 @@ export default function GlassCeramicsElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 9,772万円</li>
                   <li>2025年度（3.98円/kWh）：年 1.11億円（+1,372万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 1.26億円（+2,856万円）</li>
-                  <li>3年間で年2,800万円超の負担増（年使用量横ばい前提）</li>
+                  <li>2026年度（4.18円/kWh）：年 1.17億円（+1,932万円）</li>
+                  <li>3年間で年1,900万円超の負担増（年使用量横ばい前提）</li>
                 </ul>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

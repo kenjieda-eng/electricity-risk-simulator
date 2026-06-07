@@ -373,7 +373,7 @@ export default function CfoElectricityCostBasicsPage() {
                 <li><strong>基本料金</strong>：契約kW×単価（円/kW）。契約kW最適化で削減可能</li>
                 <li><strong>電力量料金</strong>：実使用kWh×単価（円/kWh）。新電力切替・PPA活用で削減可能</li>
                 <li><strong>燃料費調整額</strong>：化石燃料価格連動。為替・原油価格次第で±5円/kWhの変動</li>
-                <li><strong>再エネ賦課金</strong>：2025年度3.98円/kWh、2026年度予測4.5円/kWh前後と上昇トレンド</li>
+                <li><strong>再エネ賦課金</strong>：2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド</li>
                 <li><strong>容量拠出金</strong>：2024年度導入。kWhベースで全需要家負担</li>
                 <li><strong>消費税</strong>：10%（軽減税率対象外）</li>
               </ul>

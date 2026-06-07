@@ -107,7 +107,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間1,000万kWh使用の大手SaaS事業者で年4,500万円の負担、5年で2.25億円超。減免制度（年間1,000万kWh以上等）の対象規模に届く事業者は要件確認を。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間1,000万kWh使用の大手SaaS事業者で年4,180万円の負担、5年で2億円超。減免制度（年間1,000万kWh以上等）の対象規模に届く事業者は要件確認を。",
   },
   {
     label: "容量拠出金（2024年度導入）",
@@ -473,16 +473,16 @@ export default function ItServicesElectricityCostReviewPage() {
               再エネ賦課金の影響 — 24h連続稼働業種の負担額
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。自社DC運用ITサービス事業者では年数千万〜数億円規模の負担が発生し、減免制度対象に届く大手事業者は要件確認が必要です。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。自社DC運用ITサービス事業者では年数千万〜数億円規模の負担が発生し、減免制度対象に届く大手事業者は要件確認が必要です。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">事業者規模別の年間負担</p>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
-                  <li>小規模ITベンチャー：年間50万kWh × 4.5円 = 約225万円</li>
-                  <li>中堅SIer：年間500万kWh × 4.5円 = 約2,250万円</li>
-                  <li>自社DC運用SaaS：年間1,500万kWh × 4.5円 = 約6,750万円</li>
-                  <li>大手クラウド：年間6,000万kWh × 4.5円 = 約2.7億円</li>
+                  <li>小規模ITベンチャー：年間50万kWh × 4.18円 = 約209万円</li>
+                  <li>中堅SIer：年間500万kWh × 4.18円 = 約2,090万円</li>
+                  <li>自社DC運用SaaS：年間1,500万kWh × 4.18円 = 約6,270万円</li>
+                  <li>大手クラウド：年間6,000万kWh × 4.18円 = 約2.5億円</li>
                 </ul>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
