@@ -10,7 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "generate:article-slugs": "node scripts/generate-article-slugs.mjs",
-    "check:surcharge": "node scripts/check-surcharge-drift.mjs"
+    "check:surcharge": "node scripts/check-surcharge-drift.mjs",
+    "check:surcharge:strict": "node scripts/check-surcharge-drift.mjs --strict"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.98.0",
