@@ -110,7 +110,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。月30万kWh使用倉庫で年間135万円の負担増。減免制度（年間1,000万kWh以上等）の対象は大規模倉庫に限られ、中規模以下は満額負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。月30万kWh使用倉庫で年間125万円の負担増。減免制度（年間1,000万kWh以上等）の対象は大規模倉庫に限られ、中規模以下は満額負担。",
   },
   {
     label: "容量拠出金（2024年度導入）",
@@ -480,7 +480,7 @@ export default function WarehouseElectricityCostReviewPage() {
               再エネ賦課金の影響 — 大量使用業種ゆえの負担増と減免制度
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間使用量が大きい倉庫では、負担額が請求総額の15〜20%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間使用量が大きい倉庫では、負担額が請求総額の15〜20%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -488,8 +488,8 @@ export default function WarehouseElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 2,268万円</li>
                   <li>2025年度（3.98円/kWh）：年 2,587万円（+319万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 2,925万円（+657万円）</li>
-                  <li>3年間で年650万円超の負担増（年使用量横ばい前提）</li>
+                  <li>2026年度（4.18円/kWh）：年 2,717万円（+449万円）</li>
+                  <li>3年間で年400万円超の負担増（年使用量横ばい前提）</li>
                 </ul>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

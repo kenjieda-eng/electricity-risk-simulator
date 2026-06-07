@@ -485,7 +485,7 @@ export default function ElectronicComponentsElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 1.396億円</li>
                   <li>2025年度（3.98円/kWh）：年 1.592億円（+1,960万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 1.8億円（+4,040万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 1.672億円（+2,760万円）</li>
                 </ul>
               </div>
             </div>

@@ -376,8 +376,8 @@ export default function CapacityContributionSimulationPage() {
             <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>
                 <strong>再エネ賦課金と合算して「制度要因合計」で把握する</strong>
-                。2026年度は容量拠出金（約1.1円/kWh）＋再エネ賦課金（約3.8〜4.0円/kWh想定）で
-                <strong>合算約5円/kWh</strong>
+                。2026年度は容量拠出金（約1.1円/kWh）＋再エネ賦課金（4.18円/kWh・確定）で
+                <strong>合算約5.3円/kWh</strong>
                 が制度要因として発生します。
               </li>
               <li>

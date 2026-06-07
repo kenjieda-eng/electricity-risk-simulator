@@ -115,7 +115,7 @@ const costFactors = [
   {
     label: "再エネ賦課金の負担増",
     detail:
-      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。年間4,000万kWh使用の中規模工場で年1.8億円超の負担。",
+      "再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。年間4,000万kWh使用の中規模工場で年1.672億円の負担。",
   },
   {
     label: "加硫24h稼働の市場連動リスク",
@@ -477,7 +477,7 @@ export default function RubberProductsElectricityCostReviewPage() {
               再エネ賦課金の影響 — 24h加硫稼働業種の負担増
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.5円/kWh前後と上昇トレンド。ゴム業の中規模工場では負担額が請求総額の10〜15%に達します。
+              再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。ゴム業の中規模工場では負担額が請求総額の10〜15%に達します。
             </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -485,7 +485,7 @@ export default function RubberProductsElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 1.222億円</li>
                   <li>2025年度（3.98円/kWh）：年 1.393億円（+1,715万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 1.575億円（+3,535万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 1.463億円（+2,410万円）</li>
                 </ul>
               </div>
             </div>

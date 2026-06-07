@@ -486,7 +486,7 @@ export default function BeautyNailSalonElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 62.8万円</li>
                   <li>2025年度（3.98円/kWh）：年 71.6万円（+8.8万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 81万円（+18.2万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 75.2万円（+12.4万円）</li>
                 </ul>
               </div>
             </div>
