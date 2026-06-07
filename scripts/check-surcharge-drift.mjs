@@ -24,9 +24,10 @@
  *   c. 単価リテラルを「同一行で最も近い年度参照 /(20[2-3]\d)年度/」と対にし、
  *      SSOT 値と比較 → 不一致なら検出。年度に対応できなければ「年度不明・要目視」へ。
  *   d. 除外:
- *      - 窓内に「燃料費調整」または「燃調」を含む（燃料費調整額のレンジ等を賦課金と誤検出しない）
- *      - 「〜 / ～」でレンジを成す数値（例: +3.0〜+4.5円/kWh は燃調レンジ）
- *      - 「+ / ＋」で始まる増分値（例: 2023年度比で+3.2円/kWh は差分であり絶対単価ではない）
+ *      - 価格が属する「文」（句点区切り）に「燃料費調整」または「燃調」を含む（文スコープ。
+ *        旧・窓スコープだと隣接文の賦課金単価まで巻き込みマスクするため文単位に限定）
+ *      - 「〜 / ～ / ±」でレンジ・変動を成す数値（例: +3.0〜+4.5円/kWh・±5円/kWh は燃調レンジ）
+ *      - 「+ / ＋ / ±」で始まる増分・変動値（例: 2023年度比で+3.2円/kWh は差分であり絶対単価ではない）
  *      - renewableSurcharge.ts 自身とそのテスト
  *
  * 年度との対応付け:
@@ -202,10 +203,11 @@ async function scanFile(file, ssot) {
     const to = Math.min(lines.length - 1, i + CONTEXT);
     const windowText = lines.slice(from, to + 1).join("\n");
 
-    // a. 賦課金コンテキストでなければ対象外。
+    // a. 賦課金コンテキストでなければ対象外（肯定アンカーは従来どおり窓スコープ）。
     if (!windowText.includes("賦課金")) continue;
-    // d. 燃料費調整（燃調）コンテキストは丸ごと除外。
-    if (windowText.includes("燃料費調整") || windowText.includes("燃調")) continue;
+    // d. 燃調除外は窓スコープ（旧）から「価格が属する文スコープ」へ移動（価格ループ内で判定）。
+    //    旧実装は windowText に燃調語があると窓ごと一括除外し、隣接文の賦課金単価まで巻き込み
+    //    マスクしていた（例: cfo-electricity-cost-basics の賦課金行が直上の燃調行に巻き込まれ検出漏れ）。
 
     const years = [...line.matchAll(YEAR_RE)].map((m) => ({
       year: Number(m[1]),
@@ -220,12 +222,18 @@ async function scanFile(file, ssot) {
       const end = pm.index + pm[0].length;
       const snippet = makeSnippet(line, start, end);
 
-      // d. レンジ（〜 / ～）の右辺、または増分（+ / ＋）は絶対単価でないため除外。
+      // d. レンジ（〜 / ～）の右辺、増分（+ / ＋）、変動幅（±）は絶対単価でないため除外。
+      //    ± は燃調レンジ（例: ±5円/kWh・±4.5円/kWh）を絶対単価と誤検出しないための必須セット。
       const prefix = line.slice(Math.max(0, start - 6), start);
-      if (/[〜～+＋]/.test(prefix)) continue;
+      if (/[〜～+＋±]/.test(prefix)) continue;
 
       // 同一文スコープで最近傍の年度に対応付ける。
       const [segStart, segEnd] = sentenceBounds(line, start);
+
+      // d. 燃料費調整（燃調）は「価格が属する文」に当該語があるときのみ除外（文スコープ）。
+      const sentenceText = line.slice(segStart, segEnd);
+      if (sentenceText.includes("燃料費調整") || sentenceText.includes("燃調")) continue;
+
       const paired = nearestYearInSentence(years, segStart, segEnd, start, end);
 
       if (paired == null) {
