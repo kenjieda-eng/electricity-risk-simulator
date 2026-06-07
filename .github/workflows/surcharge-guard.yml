@@ -1,0 +1,22 @@
+name: surcharge-guard
+
+# 再エネ賦課金プロース・ドリフト ガード。
+# src/ または検出器スクリプトを変更する PR で、SSOT と食い違う賦課金単価
+# （例:「2026年度4.5円/kWh」※確定値は4.18）が混入していないかを strict 判定する。
+# 検出器は node 標準モジュールのみ依存のため npm install 不要。
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'scripts/check-surcharge-drift.mjs'
+
+jobs:
+  surcharge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Surcharge drift guard (strict)
+        run: node scripts/check-surcharge-drift.mjs --strict
