@@ -493,8 +493,8 @@ export default function BeverageElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 8,376万円</li>
                   <li>2025年度（3.98円/kWh）：年 9,552万円（+1,176万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 1.08億円（+2,424万円）</li>
-                  <li>3年間で年2,400万円超の負担増（年使用量横ばい前提）</li>
+                  <li>2026年度（4.18円/kWh）：年 1.0億円（+1,656万円）</li>
+                  <li>3年間で年1,500万円超の負担増（年使用量横ばい前提）</li>
                 </ul>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

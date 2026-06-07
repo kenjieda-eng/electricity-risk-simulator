@@ -485,7 +485,7 @@ export default function CastingDiecastingElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 1.047億円</li>
                   <li>2025年度（3.98円/kWh）：年 1.194億円（+1,470万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 1.35億円（+3,030万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 1.254億円（+2,070万円）</li>
                 </ul>
               </div>
             </div>

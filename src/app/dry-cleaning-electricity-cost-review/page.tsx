@@ -485,7 +485,7 @@ export default function DryCleaningElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 698万円</li>
                   <li>2025年度（3.98円/kWh）：年 796万円（+98万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 900万円（+202万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 836万円（+138万円）</li>
                 </ul>
               </div>
             </div>

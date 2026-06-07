@@ -485,7 +485,7 @@ export default function CoinLaundryElectricityCostReviewPage() {
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
                   <li>2024年度（3.49円/kWh）：年 1,745万円</li>
                   <li>2025年度（3.98円/kWh）：年 1,990万円（+245万円）</li>
-                  <li>2026年度予測（4.5円/kWh）：年 2,250万円（+505万円）</li>
+                  <li>2026年度（4.18円/kWh）：年 2,090万円（+345万円）</li>
                 </ul>
               </div>
             </div>
