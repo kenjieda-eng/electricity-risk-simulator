@@ -93,6 +93,19 @@ export default function EmergencyScenarioAnalysisTopPage() {
         </div>
       </section>
 
+      <section className="rounded-xl border-2 border-sky-300 bg-sky-50 p-5">
+        <h2 className="text-xl font-semibold text-slate-900">この特集を“自分ごと”にする</h2>
+        <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+          上記は一般的なシナリオです。自社の業種・契約・エリア・規模を入力すると、標準（現状継続）・上振れ・構造高止まり・緩和の 4 シナリオで「うちの電気代」がいくらになるかを試算できます。各シナリオは「起きた場合」の目安で、特定の将来を予測するものではありません。
+        </p>
+        <Link
+          href="/electricity-scenario-simulation"
+          className="mt-4 inline-flex items-center justify-center rounded-lg bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700 sm:text-base"
+        >
+          自社の電気代をシナリオ別に試算する →
+        </Link>
+      </section>
+
       <EmergencyScenarioChartCard
         kind="oil-scenarios"
         title="WTI原油価格のシナリオ別推移（2026年）"

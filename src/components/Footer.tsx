@@ -13,6 +13,8 @@ const primaryPageLinks = [
   { href: "/how-to", label: "シミュレーターの使い方" },
   { href: "/compare", label: "料金メニュー比較・診断" },
   { href: "/benchmark", label: "業種×規模 ベンチマークツール" },
+  { href: "/industry-electricity-calculator", label: "業種別 電気代計算機（D-1）" },
+  { href: "/electricity-scenario-simulation", label: "電気代シナリオ別シミュレーション" },
   { href: "/journey", label: "一気通貫ジャーニー（読む→行動）" },
   { href: "/concierge", label: "AI コンシェルジュ（横断検索）" },
   { href: "/knowledge-graph", label: "ナレッジグラフ" },

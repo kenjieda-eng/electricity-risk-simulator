@@ -28,6 +28,7 @@ const headerLinks: HeaderLink[] = [
   { href: "/", label: "TOP" },
   { href: "/simulate", label: "リスク診断" },
   { href: "/compare", label: "料金比較" },
+  { href: "/electricity-scenario-simulation", label: "シナリオ試算" },
   { href: "/articles", label: "解説記事" },
   { href: "/articles/by-industry", label: "業種別ガイド" },
   { href: "/special", label: "特集" },
