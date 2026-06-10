@@ -92,7 +92,15 @@ export default function IndustryElectricityCalculatorPage() {
 
         <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-lg font-semibold text-slate-900">関連コンテンツ</h2>
+          <p className="mt-2 text-xs leading-6 text-slate-600">
+            この計算機は「現状」の年間電気代を試算します。原油高・円安・補助終了などで将来どう動くかを 4 シナリオで比較したい場合は、シナリオ別シミュレーションをご利用ください（入力条件は本計算機と共通です）。
+          </p>
           <ul className="mt-3 space-y-1.5 text-sm">
+            <li>
+              <Link href="/electricity-scenario-simulation" className="text-sky-700 underline-offset-2 hover:underline">
+                → 電気代シナリオ別シミュレーション（将来の電気代を 4 シナリオで試算）
+              </Link>
+            </li>
             <li>
               <Link href="/benchmark" className="text-sky-700 underline-offset-2 hover:underline">
                 → 業種×規模 電気代ベンチマークツール（参照型）
