@@ -1400,6 +1400,14 @@ export const articleCategories: ArticleCategory[] = [
       "iwate-automotive-electricity-cost",
       "fukui-textile-electricity-cost",
       "tokushima-chemical-electricity-cost",
+      "tochigi-medical-device-electricity-cost",
+      "gifu-ceramics-electricity-cost",
+      "ishikawa-machinery-electricity-cost",
+      "niigata-metal-electricity-cost",
+      "wakayama-steel-electricity-cost",
+      "shimane-steel-electricity-cost",
+      "miyazaki-food-electricity-cost",
+      "chiba-chemical-electricity-cost",
     ],
     order: 39,
     group: "learning",
@@ -5084,6 +5092,16 @@ export const articleList: ArticleMeta[] = [
   { title: "岩手県の自動車・輸送機器工場の電気料金完全ガイド｜北上・金ケ崎の自動車集積と東北電力", slug: "iwate-automotive-electricity-cost", description: "岩手県の自動車・輸送機器製造業に特化。金ケ崎・北上・奥州の完成車・サプライヤー集積を核に、プレス・溶接・塗装・組立ラインの電力プロファイル、東北電力エリアの単価事情（火力比率が高めで燃調感応度は中〜やや高め・女川2号機再稼働の進行）、特別高圧の契約最適化、補助金・PPA活用を整理します（東北で初の自動車クロス）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 29, publishedAt: "2026-06-09" },
   { title: "福井県の繊維・眼鏡工場の電気料金完全ガイド｜鯖江・越前の地場産業集積と北陸電力", slug: "fukui-textile-electricity-cost", description: "福井県の繊維・眼鏡製造業に特化。鯖江の眼鏡、越前・福井の合繊織物・染色加工の地場集積を核に、染色のボイラー蒸気・乾燥、織機、眼鏡の研磨・メッキ・成形の電力プロファイル、北陸電力エリアの単価事情（水力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用を整理します（富山=医薬品とは業種で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 30, publishedAt: "2026-06-09" },
   { title: "徳島県の化学・LED工場の電気料金完全ガイド｜阿南の化学・LED関連集積と四国電力", slug: "tokushima-chemical-electricity-cost", description: "徳島県の化学・LED製造業に特化。阿南を中心とした化学・LED関連・電子材料の集積を核に、化学反応・結晶成長・蛍光体・クリーンルームの電力プロファイル、四国電力エリアの単価事情（伊方3号機稼働）、特別高圧の契約最適化、補助金・PPA活用を整理します（香川=食品・愛媛=製紙とは業種で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 31, publishedAt: "2026-06-09" },
+
+  // --- 業種×地域クロス 第4弾8本（B-76 Phase4：新業種(医療機器/陶磁器/機械/金属加工)を拡充・industry-region 31→39） ---
+  { title: "栃木県の医療機器工場の電気料金完全ガイド｜大田原・宇都宮の医療機器集積と東京電力エリア", slug: "tochigi-medical-device-electricity-cost", description: "栃木県の医療機器製造業に特化。大田原・宇都宮を中心とする医療機器・精密機器の集積を核に、クリーンルーム空調・精密加工・滅菌・検査の電力プロファイル、東京電力エリアの単価事情（LNG・石炭依存で燃調感応度が中〜高）、契約最適化、補助金・PPA活用を整理します（地域一般・業種一般とは検索意図を分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 32, publishedAt: "2026-06-11" },
+  { title: "岐阜県の窯業・陶磁器工場の電気料金完全ガイド｜多治見・土岐の美濃焼・タイル集積と中部電力エリア", slug: "gifu-ceramics-electricity-cost", description: "岐阜県の窯業・陶磁器（美濃焼・タイル）製造に特化。多治見・土岐・瑞浪の窯業集積を核に、焼成炉（電気炉・ガス炉）・乾燥・粉砕成形の熱負荷プロファイル、中部電力エリアの単価事情（LNG火力依存で燃調感応度は中位）、契約最適化、補助金・PPA活用を整理します。", category: "業種×地域クロス", categorySlug: "industry-region", order: 33, publishedAt: "2026-06-11" },
+  { title: "石川県の機械工場の電気料金完全ガイド｜小松の建設機械・繊維機械の集積と北陸電力エリア", slug: "ishikawa-machinery-electricity-cost", description: "石川県の機械製造業に特化。小松の建設機械・金沢周辺の繊維機械／産業機械の集積を核に、機械加工（マシニング）・組立・塗装・熱処理の電力プロファイル、北陸電力エリアの単価事情（水力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用を整理します（富山=医薬品とはエリア軸を共有しつつ業種で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 34, publishedAt: "2026-06-11" },
+  { title: "新潟県の金属加工工場の電気料金完全ガイド｜燕三条の刃物・洋食器・金属ハウスウェア集積と東北電力エリア", slug: "niigata-metal-electricity-cost", description: "新潟県の金属加工業に特化。燕三条（燕市・三条市）の刃物・洋食器・金属ハウスウェアの集積を核に、プレス・研磨・バフ・めっき・熱処理の電力プロファイル、東北電力エリアの単価事情（女川2号機の再稼働進行）、契約最適化、補助金・PPA活用を整理します（新潟=食品とは同県・別業種で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 35, publishedAt: "2026-06-11" },
+  { title: "和歌山県の鉄鋼業の電気料金完全ガイド｜和歌山臨海の一貫製鉄所・コンビナートと関西電力エリア", slug: "wakayama-steel-electricity-cost", description: "和歌山県の鉄鋼・化学に特化。和歌山市臨海部の一貫製鉄所・石油化学コンビナートを核に、高炉・転炉・圧延・コークスの電力プロファイル、関西電力エリアの単価事情（原子力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用を整理します（兵庫=神戸製鋼・島根=安来の特殊鋼とは集積タイプで分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 36, publishedAt: "2026-06-11" },
+  { title: "島根県の特殊鋼工場の電気料金完全ガイド｜安来の特殊鋼・刃物鋼の集積と中国電力エリア", slug: "shimane-steel-electricity-cost", description: "島根県の特殊鋼・金属に特化。安来の特殊鋼・刃物鋼・金属粉末の集積を核に、電気炉（アーク炉）・圧延・熱処理の電力プロファイル、中国電力エリアの単価事情（島根2号機の再稼働進行）、契約最適化、補助金・PPA活用を整理します（兵庫・和歌山の鉄鋼とは集積タイプで分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 37, publishedAt: "2026-06-11" },
+  { title: "宮崎県の食品工場の電気料金完全ガイド｜畜産加工・焼酎・冷凍の集積と九州電力エリア", slug: "miyazaki-food-electricity-cost", description: "宮崎県の食品製造業に特化。畜産加工（食肉）・本格焼酎・冷凍食品の集積を核に、冷凍冷蔵・加熱殺菌・蒸留の電力プロファイル、九州電力エリアの単価事情（原発稼働＋太陽光導入量が国内最大級で昼間の出力制御）、契約最適化、補助金・PPA活用を整理します（鹿児島=食品とは畜産加工中心で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 38, publishedAt: "2026-06-11" },
+  { title: "千葉県の化学工場の電気料金完全ガイド｜京葉コンビナートの石油化学と東京電力エリア", slug: "chiba-chemical-electricity-cost", description: "千葉県の化学工業に特化。市原・袖ケ浦・千葉・市川を結ぶ京葉コンビナートの石油化学集積を核に、エチレンプラント・蒸留・コンプレッサー・電解の連続運転プロファイル、東京電力エリアの単価事情（LNG・石炭依存で燃調感応度が中〜高）、契約最適化、補助金・PPA活用を整理します（岡山=水島・山口=周南とは立地で分離）。", category: "業種×地域クロス", categorySlug: "industry-region", order: 39, publishedAt: "2026-06-11" },
 
   // --- 電力会社別解説 第1弾パイロット3本（B-79：旧一電大手・中立解説） ---
   { title: "東京電力エナジーパートナー（東電EP）の法人向けプラン完全ガイド｜特別高圧/高圧メニュー・燃調算定・サポート体制", slug: "tepco-ep-corporate-electricity-guide", description: "東京電力エナジーパートナーの法人向けサービスを公開情報で中立的に整理。特別高圧・高圧の契約メニュー、燃料費調整額の算定方式、関東エリアの電源構成、契約手続き・サポート体制を第三者視点でまとめます。特定社の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 1, featured: true, publishedAt: "2026-05-29" },
