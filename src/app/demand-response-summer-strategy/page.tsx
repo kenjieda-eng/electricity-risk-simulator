@@ -243,6 +243,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（DR関連）", url: "https://www.enecho.meti.go.jp/" },
   { name: "電力広域的運営推進機関（OCCTO）", url: "https://www.occto.or.jp/" },
   { name: "JEPX（日本卸電力取引所）", url: "https://www.jepx.jp/" },
@@ -307,6 +308,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               夏季電気代の上振れは、JEPX高騰・燃調・デマンド・賦課金の4要因が重なる構造ですが、DRはこの中で『系統安定化＝需給ひっ迫回避』に直接貢献する仕組みです。猛暑日の14〜16時帯の電力削減で、需要家側に収益を還元します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {drStructure.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -346,6 +348,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 経産省・電力広域的運営推進機関（OCCTO）・アグリゲーター公表資料から整理。実値は地域・業種・契約条件で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -355,6 +358,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR導入の検討では、アグリゲーター選定、運用設計、電力プラン連動、BCP・ESG連動の5つの論点を整理することが重要です。CFO・現場部門・経営層の3者協議が必須。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {drFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -381,6 +385,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR参加は単独でも収益化可能ですが、固定プラン切替・自家消費太陽光・蓄電池との組合せで最大効果が出ます。実在事業者の公開事例から整理した3つのパターンをBefore/Afterで提示します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -411,6 +416,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域電力会社・アグリゲーターでDRプログラムが異なります。自社の所在地域・業種・契約電力に応じて、最適なプログラムを選定してください。複数アグリゲーターから相見積を取得し、条件比較が原則。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {programComparison.map((pg) => (
                 <div key={pg.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -432,6 +438,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR参加の経済性は『kW単価×契約電力×参加kW比率』の基本式で計算可能。中規模法人（契約電力1,000kW、参加kW 300kW、kW単価8,000円）で年240万円のインセンティブ収入＋発動時収入で年300万円規模が目安。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">基本料金（年間固定）</p>
@@ -466,6 +473,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR発動時の運用は『空調・照明制御自動化』『生産シフト夜間移行』『自家発電・蓄電池起動連動』『ライン停止・部分稼働』の4論点を組合せて設計します。事前に現場部門との合意形成が必須。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -488,6 +496,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR参加の適性は業種で異なります。製造業（生産シフト柔軟性）・データセンター（負荷管理高度）はDR適性高、オフィス・商業施設は限定的なDR参加が中心、24h連続稼働で削減余地が小さい業種は適性低。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">製造業（DR適性高）</p>
@@ -535,6 +544,7 @@ export default function DemandResponseSummerStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR参加に活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。アグリゲーター経由参加では補助金不要のケースも多い。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +621,7 @@ export default function DemandResponseSummerStrategyPage() {
             heading="関連ページ"
             links={[
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別冷却戦略のハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/summer-peak-electricity-cost-cfo", title: "夏季ピーク電気代の基礎とCFO視点", description: "夏季電気代の構造とCFO向けレポーティング。" },
               { href: "/peak-cut-5-strategies", title: "業種横断ピークカット5戦略", description: "高効率空調・LED・蓄電池・運用改善・契約見直しの5戦略。" },
               { href: "/manufacturing-cooling-strategy", title: "製造業の冷房戦略", description: "工場・倉庫の温度管理と高効率設備投資判断。" },

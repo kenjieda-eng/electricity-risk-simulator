@@ -243,6 +243,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
   { name: "環境省（ZEB事業）", url: "https://www.env.go.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
@@ -282,6 +283,7 @@ export default function OfficeBuildingPeakCutPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             オフィスビル（自社ビル・テナントビル・本社）の夏季ピークカットは、ZEB化、BEMS活用、テナント企業との連動、共用部電力管理の4論点を組合せて最適化します。コロナ後のリモートワーク併用、テナント企業のESG要求、ZEB認証ビルへの投資家関心拡大で、オフィスビルの電力管理は経営戦略の中核になりつつあります。本ページでは自社ビル・賃借ビル・REIT保有ビルの差異、BEMS導入効果、ZEB化レベル別削減、テナント連動戦略、規模別事例、補助金活用までを実務に直結する観点で整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           <AuthorBadge publishedAt="2026-05-21" updatedAt="2026-05-21" />
           <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
             <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
@@ -326,6 +328,7 @@ export default function OfficeBuildingPeakCutPage() {
               </Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -346,6 +349,7 @@ export default function OfficeBuildingPeakCutPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 経産省・環境省ZEB事業・ビルディング協会連合会から整理。実値はビル種別・延床面積で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -372,6 +376,7 @@ export default function OfficeBuildingPeakCutPage() {
               <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の事業影響</Link>
               で深掘りできます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -434,6 +439,7 @@ export default function OfficeBuildingPeakCutPage() {
               <Link href="/demand-control-reduction-effect" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドコントロール削減効果</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -515,6 +521,7 @@ export default function OfficeBuildingPeakCutPage() {
               <Link href="/real-estate-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">不動産業の電気料金見直し</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -545,6 +552,7 @@ export default function OfficeBuildingPeakCutPage() {
               <Link href="/subsidy-schedule-and-approval-rate" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金スケジュールと採択率</Link>
               。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -566,6 +574,7 @@ export default function OfficeBuildingPeakCutPage() {
               <Link href="/what-to-do-3-months-before-electricity-contract-renewal" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約更新3か月前にやること</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -575,6 +584,7 @@ export default function OfficeBuildingPeakCutPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               オフィスビルの夏季電気代はビル種別・契約構造・テナント数で大きく異なります。シミュレーターで自社条件における夏季上振れ幅と、BEMS・ZEB化・テナント連動のメリットを定量化できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での夏季上振れリスクを確認する</li>
               <li>BEMS導入のROIと削減効果を試算する</li>
@@ -617,6 +627,7 @@ export default function OfficeBuildingPeakCutPage() {
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金。" },
               { href: "/cfo-electricity-cost-basics", title: "CFOのための電気代基礎", description: "オフィスビルの経営判断フレームワーク。" },
               { href: "/electricity-cost-seasonal-pattern", title: "電気料金の季節パターン", description: "夏冬の電気代変動の基礎理解。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
             ]}
           />
 
