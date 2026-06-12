@@ -270,6 +270,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
   { name: "日本データセンター協会（JDCC）", url: "https://www.jdcc.or.jp/" },
   { name: "Green Grid（PUE指針）", url: "https://www.thegreengrid.org/" },
@@ -334,6 +335,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DCの夏季電力構造は『PUE（夏季悪化）／冷却電力急増／AIワークロード増加／冷却方式選択／顧客SLA要求』の5論点で構造化されます。PUE改善が経営戦略の中核です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {peakStructure.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -373,6 +375,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本データセンター協会・Green Grid・経産省統計から整理。実値はDC規模・PUE・立地で2〜3倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -382,6 +385,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DCの夏季電気代上昇は、AIワークロード急増、夏季気温上昇トレンド、JEPX・燃調・賦課金の累積、顧客SLAと冷却バックアップ要求、長期契約の重要性という構造的要因が並列します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -408,6 +412,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DCの冷却方式は4種類あり、夏季のラック電力密度・PUE目標・投資規模で選択します。低密度ラックは空冷＋外気冷房、高密度（AI/HPC）ラックは水冷・液浸冷却が必須です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {coolingMethods.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +443,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DCの夏季冷却最適化投資は規模で大きく異なります。小規模では外気冷房＋空調最適化、中規模では水冷導入＋自家消費太陽光、ハイパースケールでは液浸冷却＋大規模PPAが標準です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
                 <div key={item.size} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -457,6 +463,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。各事例で規模・PUE改善目標に応じた最適戦略を確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -478,6 +485,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DCの夏季デマンド管理は『外気冷房の夏季活用』『ホット/コールドアイル分離』『温度設定緩和（22→25〜27℃）』『AI予測制御』の4論点を組合せて最適化します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -500,6 +508,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               生成AI・機械学習の需要急増でGPUサーバー導入が世界的に拡大、ラック電力密度が急上昇しています。AIワークロード対応のDC設計は、夏季の冷却負荷増加と組合さり、空冷では限界、水冷・液浸冷却の導入が必須です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 上記の数値はあくまで目安であり、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">ラック電力密度の上昇</p>
@@ -534,6 +543,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               顧客（AWS・Google・Microsoft等）のSLA 99.99%以上要求で、夏季ピーク時の冷却バックアップ（冗長化N+1、N+2、2N）が必須。冗長設備の電力消費（PUE 0.05〜0.15）も計算に入れる必要があります。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">冗長化レベル</p>
@@ -649,6 +659,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
               { href: "/it-services-electricity-cost-review", title: "ITサービス業の電気料金見直し", description: "自社DC運用業種の関連事例。" },
               { href: "/semiconductor-electricity-cost-review", title: "半導体業の電気料金見直し", description: "クリーンルーム空調最適化の類似事例。" },
               { href: "/datacenter-ai-demand", title: "データセンター・AI電力需要", description: "AIワークロード増加トレンドの全体像。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働ベースロード業種の関連事例。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "DCの長期固定契約選択。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },

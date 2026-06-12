@@ -264,6 +264,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
   { name: "電力広域的運営推進機関（OCCTO）", url: "https://www.occto.or.jp/" },
   { name: "JEPX（日本卸電力取引所）", url: "https://www.jepx.jp/" },
@@ -347,6 +348,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               </Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -367,6 +369,7 @@ export default function SummerPeakElectricityCostCfoPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 経産省・電気事業連合会・気象庁から整理。実値は地域・業種・規模で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -393,6 +396,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の事業影響</Link>
               で深掘りできます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -423,6 +427,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/office-building-peak-cut" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビルのピークカット</Link>
               。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -445,6 +450,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/demand-response-summer-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドレスポンス入門・夏のピークシフト</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -467,6 +473,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/what-to-do-3-months-before-electricity-contract-renewal" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約更新3か月前にやること</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -476,6 +483,7 @@ export default function SummerPeakElectricityCostCfoPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               夏季電気代の影響度は業種で大きく異なります。製造業（24h稼働）はベースロード比重が高く、相対的に夏季比率が低い（28〜32%）。オフィス・商業施設は冷房中心で夏季比率が高い（40〜45%）。データセンターは年中稼働で冷却負荷増の比率が低い（26〜30%）が、絶対額は最大規模に。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、上記の業種区分はあくまで一般的な目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">製造業（24h稼働）</p>
@@ -538,6 +546,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/ir-disclosure-electricity-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">IR開示における電気代リスク</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -568,6 +577,7 @@ export default function SummerPeakElectricityCostCfoPage() {
               <Link href="/subsidy-schedule-and-approval-rate" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金スケジュールと採択率</Link>
               。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 補助金の要件・採択は年度・制度で変わります。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -621,6 +631,7 @@ export default function SummerPeakElectricityCostCfoPage() {
             heading="関連ページ"
             links={[
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別冷却戦略のハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/demand-response-summer-strategy", title: "DR入門・夏のピークシフト", description: "DR経済性と主要プログラム比較。" },
               { href: "/peak-cut-5-strategies", title: "業種横断ピークカット5戦略", description: "高効率空調・LED・蓄電池・運用改善・契約見直しの5戦略。" },
               { href: "/manufacturing-cooling-strategy", title: "製造業の冷房戦略", description: "工場・倉庫の温度管理と高効率設備投資判断。" },

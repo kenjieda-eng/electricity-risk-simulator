@@ -276,6 +276,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "電力広域的運営推進機関（OCCTO）", url: "https://www.occto.or.jp/" },
@@ -340,6 +341,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               夏季ピーク電気代は、契約電力（デマンド）更新リスク、JEPX市場連動リスク、業種別ピーク特性、5戦略の優先順位の考え方の5つの論点で構造化されます。各論点を理解した上で、5戦略のフェーズドアプローチを設計することが経営判断の基礎です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {peakStructure.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -379,6 +381,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 経産省・SII採択事例・公開事例から整理。実値は業種・規模・補助金活用度で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -388,6 +391,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略の選定は、各戦略のROI・即効性・補助金活用・BCP価値・CN価値を総合評価することが重要です。CFO視点では財務NPV評価、現場部門視点では運用負荷評価の両面で判断します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -414,6 +418,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略のROI（投資回収）と削減効果を比較。CFO視点では投資回収期間・NPV・即時効果のバランスで判断すべきです。運用改善・契約見直しは即時効果のため最優先、設備投資は中長期計画として組み込むのが原則です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {strategyComparison.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -444,6 +449,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略の総合投資パターンは法人規模で大きく異なります。小規模では即時型3戦略を優先、中規模では3年計画で5戦略を組合せ、大規模では5戦略フル活用＋自家消費太陽光・PPA・DRが標準です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
                 <div key={item.size} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -463,6 +469,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。各事例で5戦略のフェーズドアプローチによる総合投資回収を確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、上記の数値はあくまで目安であり、特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -484,6 +491,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略を一度に導入せず、ROIと即効性で優先順位を付ける段階的導入が原則。1年目: 契約見直し+運用改善+LED、2年目: 空調更新、3年目以降: 蓄電池・太陽光・DR。各フェーズで効果検証し次フェーズ調整。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -553,6 +561,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。複数補助金の組合せ申請（SII＋PPA＋GX）で採択率が高くなる傾向。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -583,6 +592,7 @@ export default function PeakCut5StrategiesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               5戦略の導入検討前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、フェーズドアプローチの精度が下がります。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -629,6 +639,7 @@ export default function PeakCut5StrategiesPage() {
             heading="関連ページ"
             links={[
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別冷却戦略のハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/summer-peak-electricity-cost-cfo", title: "夏季ピーク電気代の基礎とCFO視点", description: "夏季電気代の構造とCFO向けレポーティング。" },
               { href: "/demand-response-summer-strategy", title: "DR入門・夏のピークシフト", description: "DR経済性と主要プログラム比較。" },
               { href: "/manufacturing-cooling-strategy", title: "製造業の冷房戦略", description: "工場・倉庫の温度管理と高効率設備投資判断。" },

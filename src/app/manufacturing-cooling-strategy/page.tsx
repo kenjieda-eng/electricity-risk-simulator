@@ -243,6 +243,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
+  { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "日本冷凍空調工業会（JRAIA）", url: "https://www.jraia.or.jp/" },
@@ -326,6 +327,7 @@ export default function ManufacturingCoolingStrategyPage() {
               </Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -346,6 +348,7 @@ export default function ManufacturingCoolingStrategyPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 経産省・日本冷凍空調工業会・公開事例から整理。実値は業種・倉庫種別・地域で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 出典: 新電力ネット（https://pps-net.org/unit）を加工して整理。単価・統計・削減率は公開情報ベースの目安です。本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -372,6 +375,7 @@ export default function ManufacturingCoolingStrategyPage() {
               <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金の事業影響</Link>
               で深掘りできます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -381,6 +385,7 @@ export default function ManufacturingCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業の冷房戦略投資は法人規模で大きく異なります。小規模ではLED＋運用改善＋換気強化を即時実施、中規模では高効率空調＋廃熱回収＋BEMS、大規模では自家消費太陽光・蓄電池・コージェネ・DRを総合活用します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
                 <div key={item.size} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -400,6 +405,7 @@ export default function ManufacturingCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。各事例で業種特性に応じた最適戦略を確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -434,6 +440,7 @@ export default function ManufacturingCoolingStrategyPage() {
               <Link href="/demand-control-reduction-effect" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドコントロール削減効果</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -443,6 +450,7 @@ export default function ManufacturingCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種別の最適冷房戦略は大きく4パターンに分類できます。自社の業種特性に応じた組合せ設計が経営判断の基礎です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">食品工場の最適戦略</p>
@@ -517,6 +525,7 @@ export default function ManufacturingCoolingStrategyPage() {
               <Link href="/manufacturing-cfo-electricity-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業CFO電気代戦略</Link>
               で確認できます。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、本記載は特定の電力会社・契約形態を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -526,6 +535,7 @@ export default function ManufacturingCoolingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業の冷房戦略に活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。複数補助金の組合せ申請（SII＋PPA＋GX）で採択率が高くなる傾向。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -613,6 +623,7 @@ export default function ManufacturingCoolingStrategyPage() {
               { href: "/semiconductor-electricity-cost-review", title: "半導体業の電気料金見直し", description: "クリーンルーム空調＋VAV制御。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働業種のベース電力管理。" },
               { href: "/factory-electricity-cost-reduction", title: "工場の電気代削減", description: "工場向け電気代削減の全体像。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/manufacturing-cfo-electricity-strategy", title: "製造業CFO電気代戦略", description: "製造原価・Scope2・価格転嫁の経営戦略。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "製造業の固定プラン選択。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "工場屋根太陽光の投資回収。" },
