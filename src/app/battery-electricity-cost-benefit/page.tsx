@@ -197,6 +197,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド値は1か月のうち1回でも高い値が記録されると、その月の基本料金に影響します。つまり、1日あたり数分間のピークを繰り返し抑制することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -206,6 +207,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             安い時間帯に充電し、高い時間帯に放電する「ピークシフト」によって、電力量料金の単価差を節約できます。<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>利用時は特に効果が大きくなります。以下はピークシフトが効果を発揮する主なケースです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {peakShiftBenefit.map((item) => (
               <div
@@ -244,6 +246,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実際の試算には、充放電ロス・蓄電池容量の制約・メンテナンスコストを考慮した上で、回収年数を算出することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
@@ -273,6 +276,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種・規模ごとの蓄電池導入効果の概算を整理します。実際の効果は施設条件・契約内容・<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用の有無によって異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-slate-100">
@@ -308,6 +312,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池が電気料金対策として有効な場合がある一方、以下のような限界もあります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {limitations.map((item) => (
               <div
@@ -336,6 +341,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池は、デマンド抑制による基本料金削減とピークシフトによる電力量料金の最適化という2つの経路で電気料金削減に貢献できます。効果の大きさは自社の電力使用パターン・契約プラン・蓄電池の容量・設計次第です。導入前に自社のデマンドパターンを分析し、どちらの効果が主たる便益になるかを明確にした上で投資判断を行うことが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -386,10 +392,12 @@ export default function BatteryElectricityCostBenefitPage() {
               需要ピーク時の契約電力を抑制できます。深夜と夕方の需要差は約29,000MW（+35%）であり、
               この差分がピークシフトの経済価値の源泉です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </div>
           <p className="mt-3 text-xs text-slate-500">
             ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -402,6 +410,7 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2020年代の猛暑日（35℃超）は東京で10年間に101日、名古屋で179日。蓄電池の投資回収を10〜15年で見積もる場合、この温暖化トレンドは投資判断にプラスに働く要素です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -433,11 +442,13 @@ export default function BatteryElectricityCostBenefitPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※CDD（冷房度日）: 基準温度22℃を超えた日の積算値。値が大きいほど冷房需要が高い。出典: 気象庁過去の気象データ（1995〜2024年）を集計。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/why-corporations-consider-batteries",
               title: "法人が蓄電池を検討する理由",

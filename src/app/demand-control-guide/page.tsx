@@ -103,9 +103,11 @@ export default function DemandControlGuidePage() {
             <strong>デマンドコントロール</strong>とは、30分平均の需要電力（デマンド値）が契約電力を超えないよう、事前に監視・警報・制御する仕組みのことです。高圧契約の基本料金は過去12か月の最大デマンドで決まるため、一度のピーク発生が1年分の基本料金に跳ね返ります。
             これを抑える手段として、多くの法人で採用されています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             本記事では、装置の種類・費用相場・削減効果の目安・投資回収期間・導入判断の軸を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </header>
 
         <TableOfContents />
@@ -120,6 +122,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               重要なのは、<strong>30分の平均値を下げること</strong>が目的という点です。瞬間的な電力が高くても、30分通算で契約電力を超えなければ問題にならないため、設備を完全停止するのではなく、数分単位で間引き運転する制御が主流です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -127,6 +130,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               デマンドコントロールの装置は、大きく3種類に分かれます。施設規模や運用体制に合わせて選定するのが基本です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               {deviceTypes.map((d) => (
                 <div key={d.name} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -140,6 +144,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-xs leading-6 text-slate-500">
               ※ 上記は参考相場。実際の費用は既存の受電設備、配線工事の難易度、制御対象数で変動します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -148,6 +153,7 @@ export default function DemandControlGuidePage() {
               デマンドコントロールの効果は、ピークをどれだけ抑えられるかで決まります。目安としては<strong>ピーク10〜20%の抑制</strong>が現実的なラインで、その場合の基本料金削減は▲5〜15%程度になります。
               電力量料金は使用量そのものが減るわけではないため大きく変わりません。効果の主軸は基本料金です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
             <div className="mt-4 space-y-3">
               {reductionCases.map((c) => (
                 <div key={c.profile} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -160,6 +166,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-xs leading-6 text-slate-500">
               ※ 試算は契約電力あたり基本料金単価を 1,700〜2,400円/kW 前後と仮定した概算。地域・契約区分・力率により増減します。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -167,6 +174,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               次のいずれかに当てはまる施設では、デマンドコントロールの投資効果が出やすい傾向があります。
             </p>
+            <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>過去12か月で最大デマンド月と他月の差が15%以上ある</li>
               <li>夏冬のピーク月が決まっており、ピーク抑制の余地がある</li>
@@ -177,6 +185,7 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               逆に、<strong>年間を通じて電力使用が安定している施設（データセンター・24時間工場の定常運転部分）</strong>ではピーク抑制の余地が少なく、効果が限定的になりやすい点には注意が必要です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -195,11 +204,13 @@ export default function DemandControlGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               単に機械を置くだけでは効果が出にくい施策です。<Link href="/reduce-high-voltage-basic-charge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧電力の基本料金を下げる5つの方法</Link>と組み合わせて、契約電力の見直しまでを一連で設計するのが効果的です。
             </p>
+            <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </section>
 
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
               {
                 href: "/demand-control-reduction-effect",
                 title: "デマンドコントロールの削減効果",

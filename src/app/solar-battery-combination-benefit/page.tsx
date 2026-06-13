@@ -138,9 +138,11 @@ export default function SolarBatteryCombinationBenefitPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           自家消費型太陽光だけでは対応できない「夜間・悪天候時の電力依存」と「余剰電力の無駄」を蓄電池が補完することで、電気料金削減の効果が大きく高まります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           太陽光単体と蓄電池を加えた場合の違い、経済効果の考え方、設計のポイントを整理します。単純に「両方設置すれば良い」というわけではなく、自社の使用パターンに合わせた設計が重要です。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -160,6 +162,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光は昼間の購入電力を削減する効果がありますが、以下のような限界があります。蓄電池はこれらの限界を補う役割を果たします。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">太陽光単体の限界</p>
@@ -189,6 +192,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             太陽光と蓄電池を組み合わせることで生まれる主な相乗効果を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -218,6 +222,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             太陽光と蓄電池の組み合わせを経済的に評価する際の考え方を整理します。削減効果には<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減の両面があり、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>の活用により投資回収を早めることもできます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {economicConsiderations.map((item) => (
               <div
@@ -263,6 +268,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※電力量料金20円/kWh、基本料金1,650円/kW想定。上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -272,6 +278,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             導入規模に応じた概算費用と回収期間の目安を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-slate-100">
@@ -294,6 +301,7 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -335,6 +343,7 @@ export default function SolarBatteryCombinationBenefitPage() {
             </Link>{" "}
             をご参照ください。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -369,11 +378,13 @@ export default function SolarBatteryCombinationBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             太陽光と蓄電池を組み合わせることで、太陽光単体では対応できなかった夜間対応・余剰活用・安定したデマンド抑制が可能になり、電気料金削減効果が高まります。一方で、追加投資額に対する経済効果の検証と、自社の使用パターンに合わせた容量・制御ロジックの設計が不可欠です。コスト削減の試算だけでなく、将来の電気料金上昇リスクやBCP価値も含めた総合的な投資判断をお勧めします。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/self-consumption-solar-cost-benefit",
               title: "自家消費型太陽光は電気料金対策としてどう効くか",

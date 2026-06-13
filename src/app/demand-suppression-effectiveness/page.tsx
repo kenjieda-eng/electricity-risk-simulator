@@ -198,6 +198,7 @@ export default function DemandSuppressionEffectivenessPage() {
             <p className="mt-2 text-sm leading-6 text-slate-600">
               デマンド100kW・基本料金単価1,500円/kWの場合、月の基本料金は150,000円。デマンドを90kWに抑制できれば135,000円となり、月額15,000円・年間180,000円の削減になります。
             </p>
+            <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </div>
         </section>
 
@@ -208,6 +209,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンドを下げるための主な方法と、それぞれの実効性を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {suppressionMethods.map((item) => (
               <div
@@ -233,6 +235,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド抑制対策を講じる前に、以下の限界と注意点を把握しておくことが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {limitations.map((item) => (
               <div
@@ -253,6 +256,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             基本料金単価1,650円/kWを前提に、削減幅ごとの削減効果を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
@@ -274,6 +278,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -283,6 +288,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             導入方法ごとの費用と想定削減効果・回収期間の目安を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-slate-100">
@@ -304,6 +310,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -313,6 +320,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド抑制単独では限界がある場合、他の対策と組み合わせることで基本料金削減と電力量料金削減を両立できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドコントローラー＋蓄電池</p>
@@ -358,6 +366,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド抑制による基本料金削減が特に有効な法人の特徴を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
             <li>
               <span className="font-semibold">高圧・特別高圧契約の法人：</span>
@@ -383,6 +392,7 @@ export default function DemandSuppressionEffectivenessPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド抑制は高圧・特別高圧契約の法人にとって有効な基本料金削減手段ですが、月に1回でもピークが発生するとその月のデマンドが更新される仕組みのため、確実な抑制が重要です。デマンドコントローラー・蓄電池・稼働スケジュール分散などの手段を組み合わせ、継続的にデマンドを管理することで、基本料金の長期的な削減効果が期待できます。ただし、低圧契約や基本料金比率が低い場合は効果が限定的なため、自社の料金構造を確認した上で優先順位を判断することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -520,6 +530,7 @@ export default function DemandSuppressionEffectivenessPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-electricity-cost-benefit",
               title: "蓄電池は電気料金対策としてどう効くか",

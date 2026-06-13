@@ -129,6 +129,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、契約見直しと設備対策の役割の違いを整理し、組み合わせ方と判断の進め方を実務目線で解説します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -149,6 +150,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金を削減するためのアプローチには大きく2つの軸があります。この2つは目的が違うため、補完関係として捉えることが重要です。<Link href="/fixed-price-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">固定プラン</Link>か<Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>かの選択など、契約の見直しは設備対策と並行して検討する価値があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           <div className="mt-4 space-y-3">
             {roles.map((item) => (
               <div
@@ -221,12 +223,14 @@ export default function ContractReviewAndEquipmentCombinationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金削減の優先順位として、まず契約見直しから着手することを勧める主な理由は以下のとおりです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>初期投資ゼロで即効性があり、意思決定のハードルが低い</li>
             <li>見直しで削減した費用を設備投資の原資に充てることができる</li>
             <li>設備を導入した後も契約条件の見直しは引き続き行える</li>
             <li>使用パターンが変わる前に最適な契約を探ることで、設備導入後の再検討も含めた計画が立てやすい</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しの進め方については{" "}
             <Link
@@ -237,6 +241,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -246,11 +251,13 @@ export default function ContractReviewAndEquipmentCombinationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと設備対策の優先順位を判断する際に確認すべき観点を以下に整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             {priorityCheck.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ol>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -260,6 +267,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しの効果を事前に把握するためには、現行の電力契約条件での料金上振れリスクと、見直し後の想定コストを比較することが重要です。シミュレーターを使うことで、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の変動シナリオや市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             シミュレーター結果の読み方については{" "}
             <Link
@@ -270,6 +278,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <SourcesAndFaq
@@ -278,6 +287,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -290,6 +300,7 @@ export default function ContractReviewAndEquipmentCombinationPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",
