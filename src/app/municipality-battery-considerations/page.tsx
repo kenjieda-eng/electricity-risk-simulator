@@ -128,6 +128,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           市区町村・都道府県などの自治体が管理する公共施設では、電気料金の上昇対策として蓄電池の導入が検討されるケースが増えています。自治体施設の場合、民間企業と異なり「防災拠点としての機能維持」という公益的な役割も同時に考慮する必要があります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、自治体施設特有の観点から蓄電池導入の着眼点を整理します。
         </p>
@@ -151,6 +152,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体が管理する施設は多様ですが、電力使用の観点から共通する特性があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>庁舎・学校・体育館など施設の種類が多く、それぞれ電力使用パターンが異なる</li>
             <li>年度予算制のため、電気料金の上昇が予算執行に影響しやすい</li>
@@ -167,6 +169,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体施設への蓄電池導入を検討する際、最初に整理すべきは「通常時の電気料金削減」と「災害時の防災拠点機能維持」をどのように両立させるかです。以下の観点を整理することで、導入目的と設計要件を明確化できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {disasterPoints.map((item) => (
               <div
@@ -178,6 +181,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
               </div>
             ))}
           </div>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -187,6 +191,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             防災機能を確保しながら、通常時の電気料金削減を実現するための主な方法は以下のとおりです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドカット</p>
@@ -213,6 +218,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
               </p>
             </div>
           </div>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -226,6 +232,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体施設での蓄電池導入では、<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>・交付金の活用やPPAモデルの検討が初期費用の負担を軽減する有効な手段です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {budgetPoints.map((item) => (<div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -244,6 +251,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体における蓄電池導入の意思決定では、議会承認や住民への説明が求められる場合があります。説明材料として整理しておくべき主な観点は以下のとおりです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>電気料金削減による長期的な財政効果の試算</li>
             <li>防災・BCPへの投資として地域住民に提供する価値</li>
@@ -261,6 +269,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
             </Link>{" "}
             も参考になります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <SourcesAndFaq
@@ -269,6 +278,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -281,6 +291,7 @@ export default function MunicipalityBatteryConsiderationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",

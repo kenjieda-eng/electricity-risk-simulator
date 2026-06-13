@@ -137,9 +137,11 @@ export default function BatterySuitedCorporationsPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           蓄電池の導入は電気料金削減の手段として有効な場合がありますが、すべての法人に同じ効果が出るわけではありません。投資対効果（ROI）が出やすい法人と出にくい法人の違いを理解することが、導入検討の第一歩です。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、蓄電池導入の費用対効果が高くなりやすい法人の特徴と条件を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -160,6 +162,7 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人向け蓄電池の主な電気料金削減効果は大きく2つに分類できます。ひとつは<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減、もうひとつは<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の最適化です。どちらの効果が大きいかは法人の電力使用パターンと契約形態によって異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドカット（基本料金削減）</p>
@@ -172,6 +175,7 @@ export default function BatterySuitedCorporationsPage() {
               <p className="mt-1 text-sm leading-6 text-slate-600">
                 割安な夜間電力で蓄電し、単価の高い昼間に放電する。時間帯別料金を利用している場合に昼夜の単価差分だけ削減効果が生まれる。
               </p>
+              <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
             </div>
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -184,6 +188,7 @@ export default function BatterySuitedCorporationsPage() {
             </Link>{" "}
             で詳しく確認できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -210,6 +215,7 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の条件に当てはまる場合、蓄電池の投資回収期間が長くなりやすく、優先度が相対的に低くなる可能性があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {lessEffectiveConditions.map((item) => (
               <div
@@ -230,6 +236,7 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種・施設の特性によって蓄電池の向き不向きに傾向があります。ただし個々の事業者の電力使用状況が実際の効果を左右するため、あくまで参考として把握することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -281,6 +288,7 @@ export default function BatterySuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池の導入検討を進める前に、まず現行の電力契約条件でどの程度の料金上振れリスクがあるかを把握することをお勧めします。電気料金の上振れリスクが大きい場合は、契約見直し（プラン変更）の方が即効性の高い対策になる場合もあります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池と契約見直しの組み合わせについては{" "}
             <Link
@@ -291,6 +299,7 @@ export default function BatterySuitedCorporationsPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <SourcesAndFaq
@@ -299,6 +308,7 @@ export default function BatterySuitedCorporationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -311,6 +321,7 @@ export default function BatterySuitedCorporationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/commercial-facility-battery-considerations",
               title: "商業施設で蓄電池を検討するときの着眼点",

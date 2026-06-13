@@ -167,6 +167,7 @@ export default function WarehouseBatteryConsiderationsPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           倉庫の種類（常温・冷凍冷蔵・自動化センター）によって電力消費パターンと課題が異なります。それぞれの特性を踏まえた着眼点と、太陽光との組み合わせによる相乗効果について整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -186,6 +187,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             倉庫といっても種類によって電力消費パターンと課題が大きく異なります。導入前に自社の倉庫タイプに対応した着眼点を確認します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {warehouseTypes.map((item) => (
               <div
@@ -211,6 +213,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大型倉庫の最大の強みは、広い屋根面積による大規模な太陽光パネルの設置が可能な点です。太陽光と蓄電池を組み合わせることで、倉庫の電気料金対策として大きな効果が期待できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {roofSolarCombinationPoints.map((item) => (
               <div
@@ -232,6 +235,7 @@ export default function WarehouseBatteryConsiderationsPage() {
             </Link>{" "}
             をご覧ください。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -241,6 +245,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             冷凍・冷蔵倉庫では、一般の物流倉庫に加えて以下の観点が特に重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {coldStorageSpecificPoints.map((item) => (
               <div
@@ -262,6 +267,7 @@ export default function WarehouseBatteryConsiderationsPage() {
             </Link>{" "}
             をご参照ください。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -271,6 +277,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             倉庫での蓄電池・太陽光の経済効果を試算する際の主要な観点を整理します。デマンド抑制による<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>削減と、太陽光自家消費による<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>・<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の削減が主な経路です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           <div className="mt-4 space-y-4">
             {economicsForWarehouse.map((item) => (
               <div
@@ -291,6 +298,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             倉庫での蓄電池・太陽光導入を具体的に進める際に確認すべき事項をまとめます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">建物オーナーとの調整</p>
@@ -329,6 +337,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             物流倉庫・冷凍冷蔵倉庫は、広い屋根面積・大きな電力消費・停電時の商品保護ニーズという特性から、太陽光と蓄電池の組み合わせが特に有効な業態です。倉庫の種類（常温・冷凍冷蔵・自動化センター）によって検討の優先事項が異なります。経済効果の試算においては、電気料金削減効果に加えてBCP価値（停電時の商品保護）も含めた総合評価をお勧めします。建物オーナーとの調整や屋根状態の確認を早めに行い、専門業者との協議を進めることが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <SourcesAndFaq
@@ -337,6 +346,7 @@ export default function WarehouseBatteryConsiderationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -349,6 +359,7 @@ export default function WarehouseBatteryConsiderationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/solar-battery-combination-benefit",
               title: "太陽光と蓄電池を組み合わせる意味",

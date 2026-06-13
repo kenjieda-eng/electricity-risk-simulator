@@ -126,9 +126,11 @@ export default function HospitalBatteryConsiderationsPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           病院・クリニック・診療所など医療施設は、電力の安定性が最優先される事業者のひとつです。電気料金の上昇が続くなか、料金削減だけを目的に蓄電池を導入することは難しく、BCP（事業継続）への貢献と電気料金削減の両面を考慮した判断が求められます。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、医療施設特有の電力使用の特性と、蓄電池導入を検討する際の実務的な着眼点を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -149,6 +151,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院の電力使用は、他の商業・オフィス施設と大きく異なる特性を持っています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>24時間365日の連続稼働が前提で、深夜・休日も一定の電力使用がある</li>
             <li>医療機器・空調・照明など多様な設備が同時稼働し、電力使用量が大きい</li>
@@ -156,6 +159,7 @@ export default function HospitalBatteryConsiderationsPage() {
             <li>外来・手術・入院など機能区分によって電力使用パターンが異なる</li>
             <li>大規模病院は<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>または<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>契約で、<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の占める割合が大きい</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -165,6 +169,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院にとっての蓄電池の最初の検討軸は、電気料金削減ではなくBCPであることが多いです。以下の観点から蓄電池の役割を整理しておくことが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {bcpPoints.map((item) => (
               <div
@@ -185,6 +190,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金削減の主な経路は、デマンドカットによる<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と、ピークシフトによる<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           <div className="mt-4 space-y-4">
             {costReductionPoints.map((item) => (
               <div key={item.heading}>
@@ -204,6 +210,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             医療施設に蓄電池を設置する場合、一般の商業施設と比較して確認すべき法規制が多くなります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>消防法（危険物・電気設備の取扱い）</li>
             <li>建築基準法（機械室・設置スペースの要件）</li>
@@ -213,6 +220,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             これらの法規制への対応は専門的な知識が必要なため、設備設計段階で電気設備の専門家や施工会社と連携しながら進めることが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -222,6 +230,7 @@ export default function HospitalBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院での蓄電池導入の投資判断は、「電気料金削減単体での投資回収」と「BCP投資としての価値」を分けて評価することが現実的です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">電気料金削減として評価</p>
@@ -254,6 +263,7 @@ export default function HospitalBatteryConsiderationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -266,6 +276,7 @@ export default function HospitalBatteryConsiderationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",

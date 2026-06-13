@@ -149,6 +149,7 @@ export default function FactoryBatteryConsiderationsPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           デマンド管理・電気料金削減という経済的観点と、停電時の事業継続（BCP）という安全・品質管理の観点の両方から、工場での蓄電池導入を検討するための着眼点を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -168,6 +169,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             製造工場が蓄電池を導入する主な目的は以下の3点です。目的によって必要な容量・出力・制御方式が異なるため、導入前に優先目的を明確にすることが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンド削減・基本料金節約</p>
@@ -197,6 +199,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             一般的な法人向けの検討に加えて、工場では以下の4点を特に重視して検討を進めます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {factorySpecificPoints.map((item) => (
               <div
@@ -232,6 +235,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特に可燃物・危険物を扱う工場では、蓄電池設置にあたって消防署・電力会社・設備メーカーと事前協議を行うことが不可欠です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -241,6 +245,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             工場での蓄電池導入の経済効果は、電気料金削減だけでなく停電損失の回避価値も含めて評価することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -256,6 +261,7 @@ export default function FactoryBatteryConsiderationsPage() {
               </div>
             ))}
           </div>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -265,6 +271,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             工場の屋根に太陽光パネルを設置できる場合は、蓄電池との組み合わせによる効果を検討することを推奨します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             昼間に太陽光で発電した電力を直接使用しながら、余剰電力を蓄電池に蓄えることで、自家消費率が高まり夕方以降も蓄電池から供給できます。工場の使用電力が大きく、屋根面積が広い場合は、太陽光と蓄電池のセットがデマンド削減・購入電力削減・BCP対応の複数効果を一度に達成する有効な組み合わせになります。
           </p>
@@ -278,6 +285,7 @@ export default function FactoryBatteryConsiderationsPage() {
             </Link>{" "}
             をご参照ください。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -285,6 +293,7 @@ export default function FactoryBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             工場での蓄電池導入検討は、電力消費パターンの把握・生産ラインとの両立・安全要件・経済効果の試算という4つの観点から体系的に進めることが重要です。デマンド管理・電気料金削減の経済効果に加えて、停電による生産損失の回避価値を加味することで、投資判断の根拠がより明確になります。<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>制度の活用も含めて、専門業者との事前協議をお勧めします。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <SourcesAndFaq
@@ -293,6 +302,7 @@ export default function FactoryBatteryConsiderationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -305,6 +315,7 @@ export default function FactoryBatteryConsiderationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-electricity-cost-benefit",
               title: "蓄電池は電気料金対策としてどう効くか",

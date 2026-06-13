@@ -150,6 +150,7 @@ export default function DemandResponseSuitedCorporationsPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           需要応答（DR：Demand Response）は、電力需給状況に応じて需要家が電力使用を調整し、その対価としてインセンティブを受け取る仕組みです。電力系統の安定化に貢献しながら、電気料金の実質的な削減につながる可能性があります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           ただし、DRに参加できる法人・できない法人があります。このページでは、DR活用の効果が出やすい法人の特徴と条件を整理します。
         </p>
@@ -162,6 +163,7 @@ export default function DemandResponseSuitedCorporationsPage() {
             <li>業種・施設別の傾向</li>
             <li>蓄電池・設備対策との組み合わせ方</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </div>
       </header>
 
@@ -173,6 +175,7 @@ export default function DemandResponseSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             需要応答（DR）は、電力需給バランスの変動に対して需要家側が電力使用量を調整することで、電力系統の安定化に貢献する仕組みです。参加する需要家はインセンティブ（削減量に応じた報酬・電気料金の割引など）を受け取れる場合があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {drTypes.map((item) => (
               <div
@@ -193,6 +196,7 @@ export default function DemandResponseSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特に<Link href="/high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">高圧</Link>・<Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧</Link>の大口需要家はDRプログラムの参加要件を満たしやすく、インセンティブの絶対額も大きくなりやすいです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {suitedConditions.map((item) => (
               <div
@@ -221,6 +225,7 @@ export default function DemandResponseSuitedCorporationsPage() {
               </div>
             ))}
           </div>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -269,6 +274,7 @@ export default function DemandResponseSuitedCorporationsPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -278,12 +284,14 @@ export default function DemandResponseSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DRは単独での取り組みよりも、蓄電池・太陽光発電・EMSなどの設備対策や電力契約の見直しと組み合わせることで、総合的な電気料金削減効果が高まります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>蓄電池との組み合わせ：DR発令時に蓄電池から放電して購入電力を削減</li>
             <li>太陽光との組み合わせ：上げDR時に余剰電力を吸収して充電、下げDR時に放電</li>
             <li>EMSとの連携：自動制御でDRへの対応を効率化し、運用負担を低減</li>
             <li><Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動型</Link>契約との組み合わせ：高騰局面でDRに参加してコストを抑制</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             設備対策との全体的な組み合わせについては{" "}
             <Link
@@ -294,6 +302,7 @@ export default function DemandResponseSuitedCorporationsPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <SourcesAndFaq
@@ -302,6 +311,7 @@ export default function DemandResponseSuitedCorporationsPage() {
           { question: "導入に使える補助金はありますか？", answer: "SII省エネ補助金、需要家主導型PPA補助金、自治体独自の補助金などが利用できる場合があります。" },
           ]}
           sources={[
+          { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "SII 環境共創イニシアチブ", url: "https://sii.or.jp" },
           { name: "環境省", url: "https://www.env.go.jp" },
@@ -314,6 +324,7 @@ export default function DemandResponseSuitedCorporationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",

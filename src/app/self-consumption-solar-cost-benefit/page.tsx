@@ -153,6 +153,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           自家消費型太陽光が電気料金にどのように効くか、効果が出やすい条件は何かを理解することで、導入検討の精度が高まります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -177,6 +178,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             FITの売電単価（住宅用）が2024年度以降さらに低下する一方、電気料金は上昇傾向にあるため、自家消費型の方が経済合理性が高いケースが増えています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -186,6 +188,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光が電気料金を削減する経路を整理します。主な削減対象は<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>・<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>の3つです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {costReductionMechanism.map((item) => (
               <div
@@ -206,6 +209,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光の電気料金削減効果が出やすい法人の条件を確認します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {suitableConditions.map((item) => (
               <div
@@ -226,6 +230,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費率とは、太陽光が発電した電力量のうち施設内で消費した割合です。自家消費率が高いほど購入電力削減効果が大きく、経済効果も高まります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">自家消費率を高める方法</p>
@@ -252,6 +257,7 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光を検討する際に、事前に把握しておくべき留意点を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {limitationsAndConsiderations.map((item) => (
               <div
@@ -280,6 +286,8 @@ export default function SelfConsumptionSolarCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光は、購入電力量を減らすことで電力量料金・燃料費調整額・再エネ賦課金を同時に削減する効果があります。昼間に電力消費が集中する業態で、屋根や架台スペースを確保できる法人にとっては有効な電気料金対策です。電気料金の上昇傾向が続く環境では、将来のコスト上昇リスクをヘッジする意味合いも高まっています。蓄電池との組み合わせを検討する場合は、自家消費率をどこまで高められるかを中心に試算することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -344,15 +352,18 @@ export default function SelfConsumptionSolarCostBenefitPage() {
               太陽光の導入効果を最大化するには、昼間の自家消費で電力量料金を削減しつつ、蓄電池で夕方ピークの基本料金削減も狙う複合戦略が有効です。
               太陽光のみでは夕方18時台のデマンドには対応できないため、蓄電池との組み合わせが戦略の核となります。
             </p>
+            <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           </div>
           <p className="mt-3 text-xs text-slate-500">
             ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。全国9エリア合計値。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/solar-battery-combination-benefit",
               title: "太陽光と蓄電池を組み合わせる意味",

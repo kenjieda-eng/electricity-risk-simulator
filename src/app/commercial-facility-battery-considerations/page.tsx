@@ -126,6 +126,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、商業施設特有のピーク負荷の特性と、蓄電池導入を検討する際に確認すべき着眼点を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -146,6 +147,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             商業施設の電力使用には、他の業種とは異なるいくつかの特徴があります。これらが蓄電池の費用対効果を左右する主な要因になります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>開店直後に空調・照明・エスカレーターなどが一斉起動し、デマンドのピークが発生しやすい</li>
             <li>営業時間中は照明・空調・エレベーターなどが長時間稼働し、電力量が大きくなる</li>
@@ -163,6 +165,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -172,6 +175,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             商業施設での蓄電池活用は主に2つの経路で効果が出ます。デマンドカットによる<Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金</Link>の削減と、ピークシフトによる<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>の削減です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {benefits.map((item) => (
               <div key={item.heading}>
@@ -191,6 +195,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池の導入可否を判断する前に、以下の観点を整理しておくと、提案依頼の質が上がり、比較検討がしやすくなります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {checkPoints.map((item) => (
               <div
@@ -211,6 +216,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池の投資回収期間は、導入コスト・削減効果・<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>活用の有無などによって大きく異なります。商業施設で蓄電池の投資回収を試算する際の基本的な整理方法は以下のとおりです。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">削減効果の試算</p>
@@ -236,6 +242,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             一般的に、大型商業施設でデマンド削減効果が大きい場合は投資回収期間が短くなりやすい傾向がありますが、個々の施設状況によって大きく異なるため、複数業者からの提案・試算を比較することが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -245,6 +252,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池は単独の対策として検討するよりも、契約見直しや他の設備対策と組み合わせて考えることで、総合的な電気料金削減効果が高まります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>自家消費型太陽光発電と組み合わせて余剰電力を蓄電するハイブリッド構成</li>
             <li>デマンドコントローラーとの連携で制御精度を高める</li>
@@ -261,6 +269,7 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -270,11 +279,13 @@ export default function CommercialFacilityBatteryConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池導入の意思決定をする前に、現行の電力契約条件でどの程度の料金上振れリスクがあるかを把握しておくことが重要です。シミュレーターを使うことで、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の変動や市場価格の上昇が年間電気料金にどの程度影響するかを試算できます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",

@@ -147,9 +147,11 @@ export default function WhyCorporationsConsiderBatteriesPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           電気料金の高騰が続く中、産業用蓄電池の導入を検討する法人が増えています。蓄電池が注目される背景には、コスト削減と事業継続（BCP）の両方の側面があります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           単純に「節電になる」だけでなく、デマンド削減・ピークシフト・太陽光との組み合わせ・停電対策など、複数の目的が重なって検討が進むケースが多くなっています。このページでは、蓄電池検討の動機と基本的な考え方を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -169,6 +171,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池の導入が法人で注目される背景には、主に3つの構造的変化があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">電気料金の継続的上昇</p>
@@ -198,6 +201,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池が電気料金の削減に貢献する主な仕組みを整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {costReductionAspects.map((item) => (
               <div
@@ -219,6 +223,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -228,6 +233,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金対策と並んで、事業継続の観点から蓄電池を検討するケースも多くなっています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {bcpAspects.map((item) => (
               <div
@@ -242,6 +248,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             BCP目的の場合は、コスト削減よりも「停電時に最低限の業務を継続できるか」が優先課題になります。必要な容量（kWh）と出力（kW）の設計は、電気料金対策目的とは異なるアプローチが必要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -251,6 +258,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池の具体的な検討に入る前に、以下のポイントを確認しておくことが重要です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {considerationPoints.map((item) => (
               <div
@@ -271,6 +279,7 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             蓄電池が経済的に効果を発揮しやすい法人の特徴を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">効果が出やすいケース</p>
@@ -305,11 +314,13 @@ export default function WhyCorporationsConsiderBatteriesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人が蓄電池を検討する動機は、電気料金対策（デマンド削減・ピークシフト・太陽光との組み合わせ）とBCP対策（停電時の電力継続）の両面にあります。電池コストの低下により投資回収期間が現実的になりつつある一方、設置コスト・設備要件・補助金の条件を精査した上での判断が不可欠です。検討の出発点として、自社のデマンドパターンや停電リスクを把握することから始めることをお勧めします。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-electricity-cost-benefit",
               title: "蓄電池は電気料金対策としてどう効くか",

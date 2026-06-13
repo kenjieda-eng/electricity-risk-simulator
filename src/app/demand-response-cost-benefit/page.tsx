@@ -187,6 +187,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             従来は発電側の調整（火力発電の出力増減）が主体でしたが、再生可能エネルギーの普及拡大とともに需要側の柔軟な調整が重視されるようになっています。需要家がDRに参加することで、電力システム全体の安定化に貢献しながら経済的なメリットを得られる仕組みが整備されつつあります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -196,6 +197,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人が関わりうるDRの主な種類を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {drTypes.map((item) => (
               <div
@@ -238,6 +240,7 @@ export default function DemandResponseCostBenefitPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -247,6 +250,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DRによるメリットを享受しやすい法人の特徴を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-4">
             {suitableForDR.map((item) => (
               <div
@@ -267,6 +271,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DR参加を検討する際に把握しておくべき課題と対応の考え方を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {challengesAndLimitations.map((item) => (
               <div
@@ -287,6 +292,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             DR参加によって得られる対価は種類・アグリゲーターによって異なります。以下は2025〜2026年時点の業界概算値です。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
@@ -306,6 +312,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -315,6 +322,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種ごとの典型的な削減可能容量と年間インセンティブ目安を整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-slate-100">
@@ -335,6 +343,7 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※上記は2025〜2026年時点の業界概算値です。実際の効果は施設条件・契約内容により異なります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -381,11 +390,13 @@ export default function DemandResponseCostBenefitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             需要応答（DR）は、電力消費の調整を通じてインセンティブ収入・電気料金節約・容量市場への関与という複数のメリットをもたらす可能性があります。特に電力消費が大きく、設備の操業調整に柔軟性がある法人や、蓄電池・制御システムを保有する法人では参加価値が高まります。業務への影響と参加コストを事前に評価した上で、DRを電気料金対策の選択肢として位置づけることをお勧めします。
           </p>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/demand-suppression-effectiveness",
               title: "デマンド抑制はどこまで効果があるか",

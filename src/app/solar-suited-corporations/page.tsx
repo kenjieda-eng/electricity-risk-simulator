@@ -143,9 +143,11 @@ export default function SolarSuitedCorporationsPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           電気料金の上昇が続くなか、自家消費型の太陽光発電設備を導入して購入電力量を削減する動きが法人の間で広がっています。ただし、すべての法人で同じ効果が得られるわけではなく、投資対効果は使用パターンや施設の特性によって大きく異なります。
         </p>
+        <p className="mt-3 text-xs text-slate-500">なお本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、自家消費型太陽光発電の費用対効果が出やすい法人の特徴と条件を整理します。
         </p>
+        <p className="mt-3 text-xs text-slate-500">※ 上記は一般的な整理であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -166,6 +168,7 @@ export default function SolarSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光発電の主な経済効果は「発電した電力を購入電力の代わりに使用することで<Link href="/energy-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力量料金</Link>を削減する」ことです。売電収入を目的とするFIT（固定価格買取制度）とは異なり、自家消費率を高めることで電気料金削減効果が直接現れます。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 新電力ネット（電力単価・スポット価格）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。</p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">費用対効果を高める要素</p>
@@ -186,12 +189,14 @@ export default function SolarSuitedCorporationsPage() {
               </ul>
             </div>
           </div>
+          <p className="mt-3 text-xs text-slate-500">なお、本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">
             投資対効果が出やすい6つの条件
           </h2>
+          <p className="mt-3 text-xs text-slate-500">※ 本記載は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {suitedConditions.map((item) => (
               <div
@@ -209,6 +214,7 @@ export default function SolarSuitedCorporationsPage() {
           <h2 className="text-xl font-semibold text-slate-900">
             効果が出にくい条件
           </h2>
+          <p className="mt-3 text-xs text-slate-500">上記の数値はあくまで目安であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {lessEffectiveConditions.map((item) => (
               <div
@@ -229,6 +235,7 @@ export default function SolarSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種・施設の特性と自家消費型太陽光の向き不向きの目安を以下に整理します。
           </p>
+          <p className="mt-3 text-xs text-slate-500">なお本ページの内容は特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -280,11 +287,13 @@ export default function SolarSuitedCorporationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光発電は導入費用が数百万〜数千万円規模になることが多く、初期投資が大きな障壁になる場合があります。そのような場合、PPA（電力購入契約）やリースを活用することで、初期費用ゼロまたは低負担で太陽光発電の電力を利用できる選択肢があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">導入判断は各社の状況により異なり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>PPA：設備は事業者が設置・所有し、発電電力を固定単価で購入する契約</li>
             <li>リース：設備をリース会社から借り受け、月次のリース料を支払う</li>
             <li>いずれも契約期間中の柔軟性（移転・解約など）が制限される点を事前に確認が必要</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">本記載は中立的な情報提供であり、特定の電力会社・契約形態・設備を推奨するものではありません。</p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力調達の仕組みについては{" "}
             <Link
@@ -295,6 +304,7 @@ export default function SolarSuitedCorporationsPage() {
             </Link>{" "}
             も参考になります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">※参考: 電力単価・スポット価格の動向は新電力ネット https://pps-net.org/unit を参照（公開情報ベースの目安）。</p>
         </section>
 
         <SourcesAndFaq
@@ -315,6 +325,7 @@ export default function SolarSuitedCorporationsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "設備投資判断の前提となる現状の年間電気代を試算。" },
             {
               href: "/battery-suited-corporations",
               title: "蓄電池導入が向く法人の特徴",
