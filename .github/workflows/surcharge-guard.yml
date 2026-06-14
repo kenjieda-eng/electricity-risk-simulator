@@ -14,9 +14,9 @@ jobs:
   surcharge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Surcharge drift guard (strict)
         run: node scripts/check-surcharge-drift.mjs --strict
