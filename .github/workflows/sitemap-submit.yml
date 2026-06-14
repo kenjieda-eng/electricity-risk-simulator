@@ -20,10 +20,10 @@ jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
       # googleapis は devDependencies 済み。npm ci で submit 経路の依存を用意する
       # （Secrets 未設定時は googleapis を import しないため監視のみでも失敗しない）。
