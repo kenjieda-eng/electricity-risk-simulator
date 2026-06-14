@@ -1,0 +1,38 @@
+name: sitemap-submit
+
+# サイトマップ 自動submit ＋ 死活/綴り監視 ＋ 失敗通知。
+#
+# 手動プッシュ依存（2026-05-18 の綴り誤り /sitamap.xml が約4週間放置された原因）を廃し、
+# main 更新のたびに最新の /sitemap.xml を GSC へ自動submit しつつ、死活・URL数激減・
+# robots 綴りミスを毎回検証する。壊れていれば node スクリプトが exit 1 → ジョブ失敗 →
+# GitHub 標準のワークフロー失敗通知（リポジトリ管理者にメール）で即検知できる。
+#
+# Secrets（GSC_SA_KEY / GSC_SITE_URL）未設定でも死活/綴り監視は動作する（submit のみスキップ・
+# exit 0）。鍵投入後に submit が有効化される。詳細は scripts/submit-sitemap.mjs を参照。
+on:
+  push:
+    branches: [main] # マージのたびに最新 sitemap を submit ＋ 監視
+  schedule:
+    - cron: "0 0 * * 1" # 毎週月曜 09:00 JST(=00:00 UTC) のバックアップ実行
+  workflow_dispatch: {} # 手動実行（Secrets 投入後の疎通確認に使用）
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      # googleapis は devDependencies 済み。npm ci で submit 経路の依存を用意する
+      # （Secrets 未設定時は googleapis を import しないため監視のみでも失敗しない）。
+      - name: Install dependencies
+        run: npm ci
+      - name: Submit sitemap & monitor liveness/spelling
+        run: node scripts/submit-sitemap.mjs
+        env:
+          SITEMAP_URL: https://simulator.eic-jp.org/sitemap.xml
+          ROBOTS_URL: https://simulator.eic-jp.org/robots.txt
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GSC_SA_KEY: ${{ secrets.GSC_SA_KEY }}
