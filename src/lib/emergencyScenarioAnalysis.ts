@@ -133,6 +133,10 @@ export const EMERGENCY_SCENARIO_SLUGS = EMERGENCY_SCENARIO_SERIES.filter((item) 
   (item) => item.slug,
 );
 
+// シリーズ実体（データ・ページ）の最終更新日。sitemap の lastmod に使用（毎ビルド更新の過剰シグナルを防ぐ）。
+// 値は git log -1 --format=%cs -- src/lib/emergencyScenarioAnalysis.ts src/app/special/emergency-scenario-analysis の実日付。
+export const EMERGENCY_SERIES_LAST_MODIFIED = "2026-06-10";
+
 export function getEmergencyScenarioPageBySlug(slug: string) {
   return EMERGENCY_SCENARIO_SERIES.find((item) => item.slug === slug);
 }

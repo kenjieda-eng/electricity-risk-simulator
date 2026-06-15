@@ -91,6 +91,10 @@ export const MATERIALS_SCENARIO_SERIES: MaterialsScenarioPage[] = [
 
 export const MATERIALS_SCENARIO_SLUGS = MATERIALS_SCENARIO_SERIES.filter((item) => item.slug !== "index").map((item) => item.slug);
 
+// シリーズ実体（データ・ページ）の最終更新日。sitemap の lastmod に使用（毎ビルド更新の過剰シグナルを防ぐ）。
+// 値は git log -1 --format=%cs -- src/lib/materialsPackagingScenarioAnalysis.ts src/app/special/materials-packaging-scenario-analysis の実日付。
+export const MATERIALS_SERIES_LAST_MODIFIED = "2026-05-24";
+
 export function getMaterialsScenarioPageBySlug(slug: string) {
   return MATERIALS_SCENARIO_SERIES.find((item) => item.slug === slug);
 }
