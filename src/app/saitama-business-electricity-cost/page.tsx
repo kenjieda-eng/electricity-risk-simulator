@@ -358,6 +358,7 @@ const sourcesItems = [
   { name: "埼玉県環境部・産業労働部", url: "https://www.pref.saitama.lg.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function SaitamaBusinessElectricityCostPage() {
@@ -414,6 +415,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県は『東京電力エリアの首都圏中核』『日本最大級の物流拠点集積』『東京近郊型製造業』『熊谷猛暑日地帯』『県南北の地域差』という構造的特徴を持ちます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -434,6 +438,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県では2024年時点で約15社の新電力が法人向け高圧で新規受付中。東京電力エリアは新電力競争が全国で最も活発です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -450,6 +457,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京電力エリアの単価は全国エリア比で並み〜やや低め。新電力競争が活発で切替メリットも大きいエリアです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -458,12 +468,18 @@ export default function SaitamaBusinessElectricityCostPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別影響度3件 — 自動車部品・物流・オフィスビル（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -483,6 +499,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">埼玉県固有の電気代上昇要因</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県の電気代上昇は、複数の県固有要因が同時進行で重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -533,6 +552,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県の新電力シェアは2024年時点で30〜35%と全国でも高水準。大型物流センター・自動車部品工場では切替が進む一方、中小事業者は東京電力EP継続が多数です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -563,6 +585,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -574,6 +599,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターで埼玉県の電気代上振れリスクを確認する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               埼玉県は首都圏物流拠点・熊谷猛暑日・自動車工業の3要因を抱えます。シミュレーターで自社条件における上振れ幅を試算できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -616,6 +644,7 @@ export default function SaitamaBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "冷凍冷蔵設備・コンプレッサー更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東京電力の火力依存度を踏まえた解説。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "物流センター連続稼働事業者向け。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
