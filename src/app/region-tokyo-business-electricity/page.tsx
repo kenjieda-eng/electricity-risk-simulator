@@ -31,6 +31,7 @@ const sourcesItems = [
   { name: "東京電力エナジーパートナー", url: "https://www.tepco.co.jp/ep/", description: "東京電力エリアの法人向け料金プラン情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・関東圏需給情報" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "東京エリアの需給・系統情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計（公開情報ベースの目安）" },
 ];
 
 
@@ -231,6 +232,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           東京電力エリアの規模感・事業者構成を確認したうえで、関東圏業務集積と LNG 火力依存という二つの構造から、なぜいま見直しが他エリアより重要なのかを整理します。日本最大の業務需要集積地であり、LNG火力55%超の電源構成は燃料価格の上振れリスクを直接的に法人請求に反映する構造です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -263,6 +267,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は TEPCO EP の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -321,6 +328,7 @@ export default function RegionTokyoBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。</p>
         </div>
       </section>
 
@@ -397,6 +405,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700">
           東電エリアの法人需要家は、業種ごとに有効な削減アプローチが異なります。下記は当エリアでの典型的な削減事例ベンチマークです。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-sky-100 bg-white p-4">
             <p className="text-sm font-semibold text-slate-900">中規模オフィスビル（延床 5,000m²）</p>
@@ -444,6 +455,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           特に東電エリアでは、契約見直しによる即効型の削減から着手し、その回収原資を BEMS や高効率空調・LED 化に投資する『自走モデル』を 2〜3 年かけて構築するパターンが、上場企業・中堅企業ともに増えています。1 年目は契約見直しと運用改善で 5〜10% 削減、2 年目以降に設備投資で追加 5〜15% を狙う段階展開が、関東圏での主流アプローチになりつつあります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 電源構成の実績データ */}
@@ -488,6 +502,9 @@ export default function RegionTokyoBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -495,6 +512,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX 東京エリアプライス推移と直近相場</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -527,6 +547,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           東京エリアは全期間を通じてシステムプライスを上回る傾向があり、FY2022は+3.09円、FY2026は+5.33円と需要集中によるプレミアムが拡大しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* H2-Z シミュレーター */}
@@ -534,6 +557,9 @@ export default function RegionTokyoBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           東電エリアの法人需要家として自社の上振れリスクを定量化するには、以下の観点でシミュレーターを活用してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
           <li>現行契約条件での年間上振れリスク額を確認する（LNG 高騰シナリオ）</li>
@@ -613,6 +639,11 @@ export default function RegionTokyoBusinessElectricityPage() {
               href: "/office-building-electricity-cost-review",
               title: "オフィスビルの電気料金見直しポイント",
               description: "東電エリアの主力業務用需要であるオフィスビルの負荷特性と契約見直し。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

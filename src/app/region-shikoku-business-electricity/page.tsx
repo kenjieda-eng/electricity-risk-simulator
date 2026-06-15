@@ -31,6 +31,7 @@ const sourcesItems = [
   { name: "四国電力", url: "https://www.yonden.co.jp/", description: "四国電力エリアの法人向け料金プラン情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・四国地方需給情報" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "四国エリアの需給・系統情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計（公開情報ベースの目安）" },
 ];
 
 
@@ -214,6 +215,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           四国電力エリアの規模感・事業者構成を確認してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -246,6 +250,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は四国電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -304,6 +311,7 @@ export default function RegionShikokuBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。</p>
         </div>
       </section>
 
@@ -383,6 +391,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700">
           四国エリアは中小企業の比率が高く、太陽光出力制御による昼間スポット価格低下を活用した契約形態が他エリアより有効です。下記は当エリアでの典型的な削減事例ベンチマークです。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-sky-100 bg-white p-4">
             <p className="text-sm font-semibold text-slate-900">愛媛・化学／パルプ工場（特高 5,000 万kWh）</p>
@@ -435,6 +446,9 @@ export default function RegionShikokuBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -442,6 +456,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX 四国エリアプライス推移と太陽光出力制御リスク</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -474,6 +491,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           四国エリアは伊方原発と太陽光の組み合わせにより、FY2025は8.85円とシステムプライスを-2.21円下回る安値傾向。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* エリア需要の特徴 */}
@@ -481,6 +501,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">四国電力エリア需要と原発・再エネの電源構成</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           四国電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "shikoku")?.share}%を占めます。全国最小規模の需要エリア。西日本クラスターとの高い連動性(0.95)。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -514,6 +537,9 @@ export default function RegionShikokuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           四国電力エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
           <li>伊方原発稼働シナリオ別の燃調費影響を比較する</li>
@@ -593,6 +619,11 @@ export default function RegionShikokuBusinessElectricityPage() {
               href: "/extra-high-voltage-electricity-pricing",
               title: "特別高圧の電気料金の仕組み",
               description: "愛媛の化学・パルプなど特別高圧需要家向け料金体系を解説。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

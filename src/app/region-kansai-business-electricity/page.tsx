@@ -31,6 +31,7 @@ const sourcesItems = [
   { name: "関西電力", url: "https://www.kepco.co.jp/", description: "関西電力エリアの法人向け料金プラン情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・関西圏需給情報" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "関西エリアの需給・系統情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計（公開情報ベースの目安）" },
 ];
 
 
@@ -247,6 +248,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           関西電力エリアの規模感・事業者構成・電源特性をベースに、原発再稼働で抑制される料金優位性と関西経済圏の業種構成を踏まえた契約見直しの意義を整理します。原子力34.8%という全国最高水準のベースロードが燃調費上振れの緩衝材となる一方、原発停止リスクと容量拠出金・再エネ賦課金の負担増は経営課題として残ります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -273,6 +277,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は関西電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -331,6 +338,7 @@ export default function RegionKansaiBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。</p>
         </div>
       </section>
 
@@ -410,6 +418,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700">
           関電エリアでは原発稼働を背景にした料金安定性を活かしながら、固定プラン×省エネ設備の組み合わせで段階的な削減を進めるパターンが主流です。下記は当エリアでの典型的な削減事例ベンチマークです。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-indigo-100 bg-white p-4">
             <p className="text-sm font-semibold text-slate-900">関西製造業（高圧 500 万kWh/年）</p>
@@ -462,6 +473,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2024〜2026年の30分値データ（36,960レコード）を集計した関西エリアの電源構成実績です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
             <p className="text-xs font-semibold text-indigo-700">原子力</p>
@@ -498,6 +512,9 @@ export default function RegionKansaiBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -505,6 +522,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX 関西エリアプライス推移と原発稼働連動性</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -537,6 +557,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           関西エリアは原発比率の高さからシステムプライスとほぼ同水準〜やや安で推移。FY2022は-0.87円と需給安定性を反映。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* H2-Z シミュレーター */}
@@ -544,6 +567,9 @@ export default function RegionKansaiBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自社の状況を確認する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           関電エリアの法人需要家として、自社の上振れリスクを定量化するには以下の観点でシミュレーターを活用してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
           <li>原発稼働メリットを織り込んだ現行単価と、原発停止シナリオでの上振れ幅を比較する</li>
@@ -623,6 +649,11 @@ export default function RegionKansaiBusinessElectricityPage() {
               href: "/data-center-electricity-cost-review",
               title: "データセンターの電気料金見直しポイント",
               description: "関西の DC 需要家向け：原発稼働メリットを活かした特高契約の考え方。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />
