@@ -91,6 +91,10 @@ export const OIL_SCENARIO_SERIES: OilScenarioPage[] = [
 
 export const OIL_SCENARIO_SLUGS = OIL_SCENARIO_SERIES.filter((item) => item.slug !== "index").map((item) => item.slug);
 
+// シリーズ実体（データ・ページ）の最終更新日。sitemap の lastmod に使用（毎ビルド更新の過剰シグナルを防ぐ）。
+// 値は git log -1 --format=%cs -- src/lib/oilScenarioAnalysis.ts src/app/special/oil-scenario-analysis の実日付。
+export const OIL_SERIES_LAST_MODIFIED = "2026-05-06";
+
 export function getOilScenarioPageBySlug(slug: string) {
   return OIL_SCENARIO_SERIES.find((item) => item.slug === slug);
 }

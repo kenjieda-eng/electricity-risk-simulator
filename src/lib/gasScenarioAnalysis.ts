@@ -77,6 +77,10 @@ export const GAS_SCENARIO_SERIES: GasScenarioPage[] = [
 
 export const GAS_SCENARIO_SLUGS = GAS_SCENARIO_SERIES.filter((item) => item.slug !== "index").map((item) => item.slug);
 
+// シリーズ実体（データ・ページ）の最終更新日。sitemap の lastmod に使用（毎ビルド更新の過剰シグナルを防ぐ）。
+// 値は git log -1 --format=%cs -- src/lib/gasScenarioAnalysis.ts src/app/special/gas-scenario-analysis の実日付。
+export const GAS_SERIES_LAST_MODIFIED = "2026-05-06";
+
 export function getGasScenarioPageBySlug(slug: string) {
   return GAS_SCENARIO_SERIES.find((item) => item.slug === slug);
 }

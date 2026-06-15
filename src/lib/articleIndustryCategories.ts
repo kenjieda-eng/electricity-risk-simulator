@@ -75,6 +75,11 @@ export const INDUSTRY_CATEGORY_TOP = {
   },
 } as const;
 
+// 業種別シリーズ実体（データ各ファイル・/articles/by-industry 配下ページ）の最終更新日。
+// sitemap の lastmod に使用（毎ビルド更新の過剰シグナルを防ぐ）。
+// 値は git log -1 --format=%cs -- src/lib/industry*Articles.ts src/lib/articleIndustryCategories.ts src/app/articles/by-industry の実日付。
+export const INDUSTRY_SERIES_LAST_MODIFIED = "2026-05-29";
+
 export const INDUSTRY_MIDDLE_CATEGORIES: IndustryMiddleCategory[] = [
   {
     slug: "office-public",
