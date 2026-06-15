@@ -352,6 +352,7 @@ const sourcesItems = [
   { name: "福島イノベーション・コースト構想推進機構", url: "https://www.fipo.or.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function FukushimaBusinessElectricityCostPage() {
@@ -409,6 +410,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県は東北電力ネットワーク管内で、浜通り・中通り・会津の3地域から構成されます。震災・原発事故後の復興過程で再エネ拠点として整備が進み、浜通り工業地帯と会津豪雪地帯の対照的な電力消費パターンを持つ特殊な県です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -437,6 +441,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県では2024年時点で9社前後の新電力が法人向け高圧で新規受付中です。東北電力グループ系、全国系、地域密着型（ふくしま電力）の3カテゴリが主軸となります。浜通り工業地帯では大規模事業者の競争入札による切替が進んでいます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -462,6 +469,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東北電力エリアの単価は全国比でやや低めで、福島県内の浜通り工業地帯では新電力競争による単価低下が顕著です。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -473,6 +483,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -481,6 +494,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -509,6 +525,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県の電気代上昇は、地域固有要因が同時進行で重なります。それぞれの影響額を定量把握することで、契約見直しと省エネ投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -579,6 +598,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県の新電力シェアは2024年時点で20〜25%程度。浜通り工業地帯では大規模事業者の競争入札による切替が進み、需要家主導型PPAも好適エリアです。市場連動プランから固定プランへの回帰トレンドが鮮明です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -620,6 +642,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -638,6 +663,9 @@ export default function FukushimaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福島県は浜通り工業・会津豪雪・再エネ拠点という多面的特性を持ちます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・需要家主導型PPA・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -679,6 +707,7 @@ export default function FukushimaBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "コンプレッサー・冷凍設備更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力でも影響大の項目。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "減免制度の対象事業者の判定。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

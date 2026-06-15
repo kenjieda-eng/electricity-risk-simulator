@@ -352,6 +352,7 @@ const sourcesItems = [
   { name: "岩手県環境生活部・産業振興部", url: "https://www.pref.iwate.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function IwateBusinessElectricityCostPage() {
@@ -410,6 +411,9 @@ export default function IwateBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県の電力供給は『東北電力ネットワーク管轄』『内陸盆地と沿岸部の温度差』『震災復興過程の電力インフラ再構築』『自動車部品・林業の集積』という4つの構造的特徴を持ちます。BCP電源確保意識の高さも岩手県固有です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -434,6 +438,9 @@ export default function IwateBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県では2024年時点で約10社の新電力が法人向け高圧で新規受付中。東北系（東北自然エネルギー）、全国系（ENEOS・サミットエナジー）、地域密着型（いわて生協系等）、震災復興型（釜石新電力等）の4カテゴリが主軸となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -452,6 +459,9 @@ export default function IwateBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東北電力の単価は全国エリア比で1〜2円/kWh高め。寒冷地暖房需要・火力依存度が主要因。実質単価ベースでの比較が重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -460,6 +470,9 @@ export default function IwateBusinessElectricityCostPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -468,6 +481,9 @@ export default function IwateBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -489,6 +505,9 @@ export default function IwateBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県の電気代上昇は、複数の県固有要因が同時進行で重なります。それぞれの影響額を定量把握することで、契約見直しと省エネ投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -545,6 +564,9 @@ export default function IwateBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県の新電力シェアは2024年時点で15〜20%程度。北上・盛岡等の都市圏では切替が進む一方、地方部では東北電力EP継続が多数です。震災経験からBCP電源との組合せ契約が特徴的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -579,6 +601,9 @@ export default function IwateBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -592,6 +617,9 @@ export default function IwateBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               岩手県は寒冷地暖房・自動車部品工場の高負荷・震災復興BCP電源の3重要因を抱えます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -634,6 +662,7 @@ export default function IwateBusinessElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力の火力依存度を踏まえた解説。" },
               { href: "/emergency-power-outage-response", title: "停電・計画停電が発生したときの対応", description: "震災経験のある県で必読。" },
               { href: "/region-supplier-withdrawal-map", title: "エリア別新電力撤退状況マップ", description: "県内新電力の動向を含む全国マップ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -352,6 +352,7 @@ const sourcesItems = [
   { name: "秋田県産業労働部・農林水産部", url: "https://www.pref.akita.lg.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function AkitaBusinessElectricityCostPage() {
@@ -408,6 +409,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県は『東北電力エリア・風力発電全国1位』『豪雪・寒冷地需要』『製紙・木材加工集積』『再エネ出力制御の最前線』という4つの構造的特徴を持ちます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -428,6 +432,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県では2024年時点で約10社の新電力が法人向け高圧で新規受付中。風力PPA特化型新電力が県固有の特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -444,6 +451,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東北電力の単価は全国エリア比で1〜2円/kWh高めですが、風力PPA活用で1〜3円/kWh安く調達できるケースもあり、業種・規模次第で全国平均並みまで下げられる可能性があります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -452,12 +462,18 @@ export default function AkitaBusinessElectricityCostPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別影響度3件 — 製紙・木材加工・温泉旅館（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -477,6 +493,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">秋田県固有の電気代上昇要因</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県の電気代上昇は、豪雪・寒冷地・風力出力制御・賦課金など複数の県固有要因が同時進行で重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -527,6 +546,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県の新電力シェアは2024年時点で15〜20%程度。風力PPA案件の活発化が県固有の特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -557,6 +579,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -568,6 +593,9 @@ export default function AkitaBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターで秋田県の電気代上振れリスクを確認する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               秋田県は豪雪・寒冷地暖房・製紙木材集積の3重要因を抱えます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・省エネ投資・風力PPA活用のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -610,6 +638,7 @@ export default function AkitaBusinessElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力の火力依存度を踏まえた解説。" },
               { href: "/region-supplier-withdrawal-map", title: "エリア別新電力撤退状況マップ", description: "県内新電力の動向を含む全国マップ。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "製紙工場の連続稼働事業者向け。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
