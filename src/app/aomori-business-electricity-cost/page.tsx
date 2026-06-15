@@ -352,6 +352,7 @@ const sourcesItems = [
   { name: "青森県エネルギー総合対策局", url: "https://www.pref.aomori.lg.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function AomoriBusinessElectricityCostPage() {
@@ -410,6 +411,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県の電力供給は『東北電力ネットワーク管轄』『東通・大間原発の立地（停止/建設中）』『風力発電全国2位（陸上58万kW）』『豪雪寒冷地需要』という4つの構造的特徴を持ちます。再エネ集積地としての特性と、原発立地県としての特性を併せ持つ独特なエリアです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -438,6 +442,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県では2024年時点で約10社の新電力が法人向け高圧で新規受付中。東北系（東北自然エネルギー）、全国系（ENEOS・F-Power）、再エネPPA特化、地域密着型（あおもり地域電力等）の4カテゴリが主軸となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -463,6 +470,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東北電力の単価は全国エリア比で1〜2円/kWh高め。寒冷地暖房需要・火力依存度・原発停止状況が主要因。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -474,6 +484,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -482,6 +495,9 @@ export default function AomoriBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -510,6 +526,9 @@ export default function AomoriBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県の電気代上昇は、複数の県固有要因が同時進行で重なります。それぞれの影響額を定量把握することで、契約見直しと省エネ投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -573,6 +592,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県の新電力シェアは2024年時点で15〜20%程度。八戸・青森・弘前等の都市圏では切替が進む一方、地方部では東北電力EP継続が多数です。風力PPA案件が活発化しているのが県固有の特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -607,6 +629,9 @@ export default function AomoriBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -620,6 +645,9 @@ export default function AomoriBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               青森県は寒冷地暖房・豪雪・東北電力火力依存の3重リスクを抱えます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -662,6 +690,7 @@ export default function AomoriBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "CA冷蔵庫・コンプレッサー更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力の火力依存度を踏まえた解説。" },
               { href: "/solar-curtailment-by-area", title: "太陽光出力制御の実態", description: "東北電力エリアの出力制御動向。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -231,6 +231,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           中部電力エリアの規模感・事業者構成・電源特性を確認してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -257,6 +260,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は中部電力ミライズの標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -315,6 +321,7 @@ export default function RegionChubuBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">※参考: エリア別の電力単価データは 新電力ネット https://pps-net.org/unit が参考になります。単価・統計は公開情報ベースの目安です。</p>
         </div>
       </section>
 
@@ -353,6 +360,7 @@ export default function RegionChubuBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※製造業比率は全国平均（約 45%）を大幅に上回る。</p>
+          <p className="mt-2 text-xs text-slate-500">※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。</p>
         </div>
       </section>
 
@@ -420,6 +428,9 @@ export default function RegionChubuBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -427,6 +438,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -459,6 +473,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           中部エリアは製造業の大型需要が特徴で、FY2022は+0.41円とほぼ全国平均に近い動き。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* エリア需要の特徴 */}
@@ -466,6 +483,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           中部電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "chubu")?.share}%を占めます。製造業集積で需要は安定推移。負荷率{LOAD_FACTOR_FY.find(r => r.fy === 2023)?.chubu}%。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -499,6 +519,9 @@ export default function RegionChubuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">気候データと電力需要の関係</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           名古屋の気象データから、当エリアの電力需要に影響する気候特性を整理します。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {weather.summerTmax && (
@@ -540,6 +563,9 @@ export default function RegionChubuBusinessElectricityPage() {
         </div>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           名古屋は猛暑日179日（2020年代、全都市最多）、冷房度日の増加率+40%も全国最大。内陸性の気候により夏の暑さが年々深刻化しており、冷房ピーク対策の優先度が高いエリアです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -586,6 +612,11 @@ export default function RegionChubuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

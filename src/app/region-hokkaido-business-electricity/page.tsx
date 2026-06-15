@@ -199,6 +199,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           北海道電力エリアの規模感・事業者構成を確認してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -231,6 +234,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は北海道電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -289,6 +295,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">※参考: エリア別の電力単価データは 新電力ネット https://pps-net.org/unit が参考になります。単価・統計は公開情報ベースの目安です。</p>
         </div>
       </section>
 
@@ -395,6 +402,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2024〜2026年の30分値データ（35,280レコード）を集計した北海道エリアの電源構成実績です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-xs font-semibold text-slate-600">石炭火力</p>
@@ -422,6 +432,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           原子力はゼロ（全停止）で、冬季は石炭火力への依存度がさらに高まります。蓄電池稼働率98.8%は全国トップですが容量は小規模です。
           <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 注記 */}
@@ -430,6 +443,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -437,6 +453,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -469,6 +488,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           北海道エリアは本州との連系線容量制約により、独自の需給バランスでプレミアムが恒常的に発生。FY2018は+5.54円と最大の乖離。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* エリア需要の特徴 */}
@@ -476,6 +498,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           北海道電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "hokkaido")?.share}%を占めます。他エリアとの需要相関が最も低い(0.55〜0.78)。寒冷地特有の冬季暖房需要がパターンを独自化。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -551,6 +576,9 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           札幌の極寒日（-10℃以下）は1990年代の64日→2020年代の35日に半減。一方で夏の最高気温は+2.6℃上昇し、かつて冷房不要だった北海道でも冷房需要が急増しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -596,6 +624,11 @@ export default function RegionHokkaidoBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

@@ -358,6 +358,7 @@ const sourcesItems = [
   { name: "栃木県産業労働観光部", url: "https://www.pref.tochigi.lg.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function TochigiBusinessElectricityCostPage() {
@@ -414,6 +415,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県は『東京電力エリア・内陸寒冷地』『自動車工業集積』『観光業（日光・那須）』『首都圏物流拠点』という4つの構造的特徴を持ちます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -434,6 +438,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県では2024年時点で約12社の新電力が法人向け高圧で新規受付中。東京電力エリアは新電力競争が全国で最も活発です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -450,6 +457,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京電力エリアの単価は全国エリア比で並み〜やや低め。新電力競争が活発で切替メリットも大きいエリアです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -458,12 +468,18 @@ export default function TochigiBusinessElectricityCostPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別影響度3件 — 自動車工業・物流・リゾートホテル（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -483,6 +499,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">栃木県固有の電気代上昇要因</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県の電気代上昇は、複数の県固有要因が同時進行で重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -533,6 +552,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県の新電力シェアは2024年時点で25〜30%。自動車工業の中堅・大企業では切替が進んでいます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -563,6 +585,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -574,6 +599,9 @@ export default function TochigiBusinessElectricityCostPage() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターで栃木県の電気代上振れリスクを確認する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               栃木県は内陸寒冷地・自動車工業集積・観光業ピーク負荷の3要因を抱えます。シミュレーターで自社条件における上振れ幅を試算できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -616,6 +644,7 @@ export default function TochigiBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "塗装ブース・コンプレッサー更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東京電力の火力依存度を踏まえた解説。" },
               { href: "/region-supplier-withdrawal-map", title: "エリア別新電力撤退状況マップ", description: "県内新電力の動向を含む全国マップ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

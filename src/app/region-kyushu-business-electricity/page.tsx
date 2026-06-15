@@ -235,6 +235,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           九州電力エリアの規模感・事業者構成・電源特性を確認してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -261,6 +264,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は九州電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -319,6 +325,9 @@ export default function RegionKyushuBusinessElectricityPage() {
             ))}
           </div>
           <p className="mt-2 text-xs text-slate-400">※目安値。実際の請求単価は契約内容・使用量・時期により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </div>
       </section>
 
@@ -338,6 +347,7 @@ export default function RegionKyushuBusinessElectricityPage() {
         <div className="mt-6">
           <h3 className="text-lg font-semibold text-slate-900">九州電力エリアの電源別発電量構成（概算・年間ベース）</h3>
           <p className="mt-1 text-xs text-slate-500">日射量や原発稼働状況により年度・季節で変動。概算値。</p>
+          <p className="mt-2 text-xs text-slate-500">※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。</p>
           <div className="mt-4 space-y-3">
             {[
               { source: "太陽光", pct: 28, color: "bg-amber-400" },
@@ -424,6 +434,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2023〜2026年の30分値データ（12,144レコード）を集計した九州エリアの電源構成実績です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
             <p className="text-xs font-semibold text-indigo-700">原子力</p>
@@ -459,6 +472,9 @@ export default function RegionKyushuBusinessElectricityPage() {
           ※本ページの料金・シェア情報は2026年4月時点の公開情報をもとにした概算値です。
           正確な単価は各電力会社の公式ホームページまたは見積書でご確認ください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※参考: 電力単価・エリア別データは新電力ネット（pps-net.org/unit）も参照。単価・統計は公開情報ベースの目安です。
+        </p>
       </div>
 
       {/* JEPXエリアプライスの推移 */}
@@ -466,6 +482,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">JEPX卸市場でのエリアプライス推移</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           JEPX（日本卸電力取引所）における当エリアの年度別平均価格です。市場連動型プランの仕入れコストに直結するデータです。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -498,6 +517,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           九州エリアは太陽光発電の大量導入により、昼間の余剰電力でエリアプライスが全国最安水準。FY2022ですら14.42円と全国平均を-5.99円下回りました。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* エリア需要の特徴 */}
@@ -505,6 +527,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">エリア需要の特徴</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           九州電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "kyushu")?.share}%を占めます。太陽光大量導入で昼間の余剰が発生。需要の変動パターンが他エリアと異なる。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -580,6 +605,9 @@ export default function RegionKyushuBusinessElectricityPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           福岡の冷房度日は+38%増加（名古屋に次ぐ）。猛暑日も18日→126日に急増。太陽光発電が多いため昼間は余剰電力が出やすい一方、夕方以降の冷房需要が卸市場価格を押し上げる構造です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -625,6 +653,11 @@ export default function RegionKyushuBusinessElectricityPage() {
               href: "/region-supplier-withdrawal-map",
               title: "エリア別 新電力撤退状況マップ",
               description: "2022年以降の新電力撤退・解除状況を10エリアで比較。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />
