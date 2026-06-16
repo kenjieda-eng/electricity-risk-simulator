@@ -398,6 +398,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区は面積13.01km²と23区2番目に狭いが、池袋ターミナルを中心に大型商業施設・ホテル・複合施設が密集し、極めて高い電力需要密度を持ちます。サンシャインシティの地域冷暖房システム、東池袋・南池袋の再開発、巣鴨・大塚・目白の住商混在エリアと、多層構造の電力需要が特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -425,6 +428,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区では東電EP以外に15社前後の新電力が法人向け高圧で活発に営業中です。全国系・ガス併売・通信流通系・再エネ特化型の4カテゴリが主軸となり、池袋大型商業施設・ホテルでは競争入札による切替が標準化しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -462,6 +468,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理した目安・概算です。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -470,6 +479,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区の代表的な業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在エリアの業界平均値と公開事例から整理した代表的なシナリオです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -499,6 +511,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区の電気代上昇は、池袋ターミナルの極端な需要密度、サンシャインシティDHCの特殊性、ホテル業の24時間稼働、再開発エリアの大型施設電力負荷など、区固有の事業者構成が複合的に影響します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -522,6 +537,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区では国補助（SII等）・都独自補助・区独自補助（エコ・テナント運営支援）が組合せ可能です。特に区独自補助は中小商業・飲食・サービス事業者向けに使いやすい設計で、設備更新の主力財源となります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -568,6 +586,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区の新電力シェアは2024年時点で30〜35%程度と都内平均並み。池袋大型施設では競争入札による切替が標準化、中小商店では切替の余地が大きく残ります。市場連動からの固定回帰、需要家主導型PPAの活用が主要論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -591,6 +612,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区の省エネは『大型商業施設の高効率化』『ホテル業の高効率化』『DHC接続施設の最適化』『中小商店のLED・設備更新』『需要家主導型オフサイトPPA』の5軸が主力です。区エコ・テナント運営支援＋SII＋都補助の組合せで投資回収を短縮できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -627,6 +651,9 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               豊島区は池袋ターミナルの極端な需要密度・DHC接続施設・ホテル業の24時間稼働など固有の要素を持ちます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・区補助活用・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -665,6 +692,7 @@ export default function ToshimaKuBusinessElectricityCostPage() {
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "シティホテル・ビジネスホテルの最適化。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "中小・大型施設の主力補助金。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
