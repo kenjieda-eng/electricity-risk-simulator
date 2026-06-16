@@ -398,6 +398,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区は23区最大の人口と面積を持ち、住宅地中心の電力需要構造の中に、二子玉川再開発・楽天本社といった特別高圧大口需要家、大型医療機関、大学キャンパス、商業集積エリア（三軒茶屋・下北沢・自由が丘）が点在する多層構造のエリアです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -425,6 +428,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区では東電EP以外に10〜15社程度の新電力が法人向けで活発に営業中です。全国系・地域系・通信流通系・再エネ特化型の4カテゴリが主軸となり、特にガス併売の東京ガスの電気と地域系の東急パワーサプライが沿線エリアで存在感を持ちます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -462,6 +468,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理した目安・概算です。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -470,6 +479,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区の代表的な業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在エリアの業界平均値と公開事例から整理した代表的なシナリオです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -499,6 +511,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区の電気代上昇は、住宅併設小規模事業者の段階料金負担、再開発エリアの新規大型施設電力負荷、医療機関の24時間稼働、大学研究設備など、区固有の事業者構成が複合的に影響します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -522,6 +537,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区では国補助（SII等）・都独自補助・区独自補助（中小企業省エネ補助）が組合せ可能です。特に区独自補助は中小事業者向けに使いやすい設計で、LED・空調・冷凍冷蔵設備更新の主力財源となります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -551,6 +569,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区の事業者構成は、中小飲食・小売（最多）、医療機関、大学キャンパス、大型複合施設・再開発エリア、公共施設・教育施設の5層構造です。それぞれ電力消費パターンと契約区分が大きく異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +588,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区の新電力シェアは2024年時点で25〜30%程度と推定され、都内平均にやや劣後します。小規模事業者の切替余地が大きく、ガス併売・地域系新電力の活用、契約期間・違約金条項の確認が重要論点です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -591,6 +615,9 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               世田谷区の省エネは『中小店舗のLED・厨房設備更新』『医療機関の高効率化』『大学キャンパスの需要平準化』『大型施設の高効率化＋PPA』『中小向け需要見える化』の5軸が主力です。区補助・SII補助・都補助の組合せで投資回収を短縮できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -665,6 +692,7 @@ export default function SetagayaKuBusinessElectricityCostPage() {
               { href: "/hospital-electricity-cost-review", title: "病院の電気料金見直し", description: "大型医療機関の最適化。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "中小・大型施設の主力補助金。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

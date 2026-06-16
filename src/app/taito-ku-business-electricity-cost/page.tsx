@@ -398,6 +398,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区は浅草・上野観光、御徒町・合羽橋・浅草橋の問屋街、観光ホテル群と3つの事業集積を持つ独特なエリアです。観光ピーク月の需要変動、宿泊業の24時間稼働、問屋街の店舗冷暖房ロス、公共文化施設の特殊運用などが固有の論点となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -425,6 +428,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区では東電EP以外に15社前後の新電力が法人向け高圧で活発に営業中です。大型ホテル・公共文化施設では競争入札による切替が進展、観光業向け季節変動対応メニューを持つ事業者もあります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -462,6 +468,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理した目安・概算です。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -470,6 +479,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区の代表的な業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在エリアの業界平均値と公開事例から整理した代表的なシナリオです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -499,6 +511,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区の電気代上昇は、観光ピーク需要の季節変動、宿泊業の24時間稼働、問屋街の店舗冷暖房ロス、公共文化施設の特殊運用など、区固有の事業者構成が複合的に影響します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -522,6 +537,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区では国補助（SII等）・都独自補助・区独自補助（中小企業省エネ補助）が組合せ可能です。特に区独自補助は問屋街・観光飲食・中小宿泊業向けに使いやすい設計です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -551,6 +569,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区の事業者構成は、観光ホテル・ビジネスホテル、観光飲食・土産物、問屋街、公共文化施設、駅前商業施設の5層構造です。それぞれ電力消費パターンと契約区分が大きく異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +588,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区の新電力シェアは2024年時点で25〜30%程度と推定され、都内平均にやや劣後。問屋街・観光飲食の中小事業者の切替余地が大きく、観光季節変動への対応メニュー選定、SDGs対応のオフサイトPPA活用が重要論点です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -591,6 +615,9 @@ export default function TaitoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               台東区の省エネは『ホテル業の高効率化』『観光飲食のLED・厨房設備更新』『問屋街の店舗冷暖房ロス対策』『公共文化施設の最適化』『需要家主導型オフサイトPPA』の5軸が主力です。SII・都・区補助の組合せで投資回収を短縮できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -665,6 +692,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "シティホテル・ビジネスホテルの最適化。" },
               { href: "/restaurant-electricity-cost-review", title: "飲食業の電気代見直し", description: "中小飲食店の主力打ち手。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

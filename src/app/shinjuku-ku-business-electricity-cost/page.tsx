@@ -400,6 +400,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区は副都心・歓楽街・住商混在の多面的な構造を持ち、エリア別に電力負荷パターンが大きく異なります。西新宿の超高層DHC、歌舞伎町の深夜帯負荷、新宿駅の土日祝集中負荷など、契約戦略を考えるうえで重要な前提です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -427,6 +430,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区では、東電EPに加えて全国系新電力・東京ガス系・東急系・入札特化型・再エネ特化型と多様なプレイヤーが供給。西新宿の特別高圧、新宿三丁目の商業、歌舞伎町ホテル、都庁入札で競争が活発化しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -457,6 +463,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理した目安値です。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -465,6 +474,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区の代表的な3業態で、契約見直し＋設備対策の組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界ヒアリングから再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -518,6 +530,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区独自のエコ事業者支援、東京都の報告書制度関連補助・ZEB支援、国のSII省エネ補助の3層を組合せることで、投資回収を1〜2年短縮可能です。設備別の重複可否は事前確認が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -545,6 +560,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区の事業者構成は、西新宿副都心の超高層オフィス・都庁、新宿三丁目の百貨店、歌舞伎町の歓楽街・ホテル、高田馬場・落合・新大久保の中小事業者、初台・西新宿五丁目の住商混在の5層構造です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
@@ -587,6 +605,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区の省エネは、超高層オフィスの高効率化、ホテル稼働連動需要最適化、百貨店高効率化、オフサイトPPA、BEMSの5軸が主力です。業態別の打ち手を組合せることで投資回収期間を短縮できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -603,6 +624,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。歌舞伎町ホテル等の深夜帯ベース負荷、DHC受給ビル特有の論点を含めて確認することが重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -622,6 +646,9 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新宿区は西新宿の超高層、歌舞伎町ホテル、新宿三丁目百貨店、ターミナル商業など、業態別に異なる電力リスクを抱えます。シミュレーターで自社条件の上振れ幅を試算し、固定プラン切替・オフサイトPPA・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -660,6 +687,7 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "深夜帯ベース負荷型の選択論点。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "全国9エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東電エリアでも影響大の項目。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -400,6 +400,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区は光学産業の伝統（オリンパス・ニコン関連）、大日本印刷板橋工場ほか印刷業集積、高島平・成増の大型物流拠点、板橋・大山の大型商店街が並列する複合エリア。約2,000社の中小製造業の標準メニュー継続率が高く、新電力切替の潜在余地が大きい区の一つです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -427,6 +430,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区では東電EPに加え、全国系・通信流通系・地域ガス系・再エネ特化型・中小事業者向けの新電力15社前後が法人向け高圧で新規受付中。中小製造業向けの細やかな営業対応力を持つ新電力が増加中です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -464,6 +470,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -472,6 +481,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区の主力業種3つで、契約見直し＋設備対策の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表シナリオです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -500,6 +512,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区の電気代上昇は、中小製造業の標準メニュー継続による高単価放置、印刷業の24時間稼働と燃料費調整額影響、光学・印刷OEMからのScope3対応要請、再エネ賦課金上昇など、区固有の要因が複合的に重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -553,6 +568,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区の事業者構成は、光学産業・精密機器、印刷業（大日本印刷板橋工場含む）、高島平・成増物流DC、板橋・大山商店街、上板橋・東武練馬中小製造の5層構造です。各層で電力需要プロファイルと最適契約戦略が異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -569,6 +587,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区の新電力シェアは2024年時点で推計25〜30%と23区内では中程度。中小製造業・印刷業の標準メニュー継続率が高く、新電力切替の潜在余地が大きい区です。高島平物流DCでは切替が進行中。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -593,6 +614,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区の省エネは『光学・印刷業の設備更新』『物流DCの電力最適化』『工場・倉庫の屋根太陽光・自家消費』『区産業振興公社の伴走支援活用』『Scope3対応の段階的再エネ調達』の5軸が主力です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -629,6 +653,9 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               板橋区は光学産業・印刷業・物流DC・商店街など区固有の事業者構成を持ちます。シミュレーターで自社条件における上振れ幅を試算し、新電力切替・印刷機更新・屋根太陽光・Scope3対応再エネ調達のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -667,6 +694,7 @@ export default function ItabashiKuBusinessElectricityCostPage() {
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "印刷業・物流の選択肢。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "光学・印刷・物流の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東電エリアでも影響大の項目。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

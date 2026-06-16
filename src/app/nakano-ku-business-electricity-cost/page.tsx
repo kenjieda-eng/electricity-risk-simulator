@@ -398,6 +398,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区は中野駅周辺の大規模再開発進行エリアであり、中野セントラルパーク（中堅企業本社集積）、明治大中野・帝京平成大の大学キャンパス、中野ブロードウェイのサブカル集積、中野坂上のオフィスビル群、住商混在の周辺エリアと多層構造の電力需要を持ちます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -425,6 +428,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区では東電EP以外に15社前後の新電力が法人向け高圧で活発に営業中です。中野セントラルパーク・住友不動産中野坂上ビル・大学では競争入札による切替が標準化、中小事業者向けにも10社前後が新規受付中です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
@@ -461,6 +467,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理した目安・概算です。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
             </p>
           </section>
 
@@ -499,6 +508,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区の電気代上昇は、再開発進行による電力需要構造変化、中堅企業本社の高負荷率需要、大学キャンパスの長期休暇期変動、中野ブロードウェイの店舗構造特殊性など、区固有の事業者構成が複合的に影響します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -522,6 +534,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区では国補助（SII等）・都独自補助・区独自補助（エコ事業者支援）が組合せ可能です。特に区独自補助は中小飲食・小売・サブカル系専門店向けに使いやすい設計です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -568,6 +583,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区の新電力シェアは2024年時点で30〜35%程度と都内平均並み。大型オフィスビル・大学では競争入札による切替が標準化、中小事業者では切替の余地が大きく残ります。再開発エリアの新規入居予定事業者は事業計画段階での電力契約戦略が重要論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -592,6 +610,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区の省エネは『大型オフィスビルの高効率化＋PPA』『大学キャンパスの需要最適化』『ブロードウェイ・サブカル店舗のLED・ショーケース更新』『中堅企業本社のサーバルーム最適化』『需要家主導型オフサイトPPA』の5軸が主力です。SII・都・区補助の組合せで投資回収を短縮できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -608,6 +629,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。中野区はブロードウェイ等のビル一括契約構造の把握・再開発エリア入居予定事業者の事業計画段階対応・区独自補助の活用が特に重要な確認ポイントです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -627,6 +651,9 @@ export default function NakanoKuBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中野区は再開発進行・中堅企業本社の高負荷率・大学長期休暇期変動・ブロードウェイ店舗構造など固有の要素を持ちます。シミュレーターで自社条件における上振れ幅を試算し、固定プラン切替・区補助活用・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -665,6 +692,7 @@ export default function NakanoKuBusinessElectricityCostPage() {
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "板橋の中小製造業・物流事情。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "中堅・大型オフィスビルの主力打ち手。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
