@@ -432,6 +432,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県は沖縄電力単独エリアで、本土と独立した孤立系統。本島・宮古・八重山・離島の4系統に分かれます。全国最高水準の電気料金、亜熱帯・年中冷房需要、台風常襲、観光リゾート集積、米軍基地経済関連、離島電力供給が県内電力消費の特徴を形成します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -460,6 +463,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県では沖縄電力が事実上の単一事業者ですが、2024年時点で限定的に新電力が法人向け高圧で新規受付中です。沖縄電力グループ系、本土系（限定的）、地域密着型の3カテゴリが主軸となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -484,6 +490,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄電力エリアは全国で最も高い電気料金水準。本土平均より実質単価で3〜5円/kWh高く、新電力切替の競争余地は限定的ですが、太陽光自家消費＋蓄電池の組合せで電気代を大幅削減できます。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -525,6 +534,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。沖縄県は太陽光発電適地として自家消費の効果が極めて大きく、本土より大幅な削減率（30%）を実現できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -553,6 +565,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県の電気代変動は、全国最高水準の電気料金、離島・独立系統の特殊事情、石油・石炭火力依存と燃料価格変動、台風常襲とBCPの最重要性、年中冷房需要など多面的特性が複合的に影響します。それぞれの影響額を定量把握することで、契約見直し・太陽光自家消費・蓄電池BCP投資の優先順位付けが可能になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -576,6 +591,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県では国補助（SII等）に加え、県独自補助、離島・島嶼型エネルギー補助、那覇市・恩納村・宮古島市・石垣市の脱炭素補助、観光庁・農水省・環境省・内閣府沖縄担当部局の省エネ補助、沖縄振興特別措置法関連補助が組合せ可能です。最大4〜5補助の組合せで投資回収を1〜2年短縮できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -605,6 +623,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県の事業者構成は、観光リゾート、商業・データセンター・オフィス、米軍基地関連、製糖・水産加工、中小製造業・商業の5層構造です。各業種の電力消費プロファイルを把握することで自社の位置付けが見えてきます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -621,6 +642,9 @@ export default function OkinawaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県の新電力シェアは2024年時点で10%前後（全国最低水準）。離島・独立系統という構造的要因で本土系新電力の参入余地が限られます。一方、太陽光自家消費＋蓄電池の組合せが電気代削減・台風BCP対応の両立に最も効果的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -723,6 +747,7 @@ export default function OkinawaBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "空調・LED・冷凍冷蔵設備更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "沖縄電力エリア・石油石炭依存の影響。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

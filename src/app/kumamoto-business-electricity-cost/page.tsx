@@ -432,6 +432,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県は九州電力エリアに属し、TSMC/JASM進出による半導体電力需要急増がエリア最大の経営課題。半導体産業（菊陽町・大津町・合志市）、トマト・い草・スイカの全国上位農業、阿蘇・天草の観光業、熊本市の都市圏オフィス・商業が県内電力消費の中核を形成します。原発稼働メリット＋太陽光発電適地＋半導体需要急増のシナジーが県固有の競争優位です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -485,6 +488,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州電力エリアは原発稼働メリットにより本州より1〜2円/kWh安い水準を維持。TSMC/JASM進出により系統増強投資も進行中。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要で、新電力切替＋太陽光自家消費＋蓄電池の組合せで更なる削減が可能です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -524,6 +530,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。TSMC/JASM級半導体工場では年間20億円超の電気代削減が実現可能な巨大インパクトがあります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -577,6 +586,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県では国補助（SII等）に加え、県独自補助、熊本市・菊陽町・大津町の半導体産業集積支援、農水省・観光庁・農業向け省エネ補助が組合せ可能です。最大3〜4補助の組合せで投資回収を1〜2年短縮できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -605,6 +617,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県の事業者構成は、半導体製造、農業法人・施設園芸、観光業・温泉宿、オフィス・商業、中小製造業・物流・水産加工の5層構造です。各業種の電力消費プロファイルを把握することで自社の位置付けが見えてきます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -621,6 +636,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県の新電力シェアは2024年時点で約20〜25%（全国平均並み）。TSMC/JASM進出に伴い半導体産業の新電力切替が拡大中です。半導体産業の電力契約は瞬時電圧降下・停電に対する厳格な品質要求があり、単価競争力だけでなく品質保証・BCP対応力が新電力選定の必須要件です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -663,6 +681,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や太陽光・蓄電池投資の判断材料が下がります。半導体産業の連続稼働・品質要求と太陽光発電適地メリットを踏まえた契約最適化が県内事業者の競争優位です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -681,6 +702,9 @@ export default function KumamotoBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県はTSMC/JASM進出による半導体電力需要急増と太陽光発電適地のシナジーが特徴的なエリアです。シミュレーターで自社条件における上振れ幅を試算し、太陽光自家消費＋蓄電池導入・新電力競争入札・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -724,6 +748,7 @@ export default function KumamotoBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "クリーンルーム空調・LED・冷凍冷蔵設備更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州電力エリア・原発稼働の影響。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

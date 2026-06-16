@@ -432,6 +432,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県は九州電力エリアに属し、本州との関門連系線で連系。九州エリア最大の電力需要を持ち、北九州工業地帯（鉄鋼・化学・自動車）、博多都市圏（オフィス・商業・データセンター）、福岡空港・博多港・北九州港の物流拠点が県内電力消費の中核を形成します。原発稼働メリットと太陽光出力制御活用が県固有の競争優位です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -485,6 +488,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州電力エリアは原発稼働メリットにより本州より1〜2円/kWh安い水準を維持。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要で、新電力切替＋太陽光自家消費＋蓄電池の組合せで更なる削減が可能です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -524,6 +530,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。原発稼働メリット＋太陽光出力制御活用により、年間電気代を30%削減できる事業者が増えています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -577,6 +586,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県では国補助（SII等）に加え、県独自補助、北九州市・福岡市の脱炭素補助、九州経済産業局・産業集積向け補助が組合せ可能です。最大3〜4補助の組合せで投資回収を1〜2年短縮できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -622,6 +634,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県の新電力シェアは2024年時点で約25%（全国平均並み）。北九州工業地帯の特高大口と博多都市圏のオフィス・商業で新電力切替が活発です。太陽光出力制御頻発エリアとして自家消費＋蓄電池の組合せが最も効果的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -646,6 +661,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県の電気代対策は『鉄鋼・化学の電炉インバータ・廃熱回収・コージェネ』『自動車・電機・機械の設備更新』『データセンター・商業施設のフリークーリング・LED』『物流の冷凍冷蔵省エネ化』『屋根太陽光＋蓄電池でDR参加』の5軸が主力。原発稼働メリット＋太陽光出力制御活用で年間電気代を30%削減する戦略が標準化しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -662,6 +680,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や太陽光・蓄電池投資の判断材料が下がります。太陽光出力制御活用と原発稼働メリットを踏まえた契約最適化が県内事業者の競争優位です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -681,6 +702,9 @@ export default function FukuokaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県は原発稼働メリットによる安定単価と太陽光出力制御活用が特徴的なエリアです。シミュレーターで自社条件における上振れ幅を試算し、太陽光自家消費＋蓄電池導入・新電力競争入札・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -724,6 +748,7 @@ export default function FukuokaBusinessElectricityCostPage() {
               { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "博多都市圏データセンター向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "空調・LED・冷凍冷蔵設備更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

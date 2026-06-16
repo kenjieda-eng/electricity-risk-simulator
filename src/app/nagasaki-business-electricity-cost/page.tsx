@@ -432,6 +432,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県は九州電力エリアに属し、本土と独立した離島系統（壱岐・対馬・五島・平戸）を持つ特殊エリア。三菱重工長崎造船・佐世保重工の造船業、ハウステンボス・雲仙温泉の観光業、離島観光業・水産業、長崎市・佐世保市の都市圏オフィス・商業が県内電力消費の中核を形成します。本土と離島の二重構造への対応が県固有の経営課題です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -485,6 +488,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州電力エリアは原発稼働メリットにより本州より1〜2円/kWh安い水準を維持。一方、離島は石油火力依存で本土より2〜4円/kWh高い特殊事情があります。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで本土と離島を分けて比較することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -525,6 +531,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。離島事業者は島嶼型マイクログリッドによる年間電気代30%削減と台風BCP対応の両立が実現可能です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -552,6 +561,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県の電気代変動は、造船業の連続稼働、離島系統の単価高、観光業の年中冷房需要、台風常襲とBCPの重要性、再エネ賦課金など多面的特性が複合的に影響します。それぞれの影響額を定量把握することで、契約見直し・太陽光自家消費・蓄電池BCP投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -605,6 +617,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県の事業者構成は、造船業、大型観光施設、離島観光業・水産業、オフィス・商業、中小製造業・水産加工の5層構造です。各業種の電力消費プロファイルを把握することで自社の位置付けが見えてきます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -621,6 +636,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県の新電力シェアは2024年時点で約15〜20%（全国平均より低水準）。三菱重工長崎造船・ハウステンボス・長崎市内オフィスで新電力切替が活発です。離島事業者は九州電力依存度が高く、島嶼型マイクログリッドの活用が重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -663,6 +681,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や太陽光・蓄電池投資の判断材料が下がります。離島事業者と本土事業者で論点が異なり、台風BCP対応が経営課題です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -681,6 +702,9 @@ export default function NagasakiBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長崎県は造船業・観光業・離島・水産業と多様な産業構造を持ち、本土と離島の単価二重構造が特徴的なエリアです。シミュレーターで自社条件における上振れ幅を試算し、太陽光自家消費＋蓄電池導入・島嶼型マイクログリッド・新電力競争入札・省エネ投資のメリットを定量化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約条件での年間上振れリスクを確認する</li>
@@ -724,6 +748,7 @@ export default function NagasakiBusinessElectricityCostPage() {
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "マグロ・養殖魚水産加工冷蔵向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "電気溶接機・LED・冷凍冷蔵設備更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

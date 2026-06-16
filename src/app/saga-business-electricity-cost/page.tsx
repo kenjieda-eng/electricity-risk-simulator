@@ -432,6 +432,9 @@ export default function SagaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県は九州電力エリアに属し、玄海原発の立地県。有田焼・伊万里焼窯業、米麦・玉ねぎ・玉露茶等の農業、鳥栖物流ハブ、佐賀市・鳥栖市の都市圏オフィス・商業が県内電力消費の中核を形成します。玄海原発立地県メリットと太陽光出力制御活用が県固有の競争優位です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -460,6 +463,9 @@ export default function SagaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県では九州電力が最大シェアを持ちますが、2024年時点で複数の新電力が法人向け高圧で営業中です。九州電力グループ系、西部ガス系、全国系、農協系・地域密着型の4カテゴリが主軸となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -484,6 +490,9 @@ export default function SagaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州電力エリアは原発稼働メリットにより本州より1〜2円/kWh安い水準を維持。佐賀県は玄海原発立地県として地域振興メニューの恩恵も一部受けます。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -525,6 +534,9 @@ export default function SagaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。玄海原発立地県メリット＋太陽光出力制御活用により、年間電気代を30%削減できる事業者が増えています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -552,6 +564,9 @@ export default function SagaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県の電気代変動は、窯業の連続稼働と電気代影響、玄海原発立地県メリット、太陽光出力制御と昼間余剰活用、農業の高付加価値化、再エネ賦課金など多面的特性が複合的に影響します。それぞれの影響額を定量把握することで、契約見直し・太陽光自家消費・蓄電池投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -605,6 +620,9 @@ export default function SagaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県の事業者構成は、有田焼伊万里焼窯業、玄海原発関連、鳥栖物流、農業法人、中小製造業・商業の5層構造です。各業種の電力消費プロファイルを把握することで自社の位置付けが見えてきます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -621,6 +639,9 @@ export default function SagaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県の新電力シェアは2024年時点で約15〜20%（全国平均より低水準）。有田伊万里窯業大手と鳥栖物流の高圧契約で新電力切替が進む一方、中小事業者・農業法人は九州電力継続が多数派です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -645,6 +666,9 @@ export default function SagaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               佐賀県の電気代対策は『有田伊万里窯業の電気炉インバータ・廃熱回収』『鳥栖物流の冷凍冷蔵省エネ化』『農業のハウスLED・空調最適化』『玄海原発立地地域の事業者向け省エネ』『屋根太陽光＋蓄電池でDR参加』の5軸が主力。玄海原発立地県メリット＋太陽光出力制御活用で年間電気代を30%削減する戦略が標準化しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -723,6 +747,7 @@ export default function SagaBusinessElectricityCostPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "電気炉・LED・空調更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州電力エリア・原発稼働の影響。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
