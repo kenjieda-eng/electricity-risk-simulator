@@ -432,6 +432,9 @@ export default function OitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県は九州電力エリアに属し、八丁原地熱発電（全国最大級）の立地県。大分臨海工業地帯の鉄鋼化学コンビナート、別府・湯布院温泉観光業、地熱発電関連、大分市の都市圏オフィス・物流が県内電力消費の中核を形成します。地熱由来CO2フリー電源活用が県固有の特異的競争優位です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -460,6 +463,9 @@ export default function OitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県では九州電力が最大シェアを持ちますが、2024年時点で複数の新電力が法人向け高圧で活発に営業中です。九州電力グループ系、西部ガス系、全国系、地域・地熱由来系の4カテゴリが主軸となります。地熱由来CO2フリー電源メニューが県固有の競争優位として活用されています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -484,6 +490,9 @@ export default function OitaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州電力エリアは原発稼働＋地熱発電メリットにより本州より1〜2円/kWh安い水準を維持。地熱由来CO2フリー電源活用で更なる差別化が可能。実質単価（電力量料金+燃料費調整額+再エネ賦課金）ベースで比較することが重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -525,6 +534,9 @@ export default function OitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県の主力業種3つで、契約見直し＋太陽光自家消費＋蓄電池＋地熱由来CO2フリー電源の組合せによる削減効果をBefore/Afterで提示します。いずれも実在事業者の公開事例・業界団体ヒアリングから整理した代表パターンで、pps-net.org/unitのエリア単価データを根拠に試算しています。地熱由来CO2フリー電源活用により電気代削減＋RE100進捗40〜50%達成が可能です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -553,6 +565,9 @@ export default function OitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県の電気代変動は、鉄鋼化学コンビナートの連続稼働、別府湯布院温泉観光業の年中需要、八丁原地熱発電と地熱由来CO2フリー電源活用、太陽光出力制御と地熱の組合せ、再エネ賦課金など多面的特性が複合的に影響します。それぞれの影響額を定量把握することで、契約見直し・太陽光自家消費・地熱由来電源活用の優先順位付けが可能になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -576,6 +591,9 @@ export default function OitaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県では国補助（SII等）に加え、県独自補助（地熱活用支援が県固有）、大分市・別府市・由布市の脱炭素補助、観光業・農業向け省エネ補助が組合せ可能です。最大3〜4補助の組合せで投資回収を1〜2年短縮できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -622,6 +640,9 @@ export default function OitaBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大分県の新電力シェアは2024年時点で約20%（全国平均並み）。大分臨海工業地帯の特高大口と別府湯布院観光業大手で新電力切替が活発です。地熱由来CO2フリー電源を活用したRE100対応メニューが県固有の競争優位として活用が拡大中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -662,6 +683,9 @@ export default function OitaBusinessElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や地熱由来電源・太陽光投資の判断材料が下がります。地熱由来CO2フリー電源活用が県固有の特異的競争優位です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -724,6 +748,7 @@ export default function OitaBusinessElectricityCostPage() {
               { href: "/hotel-electricity-cost-review", title: "ホテル・旅館の電気料金見直し", description: "別府温泉・湯布院観光業向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "電炉・コージェネ・LED・空調更新の主力補助金。" },
               { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
