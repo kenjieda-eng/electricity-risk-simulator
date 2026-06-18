@@ -96,6 +96,7 @@ const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
   { name: "農林水産省（食品事業者向け省エネ支援）", url: "https://www.maff.go.jp", description: "食品流通事業者向け補助金情報" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
 ];
 
 const reviewPoints = [
@@ -157,6 +158,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、飲食店チェーン特有の負荷特性を踏まえた契約見直しの着眼点を整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -194,6 +198,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -219,6 +226,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             飲食業態によって電力消費プロファイルが大きく異なるため、自社業態のベンチマークと比較して契約条件を最適化することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -263,6 +273,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             飲食業は利益率の低さから、固定プランとの相性が高い業種といえます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">固定プランが向きやすい理由</p>
@@ -302,6 +315,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             飲食チェーンの設備投資で活用しやすい補助金を整理します。チェーン本部が一括申請することで、複数店舗分のスケールメリットを得られる場合があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
@@ -332,6 +348,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
             <p className="text-sm leading-7 text-slate-700 sm:text-base">
               50 店舗以上のチェーンでは、本部主導の電力契約一括見直しで年間数百万円〜千万円規模の単価優位を獲得可能です。実務手順は ①店舗別電力契約条件の本部集約（電圧区分・契約電力・現行単価・契約満了日）、②店舗グルーピング（電圧区分・供給エリア・需要パターン）、③相見積もり依頼（3〜5 社）、④評価（単価・財務安定性・供給責任条項）、⑤段階移行の 5 ステップが標準です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-semibold text-slate-900">{item.heading}</h3>
@@ -349,6 +368,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと並行して、設備面での対策を組み合わせることで電気料金の削減効果を高められます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -385,6 +407,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             50 店舗規模ファミリーレストランチェーンを想定した試算ベンチマークを示します。立地・店舗形態で削減幅は変動しますが、初期検討の参考値として活用できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">想定モデル</p>
@@ -409,6 +434,9 @@ export default function RestaurantChainElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、チェーン飲食法人事例ヒアリング、業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -495,6 +523,11 @@ export default function RestaurantChainElectricityCostReviewPage() {
               href: "/articles/by-industry/hotel-leisure",
               title: "ホテル・観光業種ハブ：観光業向け電気料金関連記事",
               description: "観光業全般の電気料金関連記事を一覧で確認。ホテル併設レストランの参考に。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />
