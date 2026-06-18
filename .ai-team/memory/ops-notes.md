@@ -1236,4 +1236,1001 @@ GSC インデックス申請の正確な上限は **公式に非公開**。
 
 ---
 
-**最終更新**: 2026-05-05 夕方（§20 Lesson-12 / §21 Lesson-13 / §22 Lesson-15 / §23 Lesson-16 / §24 Lesson-17 統合、5/5 セッションの 5 大学習を恒久化）。前回: 2026-05-01 午後（§19 Lesson-14 統合、TOC 無限ループの恒久対策）
+## §25. Lesson-18: GSC「クロール済み - インデックス未登録」は 5〜7 日のラグあり、最新値だけ見ると見誤る
+
+**確立日**: 2026-05-06 朝（リン）
+
+**背景**: 5/5 朝に GSC で「クロール済み - インデックス未登録 25 件」と表示されていた。これに基づき B-38a/b-1/2/3（5/5 中マージ済 4 PR）で 25 件全件 metadata 差別化を完遂し、「未登録対策完遂」と判定した。
+ところが翌 5/6 朝に GSC を確認すると **237 件**に急増。CSV ダウンロードした「該当ページ推移」を確認すると、実態のジャンプは 4/27→4/28（25 → 237 = +212 件）であり、**5/5 朝に GSC で見えていた 25 件は 5〜7 日前のスナップショットだった**ことが判明。
+
+### 真因
+
+- GSC「クロール済み - インデックス未登録」レポートには **5〜7 日のラグ**がある（Google 内部処理の特性）
+- 「最新値」だけ見ると、その間に発生した悪化を見逃す
+- 単日値に基づき「対策完遂」と判定すると、実態が最新値の何倍にも悪化している可能性
+
+### 運用ルール
+
+**Rule 1: 単日値ではなく週次トレンドを見る**
+
+- GSC の「クロール済み - インデックス未登録」を CSV ダウンロード（「平均読み込み時間のチャート」エクスポート）し、過去 4 週間の推移を毎週日曜にチェック
+- 急増ポイントを発見したら、git log と突き合わせて原因仮説を立てる
+
+**Rule 2: 大量コンテンツ追加（30 件以上）後は最低 10 日待ってから判定**
+
+- 大量追加 → クロール → 評価 → no-index 判定 のサイクルに 7-10 日かかる
+- 「追加直後の数日間に未登録が増えていない」を見て安心しない
+- 14 日経過時点で indexed 化率を測定し、50% 未満なら追加対策
+
+**Rule 3: GSC 申請（URL 検査 → リクエスト）した個別 URL は別途記録**
+
+- 申請履歴は GSC に残らないため自前管理必須
+- 申請後 14 日経っても indexed にならない場合、ページ品質に根本問題ありと判定
+
+### 検証コマンド（CSV ダウンロード推奨）
+
+```bash
+# GSC コンソール → ページ → 未登録 → 「クロール済み - インデックス未登録」をクリック
+# → 詳細画面右上から CSV エクスポート（「平均読み込み時間のチャート」「メタデータ」「表」3 ファイルが出る）
+# 「平均読み込み時間のチャート」が日次推移、「表」が現在の該当 URL 一覧
+```
+
+### 5/6 朝の発見の実例
+
+| 日付 | GSC 表示値 | 実態（CSV） | 認識ズレ |
+|---|---:|---:|---|
+| 5/5 朝 | 25 | 237（4/28 で確定済）| **GSC が 5-7 日遅れ表示**で 25 件と表示していた |
+| 5/6 朝 | 237 | 237 | ようやく実態に追いつく |
+
+→ 5/5 中の B-38 系 4 PR は「実態 237 件中の 25 件（10%）」しかカバーしていなかった。
+→ 翌朝発覚時には方針大幅修正が必要となった（D 戦略 3 サイクルへ）。
+
+### 関連 Lesson
+
+- **Lesson-15**: GSC 実データ早期共有 → 早期共有していてもラグの罠にハマる
+- **Lesson-16**: 大量記事追加時のインデックス監視必須 → 監視は単日値でなく週次トレンドで
+- **Lesson-19**: 大量テンプレ系ページ追加の事前重複度評価（次の §26）
+
+---
+
+## §26. Lesson-19: 大量テンプレ系ページ（30+）追加時は事前に H2 重複度評価と被リンク供給設計が必須
+
+**確立日**: 2026-05-06 朝（リン）
+
+**背景**: 4/17-4/18 に「14 categories × 47 articles」「cat21-style for cat6-20: 203 articles」「cat22-35: 47 articles」など、テンプレ化された大量記事を一括追加（git log 確証）。
+これらは 4/22 周辺で Google にクロールされ、4/27→4/28 で **212 件が一夜で no-index** された。
+深掘り調査で判明した真因は「H2 構造のテンプレ重複（業種名差し替えのみ）+ 被リンク 0〜数件の二重欠陥」。
+
+### 実測データ（5/6 朝の調査）
+
+業種別レビュー 5 件サンプルの H2 構造：
+
+| ページ | H2 構成 |
+|---|---|
+| drugstore | XXの電気料金が上がりやすい理由 → 負荷特性から見た着眼点 → 固定プランと市場連動プランの考え方 → 契約見直しで確認したいこと → 設備対策との組み合わせ → シミュレーターで確認したいこと |
+| supermarket | 同上（業種名のみ差し替え）|
+| food-factory | 同上 |
+| hospital | わずかに変化（X 5項目同じ + 1 項目差分）|
+| distribution-center | hospital と同型 |
+
+→ Google は露骨な「擬似重複」と判定。
+→ 33 件の業種別レビュー中 **25 件（76%）** が未登録。
+
+被リンク数比較（src/app/ 配下を grep -rl）：
+
+| URL | 被リンク数 |
+|---|---:|
+| 未登録ページ群（業種別 / 地域別 / glossary 等）| 0〜5 |
+| 登録済ピラー記事（fuel-cost-adjustment）| 92 |
+| 登録済ピラー記事（renewable-energy-surcharge）| 36 |
+| 登録済ピラー記事（market-price-adjustment）| 30 |
+
+→ 「テンプレ重複 + 被リンク欠乏」のダブルパンチが集団 no-index の真因。
+
+### 運用ルール
+
+**Rule 1: 30 件以上のテンプレ系ページ追加前に H2 重複度を確認**
+
+- H2 構造の重複度が **70% を超えるなら追加禁止**（テンプレ脱却が前提条件）
+- 業種・地域・自治体などの「カテゴリ大量展開」では特に注意
+- ピラー系（独自トピック）は問題ない、テンプレ系（同じ構造の量産）が危険
+
+**Rule 2: テンプレ系追加と同時に被リンク 5 本以上を pillar から供給するセットを必須化**
+
+- 各新規ページに対し、関連 pillar から最低 5 本の内部リンクを **同 PR 内で**追加
+- 「あとで内部リンク追加」では順番が遅すぎる（Google が早くにクロール → 被リンク不足で no-index 判定）
+- TOP page / カテゴリハブ / 関連 pillar の 3 経路から最低 1 本ずつ + 業種ハブから 2 本
+
+**Rule 3: 投入後 14 日経過時点でインデックス率を測定**
+
+- indexed 化率 50% 未満なら以下のいずれかが必要：
+  - H2 構造の脱テンプレ（独自セクションを追加）
+  - 被リンク追加供給（5 → 10 本以上）
+  - 本文に独自データ・図表・事例を 1500 字以上追加
+  - 最終手段：類似ページの統合・noindex 化
+
+**Rule 4: 大量追加 PR の split 推奨**
+
+- 一度に 100 件以上追加する PR は分割（30 件 × 数 PR）
+- 各 PR 後に 14 日待って GSC で評価し、問題なければ次の PR
+- 速度より品質シグナル維持を優先
+
+### 5/6 朝発見の実例
+
+```
+4/17-4/18: 500+ テンプレ系記事の一括追加
+  ↓
+4/22 周辺: Google が大量クロール
+  ↓
+4/27→4/28: Google 評価終了 → 212 件が一夜で no-index
+  ↓
+5/6 朝（GSC ラグで 9 日遅れ）: 25 → 237 と表示変化で発覚
+  ↓
+5/7-6/13: D 戦略 3 サイクル（内部リンク強化 → 本文差別化 → 低価値整理）で復旧計画
+```
+
+### 関連 Lesson
+
+- **Lesson-16**: 大量記事追加時のインデックス監視必須 → Rule 3（14 日後測定）と組み合わせ
+- **Lesson-18**: GSC 5-7 日ラグあり → Rule 3 で 14 日待つのは GSC ラグも込みの数字
+- **Lesson-12**: 構造化データ判定の方法論欠陥 → 似た「単純判定 NG、共通コンポーネント Read 必須」のパターン
+
+---
+
+## §27. Lesson-20: 特集ハブ・カテゴリハブ修正前は既存の SERIES.map() / iteration ロジックを必ず確認
+
+**確立日**: 2026-05-06 夕方（リン）
+
+**背景**: B-41 で特集 5 シリーズトップに「シリーズ全ページ」セクションを追加する仕様を出したが、ClaudeCode が実装後に指摘：
+
+> 5 つの特集トップにはすでに「この特集の全体構成」セクション（map() で各 SERIES を全件表示）が存在していたため、Phase B の「シリーズ全ページ」セクションは構造的に重複しています。
+
+実測確認結果：
+
+| シリーズ | 既存 map() 有無 |
+|---|---|
+| emergency-scenario-analysis | なし（B-41 で初追加 = 有効）|
+| oil-scenario-analysis | **あり**（OIL_SCENARIO_SERIES.map() で全件表示済）|
+| gas-scenario-analysis | **あり**（GAS_SCENARIO_SERIES.map()）|
+| materials-packaging-scenario-analysis | **あり**（MATERIALS_SCENARIO_SERIES.map()）|
+| food-procurement-scenario-analysis | **あり**（FOOD_SCENARIO_SERIES.map()）|
+
+→ 4/5 シリーズで構造重複。同一 URL が anchor として 2 回出現する状態。
+→ SEO 効果は依然プラス（リンク密度上昇）だが、UX 観点では冗長。
+
+### 真因
+
+リン側の事前検証で grep が「シリーズ全ページ」「シリーズ全件」というキーワードのみ確認し、`SERIES.map()` ループの存在をチェックしていなかった。
+ClaudeCode の Lesson-13 好事例（実装時に既存仕様を Read して気づく）と同じ構造。リン側にも同様のレビュー深度が必要。
+
+### 運用ルール
+
+**Rule 1: 動的ループ検出を含む事前検証**
+
+特集ハブ・カテゴリハブ・列挙系ページに「全件リンク」を追加する仕様を出す前に：
+
+```bash
+# 既存 SERIES.map() / .map((item|x|s) => ...) / forEach / for-of ロジックの検出
+grep -E "_SERIES\.map|_SLUGS\.map|\.map\(\(.*\) => " src/app/<target-page>/page.tsx
+grep -E "<Link href=\{.*\.|<Link href=`/" src/app/<target-page>/page.tsx
+```
+
+検出されたら、**新規セクション追加でなく既存セクション補強**を発注内容にする。
+
+**Rule 2: 既存共通コンポーネントの存在確認**
+
+`<SeriesNav />`, `<RelatedLinks />`, `<CategoryGrid />` など、既存に「全件表示」目的のコンポーネントがないか確認：
+
+```bash
+grep -rl "<SeriesNav\|<CategoryNav\|<SeriesIndex\|<EpisodeList" src/components/
+ls src/components/articles/ | grep -E "Nav|List|Index|Series"
+```
+
+**Rule 3: 「全体構成」「シリーズ一覧」「カテゴリ一覧」のテキスト検索**
+
+```bash
+grep -E "全体構成|シリーズ一覧|カテゴリ一覧|全[0-9]ページ|全件" src/app/<target>/page.tsx
+```
+
+ヒットすれば既存があると見て発注を保留 → リン再検討。
+
+**Rule 4: 仕様書テンプレートに「既存ロジック確認チェック」を組み込み**
+
+今後の B-XX_PROMPT_*.md には「§事前確認」セクションを設置：
+
+```markdown
+## §事前確認 (発注前にリンが完了)
+
+- [ ] 対象ページの既存 SERIES.map() 検出: <あり/なし>
+- [ ] 対象ページの既存「全体構成」「全件」セクション: <あり/なし>
+- [ ] 既存共通コンポーネント (Nav/List/Index): <あり/なし>
+- [ ] 既存ありの場合の発注方針: <既存補強/新規追加（理由明記）>
+```
+
+### 5/6 セッションの実例
+
+B-41 では既に 4/5 シリーズに map() 済 → 重複追加となったが、indexed 化目標達成には貢献。
+事後対応：
+- ops-notes に Lesson-20 として恒久化（本セクション）
+- 今後の B-XX 発注時は事前確認チェックリストを必須化
+
+### 関連 Lesson
+
+- **Lesson-12**: 構造化データ「未適用」判定の方法論欠陥 → Read で深く確認する原則
+- **Lesson-13**: 検証コマンド期待値の脳内シミュレーション → 同根
+- **Lesson-19**: 大量テンプレ追加リスク → 既存ロジック確認は重複追加防止にも効く
+
+---
+
+**最終更新**: 2026-05-06 夕方（§27 Lesson-20 統合、特集ハブ map() 重複追加問題を恒久化）。前回: 2026-05-06 朝（§25 Lesson-18 / §26 Lesson-19）
+
+---
+
+## §28. ClaudeCode 自主検証パターン例（Lesson-13 の運用蓄積）
+
+**確立日**: 2026-05-06 夜（リン）
+
+**目的**: ClaudeCode が実装時に Lesson-13（実装完了形の脳内シミュレーション）を発揮する具体例を蓄積し、リン側仕様書の「ClaudeCode の判断余地」を明示するため。
+
+### 28.1 好事例 1: B-38b-3 の型定義保護（5/5）
+
+**状況**: リン仕様書に 2 つの誤情報（heroAccentClass の有無、既存値の差異）あり。
+
+**ClaudeCode の対応**:
+- 型定義ファイルを Read で確認
+- リン spec を実装すると型不整合になることを検出
+- 「既存値維持」原則で正しい実装を選択
+- リン側 spec の誤情報を保護した形
+
+### 28.2 好事例 2: B-41 の特集ハブ既存 map() 検出（5/6）
+
+**状況**: B-41 仕様書で「特集 5 トップにシリーズ全件セクション追加」を要求。実は 4/5 シリーズには既に SERIES.map() で全件表示済み。
+
+**ClaudeCode の対応**:
+- 特集トップ page.tsx を Read で全件確認
+- 既存 SERIES.map() の存在を検出
+- 「構造重複」を完了報告で明示的に指摘
+- 仕様通りに追加しつつ、リスクをリンに伝達
+
+→ Lesson-20 として恒久化のきっかけに。
+
+### 28.3 好事例 3: B-47 の重複追加自主修正（5/6 夜）
+
+**状況**: B-47 で 17 pillar の RelatedLinks 末尾に対応孤立 URL を追加する仕様。1 件（international-electricity-price-comparison）は既に target href を含んでいた。
+
+**ClaudeCode の対応**:
+- 初回コミット (ab64fdb) でリン仕様通り 17 件全件追加
+- リン側 PRE_MERGE_CHECKLIST で重複を指摘される前に、**自主的に重複を検出**
+- 修正コミット (dd3648d) で重複追加分を削除
+- net 影響は international ファイル変更なし
+
+→ リン側の事後警告対応負荷ゼロ、B-47 全体スコープは 17→16 リンクに縮小し品質維持。
+
+### 28.4 リン側仕様書での「ClaudeCode 判断余地」の明示方針
+
+これらの好事例を踏まえ、今後の B-XX 発注書テンプレートには以下を明示：
+
+```markdown
+## ClaudeCode の判断余地
+
+リン仕様の「末尾追加」「H2 構造再構成」等を機械的に実装せず、以下のケースで自主判断してよい：
+
+1. 既に target href が RelatedLinks に存在する場合 → 重複追加せずスキップ
+2. 既存 SERIES.map() / industries.map() が全件表示済みの場合 → 新規セクション追加を統合提案
+3. 型定義と spec が不整合な場合 → 型定義優先で実装、spec 誤を完了報告で指摘
+4. 構造化データの二重出力が発生する場合 → 既存方式を保護
+```
+
+→ B-42 / B-43 / B-45 / B-46 / B-44 系・月次振り返り発注書に上記セクションを追加。
+
+### 28.5 Lesson-13 の運用拡張版
+
+元 Lesson-13: 検証コマンド期待値の脳内シミュレーション
+拡張版: **検証コマンド + 実装完了状態 + 重複可能性 + 型整合性 + 構造化データ重複** の 5 軸で脳内シミュレーション
+
+ClaudeCode に対する期待スキル：
+- リン仕様を **そのまま実行 vs 自主判断で改良** の判断
+- 仕様の意図を理解して、機械的でない実装
+
+### 28.6 リン側との運用協調
+
+ClaudeCode 自主判断が発生した場合のリン側対応：
+- 完了報告に「自主修正コミット」「自主スキップ判断」が含まれていたら GO 判定の +1 ポイント
+- 自主判断の妥当性をリン側で独立検証（独立 grep / Read）
+- 妥当ならそのまま GO、妥当でなければ追加修正依頼
+
+---
+
+**最終更新**: 2026-05-06 夜（§28 ClaudeCode 自主検証パターン例、Lesson-13 運用蓄積）。前回: 2026-05-06 夕方（§27 Lesson-20）
+
+
+## §29. Lesson-21: PRE_MERGE_CHECKLIST 検証スクリプトの metadata grep は範囲限定が必須
+
+**確立日**: 2026-05-07 朝（リン + ClaudeCode）
+
+**背景**: B-42 検証スクリプト `verify_b42.sh` §9 で「metadata 改変なし」を `git diff -U0` の出力から `+.*title:|+.*description:|...` で広く拾う実装にしたところ、5 ファイル中 4 ファイルで WARN を誤検出。
+
+**実態**:
+- `export const metadata = {...}` 本体は完全不変
+- 誤検出された行はすべて RelatedLinks 配列の `{ href: "/...", title: "...", description: "..." }`（§8 で意図的に追加した内部リンク補強）
+- ClaudeCode 側で内訳分析 → 「全 4 件は §8 の追加内部リンク由来 = 実害なし」と即座に切り分け（自主検証パターンの好事例）
+
+**設計教訓**:
+
+1. **検証 grep は「対象範囲を絞る」必要がある**
+   - ❌ NG: ファイル全体に対する `git diff -U0 | grep -E "+.*title:"`
+   - ✅ OK: `awk '/^export const metadata/,/^};/' file.tsx` で範囲を切り出し、その範囲内の diff だけ評価
+
+---
+
+**最終更新**: 2026-05-07 朝（§28.3 / §28.4 / §29 Lesson-21 統合、verify_*.sh 範囲限定パターン恒久化）。前回: 2026-05-06 夕方（§27 Lesson-20）
+
+2. **検証スクリプトの誤検知は「WARN」止まりにする**（FAIL にしない）
+   - 誤検知が即 NO-GO になると検証時間が膨らむ
+   - 人間 / ClaudeCode が 1 分で内訳判定できる粒度で出力する
+
+3. **ClaudeCode の自主検証で内訳分析させる**（Lesson-13 拡張）
+   - 検証スクリプト出力を ClaudeCode に渡し、「WARN の根本原因と実害の有無」を分析させると 30 秒で確定する
+
+### 適用済
+
+- 5/7 11:30: `verify_b42.sh` §9 を範囲限定 awk に修正
+- 5/7 12:00: `verify_b43.sh` 作成時に §11 で同パターン採用（ファイル: `.ai-team/scripts/verify_b43.sh`）
+- 今後の `verify_b45.sh` / `verify_b46.sh` 等で標準パターン化
+
+### 関連 Lesson
+
+- **Lesson-13**: ClaudeCode 自主検証パターン
+- **Lesson-19**: 大量テンプレ系ページ追加時の H2 重複度評価
+- **Lesson-20**: 既存 SERIES.map() / iteration ロジック確認
+
+---
+
+## §28 補足: ClaudeCode 自主検証パターン 5/7 朝の追加好事例
+
+### 好事例 5: B-42 verify_b42.sh 自主実行 + 内訳分析（5/7 朝）
+
+**状況**: B-42 完了報告時、リン作成の verify_b42.sh を自主実行。WARN 4 件発生。
+
+**ClaudeCode の対応**:
+- 検証スクリプトを自主実行（PASS 44 / WARN 4 / FAIL 0）
+- WARN 4 件の内訳を分析（§9 metadata 検証スクリプトの誤検知）
+- 「全 4 件は §8 の追加内部リンク由来 = 実害なし」を切り分け
+- 改善案として §9 を範囲限定 awk に書き換える提案
+
+→ Lesson-21 として恒久化のきっかけに。
+
+### 好事例 6: B-42 PR 作成時の untracked 警告分析（5/7 朝）
+
+**状況**: gh pr create が "Warning: 188 uncommitted changes" を出力。
+
+**ClaudeCode の対応**:
+- untracked ファイルの内訳を分析
+- 「.ai-team/ 配下の戦略文書群 = ops-notes §9.2 で既知事象」と特定
+- PR 自体は 5 ファイル変更のクリーン差分と確認
+- KENJI さんへの誤解の余地なし状態で報告
+
+### 共通パターン（5/6-7 朝で蓄積した 6 好事例から）
+
+1. 検証コマンド自主実行 + 結果サマリ
+2. WARN / 警告の根本原因分析
+3. リスクの有無判定（実害なし / 修正必要）
+4. 改善提案（次回スクリプトへの反映案）
+
+→ リン側 PRE_MERGE_CHECKLIST が「数値検証」から「ClaudeCode 分析の妥当性確認」にシフト、検証時間 30-60 分 → 5-10 分。
+
+
+### 好事例 7: B-45 で AuthorBadge / TableOfContents 統一性確保（5/7 夕方）
+
+**状況**: B-45 6 ファイルのうち 4 ファイル（municipality-bundled-procurement / municipality-procurement-bidding-failure / municipality-re100-decarbonization / executive-cfo-electricity-basics）に AuthorBadge / TableOfContents が無かった。
+
+**ClaudeCode の対応**:
+- 既存 2 ファイル（municipality-electricity-cost-review / executive-multi-site-cost-management）に既設のパターンを Read で確認
+- 「サイト統一性向上」の観点で、無かった 4 ファイルに新規追加
+- リン側発注書の「触らない要素」リストには明示されていなかったが、追加が妥当と自主判断
+- 完了報告で「統一性確保のため追加」を明示
+
+→ リン側 H2 深掘り設計書の不備（明示すべきだった）を ClaudeCode 自主判断で補完。
+
+### 好事例 8: B-46 SHIFT 補助金で業種別活用パターン H2 を新設（5/7 夕方）
+
+**状況**: B-46 で subsidy-shift-project（燃料転換補助金）を改修。H2 深掘り設計書では「既存 9 H2 維持、文言リネームのみ」推奨。
+
+**ClaudeCode の対応**:
+- 既存 H2 を Read 確認
+- SEO 価値向上の観点で「業種別活用パターン」H2 を新設可能と判断
+- 9 H2 → 10 H2 に拡張（深掘り設計書の推奨を超える品質向上）
+- 完了報告で「業種別活用パターン H2 新設」を明示
+
+→ リン側設計より上の品質を提案。SEO 観点でより業種特化された記事化に成功。
+
+### 5/7 朝〜夕方の好事例 4 件追加でパターン蓄積（合計 8 例）
+
+| 日 | 好事例 | 内容 |
+|---|---|---|
+| 5/5 | 1 | B-38b-3 の型定義保護 |
+| 5/6 | 2 | B-41 の特集ハブ既存 map() 検出 |
+| 5/6 | 3 | B-47 の重複追加自主修正 |
+| 5/7 | 5 | B-42 verify_b42.sh 自主実行 + 内訳分析 |
+| 5/7 | 6 | B-42 PR 作成時の untracked 警告分析 |
+| 5/7 | 7 | B-45 AuthorBadge / TableOfContents 統一性確保 |
+| 5/7 | 8 | B-46 SHIFT 業種別活用パターン H2 新設 |
+
+→ ClaudeCode 自主判断は **発注書の不備補完（好事例 7）** や **品質向上提案（好事例 8）** にも及び、リン側仕様書の精度向上にもフィードバックされる好循環が確立。
+
+---
+
+## §30. Lesson-22: PRE_MERGE_CHECKLIST 検証スクリプトの誤検知 4 大要因（5/8 確立）
+
+5/7-8 の B-43/B-44a/b/c/d 検証で蓄積した知見。検証スクリプトが「FAIL」を出しても実害がないケースが頻発したため、4 大要因を特定して改善コードを確立。
+
+### 4 大要因
+
+**要因 1: `main...HEAD` 三点記法の落とし穴**
+- 三点記法は「main と HEAD の両方の歴史を含む」ため、main が古いと余計な差分を拾う
+- → **対策**: `main..HEAD` 二点記法 or `origin/main..HEAD` を使う
+
+**要因 2: 共通要素検査の誤検知**
+- 「main 側に元から無い要素」を検査すると常に「無い」と判定して FAIL
+- → **対策**: 検査前に main 側の存在チェックを挟む（`git show main:path/to/file | grep ...`）
+
+**要因 3: awk の終端パターン不足**
+- `awk '/start/,/end/'` で `end` パターンが `};` `},` `}` の 3 種類存在
+- → **対策**: `awk '/start/,/(^};$|^},$|^})/'` で 3 種対応
+
+**要因 4: 外出し管理（MONTHLY_RETROSPECTIVE_ITEMS 等）の検証配慮**
+- 配列を別ファイルに外出ししたページの検証で、grep が page.tsx だけを見ると本体不在で FAIL
+- → **対策**: `_lib/` 配下の関連ファイルも同時に検査
+
+→ B-44d 5/8 試験運用以降、誤検知激減。verify_b50c.sh も §1-§4 で活用。
+
+---
+
+## §31. Lesson-23: 自動マージ運用 試験運用 6/6 完全成功（5/8 B-44d 第 1 号）
+
+5/8 17:30-19:50 に実施した自動マージ運用試験運用が **6/6 完全成功**。本格運用へ移行決定。
+
+### 評価項目（6 項目すべて ✅）
+
+| # | 項目 | 結果 |
+|---|---|:---:|
+| 1 | ClaudeCode が gh pr create 成功 | ✅ PR #168 |
+| 2 | リン GO 判定タイムリー（30 分以内） | ✅ 5 分 |
+| 3 | ClaudeCode が gh pr merge --auto 成功 | ✅ MERGED |
+| 4 | Delete branch 成功 | ✅ |
+| 5 | Vercel デプロイ Ready | ✅ |
+| 6 | 想定外の挙動なし | ✅ |
+
+### 副次的発見: Vercel build queue 詰まり
+
+5/8 5 PR 連続マージで Vercel queue が詰まり、最後の B-44d デプロイが 42 分待機。
+KENJI さんが Vercel UI で「Start Building Now」をクリック → 即解消。
+**対策**: 1 PR ずつマージ完了確認してから次を発注。
+
+5/9 B-50c から本格運用開始。KENJI さん作業時間 1 PR で約 2 分（旧運用 5 分から 60% 削減）。
+
+---
+
+## §32. Lesson-24: verify_*.sh §5 編集ファイル数チェックは workspace 状態に依存（5/9 B-50c で発見）
+
+### 状況
+5/9 B-50c PR #169 検証で `verify_b50c.sh` 実行時、§1-§4 / §6 が ✅ PASS なのに **§5 「編集ファイル数」だけ FAIL（差分 0/11）** と誤検知された。
+
+### 根本原因
+- workspace（Cowork サンドボックス）には B-50c ブランチのコンテンツが既に取り込まれた状態
+- `git diff --name-only main..HEAD` を実行すると、HEAD と main が同じツリーを指していて差分 0 になる
+- → スクリプトが「実装漏れ」と判定し FAIL を出す
+
+### 真相確認手順（リンが採用）
+- `git fetch origin feat/B-50c-noindex-11-files-20260509`
+- `git diff --stat origin/main...origin/feat/B-50c-noindex-11-files-20260509`
+- → **11 files / 11 insertions** で完全一致 → 実装は完璧、§5 FAIL は誤検知と確定
+
+### 改善コード（次回スクリプトへ反映）
+
+```bash
+# §5 を origin ベースで二重チェック
+DIFF_COUNT_LOCAL=$(git diff --name-only main..HEAD -- "${TARGET_FILES[@]}" 2>/dev/null | wc -l)
+DIFF_COUNT_ORIGIN=$(git diff --name-only origin/main...origin/$(git rev-parse --abbrev-ref HEAD) -- "${TARGET_FILES[@]}" 2>/dev/null | wc -l)
+
+if [ "$DIFF_COUNT_LOCAL" -eq 11 ] || [ "$DIFF_COUNT_ORIGIN" -eq 11 ]; then
+  pass "11 ファイル差分検出（local=$DIFF_COUNT_LOCAL, origin=$DIFF_COUNT_ORIGIN）"
+fi
+```
+
+→ 5/12 以降の verify スクリプトには `origin/main...feat/...` パターンを追加する。
+
+---
+
+## §33. Lesson-25: 自動マージ運用 2/2 完全成功（5/9 B-50c 第 2 号）→ 安定運用フェーズ確立
+
+5/9 14:30-17:16 に実施した自動マージ運用 本格運用第 2 号が **6/6 完全成功**。試験 + 本格運用 = **2/2 完全成功**。
+
+### 第 1 号 vs 第 2 号 比較
+
+| 項目 | 第 1 号 (B-44d) | 第 2 号 (B-50c) | 改善 |
+|---|---|---|---|
+| ファイル数 | 19 | 11 | 小規模化 |
+| ClaudeCode 実装時間 | 2-3h | 1.5h | -33% |
+| リン GO 判定までの時間 | 5 min | 5 min | 同等 |
+| KENJI さん総作業時間 | 約 2 min | 約 2 min | 同等 |
+| Vercel queue 詰まり | 発生 (42 min 待機) | なし | 改善（1 PR 単発のため）|
+| 本番デプロイ完了 | 5/8 19:50 (発注 17:00 から 2h50m) | 5/9 02:16 (発注 14:30 から 11h46m, ただし KENJI 5/9 朝 38 min 作業内で受発注) | 同等 |
+| 自主検証結果 | 7/7 ✅ | 7/7 ✅ | 同等 |
+| 本番反映確認 | – | 11/11 ✅ noindex 反映済 | 改善（5/10 朝 curl で確定）|
+
+### 安定運用フェーズの定義（5/9 確立）
+
+- **2/2 完全成功** = 想定外の挙動なし、運用ガイド通り
+- → **5/13 以降の B-50 系発注はこのテンプレで OK**
+- → **5/15 公開のみ手動マージに戻す**（リスク回避）
+- → 5/16 以降は自動マージ標準運用
+
+### 副次的発見
+
+- B-50c のような 10-11 件規模が「自動マージの最適サイズ」
+- 5-9 件は手動でも変わらない、12+ 件は分割推奨
+- 自動マージ最大効率域: **8-15 ファイル / 1 PR**
+
+→ 今後の Lesson-26 候補: 「自動マージサイズの最適化」を 5/16 以降の B-50 系で検証。
+
+
+---
+
+## §30. Lesson-22: PRE_MERGE_CHECKLIST 検証スクリプトの誤検知 4 大要因
+
+**確立日**: 2026-05-08（β 案 #163 検証で誤検知 3 件、B-44a #165 検証で誤検知 1 件発生）
+
+### 経緯
+
+5/8 朝の β 案検証で `verify_beta.sh` が下記の判定を出した:
+- §1 編集ファイル数: 8 (期待 1-2) → ⚠️ WARN
+- §2 H2 数: 10 (期待 11) → ⚠️ WARN
+- §14 共通要素: AuthorBadge=0, TableOfContents=0 → 🔴 FAIL
+
+調査の結果、§1 と §14 は**スクリプト側の前提誤り**（誤検知）と判明。
+β 案 4/14 PASS → 実質 14/14 PASS。
+
+B-44a の `verify_b44a.sh` でも `permanent: true` の検出 0 件が誤検知（実態 9 件全部設定済）。
+
+### 4 大要因と対策
+
+#### 要因 1: `main...HEAD` 三点記法はローカル main が古いと誤検知
+
+**症状**:
+- `git diff --name-only main...HEAD` は merge-base から HEAD への差分を返す
+- ローカル main が `git fetch` 未実行で古い場合、過去マージ済 PR の差分も含まれる
+- β 案では「変更ファイル 1 件」のはずが「8 件」と出た（B-46 マージ済 7 件含む）
+
+**対策**:
+- **二点記法 `main..HEAD` に変更**（main → HEAD の単純差分）
+- または `origin/main..HEAD` を使う（さらに確実）
+- ファイル単位で見たい場合は `git diff --name-only main..HEAD -- <path>` で範囲指定
+
+```bash
+# ❌ 三点記法（ローカル main 古い場合に誤検知）
+DIFF_COUNT=$(git diff --name-only main...HEAD)
+
+# ✅ 二点記法（直接的、誤検知なし）
+DIFF_COUNT=$(git diff --name-only main..HEAD)
+
+# ✅ ファイル限定（より確実）
+DIFF_COUNT=$(git diff --name-only main..HEAD -- "$TARGET_FILE")
+```
+
+#### 要因 2: 共通要素検査は main 側存在を先に確認すべき
+
+**症状**:
+- β 案 §14 で AuthorBadge=0、TableOfContents=0 を「削除疑い」FAIL 判定
+- 実態は cold-storage が **元から AuthorBadge / TableOfContents を持っていなかった**
+- ClaudeCode は完了報告で「AuthorBadge（なし）/ MarketDataFaq 不変」と明示していた
+
+**対策**:
+- `git show main:<file>` で main 側に元から該当要素があったか先に確認
+- 元から無いなら「OK」、元からあって今ないなら「FAIL」と判定
+- スクリプト内で `in_main` と `in_head` を比較
+
+```bash
+# ✅ Lesson-22 適用版
+for elem in AuthorBadge ContentCta TableOfContents; do
+  in_main=$(git show main:"$FILE" 2>/dev/null | grep -c "$elem")
+  in_head=$(grep -c "$elem" "$FILE")
+  if [ "$in_main" -eq 0 ]; then
+    pass "$elem は元から main にもなし（OK）"
+  elif [ "$in_head" -ge 1 ]; then
+    pass "$elem 維持（main: $in_main → HEAD: $in_head）"
+  else
+    fail "🔴 $elem が削除されている（main: $in_main → HEAD: 0）"
+  fi
+done
+```
+
+#### 要因 3: awk 終端パターン `^[+-]};$` のみだと `},` で書かれた末尾に対応できない
+
+**症状**:
+- B-44a の next.config.ts の redirect ブロックで `permanent: true` を 0 件と誤検知
+- 実態は 9 件すべて設定済
+- awk パターン `/source:.*-glossary/,/}/` の `/}/` が `},` で終わる JS オブジェクトリテラルにマッチしない
+
+**対策**:
+- 終端パターンを `};$` (オブジェクト末尾) と `,$` (配列要素末尾) の両方で許可
+- または awk から sed の行範囲指定に切替（より確実）
+
+```bash
+# ❌ awk 単純パターン（誤検知）
+perm_count=$(awk '/source:.*-glossary/,/}/' "$NEXT" | grep -c "permanent: true")
+
+# ✅ Lesson-22 適用版（行範囲指定）
+for slug in "${SLUGS[@]}"; do
+  line=$(grep -n "\"/$slug\"" "$NEXT" | head -1 | cut -d: -f1)
+  if [ -n "$line" ]; then
+    end=$((line+3))
+    block=$(sed -n "${line},${end}p" "$NEXT")
+    if echo "$block" | grep -q "permanent: true"; then
+      perm_ok=$((perm_ok+1))
+    fi
+  fi
+done
+```
+
+#### 要因 4: 月次リスト等の外出し管理を「ファイル本体での検出」で検証する誤り
+
+**症状**:
+- B-44b 検証で「月次リスト 2025-10〜2026-02 が 0 箇所」を検出
+- 実態は `MONTHLY_RETROSPECTIVE_ITEMS` を `_lib/hub-data` で外出し管理し `.map()` で展開
+- ハブ本体ファイルには直接の URL 文字列は存在しない（正しい設計）
+
+**対策**:
+- 検証対象が「外出し管理されている可能性」を考慮
+- main 側の同じファイルで同じ grep を実行し、main でも 0 なら問題なし判定
+- または `import` 文や `_lib` 参照を確認
+
+```bash
+# ✅ main 側比較（外出し管理パターンの検出）
+for ym in 2025-10 2025-11 2025-12 2026-01 2026-02; do
+  main_count=$(git show main:"$FILE" 2>/dev/null | grep -cE "/$ym")
+  head_count=$(grep -cE "/$ym" "$FILE")
+  if [ "$main_count" -eq 0 ] && [ "$head_count" -eq 0 ]; then
+    pass "/$ym: 元から外出し管理（OK）"
+  elif [ "$head_count" -lt "$main_count" ]; then
+    warn "/$ym: 削除疑い（main: $main_count → HEAD: $head_count）"
+  fi
+done
+```
+
+### Lesson-22 適用済スクリプト
+
+5/8 14:00 以降に作成した `verify_b44b.sh` / `verify_b44c.sh` / `verify_b44d.sh` には Lesson-22 を反映済。
+既存の `verify_b42.sh` / `verify_b43.sh` / `verify_b45.sh` / `verify_b46.sh` / `verify_beta.sh` / `verify_monthly.sh` / `verify_b44a.sh` は **次回利用時に Lesson-22 反映改修** を予定。
+
+### 教訓のメタ視点
+
+- **検証スクリプト自体も検証対象**：誤検知が出たら、まずスクリプトのロジックを疑う
+- **ClaudeCode の完了報告を信用しすぎない**（リン検証で齟齬が出たら原因分析）
+- **完全 PASS でも要因 4 のような「外出し管理」を見逃すと品質低下リスク**
+
+→ ops-notes Lesson-21（2026-05-07 metadata grep 範囲限定）の系譜で、検証スクリプトの精度を継続的に向上させる。
+
+---
+
+## §31. Lesson-23（枠のみ・5/8 夕方 B-44d 試験運用結果反映予定）: 自動マージ運用試験
+
+**作成日**: 2026-05-08 14:30（リン）
+**ステータス**: 試験運用準備完了、結果待ち
+
+### 試験運用の背景（5/8 14:00 KENJI さん提案）
+
+5/7-5/8 で 12 PR マージを 2 日連続達成し、KENJI さんの GitHub UI 操作（PR 作成 + Squash and merge + Delete branch）が **5 PR で約 25 分**かかっていた。
+
+KENJI さんから「GitHub でのマージも ClaudeCode にそのまま依頼して自動化できないか」と提案。
+
+### 採用方式: レベル 2（検証連動マージ）
+
+```
+KENJI さん発注（コピペ）
+↓
+ClaudeCode 実装 + push + gh pr create
+↓
+リン検証（verify_*.sh）→ GO 判定
+↓
+ClaudeCode が gh pr merge --squash --auto --delete-branch
+↓
+CI 完了 → 自動マージ → Delete branch
+↓
+ClaudeCode 完了報告
+```
+
+→ KENJI さん作業時間: 5 PR で 25 分 → **5 PR で 30 秒**（90% 削減）
+
+### 安全性確保の仕組み
+
+1. リン GO 判定前のマージ実行禁止（ClaudeCode 厳守事項）
+2. --admin / force push / main 直 push / 既存ファイル削除 すべて禁止
+3. CI 失敗時は ClaudeCode 自主修正
+4. 5/15 公開当日は完全手動に戻す
+5. GH_TOKEN は keyring 保管（OS の安全な資格情報ストア）
+
+### 評価結果（試験運用後追記予定）
+
+| 項目 | 合格基準 | 評価 |
+|---|---|:---:|
+| ClaudeCode が gh pr create 成功 | ✅ | （未評価）|
+| リン GO 判定までタイムリー（30 分以内） | ✅ | （未評価）|
+| ClaudeCode が gh pr merge --auto 成功 | ✅ | （未評価）|
+| Delete branch 成功 | ✅ | （未評価）|
+| Vercel デプロイ Ready | ✅ | （未評価）|
+| 想定外の挙動なし | ✅ | （未評価）|
+
+→ B-44d 完了後にリンが評価し、6 項目すべて OK なら 5/9 朝以降本格運用に移行。
+→ NG が出たら原因分析 → 改善 → 再試験。
+
+### 関連ドキュメント
+
+- `.ai-team/AUTO_MERGE_OPS_GUIDE_2026-05-08.md` — ClaudeCode 向け運用ガイド（厳守事項込み）
+- `.ai-team/B-44d_AUTO_MERGE_PROMPT_2026-05-08.md` — 発注テキスト + gh コマンド
+- `.ai-team/scripts/verify_b44d.sh` — 19 ファイル index:false 検証スクリプト
+- `.ai-team/DECISIONS.md` D38 — 自動マージ運用試験運用開始の意思決定記録
+
+---
+
+## §34. Lesson-26: 自動マージ運用 6/6 連続成功 + git lock 対処法（2026-05-16）
+
+### 6/6 完全成功シリーズ
+
+| # | PR | 内容 | マージ日 | 特記 |
+|---|---|---|---|---|
+| 1 | #168 | B-44d noindex 19 件 | 5/8 | 試験運用第 1 号 |
+| 2 | #169 | B-50c noindex 11 件 | 5/9 | 安定運用確立 |
+| 3 | #170 | B-50e ReviewJsonLd 削除 | 5/10 | – |
+| 4 | #171 | B-50f 月次 5 月号確定値 | 5/12 | – |
+| 5 | #172 | **B-62 月次 03/04 号 新規追加** | **5/16** | 8 ヶ月分シリーズ完全網羅 |
+| 6 | #173 | **B-79 GA Dual tag 実装** | **5/16** | 同日内 2 連続自動マージ |
+
+→ **自動マージ運用は完全に成熟、もはや「試験」ではなく標準運用**
+
+### 5/16 同日内 2 連続自動マージ（前例なし）
+
+**通常の「1 日 1 PR」原則からの例外**:
+- B-62（月次振り返り、4 ファイル変更、+1,238 行）→ 午前マージ
+- B-79（GA Dual tag、3 ファイル変更、+7 行）→ 午後マージ
+
+**衝突回避が成立した理由**:
+1. 異なる領域のファイル変更（月次ページ vs GA 設定）→ 共通ファイル衝突ゼロ
+2. B-62 マージ → main 更新 → B-79 ブランチが main 取り込み → push の順序
+3. Vercel queue: 2 デプロイが順次処理、詰まりなし
+
+**今後の判断基準**:
+- 同日内 2 PR 可: 完全に独立した領域（コンポーネント・データ・設定で重複なし）
+- 同日内 3 PR 以上: 推奨しない（KENJI さん判断ミス・リン GO 検証時間が増大）
+
+### B-62 マージ時の git lock 問題（ClaudeCode 報告より）
+
+**現象**:
+- `gh pr merge --squash --auto --delete-branch` の最初の呼び出しが `.git/index.lock` で失敗
+- 実際にはマージは GitHub 側で完了していた（stale lock は前段処理由来）
+- `--delete-branch` がマージ即時パスで効かなかったため、リモートブランチを `gh api -X DELETE` で明示削除
+
+**根本原因**:
+- 直前の git 操作（おそらく `git fetch` または `git checkout`）が中断され、`.git/index.lock` が残存
+- 次の `gh pr merge` 実行時にこの lock が引き継がれ、コマンド実行を阻害
+
+**対処法（次回以降のテンプレート）**:
+
+```bash
+# Step 1: stale lock 検出と除去
+if [ -f .git/index.lock ]; then
+  lock_age=$(($(date +%s) - $(stat -c %Y .git/index.lock 2>/dev/null || echo 0)))
+  if [ "$lock_age" -gt 60 ]; then
+    echo "stale lock を除去（${lock_age}秒前のもの）"
+    rm -f .git/index.lock
+  fi
+fi
+
+# Step 2: gh pr merge 実行（auto モード）
+gh pr merge "$PR_NUMBER" --squash --auto --delete-branch
+
+# Step 3: マージ即時実行の場合 --delete-branch が効かないことがあるので確認
+sleep 5
+gh pr view "$PR_NUMBER" --json mergedAt | jq -r '.mergedAt'
+
+# Step 4: ブランチが残っている場合は明示削除
+gh api -X DELETE "repos/{owner}/{repo}/git/refs/heads/$BRANCH_NAME" 2>/dev/null || true
+
+# Step 5: ローカル参照 prune
+git fetch origin --prune
+```
+
+### 自動マージ成熟度の指標
+
+| 段階 | 件数 | 期間 | 状態 |
+|---|:---:|---|---|
+| 試験運用 | 1 件 | 5/8 | 第 1 号 #168（B-44d）成功 |
+| 安定運用 | 2 件 | 5/9 | #169 B-50c 成功 → §33 で確立 |
+| 連続成功 | 5 件 | 5/8-5/16 | B-44d / B-50c / B-50e / B-50f / B-62 |
+| **完全標準化** | **6 件** | **5/16 B-79 で達成** | **試験運用フェーズ完全終了** |
+
+### Lesson-26 のメタ視点
+
+5/8 試験運用開始から 8 日間で 6/6 完全成功。
+- KENJI さん作業時間: 1 PR あたり 2 分（発注 + GO + マージ確認）
+- リン検証時間: 1 PR あたり 5-10 分（verify_*.sh）
+- ClaudeCode 実装時間: 30-60 分〜半日（規模次第）
+- 失敗確率: 0%（6/6）
+
+**自動マージ運用は内部完全特化戦略の前提インフラ**として確立。
+今後の「毎日 1 PR」運用は、この自動マージなしには成立しない。
+
+### 関連ドキュメント
+
+- `.ai-team/AUTO_MERGE_OPS_GUIDE_2026-05-08.md` — 運用ガイド
+- `.ai-team/B-62_AUTO_MERGE_PROMPT_DRAFT_2026-05-14.md` — 第 5 号発注（月次 03/04）
+- `.ai-team/B-79_AUTO_MERGE_PROMPT_GA_DUAL_TAG_2026-05-16.md` — 第 6 号発注（GA Dual tag）
+- `.ai-team/scripts/verify_b62.sh` — 22 項目検証
+- `.ai-team/scripts/verify_b79.sh` — 14 項目検証
+- `.ai-team/DECISIONS.md` D46（予定）— Lesson-26 完全標準化の意思決定記録
+
+
+---
+
+## §34. Lesson-26: 自動マージ運用 6/6 連続成功 + git lock 対処法（2026-05-16 確立）
+
+### 6/6 完全成功シリーズ
+
+| # | PR | 内容 | マージ日 | 特記 |
+|---|---|---|---|---|
+| 1 | #168 | B-44d noindex 19 件 | 5/8 | 試験運用第 1 号 |
+| 2 | #169 | B-50c noindex 11 件 | 5/9 | 安定運用確立 |
+| 3 | #170 | B-50e ReviewJsonLd 削除 | 5/10 | – |
+| 4 | #171 | B-50f 月次 5 月号確定値 | 5/12 | – |
+| 5 | #172 | **B-62 月次 03/04 号 新規追加** | **5/16** | 8 ヶ月分シリーズ完全網羅 |
+| 6 | #173 | **B-79 GA Dual tag 実装** | **5/16** | 同日内 2 連続自動マージ |
+
+→ **自動マージ運用は完全に成熟、もはや「試験」ではなく標準運用**
+
+### 5/16 同日内 2 連続自動マージ（前例なし）
+
+通常の「1 日 1 PR」原則からの例外:
+- B-62（月次振り返り、4 ファイル変更、+1,238 行）→ 午前マージ
+- B-79（GA Dual tag、3 ファイル変更、+7 行）→ 午後マージ
+
+衝突回避が成立した理由:
+1. 異なる領域のファイル変更（月次ページ vs GA 設定）→ 共通ファイル衝突ゼロ
+2. B-62 マージ → main 更新 → B-79 ブランチが main 取り込み → push の順序
+3. Vercel queue: 2 デプロイが順次処理、詰まりなし
+
+今後の判断基準:
+- 同日内 2 PR 可: 完全に独立した領域（コンポーネント・データ・設定で重複なし）
+- 同日内 3 PR 以上: 推奨しない（KENJI さん判断ミス・リン GO 検証時間が増大）
+
+### B-62 マージ時の git lock 問題（ClaudeCode 報告より）
+
+現象:
+- `gh pr merge --squash --auto --delete-branch` の最初の呼び出しが `.git/index.lock` で失敗
+- 実際にはマージは GitHub 側で完了していた（stale lock は前段処理由来）
+- `--delete-branch` がマージ即時パスで効かなかったため、リモートブランチを `gh api -X DELETE` で明示削除
+
+根本原因:
+- 直前の git 操作（おそらく `git fetch` または `git checkout`）が中断され、`.git/index.lock` が残存
+- 次の `gh pr merge` 実行時にこの lock が引き継がれ、コマンド実行を阻害
+
+対処法（次回以降のテンプレート）:
+
+```bash
+# Step 1: stale lock 検出と除去
+if [ -f .git/index.lock ]; then
+  lock_age=$(($(date +%s) - $(stat -c %Y .git/index.lock 2>/dev/null || echo 0)))
+  if [ "$lock_age" -gt 60 ]; then
+    echo "stale lock を除去（${lock_age}秒前のもの）"
+    rm -f .git/index.lock
+  fi
+fi
+
+# Step 2: gh pr merge 実行（auto モード）
+gh pr merge "$PR_NUMBER" --squash --auto --delete-branch
+
+# Step 3: マージ即時実行の場合 --delete-branch が効かないことがあるので確認
+sleep 5
+gh pr view "$PR_NUMBER" --json mergedAt | jq -r '.mergedAt'
+
+# Step 4: ブランチが残っている場合は明示削除
+gh api -X DELETE "repos/{owner}/{repo}/git/refs/heads/$BRANCH_NAME" 2>/dev/null || true
+
+# Step 5: ローカル参照 prune
+git fetch origin --prune
+```
+
+### 自動マージ成熟度の指標
+
+| 段階 | 件数 | 期間 | 状態 |
+|---|:---:|---|---|
+| 試験運用 | 1 件 | 5/8 | 第 1 号 #168（B-44d）成功 |
+| 安定運用 | 2 件 | 5/9 | #169 B-50c 成功 → §33 で確立 |
+| 連続成功 | 5 件 | 5/8-5/16 | B-44d / B-50c / B-50e / B-50f / B-62 |
+| **完全標準化** | **6 件** | **5/16 B-79 で達成** | **試験運用フェーズ完全終了** |
+
+### Lesson-26 のメタ視点
+
+5/8 試験運用開始から 8 日間で 6/6 完全成功。
+- KENJI さん作業時間: 1 PR あたり 2 分（発注 + GO + マージ確認）
+- リン検証時間: 1 PR あたり 5-10 分（verify_*.sh）
+- ClaudeCode 実装時間: 30-60 分〜半日（規模次第）
+- 失敗確率: 0%（6/6）
+
+自動マージ運用は内部完全特化戦略の前提インフラとして確立。
+今後の「毎日 1 PR」運用は、この自動マージなしには成立しない。
+
+### 関連ドキュメント（Lesson-26）
+
+- `.ai-team/AUTO_MERGE_OPS_GUIDE_2026-05-08.md` — 運用ガイド
+- `.ai-team/B-62_AUTO_MERGE_PROMPT_DRAFT_2026-05-14.md` — 第 5 号発注（月次 03/04）
+- `.ai-team/B-79_AUTO_MERGE_PROMPT_GA_DUAL_TAG_2026-05-16.md` — 第 6 号発注（GA Dual tag）
+- `.ai-team/scripts/verify_b62.sh` — 22 項目検証
+- `.ai-team/scripts/verify_b79.sh` — 14 項目検証
+- `.ai-team/DECISIONS.md` D46（予定）— Lesson-26 完全標準化の意思決定記録
+
+
+---
+
+## §35. Lesson-27: articles.ts 検証は git diff を最優先（2026-05-17 リン判定ミスから）
+
+### 経緯
+
+B-51a（5/17 自動マージ第 7 号）のリン GO 判定中に、articles.ts の order 値を `grep -A 5` で確認したところ、printing と pulp-paper の order が両方 10 と誤検知。
+
+実際は:
+- printing: order 36
+- pulp-paper: order 37
+- 重複なし、連番正常
+
+grep の `-A 5` が親カテゴリ定義の `order: 10`（industry-guide カテゴリのソート順）まで拾っていたため誤検知。
+
+### 教訓
+
+articles.ts のような **入れ子オブジェクト構造**を持つ TS ファイルでは、grep の前後コンテキスト指定が**親要素のフィールド名と衝突する**。
+
+**正しい確認手順**:
+
+1. **`git diff origin/main...origin/<branch> -- src/data/articles.ts` を最優先**
+   - 追加された行のみを純粋に確認
+   - 親カテゴリの定義に巻き込まれない
+2. grep を使う場合は、対象 slug を含む行**のみ**を対象に
+   ```bash
+   git diff origin/main...origin/<branch> -- src/data/articles.ts | grep -E "slug:.*\"<target>\"" -A 2
+   ```
+3. または、変更追加 (`^+`) 行に限定して grep
+   ```bash
+   git diff ... | grep "^+.*order:" 
+   ```
+
+### 影響度
+
+- 致命度: 中（GO 判定の正確性に影響、ただし即修正可能）
+- 発生頻度: articles.ts への新規追加 PR 全件で発生し得る
+- 対応コスト: 検証フロー変更のみ（追加ツール不要）
+
+### verify_*.sh への組み込み（次回改善）
+
+将来の verify_*.sh では、articles.ts 関連の検証を:
+
+```bash
+# Before（誤検知のリスクあり）
+grep -A 5 "$slug" src/data/articles.ts
+
+# After（git diff ベース、確実）
+git diff "origin/main...origin/$BRANCH" -- src/data/articles.ts | grep "^+.*$slug" 
+```
+
+### Lesson-27 のメタ視点
+
+リンの判定ミスを記録する Lesson は重要。
+- ClaudeCode 主導の自動マージ運用では、リン GO 判定が最後の砦
+- リン側の誤検知は false negative（不適切な PR を GO）や false positive（適切な PR を NO-GO）両方を引き起こす
+- 検証手順の改善は、自動マージ運用の品質を直接左右する
+
+5/17 リンが「order 重複あり」と一旦 KENJI さんに報告した後、git diff で再確認して「誤検知だった」と即訂正したのは、Lesson-27 確立につながる経験となった。
+
+### 関連ドキュメント
+
+- `.ai-team/scripts/verify_b51a.sh` — articles.ts 検証ロジック（要改善）
+- `.ai-team/scripts/verify_b62.sh` — 同上
+- `.ai-team/memory/ops-notes.md` §34 Lesson-26 — 自動マージ運用の母体
