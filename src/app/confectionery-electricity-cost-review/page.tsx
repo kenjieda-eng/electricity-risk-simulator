@@ -259,6 +259,7 @@ const sourcesItems = [
   { name: "日本洋菓子協会連合会", url: "https://www.jp-akc.com/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function ConfectioneryElectricityCostReviewPage() {
@@ -318,6 +319,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業の電力使用は『製菓オーブン／冷却凝固設備／冷蔵ショーケース／蒸し餡製造／包装検査』の5層で構成されます。製品種別（ビスケット／洋菓子／和菓子／チョコレート）で電力プロファイルが異なり、季節商戦期に需要が集中する独特な構造があります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -346,6 +350,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業の電気代水準は製品種別（ビスケット／洋菓子／和菓子／チョコレート）と冷蔵保管比率で大きく異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -357,6 +364,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 全日本菓子協会・日本洋菓子協会連合会・経産省工業統計から整理。実値は製品種別・冷蔵保管比率で1.5〜2倍ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -365,6 +375,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業の電気代上昇は、制度的要因（燃料費調整・賦課金・容量拠出金）と業界特有要因（季節商戦・直営店舗）が複合的に重なります。それぞれの影響額を定量把握することで、契約見直しと省エネ投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -389,6 +402,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
@@ -450,6 +466,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業は季節商戦期に大量電力を使う特性上、市場価格高騰局面での影響額が事業収支に直撃します。固定プランの優位性が極めて高い業種です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
@@ -506,6 +525,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業の省エネは『オーブン排熱回収』『冷蔵ショーケースインバータ化・遠隔管理』『冷却ライン高効率化』『自家消費太陽光』『BEMS・デマンド制御』の5軸で組み立てます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">オーブン排熱回収＋予熱ライン化</p>
@@ -551,6 +573,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               菓子業向けに活用しやすい補助金は5本柱。中小菓子業者でもものづくり補助金（補助率1/2〜2/3）の活用で投資回収を1〜2年短縮できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -576,6 +601,9 @@ export default function ConfectioneryElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -636,6 +664,11 @@ export default function ConfectioneryElectricityCostReviewPage() {
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "夏季ピーク需要との同期メリット。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "オーブン・冷蔵設備の主力補助金。" },
               { href: "/demand-control-reduction-effect", title: "デマンドコントロール削減効果", description: "季節ピーク削減効果。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

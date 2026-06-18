@@ -250,6 +250,7 @@ const sourcesItems = [
   { name: "一般社団法人 日本鉱業協会", url: "https://www.kogyo-kyokai.gr.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function NonFerrousMetalElectricityCostReviewPage() {
@@ -337,6 +338,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業の電気代水準は事業形態（電解・リサイクル・加工）で極端に異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -348,6 +352,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本アルミニウム協会・日本鉱業協会・経産省工業統計から整理。実値は電解比率・新規/再生比率で2〜10倍ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -356,6 +363,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業の電気代上昇は、複数の制度的・構造的要因が同時進行で重なります。LME国際市場価格との連動、リサイクル拡大、EV・脱炭素需要拡大は業界固有の構造要因です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -382,6 +392,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -447,6 +460,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業のデマンド管理は『電解槽AI制御』『溶解炉スケジュール最適化』『圧延・伸線インバータ化』『計画停止DR連動』の4論点を組合せて最適化します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -468,6 +484,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               アルミ電解は製造原価の30%以上が電気代という極端な構造のため、市場価格高騰局面で経営インパクトが直撃します。20年級の超長期固定契約も標準的に検討される業種です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -508,6 +527,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業向けの省エネ施策は『電解槽AI制御』『廃熱回収システム』『圧延・伸線インバータ化』『大規模太陽光（20〜100MW）』が4本柱。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -552,6 +574,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               非鉄金属業向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を2〜5年短縮できます。再エネ賦課金減免制度は年数億〜数百億円規模の負担軽減効果。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -581,6 +606,9 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -645,6 +673,11 @@ export default function NonFerrousMetalElectricityCostReviewPage() {
               { href: "/solar-suited-corporations", title: "太陽光が向く法人の特徴", description: "昼間使用量が大きい工場の太陽光適性。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "電解制御・廃熱回収で活用できる主力補助金。" },
               { href: "/renewable-energy-surcharge-reduction-system", title: "再エネ賦課金減免制度", description: "電気多消費業種の主力負担軽減制度。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

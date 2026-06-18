@@ -253,6 +253,7 @@ const sourcesItems = [
   { name: "日本民間放送連盟", url: "https://j-ba.or.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function BroadcastingElectricityCostReviewPage() {
@@ -351,6 +352,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 総務省情報通信統計・日本民間放送連盟・経産省工業統計から整理。実値は送信所数・4K/8K対応比率で1.5〜2.5倍ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -359,6 +363,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業の電気代上昇は、複数の制度的・構造的要因が同時進行で重なります。それぞれの影響額を定量把握することで、契約見直しと省エネ投資の優先順位付けが可能になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -385,6 +392,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -415,6 +425,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業特有のコスト要因として、全国規模の送信所網が24時間連続稼働する点があります。各送信所100〜500kWの連続負荷が継続するため、自家消費太陽光分散導入が最も有効な施策となります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -465,6 +478,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               4K/8K放送対応により編集機材・送信機の電力消費が増加します。中堅地方テレビ局で4K対応により年200〜400万kWh増、8K本格化で更に1.5〜2倍の増加が見込まれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">4K対応の電力増要因</p>
@@ -513,6 +529,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業のデマンド管理は『番組制作期のピーク管理』『スタジオ照明調光制御』『送信所太陽光分散導入』『編集サーバークラウド移行』が4大論点です。これらを同時最適化することで契約電力10〜18%削減が現実的に達成できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -534,6 +553,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業は送信所24h連続稼働＋本社放送センター連続稼働でベースロードが大きく、市場価格高騰局面での影響額が事業損益直撃します。情報インフラ事業者としても安定性が要求されるため、固定プランの選択が基本戦略です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -575,6 +597,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               放送業向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。情報インフラ事業者として優先採択される傾向があり、複数組合せ申請（SII＋PPA＋BCP）で採択率が高くなります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -604,6 +629,9 @@ export default function BroadcastingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -668,6 +696,11 @@ export default function BroadcastingElectricityCostReviewPage() {
               { href: "/solar-suited-corporations", title: "太陽光が向く法人の特徴", description: "送信所網を持つ放送業の太陽光適性。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "LED・空調・編集機材更新で活用できる主力補助金。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "送信所24h稼働の情報インフラ事業の市場価格リスク。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

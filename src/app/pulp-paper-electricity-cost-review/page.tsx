@@ -253,6 +253,7 @@ const sourcesItems = [
   { name: "日本製紙連合会（業界統計・電力消費データ）", url: "https://www.jpa.gr.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function PulpPaperElectricityCostReviewPage() {
@@ -340,6 +341,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業の電気代水準は事業形態（特殊紙／段ボール原紙／新聞紙／印刷用紙）と規模で大きく異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -351,6 +355,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本製紙連合会・経産省工業統計・紙パルプ業界誌から整理。実値は製品種別・古紙比率・自家発電比率で1.5倍前後ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -359,6 +366,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業の電気代上昇は、複数の制度的・構造的要因が同時進行で重なります。それぞれの影響額を定量把握し、化石燃料・古紙価格との3重コスト構造への対応策を講じる必要があります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -385,6 +395,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -416,6 +429,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業のデマンド管理は『抄紙機の連続稼働率最大化』『インバーター化』『ユーティリティ可変速制御』『バイオマス自家発電と系統電力の最適配分』の4軸で進めます。停止損失コストが大きいため、運用最適化の効果が極めて大きい業種です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -439,6 +455,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業は24時間365日連続稼働で年間使用量が桁違いに大きく、市場価格高騰局面での影響額が事業継続を左右します。長期固定（5〜10年）契約とバイオマス自家発電の組み合わせが業界の標準戦略です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -516,6 +535,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業の省エネは『バイオマス自家発電』『コンプレッサー・モーターのインバーター化』『高効率抄紙機更新』『DR契約・VBP参加』の4軸で組み立てます。各軸の年間削減効果と投資回収年数を提示します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">バイオマス自家発電（黒液回収ボイラ・木質）</p>
@@ -571,6 +593,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               紙パルプ業向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。大規模投資（数十〜数百億円規模）の場合は複数補助金の組合せ申請（SII＋PPA＋バイオマス＋GX）が標準で、採択率も高くなります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -600,6 +625,9 @@ export default function PulpPaperElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -664,6 +692,11 @@ export default function PulpPaperElectricityCostReviewPage() {
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金などの活用パターン。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "24h稼働・高負荷で共通する大型設備の構造比較。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "ベースロード極大の紙パルプ業に直結するリスク。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

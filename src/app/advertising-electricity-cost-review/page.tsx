@@ -250,6 +250,7 @@ const sourcesItems = [
   { name: "電通報（業界動向）", url: "https://dentsu-ho.com/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function AdvertisingElectricityCostReviewPage() {
@@ -309,6 +310,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広告業の電力使用は『撮影スタジオ（短期集中ピーク）／編集ルーム（連続稼働）／サーバー・GPU（24h稼働）／イベント（スポット）』の4層構造です。スタジオ・編集・サーバー稼働のバランスで電気代強度が大きく変わるため、自社事業の電力プロファイル把握が契約見直しの起点になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -337,6 +341,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広告業の電気代水準は事業形態（代理店本社・プロダクション・スタジオ）で大きく異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -348,6 +355,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本広告業協会・電通報・経産省工業統計から整理。実値は職種構成・スタジオ運営有無で1.5〜3倍ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -356,6 +366,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広告業の電気代上昇は、制度的要因（燃料費・賦課金）に加え、クライアントからのサステナビリティ要求、生成AI/GPU負荷増という業界固有要因が並列します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -382,6 +395,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広告業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -433,6 +449,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               オフィス中心の広告業は連続稼働工場ほどのベースロードはありませんが、本社・スタジオ・編集ルームの合算では月の使用量が大きく、市場価格高騰局面で年間数百万〜数千万円のインパクトが発生します。固定プラン採用と市場連動回避は経営判断レベルの論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
@@ -472,6 +491,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。広告業でも年間電力使用量が大きい大手本社・スタジオ運営会社では年数千万円規模の負担が発生し、減免制度対象には届かない中堅企業ほど制度対応の選択肢が限られます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -552,6 +574,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広告業向けに活用しやすい補助金は4本柱。設備投資のタイミングを補助金スケジュールと合わせると投資回収を1〜3年短縮できます。複数補助金の組合せ申請（SII＋PPA＋グリーン電力）で採択率が高くなる傾向。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -581,6 +606,9 @@ export default function AdvertisingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -645,6 +673,11 @@ export default function AdvertisingElectricityCostReviewPage() {
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金などの活用パターン。" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "賦課金の仕組みと推移を確認する。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "燃調の計算式と影響額の把握。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

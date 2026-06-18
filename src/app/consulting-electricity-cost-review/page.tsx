@@ -250,6 +250,7 @@ const sourcesItems = [
   { name: "経済産業省（コンサルティング業界統計）", url: "https://www.meti.go.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function ConsultingElectricityCostReviewPage() {
@@ -309,6 +310,9 @@ export default function ConsultingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業の電力使用は『オフィス基本電力／会議室・プレゼン設備／多拠点合算／クラウド基盤』の4層構造です。1人あたり負荷は控えめだが、大手ファームのグループ合計では大きく、多拠点契約の集約と会議室管理が見直しの起点になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -337,6 +341,9 @@ export default function ConsultingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業の電気代水準は事業形態（戦略・IT実装・会計・人事）で異なりますが、全体的には他のサービス業に比べても低水準。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -348,6 +355,9 @@ export default function ConsultingElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本コンサルタント協会・経産省統計から整理。実値は事業形態・拠点数で1.5〜3倍ぶれます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -356,6 +366,9 @@ export default function ConsultingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業の電気代上昇は、制度的要因（燃料費・賦課金）に加え、外資系/グローバルクライアントからのグリーン電力100%要求、多拠点分散契約の機会損失という業界固有要因が並列します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -382,6 +395,9 @@ export default function ConsultingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例・業界団体ヒアリングから整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -412,6 +428,9 @@ export default function ConsultingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中堅・大手コンサルファームの電気代削減で最大の効果が見込まれるのが多拠点グループ集中購買。各拠点をビル管理会社経由で個別契約しているケースから、グループ一括契約に切り替えるだけで電力単価▲5〜10%の改善が一般的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -470,6 +489,9 @@ export default function ConsultingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業はオフィス中心でベースロードは小さいですが、多拠点合算では月の使用量が大きく、市場価格高騰局面で年数百万〜数千万円のインパクトが発生します。グリーン電力100%対応とも整合する固定プラン採用が経営判断レベルの論点。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
@@ -509,6 +531,9 @@ export default function ConsultingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コンサル業向けの省エネ施策は『会議室自動制御』『LED+空調BEMS』『グリーン電力調達』『多拠点集中購買』が4本柱。投資回収1〜3年で実行可能な施策が多数存在します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -583,6 +608,9 @@ export default function ConsultingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -646,6 +674,11 @@ export default function ConsultingElectricityCostReviewPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "LED・BEMS・空調更新で活用できる主力補助金。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金などの活用パターン。" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "賦課金の仕組みと推移を確認する。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 

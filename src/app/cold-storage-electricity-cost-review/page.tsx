@@ -228,6 +228,7 @@ const sourcesItems = [
   { name: "農林水産省 食品流通合理化促進事業", url: "https://www.maff.go.jp/" },
   { name: "日本冷蔵倉庫協会（業界統計・温度帯別電力データ）", url: "https://www.jarw.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function ColdStorageElectricityCostReviewPage() {
@@ -281,6 +282,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             冷蔵倉庫の電気料金は『食品ロス防止と物流継続性』を担保するインフラ費用です。冷凍機が止まれば食品衛生法上の保管温度を逸脱し、出荷停止・全量廃棄に直結します。オフィスや小売店の電気代とは意味合いが根本的に異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>電力コストが事業収支の 15〜30% を占める（オフィス業の 3〜6 倍）</li>
             <li>停電・設備停止時の食品廃棄損失額は 1,000 m² あたり 1,000〜3,000 万円規模</li>
@@ -314,6 +318,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             温度帯別に電力消費特性が大きく異なります。冷凍機 COP は 10 年で 20〜30% 低下するため、kWh/m³ ベンチマークと COP 経年を組み合わせた評価が、契約見直しと設備投資の優先順位付けの起点になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {temperatureZones.map((item) => (
               <div
@@ -332,6 +339,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 数値は日本冷蔵倉庫協会・経産省省エネ事例集・大手物流業者公開データから業界平均値を整理した目安。実値は断熱性能・入出庫頻度・地域気候で 1.5 倍前後ぶれます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -340,6 +350,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代規模は床面積で階層的に変わり、規模帯ごとに『契約見直しの効果』『設備投資の回収年数』『補助金の活用パターン』が異なります。自社の規模帯を起点に施策の優先順位を決めましょう。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {sizeBenchmarks.map((item) => (
@@ -387,6 +400,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力使用量の 60〜75% を冷凍機が占めるため COP 改善は最大インパクトの打ち手です。10 年経過の COP 1.8〜2.2 を最新インバーター式（3.0〜3.5）に更新すると、同冷却出力で 30〜45% の電力削減が可能です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">投資回収年数</p>
@@ -423,6 +439,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             活用しやすい補助金は経産省 SII を中心に複数あり、冷凍機更新・自家消費太陽光・蓄電池導入のいずれにも適用可能。設備投資のタイミングを補助金スケジュールと合わせると投資回収を 1〜3 年短縮できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {subsidyPrograms.map((item) => (
               <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -452,6 +471,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             24h 稼働のため設備停止やテストの窓が限定されます。契約見直しと設備対策のタイミングは『計画 OFF 期』と『契約更新 6 ヶ月前』を軸に逆算で設計します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {reviewTimings.map((item) => (
@@ -501,6 +523,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             広い屋根・昼間使用量大・夏季ピーク = 太陽光ピークの三条件が揃い、自家消費太陽光・蓄電池との相性は業種別でも上位。BCP 蓄電池の正当化もしやすく、補助金との組合せで投資回収を短縮できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +592,9 @@ export default function ColdStorageElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             使用量が大きい冷蔵倉庫はプラン選択の差が年間で巨額の差になります。市場価格高騰シナリオでの影響額をシミュレーターで試算し、固定プランの必要性を数値で把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを確認する</li>
             <li>夏のピーク月（7〜9 月）を前提にした影響額を試算する</li>
@@ -611,6 +639,11 @@ export default function ColdStorageElectricityCostReviewPage() {
             { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "24h 稼働・冷凍機の高負荷で共通する大型設備の構造比較。" },
             { href: "/case-study-logistics-solar-integration", title: "物流業界の太陽光統合事例", description: "物流系企業の自家消費太陽光導入の横展開ヒント。" },
             { href: "/drugstore-electricity-cost-review", title: "ドラッグストアの電気代", description: "医薬品・要冷蔵保管で共通する保冷業態の契約最適化。" },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+            },
           ]}
         />
 
