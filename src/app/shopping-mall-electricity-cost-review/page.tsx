@@ -133,6 +133,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           ショッピングモールは、大規模な中央空調・共用部照明・テナントへの電力供給など、複雑な電力消費構造を持つ施設です。電力コストは施設運営費の中でも大きな割合を占め、収益性に直結します。テナントとの費用分担も考慮しながら、契約条件の最適化を検討することが重要です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、ショッピングモール特有の負荷特性と特別高圧受電の視点から、電気料金見直しの着眼点を整理しています。
         </p>
@@ -156,6 +159,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ショッピングモールは、電力使用量が大きく、料金上昇の影響も絶対額として大きくなりがちです。主な要因は以下のとおりです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>大規模中央空調が電力消費全体の大部分を占める</li>
             <li>夏・冬の繁忙期は空調負荷が最大になり使用量が急増する</li>
@@ -173,6 +179,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ショッピングモールの電力使用は用途が複雑に絡み合っています。各カテゴリの特性を把握し、見直しの優先順位をつけることが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大規模施設は使用量が大きいため、プラン選択による金額差も大きくなります。特別高圧受電では市場連動条件が適用されるケースもあり、条件の内容を詳細に確認する必要があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -232,6 +247,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -258,6 +276,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -266,6 +287,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ショッピングモールは設備規模が大きく、省エネ設備投資の効果が金額ベースで大きく出やすいため、契約見直しと設備対策を組み合わせた中長期計画が有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -302,6 +326,9 @@ export default function ShoppingMallElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ショッピングモールの契約見直しでは、使用量が大きいだけに、プラン選択の差が年間で非常に大きな金額になる場合があります。シミュレーターを使って価格変動シナリオ別の影響額を把握することで、意思決定の根拠を明確にできます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを確認する</li>
             <li>繁忙期（夏・年末）のピーク月を前提にした影響額を試算する</li>
@@ -323,6 +350,7 @@ export default function ShoppingMallElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />
@@ -373,6 +401,11 @@ export default function ShoppingMallElectricityCostReviewPage() {
               href: "/demand-control-reduction-effect",
               title: "デマンドコントロールによる電気料金削減効果",
               description: "ショッピングモールでのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

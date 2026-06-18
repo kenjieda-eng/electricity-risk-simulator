@@ -136,6 +136,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、アミューズメント施設特有の負荷特性を踏まえた電気料金リスクの把握と契約見直しの考え方を整理します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -156,6 +159,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             アミューズメント施設の電気料金は、以下の構造的な要因から高止まりしやすい特性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>多数の遊戯設備が常時通電され、施設全体の電力消費が大きい</li>
             <li>演出照明・装飾照明が高密度で稼働し照明電力が大きい</li>
@@ -173,6 +179,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             アミューズメント施設の電力使用は設備カテゴリごとに特性が大きく異なります。各設備の特性を理解することで、見直しと設備投資の優先順位が明確になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             アミューズメント施設は使用量が大きく収益性に対して電力コストの比率が高いため、固定プランによるコスト安定化のメリットが大きい業種です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -239,6 +254,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -265,6 +283,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -273,6 +294,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             アミューズメント施設では、電力契約の見直しと並行して設備の省エネ化を進めることで削減効果が高まります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -309,6 +333,9 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             アミューズメント施設の契約見直しでは、以下の観点でシミュレーターを活用することで、経営判断に必要な数値を把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを確認する</li>
             <li>固定プランと市場連動プランの年間コスト差を比較する</li>
@@ -330,6 +357,7 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />
@@ -375,6 +403,11 @@ export default function AmusementFacilityElectricityCostReviewPage() {
               href: "/electricity-cost-benchmark-by-industry",
               title: "業種別・電気料金の相場と目安",
               description: "アミューズメント施設の電気料金水準を業界平均と比較し、コスト見直しの根拠を把握する。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

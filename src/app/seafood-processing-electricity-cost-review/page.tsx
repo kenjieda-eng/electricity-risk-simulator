@@ -259,6 +259,7 @@ const sourcesItems = [
   { name: "水産庁", url: "https://www.jfa.maff.go.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];
 
 export default function SeafoodProcessingElectricityCostReviewPage() {
@@ -318,6 +319,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業の電力使用は『鮮魚冷蔵冷凍／急速冷凍機／干物燻製／加工ライン／製氷機』の5層で構成されます。鮮魚冷蔵冷凍が工場全体の35〜50%を占め、漁期集中時の急速冷凍機ピークが業界特有のコスト構造を形成します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -342,6 +346,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業の電気代水準は加工種別（鮮魚／冷凍／干物燻製／缶詰）と漁期集中度で大きく異なります。業界統計と公開データから整理した業界平均値を、自社水準との比較で活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryBenchmark.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -353,6 +360,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 全国水産加工業協同組合連合会・経産省工業統計から整理。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -361,6 +371,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業の電気代上昇は、24h冷凍ベースに加え、漁期集中時の急速冷凍機ピーク、夏季冷凍機効率低下、フロン規制対応投資が複合的に重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -383,6 +396,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例から整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
@@ -422,6 +438,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業は漁期予測連動デマンド制御、急速冷凍機バッチ分散、夜間事前冷却など、業種特有のデマンド管理戦略が効果的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -443,6 +462,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業は24h冷凍稼働と漁期ピーク需要が二重に重なる業種で、市場価格高騰局面での影響額が事業収支に直撃します。固定プランの優位性が極めて高い業種です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -499,6 +521,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水産加工業の省エネは『CO2冷媒・自然冷媒インバータ化』『漁期予測連動デマンド制御』『干物乾燥機温度自動化』『塩害対策自家消費太陽光』『BEMS』の5軸で組み立てます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -571,6 +596,9 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理してください。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -630,6 +658,11 @@ export default function SeafoodProcessingElectricityCostReviewPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "CO2冷媒インバータ化の主力補助金。" },
               { href: "/demand-control-reduction-effect", title: "デマンドコントロール削減効果", description: "漁期集中ピーク削減効果。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "冷凍24h稼働事業者のリスク。" },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
+              },
             ]}
           />
 
