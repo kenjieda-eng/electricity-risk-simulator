@@ -118,6 +118,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、組立工場特有の負荷特性と、電気料金見直しのポイントを整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -137,6 +140,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場の電気料金が上昇しやすい背景には、以下の要因があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -164,6 +170,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場の電力使用は、以下の設備カテゴリに大きく分かれます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
               <div
@@ -183,6 +192,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場の電気料金において、「基本料金」は最大デマンド（30分間の平均電力最大値）によって決まります。生産ライン起動時のピークが大きいほど基本料金が高くなるため、デマンド管理は電気料金削減の基本となります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">デマンド管理のポイント</p>
@@ -209,6 +221,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場のプラン選択は、生産計画の安定性と財務管理の方針によって判断が分かれます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">固定プランが向く場合</p>
@@ -243,6 +258,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
             </Link>
             で詳しく整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -251,6 +269,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場の電力見積比較では、基本料金の算定方式と燃料費調整の条件が特に重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -280,6 +301,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと合わせて以下の設備対策を実施することで、コスト削減効果を高められます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -316,6 +340,9 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             組立工場では、以下の観点でシミュレーターを活用することで、見直しの効果を数値で把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約での燃料費変動リスクと年間コスト上振れ幅を確認する</li>
             <li>固定プランへの切り替えによるコスト安定化効果を試算する</li>
@@ -337,6 +364,7 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />
@@ -387,6 +415,11 @@ export default function AssemblyFactoryElectricityCostReviewPage() {
               href: "/demand-control-reduction-effect",
               title: "デマンドコントロールによる電気料金削減効果",
               description: "組立工場でのデマンド管理が基本料金削減にどう貢献するかを解説。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />
