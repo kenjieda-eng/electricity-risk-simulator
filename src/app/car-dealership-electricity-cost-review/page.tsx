@@ -318,6 +318,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーの電力使用は『ショールーム照明・空調／整備工場（リフト・コンプレッサー）／洗車機・納車前準備／EV試乗車・販売車両用充電器／看板・サイン照明』の5層で構成されます。ショールーム＋整備工場の複合電力構造とEV充電器併設が業種特有のコスト構造を形成します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -353,6 +356,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本自動車販売協会連合会・経産省自動車課・自動車工業会EV普及データから整理。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -361,6 +367,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーの電気代上昇は、ショールーム演出照明、EV試乗車充電器の契約電力増、整備工場併設の複合構造、再エネ賦課金、容量拠出金が複合的に重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -383,6 +392,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーの電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例から整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
@@ -424,6 +436,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーはショールーム演出照明スマート制御、EV充電器ピークカット運用、整備工場と販売部門のピーク分散、屋根面積活用太陽光など、業種特有のデマンド管理戦略が効果的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -445,6 +460,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーはショールーム空調・演出照明・整備工場・EV充電器が連続稼働するため、市場価格高騰局面での影響額が事業収支に直撃します。固定プランの優位性が高い業種です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -479,6 +497,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。ディーラーの中規模5〜20店舗では負担額が請求総額の10〜15%に達します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">中規模ディーラー（年100万kWh）の負担額試算</p>
@@ -502,6 +523,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラーの省エネは『ショールーム演出照明LED化＋スマート制御』『整備工場コンプレッサー省エネ』『屋根面積活用自家消費太陽光』『EV充電器ピークカット運用』『BEMS導入』の5軸で組み立てます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +571,9 @@ export default function CarDealershipElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ディーラー向けに活用しやすい補助金は5本柱。EV充電器併設はCEV補助＋PPA＋GX補助の組合せで補助率を最大化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
@@ -634,6 +661,7 @@ export default function CarDealershipElectricityCostReviewPage() {
               { href: "/peak-demand-management", title: "ピークデマンド管理の基本", description: "ショールーム・整備工場のピーク管理。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "業種別リスク全体像。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

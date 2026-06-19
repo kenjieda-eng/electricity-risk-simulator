@@ -318,6 +318,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園の電力使用は『生命維持装置／空調／ヒーティング／展示照明／夜間バックヤード』の5層で構成されます。生命維持装置24h停止不可稼働が最大消費要素で業種特有のコスト構造を形成します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -353,6 +356,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本動物園水族館協会（JAZA）・文科省社会教育調査・環境省動物関連統計から整理。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -361,6 +367,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園の電気代上昇は、生命維持装置停止不可性に加え、水温管理の季節変動、来園者数変動下の固定電力、容量拠出金が複合的に重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -383,6 +392,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例から整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
@@ -424,6 +436,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園はろ過ポンプインバータ制御、水温管理生体別最適化、夜間バックヤード省エネ、BCP蓄電池併用など、業種特有のデマンド管理戦略が極めて効果的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -445,6 +460,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園は生命維持装置24h停止不可・水温管理の連続稼働必須・入園料への即時転嫁困難のため、市場価格高騰局面での影響額が事業収支に直撃します。固定プランの優位性が極めて高い業種です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -479,6 +497,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。水族館・動物園の中規模施設では負担額が請求総額の10〜15%に達します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">中規模水族館（年1,200万kWh）の負担額試算</p>
@@ -502,6 +523,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園の省エネは『ろ過ポンプインバータ化』『水温管理BEMS統合』『LED展示照明全面化』『自家発電・蓄電池BCP』『自家消費太陽光』の5軸で組み立てます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +571,9 @@ export default function AquariumZooElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               水族館・動物園向けに活用しやすい補助金は5本柱。ろ過ポンプインバータ化＋自家消費太陽光＋BCP蓄電池はSII＋PPA＋GX補助の組合せで補助率を最大化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
@@ -634,6 +661,7 @@ export default function AquariumZooElectricityCostReviewPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "ろ過ポンプ・空調更新の主力補助金。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "生命維持24h事業者のリスク。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

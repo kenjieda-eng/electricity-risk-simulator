@@ -318,6 +318,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業の電力使用は『塗装ブース乾燥／エアコンプレッサー／リフト・整備機器／溶接機・板金工具／EV車整備用高電圧装備』の5層で構成されます。塗装ブース（板金業）とコンプレッサー（整備業全般）が業種特有のコスト構造を形成します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {usageProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -353,6 +356,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 出典: 日本自動車整備振興会連合会・日本自動車車体整備協同組合連合会・経産省自動車課から整理。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -361,6 +367,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業の電気代上昇は、塗装ブース乾燥の電力＋燃料、コンプレッサー待機電力リーク、リフト瞬時負荷、EV車整備対応の設備投資、再エネ賦課金が複合的に重なります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
@@ -383,6 +392,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業の電気代削減は規模帯ごとに最適施策の組合せが異なります。実在事業者の公開事例から整理した3つのパターンをBefore/Afterで提示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {sizeBenchmarks.map((item) => (
@@ -424,6 +436,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業は塗装ブース運用分散、コンプレッサーインバータ化＋台数制御、リフト・溶接機の同時稼働回避、塗装ブース乾燥最適化など、業種特有のデマンド管理戦略が効果的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {demandManagement.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -445,6 +460,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業はコンプレッサー・空調・塗装ブースの計画稼働が必要なため、市場価格高騰局面での影響額が事業収支に直撃します。固定プランの優位性が高い業種です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -479,6 +497,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               再エネ賦課金は2024年度3.49円/kWh、2025年度3.98円/kWh、2026年度4.18円/kWh（確定）と上昇トレンド。整備業の中規模認証工場では負担額が請求総額の10〜15%に達します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">中規模認証工場（年18万kWh）の負担額試算</p>
@@ -502,6 +523,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業の省エネは『コンプレッサーエアー漏れ対策＋インバータ化』『塗装ブース給排気ファンインバータ化』『LED化＋赤外線乾燥灯高効率化』『自家消費太陽光』『EV充電器最適化』の5軸で組み立てます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +571,9 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               整備業向けに活用しやすい補助金は5本柱。塗装ブース更新はSII＋ものづくり補助＋GX補助の組合せで補助率を最大化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyPrograms.map((item) => (
@@ -634,6 +661,7 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
               { href: "/transportation-electricity-cost-review", title: "運輸業の電気料金見直し", description: "EV化対応の共通論点。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "業種別リスク全体像。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
