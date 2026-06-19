@@ -94,6 +94,7 @@ const faqItems = [
 const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給状況・系統運用情報" },
 ];
 
@@ -132,6 +133,9 @@ export default function HospitalElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、病院特有の負荷特性を踏まえ、安定性を重視した契約見直しの考え方を整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -162,6 +166,9 @@ export default function HospitalElectricityCostReviewPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             このため、病院の契約見直しでは「いかにコストを下げるか」だけでなく、「供給の安定性を維持したまま、合理的なコスト水準を実現するか」という視点が基本になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -228,6 +235,9 @@ export default function HospitalElectricityCostReviewPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             自院の年間使用量を把握する一次情報は、12か月分の電力会社請求書を合計するのが最短です。kWh単価ベースで当院の水準（円/kWh）が業界平均より高ければ、契約見直しによる削減余地が大きいと判断できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -236,6 +246,9 @@ export default function HospitalElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院は、固定プランとの相性が特に強い業種のひとつです。その最大の理由は、診療報酬という公定価格制度です。診療報酬は2年に一度の改定で、しかも電気代の上昇分が直接の改定要因として組み込まれることはほとんどありません。つまり一般企業のように「コスト上昇 → 価格転嫁」というルートが事実上閉ざされているため、上振れリスクを電気料金プラン側で抑え込む設計が合理的になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
@@ -305,6 +318,9 @@ export default function HospitalElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実務上は「設備導入の主目的」がどれにあたるかで申請ルートを選び、複数の補助金を同一設備で重複受給することは原則できないため、最も補助率の高いメニューを選定するのが定石です。詳細は<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金制度の概要</Link>で確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -354,6 +370,9 @@ export default function HospitalElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -362,6 +381,9 @@ export default function HospitalElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院のBCP（事業継続計画）では「災害発生から72時間の電源持続」が一つの目安として広く語られており、非常用発電・蓄電池・自家消費型PPA太陽光の組み合わせ方が論点になります。契約見直しと並行して以下の設備対策を検討することで、平時のコスト削減と非常時のBCPの両面で効果が期待できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -424,6 +446,9 @@ export default function HospitalElectricityCostReviewPage() {
             複合施策で15%超を狙うには、補助金併用と段階導入が現実的です。先述の3省連携補助金で初期費用を3分の1〜2分の1程度に圧縮した上で、契約見直しによる即効型の削減から着手し、回収原資を次の設備投資に回す「自走モデル」を組むのが、医療法人の財務上ハードルを下げる定石になります。
           </p>
           <p className="mt-2 text-xs text-slate-500">出典: 環境省ZEB事業ガイドライン、SII省エネ補助金事業実績、エネルギー情報センター内部試算をもとに業界平均レンジで作成。実数値は病院規模・地域・既設設備で大きく変動します。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -432,6 +457,9 @@ export default function HospitalElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             病院の契約見直しでは、以下の観点でシミュレーターを活用すると、経営層への説明材料を数値で準備できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行条件での年間上振れリスクを確認する（なぜ見直すのかの根拠）</li>

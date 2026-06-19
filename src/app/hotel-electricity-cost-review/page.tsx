@@ -95,6 +95,7 @@ const sourcesItems = [
   { name: "観光庁", url: "https://www.mlit.go.jp/kankocho/", description: "観光関連事業者向け省エネ・脱炭素関連支援情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
   { name: "環境省（ZEB 化推進事業）", url: "https://www.env.go.jp", description: "ホテル・宿泊施設の脱炭素化補助金情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
 ];
 
 const reviewPoints = [
@@ -154,6 +155,9 @@ export default function HotelElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、ホテル特有の負荷特性を踏まえた契約見直しの着眼点を整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -194,6 +198,9 @@ export default function HotelElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -202,6 +209,9 @@ export default function HotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ホテルの電力プロファイルは、客室稼働連動層・厨房ピーク層・共用部空調ベース層・宴会場イベント層の四層構造を持ちます。一般オフィスと異なり 24 時間稼働のベースロードが厚く、繁忙日は宴会需要のピークが客室需要と重なってデマンド最大値を押し上げる構造です。各層の負荷特性は以下のとおりです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -222,6 +232,9 @@ export default function HotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自社ホテルの電気代水準が業界相場と比べて妥当かを判断するには、客室数あたりの年間使用量・電気代を業界平均と比較するのが基本です。客室タイプ・施設形態（ビジネス/シティ/リゾート）で 1.5〜2 倍の幅があるため、自社が属するカテゴリのレンジで照合してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -295,6 +308,9 @@ export default function HotelElectricityCostReviewPage() {
             </Link>{" "}
             も参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -303,6 +319,9 @@ export default function HotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ホテルの電気代削減で、契約プラン見直しの次に効果が大きいのが省エネ設備投資です。観光業特化の補助金スキームを活用することで、初期投資を圧縮しランニングコストの改善を加速できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -333,6 +352,9 @@ export default function HotelElectricityCostReviewPage() {
           <div className="mt-4 space-y-4">
             <p className="text-sm leading-7 text-slate-700 sm:text-base">
               ホテルの電力契約見直しは、繁忙期（夏・年末年始）の前 3〜6 か月を仕込みタイミングとし、閑散期（4〜5 月、9〜10 月）に新契約を切り替えるのが運用安定性とコスト最適化の両立に有効です。複数年契約や設備投資を組み合わせる場合は、中期計画策定タイミング（通常 4 月）から逆算したスケジューリングを行います。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             {reviewPoints.map((item) => (
               <div key={item.heading}>
@@ -384,6 +406,9 @@ export default function HotelElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             複合施策の効果を具体的にイメージするため、100 室規模の中規模シティホテルを想定した試算ベンチマークを示します。施設形態・既設設備で削減幅は変動しますが、初期検討の参考値として活用できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">想定モデル</p>
@@ -407,6 +432,9 @@ export default function HotelElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、観光業法人事例ヒアリング、業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

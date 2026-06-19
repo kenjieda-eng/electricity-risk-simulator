@@ -91,6 +91,7 @@ const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
   { name: "日本チェーンストア協会", url: "https://www.jcsa.gr.jp", description: "スーパーマーケット業界の販売統計・運営実態調査" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
 ];
 
 const reviewPoints = [
@@ -150,6 +151,9 @@ export default function SupermarketElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、スーパー特有の負荷特性を踏まえ、契約見直しの着眼点を整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -189,6 +193,9 @@ export default function SupermarketElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -217,6 +224,9 @@ export default function SupermarketElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自社店舗の電気代水準が業界相場と比べて妥当かを判断する基本指標が、売場面積（m²）あたりの年間電気代と年間電力使用量です。チェーン展開している場合は店舗間ベンチマークで「電気代が突出して高い店舗」を特定するのが、見直し優先順位を決める出発点になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -297,6 +307,9 @@ export default function SupermarketElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -305,6 +318,9 @@ export default function SupermarketElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             スーパー業界の電気代圧縮で活用しやすい補助金と、チェーン展開ならではの本部主導施策を整理します。低利益率ゆえに初期投資が重く感じられる小売業にとって、補助金活用は省エネ投資の意思決定を後押しする実務的な切り札になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -355,6 +371,9 @@ export default function SupermarketElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -363,6 +382,9 @@ export default function SupermarketElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             スーパーの停電は単なる業務停止に留まらず、冷蔵冷凍商品の温度管理崩壊による食品ロス（売価ベースで1時間50〜200万円規模）に直結します。停電が長引けば全冷蔵商品の廃棄リスクもあるため、蓄電池BCPの費用対効果は、平時のピークカット効果に加えてこの食品ロス抑止額を含めて評価する必要があります。スーパーマーケットで検討されることの多い設備対策は以下のとおりです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -426,6 +448,9 @@ export default function SupermarketElectricityCostReviewPage() {
             営業利益率1〜3%の業界水準を考えると、年間250万円の電気代削減は、売上にして約8,300万〜2.5億円相当の増益効果に匹敵します。複数店舗チェーンでは効果が乗算的に拡大するため、本部主導の補助金申請＋全店一括施策展開が定石になります。
           </p>
           <p className="mt-2 text-xs text-slate-500">出典: 日本チェーンストア協会事例集、SII省エネ補助金事業実績、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -434,6 +459,9 @@ export default function SupermarketElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             スーパーマーケットの契約見直しでは、以下の観点でシミュレーターを活用すると、判断材料を数値で把握できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを確認する</li>
