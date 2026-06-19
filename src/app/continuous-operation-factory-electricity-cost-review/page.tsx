@@ -96,6 +96,7 @@ const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・製造業エネルギー政策に関する情報" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
   { name: "経産省 SII（省エネ補助金事業実績）", url: "https://sii.or.jp", description: "製造業向け省エネ補助金事業実績" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
 ];
 
 export default function ContinuousOperationFactoryElectricityCostReviewPage() {
@@ -133,6 +134,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、連続操業工場特有の負荷特性と、電気料金リスクへの対応策を整理しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
@@ -181,6 +185,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
             </Link>
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -189,6 +196,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場の電力プロファイルで他業種と最も異なる点は、夜間・休日にも需要が大きく落ちないベース負荷の厚さです。一般工場のベース率（最低需要÷最大需要）が 30〜50% であるのに対し、連続操業工場は 70〜90% に達し、契約電力（kW）の最適化余地が小さい代わりに、kWh 単価の改善効果が金額として大きく現れる構造があります。各設備カテゴリの特性は以下のとおりです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -264,6 +274,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場は、電力使用量の大きさゆえに、プラン選択が財務に与える影響が特に大きくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
@@ -299,6 +312,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場の省エネ設備投資で活用しやすい補助金スキームを整理します。電気代規模が大きいため、補助金活用での投資回収期間短縮効果が他業種より大きくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
@@ -327,6 +343,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大口契約の場合、見積比較は細部まで丁寧に確認する必要があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -357,6 +376,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業工場では、契約見直しと並行して以下の設備対策を実施することで、電力コストの構造的な削減が可能になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -393,6 +415,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             3 シフト + 日曜休止型の自動車部品工場を想定した試算ベンチマークを示します。連続操業ながらデマンド管理余地のある業態として代表的なケースです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">想定モデル</p>
@@ -415,6 +440,9 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、製造業法人事例ヒアリング、業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

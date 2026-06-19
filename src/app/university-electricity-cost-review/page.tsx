@@ -136,6 +136,9 @@ export default function UniversityElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、大学キャンパス特有の負荷特性を踏まえ、電気料金の見直しにあたって確認すべき着眼点を整理します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -156,6 +159,9 @@ export default function UniversityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大学は一般企業と比べて電力使用の特殊性が高く、電気料金が高止まりしやすい構造を持っています。主な要因は以下のとおりです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>研究設備・実験装置が24時間稼働し、大きなベースロードを形成する</li>
             <li>複数棟が混在し、棟ごとの負荷特性が異なるため最適化が難しい</li>
@@ -173,6 +179,9 @@ export default function UniversityElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function UniversityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大学の電力使用は用途によって特性が大きく異なります。各カテゴリの特性を理解しておくと、見直しの優先順位が明確になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function UniversityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大学の場合、電力使用量が大きいことと予算管理の安定性が重要なことから、固定プランとの親和性が高い傾向があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -239,6 +254,9 @@ export default function UniversityElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -265,6 +283,9 @@ export default function UniversityElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -273,6 +294,9 @@ export default function UniversityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大学キャンパスでは規模が大きいため、設備投資の効果も大きくなりやすいです。以下の設備対策が検討されるケースが多くあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -309,6 +333,9 @@ export default function UniversityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             大学キャンパスの契約見直しでは、以下の観点でシミュレーターを活用すると、判断材料を数値で把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクの規模を確認する</li>
             <li>固定プランと市場連動プランの年間コスト差を比較する</li>
@@ -330,6 +357,7 @@ export default function UniversityElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

@@ -96,6 +96,7 @@ const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・半導体産業政策に関する情報" },
   { name: "経済産業省（半導体・デジタル産業戦略）", url: "https://www.meti.go.jp", description: "半導体補助金・産業政策情報" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "電力需給・系統情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
 ];
 
 export default function SemiconductorFacilityElectricityCostReviewPage() {
@@ -133,6 +134,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、半導体関連施設特有の負荷構造と、電気料金リスクへの対応策を整理しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
@@ -181,6 +185,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
             </Link>
             でも詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -189,6 +196,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設の電力使用は、以下の設備カテゴリに大きく分かれます。クリーンルームの ISO クラス（数値が小さいほど厳しい）と超純水の純度要件が電力消費を大きく左右し、ISO クラス 3〜4 のクリーンルームは ISO クラス 7 の 5〜10 倍の単位面積当たり電力消費になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -253,6 +263,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設のプラン選択は、電力使用量の大きさと供給安定性への要求から慎重な検討が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
@@ -288,6 +301,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体産業は経産省の戦略物資として位置付けられ、世界最大規模の補助金スキームが整備されています。先端 FAB 新設には数千億円規模、中堅 FAB の設備更新にも数十億〜数百億円規模の補助が活用可能です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経産省（先端半導体）</p>
@@ -310,6 +326,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧以上の大口契約では、標準メニューに加えた交渉余地が生まれることがあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -339,6 +358,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             半導体施設では、クリーンルームのエネルギー効率改善が省エネの主軸になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -375,6 +397,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             中規模 FAB（28〜10nm 世代）を想定した試算ベンチマークを示します。先端 FAB ではより大きな金額規模になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">想定モデル</p>
@@ -398,6 +423,9 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: エネルギー情報センター内部試算、半導体業界事例ヒアリング、業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

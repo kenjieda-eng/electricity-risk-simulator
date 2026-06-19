@@ -117,6 +117,7 @@ const faqItems = [
 const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・省エネ政策・電気料金制度に関する情報" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
   { name: "OCCTO（電力広域的運営推進機関）", url: "https://www.occto.or.jp", description: "需給状況・デマンドデータ・系統運用情報" },
 ];
 
@@ -154,6 +155,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、オフィスビル特有の負荷特性を踏まえ、契約見直しの着眼点を整理しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
@@ -194,6 +198,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
               法人の電気料金が上がる理由
             </Link>{" "}
             で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -260,6 +267,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             自社ビルのkWh/m²が業界平均レンジの上限を超えている場合、設備老朽化・空調効率低下・テナント業種特性のいずれかが原因として疑わしく、契約見直しと並行して設備更新の検討が必要なシグナルになります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -299,6 +309,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -331,6 +344,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実務上は、ベース契約の電源構成を再エネ比率の高いプランに切り替えるか、非化石証書を別途調達するかの2択が一般的で、後者のほうが調達単価交渉の柔軟性が高くなります。<Link href="/non-fossil-certificates" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">非化石証書</Link>の活用方法も合わせて検討してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -360,6 +376,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -368,6 +387,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             既存ビルの省エネ改修では、補助金活用と投資回収期間のバランスから、改修順序を「効果の大きい順×補助率の高い順」で組むのが原則です。一般的には①空調主機更新（電気代の最大費目）、②BEMS導入（運用最適化の基盤）、③LED化、④外皮断熱の順に投資回収が早い傾向があり、ZEB Ready相当を目指すならまずこの順で着手します。オフィスビルで検討されることの多い設備対策は以下のとおりです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -428,6 +450,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: 環境省ZEB事業実績集、不動産協会「ビル省エネ改修事例」、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -436,6 +461,9 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             オフィスビルの契約見直しでは、以下の観点でシミュレーターを活用すると、判断材料を数値で把握できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約での年間上振れリスク額を確認する</li>

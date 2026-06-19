@@ -95,6 +95,7 @@ const faqItems = [
 const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・省エネ政策に関する情報" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "法人向け電力契約・新電力情報" },
+  { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit", description: "エリア別の電力単価・統計データ（公開情報ベース）" },
   { name: "環境省・SII（省エネ補助金事業実績）", url: "https://sii.or.jp", description: "食品工場の省エネ補助金事業実績" },
 ];
 
@@ -155,6 +156,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、食品工場特有の負荷特性を踏まえた契約見直しの着眼点を整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -195,6 +199,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -203,6 +210,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             食品工場の負荷特性で他業種と最も異なる点は、「加熱（蒸気・電気ヒーター）」と「冷凍冷蔵」が同じ建屋内で同時稼働する点です。揚げ物ライン直後にチルド冷却→冷蔵保管→出荷という工程では、わずか数十メートルの動線の中で巨大な温度勾配を維持するためにエネルギーが投入され、結果として時間帯を問わず重ね合わせ負荷が常時積み上がります。これが、夜間も含めて高ベースロードが続く食品工場の電力プロファイルの根本原因です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -223,6 +233,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自社工場の電力使用量が業界水準と比べて多いのか少ないのかを判断する基本指標が「電力原単位（kWh/t、製品1t製造あたりの消費電力量）」です。同じ食品工場でも、加工品種によって2〜4倍程度の幅があるため、自社が属する加工分類のベンチマークと比較するのが出発点になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -272,6 +285,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             食品工場のプラン選択で最大の制約となるのは食品衛生法・HACCPに基づく温度管理義務です。冷蔵庫の設定温度を緩める節電は法令違反・品質事故に直結するため、市場連動プランの「市場高騰時に節電する」という前提が成立しにくく、固定プランとの相性が他業種より高い業種といえます。一方で温度設定を変えずに「ロスを減らす」省エネ余地は大きく、契約プラン×省エネ設備の二段構えが基本戦略になります。理由を整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-sky-100 bg-sky-50 p-4">
               <p className="text-sm font-semibold text-slate-900">固定プランが向きやすい理由</p>
@@ -303,6 +319,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
             </Link>{" "}
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -311,6 +330,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             食品工場の電気代削減で、契約プラン見直しの次に効果が大きいのが省エネ設備投資です。初期投資を圧縮するために、目的別に補助金の窓口を使い分けるのが実務の定石になります。食品事業者が活用しうる主な補助メニューは以下のとおりです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -334,6 +356,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             同一設備に複数補助金を重複受給することは原則できないため、設備の主目的（省エネ更新か再エネ導入か）に応じて最適な窓口を選定します。詳細は<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金制度の概要</Link>を参照してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -418,6 +443,9 @@ export default function FoodFactoryElectricityCostReviewPage() {
             </div>
           </div>
           <p className="mt-2 text-xs text-slate-500">出典: SII省エネ補助金事業実績、食品産業センター事例集、エネルギー情報センター内部試算をもとに業界平均レンジで作成。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">

@@ -116,6 +116,9 @@ export default function ClinicElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           クリニック・診療所は規模こそ大規模病院より小さいものの、医療機器・空調・滅菌設備など電力消費の大きい設備が集中する施設です。診療時間中はほぼすべての設備が同時稼働するため、ピーク時の電力需要が高く、デマンド超過やピーク料金の影響を受けやすい構造があります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、クリニック特有の負荷特性と、電気料金見直しの考え方を整理しています。
         </p>
@@ -141,6 +144,9 @@ export default function ClinicElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             クリニックの電気料金が上昇しやすい背景には、業態固有の構造的な要因があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -169,6 +175,9 @@ export default function ClinicElectricityCostReviewPage() {
             </Link>
             でも詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -177,6 +186,9 @@ export default function ClinicElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             クリニックの電力使用は、以下の設備カテゴリに大きく分かれます。各設備の特性を把握することで、契約条件の見直し優先度が整理できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -244,6 +256,9 @@ export default function ClinicElectricityCostReviewPage() {
             </Link>
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -252,6 +267,9 @@ export default function ClinicElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             クリニックの見積比較では、単純な単価比較だけでなく以下の観点を確認することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -290,6 +308,9 @@ export default function ClinicElectricityCostReviewPage() {
             </Link>
             を参考にしてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -298,6 +319,9 @@ export default function ClinicElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと並行して以下の設備対策を講じることで、コスト削減効果を高められます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -350,6 +374,9 @@ export default function ClinicElectricityCostReviewPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -365,6 +392,7 @@ export default function ClinicElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

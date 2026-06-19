@@ -133,6 +133,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           コンビニエンスストアは、24時間365日の冷蔵・照明・空調が必須の業種です。店舗面積は小さいものの、坪当たりの電力消費量は小売業種のなかでも高い部類に入ります。フランチャイズ加盟店の場合は本部との関係も考慮しながら、契約見直しの可能性を探ることになります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、コンビニ特有の負荷特性と多拠点運営の視点から、電気料金見直しの着眼点を整理しています。
         </p>
@@ -156,6 +159,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             コンビニは店舗規模の小ささにかかわらず、電気料金が事業コストに占める割合が高くなりやすい業種です。主な要因は以下のとおりです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>24時間365日の冷蔵ショーケース稼働でベースロードが高い</li>
             <li>坪当たりの電力使用量が一般小売店舗より大幅に高い</li>
@@ -173,6 +179,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             コンビニの電力使用は、以下の設備カテゴリに大きく分けて考えることができます。設備ごとの特性を把握しておくと、見直しの優先順位を判断しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             コンビニは24時間稼働で大きなベースロードを持つため、電力市場価格の変動影響を常時受け続ける構造です。この特性から、固定プランが向きやすいと考えられます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -232,6 +247,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -258,6 +276,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -266,6 +287,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しと並行して、設備面での対策を組み合わせることで、コンビニの電気代削減効果をさらに高められます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -302,6 +326,9 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             コンビニは使用量が大きく、市場価格変動の影響を直接受けるため、シミュレーターを使って年間コストの変動幅を事前に把握することが重要です。複数店舗をお持ちの場合は、代表的な1店舗の条件で試算してみることをおすすめします。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約での年間上振れリスクを確認する</li>
             <li>夏のピーク月を前提にした影響額を試算する</li>
@@ -323,6 +350,7 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

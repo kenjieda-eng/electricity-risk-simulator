@@ -123,6 +123,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           通信施設（交換局・基地局・データセンターなど）は、通信サービスの維持のために24時間365日、高密度な電力消費設備を稼働し続けます。冗長構成・UPS・精密空調など、通信インフラ特有の設備が積み重なることで、電力コストは非常に大きな規模になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、通信施設特有の負荷構造と、電気料金リスクへの対応策を整理しています。
         </p>
@@ -145,6 +148,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設の電気料金リスクが特に大きい背景には、以下の要因があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -173,6 +179,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
             </Link>
             でも詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設の電力使用は、以下の設備カテゴリに大きく分かれます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設は、固定プランとの相性が特に高い業種のひとつです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">固定プランが向く理由</p>
@@ -227,6 +242,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
               <li>通信サービス利用者への料金転嫁が長期契約・規制等で難しい場合が多い</li>
             </ul>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -235,6 +253,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設の電力見積比較では、大口契約特有の交渉ポイントを把握することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -264,6 +285,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設では、契約見直しと並行してPUE（Power Usage Effectiveness）の改善が電力コスト削減の主軸になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -300,6 +324,9 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             通信施設では、電力使用量が大きいほどシミュレーターによるリスク定量化の価値が高まります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行の燃料費調整額水準での年間コストリスクを確認する</li>
             <li>固定プランと市場連動プランの年間コスト総額を比較する</li>
@@ -321,6 +348,7 @@ export default function TelecomFacilityElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

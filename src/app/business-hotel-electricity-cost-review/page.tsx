@@ -133,6 +133,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           ビジネスホテルは24時間稼働の宿泊施設であり、客室空調・給湯・共用部照明などが常時電力を消費します。客室稼働率による電力使用量の変動が大きく、繁忙期と閑散期の差を踏まえた契約条件の設定が重要です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、ビジネスホテル特有の電力需要特性と設備構成を踏まえた電気料金見直しの考え方を整理します。
         </p>
@@ -156,6 +159,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ビジネスホテルの電気料金は、以下の構造的な要因から高止まりしやすい特性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>客室空調・給湯が24時間対応で稼働しており停止できない設備が多い</li>
             <li>共用部照明・エレベーターが夜間も常時稼働しベースロードを形成する</li>
@@ -173,6 +179,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ビジネスホテルの電力使用は設備カテゴリごとに特性が異なります。各設備の特性を理解しておくことで、見直しと設備投資の優先順位が明確になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ビジネスホテルは電力使用量が大きく24時間稼働のため、電気料金の変動が事業収支に大きく影響します。固定プランによるコスト安定化のメリットが大きい業種といえます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -239,6 +254,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -268,6 +286,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -276,6 +297,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ビジネスホテルでは、客室数が多いほど省エネ設備の投資効果が大きくなります。以下の設備対策が有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -312,6 +336,9 @@ export default function BusinessHotelElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ビジネスホテルの契約見直しでは、以下の観点でシミュレーターを活用することで、経営判断・事業計画策定に必要な数値を把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを確認し、事業収支への影響を把握する</li>
             <li>固定プランと市場連動プランの年間コスト差を比較する</li>
@@ -333,6 +360,7 @@ export default function BusinessHotelElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

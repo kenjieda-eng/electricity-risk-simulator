@@ -137,6 +137,9 @@ export default function PublicGymElectricityCostReviewPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、公共体育館特有の負荷特性を踏まえた契約見直しの着眼点を整理します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4">
           <p className="text-sm font-semibold text-slate-900">このページでわかること</p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700">
@@ -157,6 +160,9 @@ export default function PublicGymElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公共体育館の電気料金は、以下の構造的な要因から高止まりしやすい特性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>大空間の空調に大電力が必要であり、気温変化の影響を受けやすい</li>
             <li>競技用高照度照明は一般照明の数倍の電力を消費する</li>
@@ -174,6 +180,9 @@ export default function PublicGymElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -182,6 +191,9 @@ export default function PublicGymElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             体育館の電力使用は設備カテゴリごとに特性が大きく異なります。各設備の特性を理解しておくことが、見直しの優先度判断に役立ちます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -202,6 +214,9 @@ export default function PublicGymElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公共体育館は自治体施設または自治体関連法人が管理するケースが多く、安定した予算管理と説明責任の観点から固定プランとの親和性が高い傾向があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -233,6 +248,9 @@ export default function PublicGymElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -259,6 +277,9 @@ export default function PublicGymElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -267,6 +288,9 @@ export default function PublicGymElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公共体育館では省エネ設備への改修に<Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金</Link>が活用できるケースが多く、電力契約の見直しと設備改修を組み合わせることで効果が高まります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -303,6 +327,9 @@ export default function PublicGymElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公共体育館の契約見直しでは、以下の観点でシミュレーターを活用することで、財政担当・議会への説明資料となる数値を把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約条件での年間上振れリスクを金額ベースで確認する</li>
             <li>固定プランと市場連動プランの年間コスト差を比較する</li>
@@ -324,6 +351,7 @@ export default function PublicGymElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />

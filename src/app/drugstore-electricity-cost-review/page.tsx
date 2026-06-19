@@ -133,6 +133,9 @@ export default function DrugstoreElectricityCostReviewPage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           ドラッグストアは、冷蔵・冷凍設備・高照度照明・空調が長時間稼働し、電気料金が事業コストに占める割合が大きい業種です。多店舗展開している場合は、全社的な電力コスト管理が経営上の重要課題になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、ドラッグストア特有の負荷特性と多拠点管理の観点から、電気料金見直しの着眼点を整理します。
         </p>
@@ -156,6 +159,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ドラッグストアの電気料金は、以下の構造的な要因から高止まりしやすい特性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>冷蔵・冷凍ショーケースが24時間稼働し、ベースロードが大きい</li>
             <li>高照度照明と長営業時間の組み合わせで照明電力消費が大きい</li>
@@ -173,6 +179,9 @@ export default function DrugstoreElectricityCostReviewPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +190,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ドラッグストアの電力使用は設備カテゴリごとに特性が異なります。各設備の特性を理解することで、優先して取り組むべき対策が明確になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {loadCharacteristics.map((item) => (
@@ -201,6 +213,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ドラッグストアは利益率が低い小売業であるため、電気料金の変動が収益に直結します。固定プランとの親和性が高い業種といえます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -239,6 +254,9 @@ export default function DrugstoreElectricityCostReviewPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -265,6 +283,9 @@ export default function DrugstoreElectricityCostReviewPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -273,6 +294,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ドラッグストアでは、電力契約の見直しと並行して設備改修を行うことで、削減効果を最大化できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -309,6 +333,9 @@ export default function DrugstoreElectricityCostReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ドラッグストアの契約見直しでは、以下の観点でシミュレーターを活用することで、本部の意思決定に必要な数値を把握できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>代表的な店舗の条件での年間上振れリスクを確認する</li>
             <li>固定プランと市場連動プランの年間コスト差を試算する</li>
@@ -330,6 +357,7 @@ export default function DrugstoreElectricityCostReviewPage() {
           sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp" },
           { name: "新電力ネット", url: "https://pps-net.org" },
+          { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
           ]}
           publishedAt="2026-04-11"
         />
