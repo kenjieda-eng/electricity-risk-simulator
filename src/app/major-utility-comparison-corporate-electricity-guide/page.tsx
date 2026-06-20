@@ -385,6 +385,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本ページは旧一電10社の客観的特徴を並列に整理する横断比較ガイドです。特定社の優劣評価・順位付け・推奨は一切行いません。自社条件に合う選定軸を中立的に見出すための判断材料を提供します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -407,6 +410,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               旧一電10社を横断比較する主要観点を、電源構成・燃調感応度・エリア特性・法人サービスの4軸で整理します。各観点で各社の客観的特徴を並列記述し、優劣評価は行いません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {planTypes.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -422,6 +428,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">10社の供給エリア・原発稼働・再エネ構成（公表データ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               10社の供給エリア管轄、原発稼働状況（2025年10月時点）、特徴的な再エネ・水力等の電源、全社共通の制度負担を公表データに基づき整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {dataPoints.map((item) => (
@@ -460,6 +469,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               10社共通の契約手続き・物理復旧の役割分担と、各社の独自サービスの違いを整理します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {procedures.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -481,6 +493,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">自社条件に合う『選定軸』の見出し方</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本ページの横断比較を活用して、自社条件に合う選定軸を見出すための観点を整理します。優劣評価ではなく、自社の事業内容・所在エリア・負荷特性・経営方針に照らした適合度評価が重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {compareViewpoints.map((item) => (
@@ -506,6 +521,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本ページの横断比較を活用するうえでの留意点を整理します。優劣評価でないこと、原発稼働状況の時系列変化、燃調算定方式の確認、同一条件相見積の必要性に注意が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -525,6 +543,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">電気代最適化の打ち手（10社共通・エリア別最適化）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               所在エリアの旧一電の選択・継続・切替を問わず、法人需要家が取り得る電気代最適化の打ち手を整理します。契約電力適正化・電源構成を踏まえた燃調ヘッジ・エリア別再エネ調達・省エネ投資・相見積が柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -547,6 +568,9 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">旧一電横断比較・契約見直しチェックリスト（12項目）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               横断比較を契約判断につなげる前にこのチェックリストで自社状況を整理しましょう。中立的な判断には複数社の同一条件相見積と総合的な条件評価が重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -598,6 +622,7 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を整理。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "全国エリアの電源構成を可視化。" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

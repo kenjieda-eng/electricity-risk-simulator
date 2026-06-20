@@ -384,6 +384,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力は新電力の主要類型の一つです。本ページは旧一電・新電力の主要類型を読み比べる『電力会社別解説』の一つとして、商社系新電力という類型を横断的に、公開情報に基づき中立的に整理します。特定社・特定類型の優劣評価は行いません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -408,6 +411,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力に共通して語られるプラン体系・特徴を、特別高圧大口・PPA/再エネ調達支援・高圧・燃調算定方式の観点で整理します。具体的単価・対応は各社公式公表・個別見積で確認してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {planTypes.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -423,6 +429,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <h2 className="text-xl font-semibold text-slate-900">供給エリア・電源・JEPX取扱い（公表データ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               供給エリア（各社で異なる）、電源・調達・トレーディング、JEPX市場での取扱い、全社共通の制度負担を公表データに基づき整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {dataPoints.map((item) => (
@@ -442,6 +451,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力の活用・比較パターンを3つの観点で、公開情報を踏まえた中立的な判断プロセスをケース別に整理します。特定社の優劣評価ではなく、自社条件に照らした判断の進め方を示すものです。具体的削減額は契約条件・使用実態により異なり、推測値は記載しません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -460,6 +472,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <h2 className="text-xl font-semibold text-slate-900">候補整理・契約手続き・新電力切替の留意点</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               候補類型・候補社の整理から、法人契約の手続きの流れ、供給地点特定番号の確認、新電力切替時の留意点までを整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {procedures.map((item) => (
@@ -485,6 +500,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力どうし、および他類型・旧一電を中立的に判断するための観点を整理します。単価だけでなく複数の要素を総合的に評価することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {compareViewpoints.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -507,6 +525,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力を比較・活用するうえでの留意点を整理します。類型の特徴は一般論である点、PPAの長期条件、燃調算定方式、新電力撤退時の備えに注意が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -528,6 +549,9 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
             <h2 className="text-xl font-semibold text-slate-900">電気代最適化の打ち手（契約見直し・省エネ・再エネ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系新電力の利用有無にかかわらず、法人需要家が取り得る電気代最適化の打ち手を整理します。契約電力適正化・PPA/再エネ調達・類型を跨いだ相見積・省エネ投資・燃調ヘッジが柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -600,6 +624,7 @@ export default function ShoshaAffiliatedNewPowerCorporateElectricityGuidePage() 
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を整理。" },
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動を避けるべきケース。" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

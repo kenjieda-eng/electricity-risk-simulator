@@ -385,6 +385,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               きゅうでんは九州7県を主な供給区域とする電力会社です。本ページはエリア記事（市況・新電力動向）と差別化し、特定企業の法人向けサービス詳細を公開情報に基づき中立的に整理します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -407,6 +410,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               きゅうでんが公開する法人向けプラン体系を、特別高圧・高圧・グループ再エネサービス・燃調算定方式の観点で整理します。具体的単価は公式公表・個別見積で確認してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {planTypes.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -422,6 +428,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">九州エリアの電源構成・供給区域・制度負担（公表データ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               供給区域、九州エリアの電源構成傾向（原発4基稼働・太陽光導入量・出力制御を含む）、競争環境、全社共通の制度負担を公表データに基づき整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {dataPoints.map((item) => (
@@ -440,6 +449,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別のケース別判断材料（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               九州エリアの代表的な3規模で、きゅうでんの公開情報を踏まえた中立的な判断プロセスをケース別に整理します。特定社の優劣評価ではなく、自社条件に照らした判断の進め方を示すものです。具体的削減額は契約条件・使用実態により異なり、推測値は記載しません。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -467,6 +479,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               法人契約の手続きの流れ、供給地点特定番号の確認、サポート窓口、災害時対応の観点を整理します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {procedures.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -488,6 +503,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">中立的に比較するための観点</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電力会社の選択を中立的に判断するための観点を整理します。単価だけでなく複数の要素を総合的に評価することが重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {compareViewpoints.map((item) => (
@@ -511,6 +529,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               きゅうでんの公開情報を活用するうえでの留意点を整理します。公開情報と個別見積の差、燃調上限の確認、原子力稼働・太陽光出力制御の変動などに注意が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -530,6 +551,9 @@ export default function KyudenCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">電気代最適化の打ち手（契約見直し・省エネ・再エネ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               きゅうでん契約の有無にかかわらず、九州エリアの法人需要家が取り得る電気代最適化の打ち手を整理します。契約電力適正化・再エネ調達・太陽光自家消費・省エネ投資・相見積・燃調ヘッジが柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -601,6 +625,7 @@ export default function KyudenCorporateElectricityGuidePage() {
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動を避けるべきケース。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "九州エリアの電源構成を可視化。" },
               { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "再エネ・省エネ投資の税制優遇。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
