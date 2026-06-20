@@ -152,6 +152,9 @@ export default function DemandDecilePriceRiskPage() {
           これが市場の限界費用を押し上げます。また、需給バランスが崩れやすくなるため
           価格変動幅（ボラティリティ）も拡大します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* チャート */}
@@ -194,6 +197,9 @@ export default function DemandDecilePriceRiskPage() {
           という構造を定量的に示すことができます。自社がどのデシル帯で電力を主に消費しているかを把握することが
           コスト管理の第一歩です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* D1-D5: 安定ゾーン */}
@@ -209,6 +215,9 @@ export default function DemandDecilePriceRiskPage() {
           電気料金の大幅な削減が期待できます。ただし、D1帯は深夜0〜4時が中心であり、
           実際に稼働シフトできる業種は限られます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* D6-D8: 移行ゾーン */}
@@ -222,6 +231,9 @@ export default function DemandDecilePriceRiskPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           多くの法人は最も長い稼働時間がこのD6〜D8帯に集中しています。
           ここで使用量を10%削減するだけでも、年間電気代への影響は無視できない水準になります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -293,6 +305,9 @@ export default function DemandDecilePriceRiskPage() {
           2021年1月の寒波時には最大価格251円/kWhという記録的スパイクが発生しています。
           これらの極端な価格がD10の標準偏差σ=22.97を押し上げている主因です。
           D10は「多くの時間帯は15〜18円だが、ごくまれに50〜200円超になる」分布と理解するのが正確です。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -385,6 +400,9 @@ export default function DemandDecilePriceRiskPage() {
           自社の消費パターンを把握し、高需要帯への集中を避ける戦略的な電力管理が
           競争力の差を生む時代になっています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -427,6 +445,7 @@ export default function DemandDecilePriceRiskPage() {
               title: "市場連動型プランに向かない企業",
               description: "デシルD9〜D10に消費が集中する企業が固定型を選ぶべき理由。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

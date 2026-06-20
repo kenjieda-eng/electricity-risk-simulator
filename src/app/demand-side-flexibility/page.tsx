@@ -405,6 +405,9 @@ export default function Page() {
               <Link href="/jepx-business-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX市場の事業者影響</Link>
               で確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -423,12 +426,18 @@ export default function Page() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 報酬水準は2025年10月時点の代表的なオークション結果を目安として整理。実際の単価は年度・季節・需給状況で変動します(出典: OCCTO公表値から整理)。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">DR参加の要件 — 5つの必須条件</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR/VPP参加には、契約電力区分・スマートメーター・BEMS/FEMS・アグリゲーター契約・応動可能設備の事前申請の5要件があります。それぞれの要件と実務的な準備期間(通常3〜6ヶ月)を整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {drParticipationRequirements.map((item) => (
@@ -459,6 +468,9 @@ export default function Page() {
               、{" "}
               <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -496,6 +508,9 @@ export default function Page() {
               、{" "}
               <Link href="/battery-suitability-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池導入適性診断</Link>
               で深掘りできます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -537,6 +552,9 @@ export default function Page() {
               、夏季戦略は{" "}
               <Link href="/demand-response-summer-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">夏季DR戦略</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -599,6 +617,7 @@ export default function Page() {
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種別電気代水準" },
               { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の打ち手" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "ビル事業者の打ち手" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

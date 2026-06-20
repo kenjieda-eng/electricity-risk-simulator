@@ -208,6 +208,9 @@ export default function DemandResponseRevenueModelPage() {
               </Link>{" "}
               で全体像を確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* §2 */}
@@ -338,6 +341,9 @@ export default function DemandResponseRevenueModelPage() {
               <strong>設備投資のROIが想定以上に早まる</strong>
               ケースもあります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* §4 */}
@@ -429,6 +435,9 @@ export default function DemandResponseRevenueModelPage() {
               を定期的に実施します。初年度の運用データから、発動可能 kW
               の見直し、追加設備の組み込み、契約条件の再交渉（2年目以降）を進めることで、収益を段階的に拡大できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* §6 */}
@@ -482,6 +491,9 @@ export default function DemandResponseRevenueModelPage() {
               </Link>{" "}
               をご参照ください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -520,6 +532,7 @@ export default function DemandResponseRevenueModelPage() {
                 description:
                   "容量市場・需給調整市場の整備スケジュールと法人電気料金への影響。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
