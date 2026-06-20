@@ -111,6 +111,9 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
             単一の見通しだけでは、起こり得る変動幅を過小評価することがあります。シナリオを分けて確認することで、予算と契約検討の前提を
             共有しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -121,6 +124,9 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             影響時期や継続性が異なるため、一本の想定だけでは、予算策定、見積比較、社内説明での論点が粗くなりやすい点に注意が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -145,6 +151,9 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             結果を断定的に扱わず、見積比較や予算調整の余地を確保するための資料として使うと、社内合意を取りやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -201,6 +210,9 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランの法人では、月額電気代が通常の<span className="font-semibold text-slate-900">3〜5倍</span>に膨らんだケースもありました。
             この事例が示すのは、「単一の想定（通常ケースのみ）では把握できないリスクが現実に存在する」ということです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -287,6 +299,7 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
               title: "ワーストシナリオとは",
               description: "複数要因が重なった場合の上限感を把握できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

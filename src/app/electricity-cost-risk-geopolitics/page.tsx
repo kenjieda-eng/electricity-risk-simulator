@@ -183,6 +183,9 @@ export default function ElectricityCostRiskGeopoliticsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             調達不安が高まると、市場参加者の見通しが慎重になり、燃料価格や電力市場価格の変動が大きくなることがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* Table 1: 過去の地政学リスクと電気料金への影響 */}
@@ -301,6 +304,9 @@ export default function ElectricityCostRiskGeopoliticsPage() {
             </Link>
             で確認しつつ、単月と年間の両面で判断することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -313,6 +319,9 @@ export default function ElectricityCostRiskGeopoliticsPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             単月だけでなく年間視点で確認することで、実務判断の再現性を高めやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -332,6 +341,9 @@ export default function ElectricityCostRiskGeopoliticsPage() {
               燃料費調整額ページ
             </Link>
             が有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -372,6 +384,7 @@ export default function ElectricityCostRiskGeopoliticsPage() {
               title: "法人の電気料金が上がる理由",
               description: "複合要因で上がる構造を全体像で確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -228,6 +228,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
             </ul>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: リスクマトリクス */}
@@ -266,6 +269,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 財務ストレステスト */}
@@ -309,6 +315,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">※ 年間電力費2.5億円モデル（売上100億円）での試算。実際のインパクトは自社の電力費規模・契約形態によって異なります。</p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: BCP対策フレームワーク */}
@@ -368,6 +377,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 経営判断の論点 */}
@@ -380,6 +392,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q4.</span>需給ひっ迫・停電時に事業を継続するための非常用電源設備は整っているか？</li>
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q5.</span>電力調達リスクを担当する責任者・モニタリング体制は明確に定められているか？</li>
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: アクションアイテム */}
@@ -392,6 +407,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
           <li>主要拠点の非常用電源設備の状況と稼働可能時間を施設管理部門から報告させる</li>
           <li>最終保障供給の申し込み手順・期間・単価水準を確認させる</li>
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -428,6 +446,7 @@ export default function ExecutiveBusinessContinuityRiskPage() {
               title: "リスクシナリオカテゴリ",
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

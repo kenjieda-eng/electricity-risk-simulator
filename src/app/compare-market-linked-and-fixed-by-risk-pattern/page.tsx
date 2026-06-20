@@ -83,6 +83,9 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
             平均単価の比較は入口として有効ですが、上振れ月の影響や予算管理の負担までは表現しにくい指標です。特に法人・企業・自治体の契約では、
             単価の差より「変動がどこに出るか」を先に把握しておく方が運用面のギャップを減らせます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -113,6 +116,9 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             どちらが優位かではなく、社内の意思決定プロセスに合うかで判断するのが現実的です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -152,6 +158,9 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動と固定は、優劣の問題ではなく適合性の問題です。どの変動を受け入れ、どの範囲を固定したいかを明確にし、使用データと契約条件を照合して判断することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -162,6 +171,9 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
               基本比較ページ
             </Link>
             も参照しながら、自社運用に合う契約を選んでください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -282,6 +294,7 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
               title: "法人が電力契約を見直すタイミング",
               description: "リスクパターン別の比較判断後に進む見直し開始のタイミング。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -166,6 +166,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             この変化は発電コストに波及し、結果として法人・企業・自治体の電気料金・電気代に反映されやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* Table 1: 為替水準と燃調費への影響 */}
@@ -243,6 +246,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             円安局面では以下5点を確認・対応しておくことで、電気料金上振れへの備えを整えられます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 space-y-3">
             {checklist.map((item, index) => (
               <li key={index} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
@@ -271,6 +277,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
             </Link>
             も有効です。為替と燃料価格が重なる局面では、上振れ幅が大きくなる可能性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -291,6 +300,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
             </Link>
             で確認しつつ、為替影響を前提に判断することが大切です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -305,6 +317,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             これらを分けて確認すると、円安局面でどこに影響が出やすいかを把握しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -316,6 +331,9 @@ export default function ElectricityCostRiskYenDepreciationPage() {
               ワーストシナリオ
             </Link>
             で位置づけを確認すると、予算管理に使いやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -361,6 +379,7 @@ export default function ElectricityCostRiskYenDepreciationPage() {
               title: "法人の電気料金推移（2019〜2025年）",
               description: "円安・LNG高騰の影響が実際の料金推移でどう現れたかを確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

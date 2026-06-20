@@ -123,6 +123,9 @@ export default function ElectricityCostRiskHeatwavePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             市場全体の需要が高まる局面では、使用量の増加と単価上昇が同時に起こる場合があるため、夏場は月次コストの管理で注意が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -133,6 +136,9 @@ export default function ElectricityCostRiskHeatwavePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             法人や自治体では、床面積が大きい施設、稼働時間が長い施設、ピークが集中しやすい施設ほど影響が出やすい傾向があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -167,6 +173,9 @@ export default function ElectricityCostRiskHeatwavePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             施設用途ごとに負荷特性が異なるため、自社・自施設の運用実態に合わせて確認することが大切です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -188,6 +197,9 @@ export default function ElectricityCostRiskHeatwavePage() {
             </Link>
             のページで確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -199,6 +211,9 @@ export default function ElectricityCostRiskHeatwavePage() {
             </Link>
             と比較すると、夏要因の寄与を把握しやすくなります。自社・自施設に近い使用条件で確認することが精度向上につながります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -206,6 +221,9 @@ export default function ElectricityCostRiskHeatwavePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             歴代ピーク需要Top10は全て7-8月の平日に記録。最大は2020年8月20日の164,910MW。
             これらのデータはOCCTO（電力広域的運営推進機関）の公表データを集計したものです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -410,6 +428,7 @@ export default function ElectricityCostRiskHeatwavePage() {
               title: "容量拠出金とは｜2026〜2028年度の単価と法人への影響",
               description: "夏の電力需給逼迫と容量市場の本格徴収を関連して把握",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

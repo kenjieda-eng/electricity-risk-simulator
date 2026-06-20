@@ -211,6 +211,9 @@ export default function WorstCaseElectricityCostRiskPage() {
             法人や自治体では、予算説明、庁内説明、稟議、調達比較の場面で「どこまで上振れを見込むか」が重要です。
             ワーストシナリオは、その説明を感覚ではなく構造で示すための土台になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* Table 1: ワーストケース構成要素 */}
@@ -218,6 +221,9 @@ export default function WorstCaseElectricityCostRiskPage() {
           <h2 className="text-xl font-semibold text-slate-900">ワーストケース構成要素</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             主要6要因それぞれの単独影響と、全要因が重複した場合のワーストケース影響を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -255,6 +261,9 @@ export default function WorstCaseElectricityCostRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月間使用量5万kWhの事業所を例に、リスクの重なり方別の月額増加・年間増加を試算します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -290,6 +299,9 @@ export default function WorstCaseElectricityCostRiskPage() {
           <h2 className="text-xl font-semibold text-slate-900">ワーストケースへの備え チェックリスト</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下5項目を確認しておくことで、ワーストケース発生時の影響を最小限に抑えやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-4 space-y-3">
             {preparationChecklist.map((item, index) => (
@@ -358,6 +370,9 @@ export default function WorstCaseElectricityCostRiskPage() {
             そのため、請求書の一項目だけで判断すると、上振れの全体像を見落としがちです。
             法人・企業・自治体の実務では、基本料金、従量料金、調整項目、契約条件を分けて確認することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -390,6 +405,9 @@ export default function WorstCaseElectricityCostRiskPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             単価比較だけでなく、変動リスク込みで契約を検討することで、見積時点と運用時点のギャップを抑えやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -457,6 +475,7 @@ export default function WorstCaseElectricityCostRiskPage() {
               title: "比較ページ",
               description: "契約条件の違いを同じ前提で比較できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -139,6 +139,9 @@ export default function MarketPriceAdjustmentRiskPage() {
             2019 年度（7.92 円/kWh）と 2022 年度（20.37 円/kWh）で、年度平均の差は約 2.5 倍。
             市場連動で 100% 仕入れた場合、年間の電力量料金が 2.5 倍になったことを意味します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -164,6 +167,9 @@ export default function MarketPriceAdjustmentRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2021 年度の冬季スパイクが一時的な事象だったのに対し、2022 年度は年間を通じて JEPX が高止まりしました。
             ウクライナ危機で LNG スポット価格が歴史的水準に達し、市場連動契約の法人需要家は「毎月」請求急増に直面しました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>ある中規模工場：年間電気代が前年比 2.3 倍、追加負担 3,500 万円</li>
@@ -222,12 +228,18 @@ export default function MarketPriceAdjustmentRiskPage() {
             <li>契約更新前に過去 3 年の最悪月の単価で試算</li>
             <li>経営層への説明資料に「市場連動リスク」の項目を入れる</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場価格調整額のリスク指標（JEPXボラティリティ推移）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場価格調整額は、JEPXの変動幅に連動して上下します。ボラティリティが高い年度ほど、月次の調整額の振れ幅が大きくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
@@ -283,6 +295,7 @@ export default function MarketPriceAdjustmentRiskPage() {
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "契約タイプ全体の整理。" },
             { href: "/jepx-spike-electricity-cost-impact", title: "JEPX急騰で法人の電気料金はどう上がるか", description: "リスクシナリオ。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "市場価格調整額の影響を含む料金水準の推移を確認できます。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

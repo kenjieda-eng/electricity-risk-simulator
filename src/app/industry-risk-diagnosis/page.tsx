@@ -104,6 +104,9 @@ export default function IndustryRiskDiagnosisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種を問わず、以下の確認は見直しの前提として全法人担当者に共通です。チェックしながら確認し、その後自社の業種を選択してリスクと対策を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4">
             <DiagnosisClient />
           </div>
@@ -187,6 +190,9 @@ export default function IndustryRiskDiagnosisPage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -236,6 +242,7 @@ export default function IndustryRiskDiagnosisPage() {
               title: "電力契約見直しで最も恩恵が大きい法人の特徴",
               description: "見直し効果が高い企業の条件を業種含めて解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

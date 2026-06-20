@@ -197,6 +197,9 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             単価が+5円/kWh上昇した場合の、拠点数別の月額増加・年間増加を試算します。拠点が増えるほど累積影響は急拡大します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -266,6 +269,9 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             多拠点の電気料金管理を本社主導で進めるための6ステップを確認します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 space-y-3">
             {reviewChecklist.map((item, index) => (
               <li key={index} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
@@ -296,6 +302,9 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特に利益率の低い業種（スーパー、飲食チェーン、物流）では、この累積影響が全社の営業利益を大きく圧迫します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -321,6 +330,9 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             多拠点企業では、電力会社への交渉力を高めるためにも、拠点をまとめて一括で切り替える「一括切替」の検討が有効です。以下に一括管理のメリットと注意点を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -383,6 +395,7 @@ export default function MultiSiteCompanyPriceSurgeRiskPage() {
               title: "電気料金見直しを社内で説明するときのポイント",
               description: "多拠点の一括切替を稟議・経営層に説明する方法。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

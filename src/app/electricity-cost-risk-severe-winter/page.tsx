@@ -124,6 +124,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             夏と同様に、単価の変動と使用量増が重なると、電気代の上振れ幅が大きくなるため、冬季も事前確認が重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -134,6 +137,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             つまり、冬の電気料金上昇は「使った量が増えた」だけでは説明しきれない場合があります。請求書では、使用量、単価、調整項目を分けて確認する視点が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -156,6 +162,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
             </Link>
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -167,6 +176,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             施設ごとの使用パターンを把握し、冬季特有の負荷を前提に契約や運用を見直すことが有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -189,6 +201,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
             </Link>
             のページで確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -200,6 +215,9 @@ export default function ElectricityCostRiskSevereWinterPage() {
               ワーストシナリオ
             </Link>
             と照合することで、年間の安全幅を検討しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -386,6 +404,7 @@ export default function ElectricityCostRiskSevereWinterPage() {
               title: "法人の電気料金が上がる理由",
               description: "冬以外も含む上昇要因の全体像を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

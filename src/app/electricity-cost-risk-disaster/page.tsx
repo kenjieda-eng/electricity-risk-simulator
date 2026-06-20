@@ -100,6 +100,9 @@ export default function ElectricityCostRiskDisasterPage() {
             災害リスクは、地震、台風、豪雨などにより、発電所や送配電設備に被害が出て供給力が低下する可能性を指します。
             シミュレーターでは、発生月だけでなく翌月にも影響が及ぶ想定を確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -110,6 +113,9 @@ export default function ElectricityCostRiskDisasterPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             災害影響は発生直後だけでなく、設備復旧や需給調整の過程で翌月にも余波が残る場合があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -127,6 +133,9 @@ export default function ElectricityCostRiskDisasterPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             単月だけでなく年間視点で確認し、契約方式ごとの違いを整理することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -139,6 +148,9 @@ export default function ElectricityCostRiskDisasterPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             災害対応では、コスト管理と継続運用の両立が実務上のポイントです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -255,6 +267,9 @@ export default function ElectricityCostRiskDisasterPage() {
             固定プランの場合、災害月の請求額には直接反映されませんが、次回の契約更新時に単価見直しが行われる可能性があります。
             2022年の福島沖地震後には、複数の新電力が契約条件の見直しや撤退を行った事例があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -265,6 +280,9 @@ export default function ElectricityCostRiskDisasterPage() {
               ワーストシナリオ
             </Link>
             と比較することで、上振れ幅の上限を検討しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -305,6 +323,7 @@ export default function ElectricityCostRiskDisasterPage() {
               title: "法人の電気料金が上がる理由",
               description: "災害要因以外も含めた全体像を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

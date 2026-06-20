@@ -176,6 +176,9 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               実務的には、BCP・予算管理・経営への説明責任という3軸でリスク許容度を整理し、それに合わせた配分・CAP設定・拠点戦略を設計するのが鍵になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2: 4つのハイブリッド型 */}
@@ -183,6 +186,9 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
             <h2 className="text-xl font-semibold text-slate-900">4つのハイブリッド型を比較する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ハイブリッド契約は単一の設計ではありません。実務では少なくとも以下の4パターンが組み合わせ可能で、自社の条件に合わせて選択・重ね掛けできます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {hybridTypes.map((h) => (
@@ -204,6 +210,9 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
             <h2 className="text-xl font-semibold text-slate-900">リスクヘッジ効果のシミュレーション</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               月額電気代100万円（固定プランベース）の法人を例に、JEPXの3シナリオでプランごとの月額を試算します。ハイブリッドは固定70%＋市場連動30%の配分型、CAPは市場連動に単価15円/kWh上限を付けたケースです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
@@ -262,6 +271,9 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に重要なのはステップ6の「レビュー時期を契約時に決める」ことです。市場環境は1〜2年で大きく変わるため、締結時に確定した配分比率が3年後も最適とは限りません。見直しトリガー（JEPX平均が閾値を超えた場合など）を明文化しておくと、再交渉がスムーズに進みます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -304,6 +316,7 @@ export default function ElectricityPriceRiskHedgeHybridPage() {
                 title: "高圧・特別高圧で市場連動を考えるときの注意点",
                 description: "使用量の大きい契約におけるリスクの出方。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

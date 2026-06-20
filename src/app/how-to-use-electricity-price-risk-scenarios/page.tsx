@@ -108,6 +108,9 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             年間予算と月次管理の双方に効くよう、単月型シナリオと高止まり型シナリオを分けて管理する運用が有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -130,6 +133,9 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             契約更新時には、更新条件、調整項目、違約金なども含め、シナリオごとの総コストで比較する視点が欠かせません。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -151,6 +157,9 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             先に上限感を見てから個別要因に分解すると、対策の優先順位を決めやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -163,6 +172,9 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             使い分けのルールを決めておくと、担当者が変わっても説明の質を維持しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -285,6 +297,7 @@ export default function HowToUseElectricityPriceRiskScenariosPage() {
               title: "法人の電気料金推移（2019〜2025年）",
               description: "各シナリオが実際の料金推移にどう現れたかを確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
