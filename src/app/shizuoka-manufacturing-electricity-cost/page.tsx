@@ -445,6 +445,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               静岡県は製造品出荷額全国上位の工業県で、浜松の輸送機器・楽器、富士の製紙を中心に多様な製造業が集積しています。富士川を境とした中部電力・東京電力の2エリア構造という全国でも珍しい特性が、静岡の製造業の電力事情の最大の論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               静岡県内の製造業は、富士川以西が中部電力ミライズ、以東が東京電力EPを軸に、全国系新電力・再エネ特化型・製紙の自家発電と多様な供給形態が併存。エリアごとの供給力・周波数対応の確認が新電力切替の前提です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、富士川を境とした単価・燃調の違い、製紙の電力・蒸気総合コストを、製造業の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -543,6 +552,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               静岡製造業の電気代上昇は、富士川2エリア管理の複雑性・製紙の電力蒸気大量消費・塗装プレス負荷（輸送機器）・中部東京両エリアの燃調感応度・メーカーCN要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +578,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               静岡県の中小企業省エネ補助、市町村独自補助（浜松・富士・磐田等）、国のSII省エネ補助、GX投資促進税制、製紙業向けバイオマス・省エネ補助の5層を組合せ、製造業の更新投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +610,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               静岡の製造業は、浜松磐田湖西の輸送機器（中部）、浜松の楽器（中部）、富士富士宮の製紙（東京）、静岡市・東部の電機食品化学、富士川境界という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +629,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               輸送機器・製紙の大型特別高圧では競争入札が進行中、Tier2・楽器工場でも切替余地大、市場連動からの固定回帰、メーカーCN対応の再エネ調達、製紙のバイオマス自家発電活用が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -652,6 +673,9 @@ export default function ShizuokaManufacturingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。特に電力エリア（富士川以西/以東）の正確な把握が静岡では最重要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -708,6 +732,7 @@ export default function ShizuokaManufacturingElectricityCostPage() {
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "中部・東京エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "両エリアの感応度の高さを理解。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "メーカーCN対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -445,6 +445,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               京都府は世界的観光都市として、祇園・東山・嵐山の老舗旅館、四条河原町・京都駅周辺のシティホテル、宇治・伏見・大原の観光ホテルまで多様な宿泊業態が共存しています。インバウンド需要の復活と燃調高騰の両方を受け、電気代管理の経営重要度が高まる業種です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               京都府内の宿泊業は、関西電力に加えて全国系新電力・大阪ガス系・再エネ特化型・地域系新電力と多様なプレイヤーが供給。シティホテル・大型旅館では切替シフトが進行中で、中小旅館も商工会議所支援で選択肢が広がっています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・低圧の単価レンジ、宿泊業の電気代単位指標（客室当たり・売上比）、原子力寄与による燃調感応度の低位性を、宿泊業の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -541,6 +550,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               京都宿泊業の電気代上昇は、通年空調・給湯ベース負荷・温泉/大浴場循環ろ過電力・年4〜5回のピーク重複・インバウンド変動リスク・ESG/サステナブル観光要求の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -564,6 +576,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               京都府中小企業省エネ補助、京都市環境保全・観光関連補助、観光庁宿泊施設インバウンド対応等支援、国のSII省エネ補助、需要家主導型PPA補助の5層を組合せ、宿泊業更新投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -593,6 +608,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               京都の宿泊業は、祇園・東山・西陣の老舗旅館・伝統建築、四条河原町・京都駅のシティホテル、嵐山・大原・宇治の観光・温泉旅館、外資ラグジュアリーの先行事例、商工会議所・観光連盟の支援機能という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -609,6 +627,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               シティホテル・大型旅館では切替シフト進行中、市場連動からの固定回帰、外資系RE100要請による再エネ調達主流化、サステナブル観光のブランド差別化が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -633,6 +654,9 @@ export default function KyotoHotelRyokanElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               宿泊業の省エネは、高効率ヒートポンプ給湯機＋廃熱回収、高効率空調＋客室人感センサー、全館LED＋調光制御、屋根オンサイト太陽光、BEMS＋客室稼働連動運転の5軸が主力。シティホテル・大型旅館・中小旅館いずれでも投資回収2〜4年で実現可能なメニューが揃っています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -706,6 +730,7 @@ export default function KyotoHotelRyokanElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "外資系RE100対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "シティホテル屋根活用と意匠配慮型。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

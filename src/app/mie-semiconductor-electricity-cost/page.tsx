@@ -446,6 +446,9 @@ export default function MieSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               三重県、特に四日市市・亀山市はキオクシアNANDフラッシュメモリとシャープ液晶を中心とした世界クラスの半導体・電子部品集積地です。24時間連続のクリーンルーム空調と中部電力エリアの燃調感応度の高さが業種特性の中心となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -478,6 +481,9 @@ export default function MieSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               三重県内の半導体・電子部品工場は、中部電力ミライズに加えて全国系新電力・東邦ガス系・再エネ特化型・PPA事業者と多様なプレイヤーが供給。大型ファブでは競争入札が標準化し、中堅工場でも切替シフトが進行中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -495,6 +501,9 @@ export default function MieSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、中部エリアの燃調感応度の高さ、再エネ賦課金とRE100調達コストを、半導体ファブの代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -544,6 +553,9 @@ export default function MieSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               三重半導体の電気代上昇は、クリーンルーム24h絶対需要・中部エリアの燃調感応度（高位）・EUV/ArF露光装置の高密度電力・超純水/特殊ガスのユーティリティ電力・キオクシア等のRE100要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +579,9 @@ export default function MieSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               三重県の産業集積・脱炭素設備導入補助、国のSII省エネ補助、需要家主導型再エネ・PPA補助、GX・CN投資促進税制、経産省半導体関連投資支援基金の5層を組合せ、半導体投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -596,6 +611,9 @@ export default function MieSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               三重県内の半導体集積は、四日市のキオクシア／ウェスタンデジタル合弁、亀山のシャープ液晶・カメラモジュール、鈴鹿・桑名のTier1/Tier2サプライヤー、伊勢の東京エレクトロン拠点、特高変電所網という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -612,6 +630,9 @@ export default function MieSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型半導体ファブでは競争入札が標準化、中堅工場でも切替余地大、市場連動からの固定回帰、キオクシアRE100要請による再エネ調達主流化、オフサイトPPA・VPPAの拡大が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -653,6 +674,9 @@ export default function MieSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -710,6 +734,7 @@ export default function MieSemiconductorElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "中部エリアの感応度の高さを理解。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "キオクシアRE100対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

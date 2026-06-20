@@ -445,6 +445,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡市は九州・西日本の経済中枢として、天神・博多に九州最大の商業集積を形成しています。営業時間帯への負荷集中・デパ地下の冷蔵通年負荷という業種特性と、九州電力エリアの燃調感応度の低さが電力事情の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県内の商業・小売は、九州電力に加えて九電みらいエナジー・全国系・西部ガス系・再エネ特化型と多様なプレイヤーが供給。大型商業施設・チェーン小売では競争入札が進み、中小店舗も切替余地が大きいエリアです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・特別高圧・低圧の単価レンジ、九州エリアの燃調感応度の低さを、商業・小売の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -514,6 +523,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県内の代表的な3規模の商業・小売で、契約見直し＋LED化＋空調更新＋屋上太陽光の組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界統計から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -545,6 +557,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡商業の電気代上昇は、営業時間帯への負荷集中・デパ地下の冷蔵通年負荷・九州エリアの燃調感応度（低め）・再開発に伴う設備更新・インバウンド変動と大手CN要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -568,6 +583,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡県の中小企業省エネ補助、福岡市の環境・脱炭素経営支援補助、国のSII省エネ補助、需要家主導型PPA補助、多店舗チェーン向け一括導入補助の5層を組合せ、商業・小売投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -597,6 +615,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               福岡の商業集積は、天神の商業中心、博多駅周辺の駅ビル商業、福岡近郊の大型SC、北九州・久留米の地域商業中心、九州電力・太陽光資源という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -613,6 +634,9 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型商業施設・チェーン小売では競争入札が進行中、中小店舗でも切替余地、市場連動と固定の使い分け、屋上太陽光・RE100対応の拡大が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -710,6 +734,7 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋上・駐車場太陽光の経済性。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "大手小売RE100対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

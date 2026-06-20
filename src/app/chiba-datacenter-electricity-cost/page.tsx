@@ -445,6 +445,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉県、特に印西エリアは日本最大のデータセンター集積地として、銀行勘定系から最新のハイパースケール・AI/HPC DCまでが連続立地しています。24時間連続・高負荷率という特殊な電力プロファイルと、AI需要急増による新規受電申込逼迫が現在の最大論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉県内DCは、東電EPに加えて全国系新電力・DC特化型新電力・再エネ特化型・PPA事業者と多様なプレイヤーが供給。ハイパースケール・大型コロケーションでは競争入札が標準化し、中堅・中規模DCでも切替シフトが進行中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、負荷率割引、燃料費調整額の感応度、再エネ賦課金とRE100調達コストの『二重負担』を、DCの代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -514,6 +523,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉県内の代表的な3規模のDCで、契約見直し＋PUE改善＋PPA調達の組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界統計から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -543,6 +555,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉DCの電気代上昇は、24h高負荷率による絶対額の巨大さ・AI需要によるラック密度上昇・東電エリアの燃調感応度・系統制約・RE100追加性調達コストの5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +581,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉県の中小企業省エネ・脱炭素設備導入補助、国のSII省エネ補助、需要家主導型再エネ・PPA補助、GX・CN投資促進税制、次世代DC関連支援（NEDO等）の5層を組合せ、DC投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +613,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               千葉県内のDC立地は、印西を核とするハイパースケール集積、白井・千葉市の中堅コロケーション、佐倉・市原の新規開発候補地という構造。それぞれ電力プロファイルと系統制約が異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +632,9 @@ export default function ChibaDatacenterElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ハイパースケール・大型コロケーションでは競争入札が標準化、中堅DCでも切替余地大、市場連動からの固定回帰、RE100調達の主流化、オフサイトPPA・VPPAの拡大が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -709,6 +733,7 @@ export default function ChibaDatacenterElectricityCostPage() {
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "東京エリアの電源構成を可視化。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "DCの単価変動の主因。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "DCのRE100対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

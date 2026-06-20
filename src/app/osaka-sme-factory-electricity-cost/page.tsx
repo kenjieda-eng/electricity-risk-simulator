@@ -445,6 +445,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大阪府、特に東大阪市は『日本一の町工場のまち』として全国的に知られています。金属プレス・切削・熱処理・樹脂成形・電子部品・治工具まで多様な工程の中小工場が集積し、関西電力エリア固有の電源構成・燃調感応度と密接に連動する電力プロファイルを示します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大阪府内の中小製造業は、関西電力に加えて関電グループ系新電力・全国系新電力・大阪ガス系・中小特化型と多様なプレイヤーが供給。中小高圧では切替シフトが進行中で、商工会議所経由の共同購入スキームも普及しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・低圧の単価レンジ、原子力寄与による燃調感応度の低位性、基本料金負担の大きさを、中小工場の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -543,6 +552,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               町工場の電気代上昇は、低負荷率に伴う基本料金負担の重さ・プレス/切削の瞬間ピーク・親会社からの単価転嫁難・再エネ賦課金の累積負担・中小特有の人手情報不足の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +578,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大阪府中小企業省エネ補助、東大阪市・八尾市等の市町村独自補助、国のSII省エネ補助、需要家主導型PPA支援、ものづくり補助金・事業再構築補助金の5層を組合せ、中小工場の更新投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +610,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大阪府の中小製造業集積は、東大阪のオールラウンド型町工場、八尾の樹脂・実装・金属加工、大東・門真の電機系サプライヤー、大阪市内の小規模事業者、商工会議所・産業協同組合の支援機能という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +629,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               中小高圧では切替余地大、市場連動からの固定回帰、商工会議所経由の共同購入スキーム普及が共通トレンドです。低圧の超小規模工場でも切替の選択肢が広がっています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -652,6 +673,9 @@ export default function OsakaSmeFactoryElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -709,6 +733,7 @@ export default function OsakaSmeFactoryElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "親会社CN要請対応の追加性ある再エネ調達。" },
               { href: "/cfo-electricity-cost-basics", title: "中小企業CFO 電気代戦略", description: "中小経営者向けの電気代見直し論点整理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -444,6 +444,9 @@ export default function OkinawaHotelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県は観光が基幹産業で、恩納・名護の大型リゾート、那覇のビジネスホテル、宮古・石垣の離島リゾートが集積しています。亜熱帯気候の通年冷房と、沖縄電力の独立系統・離島系統という特殊な電力事情が業種特性の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -476,6 +479,9 @@ export default function OkinawaHotelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄の宿泊業は、独立系統・小規模市場のため新電力の選択肢が本土より限定的。沖縄電力中心の中で、省エネ投資・自家消費太陽光による削減の比重が本土以上に大きい構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -493,6 +499,9 @@ export default function OkinawaHotelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・低圧の単価レンジ（独立系統で全国でも高め）、宿泊業の電気代単位指標、離島系統の供給コストを、宿泊業の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -542,6 +551,9 @@ export default function OkinawaHotelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄宿泊業の電気代上昇は、亜熱帯気候の通年冷房負荷・独立系統による高単価・離島系統の供給コスト・プールスパ厨房の追加負荷・台風リスクと再エネ設計制約の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -565,6 +577,9 @@ export default function OkinawaHotelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄県の中小・観光事業者向け省エネ補助、沖縄振興・離島活性化補助、国のSII省エネ補助、観光庁宿泊施設支援補助、需要家主導型再エネ・蓄電池補助の5層を組合せ、宿泊業投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -594,6 +609,9 @@ export default function OkinawaHotelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄の宿泊業は、恩納・読谷・本部の本島中北部大型リゾート、名護・北部のリゾート＋やんばる観光、那覇のシティ・ビジネスホテル、宮古・石垣・久米島の離島リゾートという構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -610,6 +628,9 @@ export default function OkinawaHotelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新電力の選択肢が限られる沖縄では、新電力切替よりも省エネ投資・自家消費太陽光の比重が大きいのが共通トレンド。サステナブル観光・RE100対応・台風BCPも導入を後押しします。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -651,6 +672,9 @@ export default function OkinawaHotelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、省エネ投資や供給先選定の精度が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -707,6 +731,7 @@ export default function OkinawaHotelElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "台風対策設計の屋根太陽光の経済性。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "ホテル屋根活用と外部調達の比較。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

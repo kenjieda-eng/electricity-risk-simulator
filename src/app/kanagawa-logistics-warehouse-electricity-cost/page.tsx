@@ -446,6 +446,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               神奈川県、特に京浜港湾は日本最大級の物流ハブとして、冷凍冷蔵倉庫・自動倉庫・3PL大手の関東基幹拠点が連続立地しています。24時間冷却・自動仕分け・EC連携など特殊な電力プロファイルと、AI需要急増による系統容量逼迫が現在の最大論点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -478,6 +481,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               神奈川県内の物流倉庫は、東電EPに加えて全国系新電力・物流特化型・再エネ特化型・東京ガス系と多様なプレイヤーが供給。大型冷凍冷蔵倉庫・自動倉庫では競争入札が標準化し、中堅・中規模倉庫でも切替シフトが進行中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -495,6 +501,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、冷凍冷蔵倉庫の負荷率割引、電気代の物流原価への影響を、物流倉庫の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -544,6 +553,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               神奈川物流倉庫の電気代上昇は、冷凍冷蔵24h絶対需要・EC拡大による電力需要増・東電エリアの燃調感応度・3PL契約の単価転嫁難・3PL大手RE100要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +579,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               神奈川県の中小企業省エネ補助、横浜市・川崎市の環境関連補助、国のSII省エネ補助、国交省物流効率化・脱炭素化補助、需要家主導型再エネ・PPA補助の5層を組合せ、物流倉庫投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -596,6 +611,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               神奈川県内の物流倉庫立地は、横浜港の本牧・南本牧・大黒、川崎港の東扇島・浮島・千鳥町、内陸ハブの鶴見・神奈川区、圏央道沿線の厚木・海老名・座間という構造。それぞれ電力プロファイルと系統容量が異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -612,6 +630,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型冷凍冷蔵倉庫・自動倉庫では競争入札が標準化、中堅倉庫でも切替余地大、市場連動からの固定回帰、3PL大手RE100要請による再エネ調達主流化、倉庫屋根太陽光・蓄電池併用の主流化が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -636,6 +657,9 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               物流倉庫の省エネは、冷凍機の高効率インバータ更新＋COP改善、庫内ファン高効率化＋デフロスト最適化、倉庫屋根オンサイト太陽光、自動倉庫運転スケジュール最適化、BEMS＋WMS連動の5軸が主力。大型・中堅・中規模いずれでも投資回収2〜4年で実現可能なメニューが揃っています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -709,6 +733,7 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "物流業の単価変動の主因。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "3PL大手RE100対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "倉庫屋根活用と外部調達の比較。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

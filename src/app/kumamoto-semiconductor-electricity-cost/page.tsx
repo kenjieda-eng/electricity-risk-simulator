@@ -445,6 +445,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県、特に菊陽町・大津町はTSMC/JASMの進出を契機に、世界クラスのロジック半導体・イメージセンサ・製造装置サプライチェーンが急速に形成されつつあります。24時間連続のクリーンルーム空調と露光装置の電力品質要求が業種特性の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県内の半導体・電子部品工場は、九州電力に加えて九電グループ系新電力・全国系新電力・再エネ特化型・PPA事業者と多様なプレイヤーが供給。大型ファブでは競争入札が標準化し、中堅工場でも切替シフトが進行中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、九州エリアの燃調感応度の低位性、再エネ賦課金とRE100調達コスト、これらが半導体ファブの代表的な契約タイプ別にどう作用するかを整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -543,6 +552,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本半導体の電気代上昇は、クリーンルーム24h絶対需要・EUV/ArF露光装置の高密度電力・超純水/特殊ガスのユーティリティ電力・九州エリアの燃調感応度（相対的に低位）・TSMC等のRE100要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +578,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県の半導体関連産業集積促進補助、国のSII省エネ補助、需要家主導型再エネ・PPA補助、GX・CN投資促進税制、経産省半導体関連投資支援基金の5層を組合せ、半導体投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +610,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熊本県内の半導体集積は、菊陽・大津のJASM/TSMC＋周辺サプライヤー、ソニーセミ熊本（イメージセンサ）、東京エレクトロン九州（製造装置）、三菱電機半導体関連（パワー半導体）、特高変電所網という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +629,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型半導体ファブでは競争入札が標準化、中堅工場でも切替余地大、市場連動からの固定回帰、TSMC RE100要請による再エネ調達の主流化、オフサイトPPA・VPPAの拡大が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -635,6 +656,9 @@ export default function KumamotoSemiconductorElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               半導体ファブの省エネは、クリーンルーム空調の高効率化（FFU・CRAC・チラー更新）、外気冷房（フリークーリング）、オンサイト＋オフサイトPPA、BEMS＋AI需給予測、装置排熱・超純水循環の省エネの5軸が主力。経営インパクト大の打ち手が揃っています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -709,6 +733,7 @@ export default function KumamotoSemiconductorElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州エリアでの感応度を理解。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "TSMC等のRE100対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
