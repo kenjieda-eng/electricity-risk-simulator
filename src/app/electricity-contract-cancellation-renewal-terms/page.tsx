@@ -120,6 +120,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             見積単価が有利でも、契約期間が長すぎたり、途中解約条件が厳しかったりすると、結果的に見直ししづらい契約になることがあります。価格と条件を分けて比較し、
             将来の運用変更に対応できるかまで確認する視点が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 違約金の金額パターン */}
@@ -159,6 +162,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             </tbody>
           </table>
           <p className="mt-3 text-xs text-slate-500">※ 違約金は契約条件・残存期間・使用量により大きく異なります。契約書で必ず確認してください。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 契約期間別のメリット・デメリット */}
@@ -204,6 +210,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             </tbody>
           </table>
           <p className="mt-3 text-xs text-slate-500">※ 実際の単価・違約金条件は電力会社・契約内容により異なります。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -252,6 +261,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -293,6 +305,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             </tbody>
           </table>
           <p className="mt-3 text-xs text-slate-500">※ 違約金は契約条件・残存期間・使用量により大きく異なります。契約書で必ず確認してください。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -301,6 +316,9 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
             法人向け電力契約では、安い契約かどうかだけでなく、運用しやすい契約かどうかを見る必要があります。契約期間・違約金・更新条件を先に確認しておくことで、
             乗り換え時の想定外を減らしやすくなります。特に3年以上の長期契約では月5万kWhクラスの施設でも違約金が数百万円規模になる可能性があるため、
             自動更新の通知期限と解約条件のチェックリストを活用してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -345,6 +363,7 @@ export default function ElectricityContractCancellationRenewalTermsPage() {
                 title: "解説ページ一覧",
                 description: "契約メニューカテゴリ全体を確認できます。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

@@ -169,6 +169,9 @@ export default function MunicipalityLongTermContractPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             これらの課題を解決する手段として、地方自治法は「長期継続契約」と「債務負担行為」という2つの仕組みを用意しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 3つの契約形態の比較 */}
@@ -176,6 +179,9 @@ export default function MunicipalityLongTermContractPage() {
           <h2 className="text-xl font-semibold text-slate-900">単年度契約・長期継続契約・債務負担行為の比較</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約で活用できる3つの契約形態を比較します。自団体の条例整備状況と議会対応の容易さに応じて選択してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -234,6 +240,9 @@ export default function MunicipalityLongTermContractPage() {
             長期継続契約の期間をどう設定するかは、調達安定性とコストリスクのバランスによって異なります。
             以下の表を参考に自団体の状況に合った期間を選択してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -277,6 +286,9 @@ export default function MunicipalityLongTermContractPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力価格が高止まりする中、長期継続契約を導入する自治体は増加傾向にあります。
             以下に代表的な導入パターンをまとめました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -351,6 +363,7 @@ export default function MunicipalityLongTermContractPage() {
               title: "中期経営計画への電力コスト織り込み方",
               description: "複数年の電力費を計画に組み込む手法の参考として活用できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

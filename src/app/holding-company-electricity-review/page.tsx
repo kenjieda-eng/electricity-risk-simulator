@@ -425,12 +425,18 @@ export default function Page() {
               </Link>
               で関連記事を確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">デマンド合算可否の条件表</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               デマンド合算（複数契約を1契約として基本料金算定）の可否は、託送供給等約款・各小売事業者の供給約款で定められています。持株会社化後は法人格が分かれるため、原則として合算は不可ですが、代替スキームの選択肢があります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full text-sm">
@@ -481,12 +487,18 @@ export default function Page() {
               </Link>
               で深掘りできます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">持株会社化前後のコスト比較表</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               『本社＋4工場 合計5契約・高圧2,800kW合計』の単体経営を持株会社化した場合のコスト変化を、4スキーム別に整理します。基本料金・電力量料金・年間総額のレンジで比較し、ESP介在型のメリットを定量化しました。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full text-sm">
@@ -529,6 +541,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業HD（中規模）／流通系HD（拠点分散型）／IT系HD（DC含む・ESP設立済）の3パターンで、Before/Afterの削減効果を整理します。いずれも代表的なシナリオで、自社条件への適用は個別試算が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {beforeAfterCases.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +581,9 @@ export default function Page() {
                 市場連動プランが向かない法人
               </Link>
               で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -692,6 +710,7 @@ export default function Page() {
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "製造系HDの参考データ。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "本社ビル契約の論点。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "グループ各拠点のエリア事情。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -106,6 +106,9 @@ export default function ContractReviewForAccountingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約見直しの第一歩として、現行の電気代予算と見直し後の予算見込みを比較します。以下の手順で進めます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">現行の実績確認</p>
@@ -164,6 +167,9 @@ export default function ContractReviewForAccountingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力会社が変わると、請求書の発行方式や支払い方法が変わることがあります。経理処理への影響を事前に確認します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>請求書の発行方法：紙か電子（PDFメールやWebポータル）か。社内の電子帳票対応状況と合わせて確認する</li>
             <li>請求書の発行タイミング：検針後何日後に請求書が届くか。支払い期日との関係を確認する</li>
@@ -195,6 +201,9 @@ export default function ContractReviewForAccountingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料費調整額や市場価格調整額が含まれる契約では、実績が予算を上回るリスクがあります。以下の方法で管理します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">月次モニタリング</p>
@@ -234,6 +243,9 @@ export default function ContractReviewForAccountingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の変更は、コストへの影響が大きいため稟議が必要なケースが多いです。経理部門が関与する場合は以下を確認します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>稟議書に必要な数値（現行と変更後の年間コスト比較・削減効果）を担当部門に提供する</li>
             <li>契約期間・解約条件を確認し、財務的なリスクを評価する（違約金の最大額など）</li>
@@ -288,6 +300,7 @@ export default function ContractReviewForAccountingPage() {
               title: "固定プランとは",
               description: "予算管理重視の経理部門が評価しやすい固定プランの特徴。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

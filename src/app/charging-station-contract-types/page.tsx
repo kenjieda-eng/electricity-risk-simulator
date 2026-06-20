@@ -80,15 +80,24 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">社内専用充電</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">社用車・役員車専用の充電設備では、通常の電気代として処理できます。特別な電気事業法上の手続きは不要で、使用電力は自社の経費として計上します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約電力の見直しと、EV充電のピークが通常業務のピークと重ならないよう時間帯制御が推奨されます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">従業員向け開放</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従業員の個人EVへの充電サービスを提供する場合、給与課税の取り扱いが論点になります。実費相当の従業員負担を徴収するか、現物給与として処理するかの判断が必要です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従業員から実費を徴収する場合、充電量の個別計測と請求の仕組みが必要になります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">一般開放（有料充電）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">駐車場・店舗で一般車両向けに有料充電を提供する場合、「電気事業法上の自家発電ではなく電気事業者になる可能性」「決済システム導入」「24時間対応体制」など複数のハードルがあります。専業事業者との提携が現実的なケースが多いです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -105,6 +114,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では法人EV導入と充電設備の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -146,6 +158,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -165,6 +180,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-500">※ 事例は代表例。実際の効果は事業規模・立地・既存契約条件で大きく変動します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -228,6 +246,7 @@ export default function Page() {
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

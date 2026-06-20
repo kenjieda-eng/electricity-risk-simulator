@@ -134,6 +134,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業譲渡では原則として新規契約となりますが、同じ小売事業者でそのまま乗り換える場合は「契約切替＋名義変更」の簡易手続きになることもあります。この判断は電力会社ごとに運用が異なるため、DD段階で必ず対象契約の供給会社に照会する必要があります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -143,6 +146,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               また、コーポレートPPAを結んでいる場合は契約承継の可否が発電事業者との協議事項になり、数ヶ月の追加交渉が発生します。契約に「Change of Control」条項があると、事前同意や違約金発生の可能性があり、DDの早期段階での洗い出しが必須です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -166,6 +172,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               クロージング当日の電力供給を途切れさせないため、以下の項目をクロージング30日前・7日前・前日で段階的に確認するのが実務的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>クロージング30日前：電力会社への承継通知書提出、供給地点特定番号・契約番号の棚卸し完了</li>
               <li>クロージング14日前：譲受会社の法人口座での口座振替変更手続き、請求書送付先の変更依頼</li>
@@ -182,6 +191,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               次に多いのが、<strong>再エネメニューの契約条件改定</strong>です。承継の過程で再エネ比率が下がるプランに自動切替されたり、非化石証書の割当が失われたりして、グループのScope2報告に影響するケースがあります。M&A後の第一四半期にScope2排出量を必ず再計算する運用を推奨します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -210,6 +222,7 @@ export default function Page() {
               { href: "/spin-off-energy-contracts", title: "分社化・会社分割時の電力契約", description: "空白期間を避けるための設計。" },
               { href: "/holding-company-electricity-review", title: "持株会社化に伴う電力契約の見直し", description: "契約単位とデマンド合算の論点。" },
               { href: "/auto-renewal-clause-risks", title: "自動更新条項のリスク", description: "DDで見落としやすい更新条項の管理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

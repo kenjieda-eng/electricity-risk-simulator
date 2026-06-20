@@ -221,6 +221,9 @@ export default function EmergencyContractTermsChangePage() {
           条件変更通知は契約の根幹となる料金体系・算定方式・調整項目の枠組み自体が変わります。
           以下のような変更が代表的です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -252,6 +255,9 @@ export default function EmergencyContractTermsChangePage() {
         <h2 className="text-xl font-semibold text-slate-900">通知が来たときの初動5ステップ</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           変更通知を受け取ったら、以下の順序で対応します。焦って結論を出す前に、まず情報を整理することが重要です。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ol className="mt-4 space-y-4">
           {initialSteps.map((s, i) => (
@@ -306,6 +312,9 @@ export default function EmergencyContractTermsChangePage() {
         <h2 className="text-xl font-semibold text-slate-900">受け入れるべきか断るべきかの判断ポイント</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           変更を受け入れるか、交渉・切替を選ぶかは以下の観点で判断します。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {acceptOrRejectGuide.map((group, i) => (
@@ -366,6 +375,9 @@ export default function EmergencyContractTermsChangePage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           契約条件変更通知には、業界全体の動向を反映したものと、個別の電力会社の事情によるものがあります。
           背景を理解することで、適切な交渉や判断が可能になります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 space-y-4">
           {commonChangePatterns.map((p, i) => (
@@ -430,6 +442,7 @@ export default function EmergencyContractTermsChangePage() {
               title: "CFOのための電力市場基礎",
               description: "契約条件変更を経営層に説明する際の電力市場の基礎知識。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

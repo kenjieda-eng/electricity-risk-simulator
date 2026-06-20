@@ -157,6 +157,9 @@ export default function MultiSitePlanSelectionPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             一方で、拠点ごとに別々の電力会社・別々のプランを管理することは実務上の工数を増やします。「最適化のメリット」と「管理コスト」のバランスを取ることが多拠点企業特有の課題です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -165,6 +168,9 @@ export default function MultiSitePlanSelectionPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             まず自社の拠点をタイプ別に分類し、それぞれの特性を把握することが出発点になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {siteCharacteristics.map((site) => (
@@ -227,6 +233,9 @@ export default function MultiSitePlanSelectionPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             ただし、一括交渉には注意点もあります。電力会社によっては高圧・特別高圧・低圧をまとめた一括対応ができない場合もあります。また、プランの種類（固定・市場連動）が同一でなければ一括見積もりが難しいケースもあります。交渉の際は「総量でいくらになるか」を確認したうえで、拠点別の条件と比較することをお勧めします。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -251,6 +260,9 @@ export default function MultiSitePlanSelectionPage() {
               多拠点の電力契約を本社で一括管理するか、各施設が管理するかによって、情報収集・契約交渉の体制も変わります。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -306,6 +318,7 @@ export default function MultiSitePlanSelectionPage() {
               title: "法人向け電気料金見積書の見方",
               description: "複数拠点の見積書を比較する際のポイント。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
