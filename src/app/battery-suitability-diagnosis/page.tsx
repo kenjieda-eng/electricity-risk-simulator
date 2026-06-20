@@ -110,6 +110,9 @@ export default function BatterySuitabilityDiagnosisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             産業用蓄電池の主な活用目的を整理します。自社で実現したいことと照らし合わせながら診断を進めてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {[
               { title: "ピークカット・デマンド削減", body: "使用量ピーク時に放電することで、デマンド（最大需要電力）を下げ基本料金を削減する。" },
@@ -171,6 +174,9 @@ export default function BatterySuitabilityDiagnosisPage() {
           <h2 className="text-xl font-semibold text-slate-900">診断結果から次のアクションを考える</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             「向いている」項目が多かった場合の次のステップを整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {[
@@ -280,6 +286,7 @@ export default function BatterySuitabilityDiagnosisPage() {
               title: "蓄電池導入向き不向き診断（このページ）",
               description: "現在のページです。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

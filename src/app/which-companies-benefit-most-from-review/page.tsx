@@ -190,6 +190,7 @@ export default function WhichCompaniesBenefitMostFromReviewPage() {
             { href: "/review-multi-site-electricity-contracts", title: "複数拠点の電力契約を見直すときの進め方", description: "効果が出やすい多拠点法人の見直し手順を整理できます。" },
             { href: "/who-should-handle-electricity-contract-review", title: "どの部署が法人の電力契約見直しを担当するべきか", description: "見直し効果を高める体制づくりの参考。" },
             { href: "/how-to-start-electricity-contract-review", title: "法人の電力契約見直しは何から始めるべきか", description: "見直しに着手する際の入口を整理できます。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

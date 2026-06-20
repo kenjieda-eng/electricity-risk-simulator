@@ -153,6 +153,9 @@ export default function ContractRenewal6MonthsBeforePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             3か月前からの見積比較・社内承認・手続きは最低限必要なプロセスです。しかし、その前段階の準備が不十分だと、見積取得の精度が低くなったり、社内合意に時間を取られて判断が遅れたりします。6か月前から動くことで得られるメリットは以下のとおりです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">見積精度の向上</p>
@@ -220,6 +223,9 @@ export default function ContractRenewal6MonthsBeforePage() {
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             3か月前の見積取得後に改めてシミュレーションを行うと、現行との差を具体的な金額で比較できるため、より説得力のある社内説明が可能になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -309,6 +315,7 @@ export default function ContractRenewal6MonthsBeforePage() {
               title: "市場連動プランと固定プランの違い",
               description: "6か月前の準備段階でプラン選択の軸を整理しておく。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

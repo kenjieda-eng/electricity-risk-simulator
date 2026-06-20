@@ -138,6 +138,9 @@ export default function HighVoltageContractReviewPointsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧電力契約の電気料金は、大きく分けると以下の要素で構成されます。見直しに先立って、現在の請求書でこれらの内訳を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="font-semibold text-slate-900">基本料金（円/kW・月）</p>
@@ -191,6 +194,9 @@ export default function HighVoltageContractReviewPointsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧契約の見積書を複数社から取得して比較する際には、以下の点に注意することで正確な比較が可能になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -273,6 +279,7 @@ export default function HighVoltageContractReviewPointsPage() {
               title: "固定プランとは",
               description: "高圧契約での固定プラン選択の判断軸と特徴。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

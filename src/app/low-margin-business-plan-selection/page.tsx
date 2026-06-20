@@ -178,6 +178,9 @@ export default function LowMarginBusinessPlanSelectionPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             つまり、同じ絶対額の電気代変動でも、利益率が低いほど収益への打撃は大きくなります。市場連動プランを採用する場合、この「利益率に対する電気代変動の影響」を事前に試算しておくことが不可欠です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 overflow-x-auto">
             <p className="text-sm font-semibold text-slate-900">
@@ -242,6 +245,9 @@ export default function LowMarginBusinessPlanSelectionPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下は、利益率が低い主要業種の収益構造と電力プラン選択の考え方です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {industryProfiles.map((profile) => (
@@ -356,6 +362,7 @@ export default function LowMarginBusinessPlanSelectionPage() {
               title: "法人の電力契約見直しは何から始めるべきか",
               description: "プラン選択後の見直し実務の進め方。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

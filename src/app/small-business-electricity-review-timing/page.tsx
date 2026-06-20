@@ -149,6 +149,9 @@ export default function SmallBusinessElectricityReviewTimingPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               小規模事業者は担当者の人的リソースが限られるため、全トリガーを常時ウォッチするのは現実的ではありません。「<strong>最優先は2つ、残りは四半期に1回チェック</strong>」くらいの運用が継続しやすい粒度です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {triggers.map((t) => (
@@ -187,6 +190,9 @@ export default function SmallBusinessElectricityReviewTimingPage() {
             </ol>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               具体的な切替手順は<Link href="/how-to-switch-electricity-provider" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力会社の切り替え手順</Link>を、請求書の分解方法は<Link href="/business-electricity-bill-breakdown" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">法人電気代の請求書の内訳</Link>をあわせて参照してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -230,6 +236,7 @@ export default function SmallBusinessElectricityReviewTimingPage() {
                 title: "電力会社の切り替え手順",
                 description: "見直し判断のあとに進める具体的な流れ。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

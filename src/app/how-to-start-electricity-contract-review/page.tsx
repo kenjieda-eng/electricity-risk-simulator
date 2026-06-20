@@ -245,6 +245,9 @@ export default function HowToStartElectricityContractReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直しは以下の順番で進めます。比較作業だけが先行すると、前提条件がそろわず判断が誤りやすくなるため、Step 1〜3の現状把握を先に完了させることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ol className="mt-4 space-y-3">
             {steps.map((s, i) => (
               <li key={i} className="flex gap-4 rounded-lg border border-slate-100 bg-slate-50 p-4">
@@ -330,6 +333,9 @@ export default function HowToStartElectricityContractReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             「年間電気代の規模」と「前年比の変動幅」の2軸で、見直し着手の優先度を判断できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
@@ -473,6 +479,7 @@ export default function HowToStartElectricityContractReviewPage() {
               title: "中小企業向け電力会社比較",
               description: "中小企業ターゲットの新電力比較ガイド。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

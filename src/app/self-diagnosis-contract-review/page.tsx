@@ -146,6 +146,9 @@ export default function SelfDiagnosisContractReviewPage() {
             </Link>{" "}
             に進んで定量化することをおすすめします。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-red-100 bg-red-50 p-4">
               <p className="text-sm font-semibold text-red-700">重要度：高</p>
@@ -230,6 +233,9 @@ export default function SelfDiagnosisContractReviewPage() {
           <h2 className="text-xl font-semibold text-slate-900">見直しを始めるための整理ポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             診断後に見直しを進める場合、以下の順で情報を整理すると効率よく進めることができます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約書から「プラン名・契約期間・満了日・中途解約条件」を確認する</li>
@@ -350,6 +356,7 @@ export default function SelfDiagnosisContractReviewPage() {
               title: "見積比較前チェック診断",
               description: "見積を依頼する前に揃えておくべき情報・資料を確認する。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

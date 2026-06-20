@@ -199,6 +199,9 @@ export default function InternalChecklistForElectricityContractReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の8項目は、電力契約の見直し実務を進めるうえで社内での確認が必要な事項です。確認先・確認のタイミング・確認しないリスクを整理しました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -249,6 +252,9 @@ export default function InternalChecklistForElectricityContractReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直し情報は複数部署に分散しています。以下の分担表を参考に、依頼先と期限を明確にして進めると漏れを防げます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {departmentDivision.map((dept, i) => (
@@ -346,6 +352,7 @@ export default function InternalChecklistForElectricityContractReviewPage() {
               title: "市場連動プランと固定プランの違い",
               description: "社内確認後のプラン選択比較の参考として。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

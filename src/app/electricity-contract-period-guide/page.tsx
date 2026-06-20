@@ -109,6 +109,9 @@ export default function ElectricityContractPeriodGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約期間が終了すると、自動更新条項がある場合は同じ条件で自動的に更新されます。自動更新を拒否したい場合は、契約書に定められた期限（多くは満了の1〜3か月前）までに意思表示が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -202,6 +205,9 @@ export default function ElectricityContractPeriodGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の上昇リスクをシミュレーションで確認することで、長期固定契約の価値を定量的に評価できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -290,6 +296,7 @@ export default function ElectricityContractPeriodGuidePage() {
               title: "固定プランとは",
               description: "長期契約で検討しやすい固定プランの特徴と注意点。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

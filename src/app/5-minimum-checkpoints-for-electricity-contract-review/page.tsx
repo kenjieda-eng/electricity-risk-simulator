@@ -220,6 +220,9 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の5項目は、見直し実務で最初に確認すべき基本チェックポイントです。各項目の「なぜ重要か」「確認方法」「見落とした場合のリスク」を整理しました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -270,6 +273,9 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             5項目を同時に確認することが理想ですが、優先順位をつけることで見直し着手のハードルが下がります。特に「契約期間と違約金」は、確認が遅れると選択肢が大幅に狭まるため最初に確認します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -427,6 +433,7 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
               title: "法人の電気料金を削減する見直しポイント7選",
               description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

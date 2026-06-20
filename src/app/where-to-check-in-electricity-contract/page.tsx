@@ -184,6 +184,7 @@ export default function WhereToCheckInElectricityContractPage() {
             { href: "/review-contract-renewal-deadlines", title: "法人の電力契約を更新前に確認したい期限とは", description: "契約書に記載される期限項目を実務目線で確認できます。" },
             { href: "/switching-business-electricity-contract", title: "法人が電力契約を切り替えるときの注意点", description: "解約条項を踏まえた切替時の実務ポイント。" },
             { href: "/should-you-review-after-price-increase-notice", title: "値上げ通知が来たとき、法人の電力契約はすぐ見直すべきか", description: "通知と契約条項の整合を判断する視点を整理します。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -124,6 +124,9 @@ export default function InternalExplanationPreparationChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約見直しの社内説明は、以下の4つのパートで構成するとまとまりやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {[
               { step: 1, title: "現状と課題", body: "現在いくら払っているか・なぜ上がっているか・このまま続くとどうなるか" },
@@ -162,6 +165,9 @@ export default function InternalExplanationPreparationChecklistPage() {
           <h2 className="text-xl font-semibold text-slate-900">社内説明でよくある反対意見と対応案</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             事前に想定質問への回答を準備しておくことで、説明の場での対応がスムーズになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {qaItems.map((qa) => (
@@ -281,6 +287,7 @@ export default function InternalExplanationPreparationChecklistPage() {
               title: "見積比較前チェック診断",
               description: "見積を依頼する前に揃えておくべき情報・資料を確認。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

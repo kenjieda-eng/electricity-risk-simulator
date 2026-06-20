@@ -138,6 +138,9 @@ export default function ExtraHighVoltageContractReviewPointsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧の料金構造は高圧と同様に基本料金＋電力量料金が基本ですが、以下の点で異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
               <span className="font-semibold text-slate-900">単価水準が低い：</span>
@@ -209,6 +212,9 @@ export default function ExtraHighVoltageContractReviewPointsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧の切替は影響範囲が大きいため、以下のリスクに事前に対処することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
               <span className="font-semibold text-slate-900">供給停止リスク：</span>
@@ -267,6 +273,7 @@ export default function ExtraHighVoltageContractReviewPointsPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "特別高圧を含む全般的な見直し確認項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
