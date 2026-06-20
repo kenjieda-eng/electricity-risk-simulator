@@ -385,6 +385,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力（自治体系・地産地消）は、地域の再エネ電源を活用し、SDGs・地域貢献を社会的価値として打ち出す新電力の類型です。本ページは旧一電・新電力の主要類型を読み比べる『電力会社別解説』の一つとして、カテゴリ全体の法人活用観点を公開情報に基づき中立的に整理します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -407,6 +410,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力の主要類型を、自治体出資型・市民協同型・地域事業者型の観点と燃調算定方式で整理します。具体的単価・契約条件は各社の公式公表・個別見積で確認してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {planTypes.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -422,6 +428,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">供給エリア・電源ポートフォリオ・JEPX取扱い（公表データ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               供給エリア、電源ポートフォリオ（地産地消の再エネ比率）、JEPX市場での取扱い、全社共通の制度負担を公表データに基づき整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {dataPoints.map((item) => (
@@ -441,6 +450,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力の活用パターンを3シーンで、公開情報を踏まえた中立的な判断プロセスをケース別に整理します。特定社の優劣評価ではなく、自社条件と経営方針に照らした判断の進め方を示すものです。具体的削減額は契約条件・使用実態により異なり、推測値は記載しません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -459,6 +471,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">契約手続き・サポート体制・地域新電力固有の留意点</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               法人契約の手続きの流れ、供給地点特定番号の確認、サポート窓口、地域新電力固有の留意点を整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {procedures.map((item) => (
@@ -482,6 +497,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力と旧一電・他新電力を中立的に判断するための観点を整理します。価格・サービスだけでなく、社会的価値・電源構成の透明性も含めて総合的に評価することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {compareViewpoints.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -504,6 +522,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力の公開情報を活用するうえでの留意点を整理します。組織規模・事業継続性・JEPX高騰時の対応実績・RE100クライテリア適合性に注意が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -523,6 +544,9 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">電気代最適化と地域貢献の打ち手</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地域新電力契約の有無にかかわらず、法人需要家が取り得る電気代最適化と地域貢献の打ち手を整理します。契約電力適正化・地産地消調達・省エネ投資・ハイブリッド調達・相見積が柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -594,6 +618,7 @@ export default function LocalUtilityCorporateElectricityGuidePage() {
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "固定単価が向くケースの判断軸。" },
               { href: "/decarbonization-glossary", title: "脱炭素用語集", description: "RE100・追加性等の用語整理。" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

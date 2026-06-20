@@ -385,6 +385,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               伊藤忠エネクスはエネルギー流通を中核とする商社系新電力の例です。本ページは旧一電・新電力の主要類型を読み比べる『電力会社別解説』の一つとして、特定企業の法人向けサービス詳細を公開情報に基づき中立的に整理します。特定社の優劣評価は行いません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -409,6 +412,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               伊藤忠エネクスが公開する法人向けプラン体系を、特別高圧（対応可否）・高圧・エネルギー一括・再エネメニュー・燃調算定方式の観点で整理します。具体的単価は公式公表・個別見積で確認してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {planTypes.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -424,6 +430,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">供給エリア・電源・JEPX取扱い（公表データ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               供給エリア、電源・調達、JEPX市場での取扱い、全社共通の制度負担を公表データに基づき整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {dataPoints.map((item) => (
@@ -443,6 +452,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系・流通系新電力の活用パターンを3規模で、伊藤忠エネクスの公開情報を踏まえた中立的な判断プロセスをケース別に整理します。特定社の優劣評価ではなく、自社条件に照らした判断の進め方を示すものです。具体的削減額は契約条件・使用実態により異なり、推測値は記載しません。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
                 <div key={cs.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -461,6 +473,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">契約手続き・サポート体制・新電力切替の留意点</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               法人契約の手続きの流れ、供給地点特定番号の確認、サポート窓口、新電力切替時の留意点を整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {procedures.map((item) => (
@@ -486,6 +501,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               商社系・流通系新電力と旧一電・他新電力を中立的に判断するための観点を整理します。単価だけでなく複数の要素を総合的に評価することが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {compareViewpoints.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -508,6 +526,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               伊藤忠エネクスの公開情報を活用するうえでの留意点を整理します。燃調算定方式の確認、エネルギー一括効果の見極め、市場連動メニューのリスク、新電力撤退時の備えに注意が必要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -529,6 +550,9 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">電気代最適化の打ち手（契約見直し・省エネ・再エネ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               伊藤忠エネクス契約の有無にかかわらず、法人需要家が取り得る電気代最適化の打ち手を整理します。契約電力適正化・エネルギー一括最適化・再エネ調達・省エネ投資・相見積・燃調ヘッジが柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -601,6 +625,7 @@ export default function ItochuEnexCorporateElectricityGuidePage() {
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を整理。" },
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動を避けるべきケース。" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
