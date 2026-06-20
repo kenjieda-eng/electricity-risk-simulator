@@ -171,6 +171,9 @@ export default function ExtremeHeatElectricityRiskPage() {
           東京・大阪・名古屋の猛暑日数を年次棒グラフで比較。2010年代から増加傾向が明確になり、
           2025年には名古屋52日、大阪45日、東京29日を記録しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4">
           <HotDaysBarChart />
         <MarketDataDownload
@@ -213,6 +216,9 @@ export default function ExtremeHeatElectricityRiskPage() {
           5年ごとの猛暑日数平均を見ると、増加傾向が明確に確認できます。
           特に2010年代以降は加速しており、2020年代の平均は1990年代後半に比べて
           東京・大阪・名古屋ともに2倍以上の水準に達しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -279,6 +285,9 @@ export default function ExtremeHeatElectricityRiskPage() {
           猛暑日・熱帯夜の増加は、単なる「暑い日が増えた」ではなく、電力システムに対して
           構造的な負荷増加をもたらしています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-4">
           <div className="flex gap-4">
             <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">1</div>
@@ -333,6 +342,9 @@ export default function ExtremeHeatElectricityRiskPage() {
           JEPXスポット市場では、電力需要と価格の間に強い相関があります。
           猛暑日は需要急増を引き起こし、供給余力が低下するにつれて価格が指数関数的に上昇します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-white p-4">
             <h3 className="text-base font-semibold text-sky-900">猛暑日のデータ（平均）</h3>
@@ -367,6 +379,9 @@ export default function ExtremeHeatElectricityRiskPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           過去の電力需要ピーク日トップ10はすべて8月に集中しており、しかも2018〜2022年の
           猛暑年に集中しています。猛暑日の増加と電力需要ピークの高止まりが連動していることが分かります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -449,6 +464,9 @@ export default function ExtremeHeatElectricityRiskPage() {
           デマンドコントロール、蓄電池、空調効率化、プラン選択の4つの対策を
           総合的に検討することをお勧めします。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -467,6 +485,7 @@ export default function ExtremeHeatElectricityRiskPage() {
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "夏の高値時間帯を避けるための蓄電池活用法。" },
             { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "猛暑年のJEPX価格がどう動いたかを詳解。" },
             { href: "/electricity-demand-pattern", title: "電力需要の時間帯・季節パターン", description: "需要パターンの詳細データと法人への影響。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

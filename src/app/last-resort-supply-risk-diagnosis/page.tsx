@@ -144,6 +144,9 @@ export default function LastResortSupplyRiskDiagnosisPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -202,6 +205,9 @@ export default function LastResortSupplyRiskDiagnosisPage() {
               最終保障供給から通常の小売契約に切り替える方法
             </Link>{" "}
             をご覧ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -295,6 +301,7 @@ export default function LastResortSupplyRiskDiagnosisPage() {
               title: "電力契約見直し自己診断",
               description: "そもそも見直しが必要かを10項目で確認する診断ページ。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

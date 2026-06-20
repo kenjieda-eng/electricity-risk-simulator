@@ -109,6 +109,9 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             同じ上振れ幅でも「短く大きい上昇」と「長く続く上昇」では、対応策や意思決定者への説明内容が変わります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -148,6 +151,9 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
             </Link>
             は、単独比較というより、複数要因が重なる上限イメージを持つための基準として使うのが適切です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -162,6 +168,9 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
               市場連動と固定の比較
             </Link>
             と併用すると、シナリオ別の差分が読み取りやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -285,6 +294,9 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             山型は特定月のキャッシュフローを圧迫し、平坦型は年間利益率をじわじわ押し下げます。比較時は月次と年間の両面で見ることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -325,6 +337,7 @@ export default function HowToCompareElectricityPriceRiskScenariosPage() {
               title: "市場連動プランと固定プランの違い",
               description: "シナリオ別の影響差を契約比較の観点から確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

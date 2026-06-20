@@ -148,6 +148,9 @@ export default function ExplainingPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             「電気代が高くなっている気がする」という感覚的な懸念では、経営層の優先事項には入りにくいのが現実です。数値化することで以下の効果が生まれます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>問題の大きさが具体的に把握できる</li>
             <li>「対策をする価値があるか」の判断基準が明確になる</li>
@@ -180,6 +183,9 @@ export default function ExplainingPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             単一の数値よりも、「複数のシナリオ」で示すことで、リスクの幅と対策の価値を同時に伝えることができます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {scenarioTypes.map((item) => (
               <div key={item.heading}>
@@ -198,6 +204,9 @@ export default function ExplainingPriceSurgeRiskPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金リスクのシミュレーターを使うことで、現行契約条件のもとで燃料費調整額や市場価格が変動した場合の年間影響額を試算できます。試算結果は社内説明の数値根拠として活用できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>燃料費調整額が○円/kWh上昇した場合の年間追加コスト</li>
@@ -277,6 +286,9 @@ export default function ExplainingPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金リスクを経営層・財務担当に伝える際は、以下のポイントを意識すると理解を得やすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経営層向け</p>
@@ -347,6 +359,7 @@ export default function ExplainingPriceSurgeRiskPage() {
               title: "法人の電気料金はどの程度上がるのか",
               description: "上昇幅の実績と今後のシナリオ別試算。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -117,6 +117,9 @@ export default function PowerRiskManagementPage() {
             主なリスクは、市場価格の変動、需要予測のずれ、需給逼迫、燃料価格、制度変更です。これらは別々に動くのではなく、
             同時に重なることがあります。たとえば、燃料高と猛暑と供給余力低下が重なれば、価格も数量確保も厳しくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -124,6 +127,9 @@ export default function PowerRiskManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             どの手段にも強みと弱みがあるためです。JEPXは柔軟ですが価格変動を受けやすく、相対契約や長期契約は安定しやすい一方で、
             需要変化に完全一致させるのは難しくなります。再エネ調達は電源構成や環境価値の面で有効ですが、出力変動や制度面の読み替えも必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <InfoBox title="分散調達の前提">
             分散調達は、必ず平均コストを最小化するためだけの考え方ではありません。極端な上振れを抑え、供給継続性を高めるための設計でもあります。
@@ -158,6 +164,9 @@ export default function PowerRiskManagementPage() {
             長期契約や相対契約は、ベース需要に対する数量確保と価格安定に向きやすい手段です。先物は、その上で残る将来価格の変動を抑える役割があります。
             再エネ調達は、電源構成の多様化や環境価値の確保に寄与し、非化石証書は価値のレイヤーを補います。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
             <InfoBox title="ベースを支える手段">
               相対契約、長期契約、自社電源、PPAなどは、数量確保と見通しの土台を作る役割を持ちます。
@@ -173,6 +182,9 @@ export default function PowerRiskManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実務では、一番安い手段を一つ選ぶのではなく、ベース部分を安定的な契約で押さえ、残る変動を市場やヘッジで吸収するというポートフォリオ発想が重要です。
             これに再エネ調達や環境価値の確保を重ねていくことで、価格、数量、制度、環境価値のバランスを取ります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4">
             <FlowDiagram
@@ -313,6 +325,7 @@ export default function PowerRiskManagementPage() {
               title: "デマンドレスポンス（DR）で収益を得る方法",
               description: "需要側で価格変動リスクをヘッジし、さらに収益源とする法人向けガイド。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

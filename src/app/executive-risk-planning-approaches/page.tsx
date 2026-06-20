@@ -168,6 +168,9 @@ export default function ExecutiveRiskPlanningApproachesPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: アプローチ1 固定費化 */}
@@ -198,6 +201,9 @@ export default function ExecutiveRiskPlanningApproachesPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: アプローチ2 ヘッジ */}
@@ -287,6 +293,9 @@ export default function ExecutiveRiskPlanningApproachesPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 事業計画への織り込み方 */}
@@ -325,6 +334,9 @@ export default function ExecutiveRiskPlanningApproachesPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: 組み合わせパターン */}
@@ -368,6 +380,7 @@ export default function ExecutiveRiskPlanningApproachesPage() {
               title: "電力コストのKPI管理と経営ダッシュボードの設計",
               description: "電力費を経営KPIとして定常監視するための指標とダッシュボードの設計ガイド。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

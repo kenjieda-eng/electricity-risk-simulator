@@ -144,6 +144,9 @@ export default function RetailChainPriceSurgeRiskPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             年商100億円のスーパーで営業利益が2億円（利益率2%）だとすると、上記のシナリオでは年間コスト増が利益の大部分を消費することになります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -188,6 +191,9 @@ export default function RetailChainPriceSurgeRiskPage() {
               高騰が起きてから全社への影響を把握するため、対応が後手になりやすい。
             </li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -259,6 +265,7 @@ export default function RetailChainPriceSurgeRiskPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "チェーン展開企業向けの契約確認項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

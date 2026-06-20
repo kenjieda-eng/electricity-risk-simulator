@@ -319,6 +319,9 @@ export default function IrDisclosureElectricityRiskPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電気代リスクのIR開示は『有価証券報告書』『統合報告書』『決算短信』『コーポレート・ガバナンス報告書』『TCFD/ISSB報告書』の5媒体で行います。各媒体の役割と記載位置を理解することがCFO・IR担当の出発点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {disclosureStructure.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -349,12 +352,18 @@ export default function IrDisclosureElectricityRiskPage() {
               <Link href="/cfo-electricity-cost-basics" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CFOのための電気代基礎</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業界平均との比較・ベンチマーク開示</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               プライム上場企業の電気代・Scope2開示状況を業種別に整理することで、自社の開示水準を客観的に評価できます。海外グローバル企業の先進事例も参考にすべき重要視点です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {benchmarkDisclosure.map((item) => (
@@ -370,6 +379,9 @@ export default function IrDisclosureElectricityRiskPage() {
             <h2 className="text-xl font-semibold text-slate-900">経営指標への影響開示 — 記載例集</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               実際の開示文章の標準例を5パターン整理します。事業等のリスク・MD&A・感度分析・Scope2・電力調達戦略の各シーンで活用できる雛形です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {disclosureContent.map((item) => (
@@ -412,6 +424,9 @@ export default function IrDisclosureElectricityRiskPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               機関投資家・ESG格付機関・サステナビリティアナリストとの双方向コミュニケーションを通じて、開示の質と投資家評価を向上させる体系を整備します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {investorCommunication.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -426,6 +441,9 @@ export default function IrDisclosureElectricityRiskPage() {
             <h2 className="text-xl font-semibold text-slate-900">取締役会への報告フォーマット — 株主総会対応</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               株主総会で問われる電気代関連質問への対応、ESG株主提案への姿勢表明、個人株主向け説明資料整備など、IR・株主総会対応の標準フレームワークを整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {shareholderMeeting.map((item) => (
@@ -541,6 +559,7 @@ export default function IrDisclosureElectricityRiskPage() {
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "削減打ち手の全体像。" },
               { href: "/articles/decarbonization", title: "脱炭素・カーボンニュートラル", description: "脱炭素戦略カテゴリ。" },
               { href: "/articles/for-executives", title: "経営層・CFO向け（一覧）", description: "経営層向け記事のハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

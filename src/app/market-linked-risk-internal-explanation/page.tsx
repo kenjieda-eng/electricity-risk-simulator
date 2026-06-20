@@ -164,6 +164,9 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             また、「問題が起きたときの責任の所在」を明確にしておかないと、高騰が発生した際に「なぜこのプランを選んだのか」という批判が担当者に向かうことがあります。適切な社内説明は、リスクの「見える化」と「意思決定の文書化」という2つの目的を持っています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {explanationSteps.map((item) => (
@@ -185,6 +188,9 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             社内説明で「リスクが現実に起きた事例」として参照できる代表的な事例を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -225,6 +231,9 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             経営層・上司からよくある反論と、それに対する答え方の例を整理します。事前に想定問答を準備しておくことで、説明の場での対応がスムーズになります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {commonObjections.map((item) => (
               <div key={item.objection} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -251,6 +260,9 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             この文書は、高騰が発生した際の「なぜこのプランを選んだのか」という問いへの答えになります。また、担当者異動時の引き継ぎ資料としても機能します。文書化は採用後に発生しうる批判から担当者を守るための重要なリスク管理手段です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -314,6 +326,7 @@ export default function MarketLinkedRiskInternalExplanationPage() {
               title: "電気料金見直しを社内で説明するときのポイント",
               description: "市場連動リスク説明を含む社内承認プロセスの進め方。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
