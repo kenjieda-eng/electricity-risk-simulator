@@ -401,6 +401,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               医療・福祉の省エネ・脱炭素・防災投資には、厚労省連携補助・SII省エネ補助・ZEB補助・BCP非常用電源支援・GX税制・自治体補助が活用できます。省エネと防災（BCP電源）を一体で訴求することで、採択率と費用対効果を最大化できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -425,6 +428,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               医療・福祉が活用できる主要な補助金・税制を、役割・補助率・対象設備別に整理します。投資内容に応じて最適な制度を選定し、併用・重ね取りを検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -440,6 +446,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・上限・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率・上限額・採択率の水準と、費用対効果・防災（BCP）の両面評価を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -458,6 +467,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 補助前後の投資回収（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               医療・福祉の代表的な3規模で、補助金活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -483,6 +495,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で導入しやすい医療・福祉固有の設備を整理します。停電が生命に直結するためBCP電源・コージェネを軸に、24時間空調・給湯の省エネを組合せるのが採択戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -504,6 +519,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電力使用・BCP電源需要の把握から実績報告まで、補助金申請の標準的な流れを整理します。空調・非常用発電機のリードタイムと交付決定前発注の禁止、診療継続工事の調整に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -527,6 +545,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金活用で失敗しないための留意点を整理します。発注タイミング・併用ルール・実績報告・診療継続を止めない工事計画が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -548,6 +569,9 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">医療・福祉の省エネ投資・採択戦略</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               BCP電源＋省エネの一体投資の最優先、24時間空調の高効率化、国×自治体×税制の重層活用、屋根太陽光＋蓄電池（BCP兼用）との組合せ、複数施設での段階申請が採択戦略の柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -624,6 +648,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
               { href: "/nursing-care-facility-electricity-cost-review", title: "介護施設の電気料金見直し（業種一般）", description: "介護施設の空調・給湯の最適化。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -401,6 +401,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業の省エネ・脱炭素投資には、国の補助金・税制・自治体補助の6層が活用できます。補助金（返済不要）と税制優遇（税負担軽減）を組合せ、生産性向上と一体で訴求することで採択率と費用対効果を最大化できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業が活用できる主要な補助金・税制を、役割・補助率・対象設備別に整理します。投資内容に応じて最適な制度を選定し、併用・重ね取りを検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・上限・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率・上限額・採択率の水準と、費用対効果の重要性を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 補助前後の投資回収（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造業の代表的な3規模で、補助金活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +493,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で導入しやすい製造業固有の設備を整理します。効果の大きいコンプレッサー・サーボプレス・空調・熱処理炉から優先するのが採択戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +517,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               省エネ診断から実績報告まで、補助金申請の標準的な流れを整理します。交付決定前の発注は対象外となる点に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +543,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金活用で失敗しないための留意点を整理します。発注タイミング・併用ルール・実績報告・計画書の質が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -546,6 +567,9 @@ export default function SubsidyManufacturingStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">製造業の省エネ投資・採択戦略</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               効果の大きい設備からの優先、生産性向上との一体投資、国×自治体×税制の重層活用、再エネ調達との組合せ、複数年計画での段階申請が採択戦略の柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -622,6 +646,7 @@ export default function SubsidyManufacturingStrategyPage() {
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業態別の比較ベンチマーク。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

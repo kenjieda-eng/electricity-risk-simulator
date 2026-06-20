@@ -401,6 +401,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ホテル・宿泊業の省エネ・脱炭素投資には、観光庁補助・SII省エネ補助・ZEB補助・需要家主導型PPA補助・GX税制・自治体補助が活用できます。観光振興（インバウンド対応）と省エネを一体で訴求し、外資系・サステナブル観光のCN要請を反映することで採択率と費用対効果を最大化できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -421,6 +424,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ホテル・宿泊業が活用できる主要な補助金・税制を、役割・補助率・対象設備別に整理します。投資内容に応じて最適な制度を選定し、併用・重ね取りを検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -436,6 +442,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・上限・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率・上限額・採択率の水準と、費用対効果の重要性を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -454,6 +463,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 補助前後の投資回収（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ホテル・宿泊業の代表的な3規模で、補助金活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -479,6 +491,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で導入しやすいホテル・宿泊業固有の設備を整理します。効果の大きい給湯・空調から優先するのが採択戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -500,6 +515,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エネルギー使用把握から実績報告まで、補助金申請の標準的な流れを整理します。給湯・空調のリードタイムと交付決定前発注の禁止、休館工事の調整に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -523,6 +541,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金活用で失敗しないための留意点を整理します。発注タイミング・併用ルール・実績報告・営業継続/休館工事の調整が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -544,6 +565,9 @@ export default function SubsidyHotelLeisureStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">ホテル・宿泊業の省エネ投資・採択戦略</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               給湯ヒートポンプ化の最優先、観光振興（インバウンド対応）との一体投資、国×自治体×税制の重層活用、屋根太陽光との組合せ、複数施設での段階申請が採択戦略の柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -620,6 +644,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
               { href: "/subsidy-demand-side-ppa", title: "需要家主導型PPA補助（総論）", description: "再エネ調達補助の制度概要。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

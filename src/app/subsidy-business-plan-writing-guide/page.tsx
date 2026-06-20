@@ -423,6 +423,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               採択される事業計画書の主要構成要素を、各セクションの役割と書き方とともに整理します。現状課題→投資内容→定量効果→実現可能性→スケジュール＋政策合致が基本の流れです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +441,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">数値根拠の示し方と訴求軸</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               計画書で最も評価される数値根拠の示し方と、生産性・省エネ・CNの三つの訴求軸を整理します。費用対効果を意識した投資設計が採択を左右します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +462,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">採択された計画書の構成例3パターン（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               製造・物流・商業の代表的な3パターンで、課題→投資・効果→採択ポイントの構成例を提示します。いずれも公開事例・公募要領から再構成した代表シナリオで、数値部分は自社データに置き換えて記述します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +490,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書に必ず記述すべき項目を整理します。各項目を審査項目に対応させ、定量データと論理で示すことが採択の前提です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +514,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">計画書作成の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               公募要領の精読から提出まで、事業計画書作成の標準的な流れを整理します。現状把握・効果算定・構成の組立・記述・推敲の順で進めると一貫性の高い計画書になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +540,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               不採択を招きやすい減点ポイントを整理します。効果の定性的記述・課題と投資の不整合・実現性の裏付け不足・審査項目の無視・工程の不備が主な原因です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +565,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               算定根拠付きの数値、課題→投資→効果の一貫性、三つの訴求軸の一体化、加点項目の押さえ、第三者チェックが、採択率を高める記述テクニックの柱です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -568,6 +589,9 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             <h2 className="text-xl font-semibold text-slate-900">事業計画書作成チェックリスト（12項目）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               提出前にこのチェックリストで計画書を点検しましょう。1項目でも未確認があれば、採択率が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -621,6 +645,7 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
               { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "投資判断の前提整理。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
