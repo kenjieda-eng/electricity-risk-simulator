@@ -423,6 +423,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               省エネ診断と、診断結果を活かせる補助金・税制を、役割・特徴別に整理します。無料診断を起点に、設備補助・自治体補助・税制を段階的に組合せます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +441,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <h2 className="text-xl font-semibold text-slate-900">診断費用・補助率・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               診断の費用水準（無料診断の活用）・設備補助の補助率・採択率と、費用対効果評価と診断データの連動を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +462,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 診断活用のBefore/After</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3規模で、省エネ診断を起点とした補助金獲得と電気代削減をBefore/After方式で提示します。いずれも公開情報・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +490,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               省エネ診断で改善余地が特定されやすい代表的な設備を整理します。効果の大きい空調・冷凍機・コンプレッサーから優先するのが採択・削減の戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +514,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <h2 className="text-xl font-semibold text-slate-900">診断から補助金獲得までの実務フロー（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               省エネ診断による現状把握から効果検証まで、補助金獲得の標準的なロードマップを整理します。診断データの活用・交付決定前発注の禁止・効果検証体制に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +540,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               省エネ診断・補助金活用で失敗しないための留意点を整理します。診断を活かすこと・発注タイミング・費用対効果の優先・効果検証体制が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +565,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               無料診断で現状を見える化、費用対効果の高い設備から申請、省エネ→再エネの順序、補助＋自治体＋税制の重層活用、効果検証データでのPDCAが、診断を活かす採択戦略の柱です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -568,6 +589,9 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             <h2 className="text-xl font-semibold text-slate-900">省エネ診断・補助活用チェックリスト（12項目）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               診断・補助申請前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、採択率や費用対効果が下がる可能性があります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -621,6 +645,7 @@ export default function SubsidyEnergySavingDiagnosisPage() {
               { href: "/factory-electricity-cost-benchmark", title: "工場の電気料金ベンチマーク（共通）", description: "業種比較で省エネ余地を把握。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

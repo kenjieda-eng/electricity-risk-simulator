@@ -401,6 +401,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ヒートポンプ導入にはSII省エネ補助・環境省脱炭素補助・GX税制・自治体補助が活用できます。COP改善で省エネ、ボイラ→HPの燃料転換でScope1削減を実現し、CN対応投資として一体訴求することで採択率と費用対効果を最大化できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ヒートポンプ導入に活用できる主要な補助金・税制を、役割・補助率・対象別に整理します。高効率化はSII、燃料転換は環境省を軸に、併用・重ね取りを検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・上限・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率・上限額・採択率の水準と、費用対効果の重要性を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <h2 className="text-xl font-semibold text-slate-900">業種別事例3件 — 補助前後の投資回収（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ヒートポンプの代表的な3業種で、補助金活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +493,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で導入しやすいヒートポンプ関連の設備を整理します。熱需要・温度帯に応じて空調HP・給湯HP・産業用HPを選定し、効果の大きい設備から優先するのが採択戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +517,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熱需要把握から実績報告まで、補助金申請の標準的な流れを整理します。給湯HP・産業用HPのリードタイムと交付決定前発注の禁止に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +543,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金活用で失敗しないための留意点を整理します。発注タイミング・併用ルール・温度帯適合・燃料転換の一体訴求が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -546,6 +567,9 @@ export default function SubsidyHeatPumpIntroductionPage() {
             <h2 className="text-xl font-semibold text-slate-900">ヒートポンプの省エネ投資・採択戦略</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               熱需要の大きい設備からのHP化、燃料転換によるScope1削減訴求、国×自治体×税制の重層活用、再エネ自家消費との組合せ、蓄熱・段階導入が採択戦略の柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -621,6 +645,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
               { href: "/hotel-electricity-cost-review", title: "ホテルの電気料金見直し（業種一般）", description: "大浴場・客室温水の最適化。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

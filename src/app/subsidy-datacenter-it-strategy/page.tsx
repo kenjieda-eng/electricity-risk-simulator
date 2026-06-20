@@ -421,6 +421,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               データセンター・IT業が活用できる主要な補助金・税制を、役割・補助率・対象設備別に整理します。投資内容に応じて最適な制度を選定し、併用・重ね取りを検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -436,6 +439,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・上限・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率・上限額・採択率の水準と、費用対効果（PUE改善・省エネ量あたり補助額）の重要性を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -454,6 +460,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 補助前後の投資回収（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               データセンター・IT業の代表的な3規模で、補助金活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -479,6 +488,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で導入しやすいデータセンター・IT業固有の設備を整理します。PUE改善効果の大きい液冷・外気冷房・水冷チラーから優先するのが採択戦略です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -500,6 +512,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電力使用・PUE把握から実績報告まで、補助金申請の標準的な流れを整理します。液冷・チラーのリードタイムと交付決定前発注の禁止、無停止運用工事の調整に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -523,6 +538,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金活用で失敗しないための留意点を整理します。発注タイミング・併用ルール・PUE実績報告・無停止運用を止めない工事計画が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -545,6 +563,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PUE改善（液冷・外気冷房）の最優先、AI/HPC需要との一体投資、GX税制＋補助金の重層活用、屋根太陽光＋オフサイトPPAとの組合せ、複数拠点での段階申請が採択戦略の柱です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +587,9 @@ export default function SubsidyDatacenterItStrategyPage() {
             <h2 className="text-xl font-semibold text-slate-900">データセンター・IT業向け補助金活用チェックリスト（12項目）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金申請前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、採択率や費用対効果が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -620,6 +644,7 @@ export default function SubsidyDatacenterItStrategyPage() {
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPAとオフサイトPPAの違い", description: "DCの再エネ調達手法の比較。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

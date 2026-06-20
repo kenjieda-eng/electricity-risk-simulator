@@ -423,6 +423,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本税制の2つの優遇（税額控除・特別償却）と認定手続き、補助金・他税制との関係を、役割・効果別に整理します。投資目的・所得見込みに応じて最適な組合せを選びます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +441,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <h2 className="text-xl font-semibold text-slate-900">控除率・上限・適用期限の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               控除率・償却率・控除上限・適用期限の水準と、税効果が黒字法人ほど大きい点を整理します。要件は年度改正で変わるため、最新の税制要件での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +462,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — 税効果のBefore/After</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3規模で、補助金と税制の組合せによる実質負担圧縮と税効果をBefore/After方式で提示します。いずれも公開情報・税制要件から再構成した代表シナリオで、数値は目安レンジ・税理士確認前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +490,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本税制の対象になり得る代表的な脱炭素・省エネ設備を整理します。いずれも対象可否・控除率は要件確認が必要で、SII省エネ補助等と取得価額調整のうえ併用できる設備が多いのが特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +514,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <h2 className="text-xl font-semibold text-slate-900">適用実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               投資内容・所得見込みの整理から税務申告・効果検証まで、本税制適用の標準的な流れを整理します。事業計画の認定・適用期限・補助金併用時の取得価額調整に特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +540,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               本税制で失敗しないための留意点を整理します。税額控除と特別償却の選択・補助金併用時の取得価額調整・認定期限・所得見込みが成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -547,6 +565,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               所得見込みでの制度選択、補助金＋税制の重層活用（取得価額調整）、省エネ＋再エネの一体投資、認定・適用期限の逆算、複数年での段階投資が税効果最大化の柱です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -568,6 +589,9 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             <h2 className="text-xl font-semibold text-slate-900">GX・CN投資促進税制 活用チェックリスト（12項目）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               税制適用前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、税効果が下がったり適用要件を満たせなくなる可能性があります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -621,6 +645,7 @@ export default function SubsidyGxCnInvestmentTaxPage() {
               { href: "/corporate-ppa-overview", title: "コーポレートPPAの全体像", description: "再エネ調達の基本（共通）。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

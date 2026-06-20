@@ -401,6 +401,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               投資判断の中核は『回収年数』と『ROI』。補助金で実質投資額が下がれば回収年数は短縮し、GX・CN税制の税効果でさらに早まります。まず基本式と各指標を押さえ、補助前後・税効果込みの比較で投資妥当性を見極めることが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               投資回収・ROIの算定に使う代表的な6つの指標を、役割別に整理します。スクリーニングは単純回収、優先順位づけはROI、長期評価はNPV、と用途で使い分けます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率別の回収年数早見（前提付き試算）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助率1/3・1/2、税効果込みの回収年数の早見と判断目安を、前提を置いた試算例で整理します。数値は電力単価・削減率の前提に依存するため、自社条件での再計算が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助前後ROI比較事例3件（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3つの設備投資で、補助前後・税効果込みの回収年数の改善をBefore/After方式で提示します。いずれも前提を置いた試算例で、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +493,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               主要な省エネ・脱炭素設備の補助後の回収目安を整理します。いずれも前提を置いた試算例で、稼働条件・電力単価により回収レンジは変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +517,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <h2 className="text-xl font-semibold text-slate-900">試算の手順（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               投資額の確定から感度分析・投資判断まで、補助金活用後の回収試算の標準的な流れを整理します。電力単価・削減率の保守的な前提設定と税効果の取得価額調整が信頼性を左右します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +543,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               回収試算で陥りがちな落とし穴・留意点を整理します。電力単価・削減率の過大見積もり、税効果の取得価額調整漏れ、採択前提の確定値化が代表的な失敗パターンです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -546,6 +567,9 @@ export default function SubsidyRoiPaybackCalculationPage() {
             <h2 className="text-xl font-semibold text-slate-900">ROIを高める打ち手</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               削減効果の大きい設備の優先、補助率の高い枠・中小枠の活用、税効果の取り込み、契約見直し・デマンド削減の併走、複合投資での便益積み上げがROIを高める柱です。分子（年間削減額）を増やし分母（実質投資額）を下げる発想で組み立てます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -621,6 +645,7 @@ export default function SubsidyRoiPaybackCalculationPage() {
               { href: "/subsidy-sme-energy-saving-patterns", title: "中小企業の省エネ補助活用パターン", description: "中小の投資の進め方。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

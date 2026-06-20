@@ -401,6 +401,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用の大原則は『同一設備・同一経費への国庫補助の重複は原則不可』。一方で設備の切り分け・財源の違い・補助金と税制の性質の違いを活かせば、重複しない範囲で複数の支援を重層的に活用できます。まず基本ルールを押さえ、組合せ可否を正しく見極めることが重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金を重層活用する代表的な6つのパターンを、組合せの軸（国×国／国×自治体／補助金×税制等）別に整理します。自社の投資内容に当てはまるパターンから検討します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <h2 className="text-xl font-semibold text-slate-900">組合せ可否マトリクスと補助率の天井</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               組合せ可否の大枠と、重複給付の天井（合計補助率の上限）・費用対効果を整理します。併用ルールは公募回・年度で変動するため、最新の公募要領・補助要綱での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <h2 className="text-xl font-semibold text-slate-900">併用成功事例3件 — 補助前後の実質負担（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3つの併用構成で、重層活用による実質負担圧縮と投資回収の改善をBefore/After方式で提示します。いずれも公開事例から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +493,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               重複が生じにくく併用しやすい設備の組合せを整理します。機能・目的・投資主体が分かれる設備は経費を切り分けやすく、重層活用が成立しやすいのが特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +517,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <h2 className="text-xl font-semibold text-slate-900">併用申請の手順（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               経費の棚卸しから按分根拠を整えた申請・実績報告まで、併用申請の標準的な流れを整理します。設備の切り分けと所管窓口・税理士への事前確認が成否を左右します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +543,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用で失敗しないためのNG例・留意点を整理します。同一設備への重複・自治体要件の見落とし・税制の二重取り・按分根拠の不備が代表的な失敗パターンです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -546,6 +567,9 @@ export default function SubsidyStackingCombinationRulesPage() {
             <h2 className="text-xl font-semibold text-slate-900">重層活用の最大化テクニック</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               設備の切り分け、自治体補助の上乗せ・横出し、補助金×税制の取得価額調整、PPAでの主体分け、複数年・複数拠点での分散が重層活用の柱です。重複給付の天井を超えない範囲で組合せ、実質負担を最大限圧縮します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -621,6 +645,7 @@ export default function SubsidyStackingCombinationRulesPage() {
               { href: "/subsidy-manufacturing-strategy", title: "製造業の補助金活用戦略", description: "業種別の併用構成の例。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

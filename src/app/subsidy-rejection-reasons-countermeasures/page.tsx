@@ -401,6 +401,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               不採択は失敗ではなく次の採択への材料です。審査は費用対効果と計画の整合性が中心で、形式不備による失格も少なくありません。採択率は公募回で変動し推測できないため、評価項目から弱点を逆算し、改善して再申請する姿勢が重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金で不採択になる代表的な6つの類型を、評価の中核（費用対効果・必要性・整合性）から外部要因（予算・競争倍率）まで整理します。自社の不採択がどの類型かを特定することが対策の起点です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <h2 className="text-xl font-semibold text-slate-900">不採択理由の特定と再申請戦略の考え方</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               不採択理由を公表評価項目から逆算し、事務局フィードバックを活用して再申請か別補助金切替かを判断する考え方を整理します。採択率は公募回で変動するため、推測せず最新の公表採択結果での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <h2 className="text-xl font-semibold text-slate-900">不採択→再申請で採択された事例3件（Before/After）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3つの不採択理由について、弱点を補強して再申請・別補助金で採択に至った流れをBefore/After方式で提示します。いずれも公開事例から再構成した代表シナリオで、採択は事務局公表結果に基づきます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -481,6 +493,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               審査で評価される（点が付く）主要な要素を整理します。費用対効果・必要性・整合性・加点要件・形式要件のそれぞれを満たすことが採択への道筋です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -502,6 +517,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <h2 className="text-xl font-semibold text-slate-900">再申請の手順（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               不採択理由の特定から再申請・採択後準備まで、再申請の標準的な流れを整理します。評価項目からの逆算による弱点特定と、形式不備のチェック体制構築が成否を左右します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -525,6 +543,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               審査で減点されやすいポイント・留意点を整理します。効果の小さい設備への偏り、定性的な効果記述、加点要件の取りこぼし、計画の整合性欠如が代表的な減点ポイントです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -546,6 +567,9 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             <h2 className="text-xl font-semibold text-slate-900">採択率を高める対策</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               費用対効果を前面に出す、省エネ診断で根拠を定量化する、必要性のストーリーを定量的に語る、加点要件を漏れなく反映する、形式不備をチェック体制で潰す、が採択率を高める対策の柱です。評価の中核を押さえて相対順位を上げます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -621,6 +645,7 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
               { href: "/articles/by-region", title: "地域別の電気料金見直し（一覧）", description: "地域別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

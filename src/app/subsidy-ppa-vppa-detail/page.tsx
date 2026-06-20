@@ -401,6 +401,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPAは需要家が発電事業者と長期契約を結び再エネ電気を調達する仕組みで、形態はオンサイト・オフサイト・VPPA・自己託送に大別されます。需要家主導型再エネ補助（1/2以内・kWh定額型あり）・蓄電池併設補助・GX税制を組合せ、追加性のある調達を選ぶことで、電気代削減と脱炭素を両立できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {overview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -423,6 +426,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               4つのPPA形態と需要家主導型再エネ補助・蓄電池併設補助・GX税制を、役割・特徴別に整理します。拠点条件・需要規模に応じて最適な形態と補助の組合せを選定します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {mainSubsidies.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -438,6 +444,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <h2 className="text-xl font-semibold text-slate-900">補助率・対象・採択率の水準</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               需要家主導型再エネ補助の補助率・対象・優先評価のポイントと、採択率・費用対効果の考え方を整理します。採択率は公募回で変動するため、最新の事務局公表値での確認が前提です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidyRates.map((item) => (
@@ -456,6 +465,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <h2 className="text-xl font-semibold text-slate-900">規模別事例3件 — PPA形態と補助のBefore/After</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               代表的な3パターンで、PPA形態の選び方と補助の組合せによる再エネ調達・電気代削減をBefore/After方式で提示します。いずれも公開情報・補助金実績から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {caseStudies.map((cs) => (
@@ -483,6 +495,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA・自家消費投資で補助・税制の対象になり得る代表的な設備を整理します。太陽光・蓄電池・EMSを一体で導入すると経済性とレジリエンスが高まります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {targetEquipment.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -504,6 +519,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <h2 className="text-xl font-semibold text-slate-900">申請実務の流れ（5ステップ）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               需要・拠点条件の把握から実績報告まで、PPA補助申請の標準的な流れを整理します。交付決定前の契約・発注の禁止と、PPA契約・設備のリードタイムに特に注意が必要です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {applicationFlow.map((item) => (
@@ -527,6 +545,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA・補助金活用で失敗しないための留意点を整理します。発注タイミング・追加性・形態ごとの託送料/賦課金・長期契約条件の精査が成否を左右します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {cautionItems.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -548,6 +569,9 @@ export default function SubsidyPpaVppaDetailPage() {
             <h2 className="text-xl font-semibold text-slate-900">PPA形態選択・補助活用の戦略</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               屋根面積・需要規模での形態選択、追加性のある新設電源、蓄電池併設による経済性・BCP両取り、省エネとの一体計画、補助＋税制の重層活用が、PPA活用戦略の柱です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -623,6 +647,7 @@ export default function SubsidyPpaVppaDetailPage() {
               { href: "/subsidy-logistics-strategy", title: "物流業の補助金活用戦略", description: "倉庫屋根太陽光の活用（関連業種）。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
