@@ -310,6 +310,9 @@ export default function ElectricityQuoteEvaluationChecklistPage() {
               が混在している場合、単価の見え方は大きく変わります。
               まずは8領域のチェックリストで、各見積書を同じ土俵に揃えることから始めましょう。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* チェックリスト本体 */}
@@ -361,6 +364,9 @@ export default function ElectricityQuoteEvaluationChecklistPage() {
               Excel比較表の推奨項目です。
               「年間想定コスト」は自社の直近12ヶ月の実使用量を代入して算出すると、
               単価だけでは見えない総額差を可視化できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
 
             <div className="mt-4 overflow-x-auto">
@@ -506,6 +512,7 @@ export default function ElectricityQuoteEvaluationChecklistPage() {
                 description:
                   "契約期間ごとのメリット・デメリットと、自動更新・早期解約の扱いを整理します。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

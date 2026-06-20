@@ -181,6 +181,9 @@ export default function HowToReadElectricityBillsForReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の7項目は法人向け電力請求書で標準的に記載されている項目です。各項目の確認が見直し判断にどうつながるかを整理しました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -234,6 +237,9 @@ export default function HowToReadElectricityBillsForReviewPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下のいずれかに当てはまる場合は、電力契約の見直しを検討するタイミングです。パターンごとに想定原因と推奨アクションを整理しました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {reviewSigns.map((item, i) => (
@@ -330,6 +336,7 @@ export default function HowToReadElectricityBillsForReviewPage() {
               title: "再エネ賦課金とは",
               description: "請求書の制度項目として記載される再エネ賦課金の内容を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

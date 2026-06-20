@@ -219,6 +219,9 @@ export default function ContractReviewPracticeGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人の電力契約見直しは、大きく5つのフェーズに分けて考えると整理しやすくなります。それぞれのフェーズで確認すべき事項が異なるため、各ステップで適切な情報を参照しながら進めることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-5">
             {["現状把握・準備", "タイミング確認", "見積比較", "プラン選択", "社内対応"].map(
               (step, idx) => (
@@ -263,6 +266,9 @@ export default function ContractReviewPracticeGuidePage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直しは、総務・経理・施設管理など複数の部門が関与するケースがほとんどです。部門ごとの関与ポイントを整理しておくと、社内調整がスムーズになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -368,6 +374,7 @@ export default function ContractReviewPracticeGuidePage() {
               title: "固定プランと市場連動プランの判断ガイド一覧",
               description: "プラン選択に迷ったときの整理フレームワーク。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

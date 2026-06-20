@@ -104,6 +104,9 @@ export default function BillCheckDiagnosisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直しを進めるうえで、請求書は最も手軽に入手できる「現状データ」です。現在どのような費用項目が、どの程度の金額で発生しているかを把握していないと、見積比較の精度が下がります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             特に2020年以降、電力料金の変動要因が増えています。燃料費調整額・市場価格調整額・容量拠出金・再エネ賦課金など、変動費の構成を把握することが「なぜ高くなったのか」を説明するうえでも不可欠です。
           </p>
@@ -122,6 +125,9 @@ export default function BillCheckDiagnosisPage() {
           <h2 className="text-xl font-semibold text-slate-900">確認できていない項目が多い場合の対応</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             チェックできない項目が複数ある場合、まず直近3か月分の請求書を手元に用意することから始めてください。以下の順で確認すると効率よく情報を整理できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {[
@@ -244,6 +250,7 @@ export default function BillCheckDiagnosisPage() {
               title: "見積比較前チェック診断",
               description: "請求書確認が終わったら次は見積比較の準備へ。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

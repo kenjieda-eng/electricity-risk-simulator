@@ -181,6 +181,9 @@ export default function HowToSwitchElectricityProviderPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約更新の3〜6か月前が理想的な着手タイミングです。遅くとも更新月の2か月前までにSTEP 3まで終えておかないと、相見積りを比較しきれないまま決断することになりがちです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {steps.map((step) => (
@@ -209,6 +212,9 @@ export default function HowToSwitchElectricityProviderPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               手順そのものより、通知期限や新旧契約のつなぎ目で起きるトラブルの方が実害が大きくなります。
               特に更新条件と解約申出期限は、契約締結時に想定していた条件と食い違っていることが多く、見積比較の前段で必ず確認してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {commonPitfalls.map((p) => (
@@ -261,6 +267,7 @@ export default function HowToSwitchElectricityProviderPage() {
                 title: "新電力の相見積もり前に整理したい情報",
                 description: "STEP 2前の情報整理を具体的に深掘り。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

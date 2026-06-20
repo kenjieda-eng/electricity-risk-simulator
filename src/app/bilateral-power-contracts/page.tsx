@@ -125,6 +125,9 @@ export default function BilateralPowerContractsPage() {
             相対契約は、市場を通さず、発電事業者や電源保有者などと個別条件で電気を取引する仕組みです。価格、数量、契約期間、受渡の考え方などを
             当事者同士で決められるため、市場価格だけに依存しない調達ルートを持てます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <InfoBox title="相対契約の位置づけ">
             「市場ではない別ルート」と見るだけでは不十分で、安定性を持たせる代わりに柔軟性が下がることもある手段として理解すると、調達全体の中で位置づけやすくなります。
           </InfoBox>
@@ -169,6 +172,9 @@ export default function BilateralPowerContractsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             ただし、需要予測と実需はずれるため、相対契約で全量をぴったり合わせるのは簡単ではありません。契約で押さえた量から外れる分は、
             市場や別契約で補うことになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -221,6 +227,7 @@ export default function BilateralPowerContractsPage() {
               title: "市場連動プランとは",
               description: "相対契約の仕組みが料金メニューに与える影響を確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

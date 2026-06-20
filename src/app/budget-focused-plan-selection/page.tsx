@@ -161,6 +161,9 @@ export default function BudgetFocusedPlanSelectionPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金は、プランの種類にかかわらず季節・気象・使用量によって変動します。ただし、変動の幅と予測可能性が固定プランと市場連動プランでは大きく異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">固定プランの変動要因</p>
@@ -208,6 +211,9 @@ export default function BudgetFocusedPlanSelectionPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下は、予算管理の観点から見たシナリオ別の判断の目安です。自社の状況に近いものを参考にしてください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
@@ -318,6 +324,7 @@ export default function BudgetFocusedPlanSelectionPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直し前に確認すべき項目の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

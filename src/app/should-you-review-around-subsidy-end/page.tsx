@@ -156,6 +156,9 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
             ただし、上昇要因が補助縮小によるものなのか、契約条件に問題があるのかを分けないと、
             比較判断の精度が下がります。政策要因と契約要因を切り分けることが、見直し判断の第一歩です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-1 pl-4 text-sm text-slate-700 sm:text-base">
             <li className="list-disc">政策要因: 補助対象・補助額・適用期間</li>
             <li className="list-disc">契約要因: 単価体系・調整項目・契約条件</li>
@@ -241,6 +244,9 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
             比較では、単価差だけでなく年間総額の見え方とリスクの出方を確認すると、
             政策変動に左右されにくい判断ができます。補助なしベースの単価で比較することが基本です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* セクション: 社内説明 */}
@@ -297,6 +303,7 @@ export default function ShouldYouReviewAroundSubsidyEndPage() {
               title: "固定プランとは",
               description: "補助終了後の料金安定化に向けた固定プランの特徴と注意点。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

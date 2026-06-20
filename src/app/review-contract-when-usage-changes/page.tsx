@@ -189,6 +189,9 @@ export default function ReviewContractWhenUsageChangesPage() {
             実務では、使用量・単価・調整項目を分けて確認し、どこにコスト要因があるかを切り分けることが重要です。
             特にデマンド（最大需要電力）は基本料金に直結するため、ピーク需要の変化を見落とすとコスト改善機会を逃します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 見直しトリガー表 */}
@@ -275,6 +278,9 @@ export default function ReviewContractWhenUsageChangesPage() {
             過去1年程度の請求書や需要実績を並べると、季節要因と構造変化を区別しやすくなります。
             設備投資後は省エネ効果だけでなく、契約側の再確認が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* まとめ */}
@@ -331,6 +337,7 @@ export default function ReviewContractWhenUsageChangesPage() {
               title: "市場連動プランと固定プランの違い",
               description: "使用量・デマンド変化を踏まえたプラン選択の考え方。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

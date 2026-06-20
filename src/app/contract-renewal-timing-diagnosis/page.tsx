@@ -106,6 +106,9 @@ export default function ContractRenewalTimingDiagnosisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             余裕を持って進める場合の標準的なスケジュールを以下に示します。更新時期が決まったら、逆算してスケジューリングしてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-2 text-sm text-slate-700">
             <div className="grid grid-cols-[7rem_1fr] gap-3 rounded-lg border border-slate-200 bg-white p-3">
               <span className="font-semibold text-slate-900">更新6か月前</span>
@@ -134,6 +137,9 @@ export default function ContractRenewalTimingDiagnosisPage() {
           <h2 className="text-xl font-semibold text-slate-900">更新時期別のアクション</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             現在の契約更新までの残り期間によって、取るべきアクションと優先度が変わります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
@@ -227,6 +233,7 @@ export default function ContractRenewalTimingDiagnosisPage() {
               title: "電力契約見直しチェックリスト",
               description: "見直し全体の準備チェックリストを網羅的に確認。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -247,6 +247,9 @@ export default function ContractRenewalChecklistPage() {
               この通知期限を過ぎると、次期契約の条件交渉はもちろん、
               他社への切替を検討する時間的余裕も失われます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               さらに社内稟議や経営層報告、相見積もり取得、契約書レビューなど
               更新作業自体に数ヶ月単位の時間がかかります。
@@ -358,6 +361,9 @@ export default function ContractRenewalChecklistPage() {
               </Link>
               もあわせて参照してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
                 <p className="text-sm font-semibold text-slate-900">
@@ -454,6 +460,7 @@ export default function ContractRenewalChecklistPage() {
                 description:
                   "更新月・通知期限・解約申出期限の違いと、期限管理の実務ポイントを整理します。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

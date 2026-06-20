@@ -140,6 +140,9 @@ export default function WhenToReviewElectricityContractPage() {
             似た規模の拠点でも契約条件や単価体系の違いで請求額に差が出ることがあります。特に多拠点企業では、拠点ごとの契約を横並びで比較し、
             全体最適の観点で見直し余地を探すことが有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -170,6 +173,9 @@ export default function WhenToReviewElectricityContractPage() {
             <li>最低利用条件</li>
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">料金表だけでなく、契約条件まで含めて比較することが重要です。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -275,6 +281,7 @@ export default function WhenToReviewElectricityContractPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -212,6 +212,9 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見直しの各フェーズ（現状把握・比較見積・切替手続き）で必要になる資料を一覧化しました。「なくても進められるか」の列で、着手に必須か任意かを確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -306,6 +309,9 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             多拠点法人では、拠点一覧と契約一覧を統一フォーマットで作成すると優先順位をつけやすくなります。拠点ごとの更新月と契約電力を一目で確認できる形が有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-1 text-sm leading-7 text-slate-700">
             <li>・拠点名・住所・供給地点特定番号の一覧表</li>
             <li>・各拠点の契約満了日と解約申出期限の一覧</li>
@@ -374,6 +380,7 @@ export default function DocumentsNeededForElectricityContractReviewPage() {
               title: "固定プランが向く法人の特徴",
               description: "資料準備後のプラン選択判断の参考として。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

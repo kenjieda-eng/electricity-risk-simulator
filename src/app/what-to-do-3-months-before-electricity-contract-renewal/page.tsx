@@ -181,6 +181,9 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
             </Link>{" "}
             でも確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {timelineSteps.map((step, index) => (
@@ -219,6 +222,9 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約更新の準備では、以下の2つのタイミングでシミュレーターを活用するのが効果的です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -292,6 +298,7 @@ export default function WhatToDo3MonthsBeforeRenewalPage() {
               title: "市場連動プランと固定プランの違い",
               description: "更新時のプラン選択判断に役立てる比較の軸。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
