@@ -125,6 +125,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 値上げ通知の内容 */}
@@ -143,6 +146,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 交渉タイムライン */}
@@ -168,6 +174,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 交渉の結果 */}
@@ -260,6 +269,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 交渉で有効だったポイント */}
@@ -286,6 +298,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 成功要因 */}
@@ -305,6 +320,9 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -345,6 +363,7 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "燃調費の仕組みと上限設定の重要性" },
             { href: "/when-to-review-electricity-contract", title: "見直しのタイミングはいつか", description: "値上げ通知を受けた際の対応タイミング" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "契約見直しで大幅削減した製造業の事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

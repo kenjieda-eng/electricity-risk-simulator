@@ -124,6 +124,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -143,6 +146,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -200,6 +206,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 削減結果 */}
@@ -249,6 +258,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             <p className="text-xs text-green-700 font-semibold mt-2">▲22%（約85万円/月）削減</p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* デマンド制御の月別効果テーブル */}
@@ -294,6 +306,9 @@ export default function CaseStudyHospitalPeakCutPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">※基本料金削減額は契約電力変更後（1,400kW）の基本料金単価×削減kW数で試算。実際の削減額は変更後の月から確定します。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 成功要因 */}
@@ -313,6 +328,9 @@ export default function CaseStudyHospitalPeakCutPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -352,6 +370,7 @@ export default function CaseStudyHospitalPeakCutPage() {
             { href: "/business-electricity-bill-breakdown", title: "法人向け電気料金の内訳とは", description: "基本料金・電力量料金・燃調費・再エネ賦課金の仕組み" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と新電力切り替えを組み合わせた工場事例" },
             { href: "/case-study-office-building-review", title: "オフィスビル：契約電力の適正化で年間580万円削減", description: "オフィスビルの契約見直し事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

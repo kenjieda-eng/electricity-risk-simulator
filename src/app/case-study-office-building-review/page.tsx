@@ -156,6 +156,9 @@ export default function CaseStudyOfficeBuildingPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">実際の最大デマンド実績は876kW（過去2年間の最大値）。契約電力900kWは十分な余裕を確保。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -175,6 +178,9 @@ export default function CaseStudyOfficeBuildingPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -261,6 +267,9 @@ export default function CaseStudyOfficeBuildingPage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">見直し前後の契約条件比較</h2>
         <p className="mt-2 text-sm text-slate-600">主要な契約条件の変更内容と差額の一覧</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -330,6 +339,9 @@ export default function CaseStudyOfficeBuildingPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -342,6 +354,9 @@ export default function CaseStudyOfficeBuildingPage() {
           ビル管理においてデマンドの定期点検は必須だと感じています。」
         </blockquote>
         <p className="mt-2 text-xs text-slate-500">― 不動産管理部 ビル管理担当</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 誘導 */}
@@ -351,6 +366,9 @@ export default function CaseStudyOfficeBuildingPage() {
           テナント構成が変わった、増減床があった、契約電力を長年変更していない、という場合は契約電力の見直し余地がある可能性があります。
           <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドと契約電力の仕組み</Link>を確認の上、
           過去2年分の最大デマンド実績と現在の契約電力を比較してみてください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -370,6 +388,7 @@ export default function CaseStudyOfficeBuildingPage() {
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきこと" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と新電力切り替えの組み合わせ事例" },
             { href: "/case-study-hospital-peak-cut", title: "病院：デマンド制御で基本料金22%圧縮", description: "非医療設備を対象にしたデマンド制御事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -138,6 +138,9 @@ export default function CaseStudyRetailChainPage() {
           多店舗を展開する小売チェーンでは、電力契約の見直しに際して以下のような課題が重なりやすい傾向があります。
           それぞれ個別に対処しようとすると手間がかかるため、本部主導で整理する体制が重要になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
 
         <div className="mt-5 space-y-4">
           {/* 課題1 */}
@@ -313,6 +316,9 @@ export default function CaseStudyRetailChainPage() {
             シミュレーターの使い方
           </Link>も参考にしながら、以下の手順を参考にしてください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
 
         <div className="mt-5 space-y-4">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -406,6 +412,9 @@ export default function CaseStudyRetailChainPage() {
           この事例の最大の特徴は、店舗ごとの個別最適ではなく「本部が全体を把握し、一元的に比較・交渉した」点にあります。
           多店舗型事業では以下の観点が実務上重要になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
 
         <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {[
@@ -456,6 +465,9 @@ export default function CaseStudyRetailChainPage() {
           <Link href="/articles/review-points" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">
             見直しポイント記事一覧
           </Link>と合わせてご活用ください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-5 space-y-2">
           {checklist.map((item, i) => (
@@ -524,6 +536,7 @@ export default function CaseStudyRetailChainPage() {
               title: "自治体の統合調達事例",
               description: "複数施設を統合調達した地方自治体の事例と進め方",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

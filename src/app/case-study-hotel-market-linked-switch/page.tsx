@@ -123,6 +123,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 市場連動プランの失敗 */}
@@ -142,6 +145,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 月別比較テーブル */}
@@ -198,6 +204,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 切替前後のコスト比較テーブル */}
@@ -255,6 +264,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">※市場価格調整額は固定プランでは電力量料金に統合される形となるため、費目ベースの差額は参考値です。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 固定プランへの切り替え判断 */}
@@ -275,6 +287,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 成功要因 */}
@@ -293,6 +308,9 @@ export default function CaseStudyHotelMarketLinkedPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -333,6 +351,7 @@ export default function CaseStudyHotelMarketLinkedPage() {
             { href: "/fixed-price-plan", title: "固定プランとは", description: "固定型電力プランの特徴と向いている事業者の条件" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "燃料費調整額の仕組みと上限廃止後のリスク" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と新電力切り替えを組み合わせた製造業事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

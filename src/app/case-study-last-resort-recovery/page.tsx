@@ -151,6 +151,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 最終保障供給とは */}
@@ -174,6 +177,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -193,6 +199,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -207,6 +216,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 月別推移テーブル */}
@@ -281,6 +293,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             <p className="text-xs text-green-700 font-semibold mt-1">通常契約復帰で月額▲約16万円（▲38%）</p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 成功要因 */}
@@ -300,6 +315,9 @@ export default function CaseStudyLastResortRecoveryPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -342,6 +360,7 @@ export default function CaseStudyLastResortRecoveryPage() {
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "次の電力会社を選ぶための比較手順" },
             { href: "/when-to-review-electricity-contract", title: "見直しのタイミングはいつか", description: "緊急時を含む電力契約見直しのタイミング" },
             { href: "/case-study-price-increase-negotiation", title: "値上げ通知の交渉で15%圧縮した事例", description: "値上げ通知への対処法と交渉のポイント" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

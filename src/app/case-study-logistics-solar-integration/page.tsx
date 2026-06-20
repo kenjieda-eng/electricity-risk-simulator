@@ -128,6 +128,9 @@ export default function CaseStudyLogisticsSolarPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -146,6 +149,9 @@ export default function CaseStudyLogisticsSolarPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -262,6 +268,9 @@ export default function CaseStudyLogisticsSolarPage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">太陽光導入のコスト構造</h2>
         <p className="mt-2 text-sm text-slate-600">本事例における導入コスト・発電量・削減額・回収期間の全体像</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -319,6 +328,9 @@ export default function CaseStudyLogisticsSolarPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 担当者コメント */}
@@ -330,6 +342,9 @@ export default function CaseStudyLogisticsSolarPage() {
           電力高騰リスクに対するヘッジ効果も実感しています。」
         </blockquote>
         <p className="mt-2 text-xs text-slate-500">― 経営企画部 サステナビリティ担当</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 誘導 */}
@@ -339,6 +354,9 @@ export default function CaseStudyLogisticsSolarPage() {
           自家消費型太陽光は、FIT売電の経済性が低下した現在でも「電気代の固定化・削減」と「ESG対応」を同時に実現できる手段です。
           ただし初期投資が大きいため、正確な発電量シミュレーションと補助金調査が不可欠です。
           詳細は<Link href="/contact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">お問い合わせ</Link>からご相談ください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -358,6 +376,7 @@ export default function CaseStudyLogisticsSolarPage() {
             { href: "/when-to-review-electricity-contract", title: "見直しのタイミングはいつか", description: "電力契約見直しの最適タイミングと手順" },
             { href: "/case-study-manufacturing-cost-reduction", title: "製造業：年間18%削減した事例", description: "デマンド制御と契約見直しの組み合わせ事例" },
             { href: "/case-study-hospital-peak-cut", title: "病院：デマンド制御で基本料金22%圧縮", description: "医療施設でのデマンド制御事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
