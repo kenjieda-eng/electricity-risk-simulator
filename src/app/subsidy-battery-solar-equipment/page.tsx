@@ -213,6 +213,9 @@ export default function SubsidyBatterySolarEquipmentPage() {
             法人向け業務用蓄電システムに適用できる補助金は、国の制度と自治体独自制度の2層構造になっています。
             補助率・上限額・対象設備の要件が制度によって異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -250,6 +253,9 @@ export default function SubsidyBatterySolarEquipmentPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光とオフサイトPPAでは活用できる補助金の種類が異なります。
             PPAモデルでは発電事業者側が補助金を受けるため、需要家の初期費用がゼロになるメリットがあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -329,6 +335,9 @@ export default function SubsidyBatterySolarEquipmentPage() {
             設備を分けて申請したり、補助金と税制優遇を組み合わせたりすることで、
             実質的な支援の積み上げが可能なケースがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {combinationRules.map((rule, i) => (
               <div key={i} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -380,6 +389,9 @@ export default function SubsidyBatterySolarEquipmentPage() {
             補助金を活用することで投資回収期間を3〜4年短縮できるケースが多く見られます。
             電気料金が高止まりしている現状では、補助金を活用した設備投資の経済合理性が高まっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* まとめ */}
@@ -407,6 +419,7 @@ export default function SubsidyBatterySolarEquipmentPage() {
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の活用ガイド", description: "法人が自家消費太陽光を活用する際の要点" },
             { href: "/subsidy-demand-side-ppa", title: "需要家主導型太陽光PPAの補助金活用", description: "オフサイトPPAで電力コストを削減する仕組みと補助制度" },
             { href: "/subsidy-schedule-and-approval-rate", title: "補助金申請のスケジュールと採択率の目安", description: "年間カレンダーと採択率から逆算する準備術" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

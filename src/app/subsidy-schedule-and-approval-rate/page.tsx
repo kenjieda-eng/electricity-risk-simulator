@@ -180,6 +180,9 @@ export default function SubsidyScheduleAndApprovalRatePage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 公募時期は年度・予算状況により変更されます。必ず各実施機関の公式情報を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -212,6 +215,9 @@ export default function SubsidyScheduleAndApprovalRatePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             採択率は制度・年度・応募数によって大きく変動します。30〜60%程度の幅があり、
             「申請すれば必ず通る」という制度は存在しないことを前提に計画を立てましょう。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -248,6 +254,9 @@ export default function SubsidyScheduleAndApprovalRatePage() {
             申請締切から補助金の口座振込まで、制度によっては1年以上かかる場合があります。
             資金繰りへの影響を考慮して計画を立ててください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {timeline.map((t, i) => (
               <div key={i} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -277,6 +286,9 @@ export default function SubsidyScheduleAndApprovalRatePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             補助金申請の準備は、締切日の2〜3か月前から開始することが推奨されます。
             特に以下の作業は時間がかかるため、余裕をもって着手してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {[
@@ -335,6 +347,7 @@ export default function SubsidyScheduleAndApprovalRatePage() {
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "構成と数値の示し方を具体的に解説" },
             { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光の補助金活用ガイド", description: "設備別の補助率・上限額・併用可否を整理" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果を把握。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -214,6 +214,9 @@ export default function SubsidyVsContractReviewPriorityPage() {
             契約見直しは「即効性・低リスク・低コスト」、設備投資は「大きな削減効果・長期安定・高リソース要求」という性質があります。
             どちらが優れているという話ではなく、自社の状況に応じて使い分けることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 契約見直しを先に進めるべきケース */}
@@ -248,6 +251,9 @@ export default function SubsidyVsContractReviewPriorityPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             以下の質問に順番に答えることで、自社の状況に応じた優先順位が見えてきます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {decisionPoints.map((dp, i) => (
               <div key={i} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -278,6 +284,9 @@ export default function SubsidyVsContractReviewPriorityPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             資金・リソースに余裕がある場合は、契約見直しと補助金申請を並行して進めることが最も効果的です。
             契約見直しで早期に削減効果を得ながら、補助金申請の準備を進めることができます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {parallelFlow.map((phase, i) => (
@@ -333,6 +342,9 @@ export default function SubsidyVsContractReviewPriorityPage() {
             施策を段階的に積み上げることで、合計30〜60%以上の電気代削減を実現するケースもあります。
             一度に全てを進める必要はなく、優先順位をつけて順番に取り組むことが現実的です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* まとめ */}
@@ -360,6 +372,7 @@ export default function SubsidyVsContractReviewPriorityPage() {
             { href: "/what-to-start-with-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "契約見直しの進め方と優先順位" },
             { href: "/contract-review-reduction-effect", title: "電力契約見直しで電気代はどれだけ下がるか", description: "削減幅の目安と試算方法" },
             { href: "/battery-suited-corporations", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -169,6 +169,9 @@ export default function SubsidyApplicationApprovalDocumentPage() {
           <p className="mt-2 text-sm text-slate-600">
             補助金申請を前提とした稟議書は、通常の設備投資稟議に加えて「補助金の条件・スケジュール・リスク」を組み込む必要があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {documentStructure.map((d, i) => (
               <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -240,6 +243,9 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             シミュレーターで現状の電気料金リスクを診断した結果を「電気料金上昇シナリオの根拠」として添付すると、
             投資回収計算の説得力が大幅に向上します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 差し戻し理由と対策 */}
@@ -282,6 +288,9 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             補助金申請は「着工前に申請・採択が必要」という制約があるため、
             スケジュールの緊急性を経営層に正確に伝えることが承認を早める鍵です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -322,6 +331,9 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             本ページの情報は2026年4月時点の公開情報をもとにしています。補助金制度は年度ごとに内容・補助率・上限額が変更される場合があります。
             申請前に必ず各実施機関の最新公募要領をご確認ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-1 text-sm text-slate-700">
             <li>・ SII（環境共創イニシアチブ）: <a href="https://sii.or.jp/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">https://sii.or.jp/</a></li>
             <li>・ 資源エネルギー庁: <a href="https://www.enecho.meti.go.jp/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">https://www.enecho.meti.go.jp/</a></li>
@@ -345,6 +357,7 @@ export default function SubsidyApplicationApprovalDocumentPage() {
             { href: "/approval-document-key-points", title: "電力契約見直しの稟議書に入れたい論点整理", description: "電力契約変更に特化した稟議書の論点" },
             { href: "/solar-suitability-diagnosis", title: "太陽光導入向き不向き診断", description: "稟議の前提となる適否判断に活用" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "蓄電池投資の費用対効果を把握" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

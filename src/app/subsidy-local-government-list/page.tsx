@@ -193,6 +193,9 @@ export default function SubsidyLocalGovernmentListPage() {
           電力コスト削減のための投資負担をさらに軽減できます。自治体補助金は規模が小さい分、
           申請の敷居が低く小規模な投資にも対応していることが多いです。本ページでは効率的な探し方と注意点を解説します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </header>
 
       <section className="mt-6 space-y-4">
@@ -228,6 +231,9 @@ export default function SubsidyLocalGovernmentListPage() {
           <h2 className="text-xl font-semibold text-slate-900">自治体補助金の主な種類（一般的な例）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下は一般的な制度タイプの例示です。実際の補助率・上限は自治体ごとに大きく異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -278,6 +284,9 @@ export default function SubsidyLocalGovernmentListPage() {
           <h2 className="text-xl font-semibold text-slate-900">国補助金＋自治体補助金の組み合わせシミュレーション（想定例）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまで想定例です。自治体補助との重複可否や補助率は必ず各実施機関に確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -346,6 +355,9 @@ export default function SubsidyLocalGovernmentListPage() {
             本ページの情報は2026年4月時点の公開情報をもとにしています。補助金制度は年度ごとに内容・補助率・上限額が変更される場合があります。
             申請前に必ず各実施機関の最新公募要領をご確認ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-1 text-sm text-slate-700">
             <li>・ SII（環境共創イニシアチブ）: <a href="https://sii.or.jp/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">https://sii.or.jp/</a></li>
             <li>・ 資源エネルギー庁: <a href="https://www.enecho.meti.go.jp/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">https://www.enecho.meti.go.jp/</a></li>
@@ -370,6 +382,7 @@ export default function SubsidyLocalGovernmentListPage() {
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "社内承認を取りやすくする書き方" },
             { href: "/articles/subsidies", title: "補助金・助成金カテゴリ一覧", description: "補助金関連記事をまとめて確認" },
             { href: "/municipality-procurement-methods", title: "自治体電力調達の入札実務", description: "自治体の補助金活用と電力調達を組み合わせる際の参考に。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
