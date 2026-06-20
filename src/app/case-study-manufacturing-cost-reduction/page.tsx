@@ -145,6 +145,9 @@ export default function CaseStudyManufacturingPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -164,6 +167,9 @@ export default function CaseStudyManufacturingPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -208,6 +214,9 @@ export default function CaseStudyManufacturingPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">※年額換算は月額×12の概算。実際は季節変動があるため年間削減額は約430万円（18%）。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
 
         {/* CSS バー可視化 */}
         <div className="mt-6">
@@ -238,6 +247,9 @@ export default function CaseStudyManufacturingPage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">施策別の削減効果内訳</h2>
         <p className="mt-2 text-sm text-slate-600">各施策が年間削減額430万円に占める割合と実施期間</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -307,6 +319,9 @@ export default function CaseStudyManufacturingPage() {
           もっと早く取り組むべきでした。」
         </blockquote>
         <p className="mt-2 text-xs text-slate-500">― 製造部 部長（設備管理担当）</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 同じ悩みを抱える方へ */}
@@ -319,6 +334,9 @@ export default function CaseStudyManufacturingPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           当センターでは電気代の高騰リスク診断や、現在の契約状況の課題を把握するためのシミュレーターを無料で提供しています。
           また、具体的な見直し相談は<Link href="/contact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">お問い合わせページ</Link>からご連絡ください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -339,6 +357,7 @@ export default function CaseStudyManufacturingPage() {
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "契約見直しの手順と注意点を初心者向けに解説" },
             { href: "/case-study-hospital-peak-cut", title: "病院：デマンド制御で基本料金を22%圧縮した事例", description: "中規模総合病院のデマンド制御導入事例" },
             { href: "/case-study-office-building-review", title: "オフィスビル：契約電力の適正化で年間580万円削減", description: "オフィスビルの契約見直し事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

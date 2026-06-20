@@ -139,6 +139,9 @@ export default function CaseStudyRestaurantChainPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -158,6 +161,9 @@ export default function CaseStudyRestaurantChainPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 施策 */}
@@ -178,6 +184,9 @@ export default function CaseStudyRestaurantChainPage() {
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">削減結果（Before / After）</h2>
         <p className="mt-2 text-sm text-slate-600">40店舗合計の月額・年額比較</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -268,6 +277,9 @@ export default function CaseStudyRestaurantChainPage() {
           </table>
         </div>
         <p className="mt-2 text-xs text-slate-500">※大型店は電力メニュー変更の効果が最大（単価改善の絶対額が大きい）。小型店はLED化・待機電力削減の割合が高い。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 成功要因 */}
@@ -299,6 +311,9 @@ export default function CaseStudyRestaurantChainPage() {
           年間2,800万円の削減は、今の利益率では数十店舗分の売上に相当します。」
         </blockquote>
         <p className="mt-2 text-xs text-slate-500">― 経営管理部 コストマネジメント担当</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 誘導 */}
@@ -308,6 +323,9 @@ export default function CaseStudyRestaurantChainPage() {
           夜間に電力使用量が集中する飲食業では、昼夜の時間帯別単価設計のプランへの切り替えが有効なケースがあります。
           また閉店後の待機電力は「見えないコスト」として放置されがちです。
           <Link href="/how-to-start-electricity-contract-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力契約の見直し手順</Link>を参考に、まず現状を把握することから始めてみてください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -327,6 +345,7 @@ export default function CaseStudyRestaurantChainPage() {
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "複数の電力会社を正しく比較するための方法" },
             { href: "/case-study-retail-chain-review", title: "小売チェーン30店舗：年間4,200万円削減", description: "ドラッグストアチェーンの一括見直し事例" },
             { href: "/case-study-municipality-procurement", title: "自治体：12施設統合調達で年間3,100万円削減", description: "地方自治体の統合調達事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

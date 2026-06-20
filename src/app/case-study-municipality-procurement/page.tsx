@@ -151,6 +151,9 @@ export default function CaseStudyMunicipalityPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 課題 */}
@@ -211,6 +214,9 @@ export default function CaseStudyMunicipalityPage() {
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">削減結果（Before / After）</h2>
         <p className="mt-2 text-sm text-slate-600">12施設合計の年額比較</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -288,6 +294,9 @@ export default function CaseStudyMunicipalityPage() {
           他の自治体にも早く取り組んでほしいと思います。」
         </blockquote>
         <p className="mt-2 text-xs text-slate-500">― 財政課 公共施設管理担当係長</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 誘導 */}
@@ -298,6 +307,9 @@ export default function CaseStudyMunicipalityPage() {
           入札仕様書の作成・安定供給要件の設定についてはノウハウが必要です。
           <Link href="/how-to-compare-electricity-suppliers" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力会社の比較方法</Link>も参考にしながら、
           まず全施設の電力コストの合計を把握することから始めてみてください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -317,6 +329,7 @@ export default function CaseStudyMunicipalityPage() {
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきこと" },
             { href: "/case-study-retail-chain-review", title: "小売チェーン30店舗：年間4,200万円削減", description: "一括見直しのスケールメリットを活かした事例" },
             { href: "/case-study-restaurant-chain-reduction", title: "飲食チェーン：40店舗で年間2,800万円削減", description: "チェーン店の一括見直し事例" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
