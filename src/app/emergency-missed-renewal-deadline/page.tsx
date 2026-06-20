@@ -177,6 +177,9 @@ export default function EmergencyMissedRenewalDeadlinePage() {
           電力契約の多くには「自動更新条項」が含まれており、申し出期限までに解約・更新拒否の通知をしなかった場合、
           自動的に契約が更新されます。以下の3点を正しく理解することが重要です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-3">
           {autoRenewalMechanism.map((item, i) => (
             <div key={i} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -222,6 +225,9 @@ export default function EmergencyMissedRenewalDeadlinePage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           自動更新後の対応可能性は、更新後の経過時間や違約金の規模、電力会社との関係によって異なります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {cancellationCases.map((group, i) => (
             <div
@@ -258,6 +264,9 @@ export default function EmergencyMissedRenewalDeadlinePage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           すぐに解約できない場合でも、次の更新タイミングを最大限に活用するために今から準備を始めることが重要です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -283,6 +292,9 @@ export default function EmergencyMissedRenewalDeadlinePage() {
         <h2 className="text-xl font-semibold text-slate-900">再発防止のための契約管理のポイント</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           「更新期限を忘れた」という事態を繰り返さないために、以下の管理体制を整えることが有効です。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           {contractManagementPoints.map((point, i) => (
@@ -374,6 +386,7 @@ export default function EmergencyMissedRenewalDeadlinePage() {
               title: "電気代高騰と事業継続リスク",
               description: "更新失念による高コスト契約継続リスクをBCPの観点から整理。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

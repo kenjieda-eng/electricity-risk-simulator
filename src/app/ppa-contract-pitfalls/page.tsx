@@ -405,12 +405,18 @@ export default function Page() {
               <Link href="/virtual-ppa-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">バーチャルPPAとは</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">長期契約ゆえの需要変動リスク — 5つのシナリオ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA契約期間中に企業の電力需要が変動するリスクは多面的です。工場統廃合・事業売却・海外シフト・省エネ進展・負荷変動の5シナリオを想定し、悲観ケースでもオフテイク可能な契約量設計が必須です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {demandChangeRisk.map((item) => (
@@ -449,12 +455,18 @@ export default function Page() {
               <Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光の費用対効果</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">制度変更・税制変更への備え — 6つの改正リスク</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               20年の契約期間中に制度改正は3〜5回発生する見込みです。再エネ賦課金・託送料金・容量拠出金・非化石証書制度・GX-ETS・電気事業法改正の6軸でリスクを想定し、契約書のパス・スルー条項・再交渉条項で対応します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {institutionalRisk.map((item) => (
@@ -480,6 +492,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               「需要▲30%」「発電量▲15%」「託送料金+20%」の3シナリオで、20年契約での累積影響額を試算します。いずれも数千万円〜数億円の影響規模となるため、事前のリスク評価と契約設計が経済的に正当化されます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {priceImpactTable.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -497,6 +512,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">契約交渉ポイント — 6つの必須論点</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA契約交渉では、発電事業者の信用力・SLA・価格変動メカニズム・再交渉条項・Exit Strategy・REC運用の6軸が必須論点です。経営層・法務・税務・エネルギー部門の協働で契約設計を行うことが、20年スパンでの失敗回避につながります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {negotiationPoints.map((item) => (
@@ -598,6 +616,7 @@ export default function Page() {
               { href: "/auto-renewal-clause-risks", title: "自動更新条項のリスク", description: "長期契約の落とし穴" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方カテゴリ", description: "関連カテゴリ" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応 カテゴリ", description: "関連カテゴリ" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

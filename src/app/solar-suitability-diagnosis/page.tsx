@@ -110,6 +110,9 @@ export default function SolarSuitabilityDiagnosisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光とは、発電した電力を売電せず自社で使用することを主目的とした太陽光発電システムです。電力料金の高騰局面では、買電量を減らすことで直接的なコスト削減効果が得られます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {[
               { title: "買電コストの削減", body: "発電量分だけ電力会社からの買電を減らすため、電力単価が高いほど削減効果が大きくなる。" },
@@ -153,12 +156,18 @@ export default function SolarSuitabilityDiagnosisPage() {
           <p className="mt-3 text-sm leading-6 text-slate-600">
             上記に当てはまる場合でも、PPAモデルや屋根貸し、小規模な部分自家消費など、従来とは異なるアプローチが可能なケースも増えています。まず専門業者への相談から始めることを推奨します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">導入モデルの選択：自己投資・PPA・屋根貸しの違い</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自家消費型太陽光の導入形態は複数あり、自社の資金状況・目的に応じて選択できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             {[
@@ -195,6 +204,9 @@ export default function SolarSuitabilityDiagnosisPage() {
           <h2 className="text-xl font-semibold text-slate-900">診断後の次のステップ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             「向いている」項目が多かった場合の次のアクションを整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {[
@@ -340,6 +352,7 @@ export default function SolarSuitabilityDiagnosisPage() {
               title: "固定プラン・市場連動向き診断",
               description: "太陽光導入後の電力プラン選択にも参考になる診断ページ。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

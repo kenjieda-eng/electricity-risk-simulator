@@ -91,6 +91,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               10MW（10,000kW）を超えるハイパースケール級では、特別高圧でも66kV以上の高電圧受電が一般的です。受電点が変電所に近い立地を選ぶほど、引込線の建設費と託送料金の負担が軽くなる構造で、DC立地選定はしばしば「電力コスト最適化プロジェクト」でもあります。ラック単位（6kW〜30kW/ラック）の消費電力設計と、サーバー室全体の契約電力設計は、必ず受電段階から遡って検討する必要があります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -100,6 +103,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               逆にTier II相当（N冗長のみ）や、クラウド事業者のアベイラビリティゾーン設計でソフトウェア側で冗長化するケースでは、契約電力は実需＋10〜20%マージンで済みます。Tier水準と契約電力設計は裏表の関係にあり、SLA設計との整合が不可欠です。30分デマンドで判定される最大需要電力は、冗長切替の瞬間値に引きずられるため、<Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値の考え方</Link>を踏まえた運用監視が必須になります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -111,6 +117,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ハイパースケーラーは10〜25年のコーポレートPPA（電力購入契約）で価格を長期固定し、JEPX市場変動リスクを遮断する戦略を取ります。一方で国内DC事業者は、市場連動＋燃料費調整の伝統的プランに留まるケースも多く、2022〜2023年の急騰局面で大きなコスト変動を受けました。AI需要で電力リスクが再び上昇する2026年以降は、<Link href="/corporate-ppa-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">コーポレートPPA</Link>や非化石証書の組み合わせが主流となる見通しです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -120,6 +129,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               法令面では、消防法上の非常電源（排煙・避難照明）とDC事業継続用の自家発は分けて設計すべきケースが多く、また電気事業法の保安規程・主任技術者の選任も必要になります。系統への逆潮流を伴う自家発連系（ピークカット兼用など）を検討する場合は、一般送配電事業者との協議と接続検討申込みが前提です。詳細は<Link href="/emergency-power-source-options" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">非常用電源の選び方</Link>も参照してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -131,6 +143,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新設・改修の契約電力設計では、<strong>将来3〜5年のGPU増設シナリオ</strong>を織り込んだキャパシティプランが求められます。増設後に契約電力を引き上げると、一般送配電事業者の接続検討に6ヶ月以上、場合によっては変電所増強を伴い2〜3年かかるケースもあります。AIワークロードの立ち上がりの速さに追いつくため、初期設計段階で「物理容量」と「契約容量」の双方にマージンを持たせることが実務上の定石です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -140,6 +155,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               冷却電力は外気温に依存するため、月次・季節で総需要が変動します。夏季ピーク月のデマンドが契約電力を規定するため、北海道・東北など涼しい立地のDCはPUE改善と契約電力抑制の両面で有利になります。PUE最適化の具体策は<Link href="/datacenter-cooling-optimization" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター冷却最適化</Link>で詳述しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -206,6 +224,7 @@ export default function Page() {
               { href: "/datacenter-location-grid-constraints", title: "データセンター立地と送電網制約", description: "系統空き容量の確認プロセス。" },
               { href: "/extra-high-voltage-electricity-pricing", title: "特別高圧の電気料金", description: "特別高圧料金メニューの基礎。" },
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要カテゴリ", description: "関連記事の一覧を見る。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

@@ -107,6 +107,9 @@ export default function ElectricityContractTermsPage() {
             </Link>
             でも整理できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -236,12 +239,18 @@ export default function ElectricityContractTermsPage() {
             </Link>
             とあわせて確認すると実務で使いやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">更新条件と自動更新の確認ポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自動更新の有無、更新通知の期限、更新時に単価や条件が変更される可能性を確認します。更新時の手続き期限を見落とすと、想定しない条件で契約が継続されることがあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -252,6 +261,9 @@ export default function ElectricityContractTermsPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             「安いように見えても条件が厳しい」ケースは、解約条件を確認すると把握しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -283,12 +295,18 @@ export default function ElectricityContractTermsPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人向け電力契約では、単価比較に加えて契約条件を確認することが不可欠です。上記の8項目一覧を見積取得から契約締結まで各フェーズで活用し、契約期間の長短によるトレードオフも踏まえて判断することで、導入後のギャップを減らせます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -330,6 +348,7 @@ export default function ElectricityContractTermsPage() {
               title: "法人向け電気料金の基礎知識",
               description: "見直し関連テーマを一覧でたどれます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

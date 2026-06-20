@@ -106,6 +106,9 @@ export default function ContractReviewForFacilityManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧・特別高圧の電力契約を切り替える場合、一般的には以下のプロセスが発生します。施設管理部門は各ステップで現場対応が求められることがあります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">スイッチング申請</p>
@@ -135,6 +138,9 @@ export default function ContractReviewForFacilityManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             施設管理の観点で最も重要なのは「安定して電力が供給されるか」です。以下の点を確認します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
               <strong>送配電は変わらない</strong>：電力の物理的な「送電線・配電網」は一般送配電事業者が管理する公共インフラであり、電力会社を切り替えても停電リスクは変わらない。切替による電気の品質（電圧・周波数）への影響はない
@@ -158,6 +164,9 @@ export default function ContractReviewForFacilityManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧・特別高圧契約では、基本料金が「最大需要電力（デマンド）」に基づいて決まることが多く、施設管理部門がデマンド管理を行うことでコスト削減につながります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">デマンドとは</p>
@@ -187,6 +196,9 @@ export default function ContractReviewForFacilityManagementPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧・特別高圧で受電している施設では、キュービクル（受変電設備）の管理責任が需要家側にあります。電力切替に関連して、以下の点を確認します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>受変電設備（キュービクル）の保守点検状況と更新時期を確認する</li>
             <li>電気主任技術者（選任または委託）の対応範囲に変更が生じないかを確認する</li>
@@ -281,6 +293,7 @@ export default function ContractReviewForFacilityManagementPage() {
               title: "高圧契約の見直しで確認したいこと",
               description: "施設管理が関わる高圧契約の見直し着眼点。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

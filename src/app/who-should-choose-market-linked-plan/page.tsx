@@ -94,6 +94,9 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -134,6 +137,9 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
             </Link>
             をあわせて参照すると整理しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -155,6 +161,9 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
               比較ページ
             </Link>
             で前提をそろえて検討してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -215,6 +224,9 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
             5年中4年で市場連動が有利ですが、2022年の1年だけで<span className="font-semibold text-slate-900">+606万円</span>のコスト増が発生。
             数年分のメリットが1年の高騰で吹き飛ぶリスクがあることを示しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -262,6 +274,7 @@ export default function WhoShouldChooseMarketLinkedPlanPage() {
               title: "法人の電力契約見直しは何から始めるべきか",
               description: "プラン選択の判断後に進める見直し手順の入口。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

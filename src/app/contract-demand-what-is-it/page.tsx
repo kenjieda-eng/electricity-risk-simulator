@@ -125,6 +125,9 @@ export default function ContractDemandWhatIsItPage() {
             <Link href="/basic-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">基本料金とは</Link>
             で詳しく確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* デマンドとは何か */}
@@ -144,6 +147,9 @@ export default function ContractDemandWhatIsItPage() {
             {" "}
             <Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値の見方ガイド</Link>
             もあわせて確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -208,6 +214,9 @@ export default function ContractDemandWhatIsItPage() {
             空調設備の更新、生産ラインの増設、稼働時間帯の変更、拠点統廃合などがあると、過去の契約条件が現在の実態に合わなくなることがあります。
             使用量やピークの出方が変わった時は見直しトリガーです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* どんな施設でデマンドが上がりやすいか */}
@@ -225,6 +234,9 @@ export default function ContractDemandWhatIsItPage() {
             {" "}
             <Link href="/why-business-electricity-costs-are-high" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気料金が高い会社の特徴</Link>
             もあわせて確認すると、見直しの優先順位を決めやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -382,6 +394,9 @@ export default function ContractDemandWhatIsItPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             平日は休日より<span className="font-semibold">+{DEMAND_WEEKDAY_WEEKEND.diffMW.toLocaleString()}MW（+{DEMAND_WEEKDAY_WEEKEND.diffPercent}%）高い</span>ため、平日の需要パターンがデマンド値（ひいては契約電力）を決定します。休日に需要が下がっても、平日ピークが契約電力に反映される点に注意が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 負荷率低下トレンド */}
@@ -473,6 +488,9 @@ export default function ContractDemandWhatIsItPage() {
             <Link href="/why-business-electricity-costs-are-high" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気料金が高い会社の特徴</Link>
             も参考になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -555,6 +573,7 @@ export default function ContractDemandWhatIsItPage() {
                 title: "AI コンシェルジュで関連情報を探す",
                 description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

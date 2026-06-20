@@ -155,6 +155,9 @@ export default function BusinessElectricityContractChecklistPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             逆に、現状整理が不十分なまま見積を取ると、条件がそろわず比較しづらい見積が届いたり、見積依頼のやりとりが何度も必要になるケースがあります。以下のチェックリストを使い、まず「自社の現状」を棚卸しすることから始めてみてください。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -199,6 +202,9 @@ export default function BusinessElectricityContractChecklistPage() {
             </Link>{" "}
             も参考にしてください。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             {billCheckItems.map((item) => (
               <div
@@ -263,6 +269,9 @@ export default function BusinessElectricityContractChecklistPage() {
             </Link>{" "}
             もあわせて確認してください。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             {internalCheckPoints.map((item) => (
               <div
@@ -326,6 +335,9 @@ export default function BusinessElectricityContractChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直しは、見積を取る前の整理で判断の質が大きく変わります。以下の流れで進めると、比較から社内承認までスムーズに進めやすくなります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行契約の基本情報を整理する</li>
             <li>請求書から比較に使う項目を確認する</li>
@@ -385,6 +397,7 @@ export default function BusinessElectricityContractChecklistPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

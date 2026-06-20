@@ -136,6 +136,9 @@ export default function ContractReviewReductionEffectPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* プラン切替効果テーブル */}
@@ -225,6 +228,9 @@ export default function ContractReviewReductionEffectPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">※基本料金単価は電力会社・プランによって異なります。実際は請求書の「基本料金欄」の単価でご確認ください。</p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 年間削減額バーグラフ */}
@@ -266,6 +272,9 @@ export default function ContractReviewReductionEffectPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 注意点 */}
@@ -279,6 +288,9 @@ export default function ContractReviewReductionEffectPage() {
             <li><strong>違約金・解約条件の確認：</strong>現在の契約に解約手数料や最低契約期間が設定されている場合があります。変更前に確認してください。</li>
           </ul>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 注意事項 */}
@@ -336,6 +348,7 @@ export default function ContractReviewReductionEffectPage() {
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金を下げる仕組みと効果" },
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "デマンド値の決まり方と基本料金の関係" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期の施策マップ" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

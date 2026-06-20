@@ -106,6 +106,9 @@ export default function ContractReviewForGeneralAffairsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約見直しのプロセスでは、総務部門が担う役割は会社の規模・組織によって異なりますが、一般的には以下の業務が中心となります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {[
               {
@@ -140,6 +143,9 @@ export default function ContractReviewForGeneralAffairsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見直し開始時に最初に行うのは、現行契約の内容確認です。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>現行の契約書・料金メニュー説明書を取り出し、満了日・自動更新申出期限を確認する</li>
             <li>中途解約条項（違約金・予告期間）の有無と内容を確認する</li>
@@ -182,6 +188,9 @@ export default function ContractReviewForGeneralAffairsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約見直しには複数の部門が関わります。総務部門は各部門と以下の形で連携します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経理部門との連携</p>
@@ -211,6 +220,9 @@ export default function ContractReviewForGeneralAffairsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             契約先が決定した後の手続き管理も総務部門が担うことが多いです。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約書の内容を確認し（契約期間・単価・解約条件など）、署名・捺印・提出を行う</li>
             <li>現行電力会社への解約通知が必要な場合は、予告期限内に書面で通知する</li>
@@ -280,6 +292,7 @@ export default function ContractReviewForGeneralAffairsPage() {
               title: "電力契約の解約・更新条件の確認ポイント",
               description: "総務が把握すべき解約条件と更新手続きの詳細。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

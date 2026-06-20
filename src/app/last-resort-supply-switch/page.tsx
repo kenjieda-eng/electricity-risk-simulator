@@ -112,6 +112,9 @@ export default function LastResortSupplySwitchPage() {
             供給継続のために有効な制度ですが、長期運用向きの契約ではありません。契約条件の見通しを安定させるには、
             次の小売契約へ計画的に移行する必要があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -130,6 +133,9 @@ export default function LastResortSupplySwitchPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積精度を上げるには、単価比較の前に前提条件をそろえることが重要です。使用実績だけでなく、
             契約条件の優先順位（安定性重視か、柔軟性重視か）を社内で整理しておくと判断しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             比較軸の作り方は{" "}
@@ -162,6 +168,9 @@ export default function LastResortSupplySwitchPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧・特別高圧では供給開始まで調整期間が必要になることがあり、検討開始が遅れるほど切り替え候補が限られます。
             「いつまでに何をするか」を逆算し、社内決裁や庁内手続きも含めた工程を先に置くことが実務上のポイントです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -212,6 +221,9 @@ export default function LastResortSupplySwitchPage() {
           <h2 className="text-xl font-semibold text-slate-900">切替パターン別の所要期間と注意点</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             切替の方向によって手続き内容と所要期間が異なります。どのパターンに該当するかを確認してから準備を進めます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           
       <TightSupplyAlertCalculator />
@@ -285,6 +297,7 @@ export default function LastResortSupplySwitchPage() {
               title: "最終保障供給とは",
               description: "制度の位置づけと対象の基本を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

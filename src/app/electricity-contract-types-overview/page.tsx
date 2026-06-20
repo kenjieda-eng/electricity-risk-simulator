@@ -313,6 +313,9 @@ export default function ElectricityContractTypesOverviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力会社との契約区分は、受電する電圧と契約電力の大きさによって決まります。電圧が高くなるほど単価（円/kWh）は下がる傾向がありますが、受電設備の設置・維持コストが発生します。まず自社の使用量と契約電力を把握し、該当する区分を確認しましょう。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -395,6 +398,9 @@ export default function ElectricityContractTypesOverviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種と施設規模の組み合わせによって、一般的に対応する契約区分が異なります。下表はあくまで目安ですが、競合他社の契約区分を把握する際や、新規出店・増床時の電力コスト試算に活用できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -428,6 +434,9 @@ export default function ElectricityContractTypesOverviewPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自社に最適な契約区分を判断するには、現在の使用量・契約電力を起点に5つのステップで検討します。特に低圧から高圧への切替は初期投資を伴うため、年間コスト削減効果との比較が重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {selectionSteps.map((item) => (
               <div
@@ -457,6 +466,9 @@ export default function ElectricityContractTypesOverviewPage() {
           <h2 className="text-xl font-semibold text-slate-900">契約区分ごとの詳細ページ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             各契約区分の料金体系・メリット・注意点・見直しポイントを詳しく解説したページです。自社が該当する区分のページから読み進めることをお勧めします。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {detailPages.map((page) => (
@@ -560,6 +572,7 @@ export default function ElectricityContractTypesOverviewPage() {
               title: "電気契約の解約金",
               description: "中途解約時の違約金構造と算定方法。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

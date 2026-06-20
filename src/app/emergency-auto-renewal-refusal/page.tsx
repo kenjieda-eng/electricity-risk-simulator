@@ -232,6 +232,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
           この期限が今日から何日後かを計算し、以下のステップに進んでください。
           期限が1カ月以内に迫っている場合は今すぐ電力会社に連絡してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* STEP タイムライン */}
@@ -250,6 +253,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 時間軸テーブル */}
@@ -275,6 +281,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 確認チェックリスト */}
@@ -307,6 +316,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
       <section className="mt-6 rounded-xl border border-amber-300 bg-amber-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">解約通告期限を過ぎてしまった場合の対処</h2>
         <p className="mt-2 text-sm leading-7 text-slate-700">期限を過ぎていても諦めないでください。状況別の対応を確認してください。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-3">
           {periodExpiredFlow.map((p, i) => (
             <div key={i} className="rounded-lg border border-amber-200 bg-white p-4">
@@ -393,6 +405,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 専門家に相談すべきサイン */}
@@ -402,6 +417,9 @@ export default function EmergencyAutoRenewalRefusalPage() {
           以下に当てはまる場合は、早めに
           <Link href="/contact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">専門家へご相談</Link>
           ください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-4 space-y-2">
           {expertSigns.map((sign, i) => (
@@ -473,6 +491,7 @@ export default function EmergencyAutoRenewalRefusalPage() {
               title: "値上げ通知が届いたらまずやる7つのこと",
               description: "値上げ通知を受けたときの対応手順と時間軸。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
