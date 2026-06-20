@@ -195,6 +195,9 @@ export default function SubsidySiiEnergySavingPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額・公募時期は年度・区分により異なります。必ず最新公募要領を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -213,6 +216,9 @@ export default function SubsidySiiEnergySavingPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 類型別補助率・上限額 */}
@@ -220,6 +226,9 @@ export default function SubsidySiiEnergySavingPage() {
           <h2 className="text-xl font-semibold text-slate-900">類型別の補助率と上限額（先進・標準・ASIST 別）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額は年度・区分により変更されます。正式な数値は最新公募要領をご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -250,6 +259,9 @@ export default function SubsidySiiEnergySavingPage() {
               </p>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 対象事業者・対象設備 */}
@@ -283,6 +295,9 @@ export default function SubsidySiiEnergySavingPage() {
             SIIが指定するカタログ登録製品、または一定の省エネ性能基準を満たす設備が対象となります。
             設備仕様の確認は早めに行ってください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 補助額シミュレーション */}
@@ -290,6 +305,9 @@ export default function SubsidySiiEnergySavingPage() {
           <h2 className="text-xl font-semibold text-slate-900">想定パターン別の補助額シミュレーション</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまで想定例です。実際の補助額は設備種別・省エネ率・事業者区分等により異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -315,11 +333,17 @@ export default function SubsidySiiEnergySavingPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-3 space-y-1">
             {simulationPatterns.map((p, i) => (
               <p key={i} className="text-xs text-slate-500">※ {p.label}：{p.note}</p>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 着工前申請 重要注意 */}
@@ -441,6 +465,7 @@ export default function SubsidySiiEnergySavingPage() {
             { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代見直しの基本ポイント", description: "補助金活用と並行して取り組む契約見直しの基本フレーム。" },
             { href: "/extra-high-voltage-electricity-pricing", title: "特別高圧の電気料金の仕組み", description: "大型補助金活用が見込める特別高圧需要家向け料金体系を解説。" },
             { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直しポイント", description: "省エネ補助金活用が見込める高負荷業種の代表例。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

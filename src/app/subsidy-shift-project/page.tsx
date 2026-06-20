@@ -181,6 +181,9 @@ export default function SubsidyShiftProjectPage() {
             計画策定後に省エネ設備更新（SII補助金）や再エネ調達（PPA補助金）を実施することで、
             電力コストの削減と脱炭素経営の両立が現実的な選択肢になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 制度概要テーブル */}
@@ -188,6 +191,9 @@ export default function SubsidyShiftProjectPage() {
           <h2 className="text-xl font-semibold text-slate-900">SHIFT 事業の制度概要と対象範囲（2026 年度版）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額・公募時期は年度により変更されます。必ず環境省の最新公募要領をご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -214,6 +220,9 @@ export default function SubsidyShiftProjectPage() {
           <h2 className="text-xl font-semibold text-slate-900">事業区分別の補助上限額と補助率の目安</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下は2026年4月時点の概算です。正式な上限額・補助率は公募要領でご確認ください。年度途中の変更・追加公募の可能性があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -244,6 +253,9 @@ export default function SubsidyShiftProjectPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 採択率は過去実績から概ね50〜60%程度とされていますが、年度・区分・申請内容により変動します。申請書の完成度が採否を大きく左右します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 主な補助対象 */}
@@ -260,6 +272,9 @@ export default function SubsidyShiftProjectPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 補助対象費用の範囲は年度・区分により異なります。必ず最新公募要領で確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 補助金活用シミュレーション */}
@@ -267,6 +282,9 @@ export default function SubsidyShiftProjectPage() {
           <h2 className="text-xl font-semibold text-slate-900">想定パターン別の補助額活用シミュレーション</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまで想定例です。実際の補助額・効果は事業規模・区分・申請内容により異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {simulationPatterns.map((p, i) => (
@@ -289,6 +307,9 @@ export default function SubsidyShiftProjectPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             SHIFT事業で「脱炭素削減計画」を策定した後、その計画に沿って省エネ設備投資（SII補助金）や
             再エネ調達（需要家主導型PPA補助金）を実施すると、電力コスト削減と脱炭素化が同時に進みます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
             <div className="rounded-lg border border-emerald-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800">SHIFT事業<br /><span className="text-xs font-normal text-slate-600">削減計画策定・認証取得費用を補助</span></div>
@@ -363,6 +384,9 @@ export default function SubsidyShiftProjectPage() {
             </div>
           </div>
           <p className="mt-3 text-xs text-slate-500">出典: 環境省 SHIFT 事業公開資料、業界平均レンジで作成。実数値は事業区分・規模で変動します。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 注意点・よくある失敗 */}
@@ -417,6 +441,7 @@ export default function SubsidyShiftProjectPage() {
             { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代見直しの基本ポイント", description: "補助金活用と並行して取り組む契約見直しの基本フレーム。" },
             { href: "/non-fossil-certificates", title: "非化石証書の仕組みと活用法", description: "SBT 認証取得時の再エネ調達手段として最も手軽な選択肢。" },
             { href: "/corporate-ppa-overview", title: "コーポレート PPA の概要と選び方", description: "脱炭素経営の中長期施策として活用するコーポレート PPA。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

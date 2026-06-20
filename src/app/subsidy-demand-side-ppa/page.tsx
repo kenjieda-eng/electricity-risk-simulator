@@ -147,9 +147,15 @@ export default function SubsidyDemandSidePpaPage() {
             PPA（Power Purchase Agreement：電力購入契約）とは、発電事業者が設置・所有する<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光発電</Link>設備から電力を長期固定価格で購入する契約です。
             オンサイトPPAは自社敷地内に設置するのに対し、オフサイトPPAは別の場所にある発電所から系統を通じて電力を調達します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             需要家側のメリットは、初期費用ゼロ（あるいは大幅削減）で再エネ電力を長期固定価格で調達できる点です。
             <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>や市場連動分の変動リスクをヘッジしながら、RE100・脱炭素宣言への対応が可能になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -158,6 +164,9 @@ export default function SubsidyDemandSidePpaPage() {
           <h2 className="text-xl font-semibold text-slate-900">需要家主導型太陽光発電導入支援事業 概要（目安）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額・公募時期は年度により変更されます。必ず環境省の最新公募要領をご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -177,6 +186,9 @@ export default function SubsidyDemandSidePpaPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 補助額の詳細 */}
@@ -184,6 +196,9 @@ export default function SubsidyDemandSidePpaPage() {
           <h2 className="text-xl font-semibold text-slate-900">補助額・主な要件の詳細（目安）</h2>
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下は2026年4月時点の公開情報に基づく概算です。正式な数値は環境省の公募要領でご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
@@ -204,6 +219,9 @@ export default function SubsidyDemandSidePpaPage() {
               </ul>
             </div>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 対象事業者・対象設備 */}
@@ -237,6 +255,9 @@ export default function SubsidyDemandSidePpaPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 以下はあくまでイメージです。実際の削減額・補助額は案件・契約内容・制度条件により大きく異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {simulationPatterns.map((p, i) => (
               <div key={i} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -250,6 +271,9 @@ export default function SubsidyDemandSidePpaPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 申請の流れ */}
@@ -350,6 +374,7 @@ export default function SubsidyDemandSidePpaPage() {
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光は電気料金対策としてどう効くか", description: "導入効果と費用対効果の考え方" },
             { href: "/battery-suitability-diagnosis", title: "蓄電池導入向き不向き診断", description: "蓄電池との組み合わせ効果を確認" },
             { href: "/municipality-procurement-methods", title: "自治体電力調達の入札実務", description: "自治体向けPPA活用を検討する際の調達方式の基礎知識。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

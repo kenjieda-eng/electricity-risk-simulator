@@ -219,6 +219,9 @@ export default function SubsidySmeEnergySavingPatternsPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・上限額は年度・区分により変更されます。必ず最新公募要領を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -272,6 +275,9 @@ export default function SubsidySmeEnergySavingPatternsPage() {
             中小企業は補助率が高く、中小企業・小規模事業者限定の制度にも申請できます。
             また、商工会議所やよろず支援拠点による無料申請支援が利用できる点も大きな強みです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 活用パターン */}
@@ -280,6 +286,9 @@ export default function SubsidySmeEnergySavingPatternsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             以下は中小企業が省エネ補助金を活用する代表的なパターンです。
             設備の種類・規模・業種によって最適な補助制度が変わります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {usagePatterns.map((pat, i) => (
@@ -314,6 +323,9 @@ export default function SubsidySmeEnergySavingPatternsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             中小企業が補助金申請を断念する理由の多くは「手間がかかりすぎる」という認識です。
             以下の方法を活用することで、申請工数を大幅に削減できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {applicationTips.map((tip, i) => (
@@ -371,6 +383,7 @@ export default function SubsidySmeEnergySavingPatternsPage() {
             { href: "/subsidy-sii-energy-saving", title: "省エネ補助金（SII）の申請ガイド", description: "対象設備・補助率・申請スケジュールの詳細" },
             { href: "/subsidy-schedule-and-approval-rate", title: "補助金申請のスケジュールと採択率の目安", description: "年間カレンダーと採択率から逆算する準備術" },
             { href: "/led-air-conditioning-reduction-effect", title: "LED・空調更新の電気代削減効果", description: "設備更新による削減幅の試算方法" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

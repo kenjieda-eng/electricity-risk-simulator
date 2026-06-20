@@ -233,6 +233,9 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 補助率・要件は年度・事業内容により変更されます。必ず最新の公募要領・制度解説をご確認ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {mainSubsidies.map((sub, i) => (
               <div key={i} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -290,6 +293,9 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 活用事例 */}
@@ -298,6 +304,9 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             以下は自治体が実際に取り組みやすい活用事例です。
             自治体の規模・施設の状況・脱炭素計画の進捗に応じて適切な制度を選択してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {usageExamples.map((ex, i) => (
@@ -333,6 +342,9 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 制度活用のステップ */}
@@ -382,6 +394,7 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
             { href: "/subsidy-local-government-list", title: "自治体別 電力関連補助金の探し方", description: "都道府県・市区町村の独自制度を効率的に探す方法" },
             { href: "/municipality-re100-decarbonization", title: "自治体のRE100・脱炭素化の取り組み", description: "公共部門の再エネ100%調達と脱炭素計画の進め方" },
             { href: "/subsidies-overview", title: "法人向け電力・省エネ補助金まとめ", description: "2026年度に使える主要制度を横断比較" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
