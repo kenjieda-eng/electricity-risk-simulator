@@ -165,6 +165,9 @@ export default function DemandControlReductionEffectPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* メインテーブル */}
@@ -245,6 +248,9 @@ export default function DemandControlReductionEffectPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* デマンドコントローラーの効果が出やすい条件 */}
@@ -301,6 +307,9 @@ export default function DemandControlReductionEffectPage() {
             ※本ページの削減効果は業界平均を参考にした概算値です。実際の削減効果は設備構成・操業パターン・季節変動によって異なります。正確な効果試算は専門業者にご相談ください。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* データの根拠と出典 */}
@@ -395,6 +404,9 @@ export default function DemandControlReductionEffectPage() {
             ※出典: 電力広域的運営推進機関（OCCTO）公表データ（FY2016〜2023）を集計。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -412,6 +424,7 @@ export default function DemandControlReductionEffectPage() {
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した施策マップ" },
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
             { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

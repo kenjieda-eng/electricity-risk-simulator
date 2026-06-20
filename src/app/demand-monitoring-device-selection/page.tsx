@@ -134,6 +134,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">デマンド監視装置は、30分単位の電力需要を測定し、契約電力を超過しそうなときに警報を出したり、制御信号を出したりする装置です。契約電力超過はペナルティ的な料金改定につながるため、多くの工場・ビルで導入されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">機能は単純な警報ブザーから、AI予測・クラウド蓄積・メール通知・空調自動制御まで幅広いです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">高圧・特別高圧で採用される実量制（デマンド制）では、契約電力が過去1年間の各月の最大デマンド（30分ごとの平均需要電力の最大値）の最大値で決まります。一度ピークを更新すると、その値が以後1年間の契約電力となり、基本料金が上がってしまいます。だからこそ、ピークを未然に抑えるデマンド監視装置の役割が重要になります（出典: 省エネルギーセンター / 資源エネルギー庁 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -154,6 +157,9 @@ export default function Page() {
               <li><span className="font-semibold">クラウド型：</span>計測データをクラウドに蓄積し、多拠点統合・遠隔監視・AI予測・BEMS連携が可能。月額料金が継続発生する。</li>
             </ul>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらは排他的ではなく、クラウド型でかつ制御機能を持つ製品もあります。自社の人員体制（常駐者の有無）、拠点数、データ活用志向に応じて組み合わせを選びます（出典: メーカー一般仕様 / 省エネルギーセンター 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -168,6 +174,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①予測精度（何分前に警報が出るか）、②外部制御連携（空調・生産設備の自動制御可否）、③複数拠点統合可否、④オープンデータ形式（CSV・API）の4点を確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">工場の場合は生産ライン制御との連携が可否が重要で、オフィスビルの場合は空調制御との連携が優先度高い傾向があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これに加えて、⑤通知手段（ブザー・メール・LINE・スマホアプリ）、⑥データの保存期間と分析機能、⑦既設のキュービクル・計測機器との接続互換性、⑧サポート・保守体制、も確認しておくと選定の精度が上がります。とくに⑦は追加工事の有無に直結するため、現地調査の段階で受変電設備の仕様を確認することが重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -224,6 +233,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">設置要件と工事の流れ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">一般的な設置の流れは、（1）現地調査（受変電設備・計測機器・通信環境の確認）、（2）装置・センサーの設置工事、（3）デマンド目標値・制御設定の初期設定、（4）試運転・チューニング、です。受変電設備（キュービクル）の計器用変成器（CT・VT）からパルス信号や計測値を取り込み、装置に接続します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">工事は電気工事士による施工が必要で、停電を伴う作業が発生する場合があります。クラウド型では携帯回線やLANなどの通信回線の確保が、制御型では空調・生産設備側に制御を受け入れる外部接点や通信インターフェースが必要です。既設設備の仕様により追加工事の範囲が変わるため、事前の現地調査が重要です（出典: メーカー一般仕様 / 省エネルギーセンター 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -257,12 +269,18 @@ export default function Page() {
               <li><span className="font-semibold">契約電力の見直し漏れ：</span>装置でピークを抑えられたら、実態に合わせて契約電力を引き下げる。装置導入だけでは基本料金は自動で下がらない。</li>
             </ul>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">とくに最後の点は重要で、デマンドを抑えても契約電力を見直さなければ基本料金は下がりません。装置導入と契約見直しはセットで進めます（出典: 省エネルギーセンター 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">デマンド監視装置の導入には、省エネ補助金（資源エネルギー庁）や中小企業向けのIT導入補助金が活用可能です。補助率は1/2〜2/3が一般的です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法定期報告では、デマンド管理の実績（契約電力推移）も記載事項となるため、装置導入と社内報告体制を一体で整備します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -301,6 +319,7 @@ export default function Page() {
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
