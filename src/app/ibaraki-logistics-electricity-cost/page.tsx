@@ -445,6 +445,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               茨城県、特に圏央道沿線（つくば・常総・坂東・古河）は2017年の全線開通以降、首都圏の新興物流ハブとして急成長しています。EC配送24時間体制・自動倉庫・スループット型の特殊な電力プロファイルが業種特性の中心となります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               茨城県内の物流施設は、東電EPに加えて全国系新電力・物流特化型・再エネ特化型・東京ガス系と多様なプレイヤーが供給。大型物流施設・自動倉庫では競争入札が標準化、新興物流ハブとして新電力切替の動きが加速しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、EC配送拠点の負荷率と料金体系、電気代の物流原価への影響を、物流施設の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -543,6 +552,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               茨城物流の電気代上昇は、EC配送24h絶対需要・新規施設開発の系統容量制約・東電エリアの燃調感応度・EC/3PL契約の単価転嫁難・EC大手RE100要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +578,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               茨城県の中小企業省エネ補助、圏央道沿線市町村独自補助、国のSII省エネ補助、国交省物流効率化・脱炭素化補助、需要家主導型再エネ・PPA補助の5層を組合せ、物流施設投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +610,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               茨城県の物流集積は、つくば学園都市＋圏央道JCT、常総・坂東の圏央道沿線新興ハブ、古河・五霞の北関東ハブ、つくばみらい・牛久の中堅施設、常陸那珂港の海上輸送連動という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +629,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型物流施設・自動倉庫では競争入札が標準化、中堅施設でも切替シフト進行中、市場連動からの固定回帰、EC大手・3PL大手RE100要請による再エネ調達主流化、施設屋根太陽光・蓄電池併用の主流化が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -635,6 +656,9 @@ export default function IbarakiLogisticsElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               物流施設の省エネは、自動仕分け機・自動倉庫の運転スケジュール最適化、高効率空調＋人感センサー、全館LED＋人感センサー・調光制御、施設屋根オンサイト太陽光、BEMS＋WMS連動の5軸が主力。大型・中堅・中規模いずれでも投資回収2〜4年で実現可能なメニューが揃っています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -709,6 +733,7 @@ export default function IbarakiLogisticsElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "EC大手・3PL大手RE100対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "施設屋根活用と外部調達の比較。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

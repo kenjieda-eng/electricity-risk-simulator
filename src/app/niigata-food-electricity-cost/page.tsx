@@ -445,6 +445,9 @@ export default function NiigataFoodElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新潟県は米の生産量全国トップクラスの米どころで、米菓（全国シェア過半）・清酒（県内約90蔵）・包装米飯・精米等の米加工食品が基幹産業です。米菓の乾燥焙焼、清酒の低温醸造という業種特性と、東北電力エリアの水力資源の豊かさが電力事情の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function NiigataFoodElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新潟県内の食品工場は、東北電力に加えて東北系・全国系・再エネ特化型（水力活用）と多様なプレイヤーが供給。大手米菓・大型食品工場では競争入札が進む一方、清酒蔵・中小工場は東北電力継続が多数派です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function NiigataFoodElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・特別高圧の単価レンジ、水力比率による燃調感応度の低さ、清酒の季節性と契約電力を、食品工場の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -543,6 +552,9 @@ export default function NiigataFoodElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新潟食品の電気代上昇は、米菓の乾燥焙焼連続熱負荷・清酒の低温醸造貯蔵冷却・東北エリアの燃調感応度（低め）・清酒の季節変動・食品大手のCN要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +578,9 @@ export default function NiigataFoodElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新潟県の中小企業省エネ補助、市町村独自補助、国のSII省エネ補助、農林水産省の食品産業向け補助、需要家主導型再エネ・小水力活用補助の5層を組合せ、食品工場投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +610,9 @@ export default function NiigataFoodElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新潟の食品集積は、新潟市亀田の米菓一大集積、新発田・長岡の米菓包装米飯、県内全域の清酒蔵（約90蔵）、上越中越下越の食品工場、東北電力・水力資源という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +629,9 @@ export default function NiigataFoodElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大手米菓・大型食品工場では競争入札が進行中、中小工場・清酒蔵でも切替余地、市場連動からの固定回帰、再エネ地産地消・水力活用の進展が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -652,6 +673,9 @@ export default function NiigataFoodElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               契約見直し前にこのチェックリストで自社状況を整理しましょう。1項目でも未確認があれば、新電力相見積の精度や交渉力が下がります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
@@ -708,6 +732,7 @@ export default function NiigataFoodElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋根太陽光・小水力自家消費の経済性。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "食品大手CN対応の追加性ある再エネ調達。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

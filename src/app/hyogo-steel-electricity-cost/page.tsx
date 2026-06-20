@@ -446,6 +446,9 @@ export default function HyogoSteelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               兵庫県、特に神戸・姫路・加古川・播磨臨海工業地帯は、高炉一貫製鉄所・電炉特殊鋼工場・重機械工業の超大型事業所が連続立地する全国有数の重工業集積地です。年間使用電力数十億kWh級の特別高圧需要家が集中し、関西電力エリアの電力需給に大きな影響を持ちます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -478,6 +481,9 @@ export default function HyogoSteelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               兵庫県内の鉄鋼・重工業は、関西電力の長期相対契約に加え、全国系新電力・自家発電・再エネ特化型・PPA事業者と多様な選択肢が併存。超大型需要家は長期相対が中心、Tier2/Tier3では切替シフトが進行中です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -495,6 +501,9 @@ export default function HyogoSteelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧の単価レンジ、電炉アーク負荷の瞬間電力課金、関西エリアの燃調感応度、鉄鋼業の絶対額負担を、代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -544,6 +553,9 @@ export default function HyogoSteelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               兵庫鉄鋼の電気代上昇は、高炉一貫の超巨大絶対需要・電炉アーク瞬間ピーク・水素還元製鉄CN要請・再エネ賦課金の絶対額負担・長期相対契約の硬直性の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -567,6 +579,9 @@ export default function HyogoSteelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               兵庫県の産業立地・脱炭素設備導入補助、国のSII省エネ補助、GX投資促進税制、経産省鉄鋼業GX関連投資支援基金、電力多消費業種向け再エネ賦課金減免の5層を組合せ、鉄鋼業投資の回収を1〜数年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -596,6 +611,9 @@ export default function HyogoSteelElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               兵庫の鉄鋼・重工業は、神戸の重工業中枢（神戸製鋼・川崎重工・三菱重工）、加古川・姫路の高炉一貫製鉄所、播磨臨海のTier1/Tier2部品工場、尼崎・西宮の機械素材、但馬の中小金属加工という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -612,6 +630,9 @@ export default function HyogoSteelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               超大型需要家は長期相対契約継続、Tier2/Tier3では切替余地大、市場連動からの固定回帰、CN要請による再エネ調達主流化、自家発電比率の戦略的調整が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -636,6 +657,9 @@ export default function HyogoSteelElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               鉄鋼・重工業の省エネは、廃熱発電（CDQ・TRT）更新、電炉アーク制御最適化、圧延機械インバータ高効率化、コンプレッサー集中管理、屋根・オフサイトPPAの5軸が主力。経営インパクト大の打ち手が揃っています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {energySaving.map((item) => (
@@ -710,6 +734,7 @@ export default function HyogoSteelElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増・減免制度。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "鉄鋼CN対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "重工業部品工場の屋根活用例。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

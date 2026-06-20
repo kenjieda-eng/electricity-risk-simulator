@@ -445,6 +445,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               北海道は農業・酪農・水産業の国内最大の生産地で、それと直結した食品加工業が道内各地に集積しています。冷凍冷蔵・凍結の通年負荷と、寒冷地の外気冷熱活用という二面性、北海道電力エリアの燃調感応度の高さが業種特性の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               道内の食品加工業は、北海道電力に加えて道内地域新電力・全国系新電力・再エネ特化型と多様なプレイヤーが供給。大型工場では競争入札が進む一方、北本連系線制約から道内供給力の確認が重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               高圧・特別高圧の単価レンジ、北海道エリアの燃調感応度の高さ、冷凍冷蔵負荷率と寒冷地の季節差を、食品加工の代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -514,6 +523,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               北海道内の代表的な3規模の食品加工工場で、契約見直し＋冷凍機更新＋外気冷熱活用＋再エネの組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界統計から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -543,6 +555,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               北海道食品加工の電気代上昇は、冷凍冷蔵の通年絶対需要・北海道エリアの燃調感応度（高位）・寒冷地の暖房融雪追加負荷・生産シーズン負荷変動・北本連系線制約の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +581,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               北海道の中小企業省エネ補助、市町村独自補助、国のSII省エネ補助、農林水産省の食品・水産加工業向け補助、バイオガス・再エネ・PPA補助の5層を組合せ、食品加工投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +613,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               北海道の食品加工集積は、十勝・オホーツク・根釧の酪農乳製品、釧路・根室・函館・稚内の水産加工、石狩・苫小牧・千歳の総合食品冷凍冷蔵物流、札幌圏の製菓製パン飲料という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +632,9 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               大型食品加工工場では競争入札が進行中、中堅工場でも切替余地大、市場連動からの固定回帰、再エネ地産地消・バイオガス活用の進展が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -708,6 +732,7 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "北海道エリアの感応度の高さを理解。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋根太陽光・バイオガス自家消費の経済性。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -445,6 +445,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               愛知県は出荷額・事業所数・従業員数のいずれでも国内最大の自動車産業集積地です。完成車・Tier1・Tier2・素材・物流・試験までが半径30km圏内に完結する世界的にも稀有な構造で、特別高圧契約の集中度が極めて高いエリアとなっています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               愛知県内の自動車関連工場は、中部電力ミライズに加えて全国系新電力・地域系新電力・再エネ特化型・PPA事業者と多様なプレイヤーが供給。完成車・大型Tier1では競争入札が標準化し、Tier2の中小工場では切替余地が依然大きい状態です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、燃料費調整額の感応度、再エネ賦課金の累積負担を、自動車工場の代表的な契約タイプ別に整理します。中部電力エリア固有のLNG感応度を踏まえた契約戦略が経営判断の中心となります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -514,6 +523,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               愛知県内の代表的な3規模で、契約見直し＋設備対策＋PPA調達の組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界ヒアリング・トヨタ環境報告書等から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -543,6 +555,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               愛知の自動車工場の電気代上昇は、塗装ライン集中負荷・プレス瞬間ピーク・中部エリアの燃調感応度・EV化に伴う設備投資・再エネ調達コストの5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +581,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               あいち産業労働振興プラン関連補助、国のSII省エネ補助、需要家主導型PPA補助、GX投資促進税制、中部経産局のサプライチェーン強靱化補助の5層を組合せ、Tier1・Tier2の更新投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +613,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               愛知の自動車サプライチェーンは、豊田の完成車本社機能を中心に、刈谷・安城のTier1中枢、田原のレクサス専門工場、みよし・西尾・岡崎のTier2集積、知多・名古屋港の素材・物流連動という5層構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +632,9 @@ export default function AichiAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               完成車・大型Tier1では競争入札が標準化、Tier2では切替余地大、トヨタCN宣言と連動した再エネ調達（PPA・非化石証書）の主流化が共通トレンド。市場連動からの固定回帰も顕著です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -709,6 +733,7 @@ export default function AichiAutomotiveElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "トヨタCN対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイト屋根PPA活用", description: "豊田・田原の大型屋根面積活用例。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

@@ -445,6 +445,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島県はマツダを核とする自動車産業と、呉・江田島・尾道の造船業が集積する西日本有数の重工業県です。福山の鉄鋼も含め、自動車・造船・鉄鋼の特別高圧需要家が集中する電力多消費の産業構造が業種特性の中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {electricSituation.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -477,6 +480,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島県内の自動車・造船は、中国電力に加えて全国系新電力・中国系・再エネ特化型・PPA事業者と多様なプレイヤーが供給。完成車・大型造船では競争入札が進む一方、超大型需要家は長期契約関係が継続しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {utilitiesList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -494,6 +500,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧・高圧の単価レンジ、島根原発再稼働による燃調感応度の変化、造船の操業度変動と契約電力を、代表的な契約タイプ別に整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {priceBenchmark.map((item) => (
@@ -514,6 +523,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島県内の代表的な3規模で、契約見直し＋設備対策＋PPA調達の組合せによる削減効果をBefore/After方式で提示します。いずれも公開事例・業界ヒアリング・マツダ環境報告書等から再構成した代表シナリオで、数値は目安レンジです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-4">
               {industryImpact.map((cs) => (
@@ -543,6 +555,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島の自動車・造船の電気代上昇は、塗装ライン集中負荷（自動車）・大型溶接負荷（造船）・中国エリアの燃調感応度と島根原発・電動化の設備投資・マツダCN要請の5要因が複合的に作用します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {costFactors.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -566,6 +581,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島県の産業・脱炭素設備補助、国のSII省エネ補助、需要家主導型PPA補助、GX投資促進税制、中国経産局のサプライチェーン強靱化補助の5層を組合せ、自動車・造船の更新投資の回収を1〜2年短縮するのが定石です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {subsidies.map((item) => (
@@ -595,6 +613,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               広島の重工業は、府中・宇品のマツダ完成車、広島市・東広島・三次のサプライヤー・エンジン、呉・江田島・因島の瀬戸内造船、福山の鉄鋼素材、中国電力・島根原発という構造です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {industryProfile.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -611,6 +632,9 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               完成車・大型造船では競争入札が進行中、Tier2・造船サプライヤーでは切替余地大、市場連動からの固定回帰、島根原発再稼働の燃調感応度低下期待、マツダCN対応の再エネ調達が共通トレンドです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {switchingReality.map((item) => (
@@ -708,6 +732,7 @@ export default function HiroshimaAutomotiveElectricityCostPage() {
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "賦課金推移と負担増の見立て。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPA導入ガイド", description: "マツダCN対応の追加性ある再エネ調達。" },
               { href: "/onsite-vs-offsite-ppa", title: "オンサイトvsオフサイトPPA", description: "完成車・造船の屋根活用と外部調達の比較。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
