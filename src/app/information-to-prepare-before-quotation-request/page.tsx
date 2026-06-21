@@ -202,6 +202,9 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             情報を整理して依頼することで、見積の精度が高まり、比較検討が実質的になります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {infoCategories.map((cat) => (
@@ -234,6 +237,9 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             複数拠点がある場合は、拠点ごとに異なる番号があります。拠点一覧と対応する供給地点特定番号を表にまとめておくと、見積依頼の際にスムーズです。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -316,6 +322,7 @@ export default function InformationToPrepareBeforeQuotationRequestPage() {
               title: "固定プランが向く法人の特徴",
               description: "見積依頼前にプランの方向性を整理しておく際の参考。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

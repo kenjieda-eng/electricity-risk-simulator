@@ -155,6 +155,9 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力量単価が安くても、これらの追加費用が高ければ実際の年間総コストは高くなります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {checkItems.map((section) => (
@@ -230,6 +233,9 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             コスト面とリスク面を合わせた比較のために、シミュレーターを活用して上振れシナリオの年間コスト幅を試算することをお勧めします。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         
@@ -279,6 +285,7 @@ export default function NotJustUnitPriceComparisonChecklistPage() {
               title: "市場連動プランと固定プランの違い",
               description: "総額比較に加えて、プラン選択の考え方を整理。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -313,6 +313,9 @@ export default function BudgetPlanningInHighPriceEraPage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 予算超過時の社内説明テンプレート */}
@@ -400,6 +403,9 @@ export default function BudgetPlanningInHighPriceEraPage() {
               </p>
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
       </section>
@@ -438,6 +444,7 @@ export default function BudgetPlanningInHighPriceEraPage() {
               title: "自治体の電気料金高騰による補正予算",
               description: "自治体担当者向けの電気代予算管理・補正予算対応の解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

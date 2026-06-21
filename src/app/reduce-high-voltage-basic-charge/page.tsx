@@ -136,6 +136,9 @@ export default function ReduceHighVoltageBasicChargePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               500kW以上の高圧（標準）および特別高圧では協議契約が基本となり、設備能力や使用実態を踏まえた交渉で契約電力が決まります。どちらの契約区分かによって、取るべき打ち手の優先順位が変わります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {methods.map((m) => (
@@ -175,6 +178,9 @@ export default function ReduceHighVoltageBasicChargePage() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               重要なのは、<strong>単一の施策ではなく複数組み合わせで削減する設計</strong>です。1つで▲10%狙うより、▲3〜5%の施策を3つ重ねた方が再現性があります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -220,6 +226,7 @@ export default function ReduceHighVoltageBasicChargePage() {
                 title: "高圧電力の料金構造",
                 description: "基本料金と電力量料金の全体像。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

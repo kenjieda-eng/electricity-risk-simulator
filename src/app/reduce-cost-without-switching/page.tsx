@@ -253,6 +253,9 @@ export default function ReduceCostWithoutSwitchingPage() {
               数十万円単位のコスト削減が可能です。以下の5つの手段から、
               自社に合うものを選んで実行することをおすすめします。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 5つの手段 */}
@@ -397,6 +400,9 @@ export default function ReduceCostWithoutSwitchingPage() {
                 </span>
               </li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -441,6 +447,7 @@ export default function ReduceCostWithoutSwitchingPage() {
                 description:
                   "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
