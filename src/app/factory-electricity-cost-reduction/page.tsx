@@ -161,6 +161,9 @@ export default function FactoryElectricityCostReductionPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               基本料金は契約電力1kWあたり1,600〜2,000円/月、年間では約2万円相当。100kW削減できれば年間200万円程度のインパクトとなり、多くの場合、使用量削減より投資対効果が良いのが特徴です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2: 5つの施策 */}
@@ -193,6 +196,9 @@ export default function FactoryElectricityCostReductionPage() {
             <h2 className="text-xl font-semibold text-slate-900">工場規模別の優先順位（月50/200/500万円クラス）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電気代の規模によって投資対効果のある施策が変わります。小規模では投資回収の早い運用施策を、大規模では構造的な削減施策を優先するのが基本です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
@@ -251,6 +257,9 @@ export default function FactoryElectricityCostReductionPage() {
               <li>複数拠点一括での契約再編：ボリューム交渉で単価低減を狙う</li>
               <li>設備投資施策と契約見直しを組み合わせ、短期（契約）＋中長期（設備）の二段構えで削減効果を積み上げる</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -263,6 +272,9 @@ export default function FactoryElectricityCostReductionPage() {
               <li>業種特性と負荷パターンを踏まえて、5施策の組み合わせを最適化する</li>
               <li>契約見直しと並行して進めると、短期効果と中長期効果を積み上げられる</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <RelatedLinks
@@ -328,6 +340,7 @@ export default function FactoryElectricityCostReductionPage() {
                 title: "大阪府の中小製造業・町工場の電気料金",
                 description: "東大阪・八尾の町工場固有の電力事情と削減アプローチ（業種×地域クロス）。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

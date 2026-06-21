@@ -137,6 +137,9 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
             また同じ業種でも、地域（電力会社エリア）・築年数・設備の省エネ性能・操業シフトのパターンによって30〜50%程度の差が出ることもあります。
             以下の相場データはあくまで参考目安としてご活用ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -262,6 +265,9 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
             冷蔵・冷凍倉庫は冷凍機の常時稼働により使用量が多く、圧縮機の効率が大きくコストを左右します。
             どちらも停電リスクへの備えとして自家発電設備を持つ場合が多く、維持費も考慮が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -297,6 +303,9 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
             ※本ページの金額は業界平均を参考にした概算値です。契約区分（低圧・高圧・特別高圧）・地域（電力会社エリア）・設備の省エネ性能・使用パターンにより大きく変動します。
             正確な自社コストの評価や見直し提案は、専門家またはエネルギー管理士にご相談ください。
             また、燃料費調整額・再生可能エネルギー賦課金は毎月変動するため、上記の金額レンジは変わる場合があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </div>
       </section>
@@ -340,6 +349,9 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -355,6 +367,7 @@ export default function ElectricityCostBenchmarkByIndustryPage() {
             { href: "/contract-demand-what-is-it", title: "契約電力とは", description: "デマンド値の決まり方と基本料金への影響を詳しく解説" },
             { href: "/office-electricity-cost-benchmark", title: "オフィスの電気代相場", description: "従業員数・坪数別のオフィス電気代ベンチマーク" },
             { href: "/factory-electricity-cost-benchmark", title: "工場の電気代相場", description: "業種・契約電力・使用量別の工場電気代ベンチマーク" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -176,6 +176,9 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -195,6 +198,9 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
             ))}
           </div>
           <p className="mt-3 text-xs text-slate-500">※各業態の代表的な単店規模における月額電気代の目安です。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -274,6 +280,9 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
           <p className="text-sm leading-7 text-slate-600">
             ※本ページの金額は業界平均を参考にした概算値です。契約区分・地域・使用パターンにより大きく変動します。正確な見積は専門家にご相談ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -316,6 +325,9 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -335,6 +347,7 @@ export default function RetailStoreElectricityCostBenchmarkPage() {
             { href: "/office-electricity-cost-benchmark", title: "オフィス電気代ベンチマーク", description: "店舗運営の本部機能となるオフィスの電気代水準を把握すると、店舗と本部の合算で全社見直しの効果を試算できます。" },
             { href: "/retail-chain-price-surge-risk", title: "小売チェーンの電気料金高騰リスク", description: "多店舗展開の小売事業者特有の高騰リスクを整理し、ベンチマーク水準を超えるリスクシナリオへの備えを点検できます。" },
             { href: "/supermarket-electricity-cost-review", title: "スーパーの電気代見直し", description: "冷蔵・冷凍ケースを多数抱えるスーパーの電気代対策は、生鮮を扱う小売店舗での原単位改善にも直接活かせる知見です。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

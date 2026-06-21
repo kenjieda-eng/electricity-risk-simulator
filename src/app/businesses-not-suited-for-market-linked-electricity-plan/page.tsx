@@ -158,6 +158,9 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             以下のような特徴を持つ法人は、市場連動プランのリスクが事業に与える影響が大きいため、慎重な検討が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {notSuitedCharacteristics.map((item) => (
@@ -183,6 +186,9 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             上記の特徴を複数持つ業種は、市場連動プランとの相性が低い傾向にあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -228,6 +234,9 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
               上振れリスクを吸収できる財務基盤がある場合、中長期での平均コスト低減を狙う判断もあり得る。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -253,6 +262,9 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
               市場連動プランと固定プランの違い
             </Link>{" "}
             で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -330,6 +342,7 @@ export default function BusinessesNotSuitedForMarketLinkedPlanPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

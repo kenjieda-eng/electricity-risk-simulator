@@ -337,6 +337,9 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
             </Link>
             。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2-2 */}
@@ -373,6 +376,9 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             削減効果は単独の施策でも数%、組み合わせれば10〜30%に達する。特に契約電力最適化（ポイント1）とデマンド制御（ポイント6）は基本料金と電力量料金の両方に効くため、ROI が最も高い領域だ。一方、PPA・自家消費太陽光（ポイント7）は初期投資または長期契約が必要だが、削減幅と脱炭素対応を同時に得られる戦略的レバーとなる。次章以降で各ポイントを詳細に解説する。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -501,6 +507,9 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
             </Link>
             。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2-5 */}
@@ -592,6 +601,9 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             業種別ガイドの URL は公開後に本ハブから順次差し替える。自社業種が一覧にない場合も、契約区分（特高/高圧/低圧動力/低圧電灯）と昼夜使用比率から推奨ポイントを推定可能だ。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -711,6 +723,7 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
                 title: "電気料金削減の事例集",
                 description: "業種別の実際の削減成功事例。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

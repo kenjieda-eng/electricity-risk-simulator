@@ -193,6 +193,9 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             以下のような特徴を持つ法人は、固定プランとの相性がよい傾向にあります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {suitedCharacteristics.map((item) => (
@@ -261,6 +264,9 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
             </Link>{" "}
             の各ページで確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -302,6 +308,9 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
             </Link>{" "}
             で確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -317,6 +326,9 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
             <li>市場価格が高騰したシナリオでの上振れ幅を確認する（固定プランのメリットが明確になる）</li>
             <li>現行契約との差額を把握する</li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         
@@ -384,6 +396,7 @@ export default function BusinessesSuitedForFixedPricePlanPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

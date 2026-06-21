@@ -117,6 +117,9 @@ export default function HowToCompareElectricitySuppliersPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             比較では「見た目の単価」ではなく「請求額の決まり方」を確認する視点が重要です。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -170,6 +173,9 @@ export default function HowToCompareElectricitySuppliersPage() {
             請求明細の分かりやすさや問い合わせ対応は、導入後の運用負担に直結します。比較時点で確認しておくと、
             契約後の実務を安定させやすくなります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -218,6 +224,9 @@ export default function HowToCompareElectricitySuppliersPage() {
             </Link>{" "}
             から確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -232,6 +241,9 @@ export default function HowToCompareElectricitySuppliersPage() {
             <li>価格変動リスクの許容度</li>
             <li>請求・運用面の扱いやすさ</li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         
@@ -297,6 +309,7 @@ export default function HowToCompareElectricitySuppliersPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -247,6 +247,9 @@ export default function FixedPricePlanPage() {
             </Link>
             をあわせて確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 固定プランの料金構成テーブル */}
@@ -316,6 +319,9 @@ export default function FixedPricePlanPage() {
               市場連動プランと固定プランの違い
             </Link>
             で詳細な比較を確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -392,6 +398,9 @@ export default function FixedPricePlanPage() {
             </Link>
             も参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 固定プランが向いている法人 */}
@@ -409,6 +418,9 @@ export default function FixedPricePlanPage() {
               固定プランに向いている法人の特徴
             </Link>
             で詳しく解説しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -472,6 +484,7 @@ export default function FixedPricePlanPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

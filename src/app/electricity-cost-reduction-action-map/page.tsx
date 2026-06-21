@@ -151,6 +151,9 @@ export default function ElectricityCostReductionActionMapPage() {
         <div className="rounded-xl border border-emerald-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-emerald-800">即効フェーズ：今すぐできる施策一覧</h2>
           <p className="mt-2 text-sm text-slate-600">初期投資なし・運用改善で実現できるアクション</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -207,6 +210,9 @@ export default function ElectricityCostReductionActionMapPage() {
         <div className="rounded-xl border border-sky-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-sky-800">短期フェーズ：3〜6か月で着手できる施策一覧</h2>
           <p className="mt-2 text-sm text-slate-600">契約変更・小規模設備投資で実現できるアクション</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -264,6 +270,9 @@ export default function ElectricityCostReductionActionMapPage() {
         <div className="rounded-xl border border-amber-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-amber-800">中長期フェーズ：1年以上の計画が必要な施策一覧</h2>
           <p className="mt-2 text-sm text-slate-600">設備更新・調達見直しで実現できる抜本的アクション</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -298,6 +307,9 @@ export default function ElectricityCostReductionActionMapPage() {
           <p className="mt-3 text-sm leading-7 text-slate-600">
             削減施策を選ぶ際は「効果の大きさ × 実施のしやすさ」で優先順位をつけることが基本です。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 p-4">
               <h3 className="font-semibold text-slate-900">まず把握から始める</h3>
@@ -381,6 +393,7 @@ export default function ElectricityCostReductionActionMapPage() {
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },
             { href: "/reduction-measure-difficulty-matrix", title: "削減施策の効果・難易度マトリクス", description: "施策の優先順位を可視化するマトリクス" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -153,6 +153,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             <Link href="/extra-high-voltage-electricity-pricing" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">特別高圧料金の見方</Link>
             {" "}で確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* 年間電気代の規模感 */}
@@ -243,6 +246,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額とは</Link>
             {" "}で詳しく確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* 業種別単価目安テーブル（既存） */}
@@ -353,6 +359,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             </Link>
             {" "}をあわせてご覧ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -370,6 +379,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             </Link>
             が参考になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -384,6 +396,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
               見積書の見方
             </Link>
             {" "}で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -433,6 +448,9 @@ export default function BusinessElectricityPriceBenchmarkPage() {
             法人向け電気料金の相場は、契約区分によって総合単価が18〜38円/kWhと大きく異なります。
             2022年以降の単価急騰と2024〜2025年の容量拠出金本格化を経て、現在の相場は2021年比で依然として高止まりの水準です。
             単価レンジを把握したうえで、請求書の実績総合単価と見積を比較することが、相場感をつかむ最短ルートになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -495,6 +513,7 @@ export default function BusinessElectricityPriceBenchmarkPage() {
               title: "基礎から知る（カテゴリ）",
               description: "内訳や契約の基礎テーマをカテゴリ単位で辿れます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
