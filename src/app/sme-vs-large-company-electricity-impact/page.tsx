@@ -300,6 +300,9 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
             ※ 年間電気代・売上比は業種・操業状況により大幅に異なる。製造業は上限を超える場合もある。
             契約区分は主力の類型を示す。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* 電気代+10%値上げ時の利益影響比較 */}
@@ -439,6 +442,9 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
             企業規模によって、効果が出やすい施策の優先順位は異なります。
             自社の規模に対応するパターンから着手ポイントを確認してください。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm">
               <thead>
@@ -528,6 +534,7 @@ export default function SmeVsLargeCompanyElectricityImpactPage() {
               description:
                 "中小企業でも今すぐ実行できる契約見直しのチェックリスト。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

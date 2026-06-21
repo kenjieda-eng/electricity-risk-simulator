@@ -235,6 +235,9 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
               </Link>
               の 2 つです。以降、それぞれの仕組みと両者の 10 項目比較、金額インパクト、対策まで順に整理します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2-2: 燃調費の仕組み */}
@@ -306,6 +309,9 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
                 約款での市場価格調整確認
               </Link>
               にまとめています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -400,6 +406,9 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
               </Link>
               で自社の契約電力・使用量を入力すると、容量拠出金・再エネ賦課金も含めた年間リスクを可視化できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2-6: 法人がとるべき対策 3 つ */}
@@ -474,6 +483,9 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               単独記事で片方だけを理解しても判断は難しいため、本ページを契約更新・料金改定通知のたびに再訪する一次情報としてブックマークしておくことをおすすめします。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -530,6 +542,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
                 title: "電気料金上昇の 4 要因",
                 description: "調整額以外の値上がり要因も含めて全体像を俯瞰します。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

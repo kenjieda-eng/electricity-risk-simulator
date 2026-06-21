@@ -109,6 +109,9 @@ export default function LastResortVsRetailContractPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給は供給継続のセーフティネット、通常契約は比較して選ぶ契約です。前者は「止めないため」、後者は「条件を選ぶため」という前提の違いがあります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -131,6 +134,9 @@ export default function LastResortVsRetailContractPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給は次契約までの橋渡しとして考えるのが基本です。通常契約は中長期での運用を前提に、料金、契約期間、更新条件、違約金などを設計して選びます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -158,6 +164,9 @@ export default function LastResortVsRetailContractPage() {
             </Link>{" "}
             も参考になります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -259,6 +268,9 @@ export default function LastResortVsRetailContractPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 料金単価・基本料金は高圧契約・関東エリアの参考値です。エリア・時期・需要規模により変動します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-31" />
@@ -282,6 +294,7 @@ export default function LastResortVsRetailContractPage() {
               title: "法人が電力契約を切り替えるときの注意点",
               description: "切替手続きと初回請求確認の論点を整理できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -179,6 +179,9 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2022年の電力価格高騰では、市場連動プランを採用していた複数の自治体が電気料金の急騰により補正予算を組まざるを得ない状況になりました。この経験は、公共機関における市場連動プランのリスクを改めて示すものとなりました。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -238,6 +241,9 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 施設の特性・規模・調達方針によって判断は異なります。上記は一般的傾向の整理です。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -269,6 +275,9 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
               採用の経緯・リスク管理方針・モニタリング体制を文書化し、担当者交代時に確実に引き継がれるようにする。
             </li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -291,6 +300,9 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
             </Link>{" "}
             で確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -348,6 +360,7 @@ export default function MunicipalityFixedVsMarketLinkedPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "公共施設の電力契約見直し前に確認すべき項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

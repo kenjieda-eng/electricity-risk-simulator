@@ -176,6 +176,9 @@ export default function FixedVsMarketQuickDiagnosisPage() {
           <p className="mt-4 text-sm leading-6 text-slate-600">
             「料金安定を最優先」「コスト変動を吸収する余裕が乏しい」「モニタリング体制がない」といった条件が重なるほど、固定型プランが向く傾向があります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <DiagnosisClient />
@@ -200,6 +203,9 @@ export default function FixedVsMarketQuickDiagnosisPage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -299,6 +305,7 @@ export default function FixedVsMarketQuickDiagnosisPage() {
               title: "電力契約見直し自己診断",
               description: "そもそも見直しが必要かを10項目で確認する診断ページ。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

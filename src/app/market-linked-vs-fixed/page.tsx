@@ -185,6 +185,9 @@ export default function MarketLinkedVsFixedPage() {
             市場連動プランは単価が動きやすく、固定プランは見通しを立てやすいという違いがあります。判断では、単価水準だけでなく、
             変動にどこまで対応できるか、上振れ時の社内影響を許容できるかを合わせて確認することが実務的です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -215,6 +218,9 @@ export default function MarketLinkedVsFixedPage() {
             年度予算の精度を重視する法人では、固定プランが運用しやすい場面が多くあります。一方、市場連動プランは、
             月次で実績を追いながら柔軟に判断できる体制がある場合に活用しやすい選択肢です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -223,6 +229,9 @@ export default function MarketLinkedVsFixedPage() {
             市場連動プランでは、相場急騰がそのまま負担増につながる可能性があります。固定プランは急騰耐性がある反面、
             相場下落局面で相対的に高く見えることがあるため、どのリスクを優先的に抑えたいかを明確にすることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -230,6 +239,9 @@ export default function MarketLinkedVsFixedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランのメリットは、相場下落局面の恩恵を受けやすい点です。一方のデメリットは、相場急騰時にコスト上振れが発生しやすい点にあります。
             固定プランのメリットは予算の見通しを立てやすい点で、デメリットは相場下落時に相対的に割高に見える可能性がある点です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -276,6 +288,9 @@ export default function MarketLinkedVsFixedPage() {
             固定プランなら、この<Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link>変動は契約期間中は転嫁されません。ただし更新時に反映される可能性があります。
           </p>
           <p className="mt-1 text-xs text-slate-500">出典: JEPX公表データ（スポット市場システムプライス年度平均）</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -283,6 +298,9 @@ export default function MarketLinkedVsFixedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             判断に迷う場合は、平時想定だけでなく上振れシナリオを含めて比較するのが有効です。法人の電力使用量、業種、運用体制、
             予算管理の考え方を前提にしたうえで、複数条件を試算し、差分で判断することをおすすめします。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -348,6 +366,7 @@ export default function MarketLinkedVsFixedPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

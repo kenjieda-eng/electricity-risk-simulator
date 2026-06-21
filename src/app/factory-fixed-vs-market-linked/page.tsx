@@ -161,6 +161,9 @@ export default function FactoryFixedVsMarketLinkedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             工場の電力コスト管理において、以下の4つの要因が固定プランと市場連動プランの比較判断に特に影響します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 space-y-4">
             {keyFactors.map((item) => (
               <div key={item.factor} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -246,6 +249,9 @@ export default function FactoryFixedVsMarketLinkedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             これらの条件のうち、特に「稼働時間帯が昼間ピーク時間帯と重なるかどうか」が判断の核心になります。まず自社の稼働スケジュールを時間帯別に整理し、JEPXの平均価格パターンと比較することをお勧めします。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -308,6 +314,7 @@ export default function FactoryFixedVsMarketLinkedPage() {
               title: "法人が電力契約を見直すタイミング",
               description: "工場のプラン変更を進めるための見直し開始タイミングの確認。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

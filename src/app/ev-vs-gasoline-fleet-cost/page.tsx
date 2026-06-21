@@ -283,6 +283,9 @@ export default function EvVsGasolineFleetCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               10台ベースで <strong>初期費用差は約1,600万円</strong>。この差額を何年で回収できるかが、EV化判断の一次評価軸です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 年間ランニングコスト */}
@@ -393,6 +396,9 @@ export default function EvVsGasolineFleetCostPage() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 初期費用差 約1,600万円（10台）を基準に試算。燃料価格・電気料金の変動、補助金の拡充・縮小で結論は変動します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 隠れたコスト */}
@@ -403,6 +409,9 @@ export default function EvVsGasolineFleetCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               上の試算には含めていないものの、実運用で無視できない4つの要素を整理します。
               案件評価では、これらの要素の見積を1つ1つ加算した「厳密TCO」で最終判断するのが堅実です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
@@ -441,6 +450,9 @@ export default function EvVsGasolineFleetCostPage() {
                 <strong>EV適性「低」：</strong>年間走行5,000km未満 or 出先充電中心 or 3年以内で入替予定。無理にEV化する必要なし。
               </li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -510,6 +522,7 @@ export default function EvVsGasolineFleetCostPage() {
                 description:
                   "電気代25円/kWhをさらに下げるための時間帯設計。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
