@@ -267,6 +267,9 @@ export default function ExtraHighVoltageQuotationGuidePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             まずは現行の請求書データを整理し、年間コストの全体像と変動要因を把握することから始めてください。その上で、各社の見積条件を整理した比較表を作成すると、意思決定の透明性が高まります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -309,6 +312,9 @@ export default function ExtraHighVoltageQuotationGuidePage() {
             </tbody>
           </table>
           <p className="mt-3 text-xs text-slate-500">※ 基本料金1,400円/kW、電力量料金14.5円/kWh、力率割引0.97で算定。燃調費・再エネ賦課金含まず。</p>
+          <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <SourcesAndFaq
@@ -371,6 +377,7 @@ export default function ExtraHighVoltageQuotationGuidePage() {
               title: "燃料費調整額とは",
               description: "見積書の燃調条件を読むための基礎知識を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

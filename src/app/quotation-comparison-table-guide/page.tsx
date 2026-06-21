@@ -325,6 +325,9 @@ export default function QuotationComparisonTableGuidePage() {
               前年度の使用量データでそのまま試算すると、使用量変化・設備変化が反映されず、実態とかけ離れた比較になる。
             </li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -337,6 +340,9 @@ export default function QuotationComparisonTableGuidePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             「今の燃料費調整額の水準が将来どう変化するか」「市場連動型のリスクをどう評価するか」は、比較表だけでは答えが出ません。シミュレーションを活用して上振れシナリオを把握しておくことが、現実的な判断の助けになります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         
@@ -393,6 +399,7 @@ export default function QuotationComparisonTableGuidePage() {
               title: "市場連動プランと固定プランの違い",
               description: "比較表に市場連動・固定の条件差を反映させる際の参考として。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -264,6 +264,9 @@ export default function HighVoltageQuotationGuidePage() {
               2〜3年の縛りがある契約の場合、解約・変更が必要になった際に多額の違約金が発生することがある。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -310,6 +313,9 @@ export default function HighVoltageQuotationGuidePage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -371,6 +377,7 @@ export default function HighVoltageQuotationGuidePage() {
               title: "燃料費調整額とは",
               description: "見積書の燃調条件を正しく読むための背景知識を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

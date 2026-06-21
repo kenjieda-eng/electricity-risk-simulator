@@ -139,6 +139,9 @@ export default function SmeElectricityCostReductionStepsPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               担当は<strong>現場責任者＋総務</strong>。現場での実行が必須のため、店長・工場長クラスを巻き込むのが鍵になります。STEP 1の可視化と組み合わせると、「先月と比べて何%減った」を毎月報告できるため、施策の定着度が上がります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -168,6 +171,9 @@ export default function SmeElectricityCostReductionStepsPage() {
               <li>四半期：運用改善の効果レビューと現場フィードバック</li>
               <li>年1回：契約プランの再見積り・契約条件の比較</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <RelatedLinks
@@ -198,6 +204,7 @@ export default function SmeElectricityCostReductionStepsPage() {
                 title: "法人電気代の請求書の内訳",
                 description: "STEP 1の4要素分解を詳しく解説。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

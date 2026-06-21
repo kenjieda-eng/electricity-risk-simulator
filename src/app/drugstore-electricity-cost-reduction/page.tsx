@@ -200,6 +200,9 @@ export default function DrugstoreElectricityCostReductionPage() {
               </strong>
               という順番が、投資回収期間を短くする定石になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 3軸削減アクション */}
@@ -308,6 +311,9 @@ export default function DrugstoreElectricityCostReductionPage() {
               </Link>
               も参考にしてください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -377,6 +383,7 @@ export default function DrugstoreElectricityCostReductionPage() {
                 description:
                   "モール内テナントとしてのドラッグストアを検討する際の参考に。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

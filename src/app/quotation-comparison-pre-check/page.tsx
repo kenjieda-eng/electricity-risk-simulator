@@ -110,6 +110,9 @@ export default function QuotationComparisonPreCheckPage() {
             </Link>{" "}
             もあわせて確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       <MarketDataFaq items={__CATEGORY_FAQ__} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
@@ -243,6 +246,9 @@ export default function QuotationComparisonPreCheckPage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -292,6 +298,7 @@ export default function QuotationComparisonPreCheckPage() {
               title: "新電力を比較するときのポイント",
               description: "単価以外に確認したい比較軸を整理。見積比較の精度を高める。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

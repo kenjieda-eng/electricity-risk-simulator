@@ -211,6 +211,9 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の見直しを社内で説明する際は、以下の構成で伝えるとスムーズです。承認者が知りたいのは「なぜ見直すのか」「何を比較したのか」「どれくらいの効果があるのか」「リスクはあるのか」「次に何をすればよいのか」の5点です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {explanationStructure.map((item) => (
@@ -380,6 +383,9 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -425,6 +431,7 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
               title: "市場連動プランと固定プランの違い",
               description: "両プランの仕組みとリスクの差を比較。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -246,6 +246,9 @@ export default function BillingQuotationGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             複数社から見積を取った際に、正確な比較ができないまま判断してしまうケースが少なくありません。以下の点を意識しながら比較することで、判断の精度を高められます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {[
               {
@@ -293,6 +296,9 @@ export default function BillingQuotationGuidePage() {
             <li>燃料費高騰・市場価格高騰シナリオでの影響を把握</li>
             <li>見積書を複数社から取る前に「どの条件で比較するか」を明確にする</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -387,6 +393,7 @@ export default function BillingQuotationGuidePage() {
               title: "容量拠出金とは何か",
               description: "請求書に登場した新しい費用項目の解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

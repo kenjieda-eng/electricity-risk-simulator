@@ -238,6 +238,9 @@ export default function MarketLinkedPlanRecommendationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種ごとに、使用パターンと電気代比率の典型から市場連動型プランの適性を整理しました。あくまで目安であり、個別条件（稼働時間・ピーク時間帯・固定費構造）で結論は変わります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {industryRec.map((r) => (
                 <div
@@ -324,6 +327,9 @@ export default function MarketLinkedPlanRecommendationPage() {
               </Link>
               の比較も、選択肢を広げるうえで有効です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -387,6 +393,7 @@ export default function MarketLinkedPlanRecommendationPage() {
                 description:
                   "固定と市場連動を組み合わせる代替案のメリット・デメリット。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

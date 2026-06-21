@@ -178,6 +178,9 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             価格が安定して低い期間が続けばコスト削減になりますが、冬季や夏季の需給逼迫時には急激な高騰が起きることがあります。市場連動プランを選ぶということは、そのリスクを理解したうえで引き受けることを意味します。以下の5つの前提条件を自社と照らし合わせてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {prerequisites.map((item) => (
@@ -243,6 +246,9 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
               多拠点企業はどちらを選ぶべきか
             </Link>{" "}
             でより詳しく解説しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -316,6 +322,7 @@ export default function MarketLinkedPlanSuitedBusinessesPage() {
               title: "法人の電力契約見直しは何から始めるべきか",
               description: "市場連動プランへの切替を検討する際の見直し手順の入口。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

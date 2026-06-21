@@ -307,6 +307,9 @@ export default function ElectricityCostReductionCaseStudiesPage() {
               ※ いずれも実在企業の取材データをもとに匿名化・一般化した典型事例です。
               契約条件・使用パターンにより実際の削減額は異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 詳細事例 */}
@@ -421,6 +424,9 @@ export default function ElectricityCostReductionCaseStudiesPage() {
               「契約電力適正化」「プラン切替」「多店舗一括入札」のどれが効きそうかを仮説立てします。
               相見積もりを取る前の仮説があるかどうかで、見積評価の精度は大きく変わります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -459,6 +465,7 @@ export default function ElectricityCostReductionCaseStudiesPage() {
                 description:
                   "自社の水準が高いか低いかを判断するための業種別相場を整理しています。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
