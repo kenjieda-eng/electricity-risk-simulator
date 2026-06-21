@@ -122,6 +122,9 @@ export default function ThermalVsRenewableTrendPage() {
           <ThermalVsRenewableChart />
         </div>
         <p className="mt-2 text-xs text-slate-500">出典: 各一般送配電事業者公表の30分値データを集計。FY2026は4月上旬までの暫定値。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
       </section>
 
       {/* 年度別テーブル */}
@@ -234,6 +237,9 @@ export default function ThermalVsRenewableTrendPage() {
           算出しており、最終需要端の数値とは異なります。また、年度ごとのデータ収集エリア数にばらつきがあるため、
           単純な年度間比較には注意が必要です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -249,6 +255,7 @@ export default function ThermalVsRenewableTrendPage() {
             { href: "/duck-curve-electricity-price-impact", title: "ダックカーブとは何か", description: "再エネ増加が市場価格に与える影響を解説。" },
             { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "再エネ導入拡大と法人負担の関係。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "火力依存度と燃調費の関係を解説。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

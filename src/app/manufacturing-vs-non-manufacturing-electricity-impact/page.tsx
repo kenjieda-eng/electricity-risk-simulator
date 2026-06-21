@@ -419,6 +419,9 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
             ※ 各比率は財務省法人企業統計・業界団体資料を参考とした概算レンジ。
             個社の生産品種・操業形態により実態は大きく異なる。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* +10%値上げ時の利益影響テーブル */}
@@ -578,6 +581,9 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
             <li>・製造業は「デマンド管理・省エネ設備・自家発電」が主な施策。非製造業は「契約メニュー見直し・空調照明省エネ・切り替え比較」から着手しやすい。</li>
             <li>・業種・規模を問わず、シミュレーターで「自社の電気代リスクスコア」を把握したうえで施策の優先順位を決めることが、実行効率を高める最初のステップ。</li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
       </section>
 
@@ -624,6 +630,7 @@ export default function ManufacturingVsNonManufacturingElectricityImpactPage() {
               title: "法人の電気料金が上がる理由",
               description: "製造業・非製造業を問わず共通する料金上昇の構造的要因を費目別に解説します。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

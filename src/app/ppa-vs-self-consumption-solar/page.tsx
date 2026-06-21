@@ -74,11 +74,17 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">自家消費太陽光の特徴</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自家消費太陽光は、自社で太陽光パネルを購入・設置し、発電した電力を自社で使う方式です。初期投資は必要ですが、長期的にkWhあたりのコストを抑えられ、売電や補助金で投資回収を狙います。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">設備は自社資産となり、減価償却・固定資産税・保険の対象になります。メンテナンスも自社責任です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">オンサイトPPAの特徴</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">オンサイトPPAは、発電事業者が自社所有のままパネルを設置し、発電した電力を自社が買い取る方式です。初期投資ゼロ、設備所有は発電事業者で、メンテナンスも任せられます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">一方、月々の電気代として支払うため長期コストは自家消費より高くなる傾向があり、契約期間も10〜20年と長期化します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">どちらを選ぶか</h2>
@@ -90,11 +96,17 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【自家消費】初期投資：1.5〜2.5億円。年間メンテ：50〜100万円。税制優遇：中小企業経営強化税制で即時償却可。想定LCOE：8〜12円/kWh。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【オンサイトPPA】初期投資：0円。月額支払い：発電量×12〜18円/kWh。メンテナンス：PPA事業者負担。税制優遇：なし（サービス費用として損金処理）。想定LCOE：12〜18円/kWh。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">20年トータルコスト：自家消費の方が2〜4割低くなるのが一般的ですが、初期投資・減損リスクの扱いで判断が分かれます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自家消費太陽光の税制優遇（中小企業経営強化税制・カーボンニュートラル投資促進税制）は、中小企業庁・経産省の制度で、毎年改正があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">PPA契約の会計処理は、新リース会計基準（IFRS16・日本基準2027年適用予定）の影響を受け、オンバランス化される場合もあるため、会計士との事前確認が必要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -119,6 +131,7 @@ export default function Page() {
               { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

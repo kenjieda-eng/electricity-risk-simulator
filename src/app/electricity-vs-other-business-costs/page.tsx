@@ -304,6 +304,9 @@ export default function ElectricityVsOtherBusinessCostsPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 変化率は公表統計・業界データの複数参照による概算値。電気代は高圧契約・燃料費調整額含む総請求ベース。月額影響は売上1億円・標準規模を想定した目安。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 電気代の上昇率が突出する理由 */}
@@ -407,6 +410,9 @@ export default function ElectricityVsOtherBusinessCostsPage() {
           <p className="mt-2 text-xs text-slate-500">
             ※ 比率は業界団体統計・財務省法人企業統計を参考とした概算レンジ。個社の実態は契約形態・操業状況により異なる。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 「電気代だけ対策」vs「コスト全体最適化」 */}
@@ -484,6 +490,9 @@ export default function ElectricityVsOtherBusinessCostsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代対策の予算・承認を経営層から得る際、他コストとの比較視点を持つと説得力が増します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {MANAGEMENT_POINTS.map((point) => (
               <div
@@ -510,6 +519,9 @@ export default function ElectricityVsOtherBusinessCostsPage() {
             <li>・「電気代だけ」か「全体最適化」かは二者択一ではなく、電気代対策を先行させてから全体に展開するステップアプローチが実務的。</li>
             <li>・補助政策の縮小局面を踏まえ、補助なし想定の将来コストを試算したうえで中期予算に組み込むことが重要。</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </section>
 
@@ -551,6 +563,7 @@ export default function ElectricityVsOtherBusinessCostsPage() {
               description:
                 "電気代上昇の主因である燃料費調整額の計算方法と変動の構造を解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

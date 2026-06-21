@@ -150,6 +150,9 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             受電電圧が高くなるほど、電力会社の送電・変電コストが下がり、1kWhあたりの単価が低くなる傾向があります。ただし、高電圧を受け入れるための受電設備（変圧器・キュービクルなど）を需要家側で保有・維持するコストが発生します。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -215,6 +218,9 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
             </Link>{" "}
             で確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -242,6 +248,9 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
               現在の契約に縛り期間・違約金がある場合、切り替えのタイミングに注意が必要です。
             </li>
           </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -274,6 +283,9 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
             </Link>
             {" "}でそれぞれ確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -369,6 +381,7 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "高圧・特別高圧の単価推移の実態をデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

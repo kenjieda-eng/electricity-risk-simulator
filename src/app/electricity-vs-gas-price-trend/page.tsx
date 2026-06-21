@@ -271,6 +271,9 @@ export default function ElectricityVsGasPriceTrendPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※指数は概算参考値。消費者物価指数・資源エネルギー庁公表データを参考に作成。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* 調整制度比較テーブル */}
@@ -368,6 +371,9 @@ export default function ElectricityVsGasPriceTrendPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※比率は業界平均の目安。設備構成・規模により異なります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         {/* 光熱費全体での判断ポイント */}
@@ -448,6 +454,7 @@ export default function ElectricityVsGasPriceTrendPage() {
               title: "燃料別価格推移と電気料金への影響度",
               description: "LNG・石炭・原油それぞれの影響度を比較。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

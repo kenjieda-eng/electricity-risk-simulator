@@ -171,6 +171,9 @@ export default function WinterVsSummerElectricityPage() {
         <p className="mt-2 text-xs text-slate-500">
           出典: JEPX公表の30分値スポット価格・各一般送配電事業者の需要実績（FY2019〜FY2025集計）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 季節別詳細テーブル */}
@@ -217,6 +220,9 @@ export default function WinterVsSummerElectricityPage() {
         <p className="mt-2 text-xs text-slate-500">
           変動係数（CV）= 標準偏差 ÷ 平均価格 × 100。数値が高いほど価格変動リスクが大きいことを示す。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* チャート2: 時間帯別需要パターン */}
@@ -231,6 +237,9 @@ export default function WinterVsSummerElectricityPage() {
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: 各一般送配電事業者公表の30分値需要データ（9エリア合計）の季節別時間帯平均
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -333,6 +342,9 @@ export default function WinterVsSummerElectricityPage() {
         </div>
         <p className="mt-2 text-xs text-slate-500">
           出典: JEPX・需要実績データとAMeDAS気温データを突合した集計（FY2019〜FY2025）
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -461,6 +473,9 @@ export default function WinterVsSummerElectricityPage() {
           <Link href="/compare" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">料金メニュー比較診断</Link>
           で自社に最適なプランタイプを確認することをお勧めします。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* まとめ */}
@@ -473,6 +488,9 @@ export default function WinterVsSummerElectricityPage() {
           朝夕ダブルピークで火力燃料コストが直接市場価格に反映されます。
           ただし、気候変動による夏の猛暑激化により夏リスクも増加傾向にあるため、
           冬・夏双方のリスクを踏まえた年間を通じた電力調達・省エネ戦略が求められます。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -492,6 +510,7 @@ export default function WinterVsSummerElectricityPage() {
             { href: "/compare", title: "料金メニュー比較診断", description: "市場連動型と固定価格型、自社に最適なプランを診断。" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "冬夏のピーク管理でデマンド値を下げる方法。" },
             { href: "/electricity-cost-seasonal-pattern", title: "電気料金の季節パターンを読む", description: "月別の負荷変動と料金変動の関係を業種別に整理。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -162,6 +162,9 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             商業施設の電力使用パターンは、製造業の工場や官公庁施設と異なる独自の特徴があります。主な特徴を整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">営業時間帯への集中</p>
@@ -274,6 +277,9 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -331,6 +337,7 @@ export default function CommercialFacilityFixedVsMarketLinkedPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "商業施設の電力契約見直しで確認すべき項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
