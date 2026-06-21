@@ -90,6 +90,9 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
             経済産業大臣に申請して認定を受けた事業所について、その事業所で使用した電気にかかる賦課金の
             80% が減免されます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
             <li>認定単位は「事業所」。同一法人でも複数事業所で個別に申請する必要があります。</li>
             <li>認定期間は 1 年度ごと。翌年度も減免を受けるには毎年再申請が必要です。</li>
@@ -119,6 +122,9 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             要件の数字は法改正で見直されることがあります。申請時は資源エネルギー庁の最新公表内容を確認してください。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -162,6 +168,9 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
               </tbody>
             </table>
           </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -192,6 +201,9 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
             その 7〜8 割が製造業、特に鉄鋼・化学・非鉄金属・紙パルプの 4 業種で占められます。
             減免対象電力量は全国の電力消費量の 10% 前後です。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm leading-7 text-slate-800">
               <strong>注意：</strong>近年の制度見直しでは、減免率の段階化、省エネ取組みの要件厳格化などが議論されています。
@@ -239,6 +251,7 @@ export default function RenewableEnergySurchargeReductionSystemPage() {
               description: "減免の代替策として検討。",
             },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "賦課金を含む長期の料金水準をデータで確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

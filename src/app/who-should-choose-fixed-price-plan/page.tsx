@@ -90,6 +90,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
             </Link>
             で確認できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -117,6 +120,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
             </Link>
             で整理できます。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -138,6 +144,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
             </Link>
             を事前に確認すると社内説明がしやすくなります。
           </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -154,6 +163,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             固定プランは「保守的だから選ぶ」のではなく、予算管理と説明可能性を重視する法人にとって合理的な選択肢です。見積比較では、
             固定される部分と変動する部分を分けて確認し、契約更新時の条件まで含めて判断してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -185,6 +197,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -226,6 +241,9 @@ export default function WhoShouldChooseFixedPricePlanPage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -268,6 +286,7 @@ export default function WhoShouldChooseFixedPricePlanPage() {
               title: "法人が電力契約を見直すタイミング",
               description: "固定を含む契約見直しを始める時期の判断に役立ちます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

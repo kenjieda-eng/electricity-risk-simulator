@@ -134,6 +134,9 @@ export default function RestaurantElectricityCostBenchmarkPage() {
             特に焼肉店・鉄板焼き店・中華料理店などは火力設備と換気設備の組み合わせで、他の業態と比較して電気代が高くなりやすい業態です。
             一方、カフェや軽食店は厨房規模が小さく電気代は比較的低水準です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -189,6 +192,9 @@ export default function RestaurantElectricityCostBenchmarkPage() {
             ))}
           </div>
           <p className="mt-3 text-xs text-slate-500">※各業態の代表的な規模における月額電気代の目安です。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -263,6 +269,9 @@ export default function RestaurantElectricityCostBenchmarkPage() {
           <p className="text-sm leading-7 text-slate-600">
             ※本ページの金額は業界平均を参考にした概算値です。契約区分・地域・設備の種類・使用パターンにより大きく変動します。正確な見積は専門家にご相談ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -305,6 +314,9 @@ export default function RestaurantElectricityCostBenchmarkPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -321,6 +333,7 @@ export default function RestaurantElectricityCostBenchmarkPage() {
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },
             { href: "/electricity-cost-reduction-action-map", title: "電気代削減アクション一覧", description: "即効・短期・中長期で整理した削減施策マップ" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

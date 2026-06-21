@@ -200,6 +200,9 @@ export default function FactoryElectricityCostBenchmarkPage() {
             </table>
           </div>
           <p className="mt-3 text-xs text-slate-500">※燃料費調整額・再エネ賦課金・容量拠出金は別途加算されます。上記は基本的な電力量料金・基本料金の目安です。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -222,6 +225,9 @@ export default function FactoryElectricityCostBenchmarkPage() {
             ))}
           </div>
           <p className="mt-3 text-xs text-slate-500">※業種によって構成は大きく異なります。食品加工は冷凍・冷却比率が高く、化学製造は加熱・反応炉の比率が高い傾向があります。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -252,6 +258,9 @@ export default function FactoryElectricityCostBenchmarkPage() {
             ))}
           </div>
           <p className="mt-3 text-xs text-slate-500">※各業種の代表的な中〜大規模事業者の月額電気代概算。実際は操業条件により大きく変動します。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -344,6 +353,9 @@ export default function FactoryElectricityCostBenchmarkPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -363,6 +375,7 @@ export default function FactoryElectricityCostBenchmarkPage() {
             { href: "/continuous-operation-factory-electricity-cost-review", title: "24h 稼働工場の電気代", description: "24時間稼働工場ならではの夜間負荷率の高さと契約最適化を整理し、ベンチマークから外れる業態の特殊事情を理解できます。" },
             { href: "/cold-storage-electricity-cost-review", title: "冷蔵倉庫の電気代", description: "工場併設の冷蔵倉庫は別のピークパターンを示すため、倉庫部分の電力構造を分けて把握すると合算契約の効率化に役立ちます。" },
             { href: "/telecom-facility-electricity-cost-review", title: "通信施設の電気代", description: "工場のラインを支える通信・サーバ設備は別の負荷特性を持つため、通信施設の電気代知見を踏まえると一括契約の妥当性を判断できます。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

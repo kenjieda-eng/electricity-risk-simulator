@@ -291,6 +291,9 @@ export default function HybridElectricityPlanExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             たとえば連動係数0.3・基準JEPX10円のプランで、実績JEPXが15円だった月は「15 + 0.3×(15−10) = 16.5円/kWh」となります。JEPXが8円に下がれば「15 + 0.3×(8−10) = 14.4円/kWh」に下がります。完全固定型（18円固定）と比べると、JEPX安値局面でコストを抑えられる設計です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: 3つのプランタイプ比較テーブル */}
@@ -331,6 +334,9 @@ export default function HybridElectricityPlanExplainedPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">
             ※ 燃調費の扱いは電力会社・契約内容によって異なります。契約前に必ず個別確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -390,6 +396,9 @@ export default function HybridElectricityPlanExplainedPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 本シミュレーションは理解のための例示です。実際の契約では基本料金・再エネ賦課金・燃調費が別途加算されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: メリットとデメリット */}
@@ -427,6 +436,9 @@ export default function HybridElectricityPlanExplainedPage() {
           <h2 className="text-xl font-semibold text-slate-900">向いている法人の特徴（5条件）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             ハイブリッド型プランが実務上機能しやすい法人の条件を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {suitableConditions.map((cond, i) => (
@@ -538,6 +550,7 @@ export default function HybridElectricityPlanExplainedPage() {
                 title: "法人が電力契約を見直すタイミング",
                 description: "ハイブリッドプランへの切替を検討する際の見直し開始タイミング。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

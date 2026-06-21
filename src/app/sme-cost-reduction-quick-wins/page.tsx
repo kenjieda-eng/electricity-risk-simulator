@@ -84,15 +84,24 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">運用改善で即効性のある対策</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">空調設定温度の1度見直し、使わない照明の消灯徹底、待機電力の削減（週末の機器電源オフ）など、運用改善は投資ゼロで効果が出せる最短の打ち手です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">事務所・店舗の電気代は、この運用改善だけで5〜15%の削減が可能なケースが一般的です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">低コスト機器更新</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">LED照明への更新、古いエアコンの省エネ機種への入替、インバーター搭載機器への切替が代表的です。補助金との組み合わせで投資回収を短縮できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特にLED照明は10〜20万円の投資で2〜3年で回収できるケースが多く、中小企業にも取り組みやすい打ち手です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">契約見直しによる削減</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">新電力への切替、プラン変更、契約アンペアの見直しはいずれも初期投資ゼロで実施できます。年間電気代の5〜10%程度の削減が期待できる一方、固定期間契約や違約金は事前に確認が必要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -111,6 +120,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では低圧契約・小規模事業者の電気代最適化の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -151,6 +163,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -219,6 +234,9 @@ export default function Page() {
               <li>一般社団法人エネルギー情報センター 独自調査</li>
             </ul>
             <p className="mt-3 text-xs text-slate-500">※ 各数値・制度は公表時点の情報。最新情報は各機関公式サイトをご確認ください。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -234,6 +252,7 @@ export default function Page() {
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

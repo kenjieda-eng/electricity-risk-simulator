@@ -254,6 +254,9 @@ export default function HowToReadElectricityQuotePage() {
             </Link>
             を先に把握しておくと、見積との差分が捉えやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">前提条件が揃っているか</p>
@@ -319,6 +322,9 @@ export default function HowToReadElectricityQuotePage() {
             </Link>
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 3. 契約条件 */}
@@ -326,6 +332,9 @@ export default function HowToReadElectricityQuotePage() {
           <h2 className="text-xl font-semibold text-slate-900">契約条件で確認したいこと</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             料金項目だけでなく、契約条件の違いも比較判断に大きく影響します。以下は見積段階で確認しておきたい主な条件です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {contractConditions.map((item) => (
@@ -490,6 +499,9 @@ export default function HowToReadElectricityQuotePage() {
           <p className="mt-3 text-xs text-slate-500">
             ※ 基本料金は含まず電力量料金部分のみの比較例。実際の見積は条件により異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 6. 高圧見積書の金額例 */}
@@ -584,6 +596,9 @@ export default function HowToReadElectricityQuotePage() {
             </Link>
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 7. 社内説明で整理しやすい見方 */}
@@ -637,6 +652,9 @@ export default function HowToReadElectricityQuotePage() {
               電気料金見直しを社内で説明するときのポイント
             </Link>
             で詳しく整理しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -785,6 +803,7 @@ export default function HowToReadElectricityQuotePage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

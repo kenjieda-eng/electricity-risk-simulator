@@ -146,6 +146,9 @@ export default function MarketLinkedPlanPage() {
             ただし、実務では「平均的に安そうか」だけで判断しないことが大切です。使用量の多い法人は単価変動の影響が金額に直結しやすく、単価の小さな変動でも
             年間コスト差が大きくなる場合があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -159,6 +162,9 @@ export default function MarketLinkedPlanPage() {
             <li>燃料関連コストや為替変動が価格に反映されやすい</li>
             <li>相場急騰時は、短期間でも負担増が生じることがある</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +187,9 @@ export default function MarketLinkedPlanPage() {
             <li>電力使用量が多い法人ほど、相場上昇局面でコスト影響が大きくなりやすい</li>
             <li>変動を前提としたモニタリング体制がないと、リスクが顕在化しやすい</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -193,6 +202,9 @@ export default function MarketLinkedPlanPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             価格リスクへの感度を把握できる担当体制がある法人ほど、市場連動の特徴を運用で吸収しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -204,6 +216,9 @@ export default function MarketLinkedPlanPage() {
           </ul>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動は「安いか高いか」の単純比較より、リスク許容度と社内運用体制との適合性を見て判断することが実務上は重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -271,6 +286,9 @@ export default function MarketLinkedPlanPage() {
             <li>社内承認に必要な説明資料を、比較結果とセットで準備する</li>
             <li>契約条件や見直しタイミングを事前に確認する</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -323,6 +341,7 @@ export default function MarketLinkedPlanPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

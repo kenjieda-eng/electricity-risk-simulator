@@ -211,6 +211,9 @@ export default function ReductionMeasureDifficultyMatrixPage() {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">削減施策 効果・難易度マトリクス一覧</h2>
           <p className="mt-2 text-sm text-slate-600">効果・難易度は1（低）〜5（高）のスコアで評価</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -294,6 +297,9 @@ export default function ReductionMeasureDifficultyMatrixPage() {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">業種別 推奨施策（優先順位トップ4）</h2>
           <p className="mt-2 text-sm text-slate-600">業種によって電気消費の構造が異なるため、優先すべき施策も変わります</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {industryRecommendations.map((item, i) => (
               <div key={i} className="rounded-lg border border-slate-200 p-4">
@@ -345,6 +351,9 @@ export default function ReductionMeasureDifficultyMatrixPage() {
             ※本ページの効果・難易度スコアは業界一般的な傾向をもとにした概算評価です。
             実際の効果は施設の規模・設備状況・操業パターンによって大きく異なります。正確な削減余地の評価は省エネ診断士や専門業者にご相談ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </div>
       </section>
 
@@ -379,6 +388,9 @@ export default function ReductionMeasureDifficultyMatrixPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の施策実績を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -395,6 +407,7 @@ export default function ReductionMeasureDifficultyMatrixPage() {
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "基本料金を下げるデマンド管理の効果" },
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -199,6 +199,9 @@ export default function OfficeElectricityCostBenchmarkPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 用途別内訳バーグラフ */}
@@ -262,6 +265,9 @@ export default function OfficeElectricityCostBenchmarkPage() {
             <li><strong>契約プランの見直し：</strong>低圧契約のまま大規模フロアを借りている場合、高圧切替で基本料金単価を下げられる可能性があります。</li>
           </ol>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 注意事項 */}
@@ -271,6 +277,9 @@ export default function OfficeElectricityCostBenchmarkPage() {
             ※本ページの金額は業界平均を参考にした概算値です。契約区分・地域・使用パターンにより大きく変動します。正確な見積は専門家にご相談ください。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* データの根拠と出典 */}
@@ -312,6 +321,9 @@ export default function OfficeElectricityCostBenchmarkPage() {
         <p className="mt-3 text-xs text-slate-500">
           最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -331,6 +343,7 @@ export default function OfficeElectricityCostBenchmarkPage() {
             { href: "/small-office-electricity-cost-review", title: "小規模オフィスの電気代", description: "数十坪の小規模オフィスの電気代パターンを比較し、自社オフィスの規模区分でベンチマークを正しく当てはめられるかを点検できます。" },
             { href: "/retail-store-electricity-cost-benchmark", title: "小売店電気代ベンチマーク", description: "営業時間が長く照明・空調の負荷が大きい小売店舗の電気代水準と比較し、オフィス事業との支出パターンの違いを整理できます。" },
             { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "製造・生産系の電気代水準と比較すると、自社オフィスの電力コストが業界全体でどの相対位置にあるかを多角的に把握できます。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
