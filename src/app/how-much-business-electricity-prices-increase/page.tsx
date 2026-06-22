@@ -117,6 +117,9 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
             法人電気料金の上昇は単一要因ではなく、下表の複数の項目が同時に、または時間差で積み重なって発生します。
             それぞれの発生頻度と影響幅の目安を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm">
               <thead>
@@ -252,6 +255,9 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 使用量規模別の年間コスト増加シミュレーション */}
@@ -297,6 +303,9 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
               シミュレーター
             </Link>
             を活用してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -382,6 +391,9 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
             </Link>
             や上記チェックリストの活用が有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -445,6 +457,7 @@ export default function HowMuchBusinessElectricityPricesIncreasePage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "値上げ幅の積み重ねで形成された料金水準の推移をデータで確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

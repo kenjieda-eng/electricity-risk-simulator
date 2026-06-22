@@ -93,6 +93,9 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
           規模によって負担額は数千円〜数千万円まで桁が変わります。このページでは {latest.fiscalYear}年度単価 {latest.unitPriceYenPerKwh.toFixed(2)} 円/kWh を使い、
           代表的な業態別の月額・年額負担を試算します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </header>
 
       <section className="mt-6 space-y-6">
@@ -136,6 +139,9 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             連続操業の大規模工場を例に、制度開始から現在までの年度別月額負担の推移をグラフ化しました。
             単位は万円です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <PriceAdjustmentLineChart
@@ -246,6 +252,7 @@ export default function RenewableEnergySurchargeBusinessCostPage() {
               description: "使用量削減による賦課金低減効果も確認できます。",
             },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "賦課金を含む料金水準の推移をデータで確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

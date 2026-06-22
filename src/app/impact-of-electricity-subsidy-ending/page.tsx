@@ -86,6 +86,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             補助がある期間は負担が和らぐ一方、終了すると元の水準が表面化し、結果として急な上昇に見えることがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -96,6 +99,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             この違いを明確にすると、請求額が上がった理由を社内や顧客へ説明しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -115,6 +121,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             複数拠点を持つ法人では、拠点別だけでなく全体の電気料金管理にも影響が広がるため、集計方法も含めた確認が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -138,6 +147,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             補助終了に伴う説明では、単純な値上げではなく、政策支援の終了という背景を明確に示すことが有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -152,6 +164,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
               法人の電気料金が上がる理由
             </Link>
             でも確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -259,6 +274,9 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
             法人向け電気料金の補助金終了は、単価改定とは別の理由で請求額を押し上げることがあります。補助終了後の請求額は急に上がったように見えやすいため、
             どの項目が増えたのかを切り分けて確認することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -304,6 +322,7 @@ export default function ImpactOfElectricitySubsidyEndingPage() {
               title: "補助金縮小で見え方はどう変わったか",
               description: "補助金の有無による料金水準の見え方の違いをデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

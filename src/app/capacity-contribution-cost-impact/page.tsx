@@ -114,6 +114,9 @@ export default function CapacityContributionCostImpactPage() {
             容量拠出金のkWhあたり転嫁単価は、容量市場の約定価格と小売電気事業者の販売電力量をもとに算出されます。
             2024年度は約0.5円/kWh程度でしたが、約定価格の上昇に伴い、2026年度には約1.1円/kWhに達する見込みです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm text-center">
@@ -206,6 +209,9 @@ export default function CapacityContributionCostImpactPage() {
             容量拠出金は、<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>（2025年度: 3.98円/kWh）と比べると金額は小さいものの、
             <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>と同規模の影響に成長しつつあります。制度要因が複数重なることで、合計の負担増は無視できない水準です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4">
             <CapacityContributionChartCard
@@ -243,6 +249,9 @@ export default function CapacityContributionCostImpactPage() {
               市場連動プランと固定プラン
             </Link>
             のどちらを選んでいるかで、見積比較の際の注意点が変わります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4">
@@ -318,6 +327,9 @@ export default function CapacityContributionCostImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             当面は相当規模の拠出金が継続する見通しであり、法人の電気料金コストの構造的な上昇要因の一つとして認識する必要があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* コスト管理上の対応策 */}
@@ -383,6 +395,7 @@ export default function CapacityContributionCostImpactPage() {
               title: "市場連動プランと固定プランの違い",
               description: "料金の動き方やリスクの違いを比較し、選定軸を整理します。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

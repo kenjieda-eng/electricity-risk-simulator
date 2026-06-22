@@ -276,6 +276,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
             燃料費調整額と市場価格調整額が同時に急騰した場合、月額でどれほど請求が変わるかを試算します。
             基本料金・電力量料金は変わらなくても、調整項目だけで+67万円となるケースがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
@@ -506,6 +509,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
             </Link>
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 燃調費 */}
@@ -526,6 +532,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
               燃料費調整額（燃調費）の解説
             </Link>
             で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -549,6 +558,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
             </Link>
             が参考になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 補助金終了 */}
@@ -569,6 +581,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
               補助金終了が電気料金に与える影響
             </Link>
             で月額試算の詳細を確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -591,6 +606,9 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
               値上がりが始まるタイミング
             </Link>
             で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -667,6 +685,7 @@ export default function WhyBusinessElectricityBillsRiseSuddenlyPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "急上昇後の料金水準の推移実態をデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

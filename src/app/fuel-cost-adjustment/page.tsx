@@ -118,6 +118,9 @@ export default function FuelCostAdjustmentPage() {
             基準燃料価格との差に応じて kWh あたりの単価を毎月改定します。
             改定は 3 ヶ月前の貿易統計を参照するため、実際の燃料市況とは 3〜5 ヶ月程度のタイムラグがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -134,6 +137,9 @@ export default function FuelCostAdjustmentPage() {
             平均燃料価格が基準値を上回ると燃調はプラス（上乗せ）、下回るとマイナス（値引き）になります。
             2020 年度のようにコロナ禍で世界的に燃料需要が落ち込んだ時期はマイナスの月が続きました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -142,6 +148,9 @@ export default function FuelCostAdjustmentPage() {
             以下は東京電力エナジーパートナーの高圧料金メニューにおける、年度平均の燃調単価の概算推移です。
             2022 年度にウクライナ危機起点の LNG 急騰で過去最高水準まで上昇し、
             2023 年度は政府の激変緩和措置（電気料金値引き）で見かけ上は低く抑えられています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <PriceAdjustmentLineChart
@@ -196,6 +205,9 @@ export default function FuelCostAdjustmentPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃調費の最大の変動要因は LNG 輸入価格です。日本の火力発電はガス火力が中心のため、
             LNG の CIF 価格が動けば、その 3〜5 ヶ月後に燃調単価が動きます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           
       <MarketDataDownload
@@ -285,6 +297,7 @@ export default function FuelCostAdjustmentPage() {
             { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
             { href: "/articles/industry-guide", title: "業種別の見直しポイント集（33 業種）", description: "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。" },
             { href: "/business-electricity-retrospective/2026-05", title: "【2026年5月】法人の電気料金はどう動いた？", description: "5/1施行の再エネ賦課金改定・GW明けの需要急増・冷房開始期のJEPX動向を、燃調費の動きとあわせて整理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

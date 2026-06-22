@@ -283,6 +283,9 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
             電気代のウェイトは食料・住居に比べて小さいものの、2022〜2023年にかけての急激な上昇率が
             CPI全体を大きく押し上げた主因の一つとなりました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
@@ -338,6 +341,9 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
             2020年を基準（100）として、主要光熱費の指数推移を比較すると、電気代の変動幅が突出して大きいことがわかります。
             2022年のエネルギー価格高騰時には電気代指数が約22%上昇した一方、
             2023年は政府の電気・ガス価格激変緩和措置（補助金）の効果で一時的に下落しました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
@@ -406,6 +412,9 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
             電力多消費型の製造業では、電気代の上昇がコスト増を通じてPPIを押し上げ、最終製品価格への転嫁圧力となります。
             以下は業種別の電気代コスト比率と、電気代10%上昇時の利益率への影響の目安です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
               <thead>
@@ -458,6 +467,9 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代が20%上昇した場合、企業の年間コスト増加額と営業利益率への影響を企業規模別に試算します。
             製造業の大企業では絶対額が大きく、中小企業では利益率へのインパクトが相対的に重くなる傾向があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[680px] border-collapse text-sm">
@@ -654,6 +666,7 @@ export default function ElectricityPriceIncreaseAndCpiPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "消費者物価と比較しながら電気料金の推移実態を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

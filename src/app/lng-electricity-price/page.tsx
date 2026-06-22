@@ -110,6 +110,9 @@ export default function LngElectricityPricePage() {
             日本の電力供給では、LNG火力が引き続き大きな役割を担っています。再生可能エネルギーや原子力の比率が時期により変動しても、
             需給調整を行う上でLNGの存在感は小さくありません。そのため、海外のLNG価格や供給不安が起きると、国内電力市場にも影響が出やすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* LNG輸入価格の推移 */}
@@ -177,6 +180,9 @@ export default function LngElectricityPricePage() {
             <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の急騰</Link>
             を通じて法人の電気料金を押し上げた主因の一つです。現在は落ち着いているものの、地政学リスクが再燃すれば同様の局面が再現しうる水準にあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* LNG価格変動と法人電気料金への影響試算 */}
@@ -228,6 +234,9 @@ export default function LngElectricityPricePage() {
             月20万kWhクラスの施設では、2022年水準の高騰が再来した場合、年間で500万円超のコスト増になりうる計算です。
             <Link href="/market-price-adjustment-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整のリスク</Link>
             とあわせて確認しておくことをお勧めします。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -327,6 +336,9 @@ export default function LngElectricityPricePage() {
             調達先の上位はオーストラリア・マレーシア・カタールで全体の約60%を占めます。ロシア産については2022年以降の地政学リスクへの対応が課題となっており、
             代替調達先の確保が進んでいます。中東地域の緊張が高まった場合はカタール産を含むルートへの影響も想定する必要があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* なぜ有事のときに電気料金が上がりやすいのか */}
@@ -339,6 +351,9 @@ export default function LngElectricityPricePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             法人側では、急な請求増として表れることもあれば、更新時に契約条件が慎重化する形で現れることもあります。すぐに結論を出すというより、
             「どの条件で、どこまで上振れしうるか」を事前に確認しておく姿勢が大切です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -364,6 +379,9 @@ export default function LngElectricityPricePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             常設の解説ページとしては、個別ニュースの評価よりも、「供給リスクが電気料金に波及しうる構造が再認識されている」という点を押さえることが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -458,6 +476,7 @@ export default function LngElectricityPricePage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "LNG価格を含む料金水準の推移実態をデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

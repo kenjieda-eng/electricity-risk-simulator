@@ -313,6 +313,9 @@ export default function WheelingChargeExplainedPage() {
             電力の流れは大きく「発電→送配電→小売（消費者）」の3段階で構成されます。
             このうち<strong>送配電</strong>の部分を担うのが、各エリアの<strong>一般送配電事業者</strong>（東京電力パワーグリッド、関西電力送配電など）です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           {/* フロー図 */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -413,6 +416,9 @@ export default function WheelingChargeExplainedPage() {
           <p className="mt-3 text-xs text-slate-500">
             ※割合は契約電圧・使用量・エリア・時期により異なります。高圧・特別高圧の法人を想定した目安値です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-900">
               コントロール不可のコストが電気料金の半分以上を占める
@@ -459,6 +465,9 @@ export default function WheelingChargeExplainedPage() {
             配電サービス料金が最大費目となっており、これは低圧・高圧の配電線や変圧器の設置・維持コストです。
             老朽化した設備の更新投資が今後増加する見通しであり、この費目を中心に単価が上昇する可能性があります。
           </p>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 4. エリア別単価 */}
@@ -467,6 +476,9 @@ export default function WheelingChargeExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             日本には10の一般送配電事業者が存在し、エリアごとに託送料金単価が異なります。
             需要密度・系統規模・設備投資状況・地理的条件が単価差の主な要因です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
@@ -522,6 +534,9 @@ export default function WheelingChargeExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2023年度から、一般送配電事業者の収入規制に<strong>レベニューキャップ制度</strong>（収入上限規制）が導入されました。
             従来の<strong>総括原価方式</strong>（かかったコストに適正利潤を乗せて料金を決める方式）から大きく転換しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           {/* 制度比較表 */}
@@ -599,6 +614,9 @@ export default function WheelingChargeExplainedPage() {
           <h2 className="text-xl font-semibold text-slate-900">託送料金は今後上がるのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             構造的な要因から、託送料金は今後も<strong>上昇圧力が続く</strong>見通しです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -753,6 +771,7 @@ export default function WheelingChargeExplainedPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "託送料金を含む電気料金全体の水準推移をデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

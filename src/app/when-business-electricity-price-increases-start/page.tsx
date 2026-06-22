@@ -122,6 +122,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
             電気料金の請求は「使用した月」と「請求書が届く月」がずれるのが原則です。下表は4月使用分を例にした標準的な流れです。
             値上げの影響が「どの月の請求書」に初めて現れるかを確認する際の基本的な枠組みとして活用してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -329,6 +332,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
             燃料費調整額は燃料価格の動きから数ヶ月遅れて反映されます。一般的に「X月に適用される燃調単価」は「X-3〜X-5月の平均燃料価格」をもとに計算されるため、
             燃料市況が落ち着いても請求額がすぐには下がらない、あるいは遅れて上がるように見える場合があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             <Link
               href="/fuel-cost-adjustment"
@@ -362,6 +368,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
               市場価格調整額
             </Link>
             のページも参考になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -477,6 +486,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
             </Link>
             を拠点別に確認し、検針日・対象期間・各調整項目の適用月を個別に把握しておくことが、複数拠点管理では特に重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 使用月と請求月のずれ */}
@@ -487,6 +499,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月跨ぎの検針や締め処理があるため、値上げの影響が「翌月」や「翌々月」に見えることがあります。
             「先月と比べて請求が急増した」と感じたとき、実際には2ヶ月前の使用分が反映されているケースもあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             <Link
@@ -543,6 +558,9 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
             値上げは「いつ発表されたか」より「いつの請求に現れるか」で把握することが実務的です。使用月・検針月・請求月のずれを前提に、
             調整項目と契約更新を分けて確認すると反映時期を整理しやすくなります。特に複数拠点を管理する場合は、拠点ごとの検針サイクルと
             契約更新月を一覧化しておくことで、いつ・どの拠点で変化が起きるかを先読みできるようになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -604,6 +622,7 @@ export default function WhenBusinessElectricityPriceIncreasesStartPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "値上げが積み重なった料金水準の推移をデータで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

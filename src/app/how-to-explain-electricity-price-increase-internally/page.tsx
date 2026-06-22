@@ -273,6 +273,9 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
         <p className="text-sm leading-7 text-slate-700 sm:text-base">
           下表を埋めることで、値上がりの主因がどの費目にあるかを一覧で把握できます。前年同月比の列を必ず記入し、季節要因と構造的変化を区別してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-slate-200 rounded-xl border border-slate-200 text-sm">
             <thead className="bg-slate-50">
@@ -361,6 +364,9 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
         <p className="text-sm leading-7 text-slate-700 sm:text-base">
           社内報告書は3ステップで構成するとシンプルかつ説明しやすくなります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-sky-200 bg-sky-50 p-5">
             <div className="mb-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
@@ -405,6 +411,9 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
         </h2>
         <p className="text-sm leading-7 text-slate-700 sm:text-base">
           報告後に受けやすい質問を事前に想定しておくと、説明がスムーズになります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-slate-200 rounded-xl border border-slate-200 text-sm">
@@ -452,6 +461,9 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
         </h2>
         <p className="text-sm leading-7 text-slate-700 sm:text-base">
           下表は高圧契約・月間使用量約42,500kWhの事業所を例に作成した記入例です。実際の請求書から数値を転記してご活用ください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-slate-200 rounded-xl border border-slate-200 text-sm">
@@ -643,6 +655,7 @@ export default function HowToExplainElectricityPriceIncreaseInternallyPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "説明資料の根拠となる料金推移データを確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

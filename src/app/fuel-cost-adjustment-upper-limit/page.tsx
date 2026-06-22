@@ -101,6 +101,9 @@ export default function FuelCostAdjustmentUpperLimitPage() {
             つまり、燃料価格がどれだけ急騰しても、規制料金需要家の請求額には上限以上のコストは転嫁されません。
             反面、電力会社側で「転嫁できなかったコスト」が赤字として残る構造です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -142,6 +145,9 @@ export default function FuelCostAdjustmentUpperLimitPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人向けの高圧・特別高圧契約や、新電力の自由料金プランには、燃調の上限制度は原則として適用されません。
             契約書・約款で個別に上限を設けている場合もありますが、多くは「燃料価格に応じて無制限に反映」する仕組みです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm leading-7 text-slate-800">
@@ -204,6 +210,7 @@ export default function FuelCostAdjustmentUpperLimitPage() {
             { href: "/last-resort-supply", title: "最終保障供給とは", description: "新電力撤退時の受け皿制度。" },
             { href: "/last-resort-supply-price", title: "最終保障供給の料金水準", description: "標準料金より高い仕組みを確認。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調上限到達後の料金水準推移をデータで確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

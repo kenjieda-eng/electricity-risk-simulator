@@ -116,6 +116,9 @@ export default function RenewableEnergySurchargeHistoryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             再エネ賦課金の単価は、年度ごとに次の考え方で決まります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-3 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-900">
             <p className="font-semibold">
               単価 = （当該年度の買取費用見込み − 回避可能費用 − 広域的運営推進機関費用交付金 ±調整額） ÷ 販売電力量見込み
@@ -140,6 +143,9 @@ export default function RenewableEnergySurchargeHistoryPage() {
             制度開始当初は 0.22 円/kWh と小さな負担でしたが、FIT 認定量（主に太陽光）の急拡大により、
             買取費用の総額は毎年数千億円単位で増加しました。この時期は回避可能費用も比較的安定しており、
             2012 年度 → 2022 年度で 15 倍以上に上昇しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -171,6 +177,9 @@ export default function RenewableEnergySurchargeHistoryPage() {
             賦課金単価の算定では、回避可能費用が買取費用を相殺する方向に働きます。2022 年度のウクライナ危機起点の
             卸電力市場高騰が、結果として 2023 年度の賦課金を大きく引き下げました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm leading-7 text-slate-800">
               <strong>要点：</strong>賦課金の下落は再エネ普及が落ち着いたからではなく、「電気全体の市況が上がったために相対的に賦課金の取り分が小さくて済んだ」結果です。
@@ -192,6 +201,9 @@ export default function RenewableEnergySurchargeHistoryPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2030 年代前半までに単価ピークを迎える見込みで、その後は FIT 買取期間満了案件の減少により緩やかに下落していく見通しです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -261,6 +273,7 @@ export default function RenewableEnergySurchargeHistoryPage() {
               title: "再エネ賦課金を除いても電気料金は高いのか",
               description: "賦課金を除いた本体単価の推移を整理できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

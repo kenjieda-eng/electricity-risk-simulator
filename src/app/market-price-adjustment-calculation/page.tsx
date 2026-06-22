@@ -95,6 +95,9 @@ export default function MarketPriceAdjustmentCalculationPage() {
             例：基準単価が 10 円/kWh、当月 JEPX 平均が 15 円/kWh の場合、市場調整単価は +5 円/kWh。
             月 10 万 kWh なら月 50 万円の追加請求となります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -112,6 +115,9 @@ export default function MarketPriceAdjustmentCalculationPage() {
             負荷カーブが JEPX 高値の時間帯（夏夕方・冬朝晩）に偏っている法人は、月平均連動型よりも不利になりやすい方式です。
             逆に、深夜や JEPX 安値時間に使用が集中する事業者には有利になる場合もあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -127,6 +133,9 @@ export default function MarketPriceAdjustmentCalculationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             β（連動係数）の値で市場リスクのシェア比率が決まります。β = 0.3 なら、JEPX 変動の 30% のみが料金に反映される設計です。
             「緩衝型市場連動」「固定＋市場調整ミックス」などの名称で提示されることがあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -184,6 +193,9 @@ export default function MarketPriceAdjustmentCalculationPage() {
             同じJEPX水準でも、算定方法の違いで月額<span className="font-semibold text-slate-900">35〜50万円</span>の差が生じます。
             30分実績連動型はピーク時間帯の使用割合が高い法人ほど不利になる傾向があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -215,6 +227,7 @@ export default function MarketPriceAdjustmentCalculationPage() {
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "契約タイプ全体の整理。" },
             { href: "/how-to-read-electricity-quote", title: "電気料金見積書の見方", description: "見積書の確認ポイント。" },
             { href: "/jepx-price-trend-and-corporate-impact", title: "JEPX卸電力市場価格の推移と法人電気料金への波及", description: "市場価格調整額の算定基礎となるJEPX推移を確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

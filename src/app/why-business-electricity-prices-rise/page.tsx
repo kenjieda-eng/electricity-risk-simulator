@@ -146,6 +146,9 @@ export default function WhyBusinessElectricityPricesRisePage() {
             前月より使用量があまり変わっていなくても請求額が増えることがある一方、使用量が増えているのに単価が下がるケースもあります。
             請求額の変化は、単一要因で判断しない視点が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -174,6 +177,9 @@ export default function WhyBusinessElectricityPricesRisePage() {
             さらに見落としにくいのが為替です。同じ燃料価格でも、円安が進むと日本円ベースの輸入コストは上がります。
             国際市況と為替の両方を見ることが、請求額変化の理解につながります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -188,6 +194,9 @@ export default function WhyBusinessElectricityPricesRisePage() {
               市場連動型と固定型の比較ページ
             </Link>
             で整理できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -215,12 +224,18 @@ export default function WhyBusinessElectricityPricesRisePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             契約内容が現在の使用実態に合っていない場合、必要以上にコストを負担していることもあります。市況要因と自社運用要因の両方を分けて見ることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人が見直し時に確認したいポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人の電気料金を見直すときは、安い単価を探すだけでは不十分です。まずは請求額が上がっている理由を切り分けることが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>使用量が増えているのか</li>
@@ -236,6 +251,9 @@ export default function WhyBusinessElectricityPricesRisePage() {
           <h2 className="text-xl font-semibold text-slate-900">気候変動による構造的な需要変化</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             温暖化による冷房需要の増加（CDD: 東京+24%, 名古屋+40%）は、夏のピーク電力を構造的に押し上げ、JEPX卸価格の上昇要因になっています。猛暑日の増加（東京: 1990年代21日→2020年代101日）は、電力需給逼迫のリスクを高め、法人電気料金の上振れ要因として長期的に作用します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -322,6 +340,7 @@ export default function WhyBusinessElectricityPricesRisePage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -208,6 +208,9 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               そのため、燃料価格が落ち着いても料金水準が以前の水準に戻らない「高止まり」が続き、予算策定や社内説明では「いつ戻るか」ではなく「どこで負担をコントロールするか」という観点が必要になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 5軸分解 */}
@@ -311,6 +314,9 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
               2026年の値上げは、請求書上では「燃料費調整額の反発」と「再エネ賦課金の単価改定」として目に見えて現れる一方、容量拠出金と託送料金改定は
               <strong>電力量料金単価・基本料金に内包されて見えにくい</strong>
               形で進みます。そのため、「単価がじわじわ上がっている」ように感じられるケースが多く、どの要因で上がっているかを分解しないと、次の行動（契約見直し・使用量削減・予算調整）の優先順位がつけられません。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               見積書比較の段階では、
@@ -449,6 +455,7 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
                 title: "容量拠出金の本格徴収（要因①の詳細）",
                 description: "値上げ要因の中核、2027年度7,847円/kW",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

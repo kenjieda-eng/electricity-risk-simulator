@@ -95,6 +95,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
             市場連動プランでは、調達コストの一部または多くが市場価格の影響を受けます。そのため、卸電力市場で価格が上昇すると、
             その影響が料金へ反映されやすくなります。契約によって反映ルールは異なりますが、固定型より相場変動の影響を受けやすい点が特徴です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             基本構造の確認は{" "}
             <Link href="/market-linked-plan" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
@@ -112,6 +115,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランでは、こうした需給逼迫の影響が請求額へ出やすくなる点を理解しておくことが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -138,6 +144,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             法人の使用パターンによっては、価格が上がりやすい時間帯に多く使っているため、影響が大きく出る場合があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -168,6 +177,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             名称だけで判断せず、見積書や契約条件まで確認することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -175,6 +187,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動プランを検討する際は、安く見えるかどうかだけでなく、上振れ時にどの程度まで許容できるかを確認する必要があります。
             使用時間帯、季節変動、拠点特性、予算管理のしやすさも判断材料になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             請求額の全体像を確認する入り口として{" "}
@@ -236,6 +251,9 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
             市場連動プランは、卸電力市場の価格上昇が料金へ反映されやすい仕組みです。需給逼迫、燃料高、季節要因などが重なると、
             法人の電気料金も上がりやすくなります。契約内容を確認し、自社の使用パターンとリスク許容度に合うかを見極めることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -275,6 +293,7 @@ export default function WhyMarketLinkedElectricityPricesRisePage() {
               title: "料金メニュー比較ページ",
               description: "自社条件で固定型と市場連動型を比較できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

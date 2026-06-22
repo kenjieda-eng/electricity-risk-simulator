@@ -136,6 +136,9 @@ export default function CapacityContributionExplainedPage() {
             しかし、太陽光が発電できない夕方以降や、需給が逼迫する夏冬には火力が不可欠です。
             容量市場は、こうした「必要だが採算が合いにくい」電源の維持費用を、電力利用者全体で負担する仕組みです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
             <h3 className="text-lg font-semibold text-slate-900">容量市場の基本構造</h3>
@@ -186,6 +189,9 @@ export default function CapacityContributionExplainedPage() {
             容量拠出金は小売電気事業者に課されますが、最終的には電気料金を通じて需要家（法人・家庭）が負担します。
             転嫁のされ方は契約タイプによって異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -213,6 +219,9 @@ export default function CapacityContributionExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人の電気料金に上乗せされる制度要因には、再エネ賦課金、燃料費調整額（燃調費）、そして容量拠出金があります。
             それぞれ性質が異なるため、混同しないことが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4 overflow-x-auto">
@@ -265,6 +274,9 @@ export default function CapacityContributionExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             容量拠出金の実際の支払いは2024年度から始まりました。初年度はkWhあたり約0.5円程度の影響でしたが、
             約定価格の上昇に伴い、年度を追うごとに負担額は増加する見通しです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4">
@@ -367,6 +379,7 @@ export default function CapacityContributionExplainedPage() {
               title: "法人の電気料金を削減する見直しポイント7選",
               description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
