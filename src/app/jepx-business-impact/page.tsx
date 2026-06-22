@@ -138,6 +138,9 @@ export default function JepxBusinessImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2019 年度（平常時）と 2022 年度（ウクライナ危機）を比較し、契約タイプ別の年額影響を試算します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[620px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -256,6 +259,9 @@ export default function JepxBusinessImpactPage() {
             東京エリアは平均+5.33円と大幅に高く、一方で九州・四国は太陽光大量導入の影響でシステムプライスより安くなる傾向があります。
             エリアによって「実際に適用される価格」が大きく異なることに注意が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-sky-50">
@@ -323,6 +329,7 @@ export default function JepxBusinessImpactPage() {
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "契約視点のリスク整理。" },
             { href: "/bilateral-power-contracts", title: "相対契約とは", description: "市場に依存しない調達。" },
             { href: "/long-term-power-procurement", title: "長期契約とは", description: "安定調達の選択肢。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

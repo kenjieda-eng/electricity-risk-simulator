@@ -121,6 +121,9 @@ export default function RenewablePowerProcurementPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             小売会社の調達視点では、FITとFIPで価格の持ち方や市場との接続の仕方が異なるため、同じ再エネ電気でも調達リスクの出方が変わります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -156,6 +159,9 @@ export default function RenewablePowerProcurementPage() {
             PPAは長期の売電・調達関係を組む枠組みとして語られることが多く、再エネ電源との関係性を長く持ちたいときに使われます。
             相対契約はより広い概念で、再エネに限らず個別条件で組む契約全般を含みます。再エネ調達では、この二つが重なって見えることがありますが、
             「特定電源との継続的な関係を持つか」「個別条件でどう設計するか」で整理すると理解しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -270,6 +276,7 @@ export default function RenewablePowerProcurementPage() {
               title: "再エネ賦課金とは",
               description: "再エネ調達の背景にある制度コストの仕組みを確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

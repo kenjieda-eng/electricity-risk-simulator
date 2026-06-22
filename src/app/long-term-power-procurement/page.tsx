@@ -157,6 +157,9 @@ export default function LongTermPowerProcurementPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             このため、実務では「ベースは長めの契約で持ち、不足や変動は市場で調整する」という役割分担が現実的です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -198,6 +201,9 @@ export default function LongTermPowerProcurementPage() {
             一方で、相場が下がった局面では相対的に割高に見えることがありますし、需要構造が変わったときも機動的な組み替えはしにくくなります。
             つまり、長期契約は「相場に勝つ」ためではなく、「振れを抑える」ための色合いが強い手段です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -233,6 +239,7 @@ export default function LongTermPowerProcurementPage() {
               title: "固定プランとは",
               description: "長期調達の仕組みが背景にある安定型料金メニューを確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

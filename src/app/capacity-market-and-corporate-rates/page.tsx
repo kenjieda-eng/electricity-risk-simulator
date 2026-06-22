@@ -166,6 +166,9 @@ export default function CapacityMarketAndCorporateRatesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             容量市場は電力量の取引ではなく、「いざとなれば電力を供給できる態勢を維持することへの対価」を支払う仕組みです。このため、発電量が少ない時期でも発電設備の維持コストを支援する役割を担っています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -220,6 +223,9 @@ export default function CapacityMarketAndCorporateRatesPage() {
               容量拠出金の仕組みと影響
             </Link>{" "}
             もご参照ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -341,6 +347,7 @@ export default function CapacityMarketAndCorporateRatesPage() {
               title: "デマンドレスポンス（DR）で収益を得る方法",
               description: "容量市場の供出側となって収益を得る法人向けガイド。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

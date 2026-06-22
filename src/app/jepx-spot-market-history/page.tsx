@@ -144,6 +144,9 @@ export default function JepxSpotMarketHistoryPage() {
             一時 250 円/kWh を超える 30 分コマが発生しました。1 月の月平均は 60 円/kWh を突破し、
             年度平均を大きく押し上げました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm leading-7 text-slate-800">
               <strong>当時の状況：</strong>広域予備率が一桁台に低下。節電要請が出される中、
@@ -159,6 +162,9 @@ export default function JepxSpotMarketHistoryPage() {
             日本の発電用 LNG 調達コストが跳ね上がり、JEPX 年度平均は 20.37 円/kWh に達しました。
             2022 年度は年間を通じて 15〜25 円/kWh の高値水準が続き、
             新電力 100 社超が撤退・事業譲渡に追い込まれました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -305,6 +311,7 @@ export default function JepxSpotMarketHistoryPage() {
             { href: "/jepx-business-impact", title: "JEPXが法人料金に与える影響", description: "調達経路別の波及を整理。" },
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "JEPX連動の請求反映。" },
             { href: "/how-electricity-prices-are-determined", title: "電気の価格はどう決まるのか", description: "価格決定の仕組み。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

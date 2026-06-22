@@ -312,6 +312,7 @@ export default function InterAreaPowerFlowExplainedPage() {
             { href: "/special/emergency-scenario-analysis", title: "有事シナリオ分析", description: "連系線損傷を含む緊急事態での料金影響。" },
             { href: "/thermal-vs-renewable-trend", title: "火力 vs 再エネ 年度別推移", description: "電源構成の変化が融通パターンに与える影響。" },
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "エリアプライスの仕組みと法人負担。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

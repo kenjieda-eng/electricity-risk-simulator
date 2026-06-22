@@ -291,6 +291,7 @@ export default function NegawattTradingExplainedPage() {
             { href: "/battery-electricity-cost-benefit", title: "蓄電池の電気料金対策効果", description: "蓄電池放電で操業を止めずに節電する手法。" },
             { href: "/demand-control-reduction-effect", title: "デマンドコントロールの削減効果", description: "ネガワット取引と組み合わせる基本料金削減策。" },
             { href: "/electricity-bcp-for-corporates", title: "電力 BCP とは", description: "DR/ネガワットを BCP の対策の一環として位置づける視点。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

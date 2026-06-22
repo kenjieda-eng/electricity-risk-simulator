@@ -143,6 +143,9 @@ export default function FuelProcurementAndElectricityPricesPage() {
             ただし、燃料価格上昇とJEPX価格上昇が一対一で連動するわけではありません。需要水準、再エネ出力、設備稼働状況、送電制約が重なることで、
             市場価格への反映のされ方は変わります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -186,6 +189,9 @@ export default function FuelProcurementAndElectricityPricesPage() {
             2022年以降は、欧州のエネルギー需給逼迫や地政学リスクの高まりを受けて、LNGを中心に燃料市場が大きく変動しました。
             日本でも、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>の上昇、市場価格の高騰、新電力の調達環境悪化といった形で影響が出ました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <InfoBox title="ここでの読み方">
             この局面は「燃料価格が上がったから電気料金も同じだけ上がった」と単純化するより、燃料高と需給逼迫が同時に起きると、
             調達コストの上振れ幅が大きくなりやすい事例として捉える方が実務的です。
@@ -224,6 +230,7 @@ export default function FuelProcurementAndElectricityPricesPage() {
               title: "法人の電気料金とLNGの関係",
               description: "LNGに絞って、料金への波及経路を補足できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -106,6 +106,9 @@ export default function PowerFuturesPage() {
             先物取引は、将来のある期間の価格について、いまの時点で取引条件を持つ仕組みです。電力調達の文脈では、
             将来の現物価格が大きく変わるリスクに備えるためのヘッジ手段として理解すると分かりやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <InfoBox title="読み方のポイント">
             「将来の電気を全部先に買う」のではなく、「将来の価格変動に対してどう備えるか」という観点で捉えると、現物市場との違いが見えやすくなります。
           </InfoBox>
@@ -251,6 +254,9 @@ export default function PowerFuturesPage() {
             実務では、ベース需要は相対契約や長期契約で押さえ、不足や変動はJEPXで調整しつつ、価格急変への備えとして先物を組み合わせる発想が分かりやすい整理です。
             先物は単独の万能策ではなく、調達ポートフォリオの一部として機能します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -289,6 +295,7 @@ export default function PowerFuturesPage() {
               title: "地政学リスクで電気料金はどう上がるか",
               description: "先物ヘッジが有効になる価格変動リスクの実例を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
