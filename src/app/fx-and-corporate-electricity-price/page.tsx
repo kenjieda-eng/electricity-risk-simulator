@@ -149,6 +149,9 @@ export default function FxAndCorporateElectricityPricePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             このため、国際燃料価格が変わらなくても、円安が進むだけで日本の電力会社が支払う燃料コスト（円換算）は増加します。これが為替と電気料金が連動する根本的な理由です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -268,6 +271,9 @@ export default function FxAndCorporateElectricityPricePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             円安が進むと、日本が輸入する化石燃料の円換算コストが上昇し、燃料費調整額を通じて2〜3か月後に法人電気料金に反映されます。固定プランでも燃料費調整額は変動するため、為替リスクから完全に切り離されているわけではありません。電力コスト予算の策定や契約見直しの判断には、燃料価格と並んで為替動向を組み込んだ管理が有効です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <RelatedLinks
@@ -303,6 +309,7 @@ export default function FxAndCorporateElectricityPricePage() {
               title: "容量市場と法人料金の関係",
               description: "容量市場の制度と今後の負担見通し。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

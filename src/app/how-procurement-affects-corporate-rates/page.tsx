@@ -168,6 +168,9 @@ export default function HowProcurementAffectsCorporateRatesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             調達コストが上昇すれば、その分が何らかの形で小売料金に転嫁されます。燃料費調整額のような自動調整の仕組みもありますが、固定プランでは調達コスト上昇分を小売会社が一定期間吸収することもあり、これが「固定プランでも突然値上がりする」要因のひとつになっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -309,6 +312,9 @@ export default function HowProcurementAffectsCorporateRatesPage() {
             </Link>{" "}
             で解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -356,6 +362,7 @@ export default function HowProcurementAffectsCorporateRatesPage() {
               title: "デマンドレスポンス（DR）で収益を得る方法",
               description: "調達コスト削減の次は、DR 参入で電気代を「収益源」に変える法人向けガイド。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

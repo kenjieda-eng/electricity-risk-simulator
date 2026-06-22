@@ -265,6 +265,7 @@ export default function HowElectricityPricesAreDeterminedPage() {
               title: "市場連動プランとは",
               description: "市場価格が料金へ反映される契約を実務目線で見直します。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -114,6 +114,9 @@ export default function SolarCurtailmentByAreaPage() {
           周波数が乱れるリスクがあるため、一般送配電事業者が太陽光発電所に出力を下げるよう指示します。
           これが出力制御です。制御された電力は発電されず、いわば「捨てられた」状態になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           <div className="rounded-lg border border-amber-100 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-900">FIT/FIP売電収入への影響</p>
@@ -200,6 +203,9 @@ export default function SolarCurtailmentByAreaPage() {
           その場合、<Link href="/duck-curve-electricity-price-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ダックカーブ</Link>の深化とともに
           抑制が始まるシナリオも想定されます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 法人への影響 */}
@@ -250,6 +256,7 @@ export default function SolarCurtailmentByAreaPage() {
             { href: "/duck-curve-electricity-price-impact", title: "ダックカーブとは何か", description: "太陽光余剰と夕方急騰のメカニズムを解説。" },
             { href: "/inter-area-power-flow-explained", title: "エリア間電力融通の実態", description: "連系線が余剰電力の吸収にどう貢献しているか。" },
             { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "太陽光導入と賦課金コストの関係を基礎から解説。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

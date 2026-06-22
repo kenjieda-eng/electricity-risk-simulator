@@ -112,6 +112,9 @@ export default function JepxPriceVolatilityPage() {
             2022 年度のウクライナ危機時には、LNG スポットが一時 100 ドル/MMBtu 近くまで急騰し、
             JEPX 年度平均が 20 円/kWh 台に押し上げられました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -159,6 +162,9 @@ export default function JepxPriceVolatilityPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             九州エリアでは太陽光大量導入の影響で、昼間のエリアプライスがシステムプライスより安くなりやすい傾向があります。
             一方、北海道エリアは本州との連系線容量が限られるため、冬季に逼迫しやすい構造です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -316,6 +322,7 @@ export default function JepxPriceVolatilityPage() {
             { href: "/jepx-business-impact", title: "JEPXが法人料金に与える影響", description: "調達経路別の波及。" },
             { href: "/electricity-cost-risk-heatwave", title: "猛暑による電気料金リスク", description: "猛暑時のJEPX連動影響。" },
             { href: "/electricity-cost-risk-severe-winter", title: "厳冬による電気料金リスク", description: "寒波時のJEPX連動影響。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

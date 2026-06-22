@@ -154,6 +154,9 @@ export default function OilAndCorporateElectricityPricePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             このような構造のもとでは、国際的な燃料価格の変動は電気料金に直結します。2022年のロシアによるウクライナ侵攻を契機としたLNG・石炭価格の高騰が法人電気料金の急上昇につながったのは、この構造を如実に示した事例です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -278,6 +281,9 @@ export default function OilAndCorporateElectricityPricePage() {
             </Link>{" "}
             をご覧ください。
           </p>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -320,6 +326,7 @@ export default function OilAndCorporateElectricityPricePage() {
               title: "自家消費型太陽光は電気料金対策としてどう効くか",
               description: "購入電力削減で燃料費変動リスクを低減する考え方。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

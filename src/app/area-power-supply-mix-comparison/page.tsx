@@ -331,6 +331,7 @@ export default function AreaPowerSupplyMixComparisonPage() {
             { href: "/thermal-vs-renewable-trend", title: "火力 vs 再エネ 年度別推移", description: "FY2023→FY2026の電源構成変化を追跡。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "電源構成と燃調費の関係を理解する基礎知識。" },
             { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "JEPXエリアプライスと電源構成の関連性。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

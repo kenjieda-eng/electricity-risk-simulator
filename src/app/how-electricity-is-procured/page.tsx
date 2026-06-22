@@ -256,6 +256,7 @@ export default function HowElectricityIsProcuredPage() {
               title: "燃料費調整額（燃調費）とは",
               description: "電力調達コストが料金に転嫁される仕組みを確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

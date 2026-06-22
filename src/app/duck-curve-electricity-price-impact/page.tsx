@@ -113,6 +113,9 @@ export default function DuckCurveElectricityPriceImpactPage() {
           9エリア合計の平均値です。青線が総需要、赤線がネット需要（需要−太陽光−風力）、黄色が太陽光出力。
           昼間にネット需要が沈み込み、夕方に急上昇する「アヒルの形」が鮮明です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4">
           <DuckCurveChart />
         </div>
@@ -240,6 +243,9 @@ export default function DuckCurveElectricityPriceImpactPage() {
           自社の使用パターンを把握し、市場連動型か固定価格型かの選択、蓄電池導入の検討、
           需要シフトの余地を探ることが、コスト最適化の鍵です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -257,6 +263,7 @@ export default function DuckCurveElectricityPriceImpactPage() {
             { href: "/fixed-price-plan", title: "固定単価プランとは", description: "市場変動を避ける固定価格型契約の仕組み。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "蓄電池のピークカット・アービトラージ効果を解説。" },
             { href: "/inter-area-power-flow-explained", title: "エリア間電力融通の実態", description: "連系線がダックカーブの緩和にどう貢献するか。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
