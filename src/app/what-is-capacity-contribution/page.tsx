@@ -109,6 +109,9 @@ export default function WhatIsCapacityContributionPage() {
           </Link>
           を参照してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <p className="mt-3 rounded-lg border border-sky-300 bg-white p-3 text-sm leading-7 text-slate-700 sm:text-base">
           📜 制度全体の沿革（容量市場の創設・初回オークション・拠出金導入）は{" "}
           <Link href="/capacity-market-timeline" className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -194,6 +197,9 @@ export default function WhatIsCapacityContributionPage() {
             </Link>
             を参照。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 4. 法人の電気料金にどう乗るか */}
@@ -201,6 +207,9 @@ export default function WhatIsCapacityContributionPage() {
           <h2 className="text-xl font-semibold text-slate-900">4. 法人の電気料金にどう乗るか（実額試算）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             <strong className="font-semibold text-slate-900">試算前提</strong>: 高圧 500 kW 契約、年間消費 200 万 kWh の中堅製造業
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -320,6 +329,9 @@ export default function WhatIsCapacityContributionPage() {
             </Link>
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SisterSiteLink
@@ -353,6 +365,7 @@ export default function WhatIsCapacityContributionPage() {
             { href: "/", title: "電気料金上昇リスク診断", description: "容量拠出金を含む年間影響額をシミュレーターで試算。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "容量拠出金と並ぶ請求書の上乗せ要因。" },
             { href: "/duck-curve-corporate-impact", title: "ダックカーブと法人電気料金", description: "夕方ピーク確保コストの背景を理解する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

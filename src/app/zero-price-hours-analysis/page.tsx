@@ -138,6 +138,9 @@ export default function ZeroPriceHoursAnalysisPage() {
             太陽光や風力など、燃料コストがほぼゼロの再エネ発電事業者は、発電できる状況であれば0円や0.01円で入札するインセンティブがあります。
             これらの入札だけで需要が満たされると、約定価格は0.01円/kWh（市場最低価格）になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-emerald-100 bg-emerald-50 p-4">
             <p className="text-sm font-semibold text-emerald-800">なぜ再エネ事業者は0円で入札するのか</p>
             <p className="mt-1 text-sm leading-7 text-emerald-700">
@@ -154,6 +157,9 @@ export default function ZeroPriceHoursAnalysisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             下のグラフは、各30分コマの再エネ供給比率を8段階に分類し、それぞれの平均スポット価格をプロットしたものです。
             再エネ比率が高くなるほど価格が明確に低下する<strong>強い逆相関関係</strong>が確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4">
             <RenSharePriceChart />
@@ -215,6 +221,9 @@ export default function ZeroPriceHoursAnalysisPage() {
             スポット価格が9.8〜11.0円/kWhと1日の中で最も安価な水準です。
             晴天の春・秋には再エネ比率がさらに高まり、0円コマが発生しやすい条件が整います。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-blue-100 bg-blue-50 p-4">
             <p className="text-sm font-semibold text-blue-800">ダックカーブとの関係</p>
             <p className="mt-1 text-sm leading-7 text-blue-700">
@@ -253,6 +262,9 @@ export default function ZeroPriceHoursAnalysisPage() {
             九州エリアでは特に0円コマの発生率が高く、再エネ出力制御（カーテイルメント）との関係が深いです。
             太陽光が大量に入力されるにもかかわらず消費が少ない春の休日昼間には、
             電力を「捨てる」（出力制御）か「0円で売る」かという二択を迫られる事業者が続出しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -326,6 +338,9 @@ export default function ZeroPriceHoursAnalysisPage() {
             春と秋の穏やかな気候で冷暖房需要が低く、かつ晴天が多い日には昼間の供給過剰が常態化しつつあります。
             九州電力管内は特に顕著で、出力制御コマと0円コマが頻発する「再エネ過剰ゾーン」になっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-1 text-sm leading-7 text-slate-700">
             <li>・ 2012年FIT開始 → 太陽光投資が急増、設備容量が急拡大</li>
             <li>・ 2019年頃 → 0.01円コマが観測され始める</li>
@@ -348,6 +363,9 @@ export default function ZeroPriceHoursAnalysisPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             ただし蓄電池コストの低下ペースと再エネ増設ペースの競走次第では、当面は0円コマが継続・増加する可能性も否定できません。
             法人として「昼間の安価な電力を最大限活用する」というエネルギー戦略の重要性は今後も増していきます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -394,6 +412,7 @@ export default function ZeroPriceHoursAnalysisPage() {
               title: "エリア別 太陽光出力制御の実態",
               description: "九州を中心に広がる出力制御の現状と電力市場への影響を解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

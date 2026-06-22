@@ -116,6 +116,9 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の動向は単一の指標では決まりません。以下の6指標を組み合わせて読むことで、「なぜ下がらないのか」「何が変われば動くのか」が見えやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -226,6 +229,9 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             過去の高騰事例を振り返ると、「原因が市場要因か構造要因か」で回復の有無が大きく変わることがわかります。2022年以降の高騰は構造的な性質が強く、単純な回復を期待しにくい状況です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -316,6 +322,9 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           <h2 className="text-xl font-semibold text-slate-900">シナリオ別の見通し</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             今後の電気料金動向は、外部環境と制度変化の組み合わせによって大きく3つのシナリオに分かれます。いずれのシナリオでも、制度的コスト（再エネ賦課金・容量拠出金・託送料金）は下がりにくい点に注意が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             {/* 楽観シナリオ */}
@@ -491,6 +500,9 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             「高止まりはいつか終わる」という前提に立つのではなく、「高止まりが続く可能性を前提にどう動くか」で意思決定を設計することが、今の法人経営において重要な視点です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -536,6 +548,7 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
               title: "法人の電気料金はいつ下がるのか",
               description: "下落条件と時期の見方を解説しています。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

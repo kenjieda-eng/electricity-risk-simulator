@@ -149,6 +149,9 @@ export default function ElectricityDemandPatternPage() {
           夏季は日中から夕方にかけて高い水準が続き、冬季は朝8〜10時と夕方18〜20時に
           大きなピークが発生する「双峰型」になります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4">
           <DemandHourlyChart />
         </div>
@@ -212,6 +215,9 @@ export default function ElectricityDemandPatternPage() {
           重なり産業活動が一時的に低下するためです。
           赤いバーが高需要（年間平均+10%超）、緑が低需要（平均−10%未満）を示しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4">
           <DemandMonthlyChart />
         </div>
@@ -242,6 +248,9 @@ export default function ElectricityDemandPatternPage() {
           全国9エリアのうち、東京エリアが全体の32.4%を占め突出しています。
           次いで関西（16.4%）、中部（15.2%）となっており、三大都市圏で全体の約64%を
           消費しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -302,6 +311,9 @@ export default function ElectricityDemandPatternPage() {
           全国総需要は省エネ推進・産業構造変化・人口減少を背景に緩やかな減少トレンドにあります。
           一方でデータセンター・EV充電など新たな需要が増加しており、今後は下げ止まりも予想されます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -348,6 +360,9 @@ export default function ElectricityDemandPatternPage() {
           過去のデータから全国需要が最大となった日のランキングです。上位10件すべてが
           7〜8月の猛暑日に集中しており、夏の冷房需要が需給逼迫の主要トリガーであることがわかります。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -388,6 +403,9 @@ export default function ElectricityDemandPatternPage() {
           電力市場では需要と供給のバランスが価格を決定します。需要が増えれば価格は上昇し、
           供給が増えれば（特に再エネ出力増加時）価格は低下します。法人の電力コストは
           以下の経路で需要パターンと連動しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -517,6 +535,7 @@ export default function ElectricityDemandPatternPage() {
               title: "電気料金リスクシナリオとは何か",
               description: "需要急増や燃料高騰など複数のリスクシナリオと法人の電気料金への影響を解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

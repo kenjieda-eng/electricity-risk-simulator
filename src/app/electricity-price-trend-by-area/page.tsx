@@ -240,6 +240,9 @@ export default function ElectricityPriceTrendByAreaPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             エリアごとの単価差は、偶然ではなく構造的な理由から生じています。以下の4要因がそれぞれ「安いエリア」「高いエリア」に影響を与えています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[540px] border-collapse text-sm">
               <thead>
@@ -311,6 +314,9 @@ export default function ElectricityPriceTrendByAreaPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             エリア間の電力単価差が年600万円超になるケースがあると聞くと、「拠点を関西や九州に移せばコストが下がる」という発想が出てきます。
             しかし実際には、移転コスト・従業員の採用環境・取引先との距離・物流拠点との関係など、電力コスト以外の要素が総コストを大きく左右します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -399,6 +405,7 @@ export default function ElectricityPriceTrendByAreaPage() {
               title: "地域別の電気料金動向",
               description: "各エリアの電気料金動向を地域別にまとめたカテゴリ。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -128,6 +128,9 @@ export default function RenewableSharePriceCorrelationPage() {
           再エネ比率以外の変数も価格に影響しているためです。特に冬の高需要期には再エネ比率が低い時間帯でも
           需給逼迫が重なり価格スパイクが生じます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* チャート1: 再エネ比率帯別価格バーチャート */}
@@ -201,6 +204,9 @@ export default function RenewableSharePriceCorrelationPage() {
           40%超の高再エネ比率は全体の約6%に過ぎません。現状ではまだ「昼間の高再エネ時間帯」は限られていますが、
           太陽光の普及拡大とともにこの構成は変わっていきます。
         </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* チャート2: 時間帯別の再エネ比率と価格 */}
@@ -273,6 +279,9 @@ export default function RenewableSharePriceCorrelationPage() {
           夕方の価格スパイクはより急峻になる傾向があります。
           この構造は今後も継続・拡大することが予想されます。
         </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 40%超の閾値効果 */}
@@ -287,6 +296,9 @@ export default function RenewableSharePriceCorrelationPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           この閾値を超える状況では、ゼロ円・マイナス価格が発生する時間帯とも重なります。
           九州エリアなど再エネ比率が既に50〜60%を超える地域では、この現象がより頻繁に起きています。
+        </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -340,6 +352,9 @@ export default function RenewableSharePriceCorrelationPage() {
           投資回収期間が短縮されます。太陽光発電との組み合わせ（自家消費＋余剰を蓄電）により
           経済効果をさらに高めることが可能です。
         </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 今後の展望 */}
@@ -358,6 +373,9 @@ export default function RenewableSharePriceCorrelationPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           「再エネが増えると電気が安くなる」というのは昼間限定の話であり、
           夕方・冬期のリスクは同時に拡大する点を見落とさないようにする必要があります。
+        </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -400,6 +418,7 @@ export default function RenewableSharePriceCorrelationPage() {
               title: "再生可能エネルギー賦課金の仕組み",
               description: "再エネ普及を支える賦課金の仕組みと法人負担額。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

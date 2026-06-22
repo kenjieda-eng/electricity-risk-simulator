@@ -301,6 +301,9 @@ export default function NuclearPowerAndElectricityPricePage() {
             2025年時点の各エリアの原発稼働状況と、高圧契約の総合単価目安を比較します。
             稼働基数の多いエリアほど単価が低い傾向が確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[800px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -387,6 +390,9 @@ export default function NuclearPowerAndElectricityPricePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月間5万kWh（中規模工場・商業施設の目安）でシミュレーションした場合の、
             エリア間コスト差のインパクトを示します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm text-slate-700">
@@ -566,6 +572,7 @@ export default function NuclearPowerAndElectricityPricePage() {
               title: "法人の電気料金が上がる理由",
               description: "原発再稼働を含む複数の要因が法人料金に与える影響を費目別に整理します。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

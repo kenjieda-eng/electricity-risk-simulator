@@ -340,6 +340,9 @@ export default function ElectricityPriceByVoltageTypePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧は市場と直結しているため価格変動が素早く反映されます。高圧はその中間で、規制料金と自由料金が混在します。低圧は規制料金の割合が高い分、急騰時の上昇は抑制されますが、規制料金改定のタイミングで一気に上がる点が特徴です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 区分別の月額コスト比較 */}
@@ -479,6 +482,9 @@ export default function ElectricityPriceByVoltageTypePage() {
             </Link>
             を活用することで、自社の使用パターンに合った条件を見つけやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -524,6 +530,7 @@ export default function ElectricityPriceByVoltageTypePage() {
               title: "電気料金の推移と高止まり（カテゴリ一覧）",
               description: "推移・高止まり関連の記事をまとめて確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

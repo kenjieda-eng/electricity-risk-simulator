@@ -190,6 +190,9 @@ export default function WarmingTrend30YearsPage() {
           都市部では建物・道路からの放熱、緑地の減少、エアコン排熱などが気温を押し上げ、
           郊外や農村部よりも温暖化の影響を増幅させます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
           <p className="text-sm font-semibold text-amber-800">注目: 2020年代の加速</p>
           <p className="mt-1 text-sm leading-7 text-amber-700">
@@ -237,6 +240,9 @@ export default function WarmingTrend30YearsPage() {
           HDD（Heating Degree Day: 暖房度日）は14℃を下回った分の累積値で暖房需要の指標です。
           CDDの増加は夏の冷房電力需要増・JEPX高騰リスクの上昇を意味し、HDDの低下は冬の暖房需要減を意味します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -273,6 +279,9 @@ export default function WarmingTrend30YearsPage() {
           CDD（冷房度日）の増加は直接的に夏の電力需要を押し上げます。エアコンの冷房は電力消費の
           大きな部分を占めており、連続猛暑日には午後の電力需要がピークを形成し、
           JEPXスポット価格が急騰するリスクが高まります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 space-y-3">
           <div className="flex gap-4">
@@ -318,6 +327,9 @@ export default function WarmingTrend30YearsPage() {
           温暖化によるHDD（暖房度日）の低下は、冬の暖房電力・ガス需要を減少させます。
           一見コスト減のように見えますが、電力市場全体への影響はより複雑です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-green-100 bg-green-50 p-4">
             <h3 className="text-base font-semibold text-green-900">冬の暖房コスト削減</h3>
@@ -359,6 +371,9 @@ export default function WarmingTrend30YearsPage() {
           気温トレンドが今後も続くと仮定した場合、法人の電気料金には以下の構造的な上昇圧力が加わります。
           これは短期的な市場価格変動とは別の、10〜20年単位での基礎的なコスト変動要因です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-3">
           {[
             { title: "冷房設備の能力増強コスト", desc: "より高性能な空調設備への更新が必要となり、設備投資と維持費が増加します。特に製造業・物流倉庫・データセンターでは冷却コストが収益に直結します。" },
@@ -387,6 +402,9 @@ export default function WarmingTrend30YearsPage() {
           冬の暖房コストを若干抑制しますが、年間トータルでは冷房需要増が暖房需要減を上回ります。
           法人の電気料金戦略では、この中長期トレンドを踏まえた省エネ投資・調達方法の見直しが不可欠です。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -405,6 +423,7 @@ export default function WarmingTrend30YearsPage() {
             { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格の全体像", description: "2010年以降のJEPX年次・月次価格トレンド。" },
             { href: "/demand-suppression-effectiveness", title: "デマンドコントロールの効果", description: "猛暑ピーク時のデマンド抑制で電気代を下げる方法。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "夏の高値時間帯を避けるための蓄電池活用法。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

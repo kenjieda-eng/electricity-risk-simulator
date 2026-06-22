@@ -119,6 +119,9 @@ export default function ResponseFlowWhenElectricityCostSurgesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代の年間上昇額を4段階に区分し、それぞれで「確認すべきこと」「対応レベル」「担当」「期限目安」を整理しました。金額が大きいほど対応の優先度と経営関与度が上がります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
               <tr>
@@ -401,6 +404,9 @@ export default function ResponseFlowWhenElectricityCostSurgesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代の上昇は「一時的な高騰かもしれない」と様子を見てしまいがちです。しかし以下の3つの条件に当てはまる場合、対応を先延ばしにするほど損失が拡大します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 space-y-4">
             <li className="rounded-xl border border-rose-200 bg-white p-4">
               <p className="font-semibold text-rose-800">条件1：市場連動プランで燃調・市場調整に上限がない</p>
@@ -459,6 +465,7 @@ export default function ResponseFlowWhenElectricityCostSurgesPage() {
               title: "電気代見直しを社内で説明する方法",
               description: "経営層・上司への報告をスムーズにするための資料構成と説明の型。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

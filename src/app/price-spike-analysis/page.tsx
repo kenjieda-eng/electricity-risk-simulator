@@ -142,6 +142,9 @@ export default function PriceSpikeAnalysisPage() {
             スパイクが生じたコマを市場連動型の料金プランで調達していた場合、そのコマの電力コストは通常の3〜20倍以上になります。
             頻繁なスパイク発生が続く月は電気料金明細に<strong>市場価格調整費</strong>として多額の追加請求が現れ、企業の損益に直接打撃を与えます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">スパイク価格の影響規模イメージ</p>
             <p className="mt-1 text-sm leading-7 text-amber-700">
@@ -184,6 +187,9 @@ export default function PriceSpikeAnalysisPage() {
             価格入札競争が激化しやすい時間帯でもあります。蓄電池やデマンドレスポンス（DR）によるこの時間帯の需要抑制が、
             スパイクへの有効な対策として注目されています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 月別スパイク分析 */}
@@ -204,6 +210,9 @@ export default function PriceSpikeAnalysisPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             一方、夏（8月）のスパイクは猛暑による冷房需要急増が主因です。ただし夏は太陽光の発電量が多いため、需給逼迫は主に夕方以降に限定される傾向があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -280,6 +289,9 @@ export default function PriceSpikeAnalysisPage() {
             市場連動型プランを活用していた新電力各社や電力多消費企業が深刻な経営危機に陥りました。
             以降、LNG長期契約の重要性の再認識、小売電気事業者のリスク管理強化、容量市場の整備加速など、
             日本の電力市場制度に大きな変革をもたらすきっかけとなっています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -359,6 +371,9 @@ export default function PriceSpikeAnalysisPage() {
             スパイクへの対応戦略は自社の事業特性（需要の柔軟性・設備投資余力・リスク許容度）によって最適解が異なります。
             まず現在の契約が市場連動型か固定型かを確認し、市場連動型であれば過去のスパイク発生月に自社の使用量がどの程度あったかを検証することが最初のステップです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 今後の展望 */}
@@ -373,6 +388,9 @@ export default function PriceSpikeAnalysisPage() {
             スパイクの発生頻度は中期的に低減する可能性もあります。
             ただし気候変動による極端な寒波・猛暑の増加はスパイクリスクを高める要因であり、
             今後もシナリオ別の想定を持った上でプラン選択・設備投資を検討することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 space-y-1 text-sm text-slate-700">
             <li>・ 容量市場（2024年度以降）→ 予備力確保によりスパイク抑制期待</li>
@@ -413,6 +431,7 @@ export default function PriceSpikeAnalysisPage() {
               title: "JEPX 0円コマの実態",
               description: "再エネ余剰による0円・超低価格コマの発生メカニズムと法人への意味を分析。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -221,6 +221,9 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
             再エネ拡大が電気料金に与える影響は、方向が相反する複数の経路が同時に作用しています。
             上昇圧力3項目と下降圧力3項目を並べて整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <h3 className="mt-5 text-lg font-semibold text-slate-900">
             上昇圧力（コスト増加要因）
@@ -368,6 +371,9 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
             電力市場（JEPX）では、発電コストが安い電源から順に市場に入札される「メリットオーダー（経済負荷配分）」の原則が働きます。
             太陽光・風力は燃料費がゼロに近いため、発電時は非常に低い価格で入札し、
             市場の約定価格（スポット価格）全体を引き下げる効果があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
@@ -521,6 +527,7 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
               title: "電気料金が高止まりする理由",
               description: "構造的な高止まり要因を複数の視点から解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

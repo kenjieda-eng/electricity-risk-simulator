@@ -118,6 +118,9 @@ export default function ElectricityPriceDataSourcesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公的機関・市場機関・電力会社・行政の4カテゴリに整理しました。データの性質がそれぞれ異なるため、目的に合わせて使い分けることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
               <tr>
@@ -305,6 +308,9 @@ export default function ElectricityPriceDataSourcesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             公的統計や市場データには、法人担当者が誤読しやすいポイントがあります。以下の5点に注意してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 space-y-3">
             <li className="rounded-xl border border-slate-200 bg-white p-4">
               <p className="font-semibold text-slate-900">1. 資源エネルギー庁の単価は「全契約平均」</p>
@@ -375,6 +381,7 @@ export default function ElectricityPriceDataSourcesPage() {
               title: "電気料金高止まり時代の予算策定",
               description: "高止まり局面での予算前提の置き方・シナリオ別試算方法を整理。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

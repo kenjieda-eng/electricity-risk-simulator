@@ -336,6 +336,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             日本の電力自由化は2000年から段階的に進められました。法人への影響が最も大きかった転換点ごとに整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -390,6 +393,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             完全自由化後、新電力のシェアは2021年にピークを迎えた後、燃料高騰と大量撤退を経て低下しています。
             法人向けシェアは家庭向けより高く、切り替えの活発さを示しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -460,6 +466,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
             電力自由化は競争による価格低下・選択肢拡大というメリットをもたらした一方、
             新たなリスクも生み出しました。5つの観点から整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -503,6 +512,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
             2021〜2023年にかけて起きた新電力の大量撤退は、電力自由化後最大の市場ショックでした。
             その経緯を5つのステップで整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {WITHDRAWAL_TIMELINE.map((step, i) => (
               <div key={i} className="flex gap-4">
@@ -540,6 +552,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             自由化後の法人（高圧）向け電気料金は、競争激化による下落期→高止まり期→急騰期→再調整期という
             4段階の変化をたどりました。以下に年次の水準感と背景を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -613,6 +628,9 @@ export default function ElectricityMarketLiberalizationImpactPage() {
             「自由化＝安くなる」は<span className="font-bold text-slate-900">燃料が安定している平常時には概ね正しい</span>ですが、
             燃料高騰局面では逆転するリスクがあります。
             自由化後の電力市場は、単純な「安さの競争」から「調達安定性と価格の総合評価」へと変化しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -697,6 +715,7 @@ export default function ElectricityMarketLiberalizationImpactPage() {
               title: "電気料金の改定メカニズム",
               description: "規制料金と自由化料金それぞれの改定の仕組みと法人への影響を解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
