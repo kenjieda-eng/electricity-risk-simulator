@@ -108,6 +108,9 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
             標準家庭（300kWh/月）で見ると、2012年度の月額66円から2026年度は月額1,254円まで上昇し、買い取り単価は約
             {unitPriceGrowthMultiple.toFixed(1)} 倍になっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -164,6 +167,9 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             そのため、ここで確認できる上昇は「賦課金が高いから上がっている」という説明だけでは捉えきれません。ベースコスト側の変化を読み取ることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -193,6 +199,9 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
             法人の実務では、ベース単価がどの水準にあるのかを先に押さえ、そこに補助や制度要因がどう重なるかを分けて見ると、
             契約見直しの優先順位を付けやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -217,6 +226,9 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
               再エネ賦課金
             </Link>{" "}
             の役割を分けて確認すると、実態把握しやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -248,6 +260,7 @@ export default function ElectricityPriceWithoutRenewableSurchargePage() {
               title: "法人の電気料金が上がる理由",
               description: "上昇要因を全体構造で確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

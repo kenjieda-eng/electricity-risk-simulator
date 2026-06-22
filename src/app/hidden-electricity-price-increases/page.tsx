@@ -250,6 +250,9 @@ export default function HiddenElectricityPriceIncreasesPage() {
             下表はいずれも「契約単価（電力量単価）が変わらなくても請求額が増加するパターン」です。
             月5万kWhの法人施設を想定した影響額の目安と、法人側の対策可否を示しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -307,6 +310,9 @@ export default function HiddenElectricityPriceIncreasesPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2019年を基準年として、2022年・2025年時点における各パターンの累積影響を月額・年額で試算しました。
             月5万kWh利用の高圧法人施設を想定しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -392,6 +398,9 @@ export default function HiddenElectricityPriceIncreasesPage() {
             今後も段階的に増加が予定されている項目も含まれており、
             「見えない値上げ」の圧力は当面続く見通しです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* なぜ「見えない」のか */}
@@ -436,6 +445,9 @@ export default function HiddenElectricityPriceIncreasesPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             6項目すべてを「はい」と答えられる法人は、「見えない値上げ」への対応が十分できています。
             1項目でも「いいえ」がある場合は、費用分解の仕組みを整えることを優先してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -570,6 +582,7 @@ export default function HiddenElectricityPriceIncreasesPage() {
               title: "電気料金明細書の読み方",
               description: "明細書の各行の意味と確認すべき数字のチェックポイントを整理。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

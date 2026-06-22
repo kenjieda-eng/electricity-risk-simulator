@@ -134,6 +134,9 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -149,6 +152,9 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
               10年間の単価推移
             </Link>
             も参照してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -212,6 +218,9 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2025年の単価は、基準期（2019〜2021年平均）と比較して特別高圧で<span className="font-semibold text-slate-900">+52%</span>、高圧で<span className="font-semibold text-slate-900">+41%</span>の水準です。
             ピークからの低下はあるものの、基準期への回帰には程遠い状態が続いています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -302,6 +311,9 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             LNG価格は一部緩和されましたが、規制料金改定・再エネ賦課金・容量拠出金といった構造的な費目は元に戻らない、あるいは増加方向にあります。
             「ピークアウト＝元に戻った」ではない理由がここにあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -453,6 +465,7 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
               title: "電気料金の推移と高止まり（カテゴリ一覧）",
               description: "関連ページ一覧から体系的に学べます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

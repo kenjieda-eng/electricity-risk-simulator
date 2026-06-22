@@ -260,6 +260,9 @@ export default function InternationalElectricityPriceComparisonPage() {
             下表は各国の産業用（製造業・大口法人向け）電気料金を2024〜2025年時点の為替レートで円換算した参考値です。
             日本を100%として各国の水準を比較しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
@@ -321,6 +324,9 @@ export default function InternationalElectricityPriceComparisonPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             日本の産業用電気料金が高い水準にある理由は、単一の要因ではなく、複数の構造的な問題が重なっています。
             以下の5要因は、いずれも短期間での解消が難しいものです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {structuralReasons.map((item, i) => (
@@ -472,6 +478,7 @@ export default function InternationalElectricityPriceComparisonPage() {
               title: "料金メニュー比較診断",
               description: "現在の契約プランが自社にとって最適かどうかを診断できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

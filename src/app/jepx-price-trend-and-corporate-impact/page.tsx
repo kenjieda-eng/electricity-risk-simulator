@@ -169,6 +169,9 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
             下表はJEPXスポット市場（システムプライス）の年度単純平均・最高月・最低月・前年比をまとめたものです。
             2020年度1月の異常スパイク（248円/kWh超）は年度平均を大きく押し上げており、市場の不安定性を端的に示しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
               <thead>
@@ -252,6 +255,9 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             JEPXの価格上昇は、すべての法人に等しく即座に影響するわけではありません。影響の出方は契約の種類と電力会社の調達構造によって異なります。以下の4つの経路が主な波及ルートです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ol className="mt-4 space-y-3">
             {[
@@ -386,6 +392,7 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
               title: "電気料金の推移と高止まり",
               description: "推移・高止まりに関する解説記事の一覧。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

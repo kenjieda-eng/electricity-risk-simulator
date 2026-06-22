@@ -244,6 +244,9 @@ export default function TariffRevisionCalendar2026Page() {
               <strong>確定事項</strong>・<strong>公表予定</strong>・
               <strong>議論中</strong>の3段階で色分けし、それぞれの影響を金額規模で示します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* §2 */}
@@ -365,6 +368,9 @@ export default function TariffRevisionCalendar2026Page() {
               </strong>
               が重なる時期に、単月請求の山が来ることを前提に資金繰りを組む必要があります。特に2026年冬は、翌2027年度に容量拠出金が +50% に跳ね上がることが確定しているため、冬のJEPX高騰と併せて、年明けの契約更新タイミングで相見積もりを取るのが実務的です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* §4 */}
@@ -425,6 +431,9 @@ export default function TariffRevisionCalendar2026Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2023〜2025年に高止まりした旧一電各社の自由料金メニューに対し、2027年度以降は競争による単価の正常化が期待されます。ただし、制度整備が遅れた場合や、発電側のコスト上昇で新電力側の提示単価も上がる場合は、競争効果が限定的になる可能性もあります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
 
             <h3 className="mt-6 text-lg font-semibold text-slate-900">
               需給調整市場の更なる整備
@@ -456,6 +465,9 @@ export default function TariffRevisionCalendar2026Page() {
                 契約更新月と制度改定月（再エネ賦課金は5月検針分、容量拠出金は年度切替の4月）が重なるか、どちらが先に来るか
               </strong>
               を把握しないと、「改定後の新単価」と「更新時の提示単価」の比較が正しくできません。とくに2027年4月と2028年4月の直前に契約更新を迎える事業所は、容量拠出金の +1.5倍 / +2.8倍 分を織り込んだ単価が提示されているか、別扱い（実費ベース転嫁）になっているかを約款で確認してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
 
             <h3 className="mt-6 text-lg font-semibold text-slate-900">
@@ -612,6 +624,7 @@ export default function TariffRevisionCalendar2026Page() {
                 description:
                   "改定個別ではなく、全体構造から料金上昇を理解する。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

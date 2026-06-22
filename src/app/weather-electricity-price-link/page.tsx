@@ -149,6 +149,9 @@ export default function WeatherElectricityPriceLinkPage() {
           15〜20℃帯を底として、寒冷側・高温側の両方向に需要と価格が増加するU字型が明確に表れています。
           特に極寒側（0℃以下）では需要・価格ともに急激な上昇が見られます。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4">
           <TempBinChart />
         <MarketDataDownload
@@ -242,6 +245,9 @@ export default function WeatherElectricityPriceLinkPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           電気料金に気温が影響するまでの経路は複数ありますが、主要な因果チェーンは以下の通りです。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <h3 className="text-lg font-semibold text-slate-900">冬季チェーン（極寒リスク）</h3>
@@ -295,6 +301,9 @@ export default function WeatherElectricityPriceLinkPage() {
           5変数間のピアソン相関係数をヒートマップ形式で表示しています。
           赤系は正の相関（一緒に増減）、青系は負の相関（片方が増えると片方が減る）を示します。
           濃い色ほど相関が強く、|r|≥0.7を太字で表示しています。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -388,6 +397,9 @@ export default function WeatherElectricityPriceLinkPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           データを極端気温の日（極寒日・猛暑日）と通常日に分類し、需要・価格の差を比較しました。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {/* 通常日 */}
           <div className="rounded-xl border border-green-200 bg-green-50 p-5">
@@ -471,6 +483,9 @@ export default function WeatherElectricityPriceLinkPage() {
           データが示す通り、極寒日（24.75円）は猛暑日（12.61円）の約2倍の価格水準になります。
           これは複数の要因が冬季に同時発生しやすいためです。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <h3 className="text-base font-semibold text-slate-900">LNG在庫の脆弱性</h3>
@@ -506,6 +521,9 @@ export default function WeatherElectricityPriceLinkPage() {
           暖房度日（HDD: Heating Degree Days）と冷房度日（CDD: Cooling Degree Days）は、
           電力需要・コストの先行指標として広く使われています。HDDは基準温度（通常18℃）から
           日平均気温を引いた積算値で、値が大きいほど暖房需要が大きくなります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -642,6 +660,7 @@ export default function WeatherElectricityPriceLinkPage() {
               title: "燃料費調整額の仕組みとリスク",
               description: "気温→需要→燃料費→電気料金の別の伝達経路、燃調制度の詳細解説。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

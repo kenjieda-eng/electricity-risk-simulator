@@ -235,6 +235,9 @@ export default function ElectricityPriceTrend20192025Page() {
             2022年はウクライナ危機に端を発した燃料高騰で、全区分が一気に水準を切り上げました。その後2023〜2025年は急騰前との比較で上昇幅は縮小したものの、
             2019〜2021年の平均値には戻っていません。特別高圧で約＋52%、高圧で約＋41%の乖離が続いています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             重要なのは、ピークアウトしたかどうかと過去の水準に戻ったかどうかは別の論点だという点です。法人の料金判断では、前年比較だけでなく数年単位の比較が必要です。
             詳細は{" "}
@@ -254,6 +257,9 @@ export default function ElectricityPriceTrend20192025Page() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2025年時点で電気料金が安値期に戻らない背景には、複数の構造的な要因が重なっています。
             単なる燃料価格の問題にとどまらず、制度変更が上昇圧力を固定化しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -326,6 +332,9 @@ export default function ElectricityPriceTrend20192025Page() {
             月50,000kWhを使用する高圧契約の施設を例に、2019年水準と2025年水準を費目別に比較します。
             「少し上がった」という感覚が、実際には年間数百万円規模のコスト増になっていることがわかります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -396,6 +405,9 @@ export default function ElectricityPriceTrend20192025Page() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             上昇幅は区分ごとに異なり、特に特別高圧と高圧で上振れが大きい傾向があります。低圧電灯と低圧電力も2022年以降に上がったままで、安値期には戻っていません。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>特別高圧: 2021年10.830円 → 2025年17.414円（＋60.8%）</li>
@@ -512,6 +524,7 @@ export default function ElectricityPriceTrend20192025Page() {
                 title: "法人電気料金の基礎知識",
                 description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

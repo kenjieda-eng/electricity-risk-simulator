@@ -234,6 +234,9 @@ export default function CarbonPricingElectricityImpactPage() {
             日本のカーボンプライシングは、GX推進法に基づいて段階的に拡大します。
             電力セクターへの影響は2026年試行段階では限定的ですが、2028年の本格運用以降に拡大が見込まれます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {gxSchedule.map((phase, idx) => (
               <div
@@ -393,6 +396,9 @@ export default function CarbonPricingElectricityImpactPage() {
             EU-ETSでは炭素価格が電力の限界費用（マージナルコスト）として卸価格に上乗せされ、
             結果として全需要家が炭素コストを負担する仕組みが定着しています。日本でも同様の転嫁メカニズムが本格化する見通しです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 法人が今から準備すべき5項目 */}
@@ -458,6 +464,7 @@ export default function CarbonPricingElectricityImpactPage() {
               description:
                 "複数のリスク要因が重なった場合の料金インパクトをシミュレーション。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

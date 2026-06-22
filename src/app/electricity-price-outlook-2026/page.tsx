@@ -251,6 +251,9 @@ export default function ElectricityPriceOutlook2026Page() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人向け電気料金を構成する8つの要因について、現状・2026年度見通し・2027〜2028年の方向性を整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[720px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -373,6 +376,9 @@ export default function ElectricityPriceOutlook2026Page() {
             電気料金は燃料市場・為替・政策の3つが複合的に絡み合うため、1年先でも「正確な予測」は困難です。
             重要なのは「何円になるか」を当てることではなく、「どのレンジに収まる確率が高いか」を把握して予算を設計することです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-xl border border-white bg-white p-4 shadow-sm">
               <h3 className="text-base font-semibold text-slate-900">
@@ -473,6 +479,7 @@ export default function ElectricityPriceOutlook2026Page() {
               title: "2026〜2028年 法人電気料金 制度改定カレンダー",
               description: "容量拠出金・再エネ賦課金・託送料金の時系列改定スケジュールで 2026 年度以降の見通しを裏付け。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

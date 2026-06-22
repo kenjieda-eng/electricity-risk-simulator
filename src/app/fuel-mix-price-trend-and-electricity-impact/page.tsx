@@ -208,6 +208,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
             LNGは円/kg（日本CIF概算）、石炭・原油はドル建て国際指標の年次平均を示します。
             2022年はウクライナ危機の影響でいずれも急騰し、特に石炭は3倍以上に達しました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[540px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -278,6 +281,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             発電シェアと燃調費への反映の仕方をまとめると、LNGの影響が最も大きく、次いで石炭、原油の順です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -336,6 +342,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2011年の福島第一原子力発電所事故以降、原子力から火力（特にLNG）へのシフトが続きました。
             2022年以降は原子力の再稼働と再エネの拡大により、化石燃料依存が徐々に低下しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm text-slate-700">
@@ -398,6 +407,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             3 燃料はそれぞれ参照すべき指標が異なります。LNG は財務省「貿易統計」の日本 CIF 価格、JKM（アジア LNG スポット）、米 Henry Hub の 3 系統。石炭は豪州ニューカッスル一般炭スポット指標と長期契約価格。原油は WTI・北海ブレント・ドバイの 3 銘柄を用途で使い分けます。これらの指標は経済産業省と資源エネルギー庁が月次で公表しており、無料で取得可能です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料価格が動いてから日本の法人電気料金に反映されるまでには、{" "}
@@ -462,6 +474,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             <strong className="font-semibold text-slate-900">原油</strong>: 中東依存度が約 95% で、エネルギー安全保障上の最大リスク要因です。WTI（米国指標）、北海ブレント（欧州指標）、ドバイ（中東指標）を業種・契約形態で使い分けます。発電シェアは下がっていますが、燃調費計算式には残っており影響が続きます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 2024-2026 年の動向解説 */}
@@ -495,6 +510,9 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
               容量拠出金
             </Link>{" "}
             の負担増も同時並行で進むため、燃料リスクと容量コストを総合した対策設計が求められます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -569,6 +587,7 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
               title: "円安リスクと電気料金",
               description: "ドル建て燃料価格と為替の組み合わせリスク。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

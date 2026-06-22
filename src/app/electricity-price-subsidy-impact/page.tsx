@@ -117,6 +117,9 @@ export default function ElectricityPriceSubsidyImpactPage() {
             </Link>
             も参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -176,6 +179,9 @@ export default function ElectricityPriceSubsidyImpactPage() {
             補助は一貫して縮小・終了の方向で推移しており、2025年4月以降は補助なしが続いています。
             請求書で「急な増加」が見られた時期が補助終了のタイミングと重なっていないか確認することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -223,6 +229,9 @@ export default function ElectricityPriceSubsidyImpactPage() {
             大口需要家ほど補助金の恩恵が大きく、終了後の年間負担増も大きくなります。特別高圧では年間<span className="font-semibold text-slate-900">4,200万円</span>の差が生じる計算です。
             自社の規模に応じた影響額を把握し、予算計画に反映させることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -262,6 +271,9 @@ export default function ElectricityPriceSubsidyImpactPage() {
               法人電気料金の上昇幅
             </Link>
             で確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -378,6 +390,7 @@ export default function ElectricityPriceSubsidyImpactPage() {
               title: "電気料金の推移と高止まり（カテゴリ一覧）",
               description: "関連ページ一覧から体系的に学べます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

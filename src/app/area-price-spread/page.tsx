@@ -148,6 +148,9 @@ export default function AreaPriceSpreadPage() {
             しかし混雑が生じると、高需要エリア（東京など）ではシステムプライスより高いエリアプライスが形成され、
             低需要・高供給エリア（九州など）ではシステムプライスより低いエリアプライスになります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-100 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">「スプレッド」とは</p>
             <p className="mt-1 text-sm leading-7 text-amber-700">
@@ -243,6 +246,9 @@ export default function AreaPriceSpreadPage() {
             東京エリア内で高値の入札を積み上げることで需要を満たすしかない構造です。
             これがスパイク時の東京エリアプライスの異常な高騰（FY2026年度平均で21.14円/kWh）につながっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 九州が安い理由 */}
@@ -274,6 +280,9 @@ export default function AreaPriceSpreadPage() {
             九州から東日本への余剰電力融通は連系線（中国・四国経由）に制約があり、
             九州内の余剰電力が完全には解消されないため、エリアプライスが低く張り付く傾向があります。
             逆にいうと、九州内の大口需要家は構造的に安い電力を享受できる地理的優位性があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -334,6 +343,9 @@ export default function AreaPriceSpreadPage() {
             東京-九州スプレッドは<strong>4月が年間最大（4.19円）</strong>となっています。
             この現象は以下のメカニズムで説明できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700">
             <li>
               <strong>九州（安い方向に作用）:</strong>
@@ -367,6 +379,9 @@ export default function AreaPriceSpreadPage() {
             一方、九州は原子力の稼働と太陽光の豊富さで東京ほど価格が上がらず、
             格差が最大化するという事態になりました。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-red-100 bg-red-50 p-4">
             <p className="text-sm font-semibold text-red-800">法人への教訓</p>
             <p className="mt-1 text-sm leading-7 text-red-700">
@@ -388,6 +403,9 @@ export default function AreaPriceSpreadPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             固定価格型の場合でも、小売電気事業者がヘッジコストを転嫁するため、エリアプレミアムが単価に織り込まれています。
             結果として東京エリアの料金単価は構造的に割高になりがちです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <h3 className="mt-4 text-lg font-semibold text-slate-900">複数拠点企業の最適化戦略</h3>
@@ -479,6 +497,7 @@ export default function AreaPriceSpreadPage() {
               title: "北海道の食品加工業の電気料金",
               description: "北海道電力エリアの単価・燃調感応度を食品加工の視点で深掘り（業種×地域クロス）。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

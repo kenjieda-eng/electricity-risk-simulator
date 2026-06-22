@@ -153,6 +153,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             グラフだけでは要因が見えにくいため、制度・市場・国際要因を年表で重ねます。各イベントで「何が起きたか」と
             「料金を見るうえで何に効いたか」を分けて確認すると、社内説明で論点を整理しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {TREND_EVENT_TIMELINE.map((event) => (
               <article key={event.year + event.title} className="rounded-lg border border-slate-200 p-4">
@@ -170,6 +173,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月次データがそろう2019年を基準に、ピーク局面と最新値を並べて変化幅を表示しています。2016〜2018年は公開月次データの連続性が
             十分でないため、基準比較は2019年平均で統一しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
             {TRANSITION_COMPARISON_CARDS.map((card) => (
@@ -237,6 +243,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             大きな上昇は2022年後半から2023年前半に集中し、燃料・為替・市場の複合要因が重なりました。2021年初の需給ひっ迫は先行シグナルとして
             捉えると説明しやすく、2022年の地政学要因で上昇が加速した流れがグラフ上でも確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             さらに詳しい背景は{" "}
             <Link href="/how-long-business-electricity-price-surge-lasts" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
@@ -264,6 +273,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             補助政策が入る期間は、請求時点の見かけの負担が下がる一方で、契約単価や調達コストの本来水準は同時には下がらないことがあります。比較実務では、
             「補助込みの見かけ負担」と「補助を除いた水準」を分けて読むことが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             補助政策の見え方は{" "}
             <Link href="/impact-of-electricity-subsidy-ending" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
@@ -282,6 +294,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人向け小売料金の背後には、日本卸電力取引所（JEPX）のスポット市場があります。発電事業者と小売事業者が電力を売買するこの市場の価格動向は、
             燃料費調整額や市場連動型プランを通じて法人の請求額に直結します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             {(() => {
@@ -430,6 +445,9 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             実務では、総額だけでなく単価の推移を継続的に確認し、自社の契約区分に近いデータを基準にしながら、
             補助政策や制度変更の影響を重ねて読むことが有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -602,6 +620,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               title: "業種別の見直しポイント集（ハブ）",
               description: "推移の理解を、製造・流通・医療・サービスなど業種別の電力使用特性に接続できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

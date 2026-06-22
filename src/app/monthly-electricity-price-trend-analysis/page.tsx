@@ -240,6 +240,9 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
             電気料金の請求額変動を正確に把握するには、3つのレイヤーを順番に確認します。
             ステップを飛ばすと誤った原因特定につながります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             {analysisSteps.map((step, idx) => (
               <div
@@ -274,6 +277,9 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             どちらの比較指標を使うべきかは場面によって異なります。誤った指標を使うと季節性や制度変更の影響が混在して判断を誤ります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm text-slate-700">
@@ -518,6 +524,7 @@ export default function MonthlyElectricityPriceTrendAnalysisPage() {
               title: "法人電気料金 月次振り返り",
               description: "直近の月次動向と実際のデータ振り返り。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

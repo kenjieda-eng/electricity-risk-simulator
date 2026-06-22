@@ -120,6 +120,9 @@ export default function JepxSpotPriceDashboardPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           まず全期間を通じて把握すべき4つの数字を確認しましょう。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">年度最高平均価格</p>
@@ -264,6 +267,9 @@ export default function JepxSpotPriceDashboardPage() {
           電力市場の構造変化を敏感に反映します。法人電気料金の原価構成にも直接・間接的に影響するため、
           電力調達コスト管理において欠かせない情報源です。
         </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* スポット価格が法人料金に与える影響 */}
@@ -297,6 +303,9 @@ export default function JepxSpotPriceDashboardPage() {
           スポット価格の歴史的な変動幅（FY2019: 7.93円 → FY2022: 20.41円）を踏まえたうえで、
           プラン選択のリスク許容度を設定することが重要です。
         </p>
+        <p className="mt-4 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* FY2020危機 */}
@@ -318,6 +327,9 @@ export default function JepxSpotPriceDashboardPage() {
           この危機は「LNG在庫リスク」「再エネ出力変動リスク」「気温リスク」が同時多発した複合事象であり、
           今後も同様の状況が再現しうることを示す歴史的事例となっています。
           経済産業省はその後、需給調整市場の整備や容量市場の導入を進め、制度的な安全網の強化を図っています。
+        </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -380,6 +392,9 @@ export default function JepxSpotPriceDashboardPage() {
           例えばデマンドレスポンスや蓄電池の活用が、電力コスト削減の鍵となります。
           特に高圧・特別高圧の市場連動型プランでは、夕方の高値コマが月額コストに直結するため、
           時間帯別の使用量把握が不可欠です。
+        </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
       </section>
 
@@ -459,6 +474,9 @@ export default function JepxSpotPriceDashboardPage() {
           プラン選択・省エネ施策・デマンドコントロールを組み合わせた総合的なコスト管理を
           実践することが求められます。
         </p>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -490,6 +508,7 @@ export default function JepxSpotPriceDashboardPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "2019〜2025年の料金推移データでJEPX価格と電気代の連動を確認。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
