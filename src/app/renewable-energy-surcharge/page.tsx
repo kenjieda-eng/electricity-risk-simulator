@@ -123,6 +123,9 @@ export default function RenewableEnergySurchargePage() {
             電力会社は再エネ電力を国が定めた調達価格で買い取る義務を負いますが、そのコストを単独で負担するのではなく、
             電気を使用する全ての需要家が使用量に比例して分担する仕組みです。小売料金の一部として請求書に記載されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>単価は年度単位で経済産業大臣が告示（毎年3月ごろ）</li>
             <li>5月検針分から翌年4月検針分まで、全国一律で適用</li>
@@ -199,12 +202,18 @@ export default function RenewableEnergySurchargePage() {
             単価は全国一律なので、契約電力会社やメニューを切り替えても金額は変わりません。
             月間使用量が大きい法人ほど金額に大きく影響する、純粋な「使用量比例」の費目です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">法人規模別の月額負担（{latest.fiscalYear}年度 単価 {latest.unitPriceYenPerKwh.toFixed(2)} 円/kWh）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             同じ単価でも、月間使用量が違えば再エネ賦課金の負担額は大きく変わります。主要な業態別に月額・年額を試算しました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm text-slate-700">
@@ -296,6 +305,9 @@ export default function RenewableEnergySurchargePage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-sky-50 p-5">
@@ -371,6 +383,7 @@ export default function RenewableEnergySurchargePage() {
               title: "業種別の見直しポイント集（33 業種）",
               description: "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

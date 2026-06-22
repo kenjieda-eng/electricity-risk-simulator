@@ -236,6 +236,9 @@ export default function CapacityContributionSimulationPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               試算の前提となる年度別単価は以下のとおりです。容量市場の約定結果（OCCTO公表）と、小売電気事業者の標準的な転嫁方針に基づく概算値です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               {unitPrice.map((u) => (
                 <div
@@ -344,6 +347,9 @@ export default function CapacityContributionSimulationPage() {
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               同じ使用量でも、業種特性によって月次変動幅が異なります。以下はあくまで「典型的な月次使用量レンジ」に基づく目安値で、実際は契約電力・稼働パターンにより個別に変動します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {industryBenchmark.map((b) => (
@@ -454,6 +460,7 @@ export default function CapacityContributionSimulationPage() {
                 description:
                   "もう一つの主要な制度要因。合算での負担把握の基礎になります。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

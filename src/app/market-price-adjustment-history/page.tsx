@@ -167,6 +167,9 @@ export default function MarketPriceAdjustmentHistoryPage() {
             この時期に市場連動プラン契約をしていた法人では、1 ヶ月の電気代が通常の 5〜10 倍になる事例もあり、
             市場連動リスクの認識が大きく変わった出来事でした。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -174,6 +177,9 @@ export default function MarketPriceAdjustmentHistoryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             JEPX 連動で 100% 仕入れされていたと仮定し、月 10 万 kWh の事業所の年額を試算します
             （実際には<Link href="/wheeling-charge-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">託送料金</Link>・調達マージン・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>等が別途加算されます）。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm text-slate-700">
@@ -225,6 +231,7 @@ export default function MarketPriceAdjustmentHistoryPage() {
             { href: "/jepx-explained", title: "JEPXとは何か", description: "卸電力市場の基本。" },
             { href: "/jepx-spot-market-history", title: "JEPXスポット市場の価格推移", description: "JEPX単体の推移分析。" },
             { href: "/jepx-price-trend-and-corporate-impact", title: "JEPX卸電力市場価格の推移と法人電気料金への波及", description: "市場価格調整額の背景となるJEPX推移を詳しく確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -107,6 +107,9 @@ export default function CapacityContributionWhatToCheckPage() {
             容量拠出金に関する確認は、見積書の記載確認から予算への織り込みまで複数のステップがあります。
             以下のグラフは、実務上の優先度を整理したものです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4">
             <CapacityContributionChartCard
               kind="check-priority"
@@ -181,6 +184,9 @@ export default function CapacityContributionWhatToCheckPage() {
             </Link>
             も参考にしてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
@@ -223,6 +229,9 @@ export default function CapacityContributionWhatToCheckPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             容量拠出金は年度ごとに金額が変動する制度費用です。予算策定では、以下の観点で織り込みを検討します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
 
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -261,6 +270,9 @@ export default function CapacityContributionWhatToCheckPage() {
           <h2 className="text-xl font-semibold text-slate-900">容量拠出金が見えにくいケース</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             すべての請求書で容量拠出金が明示されるわけではありません。以下のケースでは特に注意が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4 space-y-3">
@@ -365,6 +377,7 @@ export default function CapacityContributionWhatToCheckPage() {
               title: "複数拠点の電力契約を見直す",
               description: "拠点横断での比較・見直しの実務ポイントを整理します。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

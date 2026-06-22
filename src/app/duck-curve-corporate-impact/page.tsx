@@ -127,6 +127,9 @@ export default function DuckCurveCorporateImpactPage() {
             </Link>
             と合わせて理解しておくと、自社の契約見直し判断に活かせます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 2. なぜダックカーブが起きるのか */}
@@ -151,6 +154,9 @@ export default function DuckCurveCorporateImpactPage() {
               電源構成の推移
             </Link>
             を踏まえると、ダックカーブの深刻化は当面続く見通しです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -234,6 +240,9 @@ export default function DuckCurveCorporateImpactPage() {
             </Link>
             を比較し、契約見直しの方向性を整理できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 5. 法人がとるべき 4 つの対策 */}
@@ -274,6 +283,9 @@ export default function DuckCurveCorporateImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             まずはシミュレーターで自社のリスクスコアを確認し、現契約と固定/市場連動の比較見積りを取り、対策の優先順位を決めることをおすすめします。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </section>
 
@@ -295,6 +307,7 @@ export default function DuckCurveCorporateImpactPage() {
             { href: "/capacity-contribution-explained", title: "容量拠出金の仕組み（深掘り版）", description: "制度の歴史と詳細解説。" },
             { href: "/demand-response-revenue-model", title: "DR の収益モデル", description: "夕方の使用抑制で奨励金を得る仕組み。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池の電気料金対策効果", description: "ピークシフトの試算と回収期間。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -270,6 +270,9 @@ export default function ElectricityRateRevisionMechanismPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             日本の電気料金は大きく「規制料金」と「自由料金」の2種類に分かれます。法人契約（高圧・特別高圧）は自由料金の対象であり、規制料金のような厳格な認可プロセスは存在しません。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
               <thead>
@@ -328,6 +331,9 @@ export default function ElectricityRateRevisionMechanismPage() {
           </div>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             このプロセスには通常数か月を要するため、申請から実際の値上げ適用まである程度の猶予期間があります。一方、事前に公表されるため利用者は準備期間を確保しやすいという側面もあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -421,6 +427,9 @@ export default function ElectricityRateRevisionMechanismPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自由料金は電力会社が柔軟に改定できる分、法人側の情報収集と事前確認が重要です。以下の6点をチェックしておきましょう。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 space-y-3">
             {checklistItems.map((item, i) => (
               <li
@@ -450,6 +459,9 @@ export default function ElectricityRateRevisionMechanismPage() {
               容量拠出金
             </Link>
             の転嫁が始まり、規制料金・自由料金の両方で実質的な単価上昇要因となっています。料金改定の背景を確認するときは、約款改定だけでなく制度要因の寄与度も合わせて把握してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -555,6 +567,7 @@ export default function ElectricityRateRevisionMechanismPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "改定が続く料金水準の実態を直近の推移データで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

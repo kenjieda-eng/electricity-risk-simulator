@@ -123,6 +123,9 @@ export default function MarketPriceAdjustmentPage() {
             その変動を料金に反映するための調整項目です。契約書・約款では「市場調整額」「電源調達調整額」「市場連動調整」
             など複数の名称で記載されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>電力会社ごとに名称・算定ルール・反映方法が異なる</li>
             <li>固定単価プランの一部で別立て項目として入ることがある</li>
@@ -153,6 +156,9 @@ export default function MarketPriceAdjustmentPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">
             出典: 日本卸電力取引所（JEPX）公表値。2022年度は 20.37 円/kWh と過去最高。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -200,6 +206,9 @@ export default function MarketPriceAdjustmentPage() {
             </Link>
             も見落とせません。固定プランでは単価に内包されて見えにくいため、契約更新時の単価差の説明根拠として必ず確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -220,12 +229,18 @@ export default function MarketPriceAdjustmentPage() {
             </Link>
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">市場環境別の月額影響レンジ（過去実績ベース）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月間<span className="font-semibold text-slate-900">50,000kWh</span>使用の高圧事業所で、基準単価10円/kWhの場合の影響試算です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
@@ -276,6 +291,9 @@ export default function MarketPriceAdjustmentPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             「固定」「市場連動」といった名称は、契約の全体像を示す入口に過ぎません。実際の比較では、どの項目が固定で、どの項目が後から動くかを分けて確認することが、
             契約後のギャップを減らす近道です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             見積比較で確認したいポイントは以下のとおりです。
@@ -345,6 +363,7 @@ export default function MarketPriceAdjustmentPage() {
             { href: "/how-to-read-electricity-quote", title: "電気料金見積書の見方", description: "契約条件の読み方。" },
             { href: "/articles/industry-guide", title: "業種別の見直しポイント集（33 業種）", description: "病院・工場・小売・自治体施設など、業種ごとの負荷特性・固定vs市場連動の向き不向き・契約見直しの着眼点を整理した解説記事集。" },
             { href: "/business-electricity-retrospective/2026-05", title: "【2026年5月】法人の電気料金はどう動いた？", description: "再エネ賦課金改定後の本格運用月における JEPX スポットの動きと、市場連動プランの夏季リスクシナリオを整理。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -117,6 +117,9 @@ export default function FuelCostAdjustmentHistoryPage() {
             LNG・原油・石炭 CIF 価格と燃調単価は強く連動しますが、貿易統計の反映は 3〜5 ヶ月遅れのため、
             燃料価格が下がった後もしばらく燃調の高止まりが続くことがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <PriceAdjustmentLineChart
               labels={fuelImportLabels}
@@ -203,6 +206,9 @@ export default function FuelCostAdjustmentHistoryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月10万 kWh 使用の中規模事業所を例に、燃調単価だけで月額がどう変わったかを試算します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -267,6 +273,7 @@ export default function FuelCostAdjustmentHistoryPage() {
             { href: "/lng-electricity-price", title: "LNGと電気料金の関係", description: "燃料市況の背景を深掘り。" },
             { href: "/impact-of-electricity-subsidy-ending", title: "電気料金補助金終了の影響", description: "激変緩和措置終了後の請求変化。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費を含む料金水準の推移をデータで確認できます。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

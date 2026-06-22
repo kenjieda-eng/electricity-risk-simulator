@@ -392,6 +392,9 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             これらの条件は独立して発生することもあれば、複数が重なって大幅な下落を引き起こすこともあります。一方で、託送料金・容量拠出金のような「制度固定費」は下落トリガーが存在せず、上昇方向にしか動かない費目である点も重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: 過去に電気料金が下がった時期 */}
@@ -401,6 +404,9 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             過去に法人向け電気料金が実際に低下した時期と、その主な要因を以下にまとめます。いずれも「燃料価格の急落」か「政策措置」が引き金となっており、構造的な費目（託送・容量）の下落による値下がりは過去に事例がありません。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -503,6 +509,9 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             このように「下がる可能性がある費目」と「構造的に下がらない費目」が混在しています。仮に燃料費調整額が下落しても、託送料金・容量拠出金・再エネ賦課金がその幅を打ち消すケースが増えており、2025年度以降は特にその傾向が顕著です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: 2025〜2026年度の見通し */}
@@ -553,6 +562,9 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
           </div>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             2023年度に見られたような「燃料価格反落＋補助金」という二重の下落要因が重なる局面は、現時点では見込みにくい状況です。燃料価格が落ち着いても、再エネ賦課金・容量拠出金・託送料金の上昇がオフセットするため、純粋な値下がり感は限定的にとどまると考えられます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -707,6 +719,7 @@ export default function WhenWillBusinessElectricityPricesDropPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "価格が下がらない実態を直近の推移データで確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

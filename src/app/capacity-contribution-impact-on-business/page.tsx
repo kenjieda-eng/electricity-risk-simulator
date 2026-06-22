@@ -235,6 +235,9 @@ export default function CapacityContributionImpactOnBusinessPage() {
               </Link>
               で整理しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
 
             <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
               <h3 className="text-lg font-semibold text-slate-900">
@@ -413,6 +416,9 @@ export default function CapacityContributionImpactOnBusinessPage() {
               市場連動プランでは別建て明細で把握しやすい一方、
               年度ごとに単価が改定される前提で予算を置いておく必要があります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 見積比較でのチェックポイント */}
@@ -529,6 +535,7 @@ export default function CapacityContributionImpactOnBusinessPage() {
                 description:
                   "もう一つの主要な制度要因。容量拠出金と合算した負担把握の基礎になります。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

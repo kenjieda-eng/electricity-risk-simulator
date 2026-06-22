@@ -132,6 +132,9 @@ export default function RenewableEnergySurcharge2026Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               再エネ賦課金（再生可能エネルギー発電促進賦課金）は、FIT・FIP制度に基づく再エネ買取費用のうち、回避可能費用を差し引いた額を全国一律の単価で電力需要家に賦課する仕組みです。経済産業省が毎年3月に翌年度の単価を告示します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
                 <thead>
@@ -173,6 +176,9 @@ export default function RenewableEnergySurcharge2026Page() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               単価は日本全国一律です。電力会社ごとに異なる電力量料金や燃料費調整額と違い、需要家側から下げる余地はありません。逆に言えば、電気代を下げるには「使用量そのものを減らす」「減免制度を適用する」のいずれかしかありません。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -228,6 +234,9 @@ export default function RenewableEnergySurcharge2026Page() {
               </Link>
               に整理しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2: 2030年までの見通し */}
@@ -244,6 +253,9 @@ export default function RenewableEnergySurcharge2026Page() {
             </ul>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               予算策定では、2030年までは年4円/kWh前後の負担が継続する前提で見積もるのが現実的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -297,6 +309,7 @@ export default function RenewableEnergySurcharge2026Page() {
                 title: "製造業の補助金活用戦略",
                 description: "賦課金を含む電気代上昇に対し、補助金で省エネ設備を導入する実務。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

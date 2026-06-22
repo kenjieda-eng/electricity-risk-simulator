@@ -200,6 +200,9 @@ export default function CapacityContributionHistoryPage() {
             約定価格は「実需給年度に確保される容量（kW）あたりの対価（円/kW）」であり、
             これが電力会社を通じてkWhあたりの転嫁単価に換算されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -235,6 +238,9 @@ export default function CapacityContributionHistoryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             kWあたりの約定価格は、各社の発電設備構成や系統利用量をもとにkWhあたりの転嫁単価に換算されます。
             換算方法は電力会社によって異なるため、以下は目安の幅として示します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[720px] border-collapse text-sm text-slate-700">
@@ -272,6 +278,9 @@ export default function CapacityContributionHistoryPage() {
             電気料金を構成する主な変動要素を並べると、容量拠出金は2024年度には再エネ賦課金（3.49円/kWh）に次ぐ規模の
             上乗せ負担となっていました。変動特性と将来方向性の違いを把握しておくことが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[580px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -305,6 +314,9 @@ export default function CapacityContributionHistoryPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2024年度向けオークション（2020年実施）の約定価格14,137円/kWは、2025年度向け（5,242円/kW）の約2.7倍に上ります。
             この高値には複数の要因が重なっていました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -430,6 +442,7 @@ export default function CapacityContributionHistoryPage() {
               title: "2026〜2028年 法人電気料金 制度改定カレンダー",
               description: "2027→2028 年度の容量拠出金単価の最大 2.8 倍化を時系列で整理。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

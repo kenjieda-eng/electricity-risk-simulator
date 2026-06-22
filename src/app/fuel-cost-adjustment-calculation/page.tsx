@@ -97,6 +97,9 @@ export default function FuelCostAdjustmentCalculationPage() {
             平均燃料価格は、原油・LNG・石炭の貿易統計 CIF 価格（輸入価格）の加重平均です。
             加重の比率（換算係数 α, β, γ）は、各電力会社の火力発電の燃料構成を反映して決められています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm text-slate-700">
               <thead className="bg-slate-50 text-slate-900">
@@ -129,6 +132,9 @@ export default function FuelCostAdjustmentCalculationPage() {
             2023 年の規制料金改定では、多くの電力会社が基準燃料価格を引き上げました。
             これにより、同じ燃料価格でも燃調単価は低く算出される（実質的な本体値上げ）形になっています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -157,6 +163,9 @@ export default function FuelCostAdjustmentCalculationPage() {
             このラグにより、燃料価格が下がってもしばらく燃調は高止まりし、燃料価格が上がっても実際の請求反映は数ヶ月後になります。
             予算管理では、この 3〜5 ヶ月の先行指標として貿易統計を確認するのが実務的です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -180,6 +189,9 @@ export default function FuelCostAdjustmentCalculationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             年額では 360 万円の差になります。使用量規模が大きい事業者ほど、燃調の変動が経営に与える影響が大きくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -199,6 +211,7 @@ export default function FuelCostAdjustmentCalculationPage() {
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "規制料金と自由料金の違い。" },
             { href: "/lng-electricity-price", title: "LNGと電気料金の関係", description: "燃料市況の背景を確認。" },
             { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "燃調費推移を含む長期の料金水準をデータで確認できます。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
