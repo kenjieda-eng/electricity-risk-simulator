@@ -150,6 +150,9 @@ export default function LastResortSupplyInternalExplanationPage() {
             </Link>
             {" "}で詳しく確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* Table 1: 社内説明用比較表 */}
@@ -293,6 +296,9 @@ export default function LastResortSupplyInternalExplanationPage() {
               契約先の定期的なモニタリング、代替候補のリスト作成、更新タイミングでの複数社見積など、今後の管理強化策を提示します。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
@@ -330,6 +336,7 @@ export default function LastResortSupplyInternalExplanationPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "最終保障供給リスクを踏まえた契約管理の確認項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

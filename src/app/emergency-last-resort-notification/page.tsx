@@ -239,6 +239,9 @@ export default function EmergencyLastResortNotificationPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 時間軸テーブル */}
@@ -264,6 +267,9 @@ export default function EmergencyLastResortNotificationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* チェックリスト */}
@@ -285,6 +291,9 @@ export default function EmergencyLastResortNotificationPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 移行原因別の対応 */}
@@ -310,6 +319,9 @@ export default function EmergencyLastResortNotificationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 判断フロー */}
@@ -339,6 +351,9 @@ export default function EmergencyLastResortNotificationPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* やってはいけないこと */}
@@ -377,6 +392,9 @@ export default function EmergencyLastResortNotificationPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 専門家に相談すべきサイン */}
@@ -457,6 +475,7 @@ export default function EmergencyLastResortNotificationPage() {
               title: "電力契約の見直しはどこから始めるか",
               description: "契約見直しの進め方を初めての方でも分かるよう解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

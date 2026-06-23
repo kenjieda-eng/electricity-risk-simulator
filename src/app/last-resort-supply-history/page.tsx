@@ -203,6 +203,9 @@ export default function LastResortSupplyHistoryPage() {
             <Link href="/last-resort-supply-price" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給の料金</Link>
             をあわせてご確認ください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 制度の流れと電力自由化の関係 */}
@@ -240,6 +243,9 @@ export default function LastResortSupplyHistoryPage() {
             注目すべきは、最終保障供給が「経過措置」ではなく「常設のセーフティネット」として設計されている点です。
             自由化が完成した後も制度は存続し続けます。これは電力市場が構造的に需要家リスクをゼロにできないという政策判断の表れです。
             法人の電力担当者にとって、この制度の存在を「他人事」として捉えることはできません。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -288,6 +294,9 @@ export default function LastResortSupplyHistoryPage() {
           </div>
           <p className="mt-4 text-xs text-slate-500">
             出典：資源エネルギー庁「電力・ガス小売全面自由化の進捗状況」各月公表データをもとに作成。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -472,6 +481,9 @@ export default function LastResortSupplyHistoryPage() {
             <Link href="/how-to" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">シミュレーターの使い方</Link>
             を確認し、自社のリスク水準を数値で把握しておくことをお勧めします。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
@@ -488,6 +500,7 @@ export default function LastResortSupplyHistoryPage() {
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX高騰リスクが経営に与える影響を解説。" },
             { href: "/articles/last-resort-supply", title: "最終保障供給を知る（カテゴリ一覧）", description: "カテゴリ内の全記事一覧。読む順序の確認に。" },
             { href: "/compare", title: "料金メニュー比較診断", description: "現在の契約が市場水準と比べてどの位置にあるかを診断。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

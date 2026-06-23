@@ -128,6 +128,9 @@ export default function RenewableSurchargeIncreaseImpactPage() {
             </Link>{" "}
             で詳しく確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -232,6 +235,9 @@ export default function RenewableSurchargeIncreaseImpactPage() {
               自家消費による電力使用量の削減は、賦課金負担の軽減にも直結します。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -275,6 +281,7 @@ export default function RenewableSurchargeIncreaseImpactPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "賦課金を含むコスト全体の見直し項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

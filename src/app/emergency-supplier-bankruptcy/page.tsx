@@ -246,6 +246,9 @@ export default function EmergencySupplierBankruptcyPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 時間軸テーブル */}
@@ -272,6 +275,9 @@ export default function EmergencySupplierBankruptcyPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 最終保障供給 */}
@@ -323,6 +329,9 @@ export default function EmergencySupplierBankruptcyPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 未払い債権の回収 */}
@@ -339,6 +348,9 @@ export default function EmergencySupplierBankruptcyPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 社内報告テンプレート */}
@@ -406,6 +418,7 @@ export default function EmergencySupplierBankruptcyPage() {
               title: "電力会社の比較方法",
               description: "相見積もりの取り方と料金比較で見るべきポイントを解説します。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -203,6 +203,9 @@ export default function LastResortSupplyHighVoltagePage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 料金表・請求書の確認項目 */}
@@ -215,6 +218,9 @@ export default function LastResortSupplyHighVoltagePage() {
             <li>前月比・前年同月比での変化率</li>
             <li>最終保障供給料金が適用されているかの確認（請求書の料金種別欄）</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 切替時の使用実績整理 */}
@@ -238,6 +244,9 @@ export default function LastResortSupplyHighVoltagePage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* チェックリスト */}
@@ -284,6 +293,9 @@ export default function LastResortSupplyHighVoltagePage() {
               </li>
             ))}
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 既存解説ページ案内 */}
@@ -332,6 +344,7 @@ export default function LastResortSupplyHighVoltagePage() {
               title: "料金メニュー比較診断",
               description: "受電区分と使用実績を整理したら比較検討を進める入口です。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -226,6 +226,9 @@ export default function EmergencyPowerOutageResponsePage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 時間軸テーブル */}
@@ -252,6 +255,9 @@ export default function EmergencyPowerOutageResponsePage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 計画停電の事前準備チェックリスト */}
@@ -268,6 +274,9 @@ export default function EmergencyPowerOutageResponsePage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 設備別の停電対策 */}
@@ -298,6 +307,9 @@ export default function EmergencyPowerOutageResponsePage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 復電後の手順 */}
@@ -326,6 +338,9 @@ export default function EmergencyPowerOutageResponsePage() {
             </p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 被害記録と保険対応 */}
@@ -384,6 +399,9 @@ export default function EmergencyPowerOutageResponsePage() {
             停電対策・BCP整備について専門家に相談する →
           </Link>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* FAQ */}
@@ -438,6 +456,7 @@ export default function EmergencyPowerOutageResponsePage() {
               title: "最終保障供給とは何か",
               description: "電力供給が途絶えたときのセーフティネット「最終保障供給」の仕組み。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

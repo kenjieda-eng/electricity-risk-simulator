@@ -227,6 +227,9 @@ export default function LastResortSupplyEmergencyResponsePage() {
               </tbody>
             </table>
           </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         </section>
 
         {/* Table 2: 警告サイン */}
@@ -281,6 +284,9 @@ export default function LastResortSupplyEmergencyResponsePage() {
               </tbody>
             </table>
           </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -355,6 +361,9 @@ export default function LastResortSupplyEmergencyResponsePage() {
               新たな供給開始日の調整など、切替手続きで一般送配電事業者との連絡が必要になります。担当窓口を把握しておきます。
             </li>
           </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -370,6 +379,9 @@ export default function LastResortSupplyEmergencyResponsePage() {
             <li>代替候補リスト（自社の電圧区分・使用量に対応できる電力会社のリスト）を常に更新する。</li>
             <li>電力担当者が変わる際に、上記の管理事項を確実に引き継ぐ。</li>
           </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
@@ -407,6 +419,7 @@ export default function LastResortSupplyEmergencyResponsePage() {
               title: "法人向け電気料金見積書の見方",
               description: "代替先選定時の見積比較の方法。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

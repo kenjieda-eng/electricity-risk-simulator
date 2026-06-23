@@ -152,6 +152,9 @@ export default function LastResortSupplyComparisonPositioningPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給の料金が高く、期間に上限があることは、制度として「早期に通常契約に戻ることを促す」設計になっているからです。したがって、「最終保障供給でいいか」という選択肢はなく、「いかに早く通常契約に戻るか」を常に意識することが法人の電気料金管理の重要な課題です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -181,6 +184,9 @@ export default function LastResortSupplyComparisonPositioningPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給の料金水準の詳細は電力会社・時期によって異なりますが、通常の高圧・特別高圧小売契約より割高になることがほぼすべてのケースで確認されています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -208,6 +214,9 @@ export default function LastResortSupplyComparisonPositioningPage() {
               通常契約なら固定プランで単価を確定できますが、最終保障供給では料金改定があり得るためコスト予測が難しくなります。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -297,6 +306,9 @@ export default function LastResortSupplyComparisonPositioningPage() {
             <li>利益率が低く、高いコストが直接的に損益に影響する業種の場合。</li>
             <li>複数拠点が最終保障供給に移行しており、累積コストが増大している場合。</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2026-04-10" />
@@ -334,6 +346,7 @@ export default function LastResortSupplyComparisonPositioningPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "最終保障供給リスクを含む総合的な契約管理項目。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

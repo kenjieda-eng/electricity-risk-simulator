@@ -160,6 +160,9 @@ export default function MunicipalityLastResortSupplyPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 施設別料金影響表 */}
@@ -228,6 +231,9 @@ export default function MunicipalityLastResortSupplyPage() {
             入札不調が起きると、通常契約が決まるまでの期間をどうつなぐかが課題になります。最終保障供給はこの空白期間を埋める制度ですが、
             それ自体が調達完了ではありません。次回調達条件の再設計と並行して進める必要があります。
             入札不調の背景には、市場価格と入札予定価格の乖離、小売事業者の応札回避、仕様条件の問題など複合的な要因があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -319,6 +325,7 @@ export default function MunicipalityLastResortSupplyPage() {
               title: "料金メニュー比較診断",
               description: "調達条件の再設計後に比較検討を進める入口です。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
