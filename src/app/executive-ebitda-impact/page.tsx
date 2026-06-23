@@ -200,6 +200,9 @@ export default function ExecutiveEbitdaImpactPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: シナリオ別EBITDA感応度 */}
@@ -234,6 +237,9 @@ export default function ExecutiveEbitdaImpactPage() {
           </div>
           <p className="mt-3 text-xs text-slate-500">※ 年間電力費2.5億円モデルでの試算。電力費規模が異なる場合は比例換算してください。</p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 業種別リスク感応度 */}
@@ -270,6 +276,9 @@ export default function ExecutiveEbitdaImpactPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 経営指標との関係 */}
@@ -309,6 +318,9 @@ export default function ExecutiveEbitdaImpactPage() {
             </p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション5: 経営判断の論点 */}
@@ -321,6 +333,9 @@ export default function ExecutiveEbitdaImpactPage() {
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q4.</span>今後3〜5年の電気代見通しは中期経営計画に織り込まれているか？</li>
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q5.</span>複数拠点を持つ場合、拠点ごとの電力費と感応度を把握しているか？</li>
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: アクションアイテム */}
@@ -346,6 +361,9 @@ export default function ExecutiveEbitdaImpactPage() {
           <li>拠点別の電力費データを集約し、重点管理拠点を特定させる</li>
           <li>電力見直し・省エネ投資の概算ROIを1ページにまとめた経営資料を作成させる</li>
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -382,6 +400,7 @@ export default function ExecutiveEbitdaImpactPage() {
               title: "リスクシナリオカテゴリ",
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

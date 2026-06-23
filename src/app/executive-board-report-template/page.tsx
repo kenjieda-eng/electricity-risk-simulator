@@ -195,6 +195,9 @@ export default function ExecutiveBoardReportTemplatePage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 推奨テンプレート構成（5セクション） */}
@@ -265,6 +268,9 @@ export default function ExecutiveBoardReportTemplatePage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 1ページサマリーの作り方 */}
@@ -312,6 +318,9 @@ export default function ExecutiveBoardReportTemplatePage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 経営会議と取締役会での内容の差別化 */}
@@ -357,6 +366,9 @@ export default function ExecutiveBoardReportTemplatePage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: 経営層のアクションアイテム */}
@@ -404,6 +416,7 @@ export default function ExecutiveBoardReportTemplatePage() {
               title: "電力契約の見直し、まず何から始めるか",
               description: "取締役会報告の後に担当者に指示する契約見直しの進め方と優先順位。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

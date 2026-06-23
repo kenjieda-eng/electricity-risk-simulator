@@ -198,6 +198,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 拠点別コスト管理シート例（5拠点モデル） */}
@@ -246,6 +249,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
             ※ モデル数値。大阪工場が全社電力費の62%を占める最重点管理拠点であることが一目でわかる。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 一括 vs 個別調達の比較表 */}
@@ -289,6 +295,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
             </p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 月次モニタリングダッシュボード */}
@@ -368,6 +377,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
             </p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 管理ツール・システムの選択 */}
@@ -404,6 +416,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -420,6 +435,9 @@ export default function ExecutiveMultiSiteCostManagementPage() {
           <li>省エネ投資（BEMS / LED / PPA）の投資対効果をグループ全体で集計</li>
         </ul>
         <p className="mt-4 text-xs text-slate-500">グループ全体の年間電力費が 5 億円規模になる多拠点法人では、ポートフォリオ最適化による年間数千万円〜億円規模の削減余地が一般的に存在します。</p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       <MarketDataFaq items={__CATEGORY_FAQ__} />
@@ -488,6 +506,7 @@ export default function ExecutiveMultiSiteCostManagementPage() {
               title: "データセンターの電気料金見直しポイント",
               description: "多拠点 DC の電力統括管理における重点管理対象業種。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

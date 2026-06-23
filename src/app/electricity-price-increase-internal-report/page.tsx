@@ -253,6 +253,9 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
                 </p>
               </div>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 5ブロック */}
@@ -307,6 +310,9 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
                 ))}
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* Word 資料構成 */}
@@ -335,6 +341,9 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
               </Link>
               も参照してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 話し方のコツ */}
@@ -355,6 +364,9 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -424,6 +436,7 @@ export default function ElectricityPriceIncreaseInternalReportPage() {
                 description:
                   "値上げ説明の基本的な考え方と、まず押さえたい論点をまとめた入門記事。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

@@ -171,6 +171,9 @@ export default function UsingSimulatorResultsForExplanationPage() {
             </Link>{" "}
             で解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -188,6 +191,9 @@ export default function UsingSimulatorResultsForExplanationPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -204,6 +210,9 @@ export default function UsingSimulatorResultsForExplanationPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -277,6 +286,9 @@ export default function UsingSimulatorResultsForExplanationPage() {
             <li>複数のシナリオを示す場合、各シナリオの前提を明記する</li>
             <li>シミュレーター結果は判断材料のひとつであり、最終的な意思決定は実際の見積もとに行う</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -341,6 +353,7 @@ export default function UsingSimulatorResultsForExplanationPage() {
               title: "シミュレーターの使い方",
               description: "シミュレーターの入力方法と結果の見方を解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

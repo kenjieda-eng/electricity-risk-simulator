@@ -337,6 +337,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -358,6 +361,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
               P/L構造の詳細は{" "}
               <Link href="/cfo-electricity-cost-basics" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CFOのための電気代基礎</Link>
               で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -409,6 +415,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
               、太陽光投資判断は{" "}
               <Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光の費用対効果</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -471,6 +480,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
                 <li>主要リスク更新（カーボンプライス上昇・取引先要請等）</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -501,6 +513,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -516,6 +531,9 @@ export default function Scope2ReductionCfoResponsibilityPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -572,6 +590,7 @@ export default function Scope2ReductionCfoResponsibilityPage() {
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "削減打ち手の全体像。" },
               { href: "/articles/decarbonization", title: "脱炭素・カーボンニュートラル", description: "脱炭素戦略カテゴリ。" },
               { href: "/articles/corporate-ppa", title: "コーポレートPPA戦略", description: "PPA戦略カテゴリ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

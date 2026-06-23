@@ -201,6 +201,9 @@ export default function ExecutiveBoardReportingItemsPage() {
           <li>・ 報告には必ず「シナリオ別の数値」を含め、感覚論ではなくデータドリブンな経営判断につなげること。</li>
           <li>・ 意思決定が必要な事項（省エネ投資・契約切り替え・BCP整備）は取締役会の承認案件として明示する。</li>
         </ul>
+      <p className="mt-2 text-xs text-slate-500">
+        ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+      </p>
       </section>
 
       {/* セクション1: 5項目の詳細 */}
@@ -283,6 +286,9 @@ export default function ExecutiveBoardReportingItemsPage() {
             </table>
           </div>
         </div>
+      <p className="mt-2 text-xs text-slate-500">
+        ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+      </p>
       </section>
 
       {/* セクション3: 取締役会報告資料の構成テンプレート */}
@@ -391,6 +397,9 @@ export default function ExecutiveBoardReportingItemsPage() {
             </div>
           </li>
         </ul>
+      <p className="mt-2 text-xs text-slate-500">
+        ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+      </p>
       </section>
 
       {/* セクション6: 次ステップ */}
@@ -403,6 +412,9 @@ export default function ExecutiveBoardReportingItemsPage() {
           <li>省エネ投資候補案件のROI（電気代上昇後の再計算版）を担当部門にまとめさせる</li>
           <li>次回取締役会のアジェンダに「電力コストリスク報告」を正式に追加する</li>
         </ol>
+      <p className="mt-2 text-xs text-slate-500">
+        ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+      </p>
       </section>
 
       {/* 関連リンク */}
@@ -444,6 +456,7 @@ export default function ExecutiveBoardReportingItemsPage() {
               title: "リスクシナリオカテゴリ",
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

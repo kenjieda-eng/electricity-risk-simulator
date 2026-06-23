@@ -136,6 +136,9 @@ export default function ExecutiveElectricityKpiDashboardPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 主要KPI一覧表 */}
@@ -203,6 +206,9 @@ export default function ExecutiveElectricityKpiDashboardPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: ダッシュボード構成例 */}
@@ -269,6 +275,9 @@ export default function ExecutiveElectricityKpiDashboardPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 拠点別比較と経営報告 */}
@@ -292,6 +301,9 @@ export default function ExecutiveElectricityKpiDashboardPage() {
             </p>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: 経営層のアクションアイテム */}
@@ -339,6 +351,7 @@ export default function ExecutiveElectricityKpiDashboardPage() {
               title: "電力契約の見直し、まず何から始めるか",
               description: "KPI管理と並行して進める契約見直しの優先順位と進め方。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

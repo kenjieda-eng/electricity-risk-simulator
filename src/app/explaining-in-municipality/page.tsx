@@ -152,6 +152,9 @@ export default function ExplainingInMunicipalityPage() {
             <li>複数施設・複数担当部署にまたがる調整が必要</li>
             <li>年度予算制のため、契約変更のタイミングが予算編成と関係する場合がある</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -169,6 +172,9 @@ export default function ExplainingInMunicipalityPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -276,6 +282,9 @@ export default function ExplainingInMunicipalityPage() {
             </Link>{" "}
             で確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -284,6 +293,9 @@ export default function ExplainingInMunicipalityPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体の電力契約見直しは、財政効果だけでなく脱炭素や防災との整合性を示すことで、議会・住民からの理解を得やすくなります。再生可能エネルギー比率の高い電力メニューへの切替、地域エネルギー会社の活用、蓄電池・太陽光との組み合わせなど、政策目標と連動した説明が有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -338,6 +350,7 @@ export default function ExplainingInMunicipalityPage() {
               title: "電力契約の見直しはどこから始めるか",
               description: "見直し手順と優先事項を初心者向けに解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

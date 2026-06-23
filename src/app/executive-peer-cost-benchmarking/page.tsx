@@ -156,6 +156,9 @@ export default function ExecutivePeerCostBenchmarkingPage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 公開情報源 */}
@@ -226,6 +229,9 @@ export default function ExecutivePeerCostBenchmarkingPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 業種別電力コスト比率の目安表 */}
@@ -277,6 +283,9 @@ export default function ExecutivePeerCostBenchmarkingPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 結果の活用と注意点 */}
@@ -302,6 +311,9 @@ export default function ExecutivePeerCostBenchmarkingPage() {
             </ul>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       
@@ -332,6 +344,7 @@ export default function ExecutivePeerCostBenchmarkingPage() {
               title: "取締役会向け電力リスク報告テンプレートの作り方",
               description: "取締役会・経営会議で使える電力コスト・リスク報告のテンプレート構成と記載項目。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
