@@ -74,16 +74,25 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">GX推進法の概要</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX推進法（グリーン・トランスフォーメーション推進法）は、2023年5月成立・2023年7月施行の法律で、脱炭素社会への移行を「成長機会」として捉え、官民で150兆円の投資を実現するための枠組みです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">主要施策は、①GX経済移行債の発行、②GX-ETS（排出量取引制度）の創設、③化石燃料賦課金の導入、④GX推進機構の設置、の4本柱です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">段階的導入のタイムライン</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2023年5月：GX推進法成立。7月：施行。2023年：GX-ETS試行運用（自主参加）。2026年：GX-ETS本格稼働（義務参加）。2028年：化石燃料賦課金導入。2033年：電力のカーボンプライシング（有償オークション）導入。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">段階的にカーボンコストが上昇する設計で、2033年までに企業の化石燃料使用コストは大きく上昇する見込みです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">法人電気料金への影響</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①GX-ETS：電力会社が排出枠購入コストを料金に転嫁。②化石燃料賦課金：火力発電の燃料コストが上昇し、燃料費調整額に反映。③有償オークション：電力会社の排出枠購入コストが本格的に料金に波及。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年までにkWhあたり1〜3円程度の上昇要因が段階的に積み上がる可能性があり、中長期の電力コスト計画に織り込む必要があります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">GX-ETSの義務対象者と除外条件</h2>
@@ -97,6 +106,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX推進法・GX-ETSの詳細は、経産省「GX推進」サイトおよびGX推進機構公式サイトで確認できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連する開示制度（TCFD・SBT・ISSB基準）との連携強化が進められており、統合的な対応が求められます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -122,6 +134,7 @@ export default function Page() {
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
               { href: "/energy-saving-act-reporting-automation", title: "省エネ法報告の自動化", description: "省エネ法定期報告の効率化手法。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

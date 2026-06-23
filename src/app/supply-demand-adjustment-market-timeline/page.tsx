@@ -74,16 +74,25 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">需給調整市場の位置づけ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場は、一般送配電事業者が電力系統の需給バランスを維持するために必要な「調整力」を、全国大で取引する市場です。2021年から段階的に開設され、従来は電力会社エリア単位で行っていた調整力調達を全国最適化する仕組みです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">市場には発電事業者、蓄電池事業者、DRアグリゲーターなど多様な事業者が参加し、需要家もDRアグリゲーターを通じて間接参加が可能です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">段階的開設のタイムライン</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2021年4月：三次調整力②（応動時間45分）開設。2022年4月：三次調整力①（応動時間15分）開設。2023年4月：二次調整力②（応動時間5分）開設。2024年4月：一次調整力・二次調整力①の本格稼働。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">応動時間が短くなるほど、需給ひっ迫時の価格が急騰するリスクがあります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">法人電気料金への波及</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場で調達された調整力のコストは、一般送配電事業者の託送料金に反映されます。需給ひっ迫時の調整力価格高騰が、翌年度の託送料金改定に波及する経路です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR参加可能な法人は、需給調整市場への間接参加で対価を得る収益機会も得られます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">調整力の種類と応動時間（比較表）</h2>
@@ -98,6 +107,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場の制度詳細は、電力広域的運営推進機関（OCCTO）公式サイトで公開されています。年次の運用報告書で市場規模・価格推移も確認可能です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR参加の実務は、資源エネルギー庁「ディマンドリスポンス関連情報」および主要アグリゲーター各社の資料で参照できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -122,6 +134,7 @@ export default function Page() {
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

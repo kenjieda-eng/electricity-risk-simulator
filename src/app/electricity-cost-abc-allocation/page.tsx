@@ -125,6 +125,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特に電力多消費業種（冷凍倉庫・データセンター・半導体など）では、電気代配賦の精度が原価管理の品質を大きく左右します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電気料金は燃料費調整や市場連動の影響で年度によって変動します。配賦が雑なまま電気代が上昇すると、本来は電力多消費の製品に乗るべきコストが、消費の少ない製品にまで薄く広がってしまい、製品別の採算が実態とずれます。結果として、価格に転嫁すべき品目を見落としたり、逆に競争力のある品目を不必要に高く見積もったりするリスクが生じます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電気代の配賦を精緻にすることは、単なる経理上の精度向上にとどまりません。どの工程・設備が電力を多く使っているかが見えるようになるため、省エネ投資の優先順位付けや、設備更新・生産計画の意思決定にも直結します。原価管理とエネルギー管理を同じデータで結びつけられる点が、配賦設計の本質的な価値です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -133,6 +136,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらは手軽だが、精度は限定的です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">伝統的配賦の限界は「電力消費の実態と配賦基準のあいだに相関が弱い」点にあります。たとえば、高単価だが消費電力の小さい製品と、低単価だが電力多消費の製品が混在するラインで売上高按分を使うと、電力コストが高単価製品に過大に配賦され、低単価・多消費製品が実際より採算良く見えてしまいます。これは価格戦略や品目構成の判断を誤らせる典型的なパターンです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">一方で、伝統的配賦にも合理的な使いどころはあります。電力消費が製品間で大差ない事業や、計測コストをかけるほどの規模でない事業では、設備時間按分など実態に近い単一基準でも十分なことがあります。重要なのは、自社の電力消費の偏りの大きさを踏まえ、配賦精度に投資する価値があるかを見極めることです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -157,6 +163,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">実務では、電気料金の内訳（基本料金・電力量料金・燃料費調整額・再エネ賦課金）ごとに適した基準を使い分けるのが理想です。基本料金は契約電力（最大需要への寄与）、電力量料金と燃料費調整は使用電力量（kWh）で按分すると、料金構造と整合した配賦になります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -165,6 +174,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">精度は最も高いですが、計測機器の設置・データ集計コストが発生します。高コスト製品群・差別化が必要な業種ほどABCの効果が大きく現れます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ABCの考え方は二段階です。第一段階で、電気代を「活動（コストプール）」に集約します。たとえば生産ラインA・B、空調、照明、倉庫冷蔵などです。第二段階で、各活動から製品・部門へ、活動ドライバ（配賦基準）に応じてコストを割り付けます。ラインAの電気代はラインAで生産した製品の運転時間で、空調の電気代は対象エリアの面積×稼働時間で、といった形で実態に即して配賦するのがポイントです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ABCが特に効果を発揮するのは、製品ごとに電力消費の偏りが大きい事業です。多品種少量生産で、一部の製品が特定の電力多消費設備を集中的に使うようなケースでは、伝統的配賦との差が顕著になります。逆に、製品間で電力消費がほぼ均一なら、ABCの精度メリットは小さく、計測コストに見合わないこともあります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -182,6 +194,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Step4：製品・部門別に活動使用量を集計し、電気代を按分。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">初期投資：メーター設置費用、BEMS／原価計算システムで数百万円〜。効果：製品別採算の精度向上、無駄のある製品の特定。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">運用に乗せるには、Step4の後にStep5として「定期的な見直し」を組み込むと効果が持続します。生産品目や設備構成が変われば、活動の定義や配賦基準も陳腐化します。少なくとも年1回、できれば半期ごとに、コストプール・ドライバ・計測点が実態に合っているかをレビューしてください。最初から完璧を目指さず、主要設備の計測から小さく始め、効果を確認しながら対象を広げる段階導入が現実的です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -189,6 +204,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">配賦された電気代は、製造間接費として製品原価に組み込まれます。製品別の正確な電力コストが原価に乗ることで、製品別損益（プロダクトミックス）の評価、適正な販売価格の設定、不採算品目の特定が、確かな根拠に基づいて行えるようになります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">管理会計上は、配賦電気代を「変動費的に扱う部分（電力量料金・燃料費調整）」と「固定費的に扱う部分（基本料金）」に分けて捉えると、限界利益の分析や操業度の判断に役立ちます。電力多消費の工程ほど、操業度が下がったときに固定費（基本料金・契約電力）の負担が重くのしかかるため、稼働率と契約電力の最適化も併せて検討する価値があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">なお、原価計算基準（企業会計原則の体系）は配賦の枠組みを示しますが、どの基準で配賦するかは各社の合理的な判断に委ねられています。電気代の勘定科目や月次処理との関係は、<Link href="/articles/accounting-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気代の経理・税務</Link>のカテゴリも併せて確認してください。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -261,6 +279,7 @@ export default function Page() {
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

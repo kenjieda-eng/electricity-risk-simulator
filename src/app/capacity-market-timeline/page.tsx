@@ -91,6 +91,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">容量市場導入の背景</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">容量市場は、将来の電力供給力を確保するために、発電能力（kW）自体を取引する市場です。火力発電所の休廃止が進むなかで供給力不足を防ぐ制度として、2020年に初回オークションが実施されました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">約定された発電能力に対する支払いは容量拠出金として小売電気事業者に課され、最終的に法人・家庭の電気料金に転嫁されます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">主要年度の動き</h2>
@@ -117,6 +120,9 @@ export default function Page() {
                 容量市場と法人料金の関係
               </Link>
               で整理しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
         </section>
@@ -165,6 +171,9 @@ export default function Page() {
                 <p className="mt-1 text-xs leading-6 text-slate-700">電気代の売上高比率は1-3%と低いが、テナント契約・サステナビリティ要件対応が重要。</p>
               </div>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -194,6 +203,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-500">※ 事例は代表例。実際の効果は事業規模・立地・既存契約条件で大きく変動します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -205,6 +217,9 @@ export default function Page() {
               <li><strong>補助金機会逃し:</strong> 申請期限・要件を把握せず、活用可能な補助金を逃すパターン。→商工会議所・専門コンサル活用を検討。</li>
               <li><strong>BCP軽視:</strong> 停電・新電力撤退リスクを過小評価し、事業中断時の損失を最小化できないパターン。→最低限のBCP設計を早期着手。</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -229,6 +244,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -275,6 +293,7 @@ export default function Page() {
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
               { href: "/supply-demand-adjustment-market-timeline", title: "需給調整市場のタイムライン", description: "需給調整市場の制度展開スケジュール。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

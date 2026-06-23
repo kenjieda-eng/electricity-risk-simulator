@@ -74,16 +74,25 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">中小企業経営強化税制</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業経営強化税制は、中小企業が生産性向上や経営力強化のために設備投資する場合、即時償却または税額控除（7〜10%）が受けられる制度です。省エネ・脱炭素関連設備も対象で、BEMS・蓄電池・EV充電器などが含まれます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">適用には、経営力向上計画の認定が必要で、計画策定と認定申請に2〜3ヶ月かかります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">カーボンニュートラル投資促進税制</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX設備の導入に対し、即時償却または税額控除（5〜10%）が受けられる制度です。需給調整に資する設備（蓄電池・デマンド制御設備）、脱炭素効果の高い設備が対象です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2025年度以降の制度改正で対象範囲と控除率が段階的に見直されているため、最新の適用条件を税理士・商工会議所で確認することが重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">補助金との併用</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ補助金・GX補助金を受ける場合、税制優遇との併用可否、補助金部分の扱い（圧縮記帳）などが複雑になります。事前に補助事業者・税理士と調整が必要です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中長期で複数の補助金・税制を組み合わせることで、投資回収期間を大幅に短縮できるケースがあります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">税制優遇一覧表（主要）</h2>
@@ -92,6 +101,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【中小企業投資促進税制】対象：機械装置・ソフトウェア。優遇：30%特別償却または税額控除7%。適用期限：2027年3月末。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【生産性向上特別措置法（中小企業向け）】対象：市町村の先端設備等導入計画認定設備。優遇：固定資産税ゼロ（最大3年）。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">複数制度の同時適用は原則不可のため、投資効果を試算して最適な制度を選びます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -121,6 +133,7 @@ export default function Page() {
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

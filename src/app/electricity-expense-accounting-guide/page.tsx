@@ -263,6 +263,9 @@ export default function ElectricityExpenseAccountingGuidePage() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 業種別の典型仕訳 */}
@@ -301,6 +304,9 @@ export default function ElectricityExpenseAccountingGuidePage() {
 （借）水道光熱費 10,000   （貸）未払費用 10,000`}</pre>
               </div>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 按分と集計 */}
@@ -369,6 +375,9 @@ export default function ElectricityExpenseAccountingGuidePage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 年度末処理 */}
@@ -395,6 +404,9 @@ export default function ElectricityExpenseAccountingGuidePage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -464,6 +476,7 @@ export default function ElectricityExpenseAccountingGuidePage() {
                 description:
                   "家事按分の具体的な計算例と根拠資料。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
