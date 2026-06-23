@@ -235,6 +235,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 時間軸テーブル */}
@@ -260,6 +263,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 判断フロー */}
@@ -300,6 +306,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 原因別対応テーブル */}
@@ -325,6 +334,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* やってはいけないこと */}
@@ -338,6 +350,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 社内報告 */}
@@ -363,6 +378,9 @@ export default function EmergencySupplierWithdrawalPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 専門家に相談すべきサイン */}
@@ -438,6 +456,7 @@ export default function EmergencySupplierWithdrawalPage() {
               title: "電気代高騰と事業継続リスク",
               description: "新電力撤退リスクをBCPと財務リスク管理の観点から整理します。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

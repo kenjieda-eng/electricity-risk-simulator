@@ -108,6 +108,9 @@ export default function LastResortSupplyTargetPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             典型的には、高圧・特別高圧の契約区分で電気を使用する需要家が対象です。工場、オフィスビル、商業施設、病院、学校、自治体施設などが該当し得ます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -127,6 +130,9 @@ export default function LastResortSupplyTargetPage() {
             </Link>{" "}
             を参照してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -145,6 +151,9 @@ export default function LastResortSupplyTargetPage() {
             <li>病院・学校: 安定供給と契約継続性の優先度が高い</li>
             <li>自治体施設: 入札・予算・契約事務との連動が必要</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -201,6 +210,9 @@ export default function LastResortSupplyTargetPage() {
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2025年3月時点で最終保障供給を利用中の法人は全国で約<span className="font-semibold text-slate-900">3,800件</span>。2022年のピーク時（約14,000件）からは減少していますが、依然として小売契約への移行が完了していない事業所が残っています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -286,6 +298,7 @@ export default function LastResortSupplyTargetPage() {
               title: "最終保障供給への移行通知が来たら",
               description: "通知を受けた直後の対応手順を確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

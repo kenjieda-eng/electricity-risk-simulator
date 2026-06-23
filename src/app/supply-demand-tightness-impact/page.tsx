@@ -154,6 +154,9 @@ export default function SupplyDemandTightnessImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             一方、固定プランや燃料費調整額ベースのプランでは、JEPX急騰の直接影響は受けにくいものの、長期的な需給逼迫が燃料費上昇を通じて間接的に影響することがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -224,6 +227,9 @@ export default function SupplyDemandTightnessImpactPage() {
               需要の高い時間帯の使用量を削減することで、市場連動プランにおける高価格コマの影響を軽減できます。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -267,6 +273,7 @@ export default function SupplyDemandTightnessImpactPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "需給逼迫リスクを踏まえた契約確認項目。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -127,6 +127,9 @@ export default function ElectricityBcpForCorporatesPage() {
             </Link>{" "}
             を参照してください。本記事は電力に特化した 3 リスク・4 対策を扱います。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 2. 電力 BCP で想定すべき 3 大リスク */}
@@ -216,6 +219,9 @@ export default function ElectricityBcpForCorporatesPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 4. 電力 BCP の 5 ステップ策定法 */}
@@ -238,6 +244,9 @@ export default function ElectricityBcpForCorporatesPage() {
               <strong className="font-semibold text-slate-900">訓練・更新</strong>: 年 1 回の停電想定訓練、半年ごとの計画見直しを実施。市場環境・小売各社の経営状況も定期点検する。
             </li>
           </ol>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 5. 電力 BCP の主要対策 4 種 */}
@@ -287,6 +296,9 @@ export default function ElectricityBcpForCorporatesPage() {
               を参照。
             </p>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 6. まとめ */}
@@ -323,6 +335,7 @@ export default function ElectricityBcpForCorporatesPage() {
             { href: "/demand-response-revenue-model", title: "DR の収益モデル", description: "緊急時の節電で収入を得る仕組みと事業者比較。" },
             { href: "/duck-curve-corporate-impact", title: "ダックカーブが法人に与える影響", description: "夕方単価高騰の構造的リスクを BCP の視点で確認。" },
             { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価", description: "供給力確保コストの転嫁構造を踏まえた契約点検。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

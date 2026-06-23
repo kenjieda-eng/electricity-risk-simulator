@@ -151,6 +151,9 @@ export default function LastResortSupplyPage() {
           <p className="mt-3 text-xs text-slate-500">
             出典: 電力・ガス取引監視等委員会公表資料等に基づく概算。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -166,6 +169,9 @@ export default function LastResortSupplyPage() {
             <li>継続期間：原則として次の供給者が見つかるまでの暫定</li>
             <li>申請：小売から供給拒否通知を受けた後に送配電事業者に申込み</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -187,6 +193,9 @@ export default function LastResortSupplyPage() {
               法人の請求額は急増。自治体でも補正予算で数千万〜数億円規模の追加計上が相次ぎました。
             </p>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section id="emergency-response" className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5">
@@ -326,6 +335,9 @@ export default function LastResortSupplyPage() {
             <li><span className="font-semibold">事前察知が難しい場合があること</span>：突然の事業停止発表ケースでは事前察知に限界があります。</li>
             <li><span className="font-semibold">今後の再発防止策</span>：契約先の定期モニタリング、代替候補リスト作成、更新タイミングでの複数社見積など、管理強化策を提示します。</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section id="comparison-positioning" className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5">
@@ -454,6 +466,7 @@ export default function LastResortSupplyPage() {
             { href: "/concierge", title: "AI コンシェルジュで関連情報を探す", description: "35 カテゴリを横断して、自社のリスクに該当する記事を AI が提案します。" },
             { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
             { href: "/case-study-last-resort-recovery", title: "最終保障供給からの復旧事例", description: "最終保障供給から通常契約に戻した事例。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -154,6 +154,9 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             その他にも、主要産ガス国（カタール、オーストラリア、米国など）での生産トラブル、アジアの冬季需要集中、地政学的リスクによる供給経路の不安定化なども価格急騰の引き金となり得ます。これらのリスクは単独でも複合的にも発生し得るため、「LNG高騰は一時的な異常事態」ではなく、定期的に到来し得るリスクシナリオとして認識することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -198,6 +201,9 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             また、市場連動プランを契約している場合は、LNG高騰がJEPX（日本卸電力取引所）のスポット価格上昇を通じてさらに即時かつ大きく反映されることがあります。固定プランであっても燃料費調整額の上限設定がないプランでは、同様にコスト増が発生します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -257,6 +263,9 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
               燃調額が「+2円/kWh」「+5円/kWh」高騰した場合の年間コスト増を事前に試算しておくと、対策の優先度が明確になります。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -274,6 +283,9 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             LNG高騰は過去に複数回発生しており、今後も発生し得るリスクシナリオです。事前の試算が、契約見直しや予算策定の判断材料になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -318,6 +330,7 @@ export default function LngPriceSurgeElectricityCostImpactPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "リスクシナリオを踏まえた契約見直しの確認項目。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -162,6 +162,9 @@ export default function JepxSpikeElectricityCostImpactPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -267,6 +270,9 @@ export default function JepxSpikeElectricityCostImpactPage() {
               価格が上昇傾向に入ったタイミングで対応を検討できるよう、月次で確認する習慣をつけることも有効です。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -315,6 +321,7 @@ export default function JepxSpikeElectricityCostImpactPage() {
               title: "法人の電気料金推移（2019〜2025年）",
               description: "JEPXスパイクが実際の電気料金推移に与えた影響を確認できます。",
             },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

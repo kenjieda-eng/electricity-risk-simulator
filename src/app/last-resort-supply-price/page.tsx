@@ -117,6 +117,9 @@ export default function LastResortSupplyPricePage() {
               <li>（2022年10月〜2023年5月）市場連動分として JEPX 連動上乗せ</li>
             </ul>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -129,6 +132,9 @@ export default function LastResortSupplyPricePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             これを受けて、2022 年 10 月から最終保障供給料金に「<Link href="/market-price-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>」が追加され、
             <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPX</Link> 高騰時はより高くなる仕組みに見直されました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -178,6 +184,9 @@ export default function LastResortSupplyPricePage() {
               その調達コストが料金に反映される。
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -245,6 +254,9 @@ export default function LastResortSupplyPricePage() {
             <li>自治体の場合、補正予算の計上が必要になることも</li>
             <li>長期化するほど損失が積み上がるため、早期切替が最優先</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq sources={sources} faq={faqItems} publishedAt="2025-08-01" />
@@ -258,6 +270,7 @@ export default function LastResortSupplyPricePage() {
             { href: "/last-resort-vs-retail-contract", title: "最終保障供給と通常契約の違い", description: "通常契約との比較。" },
             { href: "/last-resort-supply-emergency-response", title: "入りそうなときの対応", description: "早期発見と準備。" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約見直しの始め方", description: "最終保障供給からの脱出に向けた次契約の検討手順。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

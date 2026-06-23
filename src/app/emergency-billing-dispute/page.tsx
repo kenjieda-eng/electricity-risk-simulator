@@ -234,6 +234,9 @@ export default function EmergencyBillingDisputePage() {
             </li>
           ))}
         </ol>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 二重請求の典型パターン */}
@@ -251,6 +254,9 @@ export default function EmergencyBillingDisputePage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 過大請求の原因別チェックリスト */}
@@ -279,6 +285,9 @@ export default function EmergencyBillingDisputePage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 電力会社への問い合わせテンプレート */}
@@ -347,6 +356,9 @@ export default function EmergencyBillingDisputePage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* FAQ */}
@@ -396,6 +408,7 @@ export default function EmergencyBillingDisputePage() {
               title: "電力契約の見直し、まず何から始めるか",
               description: "請求トラブル解決後の契約見直しの優先順位と進め方。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

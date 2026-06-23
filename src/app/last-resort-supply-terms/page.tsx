@@ -119,6 +119,9 @@ export default function LastResortSupplyTermsPage() {
             <li>契約期間や変更手続き</li>
             <li>供給継続に関する前提条件</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -126,6 +129,9 @@ export default function LastResortSupplyTermsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             料金単価だけでなく、基本料金、電力量料金、調整項目の扱いをセットで確認します。どの項目が固定的で、どの項目が変動しやすいかを分けて見ると、
             請求額の読み違いを減らせます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -137,6 +143,9 @@ export default function LastResortSupplyTermsPage() {
             <li>次契約への移行時に必要な手続き</li>
             <li>自社・自施設で必要な社内承認プロセス</li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -198,6 +207,9 @@ export default function LastResortSupplyTermsPage() {
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月間50,000kWh使用の高圧事業所では、最終保障供給のまま1年間継続した場合、通常小売より年間<span className="font-semibold text-slate-900">+300〜480万円</span>の追加コストが見込まれます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -300,6 +312,7 @@ export default function LastResortSupplyTermsPage() {
               title: "電力契約見直しの始め方",
               description: "次契約に向けた実務の最初のステップを整理できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

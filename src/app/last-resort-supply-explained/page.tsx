@@ -178,6 +178,9 @@ export default function LastResortSupplyExplainedPage() {
               </Link>
               で、グラフと公表データを用いて整理しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 適用条件 */}
@@ -210,6 +213,9 @@ export default function LastResortSupplyExplainedPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 料金水準 */}
@@ -231,6 +237,9 @@ export default function LastResortSupplyExplainedPage() {
                 最終保障供給の料金はなぜ高いのか
               </Link>
               で整理しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -287,6 +296,9 @@ export default function LastResortSupplyExplainedPage() {
                 切替後も、請求書上の日割計算・燃調単価の転記誤りを初月に必ず検証します。
               </li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -350,6 +362,7 @@ export default function LastResortSupplyExplainedPage() {
                 description:
                   "料金が高い理由と対応方針の伝え方を整理します。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

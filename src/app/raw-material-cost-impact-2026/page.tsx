@@ -182,6 +182,9 @@ export default function RawMaterialCostImpact2026Page() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             原材料コスト上昇は単一の品目に閉じた問題ではなく、原油・天然ガスから始まり、ナフサ・エチレン → プラスチック樹脂 → 包装資材 → 食品・日用品メーカーへと連鎖します。さらに非鉄金属（アルミ・銅・亜鉛）と化学品（溶剤・接着剤・塗料・界面活性剤）も同時並行で高騰し、業界横断的なコストインパクトを生んでいます。本シリーズでは、これらを 5 つのテーマに分けて整理し、業界別影響度と調達戦略の指針を提供します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* シリーズ全 5 記事 */}
@@ -245,6 +248,9 @@ export default function RawMaterialCostImpact2026Page() {
               </tbody>
             </table>
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 法人がとるべき調達戦略 3 つ */}
@@ -293,6 +299,7 @@ export default function RawMaterialCostImpact2026Page() {
             { href: "/special/emergency-scenario-analysis", title: "有事シナリオ分析特集", description: "原材料・電力・物流の地政学リスクを横断的に分析。" },
             { href: "/special/materials-packaging-scenario-analysis", title: "原材料・包装資材の有事シナリオ分析（特集トップ）", description: "本ハブの背景となる詳細特集ページ群への入口。" },
             { href: "/duck-curve-corporate-impact", title: "ダックカーブが法人に与える影響", description: "電力サイドのリスクとして同時並行で進む構造変化を整理。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
