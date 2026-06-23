@@ -272,6 +272,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 燃料費調整額の仕組み */}
@@ -303,6 +306,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 市場連動型契約 */}
@@ -343,6 +349,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 容量拠出金 */}
@@ -378,6 +387,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション5: 価格変動ドライバー */}
@@ -414,6 +426,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 電気代の価格構造イメージ */}
@@ -450,6 +465,9 @@ export default function ExecutiveCfoElectricityBasicsPage() {
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q4.</span>電力コストの変動要因（LNG価格・為替・JEPX）を財務部門は月次でモニタリングしているか？</li>
           <li className="flex gap-2"><span className="font-bold text-amber-600 shrink-0">Q5.</span>現在の電力会社・契約は、財務リスク管理の観点から最適な選択か？競合他社と比較したか？</li>
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション8: 次ステップ */}
@@ -531,6 +549,7 @@ export default function ExecutiveCfoElectricityBasicsPage() {
               title: "データセンターの電気料金見直しポイント",
               description: "電気代が EBITDA に直結する高負荷業種での CFO 視点の見直し。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

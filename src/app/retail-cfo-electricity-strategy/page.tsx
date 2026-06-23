@@ -360,6 +360,9 @@ export default function RetailCfoElectricityStrategyPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -376,6 +379,9 @@ export default function RetailCfoElectricityStrategyPage() {
                 <li><strong>本社経費（販管費）</strong>：本社・地域統括拠点の電気代</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -397,6 +403,9 @@ export default function RetailCfoElectricityStrategyPage() {
               、コンビニ詳細は{" "}
               <Link href="/convenience-store-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">コンビニの電気料金見直し</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -469,6 +478,9 @@ export default function RetailCfoElectricityStrategyPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -499,6 +511,9 @@ export default function RetailCfoElectricityStrategyPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -517,6 +532,9 @@ export default function RetailCfoElectricityStrategyPage() {
                 <li>Scope2排出量データの収集プロセスと第三者保証</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -573,6 +591,7 @@ export default function RetailCfoElectricityStrategyPage() {
               { href: "/executive-ebitda-impact", title: "電気代がEBITDAに与える影響の測り方", description: "EBITDAインパクト定量化。" },
               { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "3〜5年計画への組み込み。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "多店舗展開法人の選択肢。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

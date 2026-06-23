@@ -385,6 +385,9 @@ export default function CfoElectricityCostBasicsPage() {
               <Link href="/business-electricity-cost-reduction-review-points" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">法人電気代の削減ポイント</Link>
               で確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -404,6 +407,9 @@ export default function CfoElectricityCostBasicsPage() {
             </div>
             <p className="mt-3 text-xs text-slate-500">
               ※ 勘定科目の区分は『財務諸表等規則』『連結財務諸表規則』に準拠。連結決算上は『その他経費』『電力エネルギーコスト』として集約されるケースが多いです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -428,6 +434,9 @@ export default function CfoElectricityCostBasicsPage() {
               、業種横断比較は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">工場電気代ベンチマーク</Link>
               で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -486,6 +495,9 @@ export default function CfoElectricityCostBasicsPage() {
               <Link href="/executive-risk-planning-approaches" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気料金リスクを事業計画に織り込む3つのアプローチ</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -533,6 +545,9 @@ export default function CfoElectricityCostBasicsPage() {
               、テンプレートは{" "}
               <Link href="/executive-board-report-template" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">取締役会向け電力リスク報告テンプレート</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -599,6 +614,9 @@ export default function CfoElectricityCostBasicsPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -657,6 +675,7 @@ export default function CfoElectricityCostBasicsPage() {
               { href: "/executive-board-report-template", title: "取締役会向け電力リスク報告テンプレート", description: "報告テンプレートの構成。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "契約見直し準備項目。" },
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "削減打ち手の全体像。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

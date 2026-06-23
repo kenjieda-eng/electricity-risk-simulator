@@ -221,6 +221,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: 開示フレームワーク対応表 */}
@@ -260,6 +263,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             ※ ISSBはIFRS財団による国際的な開示基準。日本では2024年以降のSSBJ（サステナビリティ基準委員会）対応に注視が必要。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: Scope2算定に必要なデータ一覧 */}
@@ -305,6 +311,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: RE100進捗の記載例とKPI */}
@@ -346,6 +355,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション5: 投資家が注目するエネルギー関連KPI */}
@@ -370,6 +382,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 実務上の留意点 */}
@@ -397,6 +412,9 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
             グリーンウォッシュへの規制強化が進む中、再エネ証書の調達実績・追加性・地域性についての第三者検証を取得することがリスク管理上有効。
           </li>
         </ul>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: アクションアイテム */}
@@ -446,6 +464,7 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
               title: "リスクシナリオカテゴリ",
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

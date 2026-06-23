@@ -360,6 +360,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -377,6 +380,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
                 <li><strong>本社経費（販管費）</strong>：本社の電気代</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -419,6 +425,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
               <Link href="/cfo-electricity-cost-basics" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">CFOのための電気代基礎</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -460,6 +469,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -494,6 +506,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
               データセンター戦略は{" "}
               <Link href="/articles/datacenter-ai-demand" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター・AI需要</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -533,6 +548,9 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
                 <li>IT/DCのSLA関連投資判断プロセス</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -589,6 +607,7 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
               { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "3〜5年計画への組み込み。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "サービス業の選択肢。" },
               { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善の実務。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

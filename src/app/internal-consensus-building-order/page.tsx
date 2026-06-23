@@ -187,6 +187,9 @@ export default function InternalConsensusBuildingOrderPage() {
               </div>
             ))}
           </div>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -309,6 +312,9 @@ export default function InternalConsensusBuildingOrderPage() {
             </table>
           </div>
           <p className="mt-3 text-xs text-slate-500">※上記は目安です。電力会社・プランによって手続き期間は異なります。事前に確認することをお勧めします。</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -388,6 +394,7 @@ export default function InternalConsensusBuildingOrderPage() {
               title: "法人の電力契約見直しチェックリスト",
               description: "見直しの各ステップで確認すべき項目の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

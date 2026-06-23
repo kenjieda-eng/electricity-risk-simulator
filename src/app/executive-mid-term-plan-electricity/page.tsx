@@ -188,6 +188,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: シナリオ別電力コスト前提表（3年間×3シナリオ） */}
@@ -235,6 +238,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 制度変更インパクト表 */}
@@ -275,6 +281,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             ※ 各制度の詳細は経産省・電力広域的運営推進機関（OCCTO）・資源エネルギー庁の公表資料で確認してください。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: KPIモニタリング項目 */}
@@ -308,6 +317,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション5: 中計文書への記載例 */}
@@ -349,6 +361,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 調達戦略オプション */}
@@ -386,6 +401,9 @@ export default function ExecutiveMidTermPlanElectricityPage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 関連リンク */}
@@ -422,6 +440,7 @@ export default function ExecutiveMidTermPlanElectricityPage() {
               title: "リスクシナリオカテゴリ",
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

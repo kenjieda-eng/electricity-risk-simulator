@@ -176,6 +176,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション2: DDチェックリスト */}
@@ -215,6 +218,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             ※ 拠点数が多い場合は主要拠点（電力費上位3〜5拠点）を優先して確認する。全拠点の調査は時間的制約がある場合に限りスコーピングを行う。
           </p>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション3: 契約条件確認マトリクス */}
@@ -248,6 +254,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             </table>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション4: 違約金・中途解約コストの試算 */}
@@ -278,6 +287,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             </div>
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション5: PMI電力コスト最適化タイムライン */}
@@ -307,6 +319,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             ))}
           </div>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション6: 拠点統廃合時の電力契約まとめ替え */}
@@ -332,6 +347,9 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
             </div>
           ))}
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* セクション7: アクションアイテム */}
@@ -381,6 +399,7 @@ export default function ExecutiveMaElectricityDueDiligencePage() {
               title: "見直しポイントカテゴリ",
               description: "電力契約の見直しポイントを解説した記事一覧。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
