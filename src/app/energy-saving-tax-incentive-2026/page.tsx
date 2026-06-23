@@ -299,6 +299,9 @@ export default function EnergySavingTaxIncentive2026Page() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 制度内容・適用期間・控除率は毎年度の税制改正で変動します。最新の情報は経済産業省・中小企業庁・国税庁のウェブサイトで確認してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 対象設備 */}
@@ -352,6 +355,9 @@ export default function EnergySavingTaxIncentive2026Page() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 控除・償却の試算 */}
@@ -431,6 +437,9 @@ export default function EnergySavingTaxIncentive2026Page() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* 注意点 */}
@@ -457,6 +466,9 @@ export default function EnergySavingTaxIncentive2026Page() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -526,6 +538,7 @@ export default function EnergySavingTaxIncentive2026Page() {
                 description:
                   "設備導入に付随する電気代・仕入税額控除の論点。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

@@ -74,16 +74,25 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">省エネ法の改正方向性</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法は、1979年の制定以来、複数回の改正を経ています。2022年の改正（2023年4月施行）では、名称が「エネルギーの使用の合理化及び非化石エネルギーへの転換等に関する法律」に変更され、非化石エネルギーへの転換が目的として明記されました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">対象企業には、省エネだけでなく「非化石エネルギーへの転換」と「電気需要の最適化」への取組みが求められるようになりました。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">主要改正のタイムライン</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2022年：省エネ法改正成立。2023年4月：改正法施行、非化石エネルギー転換・電気需要最適化が追加。2024年〜：定期報告書の様式変更、非化石比率の開示義務化。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">今後も段階的に要件強化が見込まれ、中期計画書には再エネ導入計画の具体性が求められる方向です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">法人実務への影響</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特定事業者（年間エネルギー使用量1,500kL原油換算以上）・第一種エネルギー管理指定工場は、再エネ調達計画の具体化が必要。非化石比率が低い場合は説明責任が発生します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連手続きとして、非化石エネルギー活用計画の策定、定期報告書への記載、中期計画書への盛り込み、などが必要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">省エネ法改正の重要マイルストン（年表）</h2>
@@ -99,6 +108,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法の公式解説は、資源エネルギー庁「省エネルギー政策」ポータルに掲載されており、最新の改正動向・Q&Aが確認できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">非化石エネルギー活用計画の策定支援は、経産省補助金・商工会議所相談窓口で提供されています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -123,6 +135,7 @@ export default function Page() {
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

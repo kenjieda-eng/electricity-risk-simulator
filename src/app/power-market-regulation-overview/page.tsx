@@ -80,6 +80,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">自由化の段階的進展</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本の電力自由化は1995年の特別高圧自由化から始まり、2000年に高圧、2016年に低圧（全面自由化）へと段階的に進みました。この間、小売電気事業者の新規参入が相次ぎ、競争環境が形成されました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">新電力シェアは全面自由化後にピーク時20%超まで拡大しましたが、2022年の危機以降は大手電力への回帰も見られます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">2010年代の主要改正</h2>
@@ -88,6 +91,9 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">2020年代の制度改正</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">容量市場本格稼働（2024年度）、需給調整市場再編（2021年）、非化石価値取引市場の高度化（2021年）、GXリーグ発足（2023年）、GX-ETS本格稼働準備（2026年以降）など、ここ数年で制度改正が急ピッチで進んでいます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -104,6 +110,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では電力関連制度の時系列と影響の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -145,6 +154,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -164,6 +176,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-500">※ 事例は代表例。実際の効果は事業規模・立地・既存契約条件で大きく変動します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -186,6 +201,9 @@ export default function Page() {
               <li>関連部門（経理・法務・施設・経営）への早期共有不足</li>
               <li>データ更新頻度の低さ（年1回以下）による効果測定の困難化</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -227,6 +245,7 @@ export default function Page() {
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

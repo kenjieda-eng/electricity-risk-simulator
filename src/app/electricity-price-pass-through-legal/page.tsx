@@ -407,6 +407,9 @@ export default function Page() {
               <Link href="/how-to-explain-electricity-price-increase-internally" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気代値上げの社内説明</Link>
               で確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -428,6 +431,9 @@ export default function Page() {
               、内部報告フォーマットは{" "}
               <Link href="/electricity-price-increase-internal-report" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気代値上げの内部報告</Link>
               。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -451,6 +457,9 @@ export default function Page() {
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">工場電気代ベンチマーク</Link>
               。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -472,6 +481,9 @@ export default function Page() {
               、{" "}
               <Link href="/should-you-review-after-price-increase-notice" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">値上げ通知後の見直し判断</Link>
               で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -513,6 +525,9 @@ export default function Page() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -545,6 +560,9 @@ export default function Page() {
               <li>業種別の電気代比率ベンチマーク比較</li>
               <li>価格改定率(売価への反映率)の根拠数値</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <div className="mt-6">
@@ -579,6 +597,7 @@ export default function Page() {
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種別電気代水準" },
               { href: "/hidden-electricity-price-increases", title: "隠れた電気代値上げ", description: "明細の読み解き" },
               { href: "/is-business-electricity-price-increase-unreasonable", title: "電気代値上げは不当か?", description: "値上げ妥当性判断" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

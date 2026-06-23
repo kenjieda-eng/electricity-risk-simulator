@@ -127,6 +127,9 @@ export default function Page() {
               <p className="text-sm font-semibold text-slate-800">ポイント</p>
               <p className="mt-2 text-sm leading-7 text-slate-700">供給地点特定番号は「契約番号（お客さま番号）」とは別物です。お客さま番号は契約に紐づく番号で、契約先が変われば変わり得ますが、供給地点特定番号は地点そのものを示す番号で、原則として地点が同じであれば変わりません。</p>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -142,6 +145,9 @@ export default function Page() {
                 <li>拠点台帳に控え、毎回原本を探さずに済むようにする</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -149,6 +155,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">供給地点特定番号は、①電力会社からの検針票・請求書、②契約書、③新電力からの見積書、④一般送配電事業者のWeb照会、⑤電力会社カスタマーサポートへの問い合わせ、で確認できます。最も手軽なのは検針票・請求書で、「供給地点特定番号」「地点番号」などの項目名で22桁の数字が記載されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">紙の検針票が届かない契約（Web明細）では、契約先のマイページにログインして確認します。それでも見当たらない場合は、契約中の電力会社のカスタマーサポート、またはその地域の一般送配電事業者の問い合わせ窓口を利用します。問い合わせ時には契約者名・供給地住所・お客さま番号を手元に用意しておくと照会が早く進みます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">複数拠点を持つ企業では、拠点別の番号リストを管理することが、切替手続きの効率化につながります。請求書を受領した時点で番号を台帳に控えておく運用にしておくと、いざ切替・移転というときに探し回らずに済みます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -208,6 +217,9 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">この台帳を、拠点の開設・閉鎖のたびに更新する運用にしておくと、抜け漏れを防げます。相見積もりを取る際にも、拠点ごとの番号と使用量がそろっていれば、各社からスピーディに見積もりを取得できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -220,6 +232,9 @@ export default function Page() {
               <li><span className="font-semibold">古い検針票の番号をそのまま使う</span>：地点が変わっていないか、最新の請求書で確認します。</li>
             </ul>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらを避けるには、申込前に原本（最新の検針票・請求書）から番号を確認し、桁数を含めてダブルチェックする運用が有効です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -250,6 +265,9 @@ export default function Page() {
               </ul>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中〜大規模契約（高圧以上）では、手続きに2〜3ヶ月かかるケースもあるため、早期着手が重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -297,6 +315,7 @@ export default function Page() {
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

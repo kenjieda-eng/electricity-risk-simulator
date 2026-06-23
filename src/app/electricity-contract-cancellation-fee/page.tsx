@@ -131,6 +131,9 @@ export default function ElectricityContractCancellationFeePage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               また、多くの契約書には「需要家の都合により解約する場合」という条件付きの違約金条項が入っています。供給事業者側の都合（値上げ・撤退・条件変更）による解約は、違約金を免除できる解釈の余地があるため、通知文の文面を必ず保管してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2: 典型的な計算パターンと相場 */}
@@ -178,6 +181,9 @@ export default function ElectricityContractCancellationFeePage() {
               <li><span className="font-medium text-slate-900">新電力（市場連動型）：</span>違約金なし・月単位解約可の契約が比較的多い。市場リスクを需要家が負うかわりに拘束力を緩めている</li>
               <li><span className="font-medium text-slate-900">ガスセット契約：</span>ガス側の違約金と合算されることがある。電気単独では確認しにくいため、ガス契約書も確認</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2: 違約金ゼロ契約の見極め方 */}
@@ -197,6 +203,9 @@ export default function ElectricityContractCancellationFeePage() {
               自動更新型の契約では、更新直前の解約予告期間を逃すと次の1年間拘束される、というパターンがあります。更新期限を超過した場合の対応は
               <Link href="/auto-renewal-clause-risks" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自動更新条項のリスク</Link>
               を参照してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -246,6 +255,9 @@ export default function ElectricityContractCancellationFeePage() {
               <Link href="/emergency-cancellation-fee" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力契約の違約金を請求されたときの対応</Link>
               にまとめています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* まとめ */}
@@ -288,6 +300,7 @@ export default function ElectricityContractCancellationFeePage() {
                 title: "電力契約の解約・更新条件",
                 description: "契約期間・解約予告・自動更新の基本。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

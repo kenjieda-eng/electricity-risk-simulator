@@ -413,6 +413,9 @@ export default function Page() {
               </Link>
               で関連記事を確認できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -477,6 +480,9 @@ export default function Page() {
             <p className="mt-3 text-xs text-slate-500">
               ※ 月額連動型・違約金率20〜40%レンジで試算。代表シナリオに基づく目安値。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -507,6 +513,9 @@ export default function Page() {
               </Link>
               で深掘りできます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -526,6 +535,9 @@ export default function Page() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -541,6 +553,9 @@ export default function Page() {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -588,6 +603,9 @@ export default function Page() {
               <li>違約金額（自社で算出）と切替メリットの差額を判定する</li>
               <li>燃料費調整額・再エネ賦課金の上昇シナリオでの違いを確認する</li>
             </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <div className="mt-6">
@@ -617,6 +635,7 @@ export default function Page() {
               { href: "/market-price-adjustment", title: "市場価格調整額の解説", description: "市場連動プランの調整項目。" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金の概要", description: "賦課金の負担を把握。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "切替先電力会社の電源構成。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

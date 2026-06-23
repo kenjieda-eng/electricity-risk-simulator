@@ -133,6 +133,9 @@ export default function Page() {
                 <li>異議手続き：どこに、どう申し立てられるか</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -148,6 +151,9 @@ export default function Page() {
               </ol>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">なお、規制料金で上限に張り付いていた時期には、上限超過分が小売側のコスト負担となっていたため、規制料金が割安に見える局面もありました。自社の契約がどの仕組みに該当するかを把握しておくことが、コスト予測の精度を左右します（出典: 資源エネルギー庁 / 電力・ガス取引監視等委員会 / 各小売供給約款 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -155,6 +161,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">市場連動型は、卸電力取引所（JEPX）のスポット価格に単価が連動するタイプの契約です。市場価格が低い局面ではコストを抑えやすい一方、需給ひっ迫や燃料価格高騰で市場価格が急騰した局面では、単価が大きく上振れするリスクがあります。電力需要のピーク時間帯や寒波・猛暑時にスポット価格が跳ね上がると、その時間帯の使用分が高単価で請求されます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">市場連動条項を読むときは、①連動する市場価格の定義（エリアプライスかシステムプライスか）、②上限（プライスキャップ）の有無と水準、③連動係数や手数料の上乗せ方法、④価格急騰時の支払猶予や通知の仕組み、を確認します。上限が設定されていれば、最悪ケースの単価の目安が事前に把握でき、予算管理がしやすくなります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">「市場連動は安いか危険か」という二者択一で考えるのではなく、自社の価格変動への耐性・予算管理の方針に合うかで判断するのが実務的です。価格上昇を一定範囲に抑えたい企業には固定要素の大きいメニュー、変動を許容して平時の低コストを取りたい企業には市場連動メニューが向く、といった整理ができます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -194,6 +203,9 @@ export default function Page() {
               </table>
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">「諸般の事情により改定する」など抽象的な事由しか書かれていない条項は、改定の予見可能性が低く需要家に不利になりやすい注意条項です。事由の具体化を求めることが交渉の出発点になります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -208,6 +220,9 @@ export default function Page() {
                 <li>90日以上：高圧でも比較・交渉・切替の検討余地が確保しやすい</li>
               </ul>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -253,6 +268,9 @@ export default function Page() {
                 <p className="mt-2 text-sm leading-7 text-slate-700">「諸般の事情」で30日前通知のみ、という組み合わせは最も注意。更新時に事由の具体化と通知期間延長を交渉したい。</p>
               </div>
             </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -322,6 +340,7 @@ export default function Page() {
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
               { href: "/electricity-price-pass-through-legal", title: "電気料金の価格転嫁と法務", description: "電気料金の値上げ転嫁における法的論点。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

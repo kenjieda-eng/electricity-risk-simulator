@@ -81,15 +81,24 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">電気代の勘定科目</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電気代の標準的な勘定科目は、事務所・店舗では「水道光熱費」、製造業の工場では「製造経費（動力費）」、医療機関では「水道光熱費」または「診療材料費」内の項目として処理されるのが一般的です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">勘定科目の選定は自社の会計方針に従い、継続的に同じ科目を使用します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">部門配賦の考え方</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">複数部門・複数施設を持つ企業では、電気代を各部門に配賦する必要があります。専有メーターがある場合は実績配賦、ない場合は床面積・人員数・機械稼働時間比率などで按分します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">配賦基準は一度決めたら継続適用するのが原則です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">月次締めと期ずれ対応</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力会社の請求は通常、翌月締め・翌々月請求のため、月次決算では当月未請求分を見越計上します。標準的には「前月実績 × 当月日数 / 前月日数」で概算計上し、請求確定後に差額を調整します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -108,6 +117,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では電気関連取引の仕訳と税制優遇の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -149,6 +161,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -168,6 +183,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-500">※ 事例は代表例。実際の効果は事業規模・立地・既存契約条件で大きく変動します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -231,6 +249,7 @@ export default function Page() {
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

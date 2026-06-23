@@ -83,15 +83,24 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">耐用年数の基本</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">太陽光発電設備の法定耐用年数は17年、蓄電池（定置式）は6年が標準です。ただし自家発電設備として一体管理する場合、耐用年数の見直しが可能なケースもあります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">取得価額・耐用年数・償却方法（定額法・定率法）は税務上の規定に従います。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">中小企業経営強化税制の活用</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業経営強化税制を使うことで、一定の要件を満たす設備投資に対して即時償却または税額控除（7%または10%）が選択可能です。蓄電池・太陽光設備は対象になる場合があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">適用には経営力向上計画の認定が必要で、事前申請が必要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">その他の優遇税制</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中小企業投資促進税制、生産性向上設備投資促進税制、カーボンニュートラル投資促進税制など、複数の制度が活用できます。要件・スケジュールが異なるため、投資計画に合わせて選定します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -108,6 +117,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では電気関連取引の仕訳と税制優遇の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -149,6 +161,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -168,6 +183,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-500">※ 事例は代表例。実際の効果は事業規模・立地・既存契約条件で大きく変動します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -231,6 +249,7 @@ export default function Page() {
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
