@@ -300,6 +300,9 @@ export default function HowToReadElectricityBillPage() {
             </Link>{" "}
             でも確認できます。このページでは各項目を実務的な視点で掘り下げます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -347,6 +350,9 @@ export default function HowToReadElectricityBillPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             先に契約前提と固定費を確認し、その後に使用量連動・調整項目・制度項目を見ると、増減理由を説明しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約電力（基本料金の前提を確認）</li>
             <li>基本料金（固定費の水準）</li>
@@ -363,6 +369,9 @@ export default function HowToReadElectricityBillPage() {
           <h2 className="text-xl font-semibold text-slate-900">項目別の確認ポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             各項目の意味と、見積比較や見直し判断に活用するためのポイントを整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -456,6 +465,9 @@ export default function HowToReadElectricityBillPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             例えば「使用量はほぼ同じなのに総額が上がった」場合は、調整項目か契約条件の変化が原因であるケースが多くなります。使用量要因と制度・市況要因を分けて把握することで、社内報告の説明精度が高まります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 前月・前年同月と比べる */}
@@ -510,6 +522,9 @@ export default function HowToReadElectricityBillPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             この推移を把握しておくことで、見積依頼時に「使用量のピーク月と閑散月で試算してほしい」といった具体的なリクエストが可能になり、より精度の高い見積が得られます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -596,6 +611,9 @@ export default function HowToReadElectricityBillPage() {
           <h2 className="text-xl font-semibold text-slate-900">見積比較に使いたい項目</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書から見積比較に使いたい主な項目は以下のとおりです。これらを事前に整理しておくと、見積条件のすり合わせがスムーズになります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -730,6 +748,7 @@ export default function HowToReadElectricityBillPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

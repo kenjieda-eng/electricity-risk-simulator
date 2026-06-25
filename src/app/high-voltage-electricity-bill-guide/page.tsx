@@ -187,6 +187,9 @@ export default function HighVoltageElectricityBillGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧電力の請求書は大きく「固定費（基本料金）」と「変動費（電力量料金＋各種調整費）」に分かれています。低圧と異なる最大の特徴は、基本料金がデマンド管理によって決まる点です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -295,6 +298,9 @@ export default function HighVoltageElectricityBillGuidePage() {
             </Link>{" "}
             で詳しく解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
@@ -395,6 +401,7 @@ export default function HighVoltageElectricityBillGuidePage() {
               title: "市場連動プランと固定プランの違い",
               description: "請求書を理解したうえでプラン選択の軸を整理できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

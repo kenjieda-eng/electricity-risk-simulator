@@ -190,6 +190,9 @@ export default function EnergyChargeExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の変動費は電力量料金単体ではなく、<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額</Link>・<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金</Link>・<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>などの調整項目も含んだ形で請求されます。使用量（kWh）に連動するコスト全体を把握することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -263,6 +266,9 @@ export default function EnergyChargeExplainedPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力量料金の比較では「単価の数字」だけでなく「自社の使用パターンで計算した年間コスト」で比較することが重要です。時間帯区分・季節変動・燃料費調整額の扱いなど、条件を統一した上で横並び比較を行ってください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-lg border border-slate-200 bg-white p-4">
@@ -384,6 +390,7 @@ export default function EnergyChargeExplainedPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

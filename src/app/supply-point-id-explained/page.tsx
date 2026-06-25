@@ -218,6 +218,9 @@ export default function SupplyPointIdExplainedPage() {
               </span>
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: 番号の構成 */}
@@ -225,6 +228,9 @@ export default function SupplyPointIdExplainedPage() {
           <h2 className="text-xl font-semibold text-slate-900">番号の構成（22桁の内訳）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             22桁の番号はそれぞれ決まった情報を示しています。先頭2桁で送配電事業者（エリア）がわかります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           {/* 桁の構成テーブル */}
@@ -281,6 +287,9 @@ export default function SupplyPointIdExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             供給地点特定番号は以下の書類・媒体で確認できます。手元に請求書や検針票がある場合は、まず「供給地点特定番号」または「地点番号」という表記を探してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -310,6 +319,9 @@ export default function SupplyPointIdExplainedPage() {
           <h2 className="text-xl font-semibold text-slate-900">実務でどう使うか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             供給地点特定番号は、電力に関する主要な手続きすべてで活用されます。代表的な3つのケースを確認しておきましょう。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {useCases.map((uc, i) => (
@@ -354,6 +366,9 @@ export default function SupplyPointIdExplainedPage() {
               </span>
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -442,6 +457,9 @@ export default function SupplyPointIdExplainedPage() {
               <span>複数拠点を持つ法人は管理台帳を作成し、拠点ごとの番号を一元管理することを推奨する。</span>
             </li>
           </ul>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </div>
 
@@ -510,6 +528,7 @@ export default function SupplyPointIdExplainedPage() {
               title: "市場連動プランと固定プランの違い",
               description: "切り替え先を検討する際のプラン選択軸を整理できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

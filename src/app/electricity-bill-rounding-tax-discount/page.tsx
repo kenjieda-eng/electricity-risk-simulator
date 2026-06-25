@@ -115,6 +115,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
             電気料金の請求書は複数の費目で構成されており、それぞれに端数処理・消費税・割引の
             適用ルールがあります。以下の4点が主な原因です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-4">
             <div className="rounded-lg border border-slate-100 bg-slate-50 p-4">
               <h3 className="text-lg font-semibold text-slate-900">
@@ -164,6 +167,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             費目別の一般的な端数処理ルールを整理します。多くの場合「円未満切り捨て」が採用されていますが、
             約款によっては切り上げとなる場合もあるため、詳細は各電力会社の約款で確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -233,6 +239,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
             消費税の適用方式は電力会社によって異なります。手計算と請求書の金額が合わない場合、
             どの方式が採用されているかを確認することが第一歩です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -273,6 +282,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金に適用される割引制度は種類が限られており、近年は廃止・縮小の動きが続いています。
             法人契約で確認すべき主な割引を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -360,6 +372,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
             見積を比較する際は端数の合わない理由を探るよりも、前提条件（使用量・契約電力・燃調費上限の有無）を
             統一したうえで、年間総額ベースで比較することを優先してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: 端数差を気にすべき場面・気にしなくてよい場面 */}
@@ -369,6 +384,9 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             端数差はすべての場面で問題になるわけではありません。状況に応じた対応方針を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -492,6 +510,7 @@ export default function ElectricityBillRoundingTaxDiscountPage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "単価の推移実態をデータで確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

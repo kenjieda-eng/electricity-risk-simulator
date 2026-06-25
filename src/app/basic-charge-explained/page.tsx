@@ -190,6 +190,9 @@ export default function BasicChargeExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の費用構造は大きく「固定費（基本料金）」と「変動費（電力量料金＋調整費）」に分かれます。基本料金は使用量に関わらず毎月一定額が発生する固定費であり、節電による削減効果は直接には現れません。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">基本料金（固定費）</p>
@@ -329,6 +332,9 @@ export default function BasicChargeExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             デマンド値を<span className="font-semibold text-slate-900">10%</span>削減できれば、500kW契約で年間約<span className="font-semibold text-slate-900">96万円</span>の基本料金削減になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -401,6 +407,7 @@ export default function BasicChargeExplainedPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -186,6 +186,9 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧と高圧では、料金の算出方法は基本的に同じ構造（基本料金＋電力量料金＋調整費）を持ちますが、規模と複雑さが異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -265,6 +268,9 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             見積比較を行う際は、電力コンサルタントや専門家のサポートを活用することで、比較精度と交渉力を高めることができます。まずは現行請求書のデータを整理し、年間コストの全体像を把握することから始めてください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -367,6 +373,7 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
               title: "市場連動プランと固定プランの違い",
               description: "特別高圧契約でのプラン選択軸を整理できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

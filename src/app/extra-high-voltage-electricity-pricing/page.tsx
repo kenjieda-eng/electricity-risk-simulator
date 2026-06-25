@@ -116,6 +116,9 @@ export default function ExtraHighVoltageElectricityPricingPage() {
             <Link href="/contract-demand-what-is-it" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>
             の水準が高圧の数倍以上になるため、基本料金の絶対額も相当に大きくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 高圧との主な違い（比較表） */}
@@ -123,6 +126,9 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           <h2 className="text-xl font-semibold text-slate-900">高圧との主な違い</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧と高圧では、契約規模だけでなく料金の決まり方や交渉プロセスも大きく異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
@@ -175,6 +181,9 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           <h2 className="text-xl font-semibold text-slate-900">特別高圧特有の論点</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             高圧では意識しにくいが、特別高圧では実務上の重要度が高くなる論点が4つあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
 
           <div className="mt-4 space-y-4">
@@ -268,6 +277,9 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             特別高圧では、電力量料金の<span className="font-semibold text-slate-900">1円/kWh</span>の差が年間<span className="font-semibold text-slate-900">1,800万円</span>の差になります。
             単価交渉1円の重みが、高圧とは桁違いになる点を意識して見積を比較することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -371,6 +383,7 @@ export default function ExtraHighVoltageElectricityPricingPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
