@@ -178,6 +178,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
             市場単価が予定価格を上回る「予定価格超過不落」が頻発しています。
             さらに新電力各社の自治体向け入札からの撤退により「参加者ゼロの不成立」も珍しくありません。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>電力市況の上昇で予定価格が市場実勢と乖離</li>
             <li>新電力各社が固定価格入札から撤退（スポット連動型のみ提示）</li>
@@ -194,6 +197,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
             「政令で定める場合においては指名競争入札・随意契約・せり売りによることができる」と規定しています。
             入札不調後の随意契約は、地方自治法施行令第167条の2第1項第2号（競争入札に適しない場合）または
             第5号（緊急の必要）が根拠となります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">重要：随意契約の要件</p>
@@ -230,6 +236,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
           <h2 className="text-xl font-semibold text-slate-900">状況別：入札不調後の対応方針と法的根拠</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             不調の状況によって適用する法令根拠と対応が異なります。下表で自団体の状況に合った対応を確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -279,6 +288,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
             随意契約への移行は、適切に説明しなければ「競争回避」との批判を受ける可能性があります。
             以下の骨子で説明資料を構成することを推奨します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ol className="mt-3 list-decimal pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
               <span className="font-semibold">入札不調の客観的事実</span>
@@ -308,6 +320,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
           <h2 className="text-xl font-semibold text-slate-900">規模別の対応チェックポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             政令市・中核市・一般市・町村では、入札不調時に動かせるリソースと制約が異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -349,6 +364,9 @@ export default function MunicipalityProcurementBiddingFailurePage() {
             随意契約の理由書作成・予定価格の見直し・分割発注設計など、内部対応が難しい場合は
             エネルギー調達の専門家への相談をご検討ください。
             シミュレーターを活用して自団体の電力コスト水準を把握した上でご相談いただくとスムーズです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm text-sky-700">
             <Link href="/contact" className="underline underline-offset-2 hover:text-sky-900">
@@ -425,6 +443,7 @@ export default function MunicipalityProcurementBiddingFailurePage() {
               title: "法人電気代見直しの基本ポイント",
               description: "業種・エリアを問わず適用できる契約見直しの基本フレームワーク。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

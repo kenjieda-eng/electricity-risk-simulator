@@ -204,6 +204,9 @@ export default function MunicipalityFacilityManagementPackagePage() {
             この流れの中で「電力調達も委託に含めるべきか」という議論が生じています。
             電気代高騰が続く現在、電力コストの扱いは包括委託の費用対効果に直結する重要な論点です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 契約パターン比較 */}
@@ -212,6 +215,9 @@ export default function MunicipalityFacilityManagementPackagePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             包括委託における電力調達の取り扱いは主に3パターンあります。それぞれのメリット・デメリットを比較し、
             自団体の施設特性に合った方式を選択してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-4">
             {contractPatterns.map((p, i) => (
@@ -304,6 +310,9 @@ export default function MunicipalityFacilityManagementPackagePage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 議会・住民説明 */}
@@ -344,6 +353,9 @@ export default function MunicipalityFacilityManagementPackagePage() {
             包括委託から電力を分離し、別途一般競争入札で調達。
             受託事業者には月次の省エネ実績報告書を義務付け、節電目標を達成した場合にインセンティブ料を支払う設計を採用。
             省エネインセンティブにより前年比8%の使用量削減を達成。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
       </section>
@@ -389,6 +401,7 @@ export default function MunicipalityFacilityManagementPackagePage() {
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

@@ -169,6 +169,9 @@ export default function MunicipalityProcurementMethodsPage() {
             電力調達においては、供給エリア・調達規模・市場環境によって最適な方式が異なります。
             近年は市場の高騰を背景に一般競争入札の不落が増加し、随意契約や共同調達への移行が進んでいます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 比較表 */}
@@ -176,6 +179,9 @@ export default function MunicipalityProcurementMethodsPage() {
           <h2 className="text-xl font-semibold text-slate-900">入札方式の比較表</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             各方式の適用要件・メリット・デメリット・適した場面を一覧で確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -232,6 +238,9 @@ export default function MunicipalityProcurementMethodsPage() {
             電力調達における予定価格は、旧来の「前年度実績単価の微増」では市場実勢と乖離し不落の原因となります。
             以下の指標を参考に市況を反映した予定価格を設定してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc pl-5 space-y-1 text-sm leading-7 text-slate-700 sm:text-base">
             <li>JEPX（日本卸電力取引所）スポット価格の直近12か月平均</li>
             <li>燃料費調整単価の直近動向（上限廃止・復活の有無）</li>
@@ -287,6 +296,9 @@ export default function MunicipalityProcurementMethodsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             仕様書の設計が入札の成否を左右します。以下の項目を漏れなく記載してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ol className="mt-3 list-decimal pl-5 space-y-1 text-sm leading-7 text-slate-700 sm:text-base">
             <li>供給施設リスト（施設名・住所・電圧区分・需要番号・年間使用量の見込み）</li>
             <li>契約期間（単年度か複数年か）と自動更新の有無</li>
@@ -305,6 +317,9 @@ export default function MunicipalityProcurementMethodsPage() {
             各自治体の条例で基準額が定められているため、契約担当課と事前に確認してください。
             入札結果（落札者・落札金額）の公表は情報公開の観点からも推奨されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 参考事例 */}
@@ -319,6 +334,9 @@ export default function MunicipalityProcurementMethodsPage() {
             <span className="font-semibold">町村組合（5町村、人口計3万人）：</span>
             単独では参加者が集まらないため広域連合として共同調達を実施。
             調達量の増加により単価が下がり、各町村の担当工数も削減できた。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
       </section>
@@ -357,6 +375,7 @@ export default function MunicipalityProcurementMethodsPage() {
               title: "法人向け電力・省エネ補助金まとめ",
               description: "入札準備と並行して検討したい主要補助制度を横断比較。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

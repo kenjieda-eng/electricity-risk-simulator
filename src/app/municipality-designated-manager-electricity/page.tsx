@@ -162,6 +162,9 @@ export default function MunicipalityDesignatedManagerElectricityPage() {
             指定管理施設の電力契約は、大きく「自治体が契約主体」と「指定管理者が契約主体」の2つに分かれます。
             どちらのパターンかによって、コスト負担・入札の要否・リスクの所在が異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -284,6 +287,9 @@ export default function MunicipalityDesignatedManagerElectricityPage() {
             現在進行中の指定管理期間中は大きな変更が難しくても、次期指定管理の公募時に仕様書へ条件を追加することで
             問題を解決できます。以下の条件を検討してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             {nextDesignationConditions.map((item, i) => (
               <li key={i}>{item}</li>
@@ -325,6 +331,7 @@ export default function MunicipalityDesignatedManagerElectricityPage() {
               title: "法人向け電力・省エネ補助金まとめ",
               description: "指定管理施設の省エネ改修に活用できる主要補助制度を横断比較。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

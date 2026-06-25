@@ -187,6 +187,9 @@ export default function MunicipalitySupplementaryBudgetPage() {
             仕組みとして補正予算（第218条）・流用（第220条）・予備費（第217条）を設けています。
             緊急時は専決処分（第179条）も選択肢となります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -322,6 +325,9 @@ export default function MunicipalitySupplementaryBudgetPage() {
             年度末（2月）に電気代不足が判明。3月の臨時議会招集は難しいため予備費充当で対応し、
             3月議会（定例）で報告。議員からの質問に備え想定Q&Aを事前に準備した。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </section>
 
@@ -359,6 +365,7 @@ export default function MunicipalitySupplementaryBudgetPage() {
               title: "電気代急騰による予算超過の緊急対応手順",
               description: "民間企業向けだが補正予算対応の参考になる緊急対応フローを解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

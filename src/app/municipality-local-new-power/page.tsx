@@ -210,6 +210,9 @@ export default function MunicipalityLocalNewPowerPage() {
             地方自治体を中心に広がりました。ただし、ドイツとは規制環境・市場構造・自治体の財政基盤が異なるため、
             そのまま応用できるわけではありません。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">重要な前提認識</p>
             <p className="mt-1 text-sm leading-6 text-amber-700">
@@ -225,6 +228,9 @@ export default function MunicipalityLocalNewPowerPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             設立を検討する際、まず「何のために設立するのか」を整理することが出発点です。
             目的によって実現可能性と推奨度が異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -255,6 +261,9 @@ export default function MunicipalityLocalNewPowerPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体系新電力が直面する主要リスクを整理します。特に市況変動リスクとインバランスリスクは
             事業存続を左右する最重要リスクです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {riskRows.map((row, i) => (
@@ -305,6 +314,9 @@ export default function MunicipalityLocalNewPowerPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             2022年以降の電力市場高騰を受け、日本各地の自治体系新電力が経営難に陥りました。
             共通する失敗要因を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-1 text-sm leading-7 text-slate-700 sm:text-base">
             {failureFactors.map((f, i) => (
@@ -388,6 +400,9 @@ export default function MunicipalityLocalNewPowerPage() {
             2022年の市況高騰で逆ザヤが発生し、1年で累積損失が出資金を上回る状況に。
             議会に状況を報告の上、民間新電力への事業譲渡と廃業を決定。撤退コストとして〇千万円の追加支出が発生した。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 判断に迷う場合 */}
@@ -397,6 +412,9 @@ export default function MunicipalityLocalNewPowerPage() {
             自治体新電力の設立・出資判断は、電力市場・財政・法務にまたがる複合的な判断が必要です。
             FS実施前に外部専門家（エネルギーコンサルタント・法務担当・財務アドバイザー）への相談を強くお勧めします。
             シミュレーターで自団体の電力コスト水準を把握した上でご相談いただくとスムーズです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm text-sky-700">
             <Link href="/contact" className="underline underline-offset-2 hover:text-sky-900">
@@ -447,6 +465,7 @@ export default function MunicipalityLocalNewPowerPage() {
               title: "自治体・公共向け記事一覧",
               description: "自治体の電力調達に関する記事をカテゴリでまとめています。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
