@@ -195,6 +195,9 @@ export default function NonPriceFactorsInElectricityContractPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約は一度結ぶと1〜3年にわたって継続します。その間に以下のような問題が発生した場合、非価格面での確認不足が影響することがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約先の新電力が経営難に陥り、最終保障供給に切り替わって料金が上昇した</li>
             <li>請求書の内訳が不明確で、予算管理や経費処理に手間がかかった</li>
@@ -234,6 +237,9 @@ export default function NonPriceFactorsInElectricityContractPage() {
               最終保障供給とは
             </Link>{" "}
             で詳しく解説しています。新電力選択時のリスク管理の観点から合わせてご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -299,6 +305,7 @@ export default function NonPriceFactorsInElectricityContractPage() {
               title: "市場連動プランと固定プランの違い",
               description: "単価以外の条件確認と合わせてプラン選択の軸を整理。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -205,6 +205,9 @@ export default function CompareBusinessElectricityEstimatesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の7項目は、見積書の表面には出にくい条件差です。各社に同じ前提で提示させることが、正確な比較の出発点になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[700px] border-collapse text-sm">
               <thead>
@@ -349,6 +352,9 @@ export default function CompareBusinessElectricityEstimatesPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書の前提がそろっていない段階での社内提案は、後から条件面の懸念が出て手戻りになりやすいため、前提統一を先行させることが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </div>
 
@@ -396,6 +402,7 @@ export default function CompareBusinessElectricityEstimatesPage() {
               title: "市場連動プランと固定プランの違い",
               description: "見積比較で市場連動・固定の条件差を判断する際の参考として。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

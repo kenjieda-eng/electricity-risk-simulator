@@ -236,6 +236,7 @@ const relatedLinks = [
     title: "法人電気料金の見直しはどこから始める",
     description: "請求書収集→契約条件確認→使用量整理の5ステップで体系的に進める方法。",
   },
+  { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
 ];
 
 export default function ElectricityDoubleBillingFaqPage() {
@@ -290,6 +291,9 @@ export default function ElectricityDoubleBillingFaqPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               法人の電気契約で二重請求・二重支払いが発生する原因は、大きく5パターンに分類できます。原因によって連絡先や必要書類が異なるため、まず自社の状況がどのパターンに該当するか切り分けてください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {patterns.map((p) => (
                 <div key={p.no} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -335,6 +339,9 @@ export default function ElectricityDoubleBillingFaqPage() {
               <Link href="/concierge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">「コンシェルジュ窓口」</Link>
               でも、請求書の見方・連絡先選定のアドバイスを受けられます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           {/* H2-3 */}
@@ -358,6 +365,9 @@ export default function ElectricityDoubleBillingFaqPage() {
             <h2 className="text-xl font-semibold text-slate-900">トラブル発生時の連絡先・対応窓口（実務）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               二重請求・過剰請求が発生したときの主要な連絡先は以下の4つです。原則として、まず電力会社のカスタマーセンターに連絡し、解決しなければ第三者機関に進む流れが基本です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -412,6 +422,9 @@ export default function ElectricityDoubleBillingFaqPage() {
             <h2 className="text-xl font-semibold text-slate-900">よくある質問（FAQ・10問）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               現場でよく寄せられる10問について、中立社団としての回答を整理しました。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {faqs.map((f, i) => (

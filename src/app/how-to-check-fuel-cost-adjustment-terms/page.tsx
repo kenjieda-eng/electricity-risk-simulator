@@ -144,6 +144,9 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
             </Link>{" "}
             でも確認できます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -152,6 +155,9 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料費調整額の「上限（キャップ）」の有無は、料金の安定性に大きく影響します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -217,6 +223,9 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書を受け取ったら、以下の表記を確認します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>「燃料費調整額込み」か「燃料費調整額別」かを確認する。別の場合は別途追加される金額の水準を把握する</li>
             <li>「現在の燃料費調整額：○○円/kWh」など、見積時点の調整額が明示されているか確認する</li>
@@ -231,6 +240,9 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料費調整額は将来変動するため、現時点の調整額を使った単純な総額比較には限界があります。以下の方法で補完的に比較します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -302,6 +314,7 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
               title: "固定プランでも燃料費調整は変動するのか",
               description: "固定プランにおける燃料費調整額の変動リスクの整理。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

@@ -152,12 +152,18 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
             </Link>
             で整理しています。本ページでは自社側の特徴に焦点を当てます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">電気料金が高い会社に共通する7つの特徴</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月5万kWhを使用する法人を想定した影響額の目安です。自社の状況と照らし合わせて確認してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
@@ -268,12 +274,18 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
             </Link>
             が参考になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
           <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金が高い会社には、契約条件・使い方・比較手順に共通する傾向があります。7つの特徴と自己診断チェックリストを活用し、請求書・契約条件・使用実態の3点を先に整理することで、見直しの優先順位を明確にできます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -315,6 +327,7 @@ export default function WhyBusinessElectricityCostsAreHighPage() {
               title: "市場連動プランと固定プランの違い",
               description: "コスト高の原因を踏まえたプラン選択の判断軸。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
