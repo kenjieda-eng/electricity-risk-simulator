@@ -201,6 +201,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             国の2050年カーボンニュートラル宣言（2020年10月）を受け、自治体には以下の対応が求められています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">ゼロカーボンシティ表明</p>
@@ -232,6 +235,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体が活用できる主な再エネ電力調達手段を比較します。
             コスト・初期投資・契約期間・手続きの複雑さが異なるため、施設の特性と財政状況に応じて選択してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -287,6 +293,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             環境要件を入札仕様書に盛り込む方法は大きく3つあります。それぞれの特徴を理解して選択してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             <div className="rounded-xl border border-green-200 bg-green-50 p-4">
               <p className="text-sm font-semibold text-green-800">必須要件として設定</p>
@@ -326,6 +335,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
           <h2 className="text-xl font-semibold text-slate-900">先進自治体の取り組み事例</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             脱炭素と電力コスト管理の両立に取り組む自治体の事例を紹介します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -378,6 +390,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           再エネ調達でコスト増加を抑制するためには、補助金活用が不可欠です。自治体が活用できる主要な補助メニューを 3 省別に整理します。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
             <p className="text-sm font-semibold text-emerald-900">環境省</p>
@@ -418,6 +433,9 @@ export default function MunicipalityRe100DecarbonizationPage() {
         <h2 className="text-xl font-semibold text-slate-900">シミュレーターで自治体 RE100 調達のコストを試算する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           脱炭素調達のコスト増分を議会・住民に説明するには、定量的な試算が不可欠です。シミュレーターを以下の観点で活用してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
           <li>現行契約での年間電気代と、再エネ100%プラン切替後の年間コスト差を試算</li>
@@ -493,6 +511,7 @@ export default function MunicipalityRe100DecarbonizationPage() {
               title: "自治体電力入札が不調になったときの対応ガイド",
               description: "環境要件を入札仕様書に入れた際の不調リスクと対応。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

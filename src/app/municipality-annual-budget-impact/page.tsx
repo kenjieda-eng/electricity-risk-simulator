@@ -151,6 +151,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
             規定しています（会計年度独立の原則）。これにより、電気代が予算を超過しても翌年度に費用を繰り越すことは
             原則できず、当年度中に補正予算・流用・予備費充当のいずれかで対応する必要があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm font-semibold text-amber-800">実務上の頻出問題</p>
             <p className="mt-1 text-sm leading-6 text-amber-700">
@@ -166,6 +169,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
           <h2 className="text-xl font-semibold text-slate-900">局面別：電気代高騰への対応方針</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             年度を通じた局面ごとに、財政担当者が直面する課題と対応策を整理します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -233,6 +239,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
               </p>
             </div>
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 規模別対応 */}
@@ -240,6 +249,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
           <h2 className="text-xl font-semibold text-slate-900">規模別：予算対応のポイント</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             自治体の規模によって、電気代高騰の財政影響の深刻度と対応手段が異なります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -263,6 +275,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
           <h2 className="text-xl font-semibold text-slate-900">予算圧縮を和らげるコスト抑制策</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代高騰への対応は予算面の対応だけでなく、調達見直しと省エネにより使用量・単価を下げることが根本解です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-3 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-white p-4">
@@ -324,6 +339,9 @@ export default function MunicipalityAnnualBudgetImpactPage() {
             電気代高騰により年間300万円の予算超過が発生。広域連合の共同調達に参加した結果、
             単価が旧来の随意契約比で約12%削減。翌年度の当初予算を適正水準で計上できた。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
       </section>
 
@@ -361,6 +379,7 @@ export default function MunicipalityAnnualBudgetImpactPage() {
               title: "電気代がEBITDAに与える影響の測り方",
               description: "電力費上昇が財務指標に与える定量的インパクトを試算するフレームワーク。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

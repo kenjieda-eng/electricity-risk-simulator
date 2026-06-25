@@ -180,6 +180,9 @@ export default function MunicipalityResidentServiceImpactPage() {
               </p>
             </div>
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 施設別影響と対策 */}
@@ -187,6 +190,9 @@ export default function MunicipalityResidentServiceImpactPage() {
           <h2 className="text-xl font-semibold text-slate-900">施設別：電気代影響と対策一覧</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             施設種別によって電力消費パターンと有効な対策が異なります。規模・優先度に応じて対策を選択してください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -235,6 +241,9 @@ export default function MunicipalityResidentServiceImpactPage() {
           <h2 className="text-xl font-semibold text-slate-900">施設使用料の見直し：判断基準と留意点</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気代高騰を施設使用料に転嫁する場合、住民への影響を最小化しつつ受益者負担の適正化を図ることが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -303,6 +312,9 @@ export default function MunicipalityResidentServiceImpactPage() {
               都道府県の補助制度や合併特例債の活用期限を確認し、省エネ投資を計画的に進める。
             </li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 参考事例 */}
@@ -318,6 +330,9 @@ export default function MunicipalityResidentServiceImpactPage() {
             体育館の開館時間を夏季（7〜9月）のみ平日17時以降に制限し、空調コストを前年比15%削減。
             利用者への事前周知（3か月前から広報）と代替利用施設の案内を徹底し、苦情を最小化した。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 蓄電池検討 */}
@@ -327,6 +342,9 @@ export default function MunicipalityResidentServiceImpactPage() {
             電気代高騰対策として、<Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">太陽光発電</Link>と<Link href="/battery-electricity-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池</Link>を組み合わせた自家発電・蓄電による
             ピーク需要削減と電力コスト低減が注目されています。
             自治体施設での蓄電池導入検討のポイントは、以下のページで詳しく解説しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <p className="mt-2 text-sm text-sky-700">
             <Link href="/municipality-battery-considerations" className="underline underline-offset-2 hover:text-sky-900">
@@ -370,6 +388,7 @@ export default function MunicipalityResidentServiceImpactPage() {
               title: "法人向け電力・省エネ補助金まとめ",
               description: "公共施設のLED化・省エネ改修に使える主要補助制度を横断比較。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

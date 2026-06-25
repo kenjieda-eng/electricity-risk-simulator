@@ -166,6 +166,9 @@ export default function MunicipalityCouncilExplanationPage() {
             議会での電気代説明は、場面によって目的・聴衆・求められる内容が異なります。
             まず自分が対応する場面を確認してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -219,6 +222,9 @@ export default function MunicipalityCouncilExplanationPage() {
           <h2 className="text-xl font-semibold text-slate-900">補正予算説明資料の標準構成（6セクション）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             以下の構成を基本フレームとして、各自治体の実情に合わせてカスタマイズしてください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -295,6 +301,9 @@ export default function MunicipalityCouncilExplanationPage() {
               議員との距離が近いため、日常的な情報提供（電気代の動向報告等）が有効。
             </li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 議会・住民への説明ポイント */}
@@ -331,6 +340,9 @@ export default function MunicipalityCouncilExplanationPage() {
             <span className="font-semibold">一般市（人口6万人規模）：</span>
             決算審査で光熱水費の大幅超過を問われ、施設別執行状況一覧・単価推移グラフ・近隣市比較表の
             3点セットで回答。「丁寧な資料で理解できた」との評価を委員長から受けた。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
       </section>
@@ -369,6 +381,7 @@ export default function MunicipalityCouncilExplanationPage() {
               title: "取締役会で報告すべき電力リスク5項目",
               description: "議会への報告構成の参考にもなる電力リスク報告の論点整理。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

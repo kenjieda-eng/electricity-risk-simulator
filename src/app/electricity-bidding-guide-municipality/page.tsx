@@ -122,6 +122,9 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               地方自治法第234条は、自治体の契約は原則として一般競争入札によることを定めています。指名競争入札と随意契約は例外的な位置づけで、条例・規則で定めた要件に該当する場合にのみ選択できます。電力調達は予定価格が高額になりやすく、基本的には一般競争入札の対象です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
                 <thead>
@@ -174,6 +177,9 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               予定価格は、入札の上限を画す最重要指標です。自治体の契約事務規則では「取引の実例価格、需給状況、履行難易度等を考慮して適正に定める」とされており、電力調達の場合は以下の複合的な視点で設定します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>前年度の実績単価（直近12ヶ月の平均）を基準に置く</li>
               <li>現在の先物・スポット価格と、燃料費調整額の見通しを加味する</li>
@@ -221,6 +227,9 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               ダンピング応札を防ぐため、予定価格に加えて「最低制限価格」または「失格基準価格」（低入札価格調査制度）を併用する自治体が増えています。電力調達の文脈では、相場を大きく下回る応札が、落札後の撤退・契約不履行につながるリスクがあるためです。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li><span className="font-medium text-slate-900">最低制限価格：</span>予定価格の70〜90%の範囲で設定し、これを下回る応札は自動的に失格にする方式</li>
               <li><span className="font-medium text-slate-900">失格基準価格（低入調）：</span>基準を下回る応札があった場合、調査のうえ履行可能性を判断する方式。単純失格ではない</li>
@@ -233,6 +242,9 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
             <h2 className="text-xl font-semibold text-slate-900">入札不調時の対応（再入札・随意契約）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               2022年以降、電力入札不調（応札ゼロ・全社予定価格超過）は全国の自治体で急増しています。不調となった場合は、期限切れで最終保障供給に切り替わるリスクがあるため、以下の手順で速やかに次の一手を打ちます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>予定価格の見直し（相場上昇を織り込んだ再設定）または仕様の見直し（期間短縮・条件緩和）を行い、再度入札公告を出す</li>
@@ -285,6 +297,7 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
                 title: "自治体と最終保障供給",
                 description: "入札不調・撤退後に備える最終保障供給の仕組み。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

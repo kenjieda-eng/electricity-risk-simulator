@@ -203,6 +203,9 @@ export default function MunicipalityBundledProcurementPage() {
             バンドリングを導入することで、調達量の増加によるスケールメリットと手続きの効率化が同時に期待できます。
             電力市場の高騰・入札不調の増加という環境下で、多くの自治体が一括調達の検討を始めています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* メリット */}
@@ -223,6 +226,9 @@ export default function MunicipalityBundledProcurementPage() {
           <h2 className="text-xl font-semibold text-slate-900">一括調達の対象施設の選び方</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             すべての施設を最初から一括にする必要はありません。以下の観点で優先順位をつけてください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc pl-5 space-y-2 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -287,6 +293,9 @@ export default function MunicipalityBundledProcurementPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 注意点 */}
@@ -310,6 +319,9 @@ export default function MunicipalityBundledProcurementPage() {
             「スケールメリットを活かしながら調達の安定性と効率化を実現する」ことが本質です。
             まずは高圧以上の主要施設から試行し、運用実績を積みながら対象施設を拡大していく段階的アプローチが現実的です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc pl-5 space-y-1 text-sm leading-7 text-slate-700 sm:text-base">
             <li>全施設の使用量・電圧区分・契約満了日を一覧化することが第一歩</li>
             <li>高圧以上の主要施設を先行してバンドリングし、効果を検証する</li>
@@ -324,6 +336,9 @@ export default function MunicipalityBundledProcurementPage() {
         <h2 className="text-xl font-semibold text-slate-900">共同調達の先進事例（広域連携・組合方式）</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           共同調達は実施スキームによって参加自治体間の役割分担が大きく変わります。代表的な 3 パターンを整理します。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border border-indigo-100 bg-white p-4">
@@ -362,6 +377,9 @@ export default function MunicipalityBundledProcurementPage() {
         <h2 className="text-xl font-semibold text-slate-900">シミュレーターで一括調達の効果を試算する</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           共同調達導入の意思決定では、単独調達と一括調達のコスト差を定量的に示すことが議会・首長への説明の決め手になります。シミュレーターを以下の観点で活用してください。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
           <li>現行の施設別契約条件をベースに年間電力費合計を集計する</li>
@@ -437,6 +455,7 @@ export default function MunicipalityBundledProcurementPage() {
               title: "特別高圧の電気料金の仕組み",
               description: "大規模公共施設で活用される特別高圧契約の料金体系を解説。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>
