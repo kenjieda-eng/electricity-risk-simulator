@@ -113,6 +113,9 @@ export default function KwKwhKvaDifferencePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             まず、3つの単位の意味と役割を一覧でつかんでおきましょう。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-sm">
               <thead>
@@ -225,6 +228,9 @@ export default function KwKwhKvaDifferencePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             力率が高いほど無駄な電力が少なく、電力会社から見ると「効率的な需要家」とみなされます。高圧・特別高圧の契約では、力率に応じて基本料金に割引または割増が適用されます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
               <thead>
@@ -279,6 +285,9 @@ export default function KwKwhKvaDifferencePage() {
           <h2 className="text-xl font-semibold text-slate-900">請求書・見積書のどこに出てくるか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             実際の電気料金請求書・電力会社からの見積書で、これらの単位がどの項目に使われているかを整理します。請求書を手元に置きながら確認してみましょう。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-sm">
@@ -388,6 +397,9 @@ export default function KwKwhKvaDifferencePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             負荷率が低い施設（オフィスなど）は、ピーク時の電力を抑えること（デマンドコントロール）で契約電力を下げ、基本料金を削減できる可能性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* H2: まとめ */}
@@ -483,6 +495,7 @@ export default function KwKwhKvaDifferencePage() {
               title: "法人向け電気料金は高止まりしているのか",
               description: "単価推移の実態をデータで確認できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

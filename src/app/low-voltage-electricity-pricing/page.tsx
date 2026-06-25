@@ -127,6 +127,9 @@ export default function LowVoltageElectricityPricingPage() {
             電力会社の低圧配電線から直接受電するため、設備投資なしに利用できます。一方、単価は高圧より割高になる傾向があり、
             使用量が一定規模を超えると高圧への切り替えが経済的に有利になる場合があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>契約電力：50kW未満</li>
             <li>受電電圧：低圧（標準的に100V/200V）</li>
@@ -143,6 +146,9 @@ export default function LowVoltageElectricityPricingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             低圧契約には「低圧電灯（従量電灯）」と「低圧電力（動力）」の2種類があります。
             用途・電圧・料金体系が異なるため、自社の設備・用途に応じた区分を使用していることを確認することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
@@ -425,6 +431,9 @@ export default function LowVoltageElectricityPricingPage() {
             現在の契約方式と実際の使用状況にずれが生じている場合、変更申請によって基本料金を適正化できる可能性があります。
             電力会社への確認・相談を検討してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 低圧から高圧への切り替え判断（50kWの壁） */}
@@ -435,6 +444,9 @@ export default function LowVoltageElectricityPricingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             低圧契約のままでいるか、高圧へ切り替えるかの判断は、年間電気代・使用量・設備投資コストのバランスで決まります。
             一般に「50kW」前後が判断の分岐点とされます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white p-4">
             <table className="w-full border-collapse text-sm">
@@ -571,6 +583,9 @@ export default function LowVoltageElectricityPricingPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             低圧電力の請求書を毎月確認する際、以下の5点を習慣的にチェックすると、コスト増の原因が早期に把握しやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
             <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <span className="font-semibold text-slate-900">1. 契約電力と実態のずれを確認する</span>
@@ -626,6 +641,9 @@ export default function LowVoltageElectricityPricingPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             現在の契約内容・使用実績をもとに、定期的な見直しを行うことが長期的なコスト管理につながります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -699,6 +717,7 @@ export default function LowVoltageElectricityPricingPage() {
                 title: "法人向け電気料金は高止まりしているのか",
                 description: "低圧を含む料金水準の推移をデータで確認できます。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

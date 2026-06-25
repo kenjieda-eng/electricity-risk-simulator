@@ -102,6 +102,9 @@ export default function WhatIsPowerFactorPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             電力には「有効電力（実際に仕事をする電力・ワット）」と「無効電力（仕事をせずに電圧と電流の間で行ったり来たりする電力）」があります。力率は有効電力 ÷ 皮相電力（有効電力と無効電力の合成）で求められます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
             <p className="font-semibold text-slate-900">わかりやすいたとえ</p>
             <p className="mt-2 text-sm leading-7 text-slate-700">
@@ -185,6 +188,9 @@ export default function WhatIsPowerFactorPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             力率75%と95%では年間240万円の差が生じる計算になります。基本料金が大きい大口需要家ほど、力率管理のコスト効果が高くなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -213,6 +219,9 @@ export default function WhatIsPowerFactorPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             力率が低い場合、進相コンデンサ（力率改善コンデンサ）の設置や調整によって力率を改善できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>
@@ -271,6 +280,9 @@ export default function WhatIsPowerFactorPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>500kW・基本料金80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年で回収可能なケースが多いです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -326,6 +338,7 @@ export default function WhatIsPowerFactorPage() {
               title: "市場連動プランと固定プランの違い",
               description: "力率の仕組みを踏まえてプラン選択の軸を整理できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

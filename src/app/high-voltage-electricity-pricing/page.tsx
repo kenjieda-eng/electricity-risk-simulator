@@ -117,6 +117,9 @@ export default function HighVoltageElectricityPricingPage() {
             は高圧料金の根幹をなす指標です。使用量だけでなく、設備条件・契約内容なども請求額に影響するため、
             請求構造全体を見て判断する視点が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 料金構成 */}
@@ -161,6 +164,9 @@ export default function HighVoltageElectricityPricingPage() {
             請求書を見るときは、どの項目が固定的か、どの項目が変動しやすいかを先に切り分けると整理しやすくなります。
             <Link href="/demand-value-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値</Link>
             の管理も基本料金の最適化に直結します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -301,6 +307,9 @@ export default function HighVoltageElectricityPricingPage() {
             <Link href="/demand-value-guide" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値の管理</Link>
             は、基本料金を下げるための実務的な手段のひとつです。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 電力量料金 */}
@@ -316,6 +325,9 @@ export default function HighVoltageElectricityPricingPage() {
             ただし、契約プランや時間帯別単価の設定によって見え方は変わります。月ごとの総使用量だけでなく、どの時間帯に使っているか、
             季節変動があるかも確認材料になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 燃料費調整額・再エネ賦課金 */}
@@ -330,6 +342,9 @@ export default function HighVoltageElectricityPricingPage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             使用量があまり変わっていないのに請求額が増えた場合、これらの項目が要因になっていることがあります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -398,6 +413,9 @@ export default function HighVoltageElectricityPricingPage() {
             <Link href="/compare" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">比較ページ</Link>
             を起点に、現行契約と候補を同じ前提で比較してみてください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <SourcesAndFaq
@@ -459,6 +477,7 @@ export default function HighVoltageElectricityPricingPage() {
               title: "kW・kWh・kVA の違い",
               description: "電力単位の基本概念を法人契約の文脈で整理。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

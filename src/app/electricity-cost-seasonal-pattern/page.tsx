@@ -294,6 +294,9 @@ export default function ElectricityCostSeasonalPatternPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             法人の電気料金が月ごとに変動する主な要因は5つあります。これらが複合的に動くため、単純に「使用量が増えたから高い」とは言い切れないケースも多くあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {[
               {
@@ -333,6 +336,9 @@ export default function ElectricityCostSeasonalPatternPage() {
           <h2 className="text-xl font-semibold text-slate-900">月別の電気料金変動カレンダー</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             各月の使用量傾向・主な変動要因・予算管理上の注意点をまとめました。自社の実績と照らし合わせる基準としてご活用ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -383,6 +389,9 @@ export default function ElectricityCostSeasonalPatternPage() {
           <h2 className="text-xl font-semibold text-slate-900">業種別の月間使用量パターン</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力の使用量パターンは業種によって大きく異なります。同じ月でも、オフィスと工場では真逆の変動を示すことがあります。自社の業種に近いパターンを把握しておくことで、予算精度が上がります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -442,6 +451,9 @@ export default function ElectricityCostSeasonalPatternPage() {
             <span className="font-semibold text-slate-900">2〜5ヶ月の遅延</span>
             があります。このため、「使用量は少ないはずなのに請求が高い」「春なのになぜ高い？」という疑問が生じることがあります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -493,6 +505,9 @@ export default function ElectricityCostSeasonalPatternPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金に影響する制度改定は、毎月・毎年度に決まったタイミングで行われます。あらかじめスケジュールを把握しておくことで、請求額の変動を見越した予算管理が可能になります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -537,6 +552,9 @@ export default function ElectricityCostSeasonalPatternPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             年間の変動パターンを踏まえた予算策定の実践的なポイントをまとめました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {[
@@ -660,6 +678,7 @@ export default function ElectricityCostSeasonalPatternPage() {
               title: "料金メニュー比較診断",
               description: "現在の契約メニューが自社に最適かを簡単に診断できます。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

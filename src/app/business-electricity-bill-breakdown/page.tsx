@@ -412,6 +412,9 @@ export default function BusinessElectricityBillBreakdownPage() {
             </Link>
             へ自然につなげる入口ページとして使える構成にしています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -456,6 +459,9 @@ export default function BusinessElectricityBillBreakdownPage() {
             </Link>
             」の4分類でつかむと整理しやすくなります。
             それぞれ性質が違うため、同じ総額上昇でも見に行く先が変わります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-900 sm:text-base">
             請求額 = 基本料金 + 電力量料金 + 燃料費調整額 + 再エネ賦課金
@@ -517,6 +523,9 @@ export default function BusinessElectricityBillBreakdownPage() {
             実際の請求書で各項目がどのくらいの割合を占めるかは、業種・使用量・市況によって変わります。
             ただし、以下の目安を知っておくと「思ったより基本料金が高い」「燃料費調整額の影響が大きい」といった異常値に気づきやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
               <thead>
@@ -557,6 +566,9 @@ export default function BusinessElectricityBillBreakdownPage() {
               特別高圧
             </Link>
             に区分されます。区分が変わると料金メニューの構造も変わるため、自社がどの区分に当たるかを把握しておくことが請求確認の出発点になります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-left text-sm leading-6 text-slate-700 sm:text-base">
@@ -629,6 +641,9 @@ export default function BusinessElectricityBillBreakdownPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電気料金の内訳構成比は業種によって異なります。同じ料金体系の契約でも、稼働パターンや設備特性によって
             「どの項目が大きいか」が変わります。自社の業種に近いパターンを参考に、請求書の見方を調整してみてください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {industryPatterns.map((pattern) => (
@@ -757,6 +772,9 @@ export default function BusinessElectricityBillBreakdownPage() {
             </Link>
             {" "}
             へ進むと、月次確認の流れを実務に落とし込みやすくなります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -947,6 +965,7 @@ export default function BusinessElectricityBillBreakdownPage() {
               title: "法人電気料金の基礎知識",
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
