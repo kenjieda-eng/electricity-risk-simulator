@@ -132,6 +132,9 @@ export default function MidTermCancellationClauseGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約では、新電力（PPS）のメニューに特に見られますが、大手電力の高圧メニューにも設定されていることがあります。契約書の「解約」「中途解約」「契約解除」などの項目を確認します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -159,6 +162,9 @@ export default function MidTermCancellationClauseGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             予告期間とは、解約の意思表示から実際の契約終了・切替まで必要な期間です。予告期間が定められている場合、その期限を過ぎると切替できないか、自動更新されてしまいます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>一般的な予告期間は1〜3か月前。契約書の「解約通知」「解約申出」の項目で確認する</li>
             <li>スイッチング手続き（電力会社の切替）自体にも1〜2か月程度かかる場合があるため、予告期間と合わせて逆算する</li>
@@ -173,6 +179,9 @@ export default function MidTermCancellationClauseGuidePage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             中途解約で違約金が発生する場合でも、新しい契約への切替によるコスト削減がそれを上回るなら、経済的には切替が合理的です。以下の試算を行います。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -218,6 +227,9 @@ export default function MidTermCancellationClauseGuidePage() {
               シミュレーター
             </Link>{" "}
             を使って試算できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -282,6 +294,7 @@ export default function MidTermCancellationClauseGuidePage() {
               title: "市場連動プランと固定プランの違い",
               description: "中途解約を検討する際のプラン切替の判断軸。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

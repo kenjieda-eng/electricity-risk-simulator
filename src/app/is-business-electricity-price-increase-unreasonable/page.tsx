@@ -90,6 +90,9 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             請求書を手元に用意し、Step1から順番に確認していくことで、値上げの主因を特定できます。複数のステップで「あり」が出る場合は、複合要因として整理してください。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -154,6 +157,9 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             月5万kWhを使用する高圧契約法人を想定した参考値です。使用量の変化と月額変化の組み合わせで原因を絞り込むことができます。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
@@ -206,12 +212,18 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
             請求総額だけでは理由が分かりません。使用量（kWh）と実質単価を分けて見ると、節電で対応すべき論点か、契約条件を見直すべき論点かを
             切り分けやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">補助金終了や契約更新で見え方が変わることがある</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             補助金終了と契約更新が重なると、上昇幅が大きく見えやすくなります。この場合は単一原因ではなく、政策要因と契約要因を分けて確認することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -220,6 +232,9 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             市場連動要素がある契約では、需給や市場価格の変動が請求へ反映されやすく、短期間で振れ幅が大きくなることがあります。契約方式を確認し、
             許容できる変動幅かどうかを見直すことが有効です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -238,6 +253,9 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             単純な単価比較だけではなく、調整項目の扱い、契約期間、更新条件、違約金などを同時に確認します。違和感があるときほど、
             「高いか安いか」ではなく「自社条件として妥当か」で判断することが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -291,6 +309,7 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
               title: "固定プランでも燃料費調整は変動するのか",
               description: "値上げが固定プランでも起こる仕組みの整理。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

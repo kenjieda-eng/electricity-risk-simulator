@@ -144,6 +144,9 @@ export default function HowToCheckCapacityContributionTermsPage() {
             </Link>{" "}
             で解説しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -152,6 +155,9 @@ export default function HowToCheckCapacityContributionTermsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             容量拠出金は、見積書への記載方法が電力会社によって異なります。以下の3パターンを確認します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -184,6 +190,9 @@ export default function HowToCheckCapacityContributionTermsPage() {
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             長期契約（2〜3年）を結ぶ場合、契約締結時点では見積に含まれていた容量拠出金の単価が、翌年度以降に上昇した分をどちらが負担するかを確認する必要があります。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>「容量拠出金の単価は固定ですか？それとも毎年変動しますか？」を必ず確認する</li>
@@ -229,6 +238,9 @@ export default function HowToCheckCapacityContributionTermsPage() {
             <li>容量拠出金単価が今後上昇する見込みがある場合、3年固定契約で現在の単価を固定することがコスト優位になる可能性がある</li>
             <li>容量拠出金は業界全体で発生するコストであり、「含まれていない」見積が実際に安いわけではない点に注意する</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -280,6 +292,7 @@ export default function HowToCheckCapacityContributionTermsPage() {
               title: "固定プランでも燃料費調整は変動するのか",
               description: "固定プランの変動リスクを容量拠出金と合わせて確認。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 

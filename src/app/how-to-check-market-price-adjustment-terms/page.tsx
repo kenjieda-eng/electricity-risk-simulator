@@ -145,6 +145,9 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
             </Link>{" "}
             で整理しています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -206,6 +209,9 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             これらの名称がない場合でも、「電力量料金は市場の状況に応じて変動します」などの記述があれば市場連動の要素が含まれている可能性があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -214,6 +220,9 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書を受け取ったら、以下の箇所を確認します。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
             <li>見積書の「電力量料金」の欄に「変動」「市場」「JEPX」などの文言がないか確認する</li>
@@ -230,6 +239,9 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見積書だけでは判断できない場合は、以下の質問を電力会社に問い合わせます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 space-y-3">
             {[
@@ -314,6 +326,7 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
               title: "法人の電力契約で単価以外に確認したい項目",
               description: "条件・リスク・運用面の確認ポイント。",
             },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
 
