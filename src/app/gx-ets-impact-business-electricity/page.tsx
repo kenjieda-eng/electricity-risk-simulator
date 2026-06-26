@@ -84,6 +84,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">GX-ETSとは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX-ETS（グリーン・トランスフォーメーション排出量取引制度）は、日本版のCap & Trade型排出量取引制度で、GX推進法に基づき2023年から試行運用が始まりました。2026年度には本格稼働し、排出量が一定規模以上の企業を対象に、排出枠の割当と取引が義務化されます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力会社は発電に伴うCO2排出量が巨大なため、制度開始当初から対象事業者となる見込みです。電力会社が取得する排出枠のコストは、最終的には電力料金に転嫁される構造が想定されています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">電気料金への波及経路</h2>
@@ -94,6 +97,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">法人が備えるべきアクション</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①自社のScope2排出量を把握し、GX-ETS対象となる規模か確認、②電力会社別の排出係数と電気料金の比較、③再エネ電源への切替検討、④長期契約（PPA）による価格ヘッジ、の順で備えを進めます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">特に製造業・物流業など電力多消費業種では、GX-ETS対応が中長期の競争力に直結するため、経営層を巻き込んだロードマップ策定が重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">実務チェックリスト</h2>
@@ -108,6 +114,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">GX-ETSはGX推進法（2023年5月成立、7月施行）を根拠法令とし、GX推進機構が運用主体となっています。並行して、2028年の化石燃料賦課金・2033年の有償オークション導入が段階的に進められる予定です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">関連制度としては、GHGプロトコル（国際標準の排出量算定ルール）、SBT（科学的根拠に基づく削減目標）、TCFD（気候関連財務情報開示）が企業の対応上の基盤になります。これらと組み合わせて、社内体制を整えることが推奨されます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -136,6 +145,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事ではCO2排出量の定量管理と再エネ電力調達の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -176,6 +188,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -231,6 +246,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -264,6 +282,7 @@ export default function Page() {
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

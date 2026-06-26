@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">従業員向け課金のパターン</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①無料供与：事業所に設置した充電器を従業員が自由利用。福利厚生として税務処理。②従量課金：充電量に応じて従業員に請求。③サブスク：月額固定で使い放題。④割引券・ポイント：利用実績に応じてインセンティブ。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">米国・欧州では多様な課金方式が導入されており、日本でも大企業中心に普及が進んでいます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">税務上の留意点</h2>
@@ -97,6 +100,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従業員向け充電の税務整理は、国税庁「法人税法基本通達」および「所得税法基本通達」で扱い方の指針が示されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">充電管理プラットフォームの標準規格（OCPP）は、Open Charge Alliance（OCA）公式サイトで詳細仕様が公開されています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -121,6 +127,7 @@ export default function Page() {
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

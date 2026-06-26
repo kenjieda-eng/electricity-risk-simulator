@@ -204,6 +204,9 @@ export default function EvChargingElectricityCostBusinessPage() {
               <strong>急速充電（20〜50kW）</strong>、<strong>超急速充電（90〜150kW以上）</strong>の3分類が主流です。
               充電器の定格出力 × 稼働時間 で月間消費電力を概算します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
 
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -364,6 +367,9 @@ export default function EvChargingElectricityCostBusinessPage() {
               EV充電コストは、時間帯別料金（TOU）や深夜電力プランとの組合せで大幅に下げられます。
               業務車両の運行時間とセットで充電スケジュールを設計します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {touOptimization.map((t, i) => (
@@ -480,6 +486,7 @@ export default function EvChargingElectricityCostBusinessPage() {
                 description:
                   "EVを蓄電池として活用し、BCPとピークカットに併用する運用モデル。",
               },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

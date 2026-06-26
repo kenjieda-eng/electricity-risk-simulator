@@ -133,6 +133,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">エネマネ投資のROI試算とは（全体像）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">エネルギーマネジメントシステム（BEMS/FEMS/EMS）への投資判断は、『投資した金額を何年で回収できるか（投資回収年数）』と『投資に対するリターン（ROI）』という2つの指標を中核に据えます。装置の導入には数百万円〜数千万円の初期投資が必要になるため、年間でどれだけ電気代が下がるか・どれだけ収益が生まれるかを定量的に見積もり、回収年数に落とし込むことが投資判断の出発点です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">本ページでは、まず投資の主要コストと年間削減効果の見積り方を押さえ、回収年数の計算式・規模別の試算シナリオ・補助金活用後の改善・効果検証（M&V）まで、実務で使える順序で整理します。掲載する数値はいずれも前提を置いた目安であり、自社の電力使用実態に基づく再計算が前提です（出典: SII / 省エネルギーセンター / 資源エネルギー庁 等から整理・2025年時点）。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -166,6 +169,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">年間電気代1億円の工場でBEMS導入→5〜15%削減なら年500万〜1,500万円の削減。投資2,000万円なら1.5〜4年で回収の試算になります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">削減効果の見積りで重要なのは、楽観的な削減率を置いて回収を短く見せないことです。見える化（計測・可視化）だけで得られる削減と、自動制御まで踏み込んで得られる削減は水準が異なります。一般に、見える化と運用改善だけでは数%程度、空調・生産設備の自動制御まで連携すると削減幅が広がる傾向です。削減率はレンジ（範囲）で持ち、保守的なケースでも回収が成立するかを確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">契約電力の引き下げ（基本料金の削減）は、ピークカットによって最大需要を抑えることで実現します。電力量の削減と並行して、デマンド管理によるピーク抑制を効果に織り込むと、回収年数の見積りがより現実的になります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -190,6 +196,9 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">規模別のROI試算シナリオ例</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">以下はいずれも前提を置いたシナリオ例で、実際の数値は電力使用実態・設備構成・運用品質で変動します。自社条件での再計算が前提です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700">
                 <p className="font-semibold text-slate-900">中小規模（年間電気代2,000万円）</p>
@@ -229,6 +238,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ROIは、①導入時のコミッショニング（初期チューニング）の品質、②運用担当者の育成、③定期的な効果検証、で大きく変わります。装置導入だけで終わると効果が出ず、運用改善と一体で進めることが重要です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">補助金（省エネ補助金・GX関連補助金）で初期投資を抑える選択肢も活用します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">効果が出ない最大の要因は、装置を入れただけで運用改善が伴わないことです。見える化で問題箇所を特定しても、運用ルールの見直しや制御設定の最適化（チューニング）を継続しなければ、削減は定着しません。導入後はPDCA（計画・実行・検証・改善）を回し、季節やデマンド契約の見直しに合わせて設定を更新していく体制づくりが、ROI最大化の本質です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資ゼロ〜小額でできる打ち手として、電力契約の見直しやデマンド削減を併走させると、設備投資の回収議論の前に削減効果が得られる場合があります。{" "}
               <Link href="/demand-response-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドレスポンスの費用対効果</Link>
               も参考になります。</p>
@@ -248,6 +260,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">年間削減：電力量10%削減＝1,000万円／年。ピークカット10%で契約電力減＝240万円／年。合計：1,240万円／年。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資回収：1,000万円÷1,240万円＝約0.8年。5年累計削減額：5,200万円。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">実際の効果はチューニングと運用で変わるため、導入後1年間は検証期間として設けるのが標準です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -267,6 +282,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">BEMS・FEMS導入補助金は、資源エネルギー庁の「省エネルギー投資促進支援事業費補助金」が代表的です。公募は毎年4月〜8月が中心。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">補助金活用後のエビデンス管理（削減実績報告）は、省エネ法定期報告と一体化させることで運用効率化できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
@@ -305,6 +323,7 @@ export default function Page() {
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

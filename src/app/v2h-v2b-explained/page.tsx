@@ -408,6 +408,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               V2X（Vehicle to Everything）は、EVバッテリーを蓄電池として活用する技術の総称。給電先により『V2H』『V2B』『V2G』に分類されます。法人用途では業務用建物向けのV2Bが中心です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {conceptOverview.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -459,6 +462,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">主要V2H機器メーカー比較表</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               国内で実績のあるV2H/V2B機器メーカー5社を、最大出力・価格・特徴で比較しました。住宅用・業務用の両方を網羅しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full text-sm">
@@ -528,6 +534,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               V2H/V2B導入時に活用できる補助金・税制優遇を6種類整理しました。複数併用で初期負担を大幅圧縮できるケースが多く、申請時期の同時並行管理が重要です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {subsidyList.map((item) => (
                 <div key={item.name} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -577,6 +586,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               V2H/V2B導入を成功させるには、機器選定だけでなく運用設計が重要です。EV車両運用との整合、電力契約との連携、SOC管理、大電流対応、バッテリー劣化の5つの留意点を整理しました。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {designConsiderations.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -617,6 +629,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               V2H/V2B導入の検討から運用開始までの12項目チェックリスト。各項目を順を追って整理することで、機器選定・補助金活用・運用設計の漏れを防げます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -628,6 +643,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターでV2H導入後の電気代を試算する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               V2H/V2B導入はピークカット・TOU活用・燃料費削減の3軸で電気代に影響します。シミュレーターで現行年間電気代と上振れリスクを把握し、V2H投資の優先順位付けの基礎データとしてご活用ください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約での年間電気代と上振れリスクを確認する</li>
@@ -669,6 +687,7 @@ export default function Page() {
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光の補助金", description: "蓄電池系補助金。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率", description: "申請タイミング最適化。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "EV充電負荷時の契約見直し。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

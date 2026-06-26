@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">CDP質問書とは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">CDP（旧：Carbon Disclosure Project）は、気候変動・森林・水に関する企業開示を評価する国際NGOです。CDP気候変動質問書は、グローバル機関投資家のエンゲージメントツールとして位置づけられ、日本企業も2,000社以上が回答しています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2024年以降の質問書ではScope2排出量の算定方法、再エネ調達手段、追加性（Additionality）の確認が強化され、数字の提出だけでなく調達戦略の開示が重視されています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">電力関連の主要な質問項目</h2>
@@ -95,6 +98,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">CDP質問書はGHGプロトコルScope2ガイダンスに準拠しており、同プロトコルで定められたロケーション基準・マーケット基準の算定ルールを理解しておくことが前提となります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT認定企業は、CDP質問書での優遇スコアが与えられるため、両方への対応を統合的に進めるのが効率的です。TCFD推奨情報の開示との連携も重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -120,6 +126,7 @@ export default function Page() {
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
