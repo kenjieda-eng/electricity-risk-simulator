@@ -95,6 +95,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">大規模言語モデル（LLM）の学習には1回あたり数GWh〜数十GWhの電力が必要で、数万台のGPUを数週間〜数ヶ月稼働させます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">一方、推論（実際の利用）は1クエリあたり数Wh程度ですが、利用規模が大きくなると学習の数倍の累積消費になります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">実用段階でのエネルギー管理は推論の効率化が中心課題です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">GPU・アクセラレータの電力消費</h2>
@@ -104,6 +107,9 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">電力効率化の方向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">モデル圧縮（量子化・蒸留）、推論専用チップ、液冷・浸漬冷却、動的負荷分散、再エネ地域への移設など、複数アプローチが並行で進んでいます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -122,6 +128,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事ではAI時代の電力需要動向の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -163,6 +172,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -193,6 +205,9 @@ export default function Page() {
               <li><strong>補助金機会逃し:</strong> 申請期限・要件を把握せず、活用可能な補助金を逃すパターン。→商工会議所・専門コンサル活用を検討。</li>
               <li><strong>BCP軽視:</strong> 停電・新電力撤退リスクを過小評価し、事業中断時の損失を最小化できないパターン。→最低限のBCP設計を早期着手。</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -217,6 +232,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -245,6 +263,7 @@ export default function Page() {
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

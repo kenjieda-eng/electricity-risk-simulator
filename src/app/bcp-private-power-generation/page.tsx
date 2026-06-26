@@ -88,6 +88,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               BCP目的で検討される自家発電は、主に<strong>ディーゼル発電機・ガスタービン（コジェネ含む）・太陽光+蓄電池</strong>の3タイプです。導入コスト・稼働可能時間・起動時間・燃料備蓄の観点で特徴が大きく異なります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[760px] border-collapse text-sm text-slate-700">
                 <thead className="bg-slate-50 text-slate-900">
@@ -148,6 +151,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               一方で、非常用ディーゼル専用の構成は平常時に稼働しないため、純粋な「保険料」としてのコスト増にしかなりません。導入を躊躇される場合が多いのも、この経済性の薄さが一因です。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -169,6 +175,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">補助金活用の現状（2026年度）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               2026年度時点で、自家発電関連には以下のような補助金が活用できます。公募時期・要件は毎年変わるため、最新情報は各公募サイトで確認してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>需要家主導型太陽光発電導入促進事業（経産省）：オンサイト太陽光に対し1/2〜2/3補助</li>
@@ -213,6 +222,9 @@ export default function Page() {
               <li>□ コジェネ導入時は系統連系の接続検討を事前に済ませている</li>
               <li>□ 脱炭素目標（Scope1・Scope2）との整合を確認している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -229,6 +241,7 @@ export default function Page() {
               { href: "/outage-loss-simulation-by-industry", title: "停電時の損失試算と投資判断", description: "業種別の時間当たり損失額。" },
               { href: "/microgrid-for-business", title: "マイクログリッドとは", description: "自立運転を実現する電力システム。" },
               { href: "/energy-bcp-overview", title: "法人の電力BCP概論", description: "事業継続に必要な電力量の算定から。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

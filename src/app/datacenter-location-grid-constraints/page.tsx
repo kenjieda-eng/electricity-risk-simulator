@@ -83,6 +83,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">送電網制約の現状</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター大規模化に伴い、日本国内でも系統接続が受けられない・長時間待たされる事例が増えています。特に首都圏・関西圏の主要エリアでは系統空き容量が逼迫しており、新設が困難なケースがあります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">制約の背景には、①送電網の老朽化・増強遅延、②再エネ接続の増加、③特定エリアへの需要集中、があります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">空き容量の確認方法</h2>
@@ -93,6 +96,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">ノンファーム型接続など新方式</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">近年、系統混雑エリアでの接続を可能にするため、ノンファーム型接続（需給逼迫時に接続制限を受け入れる代わりに接続可能）、容量市場連動型などの新方式が導入されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">データセンター事業者は、従来のファーム接続とノンファーム接続のハイブリッド運用を検討することで、立地選択肢を広げています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">代替立地としての地方エリア</h2>
@@ -105,6 +111,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">系統空き容量情報は、各一般送配電事業者（例：東京電力パワーグリッド、関西電力送配電）の公式サイトで随時更新されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ノンファーム型接続・容量市場連動型の制度詳細は、電力広域的運営推進機関（OCCTO）および経産省「電力ネットワーク次世代化小委員会」の資料で確認できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -130,6 +139,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事ではAI時代の電力需要動向の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -170,6 +182,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -225,6 +240,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -258,6 +276,7 @@ export default function Page() {
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

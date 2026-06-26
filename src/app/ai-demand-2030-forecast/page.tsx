@@ -125,6 +125,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これに伴い、データセンター事業者の電力需要は急増し、従来の電力需要予測を大幅に上回るペースで伸びています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力需要が急増する構造を分解すると、大きく3つの要素があります。第一に、AIアクセラレータ（GPU等）1基あたりの消費電力が世代ごとに上昇していること。第二に、学習だけでなく、サービス提供である「推論」が24時間365日稼働するため、ベースロード需要そのものが底上げされること。第三に、高密度実装による発熱増で、冷却に要する電力が増えやすいことです。これらが重なり、1ラックあたりの消費電力が従来のサーバーラックの数倍に達するケースも珍しくなくなっています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">重要なのは、AIの電力需要は「一過性のブーム」ではなく、デジタルサービスの基盤需要として定着しつつある点です。クラウド、動画配信、IoT、そして生成AIと、データ処理量の拡大は構造的なトレンドであり、電力需要予測の前提そのものを更新する必要が出てきています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -142,6 +145,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【NEDO】日本のAI関連電力消費量：2030年には現在の3〜5倍の可能性。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Goldman Sachs予測】米国データセンター電力：2030年までに電力総需要の8%に到達（現在は3%）。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">予測には不確実性がありますが、いずれも「急増」という方向性は共通です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
@@ -190,6 +196,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需要の伸びを抑える鍵が、データセンターの電力効率を示すPUE（Power Usage Effectiveness）の改善です。PUEは総消費電力をIT機器消費電力で割った値で、1.0に近いほど冷却などのオーバーヘッドが小さく効率的です。従来型のデータセンターでは1.5前後だった例もありますが、最新の大規模施設では外気冷却や運用最適化により1.2前後、さらに液冷の導入で1.1付近を目指す動きが進んでいます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">AIサーバーは高発熱のため空冷では限界があり、サーバーに直接冷却液を循環させる「液冷（ダイレクト・トゥ・チップ／液浸）」が急速に普及しつつあります。冷却の効率化は、増え続けるIT負荷の伸びを部分的に相殺し、PUE改善を通じて施設全体の電力需要の増加を緩和します。冷却最適化の具体的な手法は<Link href="/datacenter-cooling-optimization" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター冷却最適化の解説</Link>も参照してください。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">もう一つの柱が再生可能エネルギーの長期調達です。大手クラウド・AI事業者はコーポレートPPAを通じて大量の再エネ電力を確保し、脱炭素目標の達成と価格変動ヘッジを同時に図っています。再エネ調達競争が激化すると、PPA価格や良質な電源の確保が難しくなる側面もあり、需要家全体の調達環境に影響します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -205,6 +214,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2030年までのkWhあたり数%〜10%程度の上昇要因となる可能性があり、長期の電力コスト計画に織り込む必要があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">波及の経路をもう少し具体的に見ると、まず需要の伸びが供給力を圧迫すれば、卸電力市場（JEPX）の価格に上昇圧力がかかります。次に、系統増強に要する投資は託送料金等を通じて広く需要家に按分される構造のため、データセンターを利用していない企業にも間接的にコストが波及し得ます。さらに、再エネ電源の争奪が進めばPPA価格や再エネ由来電力の調達コストが上がる可能性があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ただし、これらの上昇圧力は電源の新設・系統増強・効率化技術の進展によって相殺され得るものであり、波及の度合いは政策と投資の進み方に強く依存します。確定的に「いくら上がる」と断じることはできません。自社の電気料金が需要・市況変動でどう動くかの感応度は、当サイトの<Link href="/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電気料金上昇リスクシミュレーター</Link>でも目安を試算できます。<Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整制度</Link>の理解と合わせて、料金変動の構造を押さえておくとよいでしょう。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -247,12 +259,18 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">③ 再エネ長期調達：</span>コーポレートPPA等で再エネを長期固定で確保し、価格変動ヘッジと脱炭素を両立。早期の確保が有利になり得る。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">④ 受電条件・系統事情の確認：</span>新増設を計画する場合は系統の空き容量・増強負担・接続時期を早期に確認し、立地戦略に反映する。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">⑤ 契約形態の分散と省エネ：</span>固定型・市場連動型の併用でリスクを管理し、デマンド管理や高効率機器で使用量を抑える。一般の法人ユーザーにも有効。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">世界の電力需要動向は、IEA「World Energy Outlook」「Electricity Report」で継続的に分析されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本国内のデータセンター・AI関連電力需要は、経産省「総合エネルギー調査会」の電力需給小委員会や次世代電力ネットワーク小委員会で議論されており、議事録が公開されています。国内の需給状況はOCCTO（電力広域的運営推進機関）、卸価格はJEPX（日本卸電力取引所）の公表データで確認できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -290,6 +308,7 @@ export default function Page() {
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

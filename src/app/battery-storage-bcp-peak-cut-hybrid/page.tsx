@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">蓄電池のBCP活用の基本</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">産業用蓄電池は、停電時のバックアップ電源と平常時のピークカット・デマンド制御の両方で使えます。単一用途（BCPのみ）だと投資回収が難しい一方、兼用運用（ハイブリッド）でROIが大きく改善します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">リチウムイオン電池の価格は過去10年で1/5以下に下がっており、2026年時点でkWhあたり5〜10万円程度まで低下しています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">ハイブリッド運用の収益源</h2>
@@ -98,6 +101,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">蓄電池導入補助金は、環境省「レジリエンス強化型蓄電池導入支援事業」、経産省「系統用蓄電池・再エネ関連補助金」が代表的です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">税制優遇では、中小企業経営強化税制（即時償却）、カーボンニュートラル投資促進税制（税額控除）が活用可能です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -122,6 +128,7 @@ export default function Page() {
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

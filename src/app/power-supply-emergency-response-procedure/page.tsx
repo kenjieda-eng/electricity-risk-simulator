@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">需給ひっ迫警報・注意報とは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力需給ひっ迫注意報・警報は、電力需給が逼迫して大規模停電のおそれがあるときに、経産省から発令される注意喚起です。注意報は予備率5%以下、警報は予備率3%以下が発令目安です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2022年3月に初めて東京エリアで警報が発令されて以来、冬季・夏季のピーク期に注意報が発令される事例が増えています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">レベル別の節電アクション</h2>
@@ -97,6 +100,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給ひっ迫警報・注意報の発令判断は、電力広域的運営推進機関（OCCTO）が運用する需給調整機能と、経産省の需給監視に基づきます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">DR（デマンドレスポンス）参加については、需給調整市場（2021年開設）への参加契約をアグリゲーター経由で結ぶことで、対価を得ることが可能です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -121,6 +127,7 @@ export default function Page() {
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
