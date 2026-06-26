@@ -372,6 +372,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               電力BCP訓練は『計画書の整備』『機器導入』だけでは果たせない、実災害時の業務継続率を決定づける重要要素です。月次・四半期・年次の3層運用が国際標準（ISO 22301）でも推奨されています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {drillSignificance.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -416,6 +419,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               停電時間（30分〜72時間以上）別に、業務継続レベル・設備運用・実施アクション・主要リスクを整理した実務マニュアル表です。訓練シナリオ設計と現場対応の両方の基礎資料として活用してください。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead>
@@ -449,6 +455,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">電力BCP投資の費用対効果表</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               BCP投資6種別（UPS・中型発電機・大型発電機・蓄電池・V2H・自家消費太陽光）の投資額・運用時間・対象業種・ROIの目安を整理しました。優先順位付けの基礎資料としてご活用ください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="min-w-full text-sm">
@@ -518,6 +527,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               準備→実施→振り返り→PDCAの4フェーズで設計することで、訓練の質と継続性が確保できます。各フェーズの要点を整理しました。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {trainingExecutionSteps.map((item) => (
                 <div key={item.phase} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -532,6 +544,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">DR・需給ひっ迫対応の訓練ポイント</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               2022〜2023年の需給ひっ迫警報発令を経験し、DR対応が新たな訓練必須テーマとなりました。警報受領から削減実行まで30分以内を目標とし、社内DR本部の設置・実施手順・報酬請求書類の正確化が訓練ポイントです。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
               <li>警報受領経路の明確化（送配電事業者通知、OCCTO発信、新電力経由のいずれかを事前整理）</li>
@@ -566,6 +581,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターで停電時の経済影響を試算する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               停電時間別の業務継続率・損失額・BCP投資の費用対効果は、自社条件で大きく異なります。シミュレーターで年間電気代と上振れリスクを把握し、BCP投資の優先順位付けの基礎データとしてご活用ください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現行契約の年間電気代と上振れリスクを確認する</li>
@@ -604,6 +622,7 @@ export default function Page() {
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率", description: "申請タイミング最適化。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "BCPと契約の連動。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "地域別の停電傾向把握。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 

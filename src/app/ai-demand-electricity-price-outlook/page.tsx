@@ -91,6 +91,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に印西・千歳・京阪奈といった既存DC集積地では、1地点あたり100MW超のハイパースケールDC計画が同時並行で進行中です。送電網（基幹系統・特別高圧配電網）の空き容量が逼迫し、接続検討回答に2〜3年、変電所増強を伴う場合は5年以上かかるケースが2025年から顕在化しています。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -115,6 +118,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DC事業者だけでなく、同じ系統・変電所を共用する既存の製造業・物流事業者にも、送電設備増強コストが薄く広く転嫁される構造です。「自社は無関係」と見るのではなく、エリアの系統増強計画と料金見通しを確認する姿勢が必要になります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -124,6 +130,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               <Link href="/market-linked-plan" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プラン</Link>を採用している法人は、単価下振れメリットが縮小する一方、夏季ピーク時の上振れリスクは従来同様残ります。2026年以降は「夜間安・昼間高」ではなく「通年やや高＋夏冬の尖り」への構造変化を織り込んだプラン選定が求められます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -149,6 +158,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               長期（3〜5年）では、BCP・マイクログリッド・蓄電池を組み込んだエネルギー自律化の検討が必要です。AI需要による電力ひっ迫リスクが構造化する前に、自社の「電気代感応度」を経営KPIとして可視化し、毎四半期レビューに組み込む体制を整えておくことが有効です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -177,6 +189,7 @@ export default function Page() {
               { href: "/ai-workload-energy-impact", title: "AIワークロードのエネルギー影響", description: "学習・推論の電力消費の実態。" },
               { href: "/market-linked-plan", title: "市場連動プランとは", description: "JEPX価格上昇時の影響を確認する。" },
               { href: "/electricity-price-trend-2019-2025", title: "法人向け電気料金は高止まりしているのか", description: "過去の料金水準推移を確認する。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

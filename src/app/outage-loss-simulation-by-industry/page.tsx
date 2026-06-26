@@ -83,6 +83,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">停電損失の構成要素</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">停電による損失は、①機会損失（売上減少）、②復旧費用（再起動・廃棄・修繕）、③人件費（残業・振替）、④信用損失（顧客離脱・契約違反）、の4要素で構成されます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">業種・停電時間により、これらの比重は大きく変わります。短時間停電は②③、長時間停電は①④の比重が大きくなります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別の損失目安</h2>
@@ -93,6 +96,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">BCP投資のROI判断</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">損失額×発生頻度（期待値）がBCP投資額を上回る場合、投資が正当化されます。停電確率は地域・過去実績で異なり、年0.5〜2回程度の発生を想定することが多いです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">投資判断は、純経済性だけでなく、顧客・従業員・サプライチェーンへの責任という観点も含めて総合的に検討します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">停電損失試算の業種別テンプレート</h2>
@@ -105,6 +111,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">内閣府「事業継続ガイドライン」、経産省「企業BCP策定運用指針」が、BCP策定時の標準的なガイドラインです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">停電損失の業界統計データは、BCPコンサル会社の調査レポート、電気新聞・日経新聞などで定期的に公表されます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -130,6 +139,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では停電・需給ひっ迫時の事業継続の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -170,6 +182,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -225,6 +240,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -258,6 +276,7 @@ export default function Page() {
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

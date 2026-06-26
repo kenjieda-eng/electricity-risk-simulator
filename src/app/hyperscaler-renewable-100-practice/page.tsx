@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">ハイパースケーラーの再エネ100%宣言</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">主要クラウド事業者は、2020年代前半から再エネ100%・カーボンニュートラルの目標を掲げています。Amazon（2025年まで再エネ100%）、Google（2030年までに24/7カーボンフリーエネルギー）、Microsoft（2030年までにカーボンネガティブ）、などが代表例です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">これらの目標は、単なる「年間総量で再エネ」ではなく、時間マッチング（24/7）へと高度化しており、業界の調達基準を引き上げています。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">調達戦略の特徴</h2>
@@ -96,6 +99,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各社の再エネ調達実績はSustainability Report（年次公開）で開示されており、詳細な契約件数・PPA地域・進捗が確認できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">24/7カーボンフリー構想はRE100、UN Energy Compacts（国連エネルギー合意）でも取り上げられ、国際標準化が進んでいます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -120,6 +126,7 @@ export default function Page() {
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
