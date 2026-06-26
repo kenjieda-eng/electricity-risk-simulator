@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">月別電気代の基本パターン</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">小規模店舗の電気代は、夏（7〜9月）と冬（12〜2月）がピークで、春秋（4〜6月、10〜11月）が底になる二峰型が典型です。夏冬のピークは春秋の1.5〜2倍になるケースが多いです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ピークの高さは、業態（物販・飲食・サービス）、空調方式、営業時間、立地（南向き・角地）で変わります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">異常検知のポイント</h2>
@@ -93,6 +96,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 単価（円/kWh）の月次推移を把握している（燃料費調整額の影響）</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 複数店舗の場合、店舗間の使用量／面積比率を比較している</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 異常値検知時のアラート運用ルールが定まっている</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -122,6 +128,7 @@ export default function Page() {
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

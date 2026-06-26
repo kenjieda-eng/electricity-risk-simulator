@@ -173,6 +173,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               また、これらの国の低廉な電気料金は政府補助によって支えられているケースが多く、燃料高騰期には制度改正で<strong>急激な値上げが発生</strong>する可能性があります。2022年のインドネシアPLN改定、2023年のベトナムEVN値上げは、多くの日系進出企業の原価計画を狂わせました。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -230,6 +233,9 @@ export default function Page() {
               <li>□ 政府補助・減免制度の継続性を評価している</li>
               <li>□ 非常用電源・UPSの追加投資を原価計画に織り込んでいる</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -246,6 +252,7 @@ export default function Page() {
               { href: "/global-renewable-procurement-strategy", title: "グローバル企業の再エネ調達戦略", description: "国別の調達手段マッピング。" },
               { href: "/overseas-energy-strategy", title: "海外拠点のエネルギー戦略", description: "多国籍企業の電力調達設計。" },
               { href: "/europe-energy-crisis-lessons", title: "欧州電力危機の教訓", description: "2022年〜の価格変動から学ぶ。" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

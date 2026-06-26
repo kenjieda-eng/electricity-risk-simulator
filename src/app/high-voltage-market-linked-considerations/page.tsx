@@ -180,6 +180,9 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             小口需要家にとっては許容範囲でも、特別高圧需要家にとっては事業継続に影響する規模になる場合があります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         {/* 使用量規模別の市場連動リスク */}
@@ -338,6 +341,9 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
               2021年1月のような急騰が繰り返された場合の年間コストを把握し、事業継続に影響しないかを確認します。
             </li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <div className="mt-6">
@@ -382,6 +388,11 @@ export default function HighVoltageMarketLinkedConsiderationsPage() {
                 href: "/market-linked-vs-fixed",
                 title: "市場連動プランと固定プランの違い",
                 description: "プラン比較の基礎知識。",
+              },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
               },
             ]}
           />

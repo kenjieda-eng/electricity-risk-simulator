@@ -126,6 +126,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">個別契約が放置されたグループでは、各社の担当者が独自に契約更新を行うため、メニューの選択も交渉条件もバラバラになりがちです。ある拠点は市場連動メニュー、別の拠点は固定単価メニュー、さらに別の拠点は旧来の規制料金に近いプランを継続している、といった状態が珍しくありません。この「契約のサイロ化」は、単価の最適化を阻むだけでなく、グループ全体としての電力コストの実態を経営層が把握できない構造的な問題を生みます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">さらに、燃料費調整額や再エネ賦課金、市場連動部分の変動が各社で別々に表れるため、電気料金が上昇したときに「どの拠点・どの契約が原因でコストが膨らんだのか」を切り分ける作業に時間がかかります。契約情報がグループで統一されていないと、料金高騰時の打ち手（メニュー切替・契約電力の見直し・需要平準化）も後手に回りやすくなります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">経理面では、各社が個別に請求書を受領・処理するため、支払いや仕訳の重複作業が発生します。グループ全体で見れば、契約・経理・データ集計のいずれにおいても、個別契約は「規模の不経済」を生んでいると言えます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -155,6 +158,9 @@ export default function Page() {
               </div>
             </div>
             <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">どのスキームを選ぶかは、資本関係（完全子会社か持分法適用か）、経理体制（連結決算・グループ通算の有無）、各社の独立性をどこまで尊重するか、によって変わります。完全子会社中心のグループでは①一括契約が、独立性の高い事業会社が並ぶグループでは②共同購買が選ばれやすい傾向があります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -162,11 +168,17 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">グループ内に自家発電設備や太陽光・コージェネレーションがある場合、自己託送を使って、ある拠点で発電した電気を送配電網経由で離れた自社（グループ）拠点へ供給する選択肢が検討できます。グループ内で電源を融通することで、外部からの購入電力を減らし、調達リスクと脱炭素の両面でメリットを得られる可能性があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需要BG（バランシンググループ）は、複数の需要家拠点をまとめて計画値同時同量の単位として扱う仕組みです。新電力がグループ需要を1つのBGとして運用すると、拠点間で需要の山谷が相殺され、需給管理のコストやインバランスのリスクを抑えやすくなります。これは供給者にとってのコスト低減につながり、結果として契約条件に反映される余地があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ただし、自己託送・需要BGはいずれも制度上の要件や手続き（密接関係性の要件、計画提出、計量・精算の仕組みなど）が細かく定められています。導入を検討する際は、資源エネルギー庁の公表資料や供給者・送配電事業者の説明を確認し、要件を満たすかどうかを個別に判断してください。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">親会社主導の調達ガバナンス</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">調達を集約しても、運用ルール（ガバナンス）が整っていなければ、効果は持続しません。親会社または持株会社が主導して、次の3点を規程化することが重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li><span className="font-semibold">承認権限の集約</span>：一定規模以上の電力契約の締結・更新は本社承認を必須とし、各社が単独で不利な条件に更新することを防ぐ。</li>
               <li><span className="font-semibold">情報の標準化</span>：契約単価・契約電力・燃料費調整・市場連動の有無・契約満了月を統一フォーマットで集約し、グループ横断で比較可能にする。</li>
@@ -188,6 +200,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">既存契約の違約金が発生する場合は、切替タイミングを調整することで違約金を回避するのが得策。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各ステップを実務的に補足します。ステップ①の現状一覧化では、契約電力(kW)・年間使用量(kWh)・現行単価・燃料費調整の方式・市場連動の有無・契約満了月・解約条件を、グループ全社分そろえます。ここがすべての出発点であり、抜け漏れがあると後の交渉や配賦設計に響きます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">ステップ②③では、グループ需要をまとめた条件で複数の供給者に見積りや入札を依頼します。単価だけでなく、燃料費調整・市場連動部分のリスク分担、非化石証書・再エネメニューの提供条件、契約期間や中途解約条件まで含めて比較することが重要です。ステップ④の切替は、後述のとおり契約満了の早い拠点から順に移すローリング方式が、違約金回避の観点で有利です。ステップ⑤の配賦ルールは、各社のメーター実測値（kWh）を基本に、燃料費調整や基本料金部分の按分方法まで明文化しておきます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -220,6 +235,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Scope2は、購入した電気・熱・蒸気の使用に伴う間接的な温室効果ガス排出量を指す区分です（GHGプロトコルによる定義）。サステナビリティ情報開示の進展に伴い、グループ連結ベースでのScope2算定・開示の重要性が高まっています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力調達を一括管理すると、各社の使用電力量・契約上の排出係数・非化石証書や再エネメニューの付与状況を一元的に把握でき、ロケーション基準・マーケット基準のいずれの算定にも必要なデータをそろえやすくなります。各社が個別に契約・データ管理している状態では、係数の取り違えや集計漏れが起きやすく、連結開示の信頼性に影響します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">さらに、グループとして再エネ由来メニューや非化石証書をまとめて調達すれば、連結でのScope2削減を計画的に進められます。算定区分・報告の考え方はGHGプロトコルおよび環境省の公表資料に沿って整理し、開示先（適用される基準・ガイドライン）に合わせて運用してください。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -263,6 +281,7 @@ export default function Page() {
               { href: "/articles/ma-organizational-change", title: "M&A・組織再編時の電力契約", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

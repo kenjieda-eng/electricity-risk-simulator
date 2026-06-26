@@ -85,6 +85,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q1：最終保障供給とは？ A：一般送配電事業者が、電力の供給を受けられない需要家に対して最終的に供給する仕組み。2022年以降の新電力撤退で利用者が急増しました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q2：誰でも申し込める？ A：高圧・特別高圧の需要家が対象。低圧需要家には別の供給制度があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q3：申込方法は？ A：管内の一般送配電事業者のWebサイトから申込書をダウンロードして提出。受付から供給開始まで数日〜2週間程度。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">料金・期間のFAQ</h2>
@@ -102,6 +105,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q9：最終保障供給から切替する前に確認すべきことは？ A：①現在の契約電力・電力使用量を把握、②複数の新電力から見積を取得、③切替手続きに要する期間（通常1〜2ヶ月）を考慮。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q10：最終保障供給中に契約電力が変わった場合は？ A：一般送配電事業者に連絡し、契約電力の見直しを依頼。契約電力の変更は料金に大きく影響するため、早期対応が重要。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q11：切替先の新電力が撤退した場合、再度最終保障供給になる？ A：そのとおり。新電力選定時は、事業継続性（財務体力・供給実績）も評価軸に入れることが重要。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -131,6 +137,7 @@ export default function Page() {
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

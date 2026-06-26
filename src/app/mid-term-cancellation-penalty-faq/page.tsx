@@ -84,6 +84,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q1：違約金はいくらかかる？ A：契約条件により、①定額（数万〜数十万円）、②残存契約期間×月額料金の一定割合、③残存使用量×特定単価、の3パターンが主流です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q2：違約金は交渉で減額できる？ A：値上げ通知後の解約、電力会社側の契約違反、不可抗力での解約などでは減額・免除の余地があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q3：違約金条項がない契約はある？ A：一部の短期契約・自治体向け契約には違約金なしもありますが、長期契約（2年以上）では設定されているのが通常。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">解約プロセスのFAQ</h2>
@@ -95,6 +98,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">切替先選定のFAQ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q7：違約金を払ってでも切替するべき？ A：切替後の年間削減額×残存期間が違約金+切替コストを上回るなら切替が経済的。比較試算は必ず行う。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q8：違約金は次の電力会社が負担してくれる？ A：一部の新電力は、違約金負担特典を提示するケースがあります。切替見積時に確認すると有利。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">紛争時のFAQ</h2>
@@ -106,6 +112,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力契約の違約金に関する監督は、経産省「電力・ガス取引監視等委員会」で行われています。不公正な条項は公正取引委員会にも相談可能です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">下請法・独占禁止法の観点から、明らかに過大な違約金設定は「買いたたき」や「優越的地位濫用」に該当する可能性があります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -131,6 +140,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               特に2024年以降は、「電気代は下がる時代ではなく、構造的に高止まる時代」という認識が経営層にも浸透しつつあります。この認識転換を踏まえた対応策を、本記事では電力契約書の法的観点の観点から整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -171,6 +183,9 @@ export default function Page() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               エリア別では、北海道・沖縄は離島・長距離送電・燃料調達の構造的要因で高単価傾向、関西・九州は原子力稼働影響で比較的安価な時期もあります。9エリアで単価が3-4円/kWh程度の差が生じることは珍しくなく、複数拠点企業は拠点別のプラン最適化が効いてきます。また、再エネ導入可能性（太陽光適地・風力・非化石証書調達難易度）もエリアで差があり、脱炭素対応の戦略立案では無視できない要素です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 
@@ -226,6 +241,9 @@ export default function Page() {
               <li>□ 効果測定のKPI・計測方法を定義している</li>
               <li>□ 万一の撤退・変更時の対応策を用意している</li>
             </ul>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -259,6 +277,7 @@ export default function Page() {
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

@@ -296,6 +296,9 @@ export default function RenewableEnergyPlanExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             日本では、電力の物理的な流通は通常プランと同じ送配電網を経由します。「再エネ」の実態は、再エネ発電所が発電した電力の「環境価値（非化石価値）」を証書の形で取引・付与する仕組みによって実現されています。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">再エネメニューが使われる主な目的</p>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-600">
@@ -359,6 +362,9 @@ export default function RenewableEnergyPlanExplainedPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             使用量規模別に、通常プランからの月額コスト増の目安を示します。上乗せ単価の下限・上限で試算した幅で表示しています。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm leading-6 text-slate-700">
@@ -464,6 +470,9 @@ export default function RenewableEnergyPlanExplainedPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             再エネメニューへの切り替えを検討する際に確認すべき5つの判断軸を整理します。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 space-y-3">
             {decisionPoints.map((point) => (
               <div key={point.no} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -523,6 +532,9 @@ export default function RenewableEnergyPlanExplainedPage() {
             <li>電源指定型の長期契約では解約条件と事業リスクを照合して契約期間を決める</li>
             <li>GHGプロトコルのScope 2開示では証書の詳細情報（番号・発電所・発電月）を書面で取得できるか確認する</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <div className="mt-6">
@@ -562,6 +574,11 @@ export default function RenewableEnergyPlanExplainedPage() {
                 title: "契約メニューの違いを知る（カテゴリ一覧）",
                 description:
                   "固定・市場連動・ハイブリッド・再エネなど各契約タイプの解説ページ一覧。",
+              },
+              {
+                href: "/industry-electricity-calculator",
+                title: "業種別電気料金シミュレーター",
+                description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
               },
             ]}
           />

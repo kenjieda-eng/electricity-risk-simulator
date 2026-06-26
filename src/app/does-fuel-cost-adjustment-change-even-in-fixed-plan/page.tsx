@@ -83,6 +83,9 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
             固定プランは、主に電力量料金単価などの見通しを持ちやすくする契約です。一方、燃料費調整額や再エネ賦課金が別建てで反映される場合、
             月ごとの請求額は変動します。固定という名称だけで「請求が完全固定」と理解すると、比較判断を誤りやすくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -111,6 +114,9 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料費調整額は、発電用燃料価格の変動を電気料金に反映する仕組みです。固定プランでも、この項目が契約単価と別に設定されていれば、
             月ごとに増減し得ます。特に使用量が多い法人や複数拠点を持つ企業では、影響額が大きくなりやすいため注意が必要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -196,6 +202,9 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
             「固定プラン」でも請求額は月<span className="font-semibold text-slate-900">約35万円</span>の変動幅を持ちます。
             これは燃料費調整額が別建てのためで、固定されているのは電力量料金単価だけである点に注意が必要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -203,6 +212,9 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             固定プランでも、燃料費調整額が別建てで反映されるなら請求額は動きます。固定される項目と変動する項目を分けて読み、見積比較と社内説明の前提をそろえることが、
             実務上の判断精度を高めるポイントです。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
         </section>
 
@@ -245,6 +257,11 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
               href: "/why-business-electricity-prices-rise",
               title: "法人の電気料金が上がる理由",
               description: "燃調費を含む上昇要因を全体像で確認できます。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

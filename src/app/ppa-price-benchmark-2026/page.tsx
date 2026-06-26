@@ -391,6 +391,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               2026年時点の日本のコーポレートPPA単価を電源別に整理します。オンサイト/オフサイト/バーチャルの太陽光、風力、バイオマス、再エネアグリゲーションの6タイプで、それぞれの価格レンジと変動要因を解説します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {ppaPriceBySource.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-white p-4">
@@ -438,6 +441,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA案件は10MW〜100MW超までの規模で単価が大きく変動します。スケールメリット・プロジェクトファイナンス組成・税効果の活用可否で決まります。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {ppaPriceByScale.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -475,6 +481,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA契約形態は、完全固定価格・インフレ連動・市場連動カラー・差金決済(CfD)の4タイプから選択します。会計処理・予算管理・リスク許容度で判断します。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 space-y-3">
               {ppaContractTypeComparison.map((item) => (
                 <div key={item.label} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -511,6 +520,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">主要PPA仲介事業者・発電事業者 — 5タイプ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               日本のPPA市場には総合商社・電力会社・再エネ専業・外資系IPP・コンサル仲介の5タイプの事業者が参入しています。それぞれの強み・案件規模・需要家層を整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <div className="mt-4 space-y-3">
               {ppaIntermediaries.map((item) => (
@@ -556,6 +568,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA契約締結前に下記10項目をチェックすることで、長期契約での想定外リスクを大幅に低減できます。
             </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <ol className="mt-4 list-decimal space-y-2 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
               {checklistItems.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -567,6 +582,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">シミュレーターでPPA価格メリットを定量化する</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               PPA契約の経済合理性は、自社の電力単価・需要パターン・契約条件で大きく異なります。シミュレーターで現状契約とPPA契約のトータルコスト比較・年間削減効果・契約期間別の影響を試算できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>現契約とPPA(電源別)の単価差・年間コスト差を比較</li>
@@ -608,6 +626,7 @@ export default function Page() {
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "ビル事業者の打ち手" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備項目" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "PPA電源地選択の参考" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
