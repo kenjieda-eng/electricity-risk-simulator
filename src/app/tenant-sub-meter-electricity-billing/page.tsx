@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">テナント契約の電気代構造</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">商業ビル・オフィスビルでは、ビルオーナーが電力会社と一括契約し、テナントには共益費・専有部電気代として転嫁するパターンが多いです。この場合、テナントはビル経由で間接的に電気代を支払います。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">一方で、テナントが個別契約（メーターごと）を持ち、電力会社に直接支払うパターンもあります。契約形態により管理責任・自由度が変わります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">サブメーターによる按分</h2>
@@ -91,6 +94,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【ビル一括契約＋面積按分】：サブメーターなし、床面積比で按分。実使用量と乖離するリスクあり。不公平感の原因。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【個別契約】：テナントが電力会社と直接契約。自由度・価格交渉権あり。ただし、小規模テナントは単価が高めに。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">規模の大きいテナント（年間数百万円以上）は個別契約が有利なケースが多く、小規模は一括契約が簡便。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -120,6 +126,7 @@ export default function Page() {
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

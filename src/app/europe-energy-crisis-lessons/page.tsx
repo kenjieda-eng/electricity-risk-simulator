@@ -125,6 +125,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">その後、LNG代替調達・需要抑制・原発延命などの対策で2024年には平時水準まで低下しましたが、構造的な価格上昇圧力は残っています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">危機の起点を時系列で整理すると、まず2021年後半からガス在庫の低下と需要回復によって欧州のガス価格は既に上昇傾向にありました。そこに2022年の戦争が重なり、ロシアからのパイプライン供給（特にノルドストリーム経由）が段階的に縮小・停止したことで、欧州はガス供給を世界のLNGスポット市場に求めざるを得なくなりました。これがアジア・欧州間のLNG争奪を引き起こし、価格を世界規模で押し上げました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">2022年夏には記録的な熱波と渇水が追い打ちをかけました。フランスでは原子炉の点検・補修が重なり稼働率が低下し、欧州大陸全体の水力発電量も渇水で落ち込みました。供給力が削られる一方で冷房需要は高まり、卸電力価格は一段と高騰しました。エネルギー危機は単一の要因ではなく、地政学・気象・設備トラブルが複合した「複合危機」だった点を押さえることが重要です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
@@ -179,6 +182,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本も類似のリスクを抱えており、LNG輸入依存・市場連動プラン・産業競争力の観点で欧州の事例を学ぶ価値があります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">産業空洞化のリスクは特に重く受け止められました。アルミ精錬・化学・肥料・ガラスといったエネルギー多消費型産業では、危機局面で減産・操業停止に追い込まれた工場が相次ぎました。これらは一度停止すると再稼働コストが高く、海外移転が進めば地域経済と雇用に長期的な打撃を与えます。電力コストが「単なる経費」ではなく「立地競争力そのもの」であることが改めて認識されました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">また、危機は新電力（独立系小売事業者）の経営リスクも露呈させました。卸価格が小売価格を上回る「逆ザヤ」が長期化し、欧州・日本ともに撤退・倒産する事業者が出ました。需要家側から見れば、契約先の事業継続性（カウンターパーティリスク）も調達戦略で考慮すべき要素になったといえます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -197,6 +203,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【北欧諸国】再エネ・水力の豊富さで危機の影響を相対的に抑制。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本も2022〜2023年に電気・ガス価格激変緩和対策事業を実施。予算規模は累計3兆円超。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">各国の対応を比較すると、対策の「重心」がそれぞれ異なることがわかります。ドイツは供給側（端末整備・原発延命）と需要側（価格上限）の両面、フランスは原子力という自国電源の強みを生かした価格凍結、英国は期間を区切った緊急支援が中心でした。北欧は構造的に再エネ・水力比率が高く、そもそも危機の影響を受けにくい「電源構成の強さ」を体現しました。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
@@ -248,6 +257,9 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">業種別の影響シナリオ（代表的な目安）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力価格の急騰がもたらす影響は業種によって大きく異なります。以下は危機型の価格上昇局面における代表的な影響イメージで、実際の数値は契約形態・自家発の有無・地域により幅があります。あくまでシナリオ例としてご覧ください。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
               <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
                 <h3 className="text-lg font-semibold text-slate-900">製造業（電力多消費）</h3>
@@ -280,6 +292,9 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">企業が取れる具体的なリスク対策</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">欧州危機の教訓を踏まえ、日本の法人ユーザーが実務として取り得る対策を整理します。重要なのは単一の万能策に頼らず、複数の手段を組み合わせる「ポートフォリオ思考」です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">① 契約形態の分散：</span>固定型と市場連動型を併用し、価格変動エクスポージャーを管理する。全量を一方に寄せない。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">② コーポレートPPAの活用：</span>再エネ電源と長期固定価格で契約し、市場変動のヘッジと脱炭素を同時に進める。オンサイト型は自家消費で系統依存も下げられる。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><span className="font-semibold text-slate-800">③ 自家発電・蓄電池：</span>太陽光自家発やコージェネ、蓄電池でピーク需要を削減し、需給逼迫時の調達依存を下げる。BCP（事業継続）にも資する。</p>
@@ -291,6 +306,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">欧州電力危機の詳細分析は、IEA「Electricity Market Report」、ENTSO-E（欧州送電系統運用者ネットワーク）公表資料で時系列で確認できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">日本の激変緩和対策事業の詳細は、資源エネルギー庁公式サイトで公表されています。卸電力価格の国内動向はJEPX（日本卸電力取引所）、需給状況はOCCTO（電力広域的運営推進機関）の公表データで確認できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -328,6 +346,7 @@ export default function Page() {
               { href: "/articles/global-energy", title: "海外拠点・グローバルエネルギー", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

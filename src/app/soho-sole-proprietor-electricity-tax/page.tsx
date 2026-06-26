@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">電気代の家事按分の考え方</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">自宅兼事務所で事業を行う個人事業主は、電気代を「事業利用分」と「私用分」に按分し、事業分のみを必要経費に計上できます。国税庁の指針では、合理的な基準で区分すれば家事按分が認められます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">按分率の根拠として使える基準は、①使用時間（事業時間÷24時間）、②専有面積（事業専用スペース÷全床面積）、③コンセント数（事業機器÷全機器）などです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">典型的な按分率</h2>
@@ -92,6 +95,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">按分方法①：面積比16.7% → 月2,500円、年30,000円を事業経費。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">按分方法②：時間比 198時間÷(24時間×30日)＝27.5% → 月4,125円、年49,500円を事業経費。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">実務では、いずれか合理的な方法を選び、一貫して運用。税務調査での説明のため、根拠書類（記録表）を保管しておきます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -121,6 +127,7 @@ export default function Page() {
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

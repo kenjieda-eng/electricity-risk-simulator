@@ -83,6 +83,9 @@ export default function PowerProcurementAdjustmentFeePage() {
             電源調達調整費は、契約単価そのものではなく、調達コストの変動を反映する追加項目として使われることがあります。見積書で注記扱いになっていると、
             単価比較だけでは差が見えにくくなります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -113,6 +116,9 @@ export default function PowerProcurementAdjustmentFeePage() {
             <li>一見単価が低く見える提案</li>
             <li>複数の調整項目が並ぶ見積</li>
           </ul>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -146,6 +152,9 @@ export default function PowerProcurementAdjustmentFeePage() {
           <h2 className="text-xl font-semibold text-slate-900">電源調達調整費の月額影響シミュレーション</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電源調達調整費が<span className="font-semibold text-slate-900">JEPX月平均と基準単価の差額</span>で算定される場合の月額影響です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
@@ -196,6 +205,9 @@ export default function PowerProcurementAdjustmentFeePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             電源調達調整費は、単価比較だけでは見えにくい実務論点です。法人の電気料金比較では、後から動く項目が何かまで読み込み、契約条件とセットで判断することが重要です。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
         </section>
 
         
@@ -237,6 +249,11 @@ export default function PowerProcurementAdjustmentFeePage() {
               href: "/compare",
               title: "法人向け電気料金比較ページ",
               description: "整理した比較軸を使って条件差を確認できます。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

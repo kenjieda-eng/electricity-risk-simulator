@@ -149,6 +149,9 @@ export default function LedAirConditioningReductionEffectPage() {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">LED化による削減効果・費用対効果（規模別）</h2>
           <p className="mt-2 text-sm text-slate-600">蛍光灯からLED蛍光灯への全灯切り替えの場合</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -264,6 +267,9 @@ export default function LedAirConditioningReductionEffectPage() {
         <div className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">LED化＋空調最適化の合計削減効果（年間試算）</h2>
           <p className="mt-2 text-sm text-slate-600">両施策を組み合わせた場合の年間削減額の目安</p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full text-sm">
               <thead>
@@ -370,6 +376,7 @@ export default function LedAirConditioningReductionEffectPage() {
             { href: "/contract-review-reduction-effect", title: "契約見直しによる削減額の目安", description: "プラン切替・契約電力見直しの効果を解説" },
             { href: "/reduction-measure-difficulty-matrix", title: "削減施策の効果・難易度マトリクス", description: "施策の優先順位を可視化するマトリクス" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきことを解説。" },
+            { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
       </div>

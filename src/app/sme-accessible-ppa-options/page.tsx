@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">中小企業がPPAに参加しにくかった理由</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">従来のコーポレートPPAは、発電事業者が需要家1社と長期契約を結ぶ形が主流で、最低契約規模が数MW以上・年間数億円規模の調達が必要でした。中小企業にとっては契約ハードルが高く、参加は困難でした。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">また、20年の長期契約に耐える信用力（格付け）も要求されるため、中堅以下の企業には参入の壁がありました。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">アグリゲーション型PPAの仕組み</h2>
@@ -93,6 +96,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 信用力要件（契約保証金・親会社保証）を確認している</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 中途解約時のペナルティ条項を理解している</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">☑ 環境価値（トラッキング情報付き）がScope2報告に使える形式か確認している</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -122,6 +128,7 @@ export default function Page() {
               { href: "/articles/corporate-ppa", title: "コーポレートPPA", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

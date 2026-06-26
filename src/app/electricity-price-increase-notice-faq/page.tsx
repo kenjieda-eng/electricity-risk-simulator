@@ -85,6 +85,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q1：値上げ通知の見方は？ A：①値上げ実施日、②値上げ幅（円/kWh・基本料金）、③理由、④解約の自由、の4点を最優先で確認します。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q2：値上げ理由として妥当なもの？ A：燃料費・市場価格・制度改正（託送料金・容量拠出金）などが一般的な理由。燃料費調整ではなく基本単価の改定の場合は、社内説明に根拠が必要です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q3：通知なしの値上げは違法？ A：契約条件により事前通知期間が定められており、通知なしまたは短期通知は契約違反の可能性があります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">交渉の余地FAQ</h2>
@@ -101,6 +104,9 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q8：電力会社から「市場価格高騰のため」と言われたが、具体的な数字を示さない場合は？ A：経産省・電力広域機関が公開する市場価格データと照合。根拠が不明確なら、値上げ幅の妥当性を説明責任として求める。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q9：値上げ通知の書式・記載が不十分な場合は？ A：書面で再発行を依頼。消費者庁・経産省の問い合わせ窓口（電気の消費者相談）にも相談可能。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Q10：契約期間中の値上げを拒絶できる？ A：契約条件次第。多くの場合、値上げ実施前に解約する権利が認められる（違約金なし）ケースがあるため、契約書の確認を優先。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
@@ -130,6 +136,7 @@ export default function Page() {
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

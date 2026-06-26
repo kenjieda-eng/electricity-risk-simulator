@@ -291,6 +291,9 @@ export default function RegionSupplierWithdrawalMapPage() {
           2022年初頭から2023年末にかけて、全国で200社超（高圧向け）の新電力が新規受付停止・既存契約解除・事業廃止のいずれかの対応を取ったとされています。
           解除通知を受けた法人需要家数は全国合計で数十万口規模と推計されており、エネルギー自由化後最大の混乱となりました。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <div className="rounded-xl border border-rose-100 bg-rose-50 p-4 text-center">
             <p className="text-3xl font-bold text-rose-700">200社超</p>
@@ -312,6 +315,9 @@ export default function RegionSupplierWithdrawalMapPage() {
         <h2 className="text-xl font-semibold text-slate-900">エリア別 新電力撤退状況一覧</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           2022〜2025年の状況を10エリアで比較。「撤退規模」はエリア内での相対的な影響度の目安です。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -381,6 +387,9 @@ export default function RegionSupplierWithdrawalMapPage() {
         <p className="mt-2 text-sm leading-7 text-slate-600">
           個別企業名は伏せ、規模感と影響パターンで整理しています。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-4">
           {withdrawalCases.map((item, i) => (
             <div key={i} className="rounded-xl border border-rose-100 bg-rose-50 p-4">
@@ -415,6 +424,9 @@ export default function RegionSupplierWithdrawalMapPage() {
         <p className="mt-2 text-sm leading-7 text-slate-700">
           高圧法人向けの供給契約解除通知を受けた場合、以下の手順で対応してください。
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
         <div className="mt-4 space-y-3">
           {afterNotificationSteps.map((item) => (
             <div key={item.step} className="flex gap-4 items-start">
@@ -446,6 +458,9 @@ export default function RegionSupplierWithdrawalMapPage() {
           切替先が決まらない場合、法律上、旧一般電気事業者（旧一電）が「最終保障供給」として電力を供給する義務を負います。
           ただし最終保障供給の単価は、通常の旧一電の高圧標準メニューより割高（目安: 約10〜20%高い水準）に設定されており、
           長期間そのまま放置するとコスト高になります。
+        </p>
+        <p className="mt-2 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
@@ -520,6 +535,9 @@ export default function RegionSupplierWithdrawalMapPage() {
             <span><span className="font-semibold">事業継続年数・顧客数</span> — 一定規模の顧客基盤と運営実績を持つ事業者の方が安定性が高い傾向がある。</span>
           </li>
         </ul>
+        <p className="mt-3 text-xs text-slate-500">
+          ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+        </p>
       </section>
 
       {/* 注記 */}
@@ -568,6 +586,11 @@ export default function RegionSupplierWithdrawalMapPage() {
               href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "JEPX連動型プランのリスクと活用場面を解説。",
+            },
+            {
+              href: "/industry-electricity-calculator",
+              title: "業種別電気料金シミュレーター",
+              description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
           ]}
         />

@@ -463,6 +463,7 @@ export default function ElectricityGlossaryPage() {
               { href: "/articles/industry-guide", title: "業種別の見直しポイント集（33 業種）", description: "業種別の負荷特性と契約最適化" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
 
