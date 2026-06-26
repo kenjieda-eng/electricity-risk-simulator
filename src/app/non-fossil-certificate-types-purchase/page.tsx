@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">非化石証書とは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">非化石証書は、非化石電源（再エネ・原子力）で発電された電力の「環境価値」を切り離して取引できるようにしたものです。2018年に創設され、日本卸電力取引所（JEPX）の非化石価値取引市場で売買されます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">発行単位は1kWh単位、取引は小売電気事業者と需要家が市場を通じて行います。需要家直接取引は、制度上は2021年以降の需要家公募枠のみで、通常は小売電気事業者経由で購入します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">3種類の証書の違い</h2>
@@ -95,6 +98,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">非化石価値取引市場の運営はJEPX、制度設計は経済産業省（資源エネルギー庁）が担当しています。毎年度のオークション結果・取引量は経産省・JEPXの公式サイトで確認できます。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">CDP回答やRE100報告では、証書購入根拠として「トラッキング情報付きの証書」であることが要求されるため、購入時に必ず確認します。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -120,6 +126,7 @@ export default function Page() {
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

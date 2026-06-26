@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">SBTとは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT（Science Based Targets initiative）は、パリ協定の1.5℃目標と整合する温室効果ガス削減目標を認定する国際イニシアチブで、CDP・WWF・UNGC・WRIの4団体が運営しています。2024年までに世界5,000社以上、日本企業は600社超が認定を取得しています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">認定には、Scope1・Scope2・Scope3の排出削減目標を設定し、審査を経る必要があります。2034年以降は全企業に対し1.5℃目標整合が義務化される見込みです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">電力調達に関わる目標設定</h2>
@@ -94,6 +97,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">SBT認定の審査基準はSBTi公式の「SBTi Corporate Net-Zero Standard」で定められており、削減率・対象範囲・再エネ調達要件が詳細に規定されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">環境省「脱炭素経営ガイドブック」や、経産省のGXリーグ参加企業向けガイドラインも、SBT取得時の実務指針として参照されることが多いです。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -119,6 +125,7 @@ export default function Page() {
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

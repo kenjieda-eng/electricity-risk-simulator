@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">電力データ取得の主要経路</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力使用データの取得元は、①電力会社のWebポータル（CSVダウンロード）、②スマートメーターのBルートAPI、③自社EMS・デマンド監視装置、の3つが主流です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Bルート（Home Route）は、スマートメーターから家庭内・施設内へのリアルタイムデータ送信経路で、Wi-SUNなどの無線で通信します。法人でも一定の条件下で利用可能です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">BIツールでの可視化</h2>
@@ -95,6 +98,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">Bルート利用には電力会社への申込みが必要で、運用は一般社団法人スマートメーターBルート運営管理機構で管理されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力データの外部活用では、経産省「電力データ活用に関するガイドライン」（2021年策定）に沿った個人情報保護・データガバナンスが求められます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -119,6 +125,7 @@ export default function Page() {
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

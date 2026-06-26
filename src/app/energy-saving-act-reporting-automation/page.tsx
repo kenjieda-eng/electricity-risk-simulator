@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">省エネ法定期報告とは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法（エネルギーの使用の合理化等に関する法律）では、エネルギー使用量（原油換算）が一定規模以上の特定事業者に、毎年の定期報告書・中長期計画書の提出を義務付けています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">報告書には、事業所別・設備別のエネルギー使用量、削減実績、今後の計画などを記載します。手作業で集計すると、担当者の工数は数週間〜1ヶ月規模になります。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">自動化の主要アプローチ</h2>
@@ -96,6 +99,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">省エネ法定期報告の様式・記入要領は資源エネルギー庁公式サイトで公開されています。2023年の改正で非化石エネルギーへの転換・電気需要最適化の報告項目が追加されました。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">環境省・経産省が共同で運営する「温室効果ガス排出量算定・報告・公表制度」と併用することで、ESG開示データも一体管理できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -120,6 +126,7 @@ export default function Page() {
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>

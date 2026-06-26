@@ -74,6 +74,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">TOU料金プランとは</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">TOU（Time of Use）料金は、時間帯により単価が変わる料金プランで、昼間ピーク・夜間オフピーク・中間時間の3段階が一般的です。夜間単価は昼間の30〜60%程度まで低下するケースが多いです。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">EV充電は、深夜（オフピーク）に集中させることで、充電コストを大きく削減できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">スマート充電制御</h2>
@@ -97,6 +100,9 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">EV充電の時間帯最適化は、経産省「EV・PHV関連ガイドライン」および主要電力会社の料金プラン詳細で情報提供されています。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需給調整市場への参加はアグリゲーター経由で、OCCTOとアグリゲーター各社の資料で手続き方法を確認できます。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
           </section>
         </section>
 
@@ -121,6 +127,7 @@ export default function Page() {
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
+              { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />
         </div>
