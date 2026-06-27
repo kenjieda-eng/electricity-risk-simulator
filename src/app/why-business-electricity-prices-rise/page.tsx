@@ -21,7 +21,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "電気料金が上がる理由｜法人向けに主要4要因と見直しポイントを整理";
+const pageTitle = "法人の電気料金が上がる理由｜主要4要因と今すぐできる見直し【2026年版】";
 const pageDescription =
   "法人の電気料金が上がる理由は「燃料価格」「市場価格（JEPX）」「制度負担（再エネ賦課金・容量拠出金）」「契約条件」の4要因に整理できます。実データと見直し観点で徹底解説。";
 const publishedDate = "2026-03-01";

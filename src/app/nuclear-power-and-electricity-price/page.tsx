@@ -15,7 +15,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
 
 const pageTitle =
-  "原子力発電所の稼働状況と電気料金の関係｜エリア別の料金差への影響を解説";
+  "原発の稼働状況と電気料金の関係｜再稼働エリアの料金差を解説【法人向け】";
 const pageDescription =
   "原発稼働エリアと非稼働エリアの法人電気料金差を分析。再稼働が進んだ場合の料金見通し、法人の立地判断への示唆を整理。";
 const pageUrl = "https://simulator.eic-jp.org/nuclear-power-and-electricity-price";

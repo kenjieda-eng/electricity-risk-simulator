@@ -11,7 +11,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
-  "供給地点特定番号とは｜電力切り替え・見積依頼で必要になる基本情報を解説";
+  "供給地点特定番号とは｜22桁の意味・検針票での確認方法を解説【法人向け】";
 const pageDescription =
   "供給地点特定番号の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。";
 
