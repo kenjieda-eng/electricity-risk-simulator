@@ -11,7 +11,7 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "データセンター電力需要・AI電力消費の急増｜2026年最新動向と法人電気料金への影響";
+const pageTitle = "AI・データセンター電力需要は2030年に2倍｜法人電気料金への影響と備え";
 const pageDescription =
   "生成AI・LLM普及で2030年までにデータセンター電力消費は約2倍に。日本では2034年までに最大1,800万世帯分の電力を消費する見通し（IEA・OCCTO予測）。AI電力消費の実態、JEPX価格・託送料金への波及メカニズム、法人契約者が備えるべき3つのリスクを最新データで解説。";
 const pageUrl = "https://simulator.eic-jp.org/datacenter-electricity-demand-surge";

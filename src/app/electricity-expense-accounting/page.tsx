@@ -11,9 +11,9 @@ import { CATEGORY_FAQ_22_35 } from "../../data/categoryFaq22to35";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "電気代の勘定科目と仕訳｜部門配賦と月次締めの実務";
+const pageTitle = "電気代の勘定科目と仕訳｜部門配賦・月次締めの実務を法人経理向けに解説";
 const pageDescription =
-  "電気代の基本的な勘定科目（水道光熱費・製造経費）、部門配賦の考え方、月次締め時の処理を整理します。";
+  "電気代の勘定科目（水道光熱費・製造経費）の基本、部門配賦の考え方、月次締めの処理を法人経理向けに整理。事業用・家事按分やインボイス対応の詳細は勘定科目『完全ガイド』もあわせて参照。";
 const pageUrl = "https://simulator.eic-jp.org/electricity-expense-accounting";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["accounting-tax"] ?? [];

@@ -7,9 +7,9 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "EV充電インフラ用語集｜CHAdeMO・OCPP・V2H・急速充電";
+const pageTitle = "EV充電インフラ用語集｜CHAdeMO・OCPP・V2H・急速充電【2026年版】";
 const pageDescription =
-  "EV充電設備・規格・運用に関する用語を整理した用語集です。";
+  "CHAdeMO・OCPP・V2H、急速/普通充電など、EV充電インフラの規格・運用・補助金に関する用語を法人向けにわかりやすく整理。導入検討で迷わない基礎知識を網羅した用語集です。";
 const pageUrl = "https://simulator.eic-jp.org/ev-charging-glossary";
 
 export const metadata: Metadata = {

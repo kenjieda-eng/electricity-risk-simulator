@@ -9,9 +9,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 import SisterSiteLink from "../../components/simulator/SisterSiteLink";
 import FloatingCta from "../../components/simulator/FloatingCta";
 
-const pageTitle = "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策を完全解説";
+const pageTitle = "容量拠出金とは｜なぜ電気代に上乗せされるのか仕組みを図解【法人向け】";
 const pageDescription =
-  "容量拠出金とは何か、なぜ電気料金に上乗せされるのか、2026年度の単価と法人への影響額、月額試算と対策をわかりやすく解説。既存「仕組み」記事との差別化版。";
+  "容量拠出金とは何か、なぜ電気料金に上乗せされるのか、2026年度の単価と法人への影響額、月額試算と基本的な対策をわかりやすく解説します。";
 const publishedDate = "2026-05-09";
 const pageUrl = "https://simulator.eic-jp.org/what-is-capacity-contribution";
 

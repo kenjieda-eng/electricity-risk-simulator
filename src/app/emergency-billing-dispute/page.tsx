@@ -13,7 +13,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["emergency-response"];
 
 
-const pageTitle = "電気料金の二重請求・過請求が発生したときの対応｜法人向け緊急対応ガイド";
+const pageTitle = "電気料金の二重請求・過請求への対応｜原因別チェックと返金交渉【法人緊急ガイド】";
 const pageDescription =
   "電気料金に二重請求・過大請求が発生した場合の確認フローと対処法を解説。切替時の新旧両社からの二重請求、メーター誤差、契約電力の誤設定、調整費計算ミスなど原因別チェックリストと返金交渉のポイントをまとめます。";
 const pageUrl = "https://simulator.eic-jp.org/emergency-billing-dispute";
