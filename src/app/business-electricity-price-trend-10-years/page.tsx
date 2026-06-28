@@ -621,6 +621,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               description: "推移の理解を、製造・流通・医療・サービスなど業種別の電力使用特性に接続できます。",
             },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/europe-energy-crisis-lessons", title: "欧州エネルギー危機の教訓", description: "欧州の電力危機から日本の法人が学べる備え。" },
           ]}
         />
 

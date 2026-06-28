@@ -445,6 +445,7 @@ export default function BudgetPlanningInHighPriceEraPage() {
               description: "自治体担当者向けの電気代予算管理・補正予算対応の解説。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/low-margin-business-plan-selection", title: "低利益率事業のプラン選択", description: "利益率の低い事業に適した料金プランの選び方。" },
           ]}
         />
       </div>

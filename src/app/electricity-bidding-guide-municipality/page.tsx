@@ -298,6 +298,7 @@ export default function ElectricityBiddingGuideMunicipalityPage() {
                 description: "入札不調・撤退後に備える最終保障供給の仕組み。",
               },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/municipality-local-new-power", title: "自治体と地域新電力", description: "自治体が地域新電力を活用する際の論点を整理。" },
             ]}
           />
 

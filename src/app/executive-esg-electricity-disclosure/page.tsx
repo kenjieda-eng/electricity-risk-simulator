@@ -465,6 +465,7 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
               description: "電力コストに関するリスクシナリオ解説の一覧。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/cdp-questionnaire-electricity-response", title: "CDP質問書への電力・排出量の回答方法", description: "CDP気候変動質問書で問われる電力・Scope2排出の回答ポイントを整理。" },
           ]}
         />
       </div>

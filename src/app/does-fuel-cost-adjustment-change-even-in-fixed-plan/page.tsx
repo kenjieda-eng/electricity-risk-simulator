@@ -263,6 +263,7 @@ export default function DoesFuelCostAdjustmentChangeEvenInFixedPlanPage() {
               title: "業種別電気料金シミュレーター",
               description: "地域・業種・契約から現状の年間電気代と削減余地を試算。",
             },
+            { href: "/electricity-price-risk-hedge-hybrid", title: "電気料金リスクのヘッジ｜固定×市場連動ハイブリッド", description: "固定と市場連動を組み合わせ価格変動リスクを抑える考え方。" },
           ]}
         />
 

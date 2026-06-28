@@ -966,6 +966,7 @@ export default function BusinessElectricityBillBreakdownPage() {
               description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/rate-structure-glossary", title: "料金体系の用語集", description: "基本料金・電力量料金など電気料金の構成用語を解説。" },
           ]}
         />
 

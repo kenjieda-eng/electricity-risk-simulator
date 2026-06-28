@@ -514,6 +514,8 @@ export default function BusinessElectricityPriceBenchmarkPage() {
               description: "内訳や契約の基礎テーマをカテゴリ単位で辿れます。",
             },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/case-study-manufacturer-medium-contract-review", title: "事例：製造業（中規模）の契約見直し", description: "中規模メーカーが契約を見直しコストを削減した事例。" },
+              { href: "/europe-energy-crisis-lessons", title: "欧州エネルギー危機の教訓", description: "欧州の電力危機から日本の法人が学べる備え。" },
           ]}
         />
 

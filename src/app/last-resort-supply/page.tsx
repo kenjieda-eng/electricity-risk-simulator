@@ -467,6 +467,7 @@ export default function LastResortSupplyPage() {
             { href: "/articles/basic", title: "法人電気料金の基礎知識", description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。" },
             { href: "/case-study-last-resort-recovery", title: "最終保障供給からの復旧事例", description: "最終保障供給から通常契約に戻した事例。" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/last-resort-supply-risk-diagnosis", title: "最終保障供給リスク診断", description: "最終保障供給に陥るリスクと回避策をセルフ診断。" },
           ]}
         />
 
