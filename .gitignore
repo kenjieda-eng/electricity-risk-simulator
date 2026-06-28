@@ -5,3 +5,5 @@ node_modules
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+
+.ai-team/SURCHARGE_DRIFT_REPORT_*.md
