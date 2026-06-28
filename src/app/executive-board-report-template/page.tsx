@@ -417,6 +417,7 @@ export default function ExecutiveBoardReportTemplatePage() {
               description: "取締役会報告の後に担当者に指示する契約見直しの進め方と優先順位。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/internal-explanation-preparation-checklist", title: "社内説明の準備チェックリスト", description: "値上げ・契約見直しを社内説明する際の準備項目。" },
           ]}
         />
       </div>

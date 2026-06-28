@@ -336,6 +336,7 @@ export default function ElectricityBcpForCorporatesPage() {
             { href: "/duck-curve-corporate-impact", title: "ダックカーブが法人に与える影響", description: "夕方単価高騰の構造的リスクを BCP の視点で確認。" },
             { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価", description: "供給力確保コストの転嫁構造を踏まえた契約点検。" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/energy-bcp-glossary", title: "エネルギーBCP用語集", description: "非常用電源・BCP・レジリエンスの用語を法人向けに整理。" },
           ]}
         />
       </div>

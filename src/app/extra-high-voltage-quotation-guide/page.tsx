@@ -378,6 +378,7 @@ export default function ExtraHighVoltageQuotationGuidePage() {
               description: "見積書の燃調条件を読むための基礎知識を確認できます。",
             },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/billing-quotation-guide", title: "請求書・見積書の見方ガイド", description: "電気の請求書・見積書の読み方と確認ポイントを整理。" },
           ]}
         />
 

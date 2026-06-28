@@ -325,6 +325,8 @@ export default function BudgetFocusedPlanSelectionPage() {
               description: "見直し前に確認すべき項目の一覧。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/electricity-price-risk-hedge-hybrid", title: "電気料金リスクのヘッジ｜固定×市場連動ハイブリッド", description: "固定と市場連動を組み合わせ価格変動リスクを抑える考え方。" },
+            { href: "/low-margin-business-plan-selection", title: "低利益率事業のプラン選択", description: "利益率の低い事業に適した料金プランの選び方。" },
           ]}
         />
 

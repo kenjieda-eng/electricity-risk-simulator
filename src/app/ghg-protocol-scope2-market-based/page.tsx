@@ -279,6 +279,7 @@ export default function Page() {
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/cdp-questionnaire-electricity-response", title: "CDP質問書への電力・排出量の回答方法", description: "CDP気候変動質問書で問われる電力・Scope2排出の回答ポイントを整理。" },
             ]}
           />
         </div>

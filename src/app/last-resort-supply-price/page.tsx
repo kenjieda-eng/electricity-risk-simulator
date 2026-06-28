@@ -271,6 +271,7 @@ export default function LastResortSupplyPricePage() {
             { href: "/last-resort-supply-emergency-response", title: "入りそうなときの対応", description: "早期発見と準備。" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約見直しの始め方", description: "最終保障供給からの脱出に向けた次契約の検討手順。" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+            { href: "/case-study-last-resort-recovery", title: "事例：最終保障供給からの復帰", description: "最終保障供給に入った法人が通常契約へ戻した実例。" },
           ]}
         />
 

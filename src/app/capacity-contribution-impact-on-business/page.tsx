@@ -536,6 +536,7 @@ export default function CapacityContributionImpactOnBusinessPage() {
                   "もう一つの主要な制度要因。容量拠出金と合算した負担把握の基礎になります。",
               },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
+              { href: "/power-market-regulation-overview", title: "電力市場制度の全体像", description: "JEPX・容量市場など電力制度の仕組みを法人向けに概観。" },
             ]}
           />
         </div>
