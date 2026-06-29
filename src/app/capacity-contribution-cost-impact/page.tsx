@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "電気料金 制度負担 比較",
   ],
   alternates: {
-    canonical: "https://simulator.eic-jp.org/capacity-contribution-cost-impact",
+    canonical: "https://simulator.eic-jp.org/capacity-contribution-impact-on-business",
   },
   openGraph: {
     title: pageTitle,

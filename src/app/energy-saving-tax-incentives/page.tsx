@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["法人電気料金", "電気代", "法人向け電気料金", "産業用蓄電池", "中小企業電気代", "省エネ税制", "EV充電", "充電設備"],
   alternates: {
-    canonical: pageUrl,
+    canonical: "https://simulator.eic-jp.org/energy-saving-tax-incentive-2026",
   },
   openGraph: {
     title: pageTitle,
