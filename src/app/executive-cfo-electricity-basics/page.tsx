@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "電気料金 仕組み CFO",
     "法人電気料金 財務",
   ],
-  alternates: { canonical: pageUrl },
+  alternates: { canonical: "https://simulator.eic-jp.org/cfo-electricity-cost-basics" },
   robots: { index: false, follow: true },
   openGraph: {
     title: pageTitle,
