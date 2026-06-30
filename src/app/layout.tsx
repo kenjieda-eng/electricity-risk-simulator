@@ -7,6 +7,7 @@ import { Footer } from "../components/Footer";
 import { PublicHeader } from "../components/PublicHeader";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
 import BackToTop from "../components/BackToTop";
+import StickyConsultBar from "../components/StickyConsultBar";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../lib/siteConfig";
 import "./globals.css";
 
@@ -69,6 +70,7 @@ export default function RootLayout({
         </Suspense>
         <ClarityScript />
         <ArticleScrollTracker />
+        <StickyConsultBar />
       </body>
     </html>
   );
