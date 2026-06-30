@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "../../components/seo/JsonLd";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
+import ConsultCta from "../../components/ConsultCta";
 import { ScenarioSimulator } from "../../components/calculator/ScenarioSimulator";
 
 const pageTitle =
@@ -113,6 +114,14 @@ export default function ElectricityScenarioSimulationPage() {
           <ScenarioSimulator />
         </section>
 
+        {/* 試算結果直後の相談CTA */}
+        <div className="mt-6">
+          <ConsultCta
+            from="scenario"
+            heading="試算結果について、専門家に無料で相談しませんか？"
+          />
+        </div>
+
         <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
           <h2 className="text-lg font-semibold text-slate-900">関連コンテンツ</h2>
           <ul className="mt-3 space-y-1.5 text-sm">
@@ -138,6 +147,14 @@ export default function ElectricityScenarioSimulationPage() {
             </li>
           </ul>
         </section>
+
+        {/* ページ下部の相談CTA（2つ目のタッチポイント） */}
+        <div className="mt-8">
+          <ConsultCta
+            from="scenario"
+            heading="試算結果について、専門家に無料で相談しませんか？"
+          />
+        </div>
 
         <footer className="mt-8 rounded-lg border border-slate-200 bg-white p-4">
           <p className="text-xs leading-6 text-slate-600">
