@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: ["電力コスト KPI", "電気代 ダッシュボード", "経営 電力コスト管理", "電気料金 KPI"],
   alternates: { canonical: pageUrl },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical:
       "https://simulator.eic-jp.org/cultural-facility-electricity-cost-review",
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
