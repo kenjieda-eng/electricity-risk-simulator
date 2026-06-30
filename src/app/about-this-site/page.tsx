@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://simulator.eic-jp.org/about-this-site",
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
