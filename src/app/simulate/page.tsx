@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomePageClient from "../_components/HomePageClient";
+import ConsultCta from "../../components/ConsultCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../components/seo/JsonLd";
@@ -84,6 +85,14 @@ export default function SimulatePage() {
         <HomePageClient />
       </section>
 
+      {/* 結果直後の相談CTA（FAQより上） */}
+      <section className="mx-auto mt-2 mb-6 max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <ConsultCta
+          from="simulate"
+          heading="診断結果について、無料で相談しませんか？"
+        />
+      </section>
+
       <section className="mx-auto mb-8 max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="rounded-xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
           <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
@@ -124,6 +133,14 @@ export default function SimulatePage() {
           />
           <AuthorBadge />
         </div>
+      </section>
+
+      {/* ページ下部の相談CTA（2つ目のタッチポイント） */}
+      <section className="mx-auto mb-10 max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <ConsultCta
+          from="simulate"
+          heading="診断結果について、無料で相談しませんか？"
+        />
       </section>
     </>
   );

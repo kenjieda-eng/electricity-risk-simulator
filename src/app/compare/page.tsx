@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
+import ConsultCta from "../../components/ConsultCta";
 import { BreadcrumbJsonLd, FaqPageJsonLd } from "../../components/seo/JsonLd";
 import ComparePageClient from "./ComparePageClient";
 import MarketDataFaq from "../../components/market-data/MarketDataFaq";
@@ -107,6 +108,14 @@ export default function ComparePage() {
 
       <ComparePageClient />
 
+      {/* 結果直後の相談CTA（FAQより上） */}
+      <section className="mx-auto mt-2 mb-4 max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <ConsultCta
+          from="compare"
+          heading="比較結果をもとに、無料で相談しませんか？"
+        />
+      </section>
+
       <section className="mx-auto mb-8 max-w-[1600px] bg-slate-50 px-4 py-[18px] sm:px-6 lg:px-8">
         <div className="rounded-xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm">
           <h2 className="text-base font-semibold text-slate-900 sm:text-lg">比較結果の活用メモ</h2>
@@ -199,6 +208,14 @@ export default function ComparePage() {
             ]}
           />
         </div>
+      </section>
+
+      {/* ページ下部の相談CTA（2つ目のタッチポイント） */}
+      <section className="mx-auto mb-10 max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <ConsultCta
+          from="compare"
+          heading="比較結果をもとに、無料で相談しませんか？"
+        />
       </section>
     </>
   );

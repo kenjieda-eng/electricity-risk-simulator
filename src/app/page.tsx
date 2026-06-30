@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getLatestArticles } from "../lib/articles";
+import ConsultCta from "../components/ConsultCta";
 import { WebSiteJsonLd } from "../components/seo/JsonLd";
 
 const pageTitle = "法人電気料金ナビ｜見直し・比較・リスク診断";
@@ -138,6 +139,11 @@ export default function Page() {
               </Link>
             </div>
           </section>
+
+          {/* 目立つ相談CTA（中立・無料の送客導線） */}
+          <div className="mt-6">
+            <ConsultCta from="home" />
+          </div>
 
           <section className="mt-6">
             <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">解説・比較・月次動向の入口</h2>
