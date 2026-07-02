@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "静岡県の法人電気料金完全ガイド｜東海道工業地帯・富士製紙茶業・伊豆富士山観光の契約最適化";
+  "静岡県の法人電気料金ガイド【2026】中部電力エリアの単価・契約見直し・補助金";
 const pageDescription =
-  "静岡県の法人電気料金を地域特化で解説。中部電力エリアの東海道工業地帯（自動車・電機・楽器）、富士の製紙業、牧之原の茶業、伊豆・富士山の観光業、浜松光産業の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
+  "静岡県（中部電力エリア）の法人電気料金を地域特化で解説。東海道工業地帯・製紙・茶業・観光業の負荷特性、特別高圧/高圧の単価水準、契約見直しと補助金活用を2026年時点の実務目線で整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
