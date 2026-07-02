@@ -10,9 +10,9 @@ import {
 import MaterialsScenarioChartCard from "./_components/MaterialsScenarioCharts";
 import MaterialsScenarioLayout from "./_components/MaterialsScenarioLayout";
 
-const pageTitle = "原材料・包装資材の高騰は電気代にどう響く？ナフサ・樹脂価格と法人調達コストへの影響";
+const pageTitle = "原材料・包装資材の高騰は電気代にどう響く？2026年の法人調達コストを3シナリオ試算";
 const pageDescription =
-  "ナフサ不足・エチレン減産による樹脂・包装資材・化学品・非鉄金属の価格上昇を3シナリオで整理。塩ビ樹脂値上げや段ボール高騰など、電気代と並ぶ法人調達コストリスクを業種別に解説します。";
+  "樹脂・包装資材・段ボール・非鉄金属の高騰を3シナリオで整理し、電気代と並ぶ法人調達コストへの影響を業種別に試算。2026年の価格見通しと調達リスク対策まで実務目線で解説します。";
 const canonicalUrl = `https://simulator.eic-jp.org${MATERIALS_SCENARIO_BASE_PATH}`;
 
 export const metadata: Metadata = {

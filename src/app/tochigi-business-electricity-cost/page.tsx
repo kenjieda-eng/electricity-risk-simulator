@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "栃木県の法人電気料金完全ガイド｜自動車工業・観光業・内陸工業の契約最適化";
+  "栃木県の法人電気料金ガイド【2026】東京電力エリアの単価・契約見直し・補助金";
 const pageDescription =
-  "栃木県の法人電気料金を地域特化で解説。東京電力エリア、宇都宮・小山の自動車工業（日産・ホンダ関連）、日光・那須の観光業、宇都宮市の内陸工業の電力負荷、補助金、契約見直しを実務的に整理します。";
+  "栃木県（東京電力エリア）の法人電気料金を地域特化で解説。宇都宮・小山の自動車工業、日光・那須の観光業の負荷特性、単価水準、契約見直しと補助金活用を2026年時点で実務的に整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,

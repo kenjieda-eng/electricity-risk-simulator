@@ -7,9 +7,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
-  "社用車EV化のコスト比較｜ガソリン車 vs 電気自動車";
+  "社用車EV化はガソリン車より得か？10台のTCO・損益分岐点を試算【2026】";
 const pageDescription =
-  "社用車10台をEV化するTCO（総保有コスト）を、ガソリン車と電気自動車で徹底比較。年間走行距離5,000/15,000/30,000km別の損益分岐点、5年・10年保有の試算、補助金・電池劣化・出先充電コストまで実務視点で整理します。";
+  "社用車10台のEV化TCOをガソリン車と比較。走行5,000/15,000/30,000km別の損益分岐点、5年・10年試算、補助金・電池劣化・充電コストまで2026年の実務視点で整理します。";
 const pageUrl =
   "https://simulator.eic-jp.org/ev-vs-gasoline-fleet-cost";
 
