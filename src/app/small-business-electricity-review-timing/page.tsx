@@ -191,6 +191,9 @@ export default function SmallBusinessElectricityReviewTimingPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               具体的な切替手順は<Link href="/how-to-switch-electricity-provider" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">電力会社の切り替え手順</Link>を、請求書の分解方法は<Link href="/business-electricity-bill-breakdown" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">法人電気代の請求書の内訳</Link>をあわせて参照してください。
             </p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              低圧契約の料金体系や見直し余地の基礎から押さえたい場合は<Link href="/sme-electricity-basics" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業の電気料金の基礎</Link>も参考になります。
+            </p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>

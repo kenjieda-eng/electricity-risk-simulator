@@ -401,6 +401,69 @@ export default function ElectricityVsGasPriceTrendPage() {
           </div>
         </section>
 
+        {/* 光熱費リスクの見方 */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            電気とガスを合算した光熱費リスクの見方
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気とガスを別々の費目として管理していると、「電気だけ対策すれば安心」という誤解に陥りがちです。実際には、電気の燃料費調整額と都市ガスの原料費調整額はどちらもLNG・原油の国際価格を共通の起点にしており、燃料が高騰する局面では両方が同時に上振れします。電気とガスに支出を分散していても、燃料価格リスクそのものは分散しきれないという点を押さえておく必要があります。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            この共通要因を理解するには、発電・都市ガス双方の原料となるLNGを中心に燃料価格の動きを追うのが近道です。3燃料それぞれの推移と電気料金への効き方は{" "}
+            <Link
+              href="/fuel-mix-price-trend-and-electricity-impact"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              燃料別（LNG・石炭・原油）の価格推移と電気料金への影響度
+            </Link>{" "}
+            で、電気側の地域差は{" "}
+            <Link
+              href="/electricity-price-trend-by-area"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              エリア別の電気料金推移比較
+            </Link>{" "}
+            で整理しています。光熱費全体では、電気・ガスそれぞれの反映ラグの差（電気3〜5ヶ月・ガス2〜3ヶ月）を考慮して、燃料が下がった局面での予算修正タイミングを見極めることが重要です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
+        </section>
+
+        {/* 一体で見直すステップ */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            電気・ガス一体で光熱費を見直すステップ
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            光熱費を電気とガスに分けて個別最適するのではなく、全体のポートフォリオとして見直すと、削減余地の取りこぼしを防げます。実務では次の順序で進めると整理しやすくなります。
+          </p>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+            <li>直近12ヶ月の請求から、光熱費に占める電気とガスの支出比率を把握する（ガス比率が高い業種はガス調達の見直し優先度も上がる）。</li>
+            <li>電気側の削減余地を洗い出す。契約電力・燃調条件・市場連動/固定・自家消費など7軸の削減ポイントは{" "}
+              <Link
+                href="/business-electricity-cost-reduction-review-points"
+                className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+              >
+                法人の電気料金を削減する見直しポイント7選
+              </Link>{" "}
+              で確認できます。</li>
+            <li>電化率を高める前に、電気への集中リスク（燃料高騰時の総額影響）とガス併用の分散効果を5〜10年の総コストで比較する。</li>
+            <li>自家消費太陽光で買電量そのものを減らせば、電気料金・再エネ賦課金・託送料金の圧縮につながる。導入判断は{" "}
+              <Link
+                href="/self-consumption-solar-cost-benefit"
+                className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+              >
+                自家消費型太陽光の費用対効果
+              </Link>{" "}
+              を参照してください。</li>
+          </ol>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
+        </section>
+
         {/* まとめ */}
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">

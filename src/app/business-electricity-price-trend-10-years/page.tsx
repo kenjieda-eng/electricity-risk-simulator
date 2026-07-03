@@ -446,6 +446,13 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
             実務では、総額だけでなく単価の推移を継続的に確認し、自社の契約区分に近いデータを基準にしながら、
             補助政策や制度変更の影響を重ねて読むことが有効です。
           </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            電気単価の推移は都市ガスの原料費調整と共通の燃料要因で動くため、光熱費全体を管理する場合は{" "}
+            <Link href="/electricity-vs-gas-price-trend" className="text-slate-900 underline underline-offset-2 hover:text-slate-700">
+              電気料金とガス料金の推移を比較する
+            </Link>{" "}
+            もあわせて確認すると、コスト構造を取りこぼしなく把握できます。
+          </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>

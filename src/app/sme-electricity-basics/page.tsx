@@ -97,6 +97,14 @@ export default function Page() {
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">2026年度の固定費上昇と低圧契約への影響</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">低圧契約でも、契約や運用にかかわらず一律で上乗せされる固定費があります。代表が再エネ賦課金で、2026年度は4.18円/kWh（2025年度比+0.20円）と初めて4円台に達しました。月間使用量5,000kWhの事業所なら、賦課金だけで月約2.09万円・年約25万円が請求に含まれる計算です（4.18円 × 5,000kWh ＝ 20,900円/月）。この賦課金は全需要家に一律で課されるため電力会社を変えても下げられませんが、LED化や運用改善で使用量そのものを減らせば負担も比例して下がります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">賦課金の仕組みと年度ごとの単価推移は<Link href="/renewable-energy-surcharge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">再エネ賦課金の基礎</Link>で確認できます。低圧の中小事業者は、こうした固定費の上昇分を織り込んだうえで、プラン選定と省エネの両輪で見直すのが現実的です。</p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+          </section>
         </section>
 
         <SmeQuickDiagnosis />

@@ -350,6 +350,16 @@ export default function JepxPriceTrendAndCorporateImpactPage() {
             <li>・月5万kWhの法人でもJEPXが8円→20円に上昇するだけで月額コストが30万円増加しうる</li>
             <li>・固定プランと市場連動プランの選択はリスク許容度と使用規模に応じて判断する必要がある</li>
           </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            JEPX価格の背後にあるLNGは都市ガスの原料でもあり、燃料高騰時には電気とガスが同時に上振れします。光熱費全体で捉える場合は{" "}
+            <Link
+              href="/electricity-vs-gas-price-trend"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電気料金とガス料金の推移を比較する
+            </Link>{" "}
+            もあわせて確認してください。
+          </p>
         </section>
       </div>
 

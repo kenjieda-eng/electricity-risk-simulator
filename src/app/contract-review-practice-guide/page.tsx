@@ -238,6 +238,16 @@ export default function ContractReviewPracticeGuidePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             見直しの検討開始は、契約更新日の<strong>6か月前</strong>が一般的な目安です。解約通知の締め切りに遅れると次の更新サイクルまで待つことになるため、タイミングを早めに確認することが重要です。
           </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            切替を前提にしない場合でも、現行の電力会社の契約内で取り得る打ち手があります。詳しくは{" "}
+            <Link
+              href="/reduce-cost-without-switching"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電力会社を変えずに電気代を下げる方法
+            </Link>{" "}
+            を参照してください。
+          </p>
         </section>
 
         {guideSections.map((section) => (
