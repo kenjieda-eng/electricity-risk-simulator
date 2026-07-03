@@ -358,6 +358,16 @@ export default function ElectricityPriceTrendByAreaPage() {
             <li>・北海道・沖縄の高単価構造は地理的・電源構成的な制約が大きく、短期では変わりにくい</li>
             <li>・移転よりも先に、現行契約の見直しとシミュレーションを行うことが現実的な第一歩</li>
           </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気の地域差に加えて、ガスを含む光熱費全体の推移を押さえたい場合は{" "}
+            <Link
+              href="/electricity-vs-gas-price-trend"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電気料金とガス料金の推移を比較する
+            </Link>{" "}
+            もあわせて確認すると、エネルギーコスト全体の見取り図を描けます。
+          </p>
         </section>
       </div>
 

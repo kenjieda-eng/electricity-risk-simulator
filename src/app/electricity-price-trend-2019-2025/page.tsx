@@ -460,6 +460,16 @@ export default function ElectricityPriceTrend20192025Page() {
             </Link>
             を参照してください。
           </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電気とガスは共通の燃料要因で高止まりするため、光熱費全体を見直す場合は{" "}
+            <Link
+              href="/electricity-vs-gas-price-trend"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電気料金とガス料金の推移を比較する
+            </Link>{" "}
+            もあわせて確認すると、コスト全体像を取りこぼしなく把握できます。
+          </p>
         </section>
 
         <div className="mt-6">

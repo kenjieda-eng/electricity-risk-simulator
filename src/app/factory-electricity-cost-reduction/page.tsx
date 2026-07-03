@@ -262,6 +262,62 @@ export default function FactoryElectricityCostReductionPage() {
             </p>
           </section>
 
+          {/* H2: デマンド制御の実行手順 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">デマンド制御を実行する4ステップ</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              基本料金の削減に直結するデマンド監視は、生産を止めずに着手できる最優先施策です。運用に落とし込む手順を4段階で示します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li><span className="font-medium text-slate-900">実績把握：</span>直近12か月の30分デマンド値を確認し、年間最大値と契約電力の乖離を洗い出す。読み方は<Link href="/demand-value-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド値の見方</Link>で確認する。</li>
+              <li><span className="font-medium text-slate-900">警報閾値の設定：</span>契約電力の90〜95%を警報ラインに設定し、超過前に負荷を抑える運用ルールを決める。</li>
+              <li><span className="font-medium text-slate-900">負荷の自動調整：</span>デマンドコントローラーやBEMSで空調・生産設備を段階的に制御し、ピークが集中する時間帯の同時稼働を避ける。</li>
+              <li><span className="font-medium text-slate-900">契約電力の見直し：</span>ピークが安定して下がったら、翌年度以降の契約電力を実態に合わせて引き下げる。</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              デマンドレスポンス（需給ひっ迫時の調整力提供）と組み合わせると、契約電力削減と収益化を両立できます。費用対効果は<Link href="/demand-response-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドレスポンスの費用対効果</Link>で確認できます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+          </section>
+
+          {/* H2: 省エネ補助金を活用した5年試算 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">省エネ補助金を活用した5年試算の考え方</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              高効率モーターや太陽光自家消費のような設備投資施策は、初期費用がネックになりがちです。単年度の削減額だけでなく、投資回収後まで含めた複数年のコスト差で判断すると、着手判断がしやすくなります。
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              例えば、高効率設備の導入で年間120万円の電気代削減が見込める工場では、5年間の累計効果は <strong>▲120万円 × 5年 ＝ 600万円</strong> となります。契約電力を100kW適正化できるケースでは、年間約200万円の基本料金削減が、5年間で <strong>▲200万円 × 5年 ＝ 1,000万円</strong> のコスト差につながります。
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              経済産業省のSII省エネ補助金やものづくり補助金、GX関連の税制を活用して初期投資を圧縮できれば、投資回収期間が短縮され、回収後の削減分がそのまま利益に乗ります。製造業向けの補助金活用の考え方は<Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>で整理しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 削減額・試算は代表例です。実際の効果は設備構成・使用量・契約条件で変動します。補助金の要件・金額は公募ごとに異なるため、最新の公募要領をご確認ください。
+            </p>
+          </section>
+
+          {/* H2: 市場連動プランと固定プランの選び方 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">市場連動プランと固定プランの選び方（工場向け）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              設備・運用の削減と並行して、契約メニューの選択も工場のコストを大きく左右します。市場連動プランはJEPX安値局面で単価が下がる一方、需給ひっ迫時のスパイクを直接吸収する必要があります。固定プランは単価が安定し予算管理に向きますが、平時はやや割高になりがちです。
+            </p>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+              <li><span className="font-medium text-slate-900">市場連動が向く工場：</span>夜間・休日操業が多く、価格変動を吸収できる資金体力がある</li>
+              <li><span className="font-medium text-slate-900">固定が向く工場：</span>日中ピーク中心で、電気代の予算ブレを避けたい</li>
+              <li><span className="font-medium text-slate-900">ハイブリッド：</span>市場連動比率を抑えた上限キャップ付きプランで、両者の中間を取る</li>
+            </ul>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              自社の負荷パターンとリスク許容度に応じた判断軸は<Link href="/market-linked-vs-fixed" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">市場連動プランと固定プランの違い</Link>で詳しく整理しています。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+          </section>
+
           {/* まとめ */}
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">まとめ：工場電気代削減を進める順番</h2>
@@ -339,6 +395,16 @@ export default function FactoryElectricityCostReductionPage() {
                 href: "/osaka-sme-factory-electricity-cost",
                 title: "大阪府の中小製造業・町工場の電気料金",
                 description: "東大阪・八尾の町工場固有の電力事情と削減アプローチ（業種×地域クロス）。",
+              },
+              {
+                href: "/market-linked-vs-fixed",
+                title: "市場連動プランと固定プランの違い",
+                description: "工場の負荷パターンとリスク許容度に応じた契約メニューの選び方。",
+              },
+              {
+                href: "/demand-value-guide",
+                title: "デマンド値の見方",
+                description: "契約電力の適正化に直結する30分デマンド実績の読み方。",
               },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

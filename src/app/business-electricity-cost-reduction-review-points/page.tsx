@@ -377,6 +377,16 @@ export default function BusinessElectricityCostReductionReviewPointsPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             削減効果は単独の施策でも数%、組み合わせれば10〜30%に達する。特に契約電力最適化（ポイント1）とデマンド制御（ポイント6）は基本料金と電力量料金の両方に効くため、ROI が最も高い領域だ。一方、PPA・自家消費太陽光（ポイント7）は初期投資または長期契約が必要だが、削減幅と脱炭素対応を同時に得られる戦略的レバーとなる。次章以降で各ポイントを詳細に解説する。
           </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            電力会社の切替に踏み切れない事情がある場合は、まず契約内で完結するポイント（契約電力・プラン変更・付帯サービス・交渉）だけを先に実行する進め方もある。切替を前提としない打ち手の整理は{" "}
+            <Link
+              href="/reduce-cost-without-switching"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電力会社を変えずに電気代を下げる5つの方法
+            </Link>{" "}
+            を参照されたい。
+          </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
           </p>

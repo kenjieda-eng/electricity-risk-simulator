@@ -371,6 +371,80 @@ export default function ReduceCostWithoutSwitchingPage() {
             </div>
           </section>
 
+          {/* 使用パターン別の優先順位 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              使用パターン別に見た手段の優先順位
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              5つの手段は横並びで検討するより、自社の使用パターンに合わせて着手順を決めると効率的です。以下は代表的な業態ごとの目安です。
+            </p>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[560px] border-collapse text-sm">
+                <thead>
+                  <tr className="bg-slate-100 text-left text-slate-700">
+                    <th className="border border-slate-300 px-3 py-2 font-semibold">使用パターン</th>
+                    <th className="border border-slate-300 px-3 py-2 font-semibold">まず着手</th>
+                    <th className="border border-slate-300 px-3 py-2 font-semibold">次に検討</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700">
+                  <tr className="odd:bg-white even:bg-slate-50">
+                    <td className="border border-slate-300 px-3 py-2 font-medium">日中稼働中心（オフィス・店舗）</td>
+                    <td className="border border-slate-300 px-3 py-2">1. 契約電力の見直し</td>
+                    <td className="border border-slate-300 px-3 py-2">2. プラン変更／4. 付帯サービス</td>
+                  </tr>
+                  <tr className="odd:bg-white even:bg-slate-50">
+                    <td className="border border-slate-300 px-3 py-2 font-medium">夜間・24時間稼働（製造・倉庫）</td>
+                    <td className="border border-slate-300 px-3 py-2">3. 時間帯別プランへの移行</td>
+                    <td className="border border-slate-300 px-3 py-2">1. 契約電力の見直し／6. デマンド制御</td>
+                  </tr>
+                  <tr className="odd:bg-white even:bg-slate-50">
+                    <td className="border border-slate-300 px-3 py-2 font-medium">大口・長期契約可能（月100万円超）</td>
+                    <td className="border border-slate-300 px-3 py-2">5. 交渉による値引き</td>
+                    <td className="border border-slate-300 px-3 py-2">1. 契約電力の見直し／2. プラン変更</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              時間帯別プランは使用実態に合わないと逆効果になるため、移行前のシミュレーションが前提です。市場連動と固定のどちらを軸にするかは{" "}
+              <Link
+                href="/market-linked-vs-fixed"
+                className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+              >
+                市場連動プランと固定プランの違い
+              </Link>{" "}
+              で判断軸を確認してください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+          </section>
+
+          {/* 削減幅が足りないときの次の一手 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              契約内見直しで削減幅が足りないときの次の一手
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              契約内の見直しだけでは、期待削減幅が-3〜15%にとどまることがあります。ここで止まってしまうと、燃調条件や容量拠出金の転嫁、市場連動と固定の使い分けといった、より大きな削減余地を見逃しかねません。切替を最終手段として温存しつつ、まずは削減レバー全体を棚卸ししておくと、判断の精度が上がります。
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              契約電力・燃調・容量拠出金・市場連動 vs 固定・デマンド制御・PPAまで含めた7軸の削減ポイントは{" "}
+              <Link
+                href="/business-electricity-cost-reduction-review-points"
+                className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+              >
+                法人の電気料金を削減する見直しポイント7選
+              </Link>{" "}
+              で体系的に整理しています。契約内の打ち手を出し切ったうえで削減幅が物足りなければ、同じ条件で切替後の試算を並走させ、効果の大小で最終判断するのが実務的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+          </section>
+
           {/* まとめ */}
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>

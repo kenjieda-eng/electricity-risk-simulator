@@ -553,6 +553,16 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
               ・ 予算計画には「燃料価格が10%上昇したとき電気料金はどう変わるか」のシナリオ試算を組み込むことが重要。
             </li>
           </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            LNGは都市ガスの原料でもあるため、燃料高騰は電気の燃調費と都市ガスの原料費調整の双方に波及します。電気とガスを合わせた光熱費全体の視点は{" "}
+            <Link
+              href="/electricity-vs-gas-price-trend"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電気料金とガス料金の推移を比較する
+            </Link>{" "}
+            で整理しています。
+          </p>
         </section>
 
         

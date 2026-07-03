@@ -381,6 +381,16 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
             <li>・燃調費の扱いが確認できたら、比較見積の依頼条件に明示する</li>
             <li>・テンプレートに記入した情報を、社内共有の出発点として使う</li>
           </ul>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            切替を前提にしない場合でも、同じ電力会社の契約内でできる打ち手は{" "}
+            <Link
+              href="/reduce-cost-without-switching"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電力会社を変えずに電気代を下げる方法
+            </Link>{" "}
+            で確認できます。
+          </p>
         </section>
       </section>
 

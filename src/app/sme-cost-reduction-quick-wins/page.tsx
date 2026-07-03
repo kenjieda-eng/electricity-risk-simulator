@@ -99,6 +99,7 @@ export default function Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">契約見直しによる削減</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">新電力への切替、プラン変更、契約アンペアの見直しはいずれも初期投資ゼロで実施できます。年間電気代の5〜10%程度の削減が期待できる一方、固定期間契約や違約金は事前に確認が必要です。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">低圧契約の料金体系や見直し余地の基礎は<Link href="/sme-electricity-basics" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業の電気料金の基礎</Link>で整理しています。</p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>

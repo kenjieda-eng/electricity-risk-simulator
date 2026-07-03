@@ -155,6 +155,16 @@ export default function BusinessElectricityContractChecklistPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             逆に、現状整理が不十分なまま見積を取ると、条件がそろわず比較しづらい見積が届いたり、見積依頼のやりとりが何度も必要になるケースがあります。以下のチェックリストを使い、まず「自社の現状」を棚卸しすることから始めてみてください。
           </p>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            なお、切替を前提にせず現行の電力会社の契約内だけで削減余地を探す進め方もあります。その打ち手は{" "}
+            <Link
+              href="/reduce-cost-without-switching"
+              className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
+            >
+              電力会社を変えずに電気代を下げる方法
+            </Link>{" "}
+            で整理しています。
+          </p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
