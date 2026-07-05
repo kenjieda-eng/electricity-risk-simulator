@@ -347,6 +347,14 @@ export default function SubsidyScheduleAndApprovalRatePage() {
             { href: "/subsidy-application-approval-document", title: "補助金申請を前提とした稟議書の書き方", description: "構成と数値の示し方を具体的に解説" },
             { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光の補助金活用ガイド", description: "設備別の補助率・上限額・併用可否を整理" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池は電気料金対策としてどう効くか", description: "補助金活用と組み合わせた蓄電池投資の費用対効果を把握。" },
+            { href: "/subsidy-solar-carport-canopy", title: "ソーラーカーポート・駐車場太陽光の補助金", description: "駐車場の遊休空間を発電資産化（EV充電・蓄電池連動）。" },
+            { href: "/subsidy-hydrogen-fuel-cell", title: "水素・定置用燃料電池の補助金", description: "業務・産業用燃料電池と水素関連の導入支援を整理。" },
+            { href: "/subsidy-zeb-zeh-building", title: "ZEB／ZEH-M（建築物省エネ）の補助金", description: "認証区分を単位にした建物一体の省エネ改修・新築。" },
+            { href: "/subsidy-small-wind-power", title: "小形風力・自家消費風力の補助金", description: "太陽光が向かない立地の再エネ選択肢を中立に整理。" },
+            { href: "/subsidy-carbon-neutral-priority-area", title: "脱炭素先行地域・重点対策加速化事業", description: "自治体と連携して法人が参画する地域脱炭素交付金。" },
+            { href: "/subsidy-grid-storage-battery", title: "系統用・大型蓄電池の補助金", description: "系統用／需要家併設蓄電池と市場収益の違いを整理。" },
+            { href: "/subsidy-industrial-vehicle-ev", title: "フォークリフト・建機の電動化補助金", description: "構内・産業車両の電動化と充電のデマンド最適化。" },
+            { href: "/subsidy-waste-heat-recovery", title: "廃熱回収・排熱利用設備の補助金", description: "捨てている熱を回収して電力・燃料を減らす省エネ投資。" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
         />
