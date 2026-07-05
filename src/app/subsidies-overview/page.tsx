@@ -291,6 +291,34 @@ export default function SubsidiesOverviewPage() {
             <li>・ 環境省: <a href="https://www.env.go.jp/" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">https://www.env.go.jp/</a></li>
           </ul>
         </section>
+
+        {/* 設備・制度別の補助金ガイド（2026年度拡充） */}
+        <section className="rounded-xl border border-emerald-200 bg-emerald-50 p-5">
+          <h2 className="text-xl font-semibold text-slate-900">設備・制度別の補助金ガイド（2026年度拡充）</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            主要制度の総論に加え、設備・制度ごとの活用ガイドを拡充しています。自社の投資対象に近いテーマから、対象設備・補助率の考え方・代表シナリオ・申請フローを確認できます。いずれも2026年度時点の整理で、最新の公募要領での確認が前提です。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            {[
+              { href: "/subsidy-solar-carport-canopy", title: "ソーラーカーポート・駐車場太陽光の補助金", desc: "駐車場の遊休空間を発電資産化（EV充電・蓄電池連動）。" },
+              { href: "/subsidy-hydrogen-fuel-cell", title: "水素・定置用燃料電池の補助金", desc: "業務・産業用燃料電池と水素関連の導入支援を整理。" },
+              { href: "/subsidy-zeb-zeh-building", title: "ZEB／ZEH-M（建築物省エネ）の補助金", desc: "認証区分を単位にした建物一体の省エネ改修・新築。" },
+              { href: "/subsidy-small-wind-power", title: "小形風力・自家消費風力の補助金", desc: "太陽光が向かない立地の再エネ選択肢を中立に整理。" },
+              { href: "/subsidy-carbon-neutral-priority-area", title: "脱炭素先行地域・重点対策加速化事業", desc: "自治体と連携して法人が参画する地域脱炭素交付金。" },
+              { href: "/subsidy-grid-storage-battery", title: "系統用・大型蓄電池の補助金", desc: "系統用／需要家併設蓄電池と市場収益の違いを整理。" },
+              { href: "/subsidy-industrial-vehicle-ev", title: "フォークリフト・建機の電動化補助金", desc: "構内・産業車両の電動化と充電のデマンド最適化。" },
+              { href: "/subsidy-waste-heat-recovery", title: "廃熱回収・排熱利用設備の補助金", desc: "捨てている熱を回収して電力・燃料を減らす省エネ投資。" },
+            ].map((c) => (
+              <Link key={c.href} href={c.href} className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-emerald-300 hover:shadow">
+                <span className="text-sm font-semibold text-emerald-800">{c.title}</span>
+                <span className="mt-1 block text-xs leading-6 text-slate-600">{c.desc}</span>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 補助率・上限・公募時期は年度・事業区分により変動します。特定制度を推奨するものではなく、採否は審査によります。最新の公募要領を必ずご確認ください。
+          </p>
+        </section>
       </section>
 
       {/* 関連リンク */}

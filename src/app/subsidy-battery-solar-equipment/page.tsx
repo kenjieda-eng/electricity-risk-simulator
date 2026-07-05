@@ -418,6 +418,9 @@ export default function SubsidyBatterySolarEquipmentPage() {
             { href: "/battery-suited-corporations", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
             { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の活用ガイド", description: "法人が自家消費太陽光を活用する際の要点" },
             { href: "/subsidy-demand-side-ppa", title: "需要家主導型太陽光PPAの補助金活用", description: "オフサイトPPAで電力コストを削減する仕組みと補助制度" },
+            { href: "/subsidy-solar-carport-canopy", title: "ソーラーカーポート・駐車場太陽光の補助金", description: "屋根が使えない事業所でも駐車場で自家消費太陽光。" },
+            { href: "/subsidy-grid-storage-battery", title: "系統用・大型蓄電池の補助金", description: "需要家併設・系統用の大型蓄電池の補助と市場収益。" },
+            { href: "/subsidy-small-wind-power", title: "小形風力・自家消費風力の補助金", description: "太陽光が向かない立地の再エネ選択肢を中立に整理。" },
             { href: "/subsidy-schedule-and-approval-rate", title: "補助金申請のスケジュールと採択率の目安", description: "年間カレンダーと採択率から逆算する準備術" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
           ]}
