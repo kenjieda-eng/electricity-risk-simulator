@@ -609,6 +609,7 @@ export default function OfficeBuildingPeakCutPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/case-study-office-building-review", title: "オフィスビル：契約電力の適正化で年間580万円削減した事例", description: "中規模オフィスビルが過大な契約電力を適正化して削減を実現した事例。" },
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別冷却戦略のハブ。" },
               { href: "/summer-peak-electricity-cost-cfo", title: "夏季ピーク電気代の基礎とCFO視点", description: "夏季電気代の構造とCFO向けレポーティング。" },
               { href: "/demand-response-summer-strategy", title: "DR入門・夏のピークシフト", description: "DR経済性と主要プログラム比較。" },

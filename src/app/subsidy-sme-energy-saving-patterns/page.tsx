@@ -379,6 +379,7 @@ export default function SubsidySmeEnergySavingPatternsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/subsidy-local-government-list", title: "自治体別 電力関連補助金の探し方", description: "都道府県・市区町村が独自に行う省エネ・再エネ補助金の探し方と主要自治体の事例。" },
             { href: "/subsidies-overview", title: "法人向け電力・省エネ補助金まとめ", description: "2026年度に使える主要制度を横断比較" },
             { href: "/subsidy-sii-energy-saving", title: "省エネ補助金（SII）の申請ガイド", description: "対象設備・補助率・申請スケジュールの詳細" },
             { href: "/subsidy-schedule-and-approval-rate", title: "補助金申請のスケジュールと採択率の目安", description: "年間カレンダーと採択率から逆算する準備術" },

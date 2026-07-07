@@ -447,6 +447,11 @@ export default function EmergencyPriceIncreaseNoticePage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-price-increase-negotiation",
+              title: "値上げ通知の交渉で15%圧縮した事例",
+              description: "製造業が値上げ通知をデータ根拠に交渉して15%圧縮した事例。",
+            },
+            {
               href: "/how-to-compare-electricity-suppliers",
               title: "電力会社の比較方法",
               description: "相見積もりの取り方と、料金比較で見るべきポイントを解説します。",

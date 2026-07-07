@@ -370,6 +370,11 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/karaoke-box-electricity-cost-review",
+              title: "カラオケボックスの電気料金見直しポイント",
+              description: "個室AV機器の待機電力、個室空調の同時稼働ピーク、深夜電力プラン、廊下照明のセンサー化などカラオケ特有の電力負荷と契約見直しの着眼点。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "予算管理と安定性を重視する法人に固定プランが向きやすい理由。",

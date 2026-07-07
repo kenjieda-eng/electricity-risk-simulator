@@ -484,6 +484,11 @@ export default function HospitalElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/veterinary-clinic-electricity-cost-review",
+              title: "動物病院の電気料金見直しポイント",
+              description: "麻酔器・電気メス、X線/CT/MRI、薬品冷蔵庫、入院動物の温度管理など動物病院特有の電力負荷と契約見直しの着眼点。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "予算管理と安定性を重視する法人に固定プランが向く理由。",

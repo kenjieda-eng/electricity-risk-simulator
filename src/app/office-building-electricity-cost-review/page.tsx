@@ -488,6 +488,11 @@ export default function OfficeBuildingElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-office-building-review",
+              title: "オフィスビル：契約電力の適正化で年間580万円削減した事例",
+              description: "中規模オフィスビルが過大な契約電力を適正化して削減を実現した事例。",
+            },
+            {
               href: "/industry-electricity-guide",
               title: "業種別の電気料金見直しガイド一覧",
               description: "業種ごとの負荷特性と契約見直しの考え方を一覧で確認。",
