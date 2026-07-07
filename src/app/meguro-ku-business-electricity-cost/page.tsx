@@ -662,6 +662,7 @@ export default function MeguroKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "大学・大型病院・研究機関集積の区の電力需要と契約最適化。" },
               { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },

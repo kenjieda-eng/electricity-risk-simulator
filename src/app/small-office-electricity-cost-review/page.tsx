@@ -356,6 +356,11 @@ export default function SmallOfficeElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-office-building-review",
+              title: "オフィスビル：契約電力の適正化で年間580万円削減した事例",
+              description: "中規模オフィスビルが過大な契約電力を適正化して削減を実現した事例。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "予算管理と安定性を重視する法人に固定プランが向きやすい理由。",

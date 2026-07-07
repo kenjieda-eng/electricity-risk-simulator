@@ -175,6 +175,7 @@ export default function ShouldYouReviewAfterPriceIncreaseNoticePage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/case-study-price-increase-negotiation", title: "値上げ通知の交渉で15%圧縮した事例", description: "製造業が値上げ通知をデータ根拠に交渉して15%圧縮した事例。" },
             { href: "/review-contract-renewal-deadlines", title: "法人の電力契約を更新前に確認したい期限とは", description: "通知と期限を照らし合わせて判断する際の参考。" },
             { href: "/where-to-check-in-electricity-contract", title: "契約書のどこに見直し時の注意点が書かれているのか", description: "通知内容と契約条項の整合を確認する視点を整理します。" },
             { href: "/switching-business-electricity-contract", title: "法人が電力契約を切り替えるときの注意点", description: "通知を受けて切替に進む場合の実務ポイント。" },

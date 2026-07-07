@@ -128,6 +128,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/case-study-price-increase-negotiation", title: "値上げ通知の交渉で15%圧縮した事例", description: "製造業が値上げ通知をデータ根拠に交渉して15%圧縮した事例。" },
               { href: "/why-business-electricity-expensive-faq", title: "法人電気代なぜ高いFAQ", description: "3軸で原因と対処法" },
               { href: "/contract-review-flow-faq", title: "契約見直しフローFAQ", description: "着手から切替完了まで" },
               { href: "/market-linked-plan-faq", title: "市場連動プランFAQ", description: "向く企業・向かない企業" },

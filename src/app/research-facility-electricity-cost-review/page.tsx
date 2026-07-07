@@ -354,6 +354,11 @@ export default function ResearchFacilityElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/medical-device-manufacturing-electricity-cost-review",
+              title: "医療機器製造業の電気料金見直しポイント",
+              description: "GMP対応クリーンルーム24h、EOG・放射線滅菌設備、樹脂部品射出成形など医療機器製造の電力負荷と契約見直しの着眼点。",
+            },
+            {
               href: "/semiconductor-facility-electricity-cost-review",
               title: "半導体関連施設の電気料金リスク",
               description: "クリーンルームと大規模電力を持つ施設の考え方。",

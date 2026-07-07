@@ -337,6 +337,11 @@ export default function FactoryElectricityCostReductionPage() {
             heading="関連ページ"
             links={[
               {
+                href: "/furniture-manufacturing-electricity-cost-review",
+                title: "家具・建具製造業の電気料金見直しポイント",
+                description: "塗装ブース換気・乾燥炉、NC加工機・パネルソー、集塵機、コンプレッサーなど家具製造の電力負荷と契約見直しの着眼点。",
+              },
+              {
                 href: "/factory-electricity-cost-benchmark",
                 title: "工場の電気代相場（業種・規模別）",
                 description: "業種別・規模別の月額電気代ベンチマークを整理。",

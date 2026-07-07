@@ -351,6 +351,11 @@ export default function MunicipalityProcurementMethodsPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-municipality-procurement",
+              title: "自治体：12施設統合調達で年間3,100万円削減した事例",
+              description: "庁舎・図書館・体育館など12施設を統合入札して削減を実現した事例。",
+            },
+            {
               href: "/municipality-procurement-bidding-failure",
               title: "自治体電力入札が不調になったときの対応ガイド",
               description: "入札不調後の随意契約移行・再入札・議会説明の実務手順を解説。",
