@@ -369,6 +369,39 @@ export default function ElectricityPriceTrendByAreaPage() {
             もあわせて確認すると、エネルギーコスト全体の見取り図を描けます。
           </p>
         </section>
+
+        {/* 各エリアの推移・単価水準（個別ページへの導線） */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">
+            各エリアの推移・単価水準をさらに詳しく（個別ページ）
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            本ページは10エリアを横断で比較する総論です。各エリアの推移・単価水準・構造要因・見通しの考え方をより深く知りたい場合は、以下の個別ページ（推移・単価に特化）をご覧ください。
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              { href: "/region-tokyo-electricity-price-trend", label: "東京（関東）エリアの推移と単価水準" },
+              { href: "/region-kansai-electricity-price-trend", label: "関西エリアの推移と単価水準" },
+              { href: "/region-hokkaido-electricity-price-trend", label: "北海道エリアの推移と単価水準" },
+              { href: "/region-kyushu-electricity-price-trend", label: "九州エリアの推移と単価水準" },
+              { href: "/region-tohoku-electricity-price-trend", label: "東北エリアの推移と単価水準" },
+              { href: "/region-chugoku-electricity-price-trend", label: "中国エリアの推移と単価水準" },
+              { href: "/region-hokuriku-electricity-price-trend", label: "北陸エリアの推移と単価水準" },
+              { href: "/region-chubu-electricity-price-trend", label: "中部エリアの推移と単価水準" },
+            ].map((it) => (
+              <Link
+                key={it.href}
+                href={it.href}
+                className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm font-medium text-sky-700 underline-offset-2 hover:bg-slate-100 hover:text-sky-900"
+              >
+                {it.label}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 各ページは公的統計の概括をもとにした中立的な情報整理であり、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
+        </section>
       </div>
 
       <div className="mt-6">

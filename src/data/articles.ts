@@ -876,6 +876,14 @@ export const articleCategories: ArticleCategory[] = [
       "region-kyushu-business-electricity",
       "region-okinawa-business-electricity",
       "region-supplier-withdrawal-map",
+      "region-tokyo-electricity-price-trend",
+      "region-kansai-electricity-price-trend",
+      "region-hokkaido-electricity-price-trend",
+      "region-kyushu-electricity-price-trend",
+      "region-tohoku-electricity-price-trend",
+      "region-chugoku-electricity-price-trend",
+      "region-hokuriku-electricity-price-trend",
+      "region-chubu-electricity-price-trend",
     ],
     order: 20,
     group: "learning",
@@ -3656,6 +3664,16 @@ export const articleList: ArticleMeta[] = [
   { title: "大分県の法人電気料金完全ガイド", slug: "oita-business-electricity-cost", description: "大分県の法人電気料金を地域特化で解説。九州電力エリアの単価データ加工、大分臨海工業地帯（鉄鋼化学コンビナート）・別府湯布院温泉観光業・八丁原地熱発電由来CO2フリー電源・大分港物流の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 64, publishedAt: "2026-05-24" },
   { title: "宮崎県の法人電気料金完全ガイド", slug: "miyazaki-business-electricity-cost", description: "宮崎県の法人電気料金を地域特化で解説。九州電力エリアの単価データ加工、ブロイラー肉用牛畜産・マンゴーきゅうり施設園芸・旭化成延岡・フェニックス日南海岸観光業の電力負荷、太陽光発電適地メリット、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 65, publishedAt: "2026-05-24" },
   { title: "鹿児島県の法人電気料金完全ガイド", slug: "kagoshima-business-electricity-cost", description: "鹿児島県の法人電気料金を地域特化で解説。九州電力エリアの単価データ加工、川内原発立地県・焼酎蒸留発酵・黒牛黒豚サツマイモ茶葉農業・桜島火山灰BCP・種子島屋久島奄美離島の電力負荷、契約見直しを整理します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 66, publishedAt: "2026-05-24" },
+
+  // --- B-83. エリア別 法人電気料金 推移深掘り 8本（推移・単価水準に特化） ---
+  { title: "東京（関東）エリアの法人電気料金 推移と単価水準", slug: "region-tokyo-electricity-price-trend", description: "東京電力エリア（関東9都県）の法人電気料金の推移と単価水準を公的統計の概括で整理。特高・高圧・低圧の位置づけ、LNG依存が推移に与える構造、賦課金など全国共通の上昇要因、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 67, publishedAt: "2026-07-08" },
+  { title: "関西エリアの法人電気料金 推移と単価水準", slug: "region-kansai-electricity-price-trend", description: "関西電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。原発比率の高さが推移に与える構造、特高・高圧・低圧の位置づけ、賦課金など全国共通の上昇要因、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 68, publishedAt: "2026-07-08" },
+  { title: "北海道エリアの法人電気料金 推移と単価水準", slug: "region-hokkaido-electricity-price-trend", description: "北海道電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。石炭火力依存・寒冷地・系統制約が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 69, publishedAt: "2026-07-08" },
+  { title: "九州エリアの法人電気料金 推移と単価水準", slug: "region-kyushu-electricity-price-trend", description: "九州電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。原子力稼働・太陽光大量導入が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 70, publishedAt: "2026-07-08" },
+  { title: "東北エリアの法人電気料金 推移と単価水準", slug: "region-tohoku-electricity-price-trend", description: "東北電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。女川再稼働・再エネ比率・製造業集積が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 71, publishedAt: "2026-07-08" },
+  { title: "中国エリアの法人電気料金 推移と単価水準", slug: "region-chugoku-electricity-price-trend", description: "中国電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。島根原発再稼働・石炭火力依存・重工業集積が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 72, publishedAt: "2026-07-08" },
+  { title: "北陸エリアの法人電気料金 推移と単価水準", slug: "region-hokuriku-electricity-price-trend", description: "北陸電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。豊富な水力・2023年値上げ・志賀原発の動向が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 73, publishedAt: "2026-07-08" },
+  { title: "中部エリアの法人電気料金 推移と単価水準", slug: "region-chubu-electricity-price-trend", description: "中部電力ミライズエリアの法人電気料金の推移と単価水準を公的統計の概括で整理。製造業集積・浜岡停止・火力依存が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 74, publishedAt: "2026-07-08" },
 
   // --- J. 経営層・CFO向け 追加4本 ---
   { title: "中期経営計画への電力コスト織り込み方", slug: "executive-mid-term-plan-electricity", description: "中計でシナリオ別に電力コストをどう織り込むか。経営企画部が押さえるべきKPIと前提の置き方を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 5, publishedAt: "2026-04-12" },
