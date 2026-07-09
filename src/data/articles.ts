@@ -443,6 +443,7 @@ export const articleCategories: ArticleCategory[] = [
       "翌月以降の予算検討に使える確認ポイント",
     ],
     recommendedReadingOrder: [
+      "business-electricity-retrospective/2026-06",
       "business-electricity-retrospective/2026-05",
       "business-electricity-retrospective/2026-04",
       "business-electricity-retrospective/2026-03",

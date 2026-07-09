@@ -20,6 +20,13 @@ export const HUB_SERIES_POINTS = [
 
 export const MONTHLY_RETROSPECTIVE_ITEMS: RetrospectiveCardItem[] = [
   {
+    title: "【2026年6月】法人の電気料金はどう動いた？7-9月支援策決定・JEPX前年比+39%・燃調と気象の総整理",
+    description:
+      "6/12認可の7〜9月電気・ガス料金支援（高圧も対象・8月分増額見込み）、JEPXスポット6月平均15.10円/kWh（前年同月比約+39%）と東西価格差、主要10社の燃料費調整（燃調本体）、梅雨・台風の気象を整理。4区分の6月実績単価は電力取引報の公表待ちのため、確定値と定性整理を分けて解説します。",
+    href: "/business-electricity-retrospective/2026-06",
+    ctaLabel: "記事を読む",
+  },
+  {
     title: "【2026年5月】法人の電気料金はどう動いた？再エネ賦課金改定後の本格運用",
     description:
       "5/1施行の再エネ賦課金改定（確定値 +0.20円/kWh）、GW明けの需要急増、冷房シーズン入りの3要因を整理。低圧・高圧・特別高圧と業種別の影響度マトリックス、夏季ピーク前の確認3視点まで解説します。",
