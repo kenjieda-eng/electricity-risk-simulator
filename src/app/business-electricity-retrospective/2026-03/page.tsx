@@ -55,24 +55,24 @@ const MAR_2026_DATA = {
   year: 2026,
   month: 3,
   categories: [
-    { label: "特別高圧", shortLabel: "特高", value: 16.5, prevMonthValue: 16.3, diff: 0.2, prevYearValue: 18.0, prevYearDiff: -1.5 },
-    { label: "高圧", shortLabel: "高圧", value: 20.6, prevMonthValue: 20.2, diff: 0.4, prevYearValue: 21.5, prevYearDiff: -0.9 },
-    { label: "低圧電灯", shortLabel: "低灯", value: 25.5, prevMonthValue: 24.8, diff: 0.7, prevYearValue: 25.5, prevYearDiff: 0.0 },
-    { label: "低圧電力", shortLabel: "低力", value: 27.5, prevMonthValue: 26.5, diff: 1.0, prevYearValue: 28.5, prevYearDiff: -1.0 },
+    { label: "特別高圧", shortLabel: "特高", value: 16.58, prevMonthValue: 16.68, diff: -0.1, prevYearValue: 18.0, prevYearDiff: -1.42 },
+    { label: "高圧", shortLabel: "高圧", value: 18.92, prevMonthValue: 18.39, diff: 0.53, prevYearValue: 21.5, prevYearDiff: -2.58 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 23.1, prevMonthValue: 22.67, diff: 0.43, prevYearValue: 25.5, prevYearDiff: -2.4 },
+    { label: "低圧電力", shortLabel: "低力", value: 27.37, prevMonthValue: 24.01, diff: 3.36, prevYearValue: 28.5, prevYearDiff: -1.13 },
   ],
   trendData: [
     { label: "2025/10", values: [16.6, 20.1, 26.2, 29.3] as [number, number, number, number] },
     { label: "2025/11", values: [16.8, 21.3, 27.3, 33.6] as [number, number, number, number] },
     { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
-    { label: "2026/1", values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
-    { label: "2026/2", values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
-    { label: "2026/3", values: [16.5, 20.6, 25.5, 27.5] as [number, number, number, number] },
+    { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
+    { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
+    { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.8, 24.5, 25.4, 27.8] as [number, number, number, number] },
     { year: 2024, values: [18.3, 20.5, 24.6, 27.2] as [number, number, number, number] },
     { year: 2025, values: [18.0, 21.5, 25.5, 28.5] as [number, number, number, number] },
-    { year: 2026, values: [16.5, 20.6, 25.5, 27.5] as [number, number, number, number] },
+    { year: 2026, values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
   ],
 };
 
@@ -215,6 +215,9 @@ export default function BusinessElectricityRetrospective202603Page() {
         <TableOfContents />
 
         <MonthlyDataCards data={MAR_2026_DATA} />
+        <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+          【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
+        </p>
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -254,7 +257,7 @@ export default function BusinessElectricityRetrospective202603Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">低圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年3月使用分の低圧電灯は約 25.5円/kWh、低圧電力は約 27.5円/kWh の水準で、前月比はそれぞれ +0.7円、+1.0円。前月の2月使用分が補助最大の月だったため、3月使用分はその反動として小幅上昇となっています。
+              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年3月使用分の低圧電灯は約 23.10円/kWh、低圧電力は約 27.37円/kWh の水準で、前月比はそれぞれ +0.43円、+3.36円。前月の2月使用分が補助最大かつ低圧電力の水準が大きく下がった月だったため、3月使用分はその反動として上昇し、とくに低圧電力の戻りが大きくなっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               低圧は資源エネルギー庁の支援対象でもあり、3月使用分の補助単価は1.50円/kWh と、1〜2月の4.50円/kWh から約1/3水準まで縮小されました。実務上は、3月使用分の補助縮小が4月請求分として表れやすいため、経理や総務の担当者は「使用月」と「請求月」を分けて確認したほうが混乱しにくいです。
@@ -278,7 +281,7 @@ export default function BusinessElectricityRetrospective202603Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">高圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年3月使用分の高圧は約 20.6円/kWh、前月比 +0.4円・前年同月比 -0.9円の動きとなっています。前月比のプラスは補助縮小（-1.50円/kWh）と燃調変動の合計を反映した水準です。
+              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年3月使用分の高圧は約 18.92円/kWh、前月比 +0.53円・前年同月比 -2.58円の動きとなっています。前月比のプラスは補助縮小（-1.50円/kWh）と燃調変動の合計を反映した水準です。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               高圧需要家は使用量が大きいため、補助縮小の年間累計インパクトは、契約電力1,000kW・月使用量50万kWh規模の中規模工場で月75万円→月40万円程度（補助分のみ）。中規模工場・物流センター・大型病院では、3月時点で2026年度予算の前提を見直す必要が出てくる規模です。
@@ -302,7 +305,7 @@ export default function BusinessElectricityRetrospective202603Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">特別高圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年3月使用分の特別高圧は約 16.5円/kWh、前月比 +0.2円・前年同月比 -1.5円の動きで、4区分のなかで最も安定した推移にとどまっています。
+              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年3月使用分の特別高圧は約 16.58円/kWh、前月比 -0.10円・前年同月比 -1.42円の動きで、4区分のなかで最も安定した推移にとどまっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               当社団が運営している「新電力ネット」の解説では、特別高圧は政府補助の対象外であり、主に天然ガスや石炭の価格変動の影響を受けると整理されています。このため、2026年3月使用分についても、特別高圧では低圧・高圧のような「補助縮小による下押しの剥落」は前面に出ません。一方で燃料費調整は前月比 +0.05〜+0.17円/kWh で電力会社により差があり、東京電力EP +0.14円/kWh、中部電力ミライズ +0.17円/kWh が顕著な上昇となっています。
@@ -520,7 +523,7 @@ export default function BusinessElectricityRetrospective202603Page() {
           <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
             <h2 className="text-xl font-semibold text-slate-900">まとめ</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年3月使用分の法人向け電気料金は、政府補助縮小開始（低圧4.50→1.50円/kWh、高圧2.30→0.80円/kWh）と JEPX スポット価格の安定推移（10.5〜11.5円/kWh）が同時に作用し、前月比で大きな変動が表面化しなかった月でした。低圧・高圧・特別高圧のすべての契約区分で前月比 +0.2〜+1.0円/kWh の小幅上昇にとどまった一方、前年同月比では -0.9〜-1.5円/kWh の低下傾向（2025年3月の高騰局面を経た反動）となっています。
+              2026年3月使用分の法人向け電気料金は、政府補助縮小開始（低圧4.50→1.50円/kWh、高圧2.30→0.80円/kWh）と JEPX スポット価格の安定推移（10.5〜11.5円/kWh）が同時に作用した月でした。前月比は契約区分により -0.1〜+3.4円/kWh（特別高圧はほぼ横ばい、低圧電力は前月の大きな低下からの反動で戻りが大きめ）となった一方、前年同月比では -1.1〜-2.6円/kWh の低下傾向（2025年3月の高騰局面を経た反動）となっています。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               一方で、3月は「補助あり最終局面の落ち着き」と「4月以降の構造変化前夜」の境目を確認する月でもありました。4月使用分から容量拠出金の本格徴収、5月使用分から再エネ賦課金 +0.20円/kWh の上振れと補助完全終了が重なるため、3月は2026年度の予算策定と契約見直しの意思決定を進める最終的なタイミングだったといえます。

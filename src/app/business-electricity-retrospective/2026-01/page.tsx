@@ -47,10 +47,10 @@ const JAN_2026_DATA = {
   year: 2026,
   month: 1,
   categories: [
-    { label: "特別高圧", shortLabel: "特高", value: 16.5, prevMonthValue: 16.9, diff: -0.4, prevYearValue: 18.3, prevYearDiff: -1.8 },
-    { label: "高圧", shortLabel: "高圧", value: 20.5, prevMonthValue: 20.9, diff: -0.4, prevYearValue: 22.2, prevYearDiff: -1.7 },
-    { label: "低圧電灯", shortLabel: "低灯", value: 25.5, prevMonthValue: 26.8, diff: -1.3, prevYearValue: 27.3, prevYearDiff: -1.8 },
-    { label: "低圧電力", shortLabel: "低力", value: 27.0, prevMonthValue: 32.4, diff: -5.4, prevYearValue: 28.6, prevYearDiff: -1.6 },
+    { label: "特別高圧", shortLabel: "特高", value: 16.72, prevMonthValue: 16.9, diff: -0.18, prevYearValue: 18.3, prevYearDiff: -1.58 },
+    { label: "高圧", shortLabel: "高圧", value: 20.43, prevMonthValue: 20.9, diff: -0.47, prevYearValue: 22.2, prevYearDiff: -1.77 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 25.98, prevMonthValue: 26.8, diff: -0.82, prevYearValue: 27.3, prevYearDiff: -1.32 },
+    { label: "低圧電力", shortLabel: "低力", value: 27.79, prevMonthValue: 32.4, diff: -4.61, prevYearValue: 28.6, prevYearDiff: -0.81 },
   ],
   trendData: [
     { label: "2025/8", values: [17.2, 19.9, 25.9, 25.6] as [number, number, number, number] },
@@ -58,13 +58,13 @@ const JAN_2026_DATA = {
     { label: "2025/10", values: [16.6, 20.1, 26.2, 29.3] as [number, number, number, number] },
     { label: "2025/11", values: [16.8, 21.3, 27.3, 33.6] as [number, number, number, number] },
     { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
-    { label: "2026/1", values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
+    { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.9, 27.5, 31.3, 31.5] as [number, number, number, number] },
     { year: 2024, values: [18.5, 21.0, 24.7, 26.4] as [number, number, number, number] },
     { year: 2025, values: [18.3, 22.2, 27.3, 28.6] as [number, number, number, number] },
-    { year: 2026, values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
+    { year: 2026, values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
   ],
 };
 
@@ -122,6 +122,9 @@ export default function BusinessElectricityRetrospective202601Page() {
       <TableOfContents />
 
       <MonthlyDataCards data={JAN_2026_DATA} />
+      <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+        【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
+      </p>
 
       <section className="mt-6 space-y-6">
         <section className="rounded-xl border border-slate-200 bg-white p-5">
