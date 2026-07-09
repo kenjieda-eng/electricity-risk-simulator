@@ -62,11 +62,9 @@ const MAY_2026_DATA = {
   ],
   trendData: [
     { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
-    { label: "2026/1", values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
-    { label: "2026/2", values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
-    { label: "2026/3", values: [16.5, 20.6, 25.5, 27.5] as [number, number, number, number] },
-    { label: "2026/4", values: [16.7, 21.0, 26.0, 28.5] as [number, number, number, number] },
-    { label: "2026/5", values: [17.0, 21.7, 26.2, 29.7] as [number, number, number, number] },
+    { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
+    { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
+    { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.1, 24.8, 25.0, 30.5] as [number, number, number, number] },
@@ -82,17 +80,18 @@ const surchargeUpdate = [
   { label: "差分", rate: "+0.20円/kWh（前年度比 +5.0%）", note: "kWhあたり約0.2円の単価上振れが5月使用分から発生" },
 ];
 
+// 主要電力10社の2026年5月分 燃料費調整（円/kWh・税込・燃調本体）。各社2026年4月28日発表の一次出典に基づく。市場価格調整は別途。
 const fuelAdjustmentSummary = [
-  { area: "北海道電力", high: "-0.06", low: "-0.06", note: "5月単価 1.68円/kWh（高圧）、前月比減少傾向" },
-  { area: "東北電力", high: "+0.04", low: "+0.05", note: "5月単価 2.92円/kWh（高圧）" },
-  { area: "東京電力EP", high: "0.00", low: "0.00", note: "5月単価 2.67円/kWh（高圧）、前月比横ばい" },
-  { area: "中部電力ミライズ", high: "+0.06", low: "+0.07", note: "5月単価 1.20円/kWh（高圧）、前月比最大の上昇" },
-  { area: "北陸電力", high: "+0.02", low: "+0.01", note: "5月単価 2.30円/kWh(高圧)" },
-  { area: "関西電力", high: "+0.05", low: "+0.05", note: "5月単価 2.78円/kWh（高圧）、原発比率高い構成" },
-  { area: "中国電力", high: "+0.04", low: "+0.05", note: "5月単価 3.32円/kWh（高圧）、石炭比率高い構成" },
-  { area: "四国電力", high: "+0.02", low: "+0.02", note: "5月単価 2.39円/kWh（高圧）、原発再稼働で安定" },
-  { area: "九州電力", high: "+0.04", low: "+0.04", note: "5月単価 1.18円/kWh（高圧）、原発比率最大で全国最低水準" },
-  { area: "沖縄電力", high: "+0.03", low: "+0.03", note: "5月単価 3.75円/kWh（高圧）、島嶼系統で全国最高水準" },
+  { area: "北海道電力", extraHigh: "▲2.31", high: "▲2.38", note: "" },
+  { area: "東北電力", extraHigh: "0.33", high: "0.35", note: "市場価格調整は別途" },
+  { area: "東京電力EP", extraHigh: "0.87", high: "0.89", note: "2026年4月新約款＝燃調本体＋市場価格調整（別途）" },
+  { area: "中部電力ミライズ", extraHigh: "0.12", high: "0.12", note: "市場価格調整は別途" },
+  { area: "北陸電力", extraHigh: "▲7.22", high: "▲7.36", note: "" },
+  { area: "関西電力", extraHigh: "▲1.02", high: "—", note: "高圧500kW未満は市場価格調整込で▲1.24" },
+  { area: "中国電力", extraHigh: "▲1.38", high: "▲1.41", note: "合計値" },
+  { area: "四国電力", extraHigh: "▲6.89", high: "▲7.07", note: "" },
+  { area: "九州電力", extraHigh: "▲0.99", high: "▲1.01", note: "合計値" },
+  { area: "沖縄電力", extraHigh: "▲12.11", high: "▲12.39", note: "合計値（燃調＋離島）" },
 ];
 
 const jepxAreaSummary = [
@@ -184,9 +183,9 @@ const faqItems = [
       "①夏季ピーク月の使用量試算と契約電力の妥当性、②固定 vs 市場連動の夏季リスクシナリオ比較、③再エネ賦課金改定の年間累計インパクト確認の3点。5月のうちにピークカット策導入可否とプラン切替判断を完了するのが目安です。",
   },
   {
-    question: "5月の主要電力10社の燃料費調整額の動向は？",
+    question: "5月の主要電力10社の燃料費調整単価の動向は？",
     answer:
-      "業界平均では前月比 ±0.00〜+0.07円/kWh（高圧 5 月推計（速報）、新電力ネット集計）。北海道電力は前月比 -0.06円/kWhで例外的に減少、中部電力ミライズ +0.06円/kWhが最大の上昇。東京電力EPは前月比横ばい。電力会社により方向性が異なるため、自社契約先の単価動向の個別確認が必要です。",
+      "5月分の燃料費調整単価（燃調本体・税込）は、各社2026年4月28日発表の一次出典に基づき、特別高圧・高圧で会社差が大きくなっています。たとえば東京電力EPは特高0.87・高圧0.89円/kWh、中部電力ミライズは特高・高圧とも0.12円/kWh、北海道電力は特高▲2.31・高圧▲2.38円/kWhです。燃調本体とは別に市場価格調整が加わる会社もあり、詳細は各社公式でご確認ください。",
   },
 ];
 
@@ -240,6 +239,12 @@ export default function BusinessElectricityRetrospective202605Page() {
         <TableOfContents />
 
         <MonthlyDataCards data={MAY_2026_DATA} />
+        <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+          【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
+        </p>
+        <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-6 text-amber-800">
+          ※上記カードおよび本文中の2026年5月使用分の単価（推計）は、電力取引報の公表前時点の速報的な参考値です（確定値は公表後に更新。4月分＝2026年7月中旬公表見込み、5月分はそれ以降）。確定値による推移は下記グラフ（2026年3月分まで）をご覧ください。
+        </p>
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -401,26 +406,26 @@ export default function BusinessElectricityRetrospective202605Page() {
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
-            <h2 className="text-xl font-semibold text-slate-900">5月の主要電力10社の燃料費調整額一覧</h2>
+            <h2 className="text-xl font-semibold text-slate-900">5月の主要電力10社の燃料費調整単価一覧（特高・高圧の燃調本体）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              主要電力10社の2026年5月分 燃料費調整額の動向（業界平均ベース、前月比 +の上振れを示す目安値）を整理しました。原発比率・電源構成・地域要因により会社ごとに大きな差があります。
+              主要電力10社の2026年5月分 燃料費調整単価を、特別高圧・高圧の燃調本体（税込）で統一して整理しました。各社の2026年4月28日発表（2026年6月号と同一の一次出典）に基づく5月分の値です。市場価格調整（東京電力EP・中部電力ミライズ・関西電力ほか）は別途加算があり、詳細は各社公式でご確認ください。
             </p>
             <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
               <table className="min-w-full border-collapse text-sm sm:text-base">
                 <thead className="bg-slate-100">
                   <tr>
                     <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">電力会社</th>
-                    <th className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">高圧 (前月比, 円/kWh)</th>
-                    <th className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">低圧 (前月比, 円/kWh)</th>
-                    <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">特徴</th>
+                    <th className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">特高 5月 (円/kWh)</th>
+                    <th className="border-b border-slate-200 px-3 py-2 text-right font-semibold text-slate-900">高圧 5月 (円/kWh)</th>
+                    <th className="border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">備考（市場価格調整ほか）</th>
                   </tr>
                 </thead>
                 <tbody>
                   {fuelAdjustmentSummary.map((row) => (
                     <tr key={row.area} className="even:bg-slate-50">
                       <td className="border-b border-slate-200 px-3 py-2 font-medium">{row.area}</td>
+                      <td className="border-b border-slate-200 px-3 py-2 text-right tabular-nums">{row.extraHigh}</td>
                       <td className="border-b border-slate-200 px-3 py-2 text-right tabular-nums">{row.high}</td>
-                      <td className="border-b border-slate-200 px-3 py-2 text-right tabular-nums">{row.low}</td>
                       <td className="border-b border-slate-200 px-3 py-2 text-xs text-slate-600">{row.note}</td>
                     </tr>
                   ))}
@@ -428,7 +433,7 @@ export default function BusinessElectricityRetrospective202605Page() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-500">
-              ※速報値・業界平均ベース。実際の単価は各電力会社の公表値で再確認してください。{" "}
+              ※本表は各社の燃調本体（税込）で統一しています。市場価格調整は別途加算があり、表外の注記扱いです。出典は各社2026年4月28日プレスリリース（2026年6月号のデータ集と同一）。実際の単価は各電力会社の公表値で再確認してください。{" "}
               <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
               、{" "}
               <Link href="/how-to-check-fuel-cost-adjustment-terms" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">約款での燃料費調整確認</Link>

@@ -63,10 +63,9 @@ const APR_2026_DATA = {
   trendData: [
     { label: "2025/11", values: [16.8, 21.3, 27.3, 33.6] as [number, number, number, number] },
     { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
-    { label: "2026/1", values: [16.5, 20.5, 25.5, 27.0] as [number, number, number, number] },
-    { label: "2026/2", values: [16.3, 20.2, 24.8, 26.5] as [number, number, number, number] },
-    { label: "2026/3", values: [16.5, 20.6, 25.5, 27.5] as [number, number, number, number] },
-    { label: "2026/4", values: [16.7, 21.0, 26.0, 28.5] as [number, number, number, number] },
+    { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
+    { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
+    { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.6, 24.3, 25.2, 28.0] as [number, number, number, number] },
@@ -214,6 +213,12 @@ export default function BusinessElectricityRetrospective202604Page() {
         <TableOfContents />
 
         <MonthlyDataCards data={APR_2026_DATA} />
+        <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+          【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
+        </p>
+        <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-6 text-amber-800">
+          ※上記カードおよび本文中の2026年4月使用分の単価は、電力取引報の公表前時点の速報的な参考値です（確定値は公表後に更新。4月分＝2026年7月中旬公表見込み）。確定値による推移は下記グラフ（2026年3月分まで）をご覧ください。
+        </p>
 
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
