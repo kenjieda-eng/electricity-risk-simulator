@@ -374,6 +374,11 @@ export default function CompareBusinessElectricityEstimatesPage() {
           intro="見積書比較を精度高く進めるために、あわせて確認できるページです。"
           links={[
             {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気料金を削減する見直しポイント7選",
+              description: "契約区分別の削減効果と進め方を7項目で整理しています。",
+            },
+            {
               href: "/how-to-read-electricity-quote",
               title: "電力見積書の読み方：各行の意味と確認ポイント",
               description:

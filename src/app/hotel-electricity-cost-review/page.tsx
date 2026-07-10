@@ -468,6 +468,11 @@ export default function HotelElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/business-hotel-electricity-cost-review",
+              title: "ビジネスホテルの電気料金見直しポイント",
+              description: "客室稼働と設備効率を踏まえたビジネスホテルの見直しの考え方。",
+            },
+            {
               href: "/industry-electricity-guide",
               title: "業種別の電気料金見直しガイド一覧",
               description: "業種ごとの負荷特性と契約見直しの考え方を一覧で確認。",

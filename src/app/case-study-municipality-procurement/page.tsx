@@ -325,6 +325,7 @@ export default function CaseStudyMunicipalityPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
+            { href: "/water-sewage-electricity-cost-review", title: "上下水道施設の電気料金リスクと見直し", description: "ポンプ負荷と24時間稼働を踏まえた上下水道施設の契約見直しの考え方。" },
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "複数の電力会社を比較するための具体的な方法" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきこと" },
             { href: "/case-study-retail-chain-review", title: "小売チェーン30店舗：年間4,200万円削減", description: "一括見直しのスケールメリットを活かした事例" },
