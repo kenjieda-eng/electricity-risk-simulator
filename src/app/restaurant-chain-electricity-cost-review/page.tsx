@@ -470,6 +470,11 @@ export default function RestaurantChainElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-restaurant-chain-reduction",
+              title: "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例",
+              description: "居酒屋チェーンが全店舗の契約と設備を見直して削減した事例。",
+            },
+            {
               href: "/industry-electricity-guide",
               title: "業種別の電気料金見直しガイド一覧",
               description: "業種ごとの負荷特性と契約見直しの考え方を一覧で確認。",

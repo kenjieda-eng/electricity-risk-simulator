@@ -363,6 +363,11 @@ export default function ConvenienceStoreElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/drugstore-electricity-cost-review",
+              title: "ドラッグストアの電気料金見直しポイント",
+              description: "冷蔵・照明と多拠点を踏まえたドラッグストアの見直しの考え方。",
+            },
+            {
               href: "/supermarket-electricity-cost-review",
               title: "スーパーマーケットの電気料金見直しポイント",
               description: "冷蔵・空調負荷を踏まえた食品小売の契約見直しの考え方。",

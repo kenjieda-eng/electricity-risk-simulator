@@ -409,6 +409,12 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           heading="関連ページ"
           links={[
             {
+              href: "/business-electricity-contract-checklist",
+              title: "法人の電力契約見直しチェックリスト",
+              description:
+                "契約見直しで確認すべき項目を一覧で整理したチェックリストです。",
+            },
+            {
               href: "/documents-needed-for-electricity-contract-review",
               title: "法人の電気料金見直しで集めるべき資料一覧",
               description:

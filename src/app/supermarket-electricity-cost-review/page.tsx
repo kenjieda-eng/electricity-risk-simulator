@@ -490,6 +490,11 @@ export default function SupermarketElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/drugstore-electricity-cost-review",
+              title: "ドラッグストアの電気料金見直しポイント",
+              description: "冷蔵・照明と多拠点を踏まえたドラッグストアの見直しの考え方。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "予算管理と安定性を重視する法人に固定プランが向きやすい理由。",

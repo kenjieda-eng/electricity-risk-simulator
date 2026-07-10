@@ -713,6 +713,7 @@ export default function KyotoHotelRyokanElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/hot-spring-facility-electricity-cost-review", title: "温浴施設の電気料金リスクと見直し", description: "給湯・循環・空調の高負荷を踏まえた温浴施設の見直しの考え方。" },
               { href: "/kyoto-business-electricity-cost", title: "京都府の法人電気料金ガイド（地域一般）", description: "京都府全体の文脈・関西電力エリア・観光業以外も。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し（業種一般）", description: "シティ・リゾート・ビジネスホテルの業種別最適化。" },
               { href: "/region-kansai-business-electricity", title: "関西電力エリアの法人電気代事情", description: "関西全体の料金体系・原子力寄与・改定動向。" },

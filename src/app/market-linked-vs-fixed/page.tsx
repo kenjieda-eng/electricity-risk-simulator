@@ -337,6 +337,11 @@ export default function MarketLinkedVsFixedPage() {
           intro="個別解説ページを読むと、比較表で示した違いの背景をより具体的に確認できます。"
           links={[
             {
+              href: "/faq-market-linked-plan",
+              title: "【FAQ】市場連動プランは怖い？",
+              description: "市場連動プランが向いている企業・避けるべき企業をFAQ形式で整理しています。",
+            },
+            {
               href: "/market-linked-plan",
               title: "市場連動プランとは",
               description: "市場価格に連動する仕組みと、導入時に確認したい実務ポイントを解説しています。",

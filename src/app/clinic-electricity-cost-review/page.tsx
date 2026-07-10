@@ -405,6 +405,11 @@ export default function ClinicElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/nursing-care-facility-electricity-cost-review",
+              title: "介護施設の電気料金見直しポイント",
+              description: "安定供給と予算管理を重視した介護施設の電力契約見直しの考え方。",
+            },
+            {
               href: "/veterinary-clinic-electricity-cost-review",
               title: "動物病院の電気料金見直しポイント",
               description: "麻酔器・電気メス、X線/CT/MRI、薬品冷蔵庫、入院動物の温度管理など動物病院特有の電力負荷と契約見直しの着眼点。",

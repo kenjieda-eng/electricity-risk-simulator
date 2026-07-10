@@ -328,6 +328,7 @@ export default function RestaurantElectricityCostBenchmarkPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/case-study-restaurant-chain-reduction", title: "飲食チェーン：40店舗一括見直しで年間2,800万円削減した事例", description: "居酒屋チェーンが全店舗の契約と設備を見直して削減した事例。" },
             { href: "/electricity-cost-benchmark-by-industry", title: "業種別 法人電気代の月額相場一覧", description: "業種横断での電気代相場を一覧で比較" },
             { href: "/retail-store-electricity-cost-benchmark", title: "小売店舗の電気代相場", description: "コンビニ・スーパー・ドラッグストアの業態別相場" },
             { href: "/led-air-conditioning-reduction-effect", title: "LED化・空調最適化の削減効果", description: "設備対策で使用量をどれだけ下げられるか" },

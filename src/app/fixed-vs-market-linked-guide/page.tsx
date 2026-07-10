@@ -371,6 +371,11 @@ export default function FixedVsMarketLinkedGuidePage() {
           heading="関連ページ"
           links={[
             {
+              href: "/faq-market-linked-plan",
+              title: "【FAQ】市場連動プランは怖い？",
+              description: "市場連動プランが向いている企業・避けるべき企業をFAQ形式で整理しています。",
+            },
+            {
               href: "/market-linked-vs-fixed",
               title: "市場連動プランと固定プランの違い",
               description: "プランの仕組みとコスト構造の基本的な比較。",

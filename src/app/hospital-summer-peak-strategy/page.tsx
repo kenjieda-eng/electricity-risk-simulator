@@ -633,6 +633,7 @@ export default function HospitalSummerPeakStrategyPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/nursing-care-facility-electricity-cost-review", title: "介護施設の電気料金見直しポイント", description: "安定供給と予算管理を重視した介護施設の電力契約見直しの考え方。" },
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別戦略のハブ。" },
               { href: "/case-study-hospital-peak-cut", title: "病院のピークカット事例", description: "病院の実際のピークカット事例を詳説。" },
               { href: "/hospital-electricity-cost-review", title: "病院の電気料金見直し", description: "病院の電力プロファイルと料金見直し手順。" },

@@ -926,6 +926,11 @@ export default function BusinessElectricityBillBreakdownPage() {
           intro="内訳を押さえたら、見積・相場・制度要因・上昇理由へ進むと請求の読み解きが一段深まります。"
           links={[
             {
+              href: "/business-electricity-cost-reduction-review-points",
+              title: "法人電気料金を削減する見直しポイント7選",
+              description: "契約区分別の削減効果と進め方を7項目で整理しています。",
+            },
+            {
               href: "/how-to-read-electricity-quote",
               title: "法人向け電気料金見積書の見方",
               description: "請求内訳と同じ項目軸で、見積の前提を確認できます。",

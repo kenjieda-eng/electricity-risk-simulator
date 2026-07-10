@@ -242,6 +242,11 @@ export default function WhenToReviewElectricityContractPage() {
           intro="タイミングを押さえたら、資料準備・見積確認・切替までを同じ流れで読み進めると実務がつながります。"
           links={[
             {
+              href: "/business-electricity-contract-checklist",
+              title: "法人の電力契約見直しチェックリスト",
+              description: "契約見直しで確認すべき項目を一覧で整理したチェックリストです。",
+            },
+            {
               href: "/switching-business-electricity-contract",
               title: "法人が電力契約を切り替えるときの注意点",
               description: "更新・切替の期限と請求のズレなど、実行フェーズの論点を整理できます。",

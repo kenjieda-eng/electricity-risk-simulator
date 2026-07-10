@@ -312,6 +312,11 @@ export default function MarketLinkedPlanPage() {
           intro="市場連動プラン単体の理解に加えて、固定プランの考え方や比較軸も押さえると、契約方針を整理しやすくなります。"
           links={[
             {
+              href: "/faq-market-linked-plan",
+              title: "【FAQ】市場連動プランは怖い？",
+              description: "市場連動プランが向いている企業・避けるべき企業をFAQ形式で整理しています。",
+            },
+            {
               href: "/fixed-price-plan",
               title: "固定プランとは",
               description: "単価を読みやすくしたい法人向けに、固定プランの特徴と注意点を整理しています。",

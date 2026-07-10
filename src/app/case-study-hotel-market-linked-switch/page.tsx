@@ -347,6 +347,7 @@ export default function CaseStudyHotelMarketLinkedPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
+            { href: "/business-hotel-electricity-cost-review", title: "ビジネスホテルの電気料金見直しポイント", description: "客室稼働と設備効率を踏まえたビジネスホテルの見直しの考え方。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "JEPX連動型プランの仕組みとリスク・メリットを解説" },
             { href: "/fixed-price-plan", title: "固定プランとは", description: "固定型電力プランの特徴と向いている事業者の条件" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "燃料費調整額の仕組みと上限廃止後のリスク" },

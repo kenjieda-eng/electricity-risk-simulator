@@ -621,6 +621,7 @@ export default function HotelSummerPeakStrategyPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/hot-spring-facility-electricity-cost-review", title: "温浴施設の電気料金リスクと見直し", description: "給湯・循環・空調の高負荷を踏まえた温浴施設の見直しの考え方。" },
               { href: "/articles/seasonal-strategy", title: "季節別の電気代対策（一覧）", description: "夏季ピーク対策・DR・業種別戦略のハブ。" },
               { href: "/hotel-electricity-cost-review", title: "ホテルの電気料金見直し", description: "宿泊業の電力プロファイルと見直し一般。" },
               { href: "/case-study-hotel-market-linked-switch", title: "ホテルの市場連動切替事例", description: "市場連動への切替の実例と判断。" },
