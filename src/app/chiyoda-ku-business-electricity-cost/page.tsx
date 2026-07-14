@@ -669,6 +669,7 @@ export default function ChiyodaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/taito-ku-business-electricity-cost", title: "台東区（浅草・上野）の法人電気料金", description: "浅草・上野の観光宿泊、御徒町・合羽橋の問屋街に特化した電気代見直しの実務ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "全国市区町村の電気料金事情ハブ。" },
               { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の文脈と多摩・23区の比較。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電管内の料金体系・改定動向。" },

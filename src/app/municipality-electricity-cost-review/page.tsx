@@ -445,6 +445,11 @@ export default function MunicipalityElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/public-gym-electricity-cost-review",
+              title: "公共体育館の電気料金見直しポイント",
+              description: "空調・照明と大空間の稼働パターンを踏まえた公共体育館の契約見直しの着眼点。",
+            },
+            {
               href: "/water-sewage-electricity-cost-review",
               title: "上下水道施設の電気料金リスクと見直し",
               description: "ポンプ負荷と24時間稼働を踏まえた上下水道施設の契約見直しの考え方。",

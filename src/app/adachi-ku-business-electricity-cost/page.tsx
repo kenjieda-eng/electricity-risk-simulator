@@ -666,6 +666,7 @@ export default function AdachiKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/taito-ku-business-electricity-cost", title: "台東区（浅草・上野）の法人電気料金", description: "浅草・上野の観光宿泊、御徒町・合羽橋の問屋街に特化した電気代見直しの実務ガイド。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "製造業・印刷業・物流拠点集積の区の電力需要と契約最適化。" },
               { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },

@@ -280,6 +280,11 @@ export default function FactoryFixedVsMarketLinkedPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/auto-parts-electricity-cost-review",
+              title: "自動車部品業の電気代見直しポイント",
+              description: "JIT生産の負荷変動やEVシフトを踏まえた自動車部品業の電気代見直しの着眼点。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "安定性を重視する判断軸の整理。",

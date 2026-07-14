@@ -278,6 +278,11 @@ export default function LastResortSupplySwitchPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/case-study-last-resort-recovery",
+              title: "最終保障供給から通常契約に戻した事例",
+              description: "新電力撤退で最終保障供給に移行した企業が通常契約へ復帰した手順を整理。",
+            },
+            {
               href: "/when-to-review-electricity-contract",
               title: "法人が電力契約を見直すタイミング",
               description: "切り替え着手の適切な時期を整理できます。",

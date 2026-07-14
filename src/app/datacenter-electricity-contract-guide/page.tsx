@@ -219,6 +219,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/research-facility-electricity-cost-review", title: "研究施設・研究所の電気料金見直し", description: "精密機器と環境制御・超低温設備の負荷特性を踏まえた研究施設の見直しの考え方。" },
               { href: "/datacenter-electricity-demand-surge", title: "データセンター電力需要の急増", description: "AI時代のDC需要動向と法人電気料金への波及。" },
               { href: "/datacenter-cooling-optimization", title: "データセンター冷却最適化", description: "PUE改善と液冷の実務ポイント。" },
               { href: "/datacenter-location-grid-constraints", title: "データセンター立地と送電網制約", description: "系統空き容量の確認プロセス。" },

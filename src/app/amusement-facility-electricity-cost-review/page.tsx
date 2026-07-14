@@ -370,6 +370,11 @@ export default function AmusementFacilityElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/aquarium-zoo-electricity-cost-review",
+              title: "水族館・動物園の電気料金見直しポイント",
+              description: "生命維持設備の常時稼働・ろ過ポンプ・水温管理の電力構造と契約見直しの着眼点を整理。",
+            },
+            {
               href: "/karaoke-box-electricity-cost-review",
               title: "カラオケボックスの電気料金見直しポイント",
               description: "個室AV機器の待機電力、個室空調の同時稼働ピーク、深夜電力プラン、廊下照明のセンサー化などカラオケ特有の電力負荷と契約見直しの着眼点。",
