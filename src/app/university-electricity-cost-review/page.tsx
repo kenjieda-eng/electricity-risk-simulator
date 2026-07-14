@@ -370,6 +370,11 @@ export default function UniversityElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/research-facility-electricity-cost-review",
+              title: "研究施設・研究所の電気料金見直し",
+              description: "精密機器と環境制御・超低温設備の負荷特性を踏まえた研究施設の見直しの考え方。",
+            },
+            {
               href: "/businesses-suited-for-fixed-price-electricity-plan",
               title: "固定プランが向く法人の特徴",
               description: "予算管理と安定性を重視する法人に固定プランが向きやすい理由。",

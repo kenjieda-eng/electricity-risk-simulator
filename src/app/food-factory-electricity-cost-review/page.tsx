@@ -479,6 +479,11 @@ export default function FoodFactoryElectricityCostReviewPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/meat-processing-electricity-cost-review",
+              title: "精肉加工業の電気料金見直しポイント",
+              description: "ハム・ソーセージ燻製と冷蔵保管・HACCP対応設備の電力を踏まえた契約見直しを整理。",
+            },
+            {
               href: "/industry-electricity-guide",
               title: "業種別の電気料金見直しガイド一覧",
               description: "業種ごとの負荷特性と契約見直しの考え方を一覧で確認。",

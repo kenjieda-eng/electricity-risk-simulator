@@ -359,6 +359,7 @@ export default function CaseStudyPriceIncreaseNegotiationPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
+            { href: "/case-study-last-resort-recovery", title: "最終保障供給から通常契約に戻した事例", description: "新電力撤退で最終保障供給に移行した企業が通常契約へ復帰した手順を整理。" },
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "代替先を探すための電力会社比較の方法" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額とは", description: "燃調費の仕組みと上限設定の重要性" },
             { href: "/when-to-review-electricity-contract", title: "見直しのタイミングはいつか", description: "値上げ通知を受けた際の対応タイミング" },

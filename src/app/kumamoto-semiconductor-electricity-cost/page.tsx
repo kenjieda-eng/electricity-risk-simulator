@@ -715,6 +715,7 @@ export default function KumamotoSemiconductorElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/precision-instruments-electricity-cost-review", title: "精密機器業の電気料金見直しポイント", description: "恒温恒湿・微細加工・測定室の空調負荷と規模別の削減余地を整理。" },
               { href: "/kumamoto-business-electricity-cost", title: "熊本県の法人電気料金ガイド（地域一般）", description: "熊本県全体の文脈・農林水産・観光・半導体集積。" },
               { href: "/semiconductor-electricity-cost-review", title: "半導体業の電気料金見直し（業種一般）", description: "ロジック・メモリ・パワーデバイスのクリーンルーム最適化。" },
               { href: "/region-kyushu-business-electricity", title: "九州電力エリアの法人電気代事情", description: "九州エリアの料金体系・原子力＋太陽光電源構成。" },
