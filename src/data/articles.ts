@@ -932,6 +932,7 @@ export const articleCategories: ArticleCategory[] = [
       "region-hokuriku-electricity-price-trend",
       "region-chubu-electricity-price-trend",
       "region-shikoku-electricity-price-trend",
+      "region-okinawa-electricity-price-trend",
     ],
     order: 20,
     group: "learning",
@@ -1537,6 +1538,10 @@ export const articleCategories: ArticleCategory[] = [
       "updater-minden-corporate-electricity-guide",
       "regional-gas-affiliated-new-power-corporate-electricity-guide",
       "utility-affiliated-new-power-corporate-electricity-guide",
+      "hokkaido-gas-corporate-electricity-guide",
+      "shizuoka-gas-power-corporate-electricity-guide",
+      "sala-e-energy-corporate-electricity-guide",
+      "qnext-corporate-electricity-guide",
     ],
     order: 40,
     group: "learning",
@@ -3755,6 +3760,7 @@ export const articleList: ArticleMeta[] = [
   { title: "北陸エリアの法人電気料金 推移と単価水準", slug: "region-hokuriku-electricity-price-trend", description: "北陸電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。豊富な水力・2023年値上げ・志賀原発の動向が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 73, publishedAt: "2026-07-08" },
   { title: "中部エリアの法人電気料金 推移と単価水準", slug: "region-chubu-electricity-price-trend", description: "中部電力ミライズエリアの法人電気料金の推移と単価水準を公的統計の概括で整理。製造業集積・浜岡停止・火力依存が推移に与える構造、特高・高圧・低圧の位置づけ、見通しの考え方を中立的に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 74, publishedAt: "2026-07-08" },
   { title: "四国エリアの法人電気料金 推移と単価水準｜JEPX全国最低水準・伊方3号機・本四連系の構造（代表シナリオ）", slug: "region-shikoku-electricity-price-trend", description: "四国電力エリアの法人電気料金の推移と単価水準を公的統計・JEPX実績の概括で整理。伊方3号機を含む電源構成、JEPXエリアプライスが全国最低水準（2026年6月7.88円/kWh・前年比マイナスの唯一のエリア）、本四連系や製紙・造船・化学の産業構成が推移に与える構造を、四国の料金事情ページとの読み分けとともに中立に解説します。", category: "地域別電気料金事情", categorySlug: "by-region", order: 75, publishedAt: "2026-07-15" },
+  { title: "沖縄エリアの法人電気料金 推移と単価水準｜独立系統・JEPX対象外・石油火力依存の構造（代表シナリオ）", slug: "region-okinawa-electricity-price-trend", description: "沖縄電力エリアの法人電気料金の推移と単価水準を公的統計の概括で整理。本土非連系の独立系統、JEPX対象外（燃調と自社電源構成が単価を規定）、石油火力依存と燃調感応度、離島ユニバーサルサービス、台風BCPを中立に解説します。既存の沖縄事情・沖縄電力ガイドと読み分けます。", category: "地域別電気料金事情", categorySlug: "by-region", order: 76, publishedAt: "2026-07-18" },
 
   // --- J. 経営層・CFO向け 追加4本 ---
   { title: "中期経営計画への電力コスト織り込み方", slug: "executive-mid-term-plan-electricity", description: "中計でシナリオ別に電力コストをどう織り込むか。経営企画部が押さえるべきKPIと前提の置き方を整理します。", category: "経営層・CFO向け", categorySlug: "for-executives", order: 5, publishedAt: "2026-04-12" },
@@ -5303,4 +5309,8 @@ export const articleList: ArticleMeta[] = [
   { title: "みんな電力（株式会社UPDATER）の法人向け電力ガイド｜電源トレーサビリティ・再エネ100%メニュー・RE100活用", slug: "updater-minden-corporate-electricity-guide", description: "みんな電力（運営: 株式会社UPDATER。2021年にみんな電力株式会社から社名変更し、電力ブランド名「みんな電力」を継続使用）の法人向けサービスを、公開情報に基づき中立的に整理。ブロックチェーンを活用した電源トレーサビリティ、発電所を特定できる再エネ電力、再エネ100%メニュー、RE100・脱炭素の調達手段としての位置づけ、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 29, publishedAt: "2026-07-05" },
   { title: "地方ガス系新電力の法人活用ガイド｜地域ガス基盤×電気の一括最適化・エリア選定軸と中立的な選び方", slug: "regional-gas-affiliated-new-power-corporate-electricity-guide", description: "地方の都市ガス事業を母体とする地域密着型新電力（北海道ガス・静岡ガス＆パワー・サーラeエナジー・広島ガス等）の類型を、公開情報に基づき中立的に整理。本ページは特定企業ではなくタイプ別の横断解説です。ガス・電気の一括最適化、コージェネ併用、地域基盤・エリア密着、LNG等の燃料調達基盤といった地方ガス系新電力の共通特性と、供給エリアを軸にした中立的な選び方・相見積活用のポイントを、第三者・社団法人視点でまとめます。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 30, publishedAt: "2026-07-05" },
   { title: "旧一電グループ系新電力の法人活用ガイド｜グループ小売会社の類型・承継動向と中立的な選定軸", slug: "utility-affiliated-new-power-corporate-electricity-guide", description: "旧一般電気事業者（旧一電）グループに属する小売系新電力（九電ネクスト・テプコカスタマーサービス等の販売主体）の類型を、公開情報に基づき中立的に整理。本ページは特定企業ではなくタイプ別の横断解説です。旧一電本体（東京電力エナジーパートナー・関西電力等）とは別に、グループ内で全国・エリア外へ展開する小売会社の共通特性、承継・再編動向、燃調算定方式、そして本体・グループ系・他新電力を跨いだ中立的な選定軸を、第三者・社団法人視点でまとめます。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 31, publishedAt: "2026-07-05" },
+  { title: "北海道ガス「北ガスの電気」法人向けガイド｜道内産電源・ガスセット割・低圧公開／高圧個別提案（2026年7月時点）", slug: "hokkaido-gas-corporate-electricity-guide", description: "北海道ガスが運営する「北ガスの電気」を公開情報に基づき中立整理。離島除く北海道全域供給、道内産電源（天然ガスコージェネ・バイオマス等）の訴求、法人低圧の料金公開と高圧の個別提案、ガスセット割は最新公式で要確認、という事実ベースの判断材料を提示します。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 32, publishedAt: "2026-07-18" },
+  { title: "静岡ガス＆パワー（SHIZGASでんき）法人向けガイド｜50Hz/60Hz両地区対応・高圧約款改定（2026年7月時点）", slug: "shizuoka-gas-power-corporate-electricity-guide", description: "静岡ガス100%出資の静岡ガス＆パワー（登録A0024）を公開情報に基づき中立整理。静岡県内の50Hz/60Hz両地区（富士川東西）に対応した約款、2026年7月1日付高圧約款改定、低圧「SHIZGASでんき」、窓口は親会社静岡ガスに集約、電源構成・CO2係数の毎年公表を事実ベースで提示します。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 33, publishedAt: "2026-07-18" },
+  { title: "サーラeエナジー（サーラの電気）法人向けガイド｜中部＋関東・高負荷率施設への対応訴求（2026年7月時点）", slug: "sala-e-energy-corporate-electricity-guide", description: "サーラグループのサーラeエナジー（サーラの電気）を公開情報に基づき中立整理。中部＋関東の広域供給、病院・老健・夜間操業工場など負荷率の高い施設への対応を公式が明示している事実、CO2フリーオプション・電源構成公表を判断材料として提示します。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 34, publishedAt: "2026-07-18" },
+  { title: "九電ネクスト法人向けガイド｜九電100%子会社・高圧特高は市場連動プランのみ提案（2026年7月時点）", slug: "qnext-corporate-electricity-guide", description: "九州電力100%出資の九電ネクストを公開情報に基づき中立整理。2025年4月に九電みらいエナジーから小売事業を吸収分割で承継した経緯、高圧・特別高圧の新規は市場連動電力プランのみ提案という公式方針、申込状況により提案不可の場合あり、見積ベースである点を明記し、市場連動リスクの既存解説へ誘導します。特定企業の優劣評価は行いません。", category: "電力会社別解説", categorySlug: "power-utility-guide", order: 35, publishedAt: "2026-07-18" },
 ];
