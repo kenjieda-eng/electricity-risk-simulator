@@ -61,10 +61,12 @@ const MAY_2026_DATA = {
     { label: "低圧電力", shortLabel: "低力", value: 29.7, prevMonthValue: 28.5, diff: 1.2, prevYearValue: 34.7, prevYearDiff: -5.0 },
   ],
   trendData: [
-    { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
+    { label: "2025/11", values: [16.78, 21.32, 27.32, 33.58] as [number, number, number, number] },
+    { label: "2025/12", values: [16.87, 20.95, 26.78, 32.4] as [number, number, number, number] },
     { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
     { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
     { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
+    { label: "2026/4", values: [17.56, 21.37, 25.94, 32.12] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.1, 24.8, 25.0, 30.5] as [number, number, number, number] },
@@ -94,17 +96,18 @@ const fuelAdjustmentSummary = [
   { area: "沖縄電力", extraHigh: "▲12.11", high: "▲12.39", note: "合計値（燃調＋離島）" },
 ];
 
+// JEPXエリア別月間平均（公式CSV全コマ単純平均・月間確定値。沖縄はJEPX対象外）
 const jepxAreaSummary = [
-  { area: "北海道", may2026: "13.2", may2025: "8.7", diff: "+4.5" },
-  { area: "東北", may2026: "12.8", may2025: "8.4", diff: "+4.4" },
-  { area: "東京", may2026: "13.5", may2025: "8.9", diff: "+4.6" },
-  { area: "中部", may2026: "13.3", may2025: "8.7", diff: "+4.6" },
-  { area: "北陸", may2026: "13.0", may2025: "8.5", diff: "+4.5" },
-  { area: "関西", may2026: "13.4", may2025: "8.8", diff: "+4.6" },
-  { area: "中国", may2026: "13.2", may2025: "8.7", diff: "+4.5" },
-  { area: "四国", may2026: "13.1", may2025: "8.6", diff: "+4.5" },
-  { area: "九州", may2026: "12.9", may2025: "8.5", diff: "+4.4" },
-  { area: "沖縄", may2026: "16.8", may2025: "11.0", diff: "+5.8" },
+  { area: "システム", may2026: "14.06", may2025: "8.92", diff: "+5.14" },
+  { area: "北海道", may2026: "13.65", may2025: "8.50", diff: "+5.15" },
+  { area: "東北", may2026: "14.38", may2025: "9.80", diff: "+4.58" },
+  { area: "東京", may2026: "18.01", may2025: "11.19", diff: "+6.82" },
+  { area: "中部", may2026: "16.23", may2025: "8.49", diff: "+7.74" },
+  { area: "北陸", may2026: "13.94", may2025: "7.86", diff: "+6.08" },
+  { area: "関西", may2026: "13.94", may2025: "7.86", diff: "+6.08" },
+  { area: "中国", may2026: "11.76", may2025: "7.84", diff: "+3.92" },
+  { area: "四国", may2026: "7.57", may2025: "7.56", diff: "+0.01" },
+  { area: "九州", may2026: "9.48", may2025: "7.34", diff: "+2.14" },
 ];
 
 const temperatureBy8Cities = [
@@ -170,7 +173,7 @@ const faqItems = [
   {
     question: "5月のJEPXスポット価格は前年同月比でどうだった？",
     answer:
-      "2026年5月のJEPXエリア平均は12.9〜16.8円/kWh（5/12 時点）で、前年同月比では全エリアで約 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇となっています。原油・LNG価格の上昇（ホルムズ海峡リスク反映）と政府電気・ガス料金支援終了が重なり、市場連動プラン採用法人は大きな影響を受けています。",
+      "2026年5月のJEPXエリア平均（月間確定値）は 7.57〜18.01円/kWh（9エリア）で、システムプライスの前年同月比は +5.14円（約 +58%）の大幅上昇となっています。原油・LNG価格の上昇（ホルムズ海峡リスク反映）と政府電気・ガス料金支援終了が重なり、市場連動プラン採用法人は大きな影響を受けています。沖縄はJEPX対象外です。",
   },
   {
     question: "業種別では5月の電気料金影響度はどう違う？",
@@ -191,7 +194,7 @@ const faqItems = [
 
 const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・燃料費調整・再エネ賦課金告示情報" },
-  { name: "JEPX 一般社団法人 日本卸電力取引所", url: "https://www.jepx.org", description: "卸電力市場のスポット価格・成約データ（10エリア）" },
+  { name: "JEPX 一般社団法人 日本卸電力取引所", url: "https://www.jepx.org", description: "卸電力市場のスポット価格・成約データ（システム＋9エリア。沖縄は対象外）" },
   { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給状況・容量市場・系統運用情報" },
   { name: "気象庁", url: "https://www.jma.go.jp", description: "5月の月平均気温・全国8地点データ" },
 ];
@@ -243,7 +246,7 @@ export default function BusinessElectricityRetrospective202605Page() {
           【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
         </p>
         <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-6 text-amber-800">
-          ※上記カードおよび本文中の2026年5月使用分の単価（推計）は、電力取引報の公表前時点の速報的な参考値です（確定値は公表後に更新。4月分＝2026年7月中旬公表見込み、5月分はそれ以降）。確定値による推移は下記グラフ（2026年3月分まで）をご覧ください。
+          ※上記カードおよび本文中の2026年5月使用分の単価（推計）は、電力取引報の公表前時点の速報的な参考値です（確定値は公表後に更新。4月分は公表済み（推移グラフに反映済み）。5月分＝2026年8月中旬公表見込み）。確定値による推移は下記グラフ（2026年4月分まで）をご覧ください。
         </p>
 
         <section className="mt-6 space-y-6">
@@ -254,7 +257,7 @@ export default function BusinessElectricityRetrospective202605Page() {
                 5月1日施行の再エネ賦課金新単価（確定値 4.18円/kWh）が初めて全使用量に上乗せされる本格運用月。前年度（2025年度）3.98円/kWhから +0.20円/kWhの上振れが、低圧・高圧・特別高圧のすべての契約区分で発生しています。
               </li>
               <li>
-                JEPXスポット価格は5月中旬時点で前年同月比 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇。原油・LNG高騰と政府支援終了の二重要因。6月以降の冷房需要増でさらなる上振れリスク。市場連動プラン採用法人は夏季ピーク前のリスクシナリオ確認が必須です。
+                JEPXスポット価格の月間確定値では、エリア平均が 7.57〜18.01円/kWh（9エリア）、システムプライスの前年同月比は +5.14円（約 +58%）の大幅上昇。原油・LNG高騰と政府支援終了の二重要因。6月以降の冷房需要増でさらなる上振れリスク。市場連動プラン採用法人は夏季ピーク前のリスクシナリオ確認が必須です。
               </li>
               <li>
                 補助金が完全終了した実力値ベースの請求が定着した中、5月は夏季ピーク（7-9月）前の最終的な契約見直しタイミング。デマンド管理・固定プラン切替・自家消費太陽光導入の意思決定を5月中に完了させる重要月です。
@@ -442,9 +445,9 @@ export default function BusinessElectricityRetrospective202605Page() {
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
-            <h2 className="text-xl font-semibold text-slate-900">JEPXスポット価格 5月平均と10エリア比較</h2>
+            <h2 className="text-xl font-semibold text-slate-900">JEPXスポット価格 5月平均とエリア比較（システム＋9エリア）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              2026年5月のJEPXエリアプライス（10エリア別月平均、5/12 時点実績値）と前年同月比です。原油・LNG高騰と政府支援終了で、全エリアで前年同月比 +4.4〜+5.8円/kWh（約 +52%）の大幅上昇となっています。
+              2026年5月のJEPXスポット価格の月間確定値（システムプライスおよび9エリア別月平均）と前年同月比です。エリア平均は 7.57〜18.01円/kWh、システムプライスの前年同月比は +5.14円（約 +58%）の大幅上昇となっています。北陸と関西の同値は全コマで市場分断がなかった実測です。沖縄はJEPX対象外のため本表には含みません。
             </p>
             <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
               <table className="min-w-full border-collapse text-sm sm:text-base">
@@ -468,8 +471,14 @@ export default function BusinessElectricityRetrospective202605Page() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-2 text-xs leading-6 text-slate-500">
+              ※JEPX公表のスポット取引結果CSVから全コマ単純平均で算出（月間確定値）。沖縄はJEPX対象外。
+            </p>
+            <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+              【データ更新 2026-07-17】JEPX表を5/12時点の速報集計から月間確定値に更新しました。
+            </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              なお、5月後半からは冷房開始に伴う需要増で全エリアで上振れ局面入りが見込まれます。気象庁データ（次セクション参照）では全国8地点で平年比 +0.4〜+0.7°Cの高温推移となっており、冷房開始の前倒しが市場価格に波及する点に注意が必要です。{" "}
+              なお、5月後半からは冷房開始に伴う需要増で上振れ局面入りが見込まれます。気象庁データ（次セクション参照）では全国8地点で平年比 +0.4〜+0.7°Cの高温推移となっており、冷房開始の前倒しが市場価格に波及する点に注意が必要です。{" "}
               <Link href="/jepx-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPXとは</Link>
               、{" "}
               <Link href="/jepx-spot-market-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">JEPXスポット市場の歴史</Link>
@@ -560,7 +569,7 @@ export default function BusinessElectricityRetrospective202605Page() {
               <li>政府電気・ガス料金支援 2026/4 月分で終了（5月分から値引きなし）。補助なしの実力ベース請求が定着。</li>
               <li>容量拠出金 2026年度本格徴収開始（首都圏 14,812円/kW、契約電力 1,000kW で年 1,481 万円の追加負担）。</li>
               <li>東京電力エナジーパートナー 法人向け料金改定（基本料金値下げ + 電力量料金値上げ、2026/4/1 実施）。使用量の多い法人は実質値上げとなるケースが多い。</li>
-              <li>ホルムズ海峡リスクで原油 +75.19% の急騰、JEPX スポット価格も前年同月比 +52.52% の大幅上昇。市場連動プランは大きな影響を受けている。</li>
+              <li>ホルムズ海峡リスクで原油 +75.19% の急騰、JEPX システムプライスも前年同月比 +5.14円（約 +58%）の大幅上昇（月間確定値）。市場連動プランは大きな影響を受けている。</li>
             </ul>
             <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
               5月時点の確認チェックリストは次の通りです：
@@ -571,7 +580,7 @@ export default function BusinessElectricityRetrospective202605Page() {
               ))}
             </ul>
             <p className="mt-4 rounded-md bg-white px-3 py-2 text-xs text-slate-500">
-              ※本記事の数値は2026年5月12日時点の推計値・速報値です。再エネ賦課金（経産省告示）、燃調 5月分（新電力ネット集計、5/12時点の推計）、JEPX スポット価格（5/12 実績）をベースとしています。最新動向は電力取引報の公表に合わせて更新します（5月分＝2026年8月中旬公表見込み）。
+              ※本記事の4区分単価は2026年5月12日時点の推計値・速報値です。再エネ賦課金（経産省告示）、燃調 5月分（新電力ネット集計）をベースとしています。JEPX表は公式CSV全コマ単純平均の月間確定値に更新済みです（2026-07-17）。最新動向は電力取引報の公表に合わせて更新します（4月分は公表済み、5月分＝2026年8月中旬公表見込み）。
             </p>
           </section>
 

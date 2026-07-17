@@ -54,25 +54,25 @@ export const metadata: Metadata = {
 
 /**
  * 4区分の確定単価（電力・ガス取引監視等委員会「電力取引報」から算出＝販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）。
- * 2026年4月分以降は未公表のため、カードは最新確定分（2026年3月分）を表示する。
- * 6月分の実績単価は9月頃公表見込み。
+ * カードは最新確定分（2026年4月分・2026-07-17公表）を表示する。
+ * 5月分以降は未公表。6月分の実績単価は9月頃公表見込み。
  */
 const JUNE_PAGE_DATA: MonthlyPageData = {
   year: 2026,
-  month: 3,
+  month: 4,
   categories: [
-    { label: "特別高圧", shortLabel: "特高", value: 16.58, prevMonthValue: 16.68, diff: -0.1, prevYearValue: null, prevYearDiff: -1.28 },
-    { label: "高圧", shortLabel: "高圧", value: 18.92, prevMonthValue: 18.39, diff: 0.53, prevYearValue: null, prevYearDiff: -2.13 },
-    { label: "低圧電灯", shortLabel: "低灯", value: 23.1, prevMonthValue: 22.67, diff: 0.43, prevYearValue: null, prevYearDiff: -2.38 },
-    { label: "低圧電力", shortLabel: "低力", value: 27.37, prevMonthValue: 24.01, diff: 3.36, prevYearValue: null, prevYearDiff: -1.02 },
+    { label: "特別高圧", shortLabel: "特高", value: 17.56, prevMonthValue: 16.58, diff: 0.98, prevYearValue: 18.05, prevYearDiff: -0.49 },
+    { label: "高圧", shortLabel: "高圧", value: 21.37, prevMonthValue: 18.92, diff: 2.45, prevYearValue: 21.99, prevYearDiff: -0.62 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 25.94, prevMonthValue: 23.1, diff: 2.84, prevYearValue: 27.04, prevYearDiff: -1.1 },
+    { label: "低圧電力", shortLabel: "低力", value: 32.12, prevMonthValue: 27.37, diff: 4.75, prevYearValue: 32.33, prevYearDiff: -0.21 },
   ],
   trendData: [
-    { label: "2025/10", values: [16.57, 20.11, 26.16, 29.29] as [number, number, number, number] },
     { label: "2025/11", values: [16.78, 21.32, 27.32, 33.58] as [number, number, number, number] },
     { label: "2025/12", values: [16.87, 20.95, 26.78, 32.4] as [number, number, number, number] },
     { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
     { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
     { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
+    { label: "2026/4", values: [17.56, 21.37, 25.94, 32.12] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [21.5, 22.97, 25.23, 30.29] as [number, number, number, number] },
@@ -186,7 +186,7 @@ const faqItems = [
   {
     question: "2026年6月の4区分（低圧・高圧・特別高圧）の実績単価はいくらでしたか？",
     answer:
-      "2026年6月分の4区分実績単価は、本記事公開時点では未公表です。出典としている電力・ガス取引監視等委員会「電力取引報」は2026年3月分までが公表済みで、4月分は7月中旬、6月分は9月頃の公表見込みです。このため本ページのカードは最新の確定分（2026年3月分）を表示し、6月の動向は燃料費調整・JEPX・気象・支援策から定性的に整理しています。確定値が公表され次第、順次更新します。",
+      "2026年6月分の4区分実績単価は、本記事公開時点では未公表です。出典としている電力・ガス取引監視等委員会「電力取引報」は2026年4月分までが公表済みで、5月分は8月中旬、6月分は9月頃の公表見込みです。このため本ページのカードは最新の確定分（2026年4月分）を表示し、6月の動向は燃料費調整・JEPX・気象・支援策から定性的に整理しています。確定値が公表され次第、順次更新します。",
   },
   {
     question: "再エネ賦課金は2026年6月も4.18円/kWhのままですか？",
@@ -214,7 +214,7 @@ const sourcesItems = [
   {
     name: "電力・ガス取引監視等委員会「電力取引報」",
     url: "https://www.egc.meti.go.jp/info/business/report/results.html",
-    description: "4区分の確定単価（販売額÷販売電力量・全国計・検針期間ベース、事後訂正あり得る）。2026年3月分まで公表",
+    description: "4区分の確定単価（販売額÷販売電力量・全国計・検針期間ベース、事後訂正あり得る）。2026年4月分まで公表済み",
   },
   {
     name: "JEPX 一般社団法人 日本卸電力取引所",
@@ -270,7 +270,7 @@ export default function BusinessElectricityRetrospective202606Page() {
             2026年6月使用分の法人向け電気料金は、「支援・市場・気象」の3つの論点が同時に動いた月です。第一に、6月12日に7〜9月使用分の電気・ガス料金支援が特例的に認可され、家庭・低圧に加えて高圧も対象に含まれることが示されました。第二に、JEPXスポット価格が上昇し、システムプライスの月間平均は15.10円/kWh、前年同月比で約+39%となりました。第三に、梅雨・台風による太平洋側の日照不足が太陽光発電を抑え、東エリアの卸価格を押し上げました。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            一方で、低圧・高圧・特別高圧の4区分の6月実績単価は、出典としている電力・ガス取引監視等委員会「電力取引報」が2026年3月分までしか公表していないため、本記事公開時点では確定していません。そこで本記事では、確定値（2026年3月分まで）と、6月の動向に関する定性整理を明確に分けて解説します。数値の断定は確定値に限り、公表待ちの項目は「公表待ち」と明記します。
+            一方で、低圧・高圧・特別高圧の4区分の6月実績単価は、出典としている電力・ガス取引監視等委員会「電力取引報」が2026年4月分までしか公表していないため、本記事公開時点では確定していません。そこで本記事では、確定値（2026年4月分まで）と、6月の動向に関する定性整理を明確に分けて解説します。数値の断定は確定値に限り、公表待ちの項目は「公表待ち」と明記します。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             本記事は、電力・ガス取引監視等委員会「電力取引報」、JEPX、経済産業省・資源エネルギー庁、気象庁、主要電力10社の公表情報をもとに整理しています。本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。公開日は2026年7月9日です。
@@ -281,8 +281,8 @@ export default function BusinessElectricityRetrospective202606Page() {
 
         <MonthlyDataCards data={JUNE_PAGE_DATA} />
         <p className="mt-2 rounded-md bg-slate-50 px-3 py-2 text-xs leading-6 text-slate-500">
-          ※上記カードは電力・ガス取引監視等委員会「電力取引報」の最新確定分（2026年3月分）です（販売額÷販売電力量・全国計・検針期間ベース、事後訂正あり得る）。
-          2026年4月分以降の4区分実績単価は未公表で、4月分は2026年7月中旬、6月分は9月頃の公表見込みです。確定値が公表され次第、順次更新します。
+          ※上記カードは電力・ガス取引監視等委員会「電力取引報」の最新確定分（2026年4月分・確定）です（販売額÷販売電力量・全国計・検針期間ベース、事後訂正あり得る）。
+          2026年5月分以降は未公表（5月分＝8月中旬・6月分＝9月頃の公表見込み）。4月分まで確定値を反映済みです。確定値が公表され次第、順次更新します。
         </p>
 
         <section className="mt-6 space-y-6">
@@ -303,7 +303,7 @@ export default function BusinessElectricityRetrospective202606Page() {
 
           <MonthlyTrendChart data={JUNE_PAGE_DATA} />
           <p className="mt-2 rounded-md bg-slate-50 px-3 py-2 text-xs leading-6 text-slate-500">
-            ※上記グラフは電力取引報の確定値が公表済みの直近6か月（2025年10月〜2026年3月分）です。2026年4月分以降は公表待ちのため含みません。
+            ※上記グラフは電力取引報の確定値が公表済みの直近6か月（2025年11月〜2026年4月分）です。2026年5月分以降は公表待ちのため含みません。
           </p>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -424,7 +424,7 @@ export default function BusinessElectricityRetrospective202606Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">低圧の電気料金動向（2026年6月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年6月分の低圧の実績単価は電力取引報の公表待ち（9月頃見込み）のため、ここでは断定を避け、確定値・燃料費調整・支援策から動向を定性的に整理します。参考として、電力取引報の最新確定分である2026年3月分は、低圧電灯23.10円/kWh・低圧電力27.37円/kWhでした（消費税・賦課金を含まない参考値）。
+              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年6月分の低圧の実績単価は電力取引報の公表待ち（9月頃見込み）のため、ここでは断定を避け、確定値・燃料費調整・支援策から動向を定性的に整理します。参考として、電力取引報の最新確定分である2026年4月分は、低圧電灯25.94円/kWh・低圧電力32.12円/kWhでした（消費税・賦課金を含まない参考値）。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               6月分の燃料費調整（低圧・燃調本体）は会社差が大きく、たとえば東北電力8.36円/kWh・中部電力ミライズ1.35円/kWhのように加算となる会社がある一方、北陸電力▲7.69円/kWh・沖縄電力▲12.77円/kWhのようにマイナス（値引き方向）の会社もあります。低圧主体の事業者にとっては、7〜9月の電気・ガス料金支援が低圧も対象である点（単価例は各社公式で要確認）が7月以降の請求に効いてきます。
@@ -445,7 +445,7 @@ export default function BusinessElectricityRetrospective202606Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">高圧の電気料金動向（2026年6月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年6月分の高圧の実績単価は電力取引報の公表待ちのため、ここでは動向を定性的に整理します。参考として、最新確定分の2026年3月分は高圧18.92円/kWhでした。今回7〜9月の電気・ガス料金支援に高圧が対象として含まれた点は、6月号の大きな論点です。
+              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年6月分の高圧の実績単価は電力取引報の公表待ちのため、ここでは動向を定性的に整理します。参考として、最新確定分の2026年4月分は高圧21.37円/kWhでした。今回7〜9月の電気・ガス料金支援に高圧が対象として含まれた点は、6月号の大きな論点です。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               6月分の高圧・燃調本体（税込）は、5月分比で全社ほぼ横ばい〜小幅上昇（おおむね+0.03〜+0.07円/kWh）でした。ただし、2026年4月に約款を改定した会社では燃調本体とは別に市場価格調整が加わり、東京電力EPや中部電力ミライズのように市場連動分が上昇を主導するケースがあります。支援の単価例（四国電力）では高圧が8月▲1.8・9月▲2.3・10月▲1.8円/kWhとされていますが、これは一例で各社・各月で異なります。
@@ -469,7 +469,7 @@ export default function BusinessElectricityRetrospective202606Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">特別高圧の電気料金動向（2026年6月）</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年6月分の特別高圧の実績単価は電力取引報の公表待ちのため、ここでは動向を定性的に整理します。参考として、最新確定分の2026年3月分は特別高圧16.58円/kWhでした。
+              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年6月分の特別高圧の実績単価は電力取引報の公表待ちのため、ここでは動向を定性的に整理します。参考として、最新確定分の2026年4月分は特別高圧17.56円/kWhでした。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               6月分の特別高圧・燃調本体（税込）も、5月分比で全社ほぼ横ばい〜小幅上昇（おおむね+0.03〜+0.07円/kWh）でした。一方、東京電力EPの特高1.44円/kWh（前月比+0.57）や中部電力ミライズの特高1.45円/kWh（前月比+1.33）のように、2026年4月の約款改定で市場価格調整を内包した会社では、燃調本体以上に市場連動分の寄与が大きくなっています。特別高圧は燃料価格・需給・市場価格調整といった構造要因が単価を主導する区分であり、JEPXが前年比約+39%となった6月局面では、市場連動比率の点検が重要です。なお、今回の7〜9月支援は家庭・低圧・高圧が中心で、対象区分の詳細は各社公式で要確認です。
@@ -671,7 +671,7 @@ export default function BusinessElectricityRetrospective202606Page() {
               ))}
             </ul>
             <p className="mt-4 rounded-md bg-white px-3 py-2 text-xs leading-6 text-slate-500">
-              ※本記事の数値は、電力・ガス取引監視等委員会「電力取引報」（4区分の確定値、2026年3月分まで）、JEPX（スポット取引結果CSVの全コマ単純平均）、主要電力10社の2026年4月28日プレス（6月分燃料費調整・燃調本体）、気象庁（2026年6月の気象）、経済産業省・資源エネルギー庁（7〜9月支援・夏季需給）に基づきます。2026年4月分以降の4区分実績単価は公表待ちで、公表され次第、順次更新します。本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+              ※本記事の数値は、電力・ガス取引監視等委員会「電力取引報」（4区分の確定値、2026年4月分まで公表済み）、JEPX（スポット取引結果CSVの全コマ単純平均）、主要電力10社の2026年4月28日プレス（6月分燃料費調整・燃調本体）、気象庁（2026年6月の気象）、経済産業省・資源エネルギー庁（7〜9月支援・夏季需給）に基づきます。2026年5月分以降の4区分実績単価は公表待ちで、公表され次第、順次更新します。本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
           </section>
 

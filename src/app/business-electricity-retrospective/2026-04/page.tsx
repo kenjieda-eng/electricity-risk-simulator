@@ -50,28 +50,29 @@ export const metadata: Metadata = {
   },
 };
 
-// 2026年4月の確定値データ（新電力ネット集計 + 経産省告示 + JEPX 実績）
+// 2026年4月の確定値（電力取引報・令和8年4月分・2026-07-17公表）
 const APR_2026_DATA = {
   year: 2026,
   month: 4,
   categories: [
-    { label: "特別高圧", shortLabel: "特高", value: 16.7, prevMonthValue: 16.5, diff: 0.2, prevYearValue: 17.8, prevYearDiff: -1.1 },
-    { label: "高圧", shortLabel: "高圧", value: 21.0, prevMonthValue: 20.6, diff: 0.4, prevYearValue: 21.8, prevYearDiff: -0.8 },
-    { label: "低圧電灯", shortLabel: "低灯", value: 26.0, prevMonthValue: 25.5, diff: 0.5, prevYearValue: 25.9, prevYearDiff: 0.1 },
-    { label: "低圧電力", shortLabel: "低力", value: 28.5, prevMonthValue: 27.5, diff: 1.0, prevYearValue: 30.9, prevYearDiff: -2.4 },
+    { label: "特別高圧", shortLabel: "特高", value: 17.56, prevMonthValue: 16.58, diff: 0.98, prevYearValue: 18.05, prevYearDiff: -0.49 },
+    { label: "高圧", shortLabel: "高圧", value: 21.37, prevMonthValue: 18.92, diff: 2.45, prevYearValue: 21.99, prevYearDiff: -0.62 },
+    { label: "低圧電灯", shortLabel: "低灯", value: 25.94, prevMonthValue: 23.1, diff: 2.84, prevYearValue: 27.04, prevYearDiff: -1.1 },
+    { label: "低圧電力", shortLabel: "低力", value: 32.12, prevMonthValue: 27.37, diff: 4.75, prevYearValue: 32.33, prevYearDiff: -0.21 },
   ],
   trendData: [
-    { label: "2025/11", values: [16.8, 21.3, 27.3, 33.6] as [number, number, number, number] },
-    { label: "2025/12", values: [16.9, 20.9, 26.8, 32.4] as [number, number, number, number] },
+    { label: "2025/11", values: [16.78, 21.32, 27.32, 33.58] as [number, number, number, number] },
+    { label: "2025/12", values: [16.87, 20.95, 26.78, 32.4] as [number, number, number, number] },
     { label: "2026/1", values: [16.72, 20.43, 25.98, 27.79] as [number, number, number, number] },
     { label: "2026/2", values: [16.68, 18.39, 22.67, 24.01] as [number, number, number, number] },
     { label: "2026/3", values: [16.58, 18.92, 23.1, 27.37] as [number, number, number, number] },
+    { label: "2026/4", values: [17.56, 21.37, 25.94, 32.12] as [number, number, number, number] },
   ],
   sameMonthHistory: [
     { year: 2023, values: [23.6, 24.3, 25.2, 28.0] as [number, number, number, number] },
     { year: 2024, values: [18.1, 20.7, 24.9, 28.5] as [number, number, number, number] },
-    { year: 2025, values: [17.8, 21.8, 25.9, 30.9] as [number, number, number, number] },
-    { year: 2026, values: [16.7, 21.0, 26.0, 28.5] as [number, number, number, number] },
+    { year: 2025, values: [18.05, 21.99, 27.04, 32.33] as [number, number, number, number] },
+    { year: 2026, values: [17.56, 21.37, 25.94, 32.12] as [number, number, number, number] },
   ],
 };
 
@@ -216,8 +217,8 @@ export default function BusinessElectricityRetrospective202604Page() {
         <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
           【データ更新 2026-07-09】本ページの単価データは、電力・ガス取引監視等委員会「電力取引報」の確定値に基づき更新しました。初出時は公表前月について速報的な参考値を含んでいました。最新月の確定値は公表され次第、順次反映します。
         </p>
-        <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-6 text-amber-800">
-          ※上記カードおよび本文中の2026年4月使用分の単価は、電力取引報の公表前時点の速報的な参考値です（確定値は公表後に更新。4月分＝2026年7月中旬公表見込み）。確定値による推移は下記グラフ（2026年3月分まで）をご覧ください。
+        <p className="mt-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-xs leading-6 text-slate-600">
+          【データ更新 2026-07-17】2026年4月分の単価は、電力取引報の確定値（2026年7月17日公表）に更新しました。
         </p>
 
         <section className="mt-6 space-y-6">
@@ -263,7 +264,7 @@ export default function BusinessElectricityRetrospective202604Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">低圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年4月使用分の低圧電灯は約 26.0円/kWh、低圧電力は約 28.5円/kWh の水準で、前月比はそれぞれ +0.5円、+1.0円。補助縮小がさらに進み、5月以降の完全終了を控えた最終調整月の水準となっています。
+              低圧（電灯・電力）は、小規模事業所・店舗・サービス拠点で広く使われる契約区分です。2026年4月使用分の低圧電灯は 25.94円/kWh、低圧電力は 32.12円/kWh の水準で、前月比はそれぞれ +2.84円、+4.75円、前年同月比はそれぞれ ▲1.10円、▲0.21円です。前月比の上昇（とくに低圧電力の +4.75円）は、検針期間・料金改定・市場価格調整等の複合要因であり、単一原因の断定はしません。補助縮小がさらに進み、5月以降の完全終了を控えた最終調整月の水準でもあります。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               低圧は資源エネルギー庁の支援対象でしたが、4月使用分が補助の最終月。5月使用分以降は値引きなしの実力値ベース請求に移行します。容量拠出金は低圧契約では直接的な負担対象とならない場合が多いですが、卸電力市場経由で間接的に小売単価に反映される構造です。
@@ -287,7 +288,7 @@ export default function BusinessElectricityRetrospective202604Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">高圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年4月使用分の高圧は約 21.0円/kWh、前月比 +0.4円・前年同月比 -0.8円の動きとなっています。前月比のプラスは補助縮小最終・容量拠出金本格化・燃調変動の合計を反映した水準です。
+              高圧は、工場・商業施設・病院・学校・物流施設・オフィスビルで広く使われる主力契約区分です。2026年4月使用分の高圧は 21.37円/kWh、前月比 +2.45円・前年同月比 ▲0.62円の動きとなっています。前月比の上昇は、検針期間・料金改定・市場価格調整等の複合要因であり、単一原因の断定はしません。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               高圧需要家は使用量が大きいため、4月から始まる容量拠出金本格徴収の年間累計インパクトは、契約電力1,000kW・首都圏単価14,812円/kW で年1,481万円増。中規模工場・物流センター・大型病院では、4月時点で2026年度予算の前提を全面見直しする必要が出てくる規模です。さらに東京電力EP契約の法人では、基本料金値下げ + 電力量料金値上げの構造改定の影響が4月使用分から表れ始めました。
@@ -311,7 +312,7 @@ export default function BusinessElectricityRetrospective202604Page() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">特別高圧の電気料金動向</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年4月使用分の特別高圧は約 16.7円/kWh、前月比 +0.2円・前年同月比 -1.1円の動きで、4区分のなかで最も小さな上振れにとどまっています。
+              特別高圧は、大規模工場・データセンター・大型商業施設・自治体の基幹施設・大規模病院など、非常に大きな電力需要を持つ事業者が中心です。2026年4月使用分の特別高圧は 17.56円/kWh、前月比 +0.98円・前年同月比 ▲0.49円の動きです。前月比の上昇は、検針期間・料金改定・市場価格調整等の複合要因であり、単一原因の断定はしません。
             </p>
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               特別高圧は燃料価格・需給・容量拠出金など構造要因が単価を主導する区分です。4月は容量拠出金本格徴収開始の月であり、データセンター（契約電力 数万kW）では年間数千万円〜数億円規模の追加負担が4月使用分から始動。東京電力EP契約の特別高圧法人では、4/1 法人料金改定の電力量料金値上げが高ベースロード需要家に実質値上げをもたらすため、改定後の請求書の個別検証が急務となりました。
