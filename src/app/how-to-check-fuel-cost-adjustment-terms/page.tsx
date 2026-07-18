@@ -278,6 +278,7 @@ export default function HowToCheckFuelCostAdjustmentTermsPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
+            { href: "/glossary-contract-terms", title: "電力契約の用語集", description: "契約電力・基本料金・デマンド・力率など契約用語を整理。" },
             { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、両者の違いを整理します。" },
             {
               href: "/fuel-cost-adjustment",

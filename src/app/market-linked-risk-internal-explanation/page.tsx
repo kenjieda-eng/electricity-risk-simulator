@@ -292,6 +292,11 @@ export default function MarketLinkedRiskInternalExplanationPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/explaining-to-executives",
+              title: "経営層向けに電力契約見直しを説明するときのポイント",
+              description: "コストとリスクを経営層に伝える論点を整理。",
+            },
+            {
               href: "/market-linked-plan-suited-businesses",
               title: "市場連動プランが向く可能性がある法人の特徴",
               description: "市場連動を検討できる前提条件と判断軸。",

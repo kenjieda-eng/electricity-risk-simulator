@@ -402,6 +402,11 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/explaining-to-executives",
+              title: "経営層向けに電力契約見直しを説明するときのポイント",
+              description: "コストとリスクを経営層に伝える論点を整理。",
+            },
+            {
               href: "/business-electricity-contract-checklist",
               title: "法人の電力契約見直しチェックリスト",
               description: "見直しの準備段階で確認すべき項目を一覧で整理。",

@@ -459,6 +459,7 @@ export default function LastResortSupplyPage() {
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
+            { href: "/executive-business-continuity-risk", title: "電気代高騰と事業継続リスク", description: "電気代高騰をBCP・財務リスクとして捉える論点整理。" },
             { href: "/last-resort-vs-retail-contract", title: "最終保障供給と通常契約の違い", description: "役割・料金・期間の差を比較。" },
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "2022年の新電力撤退の背景。" },
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX急騰の請求影響。" },

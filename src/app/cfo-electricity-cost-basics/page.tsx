@@ -655,6 +655,7 @@ export default function CfoElectricityCostBasicsPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/executive-cfo-electricity-basics", title: "CFOのための電力市場基礎", description: "燃調費・市場連動・容量拠出金の基礎を1ページで整理。" },
               { href: "/articles/cfo-executive", title: "CFO・経営層向け電気代戦略（カテゴリ）", description: "CFO向け記事ハブ。" },
               { href: "/articles/for-executives", title: "経営層・CFO向け（一覧）", description: "経営層向け記事のハブ。" },
               { href: "/scope2-reduction-cfo-responsibility", title: "Scope2削減とCFOの責任", description: "Scope2排出量算出と削減目標の経営判断。" },

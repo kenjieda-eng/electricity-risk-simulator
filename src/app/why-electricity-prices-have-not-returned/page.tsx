@@ -424,6 +424,8 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           heading="関連ページ"
           intro="背景を理解した後は、費目別の詳細と比較実務へ進む流れが有効です。"
           links={[
+            { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "中計でシナリオ別に電力コストを織り込む前提とKPI。" },
+            { href: "/executive-risk-planning-approaches", title: "電気料金リスクを事業計画に織り込む3つのアプローチ", description: "固定費化・ヘッジ・分散から事業計画へ反映する方法。" },
             { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
             {
               href: "/electricity-price-trend-2019-2025",
