@@ -246,6 +246,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/executive-business-continuity-risk", title: "電気代高騰と事業継続リスク", description: "電気代高騰をBCP・財務リスクとして捉える論点整理。" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

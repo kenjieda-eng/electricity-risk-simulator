@@ -343,6 +343,11 @@ export default function ExplainingToExecutivesPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/executive-cfo-electricity-basics",
+              title: "CFOのための電力市場基礎",
+              description: "燃調費・市場連動・容量拠出金の基礎を1ページで整理。",
+            },
+            {
               href: "/approval-document-key-points",
               title: "電力契約見直しの稟議書に入れたい論点整理",
               description: "承認を得やすい稟議書の構成と記載内容。",

@@ -363,6 +363,11 @@ export default function BusinessElectricityContractChecklistPage() {
           intro="チェックリストの各項目をさらに深掘りしたいときは、以下のページをあわせてご覧ください。"
           links={[
             {
+              href: "/glossary-contract-terms",
+              title: "電力契約の用語集",
+              description: "契約電力・基本料金・デマンド・力率など契約用語を整理。",
+            },
+            {
               href: "/how-to-read-electricity-bill",
               title: "法人向け電気料金請求書の見方",
               description: "請求書の各項目の意味と、見積比較に使うための確認ポイントを整理。",

@@ -519,6 +519,11 @@ export default function HowLongBusinessElectricityPriceSurgeLastsPage() {
           intro="見通し判断の軸を整理した後に、推移確認と契約要因の分解へ進むための導線です。"
           links={[
             {
+              href: "/executive-risk-planning-approaches",
+              title: "電気料金リスクを事業計画に織り込む3つのアプローチ",
+              description: "固定費化・ヘッジ・分散から事業計画へ反映する方法。",
+            },
+            {
               href: "/business-electricity-price-trend-10-years",
               title: "法人向け電気料金の推移を10年で見る",
               description: "時系列の全体像を俯瞰できます。",

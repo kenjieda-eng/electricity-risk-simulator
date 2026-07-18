@@ -425,6 +425,11 @@ export default function BudgetPlanningInHighPriceEraPage() {
           heading="関連ページ"
           links={[
             {
+              href: "/executive-mid-term-plan-electricity",
+              title: "中期経営計画への電力コスト織り込み方",
+              description: "中計でシナリオ別に電力コストを織り込む前提とKPI。",
+            },
+            {
               href: "/electricity-price-data-sources",
               title: "電気料金推移データの入手先と確認方法",
               description: "予算策定に使う外部データの入手先・確認タイミング・使い方を整理。",

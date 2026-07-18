@@ -341,6 +341,7 @@ export default function CaseStudyRestaurantChainPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
+            { href: "/executive-multi-site-cost-management", title: "複数拠点の電力コスト一元管理フレームワーク", description: "拠点別コスト可視化と一括調達・個別最適の比較。" },
             { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直しはどこから始めるか", description: "見直しの手順と最初にすべきこと" },
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "複数の電力会社を正しく比較するための方法" },
             { href: "/case-study-retail-chain-review", title: "小売チェーン30店舗：年間4,200万円削減", description: "ドラッグストアチェーンの一括見直し事例" },

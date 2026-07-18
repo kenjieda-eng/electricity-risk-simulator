@@ -588,6 +588,7 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           heading="値上げ・推移クラスターの全体像（Pillar B 視点）"
           intro="本記事（Pillar B = 10 年推移データ軸）から、Pillar A（最新性軸）と 6 本のクラスター記事へのナビゲーションです。"
           links={[
+            { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "中計でシナリオ別に電力コストを織り込む前提とKPI。" },
             { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
             { href: "/why-business-electricity-prices-rise", title: "電気料金が上がる根本理由", description: "Pillar A 配下クラスター。4 要因でシンプルに整理した入口。" },
             { href: "/why-electricity-prices-have-not-returned", title: "電気料金が戻らない理由", description: "Pillar A 配下クラスター。ピーク後も水準が下がりきらない構造要因を解説。" },

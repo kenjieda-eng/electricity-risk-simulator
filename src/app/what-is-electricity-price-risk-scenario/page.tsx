@@ -280,6 +280,11 @@ export default function WhatIsElectricityPriceRiskScenarioPage() {
           intro="リスクシナリオの基本を押さえた後に、必要な順序で読み進められる導線です。"
           links={[
             {
+              href: "/executive-risk-planning-approaches",
+              title: "電気料金リスクを事業計画に織り込む3つのアプローチ",
+              description: "固定費化・ヘッジ・分散から事業計画へ反映する方法。",
+            },
+            {
               href: "/articles",
               title: "解説ページ一覧",
               description: "全カテゴリから必要なテーマを選んで確認できます。",

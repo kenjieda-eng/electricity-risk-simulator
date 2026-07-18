@@ -270,6 +270,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/scope2-reduction-cfo-responsibility", title: "Scope2削減とCFOの責任", description: "Scope2排出量の算定・再エネ調達・経営判断の論点を整理。" },
               { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
               { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
               { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },

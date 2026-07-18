@@ -118,6 +118,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
+              { href: "/executive-esg-electricity-disclosure", title: "IR・ESG開示における電力リスクの記載ガイド", description: "統合報告書・有価証券報告書での電力リスク開示の要点。" },
               { href: "/corporate-decarbonization-overview", title: "法人の脱炭素対応の全体像", description: "電力調達と情報開示の4段階を整理" },
               { href: "/re100-overview-for-business", title: "RE100とは", description: "参加要件と実務フローを解説" },
               { href: "/scope2-electricity-accounting", title: "Scope2算定と報告ガイド", description: "マーケット基準とロケーション基準" },
