@@ -630,7 +630,7 @@ export default function AkitaBusinessElectricityCostPage() {
               { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "プラン特性の比較。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/pulp-paper-electricity-cost-review", title: "紙パルプ業の電気料金見直し", description: "秋田県主力業種に直結。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "風力PPA活用パターン整理。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "風力PPA活用パターン整理。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "温泉旅館の暖房・温泉加熱コスト構造。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "寒冷地仕様パネル選定のポイント。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "コージェネ・コンプレッサー更新の主力補助金。" },

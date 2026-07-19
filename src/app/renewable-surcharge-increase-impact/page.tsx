@@ -272,7 +272,7 @@ export default function RenewableSurchargeIncreaseImpactPage() {
               description: "燃料価格高騰シナリオの仕組みと影響。",
             },
             {
-              href: "/business-electricity-cost-components",
+              href: "/business-electricity-bill-breakdown",
               title: "法人の電気料金の内訳",
               description: "電気料金を構成する各要素の全体像。",
             },

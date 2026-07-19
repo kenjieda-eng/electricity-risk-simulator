@@ -402,7 +402,7 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
               オフィスビル詳細は{" "}
               <Link href="/office-building-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビルの電気料金見直し</Link>
               、データセンター詳細は{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               。
             </p>
           </section>
@@ -594,15 +594,15 @@ export default function ServiceIndustryCfoElectricityStrategyPage() {
               { href: "/manufacturing-cfo-electricity-strategy", title: "製造業CFO戦略", description: "業種比較として製造業の事情。" },
               { href: "/retail-cfo-electricity-strategy", title: "流通・小売業CFO戦略", description: "業種比較として流通業の事情。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "オフィス業態の詳細。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者向け詳細。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者向け詳細。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "ホテル・観光業の詳細。" },
               { href: "/university-electricity-cost-review", title: "大学・教育機関の電気料金見直し", description: "教育機関の特殊性。" },
               { href: "/articles/datacenter-ai-demand", title: "データセンター・AI需要", description: "AI時代の電力需要動向。" },
               { href: "/executive-multi-site-cost-management", title: "複数拠点の電力コスト一元管理フレームワーク", description: "多拠点管理の手順。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "PPA活用パターン。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "PPA活用パターン。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "ビル屋根太陽光。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "LED・空調更新の主力補助金。" },
-              { href: "/demand-response-explained", title: "デマンドレスポンスとは", description: "DR契約の仕組み。" },
+              { href: "/demand-side-flexibility", title: "デマンドレスポンスとは", description: "DR契約の仕組み。" },
               { href: "/executive-ebitda-impact", title: "電気代がEBITDAに与える影響の測り方", description: "EBITDAインパクト定量化。" },
               { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "3〜5年計画への組み込み。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "サービス業の選択肢。" },

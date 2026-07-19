@@ -417,7 +417,7 @@ export default function KotoKuBusinessElectricityCostPage() {
                 東京都の法人電気料金完全ガイド
               </Link>
               、DC事業者の論点は{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
                 データセンターの電気料金見直し
               </Link>
               で確認できます。
@@ -445,7 +445,7 @@ export default function KotoKuBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新電力選定の基本は{" "}
-              <Link href="/how-to-choose-new-electricity-supplier" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
+              <Link href="/how-to-compare-electricity-suppliers" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
               、撤退情報は{" "}
               <Link href="/region-supplier-withdrawal-map" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別新電力撤退状況マップ</Link>
               で確認できます。
@@ -499,7 +499,7 @@ export default function KotoKuBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種横断のコスト構造比較は{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               、物流DC見直しは{" "}
               <Link href="/logistics-warehouse-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">物流倉庫の電気料金見直し</Link>
               。
@@ -688,7 +688,7 @@ export default function KotoKuBusinessElectricityCostPage() {
               { href: "/sumida-ku-business-electricity-cost", title: "墨田区の法人電気料金", description: "中小製造業とスカイツリー観光。" },
               { href: "/taito-ku-business-electricity-cost", title: "台東区の法人電気料金", description: "上野・浅草の観光・商業集積。" },
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "大学・研究機関と中小オフィス。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "東陽町・木場・有明DCの主力打ち手を網羅。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "東陽町・木場・有明DCの主力打ち手を網羅。" },
               { href: "/logistics-warehouse-electricity-cost-review", title: "物流倉庫の電気料金見直し", description: "辰巳・新木場の物流DCの主力打ち手。" },
               { href: "/ai-demand-electricity-price-outlook", title: "AI需要拡大と電気料金見通し", description: "AI需要でDC電力急増の論点を整理。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "24時間稼働法人の選択肢。" },

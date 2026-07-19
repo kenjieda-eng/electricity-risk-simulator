@@ -463,7 +463,7 @@ export default function ManufacturingCfoElectricityStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               DR詳細は{" "}
-              <Link href="/demand-response-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドレスポンスとは</Link>
+              <Link href="/demand-side-flexibility" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドレスポンスとは</Link>
               、24時間稼働事業者向けは{" "}
               <Link href="/24h-operation-price-surge-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">24時間稼働企業の料金高騰リスク</Link>
               。
@@ -573,13 +573,13 @@ export default function ManufacturingCfoElectricityStrategyPage() {
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種横断のコスト構造比較。" },
               { href: "/factory-electricity-cost-reduction", title: "工場の電気代削減", description: "削減打ち手の全体像。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働工場の特性。" },
-              { href: "/chemical-industry-electricity-cost-review", title: "化学工業の電気料金見直し", description: "化学業界の詳細。" },
+              { href: "/chemical-electricity-cost-review", title: "化学工業の電気料金見直し", description: "化学業界の詳細。" },
               { href: "/pulp-paper-electricity-cost-review", title: "紙パルプ業の電気料金見直し", description: "紙パルプ業界の詳細。" },
-              { href: "/automotive-parts-electricity-cost-review", title: "自動車部品工場の電気料金見直し", description: "自動車業界の詳細。" },
-              { href: "/food-industry-electricity-cost-review", title: "食品加工業の電気料金見直し", description: "食品業界の詳細。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "フィジカル／バーチャルPPA。" },
+              { href: "/auto-parts-electricity-cost-review", title: "自動車部品工場の電気料金見直し", description: "自動車業界の詳細。" },
+              { href: "/food-processing-electricity-cost-review", title: "食品加工業の電気料金見直し", description: "食品業界の詳細。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "フィジカル／バーチャルPPA。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "太陽光投資判断。" },
-              { href: "/demand-response-explained", title: "デマンドレスポンスとは", description: "DR契約の仕組み。" },
+              { href: "/demand-side-flexibility", title: "デマンドレスポンスとは", description: "DR契約の仕組み。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "連続稼働事業者向け。" },
               { href: "/executive-ebitda-impact", title: "電気代がEBITDAに与える影響の測り方", description: "EBITDAインパクト定量化。" },
               { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "3〜5年計画への組み込み。" },

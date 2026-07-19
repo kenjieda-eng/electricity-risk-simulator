@@ -651,7 +651,7 @@ export default function WeatherElectricityPriceLinkPage() {
               description: "時間帯・月・年度別の需要構造。U字カーブの需要側データを詳述。",
             },
             {
-              href: "/30-year-weather-data",
+              href: "/warming-trend-30-years",
               title: "30年気象トレンドと電力市場",
               description: "温暖化による猛暑日・熱帯夜増加の実データと電力コストへの影響分析。",
             },

@@ -656,11 +656,11 @@ export default function MiyagiBusinessElectricityCostPage() {
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "仙台ポート物流に直結。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "仙台都市圏オフィスビルに直結。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "仙台駅前ホテルの暖房・冷房コスト。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "オフサイトPPA活用パターン整理。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "オフサイトPPA活用パターン整理。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋上太陽光の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "クリーンルーム空調・コンプレッサー更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力の火力依存度を踏まえた解説。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "仙台市内のデータセンター事業者向け。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "仙台市内のデータセンター事業者向け。" },
               { href: "/region-supplier-withdrawal-map", title: "エリア別新電力撤退状況マップ", description: "県内新電力の動向を含む全国マップ。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

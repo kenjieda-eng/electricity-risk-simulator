@@ -681,7 +681,7 @@ export default function BroadcastingElectricityCostReviewPage() {
               { href: "/articles/industry-guide", title: "業種別の見直しポイント集（一覧）", description: "業種別の電気料金見直しポイントをハブから探す。" },
               { href: "/telecom-facility-electricity-cost-review", title: "通信施設の電気料金見直し", description: "通信基地局など24h連続稼働インフラの類似事例。" },
               { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "編集サーバー・配信サーバーの電気代削減。" },
-              { href: "/office-electricity-cost-review", title: "オフィスの電気料金見直し", description: "本社・支社オフィスの電力削減。" },
+              { href: "/office-building-electricity-cost-review", title: "オフィスの電気料金見直し", description: "本社・支社オフィスの電力削減。" },
               { href: "/publishing-electricity-cost-review", title: "出版業の電気料金見直し", description: "情報インフラ業種としての類似事例。" },
               { href: "/cultural-facility-electricity-cost-review", title: "文化施設・ホールの電気料金見直し", description: "ステージ照明・音響機材を持つ業種の類似事例。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "予算管理と安定性を重視する法人の選択肢。" },

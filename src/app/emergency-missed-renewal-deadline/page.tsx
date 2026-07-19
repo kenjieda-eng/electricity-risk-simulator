@@ -372,12 +372,12 @@ export default function EmergencyMissedRenewalDeadlinePage() {
               description: "違約金の妥当性確認と交渉の進め方を整理します。",
             },
             {
-              href: "/contract-period-guide",
+              href: "/electricity-contract-period-guide",
               title: "電力契約の契約期間と更新の仕組み",
               description: "法人向け電力契約の期間設定と更新ルールの基礎知識。",
             },
             {
-              href: "/contract-cancellation-clause-guide",
+              href: "/mid-term-cancellation-clause-guide",
               title: "電力契約の解約条項の読み方ガイド",
               description: "解約・中途解約条項の確認ポイントをわかりやすく解説。",
             },

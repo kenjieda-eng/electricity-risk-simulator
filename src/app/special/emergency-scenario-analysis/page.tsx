@@ -176,15 +176,15 @@ export default function EmergencyScenarioAnalysisTopPage() {
         <h2 className="text-xl font-semibold text-slate-900">特集内の主要導線</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { href: "/background", title: "背景", desc: "有事局面の時系列と供給制約を把握" },
-            { href: "/mechanism", title: "仕組み", desc: "価格反映のタイムラグを確認" },
-            { href: "/quadruple-pressure", title: "四重苦", desc: "複合上昇の構造を分解" },
-            { href: "/scenario-1", title: "シナリオ1", desc: "短期安定化でも残る負担を確認" },
-            { href: "/scenario-2", title: "シナリオ2", desc: "夏ピークのダブルパンチを想定" },
-            { href: "/scenario-3", title: "シナリオ3", desc: "長期化時の事業継続リスクを把握" },
-            { href: "/contract-risk", title: "契約別", desc: "契約タイプ別に上振れ幅を比較" },
-            { href: "/industry-impact", title: "業種別", desc: "業種ごとの影響度ランキング" },
-            { href: "/action-roadmap", title: "対策", desc: "今すぐ進める対策ロードマップ" },
+            { href: "/special/emergency-scenario-analysis/background", title: "背景", desc: "有事局面の時系列と供給制約を把握" },
+            { href: "/special/emergency-scenario-analysis/mechanism", title: "仕組み", desc: "価格反映のタイムラグを確認" },
+            { href: "/special/emergency-scenario-analysis/quadruple-pressure", title: "四重苦", desc: "複合上昇の構造を分解" },
+            { href: "/special/emergency-scenario-analysis/scenario-1", title: "シナリオ1", desc: "短期安定化でも残る負担を確認" },
+            { href: "/special/emergency-scenario-analysis/scenario-2", title: "シナリオ2", desc: "夏ピークのダブルパンチを想定" },
+            { href: "/special/emergency-scenario-analysis/scenario-3", title: "シナリオ3", desc: "長期化時の事業継続リスクを把握" },
+            { href: "/special/emergency-scenario-analysis/contract-risk", title: "契約別", desc: "契約タイプ別に上振れ幅を比較" },
+            { href: "/special/emergency-scenario-analysis/industry-impact", title: "業種別", desc: "業種ごとの影響度ランキング" },
+            { href: "/special/emergency-scenario-analysis/action-roadmap", title: "対策", desc: "今すぐ進める対策ロードマップ" },
           ].map((item) => (
             <Link
               key={item.href}

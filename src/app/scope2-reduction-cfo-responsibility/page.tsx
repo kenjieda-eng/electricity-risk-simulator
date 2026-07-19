@@ -411,7 +411,7 @@ export default function Scope2ReductionCfoResponsibilityPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               コーポレートPPA詳細は{" "}
-              <Link href="/corporate-ppa-types" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">コーポレートPPAの類型</Link>
+              <Link href="/corporate-ppa-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">コーポレートPPAの類型</Link>
               、太陽光投資判断は{" "}
               <Link href="/self-consumption-solar-cost-benefit" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自家消費型太陽光の費用対効果</Link>
               。
@@ -577,7 +577,7 @@ export default function Scope2ReductionCfoResponsibilityPage() {
               { href: "/retail-cfo-electricity-strategy", title: "流通・小売業CFO戦略", description: "店舗vs DC構造とScope2。" },
               { href: "/service-industry-cfo-electricity-strategy", title: "サービス業CFO戦略", description: "オフィス電気代とScope2削減。" },
               { href: "/executive-esg-electricity-disclosure", title: "IR・ESG開示における電力リスクの記載ガイド", description: "TCFD/ISSB対応の詳細。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "フィジカル／バーチャルPPAの比較。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "フィジカル／バーチャルPPAの比較。" },
               { href: "/virtual-ppa-explained", title: "バーチャルPPAとは", description: "金融契約型PPAの仕組み。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋根太陽光の経済性試算。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金等。" },

@@ -362,7 +362,7 @@ export default function HighVoltageVsExtraHighVoltageDifferencesPage() {
               description: "大口需要家が市場連動プランを選ぶ際の注意点。",
             },
             {
-              href: "/business-electricity-cost-components",
+              href: "/business-electricity-bill-breakdown",
               title: "法人の電気料金の内訳",
               description: "高圧・特別高圧を含む電気料金の全構成要素。",
             },

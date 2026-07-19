@@ -547,7 +547,7 @@ export default function Page() {
               PPA価格水準・交渉論点は{" "}
               <Link href="/ppa-price-benchmark-2026" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">PPA価格の相場と交渉ポイント</Link>
               、データセンターの再エネ調達は{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               で深掘りできます。
             </p>
           </section>

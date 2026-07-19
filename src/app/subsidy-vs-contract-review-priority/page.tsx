@@ -370,7 +370,7 @@ export default function SubsidyVsContractReviewPriorityPage() {
           links={[
             { href: "/subsidy-local-government-list", title: "自治体別 電力関連補助金の探し方", description: "都道府県・市区町村が独自に行う省エネ・再エネ補助金の探し方と主要自治体の事例。" },
             { href: "/subsidies-overview", title: "法人向け電力・省エネ補助金まとめ", description: "2026年度に使える主要制度を横断比較" },
-            { href: "/what-to-start-with-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "契約見直しの進め方と優先順位" },
+            { href: "/how-to-start-electricity-contract-review", title: "電力契約の見直し、まず何から始めるか", description: "契約見直しの進め方と優先順位" },
             { href: "/contract-review-reduction-effect", title: "電力契約見直しで電気代はどれだけ下がるか", description: "削減幅の目安と試算方法" },
             { href: "/battery-suited-corporations", title: "法人の蓄電池導入検討ガイド", description: "蓄電池の費用対効果と導入判断の考え方" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

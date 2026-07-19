@@ -456,7 +456,7 @@ export default function AomoriBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新電力選定の基本は{" "}
-              <Link href="/how-to-choose-new-electricity-supplier" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
+              <Link href="/how-to-compare-electricity-suppliers" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
               、撤退情報は{" "}
               <Link href="/region-supplier-withdrawal-map" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別新電力撤退状況マップ</Link>
               。
@@ -683,10 +683,10 @@ export default function AomoriBusinessElectricityCostPage() {
               { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "プラン特性の比較。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "りんごCA冷蔵・水産加工に直結。" },
-              { href: "/food-industry-electricity-cost-review", title: "食品加工業の電気料金見直し", description: "県内食品加工業の見直し論点。" },
+              { href: "/food-processing-electricity-cost-review", title: "食品加工業の電気料金見直し", description: "県内食品加工業の見直し論点。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "温泉旅館・ホテルの暖房・温泉加熱コスト。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "寒冷地仕様パネル選定のポイント。" },
-              { href: "/corporate-ppa-types", title: "コーポレートPPAの類型", description: "風力PPA活用パターン整理。" },
+              { href: "/corporate-ppa-overview", title: "コーポレートPPAの類型", description: "風力PPA活用パターン整理。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "CA冷蔵庫・コンプレッサー更新の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東北電力の火力依存度を踏まえた解説。" },
               { href: "/solar-curtailment-by-area", title: "太陽光出力制御の実態", description: "東北電力エリアの出力制御動向。" },

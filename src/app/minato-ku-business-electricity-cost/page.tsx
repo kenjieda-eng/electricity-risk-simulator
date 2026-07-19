@@ -492,7 +492,7 @@ export default function MinatoKuBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業態別の比較は{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               、{" "}
               <Link href="/office-building-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビルの電気料金見直し</Link>
               も参照ください。
@@ -677,7 +677,7 @@ export default function MinatoKuBusinessElectricityCostPage() {
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "隣接区・銀座/日本橋の事情。" },
               { href: "/shinagawa-ku-business-electricity-cost", title: "品川区の法人電気料金", description: "隣接区・大井/天王洲の事情。" },
               { href: "/shibuya-ku-business-electricity-cost", title: "渋谷区の法人電気料金", description: "隣接区・IT/原宿の事情。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "台場DC事業者の主力打ち手。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "台場DC事業者の主力打ち手。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "ヒルズ級大型ビルの最適化。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "他業態との比較ベンチマーク。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "オフサイトPPA活用も含む。" },

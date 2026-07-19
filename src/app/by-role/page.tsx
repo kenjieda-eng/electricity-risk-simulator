@@ -24,14 +24,14 @@ const ROLES = [
     { href: "/electricity-expense-accounting", title: "電気代の勘定科目" },
     { href: "/invoice-system-electricity", title: "インボイス制度対応" },
     { href: "/solar-battery-depreciation", title: "蓄電池・太陽光の減価償却" },
-    { href: "/department-cost-allocation", title: "部門別配賦方法" },
+    { href: "/electricity-cost-abc-allocation", title: "部門別配賦方法" },
     { href: "/budget-planning-in-high-price-era", title: "高止まり時代の予算策定" },
   ]},
   { id: "legal", name: "⚖ 法務・契約", description: "契約条項・約款・違約金・M&A対応", articles: [
     { href: "/electricity-contract-clauses", title: "契約書の主要条項" },
     { href: "/auto-renewal-clause-risks", title: "自動更新条項のリスク" },
     { href: "/force-majeure-electricity", title: "不可抗力条項の読み方" },
-    { href: "/contract-termination-penalty", title: "違約金条項" },
+    { href: "/penalty-clause-calculation", title: "違約金条項" },
     { href: "/ma-electricity-contract-handling", title: "M&A時の契約承継" },
   ]},
   { id: "esg", name: "🌱 ESG・サステナビリティ", description: "Scope2算定・RE100・脱炭素戦略", articles: [
@@ -39,7 +39,7 @@ const ROLES = [
     { href: "/ghg-protocol-scope2-market-based", title: "Market-based方式" },
     { href: "/re100-overview-for-business", title: "RE100加盟ガイド" },
     { href: "/corporate-ppa-overview", title: "コーポレートPPA入門" },
-    { href: "/tcfd-cdp-electricity-disclosure", title: "TCFD/CDP開示" },
+    { href: "/cfo-tcfd-issb-electricity-disclosure", title: "TCFD/CDP開示" },
     { href: "/gx-ets-impact-business-electricity", title: "GX-ETS影響" },
   ]},
   { id: "facility", name: "🏭 施設・設備管理", description: "BEMS・蓄電池・太陽光・省エネ", articles: [
