@@ -653,7 +653,7 @@ export default function IwateBusinessElectricityCostPage() {
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "寒冷地・24時間稼働法人の選択肢。" },
               { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "プラン特性の比較。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
-              { href: "/automotive-parts-electricity-cost-review", title: "自動車部品工場の電気料金見直し", description: "北上の自動車部品工場に直結。" },
+              { href: "/auto-parts-electricity-cost-review", title: "自動車部品工場の電気料金見直し", description: "北上の自動車部品工場に直結。" },
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "水産加工に直結。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "温泉旅館の暖房・温泉加熱コスト構造。" },
               { href: "/battery-storage-bcp-peak-cut-hybrid", title: "蓄電池のBCP×ピークカット活用", description: "震災経験のある県で投資価値が高い。" },

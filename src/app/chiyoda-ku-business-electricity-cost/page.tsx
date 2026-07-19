@@ -494,7 +494,7 @@ export default function ChiyodaKuBusinessElectricityCostPage() {
               業態別の比較は{" "}
               <Link href="/office-building-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビルの電気料金見直し</Link>
               、{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               も参照ください。
             </p>
           </section>
@@ -677,7 +677,7 @@ export default function ChiyodaKuBusinessElectricityCostPage() {
               { href: "/minato-ku-business-electricity-cost", title: "港区の法人電気料金", description: "隣接区・六本木/虎ノ門の事情。" },
               { href: "/shinjuku-ku-business-electricity-cost", title: "新宿区の法人電気料金", description: "西新宿副都心の事情。" },
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "隣接区・大学集積の事情。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "丸の内・大手町級大型ビルの最適化。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "他業態との比較ベンチマーク。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "国の主力補助金活用ガイド。" },

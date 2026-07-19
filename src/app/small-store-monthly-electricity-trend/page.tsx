@@ -122,7 +122,7 @@ export default function Page() {
             links={[
               { href: "/sme-electricity-basics", title: "中小企業の電気料金の基礎", description: "低圧契約を理解する" },
               { href: "/low-voltage-review-essentials", title: "低圧契約の見直し要点", description: "チェックリスト" },
-              { href: "/sme-cost-reduction-ideas", title: "中小企業向けの電気代削減アイデア", description: "低予算で即効性のある打ち手" },
+              { href: "/sme-cost-reduction-quick-wins", title: "中小企業向けの電気代削減アイデア", description: "低予算で即効性のある打ち手" },
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "このカテゴリの記事一覧を見る" },

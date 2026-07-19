@@ -314,7 +314,7 @@ export default function WhatIsPowerFactorPage() {
               description: "大規模契約での力率管理の考え方。",
             },
             {
-              href: "/business-electricity-cost-components",
+              href: "/business-electricity-bill-breakdown",
               title: "法人の電気料金の内訳",
               description: "基本料金・電力量料金など電気料金構成の全体像。",
             },

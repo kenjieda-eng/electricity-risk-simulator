@@ -494,7 +494,7 @@ export default function ShibuyaKuBusinessElectricityCostPage() {
               業態別の比較は{" "}
               <Link href="/office-building-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">オフィスビルの電気料金見直し</Link>
               、{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               も参照ください。
             </p>
           </section>
@@ -677,7 +677,7 @@ export default function ShibuyaKuBusinessElectricityCostPage() {
               { href: "/setagaya-ku-business-electricity-cost", title: "世田谷区の法人電気料金", description: "隣接区・住商混在の事情。" },
               { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金", description: "隣接区・中野駅再開発の事情。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "渋谷駅周辺大型ビルの最適化。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "他業態との比較ベンチマーク。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "オフサイトPPA活用も含む。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "国の主力補助金活用ガイド。" },

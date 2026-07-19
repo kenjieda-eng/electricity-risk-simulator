@@ -477,7 +477,7 @@ export default function SagaBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新電力選定の基本は{" "}
-              <Link href="/how-to-choose-new-electricity-supplier" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
+              <Link href="/how-to-compare-electricity-suppliers" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
               、撤退情報は{" "}
               <Link href="/region-supplier-withdrawal-map" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別新電力撤退状況マップ</Link>
               で確認できます。
@@ -551,7 +551,7 @@ export default function SagaBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種横断のコスト構造比較は{" "}
-              <Link href="/ceramics-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">窯業・陶磁器の電気料金見直し</Link>
+              <Link href="/ceramics-pottery-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">窯業・陶磁器の電気料金見直し</Link>
               、農業向けは{" "}
               <Link href="/agriculture-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">農業法人の電気料金見直し</Link>
               。

@@ -466,7 +466,7 @@ export default function Page() {
               業種別の電気代構造は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">工場電気代ベンチマーク</Link>
               、{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               で確認できます。
             </p>
             <p className="mt-2 text-xs text-slate-500">
@@ -615,7 +615,7 @@ export default function Page() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "BEMS導入時の補助金" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備補助金", description: "蓄電池併設時の補助金" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種別電気代水準" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の打ち手" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の打ち手" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "ビル事業者の打ち手" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

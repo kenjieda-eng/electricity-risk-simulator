@@ -455,7 +455,7 @@ export default function TokyoBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               新電力選定の基本は{" "}
-              <Link href="/how-to-choose-new-electricity-supplier" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
+              <Link href="/how-to-compare-electricity-suppliers" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">新電力選びのポイント</Link>
               、撤退情報は{" "}
               <Link href="/region-supplier-withdrawal-map" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別新電力撤退状況マップ</Link>
               で確認できます。
@@ -514,7 +514,7 @@ export default function TokyoBusinessElectricityCostPage() {
               業種横断のコスト構造比較は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">工場電気代ベンチマーク</Link>
               、データセンター見直しは{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               。
             </p>
           </section>
@@ -705,7 +705,7 @@ export default function TokyoBusinessElectricityCostPage() {
               { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "プラン特性の比較。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手を網羅。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手を網羅。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "23区大型オフィスビルの最適化。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "多摩地区工場の全国比較。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "都心オフサイトPPA活用も含む。" },

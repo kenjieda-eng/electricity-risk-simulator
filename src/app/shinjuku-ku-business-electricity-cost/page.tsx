@@ -679,7 +679,7 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
               { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金", description: "隣接区・中野駅再開発の事情。" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "西新宿超高層級の最適化。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "他業態との比較ベンチマーク。" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の主力打ち手。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "国の主力補助金活用ガイド。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率", description: "公募タイミングと採択率動向。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を整理。" },

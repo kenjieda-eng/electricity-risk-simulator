@@ -304,9 +304,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/electricity-contract-main-clauses", title: "電力契約書の主要条項", description: "法人担当者向けの読み方" },
-              { href: "/force-majeure-clause", title: "不可抗力条項の典型例", description: "災害・需給ひっ迫時の責任分担" },
-              { href: "/auto-renewal-clause", title: "自動更新条項と更新拒絶", description: "通知期限管理と解除" },
+              { href: "/electricity-contract-clauses", title: "電力契約書の主要条項", description: "法人担当者向けの読み方" },
+              { href: "/force-majeure-electricity", title: "不可抗力条項の典型例", description: "災害・需給ひっ迫時の責任分担" },
+              { href: "/auto-renewal-clause-risks", title: "自動更新条項と更新拒絶", description: "通知期限管理と解除" },
               { href: "/how-to-read-electricity-bill", title: "電気料金請求書の読み方", description: "検針票から供給地点特定番号を探す" },
               { href: "/how-to-read-electricity-quote", title: "電力見積書の読み方", description: "見積書の記載項目を確認する" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約チェックリスト", description: "契約・切替前に確認する項目" },

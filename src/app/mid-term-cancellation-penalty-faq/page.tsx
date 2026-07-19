@@ -269,9 +269,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/why-business-electricity-expensive-faq", title: "法人電気代なぜ高いFAQ", description: "3軸で原因と対処法" },
-              { href: "/contract-review-flow-faq", title: "契約見直しフローFAQ", description: "着手から切替完了まで" },
-              { href: "/market-linked-plan-faq", title: "市場連動プランFAQ", description: "向く企業・向かない企業" },
+              { href: "/faq-why-business-electricity-high", title: "法人電気代なぜ高いFAQ", description: "3軸で原因と対処法" },
+              { href: "/faq-contract-review-where-to-start", title: "契約見直しフローFAQ", description: "着手から切替完了まで" },
+              { href: "/faq-market-linked-plan", title: "市場連動プランFAQ", description: "向く企業・向かない企業" },
               { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "このカテゴリの記事一覧を見る" },

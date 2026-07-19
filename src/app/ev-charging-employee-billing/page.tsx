@@ -119,9 +119,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/ev-charging-facility-contract", title: "EV充電設備の契約区分", description: "社内専用・従業員用・一般開放" },
-              { href: "/corporate-ev-introduction", title: "法人EV導入時の電力コスト", description: "充電設備と契約区分" },
-              { href: "/corporate-ev-roi-calculation", title: "社用車EV化のROI試算", description: "月間電気代と燃料費比較" },
+              { href: "/charging-station-contract-types", title: "EV充電設備の契約区分", description: "社内専用・従業員用・一般開放" },
+              { href: "/ev-fleet-cost-calculation", title: "法人EV導入時の電力コスト", description: "充電設備と契約区分" },
+              { href: "/ev-fleet-cost-calculation", title: "社用車EV化のROI試算", description: "月間電気代と燃料費比較" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/energy-dx", title: "エネルギーマネジメント・DX", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/ev-charging", title: "EV・充電インフラ", description: "このカテゴリの記事一覧を見る" },

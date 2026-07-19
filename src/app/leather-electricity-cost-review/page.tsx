@@ -646,7 +646,7 @@ export default function LeatherElectricityCostReviewPage() {
               { href: "/solar-suited-corporations", title: "太陽光が向く法人の特徴", description: "昼間使用量が大きい工場の太陽光適性。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "LED・空調更新・コンプレッサーで活用できる主力補助金。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・自家消費太陽光の補助金", description: "需要家主導型PPA補助金などの活用パターン。" },
-              { href: "/small-business-electricity-cost-saving", title: "中小事業者の電気代削減", description: "小規模事業者向けの実践的削減ステップ。" },
+              { href: "/sme-cost-reduction-quick-wins", title: "中小事業者の電気代削減", description: "小規模事業者向けの実践的削減ステップ。" },
               {
                 href: "/industry-electricity-calculator",
                 title: "業種別電気料金シミュレーター",

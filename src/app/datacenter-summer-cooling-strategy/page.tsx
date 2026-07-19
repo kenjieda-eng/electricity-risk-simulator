@@ -531,7 +531,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               関連業種は{" "}
-              <Link href="/datacenter-ai-demand" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター・AI電力需要</Link>
+              <Link href="/datacenter-electricity-demand-surge" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター・AI電力需要</Link>
               で深掘りできます。
             </p>
           </section>
@@ -658,7 +658,7 @@ export default function DatacenterSummerCoolingStrategyPage() {
               { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC業種別電力プロファイル詳細。" },
               { href: "/it-services-electricity-cost-review", title: "ITサービス業の電気料金見直し", description: "自社DC運用業種の関連事例。" },
               { href: "/semiconductor-electricity-cost-review", title: "半導体業の電気料金見直し", description: "クリーンルーム空調最適化の類似事例。" },
-              { href: "/datacenter-ai-demand", title: "データセンター・AI電力需要", description: "AIワークロード増加トレンドの全体像。" },
+              { href: "/datacenter-electricity-demand-surge", title: "データセンター・AI電力需要", description: "AIワークロード増加トレンドの全体像。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "業種別に夏季の年間電気代を試算。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働ベースロード業種の関連事例。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "DCの長期固定契約選択。" },

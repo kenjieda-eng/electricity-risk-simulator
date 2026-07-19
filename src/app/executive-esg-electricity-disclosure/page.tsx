@@ -455,7 +455,7 @@ export default function ExecutiveEsgElectricityDisclosurePage() {
               description: "経営会議の議題として設定すべき電力リスクの論点。",
             },
             {
-              href: "/renewable-energy-certificate",
+              href: "/non-fossil-certificate-types-purchase",
               title: "非化石証書・グリーン電力証書の活用方法",
               description: "Scope2削減のための再エネ証書の種類と選択ポイント。",
             },

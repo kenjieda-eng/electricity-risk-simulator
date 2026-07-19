@@ -556,7 +556,7 @@ export default function Page() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               データセンター事例の深掘りは{" "}
-              <Link href="/datacenter-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
+              <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンターの電気料金見直し</Link>
               、PPAの落とし穴整理は{" "}
               <Link href="/ppa-contract-pitfalls" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">PPA契約の落とし穴</Link>
               。
@@ -621,7 +621,7 @@ export default function Page() {
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "長期固定の判断軸" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金の仕組み", description: "PPA経由でも関連" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "PPAでヘッジ対象の項目" },
-              { href: "/datacenter-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の打ち手" },
+              { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "DC事業者の打ち手" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "業種別電気代水準" },
               { href: "/office-building-electricity-cost-review", title: "オフィスビルの電気料金見直し", description: "ビル事業者の打ち手" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備項目" },

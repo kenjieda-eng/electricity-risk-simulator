@@ -125,9 +125,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/electricity-cost-account-classification", title: "電気代の勘定科目", description: "部門配賦と月次処理" },
+              { href: "/electricity-expense-accounting", title: "電気代の勘定科目", description: "部門配賦と月次処理" },
               { href: "/invoice-system-electricity", title: "インボイス制度と電気代", description: "仕入税額控除の扱い" },
-              { href: "/battery-solar-depreciation", title: "蓄電池・太陽光の減価償却", description: "耐用年数と税制優遇" },
+              { href: "/solar-battery-depreciation", title: "蓄電池・太陽光の減価償却", description: "耐用年数と税制優遇" },
               { href: "/articles/sme-guide", title: "中小企業・小規模事業者向け", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "このカテゴリの記事一覧を見る" },

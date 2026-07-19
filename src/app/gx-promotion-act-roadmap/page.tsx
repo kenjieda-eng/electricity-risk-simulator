@@ -125,9 +125,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/electricity-liberalization-timeline", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
+              { href: "/power-market-regulation-overview", title: "電力自由化タイムライン", description: "法人電気料金への影響" },
               { href: "/capacity-market-timeline", title: "容量市場タイムライン", description: "2020年〜本格稼働" },
-              { href: "/renewable-surcharge-revision-history", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
+              { href: "/renewable-surcharge-reform-timeline", title: "再エネ賦課金改正履歴", description: "FIT開始から現在" },
               { href: "/articles/decarbonization", title: "脱炭素・GX対応", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/glossary", title: "用語集", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "このカテゴリの記事一覧を見る" },

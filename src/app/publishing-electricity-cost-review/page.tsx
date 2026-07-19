@@ -632,7 +632,7 @@ export default function PublishingElectricityCostReviewPage() {
               { href: "/printing-electricity-cost-review", title: "印刷業の電気料金見直し", description: "印刷工場併設の電気料金見直し。" },
               { href: "/warehouse-electricity-cost-review", title: "物流倉庫の電気料金見直し", description: "書籍流通倉庫の電気代削減の考え方。" },
               { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "配信サーバーのデータセンター運用の電気代削減。" },
-              { href: "/office-electricity-cost-review", title: "オフィスの電気料金見直し", description: "本社オフィス・編集部の電力削減。" },
+              { href: "/office-building-electricity-cost-review", title: "オフィスの電気料金見直し", description: "本社オフィス・編集部の電力削減。" },
               { href: "/textile-electricity-cost-review", title: "繊維業の電気料金見直し", description: "ニッチ業界向け契約戦略の類似事例。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "予算管理と安定性を重視する法人の選択肢。" },
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "倉庫・サーバー連続稼働法人が市場連動を避ける理由。" },
