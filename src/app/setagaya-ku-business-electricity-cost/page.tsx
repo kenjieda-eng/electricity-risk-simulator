@@ -497,7 +497,7 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種横断のコスト構造比較は{" "}
-              <Link href="/restaurant-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">飲食業の電気代見直し</Link>
+              <Link href="/restaurant-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">飲食業の電気代見直し</Link>
               、病院は{" "}
               <Link href="/hospital-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">病院の電気料金見直し</Link>
               。
@@ -689,7 +689,7 @@ export default function SetagayaKuBusinessElectricityCostPage() {
               { href: "/toshima-ku-business-electricity-cost", title: "豊島区の法人電気料金", description: "池袋・サンシャインシティの大型商業事情。" },
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "東大本郷・大型病院・東京ドーム事情。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "板橋の中小製造業・物流事情。" },
-              { href: "/restaurant-electricity-cost-review", title: "飲食業の電気代見直し", description: "中小飲食店の主力打ち手を網羅。" },
+              { href: "/restaurant-electricity-cost-benchmark", title: "飲食業の電気代見直し", description: "中小飲食店の主力打ち手を網羅。" },
               { href: "/hospital-electricity-cost-review", title: "病院の電気料金見直し", description: "大型医療機関の最適化。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "中小・大型施設の主力補助金。" },

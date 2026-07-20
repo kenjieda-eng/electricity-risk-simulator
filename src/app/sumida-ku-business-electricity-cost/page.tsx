@@ -501,7 +501,7 @@ export default function SumidaKuBusinessElectricityCostPage() {
               業種横断のコスト構造比較は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">工場電気代ベンチマーク</Link>
               、商業施設見直しは{" "}
-              <Link href="/commercial-facility-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">商業施設の電気料金見直し</Link>
+              <Link href="/articles/by-industry/commercial" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">商業施設の電気料金見直し</Link>
               。
             </p>
           </section>
@@ -689,8 +689,8 @@ export default function SumidaKuBusinessElectricityCostPage() {
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "大学・研究機関と中小オフィス。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "製造・印刷業集積と高島平物流。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "町工場・中小製造業の全国比較。" },
-              { href: "/commercial-facility-electricity-cost-review", title: "商業施設の電気料金見直し", description: "錦糸町商業施設の主力打ち手。" },
-              { href: "/scope3-supply-chain-renewable-procurement", title: "Scope3対応の再エネ調達", description: "取引先要請に応じた段階的調達。" },
+              { href: "/articles/by-industry/commercial", title: "商業施設の電気料金見直し", description: "錦糸町商業施設の主力打ち手。" },
+              { href: "/cfo-supply-chain-cn-strategy", title: "Scope3対応の再エネ調達", description: "取引先要請に応じた段階的調達。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "中小製造業・観光施設の選択肢。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "町工場・商業施設の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東電エリアでも影響大の項目。" },

@@ -553,7 +553,7 @@ export default function SagaBusinessElectricityCostPage() {
               業種横断のコスト構造比較は{" "}
               <Link href="/ceramics-pottery-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">窯業・陶磁器の電気料金見直し</Link>
               、農業向けは{" "}
-              <Link href="/agriculture-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">農業法人の電気料金見直し</Link>
+              <Link href="/articles/by-industry/agriculture-primary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">農業法人の電気料金見直し</Link>
               。
             </p>
           </section>
@@ -745,7 +745,7 @@ export default function SagaBusinessElectricityCostPage() {
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "電気炉・LED・空調更新の主力補助金。" },
-              { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州電力エリア・原発稼働の影響。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

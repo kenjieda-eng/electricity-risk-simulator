@@ -459,7 +459,7 @@ export default function CarbonPricingElectricityImpactPage() {
                 "FIT/FIP制度の費用が毎月の請求書にどう転嫁されるかを解説。",
             },
             {
-              href: "/electricity-price-risk-simulation",
+              href: "/electricity-scenario-simulation",
               title: "電気料金リスクシミュレーション",
               description:
                 "複数のリスク要因が重なった場合の料金インパクトをシミュレーション。",

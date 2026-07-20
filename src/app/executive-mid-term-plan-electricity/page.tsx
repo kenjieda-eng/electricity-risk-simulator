@@ -431,7 +431,7 @@ export default function ExecutiveMidTermPlanElectricityPage() {
               description: "経営会議の議題として設定すべき電力リスクの論点。",
             },
             {
-              href: "/gx-electricity-surcharge-impact",
+              href: "/gx-ets-impact-business-electricity",
               title: "GX賦課金（炭素賦課金）の法人への影響",
               description: "2028年度からの炭素賦課金の仕組みとコストインパクトを解説。",
             },

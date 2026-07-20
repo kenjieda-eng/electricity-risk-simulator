@@ -271,7 +271,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/ma-electricity-contract-succession", title: "M&A時の電力契約承継", description: "スキーム別の手続き" },
+              { href: "/ma-electricity-contract-handling", title: "M&A時の電力契約承継", description: "スキーム別の手続き" },
               { href: "/spin-off-energy-contracts", title: "会社分割時の電力契約", description: "分割・新規契約設定" },
               { href: "/articles/contract-legal", title: "契約書・約款の読み方", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/accounting-tax", title: "電気代の経理・税務", description: "関連カテゴリも合わせて読む" },

@@ -747,7 +747,7 @@ export default function NagasakiBusinessElectricityCostPage() {
               { href: "/hotel-electricity-cost-review", title: "ホテル・旅館の電気料金見直し", description: "ハウステンボス・雲仙温泉・離島観光向け。" },
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "マグロ・養殖魚水産加工冷蔵向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "電気溶接機・LED・冷凍冷蔵設備更新の主力補助金。" },
-              { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />

@@ -499,7 +499,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
               業種横断のコスト構造比較は{" "}
               <Link href="/hotel-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホテル業の電気料金見直し</Link>
               、飲食業は{" "}
-              <Link href="/restaurant-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">飲食業の電気代見直し</Link>
+              <Link href="/restaurant-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">飲食業の電気代見直し</Link>
               。
             </p>
           </section>
@@ -690,7 +690,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "東大本郷・大型病院・東京ドーム事情。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "板橋の中小製造業・物流事情。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル業の電気料金見直し", description: "シティホテル・ビジネスホテルの最適化。" },
-              { href: "/restaurant-electricity-cost-review", title: "飲食業の電気代見直し", description: "中小飲食店の主力打ち手。" },
+              { href: "/restaurant-electricity-cost-benchmark", title: "飲食業の電気代見直し", description: "中小飲食店の主力打ち手。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

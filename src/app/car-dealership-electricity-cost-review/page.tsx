@@ -658,7 +658,7 @@ export default function CarDealershipElectricityCostReviewPage() {
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋根面積活用太陽光の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "ショールーム照明更新の主力補助金。" },
-              { href: "/peak-demand-management", title: "ピークデマンド管理の基本", description: "ショールーム・整備工場のピーク管理。" },
+              { href: "/demand-value-guide", title: "ピークデマンド管理の基本", description: "ショールーム・整備工場のピーク管理。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "業種別リスク全体像。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
