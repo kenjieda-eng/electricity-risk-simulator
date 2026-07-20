@@ -690,7 +690,7 @@ export default function ItabashiKuBusinessElectricityCostPage() {
               { href: "/ota-ku-business-electricity-cost", title: "大田区の法人電気料金", description: "町工場集積と羽田空港物流。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場電気代ベンチマーク", description: "光学・印刷業の全国比較。" },
               { href: "/logistics-warehouse-electricity-cost-review", title: "物流倉庫の電気料金見直し", description: "高島平・成増物流の主力打ち手。" },
-              { href: "/scope3-supply-chain-renewable-procurement", title: "Scope3対応の再エネ調達", description: "光学OEM取引先要請に応じた段階的調達。" },
+              { href: "/cfo-supply-chain-cn-strategy", title: "Scope3対応の再エネ調達", description: "光学OEM取引先要請に応じた段階的調達。" },
               { href: "/businesses-suited-for-fixed-price-electricity-plan", title: "固定プランが向く法人", description: "印刷業・物流の選択肢。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "光学・印刷・物流の主力補助金。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "東電エリアでも影響大の項目。" },

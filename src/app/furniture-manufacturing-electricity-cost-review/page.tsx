@@ -658,7 +658,7 @@ export default function FurnitureManufacturingElectricityCostReviewPage() {
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "日中稼働法人の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "塗装ブース・コンプレッサー更新の主力補助金。" },
               { href: "/contract-demand-what-is-it", title: "契約電力（デマンド）の仕組み", description: "デマンド管理の基礎。" },
-              { href: "/power-factor-improvement", title: "力率改善の基本", description: "木工機械用力率改善。" },
+              { href: "/what-is-power-factor", title: "力率改善の基本", description: "木工機械用力率改善。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "集塵機24h稼働事業者のリスク。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

@@ -548,7 +548,7 @@ export default function MiyazakiBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               業種横断のコスト構造比較は{" "}
-              <Link href="/livestock-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">畜産業の電気料金見直し</Link>
+              <Link href="/articles/by-industry/agriculture-primary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">畜産業の電気料金見直し</Link>
               、観光業向けは{" "}
               <Link href="/hotel-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホテル・旅館の電気料金見直し</Link>
               。
@@ -746,7 +746,7 @@ export default function MiyazakiBusinessElectricityCostPage() {
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を一覧で整理。" },
               { href: "/hotel-electricity-cost-review", title: "ホテル・旅館の電気料金見直し", description: "フェニックス・日南海岸観光業向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "畜舎温度管理・LED栽培照明・空調更新の主力補助金。" },
-              { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略（適地メリット）。" },
+              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略（適地メリット）。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "九州電力エリア・原発稼働の影響。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

@@ -464,7 +464,7 @@ export default function ElectricityPriceOutlook2026Page() {
               description: "過去の推移データをもとに高止まりの実態を確認。",
             },
             {
-              href: "/electricity-price-high-plateau-reasons",
+              href: "/why-electricity-prices-have-not-returned",
               title: "電気料金が高止まりする理由",
               description:
                 "燃料費が下がっても料金が下がりにくい構造的な要因を整理。",

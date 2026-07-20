@@ -512,7 +512,7 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
                 "FIT制度の費用が電気料金にどう転嫁されるかを解説。",
             },
             {
-              href: "/capacity-market-explained",
+              href: "/capacity-market-and-corporate-rates",
               title: "容量市場・容量拠出金とは",
               description: "2024年度から本格化する新たな固定費増加要因。",
             },
@@ -523,7 +523,7 @@ export default function RenewableEnergyExpansionPriceImpactPage() {
                 "要因別の方向性と3シナリオ別の予算前提の置き方を整理。",
             },
             {
-              href: "/electricity-price-high-plateau-reasons",
+              href: "/why-electricity-prices-have-not-returned",
               title: "電気料金が高止まりする理由",
               description: "構造的な高止まり要因を複数の視点から解説。",
             },

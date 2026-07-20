@@ -659,7 +659,7 @@ export default function RubberProductsElectricityCostReviewPage() {
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "加硫24h稼働事業者のリスク。" },
               { href: "/continuous-operation-factory-electricity-cost-review", title: "24時間連続稼働工場の見直し", description: "連続稼働工場の負荷特性。" },
               { href: "/contract-demand-what-is-it", title: "契約電力（デマンド）の仕組み", description: "デマンド管理の基礎。" },
-              { href: "/power-factor-improvement", title: "力率改善の基本", description: "バンバリーミキサ用力率改善。" },
+              { href: "/what-is-power-factor", title: "力率改善の基本", description: "バンバリーミキサ用力率改善。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

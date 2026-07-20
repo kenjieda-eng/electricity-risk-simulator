@@ -116,9 +116,9 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/electricity-contract-glossary", title: "契約関連用語集", description: "契約電力・基本料金・デマンド" },
-              { href: "/electricity-market-glossary", title: "市場関連用語集", description: "JEPX・スポット・先物" },
-              { href: "/electricity-facility-glossary", title: "設備関連用語集", description: "高圧・低圧・キュービクル" },
+              { href: "/glossary-contract-terms", title: "契約関連用語集", description: "契約電力・基本料金・デマンド" },
+              { href: "/glossary-market-terms", title: "市場関連用語集", description: "JEPX・スポット・先物" },
+              { href: "/glossary-equipment-terms", title: "設備関連用語集", description: "高圧・低圧・キュービクル" },
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/glossary", title: "用語集", description: "このカテゴリの記事一覧を見る" },

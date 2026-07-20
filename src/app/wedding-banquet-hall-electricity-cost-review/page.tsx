@@ -659,7 +659,7 @@ export default function WeddingBanquetHallElectricityCostReviewPage() {
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "郊外型式場の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "LED演出照明・空調更新の主力補助金。" },
-              { href: "/peak-demand-management", title: "ピークデマンド管理の実務", description: "土日ピーク稼働法人のデマンド管理。" },
+              { href: "/demand-value-guide", title: "ピークデマンド管理の実務", description: "土日ピーク稼働法人のデマンド管理。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
               { href: "/industry-electricity-calculator", title: "業種別電気代計算機（自社条件で年間電気代を試算）", description: "業種・規模・契約・エリアを入力するだけで推定年間電気代と削減余地3案を即時表示します。" },
             ]}
