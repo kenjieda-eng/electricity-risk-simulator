@@ -656,7 +656,7 @@ export default function AutoRepairBodyshopElectricityCostReviewPage() {
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "電気代削減打ち手の全体像。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "整備工場の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "コンプレッサー・塗装ブース更新の主力補助金。" },
-              { href: "/demand-value-guide", title: "ピークデマンド管理の基本", description: "塗装ブース・リフトの同時稼働回避。" },
+              { href: "/peak-demand-management", title: "ピークデマンド管理の基本", description: "塗装ブース・リフトの同時稼働回避。" },
               { href: "/subsidy-transformer-compressor-renewal", title: "コンプレッサーの省エネ対策", description: "エアー漏れ対策の詳細。" },
               { href: "/transportation-electricity-cost-review", title: "運輸業の電気料金見直し", description: "EV化対応の共通論点。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "業種別リスク全体像。" },
