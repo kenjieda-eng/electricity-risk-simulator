@@ -659,7 +659,7 @@ export default function GasStationElectricityCostReviewPage() {
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "キャノピー上太陽光の投資回収試算。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金の活用", description: "LED化・洗車機更新の主力補助金。" },
               { href: "/24h-operation-price-surge-risk", title: "24時間稼働企業の料金高騰リスク", description: "24h看板照明事業者のリスク。" },
-              { href: "/demand-value-guide", title: "ピークデマンド管理の基本", description: "洗車機・EV充電のピーク管理。" },
+              { href: "/peak-demand-management", title: "ピークデマンド管理の基本", description: "洗車機・EV充電のピーク管理。" },
               { href: "https://pps-net.org/unit", title: "電力単価の最新動向（新電力ネット）", description: "全国エリア別の電力量単価データ。本記事の電気代試算の参考に。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}

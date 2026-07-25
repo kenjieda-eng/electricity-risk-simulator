@@ -11,7 +11,8 @@
     "test:watch": "vitest",
     "generate:article-slugs": "node scripts/generate-article-slugs.mjs",
     "check:surcharge": "node scripts/check-surcharge-drift.mjs",
-    "check:surcharge:strict": "node scripts/check-surcharge-drift.mjs --strict"
+    "check:surcharge:strict": "node scripts/check-surcharge-drift.mjs --strict",
+    "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.98.0",

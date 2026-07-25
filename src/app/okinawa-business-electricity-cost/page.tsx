@@ -745,7 +745,7 @@ export default function OkinawaBusinessElectricityCostPage() {
               { href: "/data-center-electricity-cost-review", title: "データセンターの電気料金見直し", description: "那覇市内データセンター向け。" },
               { href: "/cold-storage-electricity-cost-review", title: "冷凍倉庫の電気料金見直し", description: "モズク・カツオ水産加工冷蔵向け。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金", description: "空調・LED・冷凍冷蔵設備更新の主力補助金。" },
-              { href: "/onsite-vs-offsite-ppa", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
+              { href: "/onsite-ppa-explained", title: "オンサイトPPA(自家消費型太陽光)", description: "太陽光自家消費＋蓄電池の組合せ戦略。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "沖縄電力エリア・石油石炭依存の影響。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
