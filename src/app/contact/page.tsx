@@ -498,7 +498,7 @@ export default async function ContactPage({
 
       {/* メインCTA：3 ステップお問い合わせヘルパー */}
       <div id="inquiry-type-selector" className="mt-8">
-        <InquiryTypeSelector />
+        <InquiryTypeSelector ctaFrom={fromSource} />
       </div>
 
       {/* 補足：個人のお客様への案内 */}

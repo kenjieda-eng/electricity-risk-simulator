@@ -58,7 +58,16 @@ const CATEGORIES: InquiryCategory[] = [
 
 const EXTERNAL_FORM_BASE = "https://eic-jp.org/contact";
 
-export default function InquiryTypeSelector() {
+type InquiryTypeSelectorProps = {
+  /**
+   * 流入元。`/contact?from=<value>` のクエリ値をサーバー側から引き回し、
+   * `contact_form_submitted` に `cta_from` として付与する。
+   * 未指定（直接来訪・ヘッダー/フッター等の素の /contact リンク）は "direct"。
+   */
+  ctaFrom?: string | null;
+};
+
+export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProps = {}) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = CATEGORIES.find((c) => c.id === selectedId) ?? null;
   const externalUrl = selected
@@ -150,6 +159,7 @@ export default function InquiryTypeSelector() {
                 window.gtag("event", "contact_form_submitted", {
                   event_category: "engagement",
                   event_label: selected?.externalFormParam ?? "no-category",
+                  cta_from: ctaFrom || "direct",
                 });
               }
             }}

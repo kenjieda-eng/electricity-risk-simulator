@@ -190,6 +190,8 @@ export function IndustryElectricityCalculator() {
     trackEvent("calculator_cta_click", {
       calculator_id: "industry_electricity",
       cta_type: ctaType,
+      // /contact 宛の CTA のみ流入元を付与（href の from= と同値）。
+      ...(ctaType === "expert_consult" ? { cta_from: "industry-calculator" } : {}),
       building_type: buildingType,
       region,
       contract_type: contractType,

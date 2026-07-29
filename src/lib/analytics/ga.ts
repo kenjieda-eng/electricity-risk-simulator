@@ -110,3 +110,42 @@ export function trackEvent(eventName: string, params?: Record<string, unknown>) 
   ensureGtag();
   window.gtag?.("event", eventName, params ?? {});
 }
+
+/**
+ * 現在のページを `cta_from` の値体系（＝`/contact?from=<value>` のクエリ値）で表す。
+ * トップは "home"、それ以外は先頭・末尾のスラッシュを除いたパス（例: "v2h-ocpp-guide"）。
+ */
+export function currentPageCtaFrom(): string | null {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const path = window.location.pathname.replace(/^\/+/, "").replace(/\/+$/, "");
+  return path === "" ? "home" : path;
+}
+
+/**
+ * リンク先 href から CTA の流入元識別子（GA4 `cta_from`）を解決する。
+ *
+ *  - `/contact?from=<value>` → その `from` 値（"sticky" / "compare" / "article" 等）
+ *  - `from` を持たない `/contact` リンク → 設置ページのスラッグ（`currentPageCtaFrom()`）
+ *  - `/contact` 以外のリンク → null（＝ `cta_from` を送信しない）
+ *
+ * 値の体系は既存の `from=` クエリと統一する。
+ */
+export function resolveCtaFrom(href: string): string | null {
+  if (href !== "/contact" && !href.startsWith("/contact?") && !href.startsWith("/contact#")) {
+    return null;
+  }
+
+  const queryStart = href.indexOf("?");
+  if (queryStart !== -1) {
+    const query = href.slice(queryStart + 1).split("#")[0];
+    const from = new URLSearchParams(query).get("from");
+    if (from) {
+      return from;
+    }
+  }
+
+  return currentPageCtaFrom();
+}

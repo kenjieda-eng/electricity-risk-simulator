@@ -235,6 +235,8 @@ export function ScenarioSimulator() {
       trackEvent("calculator_cta_click", {
         calculator_id: "scenario_simulation",
         cta_type: ctaType,
+        // /contact 宛の CTA のみ流入元を付与（href の from= と同値）。
+        ...(ctaType === "expert_consult" ? { cta_from: "scenario-simulation" } : {}),
         building_type: buildingType,
         region,
         contract_type: contractType,

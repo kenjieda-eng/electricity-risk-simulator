@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { trackEvent } from "../../lib/analytics/ga";
+import { resolveCtaFrom, trackEvent } from "../../lib/analytics/ga";
 
 type CtaLinkItem = {
   href: string;
@@ -24,7 +24,15 @@ export default function ContentCta({ heading, description, links }: ContentCtaPr
           <Link
             key={link.href}
             href={link.href}
-            onClick={() => trackEvent("cta_click", { label: link.label, href: link.href })}
+            onClick={() => {
+              // /contact 宛のリンクのみ流入元を付与する（他リンクは cta_from を送らない）。
+              const ctaFrom = resolveCtaFrom(link.href);
+              trackEvent("cta_click", {
+                label: link.label,
+                href: link.href,
+                ...(ctaFrom ? { cta_from: ctaFrom } : {}),
+              });
+            }}
             className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
             {link.label}
