@@ -35,7 +35,7 @@ export default function ConsultCta({
         <Link
           href={href}
           onClick={() =>
-            trackEvent("cta_click", { label: "consult", href, from })
+            trackEvent("cta_click", { label: "consult", href, from, cta_from: from })
           }
           className="inline-flex items-center justify-center rounded-lg bg-sky-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-sky-700"
         >

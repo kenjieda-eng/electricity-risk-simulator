@@ -83,6 +83,7 @@ export default function ContactCtaCard({
             viewFiredRef.current = true;
             trackEvent("contact_cta_view", {
               source,
+              cta_from: source,
               variant,
               page_path:
                 typeof window !== "undefined" ? window.location.pathname : null,
@@ -102,6 +103,7 @@ export default function ContactCtaCard({
   const handleClick = () => {
     trackEvent("contact_cta_click", {
       source,
+      cta_from: source,
       variant,
       risk_label: context?.riskLabel ?? null,
       risk_score: context?.riskScore ?? null,

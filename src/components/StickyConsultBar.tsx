@@ -36,7 +36,12 @@ export default function StickyConsultBar() {
         <Link
           href={HREF}
           onClick={() =>
-            trackEvent("cta_click", { label: "sticky", href: HREF, from: "sticky" })
+            trackEvent("cta_click", {
+              label: "sticky",
+              href: HREF,
+              from: "sticky",
+              cta_from: "sticky",
+            })
           }
           className="inline-flex shrink-0 items-center justify-center rounded-lg bg-sky-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-sky-700"
         >
@@ -45,7 +50,7 @@ export default function StickyConsultBar() {
         <button
           type="button"
           onClick={() => {
-            trackEvent("cta_dismiss", { label: "sticky", from: "sticky" });
+            trackEvent("cta_dismiss", { label: "sticky", from: "sticky", cta_from: "sticky" });
             setDismissed(true);
           }}
           aria-label="相談バーを閉じる"
