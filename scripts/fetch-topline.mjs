@@ -124,7 +124,19 @@ async function gscPages([startDate, endDate], rowLimit = 1000) {
 // GA4
 // ============================================================
 const analyticsdata = google.analyticsdata({ version: "v1beta", auth });
-const KEY_EVENTS = ["contact_form_submitted", "cta_click", "download_completed"];
+// ファネル順に並べる（表の出力順もこの順になる）。
+// ★ contact 到達の主導線は ContactCtaCard（845箇所）の contact_cta_click であり、
+//   cta_click ではない。cta_click の発火元 ContentCta はリンク先を問わず全リンクで
+//   発火するため（/contact 宛は 2,189 リンク中 79＝3.6%）、contact 導線の指標として
+//   読まないこと。詳細: .ai-team/CONTACT_FUNNEL_AUDIT_2026-07-29.md
+const KEY_EVENTS = [
+  "contact_form_submitted", // CV（プロキシ。外部フォームを開くクリック＝実送信ではない）
+  "contact_cta_click", // /contact 到達クリック（ContactCtaCard・主導線）
+  "contact_cta_view", // ContactCtaCard の表示（到達クリックの母数）
+  "calculator_cta_click", // 計算機からの CTA（expert_consult 含む）
+  "cta_click", // 汎用CTA（大半は記事回遊。§上記注意）
+  "download_completed", // ソフトCV
+];
 
 // 第5回計測（.ai-team/MEASUREMENT_5TH_TOPLINE_2026-07-06.md・GSC手動エクスポート 4/4〜7/3）
 const PREV_91 = { clicks: 6902, impressions: 292000, ctr: 0.024 };
