@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { articleCategories, articleList } from "../articles";
 
@@ -33,6 +35,11 @@ describe("articleList data integrity", () => {
   });
 });
 
+// /business-electricity-retrospective/ 配下（月次振り返り・区分別推移・ウクライナショック特集）は
+// recommendedReadingOrder にのみ登録し、articleList には追加しない運用のため orphan 判定から除外する。
+// 除外したぶんの担保として、下の「実ページが存在すること」のテストでタイポを検出する。
+const RETROSPECTIVE_PREFIX = "business-electricity-retrospective/";
+
 describe("articleCategories data integrity", () => {
   it("has a unique slug on every category", () => {
     const slugs = articleCategories.map((c) => c.slug);
@@ -44,11 +51,25 @@ describe("articleCategories data integrity", () => {
     const orphans: string[] = [];
     for (const category of articleCategories) {
       for (const slug of category.recommendedReadingOrder) {
+        if (slug.startsWith(RETROSPECTIVE_PREFIX)) continue;
         if (!existing.has(slug)) {
           orphans.push(`${category.slug} -> ${slug}`);
         }
       }
     }
     expect(orphans).toEqual([]);
+  });
+
+  it("retrospective entries excluded from the orphan check still resolve to a real page", () => {
+    const missing: string[] = [];
+    for (const category of articleCategories) {
+      for (const slug of category.recommendedReadingOrder) {
+        if (!slug.startsWith(RETROSPECTIVE_PREFIX)) continue;
+        if (!fs.existsSync(path.join(process.cwd(), "src", "app", slug, "page.tsx"))) {
+          missing.push(`${category.slug} -> ${slug}`);
+        }
+      }
+    }
+    expect(missing).toEqual([]);
   });
 });
