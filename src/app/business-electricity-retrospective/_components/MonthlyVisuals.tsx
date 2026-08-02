@@ -10,13 +10,15 @@ function DiffBadge({ diff }: { diff: number | null }) {
   if (diff === null) return null;
   const isUp = diff > 0;
   const isFlat = diff === 0;
+  // 記号は本文・各表の慣例に合わせる（+＝プラス／▲＝マイナス）。
+  // 上昇＝赤・低下＝緑の色分けは視認性のため従来どおり維持する。
   return (
     <span
       className={`inline-flex items-center gap-0.5 text-xs font-semibold ${
         isFlat ? "text-slate-500" : isUp ? "text-red-600" : "text-emerald-600"
       }`}
     >
-      {isFlat ? "→" : isUp ? "▲" : "▼"}
+      {isFlat ? "→" : isUp ? "+" : "▲"}
       {isFlat ? "横ばい" : `${Math.abs(diff).toFixed(1)}円`}
     </span>
   );
@@ -48,7 +50,7 @@ export function MonthlyDataCards({ data }: { data: MonthlyPageData }) {
         {data.year}年{data.month}月の契約区分別kWh単価
       </h2>
       <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-        当社団が運営している「新電力ネット」のデータをもとに、契約区分ごとのkWhあたり単価を整理しました。
+        電力・ガス取引監視等委員会「電力取引報」から算出した、契約区分ごとのkWhあたり単価を整理しました。
       </p>
       <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {data.categories.map((cat, i) => (
