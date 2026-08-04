@@ -170,8 +170,8 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
             }`}
           >
             {selected
-              ? `「${selected.label}」で 2 営業日以内に返信を受け取る →`
-              : "公式フォームを開いて送信する（2 営業日以内に返信） →"}
+              ? `「${selected.label}」で 3 営業日以内に返信を受け取る →`
+              : "公式フォームを開いて送信する（3 営業日以内に返信） →"}
           </a>
           <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
             ※ 必須項目: ご質問種別 / メールアドレス / お問い合わせ内容（3 項目）

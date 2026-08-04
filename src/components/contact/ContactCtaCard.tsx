@@ -145,7 +145,7 @@ export default function ContactCtaCard({
             相談価値の事実行。heading / description は全836箇所が page.tsx 側で上書きしているため、
             既定値を変えても効かない。全ページ一律に効かせるには prop 化しない要素である必要がある。
             記載内容はいずれも /contact に既出の事実のみ（無料 :118-120／中立・勧誘なし :380,:517／
-            営業電話なし :300／2営業日以内に返信 :292・FAQ :115）。
+            営業電話なし :300／3営業日以内に返信 :292・FAQ :115）。
           */}
           <ul className="mt-3 flex flex-wrap gap-1.5 text-xs text-slate-700 sm:text-sm">
             {CONSULT_FACTS.map((fact) => (

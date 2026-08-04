@@ -35,7 +35,7 @@ export default function StickyConsultBar() {
           <p className="min-w-0 flex-1 text-sm leading-tight text-slate-800">
             <span className="font-semibold">電気代、下げられるか無料相談</span>
             <span className="ml-2 hidden text-xs text-slate-500 sm:inline">
-              一般社団法人・中立・営業電話なし・2営業日以内に返信
+              一般社団法人・中立・営業電話なし・3営業日以内に返信
             </span>
           </p>
           <Link

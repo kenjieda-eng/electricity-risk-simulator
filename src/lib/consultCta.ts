@@ -13,13 +13,13 @@
  *   初回相談 無料              … src/app/contact/page.tsx:118-120, :453
  *   中立・勧誘なし             … 同 :380, :517
  *   営業電話なし               … 同 :300
- *   2営業日以内に返信          … 同 :292 / FAQ :115 / InquiryTypeSelector:173-174
+ *   3営業日以内に返信          … 同 :292 / FAQ :115 / InquiryTypeSelector:173-174
  */
 export const CONSULT_FACTS = [
   "初回相談 無料",
   "中立・特定の電力会社への勧誘なし",
   "営業電話なし",
-  "2営業日以内に返信",
+  "3営業日以内に返信",
 ] as const;
 
 /**

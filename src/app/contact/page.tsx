@@ -112,7 +112,7 @@ const FAQ_ITEMS: { question: string; answer: string }[] = [
   {
     question: "問い合わせから回答までどれくらい時間がかかりますか？",
     answer:
-      "通常 2 営業日以内に回答いたします。技術的な内容や複数事業所の試算依頼など回答に時間を要する場合は、最大 5 営業日いただくことがあります。緊急性の高いお問い合わせ（電力供給停止のリスクなど）は件名に「緊急」と記載いただければ、可能な限り当日対応します。",
+      "通常 3 営業日以内に回答いたします。技術的な内容や複数事業所の試算依頼など回答に時間を要する場合は、最大 5 営業日いただくことがあります。緊急性の高いお問い合わせ（電力供給停止のリスクなど）は件名に「緊急」と記載いただければ、可能な限り当日対応します。",
   },
   {
     question: "電力料金の見直し相談は無料ですか？",
@@ -289,7 +289,7 @@ export default async function ContactPage({
         <ul className="grid gap-2 text-sm leading-6 text-slate-800 sm:grid-cols-3">
           <li className="flex items-start gap-2">
             <span className="text-emerald-700" aria-hidden="true">✅</span>
-            <span><strong className="font-semibold">2 営業日以内</strong>にご返信いたします</span>
+            <span><strong className="font-semibold">3 営業日以内</strong>にご返信いたします</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-emerald-700" aria-hidden="true">✅</span>
@@ -475,7 +475,7 @@ export default async function ContactPage({
           <span className="inline-flex rounded-full bg-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
             このまま相談できます
           </span>
-          <span className="text-xs text-slate-600">2 営業日以内に返信</span>
+          <span className="text-xs text-slate-600">3 営業日以内に返信</span>
         </div>
         <h2 className="mt-3 text-xl font-semibold text-slate-900">
           このままご相談いただけます。先に無料診断を試すこともできます
