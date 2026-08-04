@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import { trackEvent } from "../../lib/analytics/ga";
+import { CONSULT_FACTS } from "../../lib/consultCta";
 
 /**
  * シミュレーター結果→問い合わせ導線の再利用型CTA。
@@ -140,6 +141,22 @@ export default function ContactCtaCard({
           <p className={isPrimary ? "mt-3 text-sm leading-7 text-slate-700 sm:text-base" : "mt-1 text-sm leading-6 text-slate-700"}>
             {description}
           </p>
+          {/*
+            相談価値の事実行。heading / description は全836箇所が page.tsx 側で上書きしているため、
+            既定値を変えても効かない。全ページ一律に効かせるには prop 化しない要素である必要がある。
+            記載内容はいずれも /contact に既出の事実のみ（無料 :118-120／中立・勧誘なし :380,:517／
+            営業電話なし :300／2営業日以内に返信 :292・FAQ :115）。
+          */}
+          <ul className="mt-3 flex flex-wrap gap-1.5 text-xs text-slate-700 sm:text-sm">
+            {CONSULT_FACTS.map((fact) => (
+              <li
+                key={fact}
+                className="rounded-full border border-slate-300 bg-white/70 px-2.5 py-0.5"
+              >
+                {fact}
+              </li>
+            ))}
+          </ul>
           {context && (context.riskLabel || context.riskScore != null) ? (
             <p className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-lg border border-sky-200 bg-white/80 px-3 py-2 text-xs text-slate-700">
               <span className="font-semibold text-slate-900">シミュレーター結果:</span>

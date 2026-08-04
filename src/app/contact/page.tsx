@@ -466,33 +466,36 @@ export default async function ContactPage({
         </ol>
       </section>
 
-      {/* Step 0: 無料診断誘導 */}
+      {/* 相談への導線（主）と無料診断（副）。
+          U-2 対応: 以前は「診断を始める → /」が塗りつぶしの主ボタンで、送信フォームの直前に
+          ホームへ戻す最強CTAが置かれていた。主従を交換し、最も目立つボタンが送信フォーム
+          （#inquiry-type-selector）を指すようにしている。診断への導線は枠線ボタンとして維持。 */}
       <section className="mt-8 rounded-xl border-2 border-amber-300 bg-amber-50 p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-flex rounded-full bg-amber-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-            Step 0 ／ おすすめ
+            このまま相談できます
           </span>
-          <span className="text-xs text-slate-600">所要時間 5 分</span>
+          <span className="text-xs text-slate-600">2 営業日以内に返信</span>
         </div>
         <h2 className="mt-3 text-xl font-semibold text-slate-900">
-          まず無料診断を試すと、より具体的な相談ができます
+          このままご相談いただけます。先に無料診断を試すこともできます
         </h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          いきなりお問い合わせフォームに進む前に、シミュレーターで自社の電気料金リスクスコアを 5 分で診断できます。診断結果をもとに相談内容を整理しておくと、担当者がより具体的なアドバイスを提供できます。
+          下のお問い合わせフォームから、そのままご相談いただけます。お急ぎでなければ、シミュレーターで自社の電気料金リスクスコアを 5 分で診断できます。診断結果をもとに相談内容を整理しておくと、担当者がより具体的なアドバイスを提供できます。
         </p>
         <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center rounded-xl bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-amber-700"
-          >
-            診断を始める（無料・5 分） →
-          </Link>
           <a
             href="#inquiry-type-selector"
+            className="inline-flex items-center justify-center rounded-xl bg-amber-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-amber-700"
+          >
+            相談内容を送る（無料） →
+          </a>
+          <Link
+            href="/"
             className="inline-flex items-center justify-center rounded-xl border-2 border-sky-300 bg-white px-6 py-3 text-base font-bold text-sky-700 transition hover:bg-sky-50"
           >
-            すぐに相談する
-          </a>
+            先に無料診断（5 分）を試す
+          </Link>
         </div>
       </section>
 
