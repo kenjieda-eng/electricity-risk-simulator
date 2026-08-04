@@ -170,8 +170,8 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
             }`}
           >
             {selected
-              ? `「${selected.label}」で 2 営業日以内に返信を受け取る →`
-              : "公式フォームを開いて送信する（2 営業日以内に返信） →"}
+              ? `「${selected.label}」で 3 営業日以内に返信を受け取る →`
+              : "公式フォームを開いて送信する（3 営業日以内に返信） →"}
           </a>
           <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
             ※ 必須項目: ご質問種別 / メールアドレス / お問い合わせ内容（3 項目）
@@ -179,12 +179,14 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
             その他の項目はすべて任意です
           </p>
         </div>
+        {/* U-3 対応: 送信ボタン直下で診断へ分岐させていた「おすすめ」表現を外し、
+            診断は選択肢として残しつつ推奨はしない中立的な案内にしている。 */}
         <p className="mt-3 text-xs text-slate-500">
           選び直す場合は上のボタンを再度押してください。{" "}
           <Link href="/" className="text-sky-700 underline-offset-2 hover:underline">
-            まず無料診断（5 分）を試す
+            先に無料診断（5 分）を試す
           </Link>{" "}
-          のもおすすめです。
+          こともできます。
         </p>
       </div>
     </section>

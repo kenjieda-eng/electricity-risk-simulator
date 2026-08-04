@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import InlineConsultLink from "../consult/InlineConsultLink";
+import { INLINE_CONSULT_SOURCES } from "../../lib/consultCta";
 
 const DEFAULT_SELECTORS = ["main h2", "main h3"];
 
@@ -40,17 +42,21 @@ export default function TableOfContents({ selectors = DEFAULT_SELECTORS }: Props
   if (items.length < 3) return null;
 
   return (
-    <nav aria-label="目次" className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-4">
-      <p className="text-xs font-semibold text-slate-700">📖 このページの目次</p>
-      <ul className="mt-2 space-y-1 text-sm">
-        {items.map((it) => (
-          <li key={it.id} className={it.level === 3 ? "pl-4" : ""}>
-            <a href={`#${it.id}`} className={`block hover:text-sky-700 ${activeId === it.id ? "font-bold text-sky-800" : "text-slate-700"}`}>
-              {it.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav aria-label="目次" className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-4">
+        <p className="text-xs font-semibold text-slate-700">📖 このページの目次</p>
+        <ul className="mt-2 space-y-1 text-sm">
+          {items.map((it) => (
+            <li key={it.id} className={it.level === 3 ? "pl-4" : ""}>
+              <a href={`#${it.id}`} className={`block hover:text-sky-700 ${activeId === it.id ? "font-bold text-sky-800" : "text-slate-700"}`}>
+                {it.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {/* 記事上部の相談導線。目次と同じくクライアント描画のため、新規のレイアウトシフトは発生しない */}
+      <InlineConsultLink from={INLINE_CONSULT_SOURCES.toc} className="mt-3" />
+    </>
   );
 }
