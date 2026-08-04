@@ -18,7 +18,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "再エネ賦課金の推移と変動要因｜2012〜2026年度を完全分析";
+const pageTitle = "再エネ賦課金の推移｜2012〜2026年度の単価変動と変動要因を解説";
 const pageDescription =
   "再エネ賦課金の単価推移を2012年度の制度開始から2026年度まで年度ごとに解説。2023年度の大幅減、2024〜2025年度の急増の背景を、FIT認定量と回避可能費用の観点から分析します。";
 const pageUrl = "https://simulator.eic-jp.org/renewable-energy-surcharge-history";
@@ -59,7 +59,7 @@ export default function RenewableEnergySurchargeHistoryPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="再エネ賦課金の推移と変動要因｜2012〜2026年度を完全分析"
+        headline="再エネ賦課金の推移｜2012〜2026年度の単価変動と変動要因を解説"
         description="再エネ賦課金の単価推移を2012年度の制度開始から2026年度まで年度ごとに解説。2023年度の大幅減、2024〜2025年度の急増の背景を、FIT認定量と回避可能費用の観点から分析します。"
         url="https://simulator.eic-jp.org/renewable-energy-surcharge-history"
         datePublished="2026-04-17"

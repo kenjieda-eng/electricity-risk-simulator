@@ -65,7 +65,7 @@ export default function BusinessElectricityRetrospective202511Page() {
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2025年11月使用分の法人向け電気料金は、激変緩和補助金終了から2ヶ月目として、実力値ベースの上昇が本格的に現れた月です。
-          当社団が運営している「新電力ネット」のデータでは、10月の補助終了による上昇傾向がそのまま継続し、さらに暖房シーズンの入りによる
+          電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価では、10月の補助終了による上昇傾向がそのまま継続し、さらに暖房シーズンの入りによる
           需要増加がこれに重なった動きが確認されています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -78,7 +78,7 @@ export default function BusinessElectricityRetrospective202511Page() {
           料金上昇が補助終了によるものだけでないことが明確になります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          この記事では、当社団が運営している「新電力ネット」のデータと政府の公表情報をもとに、
+          この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と政府の公表情報をもとに、
           2025年11月使用分の電気料金動向を、低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
@@ -120,7 +120,7 @@ export default function BusinessElectricityRetrospective202511Page() {
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             燃料面では、LNG（液化天然ガス）の市場価格が冬場に向けて季節的な上昇傾向を示しており、燃料費調整額を通じて
-            電気料金に反映されやすい時期に入っています。当社団が運営している「新電力ネット」のデータでも、この時期の上昇が
+            電気料金に反映されやすい時期に入っています。電力取引報の確定単価でも、この時期の上昇が
             複合要因によるものであることが読み取れます。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -308,7 +308,7 @@ export default function BusinessElectricityRetrospective202511Page() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-slate-500">※水準は当社団運営「新電力ネット」掲載データをもとにした目安です。実際の請求額は電力会社・契約条件により異なります。</p>
+          <p className="mt-3 text-xs text-slate-500">※水準は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）にもとづく目安です。2025年11月分の確定値は特別高圧 16.78 円/kWh・高圧 21.32 円/kWh・低圧電灯 27.32 円/kWh・低圧電力 33.58 円/kWh。実際の請求額は電力会社・契約条件により異なります。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">

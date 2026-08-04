@@ -11,9 +11,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
 const pageTitle =
-  "供給地点特定番号とは｜22桁の意味・検針票での確認方法を解説【法人向け】";
+  "供給地点特定番号（受電地点特定番号）とは｜22桁の意味と検針票での確認方法【法人向け】";
 const pageDescription =
-  "供給地点特定番号の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。";
+  "受電地点特定番号とも呼ばれる供給地点特定番号（22桁）の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。";
 
 // --- 送配電事業者コード一覧 ---
 const gridOperators = [
@@ -149,7 +149,7 @@ export default function SupplyPointIdExplainedPage() {
     <>
       <ArticleJsonLd
         headline="供給地点特定番号とは｜電力切り替え・見積依頼で必要になる基本情報を解説"
-        description="供給地点特定番号の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。"
+        description="受電地点特定番号とも呼ばれる供給地点特定番号（22桁）の意味と構成、請求書・検針票のどこに記載されているか、電力会社切り替えや見積依頼での使い方、複数拠点管理での注意点を法人向けに解説。"
         url="https://simulator.eic-jp.org/supply-point-id-explained"
         datePublished="2026-04-13"
         breadcrumbItems={[

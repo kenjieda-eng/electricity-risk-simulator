@@ -15,9 +15,9 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
 
 const pageTitle =
-  "法人の電力契約見直しで最低限確認したい5項目｜確認方法とリスクを整理";
+  "電気料金削減の見直しポイント5つ｜法人の電力契約で最低限確認したい項目とリスク";
 const pageDescription =
-  "法人向け電力契約を見直すときに最低限確認しておきたい5項目を整理します。契約電力・電力量料金・燃調費・契約期間・更新条件ごとに、確認方法と見落としリスクを表で解説します。";
+  "電気料金の削減に向けて法人の電力契約を見直すとき、最低限確認しておきたい5つのポイントを整理します。契約電力・電力量料金・燃調費・契約期間・更新条件ごとに、確認方法と見落としリスクを表で解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -168,8 +168,8 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
   return (
     <>
       <ArticleJsonLd
-        headline="法人の電力契約見直しで最低限確認したい5項目｜確認方法とリスクを整理"
-        description="法人向け電力契約を見直すときに最低限確認しておきたい5項目を整理します。契約電力・電力量料金・燃調費・契約期間・更新条件ごとに、確認方法と見落としリスクを表で解説します。"
+        headline="電気料金削減の見直しポイント5つ｜法人の電力契約で最低限確認したい項目とリスク"
+        description="電気料金の削減に向けて法人の電力契約を見直すとき、最低限確認しておきたい5つのポイントを整理します。契約電力・電力量料金・燃調費・契約期間・更新条件ごとに、確認方法と見落としリスクを表で解説します。"
         url="https://simulator.eic-jp.org/5-minimum-checkpoints-for-electricity-contract-review"
         datePublished="2026-04-17"
         breadcrumbItems={[

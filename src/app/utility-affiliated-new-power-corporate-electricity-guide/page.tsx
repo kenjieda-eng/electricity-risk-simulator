@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "旧一電グループ系新電力の法人活用ガイド｜グループ小売会社の類型・承継動向と中立的な選定軸";
+  "旧一電とは｜グループ系新電力の類型・承継動向と法人の中立的な選定軸";
 const pageDescription =
   "旧一般電気事業者（旧一電）グループに属する小売系新電力（九電ネクスト・テプコカスタマーサービス等の販売主体）の類型を、公開情報に基づき中立的に整理。本ページは特定企業ではなくタイプ別の横断解説です。旧一電本体（東京電力エナジーパートナー・関西電力等）とは別に、グループ内で全国・エリア外へ展開する小売会社の共通特性、承継・再編動向、燃調算定方式、そして本体・グループ系・他新電力を跨いだ中立的な選定軸を、第三者・社団法人視点でまとめます。特定企業の優劣評価は行いません。";
 const pageUrl = "https://simulator.eic-jp.org/utility-affiliated-new-power-corporate-electricity-guide";

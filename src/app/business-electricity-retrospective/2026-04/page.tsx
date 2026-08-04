@@ -207,7 +207,7 @@ export default function BusinessElectricityRetrospective202604Page() {
             そのため、2026年4月使用分は「構造変化の前夜」というよりも「構造変化の初月」として捉える必要があります。5月以降の補助完全終了 + 再エネ賦課金上振れ + 容量拠出金完全反映 + JEPX上昇局面が複合的に作用するため、4月は2026年度の予算修正と契約見直しの最終判断を進める月となりました。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            この記事では、当社団が運営している「新電力ネット」のデータと経産省・JEPX・OCCTO の公開情報をもとに、2026年4月使用分の電気料金動向を、低圧・高圧・特別高圧と業種別の影響度の両面から整理します。
+            この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と、経産省・JEPX・OCCTO の公開情報をもとに、2026年4月使用分の電気料金動向を、低圧・高圧・特別高圧と業種別の影響度の両面から整理します。
           </p>
         </header>
 
@@ -491,6 +491,10 @@ export default function BusinessElectricityRetrospective202604Page() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-3 text-xs text-slate-500">※上表の燃料費調整額は各電力会社の公表資料から整理した速報値です。実際の単価は各電力会社の公表値で再確認してください。{" "}
+              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
+              。
+            </p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">JEPX エリア平均（2026年4月、円/kWh）</h3>
             <div className="mt-3 grid gap-2 md:grid-cols-5 lg:grid-cols-5">
               {jepxApr.map((row) => (
@@ -500,10 +504,7 @@ export default function BusinessElectricityRetrospective202604Page() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-slate-500">※速報値・新電力ネット集計ベース。実際の単価は各電力会社の公表値で再確認してください。{" "}
-              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
-              。再エネ賦課金は4月使用分まで旧単価3.98円/kWh、5月使用分から4.18円/kWh の新単価に切り替わります。
-            </p>
+            <p className="mt-3 text-xs text-slate-500">※上表のJEPXエリア平均は日本卸電力取引所（JEPX）の公表データから算出した速報値です。再エネ賦課金は4月使用分まで旧単価3.98円/kWh、5月使用分から4.18円/kWh の新単価に切り替わります。</p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">2026年4月 主要業界ニュース 5 件</h3>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>容量市場 容量拠出金 2026 年度開始（4 月から法人料金へ反映開始、首都圏 14,812円/kW、契約電力 1,000kW で年間 約 1,481 万円の追加負担）。</li>
@@ -521,7 +522,7 @@ export default function BusinessElectricityRetrospective202604Page() {
               ))}
             </ul>
             <p className="mt-4 rounded-md bg-white px-3 py-2 text-xs text-slate-500">
-              ※本記事の数値は2026年5月15日時点の確定値です。再エネ賦課金（経産省告示）、燃調 4月分（新電力ネット集計）、JEPX スポット価格をベースとしています。
+              ※出典は数値の種類ごとに異なります。4区分の確定単価＝電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）、再エネ賦課金＝経産省告示、燃料費調整額＝各電力会社の公表資料から整理、JEPX スポット価格＝日本卸電力取引所の公表データ。
             </p>
           </section>
 

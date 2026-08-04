@@ -13,7 +13,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["emergency-response"];
 
 
-const pageTitle = "電気代が急に2倍になったときの対応手順｜原因切り分けと緊急対応";
+const pageTitle = "電気代が先月の2倍になったときの対応手順｜原因切り分けと緊急対応【法人】";
 const pageDescription =
   "電気代が急に2倍・3倍に跳ね上がった場合の原因切り分けと緊急対応手順を解説。請求書の読み方から電力会社への問い合わせ、設備側の確認まで、法人担当者向けに整理しました。";
 const pageUrl = "https://simulator.eic-jp.org/emergency-electricity-bill-doubled";
@@ -192,7 +192,7 @@ export default function EmergencyElectricityBillDoubledPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="電気代が急に2倍になったときの対応手順｜原因切り分けと緊急対応"
+        headline="電気代が先月の2倍になったときの対応手順｜原因切り分けと緊急対応【法人】"
         description="電気代が急に2倍・3倍に跳ね上がった場合の原因切り分けと緊急対応手順を解説。請求書の読み方から電力会社への問い合わせ、設備側の確認まで、法人担当者向けに整理しました。"
         url="https://simulator.eic-jp.org/emergency-electricity-bill-doubled"
         datePublished="2026-04-17"

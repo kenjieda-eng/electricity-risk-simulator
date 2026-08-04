@@ -92,7 +92,7 @@ export default function BusinessElectricityRetrospective202602Page() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">【2026年2月】法人の電気料金はどう動いた？</h1>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          補助政策と当社団が運営している「新電力ネット」のデータから読む、補助終了前の最終確認
+          補助政策と電力取引報の確定単価から読む、補助終了前の最終確認
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2026年2月使用分の法人向け電気料金は、冬の手厚い補助が効いた最後の月として見ることができます。資源エネルギー庁の
@@ -103,7 +103,7 @@ export default function BusinessElectricityRetrospective202602Page() {
           2026年3月末時点では、3月使用分の補助縮小を前提に4月使用分（5月請求分）以降の負担をどう見込むかが、予算と契約見直しの分岐点になっています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          当社団が運営している「新電力ネット」の解説でも、直近の推移として、2025年9月に少し値上がりし、その後10月も値上がりし、
+          電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価でも、直近の推移として、2025年9月に少し値上がりし、その後10月も値上がりし、
           さらに2026年1月から大きく値下がりしていることが示されており、その背景として政府補助の影響が整理されています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -115,7 +115,7 @@ export default function BusinessElectricityRetrospective202602Page() {
           どこまで意味合いが違うのか、補助縮小後に、どこまで負担感が戻る可能性があるのかを切り分けて考えることです。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          この記事では、当社団が運営している「新電力ネット」のデータと政府の公表情報をもとに、2026年2月使用分の電気料金動向を、
+          この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と政府の公表情報をもとに、2026年2月使用分の電気料金動向を、
           低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
@@ -181,7 +181,7 @@ export default function BusinessElectricityRetrospective202602Page() {
             使用される電気とされており、2026年1月使用分・2月使用分は高めの支援額が設定されています。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            当社団が運営している「新電力ネット」の解説でも、低圧の推移は、2023年以降、政府補助の開始や終了に大きく影響されていると整理されています。
+            電力取引報の確定単価で見ると、低圧の推移は、2023年以降、政府補助の開始や終了に大きく影響されています。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2026年2月使用分の低圧では、1kWhあたり4.5円の補助が入るため、料金の見え方がかなり改善しやすい状況でした。実務上は、
