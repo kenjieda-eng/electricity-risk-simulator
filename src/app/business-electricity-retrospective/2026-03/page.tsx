@@ -50,7 +50,10 @@ export const metadata: Metadata = {
   },
 };
 
-// 2026年3月の確定値データ（新電力ネット集計 + 経産省告示 + JEPX 実績）
+/**
+ * 4区分の確定単価（電力・ガス取引監視等委員会「電力取引報」から算出＝販売額÷販売電力量・全国計・
+ * 検針期間ベース・事後訂正あり得る）。再エネ賦課金は経産省告示、JEPX は同取引所の公表データ。
+ */
 const MAR_2026_DATA = {
   year: 2026,
   month: 3,
@@ -208,7 +211,7 @@ export default function BusinessElectricityRetrospective202603Page() {
             そのため、2026年3月使用分は「補助あり最終局面の落ち着き」と「4月以降の構造変化前夜」という二つの顔を持つ月として捉える必要があります。4月使用分から容量拠出金の本格徴収が始まり、5月使用分からは再エネ賦課金 +0.20円/kWh の上振れと補助完全終了が重なるため、3月は2026年度の予算策定と契約見直しの意思決定を進める最終的なタイミングでもあります。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            この記事では、当社団が運営している「新電力ネット」のデータと経産省・JEPX・OCCTO の公開情報をもとに、2026年3月使用分の電気料金動向を、低圧・高圧・特別高圧と業種別の影響度の両面から整理します。
+            この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と、経産省・JEPX・OCCTO の公開情報をもとに、2026年3月使用分の電気料金動向を、低圧・高圧・特別高圧と業種別の影響度の両面から整理します。
           </p>
         </header>
 
@@ -486,6 +489,10 @@ export default function BusinessElectricityRetrospective202603Page() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-3 text-xs text-slate-500">※上表の燃料費調整額は各電力会社の公表資料から整理した速報値です。実際の単価は各電力会社の公表値で再確認してください。{" "}
+              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
+              。
+            </p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">JEPX エリア平均（2026年3月、円/kWh）</h3>
             <div className="mt-3 grid gap-2 md:grid-cols-5 lg:grid-cols-5">
               {jepxMar.map((row) => (
@@ -495,10 +502,7 @@ export default function BusinessElectricityRetrospective202603Page() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-slate-500">※速報値・新電力ネット集計ベース。実際の単価は各電力会社の公表値で再確認してください。{" "}
-              <Link href="/fuel-cost-adjustment-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">燃料費調整額の過去推移</Link>
-              。
-            </p>
+            <p className="mt-3 text-xs text-slate-500">※上表のJEPXエリア平均は日本卸電力取引所（JEPX）の公表データから算出した速報値です。</p>
             <h3 className="mt-5 text-lg font-semibold text-slate-900">2026年3月 主要業界ニュース 5 件</h3>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
               <li>政府電気・ガス料金支援 3 月分減額（1-2 月の手厚い補助から低圧 4.50→1.50円/kWh、高圧 2.30→0.80円/kWh の段階的減額に移行）。</li>
@@ -516,7 +520,7 @@ export default function BusinessElectricityRetrospective202603Page() {
               ))}
             </ul>
             <p className="mt-4 rounded-md bg-white px-3 py-2 text-xs text-slate-500">
-              ※本記事の数値は2026年4月15日時点の確定値です。再エネ賦課金（経産省告示）、燃調 3月分（新電力ネット集計）、JEPX スポット価格をベースとしています。
+              ※出典は数値の種類ごとに異なります。4区分の確定単価＝電力・ガス取引監視等委員会「電力取引報」から算出（2026年3月分・確定）、再エネ賦課金＝経産省告示、燃料費調整額＝各電力会社の公表資料から整理、JEPX スポット価格＝日本卸電力取引所の公表データ。
             </p>
           </section>
 

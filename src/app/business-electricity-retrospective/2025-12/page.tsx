@@ -65,7 +65,7 @@ export default function BusinessElectricityRetrospective202512Page() {
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2025年12月使用分の法人向け電気料金は、激変緩和補助金が終了してから3ヶ月目にあたり、電気料金の「実力値」がより鮮明に表れた月です。
-          当社団が運営している「新電力ネット」のデータでは、この時期、暖房需要の本格化と冬場のLNG価格上昇が重なり、10月・11月から続く
+          電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価では、この時期、暖房需要の本格化と冬場のLNG価格上昇が重なり、10月・11月から続く
           上昇基調がさらに継続した動きが確認されています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -77,7 +77,7 @@ export default function BusinessElectricityRetrospective202512Page() {
           補助金という「下支え」が消えたあとの年末着地を正確に把握しておくことは、翌年の実務計画において重要な基準点となります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          この記事では、当社団が運営している「新電力ネット」のデータと政府の公表情報をもとに、
+          この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と政府の公表情報をもとに、
           2025年12月使用分の電気料金動向を、低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
@@ -115,7 +115,7 @@ export default function BusinessElectricityRetrospective202512Page() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             2025年10月に激変緩和措置が正式終了したことで、10月以降の料金は「実力値」ベースでの評価に切り替わっています。
             その状態で12月を迎えると、暖房需要の本格化により電力消費量が増大し、LNGの冬場価格上昇も重なります。
-            当社団が運営している「新電力ネット」のデータでは、この複合要因が料金水準の押し上げとして表れています。
+            電力取引報の確定単価では、この複合要因が料金水準の押し上げとして表れています。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             さらに、年末は製造業の稼働調整や商業施設の繁忙期など、業種によって電力需要パターンが異なる時期でもあります。
@@ -306,7 +306,7 @@ export default function BusinessElectricityRetrospective202512Page() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-slate-500">※水準は当社団運営「新電力ネット」掲載データをもとにした目安です。実際の請求額は電力会社・契約条件により異なります。</p>
+          <p className="mt-3 text-xs text-slate-500">※水準は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）にもとづく目安です。2025年12月分の確定値は特別高圧 16.87 円/kWh・高圧 20.95 円/kWh・低圧電灯 26.78 円/kWh・低圧電力 32.40 円/kWh。実際の請求額は電力会社・契約条件により異なります。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">

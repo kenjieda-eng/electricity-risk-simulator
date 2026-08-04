@@ -11,9 +11,9 @@ import {
   HowToJsonLd,
 } from "../../components/seo/JsonLd";
 
-const pageTitle = "電気代の二重請求・二重契約FAQ｜5つの原因と予防策を中立社団が解説";
+const pageTitle = "電気代の二重契約・二重請求FAQ｜引越し・切替で起きる5つの原因と予防策";
 const pageDescription =
-  "電気代の二重請求・二重契約・二重支払いが発生する5つの典型パターンと対処法、予防策を中立社団がFAQ形式で完全解説。電力会社切替時のトラブル予防に。";
+  "電気代の二重契約・二重請求・二重支払いが発生する5つの典型パターンと対処法、予防策を中立社団がFAQ形式で解説。引越しや電力会社の切替時のトラブル予防に。";
 const pageUrl = "https://simulator.eic-jp.org/electricity-double-billing-faq";
 const publishedAt = "2026-04-30";
 

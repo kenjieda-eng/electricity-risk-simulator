@@ -93,11 +93,11 @@ export default function BusinessElectricityRetrospective202601Page() {
       <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">【2026年1月】法人の電気料金はどう動いた？</h1>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          補助政策と当社団が運営している「新電力ネット」のデータから読む年明けの変化
+          補助政策と電力取引報の確定単価から読む年明けの変化
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2026年1月使用分の法人向け電気料金は、2025年秋から続いていた上昇基調に、ひとまずブレーキがかかった月として見ることができます。
-          当社団が運営している「新電力ネット」の推移データを見ると、2025年9月に少し値上がりし、10月にも上昇したあと、
+          電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価を見ると、2025年9月に少し値上がりし、10月にも上昇したあと、
           2026年1月使用分で大きく値下がりしています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -114,7 +114,7 @@ export default function BusinessElectricityRetrospective202601Page() {
           「補助が厚かった局面はどこまでだったのか」を確認する作業でもあります。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          この記事では、当社団が運営している「新電力ネット」のデータと政府の公表情報をもとに、
+          この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と政府の公表情報をもとに、
           2026年1月使用分の電気料金動向を、低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
@@ -160,7 +160,7 @@ export default function BusinessElectricityRetrospective202601Page() {
             ここ数年は、燃料価格高騰への対応策として行われた補助政策の開始や終了によって、月ごとの料金の見え方が変わりやすい状況が続いています。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            その中で2026年1月使用分は、補助の効果が非常に分かりやすく表れた月でした。当社団が運営している「新電力ネット」のデータでは、
+            その中で2026年1月使用分は、補助の効果が非常に分かりやすく表れた月でした。電力取引報の確定単価では、
             2025年9月に少し値上がりし、その後10月も値上がりし、さらに2026年1月使用分で大きく値下がりしています。
             この変化の大きな背景にあるのが、政府補助です。
           </p>

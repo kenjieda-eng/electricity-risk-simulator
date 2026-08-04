@@ -65,7 +65,7 @@ export default function BusinessElectricityRetrospective202510Page() {
         </p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2025年10月使用分の法人向け電気料金は、政府による激変緩和措置（電気料金補助）が正式に終了した、極めて重要な節目の月です。
-          当社団が運営している「新電力ネット」のデータでは、この時期から電気料金が補助なしの実力値ベースで確認できるようになり、
+          電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価では、この時期から電気料金が補助なしの実力値ベースで確認できるようになり、
           9月以前に比べて明確な上昇が見られます。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
@@ -78,7 +78,7 @@ export default function BusinessElectricityRetrospective202510Page() {
           10月は補助終了という「一回限りのショック」ではなく、今後の電気料金水準を判断するための新しい基準点となる月です。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-          この記事では、当社団が運営している「新電力ネット」のデータと政府の公表情報をもとに、
+          この記事では、電力・ガス取引監視等委員会「電力取引報」から算出した4区分の確定単価と政府の公表情報をもとに、
           2025年10月使用分の電気料金動向を、低圧・高圧・特別高圧ごとに法人向けに整理します。
         </p>
       </header>
@@ -118,7 +118,7 @@ export default function BusinessElectricityRetrospective202510Page() {
             それまで見えにくくなっていた実力値がそのまま請求額に出るようになりました。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-            当社団が運営している「新電力ネット」のデータでも、9月から10月にかけての変化として上昇が明確に現れており、
+            電力取引報の確定単価でも、9月から10月にかけての変化として上昇が明確に現れており、
             特に低圧の変化幅が大きくなっています。これは低圧が高圧よりも補助単価が大きかったため、
             終了によるインパクトも大きく出やすい構造になっていたためです。
           </p>
@@ -314,7 +314,7 @@ export default function BusinessElectricityRetrospective202510Page() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-slate-500">※水準は当社団運営「新電力ネット」掲載データをもとにした目安です。実際の請求額は電力会社・契約条件により異なります。</p>
+          <p className="mt-3 text-xs text-slate-500">※水準は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）にもとづく目安です。2025年10月分の確定値は特別高圧 16.57 円/kWh・高圧 20.11 円/kWh・低圧電灯 26.16 円/kWh・低圧電力 29.29 円/kWh。実際の請求額は電力会社・契約条件により異なります。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">

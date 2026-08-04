@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "補助金不採択の理由と対策 完全ガイド｜よくある不採択ポイントと再申請で採択を勝ち取る戦略";
+  "補助金の不採択理由と対策｜よくある不採択ポイントと再申請の進め方";
 const pageDescription =
   "補助金の不採択理由と対策に特化した実務ガイド。費用対効果不足・必要性の説明不足・計画の整合性欠如・形式不備など、よくある不採択の6類型と減点ポイントを整理し、再申請の手順・採択率を高める対策・不採択から再申請で採択された事例を解説します。採択率は事務局公表値ベースで公募回により変動し推測しません。";
 
