@@ -12,10 +12,21 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["municipality"];
 
+// カテゴリ共通FAQに、本ページ固有の1問（債務負担行為との違い）を加えたもの。
+// 共通データを書き換えると同カテゴリの他ページにも波及するため、ここでのみ結合する。
+const faqItems = [
+  {
+    question: "債務負担行為と長期継続契約はどう違いますか？",
+    answer:
+      "根拠条文も法的性格も異なる別の制度で、長期継続契約は債務負担行為の原則（地方自治法214条）に対する例外にあたります。債務負担行為は214条に基づき、翌年度以降にわたって債務を負担する行為を予算で定めるもので、215条により予算の一内容として位置づけられ、議会が事前に統制します。対象は将来にわたる債務全般で、案件を限定しません。一方、長期継続契約は地方自治法234条の3および施行令167条の17に根拠を持ち、条文上「第214条の規定にかかわらず」と明記されたうえで、電気・ガス・水の供給、電気通信役務の提供、不動産の賃借について、債務負担行為によらず複数年契約を締結できるとされています。電気の供給を受ける契約は、この条文が明示する典型的な対象です。予算との関係では、債務負担行為が設定の議決を経て各年度の予算に歳出計上していくのに対し、長期継続契約は各年度の予算の範囲内で給付を受け、予算が減額・削除された場合に契約を変更・解除できる特約を置くのが実務です。議会統制の面では、債務負担行為は案件ごとの議決で確定的である反面、手続に時間を要し、長期継続契約は条例の根拠のみで機動的に締結できる反面、受注者側が予算減額時の解除リスクを負います。電力の複数年契約では、234条の3に基づいて締結し解除特約を置くのが標準的な実務です。条文の解釈・運用は自団体の条例や財務規則により異なる場合があるため、法制担当・財政担当にご確認ください。",
+  },
+  ...__CATEGORY_FAQ__,
+];
 
-const pageTitle = "自治体の長期継続契約（債務負担行為）と電力契約の関係｜自治体向け";
+
+const pageTitle = "債務負担行為と長期継続契約の違い｜自治体の電力複数年契約の法的根拠と実務";
 const pageDescription =
-  "単年度予算の制約下で複数年の電力契約を結ぶための債務負担行為の仕組みと活用上の注意点を整理します。";
+  "自治体が複数年の電力契約を結ぶ際の「債務負担行為」と「長期継続契約」の違いを、根拠条文・法的性格・対象範囲・予算との関係・議会統制の5点で整理します。長期継続契約は地方自治法234条の3が214条の例外として定めるもので、電気の供給を受ける契約は法文が明示する典型的な対象です。契約期間の設定や価格改定条項など実務上の注意点も併せて解説します。";
 const pageUrl = "https://simulator.eic-jp.org/municipality-long-term-contract";
 
 export const metadata: Metadata = {
@@ -44,6 +55,42 @@ export const metadata: Metadata = {
     images: ["/api/og/municipality"],
   },
 };
+
+const differenceRows = [
+  {
+    axis: "① 根拠条文",
+    debt: "地方自治法214条（215条により予算の一内容として位置づけられる）",
+    longTerm: "地方自治法234条の3＋地方自治法施行令167条の17",
+  },
+  {
+    axis: "② 法的性格",
+    debt: "翌年度以降にわたる債務の負担を予算で定め、議会が事前に統制する仕組み",
+    longTerm: "「第214条の規定にかかわらず」複数年契約を認める、214条の例外規定",
+  },
+  {
+    axis: "③ 対象範囲",
+    debt: "将来にわたる債務全般（工事・委託・買入れなど案件を限定しない）",
+    longTerm: "法定列挙（電気・ガス・水の供給、電気通信役務の提供、不動産の賃借）＋条例で指定した契約",
+  },
+  {
+    axis: "④ 予算との関係",
+    debt: "債務負担行為の設定について議決を得たうえで、各年度の予算に歳出として計上していく",
+    longTerm: "各年度の予算の範囲内で給付を受ける。予算が減額・削除された場合に契約を変更・解除できる特約を置くのが実務",
+  },
+  {
+    axis: "⑤ 議会統制と使い分け",
+    debt: "案件ごとに議決を経るため確定的だが、審議・議決の手続に時間を要する",
+    longTerm: "条例の根拠のみで機動的に締結できるが、受注者側は予算減額時の解除リスクを負う",
+  },
+];
+
+const legalSources = [
+  { name: "地方自治法（e-Gov法令検索）", url: "https://laws.e-gov.go.jp/law/322AC0000000067" },
+  { name: "総務省 平成16年 地方自治法改正関係資料", url: "https://www.soumu.go.jp/main_content/000025906.pdf" },
+  { name: "総務省 掲載論文（長期継続契約に関する解説）", url: "https://www.soumu.go.jp/main_content/000562241.pdf" },
+  { name: "七尾市 長期継続契約について", url: "https://www.city.nanao.lg.jp/kanri/jigyosha/nyusatsu/nyusatsu/tyoukikeizoku.html" },
+  { name: "明石市 長期継続契約", url: "https://www.city.akashi.lg.jp/zaimu/zaisei_ka/shise/zaise/aramashi/tyoukikeizokukeiyaku.html" },
+];
 
 const contractTypeRows = [
   {
@@ -116,15 +163,15 @@ export default function MunicipalityLongTermContractPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="自治体の長期継続契約（債務負担行為）と電力契約の関係｜自治体向け"
+        headline="債務負担行為と長期継続契約の違い｜自治体の電力複数年契約の法的根拠と実務"
         description="単年度予算の制約下で複数年の電力契約を結ぶための債務負担行為の仕組みと活用上の注意点を整理します。"
         url="https://simulator.eic-jp.org/municipality-long-term-contract"
         datePublished="2026-04-17"
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org/" },
-          { name: "自治体の長期継続契約（債務負担行為）と電力契約の関係" },
+          { name: "債務負担行為と長期継続契約の違い" },
         ]}
-      faq={__CATEGORY_FAQ__}
+      faq={faqItems}
       />
     <ReadingProgressBar />
     <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -140,12 +187,15 @@ export default function MunicipalityLongTermContractPage() {
       <header className="mt-4 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-indigo-700">MUNICIPALITY ／ 自治体・公共向け</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-          自治体の長期継続契約（債務負担行為）と電力契約の関係
+          債務負担行為と長期継続契約の違い｜自治体の電力複数年契約
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           地方自治法の単年度予算主義のもとでは、電力契約も原則として1年ごとの更新が求められます。
           しかし毎年度の入札は事務負担が大きく、入札不調リスクや調達コストの上昇につながることもあります。
-          長期継続契約と債務負担行為の仕組みを正しく理解し、安定的かつコスト効率の高い電力調達を実現するための実務ポイントを整理します。
+          複数年契約の手段である「債務負担行為」と「長期継続契約」は同じものとして語られがちですが、根拠条文も法的性格も異なる別の制度で、
+          長期継続契約は債務負担行為の原則（地方自治法214条）に対する例外にあたります。
+          両者の違いを根拠条文・法的性格・対象範囲・予算との関係・議会統制の5点で整理したうえで、
+          安定的かつコスト効率の高い電力調達を実現するための実務ポイントをまとめます。
         </p>
       </header>
 
@@ -208,6 +258,73 @@ export default function MunicipalityLongTermContractPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* 債務負担行為と長期継続契約の違い */}
+        <section className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">債務負担行為と長期継続契約の違い</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            複数年の電力契約を検討するとき、「債務負担行為」と「長期継続契約」はしばしば同じものとして語られますが、
+            根拠条文も法的性格も異なる別の制度です。両者の関係を一言でいえば、
+            <strong className="font-semibold text-slate-900">長期継続契約は債務負担行為の原則（地方自治法214条）に対する例外</strong>
+            にあたります。ここでは実務で判断を誤りやすい5つの軸に沿って違いを整理します。
+          </p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            債務負担行為は、地方自治法214条が定める仕組みで、翌年度以降にわたって債務を負担する行為については予算で定めることとされています。
+            215条では債務負担行為が予算の一内容として位置づけられており、議会が事前に統制する構造になっています。
+            一方、長期継続契約は地方自治法234条の3および地方自治法施行令167条の17に根拠を持ち、
+            条文上「第214条の規定にかかわらず」と明記されたうえで、電気・ガス・水の供給、電気通信役務の提供、不動産の賃借について、
+            債務負担行為によらずに翌年度以降にわたる契約を締結できるとされています。
+            <strong className="font-semibold text-slate-900">電気の供給を受ける契約は、この条文が明示する典型的な対象</strong>
+            です。平成16年の改正では、条例で指定した物品の借入れや役務の提供にも対象が拡大されました。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="min-w-full text-sm">
+              <thead>
+                <tr className="bg-indigo-50">
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">比較の軸</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">債務負担行為</th>
+                  <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">長期継続契約</th>
+                </tr>
+              </thead>
+              <tbody>
+                {differenceRows.map((row, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border border-slate-200 px-3 py-2 font-semibold text-indigo-700">{row.axis}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">{row.debt}</td>
+                    <td className="border border-slate-200 px-3 py-2 text-slate-700">{row.longTerm}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">実務注記：電力の複数年契約はどちらを使うか</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              電気の供給を受ける契約は地方自治法234条の3が明示する対象であるため、
+              電力の複数年契約は同条に基づく長期継続契約として締結し、
+              各年度の予算が減額・削除された場合に契約を変更・解除できる特約を契約書に置く、というのが標準的な実務です。
+              債務負担行為による方法も選択肢として残りますが、案件ごとに議会の議決を要するため、
+              大規模な設備更新やPPAなど長期・高額の案件で用いられることが多くなります。
+              いずれの方法による場合も、自団体の条例・財務規則の定めと、契約期間中の予算措置の見通しを併せて確認してください。
+            </p>
+          </div>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">参考法令・出典</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
+              {legalSources.map((s) => (
+                <li key={s.url}>
+                  <a href={s.url} className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">{s.name}</a>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 条文の解釈・運用は自団体の条例や財務規則により異なる場合があります。実際の契約にあたっては法制担当・財政担当にご確認ください。
+            </p>
           </div>
         </section>
 
@@ -331,7 +448,7 @@ export default function MunicipalityLongTermContractPage() {
       </section>
 
       
-      <MarketDataFaq items={__CATEGORY_FAQ__} />
+      <MarketDataFaq items={faqItems} />
       <HistoricalEventTimeline events={MAJOR_ENERGY_EVENTS} />
 
 <div className="mt-8">
