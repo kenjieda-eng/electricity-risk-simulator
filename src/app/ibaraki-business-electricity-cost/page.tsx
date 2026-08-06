@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "茨城県の法人電気料金完全ガイド｜鹿島臨海工業地帯・つくば研究機関・日立電機の契約最適化";
+  "茨城県 法人の電気代 相場・平均の目安と電力会社比較｜東京電力エリアの単価水準【2026】";
 const pageDescription =
-  "茨城県の法人電気料金を地域特化で解説。東京電力エリア、鹿島臨海工業地帯のコンビナート、つくば研究機関、日立・水戸の電機工業の電力負荷プロファイル、補助金、契約見直しを実務的に整理します。";
+  "茨城県の法人電気代の相場・平均を、全国の確定単価（特別高圧17.56円/kWh等）を基準に契約区分別で整理。東京電力エリアの燃料費調整の効き方、電力会社を比較する5観点、鹿島臨海工業地帯・つくば研究機関・日立電機の負荷特性と契約見直しを実務目線で解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -148,6 +148,32 @@ const priceBenchmark = [
     label: "燃料費調整額の県内特性",
     detail:
       "東京電力エリアの燃料費調整額は2022〜2023年は月最大+6円/kWh水準、2024〜2025年は+2.5〜+4.0円/kWhレンジ。火力依存度は東北・北海道より低めで、東海第二原発再稼働で更に低下の可能性。",
+  },
+];
+
+// --- 相場を読むときの基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "鹿島臨海工業地帯のコンビナート、日立の大規模工場、つくばの大型研究施設が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "つくば・水戸の研究所や中規模工場、県内の物流センター・商業施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "水戸・つくば市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -350,6 +376,8 @@ const faqItems = [
   { question: "需要家主導型PPAは茨城県でどう活用できますか？", answer: "茨城県・東京電力エリア内の太陽光・洋上風力プロジェクトとのオフサイトPPA契約で20年程度の長期固定単価でCO2フリー電力を調達できます。鹿島コンビナート・つくば研究機関・日立電機で導入実績が増加しています。" },
   { question: "茨城県で活用できる省エネ補助金は？", answer: "SII省エネ補助金、需要家主導型PPA補助金、茨城県脱炭素・省エネ補助、水戸市・つくば市・日立市・鹿嶋市の市町村補助、脱炭素先行地域（境町・つくば市等）の特別支援が組合せ可能です。" },
   { question: "DR契約のインセンティブ目安は？", answer: "夏季ピーク時の節電要請に応じることで、契約kW・節電実績に応じて年100〜500万円のインセンティブを得られます。特別高圧の大口需要家ほどメリットが大きく、鹿島コンビナートでは年1,000万円超のインセンティブ事例もあります。" },
+  { question: "茨城県の電気代の平均・相場はいくらですか？", answer: "県単位の法人電気代の平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準に読むのが実務的です。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。茨城県は鹿島コンビナートの特別高圧から市内店舗の低圧まで幅が広く、区分をまたいだ平均には意味がありません。自社の契約区分に対応する全国値と、請求書の支払総額÷使用量で求めた実質単価を比べてください。" },
+  { question: "茨城県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点で揃えて確認します。各社へは同一の使用実績データを渡し、同じ前提で見積を取ることが前提条件です。電力量料金の安さだけで選ぶと、燃調方式や解約条件の違いで年間の支払総額が逆転することがあります。" },
 ];
 
 const sourcesItems = [
@@ -470,6 +498,60 @@ export default function IbarakiBusinessElectricityCostPage() {
             </div>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">茨城県の電気代 平均・相場の考え方（法人向け）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              茨城県の電気代の相場を調べると「県の平均額」を探しがちですが、県単位で法人の電気代平均を示した公的統計はありません。とりわけ茨城県は鹿島臨海工業地帯のコンビナートという特別高圧の超大口需要と、水戸・つくば市内の低圧の小規模事業所が同じ県内に併存しており、両者の単価は倍近く開きます。県平均という一つの数字を追うより、契約区分ごとの全国水準を基準に置き、そこから自社の位置を測るほうが実務的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              下記は電力取引報の最新確定分である2026年4月分の実績単価です。自社の請求書に記載された契約種別を確認し、対応する区分の数値を基準値として使ってください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、茨城県または東京電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 東京電力エリアの構造を重ねて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              茨城県は東京電力パワーグリッドの管内です。東京電力エリアはLNG火力の比率が高いため、国際LNG価格の変動が燃料費調整額を経由して単価に反映されやすい構造を持ちます。全国値との差を見るときは、まずこの燃料費調整額が当該月にどちら向きに効いていたかを確認すると、乖離の理由の大半が説明できます。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を併せて検討する場合は、JEPX東京エリアプライスの性質も押さえます。東京エリアは需要規模が大きく、猛暑・厳寒による需給逼迫時や燃料市況の変化で価格が振れやすい一方、太陽光の発電量が多い時間帯には昼間の価格が低下する場面もあります。価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず変動幅の許容度で判断してください。エリアの推移は{" "}
+              <Link href="/region-tokyo-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京（関東）エリアの推移と単価水準</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出す</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準値と比べる相手は、自社の請求書から計算した実質単価です。次の順で算出します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月分の請求書を並べ、月ごとの支払総額と使用量（kWh）を控える</li>
+              <li>支払総額 ÷ 使用量 で、その月の実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を取り、自社と同じ契約区分の全国値と並べて差を見る</li>
+              <li>差が大きい月について、燃料費調整額・基本料金（契約電力）・使用量の季節変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              つくばの研究機関のように24時間稼働の実験設備を抱える事業所では、負荷率が高いぶん基本料金の影響が相対的に小さく、電力量料金と燃調の寄与が単価を左右します。業種平均との乖離率を素早く確認するには{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、地域・業種・契約条件から年間電気代と削減余地を試算するには{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}が使えます。
             </p>
           </section>
 
@@ -628,6 +710,9 @@ export default function IbarakiBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東京電力エナジーパートナー管内の詳細。" },
+              { href: "/region-tokyo-electricity-price-trend", title: "東京（関東）エリアの推移と単価水準", description: "茨城県が属する東京電力エリアの推移と単価水準を深掘り。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をブラウザ内で即時計算。" },
               { href: "/tochigi-business-electricity-cost", title: "栃木県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/gunma-business-electricity-cost", title: "群馬県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/saitama-business-electricity-cost", title: "埼玉県の法人電気料金", description: "東京電力エリアの隣接県事情。" },

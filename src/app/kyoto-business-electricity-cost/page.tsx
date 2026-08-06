@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "京都府の法人電気料金完全ガイド｜国内最大級観光業・西陣友禅伝統工芸・京セラ半導体電子部品の契約最適化";
+  "京都府の法人電気代 平均・相場の見方と電力会社の比較｜関西電力エリアの単価【2026】";
 const pageDescription =
-  "京都府の法人電気料金を地域特化で解説。関西電力エリアの国内最大級観光業、西陣・友禅等の伝統工芸、京セラ・村田製作所等の半導体・電子部品、ハイテク産業の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
+  "京都府の法人電気代について、平均・相場を全国の確定単価（高圧21.37円/kWh等）から読む手順を整理。関西電力エリアの電源構成が燃料費調整に与える影響、電力会社を比較する5観点、観光業・西陣友禅の伝統工芸・半導体電子部品工場の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,32 @@ const priceBenchmark = [
     label: "関電原発再稼働メリット",
     detail:
       "関西電力は原発再稼働（高浜・大飯・美浜）により電力単価が他エリアより構造的に低い。法人需要では年間1〜3億円規模の差が出ることもあり、関電エリア事業者は相対的に有利。新電力経由でさらに優遇可能性がある。",
+  },
+];
+
+// --- 平均・相場を読む基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。府県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "長岡京・京田辺などの半導体・電子部品工場、大型の研究開発拠点が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "京都市内の大型ホテル・百貨店・大学、中規模工場が使う主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "町家を活用した宿泊施設や市内の小規模店舗・事務所の照明・OA機器分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "西陣の織機や友禅の乾燥設備、飲食店の業務用空調など小規模の動力設備。",
   },
 ];
 
@@ -344,6 +370,8 @@ const faqItems = [
   { question: "京都府で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、京都府脱炭素・省エネ設備導入補助、京都市・宇治市・長岡京市の脱炭素補助、観光庁・環境省・伝統工芸補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "京セラ・村田製作所等の半導体電子部品工場の電気代対策は？", answer: "①特別高圧の競争入札による単価最適化、②クリーンルーム空調の可変風量制御＋AI最適化、③外気冷房（フリークーリング）併用でPUE改善、④需要家主導型オフサイトPPAで再エネ調達、⑤蓄電池・BEMSによる需要最適化、の5本柱が中心。SBT・RE100対応と電気代削減を両立できます。" },
   { question: "関電と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（関西電力送配電）が担うため、関電契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。" },
+  { question: "京都府の電気代の平均・相場はいくらですか？", answer: "府県単位で法人の電気代平均を示した公的統計はないため、契約区分別の全国確定単価を基準にします。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。京都府が属する関西電力エリアは原子力のベースロードが厚く、燃料価格の変動が燃料費調整額に反映される度合いが相対的に小さい局面があります。自社の位置は、請求書の支払総額÷使用量で求めた実質単価を同じ区分の全国値と比べて確認してください。" },
+  { question: "京都府で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。観光施設のように月別の使用量差が大きい事業所では、単価表の比較だけでなく、繁閑差を反映した年間試算まで出してもらうと判断を誤りにくくなります。" },
 ];
 
 const sourcesItems = [
@@ -485,6 +513,62 @@ export default function KyotoBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              京都府の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              京都府の電気代の相場を調べる際、まず押さえておきたいのは、府県単位で法人の電気代平均を示した公的統計がないという点です。京都府では長岡京の半導体工場のような特別高圧の需要家と、西陣の織屋のように低圧電力で織機を動かす小規模事業者が同じ府内に併存し、単価の水準は大きく異なります。相場は府の平均額ではなく、自社と同じ契約区分の全国水準として捉えるのが実務的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 全国の確定単価を契約区分別に押さえる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、京都府または関西電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 関西電力エリアの構造で読み替える</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              京都府は関西電力エリアに属します。同エリアは原子力のベースロードが厚く、LNG火力への依存度が東京エリアほど高くないため、国際燃料価格の変動が燃料費調整額に反映される度合いが相対的に小さい局面があります。燃料市況が荒れた時期に全国値ほど単価が動かなかった、という読み方ができるのはこの構造によるものです。ただし方向として上下双方に振れる点は変わらないため、自社の請求書で燃調の実額を確認する作業は省略できません。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX関西エリアプライスの傾向も見ておきます。関西エリアは原子力比率の高さから需給が比較的安定し、システムプライスと近い水準で推移する傾向が指摘されています。もっとも具体的な価格差は時期・時間帯で大きく変動するため、特定の価格水準を前提に置かず、変動幅をどこまで許容できるかで判断してください。エリアの推移は{" "}
+              <Link href="/region-kansai-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">関西エリアの推移と単価水準</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              全国値と突き合わせる自社の数値は、次の手順で求めます。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>支払総額 ÷ 使用量 を計算し、月別の実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と並べる</li>
+              <li>乖離の大きい月を取り出し、燃料費調整額・契約電力・使用量の季節変動のどれが効いたかを分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              京都市内の宿泊施設は観光の繁閑差が使用量に直結し、閑散期は使用量が落ちるぶん基本料金の比重が上がって実質単価が跳ねます。年平均だけを見ると割高と誤読しやすいため、必ず月別で確認してください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +776,9 @@ export default function KyotoBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-kansai-business-electricity", title: "関西電力エリアの法人電気代事情", description: "関西電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-kansai-electricity-price-trend", title: "関西エリアの推移と単価水準", description: "京都府が属する関西電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/osaka-business-electricity-cost", title: "大阪府の法人電気料金", description: "隣接府・関西物流ハブの大阪府の事情。" },
               { href: "/shiga-business-electricity-cost", title: "滋賀県の法人電気料金", description: "隣接県・内陸工業の滋賀県の事情。" },
               { href: "/nara-business-electricity-cost", title: "奈良県の法人電気料金", description: "隣接県・観光業大国の奈良県の事情。" },

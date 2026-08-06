@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "栃木県の法人電気料金ガイド【2026】東京電力エリアの単価・契約見直し・補助金";
+  "栃木県の法人電気代 平均・相場と電力会社の比較｜東京電力エリアの単価と契約見直し【2026】";
 const pageDescription =
-  "栃木県（東京電力エリア）の法人電気料金を地域特化で解説。宇都宮・小山の自動車工業、日光・那須の観光業の負荷特性、単価水準、契約見直しと補助金活用を2026年時点で実務的に整理します。";
+  "栃木県の法人電気代を、平均・相場の考え方から整理。全国の確定単価（高圧21.37円/kWh等）を基準に東京電力エリアの燃料費調整・JEPX特性で読み替える手順、電力会社を比較する5つの観点、宇都宮・小山の自動車工業や日光・那須の観光業の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -148,6 +148,32 @@ const priceBenchmark = [
     label: "燃料費調整額の県内特性",
     detail:
       "東京電力エリアの燃料費調整額は2022〜2023年は月最大+6円/kWh水準、2024〜2025年は+2.5〜+4.0円/kWhレンジ。",
+  },
+];
+
+// --- 平均・相場を読むときの基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "小山・芳賀の自動車部品工場やキヤノン宇都宮工場のような大規模事業所が該当しやすい区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "那須・鬼怒川のリゾートホテル、工業団地の中規模工場、宇都宮市内のオフィスビルが中心。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "市内店舗・事務所の照明やOA機器など、電灯契約でまかなう部分に対応。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備（業務用空調・冷凍冷蔵ショーケース等）に適用される区分。",
   },
 ];
 
@@ -350,6 +376,8 @@ const faqItems = [
   { question: "観光業の連休・週末ピーク負荷を抑える方法は？", answer: "①BEMSによる部分空調制御、②客室数に応じた空調系統分離、③LED化、④温泉廃熱再利用、⑤連休前後の負荷分散運用の5点が主力。投資回収 SII補助活用で1〜3年が目安です。" },
   { question: "栃木県で活用できる省エネ補助金は？", answer: "SII省エネ補助金、需要家主導型PPA補助金、栃木県脱炭素・省エネ補助、宇都宮市・小山市・那須町の市町村補助、脱炭素先行地域（宇都宮市・那須塩原市等）の特別支援が組合せ可能です。" },
   { question: "栃木県の日照時間と太陽光発電の採算性は？", answer: "栃木県は年間日照時間2,000時間超で太陽光発電に適した気候条件。屋根面積1,000m²以上の事業所で1MW級導入が現実的、年間120〜140万kWh発電、投資回収 6〜8年（補助金後 4〜6年）が目安です。" },
+  { question: "栃木県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代の平均額を示した公的統計はないため、全国の確定単価を基準に読むのが実務的です。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。栃木県は東京電力エリアのため、この全国値にLNG火力比率の高さに由来する燃料費調整額の振れやすさを重ねて読みます。自社の位置を知るには、請求書の支払総額÷使用量で実質単価を算出し、同じ契約区分の全国値と比べてください。" },
+  { question: "栃木県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同じ使用実績データを渡したうえで各社に照会し、横並びで比較することが基本です。電力量料金の単価だけを見て比較すると、燃調方式や解約条件の差で年間コストが逆転する場合があります。" },
 ];
 
 const sourcesItems = [
@@ -470,6 +498,60 @@ export default function TochigiBusinessElectricityCostPage() {
             </div>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">栃木県の電気代 平均・相場の考え方（法人向け）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              「栃木県の電気代の平均・相場はいくらか」という問いに対して、県単位で法人の電気代の平均額を示した公的統計はありません。県内には小山・芳賀の自動車部品工場（特別高圧）、那須・鬼怒川のリゾートホテル（高圧）、宇都宮市内の店舗・事務所（低圧）が同居しており、これらを一つの平均値で束ねても自社の判断材料にはなりません。ここでは、全国の確定単価を基準に置き、そこにエリア要因と自社の契約区分を重ねて読む手順を整理します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 基準に置く全国の確定単価（4区分）</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              最初に契約区分ごとの全国水準を押さえます。下記は電力取引報の最新確定分である2026年4月分の実績単価です。自社がどの区分に属するかで基準値が10円/kWh以上変わるため、まず契約区分の確認から始めてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、栃木県または東京電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② エリア要因での読み替え（東京電力エリア）</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              栃木県は東京電力パワーグリッド管内のため、全国値からのぶれ方は東京電力エリアの構造で読みます。同エリアはLNG火力の比率が高く、国際LNG価格の変動が燃料費調整額を通じて単価に反映されやすい構造です。燃料市況が上振れした局面では全国値より実質単価が上に振れやすく、逆に落ち着いた局面では下がりやすい、という両方向の振れ方を前提に置いてください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討している場合は、JEPX東京エリアプライスの振れ方も併せて確認します。東京エリアは需要規模が大きく、猛暑・厳寒による需給逼迫時や燃料市況の変化で価格が振れやすい一方、太陽光の発電量が多い時間帯は昼間の価格が低下する場面もあります。具体的な価格差は時期・時間帯で大きく変動するため、特定の価格水準を前提に置かず、変動幅の許容度で判断してください。エリアの推移の詳細は{" "}
+              <Link href="/region-tokyo-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京（関東）エリアの推移と単価水準</Link>
+              {" "}で確認できます。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 自社の請求書単価を出して全国値と比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              最後に、自社の実質単価を出して上記の全国値と突き合わせます。手順は次のとおりです。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>各月の支払総額 ÷ 使用量 を計算し、月ごとの実質単価（円/kWh）を出す</li>
+              <li>12ヶ月を平均し、自社の契約区分と同じ区分の全国値と比べる</li>
+              <li>乖離が大きい月を特定し、燃料費調整額・契約電力・季節変動のどれが効いているかを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              栃木県は冬季暖房と夏季冷房の双方でピークが立つため、年平均だけでなく月別のばらつきを見ることが特に重要です。業種平均との乖離率をその場で確認したい場合は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、地域・業種・契約条件から年間電気代と削減余地を試算する場合は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}を利用してください。
             </p>
           </section>
 
@@ -628,6 +710,9 @@ export default function TochigiBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東京電力エナジーパートナー管内の詳細。" },
+              { href: "/region-tokyo-electricity-price-trend", title: "東京（関東）エリアの推移と単価水準", description: "栃木県が属する東京電力エリアの推移を深掘り。相場を読む前提の確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/ibaraki-business-electricity-cost", title: "茨城県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/gunma-business-electricity-cost", title: "群馬県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/saitama-business-electricity-cost", title: "埼玉県の法人電気料金", description: "首都圏物流拠点の事情。" },

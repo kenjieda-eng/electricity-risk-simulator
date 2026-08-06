@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "静岡県の法人電気料金ガイド【2026】中部電力エリアの単価・契約見直し・補助金";
+  "静岡県の電気代は平均・相場でどう見るか｜法人向け単価の目安と電力会社の比較【2026】";
 const pageDescription =
-  "静岡県（中部電力エリア）の法人電気料金を地域特化で解説。東海道工業地帯・製紙・茶業・観光業の負荷特性、特別高圧/高圧の単価水準、契約見直しと補助金活用を2026年時点の実務目線で整理します。";
+  "静岡県の法人電気代を、平均・相場の考え方から解説。全国の確定単価（高圧21.37円/kWh等）を基準に中部電力エリアの構造で読み替える手順、電力会社を比較する5観点、富士の製紙業や浜松の工業地帯、伊豆の観光業の負荷特性と契約見直しを整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,32 @@ const priceBenchmark = [
     label: "大規模特別高圧需要家の特別契約",
     detail:
       "年間使用量1億kWh超の超大型事業者向けには、相対契約による割引が一般化。製紙工場は構造的に電力多消費で、特別契約交渉余地が大きい業種。新電力経由でさらに優遇可能性がある。",
+  },
+];
+
+// --- 平均・相場を判断するときの基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "富士・富士宮の製紙工場、浜松・磐田の自動車／楽器工場など超大口の需要家が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "県内の中規模工場、静岡市・浜松市のオフィスビル、伊豆の中大型ホテルが中心。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "小規模な旅館・店舗・事務所の照明やOA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。茶工場の小型機械や飲食店の業務用空調などが該当。",
   },
 ];
 
@@ -344,6 +370,8 @@ const faqItems = [
   { question: "静岡県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、静岡県脱炭素・省エネ設備導入補助、浜松市・静岡市・富士市の脱炭素補助、観光庁・環境省の宿泊施設省エネ補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "浜松光産業（半導体・電子機器）の電気代対策は？", answer: "①特別高圧の競争入札による単価最適化、②クリーンルーム空調の可変風量制御＋AI最適化、③外気冷房（フリークーリング）併用でPUE改善、④需要家主導型オフサイトPPAで再エネ調達、⑤蓄電池・BEMSによる需要最適化、の5本柱が中心。SBT・RE100対応と電気代削減を両立できます。" },
   { question: "東海地震想定地域でのBCP対応は電力契約にどう影響しますか？", answer: "静岡県は東海地震・南海トラフ地震の想定地域で、BCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散（リスク分散）、③地域密着型新電力との連携（地産地消エネルギー）、④BEMSによる停電復旧時の電力管理、の4点が重要。新電力選定時にBCP対応力を必ず評価してください。" },
+  { question: "静岡県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分別の全国確定単価を基準に読みます。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。静岡県は中部電力エリアが中心（伊豆東部は東京電力エリア）で、浜岡原発停止に伴う火力依存の高さから燃料費調整額が単価に反映されやすい構造です。自社の実質単価は請求書の支払総額÷使用量で求め、同じ区分の全国値と比べてください。" },
+  { question: "静岡県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を同じ前提で照会します。静岡県では県東部の事業者が中部電力エリアと東京電力エリアのどちらに属するかで前提が変わるため、供給エリアを確定させてから見積を依頼してください。" },
 ];
 
 const sourcesItems = [
@@ -485,6 +513,62 @@ export default function ShizuokaBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              静岡県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              静岡県の電気代の平均・相場を調べても、県単位で法人の電気代平均を示した公的統計は見つかりません。県内には年間1億kWh規模を消費する富士の製紙工場から、伊豆の小規模旅館まで幅広い需要家が存在し、平均値を一つ置いても実務では使えないためです。ここでは全国の確定単価を基準に据え、中部電力エリアの構造と自社の契約区分を重ねて相場観をつくる方法を示します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 基準となる全国の確定単価（契約区分別）</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              下記は電力取引報の最新確定分である2026年4月分の実績単価です。製紙工場のような特別高圧と、茶工場の低圧電力とでは基準そのものが異なる点に注意してください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、静岡県または中部電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② エリア要因での読み替え（中部電力エリア）</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              静岡県は中部電力エリアが中心で、伊豆東部（熱海・伊東等）のみ東京電力エリアに属します。自社がどちらのエリアかで燃料費調整額の基準が変わるため、相場を比べる前に供給エリアを確認してください。中部電力エリアは浜岡原発の停止が続き、LNG・石炭を中心とする火力への依存度が高いため、国際的な燃料価格の変動が燃料費調整額を通じて単価に反映されやすい構造です。全国値との差を見るときは、まずこの燃調の向きを確認するのが近道です。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX中部エリアプライスの傾向も確認します。中部エリアは自動車を中心とする製造業の産業需要が大きく、猛暑・厳寒による需給逼迫時や燃料市況の変化で価格が振れやすい一方、太陽光の発電量が多い時間帯には昼間の価格が低下する場面もあります。価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず変動幅の許容度で判断してください。エリアの推移は{" "}
+              <Link href="/region-chubu-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中部エリアの推移と単価水準</Link>
+              {" "}で確認できます。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を割り出す</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              全国値と比べる相手は、自社の請求書から求めた実質単価です。次の手順で算出します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>支払総額 ÷ 使用量 で、月別の実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と比較する</li>
+              <li>差の大きい月について、燃料費調整額・契約電力・使用量の変動のどれが要因かを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              製紙のように24時間連続運転で負荷率の高い工場は、基本料金の重みが相対的に小さく電力量料金と燃調が単価を決めます。一方で伊豆の観光施設は季節変動が大きく、閑散期の単価が基本料金に押し上げられます。同じ県内でも読み方が変わるため、月別の分解を省かないでください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +776,9 @@ export default function ShizuokaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-chubu-business-electricity", title: "中部電力エリアの法人電気代事情", description: "中部電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-chubu-electricity-price-trend", title: "中部エリアの推移と単価水準", description: "静岡県が属する中部電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/aichi-business-electricity-cost", title: "愛知県の法人電気料金", description: "隣接県・中京工業地帯の愛知県の事情。" },
               { href: "/yamanashi-business-electricity-cost", title: "山梨県の法人電気料金", description: "隣接県・富士山周辺観光の山梨県の事情。" },
               { href: "/kanagawa-business-electricity-cost", title: "神奈川県の法人電気料金", description: "隣接県・京浜工業地帯の神奈川県の事情。" },

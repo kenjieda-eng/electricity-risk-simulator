@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "奈良県の法人電気料金完全ガイド｜東大寺春日大社観光業・電機繊維製造業・大阪通勤圏商業の契約最適化";
+  "奈良県の電気代 平均・相場はいくらか｜法人向け単価の基準と電力会社比較【2026】";
 const pageDescription =
-  "奈良県の法人電気料金を地域特化で解説。関西電力エリアの東大寺・春日大社等の観光業、電機・繊維・プラスチック等の製造業、大阪通勤圏の住宅商業、奈良盆地の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
+  "奈良県の法人電気代の平均・相場を、全国の確定単価（低圧電力32.12円/kWh・高圧21.37円/kWh等）を基準に整理。関西電力エリアの電源構成を踏まえた読み方、電力会社を比較する5観点、観光業・電機繊維製造業・大阪通勤圏商業の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,32 @@ const priceBenchmark = [
     label: "関電原発再稼働メリット",
     detail:
       "関西電力は原発再稼働（高浜・大飯・美浜）により電力単価が他エリアより構造的に低い。法人需要では年間500万〜2,000万円規模の差が出ることもあり、関電エリア事業者は相対的に有利。新電力経由でさらに優遇可能性がある。",
+  },
+];
+
+// --- 平均・相場の判断基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "奈良市内の大型観光ホテルや複合商業施設など、県内では数の限られる大口需要家の区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "生駒・大和郡山の中規模製造業、郊外型商業施設、中大型の宿泊施設が使う区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "奈良市内の中小ホテル・旅館・店舗・寺社の照明やOA機器に対応する契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。繊維・プラスチックの小型成形機や業務用空調が該当。",
   },
 ];
 
@@ -344,6 +370,8 @@ const faqItems = [
   { question: "奈良県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、奈良県脱炭素・省エネ設備導入補助、奈良市・橿原市・生駒市の脱炭素補助、観光庁・環境省・文化庁の宿泊施設・文化財省エネ補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "大阪通勤圏（生駒・大和郡山）のベッドタウン商業施設の電気代対策は？", answer: "①LED・空調更新、②BEMS・デマンドコントローラー導入、③高圧契約の競争入札による単価最適化、④地域密着型新電力との地産地消契約、⑤屋根太陽光＋蓄電池導入、の5本柱が中心。中小事業者向けSII補助・市町村補助の活用で投資回収を加速できます。" },
   { question: "関電と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（関西電力送配電）が担うため、関電契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。" },
+  { question: "奈良県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分別の全国確定単価を基準に読みます。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。奈良県は中小規模の事業所が中心で低圧の該当が多く、まず低圧電灯・低圧電力の水準を押さえると判断しやすくなります。自社の実質単価は請求書の支払総額÷使用量で算出し、同じ区分の全国値と比べてください。" },
+  { question: "奈良県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点で揃えます。使用量の小さい事業所ほど基本料金の比重が大きく、電力量料金の単価差だけでは年間の支払総額を見誤りやすいため、必ず年間試算まで出してもらってください。" },
 ];
 
 const sourcesItems = [
@@ -485,6 +513,62 @@ export default function NaraBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              奈良県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              「奈良県の電気代の平均はいくらか」を知りたい事業者は多いのですが、県単位で法人の電気代平均を示した公的統計はありません。加えて奈良県は特別高圧の大口需要家が数として限られ、中小規模の宿泊施設・店舗・製造業が中心という構成のため、仮に県平均を出しても大半の事業者の実感とはずれます。実務的には、自社と同じ契約区分の全国水準を基準に置くところから始めます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分ごとの全国確定単価を基準にする</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              下記は電力取引報の最新確定分である2026年4月分の実績単価です。奈良県内の中小事業所では低圧電灯・低圧電力の該当が多く、この2区分の水準を知っておくだけでも判断の精度が上がります。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、奈良県または関西電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 関西電力エリアの要因を重ねる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              奈良県は関西電力エリアです。同エリアは原子力のベースロードが厚く、LNG火力への依存度が東京エリアほど高くないため、国際燃料価格の変動が燃料費調整額に反映される度合いが相対的に小さい局面があります。燃料は輸入依存であるため為替の影響自体は受けますが、原子力比率が高いぶん為替感応度も相対的に緩やかになりやすい傾向です。全国値と自社単価の差を検討するときは、この前提を踏まえて燃調の実額を確認してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を候補に入れる場合は、JEPX関西エリアプライスの性質も確認します。関西エリアは原子力比率の高さから需給が比較的安定し、システムプライスと近い水準で推移する傾向が指摘されています。ただし価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず変動幅の許容度で判断することが必要です。エリアの推移の詳細は{" "}
+              <Link href="/region-kansai-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">関西エリアの推移と単価水準</Link>
+              {" "}にまとめています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 自社の請求書単価を計算する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準と比べる自社の値は、請求書から次の手順で求めます。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書を集め、月ごとの支払総額と使用量（kWh）を控える</li>
+              <li>支払総額 ÷ 使用量 で月別の実質単価（円/kWh）を計算する</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と比べる</li>
+              <li>差が大きい月を選び、燃料費調整額・契約電力・使用量の変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              低圧電力は4区分のなかで単価が最も高く、動力設備の使い方が実質単価に直結します。小型成形機や業務用空調の稼働時間を洗い出すと、削減余地の所在がはっきりします。業種平均との乖離率を確認するには{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算には{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}が使えます。
             </p>
           </section>
 
@@ -692,6 +776,9 @@ export default function NaraBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-kansai-business-electricity", title: "関西電力エリアの法人電気代事情", description: "関西電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-kansai-electricity-price-trend", title: "関西エリアの推移と単価水準", description: "奈良県が属する関西電力エリアの単価推移を深掘り。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "月額電気代と使用量から業種平均との乖離率を即時判定。" },
               { href: "/osaka-business-electricity-cost", title: "大阪府の法人電気料金", description: "隣接府・通勤先の大阪府の事情。" },
               { href: "/kyoto-business-electricity-cost", title: "京都府の法人電気料金", description: "隣接府・観光業大国の京都府の事情。" },
               { href: "/wakayama-business-electricity-cost", title: "和歌山県の法人電気料金", description: "隣接県・紀ノ川流域工業の和歌山県の事情。" },
