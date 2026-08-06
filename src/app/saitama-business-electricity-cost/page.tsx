@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "埼玉県の法人電気料金完全ガイド｜首都圏物流拠点・住宅商業密集・県南北格差の契約最適化";
+  "埼玉県の電気代 平均・相場の基準と電力会社の比較｜法人向け単価と見直し【2026】";
 const pageDescription =
-  "埼玉県の法人電気料金を地域特化で解説。東京電力エリア、首都圏2大物流拠点（圏央道・関越道）、住宅・商業密集、県南・県北の地域差を踏まえ、補助金活用、契約見直しを実務的に整理します。";
+  "埼玉県の法人電気代について、平均・相場を全国の確定単価（高圧21.37円/kWh・低圧電力32.12円/kWh等）から読む手順を整理。電力会社を比較する5観点、圏央道・関越道の物流拠点や熊谷の猛暑がもたらす夏季ピーク負荷を踏まえた契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -148,6 +148,32 @@ const priceBenchmark = [
     label: "燃料費調整額の県内特性",
     detail:
       "東京電力エリアの燃料費調整額は2022〜2023年は月最大+6円/kWh水準、2024〜2025年は+2.5〜+4.0円/kWhレンジ。",
+  },
+];
+
+// --- 平均・相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "圏央道・関越道沿線の大型物流センター、自動車関連工場、大型商業施設が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "県内の中規模倉庫・工場、さいたま市内のオフィスビルや商業施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "住宅・商業密集地の店舗や小規模事務所で、照明・OA機器に対応する契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。飲食店の業務用空調や冷凍冷蔵ショーケースなどが該当。",
   },
 ];
 
@@ -350,6 +376,8 @@ const faqItems = [
   { question: "需要家主導型PPAは埼玉県でどう活用できますか？", answer: "埼玉県・東京電力エリア内の太陽光プロジェクトとのオフサイトPPA契約で20年程度の長期固定単価でCO2フリー電力を調達できます。物流業界でRE100対応として導入が活発化しています。" },
   { question: "埼玉県で活用できる省エネ補助金は？", answer: "SII省エネ補助金、需要家主導型PPA補助金、埼玉県脱炭素・省エネ補助、さいたま市・川口市・川越市・熊谷市の市町村補助、脱炭素先行地域（秩父市・さいたま市等）の特別支援が組合せ可能です。" },
   { question: "鋳物工業（川口）の電気代削減で効果的な施策は？", answer: "①電気溶融炉のインバータ化・高効率化、②力率改善コンデンサ設置（基本料金の力率割引最大15%獲得）、③廃熱回収による予熱再利用、④固定プラン切替の4点が主力。SII補助1/2活用で投資回収2〜4年が目安です。" },
+  { question: "埼玉県の電気代の平均・相場はいくらですか？", answer: "県別に法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準にします。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。埼玉県は東京電力エリアのため、LNG火力比率の高さに由来する燃料費調整額の振れやすさを加味して読みます。自社の位置は、請求書の支払総額÷使用量で求めた実質単価を同じ区分の全国値と比べれば把握できます。" },
+  { question: "埼玉県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を揃えて比較します。夏季ピークの大きい物流施設では、契約電力の決まり方と燃調方式の組合せが年間コストに効くため、電力量料金の単価表だけでの比較は避けてください。" },
 ];
 
 const sourcesItems = [
@@ -470,6 +498,60 @@ export default function SaitamaBusinessElectricityCostPage() {
             </div>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">埼玉県の電気代 平均・相場の考え方（法人向け）</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              埼玉県の電気代の相場を知りたいとき、県別の法人電気代の平均を示した公的統計が存在しない点が出発点になります。埼玉県は圏央道・関越道沿線の大型物流センターと、県南の住宅・商業密集地に立地する小規模店舗が同居する構造で、契約区分も使用量の桁も大きく異なります。相場は「県の平均額」ではなく「自社と同じ契約区分の全国水準」として捉えるのが実務的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 全国の確定単価を契約区分ごとに確認する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準として使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。同じ「電気代」でも区分によって水準が異なるため、請求書の契約種別欄を先に確認してください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、埼玉県または東京電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 東京電力エリアの要因で全国値を読み替える</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              埼玉県は全域が東京電力パワーグリッドの管内です。東京電力エリアはLNG火力の比率が高く、国際LNG価格の動きが燃料費調整額を通じて単価に反映されやすい構造にあります。全国値と自社単価の差を検討するときは、対象月の燃料費調整額がプラス方向・マイナス方向のどちらに働いていたかをまず確認してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX東京エリアプライスの傾向も要確認です。東京エリアは需要規模が大きく、猛暑・厳寒による需給逼迫時や燃料市況の変化で価格が振れやすい一方、太陽光の発電量が多い時間帯には昼間の価格が低下する場面もあります。熊谷を含む県北は夏の高温で知られ、冷房需要が伸びる時間帯と価格が振れやすい時間帯が重なりやすい点は、埼玉県の事業者にとって固有の論点です。エリアの推移は{" "}
+              <Link href="/region-tokyo-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京（関東）エリアの推移と単価水準</Link>
+              {" "}にまとめています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から実質単価を計算して突き合わせる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              自社が相場に対してどの位置にあるかは、次の計算で確認できます。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>支払総額 ÷ 使用量 で月別の実質単価（円/kWh）を算出する</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と比較する</li>
+              <li>夏季（7〜9月）とその他季の単価差を確認し、契約電力・燃料費調整額・使用量のどれが効いているかを分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              冷凍冷蔵を伴う物流センターでは夏季にデマンドが立ちやすく、その月の契約電力が年間の基本料金を決めてしまう構造があるため、月別の分解が特に効きます。業種平均との乖離率を確認する場合は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算には{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}を利用してください。
             </p>
           </section>
 
@@ -628,6 +710,9 @@ export default function SaitamaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東京電力エナジーパートナー管内の詳細。" },
+              { href: "/region-tokyo-electricity-price-trend", title: "東京（関東）エリアの推移と単価水準", description: "埼玉県が属する東京電力エリアの単価推移を深掘り。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "月額電気代と使用量から業種平均との乖離率を即時判定。" },
               { href: "/ibaraki-business-electricity-cost", title: "茨城県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/tochigi-business-electricity-cost", title: "栃木県の法人電気料金", description: "東京電力エリアの隣接県事情。" },
               { href: "/gunma-business-electricity-cost", title: "群馬県の法人電気料金", description: "東京電力エリアの隣接県事情。" },

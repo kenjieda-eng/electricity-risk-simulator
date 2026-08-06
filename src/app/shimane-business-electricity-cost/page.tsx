@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "島根県の法人電気料金完全ガイド｜中国電力エリア単価分析・島根原発立地・安来特殊鋼・出雲観光の契約最適化";
+  "島根県の法人電気代 平均・相場と電力会社比較｜中国電力エリアの単価水準【2026】";
 const pageDescription =
-  "島根県の法人電気料金を地域特化で解説。中国電力エリアの単価水準を業種別に再加工して提示し、安来特殊鋼・日立金属、出雲大社・松江観光業、石見銀山世界遺産、隠岐諸島・離島供給、島根原発立地県の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
+  "島根県の法人電気代の平均・相場を、全国の確定単価（高圧21.37円/kWh・特別高圧17.56円/kWh等）を基準に契約区分別で整理。中国電力エリアの石炭火力比率を踏まえた読み方、電力会社を比較する5観点、安来特殊鋼・出雲松江の観光業・隠岐離島の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -165,6 +165,32 @@ const ppsNetUnitData = [
     label: "県内産業構造との接続 — 特殊鋼・電子部品・観光に応じた契約判断",
     detail:
       "pps-net.org/unit の単価データを島根県の産業構造に紐づけて再加工すると、①日立金属安来のような連続稼働の特殊鋼特高契約は固定5年で年間5,000万〜1億円の安定化効果、②出雲市の電子部品工場（島根富士通・村田）のような24時間稼働高圧契約は時間帯別料金最適化で年間500〜2,000万円の削減余地、③出雲大社・松江城周辺の観光業中小契約は地域密着型新電力との連携で年間100〜300万円規模の最適化余地、という3層構造で契約判断を行うべき。島根原発再稼働の燃料費調整額への波及を織り込んだ見積取得が重要。",
+  },
+];
+
+// --- 平均・相場を測る基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "安来の特殊鋼、島根富士通・出雲村田製作所など県内では数の限られる大口需要家の区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "松江・出雲の中規模工場、観光ホテル、水産加工場、商業施設が使う主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "県内の中小旅館・店舗・事務所で、照明やOA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。水産加工の小型冷凍機や業務用空調などが該当。",
   },
 ];
 
@@ -367,6 +393,8 @@ const faqItems = [
   { question: "島根県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、島根県脱炭素・省エネ設備導入補助、松江市・出雲市・浜田市の脱炭素補助、観光庁・農水省・環境省の省エネ補助の5本柱が中心。電源立地地域対策交付金との連携も可能で、最大4〜5補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "隠岐諸島の事業者の電気代対策は？", answer: "隠岐諸島は本土と独立した離島系統のため、供給事業者の選択肢が限定的です。①自家発電設備の併設、②太陽光＋蓄電池の自家消費型導入、③地元密着型新電力との連携、④省エネ設備への計画的更新、の4点が中心。離島補助金も活用可能です。" },
   { question: "山陰多雪BCP対応は電力契約にどう影響しますか？", answer: "島根県西部（浜田・益田）は冬季多雪による停電リスクが高く、BCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散（リスク分散）、③地域密着型新電力との連携（地産地消エネルギー）、④BEMSによる停電復旧時の電力管理、の4点が重要。" },
+  { question: "島根県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分別の全国確定単価を基準に読みます。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。島根県が属する中国電力エリアは石炭火力の比率が一定程度高く、燃料価格の変動が燃料費調整額を通じて単価に反映されやすい構造です。自社の実質単価は請求書の支払総額÷使用量で求め、同じ区分の全国値と比べてください。" },
+  { question: "島根県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を同じ前提で照会します。県内は供給を受けられる小売事業者の選択肢が都市部より限られる場合があるため、まず自社の所在地・契約区分で見積を取得できる事業者を洗い出し、そのうえで5観点を比較する順序が現実的です。" },
 ];
 
 const sourcesItems = [
@@ -504,6 +532,62 @@ export default function ShimaneBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-xs text-slate-500">
               ※ 単価は2025年10月時点の標準メニューを基準に整理。実際の単価は契約条件・季節・時間帯・新電力選定で変動します。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              島根県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              島根県の電気代の平均・相場を調べても、県単位で法人の電気代平均を示した公的統計は見つかりません。島根県は安来の特殊鋼のような大口需要家が県内消費の相当部分を占める一方、事業所数では松江・出雲の中小事業者や水産加工業が大半を占めます。県平均という一つの数字ではこの偏りを表せないため、契約区分ごとの全国水準を基準に置いて自社の位置を測ります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準にする</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              下記は電力取引報の最新確定分である2026年4月分の実績単価です。自社の請求書に記載された契約種別に対応する区分の数値を、比較の出発点として使ってください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、島根県または中国電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 中国電力エリアの構造で読み替える</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              島根県は中国電力エリアに属します。同エリアは石炭火力の比率が一定程度高く、国際石炭価格やLNG価格の変動が燃料費調整額を通じて単価に反映されやすい構造です。全国値との差を検討する際は、対象月の燃料費調整額がどちら向きに効いていたかをまず確認すると、乖離の理由の多くが説明できます。なお島根県は原発立地県ですが、料金水準は事業者ごとの調達構成と各月の燃調で決まるため、立地そのものを単価の根拠として読むことはできません。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX中国エリアプライスの傾向も押さえます。中国エリアは西日本の需給に連動しやすく、猛暑・厳寒による需給逼迫時や燃料市況の変化で価格が振れやすい一方、太陽光の発電量が多い時間帯には昼間の価格が低下する場面もあります。価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず変動幅の許容度で判断してください。エリアの推移は{" "}
+              <Link href="/region-chugoku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中国エリアの推移と単価水準</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から実質単価を求めて比較する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              全国値と突き合わせる自社の数値は、次の手順で算出します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>支払総額 ÷ 使用量 で月別の実質単価（円/kWh）を計算する</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と比較する</li>
+              <li>差が大きい月を特定し、燃料費調整額・契約電力・使用量の変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              隠岐諸島のように本土と独立した系統で供給を受ける事業者は、そもそも選べる小売事業者が限られるため、単価の比較よりも設備側の対策が実効性を持つ場合があります。自社が比較で動かせる余地の大きさを、先に見極めておくと検討が早く進みます。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -731,6 +815,9 @@ export default function ShimaneBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-chugoku-business-electricity", title: "中国電力エリアの法人電気代事情", description: "中国電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-chugoku-electricity-price-trend", title: "中国エリアの推移と単価水準", description: "島根県が属する中国電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "https://pps-net.org/unit", title: "新電力ネット エリア別電力単価（出典）", description: "本ページのエリア単価分析の出典データ。最新の単価推移はこちら。" },
               { href: "/tottori-business-electricity-cost", title: "鳥取県の法人電気料金", description: "隣接県・中国電力エリアの事情。" },
               { href: "/okayama-business-electricity-cost", title: "岡山県の法人電気料金", description: "中国電力エリア・水島コンビナートの事情。" },

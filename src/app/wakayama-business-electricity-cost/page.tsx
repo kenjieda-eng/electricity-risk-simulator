@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "和歌山県の法人電気料金完全ガイド｜紀ノ川流域製鉄化学・高野山白浜観光・梅みかん林業の契約最適化";
+  "和歌山県の法人電気代 相場・平均の考え方と電力会社の比較｜関西エリア単価【2026】";
 const pageDescription =
-  "和歌山県の法人電気料金を地域特化で解説。関西電力エリアの紀ノ川流域製鉄化学工業、高野山・白浜温泉等の観光業、林業・梅みかん果樹園、紀南漁業の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
+  "和歌山県の法人電気代の相場・平均を、全国の確定単価（特別高圧17.56円/kWh・高圧21.37円/kWh等）を基準に契約区分別で整理。関西電力エリアの構造を踏まえた読み方、電力会社を比較する5観点、紀ノ川流域の製鉄化学・高野山白浜観光・果樹冷蔵の負荷特性を解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,32 @@ const priceBenchmark = [
     label: "関電原発再稼働メリット",
     detail:
       "関西電力は原発再稼働（高浜・大飯・美浜）により電力単価が他エリアより構造的に低い。法人需要では年間1〜3億円規模の差が出ることもあり、関電エリア事業者は相対的に有利。新電力経由でさらに優遇可能性がある。",
+  },
+];
+
+// --- 相場・平均を測る基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・検針期間ベース）。
+// 消費税・再エネ賦課金は含まない。県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "紀ノ川流域の製鉄・化学プラントなど、県内電力消費の大半を占める装置産業の区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "白浜・高野山の中大型宿泊施設、海南の中規模工場、果樹の冷蔵倉庫が該当。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "紀中・紀南の小規模旅館や店舗・事務所の照明・OA機器に対応する契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。梅・みかんの選果機や小型冷蔵設備、漁協の製氷機など。",
   },
 ];
 
@@ -344,6 +370,8 @@ const faqItems = [
   { question: "和歌山県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、和歌山県脱炭素・省エネ設備導入補助、和歌山市・田辺市・新宮市の脱炭素補助、観光庁・農水省・環境省の省エネ補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "有田みかん・紀州梅の果樹冷蔵倉庫の電気代対策は？", answer: "①CO2冷媒インバータ式冷蔵庫への更新（SII補助1/2活用）、②断熱性能改善工事、③高圧契約の競争入札による単価最適化、④地域密着型新電力との地産地消契約、⑤屋根太陽光＋蓄電池導入、の5本柱が中心。果樹保存品質向上で出荷収入増にも寄与。投資回収は補助金活用で1.5〜3年です。" },
   { question: "紀南台風・南海トラフ地震想定地域でのBCP対応は電力契約にどう影響しますか？", answer: "和歌山県は紀南台風・南海トラフ地震・津波想定地域で、BCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散（リスク分散）、③地域密着型新電力との連携（地産地消エネルギー）、④BEMSによる停電復旧時の電力管理、の4点が重要。新電力選定時にBCP対応力を必ず評価してください。" },
+  { question: "和歌山県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分別の全国確定単価を基準に読みます。電力取引報の最新確定分である2026年4月分（全国計・検針期間ベース）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした（消費税・再エネ賦課金を含まない参考値）。和歌山県は紀ノ川流域の装置産業と紀中・紀南の小規模事業者で構成が大きく異なるため、県平均ではなく自社の契約区分で比べることが重要です。実質単価は請求書の支払総額÷使用量で算出できます。" },
+  { question: "和歌山県で電力会社を比較する際のポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を同じ前提で照会します。年間使用量が大きい事業者ほど燃調方式の差が金額に効くため、上限の有無と参照指標は単価表と同じ重みで確認してください。" },
 ];
 
 const sourcesItems = [
@@ -485,6 +513,62 @@ export default function WakayamaBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              和歌山県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              和歌山県の電気代の相場を判断するうえで前提となるのは、県単位で法人の電気代平均を示した公的統計が存在しないことです。県内の電力消費は紀ノ川流域の製鉄・化学プラントに大きく偏る一方、事業所の数では紀中・紀南の小規模な旅館・選果場・漁協が多数を占めます。この二極構造のもとで県平均を出しても実態を映さないため、契約区分ごとの全国水準を基準に置いて自社の位置を測ります。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 全国の確定単価を契約区分別に確認する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準として使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。特別高圧と低圧電力では水準が大きく異なるため、まず自社の契約区分を請求書で確認してください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・検針期間ベースであり、和歌山県または関西電力エリアの平均値ではありません。消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 関西電力エリアの構造を踏まえて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              和歌山県は関西電力エリアに属します。同エリアは原子力のベースロードが厚く、LNG火力への依存度が東京エリアほど高くないため、国際燃料価格の変動が燃料費調整額に反映される度合いが相対的に小さい局面があります。装置産業のように年間使用量が大きい事業者では、燃調が1円/kWh動くだけで年間の負担額が大きく変わるため、この感応度の差は無視できない論点です。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX関西エリアプライスの傾向も確認しておきます。関西エリアは原子力比率の高さから需給が比較的安定し、システムプライスと近い水準で推移する傾向が指摘されています。ただし具体的な価格差は時期・時間帯で大きく変動するため、特定の価格水準を前提にせず、変動幅をどこまで受け止められるかで判断してください。エリアの推移は{" "}
+              <Link href="/region-kansai-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">関西エリアの推移と単価水準</Link>
+              {" "}で確認できます。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から実質単価を出して照合する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              自社の実質単価は、次の手順で算出します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの支払総額と使用量（kWh）を書き出す</li>
+              <li>支払総額 ÷ 使用量 で月別の実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と照合する</li>
+              <li>乖離の大きい月について、燃料費調整額・契約電力・使用量の変動のどれが効いたかを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              果樹の冷蔵倉庫や選果場のように、収穫期に稼働が集中する事業所では、繁忙期の1ヶ月で決まった契約電力が年間の基本料金を左右します。年平均の単価だけでなく、ピーク月の作り方まで含めて見直すと効果が出やすい領域です。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +776,9 @@ export default function WakayamaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-kansai-business-electricity", title: "関西電力エリアの法人電気代事情", description: "関西電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-kansai-electricity-price-trend", title: "関西エリアの推移と単価水準", description: "和歌山県が属する関西電力エリアの推移を深掘り。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/osaka-business-electricity-cost", title: "大阪府の法人電気料金", description: "隣接府・関西物流ハブの大阪府の事情。" },
               { href: "/nara-business-electricity-cost", title: "奈良県の法人電気料金", description: "隣接県・観光業大国の奈良県の事情。" },
               { href: "/mie-business-electricity-cost", title: "三重県の法人電気料金", description: "隣接県・四日市コンビナートの三重県の事情。" },
