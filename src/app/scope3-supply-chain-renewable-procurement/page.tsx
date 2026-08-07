@@ -373,7 +373,7 @@ const sourcesItems = [
     name: "経済産業省 資源エネルギー庁（省エネポータルサイト）",
     url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/",
   },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   {
     name: "環境省 グリーン・バリューチェーンプラットフォーム（Scope3算定）",
     url: "https://www.env.go.jp/",

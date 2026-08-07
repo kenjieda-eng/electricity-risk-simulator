@@ -432,7 +432,7 @@ export default function EmergencyCancellationFeePage() {
       <SourcesAndFaq
         faq={faqForSchema}
         sources={[
-          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の違約金・不当請求に関する相談窓口と監視データ" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約の違約金・不当請求に関する相談窓口と監視データ" },
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約条件に関する公式情報" },
           { name: "新電力ネット", url: "https://pps-net.org", description: "電力契約の解約・違約金に関する市場動向情報" },
         ]}

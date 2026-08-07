@@ -338,7 +338,7 @@ export default function MarketPriceAdjustmentPage() {
           sources={[
             { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場のシステムプライス公表データ" },
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金制度・調整項目に関する情報" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "小売電気事業者の料金メニュー・約款の監視データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "小売電気事業者の料金メニュー・約款の監視データ" },
           ]}
           publishedAt="2025-08-11"
         />

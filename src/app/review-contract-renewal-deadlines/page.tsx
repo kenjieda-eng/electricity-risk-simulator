@@ -39,7 +39,7 @@ export default function ReviewContractRenewalDeadlinesPage() {
   ];
   const sources = [
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約に関する情報" },
-    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
   ];
   return (
     <>

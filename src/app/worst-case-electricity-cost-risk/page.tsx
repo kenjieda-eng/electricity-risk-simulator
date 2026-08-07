@@ -157,7 +157,7 @@ const faqItems = [
 
 const sources = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の各要因データ・補助政策情報" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格・需給の複合リスクデータ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "市場価格・需給の複合リスクデータ" },
   { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場の過去急騰データ" },
   { name: "財務省貿易統計", url: "https://www.customs.go.jp", description: "LNG・燃料輸入価格データ" },
 ];

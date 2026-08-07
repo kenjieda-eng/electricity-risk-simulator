@@ -255,7 +255,7 @@ const faqItems = [
 
 const sourcesItems = [
   { name: "経済産業省 資源エネルギー庁（省エネポータルサイト）", url: "https://www.enecho.meti.go.jp/category/saving_and_new/saving/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
   { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },

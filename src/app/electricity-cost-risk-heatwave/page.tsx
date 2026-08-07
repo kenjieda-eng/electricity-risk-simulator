@@ -70,7 +70,7 @@ const faqItems = [
 
 const sources = [
   { name: "気象庁", url: "https://www.jma.go.jp", description: "猛暑・高温データ・気候変動傾向" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "夏季需給逼迫・JEPX価格動向データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "夏季需給逼迫・JEPX価格動向データ" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "夏季の電力需給・節電要請に関する資料" },
   { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "夏季スポット市場の価格データ" },
 ];

@@ -116,7 +116,7 @@ const faqItems = [
 ];
 
 const sources = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の移行手続き・対応に関する情報" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "最終保障供給の移行手続き・対応に関する情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力供給継続制度・最終保障供給の実務ガイド" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "電力会社の撤退・倒産情報" },
 ];

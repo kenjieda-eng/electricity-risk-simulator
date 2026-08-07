@@ -327,7 +327,7 @@ const faqItems = [
 
 const sourcesItems = [
   { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
-  { name: "経済産業省 電力・ガス取引監視等委員会（相談窓口）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "経済産業省 電力・ガス取引監視等委員会（相談窓口）", url: "https://www.egc.meti.go.jp/" },
   { name: "公正取引委員会（優越的地位濫用ガイドライン）", url: "https://www.jftc.go.jp/" },
   { name: "消費者庁（消費者契約法）", url: "https://www.caa.go.jp/" },
   { name: "資源エネルギー庁（電気事業制度）", url: "https://www.enecho.meti.go.jp/" },

@@ -321,7 +321,7 @@ const sourcesItems = [
   { name: "新電力ネット（電力単価・エリア別単価・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "環境省 地域脱炭素ロードマップ・脱炭素先行地域", url: "https://www.env.go.jp/" },
   { name: "経済産業省 資源エネルギー庁（地域新電力関連資料）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
   { name: "RE100公式サイト（クライテリア・調達手段）", url: "https://www.there100.org/" },
 ];

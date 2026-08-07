@@ -322,7 +322,7 @@ const sourcesItems = [
   { name: "伊藤忠エネクス 公式サイト（法人向け電力・エネルギー流通）", url: "https://www.itcenex.com/" },
   { name: "伊藤忠エネクス 統合報告書／IR（事業構成・電源）", url: "https://www.itcenex.com/ja/ir/" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成・再エネ賦課金）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

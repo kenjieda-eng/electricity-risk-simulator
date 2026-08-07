@@ -322,7 +322,7 @@ const sourcesItems = [
   { name: "東京ガス 公式サイト（電力小売・法人向け料金プラン）", url: "https://www.tokyo-gas.co.jp/" },
   { name: "東京ガス 統合報告書（事業構成・電源ポートフォリオ）", url: "https://www.tokyo-gas.co.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・分散電源）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

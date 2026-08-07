@@ -322,7 +322,7 @@ const sourcesItems = [
   { name: "出光興産 公式サイト（電力小売・法人向け料金プラン）", url: "https://www.idemitsu.com/" },
   { name: "出光興産 統合報告書／IR（事業構成・再エネ・電源）", url: "https://www.idemitsu.com/jp/ir/" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成・再エネ賦課金）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

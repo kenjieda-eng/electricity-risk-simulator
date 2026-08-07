@@ -351,7 +351,7 @@ const sourcesItems = [
   { name: "新電力ネット（電力単価・エリア別単価・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "イーレックス株式会社 公式サイト（バイオマス発電・電力事業・グループ会社）", url: "https://www.erex.co.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・再生可能エネルギー・電源構成）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
   { name: "経済産業省（電力システム改革・GX・脱炭素政策）", url: "https://www.meti.go.jp/" },
 ];

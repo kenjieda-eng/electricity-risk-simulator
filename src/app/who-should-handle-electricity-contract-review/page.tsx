@@ -38,7 +38,7 @@ export default function WhoShouldHandleElectricityContractReviewPage() {
     { question: "複数部署で見直しを進めるとき、役割をどう決めますか？", answer: "主導部署が全体進行と期限管理を担い、協力部署は専門情報の提供と確認を担う形が実務的です。役割を文書化しておくと依頼漏れや判断遅延を防げます。" },
   ];
   const sources = [
-    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約の制度・手続きに関する情報" },
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・自由化に関する情報" },
   ];
   return (

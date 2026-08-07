@@ -497,7 +497,7 @@ export default function ContractDemandWhatIsItPage() {
           faq={faq}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力需給・契約制度に関するデータ" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ・契約制度情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ・契約制度情報" },
             { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
           ]}
           publishedAt="2025-08-01"

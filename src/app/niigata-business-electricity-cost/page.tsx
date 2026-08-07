@@ -350,7 +350,7 @@ const sourcesItems = [
   { name: "東北電力 公式サイト", url: "https://www.tohoku-epco.co.jp/" },
   { name: "経済産業省 関東経済産業局（新潟県管轄）", url: "https://www.kanto.meti.go.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
   { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];

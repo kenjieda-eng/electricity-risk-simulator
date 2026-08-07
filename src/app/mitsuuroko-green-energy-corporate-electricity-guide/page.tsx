@@ -349,7 +349,7 @@ const sourcesItems = [
   { name: "ミツウロコグリーンエネルギー 公式サイト（電力小売・再エネ発電事業）", url: "https://www.mitsuurokogreenenergy.com/" },
   { name: "ミツウロコでんき 法人向けサイト（高圧・特別高圧メニュー）", url: "https://mitsuurokodenki.jp/biz/" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成・再エネ賦課金）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

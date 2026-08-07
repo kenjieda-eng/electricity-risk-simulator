@@ -67,7 +67,7 @@ const faqItems = [
 ];
 
 const sources = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の件数・自治体事例に関するデータ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "最終保障供給の件数・自治体事例に関するデータ" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "公共施設の電力調達・制度解説" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "入札不調・調達実務に関する情報" },
 ];

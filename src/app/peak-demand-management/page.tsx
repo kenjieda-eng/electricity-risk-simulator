@@ -264,7 +264,7 @@ const sourcesItems = [
   },
   {
     name: "電力・ガス取引監視等委員会",
-    url: "https://www.emsc.meti.go.jp/",
+    url: "https://www.egc.meti.go.jp/",
   },
   {
     name: "一般社団法人 環境共創イニシアチブ（SII）",

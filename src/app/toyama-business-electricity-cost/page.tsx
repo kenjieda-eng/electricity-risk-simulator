@@ -350,7 +350,7 @@ const sourcesItems = [
   { name: "北陸電力 公式サイト", url: "https://www.rikuden.co.jp/" },
   { name: "経済産業省 中部経済産業局電力・ガス事業北陸支局", url: "https://www.chubu.meti.go.jp/b3hokuriku_denkigas/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
   { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];

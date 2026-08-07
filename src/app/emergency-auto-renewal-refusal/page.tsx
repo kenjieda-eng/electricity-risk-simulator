@@ -457,7 +457,7 @@ export default function EmergencyAutoRenewalRefusalPage() {
         faq={faqForSchema}
         sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力契約制度・自動更新条項に関する公式情報" },
-          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約の解約・更新に関する監視データ" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約の解約・更新に関する監視データ" },
           { name: "新電力ネット", url: "https://pps-net.org", description: "電力契約の切替手続き・市場動向情報" },
         ]}
         publishedAt="2026-04-11"

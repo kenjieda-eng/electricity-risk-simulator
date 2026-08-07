@@ -259,7 +259,7 @@ const sourcesItems = [
   { name: "農林水産省（みどりの食料システム戦略・農業経営統計）", url: "https://www.maff.go.jp/" },
   { name: "一般社団法人 環境共創イニシアチブ（SII）省エネ補助金", url: "https://sii.or.jp/" },
   { name: "環境省（フロン排出抑制法・脱炭素関連施策）", url: "https://www.env.go.jp/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org" },
   { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
   { name: "一般社団法人エネルギー情報センター 独自調査" },

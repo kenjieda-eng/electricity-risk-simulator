@@ -342,7 +342,7 @@ const faqItems = [
 const sourcesItems = [
   { name: "新電力ネット（電力単価・スポット価格・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "経済産業省 資源エネルギー庁（電力小売事業者登録・電気事業制度）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "国税庁（移転価格税制）", url: "https://www.nta.go.jp/" },
   { name: "法務省（会社法・組織再編税制）", url: "https://www.moj.go.jp/" },
 ];

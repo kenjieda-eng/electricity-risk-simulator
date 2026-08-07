@@ -196,7 +196,7 @@ const faqItems = [
 ];
 
 const sourcesItems = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/", description: "平均販売単価・小売市場の統計" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/", description: "平均販売単価・小売市場の統計" },
   { name: "資源エネルギー庁（電力調査統計）", url: "https://www.enecho.meti.go.jp", description: "電力量・単価の年次統計" },
   { name: "九州電力", url: "https://www.kyuden.co.jp/", description: "九州電力エリアの法人向け料金プラン情報" },
   { name: "JEPX（日本卸電力取引所）", url: "https://www.jepx.jp", description: "エリアプライスの傾向（市場連動プランの仕入れ指標）" },

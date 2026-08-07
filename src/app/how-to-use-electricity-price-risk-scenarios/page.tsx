@@ -55,7 +55,7 @@ const faqItems = [
 
 const sources = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の要因別解説・政策情報" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格・電力需給データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "市場価格・電力需給データ" },
 ];
 
 export default function HowToUseElectricityPriceRiskScenariosPage() {

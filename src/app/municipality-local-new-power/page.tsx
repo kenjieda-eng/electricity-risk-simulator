@@ -430,7 +430,7 @@ export default function MunicipalityLocalNewPowerPage() {
           faq={faq}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "小売電気事業者の登録・届出制度、電力市場データ" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "新電力の事業撤退・廃業に関する市場監視データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "新電力の事業撤退・廃業に関する市場監視データ" },
             { name: "総務省 地方公営企業制度", url: "https://www.soumu.go.jp", description: "自治体の出資法人・第三セクターに関する制度情報" },
           ]}
           publishedAt="2026-04-11"

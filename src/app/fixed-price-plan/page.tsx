@@ -428,7 +428,7 @@ export default function FixedPricePlanPage() {
           faq={faqItems}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・料金規制に関する情報" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約・取引監視に関する情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約・取引監視に関する情報" },
             { name: "新電力ネット", url: "https://pps-net.org", description: "電力プラン・新電力市場動向データ" },
           ]}
           publishedAt="2025-08-20"

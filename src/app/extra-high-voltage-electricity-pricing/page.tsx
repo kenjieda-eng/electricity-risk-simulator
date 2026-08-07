@@ -338,7 +338,7 @@ export default function ExtraHighVoltageElectricityPricingPage() {
           faq={faq}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "特別高圧の料金規制・制度データ" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ" },
             { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給調整・系統情報" },
           ]}
           publishedAt="2025-08-06"
