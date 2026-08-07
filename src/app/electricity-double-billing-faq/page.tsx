@@ -348,7 +348,7 @@ export default function ElectricityDoubleBillingFaqPage() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">二重契約を予防する5つのチェックリスト</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              電力会社の切替・名義変更・引っ越し時に、以下のチェックを事前に済ませておくと二重請求・二重契約をほぼ確実に防げます。
+              電力会社の切替・名義変更・引っ越し時に、以下のチェックを事前に済ませておくと二重請求・二重契約を防ぎやすくなります。
             </p>
             <ul className="mt-4 space-y-3">
               {preventionChecklist.map((c, i) => (

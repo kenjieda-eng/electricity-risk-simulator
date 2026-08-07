@@ -300,7 +300,7 @@ export default function MunicipalityRe100DecarbonizationPage() {
             <div className="rounded-xl border border-green-200 bg-green-50 p-4">
               <p className="text-sm font-semibold text-green-800">必須要件として設定</p>
               <p className="mt-2 text-sm leading-6 text-slate-700">
-                「再エネ電力であること」を応札条件とする。環境目標を確実に達成できるが、
+                「再エネ電力であること」を応札条件とする。環境目標を達成しやすいが、
                 参加事業者が減り不調リスクが高まる。小規模自治体・単独入札では特に注意が必要。
               </p>
             </div>
