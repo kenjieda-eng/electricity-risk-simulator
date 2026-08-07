@@ -356,7 +356,7 @@ const sourcesItems = [
   { name: "サーラの電気 公式サイト（電力小売・法人向け料金プラン）", url: "https://salaeenergy.sala.jp/" },
   { name: "サーラグループ 公式サイト（事業構成・再エネ事業）", url: "https://www.sala.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・再エネ賦課金・電源構成）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

@@ -66,7 +66,7 @@ const faqItems = [
 ];
 
 const sources = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "最終保障供給の対象・適用条件に関する解説" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "最終保障供給の対象・適用条件に関する解説" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気事業法第17条・最終保障供給制度の概要" },
 ];
 

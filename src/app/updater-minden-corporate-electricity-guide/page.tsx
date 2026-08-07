@@ -349,7 +349,7 @@ const sourcesItems = [
   { name: "株式会社UPDATER 公式サイト（会社情報・事業概要）", url: "https://www.updater.co.jp/" },
   { name: "みんな電力 ブランドサイト（電力小売・法人向けメニュー）", url: "https://minden.co.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成開示・非化石証書制度）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

@@ -305,7 +305,7 @@ export default function JepxExplainedPage() {
           sources={[
             { name: "日本卸電力取引所（JEPX）", url: "http://www.jepx.org", description: "スポット市場・時間前市場の取引データ・約定結果" },
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力市場制度・卸電力市場の概要" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "卸電力市場の監視・分析レポート" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "卸電力市場の監視・分析レポート" },
           ]}
           publishedAt="2026-03-11"
         />

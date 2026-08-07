@@ -384,7 +384,7 @@ export default function EmergencySupplierBankruptcyPage() {
         faq={faqForSchema}
         sources={[
           { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "最終保障供給制度・電力小売制度に関する公式情報" },
-          { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "新電力の撤退・倒産に関する監視データと相談窓口" },
+          { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "新電力の撤退・倒産に関する監視データと相談窓口" },
           { name: "新電力ネット", url: "https://pps-net.org", description: "新電力の撤退状況・市場動向・切替手続き情報" },
         ]}
         publishedAt="2026-04-12"

@@ -323,7 +323,7 @@ const sourcesItems = [
   { name: "北海道電力 統合報告書（電源構成・経営情報）", url: "https://www.hepco.co.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成）", url: "https://www.enecho.meti.go.jp/" },
   { name: "OCCTO 電力広域的運営推進機関（供給計画・連系線）", url: "https://www.occto.or.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.egc.meti.go.jp/" },
 ];
 
 export default function HepcoCorporateElectricityGuidePage() {

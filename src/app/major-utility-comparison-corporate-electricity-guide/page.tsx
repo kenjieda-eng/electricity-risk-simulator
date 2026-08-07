@@ -321,7 +321,7 @@ const sourcesItems = [
   { name: "新電力ネット（電力単価・エリア別単価・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "資源エネルギー庁（エネルギー基本計画・電源構成）", url: "https://www.enecho.meti.go.jp/" },
   { name: "OCCTO 電力広域的運営推進機関（供給計画・連系線）", url: "https://www.occto.or.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.egc.meti.go.jp/" },
   { name: "原子力規制委員会（原発稼働状況・新規制基準）", url: "https://www.nra.go.jp/" },
   { name: "各旧一電10社 公式サイト・統合報告書（料金プラン・電源構成）", url: "https://www.enecho.meti.go.jp/" },
 ];

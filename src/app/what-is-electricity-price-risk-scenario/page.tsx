@@ -56,7 +56,7 @@ const faqItems = [
 
 const sources = [
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電気料金の構成要因・リスク要因に関する解説" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "市場価格の動向・需給状況のモニタリング" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "市場価格の動向・需給状況のモニタリング" },
   { name: "JEPX（日本卸電力取引所）", url: "http://www.jepx.org", description: "スポット市場の過去価格データ" },
 ];
 

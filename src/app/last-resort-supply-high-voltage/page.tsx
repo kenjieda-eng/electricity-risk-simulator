@@ -67,7 +67,7 @@ const faqItems = [
 ];
 
 const sources = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "高圧・特別高圧の最終保障供給件数・料金データ" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "高圧・特別高圧の最終保障供給件数・料金データ" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "高圧電力・特別高圧の制度解説" },
 ];
 

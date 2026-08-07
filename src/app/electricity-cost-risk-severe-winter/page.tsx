@@ -71,7 +71,7 @@ const faqItems = [
 
 const sources = [
   { name: "気象庁", url: "https://www.jma.go.jp", description: "厳冬・低温データ・寒波の気象情報" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "冬季需給逼迫・JEPX価格動向" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "冬季需給逼迫・JEPX価格動向" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "冬季電力需給・LNG在庫に関する資料" },
   { name: "財務省貿易統計", url: "https://www.customs.go.jp", description: "LNG輸入量・価格データ" },
 ];

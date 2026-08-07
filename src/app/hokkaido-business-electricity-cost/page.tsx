@@ -350,7 +350,7 @@ const sourcesItems = [
   { name: "北海道電力（ほくでん）公式サイト", url: "https://www.hepco.co.jp/" },
   { name: "経済産業省 北海道経済産業局", url: "https://www.hkd.meti.go.jp/" },
   { name: "資源エネルギー庁（省エネポータル）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp/" },
   { name: "新電力ネット（電力単価・スポット価格）", url: "https://pps-net.org/" },
   { name: "新電力ネット（エリア別電力単価データ）", url: "https://pps-net.org/unit" },
 ];

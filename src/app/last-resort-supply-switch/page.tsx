@@ -67,7 +67,7 @@ const faqItems = [
 ];
 
 const sources = [
-  { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約切替手続き・監視情報" },
+  { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約切替手続き・監視情報" },
   { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売切替制度・手続きに関する資料" },
   { name: "新電力ネット", url: "https://pps-net.org", description: "小売電気事業者の比較・切替情報" },
 ];

@@ -322,7 +322,7 @@ const sourcesItems = [
   { name: "サミットエナジー 公式サイト（法人向け料金プラン）", url: "https://www.summit-energy.co.jp/" },
   { name: "住友商事 公式サイト（電力・エネルギー事業）", url: "https://www.sumitomocorp.com/" },
   { name: "資源エネルギー庁（エネルギー基本計画・コーポレートPPA）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
 ];
 

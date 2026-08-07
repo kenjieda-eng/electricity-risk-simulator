@@ -38,7 +38,7 @@ export default function WhereToCheckInElectricityContractPage() {
     { question: "電力契約書の別紙や覚書も確認すべきですか？", answer: "はい。本契約書だけでなく別紙や覚書に重要な条件が記載されているケースがあります。料金単価・調整費の扱い・特別条件などが別紙に定められていることが多いため必ず確認してください。" },
   ];
   const sources = [
-    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給契約の制度・ルールに関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力供給契約の制度・ルールに関する情報" },
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・契約に関する情報" },
   ];
   return (

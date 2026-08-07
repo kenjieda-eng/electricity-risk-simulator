@@ -42,7 +42,7 @@ export default function SwitchingBusinessElectricityContractPage() {
     { question: "切替後の請求で注意することは何ですか？", answer: "切替月の請求は日割り計算になるため、旧会社・新会社の両方から請求が来ることがあります。また検針日のズレにより1か月分の請求が2社にまたがる場合があるため、切替直後の請求書は慎重に確認してください。" },
   ];
   const sources = [
-    { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力供給切替手続きに関する情報" },
+    { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力供給切替手続きに関する情報" },
     { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売自由化・スイッチングに関する情報" },
   ];
   return (

@@ -351,7 +351,7 @@ const sourcesItems = [
   { name: "新電力ネット（電力単価・エリア別単価・新電力比較）", url: "https://pps-net.org/unit" },
   { name: "日本テクノ 公式サイト（電気保安・電力小売・デマンド見える化）", url: "https://www.n-techno.co.jp/" },
   { name: "資源エネルギー庁（エネルギー基本計画・非化石証書・電源構成）", url: "https://www.enecho.meti.go.jp/" },
-  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.emsc.meti.go.jp/" },
+  { name: "電力・ガス取引監視等委員会（登録小売電気事業者一覧・新電力動向）", url: "https://www.egc.meti.go.jp/" },
   { name: "JEPX 日本卸電力取引所（スポット市場価格）", url: "http://www.jepx.org/" },
   { name: "経済産業省（電力・ガス制度・電力システム改革）", url: "https://www.meti.go.jp/" },
 ];

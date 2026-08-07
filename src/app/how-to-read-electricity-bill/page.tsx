@@ -682,7 +682,7 @@ export default function HowToReadElectricityBillPage() {
           faq={FAQ_ITEMS}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の制度・請求項目に関する情報" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ" },
             { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場データ・料金情報" },
           ]}
           publishedAt="2025-08-07"

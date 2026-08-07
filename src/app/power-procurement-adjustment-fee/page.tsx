@@ -221,7 +221,7 @@ export default function PowerProcurementAdjustmentFeePage() {
           faq={faqItems}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力小売制度・燃料費調整制度に関する情報" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力契約条件の監視・情報公開" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力契約条件の監視・情報公開" },
           ]}
           publishedAt="2026-03-27"
         />

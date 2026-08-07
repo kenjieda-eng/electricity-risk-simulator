@@ -341,7 +341,7 @@ export default function BasicChargeExplainedPage() {
           faq={faq}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金の基本料金制度・力率割引に関するデータ" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ" },
             { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・デマンド情報" },
           ]}
           publishedAt="2026-04-10"

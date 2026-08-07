@@ -392,7 +392,7 @@ export default function HowToExplainElectricityCostReviewInternallyPage() {
           faq={faqForSchema}
           sources={[
             { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力料金制度・契約見直しに関する公式情報" },
-            { name: "電力・ガス取引監視等委員会", url: "https://www.emsc.meti.go.jp", description: "電力市場の監視データ・料金比較情報" },
+            { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ・料金比較情報" },
             { name: "新電力ネット", url: "https://pps-net.org", description: "電力市場の動向・料金比較情報" },
           ]}
           publishedAt="2026-04-10"
