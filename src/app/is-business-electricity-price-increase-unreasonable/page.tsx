@@ -15,7 +15,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ["review-points"];
 
 
 
-const pageTitle = "法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額";
+const pageTitle = "電気料金の値上げがおかしいと感じたら｜法人向け・原因切り分け6ステップとパターン別影響額";
 const pageDescription =
   "法人の電気料金の値上げが急すぎる・おかしいと感じるときに使える6ステップの原因切り分けフローと、パターン別の月額影響額を解説。燃料費調整額、市場価格要因、補助金終了、契約更新の見分け方も整理します。";
 
@@ -53,7 +53,7 @@ export default function IsBusinessElectricityPriceIncreaseUnreasonablePage() {
   return (
     <>
       <ArticleJsonLd
-        headline="法人の電気料金の値上げはおかしいのか｜原因切り分け6ステップとパターン別影響額"
+        headline="電気料金の値上げがおかしいと感じたら｜法人向け・原因切り分け6ステップとパターン別影響額"
         description="法人の電気料金の値上げが急すぎる・おかしいと感じるときに使える6ステップの原因切り分けフローと、パターン別の月額影響額を解説。燃料費調整額、市場価格要因、補助金終了、契約更新の見分け方も整理します。"
         url="https://simulator.eic-jp.org/is-business-electricity-price-increase-unreasonable"
         datePublished="2026-04-17"

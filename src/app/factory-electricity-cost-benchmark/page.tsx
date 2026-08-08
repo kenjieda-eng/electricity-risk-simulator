@@ -13,7 +13,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["benchmarks"];
 
 
-const pageTitle = "工場の電気代相場｜業種・契約電力・使用量別のベンチマーク";
+const pageTitle = "工場の電気代の相場と平均｜業種・契約電力・月間使用量別のベンチマーク";
 const pageDescription =
   "工場の電気代を業種・契約電力・月間使用量別にベンチマーク。軽工業から重工業・食品加工・化学まで業種別の相場を一覧化。基本料金・電力量料金の内訳と削減ポイントも解説します。";
 const pageUrl = "https://simulator.eic-jp.org/factory-electricity-cost-benchmark";
@@ -80,7 +80,7 @@ export default function FactoryElectricityCostBenchmarkPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="工場の電気代相場｜業種・契約電力・使用量別のベンチマーク"
+        headline="工場の電気代の相場と平均｜業種・契約電力・月間使用量別のベンチマーク"
         description="工場の電気代を業種・契約電力・月間使用量別にベンチマーク。軽工業から重工業・食品加工・化学まで業種別の相場を一覧化。基本料金・電力量料金の内訳と削減ポイントも解説します。"
         url="https://simulator.eic-jp.org/factory-electricity-cost-benchmark"
         datePublished="2026-04-17"

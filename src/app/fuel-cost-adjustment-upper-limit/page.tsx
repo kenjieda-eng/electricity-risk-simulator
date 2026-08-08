@@ -15,7 +15,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説";
+const pageTitle = "燃料費調整額に上限はあるか｜規制料金は基準燃料価格の1.5倍・自由料金は原則上限なし";
 const pageDescription =
   "燃料費調整額には、規制料金では基準燃料価格の1.5倍という上限があり、自由料金では原則上限なし。2022年の上限到達による電力会社の赤字、新電力の撤退、法人への影響を整理します。";
 const pageUrl = "https://simulator.eic-jp.org/fuel-cost-adjustment-upper-limit";
@@ -52,7 +52,7 @@ export default function FuelCostAdjustmentUpperLimitPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="燃料費調整額の上限制度｜規制料金と自由料金の違い、2022年の上限到達を解説"
+        headline="燃料費調整額に上限はあるか｜規制料金は基準燃料価格の1.5倍・自由料金は原則上限なし"
         description="燃料費調整額には、規制料金では基準燃料価格の1.5倍という上限があり、自由料金では原則上限なし。2022年の上限到達による電力会社の赤字、新電力の撤退、法人への影響を整理します。"
         url="https://simulator.eic-jp.org/fuel-cost-adjustment-upper-limit"
         datePublished="2026-04-17"

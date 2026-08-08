@@ -10,7 +10,7 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 // --- 定数 ---
-const pageTitle = "kW・kWh・kVAの違い｜電気料金で使われる単位の基礎をわかりやすく解説";
+const pageTitle = "kVAとkWの違い｜力率との関係とkWhを含む電気料金の単位をわかりやすく解説";
 const pageDescription =
   "kW（キロワット）・kWh（キロワットアワー）・kVA（キロボルトアンペア）の違いを法人向けに解説。請求書・見積書のどこに出るか、契約電力・使用量・力率との関係を具体例で整理。";
 
@@ -58,7 +58,7 @@ export default function KwKwhKvaDifferencePage() {
   return (
     <>
       <ArticleJsonLd
-        headline="kW・kWh・kVAの違い｜電気料金で使われる単位の基礎をわかりやすく解説"
+        headline="kVAとkWの違い｜力率との関係とkWhを含む電気料金の単位をわかりやすく解説"
         description="kW・kWh・kVAの違いを法人向けに解説。請求書のどこに出るか、契約電力・使用量・力率との関係を具体例で整理。"
         url="https://simulator.eic-jp.org/kw-kwh-kva-difference"
         datePublished="2026-04-13"

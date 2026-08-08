@@ -5,7 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "高圧電力の基本料金を下げる5つの方法｜削減効果と投資回収期間の目安";
+const pageTitle = "高圧電力の電気代削減｜基本料金を下げる5つの方法と投資回収期間の目安";
 const pageDescription =
   "高圧電力の基本料金は契約電力×単価で決まり、全体料金の3〜4割を占めます。デマンドコントロール・契約電力見直し・力率改善・時間分散・建物統合の5つの削減策を、効果目安と投資回収期間、適用条件とセットで整理します。";
 const pageUrl = "https://simulator.eic-jp.org/reduce-high-voltage-basic-charge";
