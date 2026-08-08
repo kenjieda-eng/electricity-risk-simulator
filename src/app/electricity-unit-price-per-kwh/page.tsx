@@ -51,6 +51,21 @@ const NEUTRAL =
 const SOURCE_NOTE =
   "※ 単価は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）にもとづく参考値です。2026年4月分が確定・最新公表で、5月分以降は未公表です（2026年8月中旬の公表見込み）。消費税・再エネ賦課金を含まない参考値であり、実際の請求額は電力会社・契約条件により異なります。";
 
+// 電力取引報「記載要領（令和8年6月改定）」で定められた販売額の定義。
+// 各項目は一次資料の記載事項のため改変しない。
+const PRICE_DEFINITION = {
+  heading: "この単価の定義（電力取引報の記載要領による）",
+  included: "基本料金・電力量料金・燃料費調整額",
+  excluded: "消費税・再生可能エネルギー発電促進賦課金・延滞金・契約事務手数料",
+  notes: [
+    "最終保障供給および離島供給は集計対象外です。",
+    "集計期間は暦月ベースと検針期間ベースの両方が認められており、事業者間で完全には統一されていません。",
+    "各種割引の反映の有無は記載要領に明示がありません。",
+  ],
+  caution:
+    "したがって、税込・賦課金込で表示される請求書の単価と単純に比較することはできません。自社の単価と比べる際は、請求書側から消費税と再生可能エネルギー発電促進賦課金を除いた金額で比較してください。",
+};
+
 const unitBasics = [
   {
     label: "kWh（キロワットアワー）は「electricityをどれだけ使ったか」を表す量の単位",
@@ -358,6 +373,10 @@ const sourcesItems = [
     name: "電力・ガス取引監視等委員会「電力取引の状況（電力取引報結果）」",
     url: "https://www.egc.meti.go.jp/info/business/report/results.html",
   },
+  {
+    name: "電力取引報 記載要領（令和8年6月改定）",
+    url: "https://www.egc.meti.go.jp/info/business/report/pdf/2606_procedure.pdf",
+  },
   { name: "資源エネルギー庁", url: "https://www.enecho.meti.go.jp/" },
   { name: "経済産業省", url: "https://www.meti.go.jp/" },
 ];
@@ -510,6 +529,21 @@ export default function ElectricityUnitPricePerKwhPage() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-500">{SOURCE_NOTE}</p>
+            <div className="mt-3 rounded-lg border border-slate-300 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">{PRICE_DEFINITION.heading}</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-6 text-slate-700">
+                <li>販売額に含まれるもの: {PRICE_DEFINITION.included}</li>
+                <li>販売額に含まれないもの: {PRICE_DEFINITION.excluded}</li>
+                {PRICE_DEFINITION.notes.map((n) => (
+                  <li key={n}>{n}</li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs leading-6 text-slate-700">{PRICE_DEFINITION.caution}</p>
+              <p className="mt-2 text-xs text-slate-500">
+                出典:{" "}
+                <a href="https://www.egc.meti.go.jp/info/business/report/pdf/2606_procedure.pdf" className="text-sky-700 underline underline-offset-2 hover:text-sky-900" target="_blank" rel="noopener noreferrer">電力取引報 記載要領（令和8年6月改定）</a>
+              </p>
+            </div>
             <p className="mt-2 text-xs text-slate-500">{NEUTRAL}</p>
             <div className="mt-4 space-y-3">
               {currentUnitPrices.map((item) => (
