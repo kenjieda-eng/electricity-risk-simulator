@@ -118,7 +118,7 @@ const remainingPeriodTable = [
     smallRate: "30〜90万円",
     midRate: "270〜450万円",
     largeRate: "1,140〜2,280万円",
-    note: "切替メリットが大きい場合、ほぼ確実に切替が有利。",
+    note: "切替メリットが大きい場合、切替が有利になりやすい。",
   },
   {
     months: "残存12ヶ月",
