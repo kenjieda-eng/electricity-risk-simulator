@@ -16,7 +16,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["energy-equipment"];
 
 
 const pageTitle =
-  "倉庫で蓄電池を検討するときの着眼点｜屋根面積と太陽光の組み合わせ";
+  "倉庫で蓄電池を検討するときの着眼点｜屋根面積を活かした太陽光発電との組み合わせ";
 const pageDescription =
   "物流倉庫・冷凍冷蔵倉庫が蓄電池の導入を検討する際の着眼点を解説します。広い屋根面積を活かした太陽光との組み合わせ、冷凍・冷蔵設備のピーク管理、停電リスクへの対応など倉庫特有の検討事項を整理します。";
 
@@ -134,7 +134,7 @@ export default function WarehouseBatteryConsiderationsPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="倉庫で蓄電池を検討するときの着眼点｜屋根面積と太陽光の組み合わせ"
+        headline="倉庫で蓄電池を検討するときの着眼点｜屋根面積を活かした太陽光発電との組み合わせ"
         description="物流倉庫・冷凍冷蔵倉庫が蓄電池の導入を検討する際の着眼点を解説します。広い屋根面積を活かした太陽光との組み合わせ、冷凍・冷蔵設備のピーク管理、停電リスクへの対応など倉庫特有の検討事項を整理します。"
         url="https://simulator.eic-jp.org/warehouse-battery-considerations"
         datePublished="2026-04-11"

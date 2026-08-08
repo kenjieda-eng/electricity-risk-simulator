@@ -6,7 +6,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "デマンドコントロールとは？導入効果と費用の目安";
+const pageTitle = "デマンドコントロールとは｜仕組み・装置の種類と費用・基本料金の削減効果";
 const pageDescription =
   "デマンドコントロールは30分デマンド値が契約電力を超えないよう監視・制御する仕組みです。装置の種類、導入効果（基本料金の削減目安）、費用相場（5〜100万円超）、投資回収期間、導入判断の基準を実務向けに整理します。";
 const pageUrl = "https://simulator.eic-jp.org/demand-control-guide";

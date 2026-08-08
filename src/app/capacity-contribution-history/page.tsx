@@ -15,7 +15,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "容量拠出金の年度別推移｜オークション結果と転嫁単価の変動を整理";
+const pageTitle = "容量拠出金の単価と年度別推移｜オークション結果・kWhあたり転嫁単価の変動を整理";
 const pageDescription =
   "容量拠出金の年度別推移をオークション結果・kWhあたり転嫁単価・法人への影響額で整理。2024年度の本格開始から今後の見通しまで、燃調費・再エネ賦課金との比較も含めて解説。";
 const pageUrl = "https://simulator.eic-jp.org/capacity-contribution-history";
@@ -146,7 +146,7 @@ export default function CapacityContributionHistoryPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="容量拠出金の年度別推移｜オークション結果と転嫁単価の変動を整理"
+        headline="容量拠出金の単価と年度別推移｜オークション結果・kWhあたり転嫁単価の変動を整理"
         description="容量拠出金の年度別推移をオークション結果・kWhあたり転嫁単価・法人への影響額で整理。2024年度の本格開始から今後の見通しまで、燃調費・再エネ賦課金との比較も含めて解説。"
         url="https://simulator.eic-jp.org/capacity-contribution-history"
         datePublished="2026-04-17"

@@ -28,7 +28,7 @@ import FloatingCta from "../../components/simulator/FloatingCta";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-trends"];
 
 
-const pageTitle = "法人の電気料金推移（10年）｜電気代の10年推移（2016→2025）を実データで解説";
+const pageTitle = "法人の電気料金・電気代単価の10年推移（2016→2025）｜特別高圧・高圧・低圧の実データで解説";
 const pageDescription =
   "電気料金の推移を10年スパン（2016→2025年）で、特別高圧・高圧・低圧の実データと図表で解説。法人の電気代10年推移、2021年以降の値上がり、高止まり、2022年急騰、補助政策、再エネ賦課金、JEPX市場の影響まで整理し、契約見直しの判断材料として使える形にまとめています。";
 
