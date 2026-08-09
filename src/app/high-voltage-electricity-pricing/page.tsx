@@ -12,7 +12,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 
 const pageTitle = "高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説";
 const pageDescription =
-  "高圧電力の料金構成を法人向けに解説。基本料金・電力量料金・燃料費調整額の仕組みから、小・中・大規模別のコスト試算、見直しポイントまで体系的に整理します。";
+  "高圧電力とは何か、料金がどのように決まるのかを法人向けに解説。基本料金・電力量料金・燃料費調整額の構成と読み方から、小・中・大規模別のコスト試算、請求書での確認ポイントまで体系的に整理します。基本料金を下げる具体的な手段は専用ページで扱います。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -62,7 +62,7 @@ export default function HighVoltageElectricityPricingPage() {
     <>
       <ArticleJsonLd
         headline="高圧電力の料金の見方｜構成・計算例・見直しポイントを法人向けに解説"
-        description="高圧電力の料金構成を法人向けに解説。基本料金・電力量料金・燃料費調整額の仕組みから、小・中・大規模別のコスト試算、見直しポイントまで体系的に整理します。"
+        description="高圧電力とは何か、料金がどのように決まるのかを法人向けに解説。基本料金・電力量料金・燃料費調整額の構成と読み方から、小・中・大規模別のコスト試算、請求書での確認ポイントまで体系的に整理します。基本料金を下げる具体的な手段は専用ページで扱います。"
         url="https://simulator.eic-jp.org/high-voltage-electricity-pricing"
         datePublished="2025-08-05"
         breadcrumbItems={[

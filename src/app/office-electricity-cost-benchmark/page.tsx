@@ -204,6 +204,66 @@ export default function OfficeElectricityCostBenchmarkPage() {
         </p>
       </section>
 
+      {/* 1kWhあたりの単価の目安 */}
+      <section className="mt-6">
+        <div className="rounded-xl border border-slate-200 bg-white p-5">
+          <h2 className="text-xl font-semibold text-slate-900">オフィスの電気代 1kWhあたりの単価の目安</h2>
+          <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+            ここまでの相場は「月額」と「坪あたり」で見てきましたが、1kWhあたりの単価はそれとは別軸の指標です。月額が同じでも使用量が違えば単価は変わり、逆に単価が同じでも使用量が増えれば月額は上がります。自社の水準を評価するときは、月額の相場と単価の水準を分けて見る必要があります。下表は契約区分別の全国計単価で、小規模なオフィスは低圧電灯、規模の大きいオフィスビルは高圧に該当することが一般的です。
+          </p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[520px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-slate-100 text-left">
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">契約区分</th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">1kWhあたり単価</th>
+                  <th className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">オフィスでの該当</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">低圧電灯</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">25.94 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-600">小規模なオフィス・事務所（照明・コンセント中心）</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">低圧電力</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">32.12 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-600">動力の業務用空調を低圧で使う事務所</td>
+                </tr>
+                <tr className="bg-sky-50">
+                  <td className="border border-slate-200 px-3 py-2 font-semibold">高圧</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">21.37 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-600">受電設備を持つオフィスビル（テナントビル含む）</td>
+                </tr>
+                <tr>
+                  <td className="border border-slate-200 px-3 py-2">特別高圧</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">17.56 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 text-slate-600">大規模な複合ビル・拠点施設</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+            自社の1kWh単価は、月の請求総額を同じ月の使用電力量で割れば算出できます。この値には基本料金や各種調整額が含まれるため、使用量が少ない月ほど高く出ます。算出方法の使い分けと、単価に何が積み上がっているか（電力量料金・燃料費調整額・再生可能エネルギー発電促進賦課金・容量拠出金の転嫁分）は
+            <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              電気代の1kWhあたり単価とは
+            </Link>
+            で詳しく整理しています。
+          </p>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 単価は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計）にもとづく参考値で、2026年4月分が確定・最新公表です。消費税・再生可能エネルギー発電促進賦課金を含まないなど販売額の定義に前提があるため、請求書の単価と単純に比較することはできません。定義の詳細は
+            <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              電気代の1kWhあたり単価とは
+            </Link>
+            をご確認ください。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+          </p>
+        </div>
+      </section>
+
       {/* 用途別内訳バーグラフ */}
       <section className="mt-6">
         <div className="rounded-xl border border-slate-200 bg-white p-5">
