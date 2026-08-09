@@ -329,6 +329,68 @@ export default function SmeElectricityProviderComparisonPage() {
             </div>
           </section>
 
+          {/* ランキングで選べない理由 */}
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              ランキングで電力会社を選べない理由
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              電力会社を「ランキング」や「おすすめ順」で示す情報は多くありますが、法人の電気料金では万人に当てはまる順位付けが成立しにくい構造があります。理由は主に3つです。
+            </p>
+
+            <div className="mt-4 space-y-3">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-base font-semibold text-slate-900">
+                  理由1：契約区分・使用量・負荷率・エリアで単価が変わる
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-700">
+                  法人の電気料金は、契約区分（低圧・高圧・特別高圧）、月間使用量、負荷率（契約電力に対してどれだけ平準的に使っているか）、エリアによって実質単価が変わります。同じ事業者と契約しても、24時間稼働の工場と日中のみ稼働する事務所では単価の出方が違います。つまり「A社が1位」という順位は特定の条件を前提にしたときに成り立つもので、条件が変われば入れ替わり得ます。自社の条件に当てはめずに順位だけを見ると判断を誤ります。契約区分ごとの単価水準は
+                  <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                    電気代の1kWhあたり単価とは
+                  </Link>
+                  で整理しています。
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-base font-semibold text-slate-900">
+                  理由2：同じ事業者でもメニューと燃調方式で結果が逆転し得る
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-700">
+                  同じ電力会社でも、固定型と市場連動型では価格の決まり方がまったく異なります。市場価格が低い局面では市場連動型が有利に見え、高騰局面では固定型が有利に見えるというように、評価時点によって優劣が入れ替わります。さらに、燃料費調整額の算定方式や上限の有無が事業者・メニューごとに違うため、同じ使用量でも請求額の動き方が変わります。順位は「いつ・どの前提で比べたか」に強く依存するため、単独では判断材料になりません。両者の違いは
+                  <Link href="/fixed-vs-market-linked-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                    固定と市場連動の比較ガイド
+                  </Link>
+                  、燃調の仕組みは
+                  <Link href="/fuel-cost-adjustment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                    燃料費調整額の解説
+                  </Link>
+                  をご覧ください。
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-base font-semibold text-slate-900">
+                  理由3：公開されている順位情報は法人の判断材料として設計されていないことがある
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-700">
+                  一般に公開されている順位情報は、家庭向けの料金プランを主な対象としている場合があります。その場合、法人契約に固有の契約電力・デマンド・力率・燃調方式といった要素が評価に反映されません。また、掲載の並び順が編集方針や送客の仕組みと連動している場合もあり、そのときは実測データに基づく評価とは別の基準になります。どのような前提・基準で並べられた順位なのかが示されていない情報は、そのまま自社の判断に持ち込まないほうが安全です。
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+              順位の代わりに使えるのが、本ページ冒頭で整理した「比較で見るべき5項目」（料金単価・契約期間・燃調費の上限・サポート体制・経営安定性）です。この5項目を自社の条件に当てはめて評価すれば、他社にとっての最適解ではなく自社にとっての最適解を選べます。単価の安さだけで判断できない理由は
+              <Link href="/cheap-unit-price-not-always-better" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+                単価の安さだけで選ばない理由
+              </Link>
+              でも整理しています。
+            </p>
+            <p className="mt-3 text-xs text-slate-500">
+              ※ 本記事は特定の電力会社・料金プランを推奨するものではなく、また特定の媒体・事業者を批判する意図もありません。中立的な判断軸の提示を目的としています。
+            </p>
+          </section>
+
           {/* 実務ステップ */}
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">

@@ -13,9 +13,9 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import { DEMAND_HOURLY_AVG, DEMAND_WEEKDAY_WEEKEND, LOAD_FACTOR_FY, DEMAND_MONTHLY_AVG, DEMAND_PEAK_DAYS } from "../../data/demandData";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "契約電力とデマンドとは｜法人の電気料金・基本料金との関係を解説";
+const pageTitle = "契約電力とは｜デマンドとの違い・基本料金との関係を法人向けに解説";
 const pageDescription =
-  "契約電力とデマンドの意味を法人向けに解説。基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。";
+  "契約電力とは何かを法人向けに解説。デマンドとの違い、基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。デマンド値そのものの見方と管理方法は専用ページで扱います。";
 const publishedDate = "2026-03-01";
 
 export const metadata: Metadata = {
@@ -68,8 +68,8 @@ export default function ContractDemandWhatIsItPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="契約電力とデマンドとは｜法人の電気料金・基本料金との関係を解説"
-        description="契約電力とデマンドの意味を法人向けに解説。基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。"
+        headline="契約電力とは｜デマンドとの違い・基本料金との関係を法人向けに解説"
+        description="契約電力とは何かを法人向けに解説。デマンドとの違い、基本料金との関係、請求書・見積書での見方、30分デマンドの仕組み、ピーク管理の考え方を全国需要データ付きで整理します。デマンド値そのものの見方と管理方法は専用ページで扱います。"
         url="https://simulator.eic-jp.org/contract-demand-what-is-it"
         datePublished="2025-08-01"
         breadcrumbItems={[
