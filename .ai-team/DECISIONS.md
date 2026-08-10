@@ -2191,7 +2191,7 @@ PR #220 (fd9ba13): B-77補助金第2弾8本(subsidies 26→34)。設備制度5(�
 
 ## 2026-08-09 高CPC語の既存強化（#313）とW1（8/3-9）着地
 - ★計画変更: 当初は「1kWh単価クラスタ残り2本＋選定軸1本」の新規3本を予定していたが、カニバリ事前確認により既存強化へ変更。office-electricity-cost-benchmark（オフィスの電気代相場）と sme-electricity-provider-comparison（中小企業向け電力会社の選び方｜比較で見るべき5項目）が既に存在し、新規を作れば共倒れになるため。使用量別早見表は狙いクエリが200kWh級＝家庭スケールでBtoC寄りのため8/8方針により不採用。
-- #313: contact電力とは主軸のtitle変更（contract-demand-what-is-it）／high-voltage-electricity-pricingのdescriptionで#312ページとの棲み分け明記／sme-electricity-provider-comparisonに新H2「ランキングで電力会社を選べない理由」（中立方針を守ったままランキング需要の受け皿を作る・特定事業者や媒体の名指しなし）／office-electricity-cost-benchmarkに新H2「オフィスの電気代 1kWhあたりの単価の目安」（4区分確定値＋#311への導線）。
+- #313: 契約電力とは主軸のtitle変更（contract-demand-what-is-it）／high-voltage-electricity-pricingのdescriptionで#312ページとの棲み分け明記／sme-electricity-provider-comparisonに新H2「ランキングで電力会社を選べない理由」（中立方針を守ったままランキング需要の受け皿を作る・特定事業者や媒体の名指しなし）／office-electricity-cost-benchmarkに新H2「オフィスの電気代 1kWhあたりの単価の目安」（4区分確定値＋#311への導線）。
 - ★実測で発注の前提が3点覆った（Windowsの事前確認による）: ①「契約電力とは」はGSC出現ゼロではなく7表示16.7位 ②contract-demand-what-is-itは「デマンド 契約電力 違い」2.9位7クリック等、デマンド意図で116表示10クリックを稼いでおり、titleからデマンドを外していれば機能中の順位を壊すところだった ③「高圧電力」は対象ページが未ランク（ランクは中電ミライズページ12.0位）のため深追いせずdescriptionのみ。
 - ★恒久ルール追加: 既存ページのメタを変更する前に、そのページが現に稼いでいるクエリをGSCで実測し、稼働中の意図を壊さないことを確認する（「取りこぼし」だけを見て判断しない）。QUALITY_RULESの検出手法の節に準じ、次回のルール更新時に明文化する。
 - W1（8/3-9）着地: 新規11本（補助金第3弾5・第4弾4・1kWh単価2）＋強化/是正9PR（#303 contact構造／#304 出典整備とメタ／#306 by-region 8県／#307 ドメイン移行127箇所／#309 断定表現／#310 時限切れ表現と品質ルール／#311 単価クラスタ／#312 取りこぼし回収9／#313 高CPC強化4）。週8-16本の新規目標を達成。
