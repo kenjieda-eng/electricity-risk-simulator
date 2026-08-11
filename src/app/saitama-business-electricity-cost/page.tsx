@@ -416,7 +416,7 @@ export default function SaitamaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            埼玉県の法人電気料金完全ガイド
+            埼玉県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             埼玉県は東京電力エリア、首都圏2大物流拠点（圏央道・関越道沿線）、さいたま・川口の都市部、熊谷・本庄の自動車部品工業、川口の鋳物工業という多層構造を持ちます。本ページでは県内法人の電気代水準、業種別影響、首都圏物流・猛暑日対策・PPA活用、補助金、契約見直しを実務的に整理します。

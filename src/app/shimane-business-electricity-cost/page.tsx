@@ -432,7 +432,7 @@ export default function ShimaneBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            島根県の法人電気料金完全ガイド
+            島根県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             島根県は中国電力エリアで、日立金属安来のヤスキハガネ特殊鋼、出雲市の電子部品工場（島根富士通・村田）、出雲大社・松江城・玉造温泉・石見銀山の観光業、浜田水産加工、隠岐諸島の離島供給と多様な産業構造を持ちます。2024年12月の島根原発2号機再稼働により燃料費調整額の改善が期待される立地県でもあります。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用・離島BCP対応を実務的に整理します。

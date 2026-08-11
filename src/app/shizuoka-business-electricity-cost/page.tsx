@@ -410,7 +410,7 @@ export default function ShizuokaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            静岡県の法人電気料金完全ガイド
+            静岡県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             静岡県は中部電力エリア（伊豆東部のみ東電エリア）で、東海道工業地帯のスズキ・ヤマハ等の輸送機械・楽器、富士の製紙業、牧之原の茶業、伊豆・富士山の観光業、浜松光産業と多様な産業構造を持ちます。本ページでは県内法人の電気代水準、業種別影響度、製紙業・浜松光産業特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

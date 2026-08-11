@@ -416,7 +416,7 @@ export default function IbarakiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            茨城県の法人電気料金完全ガイド
+            茨城県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             茨城県は東京電力エリア、鹿島臨海工業地帯の超大口コンビナート、つくば研究機関集積、日立・水戸の電機工業集積という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、コンビナート・物流・研究所の業種別影響、需要家主導型PPA活用、補助金、契約見直しを実務的に整理します。

@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "岡山県の法人電気料金完全ガイド｜中国電力エリア単価分析・水島コンビナート・倉敷ジーンズ・後楽園観光の契約最適化";
+  "岡山県・倉敷の法人電気代｜平均と相場の基準、中国電力エリアでの電力会社の選び方";
 const pageDescription =
-  "岡山県の法人電気料金を地域特化で解説。中国電力エリアの単価水準を業種別に再加工して提示し、水島コンビナート（石油化学・鉄鋼）、倉敷ジーンズ繊維、岡山後楽園・倉敷美観地区観光業、農産物冷蔵の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
+  "岡山県・倉敷の法人電気代の平均と相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。中国電力エリアの石炭火力依存と島根原発2号機再稼働が単価に及ぼす構造、電力会社を比較する5観点、水島コンビナート・倉敷ジーンズ・観光業の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -165,6 +165,33 @@ const ppsNetUnitData = [
     label: "県内産業構造との接続 — 石油化学・鉄鋼・繊維・観光に応じた契約判断",
     detail:
       "pps-net.org/unit の単価データを岡山県の産業構造に紐づけて再加工すると、①水島コンビナートの石油化学・鉄鋼の特高契約は固定5年で年間5〜15億円の安定化効果、②倉敷ジーンズ・岡山機械工業のような24時間稼働高圧契約は時間帯別料金最適化で年間500〜2,000万円の削減余地、③倉敷美観地区・後楽園・蒜山高原の観光業中小契約は地域密着型新電力との連携で年間100〜300万円規模の最適化余地、という3層構造で契約判断を行うべき。水島コンビナートの規模感を活かした共同調達も検討余地がある。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "水島コンビナートの鉄鋼・石油化学プラントや製油所など、超大口需要が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "岡山市の機械工場、児島の繊維事業者、倉敷美観地区の宿泊施設や物流拠点の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "岡山・倉敷市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や農産物向けの小型冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -367,6 +394,8 @@ const faqItems = [
   { question: "岡山県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、岡山県脱炭素・省エネ設備導入補助、岡山市・倉敷市・備前市の脱炭素補助、観光庁・農水省・環境省の省エネ補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "倉敷美観地区・後楽園等の観光業の電気代削減ポイントは？", answer: "①客室空調インバータ更新＋人感センサ連動、②LED全館化、③スパ温水・厨房の高効率化、④高圧契約の競争入札による単価最適化、⑤観光庁・環境省補助の活用、の5本柱が中心。投資回収は補助金活用で2〜3年が目安です。" },
   { question: "南海トラフ地震想定地域でのBCP対応は電力契約にどう影響しますか？", answer: "岡山県は南海トラフ地震想定地域で、特に水島コンビナート・倉敷美観地区の事業者にとってBCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散（リスク分散）、③地域密着型新電力との連携、④BEMSによる停電復旧時の電力管理、の4点が重要。新電力選定時にBCP対応力を必ず評価してください。" },
+  { question: "岡山県・倉敷の電気代の平均・相場はいくらですか？", answer: "県や市の単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準として読みます。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。岡山県は水島コンビナートの特別高圧から市内店舗の低圧まで需要の幅が広く、区分をまたいだ平均には意味がありません。自社の契約区分に対応する全国値と、請求書から消費税・再エネ賦課金を除いて求めた実質単価を比べてください。" },
+  { question: "岡山県で電力会社を選ぶときは何を比べればよいですか？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。順位づけされた一覧を探すより、この5項目を自社の条件で埋めるほうが判断は確実です。電力量料金の安さだけで選ぶと、燃調方式や解約条件の違いで年間の支払総額が逆転することがあります。" },
 ];
 
 const sourcesItems = [
@@ -404,7 +433,7 @@ export default function OkayamaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岡山県の法人電気料金完全ガイド
+            岡山県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岡山県は中国電力エリアで、水島コンビナート（JFEスチール西日本・三菱ケミカル・旭化成・JX水島製油所等）の石油化学鉄鋼業、倉敷市児島のジーンズ繊維、岡山市の機械工業、岡山後楽園・倉敷美観地区・蒜山高原の観光業、晴れの国の太陽光発電適地として多様な産業構造を持ちます。2024年12月の島根原発2号機再稼働により燃料費調整額の改善が期待されます。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。
@@ -524,6 +553,67 @@ export default function OkayamaBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-xs text-slate-500">
               出典: 新電力ネット（<a href="https://pps-net.org/unit" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">https://pps-net.org/unit</a>）を加工して作成
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              岡山県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              「倉敷の相場はいくらか」「岡山市だと平均どのくらいか」という問いに、行政区画ごとの数字で答えられる公的統計は存在しません。理由は単純で、水島の鉄鋼・石油化学プラントと児島の縫製事業者では、契約している電気そのものが別物だからです。地域で括るかわりに、契約区分という軸で全国の実績値を取り、そこに自社を重ねてみてください。以下はその手順です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 自社の契約区分を特定し、対応する全国実績値を取る</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              手元の請求書で契約種別がどれにあたるかを先に決めます。そのうえで、下表から同じ区分の数値だけを抜き出してください。使うのは電力取引報の最新確定分にあたる2026年4月分の実績値です。区分をまたいで眺めても判断材料にはなりません。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、岡山県または中国電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 中国電力エリアの構造を重ねて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              岡山県は中国電力エリアに属します。同エリアは石炭火力への依存度が高い電源構成を持つため、燃料価格の変動が燃料費調整額を通じて単価に伝わる経路は、LNG中心のエリアとは異なる動き方をします。加えて島根原発2号機の再稼働はエリアの電源構成に関わる変化であり、全国値との差を検討する際の前提として押さえておく必要があります。ただし将来の単価がどう動くかは断定できないため、実際の判断は自社の請求書に表れた燃調の実額から行ってください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を選択肢に入れる場合は、JEPX中国エリアプライスの振れ方も確認します。価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず、自社が変動をどこまで許容できるかで判断してください。エリア単位の推移は{" "}
+              <Link href="/region-chugoku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中国エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 同じ土俵に揃えてから自社の数字と突き合わせる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              ここで注意したいのが、請求書の支払総額をそのまま使わないことです。①の全国値は消費税と再エネ賦課金を除いた範囲で計算されているため、自社側も同じ範囲に揃えないと数円単位でずれます。作業は次のとおりです。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>過去1年分の検針票を月順に用意する</li>
+              <li>各月について、消費税と再エネ賦課金を除いた金額（基本料金＋電力量料金＋燃料費調整額）を書き出す</li>
+              <li>それを同月の使用量（kWh）で割り、月次の実質単価を算出する</li>
+              <li>1年分を平均し、①で選んだ全国値との差額を出す</li>
+              <li>差が目立つ月を抜き出し、燃調・契約電力・稼働量のどれが動いたのかを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              この切り分けまで進めると、岡山県内でも事業所ごとに答えが変わることが見えてきます。水島のプラントは24時間稼働で負荷率が高いため、単価を動かしているのはほぼ電力量料金と燃調です。対して倉敷美観地区の宿泊施設では、閑散期に使用量が落ちるぶん基本料金の重みが増し、同じ契約でも月次単価が跳ね上がります。年平均だけを見て割高と結論づけないでください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -731,6 +821,10 @@ export default function OkayamaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-chugoku-business-electricity", title: "中国電力エリアの法人電気代事情", description: "中国電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-chugoku-electricity-price-trend", title: "中国エリアの電気料金推移と単価水準", description: "岡山県が属する中国電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "https://pps-net.org/unit", title: "新電力ネット エリア別電力単価（出典）", description: "本ページのエリア単価分析の出典データ。最新の単価推移はこちら。" },
               { href: "/tottori-business-electricity-cost", title: "鳥取県の法人電気料金", description: "隣接県・中国電力エリアの事情。" },
               { href: "/shimane-business-electricity-cost", title: "島根県の法人電気料金", description: "隣接県・島根原発立地県の事情。" },

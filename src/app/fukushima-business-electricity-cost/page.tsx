@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "福島県の法人電気料金完全ガイド｜浜通り工業・廃炉作業・いわき港物流の契約最適化";
+  "福島県（福島市・郡山・いわき）の法人電気代｜相場の基準と電力会社比較・東北電力エリア";
 const pageDescription =
-  "福島県の法人電気料金を地域特化で解説。東北電力エリアの広域県、太平洋浜通り工業、原子力廃炉作業の電力消費、いわき港・小名浜物流、再エネ復興拠点としての特性、契約見直しと補助金活用までを実務的に整理します。";
+  "福島市・郡山・いわきを含む福島県の法人電気代の相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。東北電力エリアの再エネ比率と女川原発再稼働が単価に及ぼす構造、電力会社を比較する5観点、浜通り工業・港湾物流・会津の寒冷地負荷の特性を解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "燃料費調整額の福島県特性",
     detail:
       "東北電力エリアの燃料費調整額は2022〜2023年は月最大+6円/kWh水準、2024〜2025年は+3.0〜+4.5円/kWhレンジで推移。女川原発の再稼働進展で長期的には負担減の可能性があるが、為替・原油価格次第で再度上振れリスク。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "浜通りの大規模工場など、県内の超大口需要が該当しうる区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "郡山の製造業、いわき港・小名浜の物流拠点、福島市内の商業施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "福島・郡山・いわき市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "会津地域の豪雪事業所の電気代削減策は？", answer: "①寒冷地仕様ヒートポンプエアコンへの転換、②融雪設備のスマート制御（外気温・降雪量センサー連動）、③凍結防止ヒーターの温水循環化、④温泉熱の高効率利用、⑤BEMS導入の5本柱が効果的。SII補助・福島県補助の活用で投資回収1〜3年が目安です。" },
   { question: "福島県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、福島県再エネ・省エネ推進事業補助金、福島イノベーション・コースト構想関連補助、いわき市・郡山市・福島市の市町村補助の5本柱が中心。震災復興関連の特別支援もあり、最大3〜4補助の組合せが可能です。" },
   { question: "東北電力と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（東北電力ネットワーク）が担うため、東北電力契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。震災経験のある福島では特に重視されるポイントです。" },
+  { question: "福島県（福島市・郡山・いわき）の電気代の平均・相場はいくらですか？", answer: "県や市の単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準に読みます。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。福島県は浜通り・中通り・会津で気候も産業構成も異なり、県全体を一つの平均額で語ることに実務上の意味はありません。自社の契約区分に対応する全国値と、請求書から消費税・再エネ賦課金を除いて求めた実質単価を比べてください。" },
+  { question: "福島県で電力会社を比較する際は何を見ればよいですか？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。会津の事業所のように冬季の暖房・融雪負荷が重い拠点と、いわきの港湾物流のように通年で稼働する拠点では最適な契約が異なるため、県内に複数拠点がある場合は拠点ごとに使用実績を分けて見積を取ると比較の精度が上がります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function FukushimaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            福島県の法人電気料金完全ガイド
+            福島県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             福島県は浜通り・中通り・会津の三地域で気象条件と産業構造が大きく異なる広域県です。浜通り工業地帯、いわき港物流、会津豪雪地帯、再エネ復興拠点としての特性など多面的な側面を持ちます。本ページでは県内法人の電気代水準、業種別影響度、地域差、契約見直しの具体策、福島イノベーション・コースト構想関連補助の活用までを実務的に整理します。
@@ -485,6 +514,67 @@ export default function FukushimaBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              福島県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              福島市・郡山・いわきのいずれで事業を営む場合も、電気代の相場を「県の平均額」で捉えようとすると行き詰まります。県や市の単位で法人の電気代平均を示した公的統計がないうえ、福島県は浜通り・中通り・会津で気候も産業構成も大きく異なり、これらを均した数字は自社の判断材料になりません。相場は自社と同じ契約区分の全国水準として押さえ、そこからの距離を測るのが確実です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、福島県または東北電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 東北電力エリアの構造を重ねて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              福島県は東北電力ネットワークの管内です。東北電力エリアは再生可能エネルギーの比率が高いこと、女川原発の再稼働が電源構成に関わる変化であることが、推移を読むうえでの構造的な前提になります。全国値との差を検討するときは、こうしたエリアの事情に加えて、当該月の燃料費調整額がどちら向きに効いていたかを請求書で確認すると、乖離の理由の多くが説明できます。将来の単価水準は断定できないため、あくまで前提の確認材料として扱ってください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を選択肢に入れる場合は、JEPX東北エリアプライスの振れ方も併せて確認します。価格差は時期・時間帯で大きく変動するため、特定の水準を前提に置かず、自社が変動をどこまで許容できるかで判断してください。エリア単位の推移は{" "}
+              <Link href="/region-tohoku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東北エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準値と突き合わせる相手は、自社の請求書から計算した実質単価です。全国値と同じ範囲まで請求額を絞ってから割り算すると、比較の前提が揃います。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月分の請求書を並べ、月ごとの請求額と使用量（kWh）を控える</li>
+              <li>請求額から消費税と再エネ賦課金を差し引き、基本料金・電力量料金・燃料費調整額の合計を残す</li>
+              <li>その合計 ÷ 使用量 で、月ごとの実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を取り、自社と同じ契約区分の全国値と並べて差を見る</li>
+              <li>差の大きい月について、燃料費調整額・基本料金（契約電力）・使用量の季節変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              会津の事業所は冬季の暖房・融雪で使用量が大きく伸びる一方、いわき港・小名浜の物流拠点は通年で稼働が安定しており、同じ県内でも月別の単価の出方が異なります。複数拠点を持つ場合は拠点ごとに分けて計算し、まとめた平均で判断しないようにしてください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +782,10 @@ export default function FukushimaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-tohoku-business-electricity", title: "東北電力エリアの法人電気代事情", description: "東北電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-tohoku-electricity-price-trend", title: "東北エリアの電気料金推移と単価水準", description: "福島県が属する東北電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/miyagi-business-electricity-cost", title: "宮城県の法人電気料金", description: "隣接県・東北の中核都市仙台を擁する宮城県の事情。" },
               { href: "/yamagata-business-electricity-cost", title: "山形県の法人電気料金", description: "隣接県・米沢工業地帯と果樹冷蔵の山形県の事情。" },
               { href: "/ibaraki-business-electricity-cost", title: "茨城県の法人電気料金", description: "隣接県・鹿島臨海工業地帯の茨城県の事情。" },

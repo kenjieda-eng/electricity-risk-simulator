@@ -410,7 +410,7 @@ export default function KyotoBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            京都府の法人電気料金完全ガイド
+            京都府の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             京都府は関西電力エリアで、京都市内の国内最大級観光業、西陣・友禅・京焼等の伝統工芸、洛南・けいはんな学研都市の京セラ・村田製作所・任天堂等の半導体電子部品・ハイテク産業、伏見の酒造、舞鶴港の物流と多様な産業構造を持ちます。関電原発再稼働により電力単価が他エリアより構造的に安いのが特徴。本ページでは府内法人の電気代水準、業種別影響度、観光業・京都市景観条例特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。
