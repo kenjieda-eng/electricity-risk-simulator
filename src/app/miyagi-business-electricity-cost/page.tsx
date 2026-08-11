@@ -457,7 +457,7 @@ export default function MiyagiBusinessElectricityCostPage() {
               宮城県の電気料金水準と全国比較
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              東北電力の単価は全国エリア比で1〜2円/kWh高めですが、東北6県の中では最も低い水準です。仙台都市圏は新電力競争が活発で切替メリットも大きいエリアです。
+              全国的な水準との差は契約区分・使用量・負荷率により変わります。仙台都市圏は新電力競争が活発で切替メリットも大きいエリアです。
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。

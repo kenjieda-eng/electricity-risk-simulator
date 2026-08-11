@@ -449,7 +449,7 @@ export default function AkitaBusinessElectricityCostPage() {
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">秋田県の電気料金水準と全国比較</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-              東北電力の単価は全国エリア比で1〜2円/kWh高めですが、風力PPA活用で1〜3円/kWh安く調達できるケースもあり、業種・規模次第で全国平均並みまで下げられる可能性があります。
+              全国的な水準との差は契約区分・使用量・負荷率により変わります。風力PPAの活用が選択肢になる場合がありますが、調達単価は案件条件により異なります。
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
