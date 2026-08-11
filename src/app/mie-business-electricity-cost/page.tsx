@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "三重県の法人電気料金完全ガイド｜四日市石油化学コンビナート・亀山半導体・伊勢志摩観光の契約最適化";
+  "四日市・鈴鹿を含む三重県の法人電気代｜平均・相場の目安と電力会社の比べ方";
 const pageDescription =
-  "三重県の法人電気料金を地域特化で解説。中部電力エリアの四日市石油化学コンビナート、亀山の半導体・自動車関連工業、伊勢志摩・鈴鹿サーキット観光業、紀州林業の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
+  "三重県の法人電気代の平均・相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。中部電力エリアの燃料費調整の効き方、電力会社を比較する5観点、四日市石油化学コンビナート・亀山半導体・伊勢志摩観光の負荷特性と契約見直しを実務目線で解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "大規模特別高圧需要家の特別契約",
     detail:
       "年間使用量1億kWh超の超大型事業者向けには、相対契約による割引が一般化。四日市コンビナートの大型化学プラントは年間10〜30億kWh級の電力消費が多数、特別契約交渉余地が大きい業種。新電力経由でさらに優遇可能性がある。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "四日市コンビナートの化学プラント・製油所、亀山の半導体系大規模工場が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "鈴鹿・津の中規模工場、県内の物流センターや伊勢志摩の大型宿泊施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "四日市・津市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "三重県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、三重県脱炭素・省エネ設備導入補助、四日市市・鈴鹿市・津市の脱炭素補助、経産省GX関連補助・コンビナート再編支援の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "亀山半導体工場の電気代対策は？", answer: "①特別高圧の競争入札による単価最適化、②クリーンルーム空調の可変風量制御＋AI最適化、③外気冷房（フリークーリング）併用でPUE改善、④需要家主導型オフサイトPPAで再エネ調達、⑤蓄電池・BEMSによる需要最適化、の5本柱が中心。SBT・RE100対応と電気代削減を両立できます。" },
   { question: "南海トラフ地震想定地域でのBCP対応は電力契約にどう影響しますか？", answer: "三重県南部は南海トラフ地震・津波想定地域で、BCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散（リスク分散）、③地域密着型新電力との連携（地産地消エネルギー）、④BEMSによる停電復旧時の電力管理、の4点が重要。新電力選定時にBCP対応力を必ず評価してください。" },
+  { question: "三重県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準に読むのが実務的です。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。三重県は四日市コンビナートの特別高圧から津市内の店舗の低圧まで需要の幅が広く、区分をまたいだ平均には意味がありません。自社の契約区分に対応する全国値と、請求書から消費税・再エネ賦課金を除いて求めた実質単価を比べてください。" },
+  { question: "三重県で電力会社を比較する際は何を見ればよいですか？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。三重県は県内の大半が中部電力エリアで南部の一部が関西電力エリアにあたるため、事業所ごとに供給エリアが異なる場合は、見積依頼の前に供給地点特定番号でエリアを確認しておくと比較の前提が揃います。電力量料金の安さだけで選ぶと、燃調方式や解約条件の違いで年間の支払総額が逆転することがあります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function MieBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            三重県の法人電気料金完全ガイド
+            三重県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             三重県は中部電力エリア（南部一部は関電エリア）で、四日市石油化学コンビナート、亀山の半導体・液晶工場、鈴鹿の自動車工業、伊勢志摩・鈴鹿サーキットの観光業、紀州林業・水産業と多様な産業構造を持ちます。本ページでは県内法人の電気代水準、業種別影響度、四日市コンビナート・半導体工場特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。
@@ -485,6 +514,67 @@ export default function MieBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              三重県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              「三重県の電気代の相場」を調べると県の平均額を探したくなりますが、県単位で法人の電気代平均を示した公的統計はありません。三重県はとりわけ需要の幅が大きく、四日市コンビナートには年間十億kWh規模を使う化学プラントがある一方、津や伊勢の商店街には低圧契約の小規模事業所が並びます。この両者を足して割った数字には実務上の意味がありません。相場は「県の平均額」ではなく「自社と同じ契約区分の全国水準」として捉え、そこからの距離を測るのが確実です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              下記は電力取引報の最新確定分である2026年4月分の実績単価です。まず請求書に記載された契約種別を確認し、対応する区分の数値を基準値として使ってください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、三重県または中部電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。この単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 中部電力エリアの構造を重ねて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              三重県は県内の大半が中部電力エリアで、南部の一部が関西電力エリアにあたります。中部電力エリアは浜岡原発が停止した状態が続き、LNGを中心とする火力への依存度が高い電源構成です。そのため国際的な燃料価格の変動が燃料費調整額を経由して単価に届きやすく、全国値との差を検討するときは、まず当該月の燃調がどちら向きに効いていたかを確認すると乖離の大部分が説明できます。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を選択肢に入れる場合は、JEPXの中部エリアプライスの振れ方も併せて確認します。価格差は時期・時間帯によって大きく変動するため、特定の水準を前提に置かず、自社が変動をどこまで許容できるかで判断してください。エリア単位の推移は{" "}
+              <Link href="/region-chubu-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中部エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準値と突き合わせる相手は、自社の請求書から計算した実質単価です。比較の前提を揃えるため、全国値と同じ範囲まで請求額を絞り込んでから割り算します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月分の請求書を並べ、月ごとの請求額と使用量（kWh）を控える</li>
+              <li>請求額から消費税と再エネ賦課金を差し引き、基本料金・電力量料金・燃料費調整額の合計を残す</li>
+              <li>その合計 ÷ 使用量 で、月ごとの実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を取り、自社と同じ契約区分の全国値と並べて差を見る</li>
+              <li>差の大きい月について、燃料費調整額・基本料金（契約電力）・使用量の季節変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              四日市の連続運転プラントのように24時間稼働の設備を持つ事業所は負荷率が高く、基本料金の影響が相対的に小さいぶん、電力量料金と燃調の動きがそのまま実質単価に表れます。逆に伊勢志摩の宿泊施設のように季節波動が大きい事業所では、閑散期に使用量が落ちて基本料金の比重が上がり、実質単価が跳ねて見える点に注意してください。業種平均との乖離率を確認するには{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、地域・業種・契約条件から年間電気代と削減余地を試算するには{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}が使えます。
             </p>
           </section>
 
@@ -693,6 +783,10 @@ export default function MieBusinessElectricityCostPage() {
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-chubu-business-electricity", title: "中部電力エリアの法人電気代事情", description: "中部電力管内の料金体系・改定動向の詳細。" },
               { href: "/region-kansai-business-electricity", title: "関西電力エリアの法人電気代事情", description: "南部一部が関電エリアのため。" },
+              { href: "/region-chubu-electricity-price-trend", title: "中部エリアの電気料金推移と単価水準", description: "三重県の大半が属する中部電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/aichi-business-electricity-cost", title: "愛知県の法人電気料金", description: "隣接県・中京工業地帯の愛知県の事情。" },
               { href: "/gifu-business-electricity-cost", title: "岐阜県の法人電気料金", description: "隣接県・美濃工業の岐阜県の事情。" },
               { href: "/shiga-business-electricity-cost", title: "滋賀県の法人電気料金", description: "隣接県・関西電力エリアの滋賀県の事情。" },

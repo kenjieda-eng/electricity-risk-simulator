@@ -416,7 +416,7 @@ export default function TochigiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            栃木県の法人電気料金完全ガイド
+            栃木県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             栃木県は東京電力エリア、宇都宮・小山の自動車工業集積、日光・那須の観光業、佐野・宇都宮の物流拠点という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、自動車工業・物流・リゾートホテルの業種別影響、PPA活用、補助金、契約見直しを実務的に整理します。

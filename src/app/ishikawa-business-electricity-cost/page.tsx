@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "石川県の法人電気料金完全ガイド｜機械工業・金沢観光業・加賀温泉郷の契約最適化";
+  "石川県・金沢の法人電気代はいくらが目安か｜相場の読み方と電力会社比較（北陸電力エリア）";
 const pageDescription =
-  "石川県の法人電気料金を地域特化で解説。北陸電力エリア、コマツ系機械工業集積、金沢の伝統産業・観光業、加賀温泉郷、能登半島復興、2024年地震影響、契約見直しと補助金活用までを実務的に整理します。";
+  "石川県・金沢の法人電気代の相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。北陸電力エリアの水力比率と2023年値上げが単価に及ぼす構造、電力会社を比較する5観点、機械工業・金沢の観光業・加賀温泉郷の負荷特性と契約見直しを実務目線で解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "燃料費調整額の北陸電力特性",
     detail:
       "電源構成で火力依存度45%、水力30%、再エネ25%程度のため、燃料費調整額の変動幅は中程度。2022〜2023年は月最大+7円/kWh水準、2024〜2025年は+3.5〜+5.0円/kWhレンジで推移。志賀原発の再稼働見通しは2024年地震で不透明で、当面は高水準継続見込み。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "県内では建設機械・電子部品などの大規模工場が該当しうる区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "金沢市内のホテル・商業施設、加賀温泉郷の旅館、中規模工場や冷凍倉庫の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "金沢・小松の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "石川県で固定プランと市場連動プランのどちらが向きますか？", answer: "冬季ピーク時のスポット価格高騰リスクと2023年大幅値上げの経験を考えると、24時間稼働の機械工業・観光業・冷凍倉庫は固定プランが圧倒的に向きます。市場連動プランは限定的なケースのみ検討対象です。" },
   { question: "石川県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、石川県脱炭素・省エネ設備導入補助金、金沢市・小松市の市町村補助、能登半島地震復興関連支援制度の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "北陸電力と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（北陸電力ネットワーク）が担うため、北陸電力契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。能登地震の経験から、復旧体制の確認は特に重要です。" },
+  { question: "石川県・金沢の電気代の平均・相場はどれくらいですか？", answer: "県や市の単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準に置いて読みます。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。金沢の宿泊施設と加賀の工場では契約区分も負荷の形も異なるため、県平均という一つの数字ではなく、自社と同じ区分の全国値と請求書の実質単価を突き合わせる形で確認してください。" },
+  { question: "石川県で電力会社を比較するときの手順は？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点で揃えます。各社には同一の使用実績データを渡し、同じ前提で見積を取ることが出発点です。加賀温泉郷の旅館のように月別の使用量差が大きい事業所では、単価表の比較だけでなく繁閑差を反映した年間試算まで出してもらうと判断を誤りにくくなります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function IshikawaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            石川県の法人電気料金完全ガイド
+            石川県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             石川県は北陸電力エリアの中核県で、コマツ系建設機械工業、金沢の伝統産業・観光業、加賀温泉郷・和倉温泉、能登水産加工など多彩な産業が集積します。2023年北陸電力大幅値上げと2024年能登半島地震の影響が県内法人にとって大きなコスト圧力。本ページでは県内法人の電気代水準、業種別影響度、契約見直しの具体策、復興支援を含む補助金活用までを実務的に整理します。
@@ -485,6 +514,67 @@ export default function IshikawaBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              石川県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              「石川県の電気代はいくらが普通か」を確かめようとしても、県や市の単位で法人の電気代平均を示した公的統計は存在しません。金沢の宿泊施設、加賀の温泉旅館、小松周辺の機械工場では契約区分も負荷の形も異なり、これらをまとめた平均値は自社の判断材料になりません。相場は自社と同じ契約区分の全国水準として押さえ、そこからどれだけ離れているかを見るほうが実務に直結します。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、石川県または北陸電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 北陸電力エリアの構造を踏まえて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              石川県は北陸電力エリアに属します。同エリアは全国屈指の包蔵水力を背景に水力の比率が高く、燃料価格の変動が単価に伝わる経路が火力中心のエリアとは異なります。一方で2023年には大幅な料金改定があり、その水準がその後の比較の起点になっている事業者も少なくありません。全国値との差を見るときは、燃料費調整額の効き方に加えて、改定後の料金メニューを前提に置けているかを確認してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX北陸エリアプライスの振れ方も併せて見ます。価格差は時期・時間帯で大きく変動するため、特定の水準を前提にせず、自社が変動をどこまで許容できるかで判断するのが安全です。エリア単位の推移は{" "}
+              <Link href="/region-hokuriku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北陸エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              全国値と突き合わせる自社の数値は、次の手順で求めます。基準値と範囲を揃えてから割り算するのが要点です。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月の請求書から、月ごとの請求額と使用量（kWh）を書き出す</li>
+              <li>請求額から消費税と再エネ賦課金を除き、基本料金・電力量料金・燃料費調整額の合計を残す</li>
+              <li>その合計 ÷ 使用量 を計算し、月別の実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を、自社の契約区分に対応する全国値と並べる</li>
+              <li>乖離の大きい月を取り出し、燃料費調整額・契約電力・使用量の季節変動のどれが効いたかを分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              加賀温泉郷の旅館のように稼働の波が大きい事業所では、閑散期に使用量が落ちるぶん基本料金の比重が上がり、実質単価が高く出ます。年平均だけを見て割高と判断せず、必ず月別に分けて確認してください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +782,10 @@ export default function IshikawaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-hokuriku-business-electricity", title: "北陸電力エリアの法人電気代事情", description: "北陸電力管内の料金体系・2023年大幅値上げの詳細。" },
+              { href: "/region-hokuriku-electricity-price-trend", title: "北陸エリアの電気料金推移と単価水準", description: "石川県が属する北陸電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/toyama-business-electricity-cost", title: "富山県の法人電気料金", description: "隣接県・アルミ産業の富山県の事情。" },
               { href: "/fukui-business-electricity-cost", title: "福井県の法人電気料金", description: "隣接県・繊維・原発立地の福井県の事情。" },
               { href: "/niigata-business-electricity-cost", title: "新潟県の法人電気料金", description: "隣接県・燕三条金属加工の新潟県の事情。" },

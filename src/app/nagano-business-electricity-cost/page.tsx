@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "長野県の法人電気料金完全ガイド｜諏訪精密機械・軽井沢観光業・山岳地域の契約最適化";
+  "長野県の法人電気代 相場・平均の目安｜中部・東京2エリア混在での電力会社比較";
 const pageDescription =
-  "長野県の法人電気料金を地域特化で解説。中部電力エリア（一部東京電力エリア）、諏訪・岡谷の精密機械集積、軽井沢・志賀高原の観光業、長野市・松本市の電機工業、山岳地域の特殊事情、契約見直しと補助金活用までを実務的に整理します。";
+  "長野県の法人電気代の相場・平均を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。県内に中部電力エリアと東京電力エリアの境界が走るため、事業所ごとに供給エリアを確認したうえで電力会社を比較する5観点、諏訪の精密機械・軽井沢の観光業・果樹冷蔵の負荷特性を解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "燃料費調整額の中部電力特性",
     detail:
       "電源構成で火力依存度55%程度のため、燃料費調整額の変動幅は中程度。2022〜2023年は月最大+5〜+6円/kWh水準、2024〜2025年は+3.0〜+4.0円/kWhレンジで推移。浜岡原発の再稼働見通しは不透明で、当面は同水準継続見込み。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "県内では大規模な電機・精密機械の製造拠点が該当しうる区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "諏訪・岡谷の精密機械工場、軽井沢・白馬のリゾート施設、果樹の冷蔵施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "長野・松本市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "りんご冷蔵庫・ワイン醸造の電気代削減ポイントは？", answer: "①CO2冷媒インバータ式冷蔵庫への更新（SII＋農水補助活用）、②ワイナリーの発酵タンク温度管理高効率化、③地下貯蔵庫の冷却高効率化、④収穫期シーズン需要を反映した契約設計、⑤屋根太陽光＋蓄電池の自家消費、の5本柱が中心。投資回収は補助金活用で2〜3年が目安です。" },
   { question: "長野県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、長野県脱炭素・省エネ設備導入補助金、長野市・松本市・諏訪市の市町村補助、農水省の強い農業づくり交付金（果樹・ワイン向け）の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "中部電力と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（中部電力パワーグリッド・東京電力パワーグリッド）が担うため、復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。" },
+  { question: "長野県の電気代の平均・相場はいくらですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準にして読みます。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。長野県は県内に中部電力エリアと東京電力エリアの境界が走るため、県全体を一つの単価でくくること自体が実態に合いません。事業所ごとに供給エリアを確認したうえで、自社の契約区分に対応する全国値と請求書の実質単価を比べてください。" },
+  { question: "長野県で電力会社を比較するとき、エリアの違いはどう扱えばよいですか？", answer: "まず事業所ごとの供給エリアを確定させることが先決です。長野県は中部電力エリアと東京電力エリアが県内で分かれるため、複数拠点を持つ事業者では拠点によって供給エリアが異なることがあります。検針票や供給地点特定番号でエリアを確認したうえで、①単価構成、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を各社に同一条件で照会します。エリアが混在する場合は、拠点をまとめて1社に寄せる案と拠点ごとに最適化する案の両方を試算して比べると判断しやすくなります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function NaganoBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            長野県の法人電気料金完全ガイド
+            長野県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             長野県は中部電力エリアが主体で、佐久・上田・東御市など県東部は東京電力エリアという稀な2エリア混在県です。諏訪精密機械集積、軽井沢・志賀高原・白馬の観光業、東御・小布施のりんご・ワイン産業、山岳地域の特殊事情など多面的特性を持ちます。本ページでは県内法人の電気代水準、業種別影響度、契約見直しの具体策、補助金活用までを実務的に整理します。
@@ -485,6 +514,69 @@ export default function NaganoBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              長野県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              長野県の電気代の相場を考えるうえで最初に効いてくるのが、県内に中部電力エリアと東京電力エリアの境界が走っているという事情です。県全体を一つの単価でくくること自体が実態に合わず、加えて県単位で法人の電気代平均を示した公的統計もありません。相場はまず事業所の供給エリアを確定させ、そのうえで自社と同じ契約区分の全国水準からの距離として測る、という順序で捉えてください。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、長野県または特定エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 自社の供給エリアを確定してから構造を重ねる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              複数の拠点を持つ事業者では、拠点ごとに供給エリアが異なることがあります。比較を始める前に、検針票や供給地点特定番号で各拠点がどちらのエリアに属するかを確認してください。中部電力エリアは浜岡原発が停止した状態が続きLNGを中心とする火力への依存度が高い構成、東京電力エリアも同じくLNG火力の比率が高い構成で、いずれも燃料価格の変動が燃料費調整額を経由して単価に届きやすい点は共通します。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              エリア単位の推移は{" "}
+              <Link href="/region-chubu-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中部エリアの電気料金推移と単価水準</Link>
+              {" "}と{" "}
+              <Link href="/region-tokyo-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京（関東）エリアの電気料金推移と単価水準</Link>
+              {" "}に分けて整理しており、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}で確認できます。市場連動型を検討する場合は、該当するエリアのJEPXプライスの振れ方を見たうえで、変動をどこまで許容できるかで判断してください。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準値と突き合わせる相手は、自社の請求書から計算した実質単価です。全国値と同じ範囲まで請求額を絞ってから割り算します。拠点が複数ある場合は、拠点ごとに分けて計算してください。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月分の請求書を拠点別に並べ、月ごとの請求額と使用量（kWh）を控える</li>
+              <li>請求額から消費税と再エネ賦課金を差し引き、基本料金・電力量料金・燃料費調整額の合計を残す</li>
+              <li>その合計 ÷ 使用量 で、月ごとの実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を取り、自社と同じ契約区分の全国値と並べて差を見る</li>
+              <li>差の大きい月について、燃料費調整額・基本料金（契約電力）・使用量の季節変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              軽井沢や白馬のリゾート施設は季節による稼働差が大きく、閑散期は使用量が落ちるぶん基本料金の比重が上がって実質単価が高く出ます。標高差の大きい県内では冬季の暖房負荷が地域によって大きく異なる点も、拠点間の単価差を読むときの前提になります。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -693,6 +785,11 @@ export default function NaganoBusinessElectricityCostPage() {
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-chubu-business-electricity", title: "中部電力エリアの法人電気代事情", description: "中部電力管内の料金体系・改定動向の詳細。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "県東部・東電エリア部分の料金体系。" },
+              { href: "/region-chubu-electricity-price-trend", title: "中部エリアの電気料金推移と単価水準", description: "県内の中部電力エリア部分の推移を深掘り。相場の前提確認に。" },
+              { href: "/region-tokyo-electricity-price-trend", title: "東京（関東）エリアの電気料金推移と単価水準", description: "県内の東京電力エリア部分の推移を深掘り。拠点別の比較に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/yamanashi-business-electricity-cost", title: "山梨県の法人電気料金", description: "隣接県・精密機械と観光業の山梨県の事情。" },
               { href: "/niigata-business-electricity-cost", title: "新潟県の法人電気料金", description: "隣接県・燕三条金属加工の新潟県の事情。" },
               { href: "/toyama-business-electricity-cost", title: "富山県の法人電気料金", description: "隣接県・アルミ産業の富山県の事情。" },

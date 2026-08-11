@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "山梨県の法人電気料金完全ガイド｜精密機械（セイコー等）・富士五湖観光業・ワイン産業の契約最適化";
+  "山梨県は何電力エリア？法人電気代の相場と電力会社比較｜東京電力エリアの単価目安";
 const pageDescription =
-  "山梨県の法人電気料金を地域特化で解説。東京電力エリア、甲府盆地の精密機械（セイコー等）、富士五湖・山中湖の観光業、勝沼ワイン産業、桃・ぶどう果樹園の電力負荷、契約見直しと補助金活用までを実務的に整理します。";
+  "山梨県は東京電力エリアです。法人電気代の相場を契約区分別の全国確定単価（高圧21.37円/kWh等）から読む手順、LNG火力依存が燃料費調整に及ぼす影響、電力会社を比較する5観点、精密機械・富士五湖の観光業・ワイン産業の負荷特性と契約見直しを実務目線で整理します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "燃料費調整額の東電特性",
     detail:
       "電源構成でLNG・石炭火力依存度が65%程度のため、燃料費調整額の変動幅は大きい。2022〜2023年は月最大+8円/kWh、2024〜2025年は+3.0〜+4.5円/kWhレンジで推移。柏崎刈羽原発の再稼働進展で長期的には負担減の可能性。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "県内では大規模な精密機械・電子部品工場が該当しうる区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "甲府盆地の精密機械工場、河口湖・山中湖の宿泊施設、果樹の冷蔵施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "甲府市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。ワイナリーの醸造設備や小型の冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "山梨県の再エネ100%自治体宣言は事業者に影響しますか？", answer: "甲府市・北杜市・南アルプス市等の再エネ100%自治体宣言は、地域全体で再エネ調達を促進する政策です。事業者には法的義務はありませんが、自治体方針に沿った再エネ調達（需要家主導型PPA・再エネ証書購入）を行うことで補助金・優遇措置の対象になりやすくなります。県内太陽光・小水力PPAの活用が現実的です。" },
   { question: "山梨県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、山梨県脱炭素・省エネ設備導入補助金、甲府市・北杜市の市町村補助、農水省の強い農業づくり交付金（果樹・ワイン向け）の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "東電EPと新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（東京電力パワーグリッド）が担うため、東電EP契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。" },
+  { question: "山梨県は何電力のエリアですか？電気代の相場はどう見ればよいですか？", answer: "山梨県は東京電力パワーグリッドの管内で、東京電力エリアに属します。相場については、県単位で法人の電気代平均を示した公的統計がないため、契約区分ごとの全国確定単価を基準にします。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。自社の契約区分に対応する全国値と、請求書から消費税・再エネ賦課金を除いて求めた実質単価を比べてください。" },
+  { question: "山梨県で電力会社を比較するときは何を確認しますか？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。富士五湖周辺の宿泊施設や果樹の冷蔵施設のように季節で使用量が大きく動く事業所では、単価表の比較にとどめず、月別の使用実績を反映した年間試算まで出してもらうと判断を誤りにくくなります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function YamanashiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            山梨県の法人電気料金完全ガイド
+            山梨県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             山梨県は東京電力エリアで、甲府盆地の精密機械工業、富士五湖・山中湖の観光業、勝沼・甲州のワイン産業、全国一の桃・ぶどう果樹園など特色ある産業集積を持ちます。甲府盆地の猛暑による夏季冷房負荷、再エネ100%自治体宣言の活発化など県固有の論点があります。本ページでは県内法人の電気代水準、業種別影響度、契約見直しの具体策、補助金活用までを実務的に整理します。
@@ -485,6 +514,67 @@ export default function YamanashiBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              山梨県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              山梨県の電気代を調べるとき、まず確認されるのが「山梨県はどの電力エリアか」という点です。県内は東京電力パワーグリッドの管内で、東京電力エリアに属します。そのうえで相場を知ろうとすると県の平均額を探したくなりますが、県単位で法人の電気代平均を示した公的統計はありません。甲府盆地の精密機械工場と河口湖の宿泊施設では契約区分も負荷の形も異なるため、相場は自社と同じ契約区分の全国水準として捉えるのが実務的です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、山梨県または東京電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 東京電力エリアの構造を重ねて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              東京電力エリアはLNGを中心とする火力への依存度が高い電源構成です。そのため国際的な燃料価格の変動が燃料費調整額を経由して単価に反映されやすく、全国値との差を検討するときは、まず当該月の燃調がどちら向きに効いていたかを確認すると乖離の大部分を説明できます。県内では甲府盆地の夏季の高温と冬季の冷え込みが空調負荷を押し上げるため、使用量の季節差が単価の見え方に影響する点も併せて意識してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を選択肢に入れる場合は、JEPX東京エリアプライスの振れ方も確認します。価格差は時期・時間帯によって大きく変動するため、特定の水準を前提に置かず、自社が変動をどこまで許容できるかで判断してください。エリア単位の推移は{" "}
+              <Link href="/region-tokyo-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京（関東）エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 課税分と賦課金を外してから1kWhあたりを計算する</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              自社側の数字を作るときに間違えやすいのが、請求書の合計額をそのまま使ってしまうことです。①の全国値は消費税と再エネ賦課金を除いた範囲で算出されているため、同じ範囲に切り出さないと比較になりません。次の順で進めてください。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>過去1年分の検針票を月順に並べる</li>
+              <li>各月の内訳から消費税と再エネ賦課金を外し、基本料金＋電力量料金＋燃料費調整額の金額を控える</li>
+              <li>その金額を同月の使用量（kWh）で割って、月次の実質単価を求める</li>
+              <li>1年分を平均し、①で選んだ区分の全国値と比べて差額を確認する</li>
+              <li>差の目立つ月を抽出し、燃調・契約電力・稼働量のどれが効いたのかを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              月別に分けて見ると、山梨特有の季節差が数字に表れます。桃・ぶどうの予冷や貯蔵を担う冷蔵施設は収穫期に負荷が集中し、その時期だけ使用量が跳ね上がります。逆に稼働の少ない月は基本料金の比重が上がるため、実質単価だけが高く出ます。年平均のひとつの数字で割高と結論づけないでください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -692,6 +782,10 @@ export default function YamanashiBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電管内の料金体系・改定動向の詳細。" },
+              { href: "/region-tokyo-electricity-price-trend", title: "東京（関東）エリアの電気料金推移と単価水準", description: "山梨県が属する東京電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金", description: "近隣・首都経済集積の東京都の事情。" },
               { href: "/kanagawa-business-electricity-cost", title: "神奈川県の法人電気料金", description: "近隣・京浜工業地帯の神奈川県の事情。" },
               { href: "/nagano-business-electricity-cost", title: "長野県の法人電気料金", description: "隣接県・精密機械と観光業の長野県の事情。" },

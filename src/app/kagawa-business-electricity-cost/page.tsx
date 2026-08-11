@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "香川県の法人電気料金完全ガイド｜四国電力エリア単価分析・讃岐うどん製造・坂出造船・高松物流の契約最適化";
+  "香川県・高松の法人電気代 平均と相場｜四国電力エリアの単価目安と電力会社比較";
 const pageDescription =
-  "香川県の法人電気料金を地域特化で解説。四国電力エリアの単価水準を業種別に再加工して提示し、讃岐うどん製造・冷蔵倉庫、坂出造船（JMU・川重）、高松都市圏オフィス・データセンター、小豆島観光業の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
+  "香川県・高松の法人電気代の平均と相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。四国電力エリアが持つ「小売は割高グループ・卸は低水準」という二面性の読み方、電力会社を比較する5観点、讃岐うどん製造・坂出造船・小豆島観光の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -165,6 +165,33 @@ const ppsNetUnitData = [
     label: "県内産業構造との接続 — うどん製造・造船・物流・観光に応じた契約判断",
     detail:
       "pps-net.org/unit の単価データを香川県の産業構造に紐づけて再加工すると、①JMU坂出造船・川崎重工坂出のような特高契約は固定5年で年間1〜3億円の安定化効果、②讃岐うどん大手製造（テーブルマーク・カトキチ等）の高圧契約は冷蔵倉庫・粉砕機・茹で釜の連続稼働で年間300〜1,000万円の削減余地、③小豆島・直島観光業の中小契約は地域密着型新電力との連携で年間100〜300万円規模の最適化余地、という3層構造で契約判断を行うべき。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "坂出の造船・重工業や大規模な素材系プラントなど、超大口需要が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "讃岐うどん製造の工場・冷蔵倉庫、高松都市圏のオフィスビルや物流拠点の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "高松市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。うどん店の業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -367,6 +394,8 @@ const faqItems = [
   { question: "香川県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、香川県脱炭素・省エネ設備導入補助、高松市・坂出市・小豆島町の脱炭素補助、観光庁・農水省・環境省の省エネ補助の5本柱が中心。最大3〜4補助の組合せが可能で、投資回収を1〜2年短縮できます。" },
   { question: "小豆島・直島観光業の電気代削減ポイントは？", answer: "①客室空調インバータ更新＋人感センサ連動、②LED全館化、③スパ温水・厨房の高効率化、④高圧契約の競争入札による単価最適化、⑤観光庁・環境省補助の活用、の5本柱が中心。投資回収は補助金活用で2〜3年が目安です。" },
   { question: "南海トラフ地震・渇水・台風想定地域でのBCP対応は電力契約にどう影響しますか？", answer: "香川県は南海トラフ地震・渇水・台風想定地域で、特に讃岐うどん製造・坂出造船・データセンターの事業者にとってBCP対応は経営の必須要件です。①蓄電池・自家発電設備の併設、②複数の小売契約への分散、③地域密着型新電力との連携、④BEMSによる停電復旧時の電力管理、の4点が重要。" },
+  { question: "香川県・高松の電気代の平均・相場はいくらですか？", answer: "県や市の単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準にします。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。なお四国電力エリアは、小売の高圧単価では全国のなかで割高グループに位置する一方、卸電力市場（JEPX）の四国エリアプライスは全国最低水準という二面性があり、どちらの指標を見るかで印象が変わります。自社の位置は、請求書から消費税・再エネ賦課金を除いて求めた実質単価を同じ区分の全国値と比べて確認してください。" },
+  { question: "香川県で電力会社を比較するときのポイントは？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5観点を、同一の使用実績データをもとに各社へ照会して並べます。四国エリアは小売と卸で単価の見え方が異なるため、市場連動型を検討する場合は連動範囲と上振れ時の負担がどこまで及ぶかを、固定型と同じ土俵で試算して比べることが特に重要です。" },
 ];
 
 const sourcesItems = [
@@ -404,7 +433,7 @@ export default function KagawaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            香川県の法人電気料金完全ガイド
+            香川県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             香川県は四国電力エリアで、讃岐うどん製造（県内600軒超・大手テーブルマーク・カトキチ）、坂出造船（JMU・川崎重工）、高松都市圏のオフィス・データセンター、小豆島オリーブ・直島アートの観光業など多様な産業構造を持ちます。四国電力坂出火力発電所立地県として地域電力供給の中核を担い、伊方原発3号機の安定稼働により電力単価が全国平均より安い県です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。
@@ -524,6 +553,67 @@ export default function KagawaBusinessElectricityCostPage() {
             </div>
             <p className="mt-3 text-xs text-slate-500">
               出典: 新電力ネット（<a href="https://pps-net.org/unit" target="_blank" rel="noopener noreferrer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">https://pps-net.org/unit</a>）を加工して作成
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              香川県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              香川県や高松市の電気代の相場を調べても、県・市の単位で法人の電気代平均を示した公的統計は見つかりません。加えて四国電力エリアは、見る指標によって単価の印象が変わる点に注意が必要です。相場は「エリアが高いか安いか」という一言ではなく、自社と同じ契約区分の全国水準を基準に置き、そこからの距離として測るほうが実務に使えます。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、香川県または四国電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 四国電力エリアの二面性を踏まえて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              四国電力エリアには、旧一般電気事業者の標準メニューをベースにした小売の高圧電力量料金でみると全国のなかで割高グループに位置する一方、卸電力市場（JEPX）の四国エリアプライスは全国最低水準で推移してきたという二面性があります。「四国は安い」「四国は高い」という評価が併存するのはこのためで、どちらか一方だけを根拠に契約形態を決めると判断を誤ります。自社が固定型か市場連動型かによって、どちらの指標が効くのかが変わる点を先に整理してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              構造面では、伊方3号機の稼働状況が燃料費の安定度に関わること、本州側との連系線を通じた融通があること、製紙・造船・化学といった電力多消費型の産業構成を抱えることが、エリアの推移を読むうえでの前提になります。詳細と根拠は{" "}
+              <Link href="/region-shikoku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">四国エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。将来の価格水準は断定できないため、いずれも前提の確認材料として使ってください。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 請求書から自社の実質単価を出して比べる</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準値と突き合わせる相手は、自社の請求書から計算した実質単価です。全国値と同じ範囲まで請求額を絞ってから割り算します。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>直近12ヶ月分の請求書を並べ、月ごとの請求額と使用量（kWh）を控える</li>
+              <li>請求額から消費税と再エネ賦課金を差し引き、基本料金・電力量料金・燃料費調整額の合計を残す</li>
+              <li>その合計 ÷ 使用量 で、月ごとの実質単価（円/kWh）を求める</li>
+              <li>12ヶ月平均を取り、自社と同じ契約区分の全国値と並べて差を見る</li>
+              <li>差の大きい月について、燃料費調整額・基本料金（契約電力）・使用量の季節変動のどれが要因かを分解する</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              うどん製造の工場や併設の冷蔵倉庫は、製麺・茹で工程と保管の負荷が重なる時間帯にピークが立ちやすく、契約電力の決まり方が基本料金を通じて実質単価に効いてきます。小豆島の宿泊施設のように季節波動が大きい事業所では、閑散期に基本料金の比重が上がる点に注意してください。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -731,6 +821,10 @@ export default function KagawaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情(一覧)", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-shikoku-business-electricity", title: "四国電力エリアの法人電気代事情", description: "四国電力管内の料金体系・改定動向の詳細。" },
+              { href: "/region-shikoku-electricity-price-trend", title: "四国エリアの電気料金推移と単価水準", description: "香川県が属する四国電力エリアの推移を深掘り。小売と卸の二面性を確認できる。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "https://pps-net.org/unit", title: "新電力ネット エリア別電力単価(出典)", description: "本ページのエリア単価分析の出典データ。最新の単価推移はこちら。" },
               { href: "/tokushima-business-electricity-cost", title: "徳島県の法人電気料金", description: "隣接県・四国電力エリアの事情。" },
               { href: "/ehime-business-electricity-cost", title: "愛媛県の法人電気料金", description: "四国電力エリア・伊方原発立地県の事情。" },

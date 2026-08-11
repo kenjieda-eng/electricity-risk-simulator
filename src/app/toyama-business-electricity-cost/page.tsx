@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "富山県の法人電気料金完全ガイド｜アルミ産業全国1位・医薬品工業・黒部水力の契約最適化";
+  "富山県・富山市の法人電気代｜平均・相場の見方と電力会社を比較する5観点（北陸電力エリア）";
 const pageDescription =
-  "富山県の法人電気料金を地域特化で解説。北陸電力エリアの中核、アルミ製錬・圧延全国1位、医薬品工業、黒部ダム水力発電、2023年大幅値上げの影響、契約見直しと補助金活用までを実務的に整理します。";
+  "富山県・富山市の法人電気代の平均と相場を、契約区分別の全国確定単価（高圧21.37円/kWh等）を基準に読む手順で整理。北陸電力エリアの水力比率と2023年値上げが単価に及ぼす構造、電力会社を比較する5観点、アルミ産業・医薬品工業・宇奈月温泉の負荷特性と契約見直しを解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -142,6 +142,33 @@ const priceBenchmark = [
     label: "燃料費調整額の北陸電力特性",
     detail:
       "電源構成で火力依存度45%、水力30%、再エネ25%程度のため、燃料費調整額の変動幅は中程度。2022〜2023年は月最大+7円/kWh水準、2024〜2025年は+3.5〜+5.0円/kWhレンジで推移。志賀原発の再稼働進展（時期未定）で長期的には負担減の可能性があるが、当面は高水準が継続見込み。",
+  },
+];
+
+// --- 相場の基準に置く全国の確定単価 ---
+// 出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定／全国計・販売額÷販売電力量）。
+// 販売額に含む: 基本料金・電力量料金・燃料費調整額／含まない: 消費税・再エネ賦課金。
+// 県別・エリア別の平均値ではない点に注意。
+const nationalConfirmedUnitPrices = [
+  {
+    category: "特別高圧",
+    unit: "17.56円/kWh",
+    note: "アルミ製錬・圧延の大規模ラインなど、電力多消費型の超大口需要が属する区分。",
+  },
+  {
+    category: "高圧",
+    unit: "21.37円/kWh",
+    note: "医薬品工場、富山市内の商業施設・物流拠点、宇奈月温泉の宿泊施設の主力区分。",
+  },
+  {
+    category: "低圧電灯",
+    unit: "25.94円/kWh",
+    note: "富山・高岡市内の事務所や店舗で、照明・OA機器に対応する電灯契約分。",
+  },
+  {
+    category: "低圧電力",
+    unit: "32.12円/kWh",
+    note: "小規模事業所の動力設備。業務用空調や小型の冷凍冷蔵設備がここに含まれる。",
   },
 ];
 
@@ -344,6 +371,8 @@ const faqItems = [
   { question: "需要家主導型水力PPAの活用可否は？", answer: "北陸電力エリアは水力電源が豊富で、需要家主導型水力PPA契約の好適エリアです。アルミ・医薬品の大規模事業者でRE100対応とコスト削減を両立可能。長期的に安定した水力電源の単価メリットがあり、燃料費調整額の影響を受けにくい構造を確立できます。" },
   { question: "富山県で活用できる省エネ補助金は？", answer: "SII省エネ補助金（中小1/2、大企業1/3）、需要家主導型PPA補助金、富山県脱炭素・省エネ設備導入補助金、富山市・高岡市の市町村補助、経産省GX関連補助・電力多消費業種向け支援の5本柱が中心。最大3〜4補助の組合せが可能で、アルミ・医薬品の大型投資で投資回収を1〜2年短縮できます。" },
   { question: "北陸電力と新電力で停電時の対応に差がありますか？", answer: "停電時の物理的な復旧作業は一般送配電事業者（北陸電力ネットワーク）が担うため、北陸電力契約と新電力契約で復旧時間に差はありません。ただし新電力経由の場合、停電通知・補償対応の窓口が新電力小売事業者になるため、契約時に窓口体制を確認することが重要です。" },
+  { question: "富山県の電気代の平均・相場はどのくらいですか？", answer: "県単位で法人の電気代平均を示した公的統計はないため、契約区分ごとの全国確定単価を基準にして読みます。電力取引報の最新確定分である2026年4月分（全国計・販売額÷販売電力量）は、特別高圧17.56円/kWh、高圧21.37円/kWh、低圧電灯25.94円/kWh、低圧電力32.12円/kWhでした。この販売額には基本料金・電力量料金・燃料費調整額が含まれ、消費税・再エネ賦課金は含まれません。富山県はアルミ製錬のような電力多消費型の特別高圧需要と、市内店舗の低圧需要の差が大きく、区分をまたいだ平均には意味がありません。自社の契約区分に対応する全国値と、請求書から消費税・再エネ賦課金を除いて求めた実質単価を比べてください。" },
+  { question: "富山県で電力会社を比較する5観点とは何ですか？", answer: "①単価構成（基本料金と電力量料金の内訳、契約電力の決まり方）、②燃料費調整の方式（上限の有無・参照指標）、③市場連動の有無と連動範囲、④契約期間（自動更新条項の有無）、⑤解約条件（違約金・中途解約の可否）の5つです。各社に同一の使用実績データを渡し、同じ前提で見積を取ったうえでこの5項目を並べます。アルミ圧延のように電力費が製造原価に占める比率が高い事業では、単価の差だけでなく燃調の変動が損益に与える振れ幅まで確認しておくと、契約期間の判断がしやすくなります。" },
 ];
 
 const sourcesItems = [
@@ -382,7 +411,7 @@ export default function ToyamaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            富山県の法人電気料金完全ガイド
+            富山県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             富山県は北陸電力エリアの中核で、アルミ製錬・圧延全国1位、医薬品工業、黒部水力発電など特殊な電力構造を持ちます。2023年4月の北陸電力45.84%大幅値上げの影響を最も受けたエリアで、電気代見直しの緊急度が極めて高い県です。本ページでは県内法人の電気代水準、業種別影響度、契約見直しの具体策、補助金活用までを実務的に整理します。
@@ -486,6 +515,67 @@ export default function ToyamaBusinessElectricityCostPage() {
             </p>
             <p className="mt-2 text-xs text-slate-500">
               ※参考: 新電力ネット（電力単価・エリア別データ）https://pps-net.org/unit を参照。単価・統計は公開情報ベースの目安です。
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 className="text-xl font-semibold text-slate-900">
+              富山県の電気代 平均・相場の考え方（法人向け）
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              富山県の電気代の相場を知りたいとき、県の平均額という一つの数字を探しても答えは出ません。県や市の単位で法人の電気代平均を示した公的統計がないうえ、富山県はアルミ製錬・圧延のように電力を大量に使う特別高圧の需要家と、富山市内の店舗のような低圧の小規模事業所が同居しており、両者の単価は大きく開きます。相場は自社と同じ契約区分の全国水準として押さえ、そこからの距離を測るのが確実な進め方です。
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">① 契約区分別の全国確定単価を基準に置く</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              基準に使うのは、電力取引報の最新確定分である2026年4月分の実績単価です。請求書の契約種別を確認し、対応する区分の数値を出発点にしてください。
+            </p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {nationalConfirmedUnitPrices.map((row) => (
+                <div key={row.category} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">{row.category}　{row.unit}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ 上記4区分の数値は全国計・販売額÷販売電力量で求めた値であり、富山県または北陸電力エリアの平均値ではありません。販売額には基本料金・電力量料金・燃料費調整額を含み、消費税・再エネ賦課金は含みません。出典: 電力・ガス取引監視等委員会「電力取引報」から算出（2026年4月分・確定）。単価の定義は{" "}
+              <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">1kWhあたりの電気料金単価</Link>
+              {" "}で詳しく整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">② 北陸電力エリアの構造を踏まえて読む</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              富山県は北陸電力エリアの中核に位置します。同エリアは全国屈指の包蔵水力を背景に水力の比率が高く、燃料価格の変動が単価に伝わる経路は火力中心のエリアと同じではありません。他方で2023年の大幅な料金改定は県内法人にとって大きな転換点となり、比較の起点をどの時点に置くかで見え方が変わります。全国値との差を検討するときは、燃調の効き方に加えて、現在の契約が改定後のどのメニューに基づくものかを確認してください。
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              市場連動型を検討する場合は、JEPX北陸エリアプライスの振れ方も併せて見ます。価格差は時期・時間帯で大きく変動するため、特定の水準を前提にせず、変動の許容度で判断するのが安全です。エリア単位の推移は{" "}
+              <Link href="/region-hokuriku-electricity-price-trend" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北陸エリアの電気料金推移と単価水準</Link>
+              、全国10エリアの横並びは{" "}
+              <Link href="/electricity-price-trend-by-area" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エリア別の電気料金推移比較</Link>
+              {" "}に整理しています。
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-slate-900">③ 支払額を分解して自社の1kWhあたりを割り出す</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+              ここで使う自社の数字は、請求書の合計額そのものではありません。①に挙げた全国値は消費税と再エネ賦課金を除いた範囲の単価なので、自社側も同じ範囲に切り出してから割る必要があります。作業の順番は以下です。
+            </p>
+            <ol className="mt-3 list-decimal space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
+              <li>過去1年分の検針票を月順にそろえる</li>
+              <li>各月の請求内訳から、消費税と再エネ賦課金を除いた金額（基本料金＋電力量料金＋燃料費調整額）を抜き出す</li>
+              <li>その金額を同じ月の使用量（kWh）で割り、月ごとの実質単価を出す</li>
+              <li>12ヶ月を平均し、①で選んだ区分の全国値との差額を確認する</li>
+              <li>差が大きい月だけを取り出し、燃調・契約電力・稼働量のどれが動いた結果かを切り分ける</li>
+            </ol>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+              この分解を経ると、県内でも業態によって読み方が変わることがはっきりします。アルミ圧延や医薬品製造の連続運転ラインは負荷率が高いため、単価を左右しているのは実質的に電力量料金と燃調です。宇奈月温泉の宿泊施設ではその逆で、稼働の落ちる時期に基本料金の重みが増し、同じ契約のまま月次単価だけが上振れして見えます。業種平均との乖離率は{" "}
+              <Link href="/benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種×規模 電気代ベンチマークツール</Link>
+              、年間電気代と削減余地の試算は{" "}
+              <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気料金シミュレーター</Link>
+              {" "}で確認できます。
             </p>
           </section>
 
@@ -693,6 +783,10 @@ export default function ToyamaBusinessElectricityCostPage() {
             links={[
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリアの電気料金事情をハブから探す。" },
               { href: "/region-hokuriku-business-electricity", title: "北陸電力エリアの法人電気代事情", description: "北陸電力管内の料金体系・2023年大幅値上げの詳細。" },
+              { href: "/region-hokuriku-electricity-price-trend", title: "北陸エリアの電気料金推移と単価水準", description: "富山県が属する北陸電力エリアの推移を深掘り。相場の前提確認に。" },
+              { href: "/electricity-price-trend-by-area", title: "エリア別の電気料金推移比較", description: "全国10エリアを横並びで比較する総論。" },
+              { href: "/electricity-unit-price-per-kwh", title: "1kWhあたりの電気料金単価", description: "契約区分別の確定単価と、その算出定義（含む費目・含まない費目）を整理。" },
+              { href: "/benchmark", title: "業種×規模 電気代ベンチマークツール", description: "自社の電気代と業種平均の乖離率をその場で確認。" },
               { href: "/ishikawa-business-electricity-cost", title: "石川県の法人電気料金", description: "隣接県・機械工業の石川県の事情。" },
               { href: "/fukui-business-electricity-cost", title: "福井県の法人電気料金", description: "隣接県・繊維・原発立地の福井県の事情。" },
               { href: "/niigata-business-electricity-cost", title: "新潟県の法人電気料金", description: "隣接県・燕三条金属加工の新潟県の事情。" },
