@@ -330,7 +330,7 @@ export default function RegionOkinawaElectricityPriceTrendPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               沖縄の単価水準は、見る指標によって位置づけが変わる点に注意が必要です。旧一般電気事業者の標準メニューをベースにした<span className="font-semibold">小売の高圧電力量料金</span>でみると、
               沖縄電力エリアは全国10エリアの中で<span className="font-semibold">割高グループ</span>（参考水準として概ね17円/kWh前後で語られる区分）に位置します。
-              需要規模が他エリアより小さく、固定費の単価への乗せ方が相対的に高くなりやすい構造があるためです。
+              需要規模が相対的に小さく、固定費の単価への乗せ方が高くなりやすい構造があるためです。
               一方、沖縄は<span className="font-semibold">JEPXスポット対象外</span>であり、本土のようなエリアプライスを仕入れ指標にできません。小売単価は沖縄電力の燃調と自社電源構成（石油火力比率の高さ）で読む必要があります。
               この「小売は割高グループ・卸指標はJEPX対象外」という読み分けが要点です。これは統計上の相対位置の概括であり、エリア間の優劣を断定するものではありません。
             </p>

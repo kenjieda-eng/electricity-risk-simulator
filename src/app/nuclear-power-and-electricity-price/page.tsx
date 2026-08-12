@@ -111,7 +111,7 @@ const areaData = [
     outputMW: "約6,300MW（日本最大級）",
     reShare: "約20%（原子力が大部分）",
     highVoltageUnit: "約19〜23円/kWh",
-    note: "原発比率が高く、他エリアより単価が低め。再稼働の恩恵が最大",
+    note: "原発比率が高く、燃調感応度が低めとされる。再稼働の恩恵が最大",
   },
   {
     area: "中国エリア",
@@ -283,7 +283,7 @@ export default function NuclearPowerAndElectricityPricePage() {
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           2011年の福島第一原発事故以降、日本の多くの原発は停止し、電力会社は火力発電への依存を高めました。
           これがLNG・石炭の輸入増大を通じて電気料金上昇の一因となっています。
-          一方で2023年以降、一部の原発が再稼働し、特に関西・九州・四国エリアでは他エリアより低い単価水準が続いています。
+          一方で2023年以降、一部の原発が再稼働し、関西・九州・四国エリアでは燃料費調整額の変動が相対的に小さい局面があるとされます。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、10エリアの原発稼働状況と高圧単価の比較、稼働エリアと非稼働エリアの料金差、

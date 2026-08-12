@@ -314,7 +314,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">全国最高水準の電力量料金</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              北海道電力の高圧向け電力量料金は、本土9エリアの中で最も高い水準となっています。
+              北海道電力の高圧向け電力量料金は、寒冷地の需要構造と火力依存度の高さを背景とした水準になっているとされます。
               独立系統による他エリアからの融通制限、需要密度の低さ、燃料調達コストなどが複合的に作用しています。
               製造業や冷凍・冷蔵倉庫など電力多消費業種への影響が特に大きいエリアです。
             </p>
