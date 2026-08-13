@@ -175,7 +175,7 @@ export default function BasicRiskHubPage() {
           heading="必読記事"
           links={[
             {
-              href: "/what-is-capacity-contribution",
+              href: "/capacity-contribution-explained",
               title: "容量拠出金とは（必読）",
               description: "リスク評価で必ず把握すべき制度",
             },

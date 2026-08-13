@@ -135,7 +135,7 @@ export default function NegawattTradingExplainedPage() {
           </ul>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             供給力確保コストの転嫁構造は{" "}
-            <Link href="/what-is-capacity-contribution" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+            <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
               容量拠出金とは
             </Link>{" "}
             にまとめており、ネガワット取引が「需要側からの供給力提供」として位置づけられる背景を確認できます。

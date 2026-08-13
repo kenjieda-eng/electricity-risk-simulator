@@ -38,9 +38,9 @@ const CAPACITY_FAQ: { question: string; answer: string }[] = [
 ];
 
 
-const pageTitle = "容量拠出金とは｜2026年度5,226円/kW、2027年度7,847円/kW の法人電気代への影響を解説";
+const pageTitle = "容量拠出金とは｜制度の仕組みと法人の電気料金に与える影響の全体像";
 const pageDescription =
-  "容量拠出金は全国平均で2026年度5,226円/kW、2027年度7,847円/kW（+50%）、2028年度首都圏14,812円/kWに上昇。法人電気料金への転嫁額と年間コスト増を、契約電力規模別に実データで試算します。";
+  "容量拠出金とは、容量市場制度にもとづき小売電気事業者が負担し、電気料金を通じて法人・家庭に転嫁される費用です。容量市場の仕組み、約定価格の推移、固定プラン・市場連動プランでの転嫁のされ方、再エネ賦課金・燃料費調整額との違いまで、容量拠出金の全体像をこのページで整理します。";
 const publishedDate = "2026-04-09";
 
 export const metadata: Metadata = {
@@ -112,15 +112,68 @@ export default function CapacityContributionExplainedPage() {
 
 
       <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-700 sm:text-base">
-        📌 容量拠出金の全体像（仕組み・影響額・対策）は{" "}
-        <Link href="/what-is-capacity-contribution" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-          容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策
-        </Link>
-        （Pillar A）、制度全体の沿革は{" "}
-        <Link href="/capacity-market-timeline" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-          容量市場の制度変遷と電気料金への影響
-        </Link>
-        （Pillar B）を参照してください。
+        <p className="font-semibold text-slate-900">📌 容量拠出金の関連ページ（役割別の読み分け）</p>
+        <p className="mt-2">このページは容量拠出金の定義と全体像をまとめた起点です。目的別の詳細は次のページで確認してください。</p>
+        <ul className="mt-3 space-y-1">
+          <li>
+            単価・年度別推移を見る：{" "}
+            <Link href="/capacity-contribution-history" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金の年度別推移
+            </Link>
+          </li>
+          <li>
+            2026〜2028年度の単価一覧と月額目安を見る：{" "}
+            <Link href="/what-is-capacity-contribution" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金 2026〜2028年度の単価一覧と法人の月額負担目安
+            </Link>
+          </li>
+          <li>
+            料金への転嫁のされ方を知る：{" "}
+            <Link href="/capacity-contribution-cost-impact" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金はどう電気料金に転嫁されるか
+            </Link>
+          </li>
+          <li>
+            使用量別の影響額の目安を知る：{" "}
+            <Link href="/capacity-contribution-impact-on-business" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金で法人の電気代はいくら上がる？
+            </Link>
+          </li>
+          <li>
+            自社の数字で試算する：{" "}
+            <Link href="/capacity-contribution-simulation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金の負担額を自社で試算する手順
+            </Link>
+          </li>
+          <li>
+            見積書での扱いを確認する：{" "}
+            <Link href="/how-to-check-capacity-contribution-terms" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金の扱いを確認する方法
+            </Link>
+          </li>
+          <li>
+            契約書・年度予算に反映する：{" "}
+            <Link href="/capacity-contribution-what-to-check" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量拠出金を契約書と予算にどう織り込むか
+            </Link>
+          </li>
+          <li>
+            容量市場そのものを知る：{" "}
+            <Link href="/capacity-market-and-corporate-rates" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量市場と法人料金の関係
+            </Link>
+            {" / "}
+            <Link href="/capacity-market-timeline" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              容量市場の制度変遷と電気料金への影響
+            </Link>
+          </li>
+          <li>
+            他の制度改定とあわせて見る：{" "}
+            <Link href="/tariff-revision-calendar-2026" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
+              2026〜2028年 法人電気料金 制度改定カレンダー
+            </Link>
+          </li>
+        </ul>
       </div>
       <TableOfContents />
       <section className="mt-6 space-y-6">

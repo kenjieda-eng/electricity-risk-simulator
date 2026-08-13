@@ -7,9 +7,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 
 // --- 定数 ---
 const pageTitle =
-  "容量拠出金はいくら？使用量別の負担額シミュレーション";
+  "容量拠出金の負担額を自社で試算する手順｜年度別・使用量別の計算方法";
 const pageDescription =
-  "容量拠出金の負担額を月5,000/10,000/30,000/50,000/100,000/300,000 kWhの使用量別に、2024/2025/2026年度の年度推移で試算。業種別の目安も含めて、予算策定と社内説明に使える数字を整理します。";
+  "容量拠出金の負担額を自社の数字で試算する手順を、計算式と早見表で整理します。月5,000/10,000/30,000/50,000/100,000/300,000 kWhの使用量別に2024/2025/2026年度の試算を掲載し、業種別の目安もあわせて確認できます。";
 const pageUrl =
   "https://simulator.eic-jp.org/capacity-contribution-simulation";
 
@@ -186,7 +186,7 @@ export default function CapacityContributionSimulationPage() {
             料金が上がる理由を知る
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-            容量拠出金はいくら？使用量別の負担額シミュレーション
+            容量拠出金の負担額を自社で試算する手順
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             容量拠出金は、

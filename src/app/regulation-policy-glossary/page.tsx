@@ -106,7 +106,7 @@ export default function Page() {
             <dl className="mt-4 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
               <div><dt className="font-semibold text-slate-900">託送料金</dt><dd className="mt-1">一般送配電事業者の送電網利用料金。</dd></div>
               <div><dt className="font-semibold text-slate-900">レベニューキャップ</dt><dd className="mt-1">託送料金の総収入上限規制。2023年導入。</dd></div>
-              <div><dt className="font-semibold text-slate-900">容量拠出金</dt><dd className="mt-1">小売電気事業者が容量市場へ拠出する金銭。</dd></div>
+              <div><dt className="font-semibold text-slate-900">容量拠出金</dt><dd className="mt-1">小売電気事業者が容量市場へ拠出する金銭。詳しくは<Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金とは</Link>。</dd></div>
               <div><dt className="font-semibold text-slate-900">インバランス料金</dt><dd className="mt-1">計画値と実績値の差分に対する精算金。</dd></div>
             </dl>
           </section>
