@@ -18,9 +18,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "容量拠出金を踏まえて法人が確認したいこと｜見積書・契約書・予算策定のポイント";
+const pageTitle = "容量拠出金を契約書と予算にどう織り込むか｜確認したい条項と年度予算への反映";
 const pageDescription =
-  "容量拠出金に関して法人が見積書・契約書で確認すべきポイントと、予算策定への織り込み方を実務向けに整理します。固定プランと市場連動プランそれぞれの注意点も解説。";
+  "容量拠出金について契約書で確認したい条項と、年度予算への織り込み方を実務向けに整理します。固定プランと市場連動プランそれぞれの注意点、負担が見えにくくなるケースの見分け方もあわせて解説します。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -72,7 +72,7 @@ export default function CapacityContributionWhatToCheckPage() {
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">料金が上がる理由を知る</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">容量拠出金を踏まえて法人が確認したいこと</h1>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">容量拠出金を契約書と予算にどう織り込むか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
             容量拠出金の仕組み

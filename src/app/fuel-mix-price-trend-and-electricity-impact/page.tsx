@@ -504,7 +504,7 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             燃料リスクへの実務対策は 3 軸で整理できます。第一に、燃料費調整額上限ありプランへの切替。第二に、蓄電池・自家消費 PPA の導入で系統電力依存度を下げる。第三に、DR 参加で需給ひっ迫時に節電を収益化する。{" "}
             <Link
-              href="/what-is-capacity-contribution"
+              href="/capacity-contribution-explained"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               容量拠出金

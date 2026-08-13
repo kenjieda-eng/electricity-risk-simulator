@@ -9,9 +9,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 import SisterSiteLink from "../../components/simulator/SisterSiteLink";
 import FloatingCta from "../../components/simulator/FloatingCta";
 
-const pageTitle = "容量拠出金とは｜なぜ電気代に上乗せされるのか仕組みを図解【法人向け】";
+const pageTitle = "容量拠出金 2026〜2028年度の単価一覧と法人の月額負担目安";
 const pageDescription =
-  "容量拠出金とは何か、なぜ電気料金に上乗せされるのか、2026年度の単価と法人への影響額、月額試算と基本的な対策をわかりやすく解説します。";
+  "容量拠出金の2026〜2028年度の単価を一覧で整理し、法人の電気料金にどの程度乗るのかを月額の目安で示します。単価が上がる理由と、法人がとれる対策もあわせて確認できます。制度の定義と全体像は「容量拠出金とは」で解説しています。";
 const publishedDate = "2026-05-09";
 const pageUrl = "https://simulator.eic-jp.org/what-is-capacity-contribution";
 
@@ -103,7 +103,7 @@ export default function WhatIsCapacityContributionPage() {
         <p className="text-xs font-semibold tracking-wide text-sky-700">電気料金の推移と高止まり</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">{pageTitle}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          <strong className="font-semibold text-slate-900">容量拠出金</strong>とは、将来の電力供給力（kW）を確保するために小売電気事業者が容量市場で支払うコストを、電気料金として消費者に転嫁する費用です。本記事では「とは」検索者向けに、要点 → 単価表 → 法人月額試算 → 対策の順で短くまとめます。仕組みや歴史の深掘りは{" "}
+          <strong className="font-semibold text-slate-900">容量拠出金</strong>は、将来の電力供給力（kW）を確保するために小売電気事業者が容量市場で支払うコストを、電気料金として消費者に転嫁する費用です。本記事では年度別の単価一覧 → 法人月額の目安 → 対策の順に、金額の見当をつけるための数字をまとめます。制度の定義と全体像は{" "}
           <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
             容量拠出金（仕組み解説版）
           </Link>

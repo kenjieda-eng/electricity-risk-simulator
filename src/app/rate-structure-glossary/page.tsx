@@ -80,7 +80,7 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">制度関連の用語</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">再エネ賦課金：再エネ導入促進のためkWhあたり加算される賦課金。経産省が年度ごとに決定。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">託送料金：一般送配電事業者が送電網を使う対価として受け取る料金。小売料金に内包されます。</p>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">容量拠出金：将来の供給力確保のため、小売電気事業者が負担する料金。2024年度から本格稼働。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base"><Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">容量拠出金</Link>：将来の供給力確保のため、小売電気事業者が負担する料金。2024年度から本格稼働。</p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">料金プランの用語</h2>

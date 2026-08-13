@@ -1817,10 +1817,10 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-03-27",
   },
   {
-    title: "容量拠出金とは｜法人電気料金への影響と2024-2026年の負担額を解説",
+    title: "容量拠出金とは｜制度の仕組みと法人の電気料金に与える影響の全体像",
     slug: "capacity-contribution-explained",
     description:
-      "容量拠出金とは、2024年度開始の容量市場制度に基づき小売電気事業者が支払う負担金。法人の電気料金にkWh単価として転嫁される仕組み、2024〜2026年の負担水準、請求書での確認ポイントまで、法人向けに整理します。",
+      "容量拠出金とは、容量市場制度にもとづき小売電気事業者が負担し、電気料金を通じて法人・家庭に転嫁される費用。容量市場の仕組み、約定価格の推移、プラン別の転嫁のされ方、再エネ賦課金・燃調費との違いまで、全体像を整理します。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 11,
@@ -1828,10 +1828,10 @@ export const articleList: ArticleMeta[] = [
     lastVerifiedAt: "2026-04-19",
   },
   {
-    title: "容量拠出金で電気代はどのくらい上がるのか",
+    title: "容量拠出金はどう電気料金に転嫁されるか",
     slug: "capacity-contribution-cost-impact",
     description:
-      "容量拠出金のkWhあたり影響額を契約区分別に試算。再エネ賦課金・燃調費との比較や年度推移も含めて整理します。",
+      "容量拠出金が電気料金に乗る仕組みを、契約区分別のkWhあたり影響額で整理。再エネ賦課金・燃調費との比較、プラン別の出方の違いも解説します。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 12,
@@ -1849,10 +1849,10 @@ export const articleList: ArticleMeta[] = [
     lastVerifiedAt: "2026-04-19",
   },
   {
-    title: "容量拠出金を踏まえて法人が確認したいこと",
+    title: "容量拠出金を契約書と予算にどう織り込むか",
     slug: "capacity-contribution-what-to-check",
     description:
-      "容量拠出金に関して見積書・契約書で確認すべきポイントと、予算策定への織り込み方を実務向けに整理します。",
+      "容量拠出金について契約書で確認したい条項と、年度予算への織り込み方を実務向けに整理します。負担が見えにくくなるケースの見分け方も掲載。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 13,
@@ -4848,10 +4848,10 @@ export const articleList: ArticleMeta[] = [
     lastVerifiedAt: "2026-04-19",
   },
   {
-    title: "容量拠出金はいくら？使用量別の負担額シミュレーション",
+    title: "容量拠出金の負担額を自社で試算する手順",
     slug: "capacity-contribution-simulation",
     description:
-      "容量拠出金の負担額を月5,000〜300,000 kWhの6段階で、2024/2025/2026年度の年度推移で試算。業種別の目安も整理します。",
+      "容量拠出金の負担額を自社の数字で試算する手順を計算式と早見表で整理。月5,000〜300,000 kWhの6段階×2024/2025/2026年度の試算と業種別の目安も掲載します。",
     category: "料金が上がる理由を知る",
     categorySlug: "price-increase",
     order: 71,
@@ -5175,10 +5175,10 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-05-09",
   },
   {
-    title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策を完全解説",
+    title: "容量拠出金 2026〜2028年度の単価一覧と法人の月額負担目安",
     slug: "what-is-capacity-contribution",
     description:
-      "容量拠出金とは何か、なぜ電気料金に上乗せされるのか、2026年度の単価と法人への影響額、月額試算と対策をわかりやすく解説。既存「仕組み」記事との差別化版。",
+      "容量拠出金の2026〜2028年度の単価を一覧で整理し、法人の電気料金に乗る額を月額の目安で提示。単価が上がる理由と法人がとれる対策もあわせて確認できます。",
     category: "電気料金の推移と高止まり",
     categorySlug: "price-trends",
     order: 99,

@@ -607,6 +607,12 @@ export default function TariffRevisionCalendar2026Page() {
                   "2026年度の新単価、過去推移、法人の負担試算方法。",
               },
               {
+                href: "/capacity-contribution-explained",
+                title: "容量拠出金とは",
+                description:
+                  "容量市場の仕組みと、電気料金への転嫁のされ方をまとめた起点ページ。",
+              },
+              {
                 href: "/capacity-contribution-simulation",
                 title: "容量拠出金シミュレーション",
                 description:

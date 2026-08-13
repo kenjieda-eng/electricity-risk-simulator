@@ -17,9 +17,9 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "容量拠出金で電気代はどのくらい上がるのか｜契約区分別の影響試算";
+const pageTitle = "容量拠出金はどう電気料金に転嫁されるか｜契約区分別の影響と他費目との比較";
 const pageDescription =
-  "容量拠出金のkWhあたり影響額を契約区分別（特別高圧・高圧・低圧）に試算。再エネ賦課金・燃調費との比較、市場連動と固定プランでの出方の違いも含めて整理します。";
+  "容量拠出金が電気料金に乗る仕組みを、契約区分別（特別高圧・高圧・低圧）のkWhあたり影響額で整理。再エネ賦課金・燃料費調整額との比較、市場連動プランと固定プランでの出方の違いまで、転嫁構造の観点でまとめます。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -83,7 +83,7 @@ export default function CapacityContributionCostImpactPage() {
       {/* ヘッダー */}
       <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
         <p className="text-xs font-semibold tracking-wide text-sky-700">料金が上がる理由を知る</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">容量拠出金で電気代はどのくらい上がるのか</h1>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">容量拠出金はどう電気料金に転嫁されるか</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           <Link href="/capacity-contribution-explained" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
             容量拠出金の仕組み
