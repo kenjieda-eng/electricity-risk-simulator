@@ -721,7 +721,7 @@ export default function SubsidyZebZehBuildingPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、契約手続きは{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・交付書類の実務</Link>
               も参照ください。
@@ -839,7 +839,7 @@ export default function SubsidyZebZehBuildingPage() {
               { href: "/subsidy-waste-heat-recovery", title: "廃熱回収・排熱利用補助の活用ガイド", description: "排熱の再利用で一次エネルギー削減。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備の補助金", description: "創エネ・蓄電の補助金と自家消費。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "屋根太陽光の削減効果と回収試算。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "補助前後の回収年数を認証区分別に比較。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "国×自治体×税制の組合せ可否。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },

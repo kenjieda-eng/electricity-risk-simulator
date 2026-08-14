@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "沖縄県のホテル・宿泊業の電気料金完全ガイド｜恩納・名護・那覇・宮古石垣のリゾート／通年冷房・離島系統と沖縄電力契約";
+  "沖縄県のホテル・宿泊業の電気料金ガイド｜恩納・名護・那覇・宮古石垣のリゾート／通年冷房・離島系統と沖縄電力契約";
 const pageDescription =
   "沖縄県のホテル・宿泊業に特化した法人電気代ガイド。恩納村・読谷・名護の大型リゾート、那覇のビジネスホテル、宮古・石垣の離島リゾートの電力プロファイル、沖縄電力の独立系統・離島系統の単価事情、通年冷房・給湯・プールの省エネ、契約最適化を実務目線で整理します。";
 
@@ -405,7 +405,7 @@ export default function OkinawaHotelElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            沖縄県のホテル・宿泊業の電気料金完全ガイド
+            沖縄県のホテル・宿泊業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             沖縄県は観光立県として、恩納・名護のリゾート、那覇のビジネスホテル、宮古・石垣の離島リゾートが集積する宿泊業の一大集積地です。本ページでは「沖縄県 × ホテル・宿泊業」というクロス領域に絞り、沖縄電力の独立系統・離島系統の単価事情と、亜熱帯気候の通年冷房・台風BCP・自家消費太陽光までを実務目線で整理します。
@@ -424,7 +424,7 @@ export default function OkinawaHotelElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「沖縄 × 宿泊業」のクロス領域に特化したガイドです。沖縄県全体の文脈は{" "}
             <Link href="/okinawa-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              沖縄県の法人電気料金完全ガイド
+              沖縄県の法人電気料金ガイド
             </Link>
             、業種一般としてのホテル業全体は{" "}
             <Link href="/hotel-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

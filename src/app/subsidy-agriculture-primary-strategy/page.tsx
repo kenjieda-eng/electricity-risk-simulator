@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "農業・一次産業の補助金活用戦略 完全ガイド｜対象・補助率・申請の進め方";
+  "農業・一次産業の補助金活用戦略ガイド｜対象・補助率・申請の進め方";
 const pageDescription =
   "農業・一次産業（施設園芸・畜産・選果貯蔵・水産の陸上設備）に特化した補助金活用戦略。施設園芸の省エネ（ヒートポンプ暖房・木質バイオマス）、A重油からの燃料転換、選果場/冷蔵の自然冷媒、みどりの食料システム戦略関連を、規模別代表シナリオ・採択戦略・併用ルールで整理。";
 
@@ -369,7 +369,7 @@ export default function SubsidyAgriculturePrimaryStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            農業・一次産業の補助金活用戦略 完全ガイド
+            農業・一次産業の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             農業・一次産業（施設園芸・畜産・選果貯蔵・水産の陸上設備）は、加温・冷蔵・換気で燃料・電力を多く消費し、燃料費高騰の影響を受けやすい分野です。本ページでは施設園芸のヒートポンプ暖房・木質バイオマス、A重油からの燃料転換、選果場・冷蔵の自然冷媒、みどりの食料システム戦略関連の設備導入支援を、規模別の代表シナリオ・採択戦略・併用ルール・申請フローまで整理します。補助率・交付額は事業・年度・地域により変動し、採否は審査によります。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -554,7 +554,7 @@ export default function SubsidyAgriculturePrimaryStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX・CN投資促進税制の併用余地は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、蓄電池・太陽光は{" "}
               <Link href="/subsidy-battery-solar-equipment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池・太陽光設備の補助ガイド</Link>
               も参照ください。
@@ -576,7 +576,7 @@ export default function SubsidyAgriculturePrimaryStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、申請書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金の申請・交付書類ガイド</Link>
               、省エネ診断は{" "}
@@ -595,7 +595,7 @@ export default function SubsidyAgriculturePrimaryStrategyPage() {
                 <p className="text-sm font-semibold text-slate-900">国×自治体×再エネの切り分け</p>
                 <p className="mt-1 text-sm leading-6 text-slate-600">
                   国の支援（農水省系・SII・環境省）と、自治体の独自補助、再エネ調達支援を、設備・経費・財源の切り分けで組合せられる場合があります。可否は制度ごとに異なるため、所管窓口・自治体の農林水産部局で事前確認してください。詳細は{" "}
-                  <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+                  <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
                   。
                 </p>
               </div>
@@ -711,7 +711,7 @@ export default function SubsidyAgriculturePrimaryStrategyPage() {
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "補助前後の回収年数の目安比較。" },
               { href: "/subsidy-rejection-reasons-countermeasures", title: "補助金不採択の理由と対策", description: "不採択ポイントと再申請戦略。" },
               { href: "/subsidy-local-government-list", title: "自治体補助金の一覧・探し方", description: "農業・畜産・水産向けの地域補助。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象。" },
               { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "補助か契約見直しかの判断軸。" },
               { href: "/subsidy-manufacturing-strategy", title: "製造業の補助金活用戦略", description: "工場の生産設備が中心の場合はこちら。" },
               { href: "/subsidy-logistics-strategy", title: "物流業の補助金活用戦略", description: "冷蔵・冷凍倉庫・荷役が中心の場合はこちら。" },

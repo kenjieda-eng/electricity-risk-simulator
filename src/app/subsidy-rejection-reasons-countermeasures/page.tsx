@@ -368,7 +368,7 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            補助金不採択の理由と対策 完全ガイド
+            補助金不採択の理由と対策ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             補助金は予算と申請件数の関係で、要件を満たしても不採択になることがあります。重要なのは不採択を分析し、次の公募で改善することです。本ページでは費用対効果不足・必要性の説明不足・計画の整合性欠如・形式不備など、よくある不採択の6類型と減点ポイントを整理し、再申請の手順・採択率を高める対策・不採択から再申請で採択された事例を解説します。採択率は事務局公表値ベースで公募回により変動し、本ページでは推測しません。
@@ -483,7 +483,7 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               で詳しく解説しています。
             </p>
           </section>
@@ -533,7 +533,7 @@ export default function SubsidyRejectionReasonsCountermeasuresPage() {
               別補助金への切替は{" "}
               <Link href="/subsidy-local-government-list" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体補助金リスト</Link>
               、併用の検討は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               。
             </p>
           </section>

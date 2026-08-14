@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "ミツウロコでんき（ミツウロコグリーンエネルギー）法人向けプラン完全ガイド｜自社再エネ電源・固定単価型・燃調連動";
+  "ミツウロコでんき（ミツウロコグリーンエネルギー）法人向けプランガイド｜自社再エネ電源・固定単価型・燃調連動";
 const pageDescription =
   "ミツウロコでんき（運営: ミツウロコグリーンエネルギー株式会社／ミツウロコグループホールディングス傘下）の法人向けサービスを、公開情報に基づき中立的に整理。国内複数箇所の自社再生可能エネルギー発電所を背景とした電力小売・卸、都市ガス小売も手がける事業特性、高圧・特別高圧向けの燃料費調整ありの固定単価型メニュー体系、燃調連動条件、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣評価は行いません。";
 
@@ -379,7 +379,7 @@ export default function MitsuurokoGreenEnergyCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            ミツウロコでんき（ミツウロコグリーンエネルギー）法人向けプラン完全ガイド｜自社再エネ電源・固定単価型・燃調連動
+            ミツウロコでんき（ミツウロコグリーンエネルギー）法人向けプランガイド｜自社再エネ電源・固定単価型・燃調連動
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             ミツウロコでんき（運営: ミツウロコグリーンエネルギー株式会社／ミツウロコグループホールディングス傘下）の法人向けサービスを、公開情報に基づき中立的に整理します。国内複数箇所の自社再生可能エネルギー発電所を背景とした電力小売・卸、都市ガス小売も手がける事業特性、高圧・特別高圧向けの燃料費調整ありの固定単価型メニュー体系、燃調連動条件、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -700,7 +700,7 @@ export default function MitsuurokoGreenEnergyCorporateElectricityGuidePage() {
             links={[
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
-              { href: "/eneos-denki-corporate-electricity-guide", title: "ENEOSでんき（法人向け）完全ガイド", description: "石油系の全国系新電力の代表例。" },
+              { href: "/eneos-denki-corporate-electricity-guide", title: "ENEOSでんき（法人向け）ガイド", description: "石油系の全国系新電力の代表例。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

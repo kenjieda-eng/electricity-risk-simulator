@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "板橋区の法人電気料金完全ガイド｜光学産業・大日本印刷板橋・高島平物流";
+  "板橋区の法人電気料金ガイド｜光学産業・大日本印刷板橋・高島平物流";
 const pageDescription =
   "板橋区の法人電気料金を区固有の視点で解説。光学産業のまち（オリンパス・ニコン関連企業集積）、大日本印刷板橋工場ほか印刷業集積、高島平・成増の大型物流拠点、板橋・大山の大型商店街まで、約2,000社の中小製造業の契約見直し・補助金活用を実務的に整理します。";
 
@@ -372,7 +372,7 @@ export default function ItabashiKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            板橋区の法人電気料金完全ガイド
+            板橋区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             板橋区は『光学産業のまち』としてオリンパス・ニコン・キヤノン関連企業が集積し、大日本印刷板橋工場ほか印刷業の集積、高島平・成増の大型物流拠点、板橋・大山の大型商店街と多面的な事業者集積を持つ区です。本ページでは光学・印刷の標準メニュー切替余地、特別高圧大型印刷工場の競争入札戦略、物流DCの自家消費太陽光、契約見直し・補助金活用までを実務的に整理します。
@@ -414,7 +414,7 @@ export default function ItabashiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、中小製造業の論点は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -676,7 +676,7 @@ export default function ItabashiKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "市区町村別の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "丸の内・大手町の特別高圧オフィス集積。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の商業・オフィス集積。" },

@@ -301,7 +301,7 @@ export default function RenewableEnergySurcharge2026Page() {
               },
               {
                 href: "/subsidy-gx-cn-investment-tax",
-                title: "GX・CN投資促進税制 完全ガイド",
+                title: "GX・CN投資促進税制ガイド",
                 description: "賦課金負担増の対策として、省エネ・脱炭素設備投資に使える税額控除・特別償却。",
               },
               {

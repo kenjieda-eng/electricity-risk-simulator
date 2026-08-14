@@ -386,7 +386,7 @@ export default function SalaEEnergyCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            サーラの電気の法人向けプラン完全ガイド｜地域エネルギー系・全国供給のプラン体系とグリーンメニュー・燃調連動
+            サーラの電気の法人向けプランガイド｜地域エネルギー系・全国供給のプラン体系とグリーンメニュー・燃調連動
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             サーラの電気（サーラeエナジー株式会社／サーラグループの電力小売事業）の法人向けサービスを、公開情報に基づき中立的に整理します。サーラグループ（豊橋市）の電力小売として中部・関東広域型で電力小売を展開する事業特性、低圧（従量電灯S/M・動力P）から高圧・特別高圧（サーラの電気（高圧））までのプラン体系、グリーンメニュー（サーラの電気（CO2フリーオプション等））のCO2フリー・RE100対応、燃料費調整額の連動条件、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -657,7 +657,7 @@ export default function SalaEEnergyCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               、需要側の対策は{" "}
               <Link href="/demand-control-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドコントロールの基礎</Link>
               も参照ください。

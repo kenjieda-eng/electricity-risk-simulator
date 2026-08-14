@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "滋賀県の法人電気料金完全ガイド｜内陸工業（米原栗東）・琵琶湖周辺観光・電機機械の契約最適化";
+  "滋賀県の法人電気料金ガイド｜内陸工業（米原栗東）・琵琶湖周辺観光・電機機械の契約最適化";
 const pageDescription =
   "滋賀県の法人電気料金を地域特化で解説。関西電力エリアの内陸工業（米原・栗東・東近江）、琵琶湖周辺の観光業、電機・機械・自動車部品の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function ShigaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            滋賀県の法人電気料金完全ガイド
+            滋賀県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             滋賀県は関西電力エリアで、湖南・湖東の内陸工業集積地（パナソニック・京セラ・ブリヂストン・ヤンマー等）、琵琶湖周辺の観光業、栗東・名神沿線の大型物流センターと多様な産業構造を持ちます。関電の原発再稼働により燃料費調整額の変動が相対的に小さい局面があるとされる点が特徴。本ページでは県内法人の電気代水準、業種別影響度、内陸工業・観光業特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

@@ -105,7 +105,7 @@ export default function FuelCostAdjustmentHistoryPage() {
         </Link>
         、3 階層全体（燃料 vs 市場の総合比較）は{" "}
         <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-          メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+          メタピラー｜燃料費調整額と市場価格調整額の違いを比較
         </Link>
         を参照してください。
       </div>
@@ -266,7 +266,7 @@ export default function FuelCostAdjustmentHistoryPage() {
         <RelatedLinks
           heading="関連する解説ページ"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、両者の違いを整理します。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、両者の違いを整理します。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "制度の基本と計算式。" },
             { href: "/fuel-cost-adjustment-calculation", title: "燃料費調整額の計算式の詳細", description: "基準燃料価格と換算係数の考え方。" },
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "規制料金と自由料金の違い。" },

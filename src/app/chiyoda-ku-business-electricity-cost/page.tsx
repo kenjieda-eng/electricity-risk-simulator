@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "千代田区の法人電気料金完全ガイド｜大手町・丸の内・霞が関オフィス／官公庁／秋葉原IT電気街";
+  "千代田区の法人電気料金ガイド｜大手町・丸の内・霞が関オフィス／官公庁／秋葉原IT電気街";
 const pageDescription =
   "東京都千代田区の法人電気代を区固有の論点で解説。大手町・丸の内の特別高圧オフィス、霞が関中央官庁の電力入札、神田・秋葉原の商業・IT、大手町地域冷暖房（DHC）、丸の内再開発を踏まえた契約見直しと省エネ補助の実務をまとめます。";
 
@@ -372,7 +372,7 @@ export default function ChiyodaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            千代田区の法人電気料金完全ガイド
+            千代田区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             千代田区は大手町・丸の内の特別高圧オフィス、霞が関の中央官庁、神田・秋葉原のIT商業集積と、日本でも稀有な高密度業務地区です。本ページでは区内固有の電力事情、業種別影響、契約見直し、千代田区・東京都・国の補助金活用までを実務目線で整理します。

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "北海道の食品加工業の電気料金完全ガイド｜酪農・乳製品／水産加工／冷凍冷蔵の寒冷地24h稼働と北海道電力契約";
+  "北海道の食品加工業の電気料金ガイド｜酪農・乳製品／水産加工／冷凍冷蔵の寒冷地24h稼働と北海道電力契約";
 const pageDescription =
   "北海道の食品加工業に特化した法人電気代ガイド。十勝・釧路の酪農・乳製品、釧路・函館・稚内の水産加工、石狩・苫小牧の冷凍冷蔵倉庫の電力プロファイル、北海道電力エリアの単価事情、寒冷地特有の暖房・融雪と通年冷却の両立、契約最適化を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            北海道の食品加工業の電気料金完全ガイド
+            北海道の食品加工業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             北海道は酪農・乳製品、水産加工、冷凍冷蔵を中心とした国内最大級の食品加工集積地です。本ページでは「北海道 × 食品加工業」というクロス領域に絞り、北海道電力エリア固有の単価事情と、冷凍冷蔵24時間稼働・寒冷地の暖房融雪と通年冷却の両立・外気冷熱活用・酪農バイオガスまでを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function HokkaidoFoodProcessingElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「北海道 × 食品加工」のクロス領域に特化したガイドです。北海道全体の文脈は{" "}
             <Link href="/hokkaido-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              北海道の法人電気料金完全ガイド
+              北海道の法人電気料金ガイド
             </Link>
             、業種一般としての食品加工業全体は{" "}
             <Link href="/food-processing-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

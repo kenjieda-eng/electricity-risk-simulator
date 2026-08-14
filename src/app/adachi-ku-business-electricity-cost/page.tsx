@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "足立区の法人電気料金完全ガイド｜製造業・物流／北千住商業・中小工場集積の契約最適化";
+  "足立区の法人電気料金ガイド｜製造業・物流／北千住商業・中小工場集積の契約最適化";
 const pageDescription =
   "足立区の法人電気料金を区固有の産業集積（中小製造業・町工場、物流・倉庫、北千住の商業）から実務的に解説します。中小工場・物流の契約電力（kW）最適化・デマンド制御、規模別の代表シナリオ、足立区の省エネ補助までを整理します。";
 
@@ -370,7 +370,7 @@ export default function AdachiKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            足立区の法人電気料金完全ガイド
+            足立区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             足立区は23区北東部に広がり、区内各所に中小製造業・町工場（金属加工・機械・プレス、食品加工、印刷、樹脂成形）が広く集積するとともに、環七・首都高沿いや河川沿いに物流・倉庫拠点、北千住に大型商業・大学キャンパスを擁する多面的な産業構造を持つ区です。本ページでは「足立区 × 製造・物流・北千住商業」というクロス領域に絞り、中小工場・物流倉庫の電力プロファイル、契約電力（kW）最適化・デマンド制御、減免制度の考え方、足立区独自の省エネ補助、規模別の代表シナリオまでを実務目線で整理します。なお全区とも東京電力エリアで単価水準は共通のため、差別化は区の産業特性に置いています。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -412,7 +412,7 @@ export default function AdachiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -668,7 +668,7 @@ export default function AdachiKuBusinessElectricityCostPage() {
             links={[
               { href: "/taito-ku-business-electricity-cost", title: "台東区（浅草・上野）の法人電気料金", description: "浅草・上野の観光宿泊、御徒町・合羽橋の問屋街に特化した電気代見直しの実務ガイド。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "製造業・印刷業・物流拠点集積の区の電力需要と契約最適化。" },
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },
               { href: "/katsushika-ku-business-electricity-cost", title: "葛飾区の法人電気料金", description: "隣接区。中小製造業・町工場（金属加工・玩具）の事情。" },

@@ -443,7 +443,7 @@ export default function SubsidyIndustrialVehicleEvPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            フォークリフト・建機の電動化補助金 完全ガイド
+            フォークリフト・建機の電動化補助金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             本ページは乗用EVではなく、構内・現場で使う産業車両——電動フォークリフト・電動建設機械・構内EVトラック——の電動化に特化した補助金ガイドです。環境省の商用車の電動化促進事業、経済産業省のCEV補助金、GX建設機械認定制度などの実在制度を整理し、あわせて本サイト固有の視点として、充電の増加が契約電力（デマンド）・基本料金に与える影響と最適化を専用セクションで詳しく解説します。代表シナリオ3件の投資回収付きで、燃料費削減と電気代増を差し引いて中立的に判断できるよう整理します。
@@ -640,7 +640,7 @@ export default function SubsidyIndustrialVehicleEvPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、併用の可否は{" "}
               <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール</Link>
               。

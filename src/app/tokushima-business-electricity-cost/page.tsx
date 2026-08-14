@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "徳島県の法人電気料金完全ガイド｜四国電力エリア単価分析・日亜化学LED・医薬品・阿波踊り観光の契約最適化";
+  "徳島県の法人電気料金ガイド｜四国電力エリア単価分析・日亜化学LED・医薬品・阿波踊り観光の契約最適化";
 const pageDescription =
   "徳島県の法人電気料金を地域特化で解説。四国電力エリアの単価水準を業種別に再加工して提示し、日亜化学工業のLED・半導体、徳島大塚製薬・医薬品、阿波踊り観光業、鳴門わかめ水産加工の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function TokushimaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            徳島県の法人電気料金完全ガイド
+            徳島県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             徳島県は四国電力エリアで、阿南市の日亜化学工業（青色LED発明・世界トップシェア・パワー半導体）、徳島市・松茂の大塚製薬・大塚化学の医薬品工業、鳴門わかめ水産加工、阿波踊り・鳴門うずしお・祖谷渓の観光業など多様な産業構造を持ちます。新電力を含めた競争入札を検討する余地がある県です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "島根県の特殊鋼工場の電気料金完全ガイド｜安来の特殊鋼・刃物鋼の集積と中国電力エリア";
+  "島根県の特殊鋼工場の電気料金ガイド｜安来の特殊鋼・刃物鋼の集積と中国電力エリア";
 const pageDescription =
   "島根県の特殊鋼・金属に特化。安来の特殊鋼・刃物鋼・金属粉末の集積を背景に、電気炉（アーク炉）・圧延・熱処理の電力プロファイル、中国電力エリアの単価事情（島根2号機の再稼働進行）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ShimaneSteelElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            島根県の特殊鋼工場の電気料金完全ガイド
+            島根県の特殊鋼工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             島根県、とりわけ安来市は「ヤスキハガネ」で知られる特殊鋼・刃物鋼・金属粉末・電子材料の集積地です。本ページでは「島根県 × 特殊鋼」というクロス領域に絞り、中国電力エリア固有の単価事情（火力・水力主力で島根2号機の再稼働が進行・燃調感応度は中位）と、電気炉（アーク炉）の瞬時電力が極大という電力プロファイル、圧延・熱処理の用役負荷、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

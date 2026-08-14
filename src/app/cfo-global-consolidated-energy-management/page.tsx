@@ -8,7 +8,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
-const pageTitle = "海外拠点 連結エネルギーマネジメント完全ガイド｜RE100/SBTのグローバル整合（CFO向け）";
+const pageTitle = "海外拠点 連結エネルギーマネジメントガイド｜RE100/SBTのグローバル整合（CFO向け）";
 const pageDescription = "海外拠点を含む連結エネルギーマネジメントを、各国電力市況の違い・RE100/SBTのグローバル整合・I-REC等の証書調達・グループ調達ガバナンスの観点でCFO向けに整理。公開情報に基づく代表シナリオで、特定の電力会社・契約形態を推奨するものではありません。";
 const pageUrl = "https://simulator.eic-jp.org/cfo-global-consolidated-energy-management";
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
-const h1Text = "海外拠点 連結エネルギーマネジメント完全ガイド｜RE100/SBTのグローバル整合";
+const h1Text = "海外拠点 連結エネルギーマネジメントガイド｜RE100/SBTのグローバル整合";
 const breadcrumbTitle = "海外拠点 連結エネマネ";
 const leadText = "本記事は公開情報・制度に基づく一般的な情報整理であり、特定の電力会社・契約形態を推奨するものではありません。海外拠点を多く抱えるグループにとって、電気代はもはや各国子会社が個別に管理する経費ではなく、連結ベースでコスト・排出・調達リスクを束ねる経営テーマです。各国の電力市況と規制が異なり、為替やカントリーリスクも絡む中で、RE100やSBTといったグローバル目標との整合をどう取るか。CFO・経営企画が連結エネルギーマネジメントの全体像と論点を把握するための整理を提示します。";
 const d1CtaLead = "海外拠点の連結管理の第一歩は、自社の電気代を客観的なデータで捉えることです。業種別電気代計算機を使えば、業種ごとの電力使用の傾向をふまえた試算ができ、連結での見える化やシナリオ検討の出発点になります。実数値は契約条件・使用実態により異なりますが、まず自社の位置づけを把握する目安としてご活用ください。";

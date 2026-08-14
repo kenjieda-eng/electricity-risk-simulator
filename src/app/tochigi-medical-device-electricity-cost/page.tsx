@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "栃木県の医療機器工場の電気料金完全ガイド｜大田原・宇都宮の医療機器集積と東京電力エリア";
+  "栃木県の医療機器工場の電気料金ガイド｜大田原・宇都宮の医療機器集積と東京電力エリア";
 const pageDescription =
   "栃木県の医療機器製造業に特化。大田原・宇都宮を中心とする医療機器・精密機器の集積を背景に、クリーンルーム空調・精密加工・滅菌・検査の電力プロファイル、東京電力エリアの単価事情（LNG・石炭火力依存で燃料費調整額の感応度が中〜高）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function TochigiMedicalDeviceElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            栃木県の医療機器工場の電気料金完全ガイド
+            栃木県の医療機器工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             栃木県は大田原市・宇都宮市・那須塩原市を中心に、医療機器・精密機器の製造拠点が集積する地域です。本ページでは「栃木県 × 医療機器製造業」というクロス領域に絞り、東京電力エリア固有の単価事情（LNG・石炭火力依存で燃料費調整額の感応度が中〜高、高騰時の上振れ幅が大きい）と、クリーンルーム空調／精密加工／滅菌／検査の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

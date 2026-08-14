@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "長野県の精密機械・電子工場の電気料金完全ガイド｜諏訪・安曇野の精密／電子デバイス集積と中部電力";
+  "長野県の精密機械・電子工場の電気料金ガイド｜諏訪・安曇野の精密／電子デバイス集積と中部電力";
 const pageDescription =
   "長野県の精密機械・電子デバイス製造業に特化。諏訪・岡谷の精密機械（東洋のスイス）、安曇野の電子デバイス、上伊那の電子部品集積を核に、クリーンルーム・恒温恒湿の電力プロファイル、中部電力エリアの単価事情、特別高圧／高圧の契約最適化、補助金・PPA活用、脱炭素対応までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function NaganoPrecisionElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            長野県の精密機械・電子工場の電気料金完全ガイド
+            長野県の精密機械・電子工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             長野県は諏訪・岡谷を中心に時計・カメラを起源とする精密機械産業が発達し、「東洋のスイス」と呼ばれてきた歴史的集積地です。安曇野の電子デバイス、上伊那の電子部品、佐久・上田の電子・精密までを含む裾野が県全体に広がります。本ページでは「長野県 × 精密機械・電子デバイス製造業」というクロス領域に絞り、中部電力エリア固有の単価事情と、クリーンルーム／恒温恒湿の電力プロファイル、特別高圧・高圧の契約最適化、補助金・PPA活用、脱炭素対応までを実務目線で整理します。本ページは情報整理を目的としたものであり、特定の電力会社・契約形態を推奨するものではありません。

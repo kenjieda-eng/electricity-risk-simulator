@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "中央区の法人電気料金完全ガイド｜銀座百貨店／日本橋金融／晴海・勝どきタワマンと再開発電力";
+  "中央区の法人電気料金ガイド｜銀座百貨店／日本橋金融／晴海・勝どきタワマンと再開発電力";
 const pageDescription =
   "東京都中央区の法人電気代を区固有の論点で解説。銀座百貨店・宝飾店のファサード照明、日本橋の金融機関本店・COREDO再開発、月島・晴海・勝どきの湾岸タワー、築地市場跡再開発を踏まえた電力契約最適化と省エネ補助の実務をまとめます。";
 
@@ -372,7 +372,7 @@ export default function ChuoKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            中央区の法人電気料金完全ガイド
+            中央区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             中央区は銀座・日本橋・八重洲の伝統的商業金融、月島・晴海・勝どきの湾岸住商開発、築地・新富町の食品流通＋再開発進行と、業態が大きく異なる三層構造を持ちます。本ページでは区内固有の電力事情、業種別影響、契約見直し、中央区・東京都・国の補助金活用までを実務目線で整理します。

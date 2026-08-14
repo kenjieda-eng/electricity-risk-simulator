@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "徳島県の化学・LED工場の電気料金完全ガイド｜阿南の化学・LED関連集積と四国電力";
+  "徳島県の化学・LED工場の電気料金ガイド｜阿南の化学・LED関連集積と四国電力";
 const pageDescription =
   "徳島県の化学・LED製造業に特化。阿南を中心とした化学・LED関連・電子材料の集積を核に、化学反応・結晶成長・蛍光体・クリーンルームの電力プロファイル、四国電力エリアの単価事情（伊方3号機稼働）、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します（香川=食品・愛媛=製紙とは業種で分離）。";
 
@@ -406,7 +406,7 @@ export default function TokushimaChemicalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            徳島県の化学・LED工場の電気料金完全ガイド
+            徳島県の化学・LED工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             徳島県は阿南を中核に化学・LED関連・電子材料が集積し、特別高圧・高圧の電力多消費の大口需要家が立地する地域です。本ページでは「徳島県 × 化学・LED製造業」というクロス領域に絞り、四国電力エリア固有の単価事情（伊方3号機稼働で燃調感応度は中程度）と、化学反応・結晶成長・蛍光体・クリーンルームの電力プロファイル、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。同じ四国電力エリアでも香川＝食品、愛媛＝製紙とは業種・電力プロファイルが異なるため、本ページは化学・LEDに分離して扱います。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

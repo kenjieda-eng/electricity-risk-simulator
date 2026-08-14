@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "宮崎県の食品工場の電気料金完全ガイド｜畜産加工・焼酎・冷凍の集積と九州電力エリア";
+  "宮崎県の食品工場の電気料金ガイド｜畜産加工・焼酎・冷凍の集積と九州電力エリア";
 const pageDescription =
   "宮崎県の食品製造業に特化。畜産加工（食肉）・本格焼酎・冷凍食品の集積を背景に、冷凍冷蔵・加熱殺菌・蒸留の電力プロファイル、九州電力エリアの単価事情（原発稼働＋太陽光導入量が国内最大級で昼間の出力制御）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function MiyazakiFoodElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            宮崎県の食品工場の電気料金完全ガイド
+            宮崎県の食品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             宮崎県は肉用牛・豚・ブロイラーの畜産が全国有数で、食肉加工・冷凍・惣菜・本格焼酎（芋・麦）まで食品製造業の裾野が広い地域です。本ページでは「宮崎県 × 食品製造業」というクロス領域に絞り、九州電力エリア固有の単価事情（原発稼働＋太陽光導入量が国内最大級で晴天の昼間は出力制御が頻発）と、冷凍冷蔵／急速凍結／加熱殺菌・蒸留の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

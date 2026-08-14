@@ -425,7 +425,7 @@ export default function ElectricityCostRiskHeatwavePage() {
             },
             {
               href: "/what-is-capacity-contribution",
-              title: "容量拠出金とは｜2026〜2028年度の単価と法人への影響",
+              title: "容量拠出金 2026〜2028年度の単価一覧と月額負担目安",
               description: "夏の電力需給逼迫と容量市場の本格徴収を関連して把握",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

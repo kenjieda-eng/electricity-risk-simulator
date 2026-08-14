@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "東北電力 法人向けプラン完全ガイド｜東北6県＋新潟の特高/高圧契約・女川原発再稼働進行と水力資源";
+  "東北電力 法人向けプランガイド｜東北6県＋新潟の特高/高圧契約・女川原発再稼働進行と水力資源";
 const pageDescription =
   "東北電力株式会社の法人向け電力サービスを、公開情報に基づき中立的に整理。特別高圧・高圧の契約メニュー体系、女川・東通原発の再稼働進行と比較的豊富な水力資源を踏まえた燃料費調整額の感応度、東北6県＋新潟の供給区域、東日本大震災のBCP経験、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。";
 
@@ -352,7 +352,7 @@ export default function TohokuEpcoCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            東北電力 法人向けプラン完全ガイド｜東北6県＋新潟の特高/高圧契約・女川原発再稼働進行と水力資源
+            東北電力 法人向けプランガイド｜東北6県＋新潟の特高/高圧契約・女川原発再稼働進行と水力資源
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             東北電力株式会社の法人向け電力サービスを、公開情報に基づき中立的に整理します。特別高圧・高圧の契約メニュー体系、女川・東通原発の再稼働進行と比較的豊富な水力資源を踏まえた燃料費調整額の感応度、東北6県＋新潟の供給区域、東日本大震災のBCP経験、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -562,7 +562,7 @@ export default function TohokuEpcoCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
             <p className="mt-2 text-xs text-slate-500">

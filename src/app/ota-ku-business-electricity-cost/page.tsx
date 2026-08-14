@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "大田区の法人電気料金完全ガイド｜町工場集積・羽田空港物流・京浜工業地帯";
+  "大田区の法人電気料金ガイド｜町工場集積・羽田空港物流・京浜工業地帯";
 const pageDescription =
   "大田区の法人電気料金を区固有の視点で解説。東京最大の町工場集積（金属加工・精密機械・部品製造、約3,500社）、羽田空港物流DC、京浜島・城南島の湾岸工業、蒲田駅前商業まで、ものづくりのまちの契約見直し・補助金活用を実務的に整理します。";
 
@@ -372,7 +372,7 @@ export default function OtaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            大田区の法人電気料金完全ガイド
+            大田区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             大田区は『ものづくりのまち』として知られる東京最大の町工場集積地（約3,500社の中小製造業）。糀谷・大鳥居・蒲田の金属加工・精密機械、羽田空港物流DC、京浜島・城南島の湾岸工業、蒲田駅前商業と多面的な事業者集積を持ちます。本ページでは町工場の標準メニュー切替余地、羽田物流の24時間稼働対応、Scope3対応の再エネ調達、契約見直し・補助金活用までを実務的に整理します。
@@ -414,7 +414,7 @@ export default function OtaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、町工場の論点は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -676,7 +676,7 @@ export default function OtaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "市区町村別の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "丸の内・大手町の特別高圧オフィス集積。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の商業・オフィス集積。" },

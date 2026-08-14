@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "データセンター・IT業の補助金活用戦略｜経産省DC支援・GX税制でPUE改善・液冷を導入する完全ガイド";
+  "データセンター・IT業の補助金活用戦略｜経産省DC支援・GX税制でPUE改善・液冷を導入するガイド";
 const pageDescription =
   "データセンター・IT業に特化した補助金活用戦略ガイド。経産省の次世代データセンター/GX対応DC支援、GX投資促進税制、需要家主導型PPA補助を組合せ、PUE改善（外気冷房・液浸冷却・水冷チラー）・高効率空調（CRAC・FFU）・屋根太陽光・オフサイトPPAを導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。";
 
@@ -368,7 +368,7 @@ export default function SubsidyDatacenterItStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            データセンター・IT業の補助金活用戦略 完全ガイド
+            データセンター・IT業の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             データセンターはサーバ電力に加え冷却電力が大きく、24時間高負荷率で稼働するため、電力効率指標PUEの改善が省エネ・電気代削減の核心です。生成AI・HPC需要の急増で高密度化・液冷化も進んでいます。本ページでは経産省の次世代データセンター/GX対応DC支援・GX投資促進税制・SII省エネ補助・需要家主導型PPA補助を組合せ、PUE改善（外気冷房・液浸冷却・水冷チラー）・高効率空調・屋根太陽光・オフサイトPPAを導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。
@@ -526,7 +526,7 @@ export default function SubsidyDatacenterItStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -551,7 +551,7 @@ export default function SubsidyDatacenterItStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -576,7 +576,7 @@ export default function SubsidyDatacenterItStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、物流向け戦略は{" "}
               <Link href="/subsidy-logistics-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">物流業の補助金活用戦略</Link>
               も参照ください。
@@ -630,7 +630,7 @@ export default function SubsidyDatacenterItStrategyPage() {
             links={[
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-ppa-vppa-detail", title: "PPA/VPPA関連補助金の詳細", description: "オフサイトPPAと補助金の組合せ。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "DCのエネルギー管理システム補助。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備補助の活用ガイド", description: "屋根太陽光・蓄電池の補助。" },

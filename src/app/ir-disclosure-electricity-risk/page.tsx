@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
 
 const pageTitle =
-  "IR開示における電気代リスク｜有価証券報告書・統合報告書・株主総会対応の完全ガイド";
+  "IR開示における電気代リスク｜有価証券報告書・統合報告書・株主総会対応のガイド";
 const pageDescription =
   "CFO向けに有価証券報告書・統合報告書での電気代リスク開示、投資家への感度分析説明、株主総会の質問対応、TCFD/ISSB対応の記載例まで、IR実務に直結する情報を体系的に整理します。";
 

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "福井県の繊維・眼鏡工場の電気料金完全ガイド｜鯖江・越前の地場産業集積と北陸電力";
+  "福井県の繊維・眼鏡工場の電気料金ガイド｜鯖江・越前の地場産業集積と北陸電力";
 const pageDescription =
   "福井県の繊維・眼鏡製造業に特化。鯖江の眼鏡、越前・福井の合繊織物・染色加工の地場集積を核に、染色のボイラー蒸気・乾燥、織機、眼鏡の研磨・メッキ・成形の電力プロファイル、北陸電力エリアの単価事情（水力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用までを実務目線で整理します（富山=医薬品とは業種で分離）。";
 
@@ -406,7 +406,7 @@ export default function FukuiTextileElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            福井県の繊維・眼鏡工場の電気料金完全ガイド
+            福井県の繊維・眼鏡工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             福井県は鯖江の眼鏡（国内最大産地）と越前・福井の合繊織物・染色加工という二大地場産業が広く集積する地域です。本ページでは「福井県 × 繊維・眼鏡製造業」というクロス領域に絞り、北陸電力エリア固有の単価事情（水力比率が高く燃調感応度が相対的に低め）と、染色のボイラー蒸気・乾燥／織機／眼鏡の研磨・メッキ・成形の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお同じ北陸電力エリアでも、富山＝医薬品、福井＝繊維・眼鏡で業種・電力プロファイルが異なる点を分離して扱います。本ページは特定の電力会社・契約形態を推奨するものではありません。

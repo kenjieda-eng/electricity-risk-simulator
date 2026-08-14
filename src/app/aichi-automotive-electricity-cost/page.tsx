@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "愛知県の自動車・輸送機器工場の電気料金完全ガイド｜豊田・刈谷・田原・みよしの特別高圧プレス／塗装／溶接ライン";
+  "愛知県の自動車・輸送機器工場の電気料金ガイド｜豊田・刈谷・田原・みよしの特別高圧プレス／塗装／溶接ライン";
 const pageDescription =
   "愛知県の自動車・輸送機器製造業に特化した法人電気代ガイド。トヨタ城下町（豊田・刈谷・田原・みよし）のプレス／塗装／溶接／組立ラインの電力消費構造、中部電力エリアの単価水準、特別高圧の競争入札、補助金活用、EV化に伴う電力需要変化までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function AichiAutomotiveElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            愛知県の自動車・輸送機器工場の電気料金完全ガイド
+            愛知県の自動車・輸送機器工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             愛知県はトヨタ自動車本社を中心に、豊田・刈谷・田原・みよし・安城・西尾・岡崎までを含む世界トップクラスの自動車産業集積地です。本ページでは「愛知県 × 自動車・輸送機器製造業」というクロス領域に絞り、中部電力エリア固有の単価事情と、プレス／塗装／溶接／組立ラインの電力プロファイル、特別高圧の競争入札、補助金活用、EV化に伴う需要構造変化までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function AichiAutomotiveElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「愛知 × 自動車」のクロス領域に特化したガイドです。愛知県全体の文脈は{" "}
             <Link href="/aichi-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              愛知県の法人電気料金完全ガイド
+              愛知県の法人電気料金ガイド
             </Link>
             、業種一般としての自動車部品業全体は{" "}
             <Link href="/auto-parts-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

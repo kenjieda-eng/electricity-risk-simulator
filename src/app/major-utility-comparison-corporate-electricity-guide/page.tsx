@@ -559,7 +559,7 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -616,7 +616,7 @@ export default function MajorUtilityComparisonCorporateElectricityGuidePage() {
               { href: "/kyuden-corporate-electricity-guide", title: "九州電力（きゅうでん）の法人向けプラン", description: "九州エリアの個別解説。" },
               { href: "/okiden-corporate-electricity-guide", title: "沖縄電力（おきでん）の法人向けプラン", description: "沖縄エリアの個別解説。" },
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリア別の法人電気代事情ハブ。" },
-              { href: "/eneos-denki-corporate-electricity-guide", title: "ENEOSでんき（法人向け）完全ガイド", description: "全国系新電力の参考。" },
+              { href: "/eneos-denki-corporate-electricity-guide", title: "ENEOSでんき（法人向け）ガイド", description: "全国系新電力の参考。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の参考。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "燃調算定方式の基礎。" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備の全項目を整理。" },

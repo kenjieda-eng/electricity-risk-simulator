@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "群馬県の自動車・輸送機器工場の電気料金完全ガイド｜太田・大泉のSUBARU城下町とサプライヤー集積";
+  "群馬県の自動車・輸送機器工場の電気料金ガイド｜太田・大泉のSUBARU城下町とサプライヤー集積";
 const pageDescription =
   "群馬県の自動車・輸送機器製造業に特化。太田市のSUBARU群馬製作所（本工場・矢島工場）を核に大泉・伊勢崎・館林・邑楽郡のTier1/Tier2サプライヤー集積、プレス／塗装／溶接／組立ラインの電力プロファイル、東京電力エリアの単価事情、特別高圧の競争入札、補助金・PPA活用、EV化対応までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function GunmaAutomotiveElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            群馬県の自動車・輸送機器工場の電気料金完全ガイド
+            群馬県の自動車・輸送機器工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             群馬県は東毛地域（太田・大泉・伊勢崎・館林・邑楽郡）を中心に、完成車・部品・素材・物流が連なる自動車産業集積地です。太田市はSUBARU群馬製作所（本工場・矢島工場・大泉エンジン工場）を核とする企業城下町で、起源は中島飛行機にさかのぼります。本ページでは「群馬県 × 自動車・輸送機器製造業」というクロス領域に絞り、東京電力エリア固有の単価事情と、プレス／塗装／溶接／組立ラインの電力プロファイル、特別高圧の競争入札、補助金・PPA活用、EV化に伴う需要構造変化までを実務目線で整理します。

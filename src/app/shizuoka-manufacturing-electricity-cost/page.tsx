@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "静岡県の製造業の電気料金完全ガイド｜浜松の輸送機器・楽器／富士の製紙と中部・東京2エリアの特別高圧契約";
+  "静岡県の製造業の電気料金ガイド｜浜松の輸送機器・楽器／富士の製紙と中部・東京2エリアの特別高圧契約";
 const pageDescription =
   "静岡県の製造業に特化した法人電気代ガイド。浜松の輸送機器（スズキ・ヤマハ発動機・ホンダ）・楽器（ヤマハ・河合）、富士・富士宮の製紙の集積、富士川を境とした中部電力・東京電力の2エリア構造、抄紙機/プレス/塗装の電力プロファイル、特別高圧契約最適化を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ShizuokaManufacturingElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            静岡県の製造業の電気料金完全ガイド
+            静岡県の製造業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             静岡県は東海道工業地帯として、浜松の輸送機器・楽器、富士の製紙を中心に多様な製造業が集積する工業県です。本ページでは「静岡県 × 製造業」というクロス領域に絞り、富士川を境とした中部電力・東京電力の2エリア構造という静岡固有の論点と、抄紙機/プレス/塗装の電力プロファイル、製紙の自家発電、特別高圧契約最適化までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function ShizuokaManufacturingElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「静岡 × 製造業」のクロス領域に特化したガイドです。静岡県全体の文脈は{" "}
             <Link href="/shizuoka-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              静岡県の法人電気料金完全ガイド
+              静岡県の法人電気料金ガイド
             </Link>
             、業種一般としての組立工場全体は{" "}
             <Link href="/assembly-factory-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

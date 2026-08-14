@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "和歌山県の鉄鋼業の電気料金完全ガイド｜和歌山臨海の一貫製鉄所・コンビナートと関西電力エリア";
+  "和歌山県の鉄鋼業の電気料金ガイド｜和歌山臨海の一貫製鉄所・コンビナートと関西電力エリア";
 const pageDescription =
   "和歌山県の鉄鋼・化学に特化。和歌山市臨海部の一貫製鉄所・石油化学コンビナートを背景に、高炉・転炉・圧延・コークスの電力プロファイル、関西電力エリアの単価事情（原子力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function WakayamaSteelElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            和歌山県の鉄鋼業の電気料金完全ガイド
+            和歌山県の鉄鋼業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             和歌山県は和歌山市臨海部に高炉・転炉・連続鋳造・熱間／冷間圧延・コークス炉を擁する一貫製鉄所が立地し、隣接して石油化学コンビナートが広がる重工業集積地です。本ページでは「和歌山県 × 鉄鋼業」というクロス領域に絞り、関西電力エリア固有の単価事情（原子力比率が高く燃調感応度が相対的に低め）と、一貫製鉄所の電力プロファイル（副生ガス自家発と大口買電の併存）／圧延・補機・電気集塵の連続負荷、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

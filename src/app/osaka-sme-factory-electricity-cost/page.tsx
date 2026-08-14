@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "大阪府の中小製造業・町工場の電気料金完全ガイド｜東大阪・八尾の金属加工／プレス／樹脂成形と高圧契約最適化";
+  "大阪府の中小製造業・町工場の電気料金ガイド｜東大阪・八尾の金属加工／プレス／樹脂成形と高圧契約最適化";
 const pageDescription =
   "大阪府の中小製造業・町工場に特化した法人電気代ガイド。東大阪市・八尾市・大東市・門真市の金属加工・プレス・切削・樹脂成形・電子部品の集積、関西電力エリアの単価事情、高圧契約の最適化、補助金活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function OsakaSmeFactoryElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            大阪府の中小製造業・町工場の電気料金完全ガイド
+            大阪府の中小製造業・町工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             大阪府、特に東大阪市・八尾市・大東市・門真市は日本一の中小製造業集積地です。本ページでは「大阪府 × 中小製造業（町工場）」というクロス領域に絞り、関西電力エリア固有の単価事情と、金属プレス／切削／樹脂成形／電子部品の電力プロファイル、高圧契約の最適化、共同購入スキーム、補助金活用までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function OsakaSmeFactoryElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「大阪 × 中小製造業」のクロス領域に特化したガイドです。大阪府全体の文脈は{" "}
             <Link href="/osaka-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              大阪府の法人電気料金完全ガイド
+              大阪府の法人電気料金ガイド
             </Link>
             、業種一般としての金属加工業全体は{" "}
             <Link href="/metal-processing-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

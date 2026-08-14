@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "杉並区の法人電気料金完全ガイド｜阿佐ヶ谷・荻窪の中小オフィス／商業／アニメ制作の契約最適化";
+  "杉並区の法人電気料金ガイド｜阿佐ヶ谷・荻窪の中小オフィス／商業／アニメ制作の契約最適化";
 const pageDescription =
   "杉並区の法人電気料金を区固有の産業集積（阿佐ヶ谷・荻窪・高円寺の中小オフィス・商業、住宅地のサービス業、アニメ・映像制作スタジオ）から実務的に解説します。オフィス・商業の契約区分別の単価目安、規模別の代表シナリオ、杉並区の省エネ補助までを整理します。";
 
@@ -370,7 +370,7 @@ export default function SuginamiKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            杉並区の法人電気料金完全ガイド
+            杉並区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             杉並区は閑静な住宅地を背景に、阿佐ヶ谷・荻窪・高円寺・西荻窪の駅周辺へ中小オフィス・商業・飲食・サービス業が集積し、加えてアニメ・映像制作スタジオの集積地としても知られるエリアです。本ページでは「杉並区 × オフィス／商業／制作スタジオ」というクロス領域に絞り、各業態の電力プロファイル、契約区分・契約電力（kW）の最適化、減免制度の考え方、杉並区独自の省エネ補助、規模別の代表シナリオまでを実務目線で整理します。なお全区とも東京電力エリアで単価水準は共通のため、差別化は区の産業特性に置いています。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -409,7 +409,7 @@ export default function SuginamiKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -662,7 +662,7 @@ export default function SuginamiKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },
               { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金", description: "隣接区。中小オフィス・商業・サブカル集積の事情。" },

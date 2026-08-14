@@ -22,7 +22,7 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ["price-increase"];
 
 
-const pageTitle = "再エネ賦課金とは｜2026年度4.18円/kWh、法人負担額の試算・計算方法を完全ガイド";
+const pageTitle = "再エネ賦課金とは｜2026年度4.18円/kWh、法人負担額の試算・計算方法を解説";
 const pageDescription =
   "【2026年5月検針開始】再エネ賦課金は4.18円/kWh（前年度+0.20円、初の4円台突入）。月300kWh家庭で月1,254円、年15,048円の負担。法人特高・高圧・低圧の業態別月額試算、2012〜2026年度の単価推移グラフ、計算式、燃料費調整額との違い、減免制度の対象要件まで一般社団法人エネルギー情報センターが中立解説。";
 const publishedDate = "2026-03-01";
@@ -72,7 +72,7 @@ export default function RenewableEnergySurchargePage() {
   return (
     <>
       <ArticleJsonLd
-        headline="再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで完全ガイド"
+        headline="再エネ賦課金とは｜2012〜2026年度の推移・計算方法・法人負担まで解説"
         description="再エネ賦課金（再生可能エネルギー発電促進賦課金）の仕組み、2012〜2026年度の単価推移、計算方法、法人の月額負担試算、燃料費調整額との違いを、グラフと過去データを交えて解説します。"
         url="https://simulator.eic-jp.org/renewable-energy-surcharge"
         datePublished="2026-04-17"
@@ -376,7 +376,7 @@ export default function RenewableEnergySurchargePage() {
             {
               href: "/business-electricity-cost-reduction-review-points",
               title: "法人の電気料金を削減する見直しポイント7選",
-              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に解説。",
             },
             {
               href: "/articles/industry-guide",

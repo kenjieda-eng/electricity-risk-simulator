@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "鳥取県の法人電気料金完全ガイド｜中国電力エリア単価分析・砂丘観光・製紙電子部品・水産加工の契約最適化";
+  "鳥取県の法人電気料金ガイド｜中国電力エリア単価分析・砂丘観光・製紙電子部品・水産加工の契約最適化";
 const pageDescription =
   "鳥取県の法人電気料金を地域特化で解説。中国電力エリアの単価水準を業種別に再加工して提示し、人口最少県の製紙・電子部品工業、鳥取砂丘・大山観光業、境港水産加工、二十世紀梨果樹園冷蔵の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function TottoriBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            鳥取県の法人電気料金完全ガイド
+            鳥取県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             鳥取県は中国電力エリアで、王子製紙米子・JFEミネラル日吉津のフェロアロイ・鳥取三洋電子部品の中規模工業、境港水産加工（ベニズワイガニ・マグロ）、大山・三朝・皆生温泉の観光業、二十世紀梨果樹園と冷蔵倉庫など多様な産業構造を持ちます。2024年12月の島根原発2号機再稼働により燃料費調整額の改善が期待される地域でもあります。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用・豪雪BCP対応を実務的に整理します。

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "茨城県の物流倉庫の電気料金完全ガイド｜圏央道つくば／古河／坂東の大型物流施設・自動倉庫と東京電力契約";
+  "茨城県の物流倉庫の電気料金ガイド｜圏央道つくば／古河／坂東の大型物流施設・自動倉庫と東京電力契約";
 const pageDescription =
   "茨城県の物流業に特化した法人電気代ガイド。圏央道沿線（つくば・常総・坂東・古河）の大型物流施設集積、EC配送ハブ・冷凍冷蔵倉庫・自動倉庫の電力プロファイル、東京電力エリアの単価事情、特別高圧／高圧契約最適化と省エネ・PPA調達までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function IbarakiLogisticsElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            茨城県の物流倉庫の電気料金完全ガイド
+            茨城県の物流倉庫の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             茨城県は圏央道全線開通以降、つくば・常総・坂東・古河の沿線エリアに大型物流施設が連続立地する新興物流ハブとして急成長しています。本ページでは「茨城県 × 物流」というクロス領域に絞り、東京電力エリア固有の単価事情と、EC配送24時間体制・自動仕分け機・自動倉庫・系統容量制約・RE100対応までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function IbarakiLogisticsElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「茨城 × 物流」のクロス領域に特化したガイドです。茨城県全体の文脈は{" "}
             <Link href="/ibaraki-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              茨城県の法人電気料金完全ガイド
+              茨城県の法人電気料金ガイド
             </Link>
             、業種一般としての倉庫業全体は{" "}
             <Link href="/warehouse-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

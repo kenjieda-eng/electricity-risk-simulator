@@ -699,7 +699,7 @@ export default function ErexCorporateElectricityGuidePage() {
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
               { href: "/tepco-ep-corporate-electricity-guide", title: "東京電力エナジーパートナーの法人向けプラン", description: "エバーグリーン・マーケティングの共同出資の相手方。" },
-              { href: "/summit-energy-corporate-electricity-guide", title: "サミットエナジー（法人向け）完全ガイド", description: "発電・商社系新電力の代表例。" },
+              { href: "/summit-energy-corporate-electricity-guide", title: "サミットエナジー（法人向け）ガイド", description: "発電・商社系新電力の代表例。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
               { href: "/region-tokyo-business-electricity", title: "東京エリアの法人電気料金", description: "首都圏の市況と供給環境。" },
               { href: "/region-kansai-business-electricity", title: "関西エリアの法人電気料金", description: "関西エリアの市況と供給環境。" },

@@ -16,7 +16,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 import SisterSiteLink from "../../components/simulator/SisterSiteLink";
 import FloatingCta from "../../components/simulator/FloatingCta";
 
-const pageTitle = "市場価格調整額とは｜2026年最新・燃料費調整額との違い・法人リスク完全解説";
+const pageTitle = "市場価格調整額とは｜2026年最新・燃料費調整額との違い・法人リスク解説";
 const pageDescription =
   "市場価格調整額（市場調整額）はJEPXスポット価格と基準価格の差額を月次で電気料金に反映する仕組み。上限なしで青天井になるリスク、燃料費調整額との違い（参照価格・反映ラグ・上限制度）、固定単価プランでも別立てで含まれるケースなど、法人契約者が見積比較で見落としがちな注意点を2021年スパイク・2022年ウクライナ危機の実例で解説。";
 const pageUrl = "https://simulator.eic-jp.org/market-price-adjustment";
@@ -104,7 +104,7 @@ export default function MarketPriceAdjustmentPage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
           📊 燃料費調整 vs 市場価格調整 の総合比較は{" "}
           <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-            メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+            メタピラー｜燃料費調整額と市場価格調整額の違いを比較
           </Link>
           、対をなす燃料軸は{" "}
           <Link href="/fuel-cost-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
@@ -354,7 +354,7 @@ export default function MarketPriceAdjustmentPage() {
           heading="市場価格調整サブピラー（B）の全体像"
           intro="本記事（サブピラー B = 市場軸）から、メタピラー・対をなす燃料軸サブピラー・自身配下のクラスター 2 本へのナビゲーションです。"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整制度の総合解説（サブピラー A）", description: "対をなす燃料軸の総合解説。燃調費の仕組みと請求影響。" },
             { href: "/market-price-adjustment-risk", title: "市場価格調整のリスク", description: "市場連動プラン採用法人が直面する具体的リスク事例。" },
             { href: "/how-to-check-market-price-adjustment-terms", title: "約款での市場価格調整確認", description: "自社契約での市場連動条項の確認方法。" },

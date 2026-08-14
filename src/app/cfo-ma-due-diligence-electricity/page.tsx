@@ -8,7 +8,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
-const pageTitle = "M&A時の電力契約デューデリジェンス完全ガイド｜契約承継・燃調リスク・脱炭素資産評価（CFO向け）";
+const pageTitle = "M&A時の電力契約デューデリジェンスガイド｜契約承継・燃調リスク・脱炭素資産評価（CFO向け）";
 const pageDescription = "M&A・事業承継時の電力契約デューデリジェンスを、契約承継・燃料費調整リスク・PPAや発電設備の資産評価・脱炭素の簿外リスクの観点でCFO向けに整理。公開情報に基づく一般的整理で、特定の電力会社・契約形態を推奨するものではありません。";
 const pageUrl = "https://simulator.eic-jp.org/cfo-ma-due-diligence-electricity";
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
-const h1Text = "M&A時の電力契約デューデリジェンス完全ガイド｜契約承継・燃調リスク・脱炭素資産評価";
+const h1Text = "M&A時の電力契約デューデリジェンスガイド｜契約承継・燃調リスク・脱炭素資産評価";
 const breadcrumbTitle = "M&A時の電力契約デューデリジェンス";
 const leadText = "M&A(買収・事業承継)において、電力契約は見落とされやすい一方、承継可否・違約金・市場連動エクスポージャー・脱炭素対応など財務とリスクに直結する論点を多く含みます。本記事は公開情報・制度に基づく一般的な情報整理であり、特定の電力会社・契約形態を推奨するものではありません。CFO・経営企画が電力契約デューデリジェンス(DD)で何を確認し、PMI(統合後)でどう最適化するかを、承継・違約金・PPA・簿外リスクの観点から整理します。投資判断・会計監査の助言ではなく、実務の論点を網羅的に把握するための整理です。";
 const d1CtaLead = "対象会社や自社の電力コスト水準を把握する第一歩として、業種別の代表的な使用実態に基づく電気代の試算が役立ちます。業種別電気代計算機で自社・対象事業の規模感を試算し、DDやPMIでのコスト評価の出発点としてご活用ください。表示される金額は公開情報に基づく目安であり、実数値は契約条件・使用実態により異なります。";

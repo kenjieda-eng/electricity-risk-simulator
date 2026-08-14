@@ -6,9 +6,9 @@ import MarketDataFaq from "../../components/market-data/MarketDataFaq";
 import ContentCta from "../../components/simulator/ContentCta";
 import RelatedLinks from "../../components/simulator/RelatedLinks";
 
-const pageTitle = "【2026年版】原材料コスト上昇シリーズ｜法人の調達リスク完全マップ";
+const pageTitle = "【2026年版】原材料コスト上昇シリーズ｜法人の調達リスクマップ";
 const pageDescription =
-  "2026 年の法人調達担当者向けに、原材料・包装資材・プラスチック樹脂・非鉄金属・化学品の価格動向と調達戦略を集約した完全マップ。ナフサ不足から非鉄金属高騰、業界別影響度マトリクスと 3 つの調達戦略まで網羅。";
+  "2026 年の法人調達担当者向けに、原材料・包装資材・プラスチック樹脂・非鉄金属・化学品の価格動向と調達戦略を集約したマップ。ナフサ不足から非鉄金属高騰、業界別影響度マトリクスと 3 つの調達戦略まで網羅。";
 const publishedDate = "2026-04-25";
 const pageUrl = "https://simulator.eic-jp.org/raw-material-cost-impact-2026";
 
@@ -171,7 +171,7 @@ export default function RawMaterialCostImpact2026Page() {
         <p className="text-xs font-semibold tracking-wide text-sky-700">リスクシナリオ別に知る</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">{pageTitle}</h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          2026 年の法人調達担当者が直面する原材料・包装資材・プラスチック樹脂・非鉄金属・化学品の価格動向を、5 本のシリーズ記事で網羅した完全マップです。中東情勢、ナフサ・エチレン減産、円安、中国需要を背景に、コスト上昇圧力は構造化しています。本ハブから個別シリーズに進み、自社のリスクと対策を具体化してください。
+          2026 年の法人調達担当者が直面する原材料・包装資材・プラスチック樹脂・非鉄金属・化学品の価格動向を、5 本のシリーズ記事で網羅したマップです。中東情勢、ナフサ・エチレン減産、円安、中国需要を背景に、コスト上昇圧力は構造化しています。本ハブから個別シリーズに進み、自社のリスクと対策を具体化してください。
         </p>
       </header>
 

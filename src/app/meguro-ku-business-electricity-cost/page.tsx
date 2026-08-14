@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "目黒区の法人電気料金完全ガイド｜中目黒・自由が丘の商業／クリエイティブ・飲食の契約最適化";
+  "目黒区の法人電気料金ガイド｜中目黒・自由が丘の商業／クリエイティブ・飲食の契約最適化";
 const pageDescription =
   "目黒区の法人電気料金を区固有の産業集積（中目黒・自由が丘・学芸大学の商業・飲食、クリエイティブ・デザイン・映像制作、住商混在の中小事業者）から実務的に解説します。商業・オフィスの契約区分別の単価目安、規模別の代表シナリオ、目黒区の省エネ補助までを整理します。";
 
@@ -370,7 +370,7 @@ export default function MeguroKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            目黒区の法人電気料金完全ガイド
+            目黒区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             目黒区は中目黒・自由が丘・学芸大学・都立大学・目黒の駅周辺に商業・飲食・アパレル・雑貨・カフェが集積し、中目黒・目黒川沿いにはクリエイティブ・デザイン・映像/広告制作のオフィス・スタジオが多く、住宅地と商業が混在する「住商混在」の街です。本ページでは「目黒区 × 商業・クリエイティブ・飲食」というクロス領域に絞り、商業・オフィスの電力プロファイル、契約区分別の単価目安、需要見える化・デマンド制御、目黒区独自の省エネ補助、規模別の代表シナリオまでを実務目線で整理します。なお東京電力エリアで単価水準は共通のため、差別化は区の産業特性に置いています。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -409,7 +409,7 @@ export default function MeguroKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -663,7 +663,7 @@ export default function MeguroKuBusinessElectricityCostPage() {
             heading="関連ページ"
             links={[
               { href: "/bunkyo-ku-business-electricity-cost", title: "文京区の法人電気料金", description: "大学・大型病院・研究機関集積の区の電力需要と契約最適化。" },
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },
               { href: "/setagaya-ku-business-electricity-cost", title: "世田谷区の法人電気料金", description: "隣接区。住宅地の商業・サービス・SOHOの事情。" },

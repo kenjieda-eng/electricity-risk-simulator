@@ -452,7 +452,7 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
             {
               href: "/business-electricity-cost-reduction-review-points",
               title: "法人の電気料金を削減する見直しポイント7選",
-              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に解説。",
             },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             { href: "/faq-contract-review-where-to-start", title: "FAQ：契約見直しは何から始める？", description: "電気契約の見直しを始める順番をFAQで解説。" },

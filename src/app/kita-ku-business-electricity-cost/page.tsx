@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "北区の法人電気料金完全ガイド｜赤羽・王子の印刷／製造／物流の契約最適化";
+  "北区の法人電気料金ガイド｜赤羽・王子の印刷／製造／物流の契約最適化";
 const pageDescription =
   "北区の法人電気料金を区固有の産業集積（赤羽・王子・東十条の印刷・製本、中小製造（金属加工）、物流・倉庫）から実務的に解説します。中小工場・物流の契約電力（kW）最適化・デマンド制御、規模別の代表シナリオ、北区の省エネ補助までを整理します。";
 
@@ -370,7 +370,7 @@ export default function KitaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            北区の法人電気料金完全ガイド
+            北区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             北区は赤羽・王子・東十条などに印刷・製本・紙加工、中小製造（金属加工・機械）、物流・倉庫（赤羽・北赤羽・浮間）が広く集積する産業のまちです。本ページでは「北区 × 印刷／製造／物流」というクロス領域に絞り、印刷工場・物流倉庫の電力プロファイル、契約電力（kW）最適化・デマンド制御、減免制度の考え方、北区独自の省エネ補助、規模別の代表シナリオまでを実務目線で整理します。なお北区は東京電力エリアで単価水準は東電エリア共通のため、差別化は区の産業特性に置いています。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -409,7 +409,7 @@ export default function KitaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -666,7 +666,7 @@ export default function KitaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "隣接区。中小製造・印刷・物流の事情。" },

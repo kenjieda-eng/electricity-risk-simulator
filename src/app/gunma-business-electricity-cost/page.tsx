@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "群馬県の法人電気料金完全ガイド｜製造業集積・高崎前橋物流・山岳地域の契約最適化";
+  "群馬県の法人電気料金ガイド｜製造業集積・高崎前橋物流・山岳地域の契約最適化";
 const pageDescription =
   "群馬県の法人電気料金を地域特化で解説。東京電力エリア、製造業集積（自動車・電機）、高崎・前橋の物流拠点、草津・伊香保の観光業、山岳地域の特殊事情を踏まえ、補助金活用、契約見直しを実務的に整理します。";
 
@@ -388,7 +388,7 @@ export default function GunmaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            群馬県の法人電気料金完全ガイド
+            群馬県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             群馬県は東京電力エリア、太田・伊勢崎の自動車工業集積、大泉・館林の電機工業、高崎・前橋の物流拠点、草津・伊香保・水上の観光業という多層構造を持ちます。本ページでは県内法人の電気代水準、業種別影響、山岳地域の特殊事情、補助金、契約見直しを実務的に整理します。

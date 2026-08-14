@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "BEMS/FEMS導入補助 完全ガイド｜2026年度の対象設備・建物用途別の選び方と採択戦略";
+  "BEMS/FEMS導入補助ガイド｜2026年度の対象設備・建物用途別の選び方と採択戦略";
 const pageDescription =
   "BEMS（ビル）/FEMS（工場）のエネルギー管理システム導入補助に特化した活用ガイド。計測・制御・見える化システムの補助対象、ビル・工場・商業・倉庫の用途別の選び方、SII省エネ補助・自治体補助の補助率・要件、省エネ効果の実績報告への活用、投資回収までを、事例・採択戦略・併用ルール・申請フローで整理します。";
 
@@ -368,7 +368,7 @@ export default function SubsidyBemmsFemsPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            BEMS/FEMS導入補助の活用ガイド 完全ガイド
+            BEMS/FEMS導入補助の活用ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             BEMS（ビル）/FEMS（工場）はエネルギー使用を計測・見える化・制御して省エネを実現するシステムです。本ページでは計測・制御・見える化システムの補助対象、ビル・工場・商業・倉庫の用途別の選び方、SII省エネ補助・自治体補助の補助率・要件、省エネ効果の実績報告への活用、投資回収までを、事例・採択戦略・併用ルール・申請フローで整理します。
@@ -528,7 +528,7 @@ export default function SubsidyBemmsFemsPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -553,7 +553,7 @@ export default function SubsidyBemmsFemsPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -578,7 +578,7 @@ export default function SubsidyBemmsFemsPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、製造業向け戦略は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               も参照ください。
@@ -634,7 +634,7 @@ export default function SubsidyBemmsFemsPage() {
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "空調・給湯・産業用HPの補助金。" },
               { href: "/subsidy-energy-saving-diagnosis", title: "省エネ診断補助の活用ロードマップ", description: "診断→管理システムの起点づくり。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備の補助金", description: "再エネ自家消費とエネルギー管理の連携。" },
               { href: "/subsidy-business-plan-writing-guide", title: "補助金事業計画書の書き方", description: "採択される計画書の構成・記述例。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "国×自治体×税制の組合せ可否。" },

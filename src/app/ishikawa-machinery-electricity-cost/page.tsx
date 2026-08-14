@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "石川県の機械工場の電気料金完全ガイド｜小松の建設機械・繊維機械の集積と北陸電力エリア";
+  "石川県の機械工場の電気料金ガイド｜小松の建設機械・繊維機械の集積と北陸電力エリア";
 const pageDescription =
   "石川県の機械製造業に特化。小松の建設機械・金沢周辺の繊維機械/産業機械の集積を背景に、機械加工（マシニング）・組立・塗装・熱処理の電力プロファイル、北陸電力エリアの単価事情（水力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function IshikawaMachineryElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            石川県の機械工場の電気料金完全ガイド
+            石川県の機械工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             石川県は小松の建設機械（コマツ発祥の地）を核に、金沢市・白山市・能美市周辺の繊維機械・産業機械・工作機械・建設機械部品まで、機械製造業が県の基幹産業として集積する地域です。本ページでは「石川県 × 機械製造業」というクロス領域に絞り、北陸電力エリア固有の単価事情（水力比率が高く燃調感応度が相対的に低め）と、NC工作機械による機械加工／組立／塗装乾燥／熱処理炉の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "兵庫県の法人電気料金完全ガイド｜神戸港物流ハブ・姫路製鉄化学・神戸有馬城崎観光業の契約最適化";
+  "兵庫県の法人電気料金ガイド｜神戸港物流ハブ・姫路製鉄化学・神戸有馬城崎観光業の契約最適化";
 const pageDescription =
   "兵庫県の法人電気料金を地域特化で解説。関西電力エリアの神戸港物流ハブ、姫路の製鉄・化学コンビナート、神戸・有馬・城崎温泉の観光業、阪神工業地帯の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function HyogoBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            兵庫県の法人電気料金完全ガイド
+            兵庫県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             兵庫県は関西電力エリアで、姫路・加古川の製鉄化学コンビナート、神戸・尼崎・西宮の阪神工業地帯（神戸製鋼・川崎重工・三菱重工等の重工業）、神戸港の国際物流ハブ、神戸・有馬・城崎の観光業、灘の酒造と多様な産業構造を持ちます。関電の原発再稼働により燃料費調整額の変動が相対的に小さい局面があるとされる点が特徴。本ページでは県内法人の電気代水準、業種別影響度、製鉄化学・港湾物流特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

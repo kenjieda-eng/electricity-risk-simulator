@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "補助金事業計画書の書き方 完全ガイド｜採択される構成と記述例";
+  "補助金事業計画書の書き方ガイド｜採択される構成と記述例";
 const pageDescription =
   "補助金の事業計画書の書き方に特化した実務ガイド。採択される計画書の構成（現状課題→投資内容→定量効果→実現可能性→スケジュール）、数値根拠の示し方、生産性向上・省エネ・CN対応の訴求、加点項目の押さえ方、よくある減点ポイント、製造・物流・商業の記述例3パターンを、審査員視点で整理します。";
 
@@ -353,7 +353,7 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "補助金・助成金を知る", url: "https://simulator.eic-jp.org/articles/subsidies" },
-          { name: "補助金事業計画書の書き方完全ガイド", url: "https://simulator.eic-jp.org/subsidy-business-plan-writing-guide" },
+          { name: "補助金事業計画書の書き方ガイド", url: "https://simulator.eic-jp.org/subsidy-business-plan-writing-guide" },
         ]}
         faq={faqItems}
       />
@@ -363,12 +363,12 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
           <span className="px-2">›</span>
           <Link href="/articles/subsidies" className="underline-offset-2 hover:underline">補助金・助成金を知る</Link>
           <span className="px-2">›</span>
-          <span className="text-slate-800">補助金事業計画書の書き方完全ガイド</span>
+          <span className="text-slate-800">補助金事業計画書の書き方ガイド</span>
         </nav>
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            補助金事業計画書の書き方 完全ガイド
+            補助金事業計画書の書き方ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             補助金の採否は設備の良し悪しより事業計画書の説得力で決まります。本ページでは採択される計画書の構成（現状課題→投資内容→定量効果→実現可能性→スケジュール）、数値根拠の示し方、生産性向上・省エネ・CN対応の訴求、加点項目の押さえ方、よくある減点ポイント、製造・物流・商業の記述例3パターンを、審査員視点で整理します。
@@ -553,7 +553,7 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、中小の進め方は{" "}
               <Link href="/subsidy-sme-energy-saving-patterns" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業の省エネ補助活用パターン</Link>
               。
@@ -578,7 +578,7 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の活用は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、見直し優先度は{" "}
               <Link href="/subsidy-vs-contract-review-priority" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金と契約見直しの優先順位</Link>
               も参照ください。
@@ -641,7 +641,7 @@ export default function SubsidyBusinessPlanWritingGuidePage() {
               { href: "/subsidy-manufacturing-strategy", title: "製造業の補助金活用戦略", description: "製造業の投資・計画書の論点。" },
               { href: "/subsidy-logistics-strategy", title: "物流業の補助金活用戦略", description: "物流業の投資・計画書の論点。" },
               { href: "/subsidy-retail-commerce-strategy", title: "小売・商業の補助金活用戦略", description: "商業の投資・計画書の論点。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "CN対応の訴求と税制活用。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "CN対応の訴求と税制活用。" },
               { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "投資判断の前提整理。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },
               { href: "/articles/by-industry", title: "業種別の電気料金見直し（一覧）", description: "業種別ガイドのハブ。" },

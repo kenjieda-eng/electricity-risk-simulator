@@ -752,9 +752,9 @@ export default function SubsidyGridStorageBatteryPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助の併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -868,7 +868,7 @@ export default function SubsidyGridStorageBatteryPage() {
               { href: "/extra-high-voltage-electricity-pricing", title: "特別高圧の電気料金の仕組み", description: "大口需要家の料金構造とピークカット。" },
               { href: "/subsidy-solar-carport-canopy", title: "ソーラーカーポート・キャノピー補助", description: "駐車場の太陽光＋蓄電池の活用。" },
               { href: "/subsidy-small-wind-power", title: "小型風力発電の補助金", description: "分散電源としての小型風力の位置づけ。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "補助前後の回収年数比較。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "国×自治体×税制の組合せ可否。" },
               { href: "/self-consumption-solar-cost-benefit", title: "自家消費型太陽光の費用対効果", description: "太陽光＋蓄電池の一体最適化。" },

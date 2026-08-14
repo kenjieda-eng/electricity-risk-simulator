@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "豊島区の法人電気料金完全ガイド｜池袋ターミナル・サンシャインシティ・大型商業ホテルの契約最適化";
+  "豊島区の法人電気料金ガイド｜池袋ターミナル・サンシャインシティ・大型商業ホテルの契約最適化";
 const pageDescription =
   "豊島区の法人電気料金を地域特化で解説。池袋（JR・東武・西武の3社競合ターミナル）、サンシャインシティの自家発電・地域冷暖房、東池袋Hareza・Brillia Tower再開発、巣鴨商店街中小事業者、目白・大塚の住商混在エリアの電力契約と豊島区独自のエコ・テナント運営支援までを実務的に整理します。";
 
@@ -370,7 +370,7 @@ export default function ToshimaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            豊島区の法人電気料金完全ガイド
+            豊島区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             豊島区は池袋ターミナルを中心に大型百貨店3社（西武・東武・パルコ）、サンシャインシティ、東池袋Brillia Tower、Hareza池袋等の大型商業/オフィス複合施設が密集し、23区内でも極めて高い電力需要密度を持つエリアです。一方で巣鴨・大塚・目白・駒込には中小商業・飲食店が多く、契約構造は二極化しています。本ページでは区内法人の電気代水準、業種別影響度、固有の課題、契約見直しの具体策、豊島区エコ・テナント運営支援の活用までを実務的に整理します。
@@ -412,7 +412,7 @@ export default function ToshimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -674,8 +674,8 @@ export default function ToshimaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金完全ガイド", description: "中野駅再開発・中小オフィス・商業エリアの電力需要と契約最適化。" },
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金ガイド", description: "中野駅再開発・中小オフィス・商業エリアの電力需要と契約最適化。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "霞が関・大手町の中央官庁・大型オフィス事情。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の大型商業・百貨店事情。" },

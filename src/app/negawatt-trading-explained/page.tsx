@@ -285,7 +285,7 @@ export default function NegawattTradingExplainedPage() {
             { href: "/", title: "電気料金上昇リスク診断", description: "30 秒で自社のリスクスコアと年間影響額を試算できます。" },
             { href: "/fuel-cost-adjustment", title: "燃料費調整額（燃調費）とは", description: "請求書に直接効く燃料費調整の仕組みを確認できます。" },
             { href: "/demand-response-revenue-model", title: "DR の収益モデル", description: "ネガワット取引の収益最大化手法を深掘りで解説（G-05）。" },
-            { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価", description: "需要側からの供給力提供という位置づけを制度から確認。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧", description: "需要側からの供給力提供という位置づけを制度から確認。" },
             { href: "/jepx-explained", title: "JEPX とは｜卸電力市場の仕組み", description: "スポット価格急騰のメカニズムを理解。" },
             { href: "/duck-curve-corporate-impact", title: "ダックカーブが法人に与える影響", description: "夕方ピーク単価高騰の構造とネガワット取引の親和性を整理。" },
             { href: "/battery-electricity-cost-benefit", title: "蓄電池の電気料金対策効果", description: "蓄電池放電で操業を止めずに節電する手法。" },

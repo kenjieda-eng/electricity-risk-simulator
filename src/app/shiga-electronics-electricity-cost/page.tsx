@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "滋賀県の電子部品・機械工場の電気料金完全ガイド｜甲賀・湖東・栗東の精密電子機械集積と関西電力";
+  "滋賀県の電子部品・機械工場の電気料金ガイド｜甲賀・湖東・栗東の精密電子機械集積と関西電力";
 const pageDescription =
   "滋賀県の電子部品・機械製造業に特化。甲賀・湖東・栗東・草津の精密電子機械・電子部品の集積を核に、クリーンルーム恒温恒湿・実装・精密加工の電力プロファイル、関西電力エリアの単価事情（原子力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ShigaElectronicsElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            滋賀県の電子部品・機械工場の電気料金完全ガイド
+            滋賀県の電子部品・機械工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             滋賀県は甲賀・湖東・栗東・草津に精密電子機械／電子部品が広く集積し、京阪神都市圏に近い内陸立地と良好な交通アクセスを背景に大口産業需要が立地する地域です。本ページでは「滋賀県 × 電子部品・機械製造業」というクロス領域に絞り、関西電力エリア固有の単価事情（原子力比率が高く燃調感応度が相対的に低め）と、クリーンルーム恒温恒湿空調／実装／精密加工の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

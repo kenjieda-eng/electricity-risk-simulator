@@ -14,7 +14,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "電気の価格はどう決まるのか｜JEPX価格・燃料費・需給バランスの基本【初学者向け】";
 const pageDescription =
-  "電気の価格（JEPX 価格）は、需給バランス・天候・時間帯・燃料価格・発電構成・需給逼迫など複数要因で決まります。なぜ電気代が変動するのか、市場価格と料金の関係を、電力業界初学者・新任担当者向けに図解と具体例で完全解説。一般社団法人エネルギー情報センターが中立解説。";
+  "電気の価格（JEPX 価格）は、需給バランス・天候・時間帯・燃料価格・発電構成・需給逼迫など複数要因で決まります。なぜ電気代が変動するのか、市場価格と料金の関係を、電力業界初学者・新任担当者向けに図解と具体例で解説。一般社団法人エネルギー情報センターが中立解説。";
 const pageUrl = "https://simulator.eic-jp.org/how-electricity-prices-are-determined";
 
 export const metadata: Metadata = {

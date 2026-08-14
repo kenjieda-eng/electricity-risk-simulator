@@ -77,9 +77,9 @@ export default function Page() {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">容量市場の制度変遷と電気料金への影響</h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">2020年メインオークション開始から2024年本格稼働、2025年以降の価格動向まで、容量市場のタイムラインと法人料金への影響を整理します。</p>
           <p className="mt-3 rounded-lg border border-sky-300 bg-white p-3 text-sm leading-7 text-slate-700 sm:text-base">
-            📜 拠出金そのものの詳細（仕組み・計算・影響額・対策）は{" "}
+            📜 拠出金の2026〜2028年度の単価一覧と法人の月額目安は{" "}
             <Link href="/what-is-capacity-contribution" className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策
+              容量拠出金 2026〜2028年度の単価一覧
             </Link>
             （Pillar A）を参照してください。本記事は制度沿革・市場の動きを軸に整理した Pillar B です。
           </p>
@@ -280,7 +280,7 @@ export default function Page() {
             heading="容量拠出金クラスターの全体像（Pillar B 視点）"
             intro="本記事（Pillar B = 制度沿革）から、Pillar A（拠出金そのもの）と 8 本のクラスター記事へのナビゲーションです。"
             links={[
-              { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策（Pillar A）", description: "拠出金の定義・単価表・法人月額試算・4 つの対策をまとめた起点記事。" },
+              { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧（Pillar A）", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
               { href: "/capacity-contribution-explained", title: "容量拠出金の仕組み・計算方法", description: "拠出金の詳細メカニズムと計算式。" },
               { href: "/capacity-contribution-cost-impact", title: "容量拠出金のコスト影響詳細", description: "高圧/低圧別の影響額比較と費目別シミュレーション。" },
               { href: "/capacity-contribution-impact-on-business", title: "容量拠出金の法人ビジネスへの影響", description: "業種別の経営インパクトと利益率への波及。" },

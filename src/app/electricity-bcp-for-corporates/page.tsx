@@ -276,7 +276,7 @@ export default function ElectricityBcpForCorporatesPage() {
             <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
               メイン小売 + サブ小売の 2 社契約により、一方が撤退・倒産しても切替時間を最小化できます。容量拠出金の単価傾向は{" "}
               <Link href="/what-is-capacity-contribution" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                容量拠出金とは（単価表・月額試算）
+                容量拠出金 2026〜2028年度の単価一覧
               </Link>{" "}
               で確認可能。
             </p>
@@ -334,7 +334,7 @@ export default function ElectricityBcpForCorporatesPage() {
             { href: "/battery-electricity-cost-benefit", title: "蓄電池の電気料金対策効果", description: "ピークシフトと BCP 兼用の試算と回収期間を確認。" },
             { href: "/demand-response-revenue-model", title: "DR の収益モデル", description: "緊急時の節電で収入を得る仕組みと事業者比較。" },
             { href: "/duck-curve-corporate-impact", title: "ダックカーブが法人に与える影響", description: "夕方単価高騰の構造的リスクを BCP の視点で確認。" },
-            { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価", description: "供給力確保コストの転嫁構造を踏まえた契約点検。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧", description: "供給力確保コストの転嫁構造を踏まえた契約点検。" },
             { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             { href: "/energy-bcp-glossary", title: "エネルギーBCP用語集", description: "非常用電源・BCP・レジリエンスの用語を法人向けに整理。" },
           ]}

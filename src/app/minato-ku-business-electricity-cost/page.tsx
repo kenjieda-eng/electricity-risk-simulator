@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "港区の法人電気料金完全ガイド｜六本木・虎ノ門ヒルズ／台場データセンター／外資系IT・麻布台ヒルズ";
+  "港区の法人電気料金ガイド｜六本木・虎ノ門ヒルズ／台場データセンター／外資系IT・麻布台ヒルズ";
 const pageDescription =
   "東京都港区の法人電気代を区固有の論点で解説。六本木・虎ノ門ヒルズの自家発電とコージェネ、台場のデータセンター集積、外資系GAFAM・金融オフィス、麻布台ヒルズ新規開業、東京ガス系の地域冷暖房を踏まえた契約最適化と省エネ補助の実務をまとめます。";
 
@@ -372,7 +372,7 @@ export default function MinatoKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            港区の法人電気料金完全ガイド
+            港区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             港区は六本木・虎ノ門ヒルズの自家発電付き超大型ビル、台場のデータセンター集積、品川駅周辺のIT再開発、外資系GAFAM・金融、東京ガス系の地域冷暖房と、特殊な業務地区機能を持つエリアです。本ページでは区内固有の電力事情、業種別影響、契約見直し、港区・東京都・国の補助金活用までを実務目線で整理します。

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "オフィス・不動産業の補助金活用戦略 完全ガイド｜対象・補助率・申請の進め方";
+  "オフィス・不動産業の補助金活用戦略ガイド｜対象・補助率・申請の進め方";
 const pageDescription =
   "オフィス・不動産業（自社ビル・賃貸オフィス・ビル管理）に特化した補助金活用戦略。ZEB化・断熱改修・高効率空調照明・BEMS・変圧器をSII省エネ補助・ZEB支援・税制で導入する実務を、オーナー/テナント分離（split incentive）課題やグリーンリースも踏まえ、規模別代表シナリオ・採択戦略・併用ルールで整理します。";
 
@@ -409,7 +409,7 @@ export default function SubsidyOfficeRealEstateStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            オフィス・不動産業の補助金活用戦略 完全ガイド
+            オフィス・不動産業の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             オフィスビル・賃貸オフィス・ビル管理事業は、空調・照明を中心に電力を消費し、高効率設備への更新やZEB化で電気代削減と資産価値向上が見込める分野です。本ページではSII省エネ補助・ZEB支援・GX投資促進税制・自治体補助を組合せ、空調・照明・変圧器・BEMS・断熱改修を導入する実務を、オーナー/テナント分離（split incentive）課題やグリーンリースも踏まえ、規模別代表シナリオ・採択戦略・併用ルール・申請フローまで整理します。
@@ -595,7 +595,7 @@ export default function SubsidyOfficeRealEstateStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、申請・交付の必要書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・交付の必要書類ガイド</Link>
               を参照ください。本整理は中立的な情報提供であり、特定の電力会社・契約形態を推奨するものではありません。
@@ -617,9 +617,9 @@ export default function SubsidyOfficeRealEstateStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールの詳細は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、GX税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、自治体補助は{" "}
               <Link href="/subsidy-local-government-list" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体の省エネ・脱炭素補助一覧</Link>
               、再エネ調達は{" "}
@@ -730,7 +730,7 @@ export default function SubsidyOfficeRealEstateStrategyPage() {
               { href: "/subsidies-overview", title: "補助金・助成金の全体像（総論）", description: "法人が使える補助・税制の地図。" },
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率の動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "ビルのエネルギー管理システム補助。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "業務用ヒートポンプの補助金活用。" },
               { href: "/subsidy-energy-saving-diagnosis", title: "省エネ診断補助の活用ロードマップ", description: "申請前の現状把握と診断活用。" },

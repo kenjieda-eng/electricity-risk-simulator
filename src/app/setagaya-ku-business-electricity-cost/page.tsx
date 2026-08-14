@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "世田谷区の法人電気料金完全ガイド｜23区最大人口・住商混在・二子玉川再開発と医療教育機関の契約最適化";
+  "世田谷区の法人電気料金ガイド｜23区最大人口・住商混在・二子玉川再開発と医療教育機関の契約最適化";
 const pageDescription =
   "世田谷区（人口約94万人・23区最大）の法人電気料金を地域特化で解説。三軒茶屋・下北沢・自由が丘・二子玉川などの住商混在エリア、楽天本社や医療・大学キャンパスといった大型需要家、中小飲食・小売の低圧契約戦略、世田谷区独自の中小企業省エネ補助までを実務的に整理します。";
 
@@ -370,7 +370,7 @@ export default function SetagayaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            世田谷区の法人電気料金完全ガイド
+            世田谷区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             世田谷区は人口約94万人と23区最大、住宅地が区面積の大半を占め、中小飲食・小売・クリニック・学習塾など低圧契約の小規模事業者が圧倒的多数です。一方で二子玉川ライズ・楽天本社といった特別高圧大口需要家、関東中央病院・国立成育医療研究センター等の大型医療機関、昭和女子大・成城大などの大学キャンパスも集積する多層構造の電力需要を持ちます。本ページでは区内法人の電気代水準、業種別影響度、固有の課題、契約見直しの具体策、世田谷区独自補助の活用までを実務的に整理します。
@@ -412,7 +412,7 @@ export default function SetagayaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -674,8 +674,8 @@ export default function SetagayaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金完全ガイド", description: "中野駅再開発・中小オフィス・商業エリアの電力需要と契約最適化。" },
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/nakano-ku-business-electricity-cost", title: "中野区の法人電気料金ガイド", description: "中野駅再開発・中小オフィス・商業エリアの電力需要と契約最適化。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "霞が関・大手町の中央官庁・大型オフィス事情。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の大型商業・百貨店事情。" },

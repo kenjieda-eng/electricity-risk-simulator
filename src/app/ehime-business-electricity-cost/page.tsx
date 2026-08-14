@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "愛媛県の法人電気料金完全ガイド｜四国電力エリア単価分析・今治造船タオル・新居浜住友化学・みかん冷蔵の契約最適化";
+  "愛媛県の法人電気料金ガイド｜四国電力エリア単価分析・今治造船タオル・新居浜住友化学・みかん冷蔵の契約最適化";
 const pageDescription =
   "愛媛県の法人電気料金を地域特化で解説。四国電力エリアの単価水準を業種別に再加工して提示し、今治造船世界トップシェア・今治タオル、新居浜住友化学コンビナート、伊予柑・みかん冷蔵倉庫、道後温泉観光業、伊方原発立地県の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function EhimeBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            愛媛県の法人電気料金完全ガイド
+            愛媛県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             愛媛県は四国電力エリアで、今治造船（世界トップシェア・建造量国内1位）・今治タオル（国産タオル50%超のシェア）、新居浜住友化学・住友金属鉱山の重化学コンビナート、八幡浜・宇和島の伊予柑みかん果樹園と冷蔵倉庫、松山道後温泉観光業など多様な産業構造を持ちます。伊方原発立地県として電源立地地域対策交付金の対象でもあります。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

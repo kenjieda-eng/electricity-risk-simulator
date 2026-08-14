@@ -12,7 +12,7 @@ import FloatingCta from "../../components/simulator/FloatingCta";
 const pageTitle =
   "市場価格調整額とは｜燃料費調整額との違い・計算式・法人への影響度を比較";
 const pageDescription =
-  "燃料費調整額（燃調費）と市場価格調整額（市場調整額）の違いを、仕組み・計算式・影響の大きさ・見直しタイミングまで比較表で整理。法人の料金見直し時に「どちらのリスクが大きいか」を判断できるようにする完全ガイド。";
+  "燃料費調整額（燃調費）と市場価格調整額（市場調整額）の違いを、仕組み・計算式・影響の大きさ・見直しタイミングまで比較表で整理。法人の料金見直し時に「どちらのリスクが大きいか」を判断できるようにするガイド。";
 const pageUrl =
   "https://simulator.eic-jp.org/fuel-vs-market-adjustment-comparison";
 
@@ -133,7 +133,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             name: "料金が上がる理由を知る",
             url: "https://simulator.eic-jp.org/articles/price-increase",
           },
-          { name: "燃料費調整額と市場価格調整額の違いを完全比較" },
+          { name: "燃料費調整額と市場価格調整額の違いを比較" },
         ]}
       />
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
@@ -143,7 +143,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             料金が上がる理由を知る
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-            燃料費調整額と市場価格調整額の違い｜完全比較
+            燃料費調整額と市場価格調整額の違いを比較
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             <strong className="font-semibold text-slate-900">

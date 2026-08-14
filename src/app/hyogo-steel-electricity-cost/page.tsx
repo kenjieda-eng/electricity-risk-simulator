@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "兵庫県の鉄鋼・重工業の電気料金完全ガイド｜神戸製鋼・姫路の電炉アーク／高炉と特別高圧契約最適化";
+  "兵庫県の鉄鋼・重工業の電気料金ガイド｜神戸製鋼・姫路の電炉アーク／高炉と特別高圧契約最適化";
 const pageDescription =
   "兵庫県の鉄鋼・重工業に特化した法人電気代ガイド。神戸製鋼・姫路の鉄鋼業、川崎重工・三菱重工神戸の重機械工業、播磨臨海工業地帯の電炉アーク・高炉プロセスの電力プロファイル、関西電力エリアの特別高圧契約最適化までを実務目線で整理します。";
 
@@ -407,7 +407,7 @@ export default function HyogoSteelElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            兵庫県の鉄鋼・重工業の電気料金完全ガイド
+            兵庫県の鉄鋼・重工業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             兵庫県は神戸製鋼・日本製鉄広畑・川崎重工神戸・三菱重工神戸・IHI播磨など、鉄鋼・重工業の超大型事業所が集積する全国有数の重工業集積地です。本ページでは「兵庫県 × 鉄鋼・重工業」というクロス領域に絞り、関西電力エリア固有の単価事情と、高炉一貫製鉄所／電炉特殊鋼／重機械部品工場の電力プロファイル、特別高圧契約最適化、水素還元製鉄・CN対応までを実務目線で整理します。
@@ -426,7 +426,7 @@ export default function HyogoSteelElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「兵庫 × 鉄鋼・重工業」のクロス領域に特化したガイドです。兵庫県全体の文脈は{" "}
             <Link href="/hyogo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              兵庫県の法人電気料金完全ガイド
+              兵庫県の法人電気料金ガイド
             </Link>
             、業種一般としての鉄鋼業全体は{" "}
             <Link href="/steel-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

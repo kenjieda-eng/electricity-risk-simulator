@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "福井県の法人電気料金完全ガイド｜繊維・眼鏡（鯖江）・原発立地・越前ガニ漁業の契約最適化";
+  "福井県の法人電気料金ガイド｜繊維・眼鏡（鯖江）・原発立地・越前ガニ漁業の契約最適化";
 const pageDescription =
   "福井県の法人電気料金を地域特化で解説。北陸電力エリア、鯖江の眼鏡工業全国シェア9割、福井繊維工業、嶺南の原発立地（美浜・敦賀・大飯・高浜）、越前ガニ等漁業の電力負荷、契約見直しと補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function FukuiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            福井県の法人電気料金完全ガイド
+            福井県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             福井県は北陸電力エリアの中で、鯖江眼鏡工業（全国シェア9割）、福井繊維工業、嶺南の原発立地、越前ガニ水産加工など特色ある産業集積を持ちます。2023年北陸電力大幅値上げの影響が県内法人にとって最大のコスト圧力。本ページでは県内法人の電気代水準、業種別影響度、契約見直しの具体策、補助金活用までを実務的に整理します。

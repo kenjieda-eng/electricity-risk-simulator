@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "岐阜県の法人電気料金完全ガイド｜美濃陶磁器刃物・白川郷下呂温泉観光・東濃工業の契約最適化";
+  "岐阜県の法人電気料金ガイド｜美濃陶磁器刃物・白川郷下呂温泉観光・東濃工業の契約最適化";
 const pageDescription =
   "岐阜県の法人電気料金を地域特化で解説。中部電力エリアの美濃工業地帯（陶磁器・刃物・繊維）、白川郷・下呂温泉等の観光業、東濃の大規模工場集積、山岳地域の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function GifuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岐阜県の法人電気料金完全ガイド
+            岐阜県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岐阜県は中部電力エリアで、東濃の陶磁器・タイル産業、関市の刃物産業、大垣・各務原の自動車部品・航空機関連工業、白川郷・下呂温泉・高山の観光業、飛騨地域の林業・木材加工と多様な産業構造を持ちます。本ページでは県内法人の電気代水準、業種別影響度、東濃陶磁器・観光業特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

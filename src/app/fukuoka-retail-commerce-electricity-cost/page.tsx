@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "福岡県の商業・小売業の電気料金完全ガイド｜天神・博多の百貨店／商業施設／地下街の照明空調と九州電力契約";
+  "福岡県の商業・小売業の電気料金ガイド｜天神・博多の百貨店／商業施設／地下街の照明空調と九州電力契約";
 const pageDescription =
   "福岡県の商業・小売業に特化した法人電気代ガイド。天神・博多の百貨店・大型商業施設・地下街・専門店の集積、照明・空調・冷蔵が中心の電力プロファイル、九州電力エリアの単価事情（原子力＋太陽光で燃調感応度低め）、天神ビッグバン再開発、契約最適化を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            福岡県の商業・小売業の電気料金完全ガイド
+            福岡県の商業・小売業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             福岡県は天神・博多を中心に九州最大の商業集積を形成し、百貨店・大型商業施設・地下街・専門店・チェーン小売が高密度に立地します。本ページでは「福岡県 × 商業・小売業」というクロス領域に絞り、九州電力エリア固有の単価事情（原子力＋太陽光で燃調感応度低め）と、照明空調冷蔵の電力プロファイル、天神ビッグバン再開発、多店舗一括契約までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function FukuokaRetailCommerceElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「福岡 × 商業・小売」のクロス領域に特化したガイドです。福岡県全体の文脈は{" "}
             <Link href="/fukuoka-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              福岡県の法人電気料金完全ガイド
+              福岡県の法人電気料金ガイド
             </Link>
             、業種一般としての小売店全体は{" "}
             <Link href="/retail-store-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

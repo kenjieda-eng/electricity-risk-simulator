@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "北海道の法人電気料金完全ガイド｜寒冷地ベースロード・離島・水産加工業の契約最適化";
+  "北海道の法人電気料金ガイド｜寒冷地ベースロード・離島・水産加工業の契約最適化";
 const pageDescription =
   "北海道の法人電気料金を地域特化で解説。北海道電力エリアの石炭火力依存、暖房度日4,000超の寒冷地特性、離島供給、水産加工・食品・観光業の電力負荷プロファイル、固定vs市場連動の判断、補助金活用まで実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function HokkaidoBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            北海道の法人電気料金完全ガイド
+            北海道の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             北海道は暖房度日4,000超の全国最高水準の寒冷地で、石炭・LNG火力依存度が高く、離島供給コストが料金に按分される独特の構造を持ちます。本ページではほくでん（北海道電力）エリアの法人電気代水準、業種別影響度、寒冷地特有のコスト構造、契約見直しの具体策、補助金活用までを実務的に整理します。

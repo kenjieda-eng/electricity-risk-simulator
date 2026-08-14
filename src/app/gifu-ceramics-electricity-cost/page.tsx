@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "岐阜県の窯業・陶磁器工場の電気料金完全ガイド｜多治見・土岐の美濃焼・タイル集積と中部電力エリア";
+  "岐阜県の窯業・陶磁器工場の電気料金ガイド｜多治見・土岐の美濃焼・タイル集積と中部電力エリア";
 const pageDescription =
   "岐阜県の窯業・陶磁器（美濃焼・タイル）製造に特化。多治見・土岐・瑞浪の窯業集積を背景に、焼成炉（電気炉・ガス炉）・乾燥・粉砕成形の熱負荷プロファイル、中部電力エリアの単価事情（LNG火力依存で燃調感応度は中位）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function GifuCeramicsElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岐阜県の窯業・陶磁器工場の電気料金完全ガイド
+            岐阜県の窯業・陶磁器工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岐阜県の多治見市・土岐市・瑞浪市・可児市を中心とする東濃地域は、美濃焼（陶磁器）・タイル・ファインセラミックスの一大産地です。本ページでは「岐阜県 × 窯業・陶磁器製造業」というクロス領域に絞り、中部電力エリア固有の単価事情（LNG火力依存で燃調感応度は中位）と、焼成炉（電気炉・ガス炉）／乾燥／粉砕成形の熱負荷プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

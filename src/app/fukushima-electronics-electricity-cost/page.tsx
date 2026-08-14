@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "福島県の電子部品・半導体工場の電気料金完全ガイド｜浜通り・郡山の電子機械集積と東北電力";
+  "福島県の電子部品・半導体工場の電気料金ガイド｜浜通り・郡山の電子機械集積と東北電力";
 const pageDescription =
   "福島県の電子部品・半導体製造業に特化。郡山・いわき・会津の電子機械／電子部品／半導体後工程の集積を核に、クリーンルーム恒温恒湿空調・実装・検査の電力プロファイル、東北電力エリアの単価事情（火力比率が高めで燃調感応度は中〜やや高め・女川2号機再稼働の進行）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function FukushimaElectronicsElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            福島県の電子部品・半導体工場の電気料金完全ガイド
+            福島県の電子部品・半導体工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             福島県は郡山・いわき・会津に電子機械／電子部品／半導体後工程が広く集積し、福島イノベーション・コースト構想を背景に新規立地も進む地域です。本ページでは「福島県 × 電子部品・半導体製造業」というクロス領域に絞り、東北電力エリア固有の単価事情（火力比率が高めで燃調感応度は中〜やや高め・女川2号機再稼働の進行）と、クリーンルーム恒温恒湿空調／実装／検査の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

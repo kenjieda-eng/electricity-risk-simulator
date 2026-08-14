@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "高知県の法人電気料金完全ガイド｜四国電力エリア単価分析・紙パルプ・施設園芸ナスピーマン・カツオ水産加工の契約最適化";
+  "高知県の法人電気料金ガイド｜四国電力エリア単価分析・紙パルプ・施設園芸ナスピーマン・カツオ水産加工の契約最適化";
 const pageDescription =
   "高知県の法人電気料金を地域特化で解説。四国電力エリアの単価水準を業種別に再加工して提示し、土佐紙パルプ、施設園芸（ナス・ピーマン全国1位）、カツオ水産加工、四万十川観光業、太平洋型台風BCPの電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function KochiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            高知県の法人電気料金完全ガイド
+            高知県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             高知県は四国電力エリアで、土佐市・いの町の日本製紙土佐パルプ・大王製紙関連の紙パルプ工業、安芸郡・南国市の施設園芸（ナス・ピーマン・ミョウガ全国1位）、室戸・土佐清水・宿毛のカツオマグロ水産加工、四万十川・室戸岬・桂浜の観光業など多様な第一次・素材産業を持ちます。太平洋型台風の常襲地域であり、BCP対応が重要な県です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

@@ -8,7 +8,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
-const pageTitle = "TCFD/ISSB対応の電気代開示完全ガイド｜Scope2算定・統合報告書記載・投資家対話（CFO向け・代表シナリオ）";
+const pageTitle = "TCFD/ISSB対応の電気代開示ガイド｜Scope2算定・統合報告書記載・投資家対話（CFO向け・代表シナリオ）";
 const pageDescription = "CFO・経営層向けに、TCFD/ISSB（IFRS S2）・SSBJ基準に対応した電気代・Scope2の開示実務を、算定フロー・統合報告書記載・投資家対話の観点で整理。公開制度・事例に基づく代表シナリオで、特定の電力会社・契約形態を推奨するものではありません。";
 const pageUrl = "https://simulator.eic-jp.org/cfo-tcfd-issb-electricity-disclosure";
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
-const h1Text = "TCFD/ISSB対応の電気代開示完全ガイド｜Scope2算定・統合報告書記載・投資家対話";
+const h1Text = "TCFD/ISSB対応の電気代開示ガイド｜Scope2算定・統合報告書記載・投資家対話";
 const breadcrumbTitle = "TCFD/ISSB対応の電気代開示";
 const leadText = "本記事は公開情報・制度に基づく一般的な情報整理であり、特定の電力会社・契約形態を推奨するものではありません。電気代は単なるコストではなく、Scope2排出量を通じて気候関連開示の中核データへと位置づけが変わりました。TCFDは2023年に解散し、開示の枠組みはISSB(IFRS S2)へ、国内ではSSBJ基準へと引き継がれています。本稿はCFO・経営企画・IR担当が、電力消費とScope2をどの算定基準で捉え、再エネ証書やPPAをどう反映し、シナリオ分析や有価証券報告書・統合報告書にどう記載するかを、制度の現状に沿って実務目線で整理します。";
 const d1CtaLead = "自社の電気代が排出開示にどう影響するかを考える第一歩として、まず使用実態に即した電気代の規模感を把握することが有効です。業種別電気代計算機を使えば、業種・規模の代表シナリオに基づく目安を試算でき、Scope2算定の前提となる電力コストの位置づけを社内で議論する材料になります。実数値は契約条件・使用実態により異なります。特定の電力会社・契約形態を推奨するものではありません。";

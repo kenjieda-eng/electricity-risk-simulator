@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "宮城県の水産加工業の電気料金完全ガイド｜石巻・気仙沼・塩釜の冷凍冷蔵集積と東北電力";
+  "宮城県の水産加工業の電気料金ガイド｜石巻・気仙沼・塩釜の冷凍冷蔵集積と東北電力";
 const pageDescription =
   "宮城県の水産加工業に特化。石巻・気仙沼・塩釜の冷凍冷蔵・水産加工集積を核に、急速凍結・冷凍冷蔵倉庫・製氷の24時間稼働の電力プロファイル、東北電力エリアの単価事情と燃調感応度、震災後のBCP、特別高圧／高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -409,7 +409,7 @@ export default function MiyagiSeafoodProcessingElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            宮城県の水産加工業の電気料金完全ガイド
+            宮城県の水産加工業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             宮城県は三陸沖の好漁場を背後に、石巻・気仙沼・塩釜・女川を核とする全国有数の水産加工集積地です。本ページでは「宮城県 × 水産加工業」というクロス領域に絞り、東北電力エリア固有の単価事情と燃調感応度、急速凍結・冷凍冷蔵倉庫・製氷の24時間稼働の電力プロファイル、震災後のBCP、特別高圧／高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

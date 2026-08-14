@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "神奈川県の物流倉庫の電気料金完全ガイド｜横浜・川崎・京浜港湾の冷凍冷蔵倉庫／自動倉庫と特別高圧契約";
+  "神奈川県の物流倉庫の電気料金ガイド｜横浜・川崎・京浜港湾の冷凍冷蔵倉庫／自動倉庫と特別高圧契約";
 const pageDescription =
   "神奈川県の物流倉庫業に特化した法人電気代ガイド。横浜港・川崎港の京浜港湾物流ハブ、冷凍冷蔵倉庫の24時間稼働、自動倉庫の最新技術、東京電力エリアの単価事情、特別高圧／高圧契約の最適化と省エネ投資、PPA調達までを実務目線で整理します。";
 
@@ -407,7 +407,7 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            神奈川県の物流倉庫の電気料金完全ガイド
+            神奈川県の物流倉庫の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             神奈川県は横浜港・川崎港の京浜港湾を核とする日本最大級の物流ハブで、冷凍冷蔵倉庫・自動倉庫・3PL大手の関東基幹拠点が集積しています。本ページでは「神奈川県 × 物流倉庫」というクロス領域に絞り、東京電力エリア固有の単価事情と、24時間冷却・自動倉庫・EC拡大・PPA調達までを実務目線で整理します。
@@ -426,7 +426,7 @@ export default function KanagawaLogisticsWarehouseElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「神奈川 × 物流倉庫」のクロス領域に特化したガイドです。神奈川県全体の文脈は{" "}
             <Link href="/kanagawa-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              神奈川県の法人電気料金完全ガイド
+              神奈川県の法人電気料金ガイド
             </Link>
             、業種一般としての倉庫業全体は{" "}
             <Link href="/warehouse-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

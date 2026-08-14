@@ -648,7 +648,7 @@ export default function NihonTechnoCorporateElectricityGuidePage() {
               デマンド管理の基礎は{" "}
               <Link href="/demand-control-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド管理・契約電力適正化ガイド</Link>
               、近縁の新電力の解説は{" "}
-              <Link href="/ennet-corporate-electricity-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エネット（法人向け）完全ガイド</Link>
+              <Link href="/ennet-corporate-electricity-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">エネット（法人向け）ガイド</Link>
               、{" "}
               <Link href="/local-utility-corporate-electricity-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">地域新電力（自治体系・地産地消）法人活用ガイド</Link>
               も参照ください。
@@ -700,7 +700,7 @@ export default function NihonTechnoCorporateElectricityGuidePage() {
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
-              { href: "/ennet-corporate-electricity-guide", title: "エネット（法人向け）完全ガイド", description: "全国系新電力の代表例。" },
+              { href: "/ennet-corporate-electricity-guide", title: "エネット（法人向け）ガイド", description: "全国系新電力の代表例。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },
               { href: "/demand-control-guide", title: "デマンド管理・契約電力適正化ガイド", description: "基本料金削減の基礎となるデマンド管理。" },
               { href: "/region-tokyo-business-electricity", title: "東京エリアの法人電気料金", description: "首都圏エリアの市況と単価水準。" },

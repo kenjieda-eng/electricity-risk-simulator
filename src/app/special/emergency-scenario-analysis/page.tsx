@@ -4,9 +4,9 @@ import EmergencyScenarioChartCard from "./_components/EmergencyScenarioCharts";
 import EmergencyScenarioLayout from "./_components/EmergencyScenarioLayout";
 import { EMERGENCY_SCENARIO_BASE_PATH } from "../../../lib/emergencyScenarioAnalysis";
 
-const pageTitle = "有事シナリオ分析｜法人電気代の3シナリオ完全比較【2026年4月版】";
+const pageTitle = "有事シナリオ分析｜法人電気代の3シナリオ比較【2026年4月版】";
 const pageDescription =
-  "原油高騰・補助金終了・再エネ賦課金・円安の四重苦を前提に、法人電気代の上振れリスクを「短期安定化」「夏まで長期化」「秋以降継続」の3シナリオで完全比較。背景・仕組み・四重苦・契約別・業種別・対策まで10ページで構成された有事シナリオ分析特集トップ。一般社団法人エネルギー情報センターが中立解説。";
+  "原油高騰・補助金終了・再エネ賦課金・円安の四重苦を前提に、法人電気代の上振れリスクを「短期安定化」「夏まで長期化」「秋以降継続」の3シナリオで比較。背景・仕組み・四重苦・契約別・業種別・対策まで10ページで構成された有事シナリオ分析特集トップ。一般社団法人エネルギー情報センターが中立解説。";
 const canonicalUrl = `https://simulator.eic-jp.org${EMERGENCY_SCENARIO_BASE_PATH}`;
 
 export const metadata: Metadata = {

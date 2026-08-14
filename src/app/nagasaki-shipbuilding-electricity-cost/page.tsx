@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "長崎県の造船・重工業の電気料金完全ガイド｜長崎・佐世保の造船集積と九州電力";
+  "長崎県の造船・重工業の電気料金ガイド｜長崎・佐世保の造船集積と九州電力";
 const pageDescription =
   "長崎県の造船・重工業に特化。長崎・佐世保の造船・舶用機械・重機械の集積を核に、大型構造物溶接・クレーン・機械加工・塗装乾燥の電力プロファイル、九州電力エリアの単価事情（原子力4基＋太陽光導入量国内最大級で燃調感応度が相対的に低め）、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します（広島=呉の造船とは検索意図を分離）。";
 
@@ -406,7 +406,7 @@ export default function NagasakiShipbuildingElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            長崎県の造船・重工業の電気料金完全ガイド
+            長崎県の造船・重工業の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             長崎県は長崎・佐世保を二大拠点として造船・舶用機械・重機械が広く集積し、諫早・大村・西海方面に造船関連サプライヤーや鉄工が裾野を支える、国内有数の造船・重工業の県です。本ページでは「長崎県 × 造船・重工業」というクロス領域に絞り、九州電力エリア固有の単価事情（原子力4基稼働＋太陽光導入量が国内最大級で燃調感応度が相対的に低め）と、大型構造物溶接／クレーン／機械加工／塗装乾燥の電力プロファイル、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。なお広島＝呉・江田島の造船を含む自動車・造船クロスとは対象を分け、長崎＝長崎・佐世保の造船専業集積として検索意図を分離しています。本ページは特定の電力会社・契約形態を推奨するものではありません。

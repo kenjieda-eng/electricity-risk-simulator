@@ -10,9 +10,9 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "中小企業経営強化税制を法人の電気代対策に活かす完全ガイド｜即時償却・税額控除10%(7%)・A/B類型（2026年度）";
+  "中小企業経営強化税制を法人の電気代対策に活かすガイド｜即時償却・税額控除10%(7%)・A/B類型（2026年度）";
 const pageDescription =
-  "中小企業経営強化税制（税制）を法人の電気代対策に活かす完全ガイド。現行のA類型（生産性向上）・B類型（収益力強化/再編後）の要点、即時償却または税額控除10%（資本金3,000万円超1億円以下は7%）、経営力向上計画の認定、自家消費型太陽光（自家消費率50%以上）の扱い、GX・CN投資促進税制との違い、代表シナリオ3件の投資回収まで整理します。C類型は2025年3月末で廃止済み。税制のため税理士・所轄税務署に要確認。";
+  "中小企業経営強化税制（税制）を法人の電気代対策に活かすガイド。現行のA類型（生産性向上）・B類型（収益力強化/再編後）の要点、即時償却または税額控除10%（資本金3,000万円超1億円以下は7%）、経営力向上計画の認定、自家消費型太陽光（自家消費率50%以上）の扱い、GX・CN投資促進税制との違い、代表シナリオ3件の投資回収まで整理します。C類型は2025年3月末で廃止済み。税制のため税理士・所轄税務署に要確認。";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -488,7 +488,7 @@ export default function SubsidySmeManagementStrengtheningTaxPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            中小企業経営強化税制を法人の電気代対策に活かす完全ガイド
+            中小企業経営強化税制を法人の電気代対策に活かすガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             中小企業経営強化税制は、中小企業が生産性向上・収益力強化に資する設備を導入したときに、即時償却または税額控除10%（資本金3,000万円超1億円以下は7%）で税負担を軽くする「税制」です。省エネ設備や自家消費型太陽光（自家消費率50%以上）を対象にできる場合があり、電気代削減と税負担軽減を同時に狙えます。本ページは、現行のA類型・B類型の要点（C類型は2025年3月末で廃止済み）、経営力向上計画の認定、GX・CN投資促進税制との違い、代表シナリオ3件の投資回収まで、法人の電気代対策の観点で整理します。税制のため、適用可否・控除額の計算は税理士・所轄税務署に要確認です。
@@ -536,7 +536,7 @@ export default function SubsidySmeManagementStrengtheningTaxPage() {
               補助金全体の入口は{" "}
               <Link href="/subsidies-overview" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金・助成金の全体像</Link>
               、他の税制との比較は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。税制は補助金と性質が異なるため、別項目として実質負担を見積もることが重要です。
             </p>
           </section>
@@ -585,7 +585,7 @@ export default function SubsidySmeManagementStrengtheningTaxPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX・CN投資促進税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               、省エネ税制は{" "}
               <Link href="/energy-saving-tax-incentives" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ設備の税制優遇</Link>
               と{" "}
@@ -749,7 +749,7 @@ export default function SubsidySmeManagementStrengtheningTaxPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               補助金と税制の併用・重複活用のルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、中小企業の省エネ投資パターンは{" "}
               <Link href="/subsidy-sme-energy-saving-patterns" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業向け省エネ補助金の活用パターン</Link>
               、製造業の投資戦略は{" "}
@@ -808,7 +808,7 @@ export default function SubsidySmeManagementStrengtheningTaxPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。中小企業経営強化税制との使い分け。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。中小企業経営強化税制との使い分け。" },
               { href: "/energy-saving-tax-incentives", title: "省エネ設備の税制優遇", description: "省エネ設備に関する税制上の措置の基礎。" },
               { href: "/energy-saving-tax-incentive-2026", title: "2026年度の省エネ税制", description: "2026年度時点の省エネ関連税制の整理。" },
               { href: "/subsidy-sii-energy-saving", title: "省エネ補助金（SII）の申請ガイド", description: "SII省エネ投資促進補助金の対象・補助率・申請の流れ。" },

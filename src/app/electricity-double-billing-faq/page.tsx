@@ -269,10 +269,10 @@ export default function ElectricityDoubleBillingFaqPage() {
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <p className="text-xs font-semibold tracking-wide text-sky-700">FAQ ／ 見直しポイントを知る</p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-            電気代の二重請求・二重契約とは｜原因と対処法・予防策の完全FAQ
+            電気代の二重請求・二重契約とは｜原因と対処法・予防策のFAQ
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-            電気代の「二重請求」「二重契約」が起こると、年間で数十万円の余計な支出になることがあります。本記事では中立社団が、二重請求・二重契約・二重支払いが発生する<strong>5つの典型パターン</strong>と、それぞれの対処手順・予防策を完全FAQ形式で解説します。電力会社切替時のトラブル予防にも活用できる実務ガイドです。
+            電気代の「二重請求」「二重契約」が起こると、年間で数十万円の余計な支出になることがあります。本記事では中立社団が、二重請求・二重契約・二重支払いが発生する<strong>5つの典型パターン</strong>と、それぞれの対処手順・予防策をFAQ形式で解説します。電力会社切替時のトラブル予防にも活用できる実務ガイドです。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             すでに過剰請求が発生していて緊急対応が必要な場合は、関連記事

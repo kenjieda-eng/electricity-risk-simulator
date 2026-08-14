@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "新潟県の法人電気料金完全ガイド｜燕三条金属加工・米倉庫・雪国対策の契約最適化";
+  "新潟県の法人電気料金ガイド｜燕三条金属加工・米倉庫・雪国対策の契約最適化";
 const pageDescription =
   "新潟県の法人電気料金を地域特化で解説。東北電力エリア、燕三条の金属加工集積、コシヒカリ米倉庫、雪国対策（除排雪・融雪電力）、柏崎刈羽原発立地の特性、契約見直しと補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function NiigataBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            新潟県の法人電気料金完全ガイド
+            新潟県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             新潟県は東北電力エリアで、燕三条金属加工集積、コシヒカリ米倉庫、湯沢・苗場のスキーリゾート、柏崎刈羽原発立地など多彩な産業特性を持ちます。雪国特有の融雪・除排雪電力需要が大きく、雪国対策が電気代見直しの重要論点です。本ページでは県内法人の電気代水準、業種別影響度、雪国対策、契約見直しの具体策、補助金活用までを実務的に整理します。

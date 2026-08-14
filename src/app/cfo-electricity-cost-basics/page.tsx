@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["for-executives"];
 
 const pageTitle =
-  "CFOのための電気代基礎｜P/L構造・売上高電気代比率・経営判断フレームワーク完全ガイド";
+  "CFOのための電気代基礎｜P/L構造・売上高電気代比率・経営判断フレームワークガイド";
 const pageDescription =
   "CFO・財務責任者向けに電気代の経営判断フレームワークを体系化。P/L上の位置付け（製造原価／販管費）、業界平均ベンチマーク、感度分析、取締役会報告、ESG連携、M&A評価まで実務的に整理します。";
 

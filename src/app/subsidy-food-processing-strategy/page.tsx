@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "食品加工業の補助金活用戦略 完全ガイド｜対象・補助率・申請の進め方";
+  "食品加工業の補助金活用戦略ガイド｜対象・補助率・申請の進め方";
 const pageDescription =
   "食品加工・水産加工業に特化した補助金活用戦略。冷凍冷蔵（自然冷媒）・ボイラー・殺菌乾燥・空調の省エネ設備を、SII省エネ補助・ものづくり補助金・自然冷媒補助・農水省食品系で導入する実務を、HACCP対応と一体で、規模別代表シナリオ・採択戦略・併用ルールで整理します。";
 
@@ -409,7 +409,7 @@ export default function SubsidyFoodProcessingStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            食品加工業の補助金活用戦略 完全ガイド
+            食品加工業の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             食品加工・水産加工業は冷凍・冷蔵・製氷・殺菌・乾燥・洗浄・空調と電力多消費で、特に冷凍冷蔵は24時間稼働のため省エネ余地が大きい業種です。本ページでは経済産業省/SIIの省エネ補助・ものづくり補助金・環境省の自然冷媒機器補助・農林水産省の食品系を組合せ、HACCP対応（衛生品質）と一体で省エネ設備を導入する実務を、規模別の代表シナリオ・採択戦略・併用ルール・申請フローまで整理します。補助率・上限は事業区分・年度公募により変動するため、最新の公募要領による確認が前提です。
@@ -575,7 +575,7 @@ export default function SubsidyFoodProcessingStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               、省エネ診断は{" "}
@@ -621,9 +621,9 @@ export default function SubsidyFoodProcessingStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用の詳細は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、GX・CN投資促進税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、自治体補助の探し方は{" "}
               <Link href="/subsidy-local-government-list" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体補助金の一覧・探し方</Link>
               も参照ください。

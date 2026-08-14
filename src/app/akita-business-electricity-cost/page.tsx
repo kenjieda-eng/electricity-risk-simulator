@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "秋田県の法人電気料金完全ガイド｜風力発電全国1位・豪雪・製紙木材の契約最適化";
+  "秋田県の法人電気料金ガイド｜風力発電全国1位・豪雪・製紙木材の契約最適化";
 const pageDescription =
   "秋田県の法人電気料金を地域特化で解説。東北電力エリア、風力発電全国1位の特性、豪雪地帯の電力構造、製紙・木材加工業の電力負荷、洋上風力PPA活用、補助金、契約見直しを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function AkitaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            秋田県の法人電気料金完全ガイド
+            秋田県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             秋田県は東北電力エリア、風力発電全国1位、豪雪地帯、製紙・木材加工集積という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、製紙・木材加工・温泉旅館の業種別影響、風力PPA活用、豪雪地帯固有のコスト構造、補助金活用、契約見直しを実務的に整理します。

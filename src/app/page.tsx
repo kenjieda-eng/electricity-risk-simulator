@@ -264,7 +264,7 @@ export default function Page() {
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">主要7カ国の産業用電気料金と日本が高い構造的理由</p>
               </Link>
               <Link href="/what-is-capacity-contribution" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">
-                <p className="text-sm font-semibold text-slate-900">容量拠出金とは｜2026〜2028年度の単価と法人への影響</p>
+                <p className="text-sm font-semibold text-slate-900">容量拠出金 2026〜2028年度の単価一覧と月額負担目安</p>
                 <p className="mt-1 text-xs leading-relaxed text-slate-600">2027年度7,847円/kW、2028年度首都圏14,812円/kW の本格徴収影響を解説</p>
               </Link>
               <Link href="/kenji-eda" className="rounded-xl border border-slate-200 bg-white p-4 transition hover:bg-sky-50">

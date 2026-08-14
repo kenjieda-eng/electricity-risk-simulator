@@ -11,7 +11,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "違約金・精算金条項の計算方法完全ガイド｜残存契約期間別の違約金目安と切替損益分岐";
+  "違約金・精算金条項の計算方法ガイド｜残存契約期間別の違約金目安と切替損益分岐";
 const pageDescription =
   "電力契約の違約金条項（定額型・月額連動型・使用量連動型）の計算方法と、残存期間別の違約金目安、切替メリットとの損益分岐、免除・減額交渉のポイントを実務シナリオ3パターンと固有データ表で整理します。";
 const pageUrl = "https://simulator.eic-jp.org/penalty-clause-calculation";
@@ -365,7 +365,7 @@ export default function Page() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            違約金・精算金条項の計算方法完全ガイド｜残存契約期間と切替損益分岐
+            違約金・精算金条項の計算方法ガイド｜残存契約期間と切替損益分岐
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             電力契約の違約金条項は、定額型・月額連動型・使用量連動型など複数のタイプが存在し、計算方法によって金額が大きく変動します。本ページでは、5類型の違約金条項、残存期間別の違約金目安表、3つの実務シナリオ（高圧500kW・特別高圧3,000kW・値上げ通知後解約）でのBefore/After損益分岐、減額交渉のレバー、12項目チェックリストまでを実務担当者向けに整理します。

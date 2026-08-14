@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "沖縄電力（おきでん）の法人向けプラン完全ガイド｜独立系統・離島ユニバーサルサービスと通年冷房需要への対応";
+  "沖縄電力（おきでん）の法人向けプランガイド｜独立系統・離島ユニバーサルサービスと通年冷房需要への対応";
 const pageDescription =
   "沖縄電力株式会社（おきでん）の法人向け電力サービスを、公開情報に基づき中立的に整理。本土と非連系の独立系統という構造的特徴、離島ユニバーサルサービス、台風常襲地としてのBCP、通年冷房需要が大きい観光・ホテル業の電力プロファイル、特別高圧・高圧の契約メニュー体系、燃料費調整額の感応度、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣評価は行いません。";
 
@@ -352,7 +352,7 @@ export default function OkidenCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            沖縄電力（おきでん）の法人向けプラン完全ガイド｜独立系統・離島ユニバーサルサービスと通年冷房需要への対応
+            沖縄電力（おきでん）の法人向けプランガイド｜独立系統・離島ユニバーサルサービスと通年冷房需要への対応
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             沖縄電力株式会社（おきでん）の法人向け電力サービスを、公開情報に基づき中立的に整理します。本土と非連系の独立系統という構造的特徴、離島ユニバーサルサービス、台風常襲地としてのBCP、通年冷房需要が大きい観光・ホテル業の電力プロファイル、特別高圧・高圧の契約メニュー体系、燃料費調整額の感応度、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -565,7 +565,7 @@ export default function OkidenCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-hotel-leisure-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホテル・レジャーの補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -612,7 +612,7 @@ export default function OkidenCorporateElectricityGuidePage() {
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリア別の法人電気代事情ハブ。" },
               { href: "/okinawa-hotel-electricity-cost", title: "沖縄のホテル・観光業の電気料金", description: "沖縄エリアの業種×地域クロス。" },
               { href: "/okinawa-business-electricity-cost", title: "沖縄県の法人電気代事情", description: "沖縄県の法人需要家向けの整理。" },
-              { href: "/kyuden-corporate-electricity-guide", title: "九州電力の法人向けプラン完全ガイド", description: "九州エリアの電力会社別解説。" },
+              { href: "/kyuden-corporate-electricity-guide", title: "九州電力の法人向けプランガイド", description: "九州エリアの電力会社別解説。" },
               { href: "/tepco-ep-corporate-electricity-guide", title: "東京電力エナジーパートナーの法人向けプラン", description: "電力会社別解説の参考（関東エリア）。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "燃調算定方式の基礎。" },
               { href: "/supply-point-identification-number", title: "供給地点特定番号（22桁）とは", description: "契約・切替に必要な番号の確認方法。" },

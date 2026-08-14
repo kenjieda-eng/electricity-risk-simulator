@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "自然冷媒の冷凍冷蔵設備補助金 完全ガイド｜対象・補助率・申請の進め方（環境省系・脱フロン）";
+  "自然冷媒の冷凍冷蔵設備補助金ガイド｜対象・補助率・申請の進め方（環境省系・脱フロン）";
 const pageDescription =
   "自然冷媒（CO2・アンモニア・空気等）の冷凍冷蔵設備導入補助の対象設備・補助率の考え方・申請フロー・併用ルール・規模別代表シナリオを整理。脱フロン（フロン排出抑制法・GWP低減）と電気代削減を両立する実務を解説。";
 
@@ -387,7 +387,7 @@ export default function SubsidyNaturalRefrigerantFreezerPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            自然冷媒の冷凍冷蔵設備補助金 完全ガイド
+            自然冷媒の冷凍冷蔵設備補助金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             CO2・アンモニア・空気等を冷媒とする冷凍冷蔵設備の導入補助について、対象設備・補助率の考え方・申請フロー・他制度との併用ルール・規模別の代表シナリオを整理します。脱フロン（フロン排出抑制法・GWP低減）と電気代削減を両立する実務を、環境省系・SII省エネ補助の整理とともに解説します。補助率・上限は事業区分・年度公募により変動するため、申請前に必ず各実施機関の最新公募要領をご確認ください。
@@ -563,7 +563,7 @@ export default function SubsidyNaturalRefrigerantFreezerPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、申請書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・交付の必要書類ガイド</Link>
               。
@@ -588,7 +588,7 @@ export default function SubsidyNaturalRefrigerantFreezerPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、自治体補助は{" "}
               <Link href="/subsidy-local-government-list" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体補助一覧</Link>
               、GX税制は{" "}

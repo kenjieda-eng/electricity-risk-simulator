@@ -592,7 +592,7 @@ export default function Subsidy2026FiscalYearChangesPage() {
               切り替え先の詳細は、中小企業経営強化税制は{" "}
               <Link href="/subsidy-sme-management-strengthening-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業経営強化税制の詳細</Link>
               、脱炭素の税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               、東京都の制度は{" "}
               <Link href="/subsidy-tokyo-zero-emission-sme" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">東京都のゼロエミ中小企業向け補助</Link>
               、省力化投資は{" "}
@@ -619,7 +619,7 @@ export default function Subsidy2026FiscalYearChangesPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用の可否は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、投資回収の試算は{" "}
               <Link href="/subsidy-roi-payback-calculation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金活用後のROI・投資回収試算</Link>
               も参照ください。
@@ -730,7 +730,7 @@ export default function Subsidy2026FiscalYearChangesPage() {
               省エネ設備の税制優遇は{" "}
               <Link href="/energy-saving-tax-incentive-2026" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ設備の税制優遇（2026年度）</Link>
               、脱炭素の税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -753,7 +753,7 @@ export default function Subsidy2026FiscalYearChangesPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用・重複活用の可否は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、投資回収の試算は{" "}
               <Link href="/subsidy-roi-payback-calculation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金活用後のROI・投資回収試算</Link>
               、省力化の投資は{" "}
@@ -821,7 +821,7 @@ export default function Subsidy2026FiscalYearChangesPage() {
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
               { href: "/subsidy-manufacturing-strategy", title: "ものづくり補助金の申請戦略", description: "統合再編後の枠組みと申請の考え方。" },
               { href: "/subsidy-sme-management-strengthening-tax", title: "中小企業経営強化税制の詳細", description: "A類型・B類型とC類型廃止後の対応。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "脱炭素設備の税額控除・特別償却。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "脱炭素設備の税額控除・特別償却。" },
               { href: "/energy-saving-tax-incentive-2026", title: "省エネ設備の税制優遇（2026年度）", description: "省エネ設備の税制の要件と対象。" },
               { href: "/subsidy-sii-energy-saving", title: "省エネ・非化石転換補助金（SII）の詳細", description: "SIIの現行名称の補助制度。" },
               { href: "/subsidy-shift-project", title: "SHIFT事業（環境省）の詳細", description: "継続中のCO2削減設備更新支援。" },

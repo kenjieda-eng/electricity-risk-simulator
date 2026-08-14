@@ -582,7 +582,7 @@ export default function RegionTokyoBusinessElectricityPage() {
           links={[
             {
               href: "/nakano-ku-business-electricity-cost",
-              title: "中野区の法人電気料金完全ガイド",
+              title: "中野区の法人電気料金ガイド",
               description: "中野駅再開発・中小オフィス・商業エリアの電力需要と契約最適化。",
             },
             {

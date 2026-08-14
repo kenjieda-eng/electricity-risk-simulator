@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "PPA/VPPA関連補助金 完全ガイド｜オンサイト・オフサイト・VPPAの選び方と需要家主導型補助の組合せ";
+  "PPA/VPPA関連補助金ガイド｜オンサイト・オフサイト・VPPAの選び方と需要家主導型補助の組合せ";
 const pageDescription =
   "PPA/VPPA関連補助金に特化した法人向け詳細ガイド。オンサイトPPA・オフサイトPPA・VPPA（仮想PPA）・自己託送の違いと選び方、需要家主導型再エネ補助の対象・補助率（1/2以内・kWh定額型あり）、屋根面積・需要規模別の最適選択、RE100対応、蓄電池併設補助、追加性（additionality）の考え方、業種別の適性までを、数値捏造なしで整理します。";
 
@@ -510,7 +510,7 @@ export default function SubsidyPpaVppaDetailPage() {
               蓄電池・太陽光設備の補助は{" "}
               <Link href="/subsidy-battery-solar-equipment" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">蓄電池・太陽光設備の補助金</Link>
               、税制活用は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -533,7 +533,7 @@ export default function SubsidyPpaVppaDetailPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -558,7 +558,7 @@ export default function SubsidyPpaVppaDetailPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -636,7 +636,7 @@ export default function SubsidyPpaVppaDetailPage() {
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
               { href: "/subsidy-demand-side-ppa", title: "需要家主導型PPA補助（総論）", description: "PPA導入を支援する主力補助の概要。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備の補助金", description: "自家消費再エネ設備の補助。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "PPA関連設備の税額控除・特別償却。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "PPA関連設備の税額控除・特別償却。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "補助×税制の組合せ可否。" },
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "補助・税効果込みの回収年数比較。" },
               { href: "/corporate-ppa-overview", title: "コーポレートPPAの全体像", description: "PPAの基本と仕組み（共通）。" },

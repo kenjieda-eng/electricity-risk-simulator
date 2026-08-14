@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "岡山県の化学・石油化学工場の電気料金完全ガイド｜水島コンビナートの臨海重化学集積と中国電力";
+  "岡山県の化学・石油化学工場の電気料金ガイド｜水島コンビナートの臨海重化学集積と中国電力";
 const pageDescription =
   "岡山県の化学・石油化学工業に特化。倉敷市水島の水島コンビナート（石油精製・石油化学・誘導品・鉄鋼の臨海集積）を核に、連続操業プロセスの電力プロファイル、中国電力エリアの単価事情、コンビナート内自家発電との関係、特別高圧の競争入札、補助金・PPA活用、脱炭素対応までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function OkayamaChemicalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岡山県の化学・石油化学工場の電気料金完全ガイド
+            岡山県の化学・石油化学工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岡山県の化学・石油化学工業は、倉敷市水島の水島コンビナートを核とする瀬戸内臨海工業地帯の一翼です。本ページでは「岡山県 × 化学・石油化学工業」というクロス領域に絞り、中国電力エリア固有の単価事情と、電解・蒸留・反応・分離の連続操業プロセスの電力プロファイル、コンビナート内自家発電との関係、特別高圧の競争入札、補助金・PPA活用、脱炭素対応までを実務目線で整理します。本ページは特定の電力会社・契約形態を推奨するものではありません。
