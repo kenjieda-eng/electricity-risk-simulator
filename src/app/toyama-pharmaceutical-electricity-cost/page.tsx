@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "富山県の医薬品工場の電気料金完全ガイド｜くすりの富山・後発薬／配置薬の製造集積と北陸電力";
+  "富山県の医薬品工場の電気料金ガイド｜くすりの富山・後発薬／配置薬の製造集積と北陸電力";
 const pageDescription =
   "富山県の医薬品製造業に特化。「くすりの富山」の伝統を背景にした後発医薬品（ジェネリック）・配置薬の製造集積を核に、GMP対応クリーンルーム・空調・凍結乾燥・純水製造の電力プロファイル、北陸電力エリアの単価事情（水力比率が高く燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ToyamaPharmaceuticalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            富山県の医薬品工場の電気料金完全ガイド
+            富山県の医薬品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             富山県は「くすりの富山」配置薬（売薬）を起源に、約300年にわたって医薬品産業が発展してきた地域です。本ページでは「富山県 × 医薬品製造業」というクロス領域に絞り、北陸電力エリア固有の単価事情（水力比率が高く燃調感応度が相対的に低め）と、GMP対応クリーンルーム空調／凍結乾燥／純水製造の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

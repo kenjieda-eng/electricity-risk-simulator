@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "コージェネレーション導入支援 完全ガイド｜対象・補助率・申請の進め方";
+  "コージェネレーション導入支援ガイド｜対象・補助率・申請の進め方";
 const pageDescription =
   "コージェネレーション（CGS: ガスエンジン・ガスタービン・燃料電池）導入支援の対象・補助の考え方・申請フローを整理。電気＋熱の同時利用による総合効率向上、BCP（停電時自立運転）、ピークカットと電気料金への効果を、熱需要の大きい施設（ホテル・病院・食品工場）の代表シナリオで解説します。";
 
@@ -416,7 +416,7 @@ export default function SubsidyCogenerationIntroductionPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            コージェネレーション導入支援 完全ガイド
+            コージェネレーション導入支援ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             コージェネレーション（CGS: ガスエンジン・ガスタービン・燃料電池）は、電気と熱を同時に得て一次エネルギーを使い切る熱電併給の仕組みです。本ページでは導入支援の対象・補助の考え方・申請フローを、総合効率向上・BCP（停電時自立運転）・ピークカットと電気料金への効果とあわせ、熱需要の大きい施設（ホテル・病院・食品工場）の代表シナリオで整理します。補助率・上限は事業区分・年度公募により変動するため、最新の公募要領をご確認ください。
@@ -588,7 +588,7 @@ export default function SubsidyCogenerationIntroductionPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、必要書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・交付の必要書類ガイド</Link>
               。特定の電力会社・契約形態を推奨するものではありません。
@@ -610,7 +610,7 @@ export default function SubsidyCogenerationIntroductionPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用の詳細は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、GX・CN税制は{" "}
               <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               。

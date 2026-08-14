@@ -10,7 +10,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "廃熱回収・排熱利用設備の補助金｜工業炉・蒸気ドレン・排熱発電で捨てる熱を電力・燃料削減に変える完全ガイド";
+  "廃熱回収・排熱利用設備の補助金｜工業炉・蒸気ドレン・排熱発電で捨てる熱を電力・燃料削減に変えるガイド";
 const pageDescription =
   "廃熱回収・排熱利用設備の導入補助を中立整理。排ガス・排温水・蒸気ドレンなど捨てている熱を回収し、電力・燃料を減らす設備（廃熱回収ボイラー・排熱回収型ヒートポンプ・熱交換器・蒸気系統最適化・バイナリー発電）を、SII先進的省エネ投資促進支援・経産省の省エネ設備更新支援・NEDOの技術開発の枠組みで解説。省エネ量あたりの補助額（費用対効果）が採択の鍵となる点を軸に、代表シナリオ3件・対象設備・採択戦略・申請フローまで整理します（2026年度時点の整理・最新の公募要領で要確認）。";
 
@@ -553,7 +553,7 @@ export default function SubsidyWasteHeatRecoveryPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            廃熱回収・排熱利用設備の補助金 完全ガイド
+            廃熱回収・排熱利用設備の補助金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             排ガス・排温水・蒸気ドレンなど、工場で捨てている熱を回収して電力・燃料を減らすのが廃熱回収・排熱利用です。本ページでは、廃熱回収ボイラー・排熱回収型（高温）ヒートポンプ・熱交換器・蒸気系統最適化・排熱発電（バイナリー）といった設備の導入に使える補助を、SIIの先進的省エネルギー投資促進支援事業（工場/事業場型）、経済産業省の省エネ設備更新支援（需要側）、NEDOの技術開発の枠組みで中立に整理します。省エネ量あたりの補助額（費用対効果）が採択の鍵となる点を軸に、代表シナリオ3件・対象設備・採択戦略・申請フローまで解説します（2026年度時点の整理・最新の公募要領で要確認）。
@@ -680,7 +680,7 @@ export default function SubsidyWasteHeatRecoveryPage() {
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールの詳細は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、投資回収の試算は{" "}
               <Link href="/subsidy-roi-payback-calculation" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金活用後のROI・投資回収試算</Link>
               。
@@ -774,7 +774,7 @@ export default function SubsidyWasteHeatRecoveryPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -834,7 +834,7 @@ export default function SubsidyWasteHeatRecoveryPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX・脱炭素設備の税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、中小の進め方は{" "}
               <Link href="/subsidy-sme-energy-saving-patterns" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">中小企業の省エネ補助活用パターン</Link>
               も参照ください。

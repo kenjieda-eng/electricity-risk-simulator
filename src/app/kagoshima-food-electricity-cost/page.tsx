@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "鹿児島県の食品工場の電気料金完全ガイド｜焼酎蔵・畜産加工・水産の食品集積と九州電力";
+  "鹿児島県の食品工場の電気料金ガイド｜焼酎蔵・畜産加工・水産の食品集積と九州電力";
 const pageDescription =
   "鹿児島県の食品製造業に特化。本格芋焼酎の蔵元、畜産加工（黒豚・黒毛和牛・ブロイラー）、水産（かつお節・養殖）の集積を核に、発酵・蒸留・冷凍・加熱・乾燥の電力プロファイル、九州電力エリアの単価事情（原子力＋太陽光と出力制御）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -405,7 +405,7 @@ export default function KagoshimaFoodElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            鹿児島県の食品工場の電気料金完全ガイド
+            鹿児島県の食品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             鹿児島県は本格芋焼酎の蔵元、畜産加工（黒豚・黒毛和牛・ブロイラー）、水産（かつお節・養殖）、製茶を柱とする南九州の食料基地です。本ページでは「鹿児島県 × 食品製造業」というクロス領域に絞り、発酵・蒸留・冷凍・加熱・乾燥の電力プロファイルと、九州電力エリア固有の単価事情（原子力＋太陽光と出力制御）、契約最適化、補助金・PPA活用までを実務目線で整理します。本ガイドは特定の電力会社・契約形態を推奨するものではありません。

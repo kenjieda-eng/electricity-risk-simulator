@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "岩手県の法人電気料金完全ガイド｜震災復興・自動車部品集積・林業の契約最適化";
+  "岩手県の法人電気料金ガイド｜震災復興・自動車部品集積・林業の契約最適化";
 const pageDescription =
   "岩手県の法人電気料金を地域特化で解説。東北電力エリア、震災後復興と電力構造、北上市の自動車関連工場集積、林業・水産業の電力負荷、補助金活用、契約見直しまで実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function IwateBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岩手県の法人電気料金完全ガイド
+            岩手県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岩手県は東北電力エリア、震災復興と電力構造の再構築、北上市の自動車関連工場集積、林業・水産業の地場産業という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、自動車部品・物流・温泉旅館の業種別影響、震災経験を踏まえたBCP電源活用、補助金活用、契約見直しを実務的に整理します。

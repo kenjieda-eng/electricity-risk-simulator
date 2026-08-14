@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "千葉県の法人電気料金完全ガイド｜京葉工業地帯コンビナート・物流・観光業の契約最適化";
+  "千葉県の法人電気料金ガイド｜京葉工業地帯コンビナート・物流・観光業の契約最適化";
 const pageDescription =
   "千葉県の法人電気料金を地域特化で解説。東京電力エリア、京葉工業地帯（石油化学コンビナート）、成田・千葉港の物流拠点、舞浜・成田の観光業、洋上風力PPA活用、補助金、契約見直しを実務的に整理します。";
 
@@ -388,7 +388,7 @@ export default function ChibaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            千葉県の法人電気料金完全ガイド
+            千葉県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             千葉県は東京電力エリアの臨海重要拠点、京葉工業地帯（石油化学コンビナート）、成田空港・千葉港の物流ハブ、舞浜・南房総の観光業という構造的特徴を持ちます。本ページでは県内法人の電気代水準、コンビナート・物流・舞浜ホテルの業種別影響、銚子沖洋上風力PPA活用、補助金、契約見直しを実務的に整理します。

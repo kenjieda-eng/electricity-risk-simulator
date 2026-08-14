@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "補助金併用・重複活用ルール 完全ガイド｜国×自治体×SIIの組合せ可否マトリクスと重層活用の実務";
+  "補助金併用・重複活用ルールガイド｜国×自治体×SIIの組合せ可否マトリクスと重層活用の実務";
 const pageDescription =
   "補助金の併用・重複活用に特化した実務ガイド。同一設備への国庫補助の重複は原則不可というルールを起点に、国補助×自治体補助×SII×税制の組合せ可否マトリクス、設備・経費の切り分け、重層活用で実質負担を最大限圧縮するテクニックを、併用成功事例・申請手順・NG例まで整理します。";
 
@@ -368,7 +368,7 @@ export default function SubsidyStackingCombinationRulesPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            補助金併用・重複活用ルール 完全ガイド
+            補助金併用・重複活用ルールガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             同一設備への国庫補助の重複は原則不可。一方で対象設備・経費を切り分ける、財源の異なる自治体補助を重ねる、補助金と税制を組合せる、といった条件を満たせば併用可能なケースがあります。本ページでは国×自治体×SII×税制の組合せ可否マトリクス、設備・経費の切り分け、重層活用で実質負担を最大限圧縮するテクニックを、併用成功事例・申請手順・NG例まで整理します。
@@ -508,7 +508,7 @@ export default function SubsidyStackingCombinationRulesPage() {
               PPAの併用整理は{" "}
               <Link href="/subsidy-ppa-vppa-detail" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">PPA/VPPA関連補助金の詳細</Link>
               、税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -531,7 +531,7 @@ export default function SubsidyStackingCombinationRulesPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、申請・交付の書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・交付の書類ガイド</Link>
               。
@@ -632,7 +632,7 @@ export default function SubsidyStackingCombinationRulesPage() {
             links={[
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "補助金×税制の取得価額調整。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "補助金×税制の取得価額調整。" },
               { href: "/subsidy-local-government-list", title: "自治体補助金リスト", description: "国補助に上乗せする自治体補助の探し方。" },
               { href: "/subsidy-municipality-energy-examples", title: "自治体エネルギー補助の事例", description: "上乗せ・横出しの具体例。" },
               { href: "/subsidy-ppa-vppa-detail", title: "PPA/VPPA関連補助金の詳細", description: "PPAでの投資主体の分け方。" },

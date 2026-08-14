@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "千葉県のデータセンターの電気料金完全ガイド｜印西・白井・佐倉のハイパースケール／AI需要24h空調・特別高圧契約";
+  "千葉県のデータセンターの電気料金ガイド｜印西・白井・佐倉のハイパースケール／AI需要24h空調・特別高圧契約";
 const pageDescription =
   "千葉県のデータセンター事業者向け法人電気代ガイド。印西・白井・佐倉のハイパースケール／コロケーションDC集積、AI/HPC需要急増に伴う特別高圧需要、東京電力エリアの単価事情、PUE改善・冷却最適化・PPA調達までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ChibaDatacenterElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            千葉県のデータセンターの電気料金完全ガイド
+            千葉県のデータセンターの電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             千葉県は印西・白井・佐倉を中心とする日本最大のデータセンター集積地です。本ページでは「千葉県 × データセンター」というクロス領域に絞り、東京電力エリア固有の単価事情と、24時間高負荷率・AI/HPC高密度ラック・PUE改善・RE100調達・系統容量制約までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function ChibaDatacenterElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「千葉 × データセンター」のクロス領域に特化したガイドです。千葉県全体の文脈は{" "}
             <Link href="/chiba-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              千葉県の法人電気料金完全ガイド
+              千葉県の法人電気料金ガイド
             </Link>
             、業種一般としてのデータセンター全体は{" "}
             <Link href="/data-center-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

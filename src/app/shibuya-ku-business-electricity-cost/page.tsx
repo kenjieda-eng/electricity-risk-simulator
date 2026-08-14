@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "渋谷区の法人電気料金完全ガイド｜渋谷IT・スタートアップ／原宿表参道／恵比寿代官山オフィス";
+  "渋谷区の法人電気料金ガイド｜渋谷IT・スタートアップ／原宿表参道／恵比寿代官山オフィス";
 const pageDescription =
   "東京都渋谷区の法人電気代を区固有の論点で解説。渋谷駅周辺のIT・スタートアップ集積（GMO・サイバーエージェント・DeNA・Mercari）、渋谷スクランブルスクエア／ストリーム再開発、原宿・表参道のアパレル・クリエイティブ、恵比寿・代官山のオフィス＋商業、ビットバレー文化を踏まえた契約最適化と省エネ補助の実務をまとめます。";
 
@@ -372,7 +372,7 @@ export default function ShibuyaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            渋谷区の法人電気料金完全ガイド
+            渋谷区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             渋谷区は渋谷駅周辺のIT・スタートアップ集積（ビットバレー）、原宿表参道のクリエイティブ・アパレル商業、恵比寿代官山のオフィス＋商業、代々木の教育・オフィスと、若い企業文化と消費トレンドが集積するエリアです。本ページでは区内固有の電力事情、業種別影響、契約見直し、渋谷区・東京都・国の補助金活用までを実務目線で整理します。

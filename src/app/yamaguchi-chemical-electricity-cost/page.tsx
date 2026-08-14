@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "山口県の化学・石油化学工場の電気料金完全ガイド｜周南・宇部・岩国のコンビナートと中国電力";
+  "山口県の化学・石油化学工場の電気料金ガイド｜周南・宇部・岩国のコンビナートと中国電力";
 const pageDescription =
   "山口県の化学・石油化学工業に特化。周南（徳山）・宇部・岩国の石油化学コンビナートと誘導品・ファインケミカルの集積を核に、電解・蒸留・反応・冷却の連続操業プロセスの電力プロファイル、中国電力エリアの単価事情（島根2号機再稼働の進行）、自家発電との関係、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function YamaguchiChemicalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            山口県の化学・石油化学工場の電気料金完全ガイド
+            山口県の化学・石油化学工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             山口県は周南（徳山）・宇部・岩国の臨海部に石油化学コンビナートが集積し、誘導品・ファインケミカルの裾野が広がる、全国有数の重化学工業県です。本ページでは「山口県 × 化学・石油化学工業」というクロス領域に絞り、中国電力エリア固有の単価事情（石炭・LNG火力に原子力・水力を加えた構成で燃調感応度は中程度・島根2号機再稼働の進行）と、電解／蒸留／反応／冷却の連続操業プロセスの電力プロファイル、自家発電との最適配分、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "青森県の法人電気料金完全ガイド｜風力発電全国2位・原子力立地・りんご倉庫の契約最適化";
+  "青森県の法人電気料金ガイド｜風力発電全国2位・原子力立地・りんご倉庫の契約最適化";
 const pageDescription =
   "青森県の法人電気料金を地域特化で解説。東北電力エリア、東通原発・大間原発の立地、風力発電全国2位の特性、りんご冷蔵倉庫・水産加工業の電力負荷、補助金活用、固定vs市場連動の判断まで実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function AomoriBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            青森県の法人電気料金完全ガイド
+            青森県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             青森県は東北電力エリア・東通/大間原発立地・風力発電全国2位・豪雪寒冷地という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、りんご加工・水産加工・観光業の業種別影響、寒冷地・豪雪地帯固有のコスト要因、補助金活用、契約見直しの具体策を実務的に整理します。

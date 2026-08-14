@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "愛知県の法人電気料金完全ガイド｜中京工業地帯・トヨタ系自動車・名古屋港物流の契約最適化";
+  "愛知県の法人電気料金ガイド｜中京工業地帯・トヨタ系自動車・名古屋港物流の契約最適化";
 const pageDescription =
   "愛知県の法人電気料金を地域特化で解説。中部電力エリアの中京工業地帯、トヨタ・トヨタグループを核とする自動車関連工業、名古屋港・中部国際空港の物流、半導体・電子部品の電力負荷プロファイル、特別高圧競争入札、補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function AichiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            愛知県の法人電気料金完全ガイド
+            愛知県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             愛知県は中部電力エリアの中京工業地帯を擁し、全国1位の製造品出荷額を誇るトヨタグループを核とした自動車・電子部品・化学・物流の大規模事業者が集積します。名古屋港・中部国際空港物流、半導体製造装置工場、東三河の観光・農業も主要産業です。本ページでは県内法人の電気代水準、業種別影響度、中京工業地帯特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

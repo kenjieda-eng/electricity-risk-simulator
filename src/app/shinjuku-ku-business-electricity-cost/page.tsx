@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "新宿区の法人電気料金完全ガイド｜西新宿都庁・超高層オフィス／歌舞伎町ホテル／三丁目百貨店";
+  "新宿区の法人電気料金ガイド｜西新宿都庁・超高層オフィス／歌舞伎町ホテル／三丁目百貨店";
 const pageDescription =
   "東京都新宿区の法人電気代を区固有の論点で解説。西新宿副都心の超高層オフィス群と都庁、新宿副都心の地域冷暖房（DHC）、歌舞伎町ホテル・歓楽街の深夜帯電力、新宿三丁目百貨店、ターミナル駅商業を踏まえた契約最適化と省エネ補助の実務をまとめます。";
 
@@ -372,7 +372,7 @@ export default function ShinjukuKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            新宿区の法人電気料金完全ガイド
+            新宿区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             新宿区は西新宿副都心の超高層オフィス＋都庁、新宿三丁目の百貨店、歌舞伎町の歓楽街・ホテル、ターミナル駅商業集積、高田馬場・新大久保の住商混在と、極めて多様な機能を併せ持つエリアです。本ページでは区内固有の電力事情、業種別影響、契約見直し、新宿区・東京都・国の補助金活用までを実務目線で整理します。

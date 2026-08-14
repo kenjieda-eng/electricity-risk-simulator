@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "補助金活用後のROI・投資回収試算 完全ガイド｜補助前後の回収年数比較と税効果込みの実務";
+  "補助金活用後のROI・投資回収試算ガイド｜補助前後の回収年数比較と税効果込みの実務";
 const pageDescription =
   "補助金活用後のROI・投資回収試算に特化した実務ガイド。補助前後で回収年数がどれだけ短縮するか、GX・CN投資促進税制の税効果込みでどう変わるかを、補助率別の回収年数早見・設備別の回収目安・試算の手順・補助前後ROI比較事例で整理します。数値は前提を置いた試算例で、自社条件での再計算が前提です。";
 
@@ -368,7 +368,7 @@ export default function SubsidyRoiPaybackCalculationPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            補助金活用後のROI・投資回収試算 完全ガイド
+            補助金活用後のROI・投資回収試算ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             補助金を活用すると実質投資額が下がり、投資回収年数が大幅に短縮します。さらにGX・CN投資促進税制の税効果を加味すると実質回収はより早まります。本ページでは補助率と回収年数の関係、補助前後の比較、税効果込みの実質回収、試算の手順と落とし穴を、補助率別の早見・設備別の回収目安・補助前後ROI比較事例で整理します。数値は前提を置いた試算例で、自社条件での再計算が前提です。
@@ -483,7 +483,7 @@ export default function SubsidyRoiPaybackCalculationPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               重層活用の組合せは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               で詳しく解説しています。
             </p>
           </section>
@@ -533,7 +533,7 @@ export default function SubsidyRoiPaybackCalculationPage() {
               省エネ診断の活用は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               、税制詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               。
             </p>
           </section>
@@ -632,7 +632,7 @@ export default function SubsidyRoiPaybackCalculationPage() {
             links={[
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税効果の算定と取得価額調整。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税効果の算定と取得価額調整。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "重層活用で実質投資を圧縮。" },
               { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "投資ゼロの料金見直しを併走。" },
               { href: "/subsidy-rejection-reasons-countermeasures", title: "補助金不採択の理由と対策", description: "採択前提リスクへの備え。" },

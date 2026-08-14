@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "神奈川県の法人電気料金完全ガイド｜京浜工業地帯・横浜港川崎港物流・半導体工場の契約最適化";
+  "神奈川県の法人電気料金ガイド｜京浜工業地帯・横浜港川崎港物流・半導体工場の契約最適化";
 const pageDescription =
   "神奈川県の法人電気料金を地域特化で解説。東京電力エリアの京浜工業地帯、自動車・電機・石油化学の大規模工場、横浜港・川崎港物流、半導体・電機の大規模事業所の電力負荷プロファイル、契約見直しと補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function KanagawaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            神奈川県の法人電気料金完全ガイド
+            神奈川県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             神奈川県は東京電力エリアの京浜工業地帯を擁し、自動車・電機・石油化学・半導体・医薬品の大規模事業者が集積します。横浜港・川崎港物流の冷凍倉庫、湘南・箱根の観光業も主要産業です。本ページでは県内法人の電気代水準、業種別影響度、京浜工業地帯特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

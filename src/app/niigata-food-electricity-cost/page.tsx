@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "新潟県の食品（米菓・清酒）の電気料金完全ガイド｜米菓焼成乾燥／清酒低温醸造／包装米飯と東北電力契約";
+  "新潟県の食品（米菓・清酒）の電気料金ガイド｜米菓焼成乾燥／清酒低温醸造／包装米飯と東北電力契約";
 const pageDescription =
   "新潟県の食品（米菓・清酒・米加工）に特化した法人電気代ガイド。亀田・新潟市の米菓、県内各地の清酒蔵、包装米飯・精米の集積、米菓焼成乾燥・清酒低温醸造・冷蔵の電力プロファイル、東北電力エリアの単価事情、契約最適化を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function NiigataFoodElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            新潟県の食品（米菓・清酒）の電気料金完全ガイド
+            新潟県の食品（米菓・清酒）の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             新潟県は米どころとして、米菓（全国シェア過半）・清酒（県内約90蔵）・包装米飯を中心とした食品加工が基幹産業です。本ページでは「新潟県 × 食品（米菓・清酒）」というクロス領域に絞り、東北電力エリア固有の単価事情と、米菓焼成乾燥・清酒低温醸造・包装米飯の電力プロファイル、水力資源活用、契約最適化までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function NiigataFoodElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「新潟 × 食品（米菓・清酒）」のクロス領域に特化したガイドです。新潟県全体の文脈は{" "}
             <Link href="/niigata-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              新潟県の法人電気料金完全ガイド
+              新潟県の法人電気料金ガイド
             </Link>
             、業種一般としての食品工場全体は{" "}
             <Link href="/food-factory-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

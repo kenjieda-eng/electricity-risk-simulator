@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "鹿児島県の法人電気料金完全ガイド｜九州電力エリア単価分析・川内原発立地・焼酎蒸留・桜島火山灰・種子島宇宙センターの契約最適化";
+  "鹿児島県の法人電気料金ガイド｜九州電力エリア単価分析・川内原発立地・焼酎蒸留・桜島火山灰・種子島宇宙センターの契約最適化";
 const pageDescription =
   "鹿児島県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、川内原発立地県メリット、焼酎産業（蒸留・発酵）、桜島火山灰対策の設備電力、種子島宇宙センター、農業・畜産・観光業の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function KagoshimaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            鹿児島県の法人電気料金完全ガイド
+            鹿児島県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             鹿児島県は九州電力エリアに属し、川内原発（1・2号機）の立地県として地域振興メニューの恩恵を一部受けます。焼酎産業（薩摩酒造・本坊酒造等の蒸留・発酵）、肉用牛全国2位（鹿児島黒牛）・サツマイモ全国1位・茶葉全国2位・豚全国1位（黒豚）の畜産・農業集積、桜島・指宿温泉・霧島温泉・屋久島の観光業、種子島宇宙センター（JAXA）、奄美群島の離島事業者と多様な産業構造を持ちます。太陽光発電適地メリット＋桜島火山灰対策＋台風常襲BCP対応＋離島島嶼型マイクログリッドを組合せた契約最適化戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

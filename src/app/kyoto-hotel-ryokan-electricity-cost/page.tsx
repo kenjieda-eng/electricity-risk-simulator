@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "京都府の旅館・ホテルの電気料金完全ガイド｜祇園・嵐山・東山の宿泊業／インバウンド観光・通年空調給湯と契約最適化";
+  "京都府の旅館・ホテルの電気料金ガイド｜祇園・嵐山・東山の宿泊業／インバウンド観光・通年空調給湯と契約最適化";
 const pageDescription =
   "京都府の旅館・ホテル業に特化した法人電気代ガイド。祇園・嵐山・東山・四条河原町の老舗旅館・観光ホテルの集積、インバウンド観光復活に伴う稼働率上昇、空調・給湯・厨房・洗濯の電力プロファイル、関西電力エリアの契約最適化までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function KyotoHotelRyokanElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            京都府の旅館・ホテルの電気料金完全ガイド
+            京都府の旅館・ホテルの電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             京都府はインバウンド観光復活で稼働率と客室単価が上昇する一方、燃調高騰・サステナブル観光要請が経営課題となる宿泊業集積地です。本ページでは「京都府 × 旅館・ホテル」というクロス領域に絞り、関西電力エリア固有の単価事情と、空調／給湯／温泉ろ過の電力プロファイル、稼働率変動への備え、補助金活用までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function KyotoHotelRyokanElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「京都 × 旅館・ホテル」のクロス領域に特化したガイドです。京都府全体の文脈は{" "}
             <Link href="/kyoto-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              京都府の法人電気料金完全ガイド
+              京都府の法人電気料金ガイド
             </Link>
             、業種一般としてのホテル業全体は{" "}
             <Link href="/hotel-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

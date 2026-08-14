@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "断熱・ZEB化改修の補助金 完全ガイド｜対象・補助率・申請の進め方";
+  "断熱・ZEB化改修の補助金ガイド｜対象・補助率・申請の進め方";
 const pageDescription =
   "業務用建築物の断熱・外皮改修・ZEB化（ネット・ゼロ・エネルギー・ビル）補助の対象・補助の考え方・申請フローを整理。窓/外皮断熱・高効率空調照明・BEMSの一体改修で電気代を削減する実務を、ZEBの段階（Oriented/Ready/Nearly/ZEB）と代表シナリオで解説。";
 
@@ -422,7 +422,7 @@ export default function SubsidyInsulationRenovationPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            断熱・ZEB化改修の補助金 完全ガイド
+            断熱・ZEB化改修の補助金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             業務用建築物の断熱・外皮改修・ZEB化（ネット・ゼロ・エネルギー・ビル）に使える補助の対象・補助の考え方・申請フローを整理します。窓・外皮断熱、高効率空調・照明、BEMSを一体で改修し、建物全体の一次エネルギー消費と電気代を削減する実務を、ZEBの段階（ZEB Oriented／ZEB Ready／Nearly ZEB／ZEB）と代表シナリオで解説します。補助率・上限の具体値は区分・延床・年度公募により変動するため、最新の公募要領による確認を前提としています。
@@ -600,7 +600,7 @@ export default function SubsidyInsulationRenovationPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、申請に必要な書類は{" "}
               <Link href="/subsidy-application-approval-document" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金申請・採択の必要書類ガイド</Link>
               、公募時期は{" "}
@@ -624,9 +624,9 @@ export default function SubsidyInsulationRenovationPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールの詳細は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、税制は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、自治体制度は{" "}
               <Link href="/subsidy-local-government-list" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自治体の省エネ・脱炭素補助一覧</Link>
               も参照ください。特定の電力会社・契約形態を推奨するものではありません。
@@ -745,7 +745,7 @@ export default function SubsidyInsulationRenovationPage() {
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率", description: "公募タイミングと採択動向。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "国×自治体×税制の組合せ可否。" },
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "改修前後の回収年数比較。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "業務用ヒートポンプ空調の補助活用。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "エネルギー見える化システムの補助。" },
               { href: "/subsidy-energy-saving-diagnosis", title: "省エネ診断補助の活用ロードマップ", description: "現状把握と申請根拠づくり。" },

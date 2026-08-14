@@ -386,7 +386,7 @@ export default function CapacityContributionExplainedPage() {
           heading="関連ページ"
           links={[
             { href: "/executive-cfo-electricity-basics", title: "CFOのための電力市場基礎", description: "燃調費・市場連動・容量拠出金の基礎を1ページで整理。" },
-            { href: "/what-is-capacity-contribution", title: "容量拠出金とは｜2026〜2028年度の単価・法人への影響額・対策（Pillar A）", description: "拠出金の定義・単価表・法人月額試算・4 つの対策をまとめた起点記事。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧（Pillar A）", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
             { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響（Pillar B）", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
             {
               href: "/capacity-contribution-cost-impact",
@@ -431,7 +431,7 @@ export default function CapacityContributionExplainedPage() {
             {
               href: "/business-electricity-cost-reduction-review-points",
               title: "法人の電気料金を削減する見直しポイント7選",
-              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に完全ガイド。",
+              description: "契約電力・燃調・容量拠出金・市場連動・PPA 等 7 軸の削減ポイントを業種別・契約区分別に解説。",
             },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
               { href: "/power-market-regulation-overview", title: "電力市場制度の全体像", description: "JEPX・容量市場など電力制度の仕組みを法人向けに概観。" },

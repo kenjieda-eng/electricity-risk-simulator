@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "沖縄県の法人電気料金完全ガイド｜沖縄電力エリア単価分析・全国最高水準・観光リゾート・離島電力・台風BCPの契約最適化";
+  "沖縄県の法人電気料金ガイド｜沖縄電力エリア単価分析・全国最高水準・観光リゾート・離島電力・台風BCPの契約最適化";
 const pageDescription =
   "沖縄県の法人電気料金を地域特化で解説。沖縄電力エリアの単価水準（全国最高水準）を業種別に再加工して提示し、那覇都市圏オフィス・観光リゾートホテル、離島電力供給、米軍基地経済関連事業者、台風常襲BCPの電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function OkinawaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            沖縄県の法人電気料金完全ガイド
+            沖縄県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             沖縄県は沖縄電力単独エリアで、本土の電力系統とは独立した孤立系統。独立系統・石油火力依存という供給構造を特徴とし、観光リゾート（恩納村・宮古島・石垣島）、那覇市内オフィス・商業・データセンター、米軍基地関連事業者、製糖・モズク水産加工、離島電力供給と多様な産業構造を持ちます。台風常襲地域としてBCP対応が経営の最重要課題であり、太陽光発電適地として自家消費＋蓄電池による電気代削減・BCP両立戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

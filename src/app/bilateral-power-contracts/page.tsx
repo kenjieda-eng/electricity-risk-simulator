@@ -16,9 +16,9 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["power-procurement"];
 
 
-const pageTitle = "相対契約とは｜法人電力の仕組み・JEPXとの違い・メリット完全ガイド";
+const pageTitle = "相対契約とは｜法人電力の仕組み・JEPXとの違い・メリットガイド";
 const pageDescription =
-  "相対契約は電力会社や発電事業者が市場を通さず個別条件で電気を取引する仕組み。法人電力におけるJEPXとの違い・価格安定性・契約期間とメリットを完全ガイド。中立社団がやさしく解説。";
+  "相対契約は電力会社や発電事業者が市場を通さず個別条件で電気を取引する仕組み。法人電力におけるJEPXとの違い・価格安定性・契約期間とメリットを整理。中立社団がやさしく解説。";
 const pageUrl = "https://simulator.eic-jp.org/bilateral-power-contracts";
 
 export const metadata: Metadata = {

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "ホテル・宿泊業の補助金活用戦略｜観光庁補助・ZEB化で通年空調・給湯ヒートポンプを導入する完全ガイド";
+  "ホテル・宿泊業の補助金活用戦略｜観光庁補助・ZEB化で通年空調・給湯ヒートポンプを導入するガイド";
 const pageDescription =
   "ホテル・宿泊業に特化した補助金活用戦略ガイド。観光庁の宿泊施設支援補助、SII省エネ補助（ZEB・既存建築物省エネ化）、需要家主導型PPA補助を組合せ、通年空調・給湯ヒートポンプ・廃熱回収・全館LED・屋根太陽光を導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。";
 
@@ -368,7 +368,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            ホテル・宿泊業の補助金活用戦略 完全ガイド
+            ホテル・宿泊業の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             ホテルは空調と給湯（大浴場・客室バス）が全エネルギーの50〜70%を占める電力・熱多消費業種で、給湯ヒートポンプ化・通年空調更新の補助金費用対効果が高い業種です。本ページでは観光庁補助・SII省エネ補助・ZEB化補助・需要家主導型PPA補助を組合せ、通年空調・給湯ヒートポンプ・廃熱回収・全館LED・屋根太陽光を導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。
@@ -529,7 +529,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -554,7 +554,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -579,7 +579,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、小売向け戦略は{" "}
               <Link href="/subsidy-retail-commerce-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">小売・商業の補助金活用戦略</Link>
               も参照ください。
@@ -630,7 +630,7 @@ export default function SubsidyHotelLeisureStrategyPage() {
             links={[
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "給湯ヒートポンプと補助金の組合せ。" },
               { href: "/subsidy-ppa-vppa-detail", title: "PPA/VPPA関連補助金の詳細", description: "屋根太陽光と補助金の組合せ。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "ホテルのエネルギー管理システム補助。" },

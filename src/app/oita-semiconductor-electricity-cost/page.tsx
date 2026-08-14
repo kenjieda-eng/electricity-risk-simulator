@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "大分県の半導体・電子工場の電気料金完全ガイド｜大分・国東の先端電子集積と九州電力";
+  "大分県の半導体・電子工場の電気料金ガイド｜大分・国東の先端電子集積と九州電力";
 const pageDescription =
   "大分県の半導体・電子製造業に特化。大分・国東・中津の先端電子・半導体関連の集積を核に、クリーンルーム24時間稼働・実装・検査の電力プロファイル、九州電力エリアの単価事情（原子力4基＋太陽光導入量国内最大級で燃調感応度が相対的に低め）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function OitaSemiconductorElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            大分県の半導体・電子工場の電気料金完全ガイド
+            大分県の半導体・電子工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             大分県は大分・国東・中津に先端電子・半導体関連が広く集積し、九州の半導体サプライチェーンの一角を担う地域です。本ページでは「大分県 × 半導体・電子製造業」というクロス領域に絞り、九州電力エリア固有の単価事情（原子力4基＋太陽光導入量国内最大級で燃調感応度が相対的に低め）と、クリーンルーム24時間稼働／実装／検査の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお同じ九州の半導体でも、熊本＝菊陽町（JASM等の前工程ファブ）、大分＝先端電子・関連の集積と検索意図・対象を分離します。本ページは特定の電力会社・契約形態を推奨するものではありません。

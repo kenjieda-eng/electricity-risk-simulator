@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "千葉県の化学工場の電気料金完全ガイド｜京葉コンビナートの石油化学と東京電力エリア";
+  "千葉県の化学工場の電気料金ガイド｜京葉コンビナートの石油化学と東京電力エリア";
 const pageDescription =
   "千葉県の化学工業に特化。市原・袖ケ浦・千葉・市川を結ぶ京葉コンビナートの石油化学集積を背景に、エチレンプラント・蒸留・コンプレッサー・電解の連続運転プロファイル、東京電力エリアの単価事情（LNG・石炭依存で燃調感応度が中〜高）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function ChibaChemicalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            千葉県の化学工場の電気料金完全ガイド
+            千葉県の化学工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             千葉県は市原市・袖ケ浦市・千葉市・市川を結ぶ京葉臨海コンビナートに、石油精製・石油化学（エチレンプラント・誘導品・基礎化学品）の国内有数の集積を擁する重化学工業地帯です。本ページでは「千葉県 × 化学工業」というクロス領域に絞り、東京電力エリア固有の単価事情（LNG・石炭依存で燃調感応度が中〜高）と、石油化学プラントの電力プロファイル（連続運転で停止不可のベース負荷が極大、コージェネ自家発と大口買電の併存）／大型コンプレッサー・蒸留・電解の連続負荷、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

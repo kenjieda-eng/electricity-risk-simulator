@@ -11,7 +11,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "デマンドレスポンス・需要家リソース(VPP)活用の基本｜DRプログラム種別・収益化・参加要件の完全ガイド";
+  "デマンドレスポンス・需要家リソース(VPP)活用の基本｜DRプログラム種別・収益化・参加要件のガイド";
 const pageDescription =
   "デマンドレスポンス(DR)・VPP(仮想発電所)の仕組みと収益化を実務観点で整理。需給調整市場・容量市場・kW価値/kWh価値の取引区分、業種別の参加実績・報酬目安、契約・運用上の注意点、Before/After事例3件、FAQ8件まで網羅。";
 const pageUrl = "https://simulator.eic-jp.org/demand-side-flexibility";
@@ -364,7 +364,7 @@ export default function Page() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            デマンドレスポンス・需要家リソース(VPP)活用の基本｜DRプログラム種別・収益化・参加要件の完全ガイド
+            デマンドレスポンス・需要家リソース(VPP)活用の基本｜DRプログラム種別・収益化・参加要件のガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             デマンドレスポンス(DR)・VPP(仮想発電所)は、需給ひっ迫対応・脱炭素・電気料金削減の3軸で重要性が増している需要家リソース活用手法です。本ページでは2026年時点のDR/VPP市場構造、需給調整市場・容量市場の取引区分、業種別の収益化実績、契約・運用上の注意点、Before/After事例3件、FAQ8件、出典付き参考資料を網羅的に整理します。

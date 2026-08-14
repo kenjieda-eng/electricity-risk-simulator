@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "香川県の食品工場の電気料金完全ガイド｜冷凍麺・調味料・製粉の讃岐フード集積と四国電力";
+  "香川県の食品工場の電気料金ガイド｜冷凍麺・調味料・製粉の讃岐フード集積と四国電力";
 const pageDescription =
   "香川県の食品製造業に特化。冷凍さぬきうどん・冷凍麺、小豆島の醤油・調味料、製粉、冷凍食品の集積を核に、蒸練・乾燥・急速凍結・冷凍冷蔵の電力プロファイル、四国電力エリアの単価事情（伊方原発再稼働の影響）、契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function KagawaFoodElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            香川県の食品工場の電気料金完全ガイド
+            香川県の食品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             香川県は『うどん県』として知られる讃岐うどんの本拠地であり、冷凍さぬきうどん・冷凍麺、小豆島の醤油・調味料、製粉、冷凍食品・惣菜が県内各地に集積する瀬戸内の食品流通ハブです。本ページでは「香川県 × 食品製造業」というクロス領域に絞り、四国電力エリア固有の単価事情（伊方原発再稼働の影響）と、蒸練・茹で・乾燥・急速凍結・冷凍冷蔵といった電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。本ページは中立的な情報整理を目的とし、特定の電力会社・契約形態を推奨するものではありません。

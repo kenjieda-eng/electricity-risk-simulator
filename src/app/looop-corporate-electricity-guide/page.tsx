@@ -694,7 +694,7 @@ export default function LooopCorporateElectricityGuidePage() {
               { href: "/market-linked-plan", title: "市場連動プランとは", description: "市場連動メニューの仕組みとリスク（詳細解説）。" },
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動を避けるべきケースの判断軸。" },
               { href: "/fixed-price-plan", title: "固定単価プランとは", description: "固定単価メニューの仕組み。" },
-              { href: "/nihon-techno-corporate-electricity-guide", title: "日本テクノ（法人向け）完全ガイド", description: "高圧特化の新電力の類型解説。" },
+              { href: "/nihon-techno-corporate-electricity-guide", title: "日本テクノ（法人向け）ガイド", description: "高圧特化の新電力の類型解説。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
               { href: "/region-tokyo-business-electricity", title: "東京エリアの法人電気料金", description: "関東エリアの市況と料金事情。" },

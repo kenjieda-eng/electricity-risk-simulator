@@ -10,7 +10,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "東京都(クール・ネット東京)のゼロエミッション補助金を法人の電気代対策に活かす完全ガイド｜省エネ設備・再エネ蓄エネ・ゼロエミビル（2026年度）";
+  "東京都(クール・ネット東京)のゼロエミッション補助金を法人の電気代対策に活かすガイド｜省エネ設備・再エネ蓄エネ・ゼロエミビル（2026年度）";
 const pageDescription =
   "東京都環境局・公益財団法人東京都環境公社（クール・ネット東京）が実施するゼロエミッション化に向けた省エネ設備導入・運用改善支援事業、地産地消型再エネ・蓄エネ設備導入促進事業、中小規模事業所のゼロエミッションビル化支援事業などを、法人の電気代対策の視点で整理。都内中小企業等の対象・要件、国のSII等補助との併用整理、代表シナリオ3件の投資回収まで、2026年7月時点の公表情報として中立にまとめます。都外の事業者は各自治体制度の確認先も案内します。";
 
@@ -488,7 +488,7 @@ export default function SubsidyTokyoZeroEmissionSmePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            東京都(クール・ネット東京)のゼロエミッション補助金を法人の電気代対策に活かす完全ガイド
+            東京都(クール・ネット東京)のゼロエミッション補助金を法人の電気代対策に活かすガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             東京都環境局と公益財団法人東京都環境公社（クール・ネット東京）が実施するゼロエミッション（脱炭素）系の補助事業を、法人の電気代対策の視点で整理します。省エネ設備の更新（ゼロエミッション化に向けた省エネ設備導入・運用改善支援事業）、自家消費の再エネ・蓄エネ導入（地産地消型再エネ・蓄エネ設備導入促進事業）、建物単位の脱炭素化（中小規模事業所のゼロエミッションビル化支援事業）などを正式名称ベースで解説。対象は都内中小企業等で、都外の事業者には自地域の制度の確認先も案内します。国のSII等との併用・重複調整、代表シナリオ3件の投資回収まで、2026年7月時点の公表情報として中立にまとめます。
@@ -590,7 +590,7 @@ export default function SubsidyTokyoZeroEmissionSmePage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               国×都×税制の併用可否は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、年度ごとの変更点は{" "}
               <Link href="/subsidy-2026-fiscal-year-changes" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金の年度変更ポイント</Link>
               も参照ください。都と国の補助は財源・対象経費が別、という前提を常に意識してください。
@@ -749,7 +749,7 @@ export default function SubsidyTokyoZeroEmissionSmePage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               国×都×税制の併用可否は{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、国の省エネ補助の詳細は{" "}
               <Link href="/subsidy-sii-energy-saving" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">SII省エネ設備の補助</Link>
               も参照ください。都と国の対象経費を切り分けて重層活用を設計してください。

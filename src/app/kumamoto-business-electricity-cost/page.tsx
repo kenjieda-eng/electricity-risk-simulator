@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "熊本県の法人電気料金完全ガイド｜九州電力エリア単価分析・TSMC/JASM進出・農業トマトい草・阿蘇天草観光業の契約最適化";
+  "熊本県の法人電気料金ガイド｜九州電力エリア単価分析・TSMC/JASM進出・農業トマトい草・阿蘇天草観光業の契約最適化";
 const pageDescription =
   "熊本県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、TSMC/JASM進出による半導体電力需要急増、トマト・い草等の農業、阿蘇・天草観光業、熊本市の都市圏オフィス・水産業の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function KumamotoBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            熊本県の法人電気料金完全ガイド
+            熊本県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             熊本県は九州電力エリアに属し、TSMC/JASM進出（菊陽町）による半導体電力需要急増がエリア最大の経営課題。シリコンアイランド九州の中核として半導体産業集積（TSMC/JASM・ソニーセミコンダクタ・東京エレクトロン）、トマト・い草・スイカの全国上位農業、阿蘇山・黒川温泉・天草の観光業、熊本市の都市圏オフィス・商業と多様な産業構造を持ちます。太陽光発電適地として自家消費＋蓄電池の経済性が極めて高く、原発稼働メリット＋半導体電力需要急増＋太陽光出力制御活用のシナジーを最大化する契約最適化戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

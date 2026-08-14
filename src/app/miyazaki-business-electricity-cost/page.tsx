@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "宮崎県の法人電気料金完全ガイド｜九州電力エリア単価分析・ブロイラー肉用牛畜産・太陽光発電適地・フェニックス日南観光業の契約最適化";
+  "宮崎県の法人電気料金ガイド｜九州電力エリア単価分析・ブロイラー肉用牛畜産・太陽光発電適地・フェニックス日南観光業の契約最適化";
 const pageDescription =
   "宮崎県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、ブロイラー・肉用牛全国上位の畜産業、太陽光発電適地としての自家消費活用、フェニックス・日南海岸の観光業、宮崎市の都市圏オフィス・水産業の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function MiyazakiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            宮崎県の法人電気料金完全ガイド
+            宮崎県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             宮崎県は九州電力エリアに属し、年間日照時間2,100時間超（全国上位）の太陽光発電適地として知られます。ブロイラー全国2位・肉用牛全国3位（宮崎牛）・豚全国2位の畜産集積、マンゴー全国1位・きゅうり・ピーマンの施設園芸農業、旭化成延岡（化学・繊維・電池素材）、フェニックス・日南海岸の観光業、宮崎市・都城市の都市圏オフィス・商業と多様な産業構造を持ちます。日照条件から太陽光自家消費＋蓄電池との相性がよく、年中冷房需要＋畜舎温度管理＋観光業の電気代を太陽光自家消費で大幅削減する戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

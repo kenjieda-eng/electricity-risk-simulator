@@ -13,7 +13,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "【法人】電気契約の名義変更手順｜事業譲渡・M&A時の手続きと譲渡日前後のリスク";
 const pageDescription =
-  "事業譲渡・M&A・組織再編に伴う電気契約の名義変更手続きを、譲渡日前後のタイムライン、必要書類、旧契約の解約処理、供給停止リスクの回避策まで、法人担当者向けに完全ガイド。";
+  "事業譲渡・M&A・組織再編に伴う電気契約の名義変更手続きを、譲渡日前後のタイムライン、必要書類、旧契約の解約処理、供給停止リスクの回避策まで、法人担当者向けに解説。";
 const pageUrl = "https://simulator.eic-jp.org/business-transfer-name-change-procedure";
 
 const FAQ_ITEMS = CATEGORY_FAQ_22_35["ma-organizational-change"] ?? [];

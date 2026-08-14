@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "山形県の法人電気料金完全ガイド｜米沢機械工業・果樹冷蔵倉庫・蔵王観光業の契約最適化";
+  "山形県の法人電気料金ガイド｜米沢機械工業・果樹冷蔵倉庫・蔵王観光業の契約最適化";
 const pageDescription =
   "山形県の法人電気料金を地域特化で解説。東北電力エリアの寒冷地特性、米沢工業地帯の機械工業、さくらんぼ・りんごの果樹冷蔵倉庫、蔵王・銀山温泉の観光業の電力負荷プロファイル、契約見直しと補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function YamagataBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            山形県の法人電気料金完全ガイド
+            山形県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             山形県は東北電力エリアの中でも寒暖両極の気候を持ち、米沢機械工業・庄内食品加工・東根の果樹冷蔵・蔵王温泉観光業など多彩な産業が集積します。本ページでは県内法人の電気代水準、業種別影響度、寒冷地・豪雪・果樹冷蔵などの固有要因、契約見直しの具体策、補助金活用までを実務的に整理します。

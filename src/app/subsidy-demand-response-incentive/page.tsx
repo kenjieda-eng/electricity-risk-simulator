@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "DR・節電プログラムのインセンティブ制度 完全ガイド｜対象・報酬・参加の進め方";
+  "DR・節電プログラムのインセンティブ制度ガイド｜対象・報酬・参加の進め方";
 const pageDescription =
   "ディマンドリスポンス（DR）・節電プログラムの報酬/インセンティブの仕組み（容量市場の発動指令電源・需給調整市場・アグリゲーター経由）を、補助金との違いを明確にして整理。高圧/特別高圧需要家が需要抑制で収益化する実務と注意点を代表シナリオで解説。";
 
@@ -403,7 +403,7 @@ export default function SubsidyDemandResponseIncentivePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            DR・節電プログラムのインセンティブ制度 完全ガイド
+            DR・節電プログラムのインセンティブ制度ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             ディマンドリスポンス（DR）・節電プログラムは、設備の取得費を補助する「補助金」ではなく、需要抑制の実績（kW・kWh）に応じて支払われる実績連動の報酬・インセンティブ制度です。報酬額は容量市場・需給調整市場の価格や公募条件、アグリゲーターとの契約により変動します。本ページでは、補助金との違いを明確にしたうえで、DRの種類・対象・報酬の考え方・アグリゲーターの役割・参加の進め方を、高圧/特別高圧需要家の代表シナリオとともに整理します。

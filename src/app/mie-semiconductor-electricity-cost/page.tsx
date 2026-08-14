@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "三重県の半導体・電子部品工場の電気料金完全ガイド｜四日市キオクシア／亀山シャープのメモリ・液晶クリーンルーム";
+  "三重県の半導体・電子部品工場の電気料金ガイド｜四日市キオクシア／亀山シャープのメモリ・液晶クリーンルーム";
 const pageDescription =
   "三重県の半導体・電子部品製造業に特化した法人電気代ガイド。四日市市のキオクシアNANDフラッシュメモリ・亀山市のシャープ液晶（旧シャープ亀山工場）の集積、中部電力エリアの単価事情、クリーンルーム24時間稼働、特別高圧の契約最適化を実務目線で整理します。";
 
@@ -407,7 +407,7 @@ export default function MieSemiconductorElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            三重県の半導体・電子部品工場の電気料金完全ガイド
+            三重県の半導体・電子部品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             三重県は四日市市のキオクシアNAND型フラッシュメモリ拠点と亀山市のシャープ液晶・カメラモジュール拠点を中心に、日本でも有数の半導体・電子部品集積地です。本ページでは「三重県 × 半導体・電子部品」というクロス領域に絞り、中部電力エリア固有の燃調感応度の高さと、クリーンルーム24時間稼働・露光装置電力品質要求・キオクシアRE100対応・補助金活用までを実務目線で整理します。
@@ -426,7 +426,7 @@ export default function MieSemiconductorElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「三重 × 半導体」のクロス領域に特化したガイドです。三重県全体の文脈は{" "}
             <Link href="/mie-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              三重県の法人電気料金完全ガイド
+              三重県の法人電気料金ガイド
             </Link>
             、業種一般としての半導体業全体は{" "}
             <Link href="/semiconductor-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "GX・CN投資促進税制 完全ガイド｜10%税額控除・50%特別償却の要件と対象設備・補助金との併用ルール";
+  "GX・CN投資促進税制ガイド｜10%税額控除・50%特別償却の要件と対象設備・補助金との併用ルール";
 const pageDescription =
   "GX・カーボンニュートラル投資促進税制に特化した法人活用ガイド。投資額10%の税額控除または50%特別償却の要件、脱炭素設備・自家発電・PPA関連・高効率設備という対象設備、事業適応計画等の認定手続き、補助金との併用（取得価額調整）、中小・大企業の使い分け、規模別の税効果試算までを、税理士確認を前提に整理します。";
 
@@ -353,7 +353,7 @@ export default function SubsidyGxCnInvestmentTaxPage() {
         breadcrumbItems={[
           { name: "ホーム", url: "https://simulator.eic-jp.org" },
           { name: "補助金・助成金を知る", url: "https://simulator.eic-jp.org/articles/subsidies" },
-          { name: "GX・CN投資促進税制 法人活用完全ガイド", url: "https://simulator.eic-jp.org/subsidy-gx-cn-investment-tax" },
+          { name: "GX・CN投資促進税制 法人活用ガイド", url: "https://simulator.eic-jp.org/subsidy-gx-cn-investment-tax" },
         ]}
         faq={faqItems}
       />
@@ -363,12 +363,12 @@ export default function SubsidyGxCnInvestmentTaxPage() {
           <span className="px-2">›</span>
           <Link href="/articles/subsidies" className="underline-offset-2 hover:underline">補助金・助成金を知る</Link>
           <span className="px-2">›</span>
-          <span className="text-slate-800">GX・CN投資促進税制 法人活用完全ガイド</span>
+          <span className="text-slate-800">GX・CN投資促進税制 法人活用ガイド</span>
         </nav>
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            GX・CN投資促進税制 法人活用完全ガイド
+            GX・CN投資促進税制 法人活用ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             GX・カーボンニュートラル投資促進税制は、脱炭素設備への投資に対し投資額10%の税額控除または50%特別償却（いずれも要件あり）を選択できる優遇税制です。本ページでは税額控除と特別償却の違いと選び方、脱炭素設備・自家発電・PPA関連・高効率設備という対象設備、事業適応計画等の認定手続き、補助金との併用（取得価額調整）、中小・大企業の使い分け、規模別の税効果試算までを、税理士確認を前提に整理します。
@@ -528,7 +528,7 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -553,7 +553,7 @@ export default function SubsidyGxCnInvestmentTaxPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、補助金より契約見直しが先かは{" "}
               <Link href="/subsidy-vs-contract-review-priority" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金と契約見直しの優先順位</Link>
               。

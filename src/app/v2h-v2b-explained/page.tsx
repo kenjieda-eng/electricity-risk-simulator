@@ -11,7 +11,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "V2H・V2B（車両から建物への給電）完全ガイド｜BCP兼用のEV活用・補助金・主要機器比較";
+  "V2H・V2B（車両から建物への給電）ガイド｜BCP兼用のEV活用・補助金・主要機器比較";
 const pageDescription =
   "EV（電気自動車）を蓄電池として活用するV2H（Vehicle to Home）・V2B（Vehicle to Building）の仕組み、法人BCP活用、経済性、主要機器メーカー比較、補助金一覧、EV容量別の建物給電時間表まで、実務担当者向けに体系整理します。";
 const pageUrl = "https://simulator.eic-jp.org/v2h-v2b-explained";
@@ -380,7 +380,7 @@ export default function Page() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            V2H・V2B（車両から建物への給電）完全ガイド｜BCP兼用のEV活用
+            V2H・V2B（車両から建物への給電）ガイド｜BCP兼用のEV活用
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             EVを蓄電池として活用するV2H/V2Bは、BCP対応・ピークカット・TOU活用・EV燃料費削減・脱炭素の5用途を兼ねる『総合的な電力ソリューション』として注目されています。本ページでは仕組み、5メーカー機器比較、EV容量別の建物給電時間表、6種の補助金一覧、3規模別Before/After事例、運用設計上の留意点、12項目チェックリストまで実務担当者向けに整理します。

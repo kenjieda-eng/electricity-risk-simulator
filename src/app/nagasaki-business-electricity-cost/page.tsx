@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "長崎県の法人電気料金完全ガイド｜九州電力エリア単価分析・三菱重工長崎造船・離島電力供給・ハウステンボス観光業の契約最適化";
+  "長崎県の法人電気料金ガイド｜九州電力エリア単価分析・三菱重工長崎造船・離島電力供給・ハウステンボス観光業の契約最適化";
 const pageDescription =
   "長崎県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、三菱重工長崎の造船業、壱岐・対馬・五島の離島電力供給、ハウステンボス・佐世保の観光業、長崎市の都市圏オフィス・水産業の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function NagasakiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            長崎県の法人電気料金完全ガイド
+            長崎県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             長崎県は九州電力エリアに属し、本土と独立した離島系統（壱岐・対馬・五島・平戸）を持つ特殊なエリア。三菱重工長崎・佐世保重工の造船業、ハウステンボス・雲仙温泉・長崎市内の観光業、離島観光業・水産業（マグロ・カツオ・養殖魚）、長崎市・佐世保市の都市圏オフィス・商業と多様な産業構造を持ちます。一方、離島は独立系統で石油火力への依存度が高く供給構造が異なるため、太陽光自家消費＋蓄電池＋島嶼型マイクログリッドによる契約最適化戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

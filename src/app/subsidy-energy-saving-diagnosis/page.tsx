@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "省エネ診断補助 完全ガイド｜無料診断から補助金獲得までの実務ロードマップと採択戦略";
+  "省エネ診断補助ガイド｜無料診断から補助金獲得までの実務ロードマップと採択戦略";
 const pageDescription =
   "省エネ診断補助に特化した法人向けロードマップ。省エネ診断（無料診断含む・省エネルギーセンター等）から現状把握・改善提案・補助金申請・設備導入・効果検証までの実務フロー、診断結果の補助金申請への活用法、SII補助の費用対効果評価との連動、診断補助制度の対象・補助率を、数値捏造なしで整理します。";
 
@@ -528,7 +528,7 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、SII省エネ補助の詳細は{" "}
               <Link href="/subsidy-sii-energy-saving" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">SII省エネ補助金</Link>
               。
@@ -553,7 +553,7 @@ export default function SubsidyEnergySavingDiagnosisPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -580,7 +580,7 @@ export default function SubsidyEnergySavingDiagnosisPage() {
               次の一手のPPA・再エネは{" "}
               <Link href="/subsidy-ppa-vppa-detail" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">PPA/VPPA関連補助金の詳細</Link>
               、税効果は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -640,7 +640,7 @@ export default function SubsidyEnergySavingDiagnosisPage() {
               { href: "/subsidy-roi-payback-calculation", title: "補助金活用後のROI・投資回収試算", description: "補助・税効果込みの回収年数比較。" },
               { href: "/subsidy-rejection-reasons-countermeasures", title: "補助金不採択の理由と対策", description: "不採択ポイントと再申請戦略。" },
               { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "投資前に契約見直しが先かを判断。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "高効率設備の税額控除・特別償却。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "高効率設備の税額控除・特別償却。" },
               { href: "/subsidy-ppa-vppa-detail", title: "PPA/VPPA関連補助金の詳細", description: "省エネの次の一手の再エネ調達。" },
               { href: "/factory-electricity-cost-benchmark", title: "工場の電気料金ベンチマーク（共通）", description: "業種比較で省エネ余地を把握。" },
               { href: "/articles/subsidies", title: "補助金・助成金カテゴリ（一覧）", description: "補助金関連記事のハブ。" },

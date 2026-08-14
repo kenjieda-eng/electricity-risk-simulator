@@ -386,7 +386,7 @@ export default function HokkaidoGasCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            北ガスの電気の法人向けプラン完全ガイド｜都市ガス系・全国供給のプラン体系とグリーンメニュー・燃調連動
+            北ガスの電気の法人向けプランガイド｜都市ガス系・全国供給のプラン体系とグリーンメニュー・燃調連動
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             北ガスの電気（北海道ガス株式会社／北海道ガスグループの電力小売事業）の法人向けサービスを、公開情報に基づき中立的に整理します。独立系都市ガス事業者として北海道エリア密着型で電力小売を展開する事業特性、低圧（従量電灯S/M・動力P）から高圧・特別高圧（北ガスの電気（高圧・個別提案））までのプラン体系、グリーンメニュー（北ガスの電気（環境メニュー・公表範囲））のCO2フリー・RE100対応、燃料費調整額の連動条件、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -657,7 +657,7 @@ export default function HokkaidoGasCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               、需要側の対策は{" "}
               <Link href="/demand-control-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンドコントロールの基礎</Link>
               も参照ください。
@@ -708,7 +708,7 @@ export default function HokkaidoGasCorporateElectricityGuidePage() {
             heading="関連ページ"
             links={[
               { href: "/region-hokkaido-business-electricity", title: "北海道電力エリアの法人電気代事情", description: "道内エリアの市況・新電力動向。" },
-              { href: "/hokkaido-business-electricity-cost", title: "北海道の法人電気料金完全ガイド", description: "道内の料金水準と業種特性。" },
+              { href: "/hokkaido-business-electricity-cost", title: "北海道の法人電気料金ガイド", description: "道内の料金水準と業種特性。" },
               { href: "/hepco-corporate-electricity-guide", title: "北海道電力の法人向けガイド", description: "旧一電本体との読み分け。" },
               { href: "/regional-gas-affiliated-new-power-corporate-electricity-guide", title: "地方ガス系新電力の類型ガイド", description: "都市ガス系新電力の横断整理。" },
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
@@ -751,7 +751,7 @@ export default function HokkaidoGasCorporateElectricityGuidePage() {
             北海道エリアの市況・新電力動向は{" "}
             <Link href="/region-hokkaido-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北海道電力エリアの法人電気代事情</Link>
             、県単位の水準は{" "}
-            <Link href="/hokkaido-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北海道の法人電気料金完全ガイド</Link>
+            <Link href="/hokkaido-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北海道の法人電気料金ガイド</Link>
             、旧一電本体は{" "}
             <Link href="/hepco-corporate-electricity-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">北海道電力の法人向けガイド</Link>
             、地方ガス系の横断整理は{" "}

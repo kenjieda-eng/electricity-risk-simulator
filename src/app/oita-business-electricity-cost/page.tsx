@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "大分県の法人電気料金完全ガイド｜九州電力エリア単価分析・大分臨海工業地帯・別府湯布院観光業・八丁原地熱の契約最適化";
+  "大分県の法人電気料金ガイド｜九州電力エリア単価分析・大分臨海工業地帯・別府湯布院観光業・八丁原地熱の契約最適化";
 const pageDescription =
   "大分県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、大分臨海工業地帯（鉄鋼・化学コンビナート）、別府・湯布院温泉観光業、八丁原地熱発電（全国最大級）、大分市の都市圏オフィス・物流の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function OitaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            大分県の法人電気料金完全ガイド
+            大分県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             大分県は九州電力エリアに属し、八丁原地熱発電（全国最大級・11万kW）の立地県として地熱由来CO2フリー電源活用が県固有の特異的競争優位です。大分臨海工業地帯（新日鐵住金大分・JX大分石油化学・昭和電工大分の鉄鋼化学コンビナート）、別府温泉（全国2位温泉源数）・湯布院温泉の観光業、しいたけ・カボス全国1位の農業、大分市の都市圏オフィス・物流と多様な産業構造を持ちます。原発稼働メリット＋太陽光出力制御活用＋地熱由来CO2フリー電源の三段構成で電気代削減＋RE100対応を両立する契約最適化戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

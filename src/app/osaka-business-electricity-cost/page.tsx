@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "大阪府の法人電気料金完全ガイド｜キタミナミ商業集積・湾岸化学鉄鋼・関西物流ハブの契約最適化";
+  "大阪府の法人電気料金ガイド｜キタミナミ商業集積・湾岸化学鉄鋼・関西物流ハブの契約最適化";
 const pageDescription =
   "大阪府の法人電気料金を地域特化で解説。関西電力エリアのキタ・ミナミ商業集積、堺・泉北の湾岸化学鉄鋼コンビナート、関西物流ハブ、データセンター集積の電力負荷プロファイル、特別高圧契約、補助金活用までを実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function OsakaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            大阪府の法人電気料金完全ガイド
+            大阪府の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             大阪府は関西電力エリアで、堺泉北の石油化学鉄鋼コンビナート、北摂のパナソニック・武田薬品等の本社工場、大阪南港のデータセンター集積、梅田・難波の大型商業施設・オフィスビル、東大阪・八尾の中小製造業と多様な産業構造を持ちます。関電の原発再稼働により燃料費調整額の変動が相対的に小さい局面があるとされる点が特徴。本ページでは府内法人の電気代水準、業種別影響度、コンビナート・データセンター特有の論点、契約見直しの具体策、補助金活用までを実務的に整理します。

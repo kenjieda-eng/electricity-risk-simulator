@@ -638,7 +638,7 @@ export default function ArticlesPage() {
           links={[
             {
               href: "/what-is-capacity-contribution",
-              title: "容量拠出金とは｜2026〜2028年度の単価と法人への影響",
+              title: "容量拠出金 2026〜2028年度の単価一覧と月額負担目安",
               description: "2027年度7,847円/kW、2028年度首都圏14,812円/kW の本格徴収影響を解説",
             },
             {

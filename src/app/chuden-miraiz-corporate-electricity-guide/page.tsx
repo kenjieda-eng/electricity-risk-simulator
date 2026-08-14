@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "中部電力ミライズ 法人向けプラン完全ガイド｜特別高圧/高圧メニュー・LNG依存と燃調・サプライチェーン対応";
+  "中部電力ミライズ 法人向けプランガイド｜特別高圧/高圧メニュー・LNG依存と燃調・サプライチェーン対応";
 const pageDescription =
   "中部電力ミライズ株式会社の法人向け電力サービスを、公開情報に基づき中立的に整理。特別高圧・高圧の契約メニュー体系、LNG火力依存を背景とした燃料費調整額の感応度、中部エリアの自動車サプライチェーン対応、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。";
 
@@ -352,7 +352,7 @@ export default function ChudenMiraizCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            中部電力ミライズ 法人向けプラン完全ガイド
+            中部電力ミライズ 法人向けプランガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             中部電力ミライズ株式会社の法人向け電力サービスを、公開情報に基づき中立的に整理します。特別高圧・高圧の契約メニュー体系、LNG火力依存を背景とした燃料費調整額の感応度、中部エリアの自動車サプライチェーン対応、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -569,7 +569,7 @@ export default function ChudenMiraizCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -624,7 +624,7 @@ export default function ChudenMiraizCorporateElectricityGuidePage() {
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動を避けるべきケース。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "中部エリアの電源構成（LNG依存）を可視化。" },
               { href: "/subsidy-manufacturing-strategy", title: "製造業の補助金活用戦略", description: "自動車サプライチェーンの省エネ投資。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "再エネ・省エネ投資の税制優遇。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "再エネ・省エネ投資の税制優遇。" },
               { href: "/renewable-surcharge-increase-impact", title: "再エネ賦課金上昇の影響", description: "全社共通の制度負担の見立て。" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

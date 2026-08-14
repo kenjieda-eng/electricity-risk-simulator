@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "愛媛県の製紙・紙加工工場の電気料金完全ガイド｜四国中央市の日本一の紙産業集積と四国電力";
+  "愛媛県の製紙・紙加工工場の電気料金ガイド｜四国中央市の日本一の紙産業集積と四国電力";
 const pageDescription =
   "愛媛県の製紙・紙加工業に特化。四国中央市の「日本一の紙のまち」の製紙・紙加工・衛生用品の専業集積を核に、抄紙機・蒸解・乾燥・黒液回収ボイラー・自家発電の電力プロファイル、四国電力エリアの単価事情（伊方原発再稼働の影響）、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function EhimePaperElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            愛媛県の製紙・紙加工工場の電気料金完全ガイド
+            愛媛県の製紙・紙加工工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             愛媛県四国中央市は、製紙・板紙・家庭紙・衛生用品・紙加工が高密度に集積する「日本一の紙のまち」とされます。本ページでは「愛媛県 × 製紙・紙加工業」というクロス領域に絞り、四国電力エリア固有の単価事情（伊方原発の再稼働の影響）と、抄紙機・蒸解・乾燥・黒液回収ボイラー・バイオマス自家発を含む電力プロファイル、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。

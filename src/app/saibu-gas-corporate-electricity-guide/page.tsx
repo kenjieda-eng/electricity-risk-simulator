@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "西部ガスの電気 法人向けプラン完全ガイド｜九州の都市ガス系新電力・LNG基盤とガス電気一括最適化・相見積活用";
+  "西部ガスの電気 法人向けプランガイド｜九州の都市ガス系新電力・LNG基盤とガス電気一括最適化・相見積活用";
 const pageDescription =
   "西部ガス（西部ガスエネルギー等）の法人向け電力サービスを、公開情報に基づき中立的に整理。福岡・熊本・長崎を地盤とする都市ガス大手の電力小売事業の位置づけ、ひびきLNG等のガス基盤、ガス・電気の一括最適化、特別高圧・高圧の契約メニュー体系、燃料費調整額の連動条件、九州エリアの電源特性、契約手続き・相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣評価は行いません。";
 
@@ -352,7 +352,7 @@ export default function SaibuGasCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            西部ガスの電気 法人向けプラン完全ガイド｜九州の都市ガス系新電力・LNG基盤とガス電気一括最適化・相見積活用
+            西部ガスの電気 法人向けプランガイド｜九州の都市ガス系新電力・LNG基盤とガス電気一括最適化・相見積活用
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             西部ガスの法人向け電力サービスを、公開情報に基づき中立的に整理します。福岡・熊本・長崎を地盤とする都市ガス大手としての事業特性、ひびきLNG等のガス基盤、ガス・電気の一括最適化、九州エリアの太陽光・電源特性、特別高圧・高圧の契約メニュー体系、燃料費調整額の連動条件、契約手続き・相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -566,7 +566,7 @@ export default function SaibuGasCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -610,8 +610,8 @@ export default function SaibuGasCorporateElectricityGuidePage() {
             links={[
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
-              { href: "/osaka-gas-corporate-electricity-guide", title: "大阪ガスの電気（法人向け）完全ガイド", description: "都市ガス系新電力の関西代表例。" },
-              { href: "/toho-gas-corporate-electricity-guide", title: "東邦ガスの電気（法人向け）完全ガイド", description: "都市ガス系新電力の中部代表例。" },
+              { href: "/osaka-gas-corporate-electricity-guide", title: "大阪ガスの電気（法人向け）ガイド", description: "都市ガス系新電力の関西代表例。" },
+              { href: "/toho-gas-corporate-electricity-guide", title: "東邦ガスの電気（法人向け）ガイド", description: "都市ガス系新電力の中部代表例。" },
               { href: "/kyuden-corporate-electricity-guide", title: "九州電力の法人向けプラン", description: "旧一電（九州エリア）の参考。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },

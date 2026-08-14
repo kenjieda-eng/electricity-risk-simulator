@@ -9,7 +9,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 const pageTitle =
   "電力見積書比較の実践チェックリスト｜8領域30項目で抜け漏れゼロに";
 const pageDescription =
-  "複数電力会社の見積書を比較するときに抜け漏れを防ぐ8領域30項目の実践チェックリスト。単価種類、契約期間、燃調費、再エネ賦課金、容量拠出金、付帯サービス、支払条件、担当者対応まで完全網羅。比較表テンプレート付き、中立社団の解説です。";
+  "複数電力会社の見積書を比較するときに抜け漏れを防ぐ8領域30項目の実践チェックリスト。単価種類、契約期間、燃調費、再エネ賦課金、容量拠出金、付帯サービス、支払条件、担当者対応まで網羅。比較表テンプレート付き、中立社団の解説です。";
 const pageUrl =
   "https://simulator.eic-jp.org/electricity-quote-evaluation-checklist";
 

@@ -6,7 +6,7 @@ import MarketDataFaq from "../../../../components/market-data/MarketDataFaq";
 import ContentCta from "../../../../components/simulator/ContentCta";
 import { getArticlesByCategory } from "../../../../lib/articles";
 
-const pageTitle = "料金構造の基礎知識｜法人電気料金の値上がり要因と推移を完全マップ";
+const pageTitle = "料金構造の基礎知識｜法人電気料金の値上がり要因と推移を整理";
 const pageDescription =
   "法人電気料金の値上がり要因と推移を学ぶサブハブ。燃料費調整額、再エネ賦課金、容量拠出金、市場価格調整、燃料別価格動向まで、料金構造の基礎を体系的に整理。";
 const publishedDate = "2026-04-25";

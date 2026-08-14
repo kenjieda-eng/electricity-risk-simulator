@@ -10,7 +10,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "水素・定置用燃料電池の導入補助 完全ガイド｜NEDO水素社会構築技術開発事業・純水素形/SOFC・燃料電池CGSで電気と熱を同時活用する";
+  "水素・定置用燃料電池の導入補助ガイド｜NEDO水素社会構築技術開発事業・純水素形/SOFC・燃料電池CGSで電気と熱を同時活用する";
 const pageDescription =
   "業務・産業用の定置用燃料電池と水素利用の導入補助を中立整理。NEDO『水素社会構築技術開発事業』、環境省・経産省の脱炭素/省エネ枠、燃料電池コージェネ（CGS）を対象に、純水素形（CO2ゼロ発電）・都市ガス改質形の総合効率、電気＋熱の同時利用、BCP兼用電源としての価値を、代表シナリオ3件のBefore/Afterと投資回収・対象設備・申請フロー・採択戦略まで解説します。技術実証段階の色が濃く導入ハードルが高い点も中立に整理します。";
 
@@ -579,7 +579,7 @@ export default function SubsidyHydrogenFuelCellPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            水素・定置用燃料電池の導入補助 完全ガイド
+            水素・定置用燃料電池の導入補助ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             定置用燃料電池は『電気』と『熱』を同時に生み出せるのが最大の特徴で、総合効率の高さが費用対効果と脱炭素の両方を押し上げます。本ページでは、NEDO『水素社会構築技術開発事業』、環境省・経産省の脱炭素/省エネ枠、燃料電池コージェネ（CGS）を対象に、純水素形（CO2ゼロ発電）・都市ガス改質形の違い、電気＋熱の同時利用、BCP・非常時電源としての価値を、代表シナリオ3件のBefore/Afterと投資回収・対象設備・申請フロー・採択戦略まで中立に整理します。技術実証段階ゆえに導入ハードルが高い点も、効果を過大評価せずに解説します。
@@ -911,7 +911,7 @@ export default function SubsidyHydrogenFuelCellPage() {
               { href: "/subsidy-cogeneration-introduction", title: "コージェネ導入補助の活用ガイド", description: "熱電併給全般（ガス・燃料電池）の考え方。" },
               { href: "/subsidy-waste-heat-recovery", title: "廃熱回収・排熱利用の補助", description: "排熱を活かして総合効率を高める投資。" },
               { href: "/subsidy-carbon-neutral-priority-area", title: "脱炭素先行地域・重点地域の補助", description: "地域の脱炭素・水素施策との連携。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却との組合せ。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却との組合せ。" },
               { href: "/subsidy-shift-project", title: "事業再構築・GXシフト関連の補助", description: "事業転換を伴う脱炭素投資の受け皿。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "熱源高効率化のもう一つの選択肢。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "エネルギー管理・実績報告の体制づくり。" },

@@ -644,7 +644,7 @@ export default function RegionalGasAffiliatedNewPowerCorporateElectricityGuidePa
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               、需要側の対策は{" "}
               <Link href="/demand-control-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド制御ガイド</Link>
               も参照ください。
@@ -690,10 +690,10 @@ export default function RegionalGasAffiliatedNewPowerCorporateElectricityGuidePa
             links={[
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
-              { href: "/tokyo-gas-corporate-electricity-guide", title: "東京ガスのでんき（法人向け）完全ガイド", description: "大手都市ガス系新電力（関東）の個別ガイド。" },
-              { href: "/osaka-gas-corporate-electricity-guide", title: "大阪ガスの電気（法人向け）完全ガイド", description: "大手都市ガス系新電力（関西）の個別ガイド。" },
-              { href: "/toho-gas-corporate-electricity-guide", title: "東邦ガスの電気（法人向け）完全ガイド", description: "大手都市ガス系新電力（中部）の個別ガイド。" },
-              { href: "/saibu-gas-corporate-electricity-guide", title: "西部ガスの電気（法人向け）完全ガイド", description: "大手都市ガス系新電力（九州北部）の個別ガイド。" },
+              { href: "/tokyo-gas-corporate-electricity-guide", title: "東京ガスのでんき（法人向け）ガイド", description: "大手都市ガス系新電力（関東）の個別ガイド。" },
+              { href: "/osaka-gas-corporate-electricity-guide", title: "大阪ガスの電気（法人向け）ガイド", description: "大手都市ガス系新電力（関西）の個別ガイド。" },
+              { href: "/toho-gas-corporate-electricity-guide", title: "東邦ガスの電気（法人向け）ガイド", description: "大手都市ガス系新電力（中部）の個別ガイド。" },
+              { href: "/saibu-gas-corporate-electricity-guide", title: "西部ガスの電気（法人向け）ガイド", description: "大手都市ガス系新電力（九州北部）の個別ガイド。" },
               { href: "/shosha-affiliated-new-power-corporate-electricity-guide", title: "商社系新電力の法人活用ガイド", description: "類型別の横断解説（グローバル調達・PPA）。" },
               { href: "/utility-affiliated-new-power-corporate-electricity-guide", title: "電力系新電力の法人活用ガイド", description: "旧一電系・電力系新電力の類型解説。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },

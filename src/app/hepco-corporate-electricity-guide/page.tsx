@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "北海道電力（ほくでん）の法人向けプラン完全ガイド｜特高/高圧契約・寒冷地需要と泊原発停止後の燃調感応度";
+  "北海道電力（ほくでん）の法人向けプランガイド｜特高/高圧契約・寒冷地需要と泊原発停止後の燃調感応度";
 const pageDescription =
   "北海道電力株式会社（ほくでん）の法人向け電力サービスを、公開情報に基づき中立的に整理。特別高圧・高圧の契約メニュー体系、泊原発停止後の火力依存と燃料費調整額の感応度、寒冷地の通年冷暖房需要、北本連系線制約とBCP、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。";
 
@@ -352,7 +352,7 @@ export default function HepcoCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            北海道電力（ほくでん）の法人向けプラン完全ガイド｜特高/高圧契約・寒冷地需要と泊原発停止後の燃調感応度
+            北海道電力（ほくでん）の法人向けプランガイド｜特高/高圧契約・寒冷地需要と泊原発停止後の燃調感応度
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             北海道電力株式会社（ほくでん）の法人向け電力サービスを、公開情報に基づき中立的に整理します。特別高圧・高圧の契約メニュー体系、泊原発停止後の火力依存と燃料費調整額の感応度、寒冷地の通年冷暖房需要、北本連系線制約とBCP、契約手続き・サポート体制を、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -565,7 +565,7 @@ export default function HepcoCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -611,7 +611,7 @@ export default function HepcoCorporateElectricityGuidePage() {
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/articles/by-region", title: "地域別電気料金事情（一覧）", description: "全国エリア別の法人電気代事情ハブ。" },
               { href: "/hokkaido-food-processing-electricity-cost", title: "北海道の食品加工の電気料金", description: "北海道エリアの業種×地域クロス。" },
-              { href: "/tohoku-epco-corporate-electricity-guide", title: "東北電力の法人向けプラン完全ガイド", description: "隣接エリア（東北6県＋新潟）の電力会社別解説。" },
+              { href: "/tohoku-epco-corporate-electricity-guide", title: "東北電力の法人向けプランガイド", description: "隣接エリア（東北6県＋新潟）の電力会社別解説。" },
               { href: "/tepco-ep-corporate-electricity-guide", title: "東京電力エナジーパートナーの法人向けプラン", description: "電力会社別解説の参考（関東エリア）。" },
               { href: "/kepco-corporate-electricity-guide", title: "関西電力の法人向けプラン", description: "電力会社別解説の参考（関西エリア）。" },
               { href: "/chuden-miraiz-corporate-electricity-guide", title: "中部電力ミライズの法人向けプラン", description: "電力会社別解説の参考（中部エリア）。" },

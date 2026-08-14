@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "台東区の法人電気料金完全ガイド｜浅草上野観光・宿泊・合羽橋御徒町問屋街の契約最適化";
+  "台東区の法人電気料金ガイド｜浅草上野観光・宿泊・合羽橋御徒町問屋街の契約最適化";
 const pageDescription =
   "台東区の法人電気料金を地域特化で解説。浅草・上野の観光ホテル・飲食、御徒町の宝飾小売・卸売、合羽橋の業務用厨房問屋街、浅草橋の玩具文具卸、上野動物園・国立博物館等の公共文化施設、インバウンド回復期の宿泊業電力管理と台東区中小企業省エネ補助の活用までを実務的に整理します。";
 
@@ -370,7 +370,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            台東区の法人電気料金完全ガイド
+            台東区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             台東区は浅草・上野の観光業、御徒町・合羽橋・浅草橋の小売卸売問屋街、観光ホテル・ビジネスホテルの宿泊業という3つの事業集積を持つ独特なエリアです。インバウンド観光客回復で2024年以降観光業・宿泊業の電力需要が大幅に拡大しており、観光ピーク月と閑散月の需要変動への対応、問屋街中小事業者の店舗冷暖房ロス対策、SDGs訴求としてのオフサイトPPA活用が論点です。本ページでは区内法人の電気代水準、業種別影響度、固有の課題、契約見直しの具体策、台東区中小企業省エネ補助の活用までを実務的に整理します。
@@ -412,7 +412,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -674,7 +674,7 @@ export default function TaitoKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "霞が関・大手町の中央官庁・大型オフィス事情。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の大型商業・百貨店事情。" },

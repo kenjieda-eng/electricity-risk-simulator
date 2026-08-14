@@ -95,7 +95,7 @@ export default function FuelCostAdjustmentPage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
           📊 燃料費調整 vs 市場価格調整 の総合比較は{" "}
           <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-            メタピラー｜燃料費調整額と市場価格調整額の違いを完全比較
+            メタピラー｜燃料費調整額と市場価格調整額の違いを比較
           </Link>
           、対をなす市場軸は{" "}
           <Link href="/market-price-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
@@ -285,7 +285,7 @@ export default function FuelCostAdjustmentPage() {
           heading="燃料費調整サブピラー（A）の全体像"
           intro="本記事（サブピラー A = 燃料軸）から、メタピラー・対をなす市場軸サブピラー・自身配下のクラスター 2 本へのナビゲーションです。"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整 完全比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
             { href: "/market-price-adjustment", title: "市場価格調整の総合解説（サブピラー B）", description: "燃調と混同しやすい別の調整項目。市場連動プラン中心。" },
             { href: "/fuel-cost-adjustment-history", title: "燃料費調整額の過去推移", description: "2018〜2026 年度の燃調単価推移と最大振れ幅を実データで整理。" },
             { href: "/how-to-check-fuel-cost-adjustment-terms", title: "約款での燃料費調整確認", description: "自社契約の約款で燃調の表記・上限有無を見分ける手順。" },

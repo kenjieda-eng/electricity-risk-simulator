@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "墨田区の法人電気料金完全ガイド｜中小製造・スカイツリー観光・両国国技館";
+  "墨田区の法人電気料金ガイド｜中小製造・スカイツリー観光・両国国技館";
 const pageDescription =
   "墨田区の法人電気料金を区固有の視点で解説。すみだ3M運動を支える中小製造業（金属プレス・金型・印刷・革製品、約1,500社）、東京スカイツリー・ソラマチの観光・商業、両国国技館・北斎美術館の文化施設、錦糸町商業まで、契約見直し・補助金活用を実務的に整理します。";
 
@@ -372,7 +372,7 @@ export default function SumidaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            墨田区の法人電気料金完全ガイド
+            墨田区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             墨田区は『すみだ3M運動』を支える中小製造業（金属プレス・金型・印刷・革製品、約1,500社）、東京スカイツリー・ソラマチの観光・商業集積、両国国技館・北斎美術館の文化施設、錦糸町駅前商業と多面的な事業者集積を持ちます。本ページでは町工場の標準メニュー切替余地、スカイツリーの特別高圧契約、国技館・観光施設のイベント時電力管理、契約見直し・補助金活用までを実務的に整理します。
@@ -414,7 +414,7 @@ export default function SumidaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、中小製造業の論点は{" "}
               <Link href="/factory-electricity-cost-benchmark" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -676,7 +676,7 @@ export default function SumidaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "市区町村別の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "丸の内・大手町の特別高圧オフィス集積。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の商業・オフィス集積。" },

@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "熊本県の半導体・電子部品工場の電気料金完全ガイド｜TSMC・JASM・菊陽町クリーンルーム24h／九州電力エリアの特別高圧契約";
+  "熊本県の半導体・電子部品工場の電気料金ガイド｜TSMC・JASM・菊陽町クリーンルーム24h／九州電力エリアの特別高圧契約";
 const pageDescription =
   "熊本県の半導体・電子部品製造業に特化した法人電気代ガイド。TSMC/JASM進出で需要急増する菊陽町・大津町のクリーンルーム24時間稼働、九州電力エリアの単価事情、特別高圧の競争入札、再エネ調達、補助金活用までを実務目線で整理します。";
 
@@ -406,7 +406,7 @@ export default function KumamotoSemiconductorElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            熊本県の半導体・電子部品工場の電気料金完全ガイド
+            熊本県の半導体・電子部品工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             熊本県はTSMC/JASMの進出を契機に、菊陽町・大津町を中心とした世界クラスの半導体・電子部品集積地へと急速に変貌しています。本ページでは「熊本県 × 半導体・電子部品製造」というクロス領域に絞り、九州電力エリア固有の単価事情と、クリーンルーム24時間稼働・露光装置電力品質要求・超純水ユーティリティ・RE100調達・補助金活用までを実務目線で整理します。
@@ -425,7 +425,7 @@ export default function KumamotoSemiconductorElectricityCostPage() {
           <p className="mt-4 text-xs leading-6 text-slate-600">
             ※ 本ページは「熊本 × 半導体」のクロス領域に特化したガイドです。熊本県全体の文脈は{" "}
             <Link href="/kumamoto-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-              熊本県の法人電気料金完全ガイド
+              熊本県の法人電気料金ガイド
             </Link>
             、業種一般としての半導体業全体は{" "}
             <Link href="/semiconductor-electricity-cost-review" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">

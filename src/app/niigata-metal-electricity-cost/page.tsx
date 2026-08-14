@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "新潟県の金属加工工場の電気料金完全ガイド｜燕三条の刃物・洋食器・金属ハウスウェア集積と東北電力エリア";
+  "新潟県の金属加工工場の電気料金ガイド｜燕三条の刃物・洋食器・金属ハウスウェア集積と東北電力エリア";
 const pageDescription =
   "新潟県の金属加工業に特化。燕三条（燕市・三条市）の刃物・洋食器・金属ハウスウェアの集積を背景に、プレス・研磨・バフ・めっき・熱処理の電力プロファイル、東北電力エリアの単価事情（女川2号機の再稼働進行）、契約最適化、補助金・PPA活用を実務目線で整理します。";
 
@@ -405,7 +405,7 @@ export default function NiigataMetalElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            新潟県の金属加工工場の電気料金完全ガイド
+            新潟県の金属加工工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             新潟県の燕三条（燕市・三条市）は、刃物・洋食器・金属ハウスウェア・作業工具の世界的な産地です。本ページでは「新潟県 × 金属加工業」というクロス領域に絞り、東北電力エリア固有の単価事情（火力・水力・風力に女川2号機の再稼働進行が加わる電源構成、燃調感応度は中位）と、プレス・研磨／バフ・めっき・熱処理の電力プロファイル、契約最適化、補助金・PPA活用までを実務目線で整理します。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

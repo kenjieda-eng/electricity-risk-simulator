@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "練馬区の法人電気料金完全ガイド｜住宅地／アニメ産業／都市農業・中小事業者の契約最適化";
+  "練馬区の法人電気料金ガイド｜住宅地／アニメ産業／都市農業・中小事業者の契約最適化";
 const pageDescription =
   "練馬区の法人電気料金を区固有の産業集積（住宅地のサービス業・商業、アニメ制作産業、都市農業・中小事業者）から実務的に解説します。オフィス・商業・制作スタジオの契約区分別の単価目安、規模別の代表シナリオ、練馬区の省エネ補助までを整理します。";
 
@@ -370,7 +370,7 @@ export default function NerimaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            練馬区の法人電気料金完全ガイド
+            練馬区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             練馬区は23区西北部に位置し、面積の大半を住宅地が占める「住むまち」で、練馬・大泉学園・石神井公園・光が丘の駅周辺に商業・飲食・サービス業が集まります。大泉を中心としたアニメ・映像制作産業の集積、そして23区内で最も農地が多い「都市農業」も区の特色です。本ページでは「練馬区 × 住宅地の中小事業者／アニメ産業／都市農業」というクロス領域に絞り、オフィス・商業・制作スタジオの電力プロファイル、契約区分の最適化、減免制度の考え方、練馬区独自の省エネ補助、規模別の代表シナリオまでを実務目線で整理します。なお区全体が東京電力エリアで単価水準は共通のため、差別化は区の産業特性に置いています。本ページは特定の電力会社・契約形態を推奨するものではありません。
@@ -412,7 +412,7 @@ export default function NerimaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -662,7 +662,7 @@ export default function NerimaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/region-tokyo-business-electricity", title: "東京電力エリアの法人電気代事情", description: "東電エリアの料金体系・単価水準・燃調。" },
               { href: "/itabashi-ku-business-electricity-cost", title: "板橋区の法人電気料金", description: "隣接区。中小製造・商業・住宅地の事情。" },

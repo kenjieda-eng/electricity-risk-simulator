@@ -11,7 +11,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "持株会社化に伴う電力契約の見直し完全ガイド｜デマンド合算可否・グループ調達集約・ESP設立の実務";
+  "持株会社化に伴う電力契約の見直しガイド｜デマンド合算可否・グループ調達集約・ESP設立の実務";
 const pageDescription =
   "純粋持株会社・事業持株会社化に伴う電力契約の再設計を実務的に整理。各事業会社の契約単位・デマンド合算の可否・グループ調達集約・エネルギーマネジメント会社（ESP）設立の判断軸を、実務シナリオ3パターンと固有データ表で解説します。";
 const pageUrl = "https://simulator.eic-jp.org/holding-company-electricity-review";
@@ -379,7 +379,7 @@ export default function Page() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            持株会社化に伴う電力契約の見直し完全ガイド｜デマンド合算可否・グループ調達集約・ESP設立
+            持株会社化に伴う電力契約の見直しガイド｜デマンド合算可否・グループ調達集約・ESP設立
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             純粋持株会社・事業持株会社化に伴う電力契約の再設計は、デマンド合算の可否、各社個別契約と調達集約のバランス、ESP（エネルギーサービス会社）設立の損益分岐、税務・会社法上の論点が複雑に絡みます。本ページでは、3つの実務シナリオ（製造業HD・流通系HD・IT系HD＋ESP設立）のBefore/After事例、固有データ表4種、再編タイムライン、補助金活用、12項目チェックリストまでを実務担当者向けに整理します。

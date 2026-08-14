@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "文京区の法人電気料金完全ガイド｜東大本郷・大型病院・研究機関・東京ドームシティの契約最適化";
+  "文京区の法人電気料金ガイド｜東大本郷・大型病院・研究機関・東京ドームシティの契約最適化";
 const pageDescription =
   "文京区の法人電気料金を地域特化で解説。東京大学本郷キャンパス・東京医科歯科大・順天堂大・日本医大などの大学・大型病院、東京ドームシティ複合施設、谷根千エリアの観光業まで、文京区固有の研究設備・医療機器の高負荷電力と文京区中小企業エコアクション支援の活用までを実務的に整理します。";
 
@@ -370,7 +370,7 @@ export default function BunkyoKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            文京区の法人電気料金完全ガイド
+            文京区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             文京区は東京大学本郷キャンパスを筆頭に、お茶の水女子大・順天堂大・東京医科歯科大・日本医大などの大学・研究機関、順天堂医院・医科歯科大病院・日本医大病院・東大病院などの大型大学病院、東京ドームシティ複合施設という3つの大型需要家グループが集積する特徴的なエリアです。一方で谷根千・白山・茗荷谷・春日には中小商業・飲食店もあります。本ページでは区内法人の電気代水準、業種別影響度、固有の課題、契約見直しの具体策、文京区中小企業エコアクション支援の活用までを実務的に整理します。
@@ -409,7 +409,7 @@ export default function BunkyoKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情・水準は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -675,7 +675,7 @@ export default function BunkyoKuBusinessElectricityCostPage() {
             heading="関連ページ"
             links={[
               { href: "/taito-ku-business-electricity-cost", title: "台東区（浅草・上野）の法人電気料金", description: "浅草・上野の観光宿泊、御徒町・合羽橋の問屋街に特化した電気代見直しの実務ガイド。" },
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "都全体の電力事情・水準・補助金の総合ガイド。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "都内全区の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "霞が関・大手町の中央官庁・大型オフィス事情。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の大型商業・百貨店事情。" },

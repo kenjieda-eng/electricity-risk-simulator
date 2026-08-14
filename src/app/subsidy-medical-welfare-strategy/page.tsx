@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "医療・福祉の補助金活用戦略｜厚労省連携・BCP非常用電源で24h空調・省エネを導入する完全ガイド";
+  "医療・福祉の補助金活用戦略｜厚労省連携・BCP非常用電源で24h空調・省エネを導入するガイド";
 const pageDescription =
   "医療・福祉に特化した補助金活用戦略ガイド。厚労省連携の医療機関・介護施設設備整備補助、SII省エネ補助、BCP非常用電源（停電時の生命維持）支援、需要家主導型PPA補助を組合せ、24時間稼働空調・高効率給湯・LED・コージェネ・自家発電を導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。";
 
@@ -368,7 +368,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            医療・福祉の補助金活用戦略 完全ガイド
+            医療・福祉の補助金活用戦略ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             病院・介護施設は24時間365日稼働で空調・給湯・医療機器の電力が大きく、かつ数時間の停電が生命に直結するため、省エネ（電気代削減）と防災（BCP電源）の両面投資が重要です。本ページでは厚労省連携の設備整備補助・SII省エネ補助・BCP非常用電源支援・需要家主導型PPA補助を組合せ、24時間稼働空調・高効率給湯・コージェネ・自家発電・LED・屋根太陽光を導入する実務を、規模別事例・採択戦略・併用ルール・申請フローまで整理します。
@@ -533,7 +533,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -558,7 +558,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -583,7 +583,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、データセンター向け戦略は{" "}
               <Link href="/subsidy-datacenter-it-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">データセンター・IT業の補助金活用戦略</Link>
               も参照ください。
@@ -634,7 +634,7 @@ export default function SubsidyMedicalWelfareStrategyPage() {
             links={[
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "税額控除・特別償却の要件と対象設備。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "税額控除・特別償却の要件と対象設備。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備補助の活用ガイド", description: "BCP兼用の蓄電池・太陽光補助。" },
               { href: "/subsidy-heat-pump-introduction", title: "ヒートポンプ導入補助の活用ガイド", description: "医療用給湯ヒートポンプと補助金。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "施設のエネルギー管理システム補助。" },

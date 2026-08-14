@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "宮城県の法人電気料金完全ガイド｜仙台都市圏・半導体集積・物流拠点の契約最適化";
+  "宮城県の法人電気料金ガイド｜仙台都市圏・半導体集積・物流拠点の契約最適化";
 const pageDescription =
   "宮城県の法人電気料金を地域特化で解説。東北電力エリア、仙台都市圏のオフィス・商業集積、半導体・自動車関連工場、仙台港の物流拠点、補助金活用、契約見直しまで実務的に整理します。";
 
@@ -382,7 +382,7 @@ export default function MiyagiBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            宮城県の法人電気料金完全ガイド
+            宮城県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             宮城県は東北電力エリアの中核、仙台都市圏のオフィス・商業集積、半導体・自動車関連工場の集積、仙台港物流拠点という4つの構造的特徴を持ちます。本ページでは県内法人の電気代水準、半導体・物流・ホテル業の業種別影響、夏冬両ピーク対応、補助金活用、契約見直しを実務的に整理します。

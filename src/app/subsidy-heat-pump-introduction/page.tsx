@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "ヒートポンプ導入補助 完全ガイド｜2026年度の対象設備・業種別適性と採択戦略";
+  "ヒートポンプ導入補助ガイド｜2026年度の対象設備・業種別適性と採択戦略";
 const pageDescription =
   "ヒートポンプ導入補助に特化した活用ガイド。業務用エアコン（空調HP）・給湯ヒートポンプ・産業用ヒートポンプ（加温・乾燥）の3類型ごとの補助金・補助率、業種別適性、COP・省エネ効果、ボイラ→HPの燃料転換による脱炭素効果を、事例・採択戦略・併用ルール・申請フローで整理します。SII省エネ補助・脱炭素設備補助の活用法を解説。";
 
@@ -368,7 +368,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            ヒートポンプ導入補助の活用ガイド 完全ガイド
+            ヒートポンプ導入補助の活用ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             ヒートポンプは少ない電力で大きな加熱・冷却を行う高効率設備で、業務用エアコン（空調HP）・給湯HP・産業用HPの3類型があります。本ページでは3類型ごとの補助金・補助率、業種別適性（食品給湯・ホテル給湯・工場加温・オフィス空調）、COP・省エネ効果、ボイラ→HPの燃料転換による脱炭素効果を、事例・採択戦略・併用ルール・申請フローで整理します。
@@ -531,7 +531,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               事業計画書の書き方は{" "}
-              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方完全ガイド</Link>
+              <Link href="/subsidy-business-plan-writing-guide" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金事業計画書の書き方ガイド</Link>
               、省エネ診断は{" "}
               <Link href="/subsidy-energy-saving-diagnosis" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">省エネ診断補助の活用ロードマップ</Link>
               。
@@ -556,7 +556,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               併用ルールは{" "}
-              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルール完全ガイド</Link>
+              <Link href="/subsidy-stacking-combination-rules" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金併用・重複活用ルールガイド</Link>
               、不採択対策は{" "}
               <Link href="/subsidy-rejection-reasons-countermeasures" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">補助金不採択の理由と対策</Link>
               。
@@ -581,7 +581,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               GX税制の詳細は{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 法人活用ガイド</Link>
               、ホテル向け戦略は{" "}
               <Link href="/subsidy-hotel-leisure-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ホテル・レジャー業の補助金活用戦略</Link>
               も参照ください。
@@ -633,7 +633,7 @@ export default function SubsidyHeatPumpIntroductionPage() {
               { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（総論）", description: "国の主力省エネ補助金の制度概要。" },
               { href: "/subsidy-schedule-and-approval-rate", title: "補助金スケジュールと採択率（総論）", description: "公募タイミングと採択率動向。" },
               { href: "/subsidy-bemms-fems", title: "BEMS/FEMS導入補助の活用ガイド", description: "HPの運用制御・実績報告の管理基盤。" },
-              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制 完全ガイド", description: "電化・脱炭素設備の税額控除・特別償却。" },
+              { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制ガイド", description: "電化・脱炭素設備の税額控除・特別償却。" },
               { href: "/subsidy-battery-solar-equipment", title: "蓄電池・太陽光設備の補助金", description: "電化電力の再エネ自家消費との連携。" },
               { href: "/subsidy-business-plan-writing-guide", title: "補助金事業計画書の書き方", description: "採択される計画書の構成・記述例。" },
               { href: "/subsidy-stacking-combination-rules", title: "補助金併用・重複活用ルール", description: "SII×環境省×税制の組合せ可否。" },

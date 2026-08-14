@@ -5,7 +5,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd, HowToJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "電力会社の切り替え手順｜法人向け完全ガイド";
+const pageTitle = "電力会社の切り替え手順｜法人向けガイド";
 const pageDescription =
   "法人の電力会社切り替えを、契約情報の整理から相見積もり・プラン比較・契約締結・切替日設定・初月検針確認までの6ステップで解説します。解約金や通知期限などの落とし穴、所要期間の目安も整理します。";
 const pageUrl = "https://simulator.eic-jp.org/how-to-switch-electricity-provider";
@@ -162,7 +162,7 @@ export default function HowToSwitchElectricityProviderPage() {
       <main className="mx-auto min-h-screen w-full max-w-[1600px] bg-white px-4 py-8 text-slate-800 sm:px-6 lg:px-8">
         <header className="rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            電力会社の切り替え手順｜法人向け完全ガイド
+            電力会社の切り替え手順｜法人向けガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             法人の電力会社切り替えは、<strong>①現在の契約情報整理 → ②相見積もり3社 → ③プラン比較 → ④契約締結 → ⑤切替日設定 → ⑥初月検針確認</strong>の6ステップで進めます。

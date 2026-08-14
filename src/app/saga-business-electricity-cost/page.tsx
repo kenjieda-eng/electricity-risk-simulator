@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle =
-  "佐賀県の法人電気料金完全ガイド｜九州電力エリア単価分析・有田焼窯業・玄海原発立地・農業の契約最適化";
+  "佐賀県の法人電気料金ガイド｜九州電力エリア単価分析・有田焼窯業・玄海原発立地・農業の契約最適化";
 const pageDescription =
   "佐賀県の法人電気料金を地域特化で解説。九州電力エリアの単価水準を業種別に再加工して提示し、有田焼・伊万里焼の窯業（燃焼炉）、玄海原発立地県メリット、米・麦・畜産農業、唐津港物流の電力負荷プロファイル、契約見直し・補助金活用まで実務的に整理します。";
 
@@ -404,7 +404,7 @@ export default function SagaBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            佐賀県の法人電気料金完全ガイド
+            佐賀県の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             佐賀県は九州電力エリアに属し、玄海原発（3・4号機）の立地県として地域振興メニューの恩恵を一部受けます。世界的に有名な有田焼・伊万里焼の窯業（電気炉・ガス炉24時間連続稼働）、米・小麦・玉ねぎ・玉露茶・佐賀牛等の農業・畜産、鳥栖インターチェンジ周辺の九州物流ハブ、佐賀市・鳥栖市の都市圏オフィス・商業と多様な産業構造を持ちます。太陽光出力制御頻発エリアとして自家消費＋蓄電池の経済性が極めて高く、玄海原発立地県メリットと組合せた契約最適化戦略が主流です。本ページでは新電力ネット（pps-net.org/unit）のエリア別単価データを県の産業構造に紐づけて再加工し、業種別の契約見直し・補助金活用を実務的に整理します。

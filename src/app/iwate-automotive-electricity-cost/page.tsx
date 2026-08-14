@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "岩手県の自動車・輸送機器工場の電気料金完全ガイド｜北上・金ケ崎の自動車集積と東北電力";
+  "岩手県の自動車・輸送機器工場の電気料金ガイド｜北上・金ケ崎の自動車集積と東北電力";
 const pageDescription =
   "岩手県の自動車・輸送機器製造業に特化。金ケ崎・北上・奥州の完成車・サプライヤー集積を核に、プレス・溶接・塗装・組立ラインの電力プロファイル、東北電力エリアの単価事情（火力比率が高めで燃調感応度は中〜やや高め・女川2号機再稼働の進行）、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します（東北で初の自動車クロス）。";
 
@@ -406,7 +406,7 @@ export default function IwateAutomotiveElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            岩手県の自動車・輸送機器工場の電気料金完全ガイド
+            岩手県の自動車・輸送機器工場の電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             岩手県は北上川流域（北上・金ケ崎・奥州）に完成車・サプライヤーが広く集積し、『東北の自動車産業集積』の中核を担う地域です。本ページでは「岩手県 × 自動車・輸送機器製造業」というクロス領域に絞り、東北電力エリア固有の単価事情（火力比率が高めで燃調感応度は中〜やや高め・女川2号機再稼働の進行）と、プレス／溶接／塗装／組立ラインの電力プロファイル、特別高圧の契約最適化、補助金・PPA活用までを実務目線で整理します。岩手は東北電力エリアで初の自動車クロスであり、愛知=中部・群馬=東京・広島=中国とエリアで単価/燃調事情が異なる点を分離して扱います。なお本ページは特定の電力会社・契約形態を推奨するものではありません。

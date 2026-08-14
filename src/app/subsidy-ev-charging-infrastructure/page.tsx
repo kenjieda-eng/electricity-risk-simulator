@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "法人向けEV充電インフラ補助金 完全ガイド｜対象・補助率・申請の進め方（CEV系）";
+  "法人向けEV充電インフラ補助金ガイド｜対象・補助率・申請の進め方（CEV系）";
 const pageDescription =
   "法人のEV充電インフラ（普通充電・急速充電・V2H/V2B充放電設備）導入補助の対象・補助率の考え方・申請フロー・電気料金（基本料金・デマンド）への影響と最適化を整理。社有車EV化・従業員/来客充電の実務を、代表シナリオ・自治体上乗せ・併用ルール・採択ポイントまで中立的に解説します。";
 
@@ -398,7 +398,7 @@ export default function SubsidyEvChargingInfrastructurePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            法人向けEV充電インフラ補助金 完全ガイド
+            法人向けEV充電インフラ補助金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             社有車のEV化、従業員・来客向けの充電、充電サービスの提供など、法人がEV充電インフラを導入する場面が増えています。本ページでは、経済産業省所管・次世代自動車振興センター（NeV）執行のCEV補助金（充電インフラ）を中心に、普通充電・急速充電・V2H/V2B充放電設備の対象、補助率の考え方、申請フロー、そして充電負荷が契約電力・デマンド・基本料金に与える影響と最適化を、代表シナリオを交えて中立的に整理します。

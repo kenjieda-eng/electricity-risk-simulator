@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "ENEOSでんき 法人向けプラン完全ガイド｜全国系新電力としてのプラン体系・燃調連動条件と相見積活用";
+  "ENEOSでんき 法人向けプランガイド｜全国系新電力としてのプラン体系・燃調連動条件と相見積活用";
 const pageDescription =
   "ENEOSでんき（株式会社ENEOS／ENEOSホールディングスグループの電力小売事業）の法人向けサービスを、公開情報に基づき中立的に整理。石油系大手として全国で電力小売を展開する事業特性、特別高圧・高圧の契約メニュー体系、燃料費調整額の連動条件、グループの石油・LNG調達知見と発電所運営、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣評価は行いません。";
 
@@ -352,7 +352,7 @@ export default function EneosDenkiCorporateElectricityGuidePage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            ENEOSでんき 法人向けプラン完全ガイド｜全国系新電力としてのプラン体系・燃調連動条件と相見積活用
+            ENEOSでんき 法人向けプランガイド｜全国系新電力としてのプラン体系・燃調連動条件と相見積活用
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             ENEOSでんき（株式会社ENEOS／ENEOSホールディングスグループの電力小売事業）の法人向けサービスを、公開情報に基づき中立的に整理します。石油系大手として全国で電力小売を展開する事業特性、特別高圧・高圧の契約メニュー体系、燃料費調整額の連動条件、グループの石油・LNG調達知見と発電所運営、契約手続き・サポート体制、相見積活用のポイントを、第三者・社団法人視点で契約者の判断材料としてまとめます。特定企業の優劣を評価するものではありません。
@@ -564,7 +564,7 @@ export default function EneosDenkiCorporateElectricityGuidePage() {
               補助金活用は{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">製造業の補助金活用戦略</Link>
               、{" "}
-              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制 完全ガイド</Link>
+              <Link href="/subsidy-gx-cn-investment-tax" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">GX・CN投資促進税制ガイド</Link>
               も参照ください。
             </p>
           </section>
@@ -608,8 +608,8 @@ export default function EneosDenkiCorporateElectricityGuidePage() {
             links={[
               { href: "/articles/power-utility-guide", title: "電力会社別解説（カテゴリ一覧）", description: "主要電力会社の法人向けサービスを中立的に整理。" },
               { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "新電力・旧一電を中立的に比較する基礎。" },
-              { href: "/tokyo-gas-corporate-electricity-guide", title: "東京ガスのでんき（法人向け）完全ガイド", description: "都市ガス系新電力の代表例。" },
-              { href: "/summit-energy-corporate-electricity-guide", title: "サミットエナジー（法人向け）完全ガイド", description: "商社系新電力の代表例。" },
+              { href: "/tokyo-gas-corporate-electricity-guide", title: "東京ガスのでんき（法人向け）ガイド", description: "都市ガス系新電力の代表例。" },
+              { href: "/summit-energy-corporate-electricity-guide", title: "サミットエナジー（法人向け）ガイド", description: "商社系新電力の代表例。" },
               { href: "/local-utility-corporate-electricity-guide", title: "地域新電力（自治体系・地産地消）法人活用ガイド", description: "地域新電力の類型解説。" },
               { href: "/major-utility-comparison-corporate-electricity-guide", title: "旧一電10社 横断比較ガイド", description: "旧一電10社の中立比較。" },
               { href: "/tepco-ep-corporate-electricity-guide", title: "東京電力エナジーパートナーの法人向けプラン", description: "旧一電（関東エリア）の参考。" },

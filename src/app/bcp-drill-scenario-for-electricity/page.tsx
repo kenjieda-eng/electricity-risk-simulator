@@ -11,7 +11,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "BCP訓練シナリオ（電力編）完全ガイド｜社内演習の設計から評価までの実務手順";
+  "BCP訓練シナリオ（電力編）ガイド｜社内演習の設計から評価までの実務手順";
 const pageDescription =
   "電力停止を想定したBCP訓練シナリオの設計と演習実施手順を実務的に整理。3パターンの訓練シナリオ（短時間停電・需給ひっ迫・長時間停電）、停電時間別の対応マニュアル、電力BCP投資の費用対効果表、規模別Before/After事例、12項目チェックリストまで体系的に解説します。";
 const pageUrl = "https://simulator.eic-jp.org/bcp-drill-scenario-for-electricity";
@@ -345,7 +345,7 @@ export default function Page() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            BCP訓練シナリオ（電力編）完全ガイド｜社内演習の設計から評価まで
+            BCP訓練シナリオ（電力編）ガイド｜社内演習の設計から評価まで
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             電力BCPは『計画を作っただけ』では機能しません。定期的な訓練（演習）で手順を体得し、PDCAで改善し続けることで、実災害時の業務継続率を大幅に高められます。本ページでは、3パターンの訓練シナリオ（短時間停電・需給ひっ迫警報・長時間停電）、停電時間別の対応マニュアル（30分〜72時間）、電力BCP投資の費用対効果表、3規模別Before/After事例、12項目チェックリストまでを実務担当者向けに整理します。

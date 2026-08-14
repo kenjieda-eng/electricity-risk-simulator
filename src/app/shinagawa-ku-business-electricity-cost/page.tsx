@@ -9,7 +9,7 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 import TableOfContents from "../../components/market-data/TableOfContents";
 
 const pageTitle =
-  "品川区の法人電気料金完全ガイド｜大崎・五反田オフィス・天王洲湾岸物流・品川駅前再開発";
+  "品川区の法人電気料金ガイド｜大崎・五反田オフィス・天王洲湾岸物流・品川駅前再開発";
 const pageDescription =
   "品川区の法人電気料金を区固有の視点で解説。大崎駅西口の特別高圧オフィス群、五反田の中堅IT・スタートアップ、天王洲アイル地域冷暖房と湾岸物流、品川駅前リニア中央新幹線新駅、八潮の湾岸倉庫まで、契約見直し・補助金活用を実務的に整理します。";
 
@@ -372,7 +372,7 @@ export default function ShinagawaKuBusinessElectricityCostPage() {
 
         <header className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-6">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            品川区の法人電気料金完全ガイド
+            品川区の法人電気料金ガイド
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             品川区は大崎駅西口の特別高圧オフィス群、五反田の中堅IT・SaaS集積、天王洲アイル地域冷暖房・湾岸物流、品川駅前のリニア中央新幹線新駅周辺再開発、八潮の冷凍冷蔵物流DCと多面的な事業者集積を持つ区です。本ページでは品川区固有の電気代水準、業種別影響度、再開発と湾岸物流の電力需要構造、契約見直し・補助金活用までを実務的に整理します。
@@ -414,7 +414,7 @@ export default function ShinagawaKuBusinessElectricityCostPage() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               東京都全体の電力事情は{" "}
               <Link href="/tokyo-business-electricity-cost" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
-                東京都の法人電気料金完全ガイド
+                東京都の法人電気料金ガイド
               </Link>
               、東電エリア全体は{" "}
               <Link href="/region-tokyo-business-electricity" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -676,7 +676,7 @@ export default function ShinagawaKuBusinessElectricityCostPage() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金完全ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
+              { href: "/tokyo-business-electricity-cost", title: "東京都の法人電気料金ガイド", description: "東京都全体の電気料金事情と区横断の論点。" },
               { href: "/articles/by-municipality", title: "市区町村別電気料金事情（一覧）", description: "市区町村別の電気料金事情をハブから探す。" },
               { href: "/chiyoda-ku-business-electricity-cost", title: "千代田区の法人電気料金", description: "丸の内・大手町の特別高圧オフィス集積。" },
               { href: "/chuo-ku-business-electricity-cost", title: "中央区の法人電気料金", description: "銀座・日本橋の商業・オフィス集積。" },

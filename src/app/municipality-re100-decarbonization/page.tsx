@@ -34,7 +34,7 @@ const sourcesItems = [
 
 const pageTitle = "自治体のRE100・脱炭素調達と電力コストの両立｜ゼロカーボンシティ向け実務ガイド";
 const pageDescription =
-  "ゼロカーボンシティ宣言した自治体が、RE100・脱炭素目標と電力コスト管理を両立させるための調達戦略を完全整理。再エネ電力メニュー比較、PPA活用、入札方式選定、議会説明、住民影響への配慮まで、実務上の選択肢を一般社団法人エネルギー情報センターが中立解説。自治体担当者・議員向け。";
+  "ゼロカーボンシティ宣言した自治体が、RE100・脱炭素目標と電力コスト管理を両立させるための調達戦略を整理。再エネ電力メニュー比較、PPA活用、入札方式選定、議会説明、住民影響への配慮まで、実務上の選択肢を一般社団法人エネルギー情報センターが中立解説。自治体担当者・議員向け。";
 const pageUrl = "https://simulator.eic-jp.org/municipality-re100-decarbonization";
 
 export const metadata: Metadata = {
