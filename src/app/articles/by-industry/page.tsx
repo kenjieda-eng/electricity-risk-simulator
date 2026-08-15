@@ -125,7 +125,7 @@ export default function ArticlesByIndustryPage() {
       <section className="mt-8 rounded-xl border border-sky-200 bg-sky-50 p-5">
         <h2 className="text-xl font-semibold text-slate-900">最近追加した業種別解説（2026年5月・サービス/ニッチ業種）</h2>
         <p className="mt-2 text-sm leading-6 text-slate-700">
-          製造業細分（B-58e）に続き、サービス・ニッチ業種18件を新規追加しました。業種別記事は101件・カテゴリ網羅性国内最高水準です。
+          製造業の細分化に続き、サービス・ニッチ業種18件を新規追加しました。業種別記事は101件です。
         </p>
         <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2 xl:grid-cols-3">
           <li><Link href="/hair-salon-barber-electricity-cost-review" className="text-sky-700 underline-offset-2 hover:underline">理容室・美容室の電気料金見直し</Link></li>

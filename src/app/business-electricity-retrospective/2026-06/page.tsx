@@ -688,7 +688,7 @@ export default function BusinessElectricityRetrospective202606Page() {
               { href: "/business-electricity-retrospective/low-voltage-lighting-2019-2025", title: "低圧電灯の電気料金推移（2019〜2025）", description: "低圧電灯の長期推移を整理" },
               { href: "/region-tokyo-electricity-price-trend", title: "東京エリアの電気料金推移", description: "エリア別の推移と価格差の背景" },
               { href: "/business-electricity-price-trend-10-years", title: "法人電気料金の10年推移", description: "長期の推移を俯瞰して現在地を確認" },
-              { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "6月動向の理解に必須のサブピラー" },
+              { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "6月動向の理解に必須の基礎解説" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "4.18円/kWh（2026年度）の仕組み" },
               { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "燃調本体とは別の市場連動分の見方" },
               { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格ダッシュボード", description: "エリア別の単価と東西価格差" },

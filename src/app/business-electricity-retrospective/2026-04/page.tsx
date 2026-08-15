@@ -579,7 +579,7 @@ export default function BusinessElectricityRetrospective202604Page() {
               { href: "/business-electricity-retrospective/2026-02", title: "2026年2月の振り返り", description: "補助厚い局面の最終確認" },
               { href: "/business-electricity-retrospective/2026-01", title: "2026年1月の振り返り", description: "補助復活直後の改善局面" },
               { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "全月次振り返り一覧と長期推移" },
-              { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "4月動向の理解に必須のサブピラー" },
+              { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "4月動向の理解に必須の基礎解説" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "5/1改定の背景と仕組み" },
               { href: "/renewable-energy-surcharge-2026", title: "2026年度の再エネ賦課金", description: "新単価4.18円/kWhの解説" },
               { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "JEPX連動契約のリスク" },
