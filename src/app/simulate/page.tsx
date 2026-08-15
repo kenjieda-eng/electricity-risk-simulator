@@ -127,7 +127,7 @@ export default function SimulatePage() {
               {
                 href: "/articles/basic",
                 title: "法人電気料金の基礎知識",
-                description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（人気ハブページ）。",
+                description: "電気料金の構成・契約の種類・値上がり要因など、基礎から体系的に学べます（ハブページ）。",
               },
             ]}
           />
