@@ -104,13 +104,13 @@ export default function MarketPriceAdjustmentPage() {
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
           📊 燃料費調整 vs 市場価格調整 の総合比較は{" "}
           <Link href="/fuel-vs-market-adjustment-comparison" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-            メタピラー｜燃料費調整額と市場価格調整額の違いを比較
+            燃料費調整額と市場価格調整額の違いを比較
           </Link>
-          、対をなす燃料軸は{" "}
+          、燃料費調整額そのものの解説は{" "}
           <Link href="/fuel-cost-adjustment" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
-            燃料費調整制度の総合解説（サブピラーA）
+            燃料費調整制度の総合解説
           </Link>
-          を参照してください。本記事は市場軸の総合解説（サブピラーB）です。
+          を参照してください。本記事は市場価格調整額を総合的に解説するページです。
         </div>
       </header>
 
@@ -308,7 +308,7 @@ export default function MarketPriceAdjustmentPage() {
         </section>
 
         <section className="rounded-xl border border-sky-200 bg-sky-50 p-5">
-          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ（サブピラー B 配下のクラスター記事）</h2>
+          <h2 className="text-xl font-semibold text-slate-900">もっと深く知りたい方へ（市場価格調整をさらに詳しく）</h2>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <Link href="/market-price-adjustment-risk" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
@@ -351,11 +351,11 @@ export default function MarketPriceAdjustmentPage() {
         />
 
         <RelatedLinks
-          heading="市場価格調整サブピラー（B）の全体像"
-          intro="本記事（サブピラー B = 市場軸）から、メタピラー・対をなす燃料軸サブピラー・自身配下のクラスター 2 本へのナビゲーションです。"
+          heading="市場価格調整まわりのページ全体像"
+          intro="本記事（市場価格調整の総合解説）から、燃料費調整との比較・燃料費調整の総合解説・市場価格調整の詳細 2 本へのナビゲーションです。"
           links={[
-            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較（メタピラー）", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
-            { href: "/fuel-cost-adjustment", title: "燃料費調整制度の総合解説（サブピラー A）", description: "対をなす燃料軸の総合解説。燃調費の仕組みと請求影響。" },
+            { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
+            { href: "/fuel-cost-adjustment", title: "燃料費調整制度の総合解説", description: "燃料費調整額そのものの総合解説。燃調費の仕組みと請求影響。" },
             { href: "/market-price-adjustment-risk", title: "市場価格調整のリスク", description: "市場連動プラン採用法人が直面する具体的リスク事例。" },
             { href: "/how-to-check-market-price-adjustment-terms", title: "約款での市場価格調整確認", description: "自社契約での市場連動条項の確認方法。" },
             { href: "/market-linked-plan", title: "市場連動プランとは", description: "市場価格連動型契約の特徴。" },

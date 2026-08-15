@@ -161,13 +161,13 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
         </header>
 
         {/* サブピラー2本への誘導カード */}
-        <section aria-label="サブピラー記事への誘導" className="mt-6 grid gap-3 md:grid-cols-2">
+        <section aria-label="燃料費調整・市場価格調整それぞれの総合解説への誘導" className="mt-6 grid gap-3 md:grid-cols-2">
           <Link
             href="/fuel-cost-adjustment"
             className="group flex flex-col rounded-xl border-2 border-amber-200 bg-amber-50 p-5 transition hover:border-amber-400 hover:bg-amber-100"
           >
             <span className="inline-flex w-fit rounded-full bg-amber-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
-              サブピラー A ／ 燃料軸
+              燃料価格による調整
             </span>
             <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
               燃料費調整制度の総合解説
@@ -184,7 +184,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             className="group flex flex-col rounded-xl border-2 border-sky-200 bg-sky-50 p-5 transition hover:border-sky-400 hover:bg-sky-100"
           >
             <span className="inline-flex w-fit rounded-full bg-sky-600 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
-              サブピラー B ／ 市場軸
+              市場価格による調整
             </span>
             <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
               市場価格調整の総合解説
@@ -499,17 +499,17 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
         {/* 関連リンク */}
         <div className="mt-8">
           <RelatedLinks
-            heading="単価調整クラスターの全体像"
-            intro="本メタピラーから、サブピラー 2 本（燃料軸／市場軸）と 4 本のクラスター記事へのナビゲーションです。"
+            heading="単価調整に関するページの全体像"
+            intro="本記事（両者の比較）から、燃料費調整・市場価格調整それぞれの総合解説 2 本と、関連する 4 本の詳細記事へのナビゲーションです。"
             links={[
               {
                 href: "/fuel-cost-adjustment",
-                title: "燃料費調整制度の総合解説（サブピラー A）",
+                title: "燃料費調整制度の総合解説",
                 description: "燃調費の計算根拠と上限撤廃後の実態を整理します。",
               },
               {
                 href: "/market-price-adjustment",
-                title: "市場価格調整の総合解説（サブピラー B）",
+                title: "市場価格調整の総合解説",
                 description: "JEPX 市場連動の仕組みと 2025 年冬の挙動を整理します。",
               },
               {

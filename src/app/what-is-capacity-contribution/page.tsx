@@ -350,10 +350,10 @@ export default function WhatIsCapacityContributionPage() {
       {/* 関連リンク */}
       <div className="mt-8">
         <RelatedLinks
-          heading="容量拠出金クラスターの全体像"
-          intro="本記事（Pillar A）から、制度沿革（Pillar B）と 8 本のクラスター記事へのナビゲーションです。各記事は本記事と相互リンクしています。"
+          heading="容量拠出金に関するページの全体像"
+          intro="本記事（拠出金そのものの解説）から、制度沿革と 8 本の関連記事へのナビゲーションです。各記事は本記事と相互リンクしています。"
           links={[
-            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響（Pillar B）", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
+            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
             { href: "/capacity-contribution-explained", title: "容量拠出金の仕組み・計算方法", description: "拠出金の詳細メカニズムと計算式。仕組み解説の深掘り版。" },
             { href: "/capacity-contribution-cost-impact", title: "容量拠出金のコスト影響詳細", description: "高圧/低圧別の影響額比較と費目別シミュレーション。" },
             { href: "/capacity-contribution-impact-on-business", title: "容量拠出金の法人ビジネスへの影響", description: "業種別の経営インパクトと利益率への波及。" },

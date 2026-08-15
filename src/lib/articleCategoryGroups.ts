@@ -61,7 +61,7 @@ export const CATEGORY_MAJOR_GROUPS: CategoryMajorGroup[] = [
   {
     key: "frontier",
     title: "新領域・特集",
-    description: "市場データ、脱炭素、PPA、DX、BCP、制度改正、EV、AI需要など、トレンド・差別化テーマを扱うブロック。",
+    description: "市場データ、脱炭素、PPA、DX、BCP、制度改正、EV、AI需要など、トレンド・新領域のテーマを扱うブロック。",
     categorySlugs: [
       "market-data",
       "decarbonization",

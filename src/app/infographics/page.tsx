@@ -129,7 +129,7 @@ export default function Page() {
           heading="関連ページ"
           links={[
             { href: "/business-electricity-price-trend-10-years", title: "法人電気料金 10年推移", description: "インフォグラフィックの元データ解説。" },
-            { href: "/business-electricity-bill-breakdown", title: "電気料金の内訳", description: "請求書を読み解く詳細ピラー記事。" },
+            { href: "/business-electricity-bill-breakdown", title: "電気料金の内訳", description: "請求書を読み解く詳細な解説記事。" },
             { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "毎月の最新データ。" },
             { href: "/articles", title: "記事ハブ", description: "テーマ別解説記事。" },
             { href: "/", title: "シミュレーター", description: "リスク診断を30秒で。" },

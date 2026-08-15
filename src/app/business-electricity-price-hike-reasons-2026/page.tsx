@@ -187,7 +187,7 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
             <Link href="/business-electricity-price-trend-10-years" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
               法人電気料金の10年推移
             </Link>
-            （Pillar B）を参照してください。本記事は最新性軸（2026 年要因）の Pillar A です。
+            を参照してください。本記事は 2026 年時点の値上げ要因を解説するページです。
           </p>
         </header>
 
@@ -392,12 +392,12 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
         {/* 関連リンク */}
         <div className="mt-8">
           <RelatedLinks
-            heading="値上げ・推移クラスターの全体像"
-            intro="本記事（Pillar A = 最新性軸）から、Pillar B（10 年推移軸）と 4 本のクラスター記事 + Pillar B 配下の 2 記事へのナビゲーションです。"
+            heading="値上げと推移に関するページの全体像"
+            intro="本記事（2026 年時点の値上げ要因）から、過去 10 年の推移データと 6 本の関連記事へのナビゲーションです。"
             links={[
               {
                 href: "/business-electricity-price-trend-10-years",
-                title: "法人電気料金の10年推移（Pillar B）",
+                title: "法人電気料金の10年推移",
                 description: "過去 10 年の年度別データで高止まりの構造的背景を確認できます。",
               },
               {
@@ -423,12 +423,12 @@ export default function BusinessElectricityPriceHikeReasons2026Page() {
               {
                 href: "/electricity-price-trend-2019-2025",
                 title: "電気料金 2019〜2025 年推移",
-                description: "Pillar B 配下、近年の単価推移を年度別に確認。",
+                description: "近年の単価推移を年度別に確認。",
               },
               {
                 href: "/when-will-business-electricity-prices-drop",
                 title: "電気料金はいつ下がるか",
-                description: "Pillar B 配下、料金下降タイミングの予測整理。",
+                description: "料金下降タイミングの予測整理。",
               },
               {
                 href: "/capacity-contribution-explained",

@@ -145,11 +145,11 @@ export default function CapacityMarketAndCorporateRatesPage() {
         <Link href="/what-is-capacity-contribution" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
           容量拠出金 2026〜2028年度の単価一覧
         </Link>
-        （Pillar A）、制度全体の沿革は{" "}
+        、制度全体の沿革は{" "}
         <Link href="/capacity-market-timeline" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
           容量市場の制度変遷と電気料金への影響
         </Link>
-        （Pillar B）を参照してください。
+        を参照してください。
       </div>
       <TableOfContents />
       <section className="mt-6 space-y-6">
@@ -305,8 +305,8 @@ export default function CapacityMarketAndCorporateRatesPage() {
         <RelatedLinks
           heading="関連ページ"
           links={[
-            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧（Pillar A）", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
-            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響（Pillar B）", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
+            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
             {
               href: "/capacity-contribution-explained",
               title: "容量拠出金の仕組みと影響",

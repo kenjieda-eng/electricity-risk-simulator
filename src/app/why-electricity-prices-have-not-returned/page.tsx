@@ -108,15 +108,15 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
 
 
       <div className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-slate-700 sm:text-base">
-        📌 値上げ・推移クラスターの全体像は{" "}
+        📌 値上げと推移の全体像は{" "}
         <Link href="/business-electricity-price-hike-reasons-2026" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
           2026年法人電気料金の値上げ理由
         </Link>
-        （Pillar A = 最新性軸）と{" "}
+        （2026 年時点の要因）と{" "}
         <Link href="/business-electricity-price-trend-10-years" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
           法人電気料金の10年推移
         </Link>
-        （Pillar B = データ系軸）を参照してください。
+        （過去 10 年のデータ）を参照してください。
       </div>
       <TableOfContents />
       <section className="mt-6 space-y-6">
@@ -426,7 +426,7 @@ export default function WhyElectricityPricesHaveNotReturnedPage() {
           links={[
             { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "中計でシナリオ別に電力コストを織り込む前提とKPI。" },
             { href: "/executive-risk-planning-approaches", title: "電気料金リスクを事業計画に織り込む3つのアプローチ", description: "固定費化・ヘッジ・分散から事業計画へ反映する方法。" },
-            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
+            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由", description: "2026 年時点の値上げ要因 5 軸を分解した総合解説。" },
             {
               href: "/electricity-price-trend-2019-2025",
               title: "2019年から2025年の推移を確認する",

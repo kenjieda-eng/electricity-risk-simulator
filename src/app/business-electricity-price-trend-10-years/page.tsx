@@ -111,11 +111,11 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
           グラフは月次データがそろう2019年以降を軸にしつつ、年表では2016年の電力全面自由化以降の制度・市場の転換点もあわせて確認できます。
         </p>
         <div className="mt-4 rounded-lg border border-sky-300 bg-white p-4 text-sm leading-7 text-slate-700 sm:text-base">
-          ⚡ 2026 年の値上げ理由（最新性軸）は{" "}
+          ⚡ 2026 年時点の値上げ理由は{" "}
           <Link href="/business-electricity-price-hike-reasons-2026" className="font-semibold text-sky-700 underline-offset-2 hover:text-sky-900">
             2026年法人電気料金の値上げ理由
           </Link>
-          （Pillar A）を参照してください。本記事は過去 10 年の推移データ軸の Pillar B です。
+          を参照してください。本記事は過去 10 年の推移データをまとめたページです。
         </div>
       </header>
 
@@ -530,10 +530,10 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
               <span className="font-semibold text-slate-900">容量拠出金で電気代はどのくらい上がるのか</span>
             </Link>
             <Link href="/why-business-electricity-prices-rise" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">電気料金が上がる根本理由（Pillar A 配下）</span>
+              <span className="font-semibold text-slate-900">電気料金が上がる根本理由</span>
             </Link>
             <Link href="/when-will-business-electricity-prices-drop" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
-              <span className="font-semibold text-slate-900">電気料金はいつ下がるか（Pillar B 配下）</span>
+              <span className="font-semibold text-slate-900">電気料金はいつ下がるか</span>
             </Link>
           </div>
         </div>
@@ -585,19 +585,19 @@ export default function BusinessElectricityPriceTrend10YearsPage() {
         />
 
         <RelatedLinks
-          heading="値上げ・推移クラスターの全体像（Pillar B 視点）"
-          intro="本記事（Pillar B = 10 年推移データ軸）から、Pillar A（最新性軸）と 6 本のクラスター記事へのナビゲーションです。"
+          heading="値上げと推移に関するページの全体像"
+          intro="本記事（過去 10 年の推移データ）から、2026 年時点の値上げ要因と 6 本の関連記事へのナビゲーションです。"
           links={[
             { href: "/executive-mid-term-plan-electricity", title: "中期経営計画への電力コスト織り込み方", description: "中計でシナリオ別に電力コストを織り込む前提とKPI。" },
-            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由（Pillar A）", description: "最新性軸で 2026 年の値上げ要因 5 軸を分解した起点記事。" },
-            { href: "/why-business-electricity-prices-rise", title: "電気料金が上がる根本理由", description: "Pillar A 配下クラスター。4 要因でシンプルに整理した入口。" },
-            { href: "/why-electricity-prices-have-not-returned", title: "電気料金が戻らない理由", description: "Pillar A 配下クラスター。ピーク後も水準が下がりきらない構造要因を解説。" },
-            { href: "/how-much-business-electricity-prices-increase", title: "電気料金が何パーセント上がるか", description: "Pillar A 配下クラスター。業種・契約区分別の値上げ幅を実数試算。" },
-            { href: "/hidden-electricity-price-increases", title: "ステルス値上げ・隠れ値上げ", description: "Pillar A 配下クラスター。請求書では気づきにくい単価上昇の見落とし。" },
-            { href: "/electricity-price-trend-2019-2025", title: "電気料金 2019〜2025 年推移", description: "Pillar B 配下クラスター。近年の単価推移を年度別に確認。" },
-            { href: "/when-will-business-electricity-prices-drop", title: "電気料金はいつ下がるか", description: "Pillar B 配下クラスター。料金下降タイミングの予測整理。" },
+            { href: "/business-electricity-price-hike-reasons-2026", title: "2026年法人電気料金の値上げ理由", description: "2026 年時点の値上げ要因 5 軸を分解した総合解説。" },
+            { href: "/why-business-electricity-prices-rise", title: "電気料金が上がる根本理由", description: "4 要因でシンプルに整理した入口。" },
+            { href: "/why-electricity-prices-have-not-returned", title: "電気料金が戻らない理由", description: "ピーク後も水準が下がりきらない構造要因を解説。" },
+            { href: "/how-much-business-electricity-prices-increase", title: "電気料金が何パーセント上がるか", description: "業種・契約区分別の値上げ幅を実数試算。" },
+            { href: "/hidden-electricity-price-increases", title: "ステルス値上げ・隠れ値上げ", description: "請求書では気づきにくい単価上昇の見落とし。" },
+            { href: "/electricity-price-trend-2019-2025", title: "電気料金 2019〜2025 年推移", description: "近年の単価推移を年度別に確認。" },
+            { href: "/when-will-business-electricity-prices-drop", title: "電気料金はいつ下がるか", description: "料金下降タイミングの予測整理。" },
             { href: "/business-electricity-bill-breakdown", title: "法人電気料金の内訳", description: "請求書の項目構成と上昇要因の対応関係。" },
-            { href: "/articles/price-trends", title: "電気料金の推移と高止まり（カテゴリ）", description: "本クラスターを含む価格動向カテゴリ。" },
+            { href: "/articles/price-trends", title: "電気料金の推移と高止まり（カテゴリ）", description: "値上げ・推移の各記事を含む価格動向カテゴリ。" },
             {
               href: "/business-electricity-cost-reduction-review-points",
               title: "法人の電気料金を削減する見直しポイント7選",

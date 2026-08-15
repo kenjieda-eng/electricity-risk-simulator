@@ -386,8 +386,8 @@ export default function CapacityContributionExplainedPage() {
           heading="関連ページ"
           links={[
             { href: "/executive-cfo-electricity-basics", title: "CFOのための電力市場基礎", description: "燃調費・市場連動・容量拠出金の基礎を1ページで整理。" },
-            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧（Pillar A）", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
-            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響（Pillar B）", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
+            { href: "/what-is-capacity-contribution", title: "容量拠出金 2026〜2028年度の単価一覧", description: "2026〜2028年度の単価一覧と法人の月額負担目安を整理。" },
+            { href: "/capacity-market-timeline", title: "容量市場の制度変遷と電気料金への影響", description: "制度沿革・初回オークション・拠出金導入の経緯を時系列で整理。" },
             {
               href: "/capacity-contribution-cost-impact",
               title: "容量拠出金で電気代はどのくらい上がるのか",

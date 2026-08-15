@@ -43,7 +43,7 @@ export default function Page() {
             heading="関連ページ"
             links={[
               { href: "/business-electricity-retrospective", title: "月次振り返りハブ", description: "可視化の元データを月次で公開中。" },
-              { href: "/business-electricity-price-trend-10-years", title: "10年推移ピラー", description: "長期トレンドの解説記事。" },
+              { href: "/business-electricity-price-trend-10-years", title: "法人電気料金の10年推移", description: "長期トレンドの解説記事。" },
               { href: "/last-resort-supply-history", title: "最終保障供給 推移", description: "制度の変遷を時系列で確認。" },
               { href: "/articles", title: "記事ハブ", description: "テーマ別の解説記事。" },
               { href: "/", title: "シミュレーター", description: "30秒でリスク診断。" },
