@@ -125,7 +125,7 @@ export default function NegawattTradingExplainedPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">2. なぜ注目されているのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            ネガワット取引は、供給側の構造変化と需要側の経営課題が交わる場として、ここ数年で急速に注目を集めています。
+            ネガワット取引は、供給側の構造変化と需要側の経営課題が交わる場として、ここ数年で注目を集めています。
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-6 text-sm leading-7 text-slate-700 sm:text-base">
             <li>火力発電所の老朽化・廃止により、構造的な供給力不足が顕在化</li>

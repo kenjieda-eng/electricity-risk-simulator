@@ -393,7 +393,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             </div>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
               年額ベースでは同程度に見えても、
-              <strong>予測可能性とキャッシュフローへのストレスは市場連動プランの方が圧倒的に大きい</strong>
+              <strong>予測可能性とキャッシュフローへのストレスは市場連動プランの方が大きい</strong>
               点に注意が必要です。固定プランは単価改定通知で対応できますが、市場連動は前日 JEPX 結果が出るまで翌月の料金が読めません。
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">

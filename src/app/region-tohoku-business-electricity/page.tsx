@@ -576,7 +576,7 @@ export default function RegionTohokuBusinessElectricityPage() {
             {
               href: "/region-hokkaido-business-electricity",
               title: "北海道電力エリアの法人電気代事情",
-              description: "石炭火力依存と全国最高水準の料金特性を解説。",
+              description: "石炭火力依存と料金水準の特性を解説。",
             },
             {
               href: "/region-tokyo-business-electricity",

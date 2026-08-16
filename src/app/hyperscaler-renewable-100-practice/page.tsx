@@ -90,10 +90,10 @@ export default function Page() {
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">3社のサステナビリティ戦略比較</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Amazon（AWS）】2025年までに再エネ100%。2040年ネットゼロ。巨大PPA契約者として世界トップ。取組例：インド・欧州・米国でGW規模PPA締結。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Amazon（AWS）】2025年までに再エネ100%。2040年ネットゼロ。巨大PPA契約者。取組例：インド・欧州・米国でGW規模PPA締結。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Google（GCP）】2017年から年間総量100%達成。2030年までに24/7カーボンフリー。先進的な時間マッチング調達。SMRへの投資公表。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">【Microsoft（Azure）】2025年再エネ100%。2030年カーボンネガティブ。炭素除去技術への投資拡大。</p>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">3社とも調達規模・技術投資は圧倒的で、産業全体の再エネ需給を牽引しています。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">3社とも調達規模・技術投資は大きく、産業全体の再エネ需給を牽引しています。</p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">関連する制度・出典</h2>

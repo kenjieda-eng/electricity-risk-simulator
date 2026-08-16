@@ -262,7 +262,7 @@ export default function ExtremeHeatElectricityRiskPage() {
             <h3 className="text-base font-semibold text-amber-900">大阪：熱帯夜の多さ</h3>
             <p className="text-2xl font-bold text-amber-700 mt-1">81日（2025年）</p>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              海洋性気候の影響で夜間も気温が下がりにくく、熱帯夜が全国最多水準。
+              海洋性気候の影響で夜間も気温が下がりにくく、熱帯夜が非常に多い。
               飲食・ホテル・商業施設など夜間も稼働する業種は冷房電力の増加が
               電気料金を押し上げます。
             </p>

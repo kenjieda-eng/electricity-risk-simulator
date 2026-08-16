@@ -500,7 +500,7 @@ export default function RegionShikokuBusinessElectricityPage() {
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-xl font-semibold text-slate-900">四国電力エリア需要と原発・再エネの電源構成</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          四国電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "shikoku")?.share}%を占めます。全国最小規模の需要エリア。西日本クラスターとの高い連動性(0.95)。
+          四国電力エリアは全国需要の約{DEMAND_AREA_SHARE.find(a => a.area === "shikoku")?.share}%を占めます。小規模な需要エリア。西日本クラスターとの高い連動性(0.95)。
         </p>
         <p className="mt-2 text-xs text-slate-500">
           ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。

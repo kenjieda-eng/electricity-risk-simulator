@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 const curtailmentSummary = [
-  { area: "九州", freq: "13.8%", maxMW: "4,838", avgMW: "62", note: "全国最多。3〜4月が深刻" },
+  { area: "九州", freq: "13.8%", maxMW: "4,838", avgMW: "62", note: "3〜4月が深刻" },
   { area: "四国", freq: "10.5%", maxMW: "1,230", avgMW: "17", note: "需要規模小で余剰吸収困難" },
   { area: "関西", freq: "10.1%", maxMW: "2,650", avgMW: "19", note: "原子力ベースロードとの競合" },
   { area: "東北", freq: "7.8%", maxMW: "3,751", avgMW: "36", note: "風力との同時余剰も発生" },

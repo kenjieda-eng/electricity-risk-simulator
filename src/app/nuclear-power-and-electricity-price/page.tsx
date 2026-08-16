@@ -108,7 +108,7 @@ const areaData = [
     company: "関西電力",
     activePlants: "高浜1〜4号、大飯3・4号、美浜3号",
     activeCount: "7基",
-    outputMW: "約6,300MW（日本最大級）",
+    outputMW: "約6,300MW",
     reShare: "約20%（原子力が大部分）",
     highVoltageUnit: "約19〜23円/kWh",
     note: "原発比率が高く、燃調感応度が低めとされる。再稼働の恩恵が最大",
@@ -139,7 +139,7 @@ const areaData = [
     activePlants: "玄海3・4号、川内1・2号",
     activeCount: "4基",
     outputMW: "約3,700MW",
-    reShare: "約45%（再エネ比率も国内最高水準）",
+    reShare: "約45%（再エネ比率も高水準）",
     highVoltageUnit: "約19〜22円/kWh",
     note: "原発再稼働と太陽光の拡大で国内最安値圏。出力制御が課題",
   },
@@ -151,7 +151,7 @@ const areaData = [
     outputMW: "—",
     reShare: "約15%",
     highVoltageUnit: "約29〜34円/kWh",
-    note: "完全離島。LNG・石油火力依存で全国最高水準の単価",
+    note: "完全離島。LNG・石油火力依存で高水準の単価",
   },
 ];
 

@@ -20,7 +20,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const pageTitle = "九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性";
 const pageDescription =
-  "九州電力エリア（九州7県）の法人向け電気料金を詳解。全国最多水準の太陽光発電導入による出力制御・料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。";
+  "九州電力エリア（九州7県）の法人向け電気料金を詳解。大規模な太陽光発電導入による出力制御・料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。";
 const pageUrl = "https://simulator.eic-jp.org/region-kyushu-business-electricity";
 
 export const metadata: Metadata = {
@@ -70,8 +70,8 @@ const areaBasicInfo = [
   { label: "管内世帯数（概算）", value: "約 640万世帯" },
   { label: "法人需要家数の目安", value: "約 70万口（高圧以上：約 6.5万口）" },
   { label: "電源構成の特徴", value: "太陽光 約 25〜35%（日中）、原子力（川内・玄海）約 20〜25%、LNG火力約 25〜30%" },
-  { label: "太陽光発電設備容量", value: "約 1,800〜2,000万kW（全国最大規模）" },
-  { label: "出力制御状況", value: "年間の出力制御率が全国で最も高い水準。再エネの系統接続に制約あり" },
+  { label: "太陽光発電設備容量", value: "約 1,800〜2,000万kW" },
+  { label: "出力制御状況", value: "年間の出力制御率が高い水準。再エネの系統接続に制約あり" },
   { label: "市場シェア（新電力）", value: "電力量ベースで約 18〜23%（高圧・特別高圧の推計）" },
 ];
 
@@ -135,12 +135,12 @@ const revisionHistory = [
 
 const solarFeatures = [
   {
-    title: "全国最大規模の太陽光発電導入",
-    body: "九州7県は日照時間が長く、全国で最も多くの太陽光発電設備が導入されています。2024年時点で設備容量は約1,800〜2,000万kWに達しており、晴天の日中には系統の電力を太陽光だけで賄えるレベルになっています。この豊富な再エネ発電量は電源の多様化と燃料費節減に貢献しています。",
+    title: "大規模な太陽光発電導入",
+    body: "九州7県は日照時間が長く、多くの太陽光発電設備が導入されています。2024年時点で設備容量は約1,800〜2,000万kWに達しており、晴天の日中には系統の電力を太陽光だけで賄えるレベルになっています。この豊富な再エネ発電量は電源の多様化と燃料費節減に貢献しています。",
   },
   {
     title: "出力制御が頻発する課題",
-    body: "太陽光発電量が系統の需要を上回る際、九州電力は系統安定化のために出力制御（カーテイルメント）を実施しています。年間の出力制御量・時間は全国で最多。法人向け太陽光PPA・オンサイト発電で余剰電力が発生する場合も影響を受けることがあります。",
+    body: "太陽光発電量が系統の需要を上回る際、九州電力は系統安定化のために出力制御（カーテイルメント）を実施しています。年間の出力制御量・時間は多い水準です。法人向け太陽光PPA・オンサイト発電で余剰電力が発生する場合も影響を受けることがあります。",
   },
   {
     title: "原子力との組み合わせによる低コスト電源構成",
@@ -181,7 +181,7 @@ export default function RegionKyushuBusinessElectricityPage() {
     <>
       <ArticleJsonLd
         headline="九州電力エリアの法人電気代事情｜太陽光大量導入と料金特性"
-        description="九州電力エリア（九州7県）の法人向け電気料金を詳解。全国最多水準の太陽光発電導入による出力制御・料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。"
+        description="九州電力エリア（九州7県）の法人向け電気料金を詳解。大規模な太陽光発電導入による出力制御・料金特性、高圧・特別高圧の単価目安、2023〜2026年の改定動向、新電力状況と契約見直しのポイントを解説します。"
         url="https://simulator.eic-jp.org/region-kyushu-business-electricity"
         datePublished="2026-04-17"
         breadcrumbItems={[
@@ -208,7 +208,7 @@ export default function RegionKyushuBusinessElectricityPage() {
         </h1>
         <p className="mt-1 text-base font-medium text-amber-800">太陽光大量導入と料金特性</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          九州電力エリアは全国最大規模の太陽光発電設備を有し、川内・玄海の原子力発電も稼働することで
+          九州電力エリアは大規模な太陽光発電設備を有し、川内・玄海の原子力発電も稼働することで
           再エネ・原子力の組み合わせによる割安な電源構成を実現しています。
           法人向け電気料金は全国比で低い水準を維持していますが、
           太陽光出力制御による系統コスト・容量拠出金・再エネ賦課金の増加は全国共通の課題です。
@@ -404,7 +404,7 @@ export default function RegionKyushuBusinessElectricityPage() {
         <ol className="mt-4 space-y-3 text-sm leading-7 text-slate-700 list-decimal list-inside">
           <li>
             <span className="font-semibold">旧一電の単価が全国比で割安なことを念頭に比較する</span>
-            — 九州電力の電力量料金は関西電力と並んで全国最低水準グループに位置します。新電力への乗り換えメリットは他エリアより限定的な場合があります。
+            — 九州電力の電力量料金は関西電力と並んで低い水準のグループに位置します。新電力への乗り換えメリットは他エリアより限定的な場合があります。
           </li>
           <li>
             <span className="font-semibold">太陽光 PPA・オンサイト発電の余剰電力管理に注意する</span>
@@ -451,7 +451,7 @@ export default function RegionKyushuBusinessElectricityPage() {
           <div className="rounded-xl border border-red-200 bg-red-50 p-4">
             <p className="text-xs font-semibold text-red-700">太陽光抑制</p>
             <p className="mt-1 text-2xl font-bold text-red-900">13.8%</p>
-            <p className="text-xs text-red-600">全国最多 / 最大 4,838 MW</p>
+            <p className="text-xs text-red-600">最大 4,838 MW</p>
           </div>
           <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
             <p className="text-xs font-semibold text-blue-700">連系線（輸出）</p>
@@ -460,7 +460,7 @@ export default function RegionKyushuBusinessElectricityPage() {
           </div>
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-700">
-          原子力29.5%（稼働率100%）と太陽光13.3%の組合せが特徴です。太陽光出力制御は全国最多の13.8%（昼間時間帯）で、
+          原子力29.5%（稼働率100%）と太陽光13.3%の組合せが特徴です。太陽光出力制御は13.8%（昼間時間帯）で、
           3月には平均565.6MW、4月には851.8MWが抑制されています。余剰電力は連系線で常時1,637MWを輸出しています。
           <a href="/solar-curtailment-by-area" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 太陽光出力制御の実態を見る</a>
         </p>
@@ -515,7 +515,7 @@ export default function RegionKyushuBusinessElectricityPage() {
           </table>
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-          九州エリアは太陽光発電の大量導入により、昼間の余剰電力でエリアプライスが全国最安水準。FY2022ですら14.42円と全国平均を-5.99円下回りました。
+          九州エリアは太陽光発電の大量導入により、昼間の余剰電力でエリアプライスが低い水準。FY2022ですら14.42円と全国平均を-5.99円下回りました。
         </p>
         <p className="mt-2 text-xs text-slate-500">
           ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -622,7 +622,7 @@ export default function RegionKyushuBusinessElectricityPage() {
             {
               href: "/kyuden-corporate-electricity-guide",
               title: "九州電力（きゅうでん）の法人向けプラン解説",
-              description: "エリア全体の市況に対し、九州電力という特定企業のプラン体系・原発4基稼働と太陽光導入量国内最大級・サポートを中立的に解説（電力会社別解説）。",
+              description: "エリア全体の市況に対し、九州電力という特定企業のプラン体系・原発4基稼働と大規模な太陽光導入・サポートを中立的に解説（電力会社別解説）。",
             },
             {
               href: "/business-electricity-retrospective/high-voltage-2019-2025",

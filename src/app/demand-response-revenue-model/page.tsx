@@ -56,7 +56,7 @@ const revenueRows: {
     industry: "データセンター",
     capacityRatio: "契約電力の 5〜15%",
     annualRevenue: "5,000〜12,000円/kW/年",
-    model: "冷却設備の部分停止、UPS 切替（高速応動可能、kW 単価が最高水準）",
+    model: "冷却設備の部分停止、UPS 切替（高速応動可能、kW 単価が高水準）",
   },
   {
     industry: "製造業（連続稼働）",

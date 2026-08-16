@@ -320,11 +320,11 @@ export default function RegionTokyoElectricityPriceTrendPage() {
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
                 <p className="text-xs font-semibold text-slate-800">上振れの起きやすさ</p>
-                <p className="mt-1 text-sm text-slate-700">LNG依存度が高く、燃調費のプラス幅が全国上位になりやすい。高騰局面で実質単価が伸びやすい。</p>
+                <p className="mt-1 text-sm text-slate-700">LNG依存度が高く、燃調費のプラス幅が大きくなりやすい。高騰局面で実質単価が伸びやすい。</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
                 <p className="text-xs font-semibold text-slate-800">需要の規模</p>
-                <p className="mt-1 text-sm text-slate-700">国内最大の業務・産業需要地。市場の需給逼迫時にエリアプライスが振れやすい。</p>
+                <p className="mt-1 text-sm text-slate-700">大規模な業務・産業需要地。市場の需給逼迫時にエリアプライスが振れやすい。</p>
               </div>
             </div>
             <p className="mt-4 text-xs text-slate-500">
@@ -395,7 +395,7 @@ export default function RegionTokyoElectricityPriceTrendPage() {
               <div className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
                 <h3 className="text-base font-semibold text-indigo-900">需要密度と系統</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-700">
-                  首都圏に業務・産業需要が集中する国内最大の需要地であり、需要密度の高さは固定的な送配電コストの分散に働きます。
+                  首都圏に業務・産業需要が集中する大規模な需要地であり、需要密度の高さは固定的な送配電コストの分散に働きます。
                   一方で需給が逼迫する局面では、JEPXエリアプライスが振れやすい面もあります。
                 </p>
               </div>

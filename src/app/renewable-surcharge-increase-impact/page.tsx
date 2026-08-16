@@ -57,7 +57,7 @@ const surchargeHistory = [
   { year: "2014年度", amount: "0.75円/kWh", note: "急増開始" },
   { year: "2017年度", amount: "2.64円/kWh", note: "" },
   { year: "2019年度", amount: "2.95円/kWh", note: "" },
-  { year: "2022年度", amount: "3.45円/kWh", note: "過去最高水準" },
+  { year: "2022年度", amount: "3.45円/kWh", note: "高い水準" },
   { year: "2023年度", amount: "1.40円/kWh", note: "電力・ガス価格激変緩和措置による抑制" },
   { year: "2024年度", amount: "3.49円/kWh", note: "措置終了後の水準回帰" },
 ];

@@ -80,7 +80,7 @@ export default function Page() {
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">3種類の証書の違い</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①FIT非化石証書：FIT電源由来。再エネ指定ありで、価格は最低0.3円/kWh、取引量は最大規模。②非FIT非化石証書（再エネ指定あり）：卒FIT太陽光・大規模水力などが由来。③非FIT非化石証書（再エネ指定なし）：原子力も含む。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">①FIT非化石証書：FIT電源由来。再エネ指定ありで、価格は最低0.3円/kWh、取引量は多い。②非FIT非化石証書（再エネ指定あり）：卒FIT太陽光・大規模水力などが由来。③非FIT非化石証書（再エネ指定なし）：原子力も含む。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">RE100や再エネ調達を明示したい場合は再エネ指定ありの証書が必要です。単に非化石比率を上げるだけなら指定なしで十分です。</p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">
