@@ -82,7 +82,7 @@ const structuralFactors = [
   {
     factor: "電源構成（原子力・LNG）",
     detail:
-      "関西エリアは原子力比率が全国で最も高い水準の一つ（実績で約35%前後）。原子力は燃料費が安定しており、燃調費の上振れを抑える構造です。ただし原発停止時はLNG代替で感応度が上がります。",
+      "関西エリアは原子力比率が高い水準（実績で約35%前後）。原子力は燃料費が安定しており、燃調費の上振れを抑える構造です。ただし原発停止時はLNG代替で感応度が上がります。",
     direction: "原発が稼働する局面では単価が安定しやすい。停止局面では上振れ要因に転じる。",
   },
   {
@@ -176,7 +176,7 @@ const faqItems = [
   {
     question: "関西エリアは原発比率が高いと単価は安定しますか？",
     answer:
-      "原子力は燃料費が安定するため、稼働比率が高いほど燃料費調整額の上振れ幅が抑制されやすくなります。関西エリアは大飯・高浜・美浜が稼働し、原子力比率は全国で最も高い水準の一つです（2026年時点・最新は各公式で要確認）。ただし定期検査やトラブルで停止するとLNG代替で燃調費が増えるため、安定は絶対ではなく、停止リスクは上振れ要因として残ります。",
+      "原子力は燃料費が安定するため、稼働比率が高いほど燃料費調整額の上振れ幅が抑制されやすくなります。関西エリアは大飯・高浜・美浜が稼働し、原子力比率は高い水準です（2026年時点・最新は各公式で要確認）。ただし定期検査やトラブルで停止するとLNG代替で燃調費が増えるため、安定は絶対ではなく、停止リスクは上振れ要因として残ります。",
   },
   {
     question: "関西エリアの今後の単価見通しはどう考えればよいですか？",
@@ -321,7 +321,7 @@ export default function RegionKansaiElectricityPriceTrendPage() {
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
                 <p className="text-xs font-semibold text-slate-800">上振れの抑えやすさ</p>
-                <p className="mt-1 text-sm text-slate-700">原子力ベースロードが厚く、燃調費のプラス幅が全国上位になりにくい。高騰局面でも実質単価の伸びが相対的に緩やか。</p>
+                <p className="mt-1 text-sm text-slate-700">原子力ベースロードが厚く、燃調費のプラス幅が大きくなりにくい。高騰局面でも実質単価の伸びが相対的に緩やか。</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
                 <p className="text-xs font-semibold text-slate-800">上振れリスク</p>
@@ -382,7 +382,7 @@ export default function RegionKansaiElectricityPriceTrendPage() {
               <div className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
                 <h3 className="text-base font-semibold text-indigo-900">原子力ベースロードの厚さ</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-700">
-                  関西電力エリアは電源構成に占める原子力の比率が全国で最も高い水準の一つ（実績で約35%前後）で、大飯・高浜・美浜が稼働しています（2026年時点・最新は各公式で要確認）。
+                  関西電力エリアは電源構成に占める原子力の比率が高い水準（実績で約35%前後）で、大飯・高浜・美浜が稼働しています（2026年時点・最新は各公式で要確認）。
                   原子力は燃料費が安定しているため、国際LNG価格が上がっても燃料費調整額の上振れが他エリアより抑制されやすく、これが関西エリアの実質単価が割安グループに位置してきた最大の構造的理由です。
                 </p>
               </div>

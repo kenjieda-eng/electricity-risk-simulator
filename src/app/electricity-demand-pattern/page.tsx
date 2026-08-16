@@ -198,7 +198,7 @@ export default function ElectricityDemandPatternPage() {
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <h3 className="text-lg font-semibold text-slate-900">夕方ピーク（16〜20時）</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              太陽光出力の急減と帰宅需要の重なりで価格が最高水準に達します。
+              太陽光出力の急減と帰宅需要の重なりで価格が高水準に達します。
               市場連動型プランの契約企業にとって最もコスト管理が重要な時間帯です。
               照明・空調の調整だけで月額コストの数%〜数十%削減が可能なケースもあります。
             </p>

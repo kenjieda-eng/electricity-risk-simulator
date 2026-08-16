@@ -319,7 +319,7 @@ export default function ContinuousOperationFactoryElectricityCostReviewPage() {
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-sm font-semibold text-slate-900">経産省 SII</p>
               <p className="mt-1 text-xs leading-6 text-slate-600">
-                省エネルギー投資促進支援事業。コンプレッサー・空調・廃熱回収・コージェネ更新で活用しやすい。製造業の活用実績が最多。
+                省エネルギー投資促進支援事業。コンプレッサー・空調・廃熱回収・コージェネ更新で活用しやすい。製造業の活用実績が多い。
               </p>
             </div>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">

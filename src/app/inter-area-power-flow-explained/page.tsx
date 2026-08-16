@@ -156,7 +156,7 @@ export default function InterAreaPowerFlowExplainedPage() {
 
       {/* 東京−東北の関係 */}
       <section className="mt-6 rounded-xl border border-sky-200 bg-sky-50 p-5">
-        <h2 className="text-xl font-semibold text-slate-900">東京−東北：日本最大の電力融通ペア</h2>
+        <h2 className="text-xl font-semibold text-slate-900">東京−東北：大規模な電力融通ペア</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-white p-4">
             <h3 className="text-base font-semibold text-sky-900">東北 → 東京 の構造</h3>

@@ -387,7 +387,7 @@ export default function Scope2ReductionCfoResponsibilityPage() {
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm font-semibold text-slate-900">RE100加盟企業の状況（2024年時点）</p>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600">
-                  <li>日本企業RE100加盟数: 80社以上（世界4位）</li>
+                  <li>日本企業RE100加盟数: 80社以上</li>
                   <li>2030年RE100目標企業: 約30社</li>
                   <li>2050年RE100目標企業: 約50社</li>
                   <li>RE100中間目標達成済み企業: 約20社（再エネ50%以上）</li>

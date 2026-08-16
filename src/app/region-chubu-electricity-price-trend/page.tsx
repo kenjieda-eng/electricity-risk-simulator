@@ -96,7 +96,7 @@ const structuralFactors = [
 const voltageTrend = [
   {
     type: "特別高圧（2万V以上）",
-    feature: "自動車完成車工場・半導体ファブ・大型工場等。市場・燃料市況の影響を受けやすく、上昇局面での変動幅が相対的に大きい。中部は大口需要家数が全国有数。",
+    feature: "自動車完成車工場・半導体ファブ・大型工場等。市場・燃料市況の影響を受けやすく、上昇局面での変動幅が相対的に大きい。中部は大口需要家数が多い。",
   },
   {
     type: "高圧（6kV）",
@@ -391,7 +391,7 @@ export default function RegionChubuElectricityPriceTrendPage() {
                 <h3 className="text-base font-semibold text-indigo-900">製造業の集積と産業用需要</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-700">
                   中部エリアは自動車・機械・航空宇宙・半導体など製造業が高密度に集積し、24時間稼働の大型工場が多いことが特徴です。
-                  特別高圧（2万V以上）の大口需要家数は全国有数で、電力調達コストが製品原価に直結します。EV化や脱炭素対応で電力需要はさらに増える見通しもあり、調達戦略が複雑化しています。
+                  特別高圧（2万V以上）の大口需要家数が多く、電力調達コストが製品原価に直結します。EV化や脱炭素対応で電力需要はさらに増える見通しもあり、調達戦略が複雑化しています。
                 </p>
               </div>
               <div className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">

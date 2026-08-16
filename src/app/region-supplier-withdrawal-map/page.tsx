@@ -72,7 +72,7 @@ const areaSummary = [
     area: "東京電力エリア",
     severity: "大",
     newPowerShare: "約 28〜35%",
-    withdrawalLevel: "最大規模（全国最多）",
+    withdrawalLevel: "大規模",
     returnToOldRate: "TEPCO EP へ戻るか他の大手新電力へ",
     recovery: "2025年以降回復傾向",
     color: "bg-sky-500",
@@ -575,7 +575,7 @@ export default function RegionSupplierWithdrawalMapPage() {
             {
               href: "/region-tokyo-business-electricity",
               title: "東京電力エリアの法人電気代事情",
-              description: "全国最大規模の撤退が発生した東京エリアの詳細。",
+              description: "大規模な撤退が発生した東京エリアの詳細。",
             },
             {
               href: "/region-kansai-business-electricity",

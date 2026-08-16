@@ -105,7 +105,7 @@ export default function JepxSpotPriceDashboardPage() {
         </h1>
         <p className="mt-1 text-base font-medium text-slate-600">FY2010〜2026の17年間データ</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          日本卸電力取引所（JEPX）のスポット市場は、新電力各社が「翌日の電力」を売買する国内最大の電力取引プラットフォームです。
+          日本卸電力取引所（JEPX）のスポット市場は、新電力各社が「翌日の電力」を売買する国内の電力取引プラットフォームです。
           FY2010（2010年度）からFY2026まで、17年分の約300万コマ超のデータを集計・可視化しました。
           市場連動型プランを契約している法人、あるいは今後の料金見直しを検討している法人のご担当者に向けて、
           スポット価格の構造・季節性・極端事象をわかりやすく解説します。

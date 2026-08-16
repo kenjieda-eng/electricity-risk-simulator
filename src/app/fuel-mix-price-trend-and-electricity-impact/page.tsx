@@ -459,7 +459,7 @@ export default function FuelMixPriceTrendAndElectricityImpactPage() {
             各燃料の特徴と日本のエネルギー安全保障
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            <strong className="font-semibold text-slate-900">LNG</strong>: 日本は LNG の輸入比率がほぼ 100% で、世界最大級の輸入国です。長期契約と spot 調達の比率は概ね 7：3 で、長期契約は石油リンク価格、spot は JKM に連動します。長期契約比率の維持が価格安定の鍵で、{" "}
+            <strong className="font-semibold text-slate-900">LNG</strong>: 日本は LNG の輸入比率がほぼ 100% で、大規模な輸入国です。長期契約と spot 調達の比率は概ね 7：3 で、長期契約は石油リンク価格、spot は JKM に連動します。長期契約比率の維持が価格安定の鍵で、{" "}
             <Link
               href="/jepx-explained"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"

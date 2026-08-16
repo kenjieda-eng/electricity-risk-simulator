@@ -16,11 +16,11 @@ import AuthorBadge from "../../components/market-data/AuthorBadge";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["by-region"];
 
 const faqItems = [
-  { question: "沖縄電力の料金が全国最高水準なのはなぜですか？", answer: "本土との連系線がない孤立系統であること、本島と石垣・宮古・久米島など多数の有人離島への送電コスト、LNG・石炭・石油の複合燃料調達コストが構造的に高い水準にあるためです。沖縄電力エリアは独立系統で石油火力への依存度が高く、供給構造が本土とは異なります。これらは構造的要因のため短期的な解消は困難です。" },
+  { question: "沖縄電力の料金が高いのはなぜですか？", answer: "本土との連系線がない孤立系統であること、本島と石垣・宮古・久米島など多数の有人離島への送電コスト、LNG・石炭・石油の複合燃料調達コストが構造的に高い水準にあるためです。沖縄電力エリアは独立系統で石油火力への依存度が高く、供給構造が本土とは異なります。これらは構造的要因のため短期的な解消は困難です。" },
   { question: "離島送電コストは法人料金にどれくらい上乗せされますか？", answer: "離島送電コストは託送料金に含まれており、本島・離島問わず沖縄電力エリア全体の電気料金に分散転嫁されています。具体的金額は公表されていませんが、業界推計では電力量料金の3〜5円/kWh程度が離島系統由来コストと見られています。これは需要家規模では年間数百万〜数千万円規模の追加負担に相当します。" },
-  { question: "沖縄独立系統で新電力を選ぶ余地はありますか？", answer: "新電力の参入数は数社程度と全国最少で、価格競争による値下げ余地はほぼありません。事実上、沖縄電力との契約が唯一の選択肢となるケースが大半です。法人需要家としては、新電力切替よりも『使用量自体を減らす』省エネ投資・自家消費型太陽光・蓄電池の導入が、コスト削減の主戦場となります。" },
+  { question: "沖縄独立系統で新電力を選ぶ余地はありますか？", answer: "新電力の参入数は数社程度と少なく、価格競争による値下げ余地はほぼありません。事実上、沖縄電力との契約が唯一の選択肢となるケースが大半です。法人需要家としては、新電力切替よりも『使用量自体を減らす』省エネ投資・自家消費型太陽光・蓄電池の導入が、コスト削減の主戦場となります。" },
   { question: "沖縄の通年冷房・台風時系統リスクへの対応は？", answer: "沖縄は通年で冷房需要が発生し、夏冬のメリハリが他エリアと異なります。さらに台風時は系統が孤立しているため、本土からの応援送電が不可能で大規模停電リスクが他エリアより高い構造があります。法人需要家としては、BCP電源として蓄電池・自家消費型太陽光・非常用発電の組み合わせを、平時のピークカット用途と兼ねて導入する経営判断が広がっています。" },
-  { question: "沖縄観光業の電気代見直しの典型例は？", answer: "中規模リゾートホテル（高圧、年間500万kWh級）で、客室稼働率連動のデマンド管理＋高効率空調更新＋自家消費型太陽光（屋根30〜50kW）＋蓄電池の組み合わせにより、年間電気代の8〜15%削減事例（金額にして約150〜500万円）が報告されています。日射量が全国最高クラスのため自家消費太陽光の投資回収期間が他エリアより短くなります。" },
+  { question: "沖縄観光業の電気代見直しの典型例は？", answer: "中規模リゾートホテル（高圧、年間500万kWh級）で、客室稼働率連動のデマンド管理＋高効率空調更新＋自家消費型太陽光（屋根30〜50kW）＋蓄電池の組み合わせにより、年間電気代の8〜15%削減事例（金額にして約150〜500万円）が報告されています。日射量が多いため自家消費太陽光の投資回収期間が他エリアより短くなります。" },
   { question: "沖縄 DC・ホテル業界の削減事例の典型値は？", answer: "業界平均レンジとして、リゾートホテル（高圧、年間500万kWh）で年間150〜500万円（8〜15%）、商業施設（高圧、年間300万kWh）で年間100〜300万円（8〜12%）、商用DC（特高、年間2,000万kWh）で年間2,000〜4,000万円（8〜12%）の削減事例が報告されています。日射量・気候を活かした自家消費型太陽光と蓄電池BCPが沖縄特有の有効施策です。" },
 ];
 
@@ -34,7 +34,7 @@ const sourcesItems = [
 
 const pageTitle = "沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況";
 const pageDescription =
-  "沖縄電力エリア（沖縄県）の法人向け電気料金を詳解。全国最高水準の電力量料金、孤立系統・離島送電コスト、新電力がほぼ参入しない市場構造、観光業中心の電力需要と契約見直しポイントを解説します。";
+  "沖縄電力エリア（沖縄県）の法人向け電気料金を詳解。高水準の電力量料金、孤立系統・離島送電コスト、新電力がほぼ参入しない市場構造、観光業中心の電力需要と契約見直しポイントを解説します。";
 const pageUrl = "https://simulator.eic-jp.org/region-okinawa-business-electricity";
 
 export const metadata: Metadata = {
@@ -76,7 +76,7 @@ const areaBasicInfo = [
   { label: "管内世帯数（概算）", value: "約 70万世帯" },
   { label: "法人需要家数の目安", value: "約 10万口（高圧以上：約 0.5万口）" },
   { label: "電源構成の特徴", value: "LNG火力約50%、石炭火力約30%、石油火力約10%、再エネ約10%（ほぼ太陽光）" },
-  { label: "市場シェア（新電力）", value: "電力量ベースで約 5〜8%（全国最低クラス）" },
+  { label: "市場シェア（新電力）", value: "電力量ベースで約 5〜8%（低い水準）" },
 ];
 
 const priceTable = [
@@ -134,7 +134,7 @@ const newPowerStatus = [
   {
     category: "参入状況",
     detail:
-      "沖縄電力が送配電と小売を一体で担い、本土との連系線がないため新電力の参入障壁が極めて高い。参入社数は全国最低クラスの数社程度に限られ（2024年時点）、高圧向けプランを展開できる事業者は非常に限定的。",
+      "沖縄電力が送配電と小売を一体で担い、本土との連系線がないため新電力の参入障壁が極めて高い。参入社数は数社程度に限られ（2024年時点）、高圧向けプランを展開できる事業者は非常に限定的。",
   },
   {
     category: "撤退・解除状況",
@@ -144,7 +144,7 @@ const newPowerStatus = [
   {
     category: "市場シェア推移",
     detail:
-      "新電力シェアは長年5〜8%程度で推移し、全国10エリアの中で最も低い水準。孤立系統という構造的な制約から、短中期での大幅なシェア拡大は見込みにくい状況。",
+      "新電力シェアは長年5〜8%程度で推移し、全国10エリアの中でも低い水準。孤立系統という構造的な制約から、短中期での大幅なシェア拡大は見込みにくい状況。",
   },
   {
     category: "価格競争力",
@@ -158,7 +158,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
     <>
       <ArticleJsonLd
         headline="沖縄電力エリアの法人電気代事情｜料金水準・改定動向・新電力状況"
-        description="沖縄電力エリア（沖縄県）の法人向け電気料金を詳解。全国最高水準の電力量料金、孤立系統・離島送電コスト、新電力がほぼ参入しない市場構造、観光業中心の電力需要と契約見直しポイントを解説します。"
+        description="沖縄電力エリア（沖縄県）の法人向け電気料金を詳解。高水準の電力量料金、孤立系統・離島送電コスト、新電力がほぼ参入しない市場構造、観光業中心の電力需要と契約見直しポイントを解説します。"
         url="https://simulator.eic-jp.org/region-okinawa-business-electricity"
         datePublished="2026-04-17"
         breadcrumbItems={[
@@ -208,7 +208,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* エリア基本情報テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">なぜ沖縄電力エリアの法人電気料金見直しが重要なのか — 離島系統と全国最高水準料金</h2>
+        <h2 className="text-xl font-semibold text-slate-900">なぜ沖縄電力エリアの法人電気料金見直しが重要なのか — 離島系統と高水準の料金</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           沖縄電力エリアの規模感・事業者構成を確認してください。
         </p>
@@ -243,7 +243,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
 
       {/* 料金水準テーブル */}
       <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-xl font-semibold text-slate-900">沖縄電力の独自料金体系（全国最高水準の電力量料金）</h2>
+        <h2 className="text-xl font-semibold text-slate-900">沖縄電力の独自料金体系（高水準の電力量料金）</h2>
         <p className="mt-2 text-sm leading-7 text-slate-600">
           以下は沖縄電力の標準メニューをベースにした概算値です。
           燃料費調整額・再エネ賦課金（2026年4月時点: 3.49 円/kWh）は別途加算されます。
@@ -317,7 +317,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
         <h2 className="text-xl font-semibold text-slate-900">観光業中心の電力需要と通年空調・台風時系統リスク</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
-            <h3 className="text-base font-semibold text-sky-900">全国最高水準の電力量料金</h3>
+            <h3 className="text-base font-semibold text-sky-900">高水準の電力量料金</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
               沖縄電力の高圧電力量料金は全国10エリアの中で最も高く、高圧メニューで17〜20円/kWh前後、
               低圧電力では18〜21円/kWh前後と突出しています。LNG・石炭・石油の複数燃料への依存と
@@ -421,7 +421,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
           <p className="text-sm font-semibold text-slate-900">沖縄電力エリア共通の見直しチェックリスト</p>
           <ol className="mt-2 list-decimal list-inside space-y-1 text-xs leading-6 text-slate-700">
             <li>省エネ投資でコスト削減（新電力切替が困難なため使用量削減が主戦場）</li>
-            <li>太陽光＋蓄電池の自家発電を検討（日射量全国最高クラス）</li>
+            <li>太陽光＋蓄電池の自家発電を検討（日射量が多い）</li>
             <li>デマンドコントロールを徹底（観光業の夏季冷房ピーク抑制）</li>
             <li>燃料費調整額の上限設定を確認（LNG・石炭・石油の3燃料動向ウォッチ）</li>
             <li>
@@ -496,11 +496,11 @@ export default function RegionOkinawaBusinessElectricityPage() {
           <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
             <p className="text-xs font-semibold text-emerald-700">再エネ（太陽光主体）</p>
             <p className="mt-1 text-2xl font-bold text-emerald-900">約 10%</p>
-            <p className="text-xs text-emerald-600">日射量全国最高</p>
+            <p className="text-xs text-emerald-600">日射量が多い</p>
           </div>
         </div>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          石油火力10%は他エリアと比べ突出して高く、これは離島での燃料供給性・小規模発電の効率の制約から維持されています。一方、日射量は全国最高水準で再エネ太陽光のポテンシャルは大きく、自家消費型太陽光・PPAモデルの導入で電源構成の脱火力化が進む見込みです。
+          石油火力10%は他エリアと比べ突出して高く、これは離島での燃料供給性・小規模発電の効率の制約から維持されています。一方、日射量は多く再エネ太陽光のポテンシャルは大きく、自家消費型太陽光・PPAモデルの導入で電源構成の脱火力化が進む見込みです。
         </p>
         <p className="mt-2 text-xs text-slate-500">
           ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -578,7 +578,7 @@ export default function RegionOkinawaBusinessElectricityPage() {
             {
               href: "/self-consumption-solar-cost-benefit",
               title: "自家消費型太陽光の費用対効果",
-              description: "日射量全国最高クラスの沖縄では、自家消費型太陽光が最も効果的なコスト削減策。",
+              description: "日射量が多い沖縄では、自家消費型太陽光が最も効果的なコスト削減策。",
             },
             {
               href: "/articles/by-industry/hotel-leisure",

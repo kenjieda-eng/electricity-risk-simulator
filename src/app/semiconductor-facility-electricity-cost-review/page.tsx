@@ -130,7 +130,7 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
           半導体関連施設の電気料金リスク
         </h1>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          半導体製造施設は、国内製造業の中でも最大級の電力消費施設の一つです。クリーンルームの維持・超純水製造・精密製造装置の稼働が24時間365日休むことなく続き、電力コストが製造原価の中で大きな割合を占めます。電力の安定供給と価格の予測可能性が、生産計画と事業収支の両面で重要な経営課題となっています。
+          半導体製造施設は、国内製造業の中でも電力消費の大きい施設の一つです。クリーンルームの維持・超純水製造・精密製造装置の稼働が24時間365日休むことなく続き、電力コストが製造原価の中で大きな割合を占めます。電力の安定供給と価格の予測可能性が、生産計画と事業収支の両面で重要な経営課題となっています。
         </p>
         <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
           このページでは、半導体関連施設特有の負荷構造と、電気料金リスクへの対応策を整理しています。
@@ -299,7 +299,7 @@ export default function SemiconductorFacilityElectricityCostReviewPage() {
             半導体製造装置・FAB 投資の補助金（経産省 GAFA 補助金）
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            半導体産業は経産省の戦略物資として位置付けられ、世界最大規模の補助金スキームが整備されています。先端 FAB 新設には数千億円規模、中堅 FAB の設備更新にも数十億〜数百億円規模の補助が活用可能です。
+            半導体産業は経産省の戦略物資として位置付けられ、大規模な補助金スキームが整備されています。先端 FAB 新設には数千億円規模、中堅 FAB の設備更新にも数十億〜数百億円規模の補助が活用可能です。
           </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。

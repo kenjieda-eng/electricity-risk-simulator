@@ -97,7 +97,7 @@ export default function AreaPriceSpreadPage() {
         <p className="mt-1 text-lg font-semibold text-slate-700">東京プレミアムと地域格差</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           JEPXスポット市場には全国9エリアそれぞれの「エリアプライス」が存在し、地域によって電力価格が大きく異なります。
-          東京エリアは全国最高水準で推移することが多く、九州エリアは再エネの豊富さを背景に全国最安水準を保つことが多いです。
+          東京エリアは高い水準で推移することが多く、九州エリアは再エネの豊富さを背景に低い水準を保つことが多いです。
           この「東京プレミアム」と地域格差は、連系線（エリア間送電線）の容量制約、需要集中、電源構成の違いから生まれます。
           複数拠点を持つ法人や電力調達の最適化を検討している企業にとって、エリア間スプレッドの理解は不可欠です。
         </p>
@@ -115,12 +115,12 @@ export default function AreaPriceSpreadPage() {
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">東京 FY2026 年度平均</p>
             <p className="mt-1 text-3xl font-bold text-red-600">21.14円</p>
-            <p className="mt-1 text-sm text-slate-600">全国最高水準</p>
+            <p className="mt-1 text-sm text-slate-600">高い水準</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">九州 FY2026 年度平均</p>
             <p className="mt-1 text-3xl font-bold text-emerald-600">11.28円</p>
-            <p className="mt-1 text-sm text-slate-600">全国最安水準</p>
+            <p className="mt-1 text-sm text-slate-600">低い水準</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">FY2026 東京-九州格差</p>
@@ -220,7 +220,7 @@ export default function AreaPriceSpreadPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">3. なぜ東京エリアは価格が高いのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            東京エリアは全国最大の電力需要エリアであり、常に高水準の電力調達を求められます。
+            東京エリアは大規模な電力需要エリアであり、常に高水準の電力調達を求められます。
             以下の構造的要因が重なり、「東京プレミアム」が形成されています。
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
@@ -255,14 +255,14 @@ export default function AreaPriceSpreadPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">4. なぜ九州エリアは価格が安いのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            九州エリアのエリアプライスは全国最安水準で推移することが多く、FY2026の年度平均は11.28円/kWhと東京の約53%の水準です。
+            九州エリアのエリアプライスは低い水準で推移することが多く、FY2026の年度平均は11.28円/kWhと東京の約53%の水準です。
             この「九州ディスカウント」には構造的な理由があります。
           </p>
           <div className="mt-3 grid gap-3 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
               <p className="text-sm font-semibold text-emerald-700">再エネの豊富さ</p>
               <ul className="mt-2 space-y-1 text-sm text-slate-700">
-                <li>・ 全国最大規模の太陽光発電設備（特に宮崎・鹿児島）</li>
+                <li>・ 大規模な太陽光発電設備（特に宮崎・鹿児島）</li>
                 <li>・ 地熱・風力・水力など多様な再エネ電源が揃う</li>
                 <li>・ 春・秋の昼間は再エネ余剰が恒常化し出力制御も発生</li>
               </ul>
@@ -349,7 +349,7 @@ export default function AreaPriceSpreadPage() {
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700">
             <li>
               <strong>九州（安い方向に作用）:</strong>
-              4月は冷暖房需要が最小で全国需要が年間最低水準。九州では太陽光の出力が高く、原子力も稼働中のため供給が需要を大幅に超過。
+              4月は冷暖房需要が最小で全国需要が年間でも低い水準。九州では太陽光の出力が高く、原子力も稼働中のため供給が需要を大幅に超過。
               余剰電力が積み上がり、エリアプライスが極めて低く抑えられる。出力制御が多発するのもこの時期。
             </li>
             <li>
@@ -369,8 +369,8 @@ export default function AreaPriceSpreadPage() {
           <h2 className="text-xl font-semibold text-slate-900">7. FY2022の異常スプレッド</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             FY2022は電力価格が全体的に高騰した年度でしたが、エリアプライスの格差も顕著でした。
-            東京の年度平均は23.50円/kWhと突出して高く、九州は14.42円と全国最安水準を維持。
-            その差は<strong>9.08円/kWh</strong>と過去最大規模の東京プレミアムが生じました。
+            東京の年度平均は23.50円/kWhと突出して高く、九州は14.42円と低い水準を維持。
+            その差は<strong>9.08円/kWh</strong>と大規模な東京プレミアムが生じました。
           </p>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             ウクライナ侵攻・LNG価格急騰・円安が重なり、全エリアで電力価格が上昇する中でも、
@@ -449,7 +449,7 @@ export default function AreaPriceSpreadPage() {
           <h2 className="text-xl font-semibold text-slate-900">9. まとめ：エリア格差を踏まえた電力コスト戦略</h2>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700">
             <li>・ 東京エリアは需要集中・連系線制約・大電源不足という構造的要因から「東京プレミアム」が形成されている。</li>
-            <li>・ 九州エリアは再エネ豊富・原子力稼働で全国最安水準を維持。東京との差はFY2026で年度平均9.86円/kWh。</li>
+            <li>・ 九州エリアは再エネ豊富・原子力稼働で低い水準を維持。東京との差はFY2026で年度平均9.86円/kWh。</li>
             <li>・ スプレッドは春（4月）が最大となり、九州の再エネ余剰と東京の構造的制約が同時に最大化する季節。</li>
             <li>・ FY2022のような複合危機時には東京プレミアムが最大9円超に達し、エリアの違いが経営コストに直結した。</li>
             <li>・ 複数拠点企業はエリアごとの価格特性を理解し、拠点別の最適な調達戦略を検討することが重要。</li>

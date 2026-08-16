@@ -72,7 +72,7 @@ export default function Page() {
         <section className="mt-6 space-y-6">
           <section className="rounded-xl border border-slate-200 bg-white p-5">
             <h2 className="text-xl font-semibold text-slate-900">中国の電力事情と再エネ調達</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中国は世界最大の電力消費国で、2030年カーボンピーク・2060年カーボンニュートラル目標を宣言しています。電力市場は部分自由化の途上で、需要家が電力会社を選べる範囲は省により異なります。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">中国は電力消費大国で、2030年カーボンピーク・2060年カーボンニュートラル目標を宣言しています。電力市場は部分自由化の途上で、需要家が電力会社を選べる範囲は省により異なります。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">再エネ調達手段は、①Green Energy Certificates（GEC）、②Corporate PPA（一部省で実施可能）、③Green Electricity Trading（緑電取引）、④自家発電（太陽光）、が主流です。</p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。

@@ -108,7 +108,7 @@ const v2hManufacturerTable = [
     model: "EVパワーステーション V2H+",
     power: "最大出力 6kW（自立運転時 3kW）",
     price: "55〜90万円（機器のみ）",
-    feature: "国内V2H機器の老舗・最大手。CHAdeMO準拠、ハイブリッド蓄電池併設モデルあり。住宅用が主軸だが小規模事業所でも採用例多数。",
+    feature: "国内V2H機器の老舗・大手。CHAdeMO準拠、ハイブリッド蓄電池併設モデルあり。住宅用が主軸だが小規模事業所でも採用例多数。",
   },
   {
     maker: "三菱電機（SMART V2H）",

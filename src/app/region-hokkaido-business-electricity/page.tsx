@@ -93,7 +93,7 @@ const priceTable = [
 const revisionHistory = [
   {
     date: "2023年6月",
-    content: "規制料金（低圧）値上げ申請が認可。高圧・特別高圧も同時期に標準メニューを改定。全国最高水準の料金水準が一段と上昇。",
+    content: "規制料金（低圧）値上げ申請が認可。高圧・特別高圧も同時期に標準メニューを改定。料金水準が一段と上昇。",
   },
   {
     date: "2023年12月",
@@ -121,7 +121,7 @@ const newPowerStatus = [
   {
     category: "参入状況",
     detail:
-      "需要規模が小さく新電力にとって採算が取りにくいエリア。参入社数は全国で最も少ない部類に属し、高圧向けに実績のある事業者は限定的（2024年時点で数十社程度）。",
+      "需要規模が小さく新電力にとって採算が取りにくいエリア。参入社数は全国でも少ない部類に属し、高圧向けに実績のある事業者は限定的（2024年時点で数十社程度）。",
   },
   {
     category: "撤退・解除状況",
@@ -173,7 +173,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         </h1>
         <p className="mt-1 text-base font-medium text-sky-800">料金水準・改定動向・新電力状況</p>
         <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-          北海道電力エリアは本州から孤立した独立系統を持ち、石炭火力への高い依存度と全国最高水準の電気料金が特徴です。
+          北海道電力エリアは本州から孤立した独立系統を持ち、石炭火力への高い依存度が特徴です。
           寒冷地ゆえの暖房電力需要が大きく、燃料費変動の影響を直接受けやすい構造となっています。
           本ページでは、エリアの基本情報・料金水準・改定動向・新電力状況・
           契約見直しポイントを詳しく解説します。
@@ -312,7 +312,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
             </p>
           </div>
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
-            <h3 className="text-base font-semibold text-sky-900">全国最高水準の電力量料金</h3>
+            <h3 className="text-base font-semibold text-sky-900">電力量料金の水準</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
               北海道電力の高圧向け電力量料金は、寒冷地の需要構造と火力依存度の高さを背景とした水準になっているとされます。
               独立系統による他エリアからの融通制限、需要密度の低さ、燃料調達コストなどが複合的に作用しています。
@@ -322,7 +322,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">寒冷地ゆえの暖房電力需要</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              冬季の暖房電力需要が全国で最も大きく、1〜2 月を中心に電力消費量が急増します。
+              冬季の暖房電力需要が全国でも大きく、1〜2 月を中心に電力消費量が急増します。
               デマンドコントロールが難しい暖房用途では最大需要電力（デマンド）が上昇しやすく、
               基本料金の増加につながります。電気暖房の一部をガスや灯油に切り替えるなどのピーク対策が有効です。
             </p>
@@ -330,7 +330,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
           <div className="rounded-xl border border-sky-100 bg-sky-50 p-4">
             <h3 className="text-base font-semibold text-sky-900">洋上風力を含む再エネポテンシャル</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              北海道は風力・太陽光・バイオマスなど再エネのポテンシャルが全国屈指です。
+              北海道は風力・太陽光・バイオマスなど再エネのポテンシャルが豊富です。
               石狩湾沖などで洋上風力の開発が進んでおり、中長期的には再エネ比率の向上が期待されます。
               オンサイト太陽光や PPA による自家消費も石炭火力依存の軽減に有効な選択肢です。
             </p>
@@ -429,7 +429,7 @@ export default function RegionHokkaidoBusinessElectricityPage() {
         </div>
         <p className="mt-3 text-sm leading-7 text-slate-700">
           風力9.9%は全国最高で、再エネ比率は5月に61.2%に達する一方、1月は30.5%まで低下する極端な季節変動が特徴です。
-          原子力はゼロ（全停止）で、冬季は石炭火力への依存度がさらに高まります。蓄電池稼働率98.8%は全国トップですが容量は小規模です。
+          原子力はゼロ（全停止）で、冬季は石炭火力への依存度がさらに高まります。蓄電池稼働率98.8%は高い水準ですが容量は小規模です。
           <a href="/area-power-supply-mix-comparison" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">→ 9エリアの電源構成を比較する</a>
         </p>
         <p className="mt-2 text-xs text-slate-500">
