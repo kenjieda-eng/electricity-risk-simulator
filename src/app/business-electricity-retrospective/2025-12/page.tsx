@@ -306,7 +306,7 @@ export default function BusinessElectricityRetrospective202512Page() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-slate-500">※水準は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・検針期間ベース・事後訂正あり得る）にもとづく目安です。2025年12月分の確定値は特別高圧 16.87 円/kWh・高圧 20.95 円/kWh・低圧電灯 26.78 円/kWh・低圧電力 32.40 円/kWh。実際の請求額は電力会社・契約条件により異なります。</p>
+          <p className="mt-3 text-xs text-slate-500">※水準は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計・事後訂正あり得る・多くの事業者が検針期間ベースで報告（暦月ベースも可））にもとづく目安です。2025年12月分の確定値は特別高圧 16.87 円/kWh・高圧 20.95 円/kWh・低圧電灯 26.78 円/kWh・低圧電力 32.40 円/kWh。実際の請求額は電力会社・契約条件により異なります。</p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">

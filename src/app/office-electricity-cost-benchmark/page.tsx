@@ -223,22 +223,22 @@ export default function OfficeElectricityCostBenchmarkPage() {
               <tbody>
                 <tr className="bg-sky-50">
                   <td className="border border-slate-200 px-3 py-2 font-semibold">低圧電灯</td>
-                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">25.94 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">27.85 円/kWh</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-600">小規模なオフィス・事務所（照明・コンセント中心）</td>
                 </tr>
                 <tr>
                   <td className="border border-slate-200 px-3 py-2">低圧電力</td>
-                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">32.12 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">34.42 円/kWh</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-600">動力の業務用空調を低圧で使う事務所</td>
                 </tr>
                 <tr className="bg-sky-50">
                   <td className="border border-slate-200 px-3 py-2 font-semibold">高圧</td>
-                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">21.37 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">22.78 円/kWh</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-600">受電設備を持つオフィスビル（テナントビル含む）</td>
                 </tr>
                 <tr>
                   <td className="border border-slate-200 px-3 py-2">特別高圧</td>
-                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">17.56 円/kWh</td>
+                  <td className="border border-slate-200 px-3 py-2 font-semibold text-slate-900">17.45 円/kWh</td>
                   <td className="border border-slate-200 px-3 py-2 text-slate-600">大規模な複合ビル・拠点施設</td>
                 </tr>
               </tbody>
@@ -252,7 +252,7 @@ export default function OfficeElectricityCostBenchmarkPage() {
             で詳しく整理しています。
           </p>
           <p className="mt-3 text-xs text-slate-500">
-            ※ 単価は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計）にもとづく参考値で、2026年4月分が確定・最新公表です。消費税・再生可能エネルギー発電促進賦課金を含まないなど販売額の定義に前提があるため、請求書の単価と単純に比較することはできません。定義の詳細は
+            ※ 単価は電力・ガス取引監視等委員会「電力取引報」から算出した確定単価（販売額÷販売電力量・全国計）にもとづく参考値で、2026年5月分が確定・最新公表です。消費税・再生可能エネルギー発電促進賦課金を含まないなど販売額の定義に前提があるため、請求書の単価と単純に比較することはできません。定義の詳細は
             <Link href="/electricity-unit-price-per-kwh" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">
               電気代の1kWhあたり単価とは
             </Link>
@@ -379,7 +379,7 @@ export default function OfficeElectricityCostBenchmarkPage() {
           </p>
         </div>
         <p className="mt-3 text-xs text-slate-500">
-          最終更新: 2026年4月（2024〜2025年度の料金水準を反映）
+          最終更新: 2026年8月（2024〜2025年度の料金水準を反映）
         </p>
         <p className="mt-2 text-xs text-slate-500">
           ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
