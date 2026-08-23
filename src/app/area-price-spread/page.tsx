@@ -110,22 +110,22 @@ export default function AreaPriceSpreadPage() {
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">東京-九州スプレッド（最大）</p>
             <p className="mt-1 text-3xl font-bold text-red-600">{maxSpreadKyushu.toFixed(2)}円</p>
-            <p className="mt-1 text-sm text-slate-600">{MONTH_NAMES[maxSpreadMonthIdx]}（月平均）</p>
+            <p className="mt-1 text-sm text-slate-600">{MONTH_NAMES[maxSpreadMonthIdx]}（月別平均系列の最大）</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-xs text-slate-500">東京 FY2026 年度平均</p>
+            <p className="text-xs text-slate-500">東京 FY2026 平均（2026年4月時点の暫定値）</p>
             <p className="mt-1 text-3xl font-bold text-red-600">21.14円</p>
             <p className="mt-1 text-sm text-slate-600">高い水準</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-xs text-slate-500">九州 FY2026 年度平均</p>
+            <p className="text-xs text-slate-500">九州 FY2026 平均（2026年4月時点の暫定値）</p>
             <p className="mt-1 text-3xl font-bold text-emerald-600">11.28円</p>
             <p className="mt-1 text-sm text-slate-600">低い水準</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
             <p className="text-xs text-slate-500">FY2026 東京-九州格差</p>
             <p className="mt-1 text-3xl font-bold text-amber-600">9.86円</p>
-            <p className="mt-1 text-sm text-slate-600">同年度の年間格差</p>
+            <p className="mt-1 text-sm text-slate-600">FY2026の平均どうしの差（暫定値）</p>
           </div>
         </div>
       </section>
@@ -244,7 +244,7 @@ export default function AreaPriceSpreadPage() {
           <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
             特に冬季の需給逼迫時や夏季猛暑時には、他エリアから融通したくても連系線の容量上限に達してしまい、
             東京エリア内で高値の入札を積み上げることで需要を満たすしかない構造です。
-            これがスパイク時の東京エリアプライスの異常な高騰（FY2026年度平均で21.14円/kWh）につながっています。
+            これがスパイク時の東京エリアプライスの異常な高騰につながり、期間平均を押し上げています（FY2026の平均は2026年4月時点の暫定値で21.14円/kWh）。
           </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -255,7 +255,7 @@ export default function AreaPriceSpreadPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">4. なぜ九州エリアは価格が安いのか</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            九州エリアのエリアプライスは低い水準で推移することが多く、FY2026の年度平均は11.28円/kWhと東京の約53%の水準です。
+            九州エリアのエリアプライスは低い水準で推移することが多く、FY2026の平均は2026年4月時点の暫定値で11.28円/kWhと東京の約53%の水準です。
             この「九州ディスカウント」には構造的な理由があります。
           </p>
           <div className="mt-3 grid gap-3 md:grid-cols-2">
@@ -290,7 +290,7 @@ export default function AreaPriceSpreadPage() {
         <section className="rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">5. 年度別エリア価格の長期推移（17年間）</h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            下のグラフは、システムプライス・東京・九州・関西の年度平均エリアプライスを17年分（FY2010〜FY2026）で比較したものです。
+            下のグラフは、システムプライス・東京・九州・関西の年度平均エリアプライスを17年分（FY2010〜FY2026）で比較したものです。FY2026は年度途中で、本ページのデータは2026年4月時点までの集計です。
             全エリアが連動して変動しながらも、東京と九州の価格差は年々拡大する傾向が読み取れます。
           </p>
           <div className="mt-4">
@@ -430,7 +430,7 @@ export default function AreaPriceSpreadPage() {
           <h3 className="mt-4 text-lg font-semibold text-slate-900">電力コストのエリア差 具体的影響試算</h3>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             年間電力使用量1,000,000kWhの事業所が東京と九州にそれぞれあるケースを想定します。
-            FY2026の年度平均価格差（東京21.14円、九州11.28円）をもとに計算すると：
+            FY2026の平均価格差（2026年4月時点の暫定値・東京21.14円、九州11.28円）をもとに計算すると：
           </p>
           <div className="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm leading-7 text-slate-700">
@@ -449,7 +449,7 @@ export default function AreaPriceSpreadPage() {
           <h2 className="text-xl font-semibold text-slate-900">9. まとめ：エリア格差を踏まえた電力コスト戦略</h2>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-700">
             <li>・ 東京エリアは需要集中・連系線制約・大電源不足という構造的要因から「東京プレミアム」が形成されている。</li>
-            <li>・ 九州エリアは再エネ豊富・原子力稼働で低い水準を維持。東京との差はFY2026で年度平均9.86円/kWh。</li>
+            <li>・ 九州エリアは再エネ豊富・原子力稼働で低い水準を維持。東京との差はFY2026の平均（2026年4月時点の暫定値）で9.86円/kWh。</li>
             <li>・ スプレッドは春（4月）が最大となり、九州の再エネ余剰と東京の構造的制約が同時に最大化する季節。</li>
             <li>・ FY2022のような複合危機時には東京プレミアムが最大9円超に達し、エリアの違いが経営コストに直結した。</li>
             <li>・ 複数拠点企業はエリアごとの価格特性を理解し、拠点別の最適な調達戦略を検討することが重要。</li>
