@@ -24,9 +24,9 @@ import {
 const FAQ = MARKET_DATA_FAQ["area-price-spread"];
 
 // --- 定数 ---
-const pageTitle = "電気料金は地域でどれだけ違う？東京21.14円 vs 九州11.28円｜エリア別単価差を解説";
+const pageTitle = "JEPXエリアプライスとは｜電気料金の地域格差と東京・九州のエリア別単価差";
 const pageDescription =
-  "JEPXエリアプライスの地域格差を徹底分析。東京-九州スプレッド最大4.19円（4月）、FY2026東京21.14円vs九州11.28円の乖離原因を解説。連系線混雑・需要集中・再エネ構成の違いが生む法人電気料金への影響。";
+  "JEPXエリアプライスの地域格差を徹底分析。東京-九州スプレッド最大4.19円（4月）、FY2026（2026年4月時点の暫定値）東京21.14円vs九州11.28円の乖離原因を解説。連系線混雑・需要集中・再エネ構成の違いが生む法人電気料金への影響。";
 
 // --- Metadata ---
 export const metadata: Metadata = {
@@ -67,8 +67,8 @@ export default function AreaPriceSpreadPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="電気料金は地域でどれだけ違う？東京21.14円 vs 九州11.28円｜エリア別単価差を解説"
-        description="JEPXエリアプライスの地域格差を徹底分析。東京-九州スプレッド最大4.19円（4月）、FY2026東京21.14円vs九州11.28円の乖離原因を解説。連系線混雑・需要集中・再エネ構成の違いが生む法人電気料金への影響。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/area-price-spread"
         datePublished="2026-04-17"
         breadcrumbItems={[

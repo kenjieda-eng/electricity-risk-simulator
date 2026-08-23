@@ -9,7 +9,7 @@ import RelatedLinks from "../../components/simulator/RelatedLinks";
 import { ArticleJsonLd } from "../../components/seo/JsonLd";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
-const pageTitle = "料金改定条項の典型と読み方｜燃調・市場連動・単価見直し条項の確認ポイント";
+const pageTitle = "料金改定条項とは｜燃調・市場連動・単価見直しの読み方と確認ポイント";
 const pageDescription =
   "電力供給契約の料金改定条項（燃料費調整・市場連動・単価見直し）の典型パターンと、需要家側が確認すべき項目・改定通知のチェックポイント・不利な条項の見分け方を、公的資料を踏まえて実務目線で整理します。";
 const pageUrl = "https://simulator.eic-jp.org/price-revision-clause-reading";

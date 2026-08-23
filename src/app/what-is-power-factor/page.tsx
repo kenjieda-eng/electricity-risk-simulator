@@ -11,7 +11,7 @@ import SourcesAndFaq from "../../components/simulator/SourcesAndFaq";
 import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle =
-  "力率とは何か｜力率割引・割増の仕組みと確認ポイント";
+  "力率とは｜力率割引・割増の仕組みと基本料金への影響";
 const pageDescription =
   "高圧・特別高圧契約における力率の概念と、力率割引・割増が電気料金の基本料金に与える影響を解説。改善方法と実務での確認ポイントを詳しく説明します。";
 
@@ -57,7 +57,7 @@ export default function WhatIsPowerFactorPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="力率とは何か｜力率割引・割増の仕組みと確認ポイント"
+        headline={pageTitle}
         description="高圧・特別高圧契約における力率の概念と、力率割引・割増が電気料金の基本料金に与える影響を解説。改善方法と実務での確認ポイントを詳しく説明します。"
         url="https://simulator.eic-jp.org/what-is-power-factor"
         datePublished="2026-04-10"

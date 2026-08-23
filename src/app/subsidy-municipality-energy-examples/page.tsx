@@ -15,7 +15,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["subsidies"];
 
 const pageTitle = "自治体向け電力関連補助金・交付金の活用事例｜公共施設の省エネ支援";
 const pageDescription =
-  "自治体が活用できる電力・省エネ関連の国庫補助金・交付金について、制度の種類と活用事例を整理します。";
+  "自治体の省エネ・電気代削減に使える国庫補助金・交付金について、制度の種類と、公共施設のLED化・空調更新といった活用事例を整理します。";
 const pageUrl = "https://simulator.eic-jp.org/subsidy-municipality-energy-examples";
 
 export const metadata: Metadata = {
@@ -189,8 +189,8 @@ export default function SubsidyMunicipalityEnergyExamplesPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="自治体向け電力関連補助金・交付金の活用事例｜公共施設の省エネ支援"
-        description="自治体が活用できる電力・省エネ関連の国庫補助金・交付金について、制度の種類と活用事例を整理します。"
+        headline={pageTitle}
+        description={pageDescription}
         url="https://simulator.eic-jp.org/subsidy-municipality-energy-examples"
         datePublished="2026-04-17"
         breadcrumbItems={[

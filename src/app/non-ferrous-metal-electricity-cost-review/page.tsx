@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
 const pageTitle =
-  "非鉄金属業の電気料金見直しポイント｜アルミ精錬・銅製錬・リサイクルの契約最適化";
+  "非鉄金属業の電気料金見直しポイント｜省エネ施策とアルミ精錬・銅製錬・リサイクルの契約最適化";
 const pageDescription =
   "非鉄金属業（アルミ・銅・鉛・亜鉛・ニッケル製錬）の電気料金見直しを解説。アルミ精錬（電力30%以上）・銅製錬の溶解工程・国際価格との関係・リサイクルアルミの優位性、規模別事例、補助金活用まで実務的に整理します。";
 

@@ -18,7 +18,7 @@ const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
 
 const pageTitle =
-  "データセンターの電気料金見直しポイント｜高負荷と冗長性を踏まえた考え方";
+  "データセンターの電気料金見直しポイント｜電気代の上昇要因と契約の考え方";
 const pageDescription =
   "データセンターの電気料金が上がりやすい要因と契約見直しの着眼点を解説。IT機器・冷却設備の高ベースロード、PUE改善、冗長性要求、特別高圧契約の特性と固定プランの向き不向きを整理します。";
 
@@ -126,7 +126,7 @@ export default function DataCenterElectricityCostReviewPage() {
   return (
     <>
       <ArticleJsonLd
-        headline="データセンターの電気料金見直しポイント｜高負荷と冗長性を踏まえた考え方"
+        headline={pageTitle}
         description="データセンターの電気料金が上がりやすい要因と契約見直しの着眼点を解説。IT機器・冷却設備の高ベースロード、PUE改善、冗長性要求、特別高圧契約の特性と固定プランの向き不向きを整理します。"
         url="https://simulator.eic-jp.org/data-center-electricity-cost-review"
         datePublished="2026-04-11"
