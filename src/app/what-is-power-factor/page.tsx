@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 const faq = [
   { question: "力率とは何ですか？", answer: "力率は有効電力（実際に仕事をする電力）と皮相電力（電線に流れる電力の見かけ量）の比率です。力率が高いほど電気を効率よく使っており、100%が理想値です。力率が低いと無効電力が増え、電力会社の設備負担が増えます。" },
-  { question: "力率を改善すると電気代はどのくらい安くなりますか？", answer: "高圧契約では力率85%を基準に1%改善するごとに基本料金が0.5%割引になります。力率75%→95%に改善すると基本料金が5%（20%改善分×0.5%）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年での回収が可能なケースも多いです。" },
+  { question: "力率を改善すると電気代はどのくらい安くなりますか？", answer: "高圧契約では一般的に、力率85%を基準として、上回る1%につき基本料金が1%割引、下回る1%につき1%割増になります（中部電力ミライズ・関西電力の公表資料）。ここでいう基本料金は、契約電力×基本料金単価で求める力率調整前の金額です。力率75%→95%に改善した場合、割増10%の解消と割引10%を合わせて基本料金の20%分が軽くなります（検算：（95-75）×1%＝20%）。進相コンデンサの設置費用は数十万〜数百万円で、回収年数は見積額を年間の削減額で割って確認できます。適用条件は契約種別・電力会社で異なるため、自社の約款と検針票でご確認ください。" },
   { question: "力率はどこで確認できますか？", answer: "電力会社から毎月届く請求書や検針票に記載されています。高圧・特別高圧契約では力率が基本料金の計算に直接影響するため、毎月確認することを推奨します。" },
 ];
 
@@ -121,7 +121,7 @@ export default function WhatIsPowerFactorPage() {
             力率割引・割増の仕組み
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            高圧・特別高圧の電力契約では、力率によって基本料金が以下のように増減します。一般的な制度では、力率85%を基準として、それを上回ると割引、下回ると割増が適用されます。
+            高圧・特別高圧の電力契約では、力率によって基本料金が以下のように増減します。高圧については、力率85%を基準として、上回る1%につき基本料金が1%割引、下回る1%につき1%割増となる扱いが公表されています（中部電力ミライズ・関西電力の公表資料）。これを本ページで係数の形に置き換えると「（185-力率）÷100」となり、力率100%なら（185-100）÷100＝0.85、すなわち15%割引に相当します。特別高圧でも同様の調整が置かれることがありますが、適用条件は契約種別・電力会社で異なるため、自社の約款と検針票での確認が前提になります。
           </p>
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
@@ -164,6 +164,9 @@ export default function WhatIsPowerFactorPage() {
           <p className="mt-3 text-sm text-slate-500">
             ※ 上記は代表的な例です。電力会社・プランによって基準値や計算方式は異なります。
           </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 上記2社の公表資料が示しているのは「基準85%」と「1%につき1%の増減」までです。力率100%の15%割引、力率60%の25%割増は、この増減幅を本ページで各力率に当てはめた換算値であり、割引の上限や割増の下限は各社の約款によります。
+          </p>
         </section>
 
         <section className="rounded-xl border border-slate-200 bg-white p-5">
@@ -179,14 +182,17 @@ export default function WhatIsPowerFactorPage() {
 <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-5">
             <p className="font-semibold text-slate-900">影響額の計算例</p>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              基本料金 月額100万円 × 力率75%（割増10%）＝ 割増分 月額10万円、年間120万円の損
+              基本料金（契約電力×基本料金単価。力率調整前）月額100万円 × 力率75%（割増10%）＝ 割増分 月額10万円、年間120万円の損（検算：（85-75）×1%＝10%、100万円×10%＝10万円、10万円×12か月＝120万円）
             </p>
             <p className="mt-1 text-sm leading-7 text-slate-700">
-              基本料金 月額100万円 × 力率95%（割引10%）＝ 割引分 月額10万円、年間120万円の得
+              基本料金（契約電力×基本料金単価。力率調整前）月額100万円 × 力率95%（割引10%）＝ 割引分 月額10万円、年間120万円の得（検算：（95-85）×1%＝10%、100万円×10%＝10万円、10万円×12か月＝120万円）
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              ※ ここでいう基本料金は力率調整前（力率85%相当）の金額です。検針票の請求額にはすでに割引・割増が反映されているため、その額をそのまま当てはめると差額が過大になります。
             </p>
           </div>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            力率75%と95%では年間240万円の差が生じる計算になります。基本料金が大きい大口需要家ほど、力率管理のコスト効果が高くなります。
+            力率75%と95%では年間240万円の差が生じる計算になります（検算：120万円＋120万円＝240万円。力率調整前の基本料金に対しては（95-75）×1%＝20%分に相当）。基本料金が大きい大口需要家ほど、力率管理のコスト効果が高くなります。
           </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -255,30 +261,33 @@ export default function WhatIsPowerFactorPage() {
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">オフィスビル</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">90〜95%</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">95%以上</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲3〜5%割引</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲0〜5%</span></td>
               </tr>
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">工場（モーター多数）</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">70〜85%</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">90%以上</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜15%割引</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜20%</span></td>
               </tr>
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">商業施設（空調中心）</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">85〜92%</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">95%以上</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲3〜10%割引</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲3〜10%</span></td>
               </tr>
               <tr>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">病院</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">80〜90%</td>
                 <td className="border border-slate-200 px-3 py-2 text-slate-700">90%以上</td>
-                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲5〜10%割引</span></td>
+                <td className="border border-slate-200 px-3 py-2 text-slate-700"><span className="font-semibold text-green-700">▲0〜10%</span></td>
               </tr>
             </tbody>
           </table>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>500kW・基本料金80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます。進相コンデンサの設置費用は数十万〜数百万円で、1〜2年で回収可能なケースが多いです。
+            <Link href="/contract-demand-what-is-it" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">契約電力</Link>500kW・基本料金（契約電力×基本料金単価。力率調整前）80万円/月の工場で力率を75%→95%に改善した場合、基本料金は月約<span className="font-semibold text-slate-900">16万円</span>（年間<span className="font-semibold text-slate-900">192万円</span>）削減できます（検算：（95-75）×1%＝20%、80万円×20%＝16万円、16万円×12か月＝192万円）。進相コンデンサの設置費用は数十万〜数百万円で、回収年数は見積額を年間の削減額で割って確認できます。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※「基本料金への影響」は、現状の力率から改善後目標欄の下限値（95%または90%）までの差を「1%につき基本料金1%」で換算した、力率調整前の基本料金に対する低減幅の目安です（例：力率75%→95%なら、割増10%の解消と割引10%で合計20%分）。すでに改善後目標の水準にある場合の低減幅は0%、目標を上回って改善した場合はその分だけ大きくなります。
           </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -288,7 +297,9 @@ export default function WhatIsPowerFactorPage() {
         <SourcesAndFaq
           faq={faq}
           sources={[
-            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "力率割引制度・電力料金規制データ" },
+            { name: "中部電力ミライズ 電気料金の計算方法（高圧）", url: "https://miraiz.chuden.co.jp/business/electric/contract/obs/hi_price/calculation/", description: "力率85%を基準に、上回る1%につき基本料金を1%割引・下回る1%につき1%割増とする扱いの公表資料（契約電力500kW未満の高圧が対象）" },
+            { name: "関西電力 高圧の基本料金はどのように決まる？（お役立ちコラム）", url: "https://sol.kepco.jp/useful/aircontrol/w/koatsu_kihonryokin/", description: "高圧の力率による基本料金調整の公表資料" },
+            { name: "経済産業省 資源エネルギー庁", url: "https://www.enecho.meti.go.jp", description: "電力政策・電力統計の公表元" },
             { name: "電力・ガス取引監視等委員会", url: "https://www.egc.meti.go.jp", description: "電力市場の監視データ" },
             { name: "OCCTO 電力広域的運営推進機関", url: "https://www.occto.or.jp", description: "需給データ・系統情報" },
           ]}
