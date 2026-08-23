@@ -11,7 +11,7 @@ import ContactCtaCard from "../../components/contact/ContactCtaCard";
 
 const pageTitle = "AI需要による2030年電力需要予測｜経産省・IEA予測の読み方";
 const pageDescription =
-  "生成AI・クラウド需要による電力需要の2030年予測と、法人電気料金への波及可能性を整理します。";
+  "生成AI・データセンター需要による2030年の電力需要予測と、卸電力市場や託送料金を通じた法人電気料金への波及可能性を、経産省・IEAの公表資料をもとに整理します。";
 const pageUrl = "https://simulator.eic-jp.org/ai-demand-2030-forecast";
 
 const faqItems = [

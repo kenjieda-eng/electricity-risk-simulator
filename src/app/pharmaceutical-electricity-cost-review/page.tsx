@@ -17,7 +17,7 @@ import TableOfContents from "../../components/market-data/TableOfContents";
 const __CATEGORY_FAQ__ = CATEGORY_FAQ_6_20["industry-guide"];
 
 const pageTitle =
-  "製薬業の電気料金見直しポイント｜GMP対応・クリーンルーム・バイオ医薬品の契約最適化";
+  "製薬業の電気料金見直しポイント｜省エネ施策とGMP対応・クリーンルーム・バイオ医薬品の契約最適化";
 const pageDescription =
   "製薬業（医薬品製造・バイオ医薬品・原薬製造）の電気料金見直しを解説。GMP環境の温湿度厳格管理、クリーンルーム要件、バイオ医薬品の連続稼働、治験・研究開発、規模別事例、補助金活用まで実務的に整理します。";
 
