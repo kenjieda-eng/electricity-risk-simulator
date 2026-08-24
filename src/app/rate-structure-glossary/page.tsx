@@ -93,7 +93,7 @@ export default function Page() {
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">市場価格調整額：JEPXスポット価格の変動を反映する調整額（市場連動プラン）。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電源調達調整費：市場価格変動を反映するために一部事業者が設ける調整費。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">レベニューキャップ：一般送配電事業者の総収入に上限を設ける規制。2023年導入。</p>
-            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">力率割引：力率の良し悪しで基本料金が変動する制度。通常90%を基準に±1%ごとに0.85%増減。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">力率割引：力率の良し悪しで基本料金が変動する制度。高圧では一般的に85%を基準として、上回る1%につき基本料金が1%割引、下回る1%につき1%割増となり、適用条件は電力会社・契約種別で異なる。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">最大需要電力（デマンド）：30分単位の需要ピーク。契約電力の決定基準。</p>
           </section>
           <section className="rounded-xl border border-slate-200 bg-white p-5">

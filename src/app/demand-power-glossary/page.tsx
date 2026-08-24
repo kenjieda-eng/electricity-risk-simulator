@@ -92,7 +92,7 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">力率と割引</h2>
             <dl className="mt-4 space-y-3 text-sm leading-7 text-slate-700 sm:text-base">
               <div><dt className="font-semibold text-slate-900">力率</dt><dd className="mt-1">皮相電力に対する有効電力の比率。100%が理想。</dd></div>
-              <div><dt className="font-semibold text-slate-900">力率割引・割増</dt><dd className="mt-1">力率85%を基準に、上下1%ごとに基本料金が0.85%変動する制度。</dd></div>
+              <div><dt className="font-semibold text-slate-900">力率割引・割増</dt><dd className="mt-1">力率85%を基準に、上回る1%につき基本料金が1%割引、下回る1%につき1%割増となる制度（高圧で一般的な扱い。適用条件は電力会社・契約種別で異なる）。</dd></div>
               <div><dt className="font-semibold text-slate-900">力率改善コンデンサ</dt><dd className="mt-1">力率を改善するための機器。基本料金削減に効果。</dd></div>
             </dl>
           </section>
