@@ -311,7 +311,7 @@ export default function ExtraHighVoltageQuotationGuidePage() {
               </tr>
             </tbody>
           </table>
-          <p className="mt-3 text-xs text-slate-500">※ 基本料金1,400円/kW、電力量料金14.5円/kWh、力率割引0.97で算定。燃調費・再エネ賦課金含まず。</p>
+          <p className="mt-3 text-xs text-slate-500">※ 基本料金1,400円/kW、電力量料金14.5円/kWh、力率割引0.97（力率88%の場合。基準85%を上回る1%につき1%割引）で算定。燃調費・再エネ賦課金含まず。</p>
           <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>
