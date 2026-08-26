@@ -2304,3 +2304,13 @@ PR #220 (fd9ba13): B-77補助金第2弾8本(subsidies 26→34)。設備制度5(�
 - 申し送り: Cat6to20MoreCalculators.tsx（未使用・約400行）とdemand-power-glossary（到達不能）の整理／係数0.97を前提とする料金目安表8箇所／「▲13%」への基準額限定／scripts/faq_data.py に旧文言が逐語残存（再実行で巻き戻る）／MEETING_LOG.mdのLF正規化／コンテンツギャップ3件（電力 自動化・化学プラント 蓄電クラウド・ppa料金）。
 - 8月の新規は23本で確定（8/23時点）。次のイベントは8/31の第7回topline。
 ---
+
+## 2026-08-25 力率シリーズ完結（#327）・発生源根絶・CRLF汚染637件の発見と全站復元（復元完了は8/26未明）
+- #327（main 2649d92）: 残件クリーンアップ9ファイル+19/-466。①未使用のCat6to20MoreCalculators.tsx（453行・14export・全src参照ゼロ）を削除 ②係数0.97の目安表8箇所に前提「力率88%の場合（基準85%を上回る1%につき1%割引）」を明記（5編集・表セルと金額は不変） ③「力率82%→95%で基本料金▲13%」等7箇所に「力率調整前の基本料金に対し」の基準額限定 ④「85%以上で割引」型の境界誤り2箇所を「85%を上回る場合に割引（85%ちょうどは割引・割増なし）」へ是正。実装側の追加検出3件（metal:169の▲10%・hv-quote:67の境界）をリン承認。本番HTML 23項目＋リン独立2ページで反映確認。
+- ★発生源の特定と根絶: #325/#326で是正した力率誤り（90%基準・0.85%/ポイント）の出所は2026-04の未追跡生成スクリプト群だった。faq_data.py（賦課金4.06の旧値も含む）に続き、enhance_articles.py・gen_glossary_expansion.py・apply_faq_pr12.py・faq_dataのpycを削除。未追跡スクリプト53本を「基準90|0.85|4.06|0.0085|emsc」で走査し残存ゼロ＝再実行による巻き戻しリスクが消滅。
+- ★リンの発注ミス（F取り違え）: MEETING_LOG.mdの「LF正規化」発注は、作業ツリーの実測（CRLF 761行）をHEAD状態と取り違えたもの（8/23申し送りの記載も同根）。実測はHEAD=LF・744行で正規化コミット自体が不要だった。実装側が検証条件の不成立で停止し、未コミットだった7/17議事録17行（B-79第4弾 #294・マージコミット066e4fbの実在を照合）を発見→58e0d4cで救出追記。実装側の停止→実測照合が正しかった相互検証の3例目（#321・#322に続く）。
+- ★index stat cache汚染の発見と全站復元: git status/diff/checkoutがすべて沈黙する状態で、tracked 637件（src 538・.ai-team 53・public 32・.github 2・ルート11）の作業ツリーがCRLF化していた。全数ハッシュ照合で内容差は.claude/settings.local.json（意図的変更・保持）1件のみ＝EOLのみを確認し、CRLF版を退避のうえ rm→git checkout -- でindex blobから636件を再展開（HEADがCRLFの月次4件は一致済みで対象外・保全）。復元後: 全数再照合一致・statusの正直化・HEAD=58e0d4c不変・tsc/build/193 passed/check:surcharge/check:links全green。#324〜#327のPRが汚染を免れたのは「編集はHEAD blobを唯一の入力とする」規律の効果。
+- 運用の反省（リン）: VM側gitの検証で.git/index.lockの残骸を2回残した（VM側は削除不能のためrename退避→実装側で清掃）。以後リンのVM gitは読み取り専用plumbing＋--no-optional-locksに限定し、statusや作業ツリーdiffを叩かない。
+- 併せてリン調査の新発見（未処理）: B-44a/B-44cで統合リダイレクトした12ページ（用語集9＋last-resort-supply子3）のpage dirが残存し、sitemap（自動走査＋articleList両経路）に308リダイレクトURLが約3.5か月掲載中。articles.tsエントリ・recommendedReadingOrder・glossaryTopics・内部リンク（demand-power-glossaryだけで約60箇所）も残存 → PR-Bとして族で一括処理予定。
+- 8/31第7回toplineの準備は変更なし。8月新規は23本のまま（本日は精度・衛生のみ）。
+---
