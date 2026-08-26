@@ -456,9 +456,9 @@ export default function EmergencyLastResortNotificationPage() {
           heading="関連ページ"
           links={[
             {
-              href: "/last-resort-supply-emergency-response",
-              title: "最終保障供給に入りそうなときの対応手順",
-              description: "移行前の早期発見・切替準備の進め方を解説します。",
+              href: "/last-resort-supply#emergency-response",
+              title: "最終保障供給とは",
+              description: "「最終保障供給に入りそうなときの緊急対応」の節で確認できます。",
             },
             {
               href: "/how-to-compare-electricity-suppliers",

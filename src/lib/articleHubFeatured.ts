@@ -183,7 +183,7 @@ export const CATEGORY_HUB_SPOTLIGHT: Partial<
     heading: "用語集の代表記事",
     intro:
       "契約・市場・設備の3分野に分けて、繰り返し登場する電気事業の専門用語を整理しています。",
-    slugs: ["glossary-contract-terms", "glossary-market-terms", "glossary-equipment-terms"],
+    slugs: ["rate-structure-glossary", "renewable-energy-glossary", "decarbonization-glossary"],
   },
   faq: {
     heading: "FAQ集の代表記事",

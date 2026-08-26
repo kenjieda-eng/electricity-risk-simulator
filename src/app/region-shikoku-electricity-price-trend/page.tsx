@@ -389,7 +389,7 @@ export default function RegionShikokuElectricityPriceTrendPage() {
               自社の使用量で単価の影響を試算するには{" "}
               <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気代計算機</Link>
               、基本料金・力率など契約の基礎用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               をあわせてご確認ください。
             </p>
             <p className="mt-2 text-xs text-slate-500">
@@ -691,7 +691,7 @@ export default function RegionShikokuElectricityPriceTrendPage() {
               { href: "/region-chugoku-electricity-price-trend", title: "中国エリアの電気料金推移", description: "本四連系で結ばれる隣接エリア。" },
               { href: "/region-kyushu-electricity-price-trend", title: "九州エリアの電気料金推移", description: "西日本エリアの推移比較。" },
               { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "四国拠点の電気代の概算試算。" },
-              { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+              
             ]}
           />
         </div>

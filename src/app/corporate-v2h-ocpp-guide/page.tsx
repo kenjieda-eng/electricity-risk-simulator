@@ -532,7 +532,7 @@ export default function CorporateV2hOcppGuidePage() {
               、時間帯別料金での充電最適化は{" "}
               <Link href="/ev-charging-off-peak-tou" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">EV充電のオフピーク・TOU活用</Link>
               、契約電力への影響は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               も参照ください。
             </p>
           </section>
@@ -653,7 +653,7 @@ export default function CorporateV2hOcppGuidePage() {
               { href: "/subsidy-industrial-vehicle-ev", title: "フォークリフト・建機の電動化補助金", description: "構内EV・車両電動化の投資支援。" },
               { href: "/ev-charging-off-peak-tou", title: "EV充電のオフピーク・TOU活用", description: "時間帯別料金での充電最適化。" },
               { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "充放電を含む電気代の概算試算。" },
-              { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "充電増による契約電力への影響。" },
+              
               { href: "/subsidy-local-government-list", title: "自治体補助金の探し方一覧", description: "自治体のV2H・充電補助を探す入口。" },
               { href: "/energy-management-roi-calculation", title: "エネマネ投資のROI計算", description: "導入投資回収の考え方。" },
             ]}

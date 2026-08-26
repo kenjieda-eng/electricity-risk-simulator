@@ -344,24 +344,14 @@ export default function LastResortSupplyExplainedPage() {
                 description:
                   "割増設計の背景と料金算定ルールを実務目線で解説します。",
               },
-              {
-                href: "/last-resort-supply-emergency-response",
-                title: "最終保障供給に入りそうなときの対応手順",
-                description:
-                  "早期発見と切替準備の進め方を、担当者向けに整理します。",
-              },
+              
               {
                 href: "/last-resort-supply-switch",
                 title: "最終保障供給から通常契約への切替",
                 description:
                   "切替実務と契約条件のチェックポイントを整理します。",
               },
-              {
-                href: "/last-resort-supply-internal-explanation",
-                title: "最終保障供給を社内説明するポイント",
-                description:
-                  "料金が高い理由と対応方針の伝え方を整理します。",
-              },
+              
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },
             ]}
           />

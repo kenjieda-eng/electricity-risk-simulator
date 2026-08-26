@@ -438,7 +438,7 @@ export default function LastResortSupplyHistoryPage() {
               ——移行先探しと手続きの実務
             </li>
             <li>
-              <Link href="/last-resort-supply-emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応</Link>
+              <Link href="/last-resort-supply#emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応</Link>
               ——危機時の行動指針（平時の備えとして）
             </li>
           </ol>
@@ -475,7 +475,7 @@ export default function LastResortSupplyHistoryPage() {
             との関係を理解した上で、現在の契約がどのリスクをどこまで許容しているかを把握することが出発点になります。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-            <Link href="/last-resort-supply-emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応手順</Link>
+            <Link href="/last-resort-supply#emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応手順</Link>
             を社内で共有しておくことも、いざというときの混乱を最小化するために重要です。
             平時の段階で
             <Link href="/how-to" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">シミュレーターの使い方</Link>
@@ -495,7 +495,7 @@ export default function LastResortSupplyHistoryPage() {
             { href: "/last-resort-supply", title: "最終保障供給とは", description: "制度の基本と適用条件を解説。このページを読む前にまず確認。" },
             { href: "/last-resort-supply-price", title: "最終保障供給の料金", description: "通常契約との料金差と具体的な水準。割高になる理由を解説。" },
             { href: "/last-resort-supply-switch", title: "最終保障供給から切り替えるには", description: "移行先の探し方と切替手続きの実務的な手順。" },
-            { href: "/last-resort-supply-emergency-response", title: "最終保障供給に入りそうなときの対応", description: "危機時の早期発見と具体的な行動指針。" },
+            
             { href: "/fuel-cost-adjustment-upper-limit", title: "燃料費調整額の上限制度", description: "2022年撤退の背景となった制度の仕組みと影響。" },
             { href: "/market-price-adjustment-risk", title: "市場価格調整額の上振れリスク", description: "JEPX高騰リスクが経営に与える影響を解説。" },
             { href: "/articles/last-resort-supply", title: "最終保障供給を知る（カテゴリ一覧）", description: "カテゴリ内の全記事一覧。読む順序の確認に。" },

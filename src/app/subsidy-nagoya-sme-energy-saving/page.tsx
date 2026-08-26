@@ -676,7 +676,7 @@ export default function SubsidyNagoyaSmeEnergySavingPage() {
               、設備投資の補助金スキームは{" "}
               <Link href="/subsidy-manufacturing-strategy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ものづくり補助金の活用戦略</Link>
               、契約電力・基本料金の用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               も参照ください。
             </p>
           </section>
@@ -820,7 +820,7 @@ export default function SubsidyNagoyaSmeEnergySavingPage() {
               { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制", description: "省エネ・低炭素投資の税制優遇。" },
               { href: "/subsidy-2026-fiscal-year-changes", title: "2026年度 補助金再編まとめ", description: "制度統合・名称変更・C類型廃止の整理。" },
               { href: "/subsidy-sme-management-strengthening-tax", title: "中小企業経営強化税制ガイド", description: "即時償却・税額控除の活用。" },
-              { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+              
               { href: "/energy-management-roi-calculation", title: "エネマネ投資のROI計算", description: "補助後の投資回収の考え方。" },
             ]}
           />

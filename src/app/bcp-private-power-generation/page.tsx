@@ -236,7 +236,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/energy-bcp-glossary", title: "電力BCP・非常用電源用語集", description: "UPS・コジェネ・マイクログリッドなどBCP設備・運用用語を整理。" },
+              { href: "/electricity-glossary#energy-bcp", title: "法人電気料金の総合用語集 200+ 用語", description: "「③BCP・非常用電源関連」の節で確認できます。" },
               { href: "/emergency-power-source-options", title: "非常用電源の選び方", description: "ディーゼル・ガス・蓄電池・ハイブリッドの比較。" },
               { href: "/battery-storage-bcp-peak-cut-hybrid", title: "蓄電池のBCP活用と経済性", description: "ピークカット兼用のハイブリッド運用。" },
               { href: "/outage-loss-simulation-by-industry", title: "停電時の損失試算と投資判断", description: "業種別の時間当たり損失額。" },

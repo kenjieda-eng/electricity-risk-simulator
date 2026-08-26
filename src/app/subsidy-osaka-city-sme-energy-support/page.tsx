@@ -478,7 +478,7 @@ const relatedLinks = [
   { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制", description: "省エネ・低炭素投資の税制優遇。" },
   { href: "/subsidy-2026-fiscal-year-changes", title: "2026年度 補助金再編まとめ", description: "制度統合・名称変更・C類型廃止の整理。" },
   { href: "/subsidy-sme-management-strengthening-tax", title: "中小企業経営強化税制ガイド", description: "即時償却・税額控除の活用。" },
-  { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+  { href: "/electricity-glossary#demand-power", title: "法人電気料金の総合用語集 200+ 用語", description: "「②デマンド・力率関連」の節で確認できます。" },
   { href: "/energy-management-roi-calculation", title: "エネマネ投資のROI計算", description: "補助後の投資回収の考え方。" },
   { href: "/compare", title: "料金メニュー比較診断", description: "契約メニューの違いを比較して見直す。" },
   { href: "/simulate", title: "電気料金リスクシミュレーター", description: "現状契約のリスクと削減余地を診断。" },
@@ -692,7 +692,7 @@ export default function SubsidyOsakaCitySmeEnergySupportPage() {
               、ヒートポンプは{" "}
               <Link href="/subsidy-heat-pump-introduction" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ヒートポンプ導入と補助金</Link>
               、契約電力・デマンドの用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               も参照ください。
             </p>
           </section>

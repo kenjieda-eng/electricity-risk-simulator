@@ -442,10 +442,10 @@ export default function LastResortSupplyPage() {
             <Link href="/last-resort-vs-retail-contract" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
               <span className="font-semibold text-slate-900">最終保障供給と通常契約の違い</span>
             </Link>
-            <Link href="/last-resort-supply-emergency-response" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+            <Link href="/last-resort-supply#emergency-response" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
               <span className="font-semibold text-slate-900">最終保障供給に入りそうなときの対応</span>
             </Link>
-            <Link href="/last-resort-supply-internal-explanation" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
+            <Link href="/last-resort-supply#internal-explanation" className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm transition hover:bg-sky-50">
               <span className="font-semibold text-slate-900">社内説明のポイント</span>
             </Link>
             <Link href="/articles/last-resort-supply" className="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm transition hover:bg-sky-100">

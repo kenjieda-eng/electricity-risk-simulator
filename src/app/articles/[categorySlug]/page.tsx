@@ -759,7 +759,7 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
         <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">トピック別索引</h2>
           <p className="mt-2 text-sm leading-7 text-slate-700">
-            用語集は12のトピックに分かれています。気になる分野から該当の用語集記事を開き、関連する詳細解説に辿り着けます。
+            用語集は6のトピックに分かれています。気になる分野から該当の用語集記事を開き、関連する詳細解説に辿り着けます。
           </p>
           <nav aria-label="用語集トピック" className="mt-4 flex flex-wrap gap-2">
             {GLOSSARY_TOPIC_GROUPS.map((group) => (
@@ -772,6 +772,11 @@ export default async function ArticleCategoryPage({ params }: PageProps) {
               </a>
             ))}
           </nav>
+          <p className="mt-4 rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm leading-6 text-slate-700">
+            トピックをまたいで探すときは{" "}
+            <Link href="/electricity-glossary" className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-900">法人電気料金の総合用語集 200+ 用語</Link>
+            {" "}で1ページから確認できます。
+          </p>
           <div className="mt-5 space-y-4">
             {GLOSSARY_TOPIC_GROUPS.map((group) => {
               const items = getArticlesBySlugs(group.slugs);
