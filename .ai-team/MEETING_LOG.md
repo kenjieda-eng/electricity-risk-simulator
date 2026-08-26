@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-07-17 B-79 第4弾 PR #294（マージ待ち・江田GO）
+
+**参加者**: リン（実施）
+
+### 成果
+- PR: https://github.com/kenjieda-eng/electricity-risk-simulator/pull/294
+- ブランチ: `feat/b-79-p4-plus-okinawa-20260718`（commit `79f0c62`）
+- 新規5本: 北ガス / 静岡ガス＆パワー / サーラeエナジー / 九電ネクスト / 沖縄推移（B-83完結）
+- 補正: `utility-affiliated` にテプコCS 2024-04 電力販売休止注記（2箇所）
+- `power-utility-guide` 31→35、`by-region` 75→76、`publishedAt: 2026-07-18`
+- 検証: surcharge不一致0 / tsc OK / build OK。サブエージェント起草はAPI上限で失敗→本体で起草・沖縄はJEPX対象外に書き直し
+
+### 次アクション
+- ~~江田GOまでマージしない~~ → **MERGED** `066e4fb`（2026-07-17）
+
+---
+
 ## 2026-04-20 第15回 PSI 計測・T-17 PR #47 マージ完了（今日 4 本目の PR）
 
 **参加者**: 全員（EDA 同席、リンがファシリテート）
