@@ -292,7 +292,7 @@ export default function BasicChargeExplainedPage() {
 
         <section className="overflow-x-auto rounded-xl border border-slate-200 bg-white p-5">
           <h2 className="text-xl font-semibold text-slate-900">施設規模別 基本料金の早見表</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">単価1,650円/kW、力率割引0.97で計算した場合の目安です。</p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">単価1,650円/kW、力率割引0.97（力率88%の場合）で計算した場合の目安です。</p>
           <table className="mt-4 w-full border-collapse text-sm">
             <thead>
               <tr>

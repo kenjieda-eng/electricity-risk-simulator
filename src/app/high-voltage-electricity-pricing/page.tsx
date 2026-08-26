@@ -288,7 +288,7 @@ export default function HighVoltageElectricityPricingPage() {
             </table>
           </div>
           <p className="mt-3 text-xs text-slate-500">
-            ※ 単価は大手電力会社の標準メニュー目安。力率割引0.97適用。燃料費調整額は市場状況によって変動します。実際の料金はご契約内容をご確認ください。
+            ※ 単価は大手電力会社の標準メニュー目安。上記3表の力率割引0.97は力率88%の場合（基準85%を上回る1%につき1%割引）。燃料費調整額は市場状況によって変動します。実際の料金はご契約内容をご確認ください。
           </p>
         </section>
 

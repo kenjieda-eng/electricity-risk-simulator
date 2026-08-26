@@ -312,6 +312,9 @@ export default function ExtraHighVoltageElectricityBillGuidePage() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-3 text-xs text-slate-500">
+            ※ 力率割引0.97は力率88%の場合（基準85%を上回る1%につき1%割引）。
+          </p>
         </section>
 
         <SourcesAndFaq
