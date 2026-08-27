@@ -247,6 +247,12 @@ export default function PageNamePage() {
 **静的ページは自動検出されるため `sitemap.ts` の編集不要。**
 動的ルート（新しいシリーズ）を追加する場合のみ `sitemap.ts` を更新する。
 
+### 4. スクロール計測の対象に追加
+
+`npm run generate:article-slugs` を実行して `src/data/articleSlugs.ts` を再生成する。これを忘れると、GAのスクロール深度イベントがその記事で発火しない。
+
+再生成後は差分を確認し、再生成の出力にpage dirの無いslug（コメントアウト済みエントリを生成器が拾う既知事象・現状2件）が混入していないことを確認する。混入していれば当該slugを除去してからコミットする。
+
 ---
 
 ## 共通コンポーネント（`src/components/simulator/`）
