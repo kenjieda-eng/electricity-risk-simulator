@@ -2331,3 +2331,11 @@ PR #220 (fd9ba13): B-77補助金第2弾8本(subsidies 26→34)。設備制度5(�
 - CLAUDE.md「新しい記事ページの追加手順」へ generate:article-slugs の実行を追記（復活2件の確認注意つき・再発防止）。
 - 8/31 topline: スクロール深度イベントの対象が472→853記事に拡大するため、イベント量の段差は計測対象の拡大として解釈する（ユーザー行動の変化ではない）。
 ---
+
+## 2026-08-27 articles.tsのコメントアウト済み残骸2件を削除（#330）＝再生成の冪等化（データ側）
+- #330（1ファイル+0/-13・コメント行のみ）: what-is-market-price-adjustment／capacity-contribution-increase-impactのコメントアウト済みエントリ（#329で復活源と特定）を削除。受け入れ試験=削除後のgenerate:article-slugsでarticleSlugs.tsのblobハッシュ不変（実行前・実行後・HEADの3点一致＝手動除去が不要になったことの機械的証明）。非triviaトークン列30,224個のバイト一致とtranspile出力一致で「コメント以外の変更ゼロ」を証明。runtimeのarticleList.lengthは871で前後不変（発注の「873」はコメント内2件を含む文字列カウントで、実装側が数え方の齟齬を特定）。
+- ★ただし生成器は未修正（コメント行を今も拾う）。新たなコメントアウトで再発し得るため、CLAUDE.md手順4の確認手順は存置し注記のみ正確化。生成側の修正（コメント除外またはpage dir実在フィルタ）は将来PR候補。
+- ★実装側の新発見(A): 生成器の正規表現が「/」を含むslugを除外するため、business-electricity-retrospective/*（49ルート）とspecial/*（9）はスクロール計測の構造的対象外。さらにテストの「retrospectiveはarticleListに追加しない運用」に対し実態は20件中18件が登録済みでルールが割れている。方針整理が必要なため9月の調査項目として登録（8/31 topline前には触らない）。
+- 小物の申し送り: compare-market-linked-and-fixed-by-risk-pattern:284に統合元の旧title「法人向け電力契約でよくある市場価格調整とは」のアンカー残存（着地実title=「市場価格調整額とは」・全站1箇所）→次の小修正PRに同乗。
+- 発注側の反省2件: 行番号がstale stage（#328以前のsnapshot）由来／873が文字列カウントとruntime件数の混同。いずれも実装側の照合で特定（相互検証の5例目）。
+---
