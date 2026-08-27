@@ -409,9 +409,9 @@ export default function FiveMinimumCheckpointsForElectricityContractReviewPage()
           heading="関連ページ"
           links={[
             {
-              href: "/glossary-contract-terms",
-              title: "電力契約の用語集",
-              description: "契約電力・基本料金・デマンド・力率など契約用語を整理。",
+              href: "/electricity-glossary#contract-terms",
+              title: "法人電気料金の総合用語集 200+ 用語",
+              description: "「⑦契約条項・約款関連」の節で確認できます。",
             },
             {
               href: "/business-electricity-contract-checklist",

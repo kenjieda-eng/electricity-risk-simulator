@@ -491,7 +491,7 @@ const relatedLinks = [
   { href: "/subsidy-gx-cn-investment-tax", title: "GX・CN投資促進税制", description: "省エネ・低炭素投資の税制優遇。" },
   { href: "/subsidy-sme-management-strengthening-tax", title: "中小企業経営強化税制ガイド", description: "即時償却・税額控除の活用。" },
   { href: "/energy-management-roi-calculation", title: "エネマネ投資のROI計算", description: "補助後の投資回収の考え方。" },
-  { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+  { href: "/electricity-glossary#demand-power", title: "法人電気料金の総合用語集 200+ 用語", description: "「②デマンド・力率関連」の節で確認できます。" },
   { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "業種・規模・契約・エリアから推定年間電気代と削減余地を即時試算。" },
   { href: "/articles/subsidies", title: "補助金・助成金を知る（カテゴリ一覧）", description: "国・自治体の省エネ/再エネ補助の記事一覧。" },
   { href: "/compare", title: "料金メニュー比較診断", description: "契約メニューの違いを比較して見直す。" },
@@ -708,7 +708,7 @@ export default function SubsidyNiigataCitySolarLedPage() {
               、冷凍冷蔵設備は{" "}
               <Link href="/subsidy-natural-refrigerant-freezer" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">自然冷媒冷凍機の補助金</Link>
               、契約電力・デマンドの用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               も参照ください。
             </p>
           </section>

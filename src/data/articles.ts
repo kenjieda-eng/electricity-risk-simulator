@@ -346,14 +346,11 @@ export const articleCategories: ArticleCategory[] = [
       "last-resort-supply-target",
       "last-resort-supply-price",
       "last-resort-supply-switch",
-      "last-resort-supply-emergency-response",
       "municipality-last-resort-supply",
       "last-resort-vs-retail-contract",
       "last-resort-supply-high-voltage",
       "last-resort-supply-extra-high-voltage",
       "last-resort-supply-terms",
-      "last-resort-supply-internal-explanation",
-      "last-resort-supply-comparison-positioning",
       "last-resort-supply-explained",
     ],
     order: 6,
@@ -1168,22 +1165,13 @@ export const articleCategories: ArticleCategory[] = [
       "設備関連用語（高圧・低圧・キュービクル）",
     ],
     recommendedReadingOrder: [
-      "glossary-contract-terms",
-      "glossary-market-terms",
-      "glossary-equipment-terms",
       "rate-structure-glossary",
-      "demand-power-glossary",
-      "high-voltage-glossary",
       "low-voltage-glossary",
       "supply-demand-planning-glossary",
       "renewable-energy-glossary",
       "renewable-detail-glossary",
       "decarbonization-glossary",
-      "energy-bcp-glossary",
       "ev-charging-glossary",
-      "energy-management-glossary",
-      "regulation-policy-glossary",
-      "international-energy-glossary",
     ],
     order: 28,
     group: "learning",
@@ -3519,9 +3507,6 @@ export const articleList: ArticleMeta[] = [
   { title: "再エネメニュー（RE100対応）とは", slug: "renewable-energy-plan-explained", description: "RE100対応の再エネ電力メニューの料金構造、非化石証書の扱い、通常プランとのコスト差を解説。", category: "契約メニューの違いを知る", categorySlug: "plan-types", order: 24, publishedAt: "2026-04-13" },
   // --- 最終保障供給 4本 ---
   { title: "特別高圧で最終保障供給を使うときの注意点", slug: "last-resort-supply-extra-high-voltage", description: "大規模需要家が最終保障供給を利用する際の留意事項を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 9, publishedAt: "2026-04-10" },
-  { title: "最終保障供給を社内説明するときのポイント", slug: "last-resort-supply-internal-explanation", description: "最終保障供給の料金が高い理由の伝え方を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 10, publishedAt: "2026-04-10" },
-  { title: "最終保障供給に入りそうなときの対応手順", slug: "last-resort-supply-emergency-response", description: "早期発見と切替準備の進め方を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 11, publishedAt: "2026-04-10" },
-  { title: "最終保障供給を比較検討の中でどう位置づけるか", slug: "last-resort-supply-comparison-positioning", description: "通常契約との判断基準を整理します。", category: "最終保障供給を知る", categorySlug: "last-resort-supply", order: 12, publishedAt: "2026-04-10" },
   // --- 電力調達 5本 ---
   { title: "調達構成の違いが法人料金にどう影響するか", slug: "how-procurement-affects-corporate-rates", description: "電力会社の仕入れ構成と法人料金の関係を整理します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 11, publishedAt: "2026-04-10" },
   { title: "市場価格が法人料金に反映される仕組み", slug: "market-price-reflected-in-corporate-rates", description: "JEPXから請求書までの価格波及の流れを解説します。", category: "電力調達の仕組みを知る", categorySlug: "power-procurement", order: 12, publishedAt: "2026-04-10" },
@@ -4066,36 +4051,6 @@ export const articleList: ArticleMeta[] = [
       "企業が導入する蓄電池・太陽光発電設備の耐用年数、減価償却方法、各種税制優遇措置を整理します。",
     category: "電気代の経理・税務",
     categorySlug: "accounting-tax",
-    order: 3,
-    publishedAt: "2026-04-17",
-  },
-  {
-    title: "電力契約の用語集｜契約電力・基本料金・デマンド・力率",
-    slug: "glossary-contract-terms",
-    description:
-      "法人向け電力契約でよく登場する契約関連用語を、意味・計算方法・関連記事へのリンクと共に整理します。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 1,
-    publishedAt: "2026-04-17",
-  },
-  {
-    title: "電力市場の用語集｜JEPX・スポット・先渡し・先物・容量市場",
-    slug: "glossary-market-terms",
-    description:
-      "電力市場関連の用語（JEPX・スポット・時間前・先渡し・先物・容量市場・需給調整市場）を整理します。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 2,
-    publishedAt: "2026-04-17",
-  },
-  {
-    title: "電力設備の用語集｜高圧・低圧・キュービクル・受変電設備",
-    slug: "glossary-equipment-terms",
-    description:
-      "電力設備関連の基本用語（高圧・低圧・受電方式・キュービクル・PAS・VCB）を整理します。",
-    category: "用語集",
-    categorySlug: "glossary",
     order: 3,
     publishedAt: "2026-04-17",
   },
@@ -4760,16 +4715,6 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-04-18",
   },
   {
-    title: "高圧・特別高圧電気契約の用語集｜キュービクル・PAS・受変電設備",
-    slug: "high-voltage-glossary",
-    description:
-      "高圧・特別高圧の電気契約・受変電設備に関する専門用語を一覧で整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 7,
-    publishedAt: "2026-04-18",
-  },
-  {
     title: "低圧電気契約の用語集｜従量電灯・低圧電力・契約アンペア",
     slug: "low-voltage-glossary",
     description:
@@ -4777,16 +4722,6 @@ export const articleList: ArticleMeta[] = [
     category: "用語集",
     categorySlug: "glossary",
     order: 8,
-    publishedAt: "2026-04-18",
-  },
-  {
-    title: "デマンド・契約電力関連用語集｜30分値・力率・最大需要",
-    slug: "demand-power-glossary",
-    description:
-      "デマンド管理・契約電力の決定方式に関する専門用語を整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 9,
     publishedAt: "2026-04-18",
   },
   {
@@ -4810,16 +4745,6 @@ export const articleList: ArticleMeta[] = [
     publishedAt: "2026-04-18",
   },
   {
-    title: "電力BCP・非常用電源用語集｜UPS・コジェネ・マイクログリッド",
-    slug: "energy-bcp-glossary",
-    description:
-      "電力BCP・非常用電源・自立運転に関する設備・運用用語を整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 12,
-    publishedAt: "2026-04-18",
-  },
-  {
     title: "EV充電インフラ用語集｜CHAdeMO・OCPP・V2H・急速充電",
     slug: "ev-charging-glossary",
     description:
@@ -4827,36 +4752,6 @@ export const articleList: ArticleMeta[] = [
     category: "用語集",
     categorySlug: "glossary",
     order: 13,
-    publishedAt: "2026-04-18",
-  },
-  {
-    title: "エネマネ・DX用語集｜BEMS・FEMS・SCADA・EnOcean",
-    slug: "energy-management-glossary",
-    description:
-      "エネルギーマネジメント・電力DXに関する設備・通信プロトコル用語を整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 14,
-    publishedAt: "2026-04-18",
-  },
-  {
-    title: "電力制度・政策用語集｜電力自由化・容量市場・需給調整市場",
-    slug: "regulation-policy-glossary",
-    description:
-      "電力制度改革・政策に関する制度名・機関名を網羅的に整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 15,
-    publishedAt: "2026-04-18",
-  },
-  {
-    title: "国際エネルギー用語集｜LNG・OPEC・Brent・Henry Hub",
-    slug: "international-energy-glossary",
-    description:
-      "国際エネルギー市場・燃料指標・主要機関の用語を整理した用語集です。",
-    category: "用語集",
-    categorySlug: "glossary",
-    order: 16,
     publishedAt: "2026-04-18",
   },
   // --- S2-06 batch1（検索需要ベース 5本）2026-04-19 ---

@@ -383,7 +383,7 @@ export default function LastResortSupplyExtraHighVoltagePage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             最終保障供給に近づいている状況の対応手順は{" "}
             <Link
-              href="/last-resort-supply-emergency-response"
+              href="/last-resort-supply#emergency-response"
               className="text-sky-700 underline underline-offset-2 hover:text-sky-900"
             >
               最終保障供給に入りそうなときの対応手順
@@ -402,16 +402,8 @@ export default function LastResortSupplyExtraHighVoltagePage() {
               title: "最終保障供給とは",
               description: "最終保障供給制度の基本的な仕組みと概要。",
             },
-            {
-              href: "/last-resort-supply-emergency-response",
-              title: "最終保障供給に入りそうなときの対応手順",
-              description: "事前察知と切替準備の手順。",
-            },
-            {
-              href: "/last-resort-supply-internal-explanation",
-              title: "最終保障供給を社内説明するときのポイント",
-              description: "経営層への説明と意思決定のスピードアップ。",
-            },
+            
+            
             {
               href: "/extra-high-voltage-contract-review-points",
               title: "特別高圧契約の見直しで確認したいこと",
@@ -422,11 +414,7 @@ export default function LastResortSupplyExtraHighVoltagePage() {
               title: "高圧と特別高圧の違い",
               description: "特別高圧の基本的な位置づけの理解。",
             },
-            {
-              href: "/last-resort-supply-comparison-positioning",
-              title: "最終保障供給を比較検討の中でどう位置づけるか",
-              description: "通常契約と最終保障供給の判断基準。",
-            },
+            
             {
               href: "/how-to-start-electricity-contract-review",
               title: "電力契約見直しの始め方",

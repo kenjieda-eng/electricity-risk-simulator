@@ -114,8 +114,8 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/high-voltage-glossary", title: "高圧・特別高圧電気契約の用語集", description: "高圧・特別高圧の電気契約・受変電設備に関する専門用語を一覧で整理した用語集です。" },
-              { href: "/demand-power-glossary", title: "デマンド・契約電力関連用語集", description: "デマンド管理・契約電力の決定方式に関する専門用語を整理した用語集です。" },
+              { href: "/electricity-glossary#high-voltage", title: "法人電気料金の総合用語集 200+ 用語", description: "「①受変電・契約電力関連（高圧・特別高圧）」の節で確認できます。" },
+              
               { href: "/renewable-detail-glossary", title: "再エネ調達詳細用語集", description: "再エネ調達の手段・国際証書・追加性に関する詳細用語を整理した発展編用語集です。" },
               { href: "/articles/faq", title: "FAQ集（よくある質問）", description: "関連カテゴリも合わせて読む" },
               { href: "/articles/regulation-timeline", title: "制度改正タイムライン", description: "関連カテゴリも合わせて読む" },

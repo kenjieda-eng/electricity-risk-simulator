@@ -247,7 +247,7 @@ export default function Page() {
           <RelatedLinks
             heading="関連ページ"
             links={[
-              { href: "/energy-bcp-glossary", title: "電力BCP・非常用電源用語集", description: "UPS・コジェネ・マイクログリッドなどBCP設備・運用用語を整理。" },
+              { href: "/electricity-glossary#energy-bcp", title: "法人電気料金の総合用語集 200+ 用語", description: "「③BCP・非常用電源関連」の節で確認できます。" },
               { href: "/articles/energy-bcp", title: "電力BCP・災害対策", description: "このカテゴリの記事一覧を見る" },
               { href: "/compare", title: "料金メニュー比較・診断", description: "自社に合う電力プランを診断する" },
               { href: "/", title: "電気料金上昇リスクシミュレーター", description: "年間の電気代と上昇リスクを試算する" },

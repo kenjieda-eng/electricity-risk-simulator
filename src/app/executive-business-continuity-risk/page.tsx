@@ -437,9 +437,9 @@ export default function ExecutiveBusinessContinuityRiskPage() {
               description: "経営会議の議題として設定すべき電力リスクの論点を整理します。",
             },
             {
-              href: "/last-resort-supply-emergency-response",
-              title: "最終保障供給への移行手順",
-              description: "電力供給が停止した際の緊急対応フローを解説します。",
+              href: "/last-resort-supply#emergency-response",
+              title: "最終保障供給とは",
+              description: "「最終保障供給に入りそうなときの緊急対応」の節で確認できます。",
             },
             {
               href: "/articles/risk-scenarios",

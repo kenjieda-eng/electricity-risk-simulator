@@ -493,7 +493,7 @@ const relatedLinks = [
   { href: "/subsidy-vs-contract-review-priority", title: "補助金と契約見直しの優先順位", description: "賃借の事業所にも有効な投資前の順番整理。" },
   { href: "/factory-electricity-cost-reduction", title: "工場・事業所の電気代削減ガイド", description: "量・契約・単価の総合対策。" },
   { href: "/energy-management-roi-calculation", title: "エネマネ投資のROI計算", description: "補助後の投資回収の考え方。" },
-  { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+  { href: "/electricity-glossary#demand-power", title: "法人電気料金の総合用語集 200+ 用語", description: "「②デマンド・力率関連」の節で確認できます。" },
   { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "業種・規模・契約・エリアから推定年間電気代と削減余地を即時試算。" },
   { href: "/articles/subsidies", title: "補助金・助成金を知る（カテゴリ一覧）", description: "国・自治体の省エネ/再エネ補助の記事一覧。" },
   { href: "/compare", title: "料金メニュー比較診断", description: "契約メニューの違いを比較して見直す。" },
@@ -710,7 +710,7 @@ export default function SubsidyKurashikiCityEnergySavingPage() {
               、業務用空調・給湯のヒートポンプは{" "}
               <Link href="/subsidy-heat-pump-introduction" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">ヒートポンプ導入補助の活用ガイド</Link>
               、契約電力・デマンドの用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               、岡山市内の拠点は{" "}
               <Link href="/subsidy-okayama-city-smart-energy" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">岡山市の事業者向け省エネ・再エネ補助</Link>
               も参照ください。

@@ -485,7 +485,7 @@ const relatedLinks = [
   { href: "/subsidy-sii-energy-saving", title: "SII省エネ補助金（設備単位型）", description: "国の変圧器・モータ区分の入口。" },
   { href: "/kanagawa-business-electricity-cost", title: "神奈川県の法人電気料金", description: "自治体ルートの参照エリア。" },
   { href: "/subsidy-waste-heat-recovery", title: "廃熱回収・排熱利用の補助金", description: "熱回収エアコンプレッサ関連。" },
-  { href: "/demand-power-glossary", title: "デマンド・契約電力・力率の用語集", description: "変圧器・力率の基礎用語。" },
+  { href: "/electricity-glossary#demand-power", title: "法人電気料金の総合用語集 200+ 用語", description: "「②デマンド・力率関連」の節で確認できます。" },
   { href: "/factory-electricity-cost-reduction", title: "工場・事業所の電気代削減ガイド", description: "量・契約・単価の総合対策。" },
   { href: "/led-air-conditioning-reduction-effect", title: "LED・空調の削減効果", description: "2027蛍光灯終了→LED化の効果目安。" },
   { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "業種・規模・契約・エリアから推定年間電気代と削減余地を即時試算。" },
@@ -599,7 +599,7 @@ export default function SubsidyTransformerCompressorRenewalPage() {
               熱回収エアコンプレッサ関連の考え方は{" "}
               <Link href="/subsidy-waste-heat-recovery" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">廃熱回収・排熱利用の補助金</Link>
               、変圧器・力率の基礎用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力・力率の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力・力率の用語集</Link>
               も参照ください。
             </p>
             <p className="mt-3 text-xs text-slate-500">
@@ -728,7 +728,7 @@ export default function SubsidyTransformerCompressorRenewalPage() {
               、2027年蛍光灯終了→LED化の効果目安は{" "}
               <Link href="/led-air-conditioning-reduction-effect" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">LED・空調の削減効果</Link>
               、変圧器・力率の基礎用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力・力率の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力・力率の用語集</Link>
               も参照ください。
             </p>
           </section>

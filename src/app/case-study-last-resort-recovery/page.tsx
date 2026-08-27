@@ -338,7 +338,7 @@ export default function CaseStudyLastResortRecoveryPage() {
         <h2 className="text-xl font-semibold text-slate-900">最終保障供給に移行している方へ</h2>
         <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
           最終保障供給は「すぐに新しい電力契約を探してください」というサインです。
-          <Link href="/last-resort-supply-emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応手順</Link>を確認し、
+          <Link href="/last-resort-supply#emergency-response" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">最終保障供給に入りそうなときの対応手順</Link>を確認し、
           できるだけ早く複数の電力会社への見積もり依頼を開始してください。
           お急ぎの場合は<Link href="/contact" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">お問い合わせ</Link>から直接ご相談ください。
         </p>
@@ -356,7 +356,7 @@ export default function CaseStudyLastResortRecoveryPage() {
         <RelatedLinks
           heading="関連事例・記事"
           links={[
-            { href: "/last-resort-supply-emergency-response", title: "最終保障供給に入りそうなときの対応手順", description: "最終保障供給への移行前・移行後の対処法を解説" },
+            
             { href: "/how-to-compare-electricity-suppliers", title: "電力会社の比較方法", description: "次の電力会社を選ぶための比較手順" },
             { href: "/when-to-review-electricity-contract", title: "見直しのタイミングはいつか", description: "緊急時を含む電力契約見直しのタイミング" },
             { href: "/case-study-price-increase-negotiation", title: "値上げ通知の交渉で15%圧縮した事例", description: "値上げ通知への対処法と交渉のポイント" },

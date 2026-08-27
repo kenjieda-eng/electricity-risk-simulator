@@ -274,7 +274,7 @@ export default function MunicipalityProcurementBiddingFailurePage() {
           </p>
           <p className="mt-2 text-sm text-amber-800">
             詳細は{" "}
-            <Link href="/last-resort-supply-emergency-response" className="underline underline-offset-2 hover:text-amber-900">
+            <Link href="/last-resort-supply#emergency-response" className="underline underline-offset-2 hover:text-amber-900">
               最終保障供給に入りそうなときの対応手順
             </Link>{" "}
             を参照してください。
@@ -398,11 +398,7 @@ export default function MunicipalityProcurementBiddingFailurePage() {
               title: "自治体電力調達の入札実務｜一般競争・指名競争・随意契約の使い分け",
               description: "入札方式の基本から使い分け判断まで体系的に解説します。",
             },
-            {
-              href: "/last-resort-supply-emergency-response",
-              title: "最終保障供給に入りそうなときの対応手順",
-              description: "最終保障供給への移行リスクを回避するための実務フローを解説。",
-            },
+            
             {
               href: "/explaining-in-municipality",
               title: "自治体庁内で電力契約見直しを説明するとき",

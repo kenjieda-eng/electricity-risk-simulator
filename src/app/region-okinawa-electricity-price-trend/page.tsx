@@ -389,7 +389,7 @@ export default function RegionOkinawaElectricityPriceTrendPage() {
               自社の使用量で単価の影響を試算するには{" "}
               <Link href="/industry-electricity-calculator" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">業種別電気代計算機</Link>
               、基本料金・力率など契約の基礎用語は{" "}
-              <Link href="/demand-power-glossary" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
+              <Link href="/electricity-glossary#demand-power" className="text-sky-700 underline underline-offset-2 hover:text-sky-900">デマンド・契約電力の用語集</Link>
               をあわせてご確認ください。
             </p>
             <p className="mt-2 text-xs text-slate-500">
@@ -688,7 +688,7 @@ export default function RegionOkinawaElectricityPriceTrendPage() {
               { href: "/jepx-explained", title: "JEPXとは", description: "対象外であることの前提確認。" },
               { href: "/electricity-bcp-for-corporates", title: "法人のための電力BCP", description: "台風・停電対応のBCP整備。" },
               { href: "/industry-electricity-calculator", title: "業種別電気代計算機", description: "沖縄拠点の電気代の概算試算。" },
-              { href: "/demand-power-glossary", title: "デマンド・契約電力の用語集", description: "基本料金・力率の基礎用語。" },
+              
               { href: "/compare", title: "料金メニュー比較診断", description: "プラン比較の入口。" },
               { href: "/simulate", title: "電気料金シミュレーター", description: "上振れリスクの診断。" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "2026年度4.18円/kWhの制度コスト。" },
