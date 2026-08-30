@@ -295,7 +295,7 @@ export default function HowToCheckMarketPriceAdjustmentTermsPage() {
           heading="関連ページ"
           links={[
             { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較", description: "10 項目比較表と金額規模シミュレーションで、両者の違いを整理します。" },
-            { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "JEPX 連動の仕組み・燃調費との違い・契約注意点を整理した総合解説です。" },
+            { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "JEPX 連動の仕組み・燃調費との違い・契約注意点を整理した総合解説です。" },
             {
               href: "/how-to-check-fuel-cost-adjustment-terms",
               title: "燃料費調整額の扱いを確認する方法",

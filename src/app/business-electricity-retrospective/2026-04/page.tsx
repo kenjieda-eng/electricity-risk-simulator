@@ -582,7 +582,7 @@ export default function BusinessElectricityRetrospective202604Page() {
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "4月動向の理解に必須の基礎解説" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "5/1改定の背景と仕組み" },
               { href: "/renewable-energy-surcharge-2026", title: "2026年度の再エネ賦課金", description: "新単価4.18円/kWhの解説" },
-              { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "JEPX連動契約のリスク" },
+              { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "JEPX連動契約のリスク" },
               { href: "/jepx-explained", title: "JEPXとは", description: "卸電力市場の基本" },
               { href: "/business-electricity-cost-reduction-review-points", title: "削減見直し7ポイント", description: "包括的削減ガイド" },
               { href: "/business-electricity-contract-checklist", title: "法人電力契約見直しチェックリスト", description: "見直し準備で確認すべき項目" },

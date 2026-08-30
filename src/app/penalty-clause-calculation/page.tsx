@@ -632,7 +632,7 @@ export default function Page() {
               { href: "/businesses-not-suited-for-market-linked-electricity-plan", title: "市場連動が向かない法人", description: "市場連動回避の判断軸。" },
               { href: "/market-linked-vs-fixed", title: "市場連動と固定プランの違い", description: "プラン特性の比較。" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の仕組み", description: "切替後の燃料費調整リスク。" },
-              { href: "/market-price-adjustment", title: "市場価格調整額の解説", description: "市場連動プランの調整項目。" },
+              { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "市場連動プランの調整項目。" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金の概要", description: "賦課金の負担を把握。" },
               { href: "/area-power-supply-mix-comparison", title: "エリア別電源構成マップ", description: "切替先電力会社の電源構成。" },
               { href: "/industry-electricity-calculator", title: "業種別電気料金シミュレーター", description: "地域・業種・契約から現状の年間電気代と削減余地を試算。" },

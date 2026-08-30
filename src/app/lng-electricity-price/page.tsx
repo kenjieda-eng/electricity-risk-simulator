@@ -227,7 +227,7 @@ export default function LngElectricityPricePage() {
           </div>
           <p className="mt-2 text-xs text-slate-500">
             ※ 試算値は燃料費調整額の構造に基づく目安。実際は電力会社・契約種別・基準燃料価格の設定により異なります。
-            <Link href="/market-price-adjustment" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整費</Link>
+            <Link href="/market-price-adjustment" className="ml-1 text-sky-700 underline underline-offset-2 hover:text-sky-900">市場価格調整額</Link>
             も加わる場合は別途影響が生じます。
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
@@ -453,7 +453,7 @@ export default function LngElectricityPricePage() {
             },
             {
               href: "/market-price-adjustment",
-              title: "市場価格調整費とは",
+              title: "市場価格調整額とは",
               description: "JEPX連動で変動するもう一つのコスト要素の仕組みと実務への影響。",
             },
             {

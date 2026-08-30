@@ -170,7 +170,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
               燃料価格による調整
             </span>
             <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
-              燃料費調整制度の総合解説
+              燃料費調整額（燃調費）とは
             </p>
             <p className="mt-1.5 text-sm leading-6 text-slate-700">
               燃料費調整額（燃調費）の仕組み・計算式・上限撤廃の背景・法人への影響を 1 本で網羅。
@@ -187,7 +187,7 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
               市場価格による調整
             </span>
             <p className="mt-3 text-base font-bold text-slate-900 sm:text-lg">
-              市場価格調整の総合解説
+              市場価格調整額とは
             </p>
             <p className="mt-1.5 text-sm leading-6 text-slate-700">
               市場価格調整額（市場調整額）の仕組み・JEPX 連動の挙動・市場連動プラン採用法人のリスクを整理。
@@ -504,12 +504,12 @@ export default function FuelVsMarketAdjustmentComparisonPage() {
             links={[
               {
                 href: "/fuel-cost-adjustment",
-                title: "燃料費調整制度の総合解説",
+                title: "燃料費調整額（燃調費）とは",
                 description: "燃調費の計算根拠と上限撤廃後の実態を整理します。",
               },
               {
                 href: "/market-price-adjustment",
-                title: "市場価格調整の総合解説",
+                title: "市場価格調整額とは",
                 description: "JEPX 市場連動の仕組みと 2025 年冬の挙動を整理します。",
               },
               {
