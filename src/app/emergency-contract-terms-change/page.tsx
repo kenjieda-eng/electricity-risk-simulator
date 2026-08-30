@@ -434,7 +434,7 @@ export default function EmergencyContractTermsChangePage() {
             },
             {
               href: "/market-price-adjustment",
-              title: "市場価格調整の仕組みと注意点",
+              title: "市場価格調整額とは",
               description: "JEPX連動型の調整項目が請求に与える影響を整理します。",
             },
             {

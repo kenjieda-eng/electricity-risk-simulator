@@ -940,7 +940,7 @@ export default function BusinessElectricityRetrospective202607Page() {
               { href: "/business-electricity-price-trend-10-years", title: "法人電気料金の10年推移", description: "長期の推移を俯瞰して現在地を確認" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "8月分の上昇を理解するための基礎解説" },
               { href: "/renewable-energy-surcharge", title: "再エネ賦課金とは", description: "4.18円/kWh（2026年度）の仕組み" },
-              { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "燃調本体とは別の市場連動分の見方" },
+              { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調本体とは別の市場連動分の見方" },
               { href: "/jepx-spot-price-dashboard", title: "JEPXスポット価格ダッシュボード", description: "エリア別の単価とスパイクの確認" },
               { href: "/extreme-heat-electricity-risk", title: "猛暑と電気料金リスク", description: "猛暑が法人コストに与える影響" },
               { href: "/demand-control-guide", title: "デマンドコントロールの基本", description: "冷房ピークによる契約電力更新を抑える" },

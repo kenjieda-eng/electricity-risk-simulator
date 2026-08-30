@@ -283,10 +283,10 @@ export default function FuelCostAdjustmentPage() {
 
         <RelatedLinks
           heading="燃料費調整まわりのページ全体像"
-          intro="本記事（燃料費調整の総合解説）から、市場価格調整との比較・市場価格調整の総合解説・燃料費調整の詳細 2 本へのナビゲーションです。"
+          intro="本記事（燃料費調整の総合解説）から、市場価格調整との比較・市場価格調整の解説・燃料費調整の詳細 2 本へのナビゲーションです。"
           links={[
             { href: "/fuel-vs-market-adjustment-comparison", title: "燃料費調整 vs 市場価格調整の比較", description: "10 項目比較表と金額規模シミュレーションで、どちらのリスクが大きいかを整理します。" },
-            { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "燃調と混同しやすい別の調整項目。市場連動プラン中心。" },
+            { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "燃調と混同しやすい別の調整項目。市場連動プラン中心。" },
             { href: "/fuel-cost-adjustment-history", title: "燃料費調整額の過去推移", description: "2018〜2026 年度の燃調単価推移と最大振れ幅を実データで整理。" },
             { href: "/how-to-check-fuel-cost-adjustment-terms", title: "約款での燃料費調整確認", description: "自社契約の約款で燃調の表記・上限有無を見分ける手順。" },
             { href: "/lng-electricity-price", title: "法人の電気料金とLNGの関係", description: "LNG市況が料金に波及する流れを整理。" },

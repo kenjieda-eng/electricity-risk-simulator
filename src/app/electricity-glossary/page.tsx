@@ -455,7 +455,7 @@ export default function ElectricityGlossaryPage() {
               { href: "/contract-demand-what-is-it", title: "契約電力（デマンド）の仕組み", description: "デマンド・契約電力の基本" },
               { href: "/basic-charge-explained", title: "基本料金の決まり方", description: "契約電力 × 基本料金単価 × 力率補正" },
               { href: "/fuel-cost-adjustment", title: "燃料費調整額の解説", description: "燃料 CIF 価格連動の調整項目" },
-              { href: "/market-price-adjustment", title: "市場価格調整の総合解説", description: "JEPX 連動の調整項目" },
+              { href: "/market-price-adjustment", title: "市場価格調整額とは", description: "JEPX 連動の調整項目" },
               { href: "/jepx-explained", title: "JEPX とは", description: "卸電力市場の基本" },
               { href: "/why-business-electricity-prices-rise", title: "法人の電気料金が上がる理由", description: "上昇要因の全体像" },
               { href: "/business-electricity-cost-reduction-review-points", title: "法人電気代の削減ポイント", description: "削減打ち手の全体像" },

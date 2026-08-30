@@ -140,7 +140,7 @@ export default function PriceSpikeAnalysisPage() {
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
             電力市場では、1日48コマ（30分×48）の入札が行われます。
             スパイクが生じたコマを市場連動型の料金プランで調達していた場合、そのコマの電力コストは通常の3〜20倍以上になります。
-            頻繁なスパイク発生が続く月は電気料金明細に<strong>市場価格調整費</strong>として多額の追加請求が現れ、企業の損益に直接打撃を与えます。
+            頻繁なスパイク発生が続く月は電気料金明細に<strong>市場価格調整額</strong>として多額の追加請求が現れ、企業の損益に直接打撃を与えます。ただし明細での計上形態や名称は小売電気事業者によって異なるため、契約中の約款や請求書で確認してください。
           </p>
           <p className="mt-2 text-xs text-slate-500">
             ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
@@ -301,7 +301,7 @@ export default function PriceSpikeAnalysisPage() {
           <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
             JEPXスポット価格を反映した<strong>市場連動型（完全市場連動・部分市場連動）の電気料金プラン</strong>を契約している法人は、
             スパイク発生時に電気代が急騰するリスクを直接負います。
-            スパイクの多発した月は市場価格調整費がプラスに転じ、請求額が予算を大幅に超過する場合があります。
+            スパイクの多発した月は市場価格調整額がプラスに転じ、請求額が予算を大幅に超過する場合があります。
           </p>
           <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-800">市場連動型プランのリスク特性</p>
