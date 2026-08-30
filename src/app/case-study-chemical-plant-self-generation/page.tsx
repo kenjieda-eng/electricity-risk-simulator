@@ -211,6 +211,11 @@ export default function CaseStudyChemicalPlantSelfGenerationPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-sm font-semibold text-slate-900">参考：本記事で扱っていない選択肢（一般論）</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">本記事で取り上げた打ち手のほかに、電気料金対策として蓄電池が比較検討されることもあります。蓄電池をインターネット経由で遠隔監視し、充放電をクラウド側のシステムが自動制御するサービスも提供されており、需要予測にもとづくデマンド制御と組み合わせて運用される例もあります。</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">ただし特別高圧の連続プロセスに適用する場合は、必要な容量や受電設備との取り合い、既存の運転計画との整合を個別に検討する必要があります。</p>
+            </div>
           </section>
 
           <section className="rounded-xl border border-slate-200 bg-white p-5">

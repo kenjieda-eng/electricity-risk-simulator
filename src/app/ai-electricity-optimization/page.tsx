@@ -81,6 +81,8 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-slate-900">AI活用の典型的な3領域</h2>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">AIが電力管理に使われる領域は、①需要予測、②設備制御の最適化、③市場連動プラン運用時の購入タイミング最適化の3つが代表的です。</p>
             <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">需要予測は過去データ＋気象データ＋生産計画を入力に翌日・翌週の使用量を予測し、スポット市場調達・自家発電の稼働計画に使われます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">設備制御の最適化は、空調・照明・生産設備の運転を需要の見通しに応じて自動化する領域です。あらかじめ決めた条件やAIの予測値にもとづいて、人が計器を見ながら行っていた起動・停止や出力調整を機器側が実行します。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">電力管理の自動化では需要予測と自動制御の担う役割は異なり、需要予測だけを導入した場合は、予測結果を受けて機器を動かす操作が人手に残ります。</p>
             <p className="mt-2 text-xs text-slate-500">
               ※ 本記事は中立的な情報整理を目的としており、特定の電力会社・契約形態を推奨するものではありません。
             </p>

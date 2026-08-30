@@ -281,7 +281,7 @@ export default function CompareMarketLinkedAndFixedByRiskPatternPage() {
             },
             {
               href: "/market-price-adjustment",
-              title: "法人向け電力契約でよくある市場価格調整とは",
+              title: "市場価格調整額とは",
               description: "契約単価外の変動要素を確認できます。",
             },
             {
