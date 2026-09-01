@@ -159,6 +159,7 @@ const analyticsdata = google.analyticsdata({ version: "v1beta", auth });
 //   読まないこと。詳細: .ai-team/CONTACT_FUNNEL_AUDIT_2026-07-29.md
 const KEY_EVENTS = [
   "contact_form_submitted", // CV（プロキシ。外部フォームを開くクリック＝実送信ではない）
+  "contact_type_selected", // /contact Step1 の種別選択（到達→送信の間の中間指標・#333で新設）
   "contact_cta_click", // /contact 到達クリック（ContactCtaCard・主導線）
   "contact_cta_view", // ContactCtaCard の表示（到達クリックの母数）
   "calculator_cta_click", // 計算機からの CTA（expert_consult 含む）
@@ -526,7 +527,7 @@ if (breakdown) {
   );
   md.push("");
   md.push(
-    "※現状 `contact_form_submitted` は `event_label`（問い合わせ種別）のみ送信しており、`cta_from` は送信側にも存在しない。内訳を取るにはGA4管理画面でカスタムディメンション登録が必要（登録日以降のデータのみ遡及不可）。"
+    "※ `cta_from` は `contact_cta_view` / `contact_cta_click` / `contact_form_submitted` / `contact_type_selected` のいずれも送信済み（`contact_type_selected` は種別 `inquiry_type` も送る）。いずれもGA4のカスタムディメンションとして未登録のため内訳を取得できない。取得には管理画面で `cta_from` と `inquiry_type` の登録が必要（登録日以降のデータのみ・遡及不可）。"
   );
 }
 md.push("");

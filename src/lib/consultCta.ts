@@ -45,10 +45,10 @@ export function buildInlineConsultHref(from: string): string {
 /**
  * インライン導線クリック時に `contact_cta_click` へ渡すパラメータ。
  * イベント名はカードと共通にして /contact 到達クリックの総量を1系列で追えるようにし、
- * 内訳は `cta_from` / `variant` で分ける。
+ * 内訳は `cta_from` / `variant` で分ける（`source` は GA4 の予約語のため送らない）。
  * ※ `contact_cta_view` はインライン導線からは送らない（ファネル指標をカード単独の
  *    系列として維持するため。詳細は InlineConsultLink.tsx のコメント）。
  */
 export function buildInlineConsultEvent(from: string) {
-  return { source: from, cta_from: from, variant: "inline" as const };
+  return { cta_from: from, variant: "inline" as const };
 }

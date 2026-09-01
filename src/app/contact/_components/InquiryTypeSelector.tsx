@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { trackEvent } from "../../../lib/analytics/ga";
 
 type InquiryCategory = {
   id: string;
@@ -101,7 +102,13 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
               <button
                 key={category.id}
                 type="button"
-                onClick={() => setSelectedId(category.id)}
+                onClick={() => {
+                  setSelectedId(category.id);
+                  trackEvent("contact_type_selected", {
+                    inquiry_type: category.externalFormParam,
+                    cta_from: ctaFrom || "direct",
+                  });
+                }}
                 aria-pressed={isSelected}
                 className={`text-left rounded-lg border-2 p-4 transition ${
                   isSelected
@@ -155,13 +162,11 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              if (typeof window !== "undefined" && window.gtag) {
-                window.gtag("event", "contact_form_submitted", {
-                  event_category: "engagement",
-                  event_label: selected?.externalFormParam ?? "no-category",
-                  cta_from: ctaFrom || "direct",
-                });
-              }
+              trackEvent("contact_form_submitted", {
+                event_category: "engagement",
+                event_label: selected?.externalFormParam ?? "no-category",
+                cta_from: ctaFrom || "direct",
+              });
             }}
             className={`inline-flex items-center justify-center rounded-xl px-6 py-4 text-base font-bold shadow-sm transition sm:text-lg ${
               selected

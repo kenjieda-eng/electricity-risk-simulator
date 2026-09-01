@@ -83,7 +83,6 @@ export default function ContactCtaCard({
           if (entry.isIntersecting && !viewFiredRef.current) {
             viewFiredRef.current = true;
             trackEvent("contact_cta_view", {
-              source,
               cta_from: source,
               variant,
               page_path:
@@ -103,7 +102,6 @@ export default function ContactCtaCard({
 
   const handleClick = () => {
     trackEvent("contact_cta_click", {
-      source,
       cta_from: source,
       variant,
       risk_label: context?.riskLabel ?? null,

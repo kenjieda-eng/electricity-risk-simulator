@@ -106,7 +106,6 @@ describe("インライン導線のクリックが GA4 へ届く", () => {
     expect(calls[0][0]).toBe("event");
     expect(calls[0][1]).toBe("contact_cta_click");
     expect(calls[0][2]).toMatchObject({
-      source: "mid-article-toc",
       cta_from: "mid-article-toc",
       variant: "inline",
     });
