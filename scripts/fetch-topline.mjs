@@ -159,6 +159,7 @@ const analyticsdata = google.analyticsdata({ version: "v1beta", auth });
 //   読まないこと。詳細: .ai-team/CONTACT_FUNNEL_AUDIT_2026-07-29.md
 const KEY_EVENTS = [
   "contact_form_submitted", // CV（プロキシ。外部フォームを開くクリック＝実送信ではない）
+  "contact_type_selected", // /contact Step1 の種別選択（到達→送信の間の中間指標・#333で新設）
   "contact_cta_click", // /contact 到達クリック（ContactCtaCard・主導線）
   "contact_cta_view", // ContactCtaCard の表示（到達クリックの母数）
   "calculator_cta_click", // 計算機からの CTA（expert_consult 含む）
