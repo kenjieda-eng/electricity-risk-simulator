@@ -526,7 +526,7 @@ if (breakdown) {
   );
   md.push("");
   md.push(
-    "※現状 `contact_form_submitted` は `event_label`（問い合わせ種別）のみ送信しており、`cta_from` は送信側にも存在しない。内訳を取るにはGA4管理画面でカスタムディメンション登録が必要（登録日以降のデータのみ遡及不可）。"
+    "※ `cta_from` は `contact_cta_view` / `contact_cta_click` / `contact_form_submitted` のいずれも送信済みだが、GA4のカスタムディメンションとして未登録のため内訳を取得できない。取得にはGA4管理画面での登録が必要（登録日以降のデータのみ・遡及不可）。"
   );
 }
 md.push("");
