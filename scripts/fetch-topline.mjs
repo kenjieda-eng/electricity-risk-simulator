@@ -527,7 +527,7 @@ if (breakdown) {
   );
   md.push("");
   md.push(
-    "※ `cta_from` は `contact_cta_view` / `contact_cta_click` / `contact_form_submitted` のいずれも送信済みだが、GA4のカスタムディメンションとして未登録のため内訳を取得できない。取得にはGA4管理画面での登録が必要（登録日以降のデータのみ・遡及不可）。"
+    "※ `cta_from` は `contact_cta_view` / `contact_cta_click` / `contact_form_submitted` / `contact_type_selected` のいずれも送信済み（`contact_type_selected` は種別 `inquiry_type` も送る）。いずれもGA4のカスタムディメンションとして未登録のため内訳を取得できない。取得には管理画面で `cta_from` と `inquiry_type` の登録が必要（登録日以降のデータのみ・遡及不可）。"
   );
 }
 md.push("");
