@@ -52,3 +52,48 @@ export function buildInlineConsultHref(from: string): string {
 export function buildInlineConsultEvent(from: string) {
   return { cta_from: from, variant: "inline" as const };
 }
+
+/**
+ * ContactCtaCard の可視状態を StickyConsultBar へ伝えるカスタムイベント名（#335）。
+ *
+ * バーは `fixed inset-x-0 bottom-0 z-50` で画面下端 57px を占有するため、カードの CTA
+ * ボタンがその帯に入っている間クリックを奪う（1440×900 で `elementFromPoint` が
+ * `ASIDE` を返すことを実測）。カードが少しでも見えている間はバーを隠して共存させる。
+ *
+ * ※ 通知は `contact_cta_view`（threshold 0.5・1回限り）とは**別の** IntersectionObserver
+ *    で行う。view の発火条件を変えないため。
+ */
+export const CONSULT_CARD_VISIBLE_EVENT = "consult-card-visible";
+export const CONSULT_CARD_HIDDEN_EVENT = "consult-card-hidden";
+
+/** 「✕」で閉じた状態の保存先キー。 */
+export const CONSULT_BAR_DISMISSED_KEY = "consult-bar-dismissed";
+
+/**
+ * バーを閉じた状態を読む。
+ *
+ * `sessionStorage` を使う理由: `useState` のみだとページ遷移のたびに復活し、
+ * 8月の `cta_dismiss` 509件はその産物だった。一方 `localStorage` は永続しすぎるため
+ * 採用しない（既存方針を維持）。タブを閉じれば復活する中間案とする。
+ *
+ * SSR・プライベートモード等でアクセスが例外を投げる環境があるため、失敗時は false を
+ * 返して呼び出し側が `useState` のみで動く現行挙動へフォールバックできるようにする。
+ */
+export function readConsultBarDismissed(): boolean {
+  try {
+    if (typeof sessionStorage === "undefined") return false;
+    return sessionStorage.getItem(CONSULT_BAR_DISMISSED_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+/** バーを閉じた状態を保存する。失敗しても呼び出し側の動作を止めない。 */
+export function writeConsultBarDismissed(): void {
+  try {
+    if (typeof sessionStorage === "undefined") return;
+    sessionStorage.setItem(CONSULT_BAR_DISMISSED_KEY, "1");
+  } catch {
+    // プライベートモード等。保存できなくても当該ページ内は useState で非表示を保つ。
+  }
+}
