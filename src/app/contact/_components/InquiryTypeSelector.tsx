@@ -165,6 +165,7 @@ export default function InquiryTypeSelector({ ctaFrom }: InquiryTypeSelectorProp
               trackEvent("contact_form_submitted", {
                 event_category: "engagement",
                 event_label: selected?.externalFormParam ?? "no-category",
+                inquiry_type: selected?.externalFormParam ?? "no-category",
                 cta_from: ctaFrom || "direct",
               });
             }}

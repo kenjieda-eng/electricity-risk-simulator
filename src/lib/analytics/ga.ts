@@ -88,6 +88,11 @@ export function ensureGtag() {
   }
 }
 
+/** `page_path` 用にクエリ・ハッシュを落とす。`/a?b=1#c` → `/a`。 */
+export function pathOnly(path: string): string {
+  return path.split(/[?#]/)[0];
+}
+
 export function pageview(path: string) {
   if (!isGaEnabled()) {
     return;
@@ -96,7 +101,10 @@ export function pageview(path: string) {
   ensureGtag();
 
   window.gtag?.("event", "page_view", {
-    page_path: path,
+    // `page_path` はパス部分のみ。クエリ付きのまま渡すと GA4 側で
+    // `/contact?from=sticky?from=sticky` のようにクエリが二重化し、同一到達が
+    // 別行に分裂する（#333 で検出・#334 で是正）。フルURLは page_location が持つ。
+    page_path: pathOnly(path),
     page_location: `${window.location.origin}${path}`,
     page_title: document.title,
   });
