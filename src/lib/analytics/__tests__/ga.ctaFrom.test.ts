@@ -1,5 +1,5 @@
 import { beforeEach, afterEach, describe, expect, it } from "vitest";
-import { currentPageCtaFrom, resolveCtaFrom, trackEvent } from "../ga";
+import { currentPageCtaFrom, pageview, pathOnly, resolveCtaFrom, trackEvent } from "../ga";
 
 /**
  * `cta_from`（CTA流入元パラメータ）の解決ロジックと、GA4 へ実際に渡る
@@ -121,5 +121,40 @@ describe("trackEvent が cta_from を GA4 へ渡す", () => {
     trackEvent("cta_click", { label: "consult", cta_from: "v2h-ocpp-guide" });
 
     expect(calls).toHaveLength(0);
+  });
+});
+
+/**
+ * `page_path` にクエリを載せると GA4 側で `/contact?from=sticky?from=sticky` のように
+ * 二重化し、同一到達が別行に分裂する（#333 で検出・#334 で是正）。
+ * フルURLは `page_location` が持つので、`page_path` は必ずパス部分のみとする。
+ */
+describe("page_path はクエリ・ハッシュを含まない（#334 の回帰ガード）", () => {
+  it("pathOnly がクエリとハッシュを落とす", () => {
+    expect(pathOnly("/contact?from=sticky")).toBe("/contact");
+    expect(pathOnly("/contact?from=a&x=1#sec")).toBe("/contact");
+    expect(pathOnly("/contact#sec")).toBe("/contact");
+    expect(pathOnly("/contact")).toBe("/contact");
+    expect(pathOnly("/")).toBe("/");
+  });
+
+  it("pageview が送る page_path にクエリが含まれず、page_location はフルURLを保つ", () => {
+    const fake = setWindow("/contact");
+    const calls: unknown[][] = [];
+    fake.gtag = (...args: unknown[]) => calls.push(args);
+    (globalThis as unknown as { document: { title: string } }).document = { title: "お問い合わせ" };
+
+    try {
+      pageview("/contact?from=sticky");
+
+      expect(calls).toHaveLength(1);
+      const params = calls[0][2] as Record<string, unknown>;
+      expect(params.page_path).toBe("/contact");
+      expect(String(params.page_path)).not.toContain("?");
+      // フルURL側はクエリを保持する（流入元の識別に使うため）
+      expect(params.page_location).toBe("https://simulator.eic-jp.org/contact?from=sticky");
+    } finally {
+      delete (globalThis as unknown as { document?: unknown }).document;
+    }
   });
 });

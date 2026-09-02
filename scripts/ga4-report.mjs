@@ -169,7 +169,7 @@ async function main() {
     dateRanges: [{ startDate, endDate }],
     dimensions: [
       { name: "eventName" },
-      { name: "customEvent:source" },
+      { name: "customEvent:cta_from" },
       { name: "hostname" },
     ],
     metrics: [{ name: "eventCount" }],
@@ -193,17 +193,17 @@ async function main() {
     r.dimensionValues[1].value || "(未設定)",
     r.metricValues[0].value,
   ]);
-  console.log("\n[4] contact_cta_click 配置別（source パラメータ）\n");
+  console.log("\n[4] contact_cta_click 配置別（cta_from パラメータ）\n");
   if (ctaRows.length === 0) {
     console.log("（データなし — デプロイ直後の場合は数日〜2週間待ってください）");
   } else {
-    console.log(table(["source", "クリック数"], ctaRows));
+    console.log(table(["cta_from", "クリック数"], ctaRows));
   }
   sections.push(
     "## 4. contact_cta_click 配置別\n\n" +
       (ctaRows.length === 0
         ? "_（データなし — 計測開始から2週間ほどで蓄積されます）_"
-        : markdownTable(["source", "クリック数"], ctaRows))
+        : markdownTable(["cta_from", "クリック数"], ctaRows))
   );
 
   // Markdown 保存
