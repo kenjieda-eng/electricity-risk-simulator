@@ -440,7 +440,7 @@ export default function PageNamePage() {
 - 検査は語尾の正規表現でなく該当語の全件抽出＋文脈分類で行う
 
 ### 検証の定番
-- tsc / build / npm test（193 passed維持）/ check:surcharge / 内部404チェック
+- tsc / build / npm test（214 passed以上を維持。テスト追加時はこの数値も更新する）/ check:surcharge / 内部404チェック
 - titleはサイト全体で一意。titleを変えたら、それを逐語コピーしているアンカーテキストも同時に整合させる
 
 ※ .cursorrules は旧Cursor環境用の設定であり、本ファイルが優先する（削除は別途判断）
