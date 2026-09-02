@@ -2370,3 +2370,12 @@ PR #220 (fd9ba13): B-77補助金第2弾8本(subsidies 26→34)。設備制度5(�
 - 計測解釈の注意（記録）: #329で8/27以降スクロール計測対象が472→853記事に拡大（イベント量の段差は行動変化ではない）／#328で12URLをsitemapから削除／GSCは確定ラグ2-3日／クエリ次元の合計（クリック727）はサイト全体（5,203）を大きく下回る＝匿名化。
 - 継続監視: 「市場価格調整額」212表示@7.0位クリック0（#332の費→額是正の効果を9月計測で確認）／「電気料金削減 見直し ポイント」1,170表示@8.7位クリック0（最大の単一取りこぼし・3か月連続0）／「容量拠出金」23.8位（クリック圏内20位以内への到達を確認）。
 ---
+
+## 2026-09-02 計測の申し送り回収（#334）とStickyConsultBar衝突解消（#335）＝CV導線改修の第1弾
+- #334（4ファイル+50/-6）: contact_form_submittedにinquiry_typeを追加（Step1のcontact_type_selectedと同一キー・同一値体系でファネル突合可能に）／ga4-report.mjsのcustomEvent:source→cta_from（4箇所・sessionSourceは標準次元として無変更）／page_pathのクエリ二重化を是正（pathOnly()・page_locationはフルURL維持）。
+- #335（4ファイル+308/-5）: ①「✕」をsessionStorageで同一セッション永続化（8月のcta_dismiss 509件は「閉じても遷移で復活」の産物。localStorage不採用は維持・ストレージ不可環境はtry/catchでuseStateへフォールバック）②ContactCtaCardが画面内にある間はバーとスペーサを非表示（専用IntersectionObserver threshold 0＋カスタムイベント＋バー側カウンタ。アンマウント時にhiddenを送りカウンタ漏れを防止）。contact_cta_viewのobserver（threshold 0.5・1回限り）は無変更でGAイベント4種は完全不変。
+- ★実測: 1440×900と390×844の両方で、修正前はボタン中心のelementFromPointがバー内要素（ASIDE/SPAN/P/DIV）、修正後は3測点すべてA要素。/compare（カード2枚）でカウンタ漏れなし・ソフト遷移でバー復帰・/contact配下は非表示維持。
+- ★効果測定の設計: 主指標=contact_cta_click÷contact_cta_view（viewの発火条件不変のため分母が基準線として使える）。バー由来（cta_click・label=sticky）とカード由来（contact_cta_click）はイベント名で分離できるためカスタムディメンション未登録でも前後比較可能。cta_dismissは意図的に激減する（改善のサインであり、減少を悪化と誤読しない）。9月末toplineで「カード系到達が8/月から回復するか」「sticky到達が落ちすぎないか」を判定。
+- 計測の知見: Browser paneが非表示（document.hidden===true）の間はIntersectionObserverのコールバックが配送されず、修正が効いていないように見える。ジオメトリ測定は各測点でdocument.hidden===falseを確認して行う。
+- 運用の教訓: #335の発注文がリンの「前メッセージ参照」で欠落し、実装側が別の作業（報告A）を#335と誤認しかけた。発注文は必ず当該メッセージ内に全文を置く（参照で済ませない）。#334では回帰ガード確認時のgit checkoutで未コミット変更を失う事故が発生し、退避手順をQUALITY_RULESへ追記した。
+---
