@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import { trackEvent } from "../../lib/analytics/ga";
-import { CONSULT_FACTS } from "../../lib/consultCta";
+import {
+  CONSULT_CARD_HIDDEN_EVENT,
+  CONSULT_CARD_VISIBLE_EVENT,
+  CONSULT_FACTS,
+} from "../../lib/consultCta";
 
 /**
  * シミュレーター結果→問い合わせ導線の再利用型CTA。
@@ -99,6 +103,38 @@ export default function ContactCtaCard({
     observer.observe(el);
     return () => observer.disconnect();
   }, [source, variant]);
+
+  // #335: StickyConsultBar との衝突解消。カードが少しでも見えている間はバーを隠す。
+  // ★上の contact_cta_view 用 observer（threshold 0.5・1回限り・発火後 disconnect）とは
+  //   分離する。view の発火条件を一切変えないため、専用の observer を threshold 0 で持つ。
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+
+    let visible = false;
+    const notify = (next: boolean) => {
+      if (next === visible) return;
+      visible = next;
+      document.dispatchEvent(
+        new CustomEvent(next ? CONSULT_CARD_VISIBLE_EVENT : CONSULT_CARD_HIDDEN_EVENT)
+      );
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) notify(entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      // 可視のままアンマウントされた場合に hidden を送らないと、バー側のカウンタが
+      // 減らずバーが復帰しなくなる（ページ遷移時に必ず通る経路）。
+      notify(false);
+    };
+  }, []);
 
   const handleClick = () => {
     trackEvent("contact_cta_click", {
