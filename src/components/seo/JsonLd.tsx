@@ -171,6 +171,10 @@ export function OrganizationJsonLd({
     "https://eic-jp.org",
     "https://pps-net.org",
     "https://simulator.eic-jp.org",
+    "https://www.ra-ul.com",
+    "https://news.yahoo.co.jp/users/expert/edakenjiex/articles?page=1",
+    "https://ja.wikipedia.org/wiki/%E6%B1%9F%E7%94%B0%E5%81%A5%E4%BA%8C",
+    "https://twitter.com/kenji__eda",
   ],
 }: OrganizationJsonLdProps = {}) {
   const jsonLd = {
