@@ -33,6 +33,9 @@ export function ArticleJsonLd({
         sameAs: [
           "https://simulator.eic-jp.org/kenji-eda",
           "https://eic-jp.org",
+          "https://pps-net.org",
+          "https://ja.wikipedia.org/wiki/%E6%B1%9F%E7%94%B0%E5%81%A5%E4%BA%8C",
+          "https://news.yahoo.co.jp/users/expert/edakenjiex/articles?page=1",
         ],
         worksFor: {
           "@type": "Organization",
