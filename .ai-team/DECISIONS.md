@@ -2391,3 +2391,18 @@ PR #220 (fd9ba13): B-77補助金第2弾8本(subsidies 26→34)。設備制度5(�
 - 編集判断の記録: 気象H2は地域差が要点の月は数値を見出しに入れない／燃料市況表の「算定期間の原油・為替」行は一次出典に米ドル建てが無いため省略（次号の収集項目に加えるか要判断）／気温とJEPX上昇の因果は断定しない。
 - 申し送り: 電力取引報6月分の公表後に06〜08号カードの繰上げ（#321と同型）／07号の関西前年差は本PRで訂正済み。
 ---
+
+## 2026-09-05 CVファネル観測スクリプト（#337）・/contact作り直しの設計調査・9月設計の確定
+- #337（1ファイル+337・main efdae4b8・デプロイ 2026-09-05 13:45:14 JST）: scripts/ga4-funnel.mjs（読み取り専用・stdoutのみ・fsはreadFileSyncのみ）。日別×イベント7種＋/contact PV、--baselineで前後比較（当日は混在日として両窓から除外）、デバイス別CTR、customEvent:cta_from / inquiry_typeの内訳（未登録なら400を1行表示して続行）。9月末toplineの前後比較はこれで回す。
+- 初回観測（8/19〜9/4・baseline 9/2）: 計測は生きている（contact_type_selected 1件到達・contact_form_submitted 5件）。contact_cta_clickは前14日1件→後2日4件（方向は#335の仮説と整合・n=4のため判定せず）。cta_dismissは10.64→9.50/日で永続化による激減はまだ見えない（9/4は処理中の可能性）。デバイスはdesktop 93%・CTRはmobile 1.57% vs desktop 0.17%。8/28に/contact 32PV・dismiss 42のスパイク（原因不明・記録）。
+- ★Step1は素通りされている: 9/1以降に外部フォームを開いた4件に対し種別選択は1件。設計調査で `?category=` が外部フォーム（フォームメーラー埋め込み・iframe srcは固定文字列・添字なしキーは破棄）に一切届いていないことも確定し、3段案内は行動としても機構としても機能していない。InquiryTypeSelector.tsxの「必須3項目・その他は任意」「文脈を引き継いだうえで送信」は実測と一致せず（外部は5フィールド全必須・種別欄なし）、PR-Aで是正する。
+- ★GA4カスタムディメンション cta_from / inquiry_type は9/5時点で未登録（APIが400・登録済みはdiag_*系のみ）。登録は遡及しないため9/1以降の内訳は登録日まで取れない。
+- ★download_completedの出所: 実装側が#337報告で「コードに存在しない」と書いたのは誤りで、src/components/analytics/DownloadLink.tsx:26 の window.gtag 直叩き（/downloads のみ・8/1〜9/4で24件・8/7に15件）。grepが gtag?.( の形だけを見ていた。直叩きは compare_result_viewed 303・simulator_completed 141・kenji_eda_viewed 54・download_completed 24・concierge_used 2 の5種で、isGaEnabled()のガードと予約語規律の外にある（trackEventへの統合は小PR候補）。gtag('event')は G-VCCJXB8WGP と SIMULATOR_GA_ID の両プロパティへ送られ、#337のスクリプトは .env.local の GA4_PROPERTY_ID 1つを見る（観測は常に同一プロパティで行う）。
+- 設計調査（038ad301・.ai-team/CONTACT_REDESIGN_DESIGN_2026-09-05.md 645行）: /contact はH1とフォーム入口の間に6セクション・可視文字の89.6%が入口より上・入口は1440×900で3.17画面下・390×844で6.32画面下。Supabaseの既存insert3箇所はすべてanon経由、adminServerClientはservice roleキーが無いとanonへ黙ってフォールバック。Route Handlerは素のResponse.json＋{ok}＋手書き検証が規約。メール通知はResend直契約を推奨（恒常無料枠・HTTP1回・ドメイン認証必須＝未認証は403で送信不能・サブドメイン notify.eic-jp.org 推奨）。スパム対策は入口検査＋honeypot＋署名付き時刻トークン＋Supabase固定窓レート制限の最小4層。
+- ★前提の崩れ2件: eic-jp.org にプライバシーポリシーは存在しない（13URLが404・公開19ページ・固定ページ20件・本文照合いずれも該当なし。pps-net.org/privacy は適用範囲が同サイト以下に限定）。外部フォームは5フィールド全必須で「必須4＋任意2」は外部側では成立しない（サイト内フォーム化で成立）。
+- ★9/5 江田決定: ①受信=メール通知＋Supabase保存 ②項目=必須4（種別/会社・団体名/メール/内容）＋任意2（お名前/電話） ③個人情報=当サイトに /privacy を新設（pps-net.org/privacy を雛形に simulator.eic-jp.org を適用範囲として起草・江田承認・PR-A同梱。フォームに加え既存のシミュレーション結果保存とGA4計測も対象） ④simulation_results の anon select/insert 開放（supabase-risk-score-and-select-policy.sql）はPR-A直後に別PRで是正 ⑤自動返信メールはPR-Bと同時。リン裁定: お名前は1欄・1画面完結・ブロック時は明示エラー＋外部導線・文字数上限は設計書の値・inquiry_idはGA4に載せない・外部フォームは副導線として残す・種別4区分維持。
+- 実装計画: PR-A=/contact構成変更（フォームをファーストビューへ・現行6セクションはdetailsで圧縮し文言不変）＋フォームUI＋POST /api/contact＋Supabase保存（service role専用クライアント新設・RLS全拒否＋revoke）＋スパム対策L0〜L3＋contact_inquiry_sent / contact_inquiry_failed＋/privacy＋文言3箇所の是正。PR-B=Resend通知＋自動返信。PR-C=Turnstile（任意）。PR-D=simulation_resultsのanon開放是正。PR-AとPR-Bは続けてマージするか、間が空く場合は江田さんが1日1回 contact_inquiries を確認する。
+- 効果測定: Stage Bの分子を「外部フォームを開く」から「サーバー受理（contact_inquiry_sent）」へ更新（分母=/contactセッションは不変・新旧を直接比較しない）。真のCV=contact_inquiries行数＋外部フォーム実受信数。第1起点=2026-09-02 14:18:48 JST（#335）・第2起点=PR-Aデプロイ時刻。
+- 江田さんの作業（PR-Aのマージを止める順）: Supabase SQL EditorでDDL実行／Vercelに SUPABASE_SERVICE_ROLE_KEY と CONTACT_IP_HASH_SALT／GA4カスタムディメンション登録／Resendアカウント・APIキー・DNS（PR-B）／8月の外部フォーム実受信数（フォームメーラー管理画面）。
+- 申し送り: gtag直叩き5種のtrackEvent統合とevent_label=hrefの高カーディナリティ／ボット除外セグメントの定義／8/28スパイクと8/7のdownload_completed 15件の原因／contact_type_selectedはdedupeなし（回数であって人数ではない）／不変条件（ContactCtaCard・StickyConsultBar・InlineConsultLinkは触らない）。
+---

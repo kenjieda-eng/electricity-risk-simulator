@@ -155,3 +155,8 @@
 - IntersectionObserverに依存する挙動（CTAのview計測・可視判定）をブラウザで実測するときは、各測点で document.hidden === false を確認する。Browser paneや該当タブが非表示の間はコールバックが配送されず、修正が効いていないように見える偽陰性が出る。
 - ストリーミング描画中（docHeightが増加中）のジオメトリは信用しない。完全ロード後（docHeightが安定）に再測定する（9/1のcontactファネル調査で「カードが0×0」という誤読が発生した）。
 - 本番プロパティへGAイベントを送らない。ジオメトリ測定・elementFromPoint・表示状態の観察に留め、CTAや「✕」を実クリックしない。localhostはprotocol!==https:でgtag自体が読み込まれないため構造的に送信不能。
+
+## GAイベントの送信箇所は4つの形を全数抽出する（#337で確立）
+- 「このイベントはコードに存在しない」と結論する前に、trackEvent(...)／window.gtag("event", ...)／gtag?.("event", ...)／dataLayer.push(...) の4形と、テンプレート文字列で動的に組み立てた名前（`${...}_viewed` 等）を対象に src 全体を走査する。#337の報告は gtag?.( の形だけを見て download_completed を「存在しない」と誤認した（実体は DownloadLink.tsx の window.gtag 直叩き）。
+- 直叩きは trackEvent の isGaEnabled() ガードと予約語規律の外にある。新規のイベント送信は trackEvent 経由で書き、直叩きを見つけたら統合候補として記録する。
+- gtag('event') は設定済みの全測定ID（現行2プロパティ）へ送られる。API観測は常に同一の GA4_PROPERTY_ID で行い、プロパティを混ぜて比較しない。
